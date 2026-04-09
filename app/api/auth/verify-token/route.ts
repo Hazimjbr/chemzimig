@@ -1,3 +1,4 @@
+import { NextRequest, NextResponse } from 'next/server';
 import { getAdminAuth, getAdminFirestore } from '@/lib/firebase-admin';
 import { isAdmin as checkAdminEmail } from '@/lib/admin-config';
 

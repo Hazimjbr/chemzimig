@@ -20,6 +20,8 @@ export interface AuthUser {
     isAdmin: boolean;
     role: 'admin' | 'moderator' | 'student';
     authMethod: 'google' | 'credentials';
+    xp?: number;
+    level?: number;
 }
 
 interface LoginCredentials {

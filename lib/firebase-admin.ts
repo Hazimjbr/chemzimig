@@ -27,7 +27,7 @@ function getAdminApp(): App {
         );
     }
 
-    let cleanedKey = privateKey.trim().replace(/^["']|["']$/g, '');
+    const cleanedKey = privateKey.trim().replace(/^["']|["']$/g, '');
     let processedPrivateKey = cleanedKey;
     
     // If it doesn't look like a standard PEM key, assume it's Base64 encoded (Vercel Production)
