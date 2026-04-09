@@ -61,8 +61,19 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // ============================================
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<AuthUser | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [user, setUser] = useState<AuthUser | null>({
+        id: 'guest_user',
+        username: 'guest',
+        name: 'Guest Chemist',
+        email: 'guest@chemzim.com',
+        isAdmin: true,
+        role: 'admin',
+        authMethod: 'credentials',
+        xp: 1250,
+        level: 5,
+        grade: 'A2 Level'
+    });
+    const [isLoading, setIsLoading] = useState(false);
     const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
     const [firebaseUser, setFirebaseUser] = useState<User | null>(null);
 
@@ -465,9 +476,7 @@ export function useRequireAuth(redirectTo: string = '/login') {
     const { user, isLoading, isAuthenticated } = useAuth();
 
     useEffect(() => {
-        if (!isLoading && !isAuthenticated) {
-            window.location.href = redirectTo;
-        }
+        // No redirection needed
     }, [isLoading, isAuthenticated, redirectTo]);
 
     return { user, isLoading };

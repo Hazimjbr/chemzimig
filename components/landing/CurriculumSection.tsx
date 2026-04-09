@@ -174,7 +174,7 @@ export default function CurriculumSection() {
                   {/* CTA */}
                   {isActive ? (
                     <Link
-                      href="/login"
+                      href="/dashboard/curriculum"
                       className={`block w-full text-center py-3 rounded-xl bg-gradient-to-r ${curr.gradient} text-navy-950 font-semibold text-sm hover:opacity-90 transition-opacity`}
                     >
                       Start Practicing

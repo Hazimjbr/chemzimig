@@ -79,18 +79,18 @@ export default function Header() {
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3" id="header-cta">
           <Link
-            href="/login"
+            href="/dashboard/curriculum"
             className="px-5 py-2.5 text-sm text-muted hover:text-white transition-colors duration-300"
             id="login-btn"
           >
-            Log In
+            Dashboard
           </Link>
           <Link
-            href="/login"
+            href="/dashboard/curriculum"
             className="px-5 py-2.5 text-sm font-medium rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 hover:from-gold-500 hover:to-gold-400 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:scale-105"
             id="get-started-btn"
           >
-            Get Started Free
+            Go to Curriculum
           </Link>
         </div>
 
@@ -145,11 +145,11 @@ export default function Header() {
           ))}
           <hr className="border-border" />
           <Link
-            href="/login"
+            href="/dashboard/curriculum"
             className="text-center py-3 rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 font-medium"
             id="mobile-get-started-btn"
           >
-            Get Started Free
+            Go to Curriculum
           </Link>
         </div>
       </div>

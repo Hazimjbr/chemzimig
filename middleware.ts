@@ -10,45 +10,7 @@ function isAdminEmail(email: string | null | undefined): boolean {
 }
 
 export async function middleware(request: NextRequest) {
-    const { pathname } = request.nextUrl;
-
-    // Only protect admin and dashboard routes
-    const isAdminRoute = pathname.startsWith('/admin') || pathname.startsWith('/api/admin');
-    const isDashboardRoute = pathname.startsWith('/dashboard');
-
-    if (!isAdminRoute && !isDashboardRoute) {
-        return NextResponse.next();
-    }
-
-    // Check the chemzim session cookie
-    const sessionCookie = request.cookies.get('chemzim');
-    if (sessionCookie?.value) {
-        try {
-            const decoded = decodeURIComponent(sessionCookie.value);
-            const session = JSON.parse(decoded);
-
-            // Dashboard: any authenticated user
-            if (isDashboardRoute && session?.id) {
-                return NextResponse.next();
-            }
-
-            // Admin: must be admin role
-            if (isAdminRoute && (session?.isAdmin === true || session?.role === 'admin')) {
-                return NextResponse.next();
-            }
-        } catch {
-            // Invalid cookie
-        }
-    }
-
-    // Not authorized - redirect to login with return URL
-    if (pathname.startsWith('/api/')) {
-        return NextResponse.json({ error: 'Unauthorized access' }, { status: 401 });
-    }
-
-    const loginUrl = new URL('/login', request.url);
-    loginUrl.searchParams.set('returnUrl', pathname);
-    return NextResponse.redirect(loginUrl);
+    return NextResponse.next();
 }
 
 export const config = {

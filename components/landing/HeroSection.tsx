@@ -151,7 +151,7 @@ export default function HeroSection() {
           style={{ animationDelay: "0.45s" }}
         >
           <Link
-            href="/login"
+            href="/dashboard/curriculum"
             className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 font-semibold text-base shadow-xl shadow-gold-500/25 hover:shadow-gold-500/40 hover:scale-105 transition-all duration-300 flex items-center gap-2"
             id="hero-cta-primary"
           >
