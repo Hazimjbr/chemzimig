@@ -162,4 +162,64 @@ export const igcseCurriculum: CurriculumLevel = {
   ],
 };
 
-export const allCurricula: CurriculumLevel[] = [igcseCurriculum];
+export const aLevelCurriculum: CurriculumLevel = {
+  id: "a-level",
+  code: "9701",
+  title: "AS & A Level Chemistry",
+  description: "Cambridge International AS & A Level Chemistry (9701)",
+  topics: [
+    {
+      id: "physical-chemistry",
+      number: 1,
+      title: "Physical Chemistry",
+      subtopics: [
+        "Atomic structure",
+        "Atoms, molecules and stoichiometry",
+        "Chemical bonding",
+        "States of matter",
+        "Chemical energetics",
+        "Electrochemistry",
+        "Equilibria",
+        "Reaction kinetics"
+      ],
+    },
+    {
+      id: "inorganic-chemistry",
+      number: 2,
+      title: "Inorganic Chemistry",
+      subtopics: [
+        "The Periodic Table: chemical periodicity",
+        "Group 2",
+        "Group 17",
+        "An introduction to the chemistry of transition elements",
+        "Nitrogen and sulfur"
+      ],
+    },
+    {
+      id: "organic-chemistry-as",
+      number: 3,
+      title: "Organic Chemistry",
+      subtopics: [
+        "An introduction to organic chemistry",
+        "Hydrocarbons",
+        "Halogen derivatives",
+        "Hydroxy compounds",
+        "Carbonyl compounds",
+        "Carboxylic acids and derivatives",
+        "Nitrogen compounds",
+        "Polymerisation",
+        "Organic synthesis"
+      ],
+    },
+    {
+      id: "analysis",
+      number: 4,
+      title: "Analysis",
+      subtopics: [
+        "Analytical techniques"
+      ],
+    }
+  ],
+};
+
+export const allCurricula: CurriculumLevel[] = [igcseCurriculum, aLevelCurriculum];

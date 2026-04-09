@@ -5,7 +5,8 @@ import { cookies } from 'next/headers';
 export async function POST(request: NextRequest) {
     try {
         // --- 1. Security Lockdown: Only Admins can call this
-        const sessionCookie = cookies().get('chemzim')?.value;
+        const cookieStore = await cookies();
+        const sessionCookie = cookieStore.get('chemzim')?.value;
         const session = await verifySession(sessionCookie);
 
         if (!session || !session.isAdmin) {
