@@ -7,7 +7,7 @@ let _adminApp: App | null = null;
 let _adminAuth: Auth | null = null;
 let _adminDb: Firestore | null = null;
 
-function getAdminApp(): App {
+function getAdminApp(): App | null {
     if (_adminApp) return _adminApp;
 
     if (getApps().length > 0) {
@@ -21,10 +21,8 @@ function getAdminApp(): App {
     const privateKey = process.env.FIREBASE_PRIVATE_KEY;
 
     if (!projectId || !clientEmail || !privateKey) {
-        throw new Error(
-            '[Firebase Admin] Missing environment variables: ' +
-            'FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, or FIREBASE_PRIVATE_KEY'
-        );
+        console.warn('[Firebase Admin] Skipping initialization: Missing environment variables.');
+        return null;
     }
 
     const cleanedKey = privateKey.trim().replace(/^["']|["']$/g, '');
@@ -54,16 +52,20 @@ function getAdminApp(): App {
 
 // --- Exported Helpers ---
 
-export function getAdminAuth(): Auth {
+export function getAdminAuth(): Auth | null {
     if (!_adminAuth) {
-        _adminAuth = getAuth(getAdminApp());
+        const app = getAdminApp();
+        if (!app) return null;
+        _adminAuth = getAuth(app);
     }
     return _adminAuth;
 }
 
-export function getAdminFirestore(): Firestore {
+export function getAdminFirestore(): Firestore | null {
     if (!_adminDb) {
-        _adminDb = getFirestore(getAdminApp());
+        const app = getAdminApp();
+        if (!app) return null;
+        _adminDb = getFirestore(app);
     }
     return _adminDb;
 }

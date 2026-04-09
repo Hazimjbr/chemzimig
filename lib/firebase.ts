@@ -26,57 +26,55 @@ let _app: FirebaseApp | null = null;
 let _db: Firestore | null = null;
 let _auth: Auth | null = null;
 
-function ensureInitialized(): FirebaseApp {
+function ensureInitialized(): FirebaseApp | null {
     if (_app) return _app;
 
-    try {
+    // Check if we have the minimum requirements to initialize
+    if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
         if (typeof window !== 'undefined') {
-            console.log('[Firebase] Initialization attempt...');
-            if (!firebaseConfig.apiKey) {
-                console.error('[Firebase] API KEY IS MISSING ON CLIENT!');
-            } else {
-                console.log('[Firebase] API Key detected (starts with):', firebaseConfig.apiKey.substring(0, 5));
-            }
+            console.warn('[Firebase] Deployment mode: Missing API Key. Firebase features will be disabled.');
         }
-        
+        return null;
+    }
+
+    try {
         if (getApps().length > 0) {
             _app = getApp();
         } else {
             _app = initializeApp(firebaseConfig);
         }
-
-        console.log('[Firebase] App initialized successfully');
         return _app;
     } catch (error) {
         console.error('[Firebase] Initialization error:', error);
-        throw error;
+        return null;
     }
 }
 
 // --- Exported Helpers ---
 
-export function getFirebaseApp(): FirebaseApp {
+export function getFirebaseApp(): FirebaseApp | null {
     return ensureInitialized();
 }
 
-export function getFirestoreDB(): Firestore {
+export function getFirestoreDB(): Firestore | null {
+    const app = ensureInitialized();
+    if (!app) return null;
     if (!_db) {
-        const app = ensureInitialized();
         _db = getFirestore(app);
     }
     return _db;
 }
 
-export function getAuthInstance(): Auth {
+export function getAuthInstance(): Auth | null {
+    const app = ensureInitialized();
+    if (!app) return null;
     if (!_auth) {
-        const app = ensureInitialized();
         _auth = getAuth(app);
     }
     return _auth;
 }
 
-// Legacy exports - Now work on both server and client
-// Using getter functions to ensure lazy initialization works in all environments
-export const db = getFirestoreDB();
-export const auth = getAuthInstance();
-export default getFirebaseApp();
+// Legacy exports - Now return null safely if not configured
+export const db = typeof window !== 'undefined' ? getFirestoreDB() : null;
+export const auth = typeof window !== 'undefined' ? getAuthInstance() : null;
+export default typeof window !== 'undefined' ? getFirebaseApp() : null;

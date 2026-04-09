@@ -158,6 +158,13 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const setupAuthListener = async () => {
             try {
                 const auth = getAuthInstance();
+                
+                if (!auth) {
+                    console.log('[Auth] Firebase Auth not available, skipping listener.');
+                    await checkStoredSession();
+                    setIsLoading(false);
+                    return;
+                }
 
                 // Clean up any stale redirect flags
                 localStorage.removeItem('google_redirect_pending');
