@@ -1,6 +1,6 @@
 import React from 'react';
 import { CurriculumView } from '@/components/ui/CurriculumView';
-import { allLevels } from '@/data/curriculum';
+import { allCurricula } from '@/data/curriculum';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function CurriculumPage() {
             </div>
 
             {/* Curriculum Viewer */}
-            <CurriculumView curricula={allLevels} />
+            <CurriculumView curricula={allCurricula} />
         </div>
     );
 }

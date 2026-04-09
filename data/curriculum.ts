@@ -222,5 +222,4 @@ export const aLevelCurriculum: CurriculumLevel = {
   ],
 };
 
-// Update allCurricula to include both
-export const allLevels: CurriculumLevel[] = [igcseCurriculum, aLevelCurriculum];
+export const allCurricula: CurriculumLevel[] = [igcseCurriculum, aLevelCurriculum];
