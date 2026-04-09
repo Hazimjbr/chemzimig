@@ -367,6 +367,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
         try {
             const auth = getAuthInstance();
+            if (!auth) {
+                return { success: false, error: 'Firebase Auth is not available' };
+            }
             const provider = new GoogleAuthProvider();
 
             // Use popup for all devices (was confirmed working on mobile too)
@@ -404,7 +407,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                     verifySuccess: verifyResult.success,
                     verifyError: verifyResult.error
                 });
-                await firebaseSignOut(auth);
+                if (auth) {
+                    await firebaseSignOut(auth);
+                }
                 setIsLoading(false);
                 return {
                     success: false,
@@ -429,7 +434,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             // Sign out from Firebase if logged in via Google
             if (firebaseUser) {
                 const auth = getAuthInstance();
-                await firebaseSignOut(auth);
+                if (auth) {
+                    await firebaseSignOut(auth);
+                }
             }
         } catch (e) {
             console.error('[Auth] Firebase signout error:', e);
