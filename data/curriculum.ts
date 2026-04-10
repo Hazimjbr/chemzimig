@@ -3,6 +3,7 @@ export interface Topic {
   number: number;
   title: string;
   subtopics?: string[];
+  theory?: string; // Markdown/HTML content for theoretical explanation
 }
 
 export interface CurriculumLevel {
@@ -21,6 +22,7 @@ export const igcseCurriculum: CurriculumLevel = {
   topics: [
     {
       id: "states-of-matter",
+      theory: "## States of Matter\n\nMatter exists in three main states: solid, liquid, and gas. The kinetic particle theory explains the properties of these states.\n\n### Solids\n- Particles are closely packed in a regular arrangement.\n- Particles vibrate about fixed positions.\n- Fixed volume and shape.\n\n### Liquids\n- Particles are closely packed but irregularly arranged.\n- Particles can slide past one another.\n- Fixed volume but take the shape of the container.\n\n### Gases\n- Particles are far apart and arranged randomly.\n- Particles move rapidly and freely in all directions.\n- No fixed volume or shape; they expand to fill the container.\n\n### Changes of State\n- **Melting:** Solid to liquid (requires heat).\n- **Boiling/Evaporation:** Liquid to gas (requires heat).\n- **Condensation:** Gas to liquid (releases heat).\n- **Freezing:** Liquid to solid (releases heat).\n- **Sublimation:** Solid directly to gas.",
       number: 1,
       title: "States of Matter",
       subtopics: [
@@ -32,6 +34,7 @@ export const igcseCurriculum: CurriculumLevel = {
     },
     {
       id: "atoms-elements",
+      theory: "## Atoms, Elements and Compounds\n\nAll substances are made of atoms.\n\n### Atomic Structure\n- **Protons:** Positively charged, located in the nucleus. Mass = 1.\n- **Neutrons:** Neutral, located in the nucleus. Mass = 1.\n- **Electrons:** Negatively charged, orbit the nucleus in shells. Mass = 1/1840.\n\n### Definitions\n- **Element:** A substance made of only one type of atom.\n- **Compound:** A substance containing two or more different elements chemically bonded together.\n- **Isotopes:** Atoms of the same element with the same proton number but different nucleon (mass) numbers.\n\n### Bonding\n- **Ionic Bonding:** Strong electrostatic attraction between oppositely charged ions (metal and non-metal).\n- **Covalent Bonding:** Sharing of electron pairs between non-metal atoms.",
       number: 2,
       title: "Atoms, Elements and Compounds",
       subtopics: [

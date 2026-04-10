@@ -62,7 +62,7 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
 
                             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                                 {activeCurriculum.topics.map((topic, index) => (
-                                    <TopicCard key={topic.id} topic={topic} index={index} />
+                                    <TopicCard key={topic.id} topic={topic} index={index} curriculumId={activeCurriculum.id} />
                                 ))}
                             </div>
                         </div>
