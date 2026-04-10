@@ -8,18 +8,18 @@ import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 
 interface TopicPageProps {
-    params: {
+    params: Promise<{
         curriculumId: string;
         topicId: string;
-    };
-    searchParams: {
+    }>;
+    searchParams: Promise<{
         tab?: string;
-    };
+    }>;
 }
 
-export default function TopicPage({ params, searchParams }: TopicPageProps) {
-    const { curriculumId, topicId } = params;
-    const tab = searchParams.tab || 'theory'; // 'theory' or 'questions'
+export default async function TopicPage({ params, searchParams }: TopicPageProps) {
+    const { curriculumId, topicId } = await params;
+    const { tab = 'theory' } = await searchParams;
 
     const curriculum = allCurricula.find(c => c.id === curriculumId);
     const topic = curriculum?.topics.find(t => t.id === topicId);
