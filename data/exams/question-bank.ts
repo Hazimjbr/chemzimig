@@ -280,3 +280,306 @@ export const questionBank: Question[] = [
     createdAt: new Date().toISOString()
   }
 ];
+
+// More States of Matter Questions
+questionBank.push(
+  {
+    id: "q_som_3",
+    question: "Which process describes a gas changing directly into a solid?",
+    options: [
+      { text: "Melting" },
+      { text: "Condensation" },
+      { text: "Deposition (or Desublimation)" },
+      { text: "Sublimation" }
+    ],
+    correctAnswer: 2,
+    explanation: "Deposition is the phase transition in which gas transforms into solid without passing through the liquid phase.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "q_som_4",
+    question: "What happens to the kinetic energy of particles as a solid melts into a liquid at its melting point?",
+    options: [
+      { text: "It decreases." },
+      { text: "It increases." },
+      { text: "It remains constant." },
+      { text: "It fluctuates." }
+    ],
+    correctAnswer: 2,
+    explanation: "During a phase change (like melting), the temperature and the average kinetic energy of the particles remain constant. The added heat energy is used to overcome intermolecular forces.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Atoms, Elements, and Compounds Questions
+questionBank.push(
+  {
+    id: "q_aec_3",
+    question: "Isotopes of the same element have the same number of protons but a different number of...",
+    options: [
+      { text: "Electrons" },
+      { text: "Neutrons" },
+      { text: "Positrons" },
+      { text: "Ions" }
+    ],
+    correctAnswer: 1,
+    explanation: "Isotopes are atoms of the same element (same proton number) that have different numbers of neutrons, resulting in different mass numbers.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "q_aec_4",
+    question: "What is the formula of the magnesium ion?",
+    options: [
+      { text: "$Mg^+$" },
+      { text: "$Mg^{2+}$" },
+      { text: "$Mg^-$" },
+      { text: "$Mg^{2-}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "Magnesium is in Group II, so it loses its 2 outer shell electrons to achieve a full outer shell, forming a $2+$ ion.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Stoichiometry Questions
+questionBank.push(
+  {
+    id: "q_stc_3",
+    question: "What volume does $1\\text{ mole}$ of any gas occupy at room temperature and pressure (r.t.p)?",
+    options: [
+      { text: "$24\\text{ dm}^3$" },
+      { text: "$22.4\\text{ dm}^3$" },
+      { text: "$12\\text{ dm}^3$" },
+      { text: "$48\\text{ dm}^3$" }
+    ],
+    correctAnswer: 0,
+    explanation: "At r.t.p (approx. $20^\\circ\\text{C}$ and $1\\text{ atm}$), 1 mole of any gas occupies $24\\text{ dm}^3$ ($24,000\\text{ cm}^3$).",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  },
+  {
+    id: "q_stc_4",
+    question: "Calculate the percentage by mass of oxygen in water ($H_2O$). ($A_r$: $H = 1$, $O = 16$)",
+    options: [
+      { text: "33.3%" },
+      { text: "88.9%" },
+      { text: "11.1%" },
+      { text: "50.0%" }
+    ],
+    correctAnswer: 1,
+    explanation: "$M_r$ of $H_2O = 18$. Mass of oxygen = 16. $\\text{Percentage} = (16 / 18) \\times 100 = 88.9\\%$.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Electrochemistry Questions
+questionBank.push(
+  {
+    id: "q_elc_2",
+    question: "During the electrolysis of concentrated aqueous sodium chloride, what is produced at the anode (positive electrode)?",
+    options: [
+      { text: "Sodium" },
+      { text: "Oxygen" },
+      { text: "Chlorine" },
+      { text: "Hydrogen" }
+    ],
+    correctAnswer: 2,
+    explanation: "In concentrated aqueous $NaCl$, chloride ions ($Cl^-$) are discharged at the anode to form chlorine gas ($Cl_2$) because they are in high concentration compared to hydroxide ions.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Chemical Energetics Questions
+questionBank.push(
+  {
+    id: "q_ce_2",
+    question: "If a reaction has a negative $\\Delta H$ (enthalpy change), it is...",
+    options: [
+      { text: "Endothermic" },
+      { text: "Exothermic" },
+      { text: "Reversible" },
+      { text: "At equilibrium" }
+    ],
+    correctAnswer: 1,
+    explanation: "A negative $\\Delta H$ means the products have less energy than the reactants because energy was released to the surroundings. This is an exothermic reaction.",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Chemical Reactions
+questionBank.push(
+  {
+    id: "q_cr_2",
+    question: "What does a catalyst do in a chemical reaction?",
+    options: [
+      { text: "Increases the activation energy" },
+      { text: "Provides an alternative pathway with higher activation energy" },
+      { text: "Provides an alternative pathway with lower activation energy" },
+      { text: "Increases the temperature of the reaction" }
+    ],
+    correctAnswer: 2,
+    explanation: "A catalyst speeds up a chemical reaction by providing an alternative reaction pathway that requires a lower activation energy, without being consumed itself.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Acids, Bases and Salts
+questionBank.push(
+  {
+    id: "q_abs_2",
+    question: "Which of the following is a weak acid?",
+    options: [
+      { text: "Hydrochloric acid" },
+      { text: "Sulfuric acid" },
+      { text: "Nitric acid" },
+      { text: "Ethanoic acid" }
+    ],
+    correctAnswer: 3,
+    explanation: "Ethanoic acid is a weak acid because it only partially dissociates into ions in aqueous solution. The others are strong acids that fully dissociate.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Periodic Table
+questionBank.push(
+  {
+    id: "q_pt_2",
+    question: "Which group of elements are known as the noble gases and are unreactive?",
+    options: [
+      { text: "Group I" },
+      { text: "Group VII" },
+      { text: "Group VIII (or Group 0)" },
+      { text: "Transition Elements" }
+    ],
+    correctAnswer: 2,
+    explanation: "Group VIII elements are the noble gases. They are unreactive because they have a full outer shell of electrons.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Metals
+questionBank.push(
+  {
+    id: "q_met_2",
+    question: "Which metal is the most reactive?",
+    options: [
+      { text: "Iron" },
+      { text: "Copper" },
+      { text: "Potassium" },
+      { text: "Calcium" }
+    ],
+    correctAnswer: 2,
+    explanation: "Potassium is at the very top of the reactivity series, making it highly reactive, especially with water.",
+    level: 1,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Chemistry of Environment
+questionBank.push(
+  {
+    id: "q_env_2",
+    question: "Which gas contributes most to global warming?",
+    options: [
+      { text: "Nitrogen" },
+      { text: "Oxygen" },
+      { text: "Carbon dioxide" },
+      { text: "Argon" }
+    ],
+    correctAnswer: 2,
+    explanation: "Carbon dioxide is a greenhouse gas that traps thermal energy in the Earth's atmosphere, contributing significantly to global warming.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Organic Chemistry
+questionBank.push(
+  {
+    id: "q_org_2",
+    question: "Which functional group is present in all alcohols?",
+    options: [
+      { text: "$-COOH$" },
+      { text: "$-OH$" },
+      { text: "$C=C$" },
+      { text: "$-COO-$" }
+    ],
+    correctAnswer: 1,
+    explanation: "Alcohols contain the hydroxyl ($-OH$) functional group.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);
+
+// More Experimental Techniques
+questionBank.push(
+  {
+    id: "q_exp_2",
+    question: "Which technique is used to separate a mixture of colored dyes in ink?",
+    options: [
+      { text: "Chromatography" },
+      { text: "Distillation" },
+      { text: "Filtration" },
+      { text: "Evaporation" }
+    ],
+    correctAnswer: 0,
+    explanation: "Paper chromatography is used to separate mixtures of soluble substances, such as different colored dyes in ink.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    createdAt: new Date().toISOString()
+  }
+);

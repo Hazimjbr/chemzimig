@@ -4,14 +4,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, Hash } from 'lucide-react';
 import { Topic } from '@/data/curriculum';
+import Link from 'next/link';
 
 interface TopicCardProps {
     topic: Topic;
     index: number;
+    curriculumId: string;
 }
 
-export const TopicCard: React.FC<TopicCardProps> = ({ topic, index }) => {
+export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, curriculumId }) => {
     return (
+        <Link href={`/dashboard/curriculum/${curriculumId}/${topic.id}`}>
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,9 +49,10 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index }) => {
             </div>
 
             <div className="mt-6 pt-4 border-t border-white/5 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-sm font-medium text-indigo-400">View Questions</span>
+                <span className="text-sm font-medium text-indigo-400">Study Topic</span>
                 <ChevronRight className="w-4 h-4 text-indigo-400" />
             </div>
         </motion.div>
+        </Link>
     );
 };
