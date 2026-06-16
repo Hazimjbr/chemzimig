@@ -2,6 +2,7 @@
 // This handles all secure student authentication and management operations for the International platform.
 
 import { getAdminFirestore } from './firebase-admin';
+import bcrypt from 'bcryptjs';
 
 const STUDENTS_COLLECTION = 'students';
 const DEVICE_REQUESTS_COLLECTION = 'device_requests';
@@ -22,7 +23,7 @@ export interface Device {
 export interface Student {
     id: string;
     username: string;
-    passwordHash: string; // Plain for this pedagogical project, usually hashed
+    passwordHash: string;
     name: string;
     email?: string;
     grade?: string; // International grade (e.g., Year 10, IB DP1)
@@ -55,7 +56,11 @@ export interface LoginResult {
 }
 
 function getDB() {
-    return getAdminFirestore();
+    const db = getAdminFirestore();
+    if (!db) {
+        throw new Error('Firebase Firestore is not initialized. Check your environment variables.');
+    }
+    return db;
 }
 
 // ============ Admin Initialization ============
@@ -82,7 +87,7 @@ export async function initializeAdmin() {
             const superAdmin: Student = {
                 id: adminId,
                 username: 'hazim_admin',
-                passwordHash: 'H1975jbr', // Default secure pass as requested
+                passwordHash: await bcrypt.hash('H1975jbr', 12),
                 name: 'Hazim Jaber',
                 email: adminEmail,
                 grade: 'System Admin',
@@ -124,39 +129,47 @@ export interface UserSession {
 }
 
 /**
- * Verify a secure session cookie
+ * Verify a secure session cookie (now uses JWT in middleware/session.ts)
  */
 export async function verifySession(sessionCookie?: string): Promise<UserSession | null> {
     if (!sessionCookie) return null;
 
     try {
-        const decoded = decodeURIComponent(sessionCookie);
-        const session = JSON.parse(decoded) as UserSession;
+        // Import session verification from the new JWT-based session module
+        const { verifySessionToken } = await import('./session');
+        const payload = await verifySessionToken(sessionCookie);
         
-        if (!session.id) return null;
+        if (!payload || !payload.id) return null;
         
         // --- Multi-Layer Admin Check ---
-        let isAdmin = session.isAdmin;
-        let role = session.role;
+        let isAdmin = payload.isAdmin;
+        let role = payload.role;
 
         // 1. Direct check for Super Admin email (Hardcoded)
-        if (session.email && ADMIN_EMAILS.includes(session.email.toLowerCase())) {
+        if (payload.email && ADMIN_EMAILS.includes(payload.email.toLowerCase())) {
             isAdmin = true;
             role = 'admin';
         }
 
         // 2. Check the user-created 'admin' collection in Firestore (Manual sovereignty)
-        if (!isAdmin && session.email) {
+        if (!isAdmin && payload.email) {
             const db = getDB();
-            const adminDoc = await db.collection('admin').doc(session.email.toLowerCase()).get();
+            const adminDoc = await db.collection('admin').doc(payload.email.toLowerCase()).get();
             if (adminDoc.exists && adminDoc.data()?.role === 'admin') {
                 isAdmin = true;
                 role = 'admin';
             }
         }
 
-        return { ...session, isAdmin, role };
-    } catch (error) {
+        return {
+            id: payload.id,
+            name: payload.name || '',
+            email: payload.email,
+            isAdmin,
+            role,
+            grade: payload.grade,
+        };
+    } catch {
         return null;
     }
 }
@@ -185,8 +198,24 @@ export async function authenticateStudent(
     const studentDoc = studentSnap.docs[0];
     const student = studentDoc.data() as Student;
 
-    // 2. Validate Password
-    if (student.passwordHash !== passwordInput) {
+    // 2. Validate Password using bcrypt
+    // Also support legacy plaintext passwords with auto-migration
+    const isHashedPassword = student.passwordHash.startsWith('$2');
+    let passwordMatch = false;
+
+    if (isHashedPassword) {
+        passwordMatch = await bcrypt.compare(passwordInput, student.passwordHash);
+    } else {
+        // Legacy plaintext - auto-migrate on success
+        passwordMatch = (student.passwordHash === passwordInput);
+        if (passwordMatch) {
+            const hashedPassword = await bcrypt.hash(passwordInput, 12);
+            await studentDoc.ref.update({ passwordHash: hashedPassword });
+            console.log(`[Auth] Migrated legacy password to bcrypt for user: ${username}`);
+        }
+    }
+
+    if (!passwordMatch) {
         return { success: false, error: 'Invalid password' };
     }
 
@@ -295,10 +324,12 @@ export async function createStudent(data: {
     }
 
     const id = `std_${Date.now()}`;
+    // Hash the password before storing
+    const hashedPassword = await bcrypt.hash(data.passwordHash, 12);
     const newStudent: Student = {
         id,
         username,
-        passwordHash: data.passwordHash,
+        passwordHash: hashedPassword,
         name: data.name,
         email: data.email || '',
         grade: data.grade,
@@ -325,4 +356,169 @@ export async function getStudentById(id: string): Promise<Student | undefined> {
     const db = getDB();
     const snap = await db.collection(STUDENTS_COLLECTION).doc(id).get();
     return snap.exists ? (snap.data() as Student) : undefined;
+}
+
+// ============ Device Management ============
+
+export async function getAllDeviceRequests(): Promise<DeviceRequest[]> {
+    const db = getDB();
+    const snapshot = await db.collection(DEVICE_REQUESTS_COLLECTION).where('status', '==', 'pending').get();
+    const reqs: DeviceRequest[] = [];
+    snapshot.forEach(d => reqs.push(d.data() as DeviceRequest));
+    return reqs.sort((a, b) => new Date(b.requestedAt).getTime() - new Date(a.requestedAt).getTime());
+}
+
+export async function approveDevice(requestId: string): Promise<boolean> {
+    const db = getDB();
+    const requestRef = db.collection(DEVICE_REQUESTS_COLLECTION).doc(requestId);
+    const requestSnap = await requestRef.get();
+
+    if (!requestSnap.exists) return false;
+    const request = requestSnap.data() as DeviceRequest;
+
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
+    const studentSnap = await studentRef.get();
+    if (!studentSnap.exists) return false;
+    const student = studentSnap.data() as Student;
+
+    const devices = student.devices || [];
+    const device = devices.find(d => d.id === request.device.id);
+
+    if (device) {
+        device.status = 'approved';
+        await studentRef.update({ devices });
+    }
+
+    await requestRef.update({ status: 'approved' });
+    return true;
+}
+
+export async function rejectDevice(requestId: string): Promise<boolean> {
+    const db = getDB();
+    const requestRef = db.collection(DEVICE_REQUESTS_COLLECTION).doc(requestId);
+    const requestSnap = await requestRef.get();
+
+    if (!requestSnap.exists) return false;
+    const request = requestSnap.data() as DeviceRequest;
+
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
+    const studentSnap = await studentRef.get();
+    if (!studentSnap.exists) return false;
+    const student = studentSnap.data() as Student;
+
+    const devices = student.devices || [];
+    const filteredDevices = devices.filter(d => d.id !== request.device.id);
+
+    await studentRef.update({ devices: filteredDevices });
+    await requestRef.update({ status: 'rejected' });
+    return true;
+}
+
+export async function replaceDevice(requestId: string): Promise<boolean> {
+    const db = getDB();
+    const requestRef = db.collection(DEVICE_REQUESTS_COLLECTION).doc(requestId);
+    const requestSnap = await requestRef.get();
+
+    if (!requestSnap.exists) return false;
+    const request = requestSnap.data() as DeviceRequest;
+
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
+    const studentSnap = await studentRef.get();
+    if (!studentSnap.exists) return false;
+    const student = studentSnap.data() as Student;
+
+    const targetDeviceId = request.device.id;
+    const currentDevices = student.devices || [];
+    const updatedDevices = currentDevices.map(d => {
+        if (d.id === targetDeviceId) {
+            return { ...d, status: 'approved' as const };
+        } else if (d.status === 'approved') {
+            return { ...d, status: 'blocked' as const };
+        }
+        return d;
+    });
+
+    await studentRef.update({ devices: updatedDevices });
+    await requestRef.update({ status: 'approved' });
+    return true;
+}
+
+export async function blockDevice(studentId: string, deviceId: string): Promise<boolean> {
+    const db = getDB();
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
+    const studentSnap = await studentRef.get();
+    if (!studentSnap.exists) return false;
+    const student = studentSnap.data() as Student;
+
+    const devices = student.devices || [];
+    const device = devices.find(d => d.id === deviceId);
+    if (!device) return false;
+
+    device.status = 'blocked';
+    await studentRef.update({ devices });
+    return true;
+}
+
+export async function unblockDevice(studentId: string, deviceId: string): Promise<boolean> {
+    const db = getDB();
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
+    const studentSnap = await studentRef.get();
+    if (!studentSnap.exists) return false;
+    const student = studentSnap.data() as Student;
+
+    const devices = student.devices || [];
+    const device = devices.find(d => d.id === deviceId);
+    if (!device) return false;
+
+    device.status = 'approved';
+    await studentRef.update({ devices });
+    return true;
+}
+
+export async function removeDevice(studentId: string, deviceId: string): Promise<boolean> {
+    const db = getDB();
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
+    const studentSnap = await studentRef.get();
+    if (!studentSnap.exists) return false;
+    const student = studentSnap.data() as Student;
+
+    const devices = student.devices || [];
+    const filtered = devices.filter(d => d.id !== deviceId);
+
+    await studentRef.update({ devices: filtered });
+    return true;
+}
+
+export async function getAuthStats() {
+    const db = getDB();
+    const studentsSnap = await db.collection(STUDENTS_COLLECTION).get();
+    const reqsSnap = await db.collection(DEVICE_REQUESTS_COLLECTION).where('status', '==', 'pending').get();
+
+    let totalStudents = 0;
+    let activeStudents = 0;
+    let totalDevices = 0;
+    let approvedDevices = 0;
+    let blockedDevices = 0;
+
+    studentsSnap.forEach(doc => {
+        const s = doc.data() as Student;
+        if (s.isAdmin) return;
+
+        totalStudents++;
+        if (s.isActive) activeStudents++;
+        if (s.devices) {
+            totalDevices += s.devices.length;
+            approvedDevices += s.devices.filter(d => d.status === 'approved').length;
+            blockedDevices += s.devices.filter(d => d.status === 'blocked').length;
+        }
+    });
+
+    return {
+        totalStudents,
+        activeStudents,
+        totalDevices,
+        approvedDevices,
+        pendingDevices: reqsSnap.size,
+        blockedDevices,
+    };
 }

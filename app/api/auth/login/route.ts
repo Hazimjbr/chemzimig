@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { authenticateStudent, initializeAdmin } from '@/lib/auth-store-admin';
+import { createSessionToken, getSessionCookieOptions } from '@/lib/session';
 
 export async function POST(request: NextRequest) {
     try {
@@ -51,22 +52,20 @@ export async function POST(request: NextRequest) {
                 user: safeStudent,
             });
 
-            // Set secure HttpOnly session cookie
-            const sessionData = JSON.stringify({
+            // Create signed JWT session token (cannot be forged)
+            const token = await createSessionToken({
                 isAdmin: safeStudent.isAdmin,
-                role: safeStudent.role,
+                role: safeStudent.role as 'admin' | 'moderator' | 'student',
                 email: safeStudent.email,
-                id: safeStudent.id
+                id: safeStudent.id,
+                name: safeStudent.name,
+                grade: safeStudent.grade,
             });
 
+            const cookieOptions = getSessionCookieOptions();
             response.cookies.set({
-                name: 'chemzim',
-                value: encodeURIComponent(sessionData),
-                httpOnly: true,
-                secure: process.env.NODE_ENV === 'production',
-                sameSite: 'lax',
-                path: '/',
-                maxAge: 60 * 60 * 24 * 7, // 7 days
+                ...cookieOptions,
+                value: token,
             });
 
             return response;

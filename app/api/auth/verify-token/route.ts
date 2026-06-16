@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminAuth, getAdminFirestore } from '@/lib/firebase-admin';
 import { isAdmin as checkAdminEmail } from '@/lib/admin-config';
+import { createSessionToken, getSessionCookieOptions } from '@/lib/session';
 
 export async function POST(request: NextRequest) {
     try {
@@ -12,6 +13,9 @@ export async function POST(request: NextRequest) {
         }
 
         const auth = getAdminAuth();
+        if (!auth) {
+            return NextResponse.json({ success: false, error: 'Firebase Auth not initialized' }, { status: 500 });
+        }
         const decodedToken = await auth.verifyIdToken(idToken);
         const email = decodedToken.email;
 
@@ -25,23 +29,17 @@ export async function POST(request: NextRequest) {
         // Check the user-created 'admin' collection in Firestore
         if (!isAdmin) {
             const db = getAdminFirestore();
-            const adminDoc = await db.collection('admin').doc(email.toLowerCase()).get();
-            if (adminDoc.exists && adminDoc.data()?.role === 'admin') {
-                isAdmin = true;
+            if (db) {
+                const adminDoc = await db.collection('admin').doc(email.toLowerCase()).get();
+                if (adminDoc.exists && adminDoc.data()?.role === 'admin') {
+                    isAdmin = true;
+                }
             }
         }
 
         if (!isAdmin) {
             return NextResponse.json({ success: false, error: 'Unauthorized email' }, { status: 401 });
         }
-
-        const sessionData = JSON.stringify({
-            isAdmin: true,
-            role: 'admin',
-            email: email,
-            id: decodedToken.uid,
-            name: decodedToken.name || email.split('@')[0],
-        });
 
         const response = NextResponse.json({
             success: true,
@@ -54,14 +52,19 @@ export async function POST(request: NextRequest) {
             }
         });
 
+        // Create signed JWT session token (cannot be forged)
+        const token = await createSessionToken({
+            isAdmin: true,
+            role: 'admin',
+            email: email,
+            id: decodedToken.uid,
+            name: decodedToken.name || email.split('@')[0],
+        });
+
+        const cookieOptions = getSessionCookieOptions();
         response.cookies.set({
-            name: 'chemzim',
-            value: encodeURIComponent(sessionData),
-            httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'lax',
-            path: '/',
-            maxAge: 60 * 60 * 24 * 7,
+            ...cookieOptions,
+            value: token,
         });
 
         return response;
@@ -70,3 +73,4 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: false, error: 'Invalid token' }, { status: 401 });
     }
 }
+
