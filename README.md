@@ -14,8 +14,13 @@ ChemZim is built for speed, security, and scientific precision.
 - **NextAuth Integration:** Secure session management with HTTP-only cookies and robust middleware protection.
 
 ### 🗂️ Scalable Multi-Board Curriculum Registry
-- **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620 and `cie-alevel` for AS/A-Level 9701) with dynamic registries for modular lessons, exams, and difficulty levels.
-- **Granular Lesson Tree:** Maps 56 unique lessons per track, matching standard curriculum specifications.
+- **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620, `cie-alevel` for AS/A-Level 9701, and `edexcel-alevel` for Pearson Edexcel IAL Chemistry XCH11/YCH11) with dynamic registries for modular lessons, exams, and difficulty levels.
+- **Granular Lesson Tree:** Maps 56 unique lessons for CIE tracks and 22 lessons (across 6 units) for Edexcel, matching standard curriculum specifications.
+- **Security & Authorization Middleware:** Integrated route protection for `edexcel-alevel` and automated student track redirection during login based on registered grades.
+
+
+### ⚙️ Build & Deployment Stability
+- **TypeScript Compliance:** Cleaned registry code structure (resolving duplicate entries and merge remnants in lesson trees) and decoupled context calls (connecting quiz events directly to `useGamification` for XP processing), ensuring consistent build success and type check compliance on cloud deployment engines.
 
 ### 📝 Smart Exam Engine
 - **Bloom's Taxonomy Levels:** Questions organized into 3 difficulty levels (Retrieve, Apply, Analyze).

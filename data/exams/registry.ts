@@ -1,4 +1,4 @@
-﻿import { Question } from './types';
+import { Question } from './types';
 import { level1Questions as ci_u1_l1_lv1 } from './cie-igcse/unit-1/lesson-1/level-1';
 import { level2Questions as ci_u1_l1_lv2 } from './cie-igcse/unit-1/lesson-1/level-2';
 import { level3Questions as ci_u1_l1_lv3 } from './cie-igcse/unit-1/lesson-1/level-3';
@@ -168,7 +168,204 @@ import { level1Questions as ci_u12_l4_lv1 } from './cie-igcse/unit-12/lesson-4/l
 import { level2Questions as ci_u12_l4_lv2 } from './cie-igcse/unit-12/lesson-4/level-2';
 import { level3Questions as ci_u12_l4_lv3 } from './cie-igcse/unit-12/lesson-4/level-3';
 
+// Edexcel A-Level Imports
+import { level1Questions as ed_u1_l1_lv1 } from './edexcel-alevel/unit-1/lesson-1/level-1';
+import { level2Questions as ed_u1_l1_lv2 } from './edexcel-alevel/unit-1/lesson-1/level-2';
+import { level3Questions as ed_u1_l1_lv3 } from './edexcel-alevel/unit-1/lesson-1/level-3';
+import { level1Questions as ed_u1_l2_lv1 } from './edexcel-alevel/unit-1/lesson-2/level-1';
+import { level2Questions as ed_u1_l2_lv2 } from './edexcel-alevel/unit-1/lesson-2/level-2';
+import { level3Questions as ed_u1_l2_lv3 } from './edexcel-alevel/unit-1/lesson-2/level-3';
+import { level1Questions as ed_u1_l3_lv1 } from './edexcel-alevel/unit-1/lesson-3/level-1';
+import { level2Questions as ed_u1_l3_lv2 } from './edexcel-alevel/unit-1/lesson-3/level-2';
+import { level3Questions as ed_u1_l3_lv3 } from './edexcel-alevel/unit-1/lesson-3/level-3';
+import { level1Questions as ed_u1_l4_lv1 } from './edexcel-alevel/unit-1/lesson-4/level-1';
+import { level2Questions as ed_u1_l4_lv2 } from './edexcel-alevel/unit-1/lesson-4/level-2';
+import { level3Questions as ed_u1_l4_lv3 } from './edexcel-alevel/unit-1/lesson-4/level-3';
+import { level1Questions as ed_u1_l5_lv1 } from './edexcel-alevel/unit-1/lesson-5/level-1';
+import { level2Questions as ed_u1_l5_lv2 } from './edexcel-alevel/unit-1/lesson-5/level-2';
+import { level3Questions as ed_u1_l5_lv3 } from './edexcel-alevel/unit-1/lesson-5/level-3';
+
+import { level1Questions as ed_u2_l1_lv1 } from './edexcel-alevel/unit-2/lesson-1/level-1';
+import { level2Questions as ed_u2_l1_lv2 } from './edexcel-alevel/unit-2/lesson-1/level-2';
+import { level3Questions as ed_u2_l1_lv3 } from './edexcel-alevel/unit-2/lesson-1/level-3';
+import { level1Questions as ed_u2_l2_lv1 } from './edexcel-alevel/unit-2/lesson-2/level-1';
+import { level2Questions as ed_u2_l2_lv2 } from './edexcel-alevel/unit-2/lesson-2/level-2';
+import { level3Questions as ed_u2_l2_lv3 } from './edexcel-alevel/unit-2/lesson-2/level-3';
+import { level1Questions as ed_u2_l3_lv1 } from './edexcel-alevel/unit-2/lesson-3/level-1';
+import { level2Questions as ed_u2_l3_lv2 } from './edexcel-alevel/unit-2/lesson-3/level-2';
+import { level3Questions as ed_u2_l3_lv3 } from './edexcel-alevel/unit-2/lesson-3/level-3';
+import { level1Questions as ed_u2_l4_lv1 } from './edexcel-alevel/unit-2/lesson-4/level-1';
+import { level2Questions as ed_u2_l4_lv2 } from './edexcel-alevel/unit-2/lesson-4/level-2';
+import { level3Questions as ed_u2_l4_lv3 } from './edexcel-alevel/unit-2/lesson-4/level-3';
+import { level1Questions as ed_u2_l5_lv1 } from './edexcel-alevel/unit-2/lesson-5/level-1';
+import { level2Questions as ed_u2_l5_lv2 } from './edexcel-alevel/unit-2/lesson-5/level-2';
+import { level3Questions as ed_u2_l5_lv3 } from './edexcel-alevel/unit-2/lesson-5/level-3';
+
+import { level1Questions as ed_u3_l1_lv1 } from './edexcel-alevel/unit-3/lesson-1/level-1';
+import { level2Questions as ed_u3_l1_lv2 } from './edexcel-alevel/unit-3/lesson-1/level-2';
+import { level3Questions as ed_u3_l1_lv3 } from './edexcel-alevel/unit-3/lesson-1/level-3';
+
+import { level1Questions as ed_u4_l1_lv1 } from './edexcel-alevel/unit-4/lesson-1/level-1';
+import { level2Questions as ed_u4_l1_lv2 } from './edexcel-alevel/unit-4/lesson-1/level-2';
+import { level3Questions as ed_u4_l1_lv3 } from './edexcel-alevel/unit-4/lesson-1/level-3';
+import { level1Questions as ed_u4_l2_lv1 } from './edexcel-alevel/unit-4/lesson-2/level-1';
+import { level2Questions as ed_u4_l2_lv2 } from './edexcel-alevel/unit-4/lesson-2/level-2';
+import { level3Questions as ed_u4_l2_lv3 } from './edexcel-alevel/unit-4/lesson-2/level-3';
+import { level1Questions as ed_u4_l3_lv1 } from './edexcel-alevel/unit-4/lesson-3/level-1';
+import { level2Questions as ed_u4_l3_lv2 } from './edexcel-alevel/unit-4/lesson-3/level-2';
+import { level3Questions as ed_u4_l3_lv3 } from './edexcel-alevel/unit-4/lesson-3/level-3';
+import { level1Questions as ed_u4_l4_lv1 } from './edexcel-alevel/unit-4/lesson-4/level-1';
+import { level2Questions as ed_u4_l4_lv2 } from './edexcel-alevel/unit-4/lesson-4/level-2';
+import { level3Questions as ed_u4_l4_lv3 } from './edexcel-alevel/unit-4/lesson-4/level-3';
+import { level1Questions as ed_u4_l5_lv1 } from './edexcel-alevel/unit-4/lesson-5/level-1';
+import { level2Questions as ed_u4_l5_lv2 } from './edexcel-alevel/unit-4/lesson-5/level-2';
+import { level3Questions as ed_u4_l5_lv3 } from './edexcel-alevel/unit-4/lesson-5/level-3';
+import { level1Questions as ed_u4_l6_lv1 } from './edexcel-alevel/unit-4/lesson-6/level-1';
+import { level2Questions as ed_u4_l6_lv2 } from './edexcel-alevel/unit-4/lesson-6/level-2';
+import { level3Questions as ed_u4_l6_lv3 } from './edexcel-alevel/unit-4/lesson-6/level-3';
+
+import { level1Questions as ed_u5_l1_lv1 } from './edexcel-alevel/unit-5/lesson-1/level-1';
+import { level2Questions as ed_u5_l1_lv2 } from './edexcel-alevel/unit-5/lesson-1/level-2';
+import { level3Questions as ed_u5_l1_lv3 } from './edexcel-alevel/unit-5/lesson-1/level-3';
+import { level1Questions as ed_u5_l2_lv1 } from './edexcel-alevel/unit-5/lesson-2/level-1';
+import { level2Questions as ed_u5_l2_lv2 } from './edexcel-alevel/unit-5/lesson-2/level-2';
+import { level3Questions as ed_u5_l2_lv3 } from './edexcel-alevel/unit-5/lesson-2/level-3';
+import { level1Questions as ed_u5_l3_lv1 } from './edexcel-alevel/unit-5/lesson-3/level-1';
+import { level2Questions as ed_u5_l3_lv2 } from './edexcel-alevel/unit-5/lesson-3/level-2';
+import { level3Questions as ed_u5_l3_lv3 } from './edexcel-alevel/unit-5/lesson-3/level-3';
+import { level1Questions as ed_u5_l4_lv1 } from './edexcel-alevel/unit-5/lesson-4/level-1';
+import { level2Questions as ed_u5_l4_lv2 } from './edexcel-alevel/unit-5/lesson-4/level-2';
+import { level3Questions as ed_u5_l4_lv3 } from './edexcel-alevel/unit-5/lesson-4/level-3';
+
+import { level1Questions as ed_u6_l1_lv1 } from './edexcel-alevel/unit-6/lesson-1/level-1';
+import { level2Questions as ed_u6_l1_lv2 } from './edexcel-alevel/unit-6/lesson-1/level-2';
+import { level3Questions as ed_u6_l1_lv3 } from './edexcel-alevel/unit-6/lesson-1/level-3';
+
 export const examsRegistry: Record<string, Record<number, Record<number, Question[]>>> = {
+    'edexcel-alevel': {
+        1: {
+            1: [
+                ...ed_u1_l1_lv1,
+                ...ed_u1_l1_lv2,
+                ...ed_u1_l1_lv3
+            ],
+            2: [
+                ...ed_u1_l2_lv1,
+                ...ed_u1_l2_lv2,
+                ...ed_u1_l2_lv3
+            ],
+            3: [
+                ...ed_u1_l3_lv1,
+                ...ed_u1_l3_lv2,
+                ...ed_u1_l3_lv3
+            ],
+            4: [
+                ...ed_u1_l4_lv1,
+                ...ed_u1_l4_lv2,
+                ...ed_u1_l4_lv3
+            ],
+            5: [
+                ...ed_u1_l5_lv1,
+                ...ed_u1_l5_lv2,
+                ...ed_u1_l5_lv3
+            ],
+        },
+        2: {
+            1: [
+                ...ed_u2_l1_lv1,
+                ...ed_u2_l1_lv2,
+                ...ed_u2_l1_lv3
+            ],
+            2: [
+                ...ed_u2_l2_lv1,
+                ...ed_u2_l2_lv2,
+                ...ed_u2_l2_lv3
+            ],
+            3: [
+                ...ed_u2_l3_lv1,
+                ...ed_u2_l3_lv2,
+                ...ed_u2_l3_lv3
+            ],
+            4: [
+                ...ed_u2_l4_lv1,
+                ...ed_u2_l4_lv2,
+                ...ed_u2_l4_lv3
+            ],
+            5: [
+                ...ed_u2_l5_lv1,
+                ...ed_u2_l5_lv2,
+                ...ed_u2_l5_lv3
+            ],
+        },
+        3: {
+            1: [
+                ...ed_u3_l1_lv1,
+                ...ed_u3_l1_lv2,
+                ...ed_u3_l1_lv3
+            ],
+        },
+        4: {
+            1: [
+                ...ed_u4_l1_lv1,
+                ...ed_u4_l1_lv2,
+                ...ed_u4_l1_lv3
+            ],
+            2: [
+                ...ed_u4_l2_lv1,
+                ...ed_u4_l2_lv2,
+                ...ed_u4_l2_lv3
+            ],
+            3: [
+                ...ed_u4_l3_lv1,
+                ...ed_u4_l3_lv2,
+                ...ed_u4_l3_lv3
+            ],
+            4: [
+                ...ed_u4_l4_lv1,
+                ...ed_u4_l4_lv2,
+                ...ed_u4_l4_lv3
+            ],
+            5: [
+                ...ed_u4_l5_lv1,
+                ...ed_u4_l5_lv2,
+                ...ed_u4_l5_lv3
+            ],
+            6: [
+                ...ed_u4_l6_lv1,
+                ...ed_u4_l6_lv2,
+                ...ed_u4_l6_lv3
+            ],
+        },
+        5: {
+            1: [
+                ...ed_u5_l1_lv1,
+                ...ed_u5_l1_lv2,
+                ...ed_u5_l1_lv3
+            ],
+            2: [
+                ...ed_u5_l2_lv1,
+                ...ed_u5_l2_lv2,
+                ...ed_u5_l2_lv3
+            ],
+            3: [
+                ...ed_u5_l3_lv1,
+                ...ed_u5_l3_lv2,
+                ...ed_u5_l3_lv3
+            ],
+            4: [
+                ...ed_u5_l4_lv1,
+                ...ed_u5_l4_lv2,
+                ...ed_u5_l4_lv3
+            ],
+        },
+        6: {
+            1: [
+                ...ed_u6_l1_lv1,
+                ...ed_u6_l1_lv2,
+                ...ed_u6_l1_lv3
+            ],
+        },
+    },
     'cie-igcse': {
         1: {
             1: [
