@@ -15,6 +15,7 @@ export interface SessionPayload extends JWTPayload {
     id: string;
     name?: string;
     grade?: string;
+    track?: string;
 }
 
 // ============================================

@@ -2,13 +2,28 @@ import React from 'react';
 import { CurriculumView } from '@/components/ui/CurriculumView';
 import { allCurricula } from '@/data/curriculum';
 import { Metadata } from 'next';
+import { getSessionFromCookies } from '@/lib/session';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
     title: 'Curriculum | ChemZim',
     description: 'Explore the Cambridge IGCSE and AS/A Level Chemistry curriculum.',
 };
 
-export default function CurriculumPage() {
+export default async function CurriculumPage() {
+    const session = await getSessionFromCookies();
+    if (!session) {
+        redirect('/login');
+    }
+
+    const { track, isAdmin, role } = session;
+    const isSystemAdmin = isAdmin === true || role === 'admin' || role === 'moderator';
+
+    const filteredCurricula = allCurricula.filter(c => {
+        if (isSystemAdmin) return true; // Admin can see both
+        return c.id === track;
+    });
+
     return (
         <div className="w-full h-full min-h-[calc(100vh-120px)] relative">
             {/* Header Area */}
@@ -25,7 +40,7 @@ export default function CurriculumPage() {
             </div>
 
             {/* Curriculum Viewer */}
-            <CurriculumView curricula={allCurricula} />
+            <CurriculumView curricula={filteredCurricula} />
         </div>
     );
 }

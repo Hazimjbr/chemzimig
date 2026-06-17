@@ -16,6 +16,7 @@ import {
     Clock
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function AdminPage() {
     const { user, isLoading } = useAuth();
@@ -93,21 +94,30 @@ export default function AdminPage() {
                         <p className="text-slate-500 font-medium">Welcome back, Master Hazim. The platform is secure.</p>
                     </div>
 
-                    <div className="flex bg-white/5 border border-white/10 p-1 rounded-2xl">
-                        {['overview', 'students', 'devices'].map((tab) => (
-                            <button
-                                key={tab}
-                                onClick={() => setActiveTab(tab)}
-                                className={`
-                                    px-6 py-2.5 rounded-xl font-bold text-sm transition-all capitalize
-                                    ${activeTab === tab 
-                                        ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30' 
-                                        : 'text-slate-400 hover:text-white'}
-                                `}
-                            >
-                                {tab}
-                            </button>
-                        ))}
+                    <div className="flex flex-wrap items-center gap-3">
+                        <Link 
+                            href="/dashboard" 
+                            className="px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-xl font-bold text-sm transition-all flex items-center gap-2 shadow-sm"
+                        >
+                            ← Back to Dashboard
+                        </Link>
+                        
+                        <div className="flex bg-white/5 border border-white/10 p-1 rounded-2xl">
+                            {['overview', 'students', 'devices'].map((tab) => (
+                                <button
+                                    key={tab}
+                                    onClick={() => setActiveTab(tab)}
+                                    className={`
+                                        px-6 py-2.5 rounded-xl font-bold text-sm transition-all capitalize
+                                        ${activeTab === tab 
+                                            ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30' 
+                                            : 'text-slate-400 hover:text-white'}
+                                    `}
+                                >
+                                    {tab}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -190,6 +200,7 @@ export default function AdminPage() {
                                                     <option value="IGCSE">IGCSE</option>
                                                     <option value="AS Level">AS Level</option>
                                                     <option value="A2 Level">A2 Level</option>
+                                                    <option value="Edexcel A Level">Edexcel A Level</option>
                                                     <option value="IB">IB Chemistry</option>
                                                 </select>
                                                 <button 

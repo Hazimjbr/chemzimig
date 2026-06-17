@@ -15,7 +15,7 @@ export interface CurriculumLevel {
 }
 
 export const igcseCurriculum: CurriculumLevel = {
-  id: "igcse",
+  id: "cie-igcse",
   code: "0620",
   title: "IGCSE Chemistry",
   description: "Cambridge IGCSE Chemistry (0620) — O-Level",
@@ -166,7 +166,7 @@ export const igcseCurriculum: CurriculumLevel = {
 };
 
 export const aLevelCurriculum: CurriculumLevel = {
-  id: "a-level",
+  id: "cie-alevel",
   code: "9701",
   title: "AS & A Level Chemistry",
   description: "Cambridge International AS & A Level Chemistry (9701)",
@@ -225,4 +225,77 @@ export const aLevelCurriculum: CurriculumLevel = {
   ],
 };
 
-export const allCurricula: CurriculumLevel[] = [igcseCurriculum, aLevelCurriculum];
+export const edexcelCurriculum: CurriculumLevel = {
+  id: "edexcel-alevel",
+  code: "IAL Chemistry",
+  title: "Edexcel IAL Chemistry",
+  description: "Pearson Edexcel International Advanced Level (IAL) Chemistry (XCH11/YCH11)",
+  topics: [
+    {
+      id: "edexcel-unit-1",
+      number: 1,
+      title: "Unit 1: Structure, Bonding & Intro Organic",
+      subtopics: [
+        "Topic 1: Formulae, Equations & Amount of Substance",
+        "Topic 2: Atomic Structure & The Periodic Table",
+        "Topic 3: Bonding & Structure",
+        "Topic 4: Introductory Organic Chemistry & Alkanes",
+        "Topic 5: Alkenes"
+      ]
+    },
+    {
+      id: "edexcel-unit-2",
+      number: 2,
+      title: "Unit 2: Energetics, Group Chem, Halogenoalkanes & Alcohols",
+      subtopics: [
+        "Topic 6: Energetics",
+        "Topic 7: Intermolecular Forces",
+        "Topic 8: Redox Chemistry & Groups 1, 2 and 7",
+        "Topic 9: Kinetics & Equilibria I",
+        "Topic 10: Organic Chemistry: Halogenoalkanes, Alcohols & Modern Analytical Techniques I"
+      ]
+    },
+    {
+      id: "edexcel-unit-3",
+      number: 3,
+      title: "Unit 3: Practical Skills in Chemistry I",
+      subtopics: [
+        "Topic 11: AS Practical Skills and Techniques"
+      ]
+    },
+    {
+      id: "edexcel-unit-4",
+      number: 4,
+      title: "Unit 4: Rates, Equilibria & Further Organic",
+      subtopics: [
+        "Topic 12: Kinetics & Equilibria II",
+        "Topic 13: Entropy & Energetics II",
+        "Topic 14: Chemical Equilibria II",
+        "Topic 15: Acid-Base Equilibria",
+        "Topic 16: Organic Chemistry: Carbonyls, Carboxylic Acids & Chirality",
+        "Topic 17: Organic Chemistry: Arenes, Amines, Amides & Amino Acids"
+      ]
+    },
+    {
+      id: "edexcel-unit-5",
+      number: 5,
+      title: "Unit 5: Transition Metals & Organic Nitrogen Chemistry",
+      subtopics: [
+        "Topic 18: Redox Equilibria",
+        "Topic 19: Transition Metals & Their Chemistry",
+        "Topic 20: Organic Chemistry: Arenes, Nitrogen Compounds & Synthesis",
+        "Topic 21: Modern Analytical Techniques II"
+      ]
+    },
+    {
+      id: "edexcel-unit-6",
+      number: 6,
+      title: "Unit 6: Practical Skills in Chemistry II",
+      subtopics: [
+        "Topic 22: A2 Practical Skills and Techniques"
+      ]
+    }
+  ]
+};
+
+export const allCurricula: CurriculumLevel[] = [igcseCurriculum, aLevelCurriculum, edexcelCurriculum];

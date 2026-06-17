@@ -13,6 +13,10 @@ ChemZim is built for speed, security, and scientific precision.
 - **Lockdown Mode:** Firestore security rules are set to block direct client access, preventing any unauthorized manipulation.
 - **NextAuth Integration:** Secure session management with HTTP-only cookies and robust middleware protection.
 
+### 🗂️ Scalable Multi-Board Curriculum Registry
+- **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620 and `cie-alevel` for AS/A-Level 9701) with dynamic registries for modular lessons, exams, and difficulty levels.
+- **Granular Lesson Tree:** Maps 56 unique lessons per track, matching standard curriculum specifications.
+
 ### 📝 Smart Exam Engine
 - **Bloom's Taxonomy Levels:** Questions organized into 3 difficulty levels (Retrieve, Apply, Analyze).
 - **Grouped Randomization:** Questions sharing a scientific context (diagrams, tables) are presented together as a cohesive unit.
@@ -21,7 +25,7 @@ ChemZim is built for speed, security, and scientific precision.
 ### 🚀 Premium Interactive UX
 - **3D Molecular Visualization:** Interactive atomic models using **React Three Fiber**.
 - **Modern Aesthetics:** Glassmorphism, NeonGlow accents, and ultra-smooth transitions using **Framer Motion**.
-- **Mobile First:** Responsive charts, tables, and a floating toolbar for a seamless experience on any device.
+- **Mobile First & Orientation Aware:** Responsive charts, tables, sidebar navigation, and a floating toolbar. Includes a custom orientation-aware Casio Scientific Calculator that automatically splits into a dual-column layout on mobile landscape screens.
 
 ---
 

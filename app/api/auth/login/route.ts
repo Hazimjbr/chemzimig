@@ -34,8 +34,11 @@ export async function POST(request: NextRequest) {
             fingerprint,
             { ...deviceInfo, ipAddress }
         );
-
         if (result.success && result.student) {
+            const isOLevel = result.student.grade?.toLowerCase().includes('igcse') || false;
+            const isEdexcel = result.student.grade?.toLowerCase().includes('edexcel') || false;
+            const track = isEdexcel ? 'edexcel-alevel' : (isOLevel ? 'cie-igcse' : 'cie-alevel');
+
             const safeStudent = {
                 id: result.student.id,
                 username: result.student.username,
@@ -45,6 +48,7 @@ export async function POST(request: NextRequest) {
                 grade: result.student.grade,
                 isAdmin: result.student.isAdmin || false,
                 role: result.student.role || 'student',
+                track,
             };
 
             const response = NextResponse.json({
@@ -60,6 +64,7 @@ export async function POST(request: NextRequest) {
                 id: safeStudent.id,
                 name: safeStudent.name,
                 grade: safeStudent.grade,
+                track,
             });
 
             const cookieOptions = getSessionCookieOptions();

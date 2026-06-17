@@ -7,6 +7,8 @@ import ReactMarkdown from 'react-markdown';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 
+import { getLessonFromRegistry } from '@/data/curriculum/registry';
+
 interface TopicPageProps {
     params: Promise<{
         curriculumId: string;
@@ -14,12 +16,13 @@ interface TopicPageProps {
     }>;
     searchParams: Promise<{
         tab?: string;
+        lesson?: string;
     }>;
 }
 
 export default async function TopicPage({ params, searchParams }: TopicPageProps) {
     const { curriculumId, topicId } = await params;
-    const { tab = 'theory' } = await searchParams;
+    const { tab = 'theory', lesson = '1' } = await searchParams;
 
     const curriculum = allCurricula.find(c => c.id === curriculumId);
     const topic = curriculum?.topics.find(t => t.id === topicId);
@@ -34,6 +37,11 @@ export default async function TopicPage({ params, searchParams }: TopicPageProps
             </div>
         );
     }
+
+    const track = curriculumId;
+    const currentLessonNum = parseInt(lesson, 10);
+    const lessonData = getLessonFromRegistry(track, topic.number, currentLessonNum);
+    const theoryContent = lessonData ? lessonData.theory : topic.theory;
 
     const topicQuestions = questionBank.filter(q => q.topic === topic.id);
 
@@ -60,7 +68,7 @@ export default async function TopicPage({ params, searchParams }: TopicPageProps
             {/* Tabs */}
             <div className="flex space-x-2 border-b border-white/10 mb-8">
                 <Link
-                    href={`/dashboard/curriculum/${curriculumId}/${topicId}?tab=theory`}
+                    href={`/dashboard/curriculum/${curriculumId}/${topicId}?tab=theory&lesson=${lesson}`}
                     className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors border-b-2 ${
                         tab === 'theory'
                             ? 'text-indigo-400 border-indigo-400'
@@ -71,7 +79,7 @@ export default async function TopicPage({ params, searchParams }: TopicPageProps
                     Theory
                 </Link>
                 <Link
-                    href={`/dashboard/curriculum/${curriculumId}/${topicId}?tab=questions`}
+                    href={`/dashboard/curriculum/${curriculumId}/${topicId}?tab=questions&lesson=${lesson}`}
                     className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors border-b-2 ${
                         tab === 'questions'
                             ? 'text-emerald-400 border-emerald-400'
@@ -87,7 +95,37 @@ export default async function TopicPage({ params, searchParams }: TopicPageProps
             <div className="bg-[#0a0a1f]/60 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-10">
                 {tab === 'theory' ? (
                     <div className="prose prose-invert prose-indigo max-w-none">
-                        {topic.theory ? (
+                        {/* Lesson-level selector */}
+                        {topic.subtopics && topic.subtopics.length > 0 && (
+                            <div className="flex flex-wrap gap-2 mb-8 border-b border-white/5 pb-5">
+                                {topic.subtopics.map((sub, idx) => {
+                                    const lessonNum = idx + 1;
+                                    const hasLessonContent = getLessonFromRegistry(track, topic.number, lessonNum) !== null;
+                                    return hasLessonContent ? (
+                                        <Link
+                                            key={idx}
+                                            href={`/dashboard/curriculum/${curriculumId}/${topicId}?tab=theory&lesson=${lessonNum}`}
+                                            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border ${
+                                                currentLessonNum === lessonNum
+                                                    ? 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400 shadow-inner shadow-indigo-500/5'
+                                                    : 'bg-white/5 border-white/10 text-slate-300 hover:text-white hover:bg-white/10'
+                                            }`}
+                                        >
+                                            Lesson {lessonNum}: {sub}
+                                        </Link>
+                                    ) : (
+                                        <div
+                                            key={idx}
+                                            className="px-4 py-2 rounded-xl text-xs font-bold transition-all border bg-white/[0.02] border-dashed border-white/5 text-slate-600 cursor-not-allowed"
+                                        >
+                                            Lesson {lessonNum}: {sub}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        )}
+
+                        {theoryContent ? (
                             <ReactMarkdown
                                 components={{
                                     p: ({node, ...props}) => <p className="text-slate-300 leading-relaxed mb-4" {...props} />,
@@ -98,7 +136,7 @@ export default async function TopicPage({ params, searchParams }: TopicPageProps
                                     strong: ({node, ...props}) => <strong className="text-white font-semibold" {...props} />,
                                 }}
                             >
-                                {topic.theory}
+                                {theoryContent}
                             </ReactMarkdown>
                         ) : (
                             <div className="text-center py-12">

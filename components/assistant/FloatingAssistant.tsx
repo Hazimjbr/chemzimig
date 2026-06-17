@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, Grid3x3, LayoutGrid, Calculator } from 'lucide-react';
+import { ChevronLeft, Grid3x3, LayoutGrid, Calculator } from 'lucide-react';
 import PeriodicTable from './PeriodicTable';
 import ScientificCalculator from './ScientificCalculator';
 
@@ -29,17 +29,28 @@ export default function FloatingAssistant() {
 
     return (
         <>
-            <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex items-center">
-                {/* Tools Container */}
-                <motion.div
-                    initial={false}
-                    animate={{ 
-                        x: isExpanded ? 0 : -60,
-                        opacity: isExpanded ? 1 : 0.4
-                    }}
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    className="flex flex-col gap-3 bg-[#0a0a1a]/80 backdrop-blur-xl p-3 border-r border-y border-white/10 rounded-r-2xl shadow-[10px_0_30px_rgba(0,0,0,0.5)]"
+            <motion.div 
+                animate={{ right: isExpanded ? 0 : -68 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                className="fixed top-1/2 -translate-y-1/2 z-50 flex items-center"
+            >
+                {/* Toggle Button */}
+                <motion.button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    whileHover={{ scale: 1.1, x: -2 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="w-6 h-16 bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center rounded-l-lg shadow-[-4px_0_15px_rgba(79,70,229,0.4)] transition-colors border-y border-l border-white/10"
                 >
+                    <motion.div
+                        animate={{ rotate: isExpanded ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <ChevronLeft size={18} />
+                    </motion.div>
+                </motion.button>
+
+                {/* Tools Container */}
+                <div className="flex flex-col gap-3 bg-[#0a0a1a]/80 backdrop-blur-xl p-3 border-l border-y border-white/10 rounded-l-2xl shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
                     {/* Periodic Table Trigger */}
                     <motion.button
                         onClick={() => {
@@ -66,23 +77,8 @@ export default function FloatingAssistant() {
                     >
                         <Calculator size={20} />
                     </motion.button>
-                </motion.div>
-
-                {/* Toggle Button */}
-                <motion.button
-                    onClick={() => setIsExpanded(!isExpanded)}
-                    whileHover={{ scale: 1.1, x: 2 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-6 h-16 bg-indigo-600 hover:bg-indigo-500 text-white flex items-center justify-center rounded-r-lg shadow-[4px_0_15px_rgba(79,70,229,0.4)] transition-colors border-y border-r border-white/10"
-                >
-                    <motion.div
-                        animate={{ rotate: isExpanded ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <ChevronRight size={18} />
-                    </motion.div>
-                </motion.button>
-            </div>
+                </div>
+            </motion.div>
 
             {/* Modals */}
             <PeriodicTable 

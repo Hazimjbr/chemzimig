@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { GamificationProvider } from "@/contexts/GamificationContext";
 import FloatingAssistant from "@/components/assistant/FloatingAssistant";
 
 const inter = Inter({
@@ -64,8 +65,10 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex flex-col antialiased">
         <AuthProvider>
-          {children}
-          <FloatingAssistant />
+          <GamificationProvider>
+            {children}
+            <FloatingAssistant />
+          </GamificationProvider>
         </AuthProvider>
       </body>
     </html>

@@ -20,6 +20,7 @@ export interface AuthUser {
     isAdmin: boolean;
     role: 'admin' | 'moderator' | 'student';
     authMethod: 'google' | 'credentials';
+    track?: string;
     xp?: number;
     level?: number;
 }
@@ -328,9 +329,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                     name: result.user.name,
                     email: result.user.email,
                     image: result.user.image,
+                    grade: result.user.grade,
                     isAdmin: result.user.isAdmin || false,
                     role: result.user.role || (result.user.isAdmin ? 'admin' : 'student'),
-                    authMethod: 'credentials'
+                    authMethod: 'credentials',
+                    track: result.user.track,
                 };
 
                 setUser(authUser);

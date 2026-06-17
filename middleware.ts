@@ -47,54 +47,87 @@ export async function middleware(request: NextRequest) {
         }
     }
 
-    // ============ Admin route protection ============
-    if (!pathname.startsWith('/admin') && !pathname.startsWith('/api/admin')) {
+    // Skip auth check for public API auth endpoints
+    if (pathname.startsWith('/api/auth/')) {
+        return NextResponse.next();
+    }
+
+    // Identify paths that require protection
+    const isAdminRoute = pathname.startsWith('/admin') || pathname.startsWith('/api/admin');
+    const isDashboardRoute = pathname.startsWith('/dashboard');
+    const isOlevelRoute = pathname.startsWith('/dashboard/curriculum/cie-igcse') || pathname.startsWith('/api/cie-igcse');
+    const isAlevelRoute = pathname.startsWith('/dashboard/curriculum/cie-alevel') || pathname.startsWith('/api/cie-alevel');
+    const isEdexcelRoute = pathname.startsWith('/dashboard/curriculum/edexcel-alevel') || pathname.startsWith('/api/edexcel-alevel');
+
+    if (!isAdminRoute && !isDashboardRoute && !isOlevelRoute && !isAlevelRoute && !isEdexcelRoute) {
         return NextResponse.next();
     }
 
     // 1. Check signed JWT session cookie (The only source of truth now)
     const sessionCookie = request.cookies.get(SESSION_COOKIE_NAME);
+    let sessionPayload: any = null;
+
     if (sessionCookie?.value) {
         try {
             const secret = getSecretKey();
             const { payload } = await jwtVerify(sessionCookie.value, secret);
-
-            // Verify admin claims from the SIGNED token (cannot be forged)
-            if (payload.isAdmin === true || payload.role === 'admin' || payload.role === 'moderator') {
-                return NextResponse.next();
-            }
+            sessionPayload = payload;
         } catch {
-            // Invalid/expired/tampered token - fall through to deny
+            // Invalid/expired/tampered token
         }
     }
 
-    // 2. Fallback: NextAuth JWT (if configured)
-    try {
-        const { getToken } = await import('next-auth/jwt');
-        const token = await getToken({
-            req: request,
-            secret: process.env.NEXTAUTH_SECRET,
-        });
-        if (token?.email && isAdminEmail(token.email)) {
-            return NextResponse.next();
+    // Redirect to login if not authenticated
+    if (!sessionPayload) {
+        if (pathname.startsWith('/api/')) {
+            return NextResponse.json(
+                { error: 'Unauthorized access' },
+                { status: 401 }
+            );
         }
-    } catch {
-        // next-auth not available
+        const loginUrl = new URL('/login', request.url);
+        loginUrl.searchParams.set('returnUrl', pathname);
+        return NextResponse.redirect(loginUrl);
     }
 
-    // Not authorized - redirect pages to home, return 401 for API routes
-    if (pathname.startsWith('/api/admin')) {
-        return NextResponse.json(
-            { error: 'Unauthorized access' },
-            { status: 401 }
-        );
+    const { role, isAdmin, track } = sessionPayload;
+    const isSystemAdmin = isAdmin === true || role === 'admin' || role === 'moderator';
+
+    // 2. Admin Route Protection
+    if (isAdminRoute && !isSystemAdmin) {
+        if (pathname.startsWith('/api/')) {
+            return NextResponse.json({ error: 'Unauthorized access' }, { status: 401 });
+        }
+        return NextResponse.redirect(new URL('/dashboard', request.url));
     }
 
-    const loginUrl = new URL('/login', request.url);
-    loginUrl.searchParams.set('returnUrl', pathname);
-    return NextResponse.redirect(loginUrl);
+    // 3. O-Level Route Protection
+    if (isOlevelRoute && !isSystemAdmin && track !== 'cie-igcse') {
+        if (pathname.startsWith('/api/')) {
+            return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+        }
+        return NextResponse.redirect(new URL('/dashboard', request.url));
+    }
+
+    // 4. A-Level Route Protection
+    if (isAlevelRoute && !isSystemAdmin && track !== 'cie-alevel') {
+        if (pathname.startsWith('/api/')) {
+            return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+        }
+        return NextResponse.redirect(new URL('/dashboard', request.url));
+    }
+
+    // 5. Edexcel A-Level Route Protection
+    if (isEdexcelRoute && !isSystemAdmin && track !== 'edexcel-alevel') {
+        if (pathname.startsWith('/api/')) {
+            return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+        }
+        return NextResponse.redirect(new URL('/dashboard', request.url));
+    }
+
+    return NextResponse.next();
 }
 
 export const config = {
-    matcher: ['/admin/:path*', '/api/:path*'],
+    matcher: ['/admin/:path*', '/api/:path*', '/dashboard/:path*'],
 };
