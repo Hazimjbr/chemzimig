@@ -44,11 +44,19 @@ export default function DashboardPage() {
     }, []);
 
     const stats = [
-        { label: 'Current Level', value: level, icon: Star, color: 'text-amber-400', bg: 'bg-amber-400/10' },
-        { label: 'Total XP', value: xp, icon: Zap, color: 'text-indigo-400', bg: 'bg-indigo-400/10' },
-        { label: 'Completed', value: '0', icon: BookOpen, color: 'text-emerald-400', bg: 'bg-emerald-400/10' },
-        { label: 'Day Streak', value: streak.currentStreak, icon: Flame, color: 'text-orange-400', bg: 'bg-orange-400/10' },
+        { label: 'Current Level', value: level, icon: Star, color: 'text-amber-400', bg: 'bg-amber-400/10', glow: 'glass-card-amber' },
+        { label: 'Total XP', value: xp, icon: Zap, color: 'text-indigo-400', bg: 'bg-indigo-400/10', glow: 'glass-card-indigo' },
+        { label: 'Completed', value: '0', icon: BookOpen, color: 'text-emerald-400', bg: 'bg-emerald-400/10', glow: 'glass-card-emerald' },
+        { label: 'Day Streak', value: streak.currentStreak, icon: Flame, color: 'text-orange-400', bg: 'bg-orange-400/10', glow: 'glass-card-gold' },
     ];
+
+    const getStreakFireClass = (days: number): string => {
+        if (days >= 15) return 'streak-fire streak-fire-legendary';
+        if (days >= 8) return 'streak-fire streak-fire-high';
+        if (days >= 4) return 'streak-fire streak-fire-mid';
+        if (days >= 1) return 'streak-fire streak-fire-low';
+        return '';
+    };
 
     return (
         <div className="max-w-7xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -103,13 +111,18 @@ export default function DashboardPage() {
                 {stats.map((stat, i) => (
                     <div 
                         key={i} 
-                        className="relative bg-white/[0.03] backdrop-blur-xl border border-white/5 p-8 rounded-[1.5rem] hover:bg-white/[0.05] hover:border-white/10 transition-all group overflow-hidden"
+                        className={`glass-card ${stat.glow} p-8 group ${stat.label === 'Day Streak' ? getStreakFireClass(typeof stat.value === 'number' ? stat.value : 0) : ''}`}
                     >
                         <div className={`w-14 h-14 ${stat.bg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500`}>
                             <stat.icon className={`w-7 h-7 ${stat.color}`} />
                         </div>
                         <p className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">{stat.label}</p>
-                        <p className="text-3xl font-black text-white">{stat.value}</p>
+                        <p className="text-3xl font-black text-white flex items-center gap-2">
+                            {stat.value}
+                            {stat.label === 'Day Streak' && typeof stat.value === 'number' && stat.value > 0 && (
+                                <span className="text-2xl animate-pulse">🔥</span>
+                            )}
+                        </p>
                         
                         {/* Interactive Sparkle Effect */}
                         <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-white/5 rounded-full blur-xl group-hover:scale-150 transition-transform duration-700" />
@@ -137,7 +150,7 @@ export default function DashboardPage() {
                             { title: 'Atomic Theory & Structure', unit: 'Unit 1: The Atom', time: '12 min', xp: '50', icon: '⚛️' },
                             { title: 'Ionic & Covalent Bonding', unit: 'Unit 2: Bonding', time: '18 min', xp: '75', icon: '💎' },
                         ].map((lesson, i) => (
-                            <div key={i} className="group relative bg-[#0a0a1f] border border-white/5 p-6 rounded-3xl flex items-center gap-6 hover:bg-indigo-500/[0.03] hover:border-indigo-500/20 transition-all cursor-pointer">
+                            <div key={i} className="glass-card glass-card-indigo p-6 flex items-center gap-6 cursor-pointer group">
                                 <div className="w-20 h-20 bg-slate-900 border border-white/5 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-105 transition-transform group-hover:bg-indigo-500/10 group-hover:border-indigo-500/20 shadow-inner">
                                     {lesson.icon}
                                 </div>

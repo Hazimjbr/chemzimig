@@ -6,6 +6,13 @@ import Link from "next/link";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [boardOpen, setBoardOpen] = useState(false);
+
+  const boards = [
+    { id: 'cie-igcse', label: 'CIE IGCSE', code: '0620', color: 'gold' },
+    { id: 'cie-alevel', label: 'CIE A-Level', code: '9701', color: 'teal' },
+    { id: 'edexcel-alevel', label: 'Edexcel IAL', code: 'XCH11', color: 'purple' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +21,20 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = () => setBoardOpen(false);
+    if (boardOpen) {
+      // Small timeout to avoid immediate triggering when button is clicked
+      const timer = setTimeout(() => {
+        document.addEventListener('click', handleClickOutside);
+      }, 50);
+      return () => {
+        clearTimeout(timer);
+        document.removeEventListener('click', handleClickOutside);
+      };
+    }
+  }, [boardOpen]);
 
   const navLinks = [
     { href: "#features", label: "Features" },
@@ -65,6 +86,42 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8" id="desktop-nav">
+          {/* Board Switcher */}
+          <div className="relative">
+            <button
+              onClick={() => setBoardOpen(!boardOpen)}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg glass border border-border hover:border-gold-500/30 transition-all text-sm cursor-pointer"
+              id="board-switcher-btn"
+            >
+              <div className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="text-gold-300 font-medium">CIE IGCSE</span>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform duration-200 ${boardOpen ? 'rotate-180' : ''}`}>
+                <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </button>
+            
+            {boardOpen && (
+              <div className="absolute top-full mt-2 left-0 w-56 glass-bright rounded-xl border border-border-bright shadow-2xl shadow-black/40 overflow-hidden z-50 animate-fade-in-up" style={{ animationDuration: '0.2s' }}>
+                {boards.map((board) => (
+                  <button
+                    key={board.id}
+                    className="w-full flex items-center gap-3 px-4 py-3 text-sm text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all text-left cursor-pointer"
+                    onClick={() => setBoardOpen(false)}
+                  >
+                    <div className={`w-2 h-2 rounded-full ${
+                      board.color === 'gold' ? 'bg-gold-500' :
+                      board.color === 'teal' ? 'bg-teal-500' : 'bg-purple-500'
+                    }`} />
+                    <div>
+                      <div className="font-medium">{board.label}</div>
+                      <div className="text-[10px] text-slate-500">{board.code}</div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           {navLinks.map((link) => (
             <a
               key={link.href}

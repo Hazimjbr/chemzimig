@@ -121,7 +121,7 @@ export default function HeroSection() {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-gold-500/20 mb-8 animate-fade-in-up">
           <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="text-xs font-medium text-gold-300">
-            Cambridge IGCSE & A-Level Chemistry
+            Cambridge IGCSE • A-Level • Edexcel IAL Chemistry
           </span>
         </div>
 
@@ -188,8 +188,8 @@ export default function HeroSection() {
         >
           {[
             { value: "1,500+", label: "Practice Questions" },
-            { value: "12", label: "IGCSE Topics" },
-            { value: "Free", label: "To Get Started" },
+            { value: "34", label: "Chemistry Topics" },
+            { value: "3", label: "Exam Boards" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">

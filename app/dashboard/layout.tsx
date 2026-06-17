@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();
     const { user, logout } = useAuth();
-    const { xp, level } = useGamification();
+    const { xp, level, streak } = useGamification();
 
     return (
         <div className="flex min-h-screen bg-[#050510] text-white font-sans overflow-hidden">
@@ -143,6 +143,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     </div>
 
                     <div className="flex items-center gap-4">
+                        {/* Streak Badge */}
+                        {streak?.currentStreak > 0 && (
+                            <div className="hidden md:flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-full">
+                                <span className="text-sm">🔥</span>
+                                <span className="text-sm font-bold text-orange-400">{streak.currentStreak}d</span>
+                            </div>
+                        )}
+                        {/* XP Badge */}
                         <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
                             <Trophy className="w-4 h-4 text-amber-400" />
                             <span className="text-sm font-bold text-amber-500/90">{xp} XP</span>

@@ -281,10 +281,10 @@ export default function QuizzesPage() {
             {step === 'playing' && questions.length > 0 && (
                 <div className="space-y-8 animate-in fade-in duration-500">
                     {/* Progress */}
-                    <div className="bg-[#0a0a1f]/60 border border-white/5 rounded-3xl p-6 flex items-center justify-between">
+                    <div className="quiz-header bg-[#0a0a1f]/60 border border-white/5 rounded-3xl p-6 flex items-center justify-between">
                         <div className="flex items-center gap-3">
                             <span className="text-sm font-bold text-indigo-400">Question {currentQuestionIndex + 1} of {questions.length}</span>
-                            <div className="w-32 h-2 bg-white/5 rounded-full overflow-hidden p-0.5 border border-white/5">
+                            <div className="quiz-progress-bar w-32 h-2 bg-white/5 rounded-full overflow-hidden p-0.5 border border-white/5">
                                 <div 
                                     className="h-full bg-indigo-500 rounded-full transition-all duration-300"
                                     style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
@@ -299,46 +299,48 @@ export default function QuizzesPage() {
 
                     {/* Question Card */}
                     <div className="bg-[#0a0a1f]/60 border border-white/5 rounded-3xl p-6 md:p-10 space-y-8">
-                        <div className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
-                            <LaTeXText text={questions[currentQuestionIndex].question} />
-                        </div>
+                        <div className="quiz-content-area flex flex-col gap-6">
+                            <div className="quiz-question-panel text-xl md:text-2xl font-semibold text-white leading-relaxed">
+                                <LaTeXText text={questions[currentQuestionIndex].question} />
+                            </div>
 
-                        {/* Options Grid */}
-                        <div className="grid gap-3">
-                            {questions[currentQuestionIndex].options.map((option, idx) => {
-                                const isSelected = selectedAnswer === idx;
-                                const isCorrect = idx === questions[currentQuestionIndex].correctAnswer;
-                                
-                                let cardStyle = "bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/5";
-                                if (isSelected) {
-                                    cardStyle = "bg-indigo-500/10 border-indigo-500/40 text-indigo-300";
-                                }
-                                if (isAnswerSubmitted) {
-                                    if (isCorrect) {
-                                        cardStyle = "bg-emerald-500/10 border-emerald-500/40 text-emerald-400";
-                                    } else if (isSelected) {
-                                        cardStyle = "bg-rose-500/10 border-rose-500/40 text-rose-400";
-                                    } else {
-                                        cardStyle = "bg-white/[0.01] border-white/5 text-slate-600 opacity-60";
+                            {/* Options Grid */}
+                            <div className="quiz-options-panel grid gap-3">
+                                {questions[currentQuestionIndex].options.map((option, idx) => {
+                                    const isSelected = selectedAnswer === idx;
+                                    const isCorrect = idx === questions[currentQuestionIndex].correctAnswer;
+                                    
+                                    let cardStyle = "bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/5";
+                                    if (isSelected) {
+                                        cardStyle = "bg-indigo-500/10 border-indigo-500/40 text-indigo-300";
                                     }
-                                }
+                                    if (isAnswerSubmitted) {
+                                        if (isCorrect) {
+                                            cardStyle = "bg-emerald-500/10 border-emerald-500/40 text-emerald-400";
+                                        } else if (isSelected) {
+                                            cardStyle = "bg-rose-500/10 border-rose-500/40 text-rose-400";
+                                        } else {
+                                            cardStyle = "bg-white/[0.01] border-white/5 text-slate-600 opacity-60";
+                                        }
+                                    }
 
-                                return (
-                                    <button
-                                        key={idx}
-                                        disabled={isAnswerSubmitted}
-                                        onClick={() => setSelectedAnswer(idx)}
-                                        className={`w-full flex items-center justify-between p-4 md:p-5 rounded-2xl border text-left transition-all ${cardStyle}`}
-                                    >
-                                        <span className="font-medium text-base">
-                                            <span className="mr-3 font-bold text-slate-500">{String.fromCharCode(65 + idx)}.</span>
-                                            <LaTeXText text={option.text} />
-                                        </span>
-                                        {isAnswerSubmitted && isCorrect && <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />}
-                                        {isAnswerSubmitted && isSelected && !isCorrect && <XCircle className="w-5 h-5 text-rose-400 flex-shrink-0" />}
-                                    </button>
-                                );
-                            })}
+                                    return (
+                                        <button
+                                            key={idx}
+                                            disabled={isAnswerSubmitted}
+                                            onClick={() => setSelectedAnswer(idx)}
+                                            className={`w-full flex items-center justify-between p-4 md:p-5 rounded-2xl border text-left transition-all ${cardStyle}`}
+                                        >
+                                            <span className="font-medium text-base">
+                                                <span className="mr-3 font-bold text-slate-500">{String.fromCharCode(65 + idx)}.</span>
+                                                <LaTeXText text={option.text} />
+                                            </span>
+                                            {isAnswerSubmitted && isCorrect && <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0" />}
+                                            {isAnswerSubmitted && isSelected && !isCorrect && <XCircle className="w-5 h-5 text-rose-400 flex-shrink-0" />}
+                                        </button>
+                                    );
+                                })}
+                            </div>
                         </div>
 
                         {/* Explanation Box */}
@@ -350,7 +352,7 @@ export default function QuizzesPage() {
                         )}
 
                         {/* Actions */}
-                        <div className="flex justify-end pt-4 border-t border-white/5">
+                        <div className="quiz-nav-buttons flex justify-end pt-4 border-t border-white/5">
                             {!isAnswerSubmitted ? (
                                 <button
                                     onClick={handleSubmitAnswer}

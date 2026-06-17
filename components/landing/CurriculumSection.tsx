@@ -25,7 +25,7 @@ const curricula = [
     status: "active" as const,
     questions: "1,500+",
     color: "gold",
-    gradient: "from-gold-600 to-gold-400",
+    gradient: "from-gold-600 to-gold-500",
   },
   {
     level: "AS-Level",
@@ -63,6 +63,24 @@ const curricula = [
     color: "purple",
     gradient: "from-purple-600 to-purple-400",
   },
+  {
+    level: "Edexcel IAL",
+    code: "XCH11/YCH11",
+    title: "International A-Level Chemistry",
+    description: "Pearson Edexcel International Advanced Level Chemistry covering 6 units from atomic structure to organic synthesis.",
+    topics: [
+      "Structure & Bonding",
+      "Energetics & Group Chemistry",
+      "Practical Skills I",
+      "Rates & Equilibria",
+      "Transition Metals",
+      "Practical Skills II",
+    ],
+    status: "active" as const,
+    questions: "Coming Soon",
+    color: "purple",
+    gradient: "from-purple-600 to-purple-400",
+  },
 ];
 
 const statusStyles = {
@@ -86,18 +104,16 @@ export default function CurriculumSection() {
             Curriculum
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] text-white mb-5">
-            Cambridge <span className="text-gradient-gold">International</span>{" "}
-            Syllabus
+            British <span className="text-gradient-gold">Curriculum</span> Chemistry
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto">
-            Aligned with the official Cambridge Assessment International
-            Education syllabi. Every question mapped to specific learning
-            objectives.
+            Aligned with Cambridge Assessment and Pearson Edexcel international syllabi.
+            Every question mapped to specific learning objectives.
           </p>
         </div>
 
         {/* Curriculum cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
           {curricula.map((curr, index) => {
             const status = statusStyles[curr.status];
             const isActive = curr.status === "active";
@@ -110,7 +126,7 @@ export default function CurriculumSection() {
                     ? "border-gold-500/30 hover:border-gold-500/50 hover:shadow-2xl hover:shadow-gold-500/10"
                     : "border-border hover:border-border-bright"
                 }`}
-                id={`curriculum-card-${curr.level.toLowerCase()}`}
+                id={`curriculum-card-${curr.level.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {/* Top gradient bar */}
                 <div
@@ -134,7 +150,7 @@ export default function CurriculumSection() {
                         </span>
                       </div>
                       <p className="text-xs text-muted">
-                        Cambridge {curr.code}
+                        {curr.level.includes("Edexcel") ? "Pearson" : "Cambridge"} {curr.code}
                       </p>
                     </div>
                     <div className="text-right">
