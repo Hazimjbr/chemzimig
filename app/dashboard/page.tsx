@@ -13,10 +13,13 @@ import {
     TrendingUp
 } from 'lucide-react';
 import Link from 'next/link';
+import { useGamification } from '@/contexts/GamificationContext';
 
 export default function DashboardPage() {
     const { user } = useAuth();
+    const { xp, level, streak, dailyChallenges } = useGamification();
     const [greeting, setGreeting] = useState('Welcome');
+    const [previewLeaderboard, setPreviewLeaderboard] = useState<any[]>([]);
 
     useEffect(() => {
         const hour = new Date().getHours();
@@ -25,11 +28,26 @@ export default function DashboardPage() {
         else setGreeting('Good Evening');
     }, []);
 
+    useEffect(() => {
+        const fetchPreview = async () => {
+            try {
+                const res = await fetch('/api/leaderboard?limit=3');
+                const data = await res.json();
+                if (data.success) {
+                    setPreviewLeaderboard(data.leaderboard);
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        };
+        fetchPreview();
+    }, []);
+
     const stats = [
-        { label: 'Current Level', value: user?.level || 1, icon: Star, color: 'text-amber-400', bg: 'bg-amber-400/10' },
-        { label: 'Total XP', value: user?.xp || 0, icon: Zap, color: 'text-indigo-400', bg: 'bg-indigo-400/10' },
+        { label: 'Current Level', value: level, icon: Star, color: 'text-amber-400', bg: 'bg-amber-400/10' },
+        { label: 'Total XP', value: xp, icon: Zap, color: 'text-indigo-400', bg: 'bg-indigo-400/10' },
         { label: 'Completed', value: '0', icon: BookOpen, color: 'text-emerald-400', bg: 'bg-emerald-400/10' },
-        { label: 'Day Streak', value: '1', icon: Flame, color: 'text-orange-400', bg: 'bg-orange-400/10' },
+        { label: 'Day Streak', value: streak.currentStreak, icon: Flame, color: 'text-orange-400', bg: 'bg-orange-400/10' },
     ];
 
     return (
@@ -50,19 +68,19 @@ export default function DashboardPage() {
                             Ready to master the elements today? You have new topical lessons and practice quizzes available for your <strong>{user?.grade || 'IGCSE'}</strong> curriculum.
                         </p>
                         <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
-                            <Link 
-                                href="/dashboard/lessons" 
-                                className="group/btn flex items-center gap-2 bg-white text-indigo-700 px-8 py-4 rounded-2xl font-bold hover:bg-indigo-50 transition-all shadow-xl shadow-black/10 active:scale-95"
-                            >
-                                Start Learning
-                                <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-                            </Link>
-                            <Link 
-                                href="/dashboard/quizzes" 
-                                className="flex items-center gap-2 bg-indigo-500/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-bold hover:bg-indigo-500/30 transition-all active:scale-95"
-                            >
-                                Practice Quiz
-                            </Link>
+                             <Link 
+                                 href="/dashboard/lessons" 
+                                 className="group/btn flex items-center gap-2 bg-white text-indigo-700 px-8 py-4 rounded-2xl font-bold hover:bg-indigo-50 transition-all shadow-xl shadow-black/10 active:scale-95"
+                             >
+                                 Start Learning
+                                 <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                             </Link>
+                             <Link 
+                                 href="/dashboard/quizzes" 
+                                 className="flex items-center gap-2 bg-indigo-500/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-bold hover:bg-indigo-500/30 transition-all active:scale-95"
+                             >
+                                 Practice Quiz
+                             </Link>
                         </div>
                     </div>
                     
@@ -145,37 +163,59 @@ export default function DashboardPage() {
                     </div>
                 </div>
 
-                {/* Right Sidebar: Weekly Activity */}
+                {/* Right Sidebar: Daily Challenges & Leaderboard Preview */}
                 <div className="space-y-8">
-                    <h3 className="text-2xl font-bold text-white">Weekly Activity</h3>
-                    <div className="bg-white/[0.02] border border-white/5 p-8 rounded-[2rem] space-y-8 shadow-inner shadow-black/40">
-                        <div className="h-44 flex items-end justify-between gap-3 px-2">
-                            {[20, 50, 35, 80, 55, 20, 10].map((h, i) => (
-                                <div key={i} className="flex-1 flex flex-col items-center gap-3">
-                                    <div 
-                                        className="w-full bg-gradient-to-t from-indigo-500/20 to-indigo-500/60 rounded-t-xl transition-all hover:to-indigo-400 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]" 
-                                        style={{ height: `${h}%` }}
-                                    />
-                                    <span className="text-[10px] text-slate-600 font-black uppercase">
-                                        {['M', 'T', 'W', 'T', 'F', 'S', 'S'][i]}
-                                    </span>
+                    <div className="space-y-4">
+                        <h3 className="text-2xl font-bold text-white">Daily Challenges</h3>
+                        <div className="bg-white/[0.02] border border-white/5 p-6 rounded-[2rem] space-y-6 shadow-inner shadow-black/40">
+                            {dailyChallenges.map((challenge) => (
+                                <div key={challenge.id} className="space-y-2">
+                                    <div className="flex justify-between items-center text-sm">
+                                        <span className="font-semibold text-white/90">{challenge.title}</span>
+                                        <span className="text-xs text-indigo-400 font-bold">+{challenge.xpReward} XP</span>
+                                    </div>
+                                    <p className="text-xs text-slate-400">{challenge.description}</p>
+                                    <div className="flex items-center gap-3">
+                                        <div className="flex-1 h-2 bg-white/5 rounded-full overflow-hidden p-0.5 border border-white/5">
+                                            <div 
+                                                className="h-full bg-gradient-to-r from-indigo-600 via-indigo-500 to-emerald-400 rounded-full transition-all duration-500" 
+                                                style={{ width: `${Math.min(100, (challenge.progress / challenge.target) * 100)}%` }}
+                                            />
+                                        </div>
+                                        <span className="text-xs text-slate-500 font-bold whitespace-nowrap">
+                                            {challenge.progress} / {challenge.target}
+                                        </span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="pt-6 border-t border-white/5">
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-sm font-semibold text-slate-400">Weekly Goal</span>
-                                <span className="text-sm font-black text-indigo-400">75% Achieved</span>
-                            </div>
-                            <div className="w-full h-3 bg-white/5 rounded-full overflow-hidden p-0.5 border border-white/5">
-                                <div 
-                                    className="h-full bg-gradient-to-r from-indigo-600 via-indigo-500 to-emerald-400 rounded-full shadow-[0_0_10px_rgba(99,102,241,0.3)] transition-all duration-1000" 
-                                    style={{ width: '75%' }}
-                                />
-                            </div>
-                            <p className="text-[11px] text-slate-600 mt-3 font-medium text-center italic">
-                                &quot;Success is the sum of small efforts repeated day in and day out.&quot;
-                            </p>
+                    </div>
+
+                    {/* Leaderboard Preview */}
+                    <div className="space-y-4">
+                        <div className="flex justify-between items-center">
+                            <h3 className="text-2xl font-bold text-white">Top Students</h3>
+                            <Link href="/dashboard/leaderboard" className="text-sm font-bold text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1 group">
+                                View Full <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="bg-white/[0.02] border border-white/5 p-6 rounded-[2rem] space-y-4 shadow-inner shadow-black/40">
+                            {previewLeaderboard.map((entry, idx) => (
+                                <div key={entry.id} className="flex items-center justify-between py-2 border-b border-white/5 last:border-0 last:pb-0">
+                                    <div className="flex items-center gap-3 min-w-0">
+                                        <span className={`w-6 h-6 rounded-lg flex items-center justify-center font-black text-xs ${
+                                            idx === 0 ? 'bg-amber-400 text-black shadow-lg shadow-amber-400/25' : 
+                                            idx === 1 ? 'bg-slate-300 text-black' : 
+                                            idx === 2 ? 'bg-amber-700 text-white' :
+                                            'bg-slate-800 text-slate-400'
+                                        }`}>
+                                            #{idx + 1}
+                                        </span>
+                                        <span className="text-sm font-semibold truncate text-white/90">{entry.name}</span>
+                                    </div>
+                                    <span className="font-mono text-xs font-bold text-indigo-400">{entry.xp.toLocaleString()} XP</span>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

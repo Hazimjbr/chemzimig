@@ -39,56 +39,54 @@ export function getPHColor(ph: number): string {
 }
 
 export function getPHDescription(ph: number): string {
-    if (ph < 3) return 'حمضي قوي جداً';
-    if (ph < 5) return 'حمضي متوسط';
-    if (ph < 7) return 'حمضي ضعيف';
-    if (ph === 7) return 'متعادل';
-    if (ph < 9) return 'قاعدي ضعيف';
-    if (ph < 12) return 'قاعدي متوسط';
-    return 'قاعدي قوي جداً';
+    if (ph < 3) return 'Very Strong Acid';
+    if (ph < 5) return 'Moderate Acid';
+    if (ph < 7) return 'Weak Acid';
+    if (ph === 7) return 'Neutral';
+    if (ph < 9) return 'Weak Base';
+    if (ph < 12) return 'Moderate Base';
+    return 'Very Strong Base';
 }
 
 export interface Solution {
     name: string;
-    nameAr: string;
     ph: number;
     formula: string;
     type: 'acid' | 'base' | 'neutral';
 }
 
 export const commonSolutions: Solution[] = [
-    { name: 'Battery Acid', nameAr: 'حمض البطارية', ph: 0.5, formula: 'H₂SO₄', type: 'acid' },
-    { name: 'Stomach Acid', nameAr: 'حمض المعدة', ph: 1.5, formula: 'HCl', type: 'acid' },
-    { name: 'Lemon Juice', nameAr: 'عصير الليمون', ph: 2.5, formula: 'C₆H₈O₇', type: 'acid' },
-    { name: 'Vinegar', nameAr: 'الخل', ph: 2.9, formula: 'CH₃COOH', type: 'acid' },
-    { name: 'Cola', nameAr: 'المشروبات الغازية', ph: 3.5, formula: 'H₃PO₄', type: 'acid' },
-    { name: 'Coffee', nameAr: 'القهوة', ph: 5.0, formula: '-', type: 'acid' },
-    { name: 'Rain Water', nameAr: 'ماء المطر', ph: 5.6, formula: 'H₂O', type: 'acid' },
-    { name: 'Pure Water', nameAr: 'الماء النقي', ph: 7.0, formula: 'H₂O', type: 'neutral' },
-    { name: 'Blood', nameAr: 'الدم', ph: 7.4, formula: '-', type: 'base' },
-    { name: 'Sea Water', nameAr: 'ماء البحر', ph: 8.0, formula: '-', type: 'base' },
-    { name: 'Baking Soda', nameAr: 'صودا الخبز', ph: 9.0, formula: 'NaHCO₃', type: 'base' },
-    { name: 'Ammonia', nameAr: 'الأمونيا', ph: 11.0, formula: 'NH₃', type: 'base' },
-    { name: 'Bleach', nameAr: 'المبيض', ph: 12.5, formula: 'NaClO', type: 'base' },
-    { name: 'Drain Cleaner', nameAr: 'منظف المصارف', ph: 14.0, formula: 'NaOH', type: 'base' },
+    { name: 'Battery Acid', ph: 0.5, formula: 'H₂SO₄', type: 'acid' },
+    { name: 'Stomach Acid', ph: 1.5, formula: 'HCl', type: 'acid' },
+    { name: 'Lemon Juice', ph: 2.5, formula: 'C₆H₈O₇', type: 'acid' },
+    { name: 'Vinegar', ph: 2.9, formula: 'CH₃COOH', type: 'acid' },
+    { name: 'Cola', ph: 3.5, formula: 'H₃PO₄', type: 'acid' },
+    { name: 'Coffee', ph: 5.0, formula: '-', type: 'acid' },
+    { name: 'Rain Water', ph: 5.6, formula: 'H₂O', type: 'acid' },
+    { name: 'Pure Water', ph: 7.0, formula: 'H₂O', type: 'neutral' },
+    { name: 'Blood', ph: 7.4, formula: '-', type: 'base' },
+    { name: 'Sea Water', ph: 8.0, formula: '-', type: 'base' },
+    { name: 'Baking Soda', ph: 9.0, formula: 'NaHCO₃', type: 'base' },
+    { name: 'Ammonia', ph: 11.0, formula: 'NH₃', type: 'base' },
+    { name: 'Bleach', ph: 12.5, formula: 'NaClO', type: 'base' },
+    { name: 'Drain Cleaner', ph: 14.0, formula: 'NaOH', type: 'base' },
 ];
 
 export interface Indicator {
     name: string;
-    nameAr: string;
     acidColor: string;
     baseColor: string;
     transitionPH: [number, number];
 }
 
 export const indicators: Indicator[] = [
-    { name: 'Methyl Violet', nameAr: 'البنفسج الميثيلي', acidColor: '#f1c40f', baseColor: '#3498db', transitionPH: [0, 2] },
-    { name: 'Methyl Orange', nameAr: 'الميثيل البرتقالي', acidColor: '#e74c3c', baseColor: '#f1c40f', transitionPH: [2.9, 4.0] },
-    { name: 'Methyl Red', nameAr: 'الميثيل الأحمر', acidColor: '#e74c3c', baseColor: '#f1c40f', transitionPH: [4.2, 6.3] },
-    { name: 'Bromothymol Blue', nameAr: 'البروموثايمول الأزرق', acidColor: '#f1c40f', baseColor: '#3498db', transitionPH: [6.0, 7.6] },
-    { name: 'Phenol Red', nameAr: 'الفينول الأحمر', acidColor: '#f1c40f', baseColor: '#e74c3c', transitionPH: [6.6, 8.0] },
-    { name: 'Phenolphthalein', nameAr: 'الفينولفثالين', acidColor: 'transparent', baseColor: '#ec4899', transitionPH: [8.2, 10.0] },
-    { name: 'Indigo Carmine', nameAr: 'الأنديجو ثنائي الفوسفات', acidColor: '#3498db', baseColor: '#f1c40f', transitionPH: [11.5, 14] },
+    { name: 'Methyl Violet', acidColor: '#f1c40f', baseColor: '#3498db', transitionPH: [0, 2] },
+    { name: 'Methyl Orange', acidColor: '#e74c3c', baseColor: '#f1c40f', transitionPH: [2.9, 4.0] },
+    { name: 'Methyl Red', acidColor: '#e74c3c', baseColor: '#f1c40f', transitionPH: [4.2, 6.3] },
+    { name: 'Bromothymol Blue', acidColor: '#f1c40f', baseColor: '#3498db', transitionPH: [6.0, 7.6] },
+    { name: 'Phenol Red', acidColor: '#f1c40f', baseColor: '#e74c3c', transitionPH: [6.6, 8.0] },
+    { name: 'Phenolphthalein', acidColor: 'transparent', baseColor: '#ec4899', transitionPH: [8.2, 10.0] },
+    { name: 'Indigo Carmine', acidColor: '#3498db', baseColor: '#f1c40f', transitionPH: [11.5, 14] },
 ];
 
 export function getIndicatorColor(indicator: Indicator, ph: number): string {

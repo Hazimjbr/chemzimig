@@ -70,9 +70,10 @@ npm run dev
 ## ✨ Features
 
 - 🎯 **Past Paper Mastery** — Topic-specific questions from official papers.
-- 🏆 **Gamified Progress** — XP, levels, and daily streaks.
+- 🏆 **Gamified Progress & Leaderboard** — XP, levels, daily streaks, and competitive standings with custom Weekly, Monthly, and Mad Scientist (accuracy-focused) filters.
 - 📊 **Deep Analytics** — Comprehensive tracking of student performance.
-- 🧪 **Interactive Lab** — Simulations and 3D atomic structures.
+- 🧪 **Interactive Lab** — Simulations, 3D atomic structures, and a responsive Casio-style scientific calculator supporting dual-column landscape mode.
+- 🗂️ **Spaced Repetition Mistakes Inbox** — Automatically logs and schedules incorrect quiz questions for future student review.
 
 ---
 

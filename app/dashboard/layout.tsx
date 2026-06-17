@@ -11,15 +11,18 @@ import {
     LogOut,
     Menu,
     X,
-    ShieldCheck
+    ShieldCheck,
+    Crown
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useGamification } from '@/contexts/GamificationContext';
 
 const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Lessons', href: '/dashboard/lessons', icon: BookOpen },
     { name: 'Library', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Quizzes', href: '/dashboard/quizzes', icon: Trophy },
+    { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
     { name: 'Profile', href: '/dashboard/profile', icon: User },
 ];
 
@@ -27,6 +30,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();
     const { user, logout } = useAuth();
+    const { xp, level } = useGamification();
 
     return (
         <div className="flex min-h-screen bg-[#050510] text-white font-sans overflow-hidden">
@@ -103,7 +107,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             </div>
                             <div className="flex flex-col min-w-0">
                                 <span className="text-sm font-semibold truncate text-white/90">{user?.name || 'Student'}</span>
-                                <span className="text-xs text-slate-500 truncate">{user?.grade || 'No Grade Set'}</span>
+                                <span className="text-xs text-slate-500 truncate">Level {level} • {user?.grade || 'No Grade Set'}</span>
                             </div>
                         </div>
                         <button
@@ -141,7 +145,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <div className="flex items-center gap-4">
                         <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
                             <Trophy className="w-4 h-4 text-amber-400" />
-                            <span className="text-sm font-bold text-amber-500/90">{user?.xp || 0} XP</span>
+                            <span className="text-sm font-bold text-amber-500/90">{xp} XP</span>
                         </div>
                     </div>
                 </header>

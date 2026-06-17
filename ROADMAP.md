@@ -1,77 +1,80 @@
-# ChemZim Strategic Roadmap 🚀
+# ChemZim International Roadmap - خارطة الطريق التقنية 🚀
 
-This document outlines the development trajectory for the ChemZim International platform, detailing the migration from legacy systems and the implementation of new flagship features.
-
----
-
-## 🏗️ Phase 1: Migration & Foundation (Current)
-
-The goal is to establish a rock-solid infrastructure and port the core "IQ" of the platform.
-
-- [ ] **Infrastructure Setup:**
-  - Install core dependencies (Firebase Admin, NextAuth, KaTeX).
-  - Configure Server-Side Auth management with Base64 RSA keys.
-- [ ] **Auth & Identity Port:**
-  - Port `AuthContext` and implement Middleware protection.
-  - Design premium International Login/Signup screens.
-- [ ] **Core Rendering Logic:**
-  - Adapt `SmartText` and `SafeHTML` for English/International content.
-  - Implement KaTeX for full-spectrum chemical notation.
+هذا المستند يمثل سجل التطور التقني والخطط المستقبلية لمنصة **ChemZim International** المخصصة للمناهج البريطانية (Cambridge IGCSE & AS/A-Level). يتم تحديثه دورياً ليعكس حالة التقدم في المشروع.
 
 ---
 
-## 🧪 Phase 2: Exam Engine & Gamification
+## 🏗️ الميل الأول: التأسيس والبنية التحتية والمصادقة (مكتمل)
 
-Rebuilding the interactive core with enhanced features.
-
-- [ ] **Curriculum Integration:**
-  - Port the topic/unit hierarchy for IGCSE/A-Level.
-  - Port existing question banks and adapt for English.
-- [ ] **Advanced Randomization:**
-  - Implement `Grouped Randomization` (keeping context-related questions together).
-- [ ] **Rewards System:**
-  - Port XP, Daily Streaks, and Level calculation logic.
-  - Implement the "Nobel Laureate" progression path.
+### 🔐 البنية الأساسية والحماية
+- ✅ **Next.js Middleware:** حماية مسارات الإدارة وصفحات الطلاب الحساسة بالكامل.
+- ✅ **Firebase Admin SDK:** ربط السيرفر محلياً وسحابياً بقاعدة البيانات الجديدة `chemzim-15e83` بشكل مستقل.
+- ✅ **JWT Signed Sessions:** استخدام جلسات مشفرة وموقعة برمز سري لمنع التزوير.
+- ✅ **Device Lockdown:** تفعيل فحص البصمة الرقمية للأجهزة للطلاب لمنع تشارك الحسابات.
+- ✅ **Google Authentication (Admin):** تفعيل مصادقة حساب Google للمسؤول للولوج الآمن (تم إصلاح مفتاح Firebase API وتفعيله بنجاح).
+- ✅ **Bcrypt Password Hashing:** تشفير وحماية كلمات مرور الطلاب عند الإنشاء تلقائياً.
 
 ---
 
-## 📊 Phase 3: Dashboard & Student Tools
+## 🧪 الميل الثاني: محرك المناهج ونظام النقاط (مكتمل)
 
-Giving students the tools to master chemistry.
-
-- [ ] **Performance Dashboard:**
-  - Build interactive charts using Recharts for topic mastery.
-- [ ] **Smart Coach Integration:**
-  - Port the Mentor/Coach logic with interactive message celebrations.
-- [ ] **Floating Toolbar:**
-  - Implement a mobile-responsive toolbar for quick access to periodic tables and calculators.
+### 📝 المناهج والامتحانات والتقييم
+- ✅ **Syllabus Porting:** نقل وتجهيز هيكلية المناهج الدولية (IGCSE, AS Level, A2 Level).
+- ✅ **KaTeX Integration:** تفعيل محرك كتابة المعادلات الكيميائية والرياضية بدقة ممتازة على الواجهة.
+- ✅ **Gamification System:** نقل وحساب نقاط الخبرة (XP)، مستويات الطلاب (Levels)، وحساب الأيام المتتالية للدراسة (Daily Streaks).
 
 ---
 
-## 🌟 Phase 4: Innovation & Expansion (Future)
+## 📊 الميل الثالث: أدوات الطالب ولوحة التحكم والترجمة وتنافسية المتصدرين (مكتمل)
 
-New flagship features for the international version.
-
-- [ ] **"Ask the Expert" System:**
-  - Direct student-teacher communication portal within lessons.
-- [ ] **Sticky Context Rendering:**
-  - Diagrams stay visible while scrolling through related questions.
-- [ ] **PWA & Offline Mode:**
-  - Full support for solving questions without an internet connection.
-- [ ] **AI-Powered Recommendations:**
-  - Dynamic subject focus based on past performance analysis.
-
----
-
-## 📈 Milestones Tracking
-
-| Category | Progress | Status |
-|----------|----------|--------|
-| ✅ Core Infrastructure | 0% | Planned |
-| 🛡️ Security & Auth | 0% | Planned |
-| 📝 Exam Engine | 0% | Planned |
-| 🏆 Gamification | 0% | Planned |
+### ⚙️ أدوات الطالب المتقدمة والإدارة
+- ✅ **Premium Scientific Calculator (Casio-Style):** إعادة بناء الآلة الحاسبة العلمية بالكامل:
+  - إصلاح الألوان الخارجية لتطابق تصميم آلة كاسيو الحقيقية (أزرار DEL/AC باللون البرتقالي).
+  - ضبط أحجام الآلة لتلائم الشاشات دون الحاجة للتمرير الطولي.
+  - **Landscape Dual-Column Mode:** تفعيل التحويل التلقائي للآلة الحاسبة إلى عمودين متجاورين عند قلب الهاتف أفقياً لتجنب شريط التمرير والحفاظ على نسبة العرض.
+  - دعم الحساب الضمني مثل `2π` أو `2sin(30)` أو الأقواس المتتالية تلقائياً.
+  - إصلاح صيغ الكسر وتعديل زر `S⇔D` للتحويل الفوري بين الصيغة العشرية والكسرية.
+  - الحذف الذكي للكلمات بالكامل (مثل إزالة `sin(` ككتلة واحدة).
+- ✅ **Sovereign Leaderboard & Widget:** إضافة قائمة وجدول المتصدرين بالكامل:
+  - تصميم صفحة كاملة ومميزة للمتصدرين تحتوي على منصات تتويج 1 و 2 و 3 وتأثيرات توهج وحركة.
+  - دعم التصفية الزمنية (أسبوعي، شهري، كلي) والتصفية التنافسية (Mad Scientist) بناءً على دقة المختبر والسرعة.
+  - دمج نافذة مصغرة (Top Students Widget) بلوحة التحكم الرئيسية مع اختصارات الانتقال السريع.
+- ✅ **Gamification Translation:** تعريب/ترجمة النظام بالكامل للإنجليزية 100%:
+  - ترجمة مستويات رتب المتصدرين (Truth Seeker, Fusion Archon, Crystal Sentinel) وتحديث فلاتر التحديات اليومية (Daily Challenges) والإنجازات (Achievements) للإنجليزية.
+  - بناء كاشف لغوي في سياق التتبع يمنع تحميل التحديات اليومية بالعربية ويلغي الكاش فوراً عند الكشف عن أحرف عربية.
+- ✅ **Admin Sovereign Control Portal:** لوحة تحكم الإدارة لإنشاء الطلاب ومتابعة حالة أجهزتهم الأمنية.
+- ✅ **Back to Dashboard Shortcut:** إضافة زر عودة سريع وسلس من لوحة الإدارة إلى لوحة تحكم الطالب لسهولة التنقل.
 
 ---
 
-*Last Updated: 2026-04-09*
+## 🔴 المهام الحالية والمستقبلية (قيد التنفيذ والتخطيط)
+
+### (1) 📱 وضع الأوفلاين وتطبيق الموبايل (PWA)
+- [ ] تحويل المنصة إلى Progressive Web App لتسمح للطلاب بفتح الدروس وحل الأسئلة بدون اتصال بالإنترنت.
+
+### (2) 📚 توسيع وتدقيق بنك الأسئلة (IGCSE & A-Level)
+- [ ] مراجعة وتدقيق أسئلة المنهاج البريطاني O-Level وربطها بالوسوم التربوية المقابلة.
+- [ ] بناء وتطوير المحتوى المتقدم الخاص بطلاب الـ AS/A2 Level وتحدياته التقييمية.
+
+### (3) 🛡️ الهوية الرقمية والدرع السحابي
+- [ ] **Custom Domain:** حجز وربط نطاق دولي للمنصة (مثال: `chemzim.com` أو `chemzim.org`).
+- [ ] **Cloudflare Integration:** ربط المنصة بـ Cloudflare لتسريع تصفح الطلاب وحظر الهجمات السيبرانية وتقييد الطلبات (Rate Limiting).
+
+---
+
+## 📈 إحصائيات تقدم المشروع
+
+| الحالة | الميزة / الطبقة التقنية | نسبة الإنجاز |
+| :--- | :--- | :--- |
+| ✅ | نظام الحماية والمصادقة والـ Middleware | 100% |
+| ✅ | قاعدة البيانات المستقلة (Firebase 15e83) | 100% |
+| ✅ | محرك الـ KaTeX والمعادلات الكيميائية | 100% |
+| ✅ | نظام تتبع التقدم والنقاط وتنافسية المتصدرين (Leaderboard) | 100% |
+| ✅ | الآلة الحاسبة العلمية المطورة (Casio Landscape Dual-Column) | 100% |
+| ✅ | لوحة الإشراف والاختصارات الذكية وترجمة واجهة المستخدم | 100% |
+| 🔄 | بنك أسئلة المناهج البريطانية وتدقيقها | قيد التطوير |
+| 🔄 | تحويل المنصة لتطبيق أوفلاين (PWA) | قيد التخطيط |
+| 🔄 | حجز الدومين والدفاع السحابي (Cloudflare) | قيد التخطيط |
+
+---
+*آخر تحديث: 2026-06-17 (إنجاز اليوم: إضافة صفحة المتصدرين وتوابعها، وترجمة واجهة تحديات ونقاط الطلاب بالكامل للإنجليزية، وتطبيق تقسيم الآلة الحاسبة في الوضع الأفقي)* - **م. حازم جبر**

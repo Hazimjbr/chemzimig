@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
 import 'katex/dist/katex.min.css';
@@ -18,6 +18,17 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
     const [isShift, setIsShift] = useState(false);
     const [isAlpha, setIsAlpha] = useState(false);
     const [isDeg, setIsDeg] = useState(true);
+    const [isFractionMode, setIsFractionMode] = useState(false);
+    const [isLandscape, setIsLandscape] = useState(false);
+
+    useEffect(() => {
+        const checkOrientation = () => {
+            setIsLandscape(window.innerHeight < 550 && window.innerWidth > window.innerHeight);
+        };
+        checkOrientation();
+        window.addEventListener('resize', checkOrientation);
+        return () => window.removeEventListener('resize', checkOrientation);
+    }, []);
 
     // --- Advanced Math Engine ---
     const fact = (n: number): number => {
@@ -31,9 +42,77 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
     const nPr = (n: number, r: number): number => fact(n) / fact(n - r);
     const nCr = (n: number, r: number): number => fact(n) / (fact(r) * fact(n - r));
 
+    // Decimal to fraction approximation (continued fractions)
+    const decimalToFraction = (val: number): string | null => {
+        if (isNaN(val) || !isFinite(val)) return null;
+        if (Number.isInteger(val)) return String(val);
+        const tolerance = 1.0e-9;
+        let h1 = 1, h2 = 0, k1 = 0, k2 = 1;
+        let b = val;
+        do {
+            const a = Math.floor(b);
+            const aux = h1; h1 = a * h1 + h2; h2 = aux;
+            const aux2 = k1; k1 = a * k1 + k2; k2 = aux2;
+            b = 1 / (b - a);
+        } while (Math.abs(val - h1 / k1) > val * tolerance);
+
+        if (k1 === 1) return String(h1);
+        if (k1 > 10000) return null; // Keep denominator reasonable
+        return `${h1}/${k1}`;
+    };
+
+    // Robust factorial parser handling bracketed groups (e.g. (3+2)! -> fact(3+2))
+    const parseFactorials = (expr: string): string => {
+        let parsed = expr;
+        while (parsed.includes('!')) {
+            const index = parsed.indexOf('!');
+            if (parsed[index - 1] === ')') {
+                let depth = 1;
+                let i = index - 2;
+                while (i >= 0 && depth > 0) {
+                    if (parsed[i] === ')') depth++;
+                    if (parsed[i] === '(') depth--;
+                    i--;
+                }
+                const start = i + 1;
+                const subExpr = parsed.substring(start, index);
+                parsed = parsed.substring(0, start) + `fact${subExpr}` + parsed.substring(index + 1);
+            } else {
+                let i = index - 1;
+                while (i >= 0 && /[0-9\.]/.test(parsed[i])) {
+                    i--;
+                }
+                if (i >= 2 && parsed.substring(i - 2, i + 1) === 'Ans') {
+                    i -= 3;
+                } else if (i >= 0 && (parsed[i] === 'e' || parsed[i] === 'π')) {
+                    i--;
+                }
+                const start = i + 1;
+                const subExpr = parsed.substring(start, index);
+                parsed = parsed.substring(0, start) + `fact(${subExpr})` + parsed.substring(index + 1);
+            }
+        }
+        return parsed;
+    };
+
     const evaluateExpression = (expr: string): string => {
         try {
-            let target = expr
+            if (!expr) return '0';
+
+            // 1. Process Factorials first
+            let target = parseFactorials(expr);
+
+            // 2. Implicit multiplication conversion
+            target = target.replace(/(\d+)\(/g, '$1*('); // e.g., 2(3) -> 2*(3)
+            target = target.replace(/\)(\d+|\()/g, ')*$1'); // e.g., (2)(3) -> (2)*(3), (2)3 -> (2)*3
+            target = target.replace(/(\d+)(π|e|sin|cos|tan|log|ln|sqrt|cbrt|asin|acos|atan|Ans)/g, '$1*$2');
+            target = target.replace(/(π|e)(sin|cos|tan|log|ln|sqrt|cbrt|asin|acos|atan|Ans)/g, '$1*$2');
+            target = target.replace(/(π)(e)/g, '$1*$2');
+            target = target.replace(/(e)(π)/g, '$1*$2');
+            target = target.replace(/\)(π|e)/g, ')*$1');
+
+            // 3. Replace display operators with JS operators
+            target = target
                 .replace(/×/g, '*')
                 .replace(/÷/g, '/')
                 .replace(/−/g, '-')
@@ -42,24 +121,63 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                 .replace(/Ans/g, result || '0')
                 .replace(/\^/g, '**');
 
-            target = target.replace(/(\d+)!/g, 'fact($1)');
+            // 4. Map Trigonometry
             const trigMod = isDeg ? `(${Math.PI}/180)*` : '';
-            target = target.replace(/sin\(/g, `Math.sin(${trigMod}`).replace(/cos\(/g, `Math.cos(${trigMod}`).replace(/tan\(/g, `Math.tan(${trigMod}`)
-                .replace(/asin\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.asin(`).replace(/acos\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.acos(`).replace(/atan\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.atan(`);
-            target = target.replace(/log\(/g, 'Math.log10(').replace(/ln\(/g, 'Math.log(').replace(/sqrt\(/g, 'Math.sqrt(').replace(/cbrt\(/g, 'Math.cbrt(');
+            target = target
+                .replace(/sin\(/g, `Math.sin(${trigMod}`)
+                .replace(/cos\(/g, `Math.cos(${trigMod}`)
+                .replace(/tan\(/g, `Math.tan(${trigMod}`)
+                .replace(/asin\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.asin(`)
+                .replace(/acos\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.acos(`)
+                .replace(/atan\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.atan(`);
+
+            // 5. Map logs and roots
+            target = target
+                .replace(/log\(/g, 'Math.log10(')
+                .replace(/ln\(/g, 'Math.log(')
+                .replace(/sqrt\(/g, 'Math.sqrt(')
+                .replace(/cbrt\(/g, 'Math.cbrt(');
 
             const scope = { fact, nPr, nCr, ...Math };
             const func = new Function('math', 'with(math) { return ' + target + ' }');
             const res = func(scope);
             if (isNaN(res) || !isFinite(res)) return 'Error';
             return String(parseFloat(res.toPrecision(10)));
-        } catch (e) { return 'Error'; }
+        } catch (e) {
+            return 'Error';
+        }
     };
 
     useEffect(() => {
         if (!input) { setDisplayLatex('0'); return; }
-        let latex = input.replace(/\//g, '\\frac{').replace(/\*/g, '\\times ').replace(/\-/g, '-').replace(/sqrt\(/g, '\\sqrt{').replace(/\^2/g, '^2').replace(/\^3/g, '^3')
-            .replace(/sin\(/g, '\\sin(').replace(/cos\(/g, '\\cos(').replace(/tan\(/g, '\\tan(').replace(/pi/g, '\\pi ').replace(/log\(/g, '\\log(').replace(/ln\(/g, '\\ln(');
+
+        let latex = input
+            .replace(/\*/g, ' \\times ')
+            .replace(/\-/g, ' - ')
+            .replace(/\+/g, ' + ')
+            .replace(/pi/g, '\\pi ')
+            .replace(/Ans/g, '\\text{Ans}')
+            .replace(/sin\(/g, '\\sin(')
+            .replace(/cos\(/g, '\\cos(')
+            .replace(/tan\(/g, '\\tan(')
+            .replace(/asin\(/g, '\\sin^{-1}(')
+            .replace(/acos\(/g, '\\cos^{-1}(')
+            .replace(/atan\(/g, '\\tan^{-1}(')
+            .replace(/log\(/g, '\\log(')
+            .replace(/ln\(/g, '\\ln(')
+            .replace(/sqrt\(/g, '\\sqrt{')
+            .replace(/cbrt\(/g, '\\sqrt[3]{')
+            .replace(/\^2/g, '^2')
+            .replace(/\^3/g, '^3')
+            .replace(/\^/g, '^');
+
+        // Render fractions correctly in KaTeX recursively
+        let prevLatex = '';
+        while (latex !== prevLatex) {
+            prevLatex = latex;
+            latex = latex.replace(/([0-9\.]+|\\pi|e|\\text\{Ans\}|\([^\(\)]*\)|\\sqrt\{[^\}]*\})\/([0-9\.]+|\\pi|e|\\text\{Ans\}|\([^\(\)]*\)|\\sqrt\{[^\}]*\})/g, '\\frac{$1}{$2}');
+        }
+
         latex += '}'.repeat(Math.max(0, (latex.match(/{/g) || []).length - (latex.match(/}/g) || []).length));
         latex += ')'.repeat(Math.max(0, (latex.match(/\(/g) || []).length - (latex.match(/\)/g) || []).length));
         setDisplayLatex(latex);
@@ -69,47 +187,100 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
         let activeKey = key;
         if (isShift && shiftKey) activeKey = shiftKey;
         if (isAlpha && alphaKey) activeKey = alphaKey;
-        if (activeKey === 'AC') { if (isShift) { onClose(); } else { setInput(''); setResult(null); } }
-        else if (activeKey === 'DEL') { setInput(prev => prev.length > 1 ? prev.slice(0, -1) : ''); }
-        else if (activeKey === '=') { setResult(evaluateExpression(input)); }
+
+        // Reset fractional mode on key entries
+        if (activeKey !== 'S<=>D') {
+            setIsFractionMode(false);
+        }
+
+        if (activeKey === 'AC') {
+            if (isShift) {
+                onClose();
+            } else {
+                setInput('');
+                setResult(null);
+            }
+        }
+        else if (activeKey === 'DEL') {
+            const funcsToClear = ['asin(', 'acos(', 'atan(', 'sin(', 'cos(', 'tan(', 'log(', 'ln(', 'sqrt(', 'cbrt(', 'Ans'];
+            let cleared = false;
+            for (const f of funcsToClear) {
+                if (input.endsWith(f)) {
+                    setInput(prev => prev.slice(0, -f.length));
+                    cleared = true;
+                    break;
+                }
+            }
+            if (!cleared) {
+                setInput(prev => prev.length > 1 ? prev.slice(0, -1) : '');
+            }
+        }
+        else if (activeKey === 'S<=>D') {
+            if (result && result !== 'Error') {
+                setIsFractionMode(prev => !prev);
+            }
+        }
+        else if (activeKey === '=') {
+            setResult(evaluateExpression(input));
+        }
         else {
             let toAdd = activeKey;
-            if (toAdd === 'sin⁻¹') toAdd = 'asin('; if (toAdd === 'cos⁻¹') toAdd = 'acos('; if (toAdd === 'tan⁻¹') toAdd = 'atan('; if (toAdd === 'x!') toAdd = '!';
-            if (toAdd === '10□' || toAdd === '10^') toAdd = '10^'; if (toAdd === 'e□' || toAdd === 'e^') toAdd = 'e^';
+            if (toAdd === 'sin⁻¹') toAdd = 'asin(';
+            if (toAdd === 'cos⁻¹') toAdd = 'acos(';
+            if (toAdd === 'tan⁻¹') toAdd = 'atan(';
+            if (toAdd === 'x!') toAdd = '!';
+            if (toAdd === '10^') toAdd = '10^';
+            if (toAdd === 'e^') toAdd = 'e^';
             setInput(prev => (prev === '0' ? toAdd : prev + toAdd));
         }
-        setIsShift(false); setIsAlpha(false);
+        setIsShift(false);
+        setIsAlpha(false);
     };
 
-    // --- Micro-Adjusted UI Components ---
+    const renderResult = () => {
+        if (!result) return null;
+        if (result === 'Error') return result;
+
+        const numVal = parseFloat(result);
+        if (isFractionMode && !isNaN(numVal)) {
+            const frac = decimalToFraction(numVal);
+            if (frac && frac.includes('/')) {
+                const [num, den] = frac.split('/');
+                return <InlineMath math={`\\frac{${num}}{${den}}`} />;
+            }
+        }
+        return result;
+    };
+
+    // --- Components with Micro-Adjusted UI ---
     const SilverControl = ({ label, subLabel, subColor = "text-amber-500", onClick }: { label: string, subLabel: string, subColor?: string, onClick: () => void }) => (
         <div className="flex flex-col items-center">
-            <span className={`text-[6px] font-black uppercase mb-0.5 pointer-events-none ${subColor}`}>{subLabel}</span>
-            <button onClick={onClick} className="w-7 h-5 rounded-full bg-gradient-to-b from-[#f8fafc] via-[#cbd5e1] to-[#64748b] border border-[#475569] shadow-[0_2px_3px_rgba(0,0,0,0.5)] active:translate-y-px transition-all flex items-center justify-center">
-                <span className="text-[5px] text-slate-900 font-black uppercase">{label}</span>
+            <span className={`text-[6.5px] font-black uppercase mb-0.5 pointer-events-none ${subColor}`}>{subLabel}</span>
+            <button onClick={onClick} className="w-8 h-5.5 rounded-full bg-gradient-to-b from-[#f8fafc] via-[#cbd5e1] to-[#64748b] border border-[#475569] shadow-[0_2px_3px_rgba(0,0,0,0.5)] active:translate-y-px transition-all flex items-center justify-center">
+                <span className="text-[5.5px] text-slate-900 font-black uppercase">{label}</span>
             </button>
         </div>
     );
 
     const SciButton = ({ label, shiftLabel, alphaLabel, onClick }: { label: React.ReactNode, shiftLabel?: string, alphaLabel?: string, onClick: () => void }) => (
-        <div className="flex flex-col items-center relative h-9">
+        <div className={`flex flex-col items-center relative ${isLandscape ? 'h-7' : 'h-9'}`}>
             <div className="flex gap-1.5 absolute -top-2.5">
-                {shiftLabel && <span className="text-[5px] font-black text-amber-500 uppercase">{shiftLabel}</span>}
-                {alphaLabel && <span className="text-[5px] font-black text-rose-500 uppercase">{alphaLabel}</span>}
+                {shiftLabel && <span className="text-[5.5px] font-black text-amber-500 uppercase tracking-tighter">{shiftLabel}</span>}
+                {alphaLabel && <span className="text-[5.5px] font-black text-rose-500 uppercase tracking-tighter">{alphaLabel}</span>}
             </div>
-            <button onClick={onClick} className="w-[42px] h-[25px] bg-[#1a1c20] text-white rounded-md text-[9px] font-bold border-t border-slate-700 shadow-[0_2px_3px_rgba(0,0,0,0.6)] active:bg-slate-800 transition-colors">
-                <span className="opacity-90">{label}</span>
+            <button onClick={onClick} className={`${isLandscape ? 'w-[38px] h-[20px] text-[8px]' : 'w-[43px] h-[25px] text-[9px]'} bg-[#1a1c20] hover:bg-[#26282e] text-white rounded-md font-bold border-t border-slate-700 shadow-[0_2px_3px_rgba(0,0,0,0.6)] active:translate-y-[1px] active:shadow-none transition-all`}>
+                <span className="opacity-95">{label}</span>
             </button>
         </div>
     );
 
-    const MainButton = ({ label, shiftLabel, alphaLabel, onClick, color = "bg-[#cfd4d9]", textColor = "text-slate-900", fontSize = "text-lg" }: { label: string, shiftLabel?: string, alphaLabel?: string, onClick: () => void, color?: string, textColor?: string, fontSize?: string }) => (
-        <div className="flex flex-col items-center relative h-11">
+    const MainButton = ({ label, shiftLabel, alphaLabel, onClick, color = "bg-[#e2e8f0] hover:bg-[#cbd5e1]", textColor = "text-slate-800", fontSize = "text-base" }: { label: string, shiftLabel?: string, alphaLabel?: string, onClick: () => void, color?: string, textColor?: string, fontSize?: string }) => (
+        <div className={`flex flex-col items-center relative ${isLandscape ? 'h-8' : 'h-11'}`}>
             <div className="flex gap-2 absolute -top-2.5">
                 {shiftLabel && <span className="text-[5.5px] font-black text-amber-600 uppercase tracking-tighter">{shiftLabel}</span>}
                 {alphaLabel && <span className="text-[5.5px] font-black text-rose-600 uppercase tracking-tighter">{alphaLabel}</span>}
             </div>
-            <button onClick={onClick} className={`${color} ${textColor} w-[50px] h-[34px] rounded-lg font-black ${fontSize} shadow-[0_3px_0_rgba(0,0,0,0.4)] active:translate-y-0.5 active:shadow-none transition-all flex items-center justify-center`}>
+            <button onClick={onClick} className={`${color} ${textColor} ${isLandscape ? 'w-[42px] h-[24px] text-[11px]' : 'w-[48px] h-[32px] text-base'} rounded-lg font-black shadow-[0_3px_0_rgba(0,0,0,0.35)] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center`}>
                 <span className="drop-shadow-sm">{label}</span>
             </button>
         </div>
@@ -118,131 +289,292 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
     return (
         <AnimatePresence>
             {isOpen && (
-                <motion.div initial={{ scale: 0.9, opacity: 0, x: "-50%", y: "-50%" }} animate={{ scale: 1, opacity: 1, x: "-50%", y: "-50%" }} exit={{ scale: 0.9, opacity: 0, x: "-50%", y: "-50%" }} drag dragMomentum={false} className="fixed left-1/2 top-1/2 z-[80] w-[320px] max-h-[90vh] bg-[#0c0d10] p-4 pb-6 rounded-[2.5rem] border-[5px] border-[#1f2128] shadow-[0_0_120px_rgba(0,0,0,1)] cursor-default select-none flex flex-col items-center overflow-y-auto custom-scrollbar-thin">
-                    {/* Compact Brand & Solar Row */}
-                    <div className="w-full flex justify-between items-center mb-1 px-2 shrink-0 h-8">
-                        <div className="flex flex-col">
-                            <h1 className="text-slate-100 font-extrabold text-[12px] tracking-tighter leading-none italic">CASIO</h1>
-                            <div className="flex gap-1 items-center">
-                                <span className="text-slate-400 text-[6px] font-bold">fx-991ES PLUS</span>
-                                <span className="text-slate-500 text-[5px] font-black uppercase tracking-tighter">2nd ed.</span>
-                            </div>
-                        </div>
-                        <div className="w-16 h-6 bg-[#2d1a1a] rounded-[1px] p-0.5 flex gap-0.5 border border-white/5 opacity-70 shadow-inner">
-                            {[...Array(4)].map((_, i) => <div key={i} className="flex-1 bg-[#1a0f0f] border-x border-white/5" />)}
-                        </div>
-                        <button onClick={onClose} className="w-6 h-6 flex items-center justify-center bg-white/5 hover:bg-rose-500/20 rounded-full text-slate-600 hover:text-rose-400 transition-all border border-white/5 group">
-                            <X size={12} className="group-hover:scale-110 transition-transform" />
-                        </button>
-                    </div>
+                <motion.div
+                    initial={{ scale: 0.95, opacity: 0, x: "-50%", y: "-50%" }}
+                    animate={{ scale: 1, opacity: 1, x: "-50%", y: "-50%" }}
+                    exit={{ scale: 0.95, opacity: 0, x: "-50%", y: "-50%" }}
+                    drag
+                    dragMomentum={false}
+                    className={`fixed left-1/2 top-1/2 z-[80] bg-[#0c0d10] p-4 rounded-[2.2rem] border-[6px] border-[#1e2026] shadow-[0_0_120px_rgba(0,0,0,0.95)] cursor-default select-none flex ${
+                        isLandscape 
+                            ? "w-[590px] h-[330px] flex-row gap-5 items-center justify-between" 
+                            : "w-[310px] flex-col items-center"
+                    } overflow-hidden`}
+                >
+                    {/* Universal Close Button (Absolute positioned on top right) */}
+                    <button onClick={onClose} className="absolute top-4 right-4 w-6 h-6 flex items-center justify-center bg-white/5 hover:bg-rose-500/20 rounded-full text-slate-500 hover:text-rose-400 transition-all border border-white/5 group z-[90]">
+                        <X size={12} className="group-hover:scale-110 transition-transform" />
+                    </button>
 
-                    {/* LCD Screen - More Compact */}
-                    <div className="w-full bg-[#cbdcc1] h-[85px] rounded-lg mb-3 p-2 shrink-0 flex flex-col justify-between border-[3px] border-[#3a3f4a] shadow-[inset_0_2px_10px_rgba(0,0,0,0.4)] relative font-serif">
-                        <div className="flex justify-between items-start text-[7px] text-slate-800 font-black tracking-widest">
-                            <div className="flex gap-2">
-                                <span className={isShift ? "opacity-100" : "opacity-10"}>S</span>
-                                <span className={isAlpha ? "opacity-100" : "opacity-10"}>A</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <span className="border border-slate-900/50 px-0.5 tracking-tighter">R</span>
-                                <span>Math ▲</span>
-                            </div>
-                        </div>
-                        <div className="flex-1 flex flex-col items-start justify-center overflow-hidden py-1">
-                            <div className="text-[20px] text-slate-950 w-full overflow-x-auto custom-scrollbar-thin flex items-center">
-                                <InlineMath math={displayLatex} />
-                            </div>
-                            {result && <div className="w-full text-right text-[22px] font-black text-slate-950 pr-1">{result}</div>}
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
-                    </div>
+                    {isLandscape ? (
+                        <>
+                            {/* LEFT COLUMN: Screen + Solar + Replay/Control */}
+                            <div className="w-[240px] flex flex-col justify-between h-full pr-1">
+                                {/* Brand & Solar Panel Row */}
+                                <div className="w-full flex justify-between items-center pr-8 h-8 shrink-0">
+                                    <div className="flex flex-col">
+                                        <h1 className="text-slate-100 font-extrabold text-[12px] tracking-tighter leading-none italic">CASIO</h1>
+                                        <div className="flex gap-1 items-center">
+                                            <span className="text-slate-400 text-[6.5px] font-bold">fx-991ES PLUS</span>
+                                        </div>
+                                    </div>
+                                    <div className="w-14 h-5 bg-[#2d1a1a] rounded-[2px] p-0.5 flex gap-0.5 border border-white/5 opacity-70 shadow-inner">
+                                        {[...Array(4)].map((_, i) => <div key={i} className="flex-1 bg-[#1a0f0f] border-x border-white/5" />)}
+                                    </div>
+                                </div>
 
-                    {/* Proportional Control Row */}
-                    <div className="w-full px-1 mb-6 flex justify-between items-center h-18 shrink-0">
-                        <div className="flex flex-col gap-4">
-                            <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" onClick={() => setIsShift(!isShift)} />
-                            <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" onClick={() => setIsAlpha(!isAlpha)} />
-                        </div>
-                        <div className="relative w-20 h-20 rounded-full bg-gradient-to-b from-slate-400 via-slate-200 to-slate-400 border-[3px] border-[#4e5663] shadow-[0_4px_12px_rgba(0,0,0,0.7)] flex items-center justify-center scale-90">
-                            <div className="absolute inset-[8px] rounded-full bg-[#0c0d10] border-2 border-[#31363e] flex items-center justify-center overflow-hidden">
-                                <span className="text-[5px] text-slate-700 font-black uppercase tracking-[0.3em] mt-1 opacity-40">REPLAY</span>
-                                <button className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400"><ChevronUp size={12} /></button>
-                                <button className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400"><ChevronDown size={12} /></button>
-                                <button className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400"><ChevronLeft size={12} /></button>
-                                <button className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400"><ChevronRight size={12} /></button>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-4">
-                            <SilverControl label="Mode" subLabel="Mode Setup" subColor="text-slate-400" onClick={() => { }} />
-                            <SilverControl label="On" subLabel="On" subColor="text-slate-400" onClick={() => setInput('')} />
-                        </div>
-                    </div>
+                                {/* LCD Screen - Digital Style */}
+                                <div className="w-full bg-[#cadbb7] h-[68px] rounded-md p-1.5 flex flex-col justify-between border-[2px] border-[#292d35] shadow-[inset_0_2px_5px_rgba(0,0,0,0.5)] relative font-mono text-slate-900 shrink-0">
+                                    <div className="flex justify-between items-start text-[6.5px] font-black tracking-widest leading-none">
+                                        <div className="flex gap-2">
+                                            <span className={isShift ? "text-slate-950 font-black opacity-100" : "opacity-10"}>S</span>
+                                            <span className={isAlpha ? "text-slate-950 font-black opacity-100" : "opacity-10"}>A</span>
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <span className="border border-slate-950/30 px-0.5 leading-none">R</span>
+                                            <span>Math ▲</span>
+                                        </div>
+                                    </div>
 
-                    {/* Scientific Pad - More Airy Layout */}
-                    <div className="w-full flex flex-col gap-4 px-1 mb-6 shrink-0">
-                        <div className="flex justify-between px-3">
-                            <div className="flex gap-4">
-                                <SciButton label="CALC" shiftLabel="SOLVE" alphaLabel="=" onClick={() => handleKey('CALC', 'SOLVE', '=')} />
-                                <SciButton label="∫dx" shiftLabel="d/dx" alphaLabel=":" onClick={() => handleKey('∫dx', 'd/dx', ':')} />
-                            </div>
-                            <div className="flex gap-4">
-                                <SciButton label="x⁻¹" shiftLabel="x!" onClick={() => handleKey('^-1', '!')} />
-                                <SciButton label="log□□" shiftLabel="Σ" onClick={() => handleKey('log(')} />
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-6 gap-x-1 gap-y-5 px-1">
-                            <SciButton label="■/□" shiftLabel="▊/□" onClick={() => handleKey('/')} />
-                            <SciButton label="√■" shiftLabel="∛■" onClick={() => handleKey('sqrt(', 'cbrt(')} />
-                            <SciButton label="x²" shiftLabel="x³" onClick={() => handleKey('^2', '^3')} />
-                            <SciButton label="x□" shiftLabel="▊√■" onClick={() => handleKey('^')} />
-                            <SciButton label="log" shiftLabel="10□" onClick={() => handleKey('log(', '10^')} />
-                            <SciButton label="ln" shiftLabel="e□" onClick={() => handleKey('ln(', 'e^')} />
-                            <SciButton label="(-)" alphaLabel="A" onClick={() => handleKey('-', '', 'A')} />
-                            <SciButton label={"°' \""} shiftLabel="←" alphaLabel="B" onClick={() => handleKey('°', '←', 'B')} />
-                            <SciButton label="hyp" shiftLabel="Abs" alphaLabel="C" onClick={() => handleKey('hyp', 'Abs', 'C')} />
-                            <SciButton label="sin" shiftLabel="sin⁻¹" alphaLabel="D" onClick={() => handleKey('sin(', 'sin⁻¹', 'D')} />
-                            <SciButton label="cos" shiftLabel="cos⁻¹" alphaLabel="E" onClick={() => handleKey('cos(', 'cos⁻¹', 'E')} />
-                            <SciButton label="tan" shiftLabel="tan⁻¹" alphaLabel="F" onClick={() => handleKey('tan(', 'tan⁻¹', 'F')} />
-                            <SciButton label="RCL" shiftLabel="STO" onClick={() => { }} />
-                            <SciButton label="ENG" shiftLabel="←" onClick={() => { }} />
-                            <SciButton label="(" shiftLabel="%" onClick={() => handleKey('(')} />
-                            <SciButton label=")" shiftLabel="," alphaLabel="X" onClick={() => handleKey(')')} />
-                            <SciButton label="S⇔D" shiftLabel="a b/c⇔d/c" alphaLabel="Y" onClick={() => { }} />
-                            <SciButton label="M+" shiftLabel="M-" alphaLabel="M" onClick={() => { }} />
-                        </div>
-                    </div>
+                                    <div className="flex-1 flex flex-col justify-end overflow-hidden pb-0.5">
+                                        <div className="text-[13px] font-medium w-full overflow-x-auto whitespace-nowrap scrollbar-none flex items-center h-5">
+                                            <InlineMath math={displayLatex} />
+                                        </div>
+                                        {result && (
+                                            <div className="w-full text-right text-[15px] font-black pr-1 flex justify-end items-center h-5 overflow-hidden">
+                                                {renderResult()}
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
+                                </div>
 
-                    {/* Numeric Pad - More Concrete Layout */}
-                    <div className="w-full flex flex-col gap-4 px-1 shrink-0">
-                        <div className="grid grid-cols-5 gap-2">
-                            <MainButton label="7" shiftLabel="CONST" onClick={() => handleKey('7', 'CONST')} />
-                            <MainButton label="8" shiftLabel="CONV" onClick={() => handleKey('8', 'CONV')} />
-                            <MainButton label="9" shiftLabel="CLR" onClick={() => handleKey('9', 'CLR')} />
-                            <MainButton label="DEL" shiftLabel="INS" color="bg-[#a3e635]" fontSize="text-sm" onClick={() => handleKey('DEL', 'INS')} />
-                            <MainButton label="AC" shiftLabel="OFF" color="bg-[#a3e635]" fontSize="text-sm" onClick={() => handleKey('AC', 'AC')} />
-                        </div>
-                        <div className="grid grid-cols-5 gap-2">
-                            <MainButton label="4" alphaLabel="MATRIX" onClick={() => handleKey('4', '', 'MATRIX')} />
-                            <MainButton label="5" alphaLabel="VECTOR" onClick={() => handleKey('5', '', 'VECTOR')} />
-                            <MainButton label="6" onClick={() => handleKey('6')} />
-                            <MainButton label="×" shiftLabel="nPr" onClick={() => handleKey('*', 'nPr')} />
-                            <MainButton label="÷" shiftLabel="nCr" onClick={() => handleKey('/', 'nCr')} />
-                        </div>
-                        <div className="grid grid-cols-5 gap-2">
-                            <MainButton label="1" alphaLabel="STAT" onClick={() => handleKey('1', '', 'STAT')} />
-                            <MainButton label="2" alphaLabel="CMPLX" onClick={() => handleKey('2', '', 'CMPLX')} />
-                            <MainButton label="3" alphaLabel="BASE" onClick={() => handleKey('3', '', 'BASE')} />
-                            <MainButton label="+" shiftLabel="Pol" onClick={() => handleKey('+', 'Pol')} />
-                            <MainButton label="−" shiftLabel="Rec" onClick={() => handleKey('-', 'Rec')} />
-                        </div>
-                        <div className="grid grid-cols-5 gap-2">
-                            <MainButton label="0" shiftLabel="Rnd" onClick={() => handleKey('0', 'Rnd')} />
-                            <MainButton label="." shiftLabel="Ran#" onClick={() => handleKey('.', 'Ran#')} />
-                            <MainButton label="×10ˣ" shiftLabel="π" alphaLabel="e" fontSize="text-sm" onClick={() => handleKey('*10^', 'pi', 'e')} />
-                            <MainButton label="Ans" shiftLabel="DRG▶" fontSize="text-sm" onClick={() => handleKey('Ans', 'DRG')} />
-                            <MainButton label="=" onClick={() => handleKey('=')} />
-                        </div>
-                    </div>
+                                {/* Replay and Primary Function Row */}
+                                <div className="w-full px-1 flex justify-between items-center h-16 shrink-0">
+                                    <div className="flex flex-col gap-1.5">
+                                        <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" onClick={() => setIsShift(!isShift)} />
+                                        <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" onClick={() => setIsAlpha(!isAlpha)} />
+                                    </div>
+                                    <div className="relative w-14 h-14 rounded-full bg-gradient-to-b from-slate-400 via-slate-200 to-slate-400 border-[2px] border-[#4e5663] shadow-[0_3px_6px_rgba(0,0,0,0.65)] flex items-center justify-center scale-85">
+                                        <div className="absolute inset-[4px] rounded-full bg-[#0c0d10] border border-[#31363e] flex items-center justify-center overflow-hidden">
+                                            <button className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronUp size={8} /></button>
+                                            <button className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronDown size={8} /></button>
+                                            <button className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronLeft size={8} /></button>
+                                            <button className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronRight size={8} /></button>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col gap-1.5">
+                                        <SilverControl label="Mode" subLabel="Setup" subColor="text-slate-400" onClick={() => { }} />
+                                        <SilverControl label="On" subLabel="On" subColor="text-slate-400" onClick={() => { setInput(''); setResult(null); }} />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* RIGHT COLUMN: Numeric & Sci Buttons */}
+                            <div className="w-[300px] flex flex-col justify-between h-full pl-1">
+                                {/* Scientific Control Pad */}
+                                <div className="w-full flex flex-col gap-1 px-0.5">
+                                    <div className="flex justify-between px-2">
+                                        <div className="flex gap-2">
+                                            <SciButton label="CALC" shiftLabel="SOLVE" alphaLabel="=" onClick={() => handleKey('CALC', 'SOLVE', '=')} />
+                                            <SciButton label="∫dx" shiftLabel="d/dx" alphaLabel=":" onClick={() => handleKey('∫dx', 'd/dx', ':')} />
+                                        </div>
+                                        <div className="flex gap-2">
+                                            <SciButton label="x⁻¹" shiftLabel="x!" onClick={() => handleKey('^-1', '!')} />
+                                            <SciButton label="log□□" shiftLabel="Σ" onClick={() => handleKey('log(')} />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-6 gap-x-1 gap-y-2">
+                                        <SciButton label="■/□" shiftLabel="▊/□" onClick={() => handleKey('/')} />
+                                        <SciButton label="√■" shiftLabel="∛■" onClick={() => handleKey('sqrt(', 'cbrt(')} />
+                                        <SciButton label="x²" shiftLabel="x³" onClick={() => handleKey('^2', '^3')} />
+                                        <SciButton label="x□" shiftLabel="▊√■" onClick={() => handleKey('^')} />
+                                        <SciButton label="log" shiftLabel="10□" onClick={() => handleKey('log(', '10^')} />
+                                        <SciButton label="ln" shiftLabel="e□" onClick={() => handleKey('ln(', 'e^')} />
+
+                                        <SciButton label="(-)" alphaLabel="A" onClick={() => handleKey('-', '', 'A')} />
+                                        <SciButton label={"°' \""} shiftLabel="←" alphaLabel="B" onClick={() => handleKey('°', '←', 'B')} />
+                                        <SciButton label="hyp" shiftLabel="Abs" alphaLabel="C" onClick={() => handleKey('hyp', 'Abs', 'C')} />
+                                        <SciButton label="sin" shiftLabel="sin⁻¹" alphaLabel="D" onClick={() => handleKey('sin(', 'sin⁻¹', 'D')} />
+                                        <SciButton label="cos" shiftLabel="cos⁻¹" alphaLabel="E" onClick={() => handleKey('cos(', 'cos⁻¹', 'E')} />
+                                        <SciButton label="tan" shiftLabel="tan⁻¹" alphaLabel="F" onClick={() => handleKey('tan(', 'tan⁻¹', 'F')} />
+
+                                        <SciButton label="RCL" shiftLabel="STO" onClick={() => { }} />
+                                        <SciButton label="ENG" shiftLabel="←" onClick={() => { }} />
+                                        <SciButton label="(" shiftLabel="%" onClick={() => handleKey('(')} />
+                                        <SciButton label=")" shiftLabel="," alphaLabel="X" onClick={() => handleKey(')')} />
+                                        <SciButton label="S⇔D" shiftLabel="a b/c" alphaLabel="Y" onClick={() => handleKey('S<=>D')} />
+                                        <SciButton label="M+" shiftLabel="M-" alphaLabel="M" onClick={() => { }} />
+                                    </div>
+                                </div>
+
+                                {/* Concrete Numeric Pad */}
+                                <div className="w-full flex flex-col gap-1 px-0.5">
+                                    <div className="grid grid-cols-5 gap-1">
+                                        <MainButton label="7" shiftLabel="CONST" onClick={() => handleKey('7', 'CONST')} />
+                                        <MainButton label="8" shiftLabel="CONV" onClick={() => handleKey('8', 'CONV')} />
+                                        <MainButton label="9" shiftLabel="CLR" onClick={() => handleKey('9', 'CLR')} />
+                                        <MainButton label="DEL" shiftLabel="INS" color="bg-[#ea580c] hover:bg-[#c2410c] border-b-[2px] border-[#9a3412]" textColor="text-white" fontSize="text-[10px]" onClick={() => handleKey('DEL', 'INS')} />
+                                        <MainButton label="AC" shiftLabel="OFF" color="bg-[#ea580c] hover:bg-[#c2410c] border-b-[2px] border-[#9a3412]" textColor="text-white" fontSize="text-[10px]" onClick={() => handleKey('AC', 'AC')} />
+                                    </div>
+                                    <div className="grid grid-cols-5 gap-1">
+                                        <MainButton label="4" alphaLabel="MATRIX" onClick={() => handleKey('4', '', 'MATRIX')} />
+                                        <MainButton label="5" alphaLabel="VECTOR" onClick={() => handleKey('5', '', 'VECTOR')} />
+                                        <MainButton label="6" onClick={() => handleKey('6')} />
+                                        <MainButton label="×" shiftLabel="nPr" color="bg-[#334155] hover:bg-[#475569] border-b-[2px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('*', 'nPr')} />
+                                        <MainButton label="÷" shiftLabel="nCr" color="bg-[#334155] hover:bg-[#475569] border-b-[2px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('/', 'nCr')} />
+                                    </div>
+                                    <div className="grid grid-cols-5 gap-1">
+                                        <MainButton label="1" alphaLabel="STAT" onClick={() => handleKey('1', '', 'STAT')} />
+                                        <MainButton label="2" alphaLabel="CMPLX" onClick={() => handleKey('2', '', 'CMPLX')} />
+                                        <MainButton label="3" alphaLabel="BASE" onClick={() => handleKey('3', '', 'BASE')} />
+                                        <MainButton label="+" shiftLabel="Pol" color="bg-[#334155] hover:bg-[#475569] border-b-[2px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('+', 'Pol')} />
+                                        <MainButton label="−" shiftLabel="Rec" color="bg-[#334155] hover:bg-[#475569] border-b-[2px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('-', 'Rec')} />
+                                    </div>
+                                    <div className="grid grid-cols-5 gap-1">
+                                        <MainButton label="0" shiftLabel="Rnd" onClick={() => handleKey('0', 'Rnd')} />
+                                        <MainButton label="." shiftLabel="Ran#" onClick={() => handleKey('.', 'Ran#')} />
+                                        <MainButton label="×10ˣ" shiftLabel="π" alphaLabel="e" fontSize="text-[8px]" onClick={() => handleKey('*10^', 'pi', 'e')} />
+                                        <MainButton label="Ans" shiftLabel="DRG▶" fontSize="text-[10px]" onClick={() => handleKey('Ans', 'DRG')} />
+                                        <MainButton label="=" color="bg-[#e2e8f0] hover:bg-[#cbd5e1] border-b-[2px] border-[#cbd5e1]" onClick={() => handleKey('=')} />
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            {/* Brand & Solar Panel Row */}
+                            <div className="w-full flex justify-between items-center mb-1.5 px-1 shrink-0 h-8">
+                                <div className="flex flex-col">
+                                    <h1 className="text-slate-100 font-extrabold text-[12px] tracking-tighter leading-none italic">CASIO</h1>
+                                    <div className="flex gap-1 items-center">
+                                        <span className="text-slate-400 text-[6.5px] font-bold">fx-991ES PLUS</span>
+                                        <span className="text-slate-500 text-[5.5px] font-black uppercase tracking-tighter">2nd ed.</span>
+                                    </div>
+                                </div>
+                                <div className="w-16 h-6 bg-[#2d1a1a] rounded-[2px] p-0.5 flex gap-0.5 border border-white/5 opacity-70 shadow-inner">
+                                    {[...Array(4)].map((_, i) => <div key={i} className="flex-1 bg-[#1a0f0f] border-x border-white/5" />)}
+                                </div>
+                            </div>
+
+                            {/* LCD Screen - Digital Style */}
+                            <div className="w-full bg-[#cadbb7] h-[80px] rounded-md mb-4 p-2 shrink-0 flex flex-col justify-between border-[3px] border-[#292d35] shadow-[inset_0_2px_8px_rgba(0,0,0,0.5)] relative font-mono text-slate-900">
+                                <div className="flex justify-between items-start text-[6.5px] font-black tracking-widest leading-none">
+                                    <div className="flex gap-2">
+                                        <span className={isShift ? "text-slate-950 font-black opacity-100" : "opacity-10"}>S</span>
+                                        <span className={isAlpha ? "text-slate-950 font-black opacity-100" : "opacity-10"}>A</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <span className="border border-slate-950/30 px-0.5 leading-none">R</span>
+                                        <span>Math ▲</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex-1 flex flex-col justify-end overflow-hidden pb-0.5">
+                                    <div className="text-[15px] font-medium w-full overflow-x-auto whitespace-nowrap scrollbar-none flex items-center h-6">
+                                        <InlineMath math={displayLatex} />
+                                    </div>
+                                    {result && (
+                                        <div className="w-full text-right text-[18px] font-black pr-1 flex justify-end items-center h-6 overflow-hidden">
+                                            {renderResult()}
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none" />
+                            </div>
+
+                            {/* Replay and Primary Function Row */}
+                            <div className="w-full px-1 mb-5 flex justify-between items-center h-16 shrink-0">
+                                <div className="flex flex-col gap-2">
+                                    <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" onClick={() => setIsShift(!isShift)} />
+                                    <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" onClick={() => setIsAlpha(!isAlpha)} />
+                                </div>
+                                <div className="relative w-18 h-18 rounded-full bg-gradient-to-b from-slate-400 via-slate-200 to-slate-400 border-[3px] border-[#4e5663] shadow-[0_4px_10px_rgba(0,0,0,0.65)] flex items-center justify-center scale-90">
+                                    <div className="absolute inset-[6px] rounded-full bg-[#0c0d10] border-2 border-[#31363e] flex items-center justify-center overflow-hidden">
+                                        <span className="text-[4px] text-slate-700 font-black uppercase tracking-[0.3em] mt-1.5 opacity-30">REPLAY</span>
+                                        <button className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronUp size={10} /></button>
+                                        <button className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronDown size={10} /></button>
+                                        <button className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronLeft size={10} /></button>
+                                        <button className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronRight size={10} /></button>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <SilverControl label="Mode" subLabel="Mode Setup" subColor="text-slate-400" onClick={() => { }} />
+                                    <SilverControl label="On" subLabel="On" subColor="text-slate-400" onClick={() => { setInput(''); setResult(null); }} />
+                                </div>
+                            </div>
+
+                            {/* Scientific Control Pad */}
+                            <div className="w-full flex flex-col gap-3.5 px-0.5 mb-5 shrink-0">
+                                <div className="flex justify-between px-3">
+                                    <div className="flex gap-4">
+                                        <SciButton label="CALC" shiftLabel="SOLVE" alphaLabel="=" onClick={() => handleKey('CALC', 'SOLVE', '=')} />
+                                        <SciButton label="∫dx" shiftLabel="d/dx" alphaLabel=":" onClick={() => handleKey('∫dx', 'd/dx', ':')} />
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <SciButton label="x⁻¹" shiftLabel="x!" onClick={() => handleKey('^-1', '!')} />
+                                        <SciButton label="log□□" shiftLabel="Σ" onClick={() => handleKey('log(')} />
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-6 gap-x-1 gap-y-4 px-0.5">
+                                    <SciButton label="■/□" shiftLabel="▊/□" onClick={() => handleKey('/')} />
+                                    <SciButton label="√■" shiftLabel="∛■" onClick={() => handleKey('sqrt(', 'cbrt(')} />
+                                    <SciButton label="x²" shiftLabel="x³" onClick={() => handleKey('^2', '^3')} />
+                                    <SciButton label="x□" shiftLabel="▊√■" onClick={() => handleKey('^')} />
+                                    <SciButton label="log" shiftLabel="10□" onClick={() => handleKey('log(', '10^')} />
+                                    <SciButton label="ln" shiftLabel="e□" onClick={() => handleKey('ln(', 'e^')} />
+
+                                    <SciButton label="(-)" alphaLabel="A" onClick={() => handleKey('-', '', 'A')} />
+                                    <SciButton label={"°' \""} shiftLabel="←" alphaLabel="B" onClick={() => handleKey('°', '←', 'B')} />
+                                    <SciButton label="hyp" shiftLabel="Abs" alphaLabel="C" onClick={() => handleKey('hyp', 'Abs', 'C')} />
+                                    <SciButton label="sin" shiftLabel="sin⁻¹" alphaLabel="D" onClick={() => handleKey('sin(', 'sin⁻¹', 'D')} />
+                                    <SciButton label="cos" shiftLabel="cos⁻¹" alphaLabel="E" onClick={() => handleKey('cos(', 'cos⁻¹', 'E')} />
+                                    <SciButton label="tan" shiftLabel="tan⁻¹" alphaLabel="F" onClick={() => handleKey('tan(', 'tan⁻¹', 'F')} />
+
+                                    <SciButton label="RCL" shiftLabel="STO" onClick={() => { }} />
+                                    <SciButton label="ENG" shiftLabel="←" onClick={() => { }} />
+                                    <SciButton label="(" shiftLabel="%" onClick={() => handleKey('(')} />
+                                    <SciButton label=")" shiftLabel="," alphaLabel="X" onClick={() => handleKey(')')} />
+                                    <SciButton label="S⇔D" shiftLabel="a b/c" alphaLabel="Y" onClick={() => handleKey('S<=>D')} />
+                                    <SciButton label="M+" shiftLabel="M-" alphaLabel="M" onClick={() => { }} />
+                                </div>
+                            </div>
+
+                            {/* Concrete Numeric Pad */}
+                            <div className="w-full flex flex-col gap-3.5 px-0.5 shrink-0">
+                                <div className="grid grid-cols-5 gap-2">
+                                    <MainButton label="7" shiftLabel="CONST" onClick={() => handleKey('7', 'CONST')} />
+                                    <MainButton label="8" shiftLabel="CONV" onClick={() => handleKey('8', 'CONV')} />
+                                    <MainButton label="9" shiftLabel="CLR" onClick={() => handleKey('9', 'CLR')} />
+                                    <MainButton label="DEL" shiftLabel="INS" color="bg-[#ea580c] hover:bg-[#c2410c] border-b-[3px] border-[#9a3412]" textColor="text-white" fontSize="text-sm" onClick={() => handleKey('DEL', 'INS')} />
+                                    <MainButton label="AC" shiftLabel="OFF" color="bg-[#ea580c] hover:bg-[#c2410c] border-b-[3px] border-[#9a3412]" textColor="text-white" fontSize="text-sm" onClick={() => handleKey('AC', 'AC')} />
+                                </div>
+                                <div className="grid grid-cols-5 gap-2">
+                                    <MainButton label="4" alphaLabel="MATRIX" onClick={() => handleKey('4', '', 'MATRIX')} />
+                                    <MainButton label="5" alphaLabel="VECTOR" onClick={() => handleKey('5', '', 'VECTOR')} />
+                                    <MainButton label="6" onClick={() => handleKey('6')} />
+                                    <MainButton label="×" shiftLabel="nPr" color="bg-[#334155] hover:bg-[#475569] border-b-[3px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('*', 'nPr')} />
+                                    <MainButton label="÷" shiftLabel="nCr" color="bg-[#334155] hover:bg-[#475569] border-b-[3px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('/', 'nCr')} />
+                                </div>
+                                <div className="grid grid-cols-5 gap-2">
+                                    <MainButton label="1" alphaLabel="STAT" onClick={() => handleKey('1', '', 'STAT')} />
+                                    <MainButton label="2" alphaLabel="CMPLX" onClick={() => handleKey('2', '', 'CMPLX')} />
+                                    <MainButton label="3" alphaLabel="BASE" onClick={() => handleKey('3', '', 'BASE')} />
+                                    <MainButton label="+" shiftLabel="Pol" color="bg-[#334155] hover:bg-[#475569] border-b-[3px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('+', 'Pol')} />
+                                    <MainButton label="−" shiftLabel="Rec" color="bg-[#334155] hover:bg-[#475569] border-b-[3px] border-[#1e293b]" textColor="text-white" onClick={() => handleKey('-', 'Rec')} />
+                                </div>
+                                <div className="grid grid-cols-5 gap-2">
+                                    <MainButton label="0" shiftLabel="Rnd" onClick={() => handleKey('0', 'Rnd')} />
+                                    <MainButton label="." shiftLabel="Ran#" onClick={() => handleKey('.', 'Ran#')} />
+                                    <MainButton label="×10ˣ" shiftLabel="π" alphaLabel="e" fontSize="text-[10px]" onClick={() => handleKey('*10^', 'pi', 'e')} />
+                                    <MainButton label="Ans" shiftLabel="DRG▶" fontSize="text-sm" onClick={() => handleKey('Ans', 'DRG')} />
+                                    <MainButton label="=" color="bg-[#e2e8f0] hover:bg-[#cbd5e1] border-b-[3px] border-[#cbd5e1]" onClick={() => handleKey('=')} />
+                                </div>
+                            </div>
+                        </>
+                    )}
                 </motion.div>
             )}
         </AnimatePresence>
