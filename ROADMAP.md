@@ -89,6 +89,7 @@
 
 ### (8) 📚 توحيد وتطوير هيكلية الدروس تفاعلياً (Curriculum Unification)
 - [ ] **اعتماد النموذج النهائي:** بمجرد الاستقرار واعتماد الشكل النهائي التفاعلي لدروس الوحدة الأولى في Edexcel AS Chemistry (Unit 1: Structure, Bonding & Intro Organic)، سيتم تعميم هذا النموذج التفاعلي (Slide-by-Slide Registry Structure) على كافة مناهج المنصة الستة (بما فيها Cambridge IGCSE 0620).
+- [ ] **الخطوة الأولى لمنهج Cambridge IGCSE (States of Matter):** تحويل أول درس "States of Matter" إلى البنية التفاعلية الجديدة المقسمة إلى 4 أجزاء رئيسية (Part 1: Solids, Part 2: Liquids, Part 3: Gases, Part 4: Changes of State) وربطه بـ `registry.ts` لتفعيل القائمة الجانبية والتنقل السينمائي وتأثيراته تلقائياً.
 - [ ] **الهجرة الشاملة للبيانات:** تفكيك النصوص الطويلة القديمة (theory strings) وتحويلها إلى مصفوفات تفاعلية `LessonPart[]` غنية بالأمثلة التطبيقية والكويزات المدمجة.
 
 ---
