@@ -187,6 +187,8 @@ function AdminLayoutContent({
             <main className="flex-1 min-h-screen w-full lg:overflow-y-auto">
                 {children}
             </main>
+        </div>
+    );
 }
 
 export default function AdminLayout({
