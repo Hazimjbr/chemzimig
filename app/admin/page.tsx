@@ -277,6 +277,8 @@ function AdminContent() {
                 </div>
 
             </div>
+        </div>
+    );
 }
 
 export default function AdminPage() {
