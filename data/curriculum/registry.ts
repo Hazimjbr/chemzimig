@@ -1,8 +1,19 @@
+export interface LessonPart {
+    id: string;
+    title: string;
+    type: 'text' | 'interactive' | 'simulation' | 'quiz';
+    content: string;
+    keyPoints?: string[];
+    equations?: string[];
+    simulationId?: string;
+}
+
 export interface LessonRegistryItem {
     title: string;
     number: number;
     theory: string;
     quiz: any[];
+    parts?: LessonPart[];
 }
 
 import * as ci_u1_l1_theory from './cie-igcse/unit-1/lesson-1/index';
@@ -529,7 +540,7 @@ import * as ed_u6_l1_quiz from './edexcel-alevel/unit-6/lesson-1/quiz';
 
 export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>> = {
     'edexcel-alevel-unit-1': {
-        1: { title: ed_u1_l1_theory.lessonTitle, number: ed_u1_l1_theory.lessonNumber, theory: ed_u1_l1_theory.theoryMarkdown, quiz: ed_u1_l1_quiz.lessonQuiz },
+        1: { title: ed_u1_l1_theory.lessonTitle, number: ed_u1_l1_theory.lessonNumber, theory: ed_u1_l1_theory.theoryMarkdown, quiz: ed_u1_l1_quiz.lessonQuiz, parts: ed_u1_l1_theory.parts },
         2: { title: ed_u1_l2_theory.lessonTitle, number: ed_u1_l2_theory.lessonNumber, theory: ed_u1_l2_theory.theoryMarkdown, quiz: ed_u1_l2_quiz.lessonQuiz },
         3: { title: ed_u1_l3_theory.lessonTitle, number: ed_u1_l3_theory.lessonNumber, theory: ed_u1_l3_theory.theoryMarkdown, quiz: ed_u1_l3_quiz.lessonQuiz },
         4: { title: ed_u1_l4_theory.lessonTitle, number: ed_u1_l4_theory.lessonNumber, theory: ed_u1_l4_theory.theoryMarkdown, quiz: ed_u1_l4_quiz.lessonQuiz },
@@ -568,6 +579,13 @@ export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>>
 Object.assign(curriculumRegistry, edexcelRegistry);
 
 export function getLessonFromRegistry(track: string, unitNumber: number, lessonNumber: number): LessonRegistryItem | null {
-    const key = `${track}-unit-${unitNumber}`;
+    let resolvedTrack = track;
+    if (track === 'edexcel-as' || track === 'edexcel-a2') {
+        resolvedTrack = 'edexcel-alevel';
+    }
+    if (track === 'cie-as') {
+        resolvedTrack = 'cie-alevel';
+    }
+    const key = `${resolvedTrack}-unit-${unitNumber}`;
     return curriculumRegistry[key]?.[lessonNumber] || null;
 }

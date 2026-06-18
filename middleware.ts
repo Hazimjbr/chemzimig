@@ -7,28 +7,6 @@ const ADMIN_EMAILS = ['h75jbr@gmail.com'];
 
 const SESSION_COOKIE_NAME = 'chemzim-session';
 
-// Simple in-memory rate limiting map
-const rateLimits = new Map<string, { count: number; resetTime: number }>();
-
-// Helper function to handle rate limiting
-function checkRateLimit(key: string, limit: number, windowMs: number): { allowed: boolean; remaining: number; reset: number } {
-    const now = Date.now();
-    const limitRecord = rateLimits.get(key);
-
-    if (!limitRecord || now > limitRecord.resetTime) {
-        const resetTime = now + windowMs;
-        rateLimits.set(key, { count: 1, resetTime });
-        return { allowed: true, remaining: limit - 1, reset: resetTime };
-    }
-
-    if (limitRecord.count >= limit) {
-        return { allowed: false, remaining: 0, reset: limitRecord.resetTime };
-    }
-
-    limitRecord.count += 1;
-    return { allowed: true, remaining: limit - limitRecord.count, reset: limitRecord.resetTime };
-}
-
 function isAdminEmail(email: string | null | undefined): boolean {
     if (!email) return false;
     return ADMIN_EMAILS.includes(email.toLowerCase());
@@ -45,40 +23,6 @@ function getSecretKey(): Uint8Array {
 
 export async function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
-
-    // ============ Rate Limiting ============
-    if (pathname.startsWith('/api/')) {
-        const ip = request.ip || request.headers.get('x-forwarded-for')?.split(',')[0].trim() || request.headers.get('x-real-ip') || '127.0.0.1';
-        
-        let limit = 60; // 60 requests
-        let windowMs = 60 * 1000; // 1 minute
-        let rateLimitKey = `${ip}:general`;
-
-        if (pathname.startsWith('/api/auth/')) {
-            limit = 15; // 15 attempts
-            windowMs = 15 * 60 * 1000; // 15 minutes
-            rateLimitKey = `${ip}:auth`;
-        }
-
-        const { allowed, remaining, reset } = checkRateLimit(rateLimitKey, limit, windowMs);
-
-        if (!allowed) {
-            const retryAfter = Math.ceil((reset - Date.now()) / 1000);
-            return new NextResponse(
-                JSON.stringify({ error: 'Too many requests. Please try again later.' }),
-                {
-                    status: 429,
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Retry-After': String(retryAfter),
-                        'X-RateLimit-Limit': String(limit),
-                        'X-RateLimit-Remaining': '0',
-                        'X-RateLimit-Reset': String(Math.ceil(reset / 1000))
-                    }
-                }
-            );
-        }
-    }
 
     // ============ CSRF Protection for ALL API mutation requests ============
     if (pathname.startsWith('/api/') && ['POST', 'PUT', 'DELETE', 'PATCH'].includes(request.method)) {

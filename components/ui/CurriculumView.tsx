@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CurriculumLevel } from '@/data/curriculum';
+import { useSearchParams } from 'next/navigation';
 import { TopicCard } from './TopicCard';
 
 interface CurriculumViewProps {
@@ -10,7 +11,16 @@ interface CurriculumViewProps {
 }
 
 export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => {
-    const [activeTab, setActiveTab] = useState(curricula[0].id);
+    const searchParams = useSearchParams();
+    const trackParam = searchParams.get('track');
+    const defaultTab = curricula.some(c => c.id === trackParam) ? (trackParam || curricula[0].id) : curricula[0].id;
+    const [activeTab, setActiveTab] = useState(defaultTab);
+
+    React.useEffect(() => {
+        if (trackParam && curricula.some(c => c.id === trackParam)) {
+            setActiveTab(trackParam);
+        }
+    }, [trackParam, curricula]);
 
     const activeCurriculum = curricula.find(c => c.id === activeTab);
 

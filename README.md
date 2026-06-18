@@ -31,6 +31,10 @@ ChemZim is built for speed, security, and scientific precision.
 - **3D Molecular Visualization:** Interactive atomic models using **React Three Fiber**.
 - **Modern Aesthetics:** Glassmorphism, NeonGlow accents, and ultra-smooth transitions using **Framer Motion**.
 - **Mobile First & Orientation Aware:** Responsive charts, tables, sidebar navigation, and a floating toolbar. Includes a custom orientation-aware Casio Scientific Calculator that automatically splits into a dual-column layout on mobile landscape screens.
+- **Interactive Chemistry Calculator:** Floating toolbar widget offering stoichiometric calculations for Moles ($n = m / Mr$), Concentration, Dilutions ($C_1V_1 = C_2V_2$), Percentage Yield, Atom Economy, Uncertainty (accounting for readings count), and pH/pOH.
+- **Interactive Lesson Player:** Slide-by-slide learning dashboard with sidebar step navigation, linear progress indicator, and confetti completion celebration.
+- **Full-Screen Immersive Layout:** Dynamic layout that automatically hides the main dashboard sidebar and header in lesson view to provide a distraction-free study environment.
+- **Interactive Study Tools:** Text-to-Speech (TTS) audio-reading assistant, chemical equation reaction animator, and persistent localStorage-based study notes.
 
 ---
 
@@ -81,8 +85,10 @@ npm run dev
 - 🎯 **Past Paper Mastery** — Topic-specific questions from official papers.
 - 🏆 **Gamified Progress & Leaderboard** — XP, levels, daily streaks, and competitive standings with custom Weekly, Monthly, and Mad Scientist (accuracy-focused) filters.
 - 📊 **Deep Analytics** — Comprehensive tracking of student performance.
-- 🧪 **Interactive Lab** — Simulations, 3D atomic structures, and a responsive Casio-style scientific calculator supporting dual-column landscape mode.
+- 🧪 **Interactive Lab** — Simulations, 3D atomic structures, a responsive Casio-style scientific calculator, and a premium **Chemistry Stoichiometric Calculator** widget in the assistant bar.
 - 🗂️ **Spaced Repetition Mistakes Inbox** — Automatically logs and schedules incorrect quiz questions for future student review.
+- 📖 **Interactive Lesson Player** — Premium slide-based player with step navigation, progress tracking, study notes recorder, text-to-speech engine, reaction animator, and confetti completion celebration.
+- 🌐 **Multi-Board Curriculum Splits** — Fully separated tracks for CIE IGCSE, CIE AS, CIE A-Level, Edexcel IGCSE, Edexcel AS, and Edexcel A2 with URL-based active track preservation.
 
 ---
 

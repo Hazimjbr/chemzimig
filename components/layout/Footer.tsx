@@ -59,7 +59,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-muted text-sm leading-relaxed max-w-sm mb-6">
-              The ultimate chemistry learning platform for IGCSE and A-Level
+              The ultimate chemistry learning platform for international chemistry
               students. Master your chemistry with interactive practice and
               gamified learning.
             </p>

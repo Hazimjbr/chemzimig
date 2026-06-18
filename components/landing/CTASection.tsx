@@ -29,7 +29,7 @@ export default function CTASection() {
         </h2>
 
         <p className="text-lg text-muted max-w-xl mx-auto mb-10 leading-relaxed">
-          Join students who are mastering Cambridge Chemistry with smart
+          Join students who are mastering Chemistry with smart
           practice. Start for free — no credit card required.
         </p>
 

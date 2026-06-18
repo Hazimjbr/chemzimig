@@ -32,6 +32,21 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const { user, logout } = useAuth();
     const { xp, level, streak } = useGamification();
 
+    const isLessonPlayer = pathname?.startsWith('/dashboard/curriculum/') && pathname.split('/').length > 4;
+
+    if (isLessonPlayer) {
+        return (
+            <div className="min-h-screen bg-[#050510] text-white font-sans overflow-x-hidden">
+                <main className="w-full min-h-screen relative z-0 p-6 lg:p-10">
+                    {/* Visual Background Orbs */}
+                    <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
+                    <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
+                    {children}
+                </main>
+            </div>
+        );
+    }
+
     return (
         <div className="flex min-h-screen bg-[#050510] text-white font-sans overflow-hidden">
             {/* Mobile Sidebar Overlay */}

@@ -7,7 +7,7 @@ const stats = [
     value: 1500,
     suffix: "+",
     label: "Practice Questions",
-    description: "Covering all IGCSE topics",
+    description: "Covering all syllabus topics",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path d="M9 3L9 8L6 14L8 14L10 18L14 18L16 14L18 14L15 8L15 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -19,7 +19,7 @@ const stats = [
     value: 12,
     suffix: "",
     label: "IGCSE Topics",
-    description: "Full Cambridge 0620 syllabus",
+    description: "Full syllabus coverage",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -122,7 +122,7 @@ export default function StatsSection() {
             Built for <span className="text-gradient-teal">Results</span>
           </h2>
           <p className="text-muted text-lg max-w-xl mx-auto">
-            Everything you need to ace your Cambridge chemistry exams.
+            Everything you need to ace your international chemistry exams.
           </p>
         </div>
 

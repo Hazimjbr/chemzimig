@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, Grid3x3, LayoutGrid, Calculator } from 'lucide-react';
+import { ChevronLeft, Grid3x3, LayoutGrid, Calculator, FlaskConical } from 'lucide-react';
 import PeriodicTable from './PeriodicTable';
 import ScientificCalculator from './ScientificCalculator';
+import ChemistryCalculator from './ChemistryCalculator';
 
 export default function FloatingAssistant() {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isTableOpen, setIsTableOpen] = useState(false);
     const [isCalcOpen, setIsCalcOpen] = useState(false);
+    const [isChemCalcOpen, setIsChemCalcOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -30,6 +32,7 @@ export default function FloatingAssistant() {
     return (
         <>
             <motion.div 
+                initial={{ right: -68 }}
                 animate={{ right: isExpanded ? 0 : -68 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 className="fixed top-1/2 -translate-y-1/2 z-50 flex items-center"
@@ -65,6 +68,7 @@ export default function FloatingAssistant() {
                         <PeriodicTableIcon />
                     </motion.button>
 
+                    {/* Scientific Calculator Trigger */}
                     <motion.button
                         onClick={() => {
                             setIsCalcOpen(true);
@@ -77,6 +81,20 @@ export default function FloatingAssistant() {
                     >
                         <Calculator size={20} />
                     </motion.button>
+
+                    {/* Chemistry Calculator Trigger */}
+                    <motion.button
+                        onClick={() => {
+                            setIsChemCalcOpen(true);
+                            setIsExpanded(false);
+                        }}
+                        whileHover={{ scale: 1.1, backgroundColor: 'rgba(99, 102, 241, 0.2)' }}
+                        whileTap={{ scale: 0.9 }}
+                        className="w-11 h-11 flex items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 transition-colors shadow-lg shadow-indigo-500/10"
+                        title="Chemistry Calculator"
+                    >
+                        <FlaskConical size={20} />
+                    </motion.button>
                 </div>
             </motion.div>
 
@@ -88,6 +106,10 @@ export default function FloatingAssistant() {
             <ScientificCalculator
                 isOpen={isCalcOpen}
                 onClose={() => setIsCalcOpen(false)}
+            />
+            <ChemistryCalculator
+                isOpen={isChemCalcOpen}
+                onClose={() => setIsChemCalcOpen(false)}
             />
         </>
     );

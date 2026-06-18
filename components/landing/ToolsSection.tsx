@@ -21,8 +21,8 @@ const tools = [
     bgGlow: "bg-teal-500/8",
   },
   {
-    title: "Molar Mass Calculator",
-    description: "Instantly calculate molar masses for any compound. Enter a formula and get precise atomic mass breakdowns.",
+    title: "Scientific Calculator",
+    description: "Full-featured scientific calculator directly on your screen for quick mathematical and trigonometric operations.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <rect x="4" y="4" width="20" height="20" rx="3" stroke="currentColor" strokeWidth="1.2" />
@@ -32,15 +32,15 @@ const tools = [
         <line x1="18" y1="10" x2="18" y2="24" stroke="currentColor" strokeWidth="0.8" />
         <line x1="4" y1="15" x2="24" y2="15" stroke="currentColor" strokeWidth="0.8" />
         <line x1="4" y1="19.5" x2="24" y2="19.5" stroke="currentColor" strokeWidth="0.8" />
-        <text x="8" y="8.5" fill="currentColor" fontSize="5" fontFamily="monospace" fontWeight="bold">Mr</text>
+        <text x="8" y="8.5" fill="currentColor" fontSize="5" fontFamily="monospace" fontWeight="bold">f(x)</text>
       </svg>
     ),
     gradient: "from-gold-500 to-gold-600",
     bgGlow: "bg-gold-500/8",
   },
   {
-    title: "Yield & Concentration",
-    description: "Calculate percentage yield, atom economy, concentration in mol/dm³, and perform dilution calculations.",
+    title: "Chemistry Calculator",
+    description: "Calculate moles, mass, concentrations, dilution properties, percentage yield, atom economy, percentage uncertainties, and pH solutions.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
         <path d="M10 3V10L4 22H24L18 10V3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />

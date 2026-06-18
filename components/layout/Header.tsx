@@ -10,9 +10,14 @@ export default function Header() {
 
   const boards = [
     { id: 'cie-igcse', label: 'CIE IGCSE', code: '0620', color: 'gold' },
-    { id: 'cie-alevel', label: 'CIE A-Level', code: '9701', color: 'teal' },
-    { id: 'edexcel-alevel', label: 'Edexcel IAL', code: 'XCH11', color: 'purple' },
+    { id: 'cie-as', label: 'CIE AS-Level', code: '9701', color: 'teal' },
+    { id: 'cie-alevel', label: 'CIE A-Level', code: '9701', color: 'purple' },
+    { id: 'edexcel-igcse', label: 'Edexcel IGCSE', code: '4CH1', color: 'purple' },
+    { id: 'edexcel-as', label: 'Edexcel AS', code: 'XCH11', color: 'purple' },
+    { id: 'edexcel-a2', label: 'Edexcel A2', code: 'YCH11', color: 'purple' },
   ];
+
+  const [selectedBoard, setSelectedBoard] = useState(boards[0]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -93,8 +98,11 @@ export default function Header() {
               className="flex items-center gap-2 px-3 py-1.5 rounded-lg glass border border-border hover:border-gold-500/30 transition-all text-sm cursor-pointer"
               id="board-switcher-btn"
             >
-              <div className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span className="text-gold-300 font-medium">CIE IGCSE</span>
+              <div className={`w-2 h-2 rounded-full ${
+                selectedBoard.color === 'gold' ? 'bg-gold-500' :
+                selectedBoard.color === 'teal' ? 'bg-teal-500' : 'bg-purple-500'
+              }`} />
+              <span className="text-gold-300 font-medium">{selectedBoard.label}</span>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className={`transition-transform duration-200 ${boardOpen ? 'rotate-180' : ''}`}>
                 <path d="M3 5L6 8L9 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
@@ -106,7 +114,26 @@ export default function Header() {
                   <button
                     key={board.id}
                     className="w-full flex items-center gap-3 px-4 py-3 text-sm text-slate-400 hover:text-white hover:bg-white/[0.05] transition-all text-left cursor-pointer"
-                    onClick={() => setBoardOpen(false)}
+                    onClick={() => {
+                      setSelectedBoard(board);
+                      setBoardOpen(false);
+                      
+                      // Map board id to the corresponding curriculum card element id
+                      let cardId = '';
+                      if (board.id === 'cie-igcse') cardId = 'curriculum-card-igcse';
+                      else if (board.id === 'cie-as') cardId = 'curriculum-card-as-level';
+                      else if (board.id === 'cie-alevel') cardId = 'curriculum-card-a-level';
+                      else if (board.id === 'edexcel-igcse') cardId = 'curriculum-card-edexcel-igcse';
+                      else if (board.id === 'edexcel-as') cardId = 'curriculum-card-edexcel-as';
+                      else if (board.id === 'edexcel-a2') cardId = 'curriculum-card-edexcel-a2';
+
+                      if (cardId) {
+                        const el = document.getElementById(cardId);
+                        if (el) {
+                          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                      }
+                    }}
                   >
                     <div className={`w-2 h-2 rounded-full ${
                       board.color === 'gold' ? 'bg-gold-500' :

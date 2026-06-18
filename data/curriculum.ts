@@ -165,11 +165,11 @@ export const igcseCurriculum: CurriculumLevel = {
   ],
 };
 
-export const aLevelCurriculum: CurriculumLevel = {
-  id: "cie-alevel",
+export const cieAsCurriculum: CurriculumLevel = {
+  id: "cie-as",
   code: "9701",
-  title: "AS & A Level Chemistry",
-  description: "Cambridge International AS & A Level Chemistry (9701)",
+  title: "CIE AS-Level Chemistry",
+  description: "Cambridge International AS Level Chemistry covering physical, inorganic, and organic chemistry.",
   topics: [
     {
       id: "physical-chemistry",
@@ -181,7 +181,6 @@ export const aLevelCurriculum: CurriculumLevel = {
         "Chemical bonding",
         "States of matter",
         "Chemical energetics",
-        "Electrochemistry",
         "Equilibria",
         "Reaction kinetics"
       ],
@@ -194,8 +193,6 @@ export const aLevelCurriculum: CurriculumLevel = {
         "The Periodic Table: chemical periodicity",
         "Group 2",
         "Group 17",
-        "An introduction to the chemistry of transition elements",
-        "Nitrogen and sulfur"
       ],
     },
     {
@@ -207,6 +204,41 @@ export const aLevelCurriculum: CurriculumLevel = {
         "Hydrocarbons",
         "Halogen derivatives",
         "Hydroxy compounds",
+      ],
+    },
+  ],
+};
+
+export const aLevelCurriculum: CurriculumLevel = {
+  id: "cie-alevel",
+  code: "9701",
+  title: "CIE A-Level Chemistry",
+  description: "Cambridge International A Level Chemistry covering advanced transition elements and analytical techniques.",
+  topics: [
+    {
+      id: "physical-chemistry-a2",
+      number: 1,
+      title: "Advanced Physical Chemistry",
+      subtopics: [
+        "Electrochemistry",
+        "Equilibria II",
+        "Reaction kinetics II"
+      ],
+    },
+    {
+      id: "inorganic-chemistry-a2",
+      number: 2,
+      title: "Transition Elements",
+      subtopics: [
+        "An introduction to the chemistry of transition elements",
+        "Nitrogen and sulfur"
+      ],
+    },
+    {
+      id: "organic-chemistry-a2",
+      number: 3,
+      title: "Advanced Organic Chemistry",
+      subtopics: [
         "Carbonyl compounds",
         "Carboxylic acids and derivatives",
         "Nitrogen compounds",
@@ -225,11 +257,31 @@ export const aLevelCurriculum: CurriculumLevel = {
   ],
 };
 
-export const edexcelCurriculum: CurriculumLevel = {
-  id: "edexcel-alevel",
-  code: "IAL Chemistry",
-  title: "Edexcel IAL Chemistry",
-  description: "Pearson Edexcel International Advanced Level (IAL) Chemistry (XCH11/YCH11)",
+export const edexcelIgcseCurriculum: CurriculumLevel = {
+  id: "edexcel-igcse",
+  code: "4CH1",
+  title: "Edexcel IGCSE Chemistry",
+  description: "Pearson Edexcel International GCSE Chemistry covering core concepts.",
+  topics: [
+    {
+      id: "principles-of-chemistry",
+      number: 1,
+      title: "Principles of Chemistry",
+      subtopics: [
+        "States of Matter",
+        "Elements, Compounds & Mixtures",
+        "Atomic Structure",
+        "Chemical Formulae, Equations & Calculations"
+      ]
+    }
+  ]
+};
+
+export const edexcelAsCurriculum: CurriculumLevel = {
+  id: "edexcel-as",
+  code: "XCH11",
+  title: "Edexcel AS Chemistry",
+  description: "Pearson Edexcel International AS Level Chemistry covering Units 1, 2, and 3.",
   topics: [
     {
       id: "edexcel-unit-1",
@@ -246,7 +298,7 @@ export const edexcelCurriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-2",
       number: 2,
-      title: "Unit 2: Energetics, Group Chem, Halogenoalkanes & Alcohols",
+      title: "Unit 2: Energetics, Group Chem & Halogenoalkanes",
       subtopics: [
         "Topic 6: Energetics",
         "Topic 7: Intermolecular Forces",
@@ -262,7 +314,16 @@ export const edexcelCurriculum: CurriculumLevel = {
       subtopics: [
         "Topic 11: AS Practical Skills and Techniques"
       ]
-    },
+    }
+  ]
+};
+
+export const edexcelA2Curriculum: CurriculumLevel = {
+  id: "edexcel-a2",
+  code: "YCH11",
+  title: "Edexcel A2 Chemistry",
+  description: "Pearson Edexcel International A2 Level Chemistry covering Units 4, 5, and 6.",
+  topics: [
     {
       id: "edexcel-unit-4",
       number: 4,
@@ -298,4 +359,11 @@ export const edexcelCurriculum: CurriculumLevel = {
   ]
 };
 
-export const allCurricula: CurriculumLevel[] = [igcseCurriculum, aLevelCurriculum, edexcelCurriculum];
+export const allCurricula: CurriculumLevel[] = [
+  igcseCurriculum,
+  cieAsCurriculum,
+  aLevelCurriculum,
+  edexcelIgcseCurriculum,
+  edexcelAsCurriculum,
+  edexcelA2Curriculum
+];

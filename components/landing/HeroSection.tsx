@@ -140,7 +140,7 @@ export default function HeroSection() {
           className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "0.3s" }}
         >
-          Practice with real Cambridge past paper questions, track your progress
+          Practice with real past paper questions from international exam boards, track your progress
           with gamified learning, and conquer every topic from Stoichiometry to
           Organic Chemistry.
         </p>

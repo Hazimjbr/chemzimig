@@ -64,19 +64,47 @@ const curricula = [
     gradient: "from-purple-600 to-purple-400",
   },
   {
-    level: "Edexcel IAL",
-    code: "XCH11/YCH11",
-    title: "International A-Level Chemistry",
-    description: "Pearson Edexcel International Advanced Level Chemistry covering 6 units from atomic structure to organic synthesis.",
+    level: "Edexcel IGCSE",
+    code: "4CH1",
+    title: "O-Level Chemistry",
+    description: "Pearson Edexcel International GCSE Chemistry covering principles of chemistry, inorganic, physical, and organic chemistry.",
+    topics: [
+      "Principles of Chemistry",
+      "Inorganic Chemistry",
+      "Physical Chemistry",
+      "Organic Chemistry",
+    ],
+    status: "coming-soon" as const,
+    questions: "Coming Soon",
+    color: "purple",
+    gradient: "from-purple-600 to-purple-400",
+  },
+  {
+    level: "Edexcel AS",
+    code: "XCH11",
+    title: "International AS Chemistry",
+    description: "Pearson Edexcel International AS Level Chemistry covering Units 1, 2, and 3 (Structure, Energetics, Organic Intro, and Practical Skills I).",
     topics: [
       "Structure & Bonding",
       "Energetics & Group Chemistry",
       "Practical Skills I",
+    ],
+    status: "active" as const,
+    questions: "Coming Soon",
+    color: "purple",
+    gradient: "from-purple-600 to-purple-400",
+  },
+  {
+    level: "Edexcel A2",
+    code: "YCH11",
+    title: "International A2 Chemistry",
+    description: "Pearson Edexcel International A2 Level Chemistry covering Units 4, 5, and 6 (Kinetics, Organic Synthesis, Transition Metals, and Practical Skills II).",
+    topics: [
       "Rates & Equilibria",
       "Transition Metals",
       "Practical Skills II",
     ],
-    status: "active" as const,
+    status: "coming-soon" as const,
     questions: "Coming Soon",
     color: "purple",
     gradient: "from-purple-600 to-purple-400",
@@ -97,14 +125,14 @@ const statusStyles = {
 export default function CurriculumSection() {
   return (
     <section className="relative py-24 lg:py-32" id="curriculum">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1600px] mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16">
           <span className="inline-block text-xs font-semibold tracking-widest text-gold-400 uppercase mb-4">
             Curriculum
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] text-white mb-5">
-            British <span className="text-gradient-gold">Curriculum</span> Chemistry
+            International <span className="text-gradient-gold">Curriculum</span> Chemistry
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto">
             Aligned with Cambridge Assessment and Pearson Edexcel international syllabi.
@@ -113,7 +141,7 @@ export default function CurriculumSection() {
         </div>
 
         {/* Curriculum cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {curricula.map((curr, index) => {
             const status = statusStyles[curr.status];
             const isActive = curr.status === "active";

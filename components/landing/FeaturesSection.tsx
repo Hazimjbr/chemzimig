@@ -10,7 +10,7 @@ const features = [
     ),
     title: "Past Paper Questions",
     description:
-      "Practice with real Cambridge IGCSE and A-Level past paper questions, classified by topic and difficulty level.",
+      "Practice with real past paper questions classified by topic and difficulty level across international syllabi.",
     color: "gold",
   },
   {
@@ -27,15 +27,12 @@ const features = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5" />
-        <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M12 6.0001C12 6.0001 8.5 2.0001 2 3.0001V19.0001C8.5 18.0001 12 21.0001 12 21.0001M12 6.0001C12 6.0001 15.5 2.0001 22 3.0001V19.0001C15.5 18.0001 12 21.0001 12 21.0001M12 6.0001V21.0001" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: "Interactive Periodic Table",
+    title: "Interactive Lessons",
     description:
-      "Explore elements with detailed properties, electron configurations, and direct links to related exam questions.",
+      "Learn core concepts through bite-sized lessons featuring beautiful formatting, chemical diagrams, and structured notes.",
     color: "purple",
   },
   {
@@ -64,13 +61,13 @@ const features = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M6.5 2H20V22H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 11L12 14L22 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M21 12V19C21 20.1 20.1 21 19 21H5C3.9 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    title: "Chemistry Calculator",
+    title: "Targeted Quizzes",
     description:
-      "Built-in calculators for molar mass, concentration, percentage yield, and empirical formula conversions.",
+      "Reinforce concepts through immediate feedback, step-by-step guidance, and quizzes tailored directly to your syllabus.",
     color: "gold",
   },
 ];
@@ -122,7 +119,7 @@ export default function FeaturesSection() {
         </h2>
         <p className="text-muted text-lg max-w-2xl mx-auto">
           A complete chemistry learning toolkit designed specifically for
-          Cambridge international students.
+          international chemistry students.
         </p>
       </div>
 
