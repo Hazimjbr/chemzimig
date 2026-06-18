@@ -354,7 +354,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                             </div>
                                                             
                                                             <div className="grid grid-cols-1 gap-3.5">
-                                                                {activeQuestion.options.map((opt, oIdx) => {
+                                                                {activeQuestion.options.map((opt: { text: string; isCorrect: boolean }, oIdx: number) => {
                                                                     const isSelected = selectedIdx === oIdx;
                                                                     const isCorrect = opt.isCorrect;
                                                                     
