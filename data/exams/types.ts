@@ -2,7 +2,17 @@
 // Adapted for Cambridge IGCSE & A-Level Chemistry
 
 /** Curriculum level */
-export type CurriculumLevel = "igcse" | "as-level" | "a-level";
+export type CurriculumLevel = 
+  | "igcse" 
+  | "as-level" 
+  | "a-level"
+  | "edexcel-igcse"
+  | "edexcel-as"
+  | "edexcel-a2"
+  | "edexcel-alevel"
+  | "cie-igcse"
+  | "cie-as"
+  | "cie-alevel";
 
 /** Paper type */
 export type PaperType = "mcq" | "structured" | "practical";
@@ -26,7 +36,22 @@ export type IGCSETopicTag =
   | "metals"
   | "chemistry-environment"
   | "organic-chemistry"
-  | "experimental-techniques";
+  | "experimental-techniques"
+  // Edexcel unit IDs
+  | "edexcel-unit-1"
+  | "edexcel-unit-2"
+  | "edexcel-unit-3"
+  | "edexcel-unit-4"
+  | "edexcel-unit-5"
+  | "edexcel-unit-6"
+  // CIE AS & A Level IDs
+  | "physical-chemistry"
+  | "inorganic-chemistry"
+  | "organic-chemistry-as"
+  | "physical-chemistry-a2"
+  | "inorganic-chemistry-a2"
+  | "organic-chemistry-a2"
+  | "analysis";
 
 /** A single option in a question */
 export interface QuestionOption {

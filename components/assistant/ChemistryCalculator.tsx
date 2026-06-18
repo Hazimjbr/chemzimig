@@ -9,7 +9,7 @@ interface ChemistryCalculatorProps {
     onClose: () => void;
 }
 
-type TabType = 'moles' | 'concentration' | 'dilution' | 'yield' | 'atomeconomy' | 'uncertainty' | 'ph';
+type TabType = 'moles' | 'concentration' | 'dilution' | 'yield' | 'atomeconomy' | 'uncertainty' | 'ph' | 'idealgas' | 'gasvolume';
 
 export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalculatorProps) {
     const [activeTab, setActiveTab] = useState<TabType>('moles');
@@ -28,6 +28,25 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
     const [uncState, setUncState] = useState({ absolute: '', measured: '', pct: '', readings: '1' });
     // State for pH & pOH tab
     const [phState, setPhState] = useState({ ph: '', hConc: '', poh: '', ohConc: '' });
+    
+    // Ideal Gas sub-mode & states
+    const [gasSubMode, setGasSubMode] = useState<'moles' | 'density' | 'molarmass'>('moles');
+    const [idealGasState, setIdealGasState] = useState({
+        p: '',     // pressure in Pa
+        V: '',     // volume in m³
+        n: '',     // moles
+        T: '',     // temperature in K
+        rho: '',   // density in g/dm³ or kg/m³
+        M: '',     // molar mass in g/mol
+        mass: '',  // mass in g
+    });
+
+    // Gas Volume state: V = n * Vm
+    const [gasVolState, setGasVolState] = useState({
+        v: '',     // volume in dm³ (or L)
+        n: '',     // moles
+        vm: '24.0' // molar volume in dm³/mol
+    });
 
     const [result, setResult] = useState<{ value: string; unit: string; formula: string } | null>(null);
     const [error, setError] = useState<string | null>(null);
@@ -40,6 +59,8 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
         setAeState({ desired: '', totalReactants: '', pct: '' });
         setUncState({ absolute: '', measured: '', pct: '', readings: '1' });
         setPhState({ ph: '', hConc: '', poh: '', ohConc: '' });
+        setIdealGasState({ p: '', V: '', n: '', T: '', rho: '', M: '', mass: '' });
+        setGasVolState({ v: '', n: '', vm: '24.0' });
         setResult(null);
         setError(null);
     };
@@ -304,6 +325,176 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
                     unit: 'All values solved',
                     formula: 'pH = -log[H⁺], pH + pOH = 14'
                 });
+            } else if (activeTab === 'idealgas') {
+                const { p, V, n, T, rho, M, mass } = idealGasState;
+                const R = 8.314;
+
+                if (gasSubMode === 'moles') {
+                    const P_val = parseFloat(p);
+                    const V_val = parseFloat(V);
+                    const N_val = parseFloat(n);
+                    const T_val = parseFloat(T);
+
+                    const filled = [p, V, n, T].filter(x => x !== '').length;
+                    if (filled !== 3) {
+                        setError('Please fill exactly three fields.');
+                        return;
+                    }
+
+                    if (!p) {
+                        if (V_val <= 0 || T_val < 0 || N_val < 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((N_val * R * T_val) / V_val).toFixed(2),
+                            unit: 'Pa',
+                            formula: 'p = nRT / V'
+                        });
+                    } else if (!V) {
+                        if (P_val <= 0 || T_val < 0 || N_val < 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((N_val * R * T_val) / P_val).toFixed(6),
+                            unit: 'm³',
+                            formula: 'V = nRT / p'
+                        });
+                    } else if (!n) {
+                        if (P_val <= 0 || V_val <= 0 || T_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((P_val * V_val) / (R * T_val)).toFixed(4),
+                            unit: 'mol',
+                            formula: 'n = pV / RT'
+                        });
+                    } else if (!T) {
+                        if (P_val <= 0 || V_val <= 0 || N_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((P_val * V_val) / (N_val * R)).toFixed(2),
+                            unit: 'K',
+                            formula: 'T = pV / nR'
+                        });
+                    }
+                } else if (gasSubMode === 'density') {
+                    const P_val = parseFloat(p);
+                    const M_val = parseFloat(M);
+                    const Rho_val = parseFloat(rho);
+                    const T_val = parseFloat(T);
+
+                    const filled = [p, M, rho, T].filter(x => x !== '').length;
+                    if (filled !== 3) {
+                        setError('Please fill exactly three fields.');
+                        return;
+                    }
+
+                    if (!p) {
+                        if (M_val <= 0 || T_val < 0 || Rho_val < 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((Rho_val * R * T_val) / (M_val * 1e-3)).toFixed(2),
+                            unit: 'Pa',
+                            formula: 'p = ρRT / (M × 10⁻³)'
+                        });
+                    } else if (!M) {
+                        if (P_val <= 0 || T_val < 0 || Rho_val < 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((Rho_val * R * T_val) / (P_val * 1e-3)).toFixed(2),
+                            unit: 'g/mol',
+                            formula: 'M = ρRT / (p × 10⁻³)'
+                        });
+                    } else if (!rho) {
+                        if (P_val <= 0 || M_val <= 0 || T_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((P_val * M_val * 1e-3) / (R * T_val)).toFixed(4),
+                            unit: 'g/dm³ (kg/m³)',
+                            formula: 'ρ = pM × 10⁻³ / RT'
+                        });
+                    } else if (!T) {
+                        if (P_val <= 0 || M_val <= 0 || Rho_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((P_val * M_val * 1e-3) / (Rho_val * R)).toFixed(2),
+                            unit: 'K',
+                            formula: 'T = pM × 10⁻³ / ρR'
+                        });
+                    }
+                } else if (gasSubMode === 'molarmass') {
+                    const P_val = parseFloat(p);
+                    const V_val = parseFloat(V);
+                    const Mass_val = parseFloat(mass);
+                    const M_val = parseFloat(M);
+                    const T_val = parseFloat(T);
+
+                    const filled = [p, V, mass, M, T].filter(x => x !== '').length;
+                    if (filled !== 4) {
+                        setError('Please fill exactly four fields.');
+                        return;
+                    }
+
+                    if (!p) {
+                        if (V_val <= 0 || M_val <= 0 || Mass_val < 0 || T_val < 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((Mass_val * R * T_val) / (M_val * V_val)).toFixed(2),
+                            unit: 'Pa',
+                            formula: 'p = mRT / MV'
+                        });
+                    } else if (!V) {
+                        if (P_val <= 0 || M_val <= 0 || Mass_val < 0 || T_val < 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((Mass_val * R * T_val) / (M_val * P_val)).toFixed(6),
+                            unit: 'm³',
+                            formula: 'V = mRT / Mp'
+                        });
+                    } else if (!mass) {
+                        if (P_val <= 0 || V_val <= 0 || M_val <= 0 || T_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((P_val * V_val * M_val) / (R * T_val)).toFixed(4),
+                            unit: 'g',
+                            formula: 'm = pVMr / RT'
+                        });
+                    } else if (!M) {
+                        if (P_val <= 0 || V_val <= 0 || Mass_val <= 0 || T_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((Mass_val * R * T_val) / (P_val * V_val)).toFixed(2),
+                            unit: 'g/mol',
+                            formula: 'Mr = mRT / pV'
+                        });
+                    } else if (!T) {
+                        if (P_val <= 0 || V_val <= 0 || Mass_val <= 0 || M_val <= 0) throw new Error('Invalid input values.');
+                        setResult({
+                            value: ((P_val * V_val * M_val) / (Mass_val * R)).toFixed(2),
+                            unit: 'K',
+                            formula: 'T = pVMr / mR'
+                        });
+                    }
+                }
+            } else if (activeTab === 'gasvolume') {
+                const { v, n, vm } = gasVolState;
+                const V_val = parseFloat(v);
+                const N_val = parseFloat(n);
+                const Vm_val = parseFloat(vm);
+
+                const filled = [v, n, vm].filter(x => x !== '').length;
+                if (filled !== 2) {
+                    setError('Please fill exactly two fields.');
+                    return;
+                }
+
+                if (!v) {
+                    if (N_val < 0 || Vm_val <= 0) throw new Error('Invalid input values.');
+                    setResult({
+                        value: (N_val * Vm_val).toFixed(3),
+                        unit: 'dm³ (L)',
+                        formula: 'V = n × Vm'
+                    });
+                } else if (!n) {
+                    if (V_val < 0 || Vm_val <= 0) throw new Error('Invalid input values.');
+                    setResult({
+                        value: (V_val / Vm_val).toFixed(4),
+                        unit: 'mol',
+                        formula: 'n = V / Vm'
+                    });
+                } else if (!vm) {
+                    if (V_val < 0 || N_val <= 0) throw new Error('Invalid input values.');
+                    setResult({
+                        value: (V_val / N_val).toFixed(2),
+                        unit: 'dm³/mol',
+                        formula: 'Vm = V / n'
+                    });
+                }
             }
         } catch (err: any) {
             setError(err.message || 'Calculation error. Please check inputs.');
@@ -353,7 +544,7 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
 
                         {/* Scrollable Tabs Bar */}
                         <div className="flex gap-2 p-2 bg-white/5 border-b border-white/5 text-[10px] overflow-x-auto scrollbar-none whitespace-nowrap">
-                            {(['moles', 'concentration', 'dilution', 'yield', 'atomeconomy', 'uncertainty', 'ph'] as TabType[]).map((tab) => (
+                            {(['moles', 'concentration', 'dilution', 'yield', 'atomeconomy', 'uncertainty', 'ph', 'idealgas', 'gasvolume'] as TabType[]).map((tab) => (
                                 <button
                                     key={tab}
                                     onClick={() => handleTabChange(tab)}
@@ -370,6 +561,8 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
                                     {tab === 'atomeconomy' && 'Atom Economy'}
                                     {tab === 'uncertainty' && 'Uncertainty %'}
                                     {tab === 'ph' && 'pH & pOH'}
+                                    {tab === 'idealgas' && 'Ideal Gas Law'}
+                                    {tab === 'gasvolume' && 'Gas Vol & Moles'}
                                 </button>
                             ))}
                         </div>
@@ -387,11 +580,22 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
                                     {activeTab === 'atomeconomy' && '% AE = (Desired Mr / Total Mr) × 100'}
                                     {activeTab === 'uncertainty' && '% Uncertainty = (Abs Error × Readings / Value) × 100'}
                                     {activeTab === 'ph' && 'pH = -log[H⁺] | pH + pOH = 14'}
+                                    {activeTab === 'idealgas' && (
+                                        gasSubMode === 'moles' ? 'pV = nRT' :
+                                        gasSubMode === 'density' ? 'pM = ρRT' : 'pV = (m/M)RT'
+                                    )}
+                                    {activeTab === 'gasvolume' && 'V = n × Vm'}
                                 </div>
                                 <p className="text-[10px] text-slate-500 mt-2">
                                     {activeTab === 'dilution' && '💡 Fill exactly three values to calculate the remaining unknown.'}
                                     {activeTab === 'ph' && '💡 Fill exactly one value to solve for all remaining values.'}
-                                    {activeTab !== 'dilution' && activeTab !== 'ph' && '💡 Fill exactly two values and leave the target field empty.'}
+                                    {activeTab === 'idealgas' && (
+                                        gasSubMode === 'moles' ? '💡 Fill exactly 3 values to solve. Note: V must be in m³. (R = 8.31 J K⁻¹ mol⁻¹)' :
+                                        gasSubMode === 'density' ? '💡 Fill exactly 3 values to solve. Note: ρ is in g/dm³. (R = 8.31 J K⁻¹ mol⁻¹)' :
+                                        '💡 Fill exactly 4 values to solve. Note: V must be in m³. (R = 8.31 J K⁻¹ mol⁻¹)'
+                                    )}
+                                    {activeTab === 'gasvolume' && '💡 Fill exactly two values. Vm defaults to 24.0 dm³/mol (RTP).'}
+                                    {activeTab !== 'dilution' && activeTab !== 'ph' && activeTab !== 'idealgas' && activeTab !== 'gasvolume' && '💡 Fill exactly two values and leave the target field empty.'}
                                 </p>
                             </div>
 
@@ -764,6 +968,225 @@ export default function ChemistryCalculator({ isOpen, onClose }: ChemistryCalcul
                                                     onChange={e => setPhState(prev => ({ ...prev, ohConc: e.target.value }))}
                                                     className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left font-mono"
                                                 />
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+
+                                {activeTab === 'idealgas' && (
+                                    <>
+                                        {/* Sub-mode Select */}
+                                        <div className="flex gap-1 mb-2 p-1 bg-white/5 rounded-xl border border-white/10">
+                                            <button
+                                                type="button"
+                                                onClick={() => { setGasSubMode('moles'); setResult(null); setError(null); }}
+                                                className={`flex-1 py-1.5 rounded-lg text-[10px] font-semibold transition-all ${gasSubMode === 'moles' ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30' : 'text-slate-400 hover:text-white'}`}
+                                            >
+                                                Moles (pV = nRT)
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={() => { setGasSubMode('density'); setResult(null); setError(null); }}
+                                                className={`flex-1 py-1.5 rounded-lg text-[10px] font-semibold transition-all ${gasSubMode === 'density' ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30' : 'text-slate-400 hover:text-white'}`}
+                                            >
+                                                Density (pM = ρRT)
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={() => { setGasSubMode('molarmass'); setResult(null); setError(null); }}
+                                                className={`flex-1 py-1.5 rounded-lg text-[10px] font-semibold transition-all ${gasSubMode === 'molarmass' ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30' : 'text-slate-400 hover:text-white'}`}
+                                            >
+                                                Molar Mass (pV = mRT/M)
+                                            </button>
+                                        </div>
+
+                                        {/* Shared and conditional inputs */}
+                                        <div className="flex flex-col gap-3">
+                                            {/* Pressure - Shared in all */}
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                    <span>Pressure</span>
+                                                    <span className="text-slate-500 font-normal">p (Pa)</span>
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    step="any"
+                                                    placeholder="Leave blank to calculate..."
+                                                    value={idealGasState.p}
+                                                    onChange={e => setIdealGasState(prev => ({ ...prev, p: e.target.value }))}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                />
+                                            </div>
+
+                                            {/* Volume - Shared in Moles & Molar Mass modes */}
+                                            {(gasSubMode === 'moles' || gasSubMode === 'molarmass') && (
+                                                <div className="flex flex-col gap-1.5 text-left">
+                                                    <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                        <span>Volume</span>
+                                                        <span className="text-slate-500 font-normal">V (m³)</span>
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Leave blank to calculate..."
+                                                        value={idealGasState.V}
+                                                        onChange={e => setIdealGasState(prev => ({ ...prev, V: e.target.value }))}
+                                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Moles - Moles variant only */}
+                                            {gasSubMode === 'moles' && (
+                                                <div className="flex flex-col gap-1.5 text-left">
+                                                    <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                        <span>Moles</span>
+                                                        <span className="text-slate-500 font-normal">n (mol)</span>
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Leave blank to calculate..."
+                                                        value={idealGasState.n}
+                                                        onChange={e => setIdealGasState(prev => ({ ...prev, n: e.target.value }))}
+                                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Density - Density variant only */}
+                                            {gasSubMode === 'density' && (
+                                                <div className="flex flex-col gap-1.5 text-left">
+                                                    <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                        <span>Density</span>
+                                                        <span className="text-slate-500 font-normal">ρ (g/dm³ or kg/m³)</span>
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Leave blank to calculate..."
+                                                        value={idealGasState.rho}
+                                                        onChange={e => setIdealGasState(prev => ({ ...prev, rho: e.target.value }))}
+                                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Mass (m) - Molar mass mode only */}
+                                            {gasSubMode === 'molarmass' && (
+                                                <div className="flex flex-col gap-1.5 text-left">
+                                                    <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                        <span>Mass</span>
+                                                        <span className="text-slate-500 font-normal">m (g)</span>
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Leave blank to calculate..."
+                                                        value={idealGasState.mass}
+                                                        onChange={e => setIdealGasState(prev => ({ ...prev, mass: e.target.value }))}
+                                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Molar Mass (Mr) - Density & Molar Mass variants */}
+                                            {(gasSubMode === 'density' || gasSubMode === 'molarmass') && (
+                                                <div className="flex flex-col gap-1.5 text-left">
+                                                    <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                        <span>Molar Mass</span>
+                                                        <span className="text-slate-500 font-normal">M / Mr (g/mol)</span>
+                                                    </label>
+                                                    <input
+                                                        type="number"
+                                                        step="any"
+                                                        placeholder="Leave blank to calculate..."
+                                                        value={idealGasState.M}
+                                                        onChange={e => setIdealGasState(prev => ({ ...prev, M: e.target.value }))}
+                                                        className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                    />
+                                                </div>
+                                            )}
+
+                                            {/* Temperature - Shared in all */}
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                    <span>Temperature</span>
+                                                    <span className="text-slate-500 font-normal">T (K)</span>
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    step="any"
+                                                    placeholder="Leave blank to calculate..."
+                                                    value={idealGasState.T}
+                                                    onChange={e => setIdealGasState(prev => ({ ...prev, T: e.target.value }))}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                />
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+
+                                {activeTab === 'gasvolume' && (
+                                    <>
+                                        <div className="flex flex-col gap-4 text-left">
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                    <span>Gas Volume</span>
+                                                    <span className="text-slate-500 font-normal">V (dm³ or L)</span>
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    step="any"
+                                                    placeholder="Leave blank to calculate..."
+                                                    value={gasVolState.v}
+                                                    onChange={e => setGasVolState(prev => ({ ...prev, v: e.target.value }))}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                    <span>Moles</span>
+                                                    <span className="text-slate-500 font-normal">n (mol)</span>
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    step="any"
+                                                    placeholder="Leave blank to calculate..."
+                                                    value={gasVolState.n}
+                                                    onChange={e => setGasVolState(prev => ({ ...prev, n: e.target.value }))}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left"
+                                                />
+                                            </div>
+                                            <div className="flex flex-col gap-1.5 text-left">
+                                                <label className="text-xs text-slate-400 font-semibold flex justify-between">
+                                                    <span>Molar Volume (Vm)</span>
+                                                    <span className="text-slate-500 font-normal">dm³/mol</span>
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    step="any"
+                                                    placeholder="e.g. 24.0"
+                                                    value={gasVolState.vm}
+                                                    onChange={e => setGasVolState(prev => ({ ...prev, vm: e.target.value }))}
+                                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm text-left font-mono"
+                                                />
+                                                <div className="flex gap-2 mt-1">
+                                                    <button 
+                                                        type="button" 
+                                                        onClick={() => setGasVolState(prev => ({ ...prev, vm: '24.0' }))} 
+                                                        className="px-2.5 py-1 bg-white/5 hover:bg-indigo-500/20 hover:text-indigo-400 border border-white/10 rounded-lg text-[10px] text-slate-300 transition-all font-mono"
+                                                    >
+                                                        RTP (24.0)
+                                                    </button>
+                                                    <button 
+                                                        type="button" 
+                                                        onClick={() => setGasVolState(prev => ({ ...prev, vm: '22.4' }))} 
+                                                        className="px-2.5 py-1 bg-white/5 hover:bg-indigo-500/20 hover:text-indigo-400 border border-white/10 rounded-lg text-[10px] text-slate-300 transition-all font-mono"
+                                                    >
+                                                        STP (22.4)
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </>

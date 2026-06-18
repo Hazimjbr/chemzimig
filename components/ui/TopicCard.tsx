@@ -14,12 +14,11 @@ interface TopicCardProps {
 
 export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, curriculumId }) => {
     return (
-        <Link href={`/dashboard/curriculum/${curriculumId}/${topic.id}`}>
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="group relative bg-[#0a0a1f]/60 backdrop-blur-md border border-white/10 rounded-2xl p-6 overflow-hidden hover:border-indigo-500/50 hover:bg-[#0a0a1f]/80 transition-all duration-300"
+            className="group relative bg-[#0a0a1f]/60 backdrop-blur-md border border-white/10 rounded-2xl p-6 overflow-hidden hover:border-indigo-500/50 hover:bg-[#0a0a1f]/80 transition-all duration-300 flex flex-col justify-between"
         >
             <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 rounded-bl-[100px] -z-10 group-hover:bg-indigo-500/10 transition-colors" />
 
@@ -31,28 +30,33 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, curriculumId
                 </div>
 
                 <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white/90 mb-2 group-hover:text-indigo-400 transition-colors">
-                        {topic.title}
-                    </h3>
+                    <Link href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=1`}>
+                        <h3 className="text-lg font-semibold text-white/90 mb-2 hover:text-indigo-400 transition-colors cursor-pointer">
+                            {topic.title}
+                        </h3>
+                    </Link>
 
                     {topic.subtopics && topic.subtopics.length > 0 && (
                         <div className="space-y-2 mt-4">
                             {topic.subtopics.map((sub, i) => (
-                                <div key={i} className="flex items-center gap-2 text-sm text-slate-400">
+                                <Link 
+                                    key={i} 
+                                    href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=${i + 1}`}
+                                    className="flex items-center gap-2 text-sm text-slate-400 hover:text-emerald-400 transition-colors cursor-pointer"
+                                >
                                     <Hash className="w-3 h-3 text-emerald-500/70" />
                                     <span>{sub}</span>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     )}
                 </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/5 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <Link href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=1`} className="mt-6 pt-4 border-t border-t-white/5 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-sm font-medium text-indigo-400">Study Topic</span>
                 <ChevronRight className="w-4 h-4 text-indigo-400" />
-            </div>
+            </Link>
         </motion.div>
-        </Link>
     );
 };

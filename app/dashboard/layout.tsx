@@ -21,7 +21,7 @@ const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Lessons', href: '/dashboard/lessons', icon: BookOpen },
     { name: 'Library', href: '/dashboard/curriculum', icon: BookOpen },
-    { name: 'Quizzes', href: '/dashboard/quizzes', icon: Trophy },
+    { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
     { name: 'Profile', href: '/dashboard/profile', icon: User },
 ];
@@ -36,8 +36,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
     if (isLessonPlayer) {
         return (
-            <div className="min-h-screen bg-[#050510] text-white font-sans overflow-x-hidden">
-                <main className="w-full min-h-screen relative z-0 p-6 lg:p-10">
+            <div className="h-screen bg-[#050510] text-white font-sans overflow-hidden flex flex-col">
+                <main className="w-full h-full relative z-0 p-2 pb-0 lg:p-3 lg:pb-0 flex flex-col overflow-hidden">
                     {/* Visual Background Orbs */}
                     <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
                     <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />

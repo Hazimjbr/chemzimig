@@ -208,15 +208,26 @@ function getAudioFingerprint(): Promise<string> {
 
             let fingerprint = '';
             processor.onaudioprocess = (event) => {
-                const data = event.inputBuffer.getChannelData(0);
-                fingerprint = data.slice(0, 100).join(',');
-                oscillator.stop();
-                processor.disconnect();
-                audioContext.close();
-                resolve(fingerprint.substring(0, 50));
+                try {
+                    const data = event.inputBuffer.getChannelData(0);
+                    fingerprint = data.slice(0, 100).join(',');
+                    oscillator.stop();
+                    processor.disconnect();
+                    if (audioContext.state !== 'closed') {
+                        audioContext.close().catch(() => {});
+                    }
+                    resolve(fingerprint.substring(0, 50));
+                } catch {
+                    resolve('');
+                }
             };
 
             setTimeout(() => {
+                try {
+                    if (audioContext.state !== 'closed') {
+                        audioContext.close().catch(() => {});
+                    }
+                } catch {}
                 resolve('');
             }, 100);
         } catch {

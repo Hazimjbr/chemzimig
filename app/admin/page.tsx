@@ -15,13 +15,18 @@ import {
     XCircle,
     Clock
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
 export default function AdminPage() {
     const { user, isLoading } = useAuth();
     const router = useRouter();
-    const [activeTab, setActiveTab] = useState('overview');
+    const searchParams = useSearchParams();
+    const activeTab = searchParams.get('tab') || 'overview';
+    
+    const setActiveTab = (tab: string) => {
+        router.push(`/admin?tab=${tab}`);
+    };
     
     // --- Student Creation State ---
     const [isCreating, setIsCreating] = useState(false);

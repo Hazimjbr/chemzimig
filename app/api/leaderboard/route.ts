@@ -103,8 +103,27 @@ export async function GET(request: NextRequest) {
             console.warn('Database fetch failed, falling back to mock data', dbError);
         }
 
-        // Fallback to Mock Data if DB is empty or failed
-        if (leaderboard.length === 0) {
+        // If DB has users, but less than 10, fill the rest with mock data for aesthetic display
+        if (leaderboard.length > 0 && leaderboard.length < 10) {
+            const lowestRealXP = leaderboard[leaderboard.length - 1].xp || 1000;
+            const needed = 10 - leaderboard.length;
+            const mocks = generateMockData(needed).map((m, idx) => ({
+                ...m,
+                id: `mock-fill-${idx}`,
+                xp: Math.max(100, Math.floor(lowestRealXP * Math.pow(0.85, idx + 1))),
+                level: Math.max(1, Math.floor((lowestRealXP * Math.pow(0.85, idx + 1)) / 1000) + 1)
+            }));
+            
+            // Merge and sort by XP (if we want real users to compete naturally)
+            const merged = [...leaderboard, ...mocks].sort((a, b) => b.xp - a.xp);
+            
+            // Re-rank
+            leaderboard = merged.map((entry, index) => ({
+                ...entry,
+                rank: index + 1
+            }));
+        } else if (leaderboard.length === 0) {
+            // Fallback to Mock Data if DB is empty or failed
             leaderboard = generateMockData(limitCount);
         }
 
