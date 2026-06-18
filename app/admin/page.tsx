@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { 
     Users, 
@@ -18,7 +18,7 @@ import {
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
-export default function AdminPage() {
+function AdminContent() {
     const { user, isLoading } = useAuth();
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -277,6 +277,16 @@ export default function AdminPage() {
                 </div>
 
             </div>
-        </div>
+}
+
+export default function AdminPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-[#050510] flex items-center justify-center">
+                <div className="w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
+            </div>
+        }>
+            <AdminContent />
+        </Suspense>
     );
 }
