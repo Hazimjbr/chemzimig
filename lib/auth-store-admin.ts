@@ -203,15 +203,16 @@ export async function authenticateStudent(
 
     // 2. Validate Password using bcrypt
     // Also support legacy plaintext passwords with auto-migration
-    const isHashedPassword = student.passwordHash.startsWith('$2');
+    const passwordHash = student.passwordHash || (student as any).password || '';
+    const isHashedPassword = passwordHash.startsWith('$2');
     let passwordMatch = false;
 
     if (isHashedPassword) {
-        passwordMatch = await bcrypt.compare(passwordInput, student.passwordHash);
+        passwordMatch = await bcrypt.compare(passwordInput, passwordHash);
     } else {
         // Legacy plaintext - auto-migrate on success
-        passwordMatch = (student.passwordHash === passwordInput);
-        if (passwordMatch) {
+        passwordMatch = (passwordHash === passwordInput);
+        if (passwordMatch && passwordInput) {
             const hashedPassword = await bcrypt.hash(passwordInput, 12);
             await studentDoc.ref.update({ passwordHash: hashedPassword });
             console.log(`[Auth] Migrated legacy password to bcrypt for user: ${username}`);
