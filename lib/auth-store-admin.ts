@@ -26,6 +26,8 @@ export interface Student {
     passwordHash: string;
     name: string;
     email?: string;
+    phone?: string;
+    notes?: string;
     grade?: string; // International grade (e.g., Year 10, IB DP1)
     image?: string;
     devices: Device[];
@@ -34,6 +36,7 @@ export interface Student {
     role?: 'admin' | 'moderator' | 'student';
     createdAt: string;
     lastLogin?: string;
+    notes_internal?: string;
     xp?: number;
     level?: number;
 }
@@ -307,15 +310,46 @@ export async function authenticateStudent(
 
 // ============ Student Management ============
 
+export function generatePassword(length: number = 8): string {
+    const chars = 'abcdefghjkmnpqrstuvwxyz23456789'; // Excluded confusing chars like l, 1, i, o, 0
+    let password = '';
+    for (let i = 0; i < length; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return password;
+}
+
+export function generateUsername(name: string, email?: string): string {
+    let base = name.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '').slice(0, 6);
+
+    if (!base && email) {
+        base = email.split('@')[0].toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 4);
+    }
+
+    const randomLength = base ? 3 : 6;
+    const random = Math.floor(Math.random() * Math.pow(10, randomLength)).toString().padStart(randomLength, '0');
+
+    return `${base}${random}`;
+}
+
 export async function createStudent(data: {
-    username: string;
-    passwordHash: string;
+    username?: string;
+    passwordHash?: string; // This is the plaintext password from the form
     name: string;
     email?: string;
+    phone?: string;
+    notes?: string;
     grade: string;
+    role?: 'admin' | 'moderator' | 'student';
 }) {
     const db = getDB();
-    const username = data.username.trim().toLowerCase();
+    const generatedPassword = data.passwordHash ? null : generatePassword();
+    const rawPassword = data.passwordHash || generatedPassword || '';
+    
+    let username = data.username ? data.username.trim().toLowerCase() : '';
+    if (!username) {
+        username = generateUsername(data.name, data.email);
+    }
     
     // Check uniqueness
     const existingSnap = await db.collection(STUDENTS_COLLECTION).where('username', '==', username).get();
@@ -325,13 +359,15 @@ export async function createStudent(data: {
 
     const id = `std_${Date.now()}`;
     // Hash the password before storing
-    const hashedPassword = await bcrypt.hash(data.passwordHash, 12);
+    const hashedPassword = await bcrypt.hash(rawPassword, 12);
     const newStudent: Student = {
         id,
         username,
         passwordHash: hashedPassword,
         name: data.name,
         email: data.email || '',
+        phone: data.phone || '',
+        notes: data.notes || '',
         grade: data.grade,
         image: `https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`,
         devices: [],
@@ -339,12 +375,14 @@ export async function createStudent(data: {
         createdAt: new Date().toISOString(),
         xp: 0,
         level: 1,
-        role: 'student'
+        role: data.role || 'student',
+        isAdmin: data.role === 'admin' || data.role === 'moderator'
     };
 
     await db.collection(STUDENTS_COLLECTION).doc(id).set(newStudent);
-    return { success: true, student: newStudent };
+    return { success: true, student: newStudent, rawPassword };
 }
+
 
 export async function getAllStudents(): Promise<Student[]> {
     const db = getDB();

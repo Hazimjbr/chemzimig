@@ -55,11 +55,17 @@ export async function middleware(request: NextRequest) {
     // Identify paths that require protection
     const isAdminRoute = pathname.startsWith('/admin') || pathname.startsWith('/api/admin');
     const isDashboardRoute = pathname.startsWith('/dashboard');
-    const isOlevelRoute = pathname.startsWith('/dashboard/curriculum/cie-igcse') || pathname.startsWith('/api/cie-igcse');
-    const isAlevelRoute = pathname.startsWith('/dashboard/curriculum/cie-alevel') || pathname.startsWith('/api/cie-alevel');
-    const isEdexcelRoute = pathname.startsWith('/dashboard/curriculum/edexcel-alevel') || pathname.startsWith('/api/edexcel-alevel');
 
-    if (!isAdminRoute && !isDashboardRoute && !isOlevelRoute && !isAlevelRoute && !isEdexcelRoute) {
+    const validTracks = ['cie-igcse', 'cie-as', 'cie-alevel', 'edexcel-igcse', 'edexcel-as', 'edexcel-a2'];
+    let targetRouteTrack: string | null = null;
+    for (const t of validTracks) {
+        if (pathname.startsWith(`/dashboard/curriculum/${t}`) || pathname.startsWith(`/api/${t}`)) {
+            targetRouteTrack = t;
+            break;
+        }
+    }
+
+    if (!isAdminRoute && !isDashboardRoute && !targetRouteTrack) {
         return NextResponse.next();
     }
 
@@ -101,24 +107,8 @@ export async function middleware(request: NextRequest) {
         return NextResponse.redirect(new URL('/dashboard', request.url));
     }
 
-    // 3. O-Level Route Protection
-    if (isOlevelRoute && !isSystemAdmin && track !== 'cie-igcse') {
-        if (pathname.startsWith('/api/')) {
-            return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-        }
-        return NextResponse.redirect(new URL('/dashboard', request.url));
-    }
-
-    // 4. A-Level Route Protection
-    if (isAlevelRoute && !isSystemAdmin && track !== 'cie-alevel') {
-        if (pathname.startsWith('/api/')) {
-            return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-        }
-        return NextResponse.redirect(new URL('/dashboard', request.url));
-    }
-
-    // 5. Edexcel A-Level Route Protection
-    if (isEdexcelRoute && !isSystemAdmin && track !== 'edexcel-alevel') {
+    // 3. Curriculum Route Protection
+    if (targetRouteTrack && !isSystemAdmin && track !== targetRouteTrack) {
         if (pathname.startsWith('/api/')) {
             return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
         }

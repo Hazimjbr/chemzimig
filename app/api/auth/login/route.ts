@@ -35,9 +35,13 @@ export async function POST(request: NextRequest) {
             { ...deviceInfo, ipAddress }
         );
         if (result.success && result.student) {
-            const isOLevel = result.student.grade?.toLowerCase().includes('igcse') || false;
-            const isEdexcel = result.student.grade?.toLowerCase().includes('edexcel') || false;
-            const track = isEdexcel ? 'edexcel-alevel' : (isOLevel ? 'cie-igcse' : 'cie-alevel');
+            const gradeVal = result.student.grade || 'cie-igcse';
+            const validTracks = ['cie-igcse', 'cie-as', 'cie-alevel', 'edexcel-igcse', 'edexcel-as', 'edexcel-a2'];
+            const track = validTracks.includes(gradeVal)
+                ? gradeVal
+                : (gradeVal.toLowerCase().includes('edexcel')
+                    ? 'edexcel-as'
+                    : (gradeVal.toLowerCase().includes('igcse') ? 'cie-igcse' : 'cie-alevel'));
 
             const safeStudent = {
                 id: result.student.id,
