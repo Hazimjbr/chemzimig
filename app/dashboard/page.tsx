@@ -10,7 +10,9 @@ import {
     Star,
     Clock,
     Zap,
-    TrendingUp
+    TrendingUp,
+    Megaphone,
+    X
 } from 'lucide-react';
 import Link from 'next/link';
 import { useGamification } from '@/contexts/GamificationContext';
@@ -21,6 +23,8 @@ export default function DashboardPage() {
     const { xp, level, streak, dailyChallenges } = useGamification();
     const [greeting, setGreeting] = useState('Welcome');
     const [previewLeaderboard, setPreviewLeaderboard] = useState<any[]>([]);
+    const [announcements, setAnnouncements] = useState<any[]>([]);
+    const [dismissedAnns, setDismissedAnns] = useState<string[]>([]);
 
     // Resolve track and curriculum dynamically
     const studentTrackId = React.useMemo(() => {
@@ -55,6 +59,22 @@ export default function DashboardPage() {
             href: `/dashboard/curriculum/${activeCurriculum.id}/${firstTopic.id}?tab=theory&lesson=${index + 1}`
         }));
     }, [activeCurriculum]);
+
+    useEffect(() => {
+        if (!studentTrackId) return;
+        const fetchAnnouncements = async () => {
+            try {
+                const res = await fetch(`/api/announcements?curriculum=${studentTrackId}`);
+                const data = await res.json();
+                if (data.success) {
+                    setAnnouncements(data.announcements || []);
+                }
+            } catch (e) {
+                console.error('Failed to fetch announcements:', e);
+            }
+        };
+        fetchAnnouncements();
+    }, [studentTrackId]);
 
     useEffect(() => {
         const hour = new Date().getHours();
@@ -96,6 +116,54 @@ export default function DashboardPage() {
     return (
         <div className="max-w-7xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             
+            {/* Announcements List */}
+            {announcements
+                .filter(ann => !dismissedAnns.includes(ann.id))
+                .map((ann) => (
+                    <div 
+                        key={ann.id} 
+                        className={`relative overflow-hidden rounded-[2rem] border p-6 flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 animate-in slide-in-from-top-4 ${
+                            ann.category === 'Important' 
+                                ? 'bg-rose-500/10 border-rose-500/20 text-rose-200 shadow-lg shadow-rose-500/5' 
+                                : ann.category === 'Event'
+                                ? 'bg-amber-500/10 border-amber-500/20 text-amber-200 shadow-lg shadow-amber-500/5'
+                                : ann.category === 'Update'
+                                ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-200 shadow-lg shadow-emerald-500/5'
+                                : 'bg-indigo-500/10 border-indigo-500/20 text-indigo-200 shadow-lg shadow-indigo-500/5'
+                        }`}
+                    >
+                        <div className="flex items-start gap-4">
+                            <div className={`p-3 rounded-2xl ${
+                                ann.category === 'Important' ? 'bg-rose-500/20 text-rose-400' :
+                                ann.category === 'Event' ? 'bg-amber-500/20 text-amber-400' :
+                                ann.category === 'Update' ? 'bg-emerald-500/20 text-emerald-400' :
+                                'bg-indigo-500/20 text-indigo-400'
+                            }`}>
+                                <Megaphone className="w-6 h-6" />
+                            </div>
+                            <div className="space-y-1">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                    <span className="font-extrabold text-white text-lg">{ann.title}</span>
+                                    <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold uppercase ${
+                                        ann.category === 'Important' ? 'bg-rose-500/20 text-rose-300' :
+                                        ann.category === 'Event' ? 'bg-amber-500/20 text-amber-300' :
+                                        ann.category === 'Update' ? 'bg-emerald-500/20 text-emerald-300' :
+                                        'bg-indigo-500/20 text-indigo-300'
+                                    }`}>{ann.category}</span>
+                                </div>
+                                <p className="text-slate-300 text-sm leading-relaxed max-w-3xl">{ann.content}</p>
+                            </div>
+                        </div>
+                        <button 
+                            onClick={() => setDismissedAnns([...dismissedAnns, ann.id])}
+                            className="absolute top-4 right-4 p-1.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer"
+                        >
+                            <X className="w-4 h-4" />
+                        </button>
+                    </div>
+                ))
+            }
+
             {/* Hero Welcome Section */}
             <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-indigo-700 to-violet-800 p-8 lg:p-14 shadow-2xl shadow-indigo-500/20 group">
                 <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">

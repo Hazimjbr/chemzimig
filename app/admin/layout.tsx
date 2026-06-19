@@ -26,8 +26,8 @@ function AdminLayoutContent({
         {
             label: 'Dashboard',
             icon: Home,
-            href: '/admin',
-            active: pathname === '/admin' && !searchParams.get('tab'),
+            href: '/dashboard',
+            active: false,
         },
         {
             label: 'Overview',
