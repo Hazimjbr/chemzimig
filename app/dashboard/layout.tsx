@@ -19,7 +19,7 @@ import { useGamification } from '@/contexts/GamificationContext';
 
 const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-    { name: 'Library', href: '/dashboard/curriculum', icon: BookOpen },
+    { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
     { name: 'Profile', href: '/dashboard/profile', icon: User },

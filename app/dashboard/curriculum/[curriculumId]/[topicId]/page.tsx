@@ -164,7 +164,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
             <div className="flex flex-col items-center justify-center h-full text-center py-20">
                 <h1 className="text-2xl font-bold text-white mb-2">Topic not found</h1>
                 <Link href="/dashboard/curriculum" className="text-indigo-400 hover:text-indigo-300">
-                    Return to Library
+                    Return to Syllabus
                 </Link>
             </div>
         );
@@ -241,7 +241,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                         className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors mb-1 text-[10px] font-semibold"
                     >
                         <ArrowLeft className="w-2.5 h-2.5" />
-                        Back to Library
+                        Back to Syllabus
                     </Link>
                     <h1 className="text-lg md:text-xl font-bold text-white leading-tight">
                         {topic.number}. {topic.title}

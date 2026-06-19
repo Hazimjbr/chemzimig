@@ -34,7 +34,7 @@ export default async function CurriculumPage() {
                     <span className="text-3xl">📚</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
-                    The Library
+                    Syllabus
                 </h1>
                 <p className="text-lg text-slate-400 max-w-2xl">
                     Master your syllabus from the core principles to advanced concepts. Select your level to explore the curriculum.
