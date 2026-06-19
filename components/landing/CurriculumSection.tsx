@@ -1,9 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useAuth } from "@/contexts/AuthContext";
+import { Lock } from "lucide-react";
+import { questionBank } from "@/data/exams";
+import { curriculumRegistry } from "@/data/curriculum/registry";
 
 const curricula = [
   {
+    id: "cie-igcse",
     level: "IGCSE",
     code: "0620",
     title: "O-Level Chemistry",
@@ -28,6 +33,7 @@ const curricula = [
     gradient: "from-gold-600 to-gold-500",
   },
   {
+    id: "cie-as",
     level: "AS-Level",
     code: "9701",
     title: "AS Chemistry",
@@ -46,6 +52,7 @@ const curricula = [
     gradient: "from-teal-600 to-teal-400",
   },
   {
+    id: "cie-alevel",
     level: "A-Level",
     code: "9701",
     title: "A2 Chemistry",
@@ -64,6 +71,7 @@ const curricula = [
     gradient: "from-purple-600 to-purple-400",
   },
   {
+    id: "edexcel-igcse",
     level: "Edexcel IGCSE",
     code: "4CH1",
     title: "O-Level Chemistry",
@@ -80,6 +88,7 @@ const curricula = [
     gradient: "from-purple-600 to-purple-400",
   },
   {
+    id: "edexcel-as",
     level: "Edexcel AS",
     code: "XCH11",
     title: "International AS Chemistry",
@@ -95,6 +104,7 @@ const curricula = [
     gradient: "from-purple-600 to-purple-400",
   },
   {
+    id: "edexcel-a2",
     level: "Edexcel A2",
     code: "YCH11",
     title: "International A2 Chemistry",
@@ -123,6 +133,87 @@ const statusStyles = {
 };
 
 export default function CurriculumSection() {
+  const { user, isAuthenticated } = useAuth();
+
+  const getQuestionCount = (trackId: string): number => {
+    let count = 0;
+    
+    // 1. Count from exams/tests (questionBank)
+    questionBank.forEach((q) => {
+      const qCurr = q.curriculum;
+      const qTopic = q.topic;
+
+      if (trackId === "cie-igcse") {
+        if (qCurr === "igcse" || qCurr === "cie-igcse") {
+          count++;
+        }
+      } else if (trackId === "cie-as") {
+        if (qCurr === "as-level" || qCurr === "cie-as") {
+          count++;
+        }
+      } else if (trackId === "cie-alevel") {
+        if (qCurr === "a-level" || qCurr === "cie-alevel") {
+          count++;
+        }
+      } else if (trackId === "edexcel-igcse") {
+        if (qCurr === "edexcel-igcse") {
+          count++;
+        }
+      } else if (trackId === "edexcel-as") {
+        if (qCurr === "edexcel-as") {
+          count++;
+        } else if (qCurr === "edexcel-alevel" && (qTopic === "edexcel-unit-1" || qTopic === "edexcel-unit-2" || qTopic === "edexcel-unit-3")) {
+          count++;
+        }
+      } else if (trackId === "edexcel-a2") {
+        if (qCurr === "edexcel-a2") {
+          count++;
+        } else if (qCurr === "edexcel-alevel" && (qTopic === "edexcel-unit-4" || qTopic === "edexcel-unit-5" || qTopic === "edexcel-unit-6")) {
+          count++;
+        }
+      }
+    });
+
+    // 2. Count from lesson quizzes (curriculumRegistry)
+    Object.entries(curriculumRegistry).forEach(([key, unitRegistry]) => {
+      let isMatch = false;
+      
+      if (trackId === "cie-igcse" && key.startsWith("cie-igcse-unit-")) {
+        isMatch = true;
+      } else if (trackId === "edexcel-as" && key.startsWith("edexcel-alevel-unit-")) {
+        const unitNum = parseInt(key.replace("edexcel-alevel-unit-", ""), 10);
+        if (unitNum >= 1 && unitNum <= 3) {
+          isMatch = true;
+        }
+      } else if (trackId === "edexcel-a2" && key.startsWith("edexcel-alevel-unit-")) {
+        const unitNum = parseInt(key.replace("edexcel-alevel-unit-", ""), 10);
+        if (unitNum >= 4 && unitNum <= 6) {
+          isMatch = true;
+        }
+      } else if (trackId === "cie-as" && key.startsWith("cie-alevel-unit-")) {
+        const unitNum = parseInt(key.replace("cie-alevel-unit-", ""), 10);
+        if (unitNum >= 1 && unitNum <= 3) {
+          isMatch = true;
+        }
+      } else if (trackId === "cie-alevel" && key.startsWith("cie-alevel-unit-")) {
+        const unitNum = parseInt(key.replace("cie-alevel-unit-", ""), 10);
+        if (unitNum >= 4 && unitNum <= 6) {
+          isMatch = true;
+        }
+      }
+
+      if (isMatch) {
+        Object.values(unitRegistry).forEach((lesson) => {
+          if (lesson.quiz && Array.isArray(lesson.quiz)) {
+            count += lesson.quiz.length;
+          }
+        });
+      }
+    });
+
+    return count;
+  };
+
   return (
     <section className="relative py-24 lg:py-32" id="curriculum">
       <div className="max-w-[1600px] mx-auto px-6">
@@ -145,6 +236,8 @@ export default function CurriculumSection() {
           {curricula.map((curr, index) => {
             const status = statusStyles[curr.status];
             const isActive = curr.status === "active";
+            const isInteractive = isAuthenticated && (user?.isAdmin || user?.track === curr.id);
+            const count = getQuestionCount(curr.id);
 
             return (
               <div
@@ -183,9 +276,9 @@ export default function CurriculumSection() {
                     </div>
                     <div className="text-right">
                       <div className="text-sm font-semibold text-white">
-                        {curr.questions}
+                        {count > 0 ? count.toLocaleString() : "Coming Soon"}
                       </div>
-                      <div className="text-[10px] text-muted">questions</div>
+                      {count > 0 && <div className="text-[10px] text-muted">questions</div>}
                     </div>
                   </div>
 
@@ -216,20 +309,34 @@ export default function CurriculumSection() {
                   </div>
 
                   {/* CTA */}
-                  {isActive ? (
+                  {isInteractive ? (
                     <Link
                       href="/dashboard/curriculum"
-                      className={`block w-full text-center py-3 rounded-xl bg-gradient-to-r ${curr.gradient} text-navy-950 font-semibold text-sm hover:opacity-90 transition-opacity`}
+                      className={`block w-full text-center py-3 rounded-xl bg-gradient-to-r ${curr.gradient} text-navy-950 font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-gold-500/10`}
                     >
                       Start Practicing
                     </Link>
+                  ) : isActive ? (
+                    isAuthenticated ? (
+                      <div
+                        className="flex items-center justify-center gap-2 w-full text-center py-3 rounded-xl bg-navy-950 border border-white/5 text-slate-500 font-semibold text-sm opacity-50 select-none"
+                      >
+                        <Lock className="h-4 w-4" />
+                        Syllabus Locked
+                      </div>
+                    ) : (
+                      <div
+                        className={`block w-full text-center py-3 rounded-xl bg-gradient-to-r ${curr.gradient} text-navy-950 font-semibold text-sm opacity-90 select-none`}
+                      >
+                        Syllabus Active
+                      </div>
+                    )
                   ) : (
-                    <button
-                      disabled
-                      className="block w-full text-center py-3 rounded-xl border border-border text-muted text-sm cursor-not-allowed"
+                    <div
+                      className="block w-full text-center py-3 rounded-xl border border-border text-muted text-sm select-none opacity-50"
                     >
                       Coming Soon
-                    </button>
+                    </div>
                   )}
                 </div>
               </div>
