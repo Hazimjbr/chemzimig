@@ -71,7 +71,6 @@ export default function Header() {
   }, [profileMenuOpen]);
 
   const navLinks = [
-    { href: "#features", label: "Features" },
     { href: "#curriculum", label: "Curriculum" },
     { href: "#stats", label: "Stats" },
     { href: "#tools", label: "Tools" },

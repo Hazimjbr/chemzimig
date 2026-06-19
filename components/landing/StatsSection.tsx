@@ -2,12 +2,23 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const stats = [
+interface StatItem {
+  value: number | string;
+  suffix: string;
+  isNumeric?: boolean;
+  label: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+}
+
+const stats: StatItem[] = [
   {
-    value: 1500,
+    value: 3000,
     suffix: "+",
+    isNumeric: true,
     label: "Practice Questions",
-    description: "Covering all syllabus topics",
+    description: "Covering all major boards",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path d="M9 3L9 8L6 14L8 14L10 18L14 18L16 14L18 14L15 8L15 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -16,14 +27,14 @@ const stats = [
     color: "gold",
   },
   {
-    value: 12,
+    value: "Instant",
     suffix: "",
-    label: "IGCSE Topics",
-    description: "Full syllabus coverage",
+    isNumeric: false,
+    label: "Mark Schemes & Hints",
+    description: "Step-by-step guidance for every question",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M6.5 2H20V22H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 6.252V20m0-13.748A5.978 5.978 0 0 1 7.5 6c-1.854 0-3.535.839-4.67 2.188C2.3 8.761 2 9.593 2 10.5V20c0 .445.312.83.742.924l5.127 1.127A5.962 5.962 0 0 1 12 20m0-13.748A5.978 5.978 0 0 0 16.5 6c1.854 0 3.535.839 4.67 2.188.53.573.83 1.405.83 2.312v9.5c0 .445-.312.83-.742.924l-5.127 1.127A5.962 5.962 0 0 0 12 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
     color: "teal",
@@ -31,6 +42,7 @@ const stats = [
   {
     value: 3,
     suffix: "",
+    isNumeric: true,
     label: "Difficulty Levels",
     description: "Easy, Medium & Hard",
     icon: (
@@ -43,8 +55,9 @@ const stats = [
   {
     value: 100,
     suffix: "%",
-    label: "Free Access",
-    description: "No paywall, no limits",
+    isNumeric: true,
+    label: "Exam-Aligned",
+    description: "Matches board specs exactly",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" />
@@ -62,24 +75,28 @@ const colorClasses: Record<string, string> = {
   emerald: "text-emerald-400 bg-emerald-500/10 border-emerald-500/20",
 };
 
-function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
-  const [count, setCount] = useState(0);
+function AnimatedCounter({ target, suffix, isNumeric = true }: { target: number | string; suffix: string; isNumeric?: boolean }) {
+  const [count, setCount] = useState<number | string>(isNumeric ? 0 : target);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!isNumeric) return;
+    const targetNum = typeof target === "number" ? target : parseFloat(target);
+    if (isNaN(targetNum)) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
           const duration = 2000;
           const steps = 60;
-          const increment = target / steps;
+          const increment = targetNum / steps;
           let current = 0;
           const timer = setInterval(() => {
             current += increment;
-            if (current >= target) {
-              setCount(target);
+            if (current >= targetNum) {
+              setCount(targetNum);
               clearInterval(timer);
             } else {
               setCount(Math.floor(current));
@@ -92,11 +109,11 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
 
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [target, hasAnimated]);
+  }, [target, hasAnimated, isNumeric]);
 
   return (
     <div ref={ref} className="text-4xl sm:text-5xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">
-      {count.toLocaleString()}
+      {typeof count === "number" ? count.toLocaleString() : count}
       {suffix}
     </div>
   );
@@ -140,7 +157,7 @@ export default function StatsSection() {
               </div>
 
               {/* Counter */}
-              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+              <AnimatedCounter target={stat.value} suffix={stat.suffix} isNumeric={stat.isNumeric} />
 
               {/* Label */}
               <div className="text-sm font-medium text-white mt-2">
