@@ -82,6 +82,18 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ success: true, isActive: !current });
         }
 
+        if (action === 'reset-password') {
+            const { newPassword } = body;
+            if (!newPassword || newPassword.trim().length < 6) {
+                return NextResponse.json({ success: false, error: 'Password must be at least 6 characters' }, { status: 400 });
+            }
+            const bcrypt = require('bcryptjs');
+            const salt = await bcrypt.genSalt(10);
+            const passwordHash = await bcrypt.hash(newPassword, salt);
+            await studentRef.update({ passwordHash });
+            return NextResponse.json({ success: true });
+        }
+
         if (action === 'delete') {
             await studentRef.delete();
             return NextResponse.json({ success: true });

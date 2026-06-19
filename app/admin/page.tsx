@@ -21,7 +21,8 @@ import {
     TrendingUp,
     Trophy,
     Megaphone,
-    Send
+    Send,
+    Key
 } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -38,6 +39,8 @@ function AdminContent() {
     
     // --- Student Creation State ---
     const [showCreateForm, setShowCreateForm] = useState(false);
+    const [showQuickPaste, setShowQuickPaste] = useState(false);
+    const [quickPasteText, setQuickPasteText] = useState('');
     const [isCreating, setIsCreating] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -52,6 +55,128 @@ function AdminContent() {
     const [createdCredentials, setCreatedCredentials] = useState<{ username: string; password?: string } | null>(null);
     const [copiedField, setCopiedField] = useState<string | null>(null);
     const [status, setStatus] = useState<{ type: 'success' | 'error' | null, msg: string }>({ type: null, msg: '' });
+
+    const handleQuickPaste = (text: string) => {
+        setQuickPasteText(text);
+        if (!text.trim()) return;
+
+        const lines = text.split('\n').map(l => l.trim());
+        let name = '';
+        let email = '';
+        let phone = '';
+        let grade = formData.grade;
+
+        // 1. Email extraction
+        const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+        if (emailMatch) {
+            email = emailMatch[0];
+        }
+
+        // 2. Phone extraction
+        const phoneMatch = text.match(/(?:\+?|00)?\d{9,15}/);
+        if (phoneMatch) {
+            phone = phoneMatch[0];
+        }
+
+        // 3. Grade/Curriculum extraction (English keywords)
+        const lowerText = text.toLowerCase();
+        if (lowerText.includes('edexcel')) {
+            if (lowerText.includes('as-level') || lowerText.includes('as level') || lowerText.includes(' as ')) {
+                grade = 'edexcel-as';
+            } else if (lowerText.includes('a2-level') || lowerText.includes('a2 level') || lowerText.includes(' a2 ') || lowerText.includes(' a-level ') || lowerText.includes(' a level ')) {
+                grade = 'edexcel-a2';
+            } else {
+                grade = 'edexcel-igcse';
+            }
+        } else {
+            if (lowerText.includes('as-level') || lowerText.includes('as level') || lowerText.includes(' as ')) {
+                grade = 'cie-as';
+            } else if (lowerText.includes('a-level') || lowerText.includes('a level') || lowerText.includes(' alevel ')) {
+                grade = 'cie-alevel';
+            } else if (lowerText.includes('igcse') || lowerText.includes('cie') || lowerText.includes('cambridge')) {
+                grade = 'cie-igcse';
+            }
+        }
+
+        // 4. Name extraction
+        const nameLine = lines.find(line => {
+            const lowerLine = line.toLowerCase();
+            return lowerLine.startsWith('name:') || 
+                   lowerLine.startsWith('full name:') || 
+                   lowerLine.startsWith('student name:') ||
+                   lowerLine.startsWith('student:');
+        });
+
+        if (nameLine) {
+            name = nameLine.replace(/^(name:|full name:|student name:|student:)\s*/i, '').trim();
+        } else {
+            const fallback = lines.find(line => {
+                const clean = line.trim();
+                return clean.length > 2 && 
+                       !clean.includes('@') && 
+                       !/(?:\+?|00)?\d{9,15}/.test(clean) && 
+                       !clean.toLowerCase().includes('curriculum') && 
+                       !clean.toLowerCase().includes('track') && 
+                       !clean.toLowerCase().includes('grade');
+            });
+            if (fallback) {
+                name = fallback;
+            }
+        }
+
+        let username = formData.username;
+        if (name && !formData.username) {
+            username = name.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15);
+        }
+
+        setFormData(prev => ({
+            ...prev,
+            name: name || prev.name,
+            email: email || prev.email,
+            phone: phone || prev.phone,
+            grade: grade || prev.grade,
+            username: username || prev.username,
+            notes: text.trim() ? `Imported from pasted text:\n"${text.trim()}"` : prev.notes
+        }));
+    };
+
+    // --- Password Reset States & Handlers ---
+    const [resetPasswordStudent, setResetPasswordStudent] = useState<any | null>(null);
+    const [newStudentPassword, setNewStudentPassword] = useState('');
+    const [isResettingPassword, setIsResettingPassword] = useState(false);
+    const [resetCredentialsResult, setResetCredentialsResult] = useState<{ username: string; password?: string } | null>(null);
+
+    const handleResetPasswordSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!resetPasswordStudent || !newStudentPassword.trim()) return;
+        setIsResettingPassword(true);
+        try {
+            const res = await fetch('/api/admin/students', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'reset-password',
+                    studentId: resetPasswordStudent.id,
+                    newPassword: newStudentPassword
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                setResetCredentialsResult({
+                    username: resetPasswordStudent.username,
+                    password: newStudentPassword
+                });
+                setNewStudentPassword('');
+            } else {
+                alert(data.error || 'Failed to reset password');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Connection error');
+        } finally {
+            setIsResettingPassword(false);
+        }
+    };
 
     const handleCreateStudent = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -393,10 +518,53 @@ function AdminContent() {
                                     <div className="space-y-8 animate-in fade-in duration-500">
                                         {showCreateForm && (
                                             <div className="bg-indigo-500/5 border border-indigo-500/10 p-6 rounded-3xl animate-in slide-in-from-top-4 duration-300">
-                                            <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                                                <Users className="w-5 h-5 text-indigo-400" />
-                                                Create New Student
-                                            </h4>
+                                            <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                                                <h4 className="text-lg font-bold flex items-center gap-2">
+                                                    <Users className="w-5 h-5 text-indigo-400" />
+                                                    Create New Student
+                                                </h4>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setShowQuickPaste(!showQuickPaste)}
+                                                    className="px-3 py-1.5 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 text-indigo-400 rounded-lg text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer"
+                                                >
+                                                    <span>⚡</span> {showQuickPaste ? 'Hide Smart Paste' : 'Smart Paste (WhatsApp/Email)'}
+                                                </button>
+                                            </div>
+
+                                            {showQuickPaste && (
+                                                <div className="mb-6 p-4 bg-indigo-500/5 border border-indigo-500/10 rounded-2xl space-y-2 animate-in slide-in-from-top-2 duration-300">
+                                                    <div className="flex items-center justify-between flex-wrap gap-2">
+                                                        <label className="text-[10px] text-indigo-300 font-bold uppercase tracking-widest block">
+                                                            Paste WhatsApp / Email Text here (English)
+                                                        </label>
+                                                        <button
+                                                            type="button"
+                                                            onClick={() => {
+                                                                const template = `Hello! Please send me your details in this format to create your ChemZim account:\n\nName: \nEmail: \nPhone: \nCurriculum: `;
+                                                                navigator.clipboard.writeText(template);
+                                                                setCopiedField('template');
+                                                                setTimeout(() => setCopiedField(null), 1500);
+                                                            }}
+                                                            className="text-[10px] bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 text-indigo-300 hover:text-white px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 active:scale-95 cursor-pointer"
+                                                        >
+                                                            {copiedField === 'template' ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                                                            Copy Request Template
+                                                        </button>
+                                                    </div>
+                                                    <textarea
+                                                        rows={4}
+                                                        value={quickPasteText}
+                                                        onChange={(e) => handleQuickPaste(e.target.value)}
+                                                        placeholder={`Paste information here. E.g.:\nName: Sarah Connor\nEmail: sarah@sky.net\nPhone: +962791234567\nCurriculum: Edexcel IGCSE`}
+                                                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-indigo-500 transition-all text-xs text-white placeholder-slate-600 resize-none font-mono"
+                                                    />
+                                                    <span className="text-[10px] text-slate-500 block">
+                                                        ⚡ Fields will automatically fill in as you paste or type. You can review them below before saving.
+                                                    </span>
+                                                </div>
+                                            )}
+
                                             <form onSubmit={handleCreateStudent} className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                  <div className="flex flex-col gap-1.5 md:col-span-2">
                                                      <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Full Name *</label>
@@ -641,6 +809,16 @@ function AdminContent() {
                                                                          </td>
                                                                          <td className="py-4 text-right">
                                                                              <div className="flex items-center justify-end gap-2">
+                                                                                 <button
+                                                                                     onClick={() => {
+                                                                                         setResetPasswordStudent(student);
+                                                                                         setResetCredentialsResult(null);
+                                                                                     }}
+                                                                                     className="px-3 py-1.5 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 text-indigo-400 rounded-lg text-xs font-bold transition-all active:scale-95 cursor-pointer flex items-center gap-1"
+                                                                                 >
+                                                                                     <Key className="w-3.5 h-3.5" />
+                                                                                     Reset
+                                                                                 </button>
                                                                                  <button
                                                                                      onClick={() => handleStudentAction('toggle-active', student.id)}
                                                                                      className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all active:scale-95 cursor-pointer border ${
@@ -1187,6 +1365,154 @@ function AdminContent() {
                 </div>
 
             </div>
+
+            {/* Password Reset Modal */}
+            {resetPasswordStudent && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-300">
+                    <div className="bg-[#0b0b1a] border border-white/10 rounded-[2rem] p-6 w-full max-w-md space-y-6 shadow-2xl animate-in zoom-in-95 duration-300">
+                        <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                            <h4 className="text-lg font-bold text-white flex items-center gap-2">
+                                <Key className="w-5 h-5 text-indigo-400" />
+                                Reset Password
+                            </h4>
+                            {!resetCredentialsResult && (
+                                <button 
+                                    onClick={() => {
+                                        setResetPasswordStudent(null);
+                                        setNewStudentPassword('');
+                                    }}
+                                    className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all cursor-pointer"
+                                >
+                                    <XCircle className="w-5 h-5" />
+                                </button>
+                            )}
+                        </div>
+
+                        {!resetCredentialsResult ? (
+                            <form onSubmit={handleResetPasswordSubmit} className="space-y-4">
+                                <div className="space-y-1">
+                                    <span className="text-xs text-slate-500 font-bold block">Student</span>
+                                    <span className="font-bold text-white block">{resetPasswordStudent.name} ({resetPasswordStudent.username})</span>
+                                </div>
+
+                                <div className="flex flex-col gap-1.5">
+                                    <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">New Password *</label>
+                                    <div className="flex gap-2">
+                                        <input 
+                                            type="text" 
+                                            placeholder="At least 6 characters" 
+                                            required
+                                            value={newStudentPassword}
+                                            onChange={e => setNewStudentPassword(e.target.value)}
+                                            className="bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-indigo-500 transition-all text-sm text-white flex-1"
+                                        />
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%';
+                                                let pass = '';
+                                                for (let i = 0; i < 8; i++) {
+                                                    pass += chars.charAt(Math.floor(Math.random() * chars.length));
+                                                }
+                                                setNewStudentPassword(pass);
+                                            }}
+                                            className="px-3 py-2 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 text-indigo-400 rounded-xl text-xs font-bold transition-all active:scale-95 cursor-pointer"
+                                        >
+                                            Generate
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center gap-3 pt-2">
+                                    <button 
+                                        type="submit"
+                                        disabled={isResettingPassword || newStudentPassword.length < 6}
+                                        className="flex-1 bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 text-white py-3 rounded-xl text-xs font-bold transition-all shadow-lg shadow-indigo-500/20 active:scale-95 cursor-pointer"
+                                    >
+                                        {isResettingPassword ? 'Updating...' : 'Update Password'}
+                                    </button>
+                                    <button 
+                                        type="button"
+                                        onClick={() => {
+                                            setResetPasswordStudent(null);
+                                            setNewStudentPassword('');
+                                        }}
+                                        className="px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-xl text-xs font-bold transition-all active:scale-95 cursor-pointer"
+                                    >
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        ) : (
+                            <div className="space-y-4 animate-in fade-in duration-300">
+                                <h5 className="text-sm font-bold text-emerald-400 flex items-center gap-2">
+                                    <CheckCircle2 className="w-4 h-4" />
+                                    Password Reset Successfully!
+                                </h5>
+                                <div className="grid grid-cols-1 gap-3 text-xs">
+                                    <div className="bg-white/[0.02] border border-white/5 p-3 rounded-xl flex items-center justify-between">
+                                        <div>
+                                            <span className="text-[10px] text-slate-500 font-bold uppercase block mb-1">Username</span>
+                                            <code className="text-white font-mono font-bold">{resetCredentialsResult.username}</code>
+                                        </div>
+                                        <button 
+                                            type="button"
+                                            onClick={() => {
+                                                navigator.clipboard.writeText(resetCredentialsResult.username);
+                                                setCopiedField('reset_username');
+                                                setTimeout(() => setCopiedField(null), 1500);
+                                            }}
+                                            className="text-slate-400 hover:text-white p-1 cursor-pointer"
+                                        >
+                                            {copiedField === 'reset_username' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                                        </button>
+                                    </div>
+                                    <div className="bg-white/[0.02] border border-white/5 p-3 rounded-xl flex items-center justify-between">
+                                        <div>
+                                            <span className="text-[10px] text-slate-500 font-bold uppercase block mb-1">New Password</span>
+                                            <code className="text-white font-mono font-bold">{resetCredentialsResult.password}</code>
+                                        </div>
+                                        <button 
+                                            type="button"
+                                            onClick={() => {
+                                                navigator.clipboard.writeText(resetCredentialsResult.password || '');
+                                                setCopiedField('reset_password');
+                                                setTimeout(() => setCopiedField(null), 1500);
+                                            }}
+                                            className="text-slate-400 hover:text-white p-1 cursor-pointer"
+                                        >
+                                            {copiedField === 'reset_password' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                                        </button>
+                                    </div>
+                                </div>
+                                <button 
+                                    type="button"
+                                    onClick={() => {
+                                        const inviteMsg = `Hello! 👋\n\nYour password has been reset successfully.\n\n🔐 New Credentials:\nUsername: ${resetCredentialsResult.username}\nPassword: ${resetCredentialsResult.password}\n\n🔗 Access here: ${window.location.origin}/login`;
+                                        navigator.clipboard.writeText(inviteMsg);
+                                        setCopiedField('reset_invite');
+                                        setTimeout(() => setCopiedField(null), 1500);
+                                    }}
+                                    className="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white py-2.5 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2 cursor-pointer"
+                                >
+                                    {copiedField === 'reset_invite' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                                    Copy Invite Message
+                                </button>
+                                <button 
+                                    type="button"
+                                    onClick={() => {
+                                        setResetPasswordStudent(null);
+                                        setResetCredentialsResult(null);
+                                    }}
+                                    className="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2.5 rounded-xl text-xs font-bold transition-all active:scale-95 cursor-pointer mt-2"
+                                >
+                                    Done
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
