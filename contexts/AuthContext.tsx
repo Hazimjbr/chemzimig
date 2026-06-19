@@ -93,6 +93,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             console.error('Logout API failed:', e);
             // Fallback: try to clear client-side (won't work for HttpOnly but safe to try)
             document.cookie = 'chemzim=; path=/; max-age=0';
+            document.cookie = 'chemzim-session=; path=/; max-age=0';
         }
     }, []);
 

@@ -19,9 +19,11 @@ export default async function CurriculumPage() {
     const { track, isAdmin, role } = session;
     const isSystemAdmin = isAdmin === true || role === 'admin' || role === 'moderator';
 
+    const resolvedTrack = track || (session.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (session.grade === 'AS Level' ? 'cie-as' : (session.grade === 'A2 Level' || session.grade === 'IB' || session.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
+
     const filteredCurricula = allCurricula.filter(c => {
         if (isSystemAdmin) return true; // Admin can see both
-        return c.id === track;
+        return c.id === resolvedTrack;
     });
 
     return (

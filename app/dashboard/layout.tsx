@@ -19,7 +19,6 @@ import { useGamification } from '@/contexts/GamificationContext';
 
 const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-    { name: 'Lessons', href: '/dashboard/lessons', icon: BookOpen },
     { name: 'Library', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
@@ -125,13 +124,23 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 <span className="text-xs text-slate-500 truncate">Level {level} • {user?.grade || 'No Grade Set'}</span>
                             </div>
                         </div>
-                        <button
-                            onClick={() => logout()}
-                            className="flex items-center gap-3 w-full px-4 py-3 text-rose-400/80 hover:text-rose-400 hover:bg-rose-500/10 rounded-xl transition-all group"
-                        >
-                            <LogOut className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                            <span className="font-medium">Logout</span>
-                        </button>
+                        {user ? (
+                            <button
+                                onClick={() => logout()}
+                                className="flex items-center gap-3 w-full px-4 py-3 text-rose-400/80 hover:text-rose-400 hover:bg-rose-500/10 rounded-xl transition-all group"
+                            >
+                                <LogOut className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+                                <span className="font-medium">Logout</span>
+                            </button>
+                        ) : (
+                            <Link
+                                href="/login"
+                                className="flex items-center gap-3 w-full px-4 py-3 text-emerald-400 hover:bg-emerald-500/10 rounded-xl transition-all group border border-transparent hover:border-emerald-500/20"
+                            >
+                                <LogOut className="w-5 h-5 group-hover:translate-x-1 transition-transform rotate-180" />
+                                <span className="font-medium">Login</span>
+                            </Link>
+                        )}
                     </div>
                 </div>
             </aside>

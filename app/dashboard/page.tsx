@@ -14,12 +14,47 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useGamification } from '@/contexts/GamificationContext';
+import { allCurricula } from '@/data/curriculum';
 
 export default function DashboardPage() {
     const { user } = useAuth();
     const { xp, level, streak, dailyChallenges } = useGamification();
     const [greeting, setGreeting] = useState('Welcome');
     const [previewLeaderboard, setPreviewLeaderboard] = useState<any[]>([]);
+
+    // Resolve track and curriculum dynamically
+    const studentTrackId = React.useMemo(() => {
+        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
+        let normalized = track.toLowerCase().trim();
+        if (normalized === 'igcse') normalized = 'cie-igcse';
+        if (normalized === 'edexcel-alevel') {
+            const grade = (user?.grade || '').toLowerCase();
+            if (grade.includes('a2') || grade.includes('a level') || grade.includes('alevel') || grade.includes('unit 4') || grade.includes('unit 5') || grade.includes('unit 6')) {
+                return 'edexcel-a2';
+            }
+            return 'edexcel-as';
+        }
+        return normalized;
+    }, [user]);
+
+    const activeCurriculum = React.useMemo(() => {
+        return allCurricula.find(c => c.id === studentTrackId) || allCurricula[0];
+    }, [studentTrackId]);
+
+    const recommendedLessons = React.useMemo(() => {
+        const firstTopic = activeCurriculum.topics[0];
+        if (!firstTopic) return [];
+        
+        const subtopics = firstTopic.subtopics || [];
+        return subtopics.slice(0, 2).map((subtopic, index) => ({
+            title: subtopic,
+            unit: `Unit ${firstTopic.number}: ${firstTopic.title}`,
+            time: index === 0 ? '15 min' : '20 min',
+            xp: index === 0 ? '50' : '75',
+            icon: index === 0 ? '⚛️' : '💎',
+            href: `/dashboard/curriculum/${activeCurriculum.id}/${firstTopic.id}?tab=theory&lesson=${index + 1}`
+        }));
+    }, [activeCurriculum]);
 
     useEffect(() => {
         const hour = new Date().getHours();
@@ -73,7 +108,7 @@ export default function DashboardPage() {
                             {greeting}, <span className="text-indigo-200">{user?.name?.split(' ')[0] || 'Student'}</span> 👋
                         </h1>
                         <p className="text-indigo-100/70 text-lg max-w-xl leading-relaxed font-medium">
-                            Ready to master the elements today? You have new topical lessons and practice quizzes available for your <strong>{user?.grade || 'IGCSE'}</strong> curriculum.
+                            Ready to master the elements today? You have new topical lessons and practice quizzes available for your <strong>{activeCurriculum.title}</strong> curriculum.
                         </p>
                         <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
                              <Link 
@@ -100,12 +135,12 @@ export default function DashboardPage() {
                         </div>
                     </div>
                 </div>
-
+ 
                 {/* Decorative background vectors */}
                 <div className="absolute -top-12 -right-12 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none" />
             </div>
-
+ 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                 {stats.map((stat, i) => (
@@ -129,7 +164,7 @@ export default function DashboardPage() {
                     </div>
                 ))}
             </div>
-
+ 
             {/* Content Sections */}
             <div className="grid lg:grid-cols-3 gap-10">
                 
@@ -138,7 +173,7 @@ export default function DashboardPage() {
                     <div className="flex items-center justify-between">
                         <div>
                            <h3 className="text-2xl font-bold text-white mb-1">Recommended for You</h3>
-                           <p className="text-sm text-slate-500">Based on your current progress in {user?.grade || 'IGCSE'}</p>
+                           <p className="text-sm text-slate-500">Based on your current progress in {activeCurriculum.title}</p>
                         </div>
                         <Link href="/dashboard/lessons" className="text-indigo-400 text-sm font-bold hover:text-indigo-300 transition-colors flex items-center gap-1 group">
                             View All <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -146,11 +181,12 @@ export default function DashboardPage() {
                     </div>
                     
                     <div className="grid gap-5">
-                        {[
-                            { title: 'Atomic Theory & Structure', unit: 'Unit 1: The Atom', time: '12 min', xp: '50', icon: '⚛️' },
-                            { title: 'Ionic & Covalent Bonding', unit: 'Unit 2: Bonding', time: '18 min', xp: '75', icon: '💎' },
-                        ].map((lesson, i) => (
-                            <div key={i} className="glass-card glass-card-indigo p-6 flex items-center gap-6 cursor-pointer group">
+                        {recommendedLessons.map((lesson, i) => (
+                            <Link 
+                                href={lesson.href}
+                                key={i} 
+                                className="glass-card glass-card-indigo p-6 flex items-center gap-6 cursor-pointer group"
+                            >
                                 <div className="w-20 h-20 bg-slate-900 border border-white/5 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-105 transition-transform group-hover:bg-indigo-500/10 group-hover:border-indigo-500/20 shadow-inner">
                                     {lesson.icon}
                                 </div>
@@ -171,8 +207,11 @@ export default function DashboardPage() {
                                 <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white/5 border border-white/5 group-hover:bg-indigo-500 group-hover:border-indigo-400 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.4)] transition-all">
                                     <ChevronRight className="w-6 h-6 text-slate-400 group-hover:text-white" />
                                 </div>
-                            </div>
+                            </Link>
                         ))}
+                        {recommendedLessons.length === 0 && (
+                            <div className="text-slate-400 text-sm py-4">No recommended lessons found for this curriculum.</div>
+                        )}
                     </div>
                 </div>
 
