@@ -3,7 +3,7 @@ import { Question } from "./types";
 export const questionBank: Question[] = [
   // States of Matter
   {
-    id: "q_som_1",
+    id: "q_som_1-20260106",
     question: "Which of the following describes the changes in arrangement and movement of particles when a liquid becomes a gas?",
     options: [
       { text: "Particles become closer together and move more slowly." },
@@ -20,7 +20,7 @@ export const questionBank: Question[] = [
     createdAt: "2026-01-06"
   },
   {
-    id: "q_som_2",
+    id: "q_som_2-20260106",
     question: "In which state of matter are the particles arranged in a regular, repeating pattern?",
     options: [
       { text: "Solid" },
@@ -39,7 +39,7 @@ export const questionBank: Question[] = [
 
   // Atoms, Elements, and Compounds
   {
-    id: "q_aec_1",
+    id: "q_aec_1-20260106",
     question: "An atom has 11 protons, 12 neutrons, and 11 electrons. What is the nucleon number (mass number) of this atom?",
     options: [
       { text: "11" },
@@ -56,7 +56,7 @@ export const questionBank: Question[] = [
     createdAt: "2026-01-06"
   },
   {
-    id: "q_aec_2",
+    id: "q_aec_2-20260106",
     question: "Which type of bonding involves the sharing of electron pairs between non-metal atoms?",
     options: [
       { text: "Ionic bonding" },
@@ -75,7 +75,7 @@ export const questionBank: Question[] = [
 
   // Stoichiometry
   {
-    id: "q_stc_1",
+    id: "q_stc_1-20260106",
     question: "What is the relative formula mass ($M_r$) of carbon dioxide ($CO_2$)? (Relative atomic masses: $C = 12$, $O = 16$)",
     options: [
       { text: "28" },
@@ -92,7 +92,7 @@ export const questionBank: Question[] = [
     createdAt: "2026-01-06"
   },
   {
-    id: "q_stc_2",
+    id: "q_stc_2-20260106",
     question: "How many moles of water ($H_2O$) are present in $36\\text{ g}$ of water? ($M_r$ of $H_2O = 18$)",
     options: [
       { text: "0.5 moles" },
@@ -111,7 +111,7 @@ export const questionBank: Question[] = [
 
   // Electrochemistry
   {
-    id: "q_elc_1",
+    id: "q_elc_1-20260106",
     question: "During the electrolysis of molten lead(II) bromide, what is produced at the cathode (negative electrode)?",
     options: [
       { text: "Lead metal" },
@@ -130,7 +130,7 @@ export const questionBank: Question[] = [
 
   // Chemical Energetics
   {
-    id: "q_ce_1",
+    id: "q_ce_1-20260106",
     question: "Which statement about an exothermic reaction is correct?",
     options: [
       { text: "Energy is taken in from the surroundings and the temperature decreases." },
@@ -149,7 +149,7 @@ export const questionBank: Question[] = [
 
   // Chemical Reactions
   {
-    id: "q_cr_1",
+    id: "q_cr_1-20260106",
     question: "Which change will increase the rate of reaction between a solid piece of marble (calcium carbonate) and hydrochloric acid?",
     options: [
       { text: "Using a larger piece of marble with the same total mass" },
@@ -168,7 +168,7 @@ export const questionBank: Question[] = [
 
   // Acids, Bases and Salts
   {
-    id: "q_abs_1",
+    id: "q_abs_1-20260106",
     question: "Which ion is present in all aqueous acidic solutions?",
     options: [
       { text: "Hydroxide ion ($OH^-$)" },
@@ -187,7 +187,7 @@ export const questionBank: Question[] = [
 
   // The Periodic Table
   {
-    id: "q_pt_1",
+    id: "q_pt_1-20260106",
     question: "As you move down Group VII (the halogens) of the Periodic Table, what happens to their reactivity?",
     options: [
       { text: "It increases." },
@@ -206,7 +206,7 @@ export const questionBank: Question[] = [
 
   // Metals
   {
-    id: "q_met_1",
+    id: "q_met_1-20260106",
     question: "Which of the following metals is extracted from its ore by heating with carbon?",
     options: [
       { text: "Aluminium" },
@@ -225,7 +225,7 @@ export const questionBank: Question[] = [
 
   // Chemistry of the Environment
   {
-    id: "q_env_1",
+    id: "q_env_1-20260106",
     question: "Which gas is the main component of clean, dry air?",
     options: [
       { text: "Oxygen" },
@@ -244,7 +244,7 @@ export const questionBank: Question[] = [
 
   // Organic Chemistry
   {
-    id: "q_org_1",
+    id: "q_org_1-20260106",
     question: "What is the general formula for alkanes?",
     options: [
       { text: "$C_nH_{2n}$" },
@@ -263,7 +263,7 @@ export const questionBank: Question[] = [
 
   // Experimental Techniques
   {
-    id: "q_exp_1",
+    id: "q_exp_1-20260106",
     question: "Which separation technique is most suitable for obtaining pure water from seawater?",
     options: [
       { text: "Filtration" },
@@ -284,7 +284,7 @@ export const questionBank: Question[] = [
 // More States of Matter Questions
 questionBank.push(
   {
-    id: "q_som_3",
+    id: "q_som_3-20260106",
     question: "Which process describes a gas changing directly into a solid?",
     options: [
       { text: "Melting" },
@@ -301,7 +301,7 @@ questionBank.push(
     createdAt: "2026-01-06"
   },
   {
-    id: "q_som_4",
+    id: "q_som_4-20260106",
     question: "What happens to the kinetic energy of particles as a solid melts into a liquid at its melting point?",
     options: [
       { text: "It decreases." },
@@ -322,7 +322,7 @@ questionBank.push(
 // More Atoms, Elements, and Compounds Questions
 questionBank.push(
   {
-    id: "q_aec_3",
+    id: "q_aec_3-20260106",
     question: "Isotopes of the same element have the same number of protons but a different number of...",
     options: [
       { text: "Electrons" },
@@ -339,7 +339,7 @@ questionBank.push(
     createdAt: "2026-01-06"
   },
   {
-    id: "q_aec_4",
+    id: "q_aec_4-20260106",
     question: "What is the formula of the magnesium ion?",
     options: [
       { text: "$Mg^+$" },
@@ -360,7 +360,7 @@ questionBank.push(
 // More Stoichiometry Questions
 questionBank.push(
   {
-    id: "q_stc_3",
+    id: "q_stc_3-20260106",
     question: "What volume does $1\\text{ mole}$ of any gas occupy at room temperature and pressure (r.t.p)?",
     options: [
       { text: "$24\\text{ dm}^3$" },
@@ -377,7 +377,7 @@ questionBank.push(
     createdAt: "2026-01-06"
   },
   {
-    id: "q_stc_4",
+    id: "q_stc_4-20260106",
     question: "Calculate the percentage by mass of oxygen in water ($H_2O$). ($A_r$: $H = 1$, $O = 16$)",
     options: [
       { text: "33.3%" },
@@ -398,7 +398,7 @@ questionBank.push(
 // More Electrochemistry Questions
 questionBank.push(
   {
-    id: "q_elc_2",
+    id: "q_elc_2-20260106",
     question: "During the electrolysis of concentrated aqueous sodium chloride, what is produced at the anode (positive electrode)?",
     options: [
       { text: "Sodium" },
@@ -419,7 +419,7 @@ questionBank.push(
 // More Chemical Energetics Questions
 questionBank.push(
   {
-    id: "q_ce_2",
+    id: "q_ce_2-20260106",
     question: "If a reaction has a negative $\\Delta H$ (enthalpy change), it is...",
     options: [
       { text: "Endothermic" },
@@ -440,7 +440,7 @@ questionBank.push(
 // More Chemical Reactions
 questionBank.push(
   {
-    id: "q_cr_2",
+    id: "q_cr_2-20260106",
     question: "What does a catalyst do in a chemical reaction?",
     options: [
       { text: "Increases the activation energy" },
@@ -461,7 +461,7 @@ questionBank.push(
 // More Acids, Bases and Salts
 questionBank.push(
   {
-    id: "q_abs_2",
+    id: "q_abs_2-20260106",
     question: "Which of the following is a weak acid?",
     options: [
       { text: "Hydrochloric acid" },
@@ -482,7 +482,7 @@ questionBank.push(
 // More Periodic Table
 questionBank.push(
   {
-    id: "q_pt_2",
+    id: "q_pt_2-20260106",
     question: "Which group of elements are known as the noble gases and are unreactive?",
     options: [
       { text: "Group I" },
@@ -503,7 +503,7 @@ questionBank.push(
 // More Metals
 questionBank.push(
   {
-    id: "q_met_2",
+    id: "q_met_2-20260106",
     question: "Which metal is the most reactive?",
     options: [
       { text: "Iron" },
@@ -524,7 +524,7 @@ questionBank.push(
 // More Chemistry of Environment
 questionBank.push(
   {
-    id: "q_env_2",
+    id: "q_env_2-20260106",
     question: "Which gas contributes most to global warming?",
     options: [
       { text: "Nitrogen" },
@@ -545,7 +545,7 @@ questionBank.push(
 // More Organic Chemistry
 questionBank.push(
   {
-    id: "q_org_2",
+    id: "q_org_2-20260106",
     question: "Which functional group is present in all alcohols?",
     options: [
       { text: "$-COOH$" },
@@ -566,7 +566,7 @@ questionBank.push(
 // More Experimental Techniques
 questionBank.push(
   {
-    id: "q_exp_2",
+    id: "q_exp_2-20260106",
     question: "Which technique is used to separate a mixture of colored dyes in ink?",
     options: [
       { text: "Chromatography" },

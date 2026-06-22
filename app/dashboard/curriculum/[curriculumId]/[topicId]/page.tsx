@@ -253,10 +253,11 @@ const mdComponents = {
                 }
                 
                 if (React.isValidElement(item)) {
-                    const nestedChildren = React.Children.toArray(item.props.children);
+                    const element = item as React.ReactElement<any>;
+                    const nestedChildren = React.Children.toArray(element.props.children);
                     const newList = [...childrenList];
-                    newList[targetIdx] = React.cloneElement(item as React.ReactElement, {
-                        ...item.props,
+                    newList[targetIdx] = React.cloneElement(element, {
+                        ...element.props,
                         children: cleanPrefix(nestedChildren)
                     });
                     return newList;

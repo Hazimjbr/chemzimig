@@ -24,11 +24,12 @@ if (typeof window === 'undefined') {
         const fs = require('fs');
         const path = require('path');
         const dataDir = path.join(process.cwd(), 'data');
-        function walkDir(dir) {
-            let results = [];
+        
+        function walkDir(dir: string): string[] {
+            let results: string[] = [];
             if (!fs.existsSync(dir)) return results;
             const list = fs.readdirSync(dir);
-            list.forEach(file => {
+            list.forEach((file: string) => {
                 const fullPath = path.join(dir, file);
                 const stat = fs.statSync(fullPath);
                 if (stat && stat.isDirectory()) {
@@ -39,14 +40,15 @@ if (typeof window === 'undefined') {
             });
             return results;
         }
+        
         const files = walkDir(dataDir);
         let modifiedFiles = 0;
         let modifiedQuestions = 0;
-        files.forEach(file => {
+        files.forEach((file: string) => {
             if (!file.includes('exams') && !file.includes('curriculum')) return;
             const content = fs.readFileSync(file, 'utf-8');
             let hasChanges = false;
-            const newContent = content.replace(/id:\s*(['"])([^'"]+)\1/g, (match, quote, idStr) => {
+            const newContent = content.replace(/id:\s*(['"])([^'"]+)\1/g, (match: string, quote: string, idStr: string) => {
                 if (!/\d{8}/.test(idStr)) {
                     hasChanges = true;
                     modifiedQuestions++;
