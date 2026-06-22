@@ -2,7 +2,7 @@ import { Question } from '../../../types';
 
 export const level3Questions: Question[] = [
   {
-    id: "q_ed_u1_l1_lv3_so4_spectator",
+    id: "q_ed_u1_l1_lv3_so4_spectator-20260106",
     question: "A student mixes $50.0\\text{ cm}^3$ of $0.200\\text{ mol dm}^{-3}$ barium chloride solution, $\\text{BaCl}_2\\text{(aq)}$, with $150.0\\text{ cm}^3$ of $0.100\\text{ mol dm}^{-3}$ sodium sulfate solution, $\\text{Na}_2\\text{SO}_4\\text{(aq)}$. Barium sulfate precipitates according to the equation:\n$$\\text{Ba}^{2+}\\text{(aq)} + \\text{SO}_4^{2-}\\text{(aq)} \\rightarrow \\text{BaSO}_4\\text{(s)}$$\nCalculate the concentration of the remaining dissolved sulfate ions, $\\text{SO}_4^{2-}\\text{(aq)}$, in the solution after precipitation is complete. (Assume volumes are additive).",
     options: [
       { text: "0.0250 mol dm⁻³" },

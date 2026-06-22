@@ -3,7 +3,7 @@
 // Extraction of Metals - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u9_l3_lv3_1",
+    id: "ex_ci_u9_l3_lv3_1-20260106",
     question: "Sample Hard question about Extraction of Metals - replace with real content.",
     options: [
       { text: "Option A" },

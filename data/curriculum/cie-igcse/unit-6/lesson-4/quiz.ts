@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u6_l4_q1",
+    id: "ci_u6_l4_q1-20260106",
     question: "Sample question about Reversible Reactions and Equilibrium - replace with real content.",
     options: [
       { text: "Option A", isCorrect: false },

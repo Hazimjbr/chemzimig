@@ -3,7 +3,7 @@
 // Group I - Alkali Metals - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u8_l2_lv3_1",
+    id: "ex_ci_u8_l2_lv3_1-20260106",
     question: "Sample Hard question about Group I - Alkali Metals - replace with real content.",
     options: [
       { text: "Option A" },

@@ -3,7 +3,7 @@
 // Arrangement of Elements - Level 2 (Medium)
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u8_l1_lv2_1",
+    id: "ex_ci_u8_l1_lv2_1-20260106",
     question: "Sample Medium question about Arrangement of Elements - replace with real content.",
     options: [
       { text: "Option A" },

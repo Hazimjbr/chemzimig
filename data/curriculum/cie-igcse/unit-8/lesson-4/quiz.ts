@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u8_l4_q1",
+    id: "ci_u8_l4_q1-20260106",
     question: "Sample question about Group VIII/0 - Noble Gases - replace with real content.",
     options: [
       { text: "Option A", isCorrect: false },

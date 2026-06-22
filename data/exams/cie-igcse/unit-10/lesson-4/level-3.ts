@@ -3,7 +3,7 @@
 // Carbon Cycle - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u10_l4_lv3_1",
+    id: "ex_ci_u10_l4_lv3_1-20260106",
     question: "Sample Hard question about Carbon Cycle - replace with real content.",
     options: [
       { text: "Option A" },

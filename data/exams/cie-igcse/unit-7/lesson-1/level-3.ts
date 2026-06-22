@@ -3,7 +3,7 @@
 // Acids and Bases - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u7_l1_lv3_1",
+    id: "ex_ci_u7_l1_lv3_1-20260106",
     question: "Sample Hard question about Acids and Bases - replace with real content.",
     options: [
       { text: "Option A" },

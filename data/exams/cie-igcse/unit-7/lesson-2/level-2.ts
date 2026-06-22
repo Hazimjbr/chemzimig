@@ -3,7 +3,7 @@
 // pH Scale and Indicators - Level 2 (Medium)
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u7_l2_lv2_1",
+    id: "ex_ci_u7_l2_lv2_1-20260106",
     question: "Sample Medium question about pH Scale and Indicators - replace with real content.",
     options: [
       { text: "Option A" },

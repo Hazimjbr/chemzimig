@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u2_l3_q1",
+    id: "ci_u2_l3_q1-20260106",
     question: "Sample question about Ions and Ionic Bonds - replace with real content.",
     options: [
       { text: "Option A", isCorrect: false },

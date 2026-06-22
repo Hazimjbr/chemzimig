@@ -43,7 +43,7 @@ export default function EquationAnimator({ reactants, products, description }: E
     };
 
     return (
-        <div className="bg-[#0a0a1f]/40 border border-white/5 rounded-2xl p-6 text-center overflow-hidden flex flex-col gap-5">
+        <div className="bg-[#0a0a1f]/40 border border-white/5 rounded-2xl p-6 text-center overflow-hidden flex flex-col gap-5 flex-shrink-0">
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Chemical Equation Visualizer</h4>
 
             <div className="flex items-center justify-center gap-4 flex-wrap select-none">

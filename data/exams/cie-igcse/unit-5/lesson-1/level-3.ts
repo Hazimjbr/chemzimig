@@ -3,7 +3,7 @@
 // Exothermic and Endothermic Reactions - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u5_l1_lv3_1",
+    id: "ex_ci_u5_l1_lv3_1-20260106",
     question: "Sample Hard question about Exothermic and Endothermic Reactions - replace with real content.",
     options: [
       { text: "Option A" },

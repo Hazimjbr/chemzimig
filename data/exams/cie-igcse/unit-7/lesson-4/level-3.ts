@@ -3,7 +3,7 @@
 // Oxides - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u7_l4_lv3_1",
+    id: "ex_ci_u7_l4_lv3_1-20260106",
     question: "Sample Hard question about Oxides - replace with real content.",
     options: [
       { text: "Option A" },

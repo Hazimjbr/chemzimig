@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u10_l3_q1",
+    id: "ci_u10_l3_q1-20260106",
     question: "Sample question about Air Quality and Climate - replace with real content.",
     options: [
       { text: "Option A", isCorrect: false },

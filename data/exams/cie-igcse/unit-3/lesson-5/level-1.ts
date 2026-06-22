@@ -3,7 +3,7 @@
 // Reacting Masses - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u3_l5_lv1_1",
+    id: "ex_ci_u3_l5_lv1_1-20260106",
     question: "Sample Easy question about Reacting Masses - replace with real content.",
     options: [
       { text: "Option A" },

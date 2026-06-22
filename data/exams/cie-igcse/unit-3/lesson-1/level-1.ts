@@ -3,7 +3,7 @@
 // Formulae - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u3_l1_lv1_1",
+    id: "ex_ci_u3_l1_lv1_1-20260106",
     question: "Sample Easy question about Formulae - replace with real content.",
     options: [
       { text: "Option A" },

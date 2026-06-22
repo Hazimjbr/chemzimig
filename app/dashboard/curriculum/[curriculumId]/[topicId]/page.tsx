@@ -14,6 +14,8 @@ import { getLessonFromRegistry } from '@/data/curriculum/registry';
 import TextToSpeech from '@/components/visual/TextToSpeech';
 import LessonNotes from '@/components/visual/LessonNotes';
 import EquationAnimator from '@/components/visual/EquationAnimator';
+import GasLawSimulator from '@/components/visual/GasLawSimulator';
+import AvogadroScale from '@/components/visual/AvogadroScale';
 import { useGamification } from '@/contexts/GamificationContext';
 
 interface TopicPageProps {
@@ -26,6 +28,47 @@ interface TopicPageProps {
         lesson?: string;
     }>;
 }
+
+const renderTableFromLines = (tableLines: string[], keyIdx: number): React.ReactNode => {
+    const rows = tableLines
+        .map(line => {
+            const cleanLine = line.trim().replace(/^>\s*/, '');
+            return cleanLine.split('|').map(cell => cell.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+        })
+        .filter(row => row.length > 0 && !row.every(cell => /^:?-+:?$/.test(cell)));
+
+    if (rows.length === 0) return null;
+
+    const headers = rows[0];
+    const bodyRows = rows.slice(1);
+
+    return (
+        <div key={`table-wrapper-${keyIdx}`} className="overflow-x-auto my-6 rounded-2xl border border-white/10 shadow-lg">
+            <table className="min-w-full divide-y divide-white/10 bg-[#0d0d26]/80 backdrop-blur-md">
+                <thead className="bg-white/[0.04]">
+                    <tr>
+                        {headers.map((header, hIdx) => (
+                            <th key={hIdx} className="px-6 py-4 text-left text-xs font-bold text-indigo-300 uppercase tracking-wider border-b border-white/10">
+                                {renderTextWithMath(header)}
+                            </th>
+                        ))}
+                    </tr>
+                </thead>
+                <tbody className="divide-y divide-white/5">
+                    {bodyRows.map((row, rIdx) => (
+                        <tr key={rIdx} className="hover:bg-white/[0.02] transition-colors">
+                            {row.map((cell, cIdx) => (
+                                <td key={cIdx} className="px-6 py-4 text-sm text-slate-300">
+                                    {renderTextWithMath(cell)}
+                                </td>
+                            ))}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
 
 const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
     if (!children) return null;
@@ -43,22 +86,45 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
         return children;
     }
 
+    if (children.includes('[CUSTOM_TABLE:')) {
+        const parts = children.split(/\[CUSTOM_TABLE:(.*?)\]/g);
+        if (parts.length > 1) {
+            return (
+                <React.Fragment>
+                    {parts.map((part, i) => {
+                        if (i % 2 === 1) {
+                            try {
+                                const tableLines = decodeURIComponent(part).split('\n');
+                                return renderTableFromLines(tableLines, i);
+                            } catch (e) {
+                                return `[Error decoding table]`;
+                            }
+                        }
+                        return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
+                    })}
+                </React.Fragment>
+            );
+        }
+    }
+
     if (children.includes('[NOWRAP:')) {
         const parts = children.split(/\[NOWRAP:(.*?)\]/g);
-        return (
-            <React.Fragment>
-                {parts.map((part, i) => {
-                    if (i % 2 === 1) {
-                        return (
-                            <span key={i} className="inline-block whitespace-nowrap">
-                                {renderTextWithMath(part)}
-                            </span>
-                        );
-                    }
-                    return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
-                })}
-            </React.Fragment>
-        );
+        if (parts.length > 1) {
+            return (
+                <React.Fragment>
+                    {parts.map((part, i) => {
+                        if (i % 2 === 1) {
+                            return (
+                                <span key={i} className="inline-block whitespace-nowrap">
+                                    {renderTextWithMath(part)}
+                                </span>
+                            );
+                        }
+                        return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
+                    })}
+                </React.Fragment>
+            );
+        }
     }
     
     if (children.includes('$$')) {
@@ -67,7 +133,7 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <BlockMath key={i} math={part} />;
+                        return <BlockMath key={i} math={part.replace(/\\_/g, '_').replace(/(?<!\\)%/g, '\\%')} />;
                     }
                     return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
                 })}
@@ -81,7 +147,7 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <InlineMath key={i} math={part} />;
+                        return <InlineMath key={i} math={part.replace(/\\_/g, '_').replace(/(?<!\\)%/g, '\\%')} />;
                     }
                     return <React.Fragment key={i}>{part}</React.Fragment>;
                 })}
@@ -97,7 +163,7 @@ const formatTrailingSymbolsAndUnits = (text: string): string => {
     
     // 1. Manually parenthesized expressions followed by a period at the end of sentences/lines.
     // e.g. (NaCl). or ($...$). or (g mol⁻¹).
-    const parenthesizedRegex = /\(([^)]+?)\)\./g;
+    const parenthesizedRegex = /\(([^)]{1,12})\)\./g;
 
     // 2. Specific units at the end of sentences/lines: mol⁻¹, g mol⁻¹, dm³, cm³, m³, kPa, Pa, K, mol, g
     const unitRegex = /\b(mol⁻¹|g\s*mol⁻¹|dm³|cm³|m³|kPa|Pa|K|mol|g)\./g;
@@ -105,8 +171,7 @@ const formatTrailingSymbolsAndUnits = (text: string): string => {
     // 3. Chemical formulas/symbols: e.g. NaCl., CO2., H2O., He.
     const chemRegex = /\b(NaCl|CO₂|CO_2|H₂O|H_2O|He|O₂|O_2|H₂|H_2|Fe|CuSO₄|CuSO_4|Fe₂O₃|Fe_2O_3|CO)\./g;
     
-    // 4. Numbers at the end of a sentence/line (excluding list prefixes or labels, and not followed by a digit to avoid decimal points).
-    const numberRegex = /(?<!^|\n|#\s|##\s|###\s|####\s|\bLesson\s|\bTopic\s)\b(\d+(?:\.\d+)?)\.(?!\d)/g;
+    const numberRegex = /(?<!(?:^|\n)\s*|>\s*|#\s|##\s|###\s|####\s|\bLesson\s|\bTopic\s)\b(\d+(?:\.\d+)?)\.(?!\d)/g;
     
     // 5. Inline math ending with a number/unit/symbol followed by a period.
     const mathRegex = /\$([^\$]+?(?:\d+|mol|g|dm³|cm³|m³|Pa|kPa|K|NaCl|CO_2|H_2O|Fe|atoms|molecules))\$\./g;
@@ -115,11 +180,185 @@ const formatTrailingSymbolsAndUnits = (text: string): string => {
     processed = processed.replace(parenthesizedRegex, '[NOWRAP:($1).]');
     processed = processed.replace(unitRegex, '[NOWRAP:($1).]');
     processed = processed.replace(chemRegex, '[NOWRAP:($1).]');
-    processed = processed.replace(mathRegex, '[NOWRAP:($$1).]');
+    processed = processed.replace(mathRegex, '[NOWRAP:$$$1$$.]');
     processed = processed.replace(/\b(carbon)-(\d+)\./gi, '[NOWRAP:$1-($2).]');
     processed = processed.replace(numberRegex, '[NOWRAP:($1).]');
     
     return processed;
+};
+
+const mdComponents = {
+    p: ({node, children, ...props}: any) => <div className="text-slate-300 leading-relaxed mb-4" {...props}>{renderTextWithMath(children)}</div>,
+    h2: ({node, children, ...props}: any) => <h2 className="text-2xl font-bold text-white mt-8 mb-4 border-b border-white/10 pb-2" {...props}>{renderTextWithMath(children)}</h2>,
+    h3: ({node, children, ...props}: any) => <h3 className="text-xl font-semibold text-indigo-300 mt-6 mb-3" {...props}>{renderTextWithMath(children)}</h3>,
+    ul: ({node, ...props}: any) => <ul className="list-disc pl-6 space-y-2 text-slate-300 mb-6" {...props} />,
+    ol: ({node, ...props}: any) => <ol className="list-decimal pl-6 space-y-2 text-slate-300 mb-6" {...props} />,
+    li: ({node, children, ...props}: any) => <li className="marker:text-indigo-500" {...props}>{renderTextWithMath(children)}</li>,
+    strong: ({node, children, ...props}: any) => <strong className="text-white font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
+    em: ({node, children, ...props}: any) => <em {...props}>{renderTextWithMath(children)}</em>,
+    blockquote: ({node, children, ...props}: any) => {
+        const getFirstText = (n: any): string => {
+            if (!n) return '';
+            if (n.type === 'text') {
+                if (n.value.trim() === '') return '';
+                return n.value;
+            }
+            if (n.children && n.children.length > 0) {
+                for (const child of n.children) {
+                    const text = getFirstText(child);
+                    if (text) return text;
+                }
+            }
+            return '';
+        };
+
+        const getAllText = (n: any): string => {
+            if (!n) return '';
+            if (n.type === 'text') return n.value;
+            if (n.children && n.children.length > 0) {
+                return n.children.map((child: any) => getAllText(child)).join(' ');
+            }
+            return '';
+        };
+        
+        const firstText = getFirstText(node);
+        const match = firstText.match(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION|EXAMPLE|BOX)\]/i);
+        
+        if (match) {
+            const type = match[1].toLowerCase();
+            const cleanPrefix = (childrenList: React.ReactNode[]): React.ReactNode[] => {
+                if (childrenList.length === 0) return childrenList;
+                
+                let targetIdx = -1;
+                for (let i = 0; i < childrenList.length; i++) {
+                    const item = childrenList[i];
+                    if (typeof item === 'string' && item.trim() !== '') {
+                        targetIdx = i;
+                        break;
+                    }
+                    if (React.isValidElement(item)) {
+                        targetIdx = i;
+                        break;
+                    }
+                }
+                
+                if (targetIdx === -1) return childrenList;
+                
+                const item = childrenList[targetIdx];
+                if (typeof item === 'string') {
+                    const cleanText = item.replace(/^\[!(NOTE|TIP|WARNING|IMPORTANT|CAUTION|EXAMPLE|BOX)\]\s*/i, '');
+                    const newList = [...childrenList];
+                    newList[targetIdx] = cleanText;
+                    return newList;
+                }
+                
+                if (React.isValidElement(item)) {
+                    const nestedChildren = React.Children.toArray(item.props.children);
+                    const newList = [...childrenList];
+                    newList[targetIdx] = React.cloneElement(item as React.ReactElement, {
+                        ...item.props,
+                        children: cleanPrefix(nestedChildren)
+                    });
+                    return newList;
+                }
+                
+                return childrenList;
+            };
+
+            const cleanedChildren = cleanPrefix(React.Children.toArray(children));
+
+            let bgClass = 'bg-blue-500/10 border-blue-500/20 text-blue-300';
+            let title = 'Note';
+            let icon = 'ℹ️';
+            let showHeader = type === 'example';
+
+            if (type === 'tip') {
+                bgClass = 'bg-emerald-500/10 border-emerald-500/20 text-emerald-300';
+                title = 'Tip';
+                icon = '💡';
+            } else if (type === 'warning') {
+                bgClass = 'bg-amber-500/10 border-amber-500/20 text-amber-300';
+                title = 'Warning';
+                icon = '⚠️';
+            } else if (type === 'important') {
+                bgClass = 'bg-indigo-500/10 border-indigo-500/20 text-indigo-300';
+                title = 'Important';
+                icon = '📌';
+            } else if (type === 'caution') {
+                bgClass = 'bg-rose-500/10 border-rose-500/20 text-rose-300';
+                title = 'Caution';
+                icon = '🛑';
+            } else if (type === 'example') {
+                bgClass = 'bg-purple-500/10 border-purple-500/20 text-purple-300';
+                title = 'Worked Example';
+                icon = '📝';
+            } else if (type === 'box') {
+                bgClass = 'bg-blue-500/10 border-blue-500/20 text-slate-200';
+            }
+
+            const isStepByStep = getAllText(node).toLowerCase().includes('step-by-step solution');
+
+            return (
+                <div className={`border rounded-2xl p-5 my-6 flex flex-col gap-2 ${bgClass} backdrop-blur-md overflow-x-auto w-full`}>
+                    {showHeader && !isStepByStep && (
+                        <div className="flex items-center gap-2 font-bold uppercase tracking-wider text-xs">
+                            <span>{icon}</span>
+                            <span>{title}</span>
+                        </div>
+                    )}
+                    <div className="text-sm leading-relaxed">
+                        {cleanedChildren}
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <blockquote className="border-l-4 border-indigo-500/30 pl-4 my-4 text-slate-400 italic">
+                {children}
+            </blockquote>
+        );
+    }
+};
+
+const renderContentWithTables = (content: string) => {
+    if (!content) return null;
+    
+    const lines = content.split('\n');
+    const processedLines: string[] = [];
+    let currentTableLines: string[] = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmed = line.trim();
+        const isTableLine = trimmed.startsWith('|') || trimmed.startsWith('> |');
+        
+        if (isTableLine) {
+            currentTableLines.push(line);
+        } else {
+            if (currentTableLines.length > 0) {
+                const isBlockquoteTable = currentTableLines[0].trim().startsWith('>');
+                const prefix = isBlockquoteTable ? '> ' : '';
+                const encoded = encodeURIComponent(currentTableLines.join('\n'));
+                processedLines.push(`${prefix}[CUSTOM_TABLE:${encoded}]`);
+                currentTableLines = [];
+            }
+            processedLines.push(line);
+        }
+    }
+    
+    if (currentTableLines.length > 0) {
+        const isBlockquoteTable = currentTableLines[0].trim().startsWith('>');
+        const prefix = isBlockquoteTable ? '> ' : '';
+        const encoded = encodeURIComponent(currentTableLines.join('\n'));
+        processedLines.push(`${prefix}[CUSTOM_TABLE:${encoded}]`);
+    }
+    
+    return (
+        <ReactMarkdown components={mdComponents}>
+            {formatTrailingSymbolsAndUnits(processedLines.join('\n'))}
+        </ReactMarkdown>
+    );
 };
 
 export default function TopicPage({ params, searchParams }: TopicPageProps) {
@@ -244,7 +483,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                         Back to Syllabus
                     </Link>
                     <h1 className="text-lg md:text-xl font-bold text-white leading-tight">
-                        {topic.number}. {topic.title}
+                        Unit {topic.number} - Topic {currentLessonNum}: {lessonData?.title || topic.title}
                     </h1>
                     <p className="text-emerald-400 font-medium text-[10px] mt-0.5">
                         {curriculum.title}
@@ -253,10 +492,10 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
             </div>
 
             {/* Content Area - Immersive layout with independent column scrolls */}
-            <div className="bg-[#0a0a1f]/60 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden flex flex-col flex-1 min-h-[350px]">
+            <div className="bg-[#0a0a1f]/60 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden flex flex-col flex-1 min-h-0">
                     {/* Interactive Lesson Player (Slide-by-slide) */}
                     {hasParts ? (
-                            <div className="flex flex-1 overflow-hidden h-full">
+                            <div className="flex flex-1 overflow-hidden min-h-0">
                                 {/* Sidebar list of lesson parts - Independently scrollable */}
                                 <aside className="w-64 flex-shrink-0 border-r border-white/10 overflow-y-auto p-5 bg-white/[0.02] hidden md:block">
                                     <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Lesson Parts</h3>
@@ -287,7 +526,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 </aside>
 
                                 {/* Active Slide Content Area - Independently scrollable */}
-                                <div className="flex-1 flex flex-col overflow-hidden">
+                                <div className="flex-1 flex flex-col overflow-hidden min-h-0">
                                     {/* Scrollable Container */}
                                     <div className="flex-1 overflow-y-auto p-6 md:p-8 flex flex-col gap-6">
                                         {/* Progress Bar inside card */}
@@ -316,6 +555,27 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                             <h3 className="text-lg font-bold text-emerald-400 mt-2">Lesson Completed!</h3>
                                             <p className="text-slate-400 text-sm mt-1">Excellent work completing this lesson. You have earned +25 XP!</p>
                                         </div>
+                                    )}
+
+                                    {/* Dynamic reaction animator rendered when defined on the active lesson part */}
+                                    {currentPart.equationVisualizer && (
+                                        <EquationAnimator 
+                                            reactants={currentPart.equationVisualizer.reactants}
+                                            products={currentPart.equationVisualizer.products}
+                                            description={currentPart.equationVisualizer.description}
+                                        />
+                                    )}
+
+                                    {/* Dynamic gas law simulator rendered when defined on the active lesson part */}
+                                    {currentPart.gasLawSimulator && (
+                                        <GasLawSimulator 
+                                            law={currentPart.gasLawSimulator.law}
+                                        />
+                                    )}
+
+                                    {/* Dynamic Avogadro Scale simulator rendered when defined on the active lesson part */}
+                                    {currentPart.avogadroScale && (
+                                        <AvogadroScale />
                                     )}
 
                                     {/* Slide Main Content */}
@@ -421,47 +681,36 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                     );
                                                 })()
                                             ) : (
-                                            // Standard Lesson Player Slide Content
-                                            <>
-                                                <ReactMarkdown
-                                                    components={{
-                                                        p: ({node, children, ...props}) => <div className="text-slate-300 leading-relaxed mb-4" {...props}>{renderTextWithMath(children)}</div>,
-                                                        h2: ({node, children, ...props}) => <h2 className="text-2xl font-bold text-white mt-8 mb-4 border-b border-white/10 pb-2" {...props}>{renderTextWithMath(children)}</h2>,
-                                                        h3: ({node, children, ...props}) => <h3 className="text-xl font-semibold text-indigo-300 mt-6 mb-3" {...props}>{renderTextWithMath(children)}</h3>,
-                                                        ul: ({node, ...props}) => <ul className="list-disc pl-6 space-y-2 text-slate-300 mb-6" {...props} />,
-                                                        li: ({node, children, ...props}) => <li className="marker:text-indigo-500" {...props}>{renderTextWithMath(children)}</li>,
-                                                        strong: ({node, children, ...props}) => <strong className="text-white font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
-                                                        em: ({node, children, ...props}) => <em {...props}>{renderTextWithMath(children)}</em>,
-                                                    }}
-                                                >
-                                                    {formatTrailingSymbolsAndUnits(currentPart.content)}
-                                                </ReactMarkdown>
+                                                // Standard Lesson Player Slide Content
+                                                <>
+                                                    {renderContentWithTables(currentPart.content)}
 
-                                                {/* Key Points */}
-                                                {currentPart.keyPoints && currentPart.keyPoints.length > 0 && (
-                                                    <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-2xl p-5 mt-6">
-                                                        <h4 className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">Key Study Points</h4>
-                                                        <ul className="space-y-2.5">
-                                                            {currentPart.keyPoints.map((point, i) => (
-                                                                <li key={i} className="flex gap-2.5 items-start text-sm text-slate-300">
-                                                                    <span className="text-indigo-400 mt-0.5">•</span>
-                                                                    <span>{renderTextWithMath(formatTrailingSymbolsAndUnits(point))}</span>
-                                                                </li>
-                                                            ))}
-                                                        </ul>
-                                                    </div>
-                                                )}
-                                            </>
-                                        )}
-                                    </div>
+                                                    {/* Key Points */}
+                                                    {currentPart.keyPoints && currentPart.keyPoints.length > 0 && (
+                                                        <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-2xl p-5 mt-6">
+                                                            <h4 className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">Key Study Points</h4>
+                                                            <ul className="space-y-2.5">
+                                                                {currentPart.keyPoints.map((point, i) => (
+                                                                    <li key={i} className="flex gap-2.5 items-start text-sm text-slate-300">
+                                                                        <span className="text-indigo-400 mt-0.5">•</span>
+                                                                        <span>{renderTextWithMath(formatTrailingSymbolsAndUnits(point))}</span>
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
+                                                        </div>
+                                                    )}
+                                                </>
+                                            )}
+                                        </div>
 
-                                    {/* Dynamic reaction animator for specific stoichiometry or acid-base topics */}
-                                    {(topicId.includes('stoichiometry') || topicId.includes('acid') || topicId.includes('unit-1')) && currentPart.id === 'the-mole' && (
-                                        <EquationAnimator 
-                                            reactants={[['2H₂', '#ef4444'], ['O₂', '#3b82f6']]}
-                                            products={[['2H₂O', '#10b981']]}
-                                            description="2 moles of Hydrogen gas (H₂) react with 1 mole of Oxygen gas (O₂) to produce 2 moles of Water (H₂O)."
-                                        />
+
+
+                                    {/* Lesson Notes Section */}
+                                    {currentPart.id !== 'interactive-quiz' && (
+                                        <div className="border-t border-white/5 pt-6 mt-2 flex-shrink-0">
+                                            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">📝 Study Notes</h4>
+                                            <LessonNotes lessonId={`${curriculumId}-${topicId}-lesson-${currentLessonNum}`} />
+                                        </div>
                                     )}
 
                                     </div>
@@ -493,15 +742,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 {theoryContent ? (
                                     <>
                                         <ReactMarkdown
-                                            components={{
-                                                p: ({node, children, ...props}) => <div className="text-slate-300 leading-relaxed mb-4" {...props}>{renderTextWithMath(children)}</div>,
-                                                h2: ({node, children, ...props}) => <h2 className="text-2xl font-bold text-white mt-8 mb-4 border-b border-white/10 pb-2" {...props}>{renderTextWithMath(children)}</h2>,
-                                                h3: ({node, children, ...props}) => <h3 className="text-xl font-semibold text-indigo-300 mt-6 mb-3" {...props}>{renderTextWithMath(children)}</h3>,
-                                                ul: ({node, ...props}) => <ul className="list-disc pl-6 space-y-2 text-slate-300 mb-6" {...props} />,
-                                                li: ({node, children, ...props}) => <li className="marker:text-indigo-500" {...props}>{renderTextWithMath(children)}</li>,
-                                                strong: ({node, children, ...props}) => <strong className="text-white font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
-                                                em: ({node, children, ...props}) => <em {...props}>{renderTextWithMath(children)}</em>,
-                                            }}
+                                            components={mdComponents}
                                         >
                                             {formatTrailingSymbolsAndUnits(theoryContent)}
                                         </ReactMarkdown>

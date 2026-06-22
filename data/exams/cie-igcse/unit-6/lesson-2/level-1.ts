@@ -3,7 +3,7 @@
 // Collision Theory - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u6_l2_lv1_1",
+    id: "ex_ci_u6_l2_lv1_1-20260106",
     question: "Sample Easy question about Collision Theory - replace with real content.",
     options: [
       { text: "Option A" },

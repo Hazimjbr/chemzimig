@@ -39,7 +39,7 @@ const renderTextWithMath = (text: string): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <BlockMath key={i} math={part} />;
+                        return <BlockMath key={i} math={part.replace(/(?<!\\)%/g, '\\%')} />;
                     }
                     return <span key={i}>{renderTextWithMath(part)}</span>;
                 })}
@@ -53,7 +53,7 @@ const renderTextWithMath = (text: string): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <InlineMath key={i} math={part} />;
+                        return <InlineMath key={i} math={part.replace(/(?<!\\)%/g, '\\%')} />;
                     }
                     return <span key={i}>{part}</span>;
                 })}

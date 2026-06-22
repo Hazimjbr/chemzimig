@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u1_l1_q1",
+    id: "ci_u1_l1_q1-20260106",
     question: "Which of the following describes the arrangement of particles in a solid?",
     options: [
       { text: "Randomly arranged with large spaces in between", isCorrect: false },
@@ -11,7 +11,7 @@
     explanation: "Particles in a solid are closely packed in a fixed, regular lattice structure."
   },
   {
-    id: "ci_u1_l1_q2",
+    id: "ci_u1_l1_q2-20260106",
     question: "Why can liquids flow and take the shape of their container?",
     options: [
       { text: "Particles are in a fixed position", isCorrect: false },

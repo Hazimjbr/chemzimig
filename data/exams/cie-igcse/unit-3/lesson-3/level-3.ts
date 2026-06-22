@@ -3,7 +3,7 @@
 // The Mole Concept - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u3_l3_lv3_1",
+    id: "ex_ci_u3_l3_lv3_1-20260106",
     question: "Sample Hard question about The Mole Concept - replace with real content.",
     options: [
       { text: "Option A" },

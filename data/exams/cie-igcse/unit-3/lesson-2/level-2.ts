@@ -3,7 +3,7 @@
 // Relative Atomic Mass - Level 2 (Medium)
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u3_l2_lv2_1",
+    id: "ex_ci_u3_l2_lv2_1-20260106",
     question: "Sample Medium question about Relative Atomic Mass - replace with real content.",
     options: [
       { text: "Option A" },

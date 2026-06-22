@@ -3,7 +3,7 @@
 // Relative Atomic Mass - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u3_l2_lv3_1",
+    id: "ex_ci_u3_l2_lv3_1-20260106",
     question: "Sample Hard question about Relative Atomic Mass - replace with real content.",
     options: [
       { text: "Option A" },

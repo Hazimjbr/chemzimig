@@ -150,8 +150,15 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                         localStorage.setItem('auth_user', JSON.stringify(adminUser));
                         return true;
                     }
-                } catch (e) {
-                    console.error('[Auth] Admin session verification failed:', e);
+                } catch (e: any) {
+                    const isNetworkError = e?.code === 'auth/network-request-failed' || 
+                                           e?.message?.includes('network-request-failed') ||
+                                           (typeof navigator !== 'undefined' && !navigator.onLine);
+                    if (isNetworkError) {
+                        console.warn('[Auth] Admin session verification failed due to network/offline status:', e?.message || e);
+                    } else {
+                        console.error('[Auth] Admin session verification failed:', e);
+                    }
                 }
             }
             return false;

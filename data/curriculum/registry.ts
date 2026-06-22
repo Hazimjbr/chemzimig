@@ -6,6 +6,15 @@ export interface LessonPart {
     keyPoints?: string[];
     equations?: string[];
     simulationId?: string;
+    equationVisualizer?: {
+        reactants: [string, string][];
+        products: [string, string][];
+        description?: string;
+    };
+    gasLawSimulator?: {
+        law: 'boyle' | 'charles' | 'gay-lussac';
+    };
+    avogadroScale?: boolean;
 }
 
 export interface LessonRegistryItem {
@@ -541,7 +550,7 @@ import * as ed_u6_l1_quiz from './edexcel-alevel/unit-6/lesson-1/quiz';
 export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>> = {
     'edexcel-alevel-unit-1': {
         1: { title: ed_u1_l1_theory.lessonTitle, number: ed_u1_l1_theory.lessonNumber, theory: ed_u1_l1_theory.theoryMarkdown, quiz: ed_u1_l1_quiz.lessonQuiz, parts: ed_u1_l1_theory.parts },
-        2: { title: ed_u1_l2_theory.lessonTitle, number: ed_u1_l2_theory.lessonNumber, theory: ed_u1_l2_theory.theoryMarkdown, quiz: ed_u1_l2_quiz.lessonQuiz },
+        2: { title: ed_u1_l2_theory.lessonTitle, number: ed_u1_l2_theory.lessonNumber, theory: ed_u1_l2_theory.theoryMarkdown, quiz: ed_u1_l2_quiz.lessonQuiz, parts: ed_u1_l2_theory.parts },
         3: { title: ed_u1_l3_theory.lessonTitle, number: ed_u1_l3_theory.lessonNumber, theory: ed_u1_l3_theory.theoryMarkdown, quiz: ed_u1_l3_quiz.lessonQuiz },
         4: { title: ed_u1_l4_theory.lessonTitle, number: ed_u1_l4_theory.lessonNumber, theory: ed_u1_l4_theory.theoryMarkdown, quiz: ed_u1_l4_quiz.lessonQuiz },
         5: { title: ed_u1_l5_theory.lessonTitle, number: ed_u1_l5_theory.lessonNumber, theory: ed_u1_l5_theory.theoryMarkdown, quiz: ed_u1_l5_quiz.lessonQuiz },
@@ -579,11 +588,11 @@ export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>>
 Object.assign(curriculumRegistry, edexcelRegistry);
 
 export function getLessonFromRegistry(track: string, unitNumber: number, lessonNumber: number): LessonRegistryItem | null {
-    let resolvedTrack = track;
-    if (track === 'edexcel-as' || track === 'edexcel-a2') {
+    let resolvedTrack = track.replace(/-20260106$/, '');
+    if (resolvedTrack === 'edexcel-as' || resolvedTrack === 'edexcel-a2') {
         resolvedTrack = 'edexcel-alevel';
     }
-    if (track === 'cie-as') {
+    if (resolvedTrack === 'cie-as') {
         resolvedTrack = 'cie-alevel';
     }
     const key = `${resolvedTrack}-unit-${unitNumber}`;

@@ -52,7 +52,9 @@ export default function DashboardPage() {
         const subtopics = firstTopic.subtopics || [];
         return subtopics.slice(0, 2).map((subtopic, index) => ({
             title: subtopic,
-            unit: `Unit ${firstTopic.number}: ${firstTopic.title}`,
+            unit: /^unit\s+\d+:/i.test(firstTopic.title)
+                ? firstTopic.title
+                : `Unit ${firstTopic.number}: ${firstTopic.title}`,
             time: index === 0 ? '15 min' : '20 min',
             xp: index === 0 ? '50' : '75',
             icon: index === 0 ? '⚛️' : '💎',

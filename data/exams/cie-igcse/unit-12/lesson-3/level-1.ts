@@ -3,7 +3,7 @@
 // Identification of Ions and Gases - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u12_l3_lv1_1",
+    id: "ex_ci_u12_l3_lv1_1-20260106",
     question: "Sample Easy question about Identification of Ions and Gases - replace with real content.",
     options: [
       { text: "Option A" },

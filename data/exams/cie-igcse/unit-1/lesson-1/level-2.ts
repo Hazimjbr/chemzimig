@@ -2,7 +2,7 @@
 
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u1_l1_lv2_1",
+    id: "ex_ci_u1_l1_lv2_1-20260106",
     question: "A gas jar of brown nitrogen dioxide gas is placed upside down on top of a gas jar of air. Over time, the brown color spreads evenly throughout both jars. What explains this observation?",
     options: [
       { text: "The nitrogen dioxide particles fall due to gravity" },

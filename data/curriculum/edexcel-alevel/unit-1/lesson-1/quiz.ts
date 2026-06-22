@@ -229,5 +229,115 @@ export const lessonQuiz = [
       { text: "58.7 (Nickel, Ni)", isCorrect: false }
     ],
     explanation: "Looking at the data in the table, the heating reaches a constant mass of $2.60\\text{ g}$ at 15 minutes (verified at 20 minutes).\n\nFirst, find the mass of water lost:\n$\\text{Mass of water} = 4.76 - 2.60 = 2.16\\text{ g}$ (3 significant figures)\n\nCalculate the moles of water:\n$n(\\text{H}_2\\text{O}) = \\frac{2.16}{18.0} = 0.120\\text{ mol}$ (3 significant figures)\n\nFrom the formula $M\\text{Cl}_2 \\cdot 6\\text{H}_2\\text{O}$, the ratio of anhydrous salt to water is $1 : 6$.\n\nCalculate the moles of the anhydrous salt:\n$n(M\\text{Cl}_2) = \\frac{0.120}{6} = 0.0200\\text{ mol}$ (3 significant figures)\n\nCalculate the molar mass ($Mr$) of $M\\text{Cl}_2$:\n$Mr(M\\text{Cl}_2) = \\frac{\\text{mass}}{n} = \\frac{2.60\\text{ g}}{0.0200\\text{ mol}} = 130.0\\text{ g mol}^{-1}$ (4 significant figures)\n\nCalculate the atomic mass of metal $M$:\n$Ar(M) + (2 \\times 35.5) = 130.0$\n$Ar(M) + 71.0 = 130.0$\n$Ar(M) = 59.0$ (reported to 3 significant figures, matching the starting mass inputs)\n\nCobalt has an atomic mass of $58.9 \\approx 59.0$, which matches transition metal $M$."
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-HARD-20260622-21",
+    question: "A sample of $0.125\\text{ mol}$ of sodium carbonate, $\\text{Na}_2\\text{CO}_3$, is dissolved in water. Calculate the total number of ions in this solution. (Take Avogadro constant $L = 6.02 \\times 10^{23}\\text{ mol}^{-1}$)",
+    options: [
+      { text: "2.26 × 10²³ ions", isCorrect: true },
+      { text: "7.53 × 10²² ions", isCorrect: false },
+      { text: "1.51 × 10²³ ions", isCorrect: false },
+      { text: "3.01 × 10²³ ions", isCorrect: false }
+    ],
+    explanation: "First, determine the moles of sodium carbonate:\n$n = 0.125\\text{ mol}$\n\nEach formula unit of $\\text{Na}_2\\text{CO}_3$ dissociates into 3 ions:\n$\\text{Na}_2\\text{CO}_3\\text{(aq)} \\rightarrow 2\\text{Na}^+\\text{(aq)} + \\text{CO}_3^{2-}\\text{(aq)}$\n\nTotal moles of ions in solution:\n$n(\\text{ions}) = 0.125\\text{ mol} \\times 3 = 0.375\\text{ mol}$\n\nNow calculate the number of ions using Avogadro's constant ($L$):\n$\\text{Number of ions} = 0.375 \\times 6.02 \\times 10^{23} = 2.2575 \\times 10^{23}\\text{ ions}$\n\nRounding to 3 significant figures gives $2.26 \\times 10^{23}\\text{ ions}$"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-HARD-20260622-22",
+    question: "Complete combustion of $1.50\\text{ g}$ of an organic compound containing carbon, hydrogen, and oxygen produced $2.20\\text{ g}$ of carbon dioxide, $\\text{CO}_2$, and $0.90\\text{ g}$ of water, $\\text{H}_2\\text{O}$. Determine the empirical formula of the compound. ($Ar$: $\\text{C}=12.0$, $\\text{H}=1.0$, $\\text{O}=16.0$)",
+    options: [
+      { text: "CH₂O", isCorrect: true },
+      { text: "CHO", isCorrect: false },
+      { text: "C₂H₄O", isCorrect: false },
+      { text: "CH₃O", isCorrect: false }
+    ],
+    explanation: "Step 1: Calculate the mass of carbon and hydrogen from the products:\n* $\\text{Mass of C} = 2.20\\text{ g} \\times \\left(\\frac{12.0}{44.0}\\right) = 0.60\\text{ g}$\n* $\\text{Mass of H} = 0.90\\text{ g} \\times \\left(\\frac{2.0}{18.0}\\right) = 0.10\\text{ g}$\n\nStep 2: Find the mass of oxygen by subtraction:\n* $\\text{Mass of O} = 1.50\\text{ g} - (0.60\\text{ g} + 0.10\\text{ g}) = 0.80\\text{ g}$\n\nStep 3: Convert masses to moles:\n* $n(\\text{C}) = \\frac{0.60}{12.0} = 0.050\\text{ mol}$\n* $n(\\text{H}) = \\frac{0.10}{1.0} = 0.10\\text{ mol}$\n* $n(\\text{O}) = \\frac{0.80}{16.0} = 0.050\\text{ mol}$\n\nStep 4: Find the simplest whole number ratio:\n* $\\text{C} : \\text{H} : \\text{O} = 0.050 : 0.10 : 0.050 = 1 : 2 : 1$\n* The empirical formula is **$\\text{CH}_2\\text{O}$**"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-HARD-20260622-23",
+    question: "A sample of gas has a volume of $240\\text{ cm}^3$ at a temperature of $127^\\circ\\text{C}$ and a pressure of $1.50 \\times 10^5\\text{ Pa}$. Calculate the amount of moles of gas present in this sample. ($R = 8.31\\text{ J K}^{-1}\\text{ mol}^{-1}$)",
+    options: [
+      { text: "0.0108 mol", isCorrect: true },
+      { text: "0.0341 mol", isCorrect: false },
+      { text: "0.0125 mol", isCorrect: false },
+      { text: "0.0216 mol", isCorrect: false }
+    ],
+    explanation: "Use the ideal gas equation $pV = nRT$:\n$$n = \\frac{pV}{RT}$$\n\nConvert units to standard SI units:\n* $p = 1.50 \\times 10^5\\text{ Pa}$\n* $V = 240\\text{ cm}^3 = 240 \\times 10^{-6}\\text{ m}^3 = 2.40 \\times 10^{-4}\\text{ m}^3$\n* $T = 127 + 273 = 400\\text{ K}$\n\nSubstitute the values and solve:\n$$n = \\frac{1.50 \\times 10^5 \\times 2.40 \\times 10^{-4}}{8.31 \\times 400}$$\n$$n = \\frac{36.0}{3324} \\approx 0.0108\\text{ mol}$$\n\nRounding to 3 significant figures gives $0.0108\\text{ mol}$"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-HARD-20260622-24",
+    question: "A $25.0\\text{ cm}^3$ sample of sulfuric acid, $\\text{H}_2\\text{SO}_4$, is neutralized exactly by $30.0\\text{ cm}^3$ of $0.150\\text{ mol dm}^{-3}$ sodium hydroxide, $\\text{NaOH}$, solution. What is the concentration of the sulfuric acid in $\\text{mol dm}^{-3}$?",
+    options: [
+      { text: "0.0900 mol dm⁻³", isCorrect: true },
+      { text: "0.180 mol dm⁻³", isCorrect: false },
+      { text: "0.225 mol dm⁻³", isCorrect: false },
+      { text: "0.0450 mol dm⁻³", isCorrect: false }
+    ],
+    explanation: "First, write the balanced chemical equation for the neutralization:\n$$\\text{H}_2\\text{SO}_4\\text{(aq)} + 2\\text{NaOH(aq)} \\rightarrow \\text{Na}_2\\text{SO}_4\\text{(aq)} + 2\\text{H}_2\\text{O(l)}$$\n\nCalculate the moles of $\\text{NaOH}$ used:\n$n(\\text{NaOH}) = C \\times V = 0.150\\text{ mol dm}^{-3} \\times \\left(\\frac{30.0}{1000}\\right)\\text{ dm}^3 = 0.00450\\text{ mol}$\n\nFrom the stoichiometry, the mole ratio of $\\text{H}_2\\text{SO}_4 : \\text{NaOH}$ is $1 : 2$.\n\nCalculate the moles of $\\text{H}_2\\text{SO}_4$ reacted:\n$n(\\text{H}_2\\text{SO}_4) = \\frac{0.00450}{2} = 0.00225\\text{ mol}$\n\nNow calculate the concentration of sulfuric acid:\n$C(\\text{H}_2\\text{SO}_4) = \\frac{n}{V} = \\frac{0.00225\\text{ mol}}{\\left(\\frac{25.0}{1000}\\right)\\text{ dm}^3} = 0.0900\\text{ mol dm}^{-3}$\n\nSince both starting values have 3 significant figures, the final concentration is reported to 3 significant figures as $0.0900\\text{ mol dm}^{-3}$"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-HARD-20260622-25",
+    question: "A student recorded an initial burette reading of $0.15\\text{ cm}^3$ and a final reading of $25.35\\text{ cm}^3$ in a titration. If the burette is accurate to $\\pm 0.05\\text{ cm}^3$ per reading, what is the percentage uncertainty in the titre?",
+    options: [
+      { text: "0.40%", isCorrect: true },
+      { text: "0.20%", isCorrect: false },
+      { text: "0.39%", isCorrect: false },
+      { text: "0.10%", isCorrect: false }
+    ],
+    explanation: "First, calculate the titre volume (the difference between the two readings):\n$$\\text{Titre} = 25.35\\text{ cm}^3 - 0.15\\text{ cm}^3 = 25.20\\text{ cm}^3$$\n\nCalculate the absolute uncertainty. A burette reading is done twice (initial and final), so:\n$$\\text{Absolute Uncertainty} = 2 \\times 0.05\\text{ cm}^3 = 0.10\\text{ cm}^3$$\n\nCalculate the percentage uncertainty:\n$$\\text{Percentage Uncertainty} = \\left(\\frac{0.10}{25.20}\\right) \\times 100 \\approx 0.3968\\%$$\nRounding to 2 significant figures (matching the precision of the apparatus accuracy $0.05$) gives $0.40\\%$"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-MEDIUM-20260622-26",
+    question: "A student recorded the following burette titres during a series of titrations:\n\n$$\\begin{array}{l|c} \\text{Titration run} & \\text{Volume of acid added (cm}^3\\text{)} \\\\ \\hline \\text{1 (Rough)} & 24.10 \\\\ \\text{2} & 23.40 \\\\ \\text{3} & 23.65 \\\\ \\text{4} & 23.50 \\end{array}$$\n\nWhich mean titre volume should be used for the calculations?",
+    options: [
+      { text: "23.45 cm³", isCorrect: true },
+      { text: "23.52 cm³", isCorrect: false },
+      { text: "23.66 cm³", isCorrect: false },
+      { text: "23.40 cm³", isCorrect: false }
+    ],
+    explanation: "Step 1: Identify concordant results:\n* Concordant titres must be within $0.20\\text{ cm}^3$ of each other\n* Run 1 ($24.10\\text{ cm}^3$) is the rough titration and must be ignored\n\nStep 2: Compare the remaining titres:\n* The difference between Run 2 ($23.40\\text{ cm}^3$) and Run 3 ($23.65\\text{ cm}^3$) is $0.25\\text{ cm}^3$ (not concordant)\n* Only Run 2 ($23.40\\text{ cm}^3$) and Run 4 ($23.50\\text{ cm}^3$) are within the $0.10\\text{ cm}^3$ concordancy range\n\nStep 3: Calculate the mean titre:\n* Average = $\\frac{23.40 + 23.50}{2} = 23.45\\text{ cm}^3$"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-HARD-20260622-27",
+    question: "An impure sample of sodium hydrogencarbonate, $\\text{NaHCO}_3$, weighing $2.00\\text{ g}$ was reacted with excess dilute hydrochloric acid. The reaction produced $480.0\\text{ cm}^3$ of carbon dioxide gas measured at r.t.p. Calculate the percentage purity of the sodium hydrogencarbonate sample. \n$$\\text{NaHCO}_3\\text{(s)} + \\text{HCl(aq)} \\rightarrow \\text{NaCl(aq)} + \\text{H}_2\\text{O(l)} + \\text{CO}_2\\text{(g)}$$\n(Molar volume of gas at r.t.p. $= 24.0\\text{ dm}^3\\text{ mol}^{-1}$, $Mr(\\text{NaHCO}_3) = 84.0$)",
+    options: [
+      { text: "84.0%", isCorrect: true },
+      { text: "42.0%", isCorrect: false },
+      { text: "96.0%", isCorrect: false },
+      { text: "75.0%", isCorrect: false }
+    ],
+    explanation: "1. Calculate moles of $\\text{CO}_2$ gas:\n$n(\\text{CO}_2) = \\frac{0.4800\\text{ dm}^3}{24.0\\text{ dm}^3\\text{ mol}^{-1}} = 0.0200\\text{ mol}$\n\n2. From stoichiometry, $1\\text{ mole}$ of $\\text{NaHCO}_3$ produces $1\\text{ mole}$ of $\\text{CO}_2$.\nSo, moles of pure $\\text{NaHCO}_3 = 0.0200\\text{ mol}$\n\n3. Calculate mass of pure $\\text{NaHCO}_3$:\n$\\text{Mass} = 0.0200\\text{ mol} \\times 84.0\\text{ g mol}^{-1} = 1.68\\text{ g}$\n\n4. Calculate percentage purity:\n$$\\%\\text{ Purity} = \\left(\\frac{1.68\\text{ g}}{2.00\\text{ g}}\\right) \\times 100 = 84.0\\%$$"
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-MEDIUM-20260622-28",
+    question: "In the preparation of pure hydrated copper(II) sulfate crystals, why is the reaction mixture filtered immediately after reacting excess copper(II) oxide with dilute sulfuric acid?",
+    options: [
+      { text: "To remove unreacted copper(II) oxide solid", isCorrect: true },
+      { text: "To separate the water of crystallization from the salt", isCorrect: false },
+      { text: "To remove excess unreacted sulfuric acid", isCorrect: false },
+      { text: "To accelerate the crystallization process", isCorrect: false }
+    ],
+    explanation: "Copper(II) oxide is added in excess to ensure all sulfuric acid is neutralized. Since copper(II) oxide is insoluble in water, it remains as a solid, whereas the copper(II) sulfate product is soluble and dissolves. Filtration separates the insoluble unreacted copper(II) oxide residue from the soluble copper(II) sulfate filtrate."
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-EASY-20260622-29",
+    question: "Which of the following pairs of aqueous solutions will react to form an insoluble precipitate when mixed together?",
+    options: [
+      { text: "Barium chloride and sodium sulfate", isCorrect: true },
+      { text: "Potassium nitrate and copper(II) sulfate", isCorrect: false },
+      { text: "Sodium carbonate and ammonium chloride", isCorrect: false },
+      { text: "Magnesium nitrate and potassium chloride", isCorrect: false }
+    ],
+    explanation: "According to solubility rules:\n* Barium sulfate ($\\text{BaSO}_4$) is insoluble, so mixing $\\text{BaCl}_2\\text{(aq)}$ and $\\text{Na}_2\\text{SO}_4\\text{(aq)}$ produces a white precipitate.\n* All other option combinations result in only soluble ions (nitrates, sodium, potassium, ammonium, and most chlorides/sulfates are soluble)."
+  },
+  {
+    id: "EDEXCEL-AL-U1-L1-MEDIUM-20260622-30",
+    question: "After filtering the crystals of a hydrated salt from its saturated solution, which is the correct final step to obtain a pure, dry sample of the crystals?",
+    options: [
+      { text: "Wash the crystals with a small volume of ice-cold distilled water, then dry between sheets of filter paper", isCorrect: true },
+      { text: "Evaporate the remaining solution to complete dryness by strong direct heating", isCorrect: false },
+      { text: "Wash the crystals with hot distilled water, then dry in a high-temperature furnace", isCorrect: false },
+      { text: "Dry the crystals directly without washing to avoid dissolving them", isCorrect: false }
+    ],
+    explanation: "Crystals should be washed with a minimal volume of ice-cold distilled water to rinse away any soluble impurities remaining on their surface without dissolving too much of the product. They are then gently pressed dry between sheets of filter paper or in a warm (not hot) oven to preserve the water of crystallization."
   }
 ];

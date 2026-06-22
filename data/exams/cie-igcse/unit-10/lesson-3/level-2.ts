@@ -3,7 +3,7 @@
 // Air Quality and Climate - Level 2 (Medium)
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u10_l3_lv2_1",
+    id: "ex_ci_u10_l3_lv2_1-20260106",
     question: "Sample Medium question about Air Quality and Climate - replace with real content.",
     options: [
       { text: "Option A" },

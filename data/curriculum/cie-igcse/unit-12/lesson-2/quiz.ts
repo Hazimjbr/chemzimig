@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u12_l2_q1",
+    id: "ci_u12_l2_q1-20260106",
     question: "Sample question about Purification and Separation - replace with real content.",
     options: [
       { text: "Option A", isCorrect: false },

@@ -3,7 +3,7 @@
 // Hydrogen-Oxygen Fuel Cells - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u4_l4_lv1_1",
+    id: "ex_ci_u4_l4_lv1_1-20260106",
     question: "Sample Easy question about Hydrogen-Oxygen Fuel Cells - replace with real content.",
     options: [
       { text: "Option A" },

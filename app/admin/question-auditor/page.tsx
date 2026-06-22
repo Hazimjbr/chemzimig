@@ -36,7 +36,7 @@ const renderTextWithMath = (text: string): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <BlockMath key={i} math={part} />;
+                        return <BlockMath key={i} math={part.replace(/(?<!\\)%/g, '\\%')} />;
                     }
                     return <span key={i}>{renderTextWithMath(part)}</span>;
                 })}
@@ -50,7 +50,7 @@ const renderTextWithMath = (text: string): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <InlineMath key={i} math={part} />;
+                        return <InlineMath key={i} math={part.replace(/(?<!\\)%/g, '\\%')} />;
                     }
                     return <span key={i}>{part}</span>;
                 })}
@@ -308,10 +308,14 @@ export default function QuestionAuditorPage() {
             (q.explanation && q.explanation.toLowerCase().includes(searchQuery.toLowerCase()));
         
         let matchesDate = true;
-        if (dateFrom && q.createdAt) {
-            const filterDate = new Date(dateFrom);
-            const questionDate = new Date(q.createdAt);
-            matchesDate = questionDate >= filterDate;
+        if (dateFrom) {
+            if (q.createdAt) {
+                const filterDate = new Date(dateFrom);
+                const questionDate = new Date(q.createdAt);
+                matchesDate = questionDate >= filterDate;
+            } else {
+                matchesDate = false;
+            }
         }
 
         return matchesTrack && matchesSource && matchesUnit && matchesLesson && matchesLevel && matchesSearch && matchesDate;

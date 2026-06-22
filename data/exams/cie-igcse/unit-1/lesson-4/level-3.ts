@@ -3,7 +3,7 @@
 // Kinetic Particle Theory - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u1_l4_lv3_1",
+    id: "ex_ci_u1_l4_lv3_1-20260106",
     question: "Sample Hard question about Kinetic Particle Theory - replace with real content.",
     options: [
       { text: "Option A" },

@@ -2,7 +2,7 @@
 
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u1_l1_lv3_1",
+    id: "ex_ci_u1_l1_lv3_1-20260106",
     question: "Equal volumes of ammonia gas (NH3, Mr = 17) and hydrogen chloride gas (HCl, Mr = 36.5) are introduced at opposite ends of a long glass tube. A white ring of ammonium chloride forms. Where will the ring form and why?",
     options: [
       { text: "Exactly in the middle because both gases travel at the same speed" },

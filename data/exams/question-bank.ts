@@ -17,7 +17,7 @@ export const questionBank: Question[] = [
     topic: "states-of-matter",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
   {
     id: "q_som_2",
@@ -34,7 +34,7 @@ export const questionBank: Question[] = [
     topic: "states-of-matter",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Atoms, Elements, and Compounds
@@ -53,7 +53,7 @@ export const questionBank: Question[] = [
     topic: "atoms-elements",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
   {
     id: "q_aec_2",
@@ -70,7 +70,7 @@ export const questionBank: Question[] = [
     topic: "atoms-elements",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Stoichiometry
@@ -89,7 +89,7 @@ export const questionBank: Question[] = [
     topic: "stoichiometry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
   {
     id: "q_stc_2",
@@ -106,7 +106,7 @@ export const questionBank: Question[] = [
     topic: "stoichiometry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Electrochemistry
@@ -125,7 +125,7 @@ export const questionBank: Question[] = [
     topic: "electrochemistry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Chemical Energetics
@@ -144,7 +144,7 @@ export const questionBank: Question[] = [
     topic: "chemical-energetics",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Chemical Reactions
@@ -163,7 +163,7 @@ export const questionBank: Question[] = [
     topic: "chemical-reactions",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Acids, Bases and Salts
@@ -182,7 +182,7 @@ export const questionBank: Question[] = [
     topic: "acids-bases-salts",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // The Periodic Table
@@ -201,7 +201,7 @@ export const questionBank: Question[] = [
     topic: "periodic-table",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Metals
@@ -220,7 +220,7 @@ export const questionBank: Question[] = [
     topic: "metals",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Chemistry of the Environment
@@ -239,7 +239,7 @@ export const questionBank: Question[] = [
     topic: "chemistry-environment",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Organic Chemistry
@@ -258,7 +258,7 @@ export const questionBank: Question[] = [
     topic: "organic-chemistry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
 
   // Experimental Techniques
@@ -277,7 +277,7 @@ export const questionBank: Question[] = [
     topic: "experimental-techniques",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 ];
 
@@ -298,7 +298,7 @@ questionBank.push(
     topic: "states-of-matter",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
   {
     id: "q_som_4",
@@ -315,7 +315,7 @@ questionBank.push(
     topic: "states-of-matter",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -336,7 +336,7 @@ questionBank.push(
     topic: "atoms-elements",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
   {
     id: "q_aec_4",
@@ -353,7 +353,7 @@ questionBank.push(
     topic: "atoms-elements",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -374,7 +374,7 @@ questionBank.push(
     topic: "stoichiometry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   },
   {
     id: "q_stc_4",
@@ -391,7 +391,7 @@ questionBank.push(
     topic: "stoichiometry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -412,7 +412,7 @@ questionBank.push(
     topic: "electrochemistry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -433,7 +433,7 @@ questionBank.push(
     topic: "chemical-energetics",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -454,7 +454,7 @@ questionBank.push(
     topic: "chemical-reactions",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -475,7 +475,7 @@ questionBank.push(
     topic: "acids-bases-salts",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -496,7 +496,7 @@ questionBank.push(
     topic: "periodic-table",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -517,7 +517,7 @@ questionBank.push(
     topic: "metals",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -538,7 +538,7 @@ questionBank.push(
     topic: "chemistry-environment",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -559,7 +559,7 @@ questionBank.push(
     topic: "organic-chemistry",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );
 
@@ -580,6 +580,6 @@ questionBank.push(
     topic: "experimental-techniques",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: new Date().toISOString()
+    createdAt: "2026-01-06"
   }
 );

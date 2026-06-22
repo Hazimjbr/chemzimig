@@ -2,7 +2,7 @@
 
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u1_l1_lv1_1",
+    id: "ex_ci_u1_l1_lv1_1-20260106",
     question: "What state of matter has no fixed shape, no fixed volume, and is easily compressed?",
     options: [
       { text: "Solid" },
@@ -17,7 +17,7 @@ export const level1Questions: Question[] = [
     createdAt: "2026-06-16T12:00:00Z"
   },
   {
-    id: "ex_ci_u1_l1_lv1_2",
+    id: "ex_ci_u1_l1_lv1_2-20260106",
     question: "Which of the following processes represents a physical change from solid directly to gas?",
     options: [
       { text: "Melting" },

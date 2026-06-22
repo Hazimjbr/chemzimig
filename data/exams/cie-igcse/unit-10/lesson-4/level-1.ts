@@ -3,7 +3,7 @@
 // Carbon Cycle - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u10_l4_lv1_1",
+    id: "ex_ci_u10_l4_lv1_1-20260106",
     question: "Sample Easy question about Carbon Cycle - replace with real content.",
     options: [
       { text: "Option A" },

@@ -1,6 +1,6 @@
 ﻿export const lessonQuiz = [
   {
-    id: "ci_u5_l4_q1",
+    id: "ci_u5_l4_q1-20260106",
     question: "Sample question about Fuel and Hydrogen - replace with real content.",
     options: [
       { text: "Option A", isCorrect: false },

@@ -3,7 +3,7 @@
 // Arrangement of Elements - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u8_l1_lv3_1",
+    id: "ex_ci_u8_l1_lv3_1-20260106",
     question: "Sample Hard question about Arrangement of Elements - replace with real content.",
     options: [
       { text: "Option A" },

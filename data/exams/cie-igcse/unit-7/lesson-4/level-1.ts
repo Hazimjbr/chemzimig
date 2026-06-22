@@ -3,7 +3,7 @@
 // Oxides - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u7_l4_lv1_1",
+    id: "ex_ci_u7_l4_lv1_1-20260106",
     question: "Sample Easy question about Oxides - replace with real content.",
     options: [
       { text: "Option A" },

@@ -3,7 +3,7 @@
 // Kinetic Particle Theory - Level 2 (Medium)
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u1_l4_lv2_1",
+    id: "ex_ci_u1_l4_lv2_1-20260106",
     question: "Sample Medium question about Kinetic Particle Theory - replace with real content.",
     options: [
       { text: "Option A" },

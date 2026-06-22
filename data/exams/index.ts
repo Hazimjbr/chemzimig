@@ -17,3 +17,50 @@ Object.values(examsRegistry).forEach(trackRegistry => {
 });
 
 export const questionBank: Question[] = [...baseQuestionBank, ...registeredQuestions];
+
+// TEMPORARY SCRIPT TO ADD DATES
+if (typeof window === 'undefined') {
+    try {
+        const fs = require('fs');
+        const path = require('path');
+        const dataDir = path.join(process.cwd(), 'data');
+        function walkDir(dir) {
+            let results = [];
+            if (!fs.existsSync(dir)) return results;
+            const list = fs.readdirSync(dir);
+            list.forEach(file => {
+                const fullPath = path.join(dir, file);
+                const stat = fs.statSync(fullPath);
+                if (stat && stat.isDirectory()) {
+                    results = results.concat(walkDir(fullPath));
+                } else if (fullPath.endsWith('.ts')) {
+                    results.push(fullPath);
+                }
+            });
+            return results;
+        }
+        const files = walkDir(dataDir);
+        let modifiedFiles = 0;
+        let modifiedQuestions = 0;
+        files.forEach(file => {
+            if (!file.includes('exams') && !file.includes('curriculum')) return;
+            const content = fs.readFileSync(file, 'utf-8');
+            let hasChanges = false;
+            const newContent = content.replace(/id:\s*(['"])([^'"]+)\1/g, (match, quote, idStr) => {
+                if (!/\d{8}/.test(idStr)) {
+                    hasChanges = true;
+                    modifiedQuestions++;
+                    return `id: ${quote}${idStr}-20260106${quote}`;
+                }
+                return match;
+            });
+            if (hasChanges) {
+                fs.writeFileSync(file, newContent, 'utf-8');
+                modifiedFiles++;
+            }
+        });
+        console.log(`[DATA-MIGRATION] Successfully added dates to ${modifiedQuestions} questions across ${modifiedFiles} files.`);
+    } catch(e) {
+        console.error('[DATA-MIGRATION] Error:', e);
+    }
+}
