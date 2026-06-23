@@ -46,6 +46,14 @@ export interface MistakeItem {
     lastReviewedAt: string;   // YYYY-MM-DD
 }
 
+export interface SolvedQuestionStatus {
+    questionId: string;
+    difficulty: number; // 1 | 2 | 3
+    isCorrect: boolean;
+    attemptsCount: number;
+    lastAttemptAt: string; // ISO String
+}
+
 interface UserData {
     userId: string;
     xp: number;
@@ -56,6 +64,7 @@ interface UserData {
     unlockedAchievements: string[];
     dailyChallenges: { date: string; challenges: DailyChallenge[] };
     mistakeInbox?: MistakeItem[];
+    solvedQuestions?: Record<string, SolvedQuestionStatus>;
 }
 
 interface GamificationContextType {
@@ -78,6 +87,8 @@ interface GamificationContextType {
     saveMistakes: (wrongQuestions: { id: string; unitId: string; level: number; tags?: string[] }[]) => void;
     updateMistakeAfterReview: (questionId: string, wasCorrect: boolean) => void;
     removeMistake: (questionId: string) => void;
+    solvedQuestions: Record<string, SolvedQuestionStatus>;
+    saveQuestionAttempts: (attempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean }>) => void;
 }
 
 const defaultStreak: StreakData = {
@@ -116,6 +127,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
     const [quizScores, setQuizScores] = useState<Record<string, number>>({});
     const [isLoading, setIsLoading] = useState(true);
     const [mistakeInbox, setMistakeInbox] = useState<MistakeItem[]>([]);
+    const [solvedQuestions, setSolvedQuestions] = useState<Record<string, SolvedQuestionStatus>>({});
 
     // Load initial data from localStorage for persistence
     useEffect(() => {
@@ -152,6 +164,10 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                 const savedMistakes = localStorage.getItem(`${prefix}mistakeInbox`);
                 if (savedMistakes) setMistakeInbox(JSON.parse(savedMistakes));
                 else setMistakeInbox([]);
+
+                const savedSolved = localStorage.getItem(`${prefix}solvedQuestions`);
+                if (savedSolved) setSolvedQuestions(JSON.parse(savedSolved));
+                else setSolvedQuestions({});
 
                 // Load daily challenges
                 const today = new Date().toDateString();
@@ -430,6 +446,37 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
         });
     }, [saveState]);
 
+    const saveQuestionAttempts = useCallback((attempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean }>) => {
+        setSolvedQuestions(prev => {
+            const updated = { ...prev };
+            const today = new Date().toISOString();
+
+            attempts.forEach(att => {
+                const existing = updated[att.questionId];
+                if (existing) {
+                    updated[att.questionId] = {
+                        questionId: att.questionId,
+                        difficulty: att.difficulty,
+                        isCorrect: att.isCorrect,
+                        attemptsCount: existing.attemptsCount + 1,
+                        lastAttemptAt: today
+                    };
+                } else {
+                    updated[att.questionId] = {
+                        questionId: att.questionId,
+                        difficulty: att.difficulty,
+                        isCorrect: att.isCorrect,
+                        attemptsCount: 1,
+                        lastAttemptAt: today
+                    };
+                }
+            });
+
+            saveState('solvedQuestions', updated);
+            return updated;
+        });
+    }, [saveState]);
+
     // Check streak on mount when user info loads
     useEffect(() => {
         if (!isLoading && user && streak.lastActiveDate) {
@@ -458,6 +505,8 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
             saveMistakes,
             updateMistakeAfterReview,
             removeMistake,
+            solvedQuestions,
+            saveQuestionAttempts,
         }}>
             {children}
         </GamificationContext.Provider>

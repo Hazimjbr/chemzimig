@@ -130,13 +130,14 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
 
 export default function QuizzesPage() {
     const { user } = useAuth();
-    const { addXP } = useGamification();
+    const { addXP, solvedQuestions, saveQuestionAttempts } = useGamification();
 
     const [allQuestions, setAllQuestions] = useState<LocalQuestion[]>([]);
     
     // Multi-step states
     const [step, setStep] = useState<'mode-select' | 'config' | 'playing' | 'result'>('mode-select');
     const [selectedMode, setSelectedMode] = useState<'comprehensive' | 'unit' | 'lesson' | 'custom'>('comprehensive');
+    const [selectedFilter, setSelectedFilter] = useState<'all' | 'new' | 'incorrect' | 'correct'>('new');
     
     // Configuration states
     const [selectedSource, setSelectedSource] = useState<'all' | 'exam' | 'quiz'>('all');
@@ -323,7 +324,7 @@ export default function QuizzesPage() {
     }, [user]);
 
     const activeCurriculum = useMemo(() => {
-        return allCurricula.find(c => c.id === studentTrackId) || allCurricula[0];
+        return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
     }, [studentTrackId]);
 
     // 3. Dynamic Lists and selections matching active curriculum ONLY
@@ -354,11 +355,12 @@ export default function QuizzesPage() {
         setSelectedLesson('all');
         setSelectedLevel('all');
         setSelectedCustomUnits([]);
+        setSelectedFilter('new');
         setStep('config');
     };
 
-    // 5. Generate and start the exam
-    const handleStartExam = () => {
+    // 4b. Filter memos for smart filters
+    const filteredPool = useMemo(() => {
         let pool = allQuestions.filter(q => q.trackId === studentTrackId);
 
         // Filter by source
@@ -388,6 +390,35 @@ export default function QuizzesPage() {
         if (selectedLevel !== 'all') {
             pool = pool.filter(q => q.level.toLowerCase() === selectedLevel.toLowerCase());
         }
+
+        return pool;
+    }, [allQuestions, studentTrackId, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
+
+    const filterCounts = useMemo(() => {
+        const all = filteredPool.length;
+        const newCount = filteredPool.filter(q => !solvedQuestions[q.id]).length;
+        const incorrect = filteredPool.filter(q => solvedQuestions[q.id] && !solvedQuestions[q.id].isCorrect).length;
+        const correct = filteredPool.filter(q => solvedQuestions[q.id] && solvedQuestions[q.id].isCorrect).length;
+
+        return { all, new: newCount, incorrect, correct };
+    }, [filteredPool, solvedQuestions]);
+
+    const activeFilteredQuestions = useMemo(() => {
+        if (selectedFilter === 'new') {
+            return filteredPool.filter(q => !solvedQuestions[q.id]);
+        }
+        if (selectedFilter === 'incorrect') {
+            return filteredPool.filter(q => solvedQuestions[q.id] && !solvedQuestions[q.id].isCorrect);
+        }
+        if (selectedFilter === 'correct') {
+            return filteredPool.filter(q => solvedQuestions[q.id] && solvedQuestions[q.id].isCorrect);
+        }
+        return filteredPool;
+    }, [filteredPool, selectedFilter, solvedQuestions]);
+
+    // 5. Generate and start the exam
+    const handleStartExam = () => {
+        const pool = activeFilteredQuestions;
 
         if (pool.length === 0) {
             alert("No questions found matching your criteria. Please adjust your selections.");
@@ -450,6 +481,25 @@ export default function QuizzesPage() {
             if (addXP && earnedXP > 0) {
                 addXP(earnedXP);
             }
+
+            // Save question solved status
+            const currentAttempts = [
+                ...userAnswers.map(ua => {
+                    const qObj = questions.find(q => q.id === ua.questionId);
+                    return {
+                        questionId: ua.questionId,
+                        difficulty: qObj?.rawLevel || 1,
+                        isCorrect: ua.isCorrect
+                    };
+                }),
+                {
+                    questionId: currentQuestion.id,
+                    difficulty: currentQuestion.rawLevel || 1,
+                    isCorrect
+                }
+            ];
+            saveQuestionAttempts(currentAttempts);
+
             setStep('result');
         }
     };
@@ -560,36 +610,117 @@ export default function QuizzesPage() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 
                                 {/* A. Source Type */}
-                                <div className="flex flex-col gap-1.5">
+                                <div className="flex flex-col gap-2">
                                     <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Question Source</label>
-                                    <select 
-                                        value={selectedSource}
-                                        onChange={e => {
-                                            setSelectedSource(e.target.value as any);
-                                            setSelectedLesson('all');
-                                        }}
-                                        className="bg-[#0b0b1a] border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-indigo-500/50 outline-none text-slate-300 w-full"
-                                    >
-                                        <option value="all">Mixed (Exam & Quiz)</option>
-                                        <option value="exam">Exam Practice Bank Only</option>
-                                        <option value="quiz">Lesson Quizzes Only</option>
-                                    </select>
+                                    <div className="flex flex-col gap-2 bg-[#050515]/80 p-1.5 border border-white/5 rounded-2xl">
+                                        {[
+                                            { id: 'all', label: 'Mixed (Exam & Quiz)', icon: '🧪' },
+                                            { id: 'exam', label: 'Exams Only', icon: '📝' },
+                                            { id: 'quiz', label: 'Quizzes Only', icon: '📖' }
+                                        ].map(src => {
+                                            const isActive = selectedSource === src.id;
+                                            return (
+                                                <button
+                                                    key={src.id}
+                                                    type="button"
+                                                    onClick={() => {
+                                                        setSelectedSource(src.id as any);
+                                                        setSelectedLesson('all');
+                                                    }}
+                                                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-xs font-bold transition-all border ${
+                                                        isActive
+                                                            ? 'bg-indigo-500/15 border-indigo-500/30 text-indigo-300 shadow-inner'
+                                                            : 'bg-white/[0.01] border-transparent text-slate-400 hover:text-white hover:bg-white/[0.03]'
+                                                    }`}
+                                                >
+                                                    <span className="text-base">{src.icon}</span>
+                                                    <span>{src.label}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
 
                                 {/* B. Difficulty */}
-                                <div className="flex flex-col gap-1.5">
+                                <div className="flex flex-col gap-2">
                                     <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Difficulty Level</label>
-                                    <select 
-                                        value={selectedLevel}
-                                        onChange={e => setSelectedLevel(e.target.value)}
-                                        className="bg-[#0b0b1a] border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-indigo-500/50 outline-none text-slate-300 w-full"
-                                    >
-                                        <option value="all">All Difficulties</option>
-                                        <option value="easy">Easy</option>
-                                        <option value="medium">Medium</option>
-                                        <option value="hard">Hard</option>
-                                    </select>
+                                    <div className="flex flex-col gap-2 bg-[#050515]/80 p-1.5 border border-white/5 rounded-2xl">
+                                        {[
+                                            { id: 'all', label: 'All Difficulties', icon: '⚖️' },
+                                            { id: 'easy', label: 'Easy', icon: '🟢' },
+                                            { id: 'medium', label: 'Medium', icon: '🟡' },
+                                            { id: 'hard', label: 'Hard', icon: '🔴' }
+                                        ].map(lvl => {
+                                            const isActive = selectedLevel === lvl.id;
+                                            return (
+                                                <button
+                                                    key={lvl.id}
+                                                    type="button"
+                                                    onClick={() => setSelectedLevel(lvl.id)}
+                                                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-xs font-bold transition-all border ${
+                                                        isActive
+                                                            ? 'bg-indigo-500/15 border-indigo-500/30 text-indigo-300 shadow-inner'
+                                                            : 'bg-white/[0.01] border-transparent text-slate-400 hover:text-white hover:bg-white/[0.03]'
+                                                    }`}
+                                                >
+                                                    <span className="text-base">{lvl.icon}</span>
+                                                    <span>{lvl.label}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
+
+                                {/* Smart Filtering */}
+                                <div className="flex flex-col gap-2 sm:col-span-2">
+                                    <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Question Filtering</label>
+                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-[#050515]/80 p-1 border border-white/5 rounded-2xl">
+                                        {[
+                                            { id: 'new', label: 'Unanswered', count: filterCounts.new },
+                                            { id: 'incorrect', label: 'Answered Incorrectly', count: filterCounts.incorrect },
+                                            { id: 'correct', label: 'Answered Correctly', count: filterCounts.correct },
+                                            { id: 'all', label: 'All Questions', count: filterCounts.all }
+                                        ].map(tab => {
+                                            const isActive = selectedFilter === tab.id;
+                                            return (
+                                                <button
+                                                    key={tab.id}
+                                                    type="button"
+                                                    onClick={() => setSelectedFilter(tab.id as any)}
+                                                    className={`py-3 px-2 rounded-xl text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 ${
+                                                        isActive
+                                                            ? 'bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 shadow-lg'
+                                                            : 'text-slate-500 hover:text-slate-300 hover:bg-white/[0.02] border border-transparent'
+                                                    }`}
+                                                >
+                                                    <span>{tab.label}</span>
+                                                    <span className={`text-[10px] font-medium opacity-80 ${isActive ? 'text-indigo-400' : 'text-slate-600'}`}>
+                                                        ({tab.count})
+                                                    </span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+
+                                {activeFilteredQuestions.length === 0 && (
+                                    <div className="sm:col-span-2 bg-rose-500/10 border border-rose-500/20 rounded-2xl p-4 flex items-start gap-3 text-rose-300 text-sm">
+                                        <AlertCircle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                                        <div className="space-y-1">
+                                            <p className="font-bold">No questions match this filter!</p>
+                                            <p className="text-xs text-rose-400/90">
+                                                Try changing your filter settings, selecting another topic, or switching to "All Questions" to practice.
+                                            </p>
+                                            <button
+                                                type="button"
+                                                onClick={() => setSelectedFilter('all')}
+                                                className="mt-2 text-xs font-bold bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 px-3 py-1.5 rounded-lg transition-colors text-white"
+                                            >
+                                                Switch to All Questions
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
 
                                 {/* C. Unit selection if applicable */}
                                 {(selectedMode === 'unit' || selectedMode === 'lesson') && (
@@ -708,13 +839,18 @@ export default function QuizzesPage() {
                                     <span className="text-slate-400">Difficulty:</span>
                                     <span className="text-white font-semibold capitalize">{selectedLevel === 'all' ? 'All levels' : selectedLevel}</span>
                                 </div>
+                                <div className="flex justify-between border-t border-white/5 pt-2 mt-2">
+                                    <span className="text-slate-400">Available:</span>
+                                    <span className="text-indigo-400 font-bold">{activeFilteredQuestions.length} Questions</span>
+                                </div>
                             </div>
                         </div>
 
                         <div className="space-y-3">
                             <button
                                 onClick={handleStartExam}
-                                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-600 text-white py-4 rounded-2xl font-bold shadow-xl shadow-indigo-500/20 hover:opacity-90 active:scale-95 transition-all"
+                                disabled={activeFilteredQuestions.length === 0}
+                                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-600 text-white py-4 rounded-2xl font-bold shadow-xl shadow-indigo-500/20 hover:opacity-90 active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
                             >
                                 <Play className="w-5 h-5" />
                                 Start Exam
