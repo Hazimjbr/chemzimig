@@ -93,3 +93,96 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
 
 9. **Avoiding Confusing End-of-Line Periods:**
    - To prevent student confusion, do not put a period (`.`) at the end of a line if it terminates with a chemical symbol (e.g. `Na`), a number (e.g. `2.3`), or a unit (e.g. `mol/dm3`), as the period could be mistaken for part of the symbol, number, or unit.
+
+# Chat Suppression Rules
+1. **Direct Execution:** When the user requests execution of a command or code implementation using words like "execute", "apply", "run", or "write code", you must output ONLY the code or commands inside a markdown code block. Do NOT include explanations, discussions, apologies, or greetings.
+2. **Explanations & Discussions:** If the user requests explanations or discussions using words like "explain", "discuss", or "what is the issue", you may write normal, detailed explanations and discussions.
+
+# Core TypeScript Interfaces (Database Schemas)
+
+Ensure any code interacting with Firestore or authentication strictly conforms to the following TypeScript interfaces. If you need to modify these structures, make sure they are aligned with the source files.
+
+## (1) Student & Device Security Schemas
+Reference source: [auth-store-admin.ts](file:///c:/Users/admin/Projects/chemzim/lib/auth-store-admin.ts)
+```typescript
+export interface Device {
+    id: string;
+    fingerprint: string;
+    name: string;
+    type: 'mobile' | 'tablet' | 'desktop' | 'unknown';
+    browser: string;
+    os: string;
+    firstSeen: string;
+    lastSeen: string;
+    status: 'pending' | 'approved' | 'blocked';
+    ipAddress?: string;
+}
+
+export interface Student {
+    id: string;
+    username: string;
+    passwordHash: string;
+    name: string;
+    email?: string;
+    phone?: string;
+    notes?: string;
+    grade?: string; // International grade (e.g., Year 10, IB DP1)
+    image?: string;
+    devices: Device[];
+    isActive: boolean;
+    isAdmin?: boolean;
+    role?: 'admin' | 'moderator' | 'student';
+    createdAt: string;
+    lastLogin?: string;
+    notes_internal?: string;
+    xp?: number;
+    level?: number;
+}
+```
+
+## (2) Dynamic Lesson Player & Content Registry
+Reference source: [registry.ts](file:///c:/Users/admin/Projects/chemzim/data/curriculum/registry.ts)
+```typescript
+export interface LessonPart {
+    id: string;
+    title: string;
+    type: 'text' | 'interactive' | 'simulation' | 'quiz';
+    content: string;
+    keyPoints?: string[];
+    equations?: string[];
+    simulationId?: string;
+    equationVisualizer?: {
+        reactants: [string, string][];
+        products: [string, string][];
+        description?: string;
+    };
+    gasLawSimulator?: {
+        law: 'boyle' | 'charles' | 'gay-lussac';
+    };
+    avogadroScale?: boolean;
+}
+```
+
+## (3) Smart Question Bank Schema
+Reference source: [types.ts](file:///c:/Users/admin/Projects/chemzim/data/exams/types.ts)
+```typescript
+export interface QuestionOption {
+  text: string;
+  isCorrect?: boolean;
+}
+
+export interface Question {
+  id: string;
+  question: string;
+  options: QuestionOption[];
+  correctAnswer: number;
+  explanation: string;
+  level: DifficultyLevel;
+  topic: IGCSETopicTag;
+  curriculum: CurriculumLevel;
+  paperType?: PaperType;
+  source?: string;
+  createdAt: string;
+  tableHtml?: string;
+}
+```
