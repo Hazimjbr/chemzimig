@@ -98,6 +98,7 @@ export const parts: LessonPart[] = [
         id: 'mass-spectrometry-20260106',
         title: 'Mass Spectrometry',
         type: 'text',
+        massSpecSimulator: true,
         content: `
 > [!NOTE]
 > ### ⚙️ Principles of Mass Spectrometry
@@ -139,6 +140,111 @@ export const parts: LessonPart[] = [
 >   2. Located at the far right of the spectrum, it represents the relative molecular mass ($M_r$) of the intact molecule
 > * **Fragment Ion Peaks:** The peaks with smaller $m/z$ values represent fragment ions formed when the molecular ion breaks down. The positively charged species detected can be positive atoms, molecules, or molecular fragments
 > * **The $M+1$ Peak:** In large organic compounds (like ethyl benzoate), a very small peak is observed at $m/z = M+1$. This is caused by the naturally occurring carbon-13 isotope ($1.11\%$) present in the molecules
+
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+    <linearGradient id="barBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="barAmber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="360" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" rx="8" />
+  <rect width="1000" height="360" fill="url(#grid)" rx="8" />
+
+  <!-- Title -->
+  <text x="500" y="30" fill="#c7d2fe" font-size="14" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">Typical Mass Spectrum of an Organic Compound</text>
+
+  <!-- Y-Axis Grid Lines & Labels -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.5">
+    <line x1="100" y1="50" x2="900" y2="50" stroke-dasharray="4 4" />
+    <line x1="100" y1="100" x2="900" y2="100" stroke-dasharray="4 4" />
+    <line x1="100" y1="150" x2="900" y2="150" stroke-dasharray="4 4" />
+    <line x1="100" y1="200" x2="900" y2="200" stroke-dasharray="4 4" />
+    <line x1="100" y1="250" x2="900" y2="250" stroke-dasharray="4 4" />
+  </g>
+
+  <g fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="end">
+    <text x="90" y="54">100</text>
+    <text x="90" y="104">80</text>
+    <text x="90" y="154">60</text>
+    <text x="90" y="204">40</text>
+    <text x="90" y="254">20</text>
+    <text x="90" y="304">0</text>
+  </g>
+
+  <!-- Axes -->
+  <line x1="100" y1="40" x2="100" y2="300" stroke="#475569" stroke-width="2" />
+  <line x1="100" y1="300" x2="920" y2="300" stroke="#475569" stroke-width="2" />
+
+  <!-- Axis Titles -->
+  <text x="45" y="170" fill="#94a3b8" font-size="12" font-weight="600" transform="rotate(-90,45,170)" text-anchor="middle" font-family="system-ui, sans-serif">Relative Intensity (%)</text>
+  <text x="510" y="342" fill="#94a3b8" font-size="12" font-weight="600" text-anchor="middle" font-family="system-ui, sans-serif">m/z (Mass-to-Charge Ratio)</text>
+
+  <!-- X-Axis Labels -->
+  <g fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="225" y="318">25</text>
+    <text x="350" y="318">50</text>
+    <text x="475" y="318">75</text>
+    <text x="600" y="318">100</text>
+    <text x="725" y="318">125</text>
+    <text x="850" y="318">150</text>
+  </g>
+
+  <!-- Spectrum Peaks -->
+  <!-- Fragment Peak at m/z = 39 (x=295) height=10% (y=275) -->
+  <line x1="295" y1="300" x2="295" y2="275" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" />
+  <!-- Fragment Peak at m/z = 51 (x=355) height=20% (y=250) -->
+  <line x1="355" y1="300" x2="355" y2="250" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" />
+  <!-- Fragment Peak at m/z = 77 (x=485) height=40% (y=200) -->
+  <line x1="485" y1="300" x2="485" y2="200" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" />
+  <!-- Base Peak at m/z = 105 (x=625) height=100% (y=50) -->
+  <line x1="625" y1="300" x2="625" y2="50" stroke="url(#barAmber)" stroke-width="4" stroke-linecap="round" />
+  <!-- Fragment Peak at m/z = 120 (x=700) height=15% (y=262.5) -->
+  <line x1="700" y1="300" x2="700" y2="262.5" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" />
+  <!-- Molecular Ion Peak (M) at m/z = 150 (x=850) height=25% (y=237.5) -->
+  <line x1="850" y1="300" x2="850" y2="237.5" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+  <!-- M+1 Peak at m/z = 151 (x=855) height=2.5% (y=293.75) -->
+  <line x1="855" y1="300" x2="855" y2="293.75" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Label Annotations -->
+  <!-- Base Peak Label -->
+  <g font-family="system-ui, sans-serif" font-size="11">
+    <text x="635" y="70" fill="#fbbf24" font-weight="700">Base Peak (100% abundance)</text>
+    <text x="635" y="85" fill="#94a3b8">The most intense/stable peak in the spectrum</text>
+    <path d="M 630 75 L 627 75" stroke="#fbbf24" stroke-width="1" marker-end="url(#arrow)" />
+
+    <!-- Fragment Peaks Label -->
+    <text x="375" y="145" fill="#60a5fa" font-weight="700">Fragment Ion Peaks</text>
+    <text x="375" y="160" fill="#94a3b8">Formed when the molecular ion breaks down</text>
+    <path d="M 430 168 L 475 190" stroke="#94a3b8" stroke-width="1" fill="none" marker-end="url(#arrow)" />
+    <path d="M 400 168 L 362 235" stroke="#94a3b8" stroke-width="1" fill="none" marker-end="url(#arrow)" />
+
+    <!-- Molecular Ion Peak (M) Label -->
+    <text x="690" y="215" fill="#f87171" font-weight="700" text-anchor="end">Molecular Ion Peak (M)</text>
+    <text x="690" y="230" fill="#94a3b8" text-anchor="end">Represents the intact molecule (Mr = 150)</text>
+    <path d="M 695 225 L 840 242" stroke="#f87171" stroke-width="1" fill="none" marker-end="url(#arrow)" />
+
+    <!-- M+1 Peak Label -->
+    <text x="880" y="270" fill="#f43f5e" font-weight="700">M+1 Peak</text>
+    <text x="880" y="285" fill="#94a3b8">Due to natural 13C abundance</text>
+    <path d="M 875 280 L 858 293" stroke="#f43f5e" stroke-width="1" fill="none" marker-end="url(#arrow)" />
+  </g>
+</svg>`)}
 
 > [!BOX]
 > ### 🧪 Isotopic Patterns & Chlorine Spectrum
@@ -307,7 +413,44 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 > >    * **Path 2 (Second Most):** $^{56}\\text{X}^{2+}$ ($m/z = 28$)
 > >    * **Path 3 (Third Most):** $^{54}\\text{X}^{+}$ ($m/z = 54$)
 > >    * **Path 1 (Least Deflection):** $^{56}\\text{X}^{+}$ (largest $m/z = 56$)
-        `,
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Organic Fragmentation of Propanone
+> **Question:** In the mass spectrum of propanone ($\\text{CH}_3\\text{COCH}_3$), major peaks are observed at $m/z = 58$, $43$, and $15$. Identify the species responsible for each of these peaks and write the equation for the formation of the fragment ion at $m/z = 43$ from the molecular ion
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the molecular ion peak (M):**
+> >    * The peak at $m/z = 58$ corresponds to the relative molecular mass of propanone ($12 \\times 3 + 1 \\times 6 + 16 = 58$)
+> >    * The species is the molecular ion: $[\\text{CH}_3\\text{COCH}_3]^+$
+> > 2. **Identify the fragment peaks:**
+> >    * $m/z = 15$ corresponds to the methyl group fragment: $[\\text{CH}_3]^+$
+> >    * $m/z = 43$ corresponds to the remaining acylium ion fragment: $[\\text{CH}_3\\text{CO}]^+$ (since $58 - 15 = 43$)
+> >    * **Note:** All detected species in a mass spectrometer must carry a positive charge
+> > 3. **Write the fragmentation equation:**
+> >    * Gaseous molecular ion breaks down to form a positive ion fragment and a neutral radical:
+> >      $$[\\text{CH}_3\\text{COCH}_3]^+(\\text{g}) \\rightarrow [\\text{CH}_3\\text{CO}]^+(\\text{g}) + \\cdot\\text{CH}_3(\\text{g})$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Isotopic Peak Patterns of Bromine (Br₂)
+> **Question:** Bromine has two naturally occurring isotopes: $^{79}\\text{Br}$ (abundance $50.7\\%$) and $^{81}\\text{Br}$ (abundance $49.3\\%$), which can be approximated as a $1:1$ ratio. Describe the expected molecular ion peaks in the mass spectrum of diatomic bromine gas ($\\text{Br}_2$) and deduce their relative peak height ratio
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce possible isotopic combinations for $\\text{Br}_2$:**
+> >    * Combination 1: $^{79}\\text{Br} - ^{79}\\text{Br} \\implies m/z = 79 + 79 = 158$
+> >    * Combination 2: $^{79}\\text{Br} - ^{81}\\text{Br}$ or $^{81}\\text{Br} - ^{79}\\text{Br} \\implies m/z = 79 + 81 = 160$
+> >    * Combination 3: $^{81}\\text{Br} - ^{81}\\text{Br} \\implies m/z = 81 + 81 = 162$
+> > 2. **Calculate the probability of each combination (using $1:1$ ratio):**
+> >    * Probability of $^{158}\\text{Br}_2^+ = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$
+> >    * Probability of $^{160}\\text{Br}_2^+ = 2 \\times \\left(\\frac{1}{2} \\times \\frac{1}{2}\\right) = \\frac{1}{2}$
+> >    * Probability of $^{162}\\text{Br}_2^+ = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$
+> > 3. **Deduce peak height ratio:**
+> >    * Converting probabilities ($\\frac{1}{4} : \\frac{2}{4} : \\frac{1}{4}$) gives a simplified ratio:
+> >      $$\\text{Ratio of peaks (158 : 160 : 162)} = 1:2:1$$
+         `,
         keyPoints: [
             'All ions in a TOF spectrometer are accelerated to have the same kinetic energy.',
             'Velocity is inversely proportional to the square root of isotopic mass; lighter ions reach the detector first.',

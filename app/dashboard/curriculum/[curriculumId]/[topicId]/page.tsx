@@ -16,6 +16,7 @@ import LessonNotes from '@/components/visual/LessonNotes';
 import EquationAnimator from '@/components/visual/EquationAnimator';
 import GasLawSimulator from '@/components/visual/GasLawSimulator';
 import AvogadroScale from '@/components/visual/AvogadroScale';
+import MassSpecSimulator from '@/components/visual/MassSpecSimulator';
 import { useGamification } from '@/contexts/GamificationContext';
 
 interface TopicPageProps {
@@ -78,12 +79,33 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
             return (
                 <React.Fragment>
                     {children.map((child, idx) =>
-                        typeof child === 'string' ? <React.Fragment key={idx}>{renderTextWithMath(child)}</React.Fragment> : child
+                        typeof child === 'string' ? <React.Fragment key={idx}>{renderTextWithMath(child)}</React.Fragment> : <React.Fragment key={idx}>{renderTextWithMath(child)}</React.Fragment>
                     )}
                 </React.Fragment>
             );
         }
+        if (React.isValidElement(children)) {
+            const element = children as React.ReactElement<any>;
+            return React.cloneElement(element, {
+                ...element.props,
+                children: renderTextWithMath(element.props.children)
+            });
+        }
         return children;
+    }
+
+    if (children.includes('<svg')) {
+        const parts = children.split(/(<svg[\s\S]*?<\/svg>)/g);
+        return (
+            <React.Fragment>
+                {parts.map((part, i) => {
+                    if (i % 2 === 1) {
+                        return <div key={i} className="w-full overflow-x-auto flex justify-center my-4" dangerouslySetInnerHTML={{ __html: part }} />;
+                    }
+                    return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
+                })}
+            </React.Fragment>
+        );
     }
 
     if (children.includes('[CUSTOM_TABLE:')) {
@@ -107,7 +129,35 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
         }
     }
 
+    if (children.includes('[INLINE_SVG:')) {
+        const parts = children.split(/\[INLINE_SVG:(.*?)\]/gs);
+        if (parts.length > 1) {
+            return (
+                <React.Fragment>
+                    {parts.map((part, i) => {
+                        if (i % 2 === 1) {
+                            try {
+                                const svgHtml = decodeURIComponent(part);
+                                return (
+                                    <div
+                                        key={i}
+                                        className="flex justify-center my-4"
+                                        dangerouslySetInnerHTML={{ __html: svgHtml }}
+                                    />
+                                );
+                            } catch {
+                                return null;
+                            }
+                        }
+                        return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
+                    })}
+                </React.Fragment>
+            );
+        }
+    }
+
     if (children.includes('[NOWRAP:')) {
+
         const parts = children.split(/\[NOWRAP:(.*?)\]/g);
         if (parts.length > 1) {
             return (
@@ -196,6 +246,26 @@ const mdComponents = {
     li: ({ node, children, ...props }: any) => <li className="marker:text-indigo-500" {...props}>{renderTextWithMath(children)}</li>,
     strong: ({ node, children, ...props }: any) => <strong className="text-white font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
     em: ({ node, children, ...props }: any) => <em {...props}>{renderTextWithMath(children)}</em>,
+    img: ({ node, src, alt, ...props }: any) => (
+        <div className="flex justify-center my-4">
+            <img
+                src={src}
+                alt={alt || ''}
+                style={{ maxWidth: '30%', height: 'auto' }}
+                className="rounded-xl border border-white/10 shadow-lg"
+                {...props}
+            />
+        </div>
+    ),
+
+    a: ({ node, children, ...props }: any) => {
+        const hrefStr = props.href || '';
+        const hasCustomTable = hrefStr.includes('CUSTOM_TABLE') || (typeof children === 'string' && children.includes('CUSTOM_TABLE')) || (Array.isArray(children) && children.some(c => typeof c === 'string' && c.includes('CUSTOM_TABLE')));
+        if (hasCustomTable) {
+            return <>{renderTextWithMath(children)}</>;
+        }
+        return <a className="text-indigo-400 hover:text-indigo-300 underline transition-colors" {...props}>{renderTextWithMath(children)}</a>;
+    },
     blockquote: ({ node, children, ...props }: any) => {
         const getFirstText = (n: any): string => {
             if (!n) return '';
@@ -340,7 +410,12 @@ const renderContentWithTables = (content: string) => {
             if (currentTableLines.length > 0) {
                 const isBlockquoteTable = currentTableLines[0].trim().startsWith('>');
                 const prefix = isBlockquoteTable ? '> ' : '';
-                const encoded = encodeURIComponent(currentTableLines.join('\n'));
+                const encoded = encodeURIComponent(currentTableLines.join('\n'))
+                    .replace(/\(/g, '%28')
+                    .replace(/\)/g, '%29')
+                    .replace(/\[/g, '%5B')
+                    .replace(/\]/g, '%5D')
+                    .replace(/\*/g, '%2A');
                 processedLines.push(`${prefix}[CUSTOM_TABLE:${encoded}]`);
                 currentTableLines = [];
             }
@@ -351,7 +426,12 @@ const renderContentWithTables = (content: string) => {
     if (currentTableLines.length > 0) {
         const isBlockquoteTable = currentTableLines[0].trim().startsWith('>');
         const prefix = isBlockquoteTable ? '> ' : '';
-        const encoded = encodeURIComponent(currentTableLines.join('\n'));
+        const encoded = encodeURIComponent(currentTableLines.join('\n'))
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29')
+            .replace(/\[/g, '%5B')
+            .replace(/\]/g, '%5D')
+            .replace(/\*/g, '%2A');
         processedLines.push(`${prefix}[CUSTOM_TABLE:${encoded}]`);
     }
 
@@ -509,8 +589,8 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                             setCompleted(false);
                                         }}
                                         className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2.5 cursor-pointer ${currentPartIndex === idx
-                                                ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400'
-                                                : 'border border-transparent text-slate-400 hover:text-white hover:bg-white/5'
+                                            ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400'
+                                            : 'border border-transparent text-slate-400 hover:text-white hover:bg-white/5'
                                             }`}
                                     >
                                         <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold border ${currentPartIndex === idx ? 'border-indigo-400 text-indigo-400' : 'border-slate-600 text-slate-500'
@@ -575,6 +655,11 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 {/* Dynamic Avogadro Scale simulator rendered when defined on the active lesson part */}
                                 {currentPart.avogadroScale && (
                                     <AvogadroScale />
+                                )}
+
+                                {/* Dynamic Mass Spectrometer simulator rendered when defined on the active lesson part */}
+                                {currentPart.massSpecSimulator && (
+                                    <MassSpecSimulator />
                                 )}
 
                                 {/* Slide Main Content */}

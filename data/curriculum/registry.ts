@@ -15,6 +15,7 @@ export interface LessonPart {
         law: 'boyle' | 'charles' | 'gay-lussac';
     };
     avogadroScale?: boolean;
+    massSpecSimulator?: boolean;
 }
 
 export interface LessonRegistryItem {
