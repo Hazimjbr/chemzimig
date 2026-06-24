@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, useCallback } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback, useRef } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { calculateLevel } from '@/lib/level-utils';
 
@@ -67,6 +67,12 @@ interface UserData {
     solvedQuestions?: Record<string, SolvedQuestionStatus>;
 }
 
+interface XPQueueItem {
+    eventId: string;
+    amount: number;
+    timestamp: number;
+}
+
 interface GamificationContextType {
     streak: StreakData;
     achievements: Achievement[];
@@ -80,7 +86,7 @@ interface GamificationContextType {
     checkStreak: () => void;
     unlockAchievement: (id: string) => void;
     updateChallengeProgress: (type: string, amount: number) => void;
-    addXP: (amount: number) => void;
+    addXP: (amount: number, eventId?: string) => void;
     completeLesson: (lessonId: string) => void;
     saveQuizScore: (quizId: string, score: number) => void;
     mistakeInbox: MistakeItem[];
@@ -117,7 +123,7 @@ const allAchievements: Achievement[] = [
 const GamificationContext = createContext<GamificationContextType | undefined>(undefined);
 
 export function GamificationProvider({ children }: { children: React.ReactNode }) {
-    const { user } = useAuth();
+    const { user, updateUser } = useAuth();
     const [streak, setStreak] = useState<StreakData>(defaultStreak);
     const [unlockedAchievements, setUnlockedAchievements] = useState<string[]>([]);
     const [dailyChallenges, setDailyChallenges] = useState<DailyChallenge[]>([]);
@@ -129,10 +135,82 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
     const [mistakeInbox, setMistakeInbox] = useState<MistakeItem[]>([]);
     const [solvedQuestions, setSolvedQuestions] = useState<Record<string, SolvedQuestionStatus>>({});
 
-    // Load initial data from localStorage for persistence
+    const isSyncing = useRef(false);
+
+    const saveState = useCallback((key: string, value: any) => {
+        if (!user) return;
+        const prefix = `gamify_${user.id}_`;
+        localStorage.setItem(`${prefix}${key}`, JSON.stringify(value));
+    }, [user]);
+
+    // WAL pending queue syncing mechanism
+    const syncPendingXP = useCallback(async () => {
+        if (!user || isSyncing.current) return;
+        const prefix = `gamify_${user.id}_`;
+        const queueKey = `${prefix}xp_queue`;
+
+        const savedQueue = localStorage.getItem(queueKey);
+        if (!savedQueue) return;
+
+        const queue: XPQueueItem[] = JSON.parse(savedQueue);
+        if (queue.length === 0) return;
+
+        isSyncing.current = true;
+
+        try {
+            const response = await fetch('/api/auth/sync-xp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ xpUpdates: queue })
+            });
+
+            const result = await response.json();
+            if (result.success && Array.isArray(result.syncedEventIds)) {
+                // Remove processed items from local queue
+                const updatedQueue = queue.filter(item => !result.syncedEventIds.includes(item.eventId));
+                localStorage.setItem(queueKey, JSON.stringify(updatedQueue));
+
+                // Update single source of truth XP state from server
+                if (typeof result.xp === 'number') {
+                    setXP(result.xp);
+                    setLevel(result.level);
+                    saveState('xp', result.xp);
+                    updateUser({ xp: result.xp, level: result.level });
+                }
+            }
+        } catch (e) {
+            console.warn('[Sync Pending XP] Failed (offline or server error). Stained in queue:', e);
+        } finally {
+            isSyncing.current = false;
+        }
+    }, [user, saveState, updateUser]);
+
+    // Trigger migration of legacy XP if Firestore contains 0 XP
+    const migrateLegacyXP = useCallback(async (legacyXP: number) => {
+        if (!user || legacyXP <= 0) return;
+
+        try {
+            const response = await fetch('/api/auth/migrate-xp', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ xp: legacyXP })
+            });
+            const result = await response.json();
+            if (result.success) {
+                setXP(result.xp);
+                setLevel(result.level);
+                saveState('xp', result.xp);
+                updateUser({ xp: result.xp, level: result.level });
+            }
+        } catch (e) {
+            console.error('[Legacy XP Migration] Migration failed:', e);
+        }
+    }, [user, saveState, updateUser]);
+
+    // Load initial data from localStorage and fetch Firestore state
     useEffect(() => {
         if (user) {
-            const loadFromLocalStorage = () => {
+            const loadAndMigrate = async () => {
                 const prefix = `gamify_${user.id}_`;
                 
                 const savedStreak = localStorage.getItem(`${prefix}streakData`);
@@ -142,16 +220,6 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                 const savedAchievements = localStorage.getItem(`${prefix}unlockedAchievements`);
                 if (savedAchievements) setUnlockedAchievements(JSON.parse(savedAchievements));
                 else setUnlockedAchievements([]);
-
-                const savedXP = localStorage.getItem(`${prefix}xp`);
-                if (savedXP) {
-                    const xpVal = parseInt(savedXP);
-                    setXP(xpVal);
-                    setLevel(calculateLevel(xpVal));
-                } else {
-                    setXP(0);
-                    setLevel(1);
-                }
 
                 const savedLessons = localStorage.getItem(`${prefix}completedLessons`);
                 if (savedLessons) setCompletedLessons(JSON.parse(savedLessons));
@@ -169,7 +237,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                 if (savedSolved) setSolvedQuestions(JSON.parse(savedSolved));
                 else setSolvedQuestions({});
 
-                // Load daily challenges
+                // Sync daily challenges
                 const today = new Date().toDateString();
                 const savedChallenges = localStorage.getItem(`${prefix}dailyChallenges`);
                 if (savedChallenges) {
@@ -183,18 +251,44 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                 } else {
                     generateDailyChallenges(prefix);
                 }
+
+                // XP Hydration & Migration Logic
+                const savedXP = localStorage.getItem(`${prefix}xp`);
+                const localXPVal = savedXP ? parseInt(savedXP) : 0;
+
+                // Sync base state from server if it has data
+                if (typeof user.xp === 'number' && user.xp > 0) {
+                    setXP(user.xp);
+                    setLevel(user.level || 1);
+                    saveState('xp', user.xp);
+                } else if (localXPVal > 0) {
+                    // Firestore is 0, local progress is positive -> Migrate
+                    await migrateLegacyXP(localXPVal);
+                } else {
+                    setXP(0);
+                    setLevel(1);
+                }
+
+                // Process pending queue on boot
+                syncPendingXP();
             };
 
-            loadFromLocalStorage();
+            loadAndMigrate();
         }
         setIsLoading(false);
-    }, [user]);
+    }, [user, migrateLegacyXP, syncPendingXP]);
 
-    const saveState = useCallback((key: string, value: any) => {
-        if (!user) return;
-        const prefix = `gamify_${user.id}_`;
-        localStorage.setItem(`${prefix}${key}`, JSON.stringify(value));
-    }, [user]);
+    // Sync online detection to trigger pending syncs
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+
+        const handleOnline = () => {
+            syncPendingXP();
+        };
+
+        window.addEventListener('online', handleOnline);
+        return () => window.removeEventListener('online', handleOnline);
+    }, [syncPendingXP]);
 
     const generateDailyChallenges = (prefix: string) => {
         const today = new Date().toDateString();
@@ -249,13 +343,33 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
         }
     }, [unlockedAchievements, saveState]);
 
-    const addXP = useCallback((amount: number) => {
+    const addXP = useCallback((amount: number, eventId?: string) => {
+        if (!user) return;
+
+        const actualEventId = eventId || `xp-manual-${Date.now()}`;
         const newXP = xp + amount;
         const newLevel = calculateLevel(newXP);
 
+        // Update local state immediately for instant responsive feedback
         setXP(newXP);
         setLevel(newLevel);
         saveState('xp', newXP);
+
+        // Queue in Write-Ahead Log (WAL)
+        const prefix = `gamify_${user.id}_`;
+        const queueKey = `${prefix}xp_queue`;
+        const savedQueue = localStorage.getItem(queueKey);
+        const queue: XPQueueItem[] = savedQueue ? JSON.parse(savedQueue) : [];
+        
+        queue.push({
+            eventId: actualEventId,
+            amount,
+            timestamp: Date.now()
+        });
+        localStorage.setItem(queueKey, JSON.stringify(queue));
+
+        // Background push
+        syncPendingXP();
 
         // Check for XP achievements
         if (newXP >= 100) unlockAchievement('xp-100');
@@ -263,7 +377,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
         if (newXP >= 1000) unlockAchievement('xp-1000');
         if (newLevel >= 5) unlockAchievement('level-5');
         if (newLevel >= 10) unlockAchievement('level-10');
-    }, [xp, saveState, unlockAchievement]);
+    }, [user, xp, saveState, unlockAchievement, syncPendingXP]);
 
     const checkStreak = useCallback(() => {
         const today = new Date().toDateString();
@@ -300,7 +414,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
             else if (newStreak.currentStreak >= 8) xpReward = 15;
             else if (newStreak.currentStreak >= 4) xpReward = 10;
 
-            addXP(xpReward);
+            addXP(xpReward, `streak-${today}`);
         }
 
         if (newStreak.currentStreak >= 3) unlockAchievement('streak-3');
@@ -315,7 +429,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                     const newProgress = c.progress + amount;
                     const completed = newProgress >= c.target;
                     if (completed && !c.completed) {
-                        addXP(c.xpReward);
+                        addXP(c.xpReward, `daily-challenge-${c.id}-${new Date().toDateString()}`);
                     }
                     return { ...c, progress: newProgress, completed };
                 }
@@ -334,7 +448,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
             saveState('completedLessons', newCompleted);
 
             // Add XP
-            addXP(25);
+            addXP(25, `lesson-${lessonId}`);
 
             // Check achievements
             if (newCompleted.length >= 1) unlockAchievement('first-lesson');
@@ -353,7 +467,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
             saveState('quizScores', newScores);
 
             // Add XP based on score
-            addXP(Math.round(score / 10));
+            addXP(Math.round(score / 10), `quiz-${quizId}-${score}`);
 
             // Check achievements
             if (Object.keys(newScores).length >= 1) unlockAchievement('first-quiz');

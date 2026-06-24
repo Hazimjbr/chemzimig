@@ -157,6 +157,58 @@ export default function QuizzesPage() {
     const [timeTaken, setTimeTaken] = useState<number>(0);
     const [userAnswers, setUserAnswers] = useState<Array<{ questionId: string; selectedAnswer: number; isCorrect: boolean }>>([]);
 
+    const [hasSavedSession, setHasSavedSession] = useState<boolean>(false);
+
+    // Save session state to sessionStorage
+    useEffect(() => {
+        if (step === 'playing' && questions.length > 0) {
+            sessionStorage.setItem('chemzim_quiz_session', JSON.stringify({
+                questions,
+                currentQuestionIndex,
+                selectedAnswer,
+                isAnswerSubmitted,
+                score,
+                timeStart,
+                userAnswers
+            }));
+        } else if (step === 'result' || step === 'mode-select') {
+            sessionStorage.removeItem('chemzim_quiz_session');
+        }
+    }, [step, questions, currentQuestionIndex, selectedAnswer, isAnswerSubmitted, score, timeStart, userAnswers]);
+
+    // Check for saved session on mount
+    useEffect(() => {
+        const saved = sessionStorage.getItem('chemzim_quiz_session');
+        if (saved) {
+            setHasSavedSession(true);
+        }
+    }, []);
+
+    const handleResumeSession = () => {
+        const saved = sessionStorage.getItem('chemzim_quiz_session');
+        if (saved) {
+            try {
+                const data = JSON.parse(saved);
+                setQuestions(data.questions || []);
+                setCurrentQuestionIndex(data.currentQuestionIndex || 0);
+                setSelectedAnswer(data.selectedAnswer !== undefined ? data.selectedAnswer : null);
+                setIsAnswerSubmitted(data.isAnswerSubmitted || false);
+                setScore(data.score || 0);
+                setTimeStart(data.timeStart || Date.now());
+                setUserAnswers(data.userAnswers || []);
+                setStep('playing');
+            } catch (e) {
+                console.error('Failed to parse saved session:', e);
+            }
+        }
+        setHasSavedSession(false);
+    };
+
+    const handleDiscardSession = () => {
+        sessionStorage.removeItem('chemzim_quiz_session');
+        setHasSavedSession(false);
+    };
+
     // 1. Build and map all questions on mount
     useEffect(() => {
         const staticExamQuestions: LocalQuestion[] = questionBank.map(q => {
@@ -506,6 +558,35 @@ export default function QuizzesPage() {
 
     return (
         <div className="w-full max-w-5xl mx-auto pb-20 font-sans text-white">
+            {hasSavedSession && (
+                <div className="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div className="bg-[#0b0b1a] border border-indigo-500/30 rounded-3xl p-6 md:p-8 max-w-md w-full shadow-2xl shadow-indigo-500/10 space-y-6 text-center animate-in scale-in duration-250">
+                        <div className="w-16 h-16 bg-indigo-500/10 border border-indigo-500/20 rounded-full flex items-center justify-center mx-auto text-indigo-400">
+                            <Clock className="w-8 h-8 animate-pulse" />
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-xl font-bold">Unfinished Quiz Detected</h3>
+                            <p className="text-sm text-slate-400">
+                                You have an incomplete quiz session. Would you like to resume where you left off?
+                            </p>
+                        </div>
+                        <div className="flex gap-4">
+                            <button
+                                onClick={handleDiscardSession}
+                                className="flex-1 py-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl font-bold text-sm text-slate-300 transition-all"
+                            >
+                                Discard
+                            </button>
+                            <button
+                                onClick={handleResumeSession}
+                                className="flex-1 py-3 bg-gradient-to-r from-indigo-500 to-violet-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-indigo-500/20 transition-all hover:opacity-90 active:scale-95"
+                            >
+                                Resume
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
             
             {/* Step Indicator Header */}
             <div className="flex items-center justify-between border-b border-white/5 pb-6 mb-10">

@@ -20,7 +20,12 @@ interface SmartTextProps {
  * - Spacing normalization for units (mol/L, °C, etc).
  */
 export function SmartText({ children, className, as: Component = 'span' }: SmartTextProps) {
-    const processedText = normalizeText(children);
+    let processedText = children;
+    try {
+        processedText = normalizeText(children);
+    } catch (e) {
+        console.error('Error in SmartText rendering:', e);
+    }
 
     return (
         <Component
@@ -36,23 +41,28 @@ export function SmartText({ children, className, as: Component = 'span' }: Smart
 function normalizeText(text: string): string {
     if (!text || typeof text !== 'string') return text || '';
 
-    let processed = text;
+    try {
+        let processed = text;
 
-    // 1. Convert any accidental Arabic numerals to English numerals
-    processed = processed.replace(/[\u0660-\u0669]/g, (d) => 
-        (d.charCodeAt(0) - 0x0660).toString()
-    );
+        // 1. Convert any accidental Arabic numerals to English numerals
+        processed = processed.replace(/[\u0660-\u0669]/g, (d) => 
+            (d.charCodeAt(0) - 0x0660).toString()
+        );
 
-    // 2. Ensure chemical operators have standard spacing
-    // e.g. "A+B -> C" becomes "A + B → C"
-    processed = processed.replace(/\s*[+]\s*/g, ' + ');
-    processed = processed.replace(/\s*->\s*/g, ' → ');
-    processed = processed.replace(/\s*<->\s*/g, ' ⇌ ');
+        // 2. Ensure chemical operators have standard spacing
+        // e.g. "A+B -> C" becomes "A + B → C"
+        processed = processed.replace(/\s*[+]\s*/g, ' + ');
+        processed = processed.replace(/\s*->\s*/g, ' → ');
+        processed = processed.replace(/\s*<->\s*/g, ' ⇌ ');
 
-    // 3. Handle subscripts/superscripts if provided as plain text codes
-    // (Though KaTeX is preferred, this is a fallback)
-    
-    return processed;
+        // 3. Handle subscripts/superscripts if provided as plain text codes
+        // (Though KaTeX is preferred, this is a fallback)
+        
+        return processed;
+    } catch (e) {
+        console.error('Error in normalizeText:', e);
+        return text;
+    }
 }
 
 /**

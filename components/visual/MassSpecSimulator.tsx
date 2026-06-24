@@ -38,6 +38,19 @@ export default function MassSpecSimulator() {
     const particlesRef = useRef<Particle[]>([]);
     const lastFireRef = useRef<number>(0);
     const detectedRef = useRef<{ mz: number; color: string }[]>([]);
+    const [isIntersecting, setIsIntersecting] = useState(true);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsIntersecting(entry.isIntersecting);
+        }, { threshold: 0.1 });
+
+        observer.observe(canvas);
+        return () => observer.disconnect();
+    }, []);
 
     const [mass, setMass] = useState(40);
     const [charge, setCharge] = useState(1);
@@ -220,20 +233,22 @@ export default function MassSpecSimulator() {
             ctx.fillText('\u2736', DEFLECT_END + 2, p.detectedY + 4);
         });
     }, []);
-
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
         const loop = (ts: number) => {
+            if (!isIntersecting) return;
             if (runningRef.current && ts - lastFireRef.current > 950) {
                 spawnParticle(canvas); lastFireRef.current = ts;
             }
             draw();
             animRef.current = requestAnimationFrame(loop);
         };
-        animRef.current = requestAnimationFrame(loop);
+        if (isIntersecting) {
+            animRef.current = requestAnimationFrame(loop);
+        }
         return () => cancelAnimationFrame(animRef.current);
-    }, [draw, spawnParticle]);
+    }, [draw, spawnParticle, isIntersecting]);
 
     useEffect(() => {
         const stages = Object.keys(STAGE_COLORS);

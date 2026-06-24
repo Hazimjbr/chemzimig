@@ -50,10 +50,10 @@ export default function GasLawSimulator({ law }: GasLawSimulatorProps) {
     const [temperature, setTemperature] = useState(300); // Kelvin (150K to 600K)
     const [moles, setMoles] = useState(4); // Amount (1 to 20 particles)
     const [pressure, setPressure] = useState(1.0); // atm
-    
     const [collisionRate, setCollisionRate] = useState(0);
     const collisionCountRef = useRef(0);
     const wallGlowRef = useRef({ left: 0, right: 0, top: 0, bottom: 0 });
+    const [isIntersecting, setIsIntersecting] = useState(true);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -61,6 +61,18 @@ export default function GasLawSimulator({ law }: GasLawSimulatorProps) {
             collisionCountRef.current = 0;
         }, 500);
         return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsIntersecting(entry.isIntersecting);
+        }, { threshold: 0.1 });
+
+        observer.observe(canvas);
+        return () => observer.disconnect();
     }, []);
 
     const requestRef = useRef<number | null>(null);
@@ -197,8 +209,9 @@ export default function GasLawSimulator({ law }: GasLawSimulatorProps) {
                 }
             });
         };
-
         const render = () => {
+            if (!isIntersecting) return;
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             const containerHeight = (volume / 200) * canvas.height;
             const topWall = canvas.height - containerHeight;
@@ -288,7 +301,7 @@ export default function GasLawSimulator({ law }: GasLawSimulatorProps) {
         return () => {
             if (requestRef.current) cancelAnimationFrame(requestRef.current);
         };
-    }, [isPlaying, volume, selectedGas, temperature]);
+    }, [isPlaying, volume, selectedGas, temperature, isIntersecting]);
 
     const handlePressureChange = (newPressurePa: number) => {
         if (constantMode === 'charles') return;

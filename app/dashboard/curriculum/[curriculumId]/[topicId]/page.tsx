@@ -1,6 +1,7 @@
 'use client';
 
 import React, { use, useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { allCurricula } from '@/data/curriculum';
 import { questionBank } from '@/data/exams';
 import Link from 'next/link';
@@ -13,10 +14,21 @@ import confetti from 'canvas-confetti';
 import { getLessonFromRegistry } from '@/data/curriculum/registry';
 import TextToSpeech from '@/components/visual/TextToSpeech';
 import LessonNotes from '@/components/visual/LessonNotes';
-import EquationAnimator from '@/components/visual/EquationAnimator';
-import GasLawSimulator from '@/components/visual/GasLawSimulator';
-import AvogadroScale from '@/components/visual/AvogadroScale';
-import MassSpecSimulator from '@/components/visual/MassSpecSimulator';
+
+const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { ssr: false });
+const GasLawSimulator = dynamic(() => import('@/components/visual/GasLawSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const AvogadroScale = dynamic(() => import('@/components/visual/AvogadroScale'), {
+    ssr: false,
+    loading: () => <div className="h-[300px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const MassSpecSimulator = dynamic(() => import('@/components/visual/MassSpecSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[250px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+
 import { useGamification } from '@/contexts/GamificationContext';
 
 interface TopicPageProps {

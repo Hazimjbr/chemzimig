@@ -410,122 +410,167 @@ export async function getAllDeviceRequests(): Promise<DeviceRequest[]> {
 export async function approveDevice(requestId: string): Promise<boolean> {
     const db = getDB();
     const requestRef = db.collection(DEVICE_REQUESTS_COLLECTION).doc(requestId);
-    const requestSnap = await requestRef.get();
 
-    if (!requestSnap.exists) return false;
-    const request = requestSnap.data() as DeviceRequest;
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const requestSnap = await transaction.get(requestRef);
+            if (!requestSnap.exists) return false;
+            const request = requestSnap.data() as DeviceRequest;
 
-    const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
-    const studentSnap = await studentRef.get();
-    if (!studentSnap.exists) return false;
-    const student = studentSnap.data() as Student;
+            const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
+            const studentSnap = await transaction.get(studentRef);
+            if (!studentSnap.exists) return false;
+            const student = studentSnap.data() as Student;
 
-    const devices = student.devices || [];
-    const device = devices.find(d => d.id === request.device.id);
+            const devices = student.devices || [];
+            const device = devices.find(d => d.id === request.device.id);
 
-    if (device) {
-        device.status = 'approved';
-        await studentRef.update({ devices });
+            if (device) {
+                device.status = 'approved';
+                transaction.update(studentRef, { devices });
+            }
+
+            transaction.update(requestRef, { status: 'approved' });
+            return true;
+        });
+    } catch (e) {
+        console.error('Error in approveDevice transaction:', e);
+        return false;
     }
-
-    await requestRef.update({ status: 'approved' });
-    return true;
 }
 
 export async function rejectDevice(requestId: string): Promise<boolean> {
     const db = getDB();
     const requestRef = db.collection(DEVICE_REQUESTS_COLLECTION).doc(requestId);
-    const requestSnap = await requestRef.get();
 
-    if (!requestSnap.exists) return false;
-    const request = requestSnap.data() as DeviceRequest;
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const requestSnap = await transaction.get(requestRef);
+            if (!requestSnap.exists) return false;
+            const request = requestSnap.data() as DeviceRequest;
 
-    const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
-    const studentSnap = await studentRef.get();
-    if (!studentSnap.exists) return false;
-    const student = studentSnap.data() as Student;
+            const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
+            const studentSnap = await transaction.get(studentRef);
+            if (!studentSnap.exists) return false;
+            const student = studentSnap.data() as Student;
 
-    const devices = student.devices || [];
-    const filteredDevices = devices.filter(d => d.id !== request.device.id);
+            const devices = student.devices || [];
+            const filteredDevices = devices.filter(d => d.id !== request.device.id);
 
-    await studentRef.update({ devices: filteredDevices });
-    await requestRef.update({ status: 'rejected' });
-    return true;
+            transaction.update(studentRef, { devices: filteredDevices });
+            transaction.update(requestRef, { status: 'rejected' });
+            return true;
+        });
+    } catch (e) {
+        console.error('Error in rejectDevice transaction:', e);
+        return false;
+    }
 }
 
 export async function replaceDevice(requestId: string): Promise<boolean> {
     const db = getDB();
     const requestRef = db.collection(DEVICE_REQUESTS_COLLECTION).doc(requestId);
-    const requestSnap = await requestRef.get();
 
-    if (!requestSnap.exists) return false;
-    const request = requestSnap.data() as DeviceRequest;
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const requestSnap = await transaction.get(requestRef);
+            if (!requestSnap.exists) return false;
+            const request = requestSnap.data() as DeviceRequest;
 
-    const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
-    const studentSnap = await studentRef.get();
-    if (!studentSnap.exists) return false;
-    const student = studentSnap.data() as Student;
+            const studentRef = db.collection(STUDENTS_COLLECTION).doc(request.studentId);
+            const studentSnap = await transaction.get(studentRef);
+            if (!studentSnap.exists) return false;
+            const student = studentSnap.data() as Student;
 
-    const targetDeviceId = request.device.id;
-    const currentDevices = student.devices || [];
-    const updatedDevices = currentDevices.map(d => {
-        if (d.id === targetDeviceId) {
-            return { ...d, status: 'approved' as const };
-        } else if (d.status === 'approved') {
-            return { ...d, status: 'blocked' as const };
-        }
-        return d;
-    });
+            const targetDeviceId = request.device.id;
+            const currentDevices = student.devices || [];
+            const updatedDevices = currentDevices.map(d => {
+                if (d.id === targetDeviceId) {
+                    return { ...d, status: 'approved' as const };
+                } else if (d.status === 'approved') {
+                    return { ...d, status: 'blocked' as const };
+                }
+                return d;
+            });
 
-    await studentRef.update({ devices: updatedDevices });
-    await requestRef.update({ status: 'approved' });
-    return true;
+            transaction.update(studentRef, { devices: updatedDevices });
+            transaction.update(requestRef, { status: 'approved' });
+            return true;
+        });
+    } catch (e) {
+        console.error('Error in replaceDevice transaction:', e);
+        return false;
+    }
 }
 
 export async function blockDevice(studentId: string, deviceId: string): Promise<boolean> {
     const db = getDB();
     const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
-    const studentSnap = await studentRef.get();
-    if (!studentSnap.exists) return false;
-    const student = studentSnap.data() as Student;
 
-    const devices = student.devices || [];
-    const device = devices.find(d => d.id === deviceId);
-    if (!device) return false;
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const studentSnap = await transaction.get(studentRef);
+            if (!studentSnap.exists) return false;
+            const student = studentSnap.data() as Student;
 
-    device.status = 'blocked';
-    await studentRef.update({ devices });
-    return true;
+            const devices = student.devices || [];
+            const device = devices.find(d => d.id === deviceId);
+            if (!device) return false;
+
+            device.status = 'blocked';
+            transaction.update(studentRef, { devices });
+            return true;
+        });
+    } catch (e) {
+        console.error('Error in blockDevice transaction:', e);
+        return false;
+    }
 }
 
 export async function unblockDevice(studentId: string, deviceId: string): Promise<boolean> {
     const db = getDB();
     const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
-    const studentSnap = await studentRef.get();
-    if (!studentSnap.exists) return false;
-    const student = studentSnap.data() as Student;
 
-    const devices = student.devices || [];
-    const device = devices.find(d => d.id === deviceId);
-    if (!device) return false;
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const studentSnap = await transaction.get(studentRef);
+            if (!studentSnap.exists) return false;
+            const student = studentSnap.data() as Student;
 
-    device.status = 'approved';
-    await studentRef.update({ devices });
-    return true;
+            const devices = student.devices || [];
+            const device = devices.find(d => d.id === deviceId);
+            if (!device) return false;
+
+            device.status = 'approved';
+            transaction.update(studentRef, { devices });
+            return true;
+        });
+    } catch (e) {
+        console.error('Error in unblockDevice transaction:', e);
+        return false;
+    }
 }
 
 export async function removeDevice(studentId: string, deviceId: string): Promise<boolean> {
     const db = getDB();
     const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
-    const studentSnap = await studentRef.get();
-    if (!studentSnap.exists) return false;
-    const student = studentSnap.data() as Student;
 
-    const devices = student.devices || [];
-    const filtered = devices.filter(d => d.id !== deviceId);
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const studentSnap = await transaction.get(studentRef);
+            if (!studentSnap.exists) return false;
+            const student = studentSnap.data() as Student;
 
-    await studentRef.update({ devices: filtered });
-    return true;
+            const devices = student.devices || [];
+            const filtered = devices.filter(d => d.id !== deviceId);
+
+            transaction.update(studentRef, { devices: filtered });
+            return true;
+        });
+    } catch (e) {
+        console.error('Error in removeDevice transaction:', e);
+        return false;
+    }
 }
 
 export async function getAuthStats() {

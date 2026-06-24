@@ -27,13 +27,23 @@ interface Particle {
     originalY: number; // for solid lattice vibration
 }
 
-// Single Jar Canvas Simulator Component to avoid duplicate code
 function JarSimulator({ substance, moles }: { substance: Substance; moles: number }) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const particlesRef = useRef<Particle[]>([]);
     const requestRef = useRef<number | null>(null);
+    const [isIntersecting, setIsIntersecting] = useState(true);
 
-    // Initialize/Re-initialize particles when substance or mole count changes
+    useEffect(() => {
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+
+        const observer = new IntersectionObserver(([entry]) => {
+            setIsIntersecting(entry.isIntersecting);
+        }, { threshold: 0.1 });
+
+        observer.observe(canvas);
+        return () => observer.disconnect();
+    }, []);
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -90,8 +100,9 @@ function JarSimulator({ substance, moles }: { substance: Substance; moles: numbe
         if (!canvas) return;
         const ctx = canvas.getContext('2d');
         if (!ctx) return;
-
         const render = () => {
+            if (!isIntersecting) return;
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             const width = canvas.width;
             const height = canvas.height;
@@ -152,7 +163,7 @@ function JarSimulator({ substance, moles }: { substance: Substance; moles: numbe
         return () => {
             if (requestRef.current) cancelAnimationFrame(requestRef.current);
         };
-    }, [substance]);
+    }, [substance, isIntersecting]);
 
     return (
         <canvas

@@ -25,11 +25,10 @@ export interface SessionPayload extends JWTPayload {
 function getSecretKey(): Uint8Array {
     const secret = process.env.SESSION_SECRET;
     if (!secret) {
-        console.warn(
-            '[Session] WARNING: SESSION_SECRET is not set in environment variables! ' +
-            'Using fallback secret. Please configure it in your Vercel Dashboard.'
+        throw new Error(
+            'FATAL ERROR: SESSION_SECRET is not configured in the environment variables! ' +
+            'Please define it in your .env.local file or your production environment configuration (Vercel).'
         );
-        return new TextEncoder().encode('fallback-do-not-use-in-production');
     }
     return new TextEncoder().encode(secret);
 }

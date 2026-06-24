@@ -15,8 +15,8 @@ function isAdminEmail(email: string | null | undefined): boolean {
 function getSecretKey(): Uint8Array {
     const secret = process.env.SESSION_SECRET;
     if (!secret) {
-        console.error('[Middleware] SESSION_SECRET is not set!');
-        return new TextEncoder().encode('fallback-do-not-use-in-production');
+        console.error('[FATAL] SESSION_SECRET is not set! All protected routes are now BLOCKED.');
+        throw new Error('SESSION_SECRET is not configured.');
     }
     return new TextEncoder().encode(secret);
 }

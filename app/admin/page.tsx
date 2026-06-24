@@ -72,8 +72,8 @@ function AdminContent() {
             email = emailMatch[0];
         }
 
-        // 2. Phone extraction
-        const phoneMatch = text.match(/(?:\+?|00)?\d{9,15}/);
+        // 2. Phone extraction (robust matching, avoiding timestamps or dates)
+        const phoneMatch = text.match(/\b(?:\+?|00)?[0-9]\d{8,13}\b/);
         if (phoneMatch) {
             phone = phoneMatch[0];
         }
