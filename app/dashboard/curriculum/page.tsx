@@ -23,7 +23,7 @@ export default async function CurriculumPage() {
 
     const filteredCurricula = allCurricula.filter(c => {
         if (isSystemAdmin) return true; // Admin can see both
-        return c.id === resolvedTrack;
+        return c.id === resolvedTrack || c.id === `${resolvedTrack}-20260106` || c.id.startsWith(resolvedTrack + '-');
     });
 
     return (

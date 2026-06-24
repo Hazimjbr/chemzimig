@@ -14,9 +14,10 @@ ChemZim is built for speed, security, and scientific precision.
 - **NextAuth Integration:** Secure session management with HTTP-only cookies and robust middleware protection.
 
 ### 🗂️ Scalable Multi-Board Curriculum Registry
-- **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620, `cie-as` for Cambridge AS-Level 9701, `cie-alevel` for AS/A-Level 9701, and `edexcel-alevel` for Pearson Edexcel IAL Chemistry XCH11/YCH11) with dynamic registries for modular lessons, exams, and difficulty levels. Includes automated suffix resolution (`-20260106`) during registry lookups to ensure flawless route-to-data mapping.
+- **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620, `cie-as` for Cambridge AS-Level 9701, `cie-alevel` for AS/A-Level 9701, and `edexcel-alevel` for Pearson Edexcel IAL Chemistry XCH11/YCH11) with dynamic registries for modular lessons, exams, and difficulty levels. Includes automated suffix resolution (`-20260106`) during registry lookups to ensure flawless route-to-data mapping, and robust fallback track matching inside the curriculum page filter to prevent mismatched student tracks from throwing undefined errors.
 - **Granular Lesson Tree:** Maps 56 unique lessons for CIE tracks and 22 lessons (across 6 units) for Edexcel. Pearson Edexcel Unit 1: Topic 1 ("Formulae, Equations and Amount of Substance") is fully completed as a state-of-the-art interactive curriculum featuring 10 slide-based parts, integrated chemical simulators (Avogadro scale, gas laws, reaction animator), and a comprehensive 30-question quiz covering all standard exam concepts.
 - **Security & Authorization Middleware:** Integrated route protection for `edexcel-alevel` and automated student track redirection during login based on registered grades.
+- **Empty-State UI Safeguards:** Integrated safety layout checks in client components (such as `CurriculumView`) to gracefully display warning panels instead of causing Next.js runtime exceptions if no matched curriculum is found.
 
 
 ### ⚙️ Build & Deployment Stability

@@ -23,6 +23,17 @@ interface CurriculumViewProps {
 export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => {
     const searchParams = useSearchParams();
     const trackParam = searchParams.get('track');
+
+    if (!curricula || curricula.length === 0) {
+        return (
+            <div className="w-full text-center py-12 text-slate-400 bg-[#0a0a1f]/40 backdrop-blur-md border border-white/5 rounded-3xl">
+                <span className="text-3xl mb-4 block">🔍</span>
+                <p className="font-semibold text-white mb-2">No Curriculum Available</p>
+                <p className="text-sm">There are no courses matching your track. Please contact your administrator.</p>
+            </div>
+        );
+    }
+
     const defaultTab = curricula.some(c => c.id === trackParam) ? (trackParam || curricula[0].id) : curricula[0].id;
     const [activeTab, setActiveTab] = useState(defaultTab);
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
