@@ -20,7 +20,7 @@ import { allCurricula } from '@/data/curriculum';
 
 export default function DashboardPage() {
     const { user } = useAuth();
-    const { xp, level, streak, dailyChallenges } = useGamification();
+    const { xp, level, streak, dailyChallenges, completedLessons } = useGamification();
     const [greeting, setGreeting] = useState('Welcome');
     const [previewLeaderboard, setPreviewLeaderboard] = useState<any[]>([]);
     const [announcements, setAnnouncements] = useState<any[]>([]);
@@ -44,6 +44,20 @@ export default function DashboardPage() {
     const activeCurriculum = React.useMemo(() => {
         return allCurricula.find(c => c.id === studentTrackId) || allCurricula[0];
     }, [studentTrackId]);
+
+    const totalLessonsInCurriculum = React.useMemo(() => {
+        return activeCurriculum.topics.reduce((acc, topic) => acc + (topic.subtopics?.length || 0), 0);
+    }, [activeCurriculum]);
+
+    const completedCountForTrack = React.useMemo(() => {
+        if (!completedLessons) return 0;
+        return completedLessons.filter(id => id.startsWith(studentTrackId)).length;
+    }, [completedLessons, studentTrackId]);
+
+    const progressPercentage = React.useMemo(() => {
+        if (totalLessonsInCurriculum === 0) return 0;
+        return Math.min(100, Math.round((completedCountForTrack / totalLessonsInCurriculum) * 100));
+    }, [completedCountForTrack, totalLessonsInCurriculum]);
 
     const recommendedLessons = React.useMemo(() => {
         const firstTopic = activeCurriculum.topics[0];
@@ -103,7 +117,7 @@ export default function DashboardPage() {
     const stats = [
         { label: 'Current Level', value: level, icon: Star, color: 'text-amber-400', bg: 'bg-amber-400/10', glow: 'glass-card-amber' },
         { label: 'Total XP', value: xp, icon: Zap, color: 'text-indigo-400', bg: 'bg-indigo-400/10', glow: 'glass-card-indigo' },
-        { label: 'Completed', value: '0', icon: BookOpen, color: 'text-emerald-400', bg: 'bg-emerald-400/10', glow: 'glass-card-emerald' },
+        { label: 'Completed', value: completedCountForTrack, icon: BookOpen, color: 'text-emerald-400', bg: 'bg-emerald-400/10', glow: 'glass-card-emerald' },
         { label: 'Day Streak', value: streak.currentStreak, icon: Flame, color: 'text-orange-400', bg: 'bg-orange-400/10', glow: 'glass-card-gold' },
     ];
 
@@ -169,7 +183,7 @@ export default function DashboardPage() {
             {/* Hero Welcome Section */}
             <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-indigo-700 to-violet-800 p-8 lg:p-14 shadow-2xl shadow-indigo-500/20 group">
                 <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-                    <div className="text-center lg:text-left space-y-4">
+                    <div className="text-center lg:text-left space-y-4 w-full lg:max-w-xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-indigo-100 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
                            <TrendingUp className="w-3 h-3" />
                            Your path to Chemistry Excellence
@@ -177,9 +191,24 @@ export default function DashboardPage() {
                         <h1 className="text-3xl lg:text-6xl font-extrabold text-white tracking-tight">
                             {greeting}, <span className="text-indigo-200">{user?.name?.split(' ')[0] || 'Student'}</span> 👋
                         </h1>
-                        <p className="text-indigo-100/70 text-lg max-w-xl leading-relaxed font-medium">
+                        <p className="text-indigo-100/70 text-base lg:text-lg leading-relaxed font-medium">
                             Ready to master the elements today? You have new topical lessons and practice quizzes available for your <strong>{activeCurriculum.title}</strong> curriculum.
                         </p>
+
+                        {/* Syllabus Progress Bar */}
+                        <div className="space-y-2 pt-2 max-w-md mx-auto lg:mx-0">
+                            <div className="flex justify-between text-xs font-extrabold text-indigo-200">
+                                <span>SYLLABUS PROGRESS</span>
+                                <span>{progressPercentage}% ({completedCountForTrack}/{totalLessonsInCurriculum} Lessons)</span>
+                            </div>
+                            <div className="w-full h-2 rounded-full bg-white/10 overflow-hidden border border-white/5">
+                                <div 
+                                    className="h-full bg-gradient-to-r from-emerald-400 to-teal-300 rounded-full transition-all duration-1000"
+                                    style={{ width: `${progressPercentage}%` }}
+                                />
+                            </div>
+                        </div>
+
                         <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
                              <Link 
                                  href="/dashboard/lessons" 
@@ -210,6 +239,33 @@ export default function DashboardPage() {
                 <div className="absolute -top-12 -right-12 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none" />
             </div>
+
+            {/* Resume Learning Quick Action */}
+            {user?.lastStudiedLesson && (
+                <div className="glass-card glass-card-indigo border border-indigo-500/10 p-6 rounded-[2rem] flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in slide-in-from-left-4 duration-300">
+                    <div className="flex items-center gap-4">
+                        <div className="p-3.5 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                            <BookOpen className="w-6.5 h-6.5" />
+                        </div>
+                        <div>
+                            <span className="text-[10px] text-slate-500 block font-bold uppercase tracking-wider">Continue Where You Left Off</span>
+                            <span className="text-white font-extrabold text-base sm:text-lg block mt-0.5">
+                                {(user.lastStudiedLesson as any).lessonTitle}
+                            </span>
+                            <span className="text-xs text-indigo-300 font-semibold mt-0.5 block">
+                                Lesson {(user.lastStudiedLesson as any).lessonNum} • {(user.lastStudiedLesson as any).curriculumId.toUpperCase()}
+                            </span>
+                        </div>
+                    </div>
+                    <Link
+                        href={`/dashboard/curriculum/${(user.lastStudiedLesson as any).curriculumId}/${(user.lastStudiedLesson as any).topicId}?lesson=${(user.lastStudiedLesson as any).lessonNum}`}
+                        className="flex items-center justify-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3.5 rounded-xl font-bold transition-all active:scale-95 text-sm cursor-pointer"
+                    >
+                        Resume Learning
+                        <ChevronRight className="w-4 h-4" />
+                    </Link>
+                </div>
+            )}
  
             {/* Stats Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">

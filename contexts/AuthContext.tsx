@@ -23,6 +23,13 @@ export interface AuthUser {
     track?: string;
     xp?: number;
     level?: number;
+    lastStudiedLesson?: {
+        curriculumId: string;
+        topicId: string;
+        lessonNum: number;
+        lessonTitle: string;
+        updatedAt: string;
+    };
 }
 
 interface LoginCredentials {

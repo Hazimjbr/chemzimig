@@ -552,9 +552,9 @@ export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>>
     'edexcel-alevel-unit-1': {
         1: { title: ed_u1_l1_theory.lessonTitle, number: ed_u1_l1_theory.lessonNumber, theory: ed_u1_l1_theory.theoryMarkdown, quiz: ed_u1_l1_quiz.lessonQuiz, parts: ed_u1_l1_theory.parts },
         2: { title: ed_u1_l2_theory.lessonTitle, number: ed_u1_l2_theory.lessonNumber, theory: ed_u1_l2_theory.theoryMarkdown, quiz: ed_u1_l2_quiz.lessonQuiz, parts: ed_u1_l2_theory.parts },
-        3: { title: ed_u1_l3_theory.lessonTitle, number: ed_u1_l3_theory.lessonNumber, theory: ed_u1_l3_theory.theoryMarkdown, quiz: ed_u1_l3_quiz.lessonQuiz },
-        4: { title: ed_u1_l4_theory.lessonTitle, number: ed_u1_l4_theory.lessonNumber, theory: ed_u1_l4_theory.theoryMarkdown, quiz: ed_u1_l4_quiz.lessonQuiz },
-        5: { title: ed_u1_l5_theory.lessonTitle, number: ed_u1_l5_theory.lessonNumber, theory: ed_u1_l5_theory.theoryMarkdown, quiz: ed_u1_l5_quiz.lessonQuiz },
+        3: { title: ed_u1_l3_theory.lessonTitle, number: ed_u1_l3_theory.lessonNumber, theory: ed_u1_l3_theory.theoryMarkdown, quiz: ed_u1_l3_quiz.lessonQuiz, parts: ed_u1_l3_theory.parts },
+        4: { title: ed_u1_l4_theory.lessonTitle, number: ed_u1_l4_theory.lessonNumber, theory: ed_u1_l4_theory.theoryMarkdown, quiz: ed_u1_l4_quiz.lessonQuiz, parts: ed_u1_l4_theory.parts },
+        5: { title: ed_u1_l5_theory.lessonTitle, number: ed_u1_l5_theory.lessonNumber, theory: ed_u1_l5_theory.theoryMarkdown, quiz: ed_u1_l5_quiz.lessonQuiz, parts: ed_u1_l5_theory.parts },
     },
     'edexcel-alevel-unit-2': {
         1: { title: ed_u2_l1_theory.lessonTitle, number: ed_u2_l1_theory.lessonNumber, theory: ed_u2_l1_theory.theoryMarkdown, quiz: ed_u2_l1_quiz.lessonQuiz },
@@ -599,3 +599,5 @@ export function getLessonFromRegistry(track: string, unitNumber: number, lessonN
     const key = `${resolvedTrack}-unit-${unitNumber}`;
     return curriculumRegistry[key]?.[lessonNumber] || null;
 }
+// Trigger rebuild for quiz expansion 20260627
+

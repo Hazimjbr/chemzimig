@@ -1,15 +1,28 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import { 
     User as UserIcon, Shield, Award, Calendar, BookOpen, 
-    Flame, Zap, Trophy, ShieldCheck, Laptop, LogOut
+    Flame, Zap, Trophy, ShieldCheck, Laptop, LogOut, Camera, X as CloseIcon
 } from 'lucide-react';
 
+const PRESET_AVATARS = [
+    { emoji: '🧪', name: 'Flask', color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' },
+    { emoji: '⚛️', name: 'Atom', color: 'bg-blue-500/10 text-blue-400 border-blue-500/20' },
+    { emoji: '🧑‍🔬', name: 'Chemist', color: 'bg-amber-500/10 text-amber-400 border-amber-500/20' },
+    { emoji: '🧬', name: 'DNA', color: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20' },
+    { emoji: '🔥', name: 'Flame', color: 'bg-orange-500/10 text-orange-400 border-orange-500/20' },
+    { emoji: '💎', name: 'Crystal', color: 'bg-sky-500/10 text-sky-400 border-sky-500/20' },
+    { emoji: '⚖️', name: 'Balance', color: 'bg-rose-500/10 text-rose-400 border-rose-500/20' },
+    { emoji: '🌡️', name: 'Thermo', color: 'bg-red-500/10 text-red-400 border-red-500/20' },
+];
+
+const isUrl = (str: string) => str.startsWith('http') || str.startsWith('/') || str.startsWith('data:');
+
 export default function ProfilePage() {
-    const { user, deviceInfo, logout } = useAuth();
+    const { user, deviceInfo, logout, updateUser } = useAuth();
     const { 
         xp, 
         level, 
@@ -21,19 +34,52 @@ export default function ProfilePage() {
         mistakeInbox
     } = useGamification();
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isUpdating, setIsUpdating] = useState(false);
+
     const totalQuizzesSolved = Object.keys(quizScores).length;
+
+    const handleSelectAvatar = async (avatar: string) => {
+        setIsUpdating(true);
+        try {
+            const res = await fetch('/api/profile', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ image: avatar }),
+            });
+            const data = await res.json();
+            if (data.success) {
+                updateUser({ image: avatar });
+                setIsModalOpen(false);
+            } else {
+                alert(data.error || 'Failed to update avatar');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Failed to update avatar');
+        } finally {
+            setIsUpdating(false);
+        }
+    };
 
     return (
         <div className="w-full max-w-4xl mx-auto pb-20 animate-in fade-in duration-500">
             {/* Header Hero Section */}
             <div className="glass-card glass-card-indigo p-8 mb-8 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                <div className="relative group">
-                    <div className="w-24 h-24 rounded-2xl bg-indigo-500/10 border-2 border-indigo-500/30 flex items-center justify-center text-4xl overflow-hidden shadow-inner group-hover:scale-105 transition-transform duration-300">
+                <div className="relative group cursor-pointer" onClick={() => setIsModalOpen(true)}>
+                    <div className="w-24 h-24 rounded-2xl bg-indigo-500/10 border-2 border-indigo-500/30 flex items-center justify-center text-4xl overflow-hidden shadow-inner group-hover:scale-105 transition-all duration-300 relative">
                         {user?.image ? (
-                            <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
+                            isUrl(user.image) ? (
+                                <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
+                            ) : (
+                                <span className="text-5xl">{user.image}</span>
+                            )
                         ) : (
                             '👤'
                         )}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                            <Camera className="w-6 h-6 text-white" />
+                        </div>
                     </div>
                     {user?.isAdmin && (
                         <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-navy-950 p-1.5 rounded-lg shadow-lg" title="Administrator">
@@ -62,6 +108,40 @@ export default function ProfilePage() {
                     </p>
                 </div>
             </div>
+
+            {/* Avatar Selector Modal */}
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-navy-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
+                    <div className="glass-card max-w-md w-full p-6 space-y-6 relative border border-white/10 shadow-2xl">
+                        <button 
+                            onClick={() => setIsModalOpen(false)}
+                            className="absolute top-4 right-4 p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer"
+                        >
+                            <CloseIcon className="w-5 h-5" />
+                        </button>
+                        <div className="space-y-1">
+                            <h3 className="text-xl font-bold text-white">Select Chemistry Avatar</h3>
+                            <p className="text-slate-400 text-xs">Choose a scientific avatar to represent your chemical identity.</p>
+                        </div>
+
+                        <div className="grid grid-cols-4 gap-3">
+                            {PRESET_AVATARS.map((av) => (
+                                <button
+                                    key={av.name}
+                                    onClick={() => handleSelectAvatar(av.emoji)}
+                                    disabled={isUpdating}
+                                    className={`aspect-square rounded-2xl border text-3xl flex flex-col items-center justify-center p-2 transition-all hover:scale-105 hover:bg-white/5 cursor-pointer ${av.color} ${
+                                        user?.image === av.emoji ? 'ring-2 ring-indigo-500 border-transparent' : 'border-white/5'
+                                    }`}
+                                >
+                                    <span>{av.emoji}</span>
+                                    <span className="text-[10px] text-slate-500 font-semibold mt-1">{av.name}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">

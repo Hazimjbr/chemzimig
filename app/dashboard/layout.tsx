@@ -114,7 +114,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         <div className="flex items-center gap-3 px-2">
                             <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-white/10 flex items-center justify-center text-xl overflow-hidden shadow-inner">
                                 {user?.image ? (
-                                    <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
+                                    (user.image.startsWith('http') || user.image.startsWith('/') || user.image.startsWith('data:')) ? (
+                                        <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
+                                    ) : (
+                                        <span className="text-2xl">{user.image}</span>
+                                    )
                                 ) : (
                                     '👤'
                                 )}

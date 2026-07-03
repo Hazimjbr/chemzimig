@@ -94,6 +94,35 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
 9. **Avoiding Confusing End-of-Line Periods:**
    - To prevent student confusion, do not put a period (`.`) at the end of a line if it terminates with a chemical symbol (e.g. `Na`), a number (e.g. `2.3`), or a unit (e.g. `mol/dm3`), as the period could be mistaken for part of the symbol, number, or unit.
 
+10. **LaTeX Escaping in TypeScript Files:**
+    - When writing LaTeX formulas within TypeScript template literals, you **MUST** use **4 backslashes** (`\\\\`) for LaTeX commands (e.g., `\\\\text`, `\\\\implies`, `\\\\_`). Using fewer (e.g., `\\text` or `\_`) will result in parser stripping and incorrect rendering at runtime.
+    - Example: Use `$\\text{Na}$` as `$\\\\text{Na}$` in TS source code.
+
+11. **KaTeX Subscripts vs Markdown Emphasis Collision:**
+    - **The Issue:** The Markdown parser (`react-markdown`) processes content before KaTeX. It will interpret LaTeX subscripts containing parentheses like `_{3(s)}` or `_{(aq)}` as markdown emphasis symbols (e.g., matching the `_` character to start italic formatting), causing render-breaking HTML injection like `<em>` inside LaTeX syntax. This also occurs in blocks with multiple underscores (such as `\\text{C}_8\\text{H}_{18}`).
+    - **The Fixes:** 
+      1. Avoid using braces `_{...}` wrapped around parentheses inside math mode. Instead, write the subscript number first and put the state symbol in a separate `\\text{}` block at normal level.
+         - *Example (Incorrect):* `$\\text{AlCl}_{3(s)}$`
+         - *Example (Correct):* `$\\text{AlCl}_3\\text{(s)}$`
+      2. For narrative inline text, replace complex KaTeX structures with unicode subscripts to completely avoid underscore parsing conflicts.
+         - *Example (Correct):* `cyclohexane (C₆H₁₂)`
+      3. For display equations (blocks with `$$...$$` containing multiple subscripts like `C8H18 > C3H8`), wrap the unicode subscripts inside `$$` tags. This renders the equation on a separate line with a large font size without using any underscores.
+         - *Example (Correct):* `$$C₈H₁₈ > C₃H₈$$`
+
+12. **Escaping Backticks and Backslashes in JavaScript/TypeScript Template Literals:**
+    - **The Issue:** Using raw backticks (`` ` ``) or unescaped backslashes (`\`) inside multiline template strings (which are also enclosed in backticks) breaks JavaScript/TypeScript syntax. The engine treats internal backticks as string terminators, causing compilation failures like `Expected ',', got 'ident'`. Unescaped backslashes (like `/\`) trigger escape errors such as `Expected unicode escape` if followed by specific characters or newlines.
+    - **The Fixes:**
+      1. **Avoid backticks inside template literals:** Do not use markdown inline code blocks containing backticks (e.g., `` `code` ``) inside the lesson parts markdown content. Use bold formatting (`**code**`) or simple quotes instead.
+      2. **Double-escape literal backslashes:** When displaying a literal backslash in text (such as in a skeletal formula structure like `/\`), double-escape it so the compiler evaluates it as a single backslash (e.g., write `/\\`).
+
+13. **Key Study Points Requirements:**
+    - Every individual lesson part (`LessonPart`) registry object must have the `keyPoints` array property defined with relevant key takeaways, summary rules, or common exam pitfalls to provide students with a summary box at the end of each slide.
+
+14. **Markdown Tables inside Blockquotes:**
+    - When writing markdown tables inside blockquotes (`>`), do not indent the table rows (e.g., do not write `>    | Column |`). Instead, start the table characters directly after the blockquote prefix (e.g., `> | Column |`), otherwise the markdown parser fails to parse it as a table and compiles it into a single line.
+
+
+
 # Chat Suppression Rules
 1. **Direct Execution:** When the user requests execution of a command or code implementation using words like "execute", "apply", "run", or "write code", you must output ONLY the code or commands inside a markdown code block. Do NOT include explanations, discussions, apologies, or greetings.
 2. **Explanations & Discussions:** If the user requests explanations or discussions using words like "explain", "discuss", or "what is the issue", you may write normal, detailed explanations and discussions.

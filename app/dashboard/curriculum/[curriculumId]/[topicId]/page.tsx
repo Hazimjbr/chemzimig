@@ -1,9 +1,9 @@
 'use client';
 
-import React, { use, useState, useEffect } from 'react';
+import React, { use, useState, useEffect, useMemo } from 'react';
 import dynamic from 'next/dynamic';
 import { allCurricula } from '@/data/curriculum';
-import { questionBank } from '@/data/exams';
+
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, BrainCircuit, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
@@ -14,6 +14,7 @@ import confetti from 'canvas-confetti';
 import { getLessonFromRegistry } from '@/data/curriculum/registry';
 import TextToSpeech from '@/components/visual/TextToSpeech';
 import LessonNotes from '@/components/visual/LessonNotes';
+import MarkdownCarousel from '@/components/visual/MarkdownCarousel';
 
 const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { ssr: false });
 const GasLawSimulator = dynamic(() => import('@/components/visual/GasLawSimulator'), {
@@ -30,6 +31,7 @@ const MassSpecSimulator = dynamic(() => import('@/components/visual/MassSpecSimu
 });
 
 import { useGamification } from '@/contexts/GamificationContext';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface TopicPageProps {
     params: Promise<{
@@ -120,8 +122,8 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
         );
     }
 
-    if (children.includes('[CUSTOM_TABLE:')) {
-        const parts = children.split(/\[CUSTOM_TABLE:(.*?)\]/g);
+    if (children.includes('@@@CUSTOM_TABLE_START@@@')) {
+        const parts = children.split(/@@@CUSTOM_TABLE_START@@@(.*?)@@@CUSTOM_TABLE_END@@@/g);
         if (parts.length > 1) {
             return (
                 <React.Fragment>
@@ -238,18 +240,69 @@ const formatTrailingSymbolsAndUnits = (text: string): string => {
     // 5. Inline math ending with a number/unit/symbol followed by a period.
     const mathRegex = /\$([^\$]+?(?:\d+|mol|g|dm³|cm³|m³|Pa|kPa|K|NaCl|CO_2|H_2O|Fe|atoms|molecules))\$\./g;
 
-    let processed = text;
-    processed = processed.replace(parenthesizedRegex, '[NOWRAP:($1).]');
-    processed = processed.replace(unitRegex, '[NOWRAP:($1).]');
-    processed = processed.replace(chemRegex, '[NOWRAP:($1).]');
-    processed = processed.replace(mathRegex, '[NOWRAP:$$$1$$.]');
-    processed = processed.replace(/\b(carbon)-(\d+)\./gi, '[NOWRAP:$1-($2).]');
-    processed = processed.replace(numberRegex, '[NOWRAP:($1).]');
+    const parts = text.split(/(@@@CUSTOM_TABLE_START@@@.*?@@@CUSTOM_TABLE_END@@@)/g);
+    for (let i = 0; i < parts.length; i++) {
+        if (i % 2 === 0) {
+            let processed = parts[i];
+            processed = processed.replace(parenthesizedRegex, '[NOWRAP:($1).]');
+            processed = processed.replace(unitRegex, '[NOWRAP:($1).]');
+            processed = processed.replace(chemRegex, '[NOWRAP:($1).]');
+            processed = processed.replace(mathRegex, '[NOWRAP:$$$1$$.]');
+            processed = processed.replace(/\b(carbon)-(\d+)\./gi, '[NOWRAP:$1-($2).]');
+            processed = processed.replace(numberRegex, '[NOWRAP:($1).]');
+            parts[i] = processed;
+        }
+    }
 
-    return processed;
+    return parts.join('');
 };
 
-const mdComponents = {
+const mdComponents: any = {
+    pre: ({ node, children, ...props }: any) => {
+        const isCarousel = node?.children?.[0]?.properties?.className?.includes('language-carousel');
+        if (isCarousel) {
+            return <>{children}</>;
+        }
+        return <pre className="bg-slate-900/50 p-4 rounded-xl border border-white/10 overflow-x-auto my-4 text-sm font-mono text-slate-300" {...props}>{children}</pre>;
+    },
+    code: ({ node, inline, className, children, ...props }: any) => {
+        const match = /language-(\w+)/.exec(className || '');
+        if (!inline && match && match[1] === 'carousel') {
+            const content = String(children).replace(/\n$/, '');
+            const slides = content.split('<!-- slide -->').map((s: string) => s.trim()).filter((s: string) => s !== '');
+
+            // Custom components for carousel to render SVGs at full width and correct aspect ratio
+            const carouselMdComponents = {
+                ...mdComponents,
+                img: ({ node, src, alt, ...imgProps }: any) => {
+                    const srcWithBuster = src ? `${src}?v=${Date.now()}` : src;
+                    return (
+                        <div className="flex justify-center w-full max-w-[500px] my-2">
+                            <img
+                                src={srcWithBuster}
+                                alt={alt || ''}
+                                style={{ width: '100%', height: 'auto', aspectRatio: '400 / 250' }}
+                                className="rounded-xl border border-white/10 shadow-lg"
+                                {...imgProps}
+                            />
+                        </div>
+                    );
+                }
+            };
+
+            const slideNodes = slides.map((slide: string, idx: number) => (
+                <ReactMarkdown key={idx} components={carouselMdComponents}>
+                    {slide}
+                </ReactMarkdown>
+            ));
+            return <MarkdownCarousel slides={slideNodes} />;
+        }
+        return (
+            <code className={className} {...props}>
+                {children}
+            </code>
+        );
+    },
     p: ({ node, children, ...props }: any) => <div className="text-slate-300 leading-relaxed mb-4" {...props}>{renderTextWithMath(children)}</div>,
     h2: ({ node, children, ...props }: any) => <h2 className="text-2xl font-bold text-white mt-8 mb-4 border-b border-white/10 pb-2" {...props}>{renderTextWithMath(children)}</h2>,
     h3: ({ node, children, ...props }: any) => <h3 className="text-xl font-semibold text-indigo-300 mt-6 mb-3" {...props}>{renderTextWithMath(children)}</h3>,
@@ -414,21 +467,16 @@ const renderContentWithTables = (content: string) => {
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const trimmed = line.trim();
-        const isTableLine = trimmed.startsWith('|') || trimmed.startsWith('> |');
+        const isTableLine = /^(>?\s*\|)/.test(trimmed);
 
         if (isTableLine) {
             currentTableLines.push(line);
         } else {
             if (currentTableLines.length > 0) {
-                const isBlockquoteTable = currentTableLines[0].trim().startsWith('>');
+                const isBlockquoteTable = /^\s*>/.test(currentTableLines[0]);
                 const prefix = isBlockquoteTable ? '> ' : '';
-                const encoded = encodeURIComponent(currentTableLines.join('\n'))
-                    .replace(/\(/g, '%28')
-                    .replace(/\)/g, '%29')
-                    .replace(/\[/g, '%5B')
-                    .replace(/\]/g, '%5D')
-                    .replace(/\*/g, '%2A');
-                processedLines.push(`${prefix}[CUSTOM_TABLE:${encoded}]`);
+                const encoded = encodeURIComponent(currentTableLines.join('\n'));
+                processedLines.push(`${prefix}@@@CUSTOM_TABLE_START@@@${encoded}@@@CUSTOM_TABLE_END@@@`);
                 currentTableLines = [];
             }
             processedLines.push(line);
@@ -436,15 +484,10 @@ const renderContentWithTables = (content: string) => {
     }
 
     if (currentTableLines.length > 0) {
-        const isBlockquoteTable = currentTableLines[0].trim().startsWith('>');
+        const isBlockquoteTable = /^\s*>/.test(currentTableLines[0]);
         const prefix = isBlockquoteTable ? '> ' : '';
-        const encoded = encodeURIComponent(currentTableLines.join('\n'))
-            .replace(/\(/g, '%28')
-            .replace(/\)/g, '%29')
-            .replace(/\[/g, '%5B')
-            .replace(/\]/g, '%5D')
-            .replace(/\*/g, '%2A');
-        processedLines.push(`${prefix}[CUSTOM_TABLE:${encoded}]`);
+        const encoded = encodeURIComponent(currentTableLines.join('\n'));
+        processedLines.push(`${prefix}@@@CUSTOM_TABLE_START@@@${encoded}@@@CUSTOM_TABLE_END@@@`);
     }
 
     return (
@@ -466,14 +509,15 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
     const lessonData = getLessonFromRegistry(track, topic?.number || 1, currentLessonNum);
     const theoryContent = lessonData ? lessonData.theory : (topic ? topic.theory : '');
 
-    const topicQuestions = questionBank.filter(q => q.topic === (topic?.id || ''));
 
-    // Gamification hooks
+    // Gamification & Auth hooks
     const { completeLesson, addXP } = useGamification();
+    const { updateUser } = useAuth();
 
     // State for interactive lesson player
     const [currentPartIndex, setCurrentPartIndex] = useState(0);
     const [completed, setCompleted] = useState(false);
+    const [sidebarOpen, setSidebarOpen] = useState(true);
 
     // Interactive Quiz State
     const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
@@ -491,6 +535,32 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
         setQuizCompleted(false);
     }, [lesson]);
 
+    // Save last studied lesson state
+    useEffect(() => {
+        if (lessonData && topic && curriculum) {
+            const saveLastStudied = async () => {
+                try {
+                    const lastStudied = {
+                        curriculumId,
+                        topicId,
+                        lessonNum: currentLessonNum,
+                        lessonTitle: lessonData.title || topic.title || 'Chemistry Lesson',
+                        updatedAt: new Date().toISOString()
+                    };
+                    await fetch('/api/profile', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ lastStudiedLesson: lastStudied }),
+                    });
+                    updateUser({ lastStudiedLesson: lastStudied } as any);
+                } catch (e) {
+                    console.error('Failed to save last studied lesson:', e);
+                }
+            };
+            saveLastStudied();
+        }
+    }, [curriculumId, topicId, currentLessonNum, lessonData, topic, curriculum]);
+
     if (!curriculum || !topic) {
         return (
             <div className="flex flex-col items-center justify-center h-full text-center py-20">
@@ -504,7 +574,22 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
     const hasParts = lessonData && lessonData.parts && lessonData.parts.length > 0;
     const rawPartsList = lessonData?.parts || [];
-    const lessonQuiz = lessonData?.quiz || [];
+    const rawLessonQuiz = lessonData?.quiz || [];
+
+    // Shuffle options once when the lesson data changes
+    const lessonQuiz = useMemo(() => {
+        return rawLessonQuiz.map(question => {
+            const options = [...question.options];
+            for (let i = options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [options[i], options[j]] = [options[j], options[i]];
+            }
+            return {
+                ...question,
+                options
+            };
+        });
+    }, [rawLessonQuiz]);
 
     const partsList = [...rawPartsList];
     if (hasParts && lessonQuiz.length > 0) {
@@ -590,31 +675,33 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                 {hasParts ? (
                     <div className="flex flex-1 overflow-hidden min-h-0">
                         {/* Sidebar list of lesson parts - Independently scrollable */}
-                        <aside className="w-64 flex-shrink-0 border-r border-white/10 overflow-y-auto p-5 bg-white/[0.02] hidden md:block">
-                            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Lesson Parts</h3>
-                            <div className="flex flex-col gap-2">
-                                {partsList.map((part, idx) => (
-                                    <button
-                                        key={part.id}
-                                        onClick={() => {
-                                            setCurrentPartIndex(idx);
-                                            setCompleted(false);
-                                        }}
-                                        className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2.5 cursor-pointer ${currentPartIndex === idx
-                                            ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400'
-                                            : 'border border-transparent text-slate-400 hover:text-white hover:bg-white/5'
-                                            }`}
-                                    >
-                                        <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold border ${currentPartIndex === idx ? 'border-indigo-400 text-indigo-400' : 'border-slate-600 text-slate-500'
-                                            }`}>
-                                            {idx + 1}
-                                        </div>
-                                        <span className="truncate flex-1">{part.title}</span>
-                                        {idx < currentPartIndex && <CheckCircle size={12} className="text-emerald-500 ml-auto" />}
-                                    </button>
-                                ))}
-                            </div>
-                        </aside>
+                        {sidebarOpen && (
+                            <aside className="w-64 flex-shrink-0 border-r border-white/10 overflow-y-auto p-5 bg-white/[0.02] hidden md:block">
+                                <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Lesson Parts</h3>
+                                <div className="flex flex-col gap-2">
+                                    {partsList.map((part, idx) => (
+                                        <button
+                                            key={part.id}
+                                            onClick={() => {
+                                                setCurrentPartIndex(idx);
+                                                setCompleted(false);
+                                            }}
+                                            className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2.5 cursor-pointer ${currentPartIndex === idx
+                                                ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400'
+                                                : 'border border-transparent text-slate-400 hover:text-white hover:bg-white/5'
+                                                }`}
+                                        >
+                                            <div className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-bold border ${currentPartIndex === idx ? 'border-indigo-400 text-indigo-400' : 'border-slate-600 text-slate-500'
+                                                }`}>
+                                                {idx + 1}
+                                            </div>
+                                            <span className="truncate flex-1">{part.title}</span>
+                                            {idx < currentPartIndex && <CheckCircle size={12} className="text-emerald-500 ml-auto flex-shrink-0" />}
+                                        </button>
+                                    ))}
+                                </div>
+                            </aside>
+                        )}
 
                         {/* Active Slide Content Area - Independently scrollable */}
                         <div className="flex-1 flex flex-col overflow-hidden min-h-0">
@@ -630,9 +717,18 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
                                 {/* Title Header with TextToSpeech */}
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white/5 p-4 rounded-xl border border-white/10 flex-shrink-0">
-                                    <div>
-                                        <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Part {currentPartIndex + 1} of {partsList.length}</span>
-                                        <h2 className="text-lg font-bold text-white mt-0.5">{currentPart.title}</h2>
+                                    <div className="flex items-center gap-3">
+                                        <button 
+                                            onClick={() => setSidebarOpen(!sidebarOpen)}
+                                            className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer hidden md:flex items-center justify-center border border-white/5"
+                                            title={sidebarOpen ? "Collapse Lesson Parts" : "Expand Lesson Parts"}
+                                        >
+                                            {sidebarOpen ? <ChevronLeft className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
+                                        </button>
+                                        <div>
+                                            <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Part {currentPartIndex + 1} of {partsList.length}</span>
+                                            <h2 className="text-lg font-bold text-white mt-0.5">{currentPart.title}</h2>
+                                        </div>
                                     </div>
                                     {currentPart.id !== 'interactive-quiz' && (
                                         <TextToSpeech text={currentPart.content} title={currentPart.title} />
@@ -733,7 +829,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                                     onClick={() => handleSelectOption(quizActiveIndex, oIdx)}
                                                                     className={`w-full text-left p-4 rounded-xl border transition-all text-sm flex items-center justify-between ${optionStyle} ${!isAnswered ? 'cursor-pointer' : ''}`}
                                                                 >
-                                                                    <span>{String.fromCharCode(65 + oIdx)}. {opt.text}</span>
+                                                                    <span>{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
                                                                     {isAnswered && isCorrect && <span className="text-emerald-400 text-xs font-bold bg-emerald-500/10 px-2 py-0.5 rounded-md">Correct</span>}
                                                                     {isAnswered && isSelected && !isCorrect && <span className="text-rose-400 text-xs font-bold bg-rose-500/10 px-2 py-0.5 rounded-md">Incorrect</span>}
                                                                 </button>
@@ -861,3 +957,4 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
         </div>
     );
 }
+// Force compile update 20260627

@@ -13,11 +13,11 @@ This lesson covers subatomic particles, mass spectrometry, relative isotopic and
 `;
 
 export const parts: LessonPart[] = [
-    {
-        id: 'subatomic-particles-20260106',
-        title: 'Subatomic Particles & Isotopes',
-        type: 'text',
-        content: `
+  {
+    id: 'subatomic-particles-20260106',
+    title: 'Subatomic Particles & Isotopes',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### ⚛️ Fundamental Subatomic Particles
 > All atoms (except $^1_1\\text{H}$) consist of three sub-particles. The mass of these particles is measured in atomic mass units because they are very light
@@ -88,18 +88,18 @@ export const parts: LessonPart[] = [
 > >    * The $-1$ charge indicates a gain of 1 electron
 > >    * Electrons = Protons $+$ Charge magnitude = $17 + 1 = 18$
         `,
-        keyPoints: [
-            'Protons and neutrons occupy the dense central nucleus.',
-            'Isotopes share identical electronic structures, resulting in identical chemical reactivity.',
-            'Cations are formed by losing electrons; anions are formed by gaining electrons.'
-        ]
-    },
-    {
-        id: 'mass-spectrometry-20260106',
-        title: 'Mass Spectrometry',
-        type: 'text',
-        massSpecSimulator: true,
-        content: `
+    keyPoints: [
+      'Protons and neutrons occupy the dense central nucleus.',
+      'Isotopes share identical electronic structures, resulting in identical chemical reactivity.',
+      'Cations are formed by losing electrons; anions are formed by gaining electrons.'
+    ]
+  },
+  {
+    id: 'mass-spectrometry-20260106',
+    title: 'Mass Spectrometry',
+    type: 'text',
+    massSpecSimulator: true,
+    content: `
 > [!NOTE]
 > ### ⚙️ Principles of Mass Spectrometry
 > A **Mass Spectrometer** is a highly sensitive analytical instrument. The operation of a mass spectrometer follows five key steps:
@@ -442,122 +442,402 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 > > 1. **Deduce possible isotopic combinations for $\\text{Br}_2$:**
 > >    * Combination 1: $^{79}\\text{Br} - ^{79}\\text{Br} \\implies m/z = 79 + 79 = 158$
 > >    * Combination 2: $^{79}\\text{Br} - ^{81}\\text{Br}$ or $^{81}\\text{Br} - ^{79}\\text{Br} \\implies m/z = 79 + 81 = 160$
-> >    * Combination 3: $^{81}\\text{Br} - ^{81}\\text{Br} \\implies m/z = 81 + 81 = 162$
-> > 2. **Calculate the probability of each combination (using $1:1$ ratio):**
-> >    * Probability of $^{158}\\text{Br}_2^+ = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$
-> >    * Probability of $^{160}\\text{Br}_2^+ = 2 \\times \\left(\\frac{1}{2} \\times \\frac{1}{2}\\right) = \\frac{1}{2}$
-> >    * Probability of $^{162}\\text{Br}_2^+ = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$
-> > 3. **Deduce peak height ratio:**
-> >    * Converting probabilities ($\\frac{1}{4} : \\frac{2}{4} : \\frac{1}{4}$) gives a simplified ratio:
-> >      $$\\text{Ratio of peaks (158 : 160 : 162)} = 1:2:1$$
-         `,
-        keyPoints: [
-            'All ions in a TOF spectrometer are accelerated to have the same kinetic energy.',
-            'Velocity is inversely proportional to the square root of isotopic mass; lighter ions reach the detector first.',
-            'The abundance signal corresponds to the current generated as ions hit the detector.'
-        ]
-    },
-    {
-        id: 'electronic-configurations-20260106',
-        title: 'Electronic Configurations',
-        type: 'text',
-        content: `
-### 3. Orbitals & Electronic Configurations
-Electrons occupy specific regions of space called **atomic orbitals** within subshells.
-
-* **Principal Quantum Shells ($n$):** Main energy levels ($n = 1, 2, 3, 4$).
-* **Subshells:** Shells are divided into $s, p, d,$ and $f$ subshells.
-* **Atomic Orbital:** A region of space where there is a high probability (usually $>95\\%$) of finding an electron. Each orbital can hold a **maximum of 2 electrons** with opposite spins.
-
-| Subshell | Number of Orbitals | Maximum Electrons | Orbital Shape |
-| :---: | :---: | :---: | :---: |
-| **s** | $1$ | $2$ | Spherical |
-| **p** | $3$ | $6$ | Dumbbell-shaped ($p_x, p_y, p_z$) |
-| **d** | $5$ | $10$ | Complex |
-
-#### 📐 Rules for Filling Orbitals:
-1. **Aufbau Principle:** Electrons fill orbitals in order of increasing energy (e.g., $1s$ then $2s$, $2p$, $3s$, $3p$, $4s$, $3d$).
-2. **Hund's Rule:** Electrons occupy degenerate (equal energy) orbitals singly before pairing up, keeping spins parallel to minimize electron-electron repulsion.
-3. **Pauli Exclusion Principle:** Two electrons in the same orbital must have opposite spins.
-
-⚠️ **Exceptions (Transition Elements Chromium & Copper):**
-* **Chromium ($Z = 24$):** $[\\text{Ar}] 4s^1 3d^5$ (not $4s^2 3d^4$) to achieve a more stable half-filled $d$-subshell.
-* **Copper ($Z = 29$):** $[\\text{Ar}] 4s^1 3d^{10}$ (not $4s^2 3d^9$) to achieve a more stable fully-filled $d$-subshell.
-
----
-
-> [!EXAMPLE]
-> #### 📝 Worked Example: Electronic Configuration of Ions
-> **Question:** > Write the full electronic configuration for:
-> 1. $\\text{S}^{2-}$ ion ($Z = 16$).
-> 2. $\\text{Fe}^{2+}$ ion ($Z = 26$).
+> **Question:** Bromine has two naturally occurring isotopes: $^{79}\text{Br}$ (abundance $50.7\%$) and $^{81}\text{Br}$ (abundance $49.3\%$), which can be approximated as a $1:1$ ratio. Describe the expected molecular ion peaks in the mass spectrum of diatomic bromine gas ($\text{Br}_2$) and deduce their relative peak height ratio
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
-> > > > 1. **For $\\text{S}^{2-}$ ion:**
-> >    * Neutral sulfur atom: $1s^2 2s^2 2p^6 3s^2 3p^4$
-> >    * Sulfur gained 2 electrons to form $\\text{S}^{2-}$:
-> >      $$\\text{S}^{2-} = 1s^2 2s^2 2p^6 3s^2 3p^6\\text{ (Noble gas configuration of Ar)}$$
 > > 
-> > 2. **For $\\text{Fe}^{2+}$ ion:**
-> >    * Neutral iron atom: $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^6$
-> >    * **Rule:** Transition metals lose electrons from the $4s$ orbital **before** the $3d$ orbital.
-> >    * Remove 2 electrons from the $4s$ shell:
-> >      $$\\text{Fe}^{2+} = 1s^2 2s^2 2p^6 3s^2 3p^6 3d^6\\text{ (or } [\\text{Ar}] 3d^6\\text{)}$$
+> > 1. **Deduce possible isotopic combinations for $\text{Br}_2$:**
+> >    * Combination 1: $^{79}\text{Br} - ^{79}\text{Br} \implies m/z = 79 + 79 = 158$
+> >    * Combination 2: $^{79}\text{Br} - ^{81}\text{Br}$ or $^{81}\text{Br} - ^{79}\text{Br} \implies m/z = 79 + 81 = 160$
+> >    * Combination 3: $^{81}\text{Br} - ^{81}\text{Br} \implies m/z = 81 + 81 = 162$
+> > 2. **Calculate the probability of each combination (using $1:1$ ratio):**
+> >    * Probability of $^{158}\text{Br}_2^+ = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$
+> >    * Probability of $^{160}\text{Br}_2^+ = 2 \times \left(\frac{1}{2} \times \frac{1}{2}\right) = \frac{1}{2}$
+> >    * Probability of $^{162}\text{Br}_2^+ = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}$
+> > 3. **Deduce peak height ratio:**
+> >    * Converting probabilities ($\frac{1}{4} : \frac{2}{4} : \frac{1}{4}$) gives a simplified ratio:
+> >      $$\text{Ratio of peaks (158 : 160 : 162)} = 1:2:1$$
+         `,
+    keyPoints: [
+      'All ions in a TOF spectrometer are accelerated to have the same kinetic energy.',
+      'Velocity is inversely proportional to the square root of isotopic mass; lighter ions reach the detector first.',
+      'The abundance signal corresponds to the current generated as ions hit the detector.'
+    ]
+  },
+  {
+    id: 'electronic-configurations-20260106',
+    title: 'Electronic Configurations & Periodic Trends',
+    type: 'text',
+    content: `
+> [!NOTE]
+> ### ⚛️ Principal Quantum Shells and Sublevels
+> * **Quantum Shells (Main Energy Levels):** Represented by the principal quantum number $n$ ($n = 1, 2, 3, 4$). Each shell can hold a maximum of $2n^2$ electrons
+> * **Sublevels:** Each main quantum shell is made up of sublevels of different energies. These are designated as $s$, $p$, $d$, and $f$ subshells
+> * **Sublevels and Orbitals:** Each sublevel is made up of one or more orbitals of the same energy (degenerate orbitals)
+> * **Valence Electrons:** The electrons in the outermost shell. Valence electrons determine the chemical properties of an element since each atom likes to achieve an electronic configuration similar to the closest noble gas by losing, gaining, or sharing electrons
+
+> [!IMPORTANT]
+> ### 🧮 Orbitals and Filling Sequence
+> * **Orbital:** A region within an atom where there is a high probability (usually $>95\%$) of finding an electron. Each orbital can hold up to $2$ electrons with opposite spins
+> * **Types of Orbitals:**
+>    * **s orbital:** One spherical orbital per shell, present in all shells
+>    * **p orbitals:** Three dumbbell-shaped orbitals ($p_x, p_y, p_z$) orientated along perpendicular axes, present from $n \ge 2$
+> * **Energy Sequence:** Electrons fill orbitals in order of increasing energy:
+>   $$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^{10} 4p^6 5s^2 4d^{10} 5p^6 6s^2 4f^{14} 5d^{10} 6p^6 7s^2 5f^{14} 6d^{10} 7p^6 8s^2$$
+> * **Model Development:** The electronic structure model has been developed from:
+>    * Successive ionization energies of an element, which provide evidence for the existence of quantum shells and the group to which the element belongs
+>    * First ionization energy of successive elements, which provides evidence for electron sub-shells
+
+> [!TIP]
+> ### 🧪 Rules for Filling Orbitals
+> * **Aufbau Principle:** Electrons fill orbitals of lowest energy first (e.g., $1s$ before $2s$, $2s$ before $2p$)
+> * **Pauli Exclusion Principle:** An atomic orbital can hold a maximum of two electrons, and these two electrons must have opposite spins
+> * **Hund's Rule:** For degenerate orbitals (orbitals of the same energy, like the three $2p$ orbitals), electrons will fill them singly with parallel spins before pairing up to minimize electron-electron repulsion
+
+> [!WARNING]
+> ### ⚠️ Anomalous Electronic Configurations
+> Transition metals fill orbitals starting from lower to higher energy. However, Chromium ($Z = 24$) and Copper ($Z = 29$) have anomalous configurations because half-filled or completely filled $d$-subshells are exceptionally stable:
+> * **Chromium ($^{52}\\_{ 24}\\text{Cr}$):** Expected [Ar] $4s^2 3d^4$ → actual configuration is [Ar] $4s^1 3d^5$
+> * **Copper ($^{63}\\_{ 29}\\text{Cu}$):** Expected [Ar] $4s^2 3d^9$ → actual configuration is [Ar] $4s^1 3d^{10}$
+> 
+> *Note:* When transition metals form ions, they always lose the $4s$ electrons before the $3d$ electrons.
+
+> [!BOX]
+> ### 📋 Periodic Table Blocks and Structure
+> * **Blocks:** The Periodic Table is divided into $s$, $p$, $d$, and $f$ blocks depending on which subshell contains the outer valence electrons
+> * **Period Number:** Indicates the number of quantum energy shells containing electrons
+> * **Group Number:** Indicates the number of electrons in the outer shell (valence electrons)
+> * **Shielding Effect:** The repulsion between filled inner (core) shells and the furthest (outer) valence electrons, which reduces the nuclear attraction felt by the outer electrons
+
+> [!NOTE]
+> ### 📏 Factors Determining Atomic Radius
+> Three key factors determine atomic radius (in order of priority):
+> 
+> 1. **Outer Shell Number (Quantum Shells):** As the number of quantum shells increases, the shielding shells increase, which increases the atomic radius:
+>    * e.g. $^{23}\\_{ 11}\\text{Na}$ (2,8,1) > $^{7}\\_{ 3}\\text{Li}$ (2,1)
+> 2. **Nuclear Charge (Proton Number):** For species with the same shielding, as the nuclear charge increases, the electrostatic attraction between the nucleus and the valence electrons becomes stronger, decreasing the atomic radius:
+>    * e.g. $^{23}\\_{ 11}\\text{Na} > {}^{24}\\_{ 12}\\text{Mg}$
+> 3. **Electron Number (Repulsion):** For species with the same nuclear charge (isotopes or ions), as the number of electrons increases, the electron-electron repulsion increases, which increases the volume (radius):
+>    * e.g. $^{35.5}\\_{ 17}\\text{Cl}^- > {}^{35.5}\\_{ 17}\\text{Cl}$
+
+> [!IMPORTANT]
+> ### ⚖️ Definitions and Radius Trends
+> * **Bond Length:** The average distance between the nuclei of two covalently bonded atoms
+> * **Atomic Radius:** Half the distance between two nuclei of two similar atoms in a diatomic molecule
+> * **Attraction Strength:** As the atomic radius decreases, the attraction forces between the nucleus and electrons increase
+> * **Periodic Trend (Across a Period):** Atomic radius decreases across a period because the nuclear charge increases (more protons) while electron shielding remains constant
+> * **Group Trend (Down a Group):** Atomic radius increases down a group because the number of quantum shells increases
+
+> [!BOX]
+> ### 📋 Ionic Radius Trends
+> * **Positive Ions (Cations):** Cations are smaller than their parent atoms because they have fewer shells or have the same number of protons but fewer shielding electrons:
+>   * e.g. $^{23}\\_{ 11}\\text{Na}$ (2,8,1) > $^{23}\\_{ 11}\\text{Na}^+$ (2,8)
+> * **Cations with Higher Charge:** A cation with a higher charge is smaller than one with a lower charge because it has the same proton number, same shielding, but less electron repulsion:
+>   * e.g. $^{56}\\_{ 26}\\text{Fe}^{2+} > {}^{56}\\_{ 26}\\text{Fe}^{3+}$
+> * **Negative Ions (Anions):** Anions are larger than their parent atoms because they have the same proton number but increased electron repulsion:
+>   * e.g. $^{35.5}\\_{ 17}\\text{Cl}^- > {}^{35.5}\\_{ 17}\\text{Cl}$
+> * **Isoelectronic Ions:** Ions that have the same number of electrons (same electronic configuration):
+>   * e.g. $\\text{Na}^+$, $\\text{F}^-$, $\\text{Mg}^{2+}$, $\\text{O}^{2-}$
+>   * For these ions, radius decreases as nuclear charge (proton number) increases: $\\text{O}^{2-} > \\text{F}^- > \\text{Na}^+ > \\text{Mg}^{2+}$
+> 
+> ---
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1: Electronic Configuration of Chromium
+> **Question:** Write the full electronic configuration of a Chromium atom ($^{52}\\_{ 24}\\text{Cr}$) and explain why it is anomalous
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine the number of electrons:**
+> >    * Chromium has an atomic number of $24$, meaning a neutral atom has $24$ electrons
+> > 2. **Apply the Aufbau principle and identify the anomaly:**
+> >    * Following regular filling, the expected configuration is $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^4$
+> >    * However, having a half-filled $d$-subshell ($3d^5$) is more stable than a partially filled $3d^4$ subshell
+> > 3. **Write the actual configuration:**
+> >    * One electron from $4s$ is promoted to $3d$ to achieve two half-filled subshells:
+> >      * Cr = $1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 3d^5$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Comparing Ionic Radii of Isoelectronic Species
+> **Question:** Arrange the following isoelectronic species in order of decreasing radius: $\\text{O}^{2-}$, $\\text{F}^-$, $\\text{Na}^+$, $\\text{Mg}^{2+}$ and justify your arrangement
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Count the number of electrons and protons for each ion:**
+> >    * All four ions have $10$ electrons (isoelectronic)
+> >    * $\\text{O}^{2-}$ has $8$ protons
+> >    * $\\text{F}^-$ has $9$ protons
+> >    * $\\text{Na}^+$ has $11$ protons
+> >    * $\\text{Mg}^{2+}$ has $12$ protons
+> > 2. **Analyze the nuclear charge effect:**
+> >    * As proton number increases, nuclear charge increases while shielding remains the same (all have $10$ core/valence electrons in $1s^2 2s^2 2p^6$)
+> >    * A stronger nuclear charge pulls the electrons closer, decreasing the radius
+> > 3. **Order by decreasing radius (largest to smallest):**
+> >    * $\\text{O}^{2-} > \\text{F}^- > \\text{Na}^+ > \\text{Mg}^{2+}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Unpaired Electrons in Transition Metal Ions
+> **Question:** Identify which of the following transition metal ions contains the greatest number of unpaired electrons in its ground state: $\\text{Cr}^{3+}$, $\\text{Fe}^{2+}$, $\\text{Fe}^{3+}$, or $\\text{Ni}^{2+}$ (Atomic numbers: $\\text{Cr} = 24$, $\\text{Fe} = 26$, $\\text{Ni} = 28$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the electronic configuration of the neutral atoms:**
+> >    * $\\text{Cr} = [\\text{Ar}] 4s^1 3d^5$ (anomalous stability)
+> >    * $\\text{Fe} = [\\text{Ar}] 4s^2 3d^6$
+> >    * $\\text{Ni} = [\\text{Ar}] 4s^2 3d^8$
+> > 2. **Remove electrons to form the cations (losing $4s$ electrons first):**
+> >    * $\\text{Cr}^{3+}$: Lose one $4s$ and two $3d$ electrons $\\implies [\\text{Ar}] 3d^3$
+> >    * $\\text{Fe}^{2+}$: Lose two $4s$ electrons $\\implies [\\text{Ar}] 3d^6$
+> >    * $\\text{Fe}^{3+}$: Lose two $4s$ and one $3d$ electron $\\implies [\\text{Ar}] 3d^5$
+> >    * $\\text{Ni}^{2+}$: Lose two $4s$ electrons $\\implies [\\text{Ar}] 3d^8$
+> > 3. **Apply Hund's rule to find the number of unpaired electrons in the $3d$ subshell:**
+> >    * $3d^3$: 3 unpaired electrons (singly occupied orbitals)
+> >    * $3d^6$: 4 unpaired electrons (1 pair, 4 singly occupied orbitals)
+> >    * $3d^5$: 5 unpaired electrons (5 singly occupied orbitals)
+> >    * $3d^8$: 2 unpaired electrons (3 pairs, 2 singly occupied orbitals)
+> >    * Therefore, the ion with the greatest number of unpaired electrons is $\\text{Fe}^{3+}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Electronic Configuration of Copper(II) Ion
+> **Question:** Deduce the correct electronic configuration of the $\\text{Cu}^{2+}$ ion in its ground state (Atomic number: $\\text{Cu} = 29$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the electronic configuration of a neutral Copper atom:**
+> >    * A neutral Copper atom has 29 electrons. Due to the extra stability of a fully-filled $3d$ subshell, its configuration is:
+> >      $$\\text{Cu} = 1s^2 2s^2 2p^6 3s^2 3p^6 4s^1 3d^{10}$$
+> > 2. **Apply the rule for transition metal ion formation:**
+> >    * When transition metals form ions, electrons are always lost from the $4s$ subshell before the $3d$ subshell
+> > 3. **Remove two electrons to form the $2+$ ion:**
+> >    * We remove the single electron from the $4s$ orbital and one electron from the $3d$ orbitals:
+> >      $$\\text{Cu}^{2+} = 1s^2 2s^2 2p^6 3s^2 3p^6 3d^9$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Occupied Orbitals in a Sulfur Atom
+> **Question:** Determine how many orbitals contain at least one electron in a ground-state Sulfur atom, $\\text{S}$ (Atomic number $Z = 16$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the full electronic configuration of Sulfur:**
+> >    * Sulfur has 16 electrons:
+> >      $$\\text{S} = 1s^2 2s^2 2p^6 3s^2 3p^4$$
+> > 2. **Break down the orbitals in each subshell:**
+> >    * The $1s$ subshell has 1 orbital containing 2 electrons
+> >    * The $2s$ subshell has 1 orbital containing 2 electrons
+> >    * The $2p$ subshell has 3 orbitals containing 6 electrons
+> >    * The $3s$ subshell has 1 orbital containing 2 electrons
+> > 3. **Apply Hund's rule to the $3p$ subshell:**
+> >    * The $3p$ subshell contains 4 electrons distributed across 3 orbitals
+> >    * According to Hund's rule, electrons fill degenerate orbitals singly first before pairing:
+> >      * 1 orbital contains a pair of electrons
+> >      * 2 orbitals each contain a single unpaired electron
+> >      * Thus, all 3 orbitals in the $3p$ subshell contain at least one electron
+> > 4. **Calculate the total number of occupied orbitals:**
+> >    * Total occupied orbitals = $1 \\text{ (from } 1s) + 1 \\text{ (from } 2s) + 3 \\text{ (from } 2p) + 1 \\text{ (from } 3s) + 3 \\text{ (from } 3p)$
+> >    * This gives a total of 9 occupied orbitals
         `,
-        keyPoints: [
-            'An orbital is a probability density map holding at most two paired electrons.',
-            '4s is filled before 3d because it is at a lower energy level in neutral atoms.',
-            '4s is lost before 3d when transition metal cations are formed.'
-        ]
-    },
-    {
-        id: 'ionization-energies-20260106',
-        title: 'Ionization Energies',
-        type: 'text',
-        content: `
-### 4. Ionization Energies
-* **First Ionization Energy ($I_1$):** The energy required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous $1+$ ions.
-  $$\\text{X(g)} \\rightarrow \\text{X}^+\\text{(g)} + e^-$$
-* **Second Ionization Energy ($I_2$):** The energy required to remove one mole of electrons from one mole of gaseous $1+$ ions to form one mole of gaseous $2+$ ions.
-  $$\\text{X}^+\\text{(g)} \\rightarrow \\text{X}^{2+}\\text{(g)} + e^-$$
+    keyPoints: [
+      'An orbital is a probability density map holding at most two paired electrons.',
+      '4s is filled before 3d because it is at a lower energy level in neutral atoms.',
+      '4s is lost before 3d when transition metal cations are formed.'
+    ]
+  },
+  {
+    id: 'ionization-energies-20260106',
+    title: 'Ionization Energies & Periodic Trends',
+    type: 'text',
+    content: `
+> [!NOTE]
+> ### ⚡ Evidence for Electronic Structure
+> The modern model of the atom and its electronic structure was developed based on key experimental evidence:
+> 
+> 1. **Successive Ionization Energies:** The energy patterns when removing electrons one by one from an element provide direct evidence for the existence of quantum shells (energy levels) and the specific group to which the element belongs
+> 2. **First Ionization Energies of Successive Elements:** The trends across periods and groups provide direct evidence for the existence of electron sub-shells ($s$, $p$, $d$, and $f$ orbitals)
 
-#### 📈 Periodic Trends in First Ionization Energy:
-* **Down a Group:** Decreases. Nuclear charge increases, but atomic radius and electron shielding increase significantly. Outer electron is further from the nucleus and less strongly attracted.
-* **Across a Period:** Generally increases. Nuclear charge increases, shielding remains constant, atomic radius decreases. Outer electron is more strongly attracted.
+> [!IMPORTANT]
+> ### 🧮 What is Ionization Energy?
+> **Ionization Energy ($I.E.$):** The amount of energy required (an endothermic process, $\\\\Delta H > 0$) to completely remove the most loosely bound (outermost) electron from each gaseous atom/ion in one mole to form one mole of positive gaseous ions.
+> 
+> * **First Ionization Energy ($I_1$):** Energy required to remove one electron from each atom in one mole of gaseous atoms to form one mole of gaseous $1+$ ions:
+>   $$\\\\text{Cl(g)} \\\\rightarrow \\\\text{Cl}^+\\\\text{(g)} + e^-$$
+> * **Second Ionization Energy ($I_2$):** Energy required to remove one electron from each $1+$ ion in one mole of gaseous ions to form one mole of gaseous $2+$ ions:
+>   $$\\\\text{Br}^+\\\\text{(g)} \\\\rightarrow \\\\text{Br}^{2+}\\\\text{(g)} + e^-$$
+> * **Third Ionization Energy ($I_3$):** Energy required to remove one electron from each $2+$ ion in one mole of gaseous ions to form one mole of gaseous $3+$ ions:
+>   $$\\\\text{K}^{2+}\\\\text{(g)} \\\\rightarrow \\\\text{K}^{3+}\\\\text{(g)} + e^-$$
 
-#### 🔍 Discontinuities (Evidence for Subshells in Period 3):
-1. **Dip between Mg ($1s^2 2s^2 2p^6 3s^2$) and Al ($1s^2 2s^2 2p^6 3s^2 3p^1$):**
-   * The outer electron in Al is in a $3p$ orbital, which is higher in energy and further from the nucleus than Mg's $3s$ orbital. It also experiences extra shielding from the $3s$ subshell, making it easier to remove.
-2. **Dip between P ($[\\text{Ne}] 3s^2 3p^3$) and S ($[\\text{Ne}] 3s^2 3p^4$):**
-   * P has three unpaired electrons in degenerate $3p$ orbitals ($3p_x^1 3p_y^1 3p_z^1$). S has one paired set of electrons in a $3p$ orbital ($3p_x^2 3p_y^1 3p_z^1$).
-   * Mutual repulsion between the two paired electrons in the same orbital in sulfur makes the electron easier to remove.
+> [!TIP]
+> ### 🧪 Rules for Ionizing Atoms
+> When writing configurations or determining which electron is lost:
+> 
+> 1. **Representative Elements ($s$ and $p$ blocks):** Start removing electrons from the last occupied orbital (the highest energy level)
+> 2. **Transition Metals ($d$ block):** **Always** remove electrons from the outer $4s$ orbital first, and only then from the $3d$ orbitals
+
+> [!NOTE]
+> ### 📈 Successive Ionization Energy Patterns
+> * **Gradual/Steady Rise:** Successive ionization energies of an element always increase gradually because the remaining electrons are pulled closer by a constant nuclear charge (more protons than electrons, resulting in a smaller ionic radius and increased electrostatic attraction)
+> * **Quantum Shell Jumps:** A massive, sharp jump in ionization energy occurs when an electron is removed from a lower principal quantum shell ($n-1$), which is much closer to the nucleus and experiences far less shielding
+> * **Logarithmic Scale:** Because successive ionization energies span an extremely large range of values, they are managed and plotted using a logarithmic scale (e.g. $\\\\log_{10} I.E.$)
+
+> [!BOX]
+> ### 📋 Electronegativity
+> * **Definition:** The relative ability of an atom in a covalent bond to attract the shared pair of electrons towards itself
+> * **Periodic Trends:** Electronegativity increases across a period (due to increasing nuclear charge and decreasing atomic size) and increases going up a group (due to less shielding and smaller atomic size)
+> * **Highest Electronegativity Order:** $\\\\text{F} > \\\\text{O} > \\\\text{Cl} > \\\\text{N} > \\\\text{Br} > \\\\text{I}$
+
+---
+
+> [!NOTE]
+> ### 📈 Periodic Trends in First Ionization Energy
+> 1. **Down a Group (Decreases):**
+>    * The atomic radius increases as the number of quantum shells increases
+>    * Shielding from inner shells increases significantly
+>    * The outer electron is further from the nucleus, weakening the electrostatic attraction forces and making it easier to remove
+> 2. **Across a Period (Increases):**
+>    * The nuclear charge increases (more protons in the nucleus)
+>    * The atomic radius decreases (electrons are pulled closer)
+>    * Shielding remains relatively constant because electrons are added to the same outer quantum shell
+>    * Consequently, the electrostatic attraction between the nucleus and outer electrons increases, requiring more energy to remove an electron
+
+> [!WARNING]
+> ### ⚠️ Key Anomalies in First Ionization Energy
+> While first ionization energy generally increases across a period, there are two distinct dips (anomalies) that provide evidence for sub-shells and orbital filling:
+> 
+> 1. **Group 2 vs Group 3 Dip (e.g. Be vs B, and Mg vs Al):**
+>    * **Boron ($1s^2 2s^2 2p^1$)** has a lower first ionization energy than **Beryllium ($1s^2 2s^2$)**
+>    * **Reason:** The outer electron of Boron is in a $2p$ sub-shell, which is higher in energy and experiences additional shielding from the filled $2s^2$ sub-shell, making it easier to remove than Beryllium's $2s$ electron
+>    * This also applies to **Magnesium** ($3s^2$) and **Aluminium** ($3s^2 3p^1$) in Period 3
+> 2. **Group 5 vs Group 6 Dip (e.g. N vs O, and P vs S):**
+>    * **Oxygen ($1s^2 2s^2 2p^4$)** has a lower first ionization energy than **Nitrogen ($1s^2 2s^2 2p^3$)**
+>    * **Reason:** Nitrogen has a stable half-filled $2p$ sub-shell with singly occupied orbitals ($2p_x^1 2p_y^1 2p_z^1$). In Oxygen, two electrons must pair up in a single $2p$ orbital ($2p_x^2 2p_y^1 2p_z^1$), generating **spin-pair repulsion** which makes the outer electron easier to remove
+>    * This also applies to **Phosphorus** ($3p^3$) and **Sulfur** ($3p^4$) in Period 3
+
+---
+
+> [!IMPORTANT]
+> ### 🧱 Physical Structure of Elements and Compounds
+> The structure of elements and compounds determines their physical properties:
+> 
+> #### 1. Structure of Elements (Across Period 2 & 3):
+> * **Giant Metallic Lattice:** Metals (Group I to III, e.g. $\\\\text{Li}$, $\\\\text{Be}$, $\\\\text{Na}$, $\\\\text{Mg}$, $\\\\text{Al}$) form giant structures held by metallic bonding (delocalized electrons)
+> * **Giant Covalent Lattice:** Carbon (diamond/graphite), Silicon, and Boron (which forms a giant covalent lattice) form giant covalent structures with strong, directional covalent bonds throughout the lattice
+> * **Simple Covalent Molecules:** Non-metals (Group V to VII, e.g. $\\\\text{P}_4$, $\\\\text{S}_8$, $\\\\text{Cl}_2$, $\\\\text{O}_2$, $\\\\text{N}_2$, $\\\\text{F}_2$) exist as individual molecules held together by weak intermolecular London forces
+> * **Monoatomic Elements:** Noble gases (Group VIII/0, e.g. $\\\\text{He}$, $\\\\text{Ne}$, $\\\\text{Ar}$) exist as single, unbonded atoms held by extremely weak London forces
+> 
+> #### 2. Structure of Compounds:
+> * **Ionic Bonding (Metal + Non-metal):** Formed when metals lose electrons and non-metals gain electrons to achieve stable octets (except Boron and Beryllium compounds, which tend to be covalent due to high charge density)
+> * **Covalent Bonding (Non-metal + Non-metal/Semi-metal):** Formed by the sharing of valence electron pairs
+
+> [!TIP]
+> ### 🌡️ Melting and Boiling Point Trends
+> Melting and boiling points depend on the type of structure and strength of bonding forces:
+> 
+> 1. **Across a Period (Period 2 & 3):**
+>    * **Group I to III (Metals):** MP and BP increase because the number of delocalized electrons per atom increases and the ionic charge increases, resulting in stronger metallic bonding attraction
+>    * **Group IV (C or Si):** Peaks dramatically (maximum MP/BP) because they form giant covalent lattices. Breaking the strong, extensive covalent bonds requires massive thermal energy
+>    * **Group V to VIII (Non-metals & Noble gases):** MP and BP drop sharply because they have simple molecular (or monoatomic) structures. Melting only requires overcoming weak London forces, which need very little energy. Within simple molecules, the MP/BP depends on size: $\\\\text{S}_8 > \\\\text{P}_4 > \\\\text{Cl}_2 > \\\\text{Ar}$
+> 2. **Down Non-metallic Groups (Increases):**
+>    * The total number of electrons in the molecules increases, which increases the strength of temporary dipoles and thus the strength of London forces between molecules
+> 3. **Down Metallic Groups (Decreases):**
+>    * The atomic radius increases, placing the delocalized valence electrons further away from the positive metal nuclei, which weakens the metallic bond
 
 ---
 
 > [!EXAMPLE]
-> #### 📝 Worked Example: Interpreting Successive Ionization Energies
-> **Question:** > The successive ionization energies (in $\\text{kJ mol}^{-1}$) of an element $\\text{Y}$ in Period 3 are:
-> $I_1 = 789$, $I_2 = 1577$, $I_3 = 3232$, $I_4 = 4356$, $I_5 = 16091$, $I_6 = 19785$.  
-> Identify element $\\text{Y}$ and justify your answer.
+> #### 📝 Worked Example 1: Interpreting Successive Ionization Energies
+> **Question:** The successive ionization energies (in $\\\\text{kJ mol}^{-1}$) of a Period 3 element $\\\\text{Y}$ are: $I_1 = 789$, $I_2 = 1577$, $I_3 = 3232$, $I_4 = 4356$, $I_5 = 16091$, $I_6 = 19785$
+> Identify element $\\\\text{Y}$ and justify your answer.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
-> > > > 1. **Look for the largest jump:**
-> >    * $I_1 \\rightarrow I_2$: approx. $2\\times$ increase.
-> >    * $I_2 \\rightarrow I_3$: approx. $2\\times$ increase.
-> >    * $I_3 \\rightarrow I_4$: approx. $1.35\\times$ increase.
-> >    * $I_4 \\rightarrow I_5$: huge increase ($4356 \\rightarrow 16091$), nearly $4\\times$ increase!
-> > 2. **Interpret the jump:**
-> >    * The large jump between $I_4$ and $I_5$ indicates that the 5th electron is removed from a shell closer to the nucleus (inner core shell).
-> >    * This means element $\\text{Y}$ has **4 valence electrons** (Group 14).
+> > 
+> > 1. **Analyze successive differences to find the largest jump:**
+> >    * $I_1 \\\\rightarrow I_2$: approx. $2\\\\times$ increase
+> >    * $I_2 \\\\rightarrow I_3$: approx. $2\\\\times$ increase
+> >    * $I_3 \\\\rightarrow I_4$: approx. $1.35\\\\times$ increase
+> >    * $I_4 \\\\rightarrow I_5$: huge jump ($4356 \\\\rightarrow 16091$), which is a nearly $4\\\\times$ increase
+> > 2. **Determine the number of valence electrons:**
+> >    * The sharp increase between $I_4$ and $I_5$ indicates that the fifth electron is removed from a shell closer to the nucleus (inner core shell)
+> >    * Therefore, the element has 4 valence electrons, placing it in Group 14 (Group IV)
 > > 3. **Identify the element:**
-> >    * Since $\\text{Y}$ is in Period 3 and Group 14, it must be **Silicon (Si)**.
+> >    * The Period 3 element in Group 14 is Silicon (Si)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Explaining first ionization energy exceptions
+> **Question:** Explain why the first ionization energy of Oxygen is lower than that of Nitrogen, despite Oxygen having a greater nuclear charge
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the electronic configurations:**
+> >    * Nitrogen ($Z = 7$): $1s^2 2s^2 2p^3$ (or $1s^2 2s^2 2p_x^1 2p_y^1 2p_z^1$)
+> >    * Oxygen ($Z = 8$): $1s^2 2s^2 2p^4$ (or $1s^2 2s^2 2p_x^2 2p_y^1 2p_z^1$)
+> > 2. **Compare orbital occupancy:**
+> >    * Nitrogen has a stable, half-filled $2p$ sub-shell where each of the three $2p$ orbitals contains a single unpaired electron
+> >    * Oxygen has four electrons in the $2p$ sub-shell, meaning one of the $2p$ orbitals must contain a pair of electrons
+> > 3. **Analyze electron-electron interaction:**
+> >    * The paired electrons in the same $2p$ orbital in Oxygen experience spin-pair repulsion
+> >    * This repulsion makes it easier to remove one of these paired electrons from Oxygen than an unpaired electron from Nitrogen
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Melting Point Trends of Period 3 Elements
+> **Question:** Explain the difference in melting points between Silicon ($1687\\\\text{ K}$) and Phosphorus ($317\\\\text{ K}$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the structure and bonding of Silicon:**
+> >    * Silicon has a giant covalent lattice structure
+> >    * Each Silicon atom is covalently bonded to four other Silicon atoms in a tetrahedral arrangement
+> >    * Melting Silicon requires breaking many strong, directional covalent bonds throughout the entire structure, which requires a large amount of energy
+> > 2. **Identify the structure and bonding of Phosphorus:**
+> >    * Phosphorus exists as simple molecular $\\\\text{P}_4$ molecules
+> >    * In the solid state, these molecules are held together only by weak intermolecular London forces (instantaneous dipole-induced dipole attractions)
+> >    * Melting Phosphorus only requires overcoming these weak London forces between molecules, leaving the strong covalent bonds within the $\\\\text{P}_4$ molecules intact
+> > 3. **Conclude the comparison:**
+> >    * Much less thermal energy is required to overcome the weak London forces in Phosphorus than to break the strong covalent bonds in Silicon, explaining why Silicon has a significantly higher melting point
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Identifying periodic table block from ion electronic structure
+> **Question:** A stable ion $W^{3+}$ contains 18 electrons. Determine the block in the periodic table where element $W$ is located.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Find the number of electrons in the neutral atom:**
+> >    * The ion has a $3+$ charge, which means the neutral atom has lost 3 electrons
+> >    * Number of electrons in neutral atom $W = 18 + 3 = 21$
+> > 2. **Identify the atomic number and element:**
+> >    * Since atomic number is the number of protons (equal to electrons in a neutral atom), $Z = 21$
+> >    * Element 21 is Scandium (Sc)
+> > 3. **Determine the block based on electronic configuration:**
+> >    * The electronic configuration of Scandium is $[\\\\text{Ar}] 4s^2 3d^1$
+> >    * Since the highest energy subshell being filled is the $3d$ subshell, element $W$ belongs to the **d-block**
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Melting Point Difference of Group 4 Elements (Carbon vs Silicon)
+> **Question:** Both carbon (diamond) and silicon form giant covalent lattices in Group 14 (Group IV). However, the melting temperature of carbon ($3550^\\\\circ\\\\text{C}$) is significantly higher than that of silicon ($1414^\\\\circ\\\\text{C}$). What is the primary reason for this difference?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare atomic sizes of Carbon and Silicon:**
+> >    * Carbon is in Period 2 and has a smaller atomic radius than Silicon, which is in Period 3
+> > 2. **Analyze the effect on covalent bond strength:**
+> >    * Because the Carbon atoms are smaller, the shared electron pairs in the $\\\\text{C-C}$ bond are closer to the nuclei, resulting in stronger electrostatic attraction forces
+> >    * Therefore, $\\\\text{C-C}$ covalent bonds are shorter and significantly stronger than $\\\\text{Si-Si}$ covalent bonds
+> > 3. **Relate bond strength to melting point:**
+> >    * Since the giant covalent lattice of diamond is held together by these stronger and shorter $\\\\text{C-C}$ bonds, much more thermal energy is required to break them compared to the weaker $\\\\text{Si-Si}$ bonds in silicon, leading to a much higher melting point
         `,
-        keyPoints: [
-            'First ionization energy equations must always include gaseous state symbols (g).',
-            'Successive ionization energies always increase because the remaining electrons are pulled closer by a constant positive nuclear charge.',
-            'Dips in ionization energy across a period provide evidence for subshells and orbital electron pairing repulsion.'
-        ]
-    }
+    keyPoints: [
+      'First ionization energy equations must always include gaseous state symbols (g).',
+      'Successive ionization energies always increase because the remaining electrons are pulled closer by a constant positive nuclear charge.',
+      'Dips in ionization energy across a period provide evidence for subshells and orbital electron pairing repulsion.'
+    ]
+  }
 ];

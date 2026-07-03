@@ -88,7 +88,7 @@ export async function GET(request: NextRequest) {
                             id: `player-${index + 1}`, // Hide real Firestore ID from public API
                             name: data.name || 'Student',
                             title: data.title || '',
-                            avatar: data.avatar || null,
+                            avatar: data.image || data.avatar || null,
                             xp: data.xp || 0,
                             level: data.level || 1,
                             streak: data.streak?.currentStreak || 0,
