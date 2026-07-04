@@ -26,9 +26,9 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
 
     if (!curricula || curricula.length === 0) {
         return (
-            <div className="w-full text-center py-12 text-slate-400 bg-[#0a0a1f]/40 backdrop-blur-md border border-white/5 rounded-3xl">
+            <div className="w-full text-center py-12 text-slate-400 bg-surface/40 backdrop-blur-md border border-border rounded-3xl">
                 <span className="text-3xl mb-4 block">🔍</span>
-                <p className="font-semibold text-white mb-2">No Curriculum Available</p>
+                <p className="font-semibold text-foreground mb-2">No Curriculum Available</p>
                 <p className="text-sm">There are no courses matching your track. Please contact your administrator.</p>
             </div>
         );
@@ -51,26 +51,26 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
             {/* Tabs & View Mode Toggle */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 {/* Curriculum Tabs */}
-                <div className="flex flex-wrap gap-2 bg-[#0a0a1f]/80 p-2 rounded-2xl border border-white/10 w-fit backdrop-blur-md">
+                <div className="flex flex-wrap gap-2 bg-surface p-2 rounded-2xl border border-border w-fit backdrop-blur-md">
                     {curricula.map((curr) => (
                         <button
                             key={curr.id}
                             onClick={() => setActiveTab(curr.id)}
                             className={`relative px-6 py-3 rounded-xl text-sm font-medium transition-colors ${
-                                activeTab === curr.id ? 'text-white' : 'text-slate-400 hover:text-white'
+                                activeTab === curr.id ? 'text-indigo-600 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white'
                             }`}
                         >
                             {activeTab === curr.id && (
                                 <motion.div
                                     layoutId="activeTab"
-                                    className="absolute inset-0 bg-indigo-500/20 border border-indigo-500/50 rounded-xl"
+                                    className="absolute inset-0 bg-indigo-500/10 border border-indigo-500/30 rounded-xl"
                                     initial={false}
                                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                 />
                             )}
                             <span className="relative z-10 flex items-center gap-2">
                                 <span>{curr.title}</span>
-                                <span className="text-xs bg-white/10 px-2 py-0.5 rounded-md text-slate-300">
+                                <span className="text-xs bg-background px-2 py-0.5 rounded-md text-slate-500">
                                     {curr.code}
                                 </span>
                             </span>
@@ -79,13 +79,13 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                 </div>
 
                 {/* View Mode Selector */}
-                <div className="flex bg-white/5 border border-white/10 p-1 rounded-xl w-fit backdrop-blur-md self-end sm:self-auto">
+                <div className="flex bg-surface border border-border p-1 rounded-xl w-fit backdrop-blur-md self-end sm:self-auto">
                     <button
                         onClick={() => setViewMode('grid')}
                         className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                             viewMode === 'grid' 
                                 ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20' 
-                                : 'text-slate-400 hover:text-white hover:bg-white/5'
+                                : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'
                         }`}
                         title="Grid Cards View"
                     >
@@ -97,7 +97,7 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                         className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold transition-all ${
                             viewMode === 'list' 
                                 ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20' 
-                                : 'text-slate-400 hover:text-white hover:bg-white/5'
+                                : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5'
                         }`}
                         title="Detailed Lessons View"
                     >
@@ -120,8 +120,8 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                         <div>
                             {/* Curriculum Headers */}
                             <div className="mb-8">
-                                <h2 className="text-3xl font-bold text-white mb-2">{activeCurriculum.title}</h2>
-                                <p className="text-slate-400">{activeCurriculum.description}</p>
+                                <h2 className="text-3xl font-bold text-foreground mb-2">{activeCurriculum.title}</h2>
+                                <p className="text-muted">{activeCurriculum.description}</p>
                             </div>
 
                             {/* View Modes Render */}
@@ -139,22 +139,22 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                                         ).length || 0;
 
                                         return (
-                                            <div key={topic.id} className="bg-[#0a0a1f]/40 backdrop-blur-md border border-white/5 rounded-3xl p-6 md:p-8">
-                                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/5 pb-6 mb-6">
+                                            <div key={topic.id} className="bg-surface backdrop-blur-md border border-border rounded-3xl p-6 md:p-8">
+                                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border pb-6 mb-6">
                                                     <div>
                                                         <div className="flex items-center gap-3 mb-2">
-                                                            <span className="px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                                                            <span className="px-3 py-1 rounded-full text-xs font-bold bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 border border-indigo-500/20">
                                                                 Unit {topic.number}
                                                             </span>
                                                             <span className="text-xs text-slate-500">
                                                                 {availableLessonsCount} of {topic.subtopics?.length || 0} Lessons Available
                                                             </span>
                                                         </div>
-                                                        <h2 className="text-2xl font-bold text-white">{topic.title}</h2>
+                                                        <h2 className="text-2xl font-bold text-foreground">{topic.title}</h2>
                                                     </div>
                                                     <Link 
                                                         href={`/dashboard/curriculum/${activeCurriculum.id}/${topic.id}`}
-                                                        className="inline-flex items-center justify-center bg-white/5 hover:bg-white/10 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all border border-white/10 w-fit"
+                                                        className="inline-flex items-center justify-center bg-surface hover:bg-surface-hover text-foreground px-5 py-2.5 rounded-xl text-sm font-semibold transition-all border border-border w-fit"
                                                     >
                                                         Explore Unit
                                                     </Link>
@@ -173,20 +173,20 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                                                                     key={index}
                                                                     className={`group flex items-center justify-between p-4 md:p-5 rounded-2xl border transition-all ${
                                                                         isAvailable 
-                                                                            ? 'bg-[#050510]/55 border-white/5 hover:border-indigo-500/30 hover:bg-indigo-500/[0.02]' 
-                                                                            : 'bg-white/[0.01] border-dashed border-white/5 opacity-60'
+                                                                            ? 'bg-surface border-border hover:border-indigo-500/30 hover:bg-indigo-500/[0.02]' 
+                                                                            : 'bg-surface/20 border-dashed border-border opacity-60'
                                                                     }`}
                                                                 >
                                                                     <div className="flex items-center gap-4 min-w-0">
                                                                         <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm ${
                                                                             isAvailable 
-                                                                                ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20' 
-                                                                                : 'bg-white/5 text-slate-600 border border-white/5'
+                                                                                ? 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 border border-indigo-500/20' 
+                                                                                : 'bg-background text-slate-500 border border-border'
                                                                         }`}>
                                                                             {lessonNum}
                                                                         </div>
                                                                         <div className="min-w-0">
-                                                                            <h4 className={`font-semibold truncate text-base ${isAvailable ? 'text-white group-hover:text-indigo-300' : 'text-slate-500'}`}>
+                                                                            <h4 className={`font-semibold truncate text-base ${isAvailable ? 'text-foreground group-hover:text-indigo-600 dark:group-hover:text-indigo-300' : 'text-slate-500'}`}>
                                                                                 {subtopic}
                                                                             </h4>
                                                                             <div className="flex items-center gap-4 text-xs font-semibold text-slate-500 mt-1">
@@ -206,7 +206,7 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                                                                         {isAvailable ? (
                                                                             <Link
                                                                                 href={`/dashboard/curriculum/${activeCurriculum.id}/${topic.id}?tab=theory&lesson=${lessonNum}`}
-                                                                                className="flex items-center gap-2 bg-indigo-500/10 hover:bg-indigo-50 text-indigo-400 hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all border border-indigo-500/20 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
+                                                                                className="flex items-center gap-2 bg-indigo-500/10 hover:bg-indigo-500 text-indigo-500 dark:text-indigo-400 hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all border border-indigo-500/20 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
                                                                             >
                                                                                 Study Lesson
                                                                                 <ChevronRight className="w-4 h-4" />

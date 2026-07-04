@@ -108,7 +108,7 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
         return children;
     }
 
-    if (children.includes('<svg')) {
+    if (children.includes('<svg') && children.includes('</svg>')) {
         const parts = children.split(/(<svg[\s\S]*?<\/svg>)/g);
         return (
             <React.Fragment>
@@ -303,13 +303,13 @@ const mdComponents: any = {
             </code>
         );
     },
-    p: ({ node, children, ...props }: any) => <div className="text-slate-300 leading-relaxed mb-4" {...props}>{renderTextWithMath(children)}</div>,
-    h2: ({ node, children, ...props }: any) => <h2 className="text-2xl font-bold text-white mt-8 mb-4 border-b border-white/10 pb-2" {...props}>{renderTextWithMath(children)}</h2>,
-    h3: ({ node, children, ...props }: any) => <h3 className="text-xl font-semibold text-indigo-300 mt-6 mb-3" {...props}>{renderTextWithMath(children)}</h3>,
-    ul: ({ node, ...props }: any) => <ul className="list-disc pl-6 space-y-2 text-slate-300 mb-6" {...props} />,
-    ol: ({ node, ...props }: any) => <ol className="list-decimal pl-6 space-y-2 text-slate-300 mb-6" {...props} />,
+    p: ({ node, children, ...props }: any) => <div className="text-foreground/90 leading-relaxed mb-4" {...props}>{renderTextWithMath(children)}</div>,
+    h2: ({ node, children, ...props }: any) => <h2 className="text-2xl font-bold text-foreground mt-8 mb-4 border-b border-border pb-2" {...props}>{renderTextWithMath(children)}</h2>,
+    h3: ({ node, children, ...props }: any) => <h3 className="text-xl font-semibold text-indigo-600 dark:text-indigo-300 mt-6 mb-3" {...props}>{renderTextWithMath(children)}</h3>,
+    ul: ({ node, ...props }: any) => <ul className="list-disc pl-6 space-y-2 text-foreground/80 mb-6" {...props} />,
+    ol: ({ node, ...props }: any) => <ol className="list-decimal pl-6 space-y-2 text-foreground/80 mb-6" {...props} />,
     li: ({ node, children, ...props }: any) => <li className="marker:text-indigo-500" {...props}>{renderTextWithMath(children)}</li>,
-    strong: ({ node, children, ...props }: any) => <strong className="text-white font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
+    strong: ({ node, children, ...props }: any) => <strong className="text-foreground font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
     em: ({ node, children, ...props }: any) => <em {...props}>{renderTextWithMath(children)}</em>,
     img: ({ node, src, alt, ...props }: any) => (
         <div className="flex justify-center my-4">
@@ -317,7 +317,7 @@ const mdComponents: any = {
                 src={src}
                 alt={alt || ''}
                 style={{ maxWidth: '30%', height: 'auto' }}
-                className="rounded-xl border border-white/10 shadow-lg"
+                className="rounded-xl border border-border shadow-lg"
                 {...props}
             />
         </div>
@@ -329,7 +329,7 @@ const mdComponents: any = {
         if (hasCustomTable) {
             return <>{renderTextWithMath(children)}</>;
         }
-        return <a className="text-indigo-400 hover:text-indigo-300 underline transition-colors" {...props}>{renderTextWithMath(children)}</a>;
+        return <a className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 underline transition-colors" {...props}>{renderTextWithMath(children)}</a>;
     },
     blockquote: ({ node, children, ...props }: any) => {
         const getFirstText = (n: any): string => {
@@ -403,33 +403,33 @@ const mdComponents: any = {
 
             const cleanedChildren = cleanPrefix(React.Children.toArray(children));
 
-            let bgClass = 'bg-blue-500/10 border-blue-500/20 text-blue-300';
+            let bgClass = 'bg-blue-500/10 border-blue-500/20 text-blue-700 dark:text-blue-300';
             let title = 'Note';
             let icon = 'ℹ️';
             let showHeader = type === 'example';
 
             if (type === 'tip') {
-                bgClass = 'bg-emerald-500/10 border-emerald-500/20 text-emerald-300';
+                bgClass = 'bg-emerald-500/10 border-emerald-500/20 text-emerald-700 dark:text-emerald-300';
                 title = 'Tip';
                 icon = '💡';
             } else if (type === 'warning') {
-                bgClass = 'bg-amber-500/10 border-amber-500/20 text-amber-300';
+                bgClass = 'bg-amber-500/10 border-amber-500/20 text-amber-700 dark:text-amber-300';
                 title = 'Warning';
                 icon = '⚠️';
             } else if (type === 'important') {
-                bgClass = 'bg-indigo-500/10 border-indigo-500/20 text-indigo-300';
+                bgClass = 'bg-indigo-500/10 border-indigo-500/20 text-indigo-700 dark:text-indigo-300';
                 title = 'Important';
                 icon = '📌';
             } else if (type === 'caution') {
-                bgClass = 'bg-rose-500/10 border-rose-500/20 text-rose-300';
+                bgClass = 'bg-rose-500/10 border-rose-500/20 text-rose-700 dark:text-rose-300';
                 title = 'Caution';
                 icon = '🛑';
             } else if (type === 'example') {
-                bgClass = 'bg-purple-500/10 border-purple-500/20 text-purple-300';
+                bgClass = 'bg-purple-500/10 border-purple-500/20 text-purple-700 dark:text-purple-300';
                 title = 'Worked Example';
                 icon = '📝';
             } else if (type === 'box') {
-                bgClass = 'bg-blue-500/10 border-blue-500/20 text-slate-200';
+                bgClass = 'bg-blue-500/10 border-blue-500/20 text-foreground/90';
             }
 
             const isStepByStep = getAllText(node).toLowerCase().includes('step-by-step solution');
@@ -450,7 +450,7 @@ const mdComponents: any = {
         }
 
         return (
-            <blockquote className="border-l-4 border-indigo-500/30 pl-4 my-4 text-slate-400 italic">
+            <blockquote className="border-l-4 border-indigo-500/30 pl-4 my-4 text-foreground/70 italic">
                 {children}
             </blockquote>
         );
@@ -651,32 +651,32 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
     return (
         <div className="w-full max-w-none h-full flex flex-col overflow-hidden pb-0">
             {/* Header - Sticky at top */}
-            <div className="flex-shrink-0 bg-[#060615] border-b border-white/10 py-2.5 mb-3.5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex-shrink-0 bg-background border-b border-border py-2.5 mb-3.5 flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                     <Link
                         href={`/dashboard/curriculum?track=${curriculumId}`}
-                        className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white transition-colors mb-1 text-[10px] font-semibold"
+                        className="inline-flex items-center gap-1.5 text-slate-400 hover:text-foreground transition-colors mb-1 text-[10px] font-semibold"
                     >
                         <ArrowLeft className="w-2.5 h-2.5" />
                         Back to Syllabus
                     </Link>
-                    <h1 className="text-lg md:text-xl font-bold text-white leading-tight">
+                    <h1 className="text-lg md:text-xl font-bold text-foreground leading-tight">
                         Unit {topic.number} - Topic {currentLessonNum}: {lessonData?.title || topic.title}
                     </h1>
-                    <p className="text-emerald-400 font-medium text-[10px] mt-0.5">
+                    <p className="text-emerald-500 dark:text-emerald-400 font-medium text-[10px] mt-0.5">
                         {curriculum.title}
                     </p>
                 </div>
             </div>
 
             {/* Content Area - Immersive layout with independent column scrolls */}
-            <div className="bg-[#0a0a1f]/60 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden flex flex-col flex-1 min-h-0">
+            <div className="bg-surface/60 backdrop-blur-md border border-border rounded-3xl overflow-hidden flex flex-col flex-1 min-h-0">
                 {/* Interactive Lesson Player (Slide-by-slide) */}
                 {hasParts ? (
                     <div className="flex flex-1 overflow-hidden min-h-0">
                         {/* Sidebar list of lesson parts - Independently scrollable */}
                         {sidebarOpen && (
-                            <aside className="w-64 flex-shrink-0 border-r border-white/10 overflow-y-auto p-5 bg-white/[0.02] hidden md:block">
+                            <aside className="w-64 flex-shrink-0 border-r border-border overflow-y-auto p-5 bg-background/25 hidden md:block">
                                 <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Lesson Parts</h3>
                                 <div className="flex flex-col gap-2">
                                     {partsList.map((part, idx) => (
@@ -687,11 +687,11 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                 setCompleted(false);
                                             }}
                                             className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2.5 cursor-pointer ${currentPartIndex === idx
-                                                ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-400'
-                                                : 'border border-transparent text-slate-400 hover:text-white hover:bg-white/5'
+                                                ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 dark:text-indigo-400'
+                                                : 'border border-transparent text-slate-400 hover:text-foreground hover:bg-white/5'
                                                 }`}
                                         >
-                                            <div className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-bold border ${currentPartIndex === idx ? 'border-indigo-400 text-indigo-400' : 'border-slate-600 text-slate-500'
+                                            <div className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-bold border ${currentPartIndex === idx ? 'border-indigo-500 dark:border-indigo-400 text-indigo-500 dark:text-indigo-400' : 'border-slate-600 text-slate-500'
                                                 }`}>
                                                 {idx + 1}
                                             </div>
@@ -708,7 +708,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                             {/* Scrollable Container */}
                             <div className="flex-1 overflow-y-auto p-6 md:p-8 flex flex-col gap-6">
                                 {/* Progress Bar inside card */}
-                                <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden flex-shrink-0">
+                                <div className="w-full h-1 bg-border rounded-full overflow-hidden flex-shrink-0">
                                     <div
                                         className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300"
                                         style={{ width: `${progress}%` }}
@@ -716,18 +716,18 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 </div>
 
                                 {/* Title Header with TextToSpeech */}
-                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white/5 p-4 rounded-xl border border-white/10 flex-shrink-0">
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-surface/30 p-4 rounded-xl border border-border flex-shrink-0">
                                     <div className="flex items-center gap-3">
                                         <button 
                                             onClick={() => setSidebarOpen(!sidebarOpen)}
-                                            className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer hidden md:flex items-center justify-center border border-white/5"
+                                            className="p-2 rounded-xl bg-surface/50 hover:bg-surface/80 text-slate-400 hover:text-foreground transition-all cursor-pointer hidden md:flex items-center justify-center border border-border"
                                             title={sidebarOpen ? "Collapse Lesson Parts" : "Expand Lesson Parts"}
                                         >
                                             {sidebarOpen ? <ChevronLeft className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                                         </button>
                                         <div>
-                                            <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">Part {currentPartIndex + 1} of {partsList.length}</span>
-                                            <h2 className="text-lg font-bold text-white mt-0.5">{currentPart.title}</h2>
+                                            <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Part {currentPartIndex + 1} of {partsList.length}</span>
+                                            <h2 className="text-lg font-bold text-foreground mt-0.5">{currentPart.title}</h2>
                                         </div>
                                     </div>
                                     {currentPart.id !== 'interactive-quiz' && (
@@ -771,7 +771,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 )}
 
                                 {/* Slide Main Content */}
-                                <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8">
+                                <div className="bg-surface/30 border border-border rounded-2xl p-6 md:p-8">
                                     {currentPart.id === 'interactive-quiz' ? (
                                         (() => {
                                             const activeQuestion = lessonQuiz[quizActiveIndex];
@@ -782,26 +782,26 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                 <div className="flex flex-col gap-6">
                                                     {allQuestionsAnswered && (
                                                         <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 text-center animate-fade-in-up">
-                                                            <div className="text-emerald-400 font-bold text-sm">🏆 Quiz Completed!</div>
-                                                            <div className="text-slate-300 text-xs mt-1">
+                                                            <div className="text-emerald-500 dark:text-emerald-400 font-bold text-sm">🏆 Quiz Completed!</div>
+                                                            <div className="text-foreground/80 text-xs mt-1">
                                                                 You answered {Object.values(quizFirstAttempts).filter(Boolean).length} of {lessonQuiz.length} questions correctly on the first attempt.
-                                                                <span className="block mt-1 font-semibold text-emerald-400">Click 'Finish Lesson' below to collect your +25 XP!</span>
+                                                                <span className="block mt-1 font-semibold text-emerald-500 dark:text-emerald-400">Click 'Finish Lesson' below to collect your +25 XP!</span>
                                                             </div>
                                                         </div>
                                                     )}
-                                                    <div className="flex flex-col gap-2 bg-white/5 px-4 py-3 rounded-xl border border-white/10 text-xs font-semibold">
+                                                    <div className="flex flex-col gap-2 bg-surface px-4 py-3 rounded-xl border border-border text-xs font-semibold text-foreground/80">
                                                         <div className="flex justify-between items-center">
-                                                            <span className="text-slate-400">Question {quizActiveIndex + 1} of {lessonQuiz.length}</span>
-                                                            <span className="text-emerald-400 font-bold">First Attempt Correct: {Object.values(quizFirstAttempts).filter(Boolean).length} / {lessonQuiz.length}</span>
+                                                            <span className="text-muted">Question {quizActiveIndex + 1} of {lessonQuiz.length}</span>
+                                                            <span className="text-emerald-500 dark:text-emerald-400 font-bold">First Attempt Correct: {Object.values(quizFirstAttempts).filter(Boolean).length} / {lessonQuiz.length}</span>
                                                         </div>
                                                         {activeQuestion.id && (
-                                                            <div className="text-[10px] text-indigo-400/80 font-mono border-t border-white/5 pt-1.5 mt-0.5">
+                                                            <div className="text-[10px] text-indigo-500 dark:text-indigo-400/80 font-mono border-t border-border pt-1.5 mt-0.5">
                                                                 ID: {activeQuestion.id}
                                                             </div>
                                                         )}
                                                     </div>
 
-                                                    <div className="text-white text-lg font-medium leading-relaxed my-2">
+                                                    <div className="text-foreground text-lg font-semibold leading-relaxed my-2">
                                                         {renderTextWithMath(activeQuestion.question)}
                                                     </div>
 
@@ -810,15 +810,15 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                             const isSelected = selectedIdx === oIdx;
                                                             const isCorrect = opt.isCorrect;
 
-                                                            let optionStyle = "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10 hover:border-white/20";
+                                                            let optionStyle = "bg-surface border-border text-foreground hover:bg-surface-hover hover:border-border-bright";
 
                                                             if (isAnswered) {
                                                                 if (isCorrect) {
-                                                                    optionStyle = "bg-emerald-500/10 border-emerald-500/50 text-emerald-400 font-medium";
+                                                                    optionStyle = "bg-emerald-500/10 border-emerald-500/50 text-emerald-600 dark:text-emerald-400 font-medium";
                                                                 } else if (isSelected) {
-                                                                    optionStyle = "bg-rose-500/10 border-rose-500/50 text-rose-400 font-medium";
+                                                                    optionStyle = "bg-rose-500/10 border-rose-500/50 text-rose-600 dark:text-rose-400 font-medium";
                                                                 } else {
-                                                                    optionStyle = "bg-white/[0.02] border-white/5 text-slate-500 opacity-60";
+                                                                    optionStyle = "bg-background border-border text-slate-400 opacity-60";
                                                                 }
                                                             }
 
@@ -830,18 +830,18 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                                     className={`w-full text-left p-4 rounded-xl border transition-all text-sm flex items-center justify-between ${optionStyle} ${!isAnswered ? 'cursor-pointer' : ''}`}
                                                                 >
                                                                     <span>{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
-                                                                    {isAnswered && isCorrect && <span className="text-emerald-400 text-xs font-bold bg-emerald-500/10 px-2 py-0.5 rounded-md">Correct</span>}
-                                                                    {isAnswered && isSelected && !isCorrect && <span className="text-rose-400 text-xs font-bold bg-rose-500/10 px-2 py-0.5 rounded-md">Incorrect</span>}
+                                                                    {isAnswered && isCorrect && <span className="text-emerald-600 dark:text-emerald-400 text-xs font-bold bg-emerald-500/10 px-2 py-0.5 rounded-md">Correct</span>}
+                                                                    {isAnswered && isSelected && !isCorrect && <span className="text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-500/10 px-2 py-0.5 rounded-md">Incorrect</span>}
                                                                 </button>
                                                             );
                                                         })}
                                                     </div>
 
-                                                    <div className="flex justify-between items-center gap-4 mt-6 border-t border-white/5 pt-4">
+                                                    <div className="flex justify-between items-center gap-4 mt-6 border-t border-border pt-4">
                                                         <button
                                                             disabled={quizActiveIndex === 0}
                                                             onClick={() => setQuizActiveIndex(prev => prev - 1)}
-                                                            className="bg-white/5 hover:bg-white/10 text-white font-semibold py-2.5 px-4 rounded-xl border border-white/10 transition-all text-xs flex items-center gap-1.5 cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
+                                                            className="bg-surface hover:bg-surface-hover text-foreground font-semibold py-2.5 px-4 rounded-xl border border-border transition-all text-xs flex items-center gap-1.5 cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
                                                         >
                                                             <ChevronLeft className="w-3.5 h-3.5" />
                                                             Previous Question
@@ -850,7 +850,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                         <button
                                                             disabled={quizActiveIndex === lessonQuiz.length - 1}
                                                             onClick={handleNextQuizQuestion}
-                                                            className="bg-white/5 hover:bg-white/10 text-white font-semibold py-2.5 px-4 rounded-xl border border-white/10 transition-all text-xs flex items-center gap-1.5 cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
+                                                            className="bg-surface hover:bg-surface-hover text-foreground font-semibold py-2.5 px-4 rounded-xl border border-border transition-all text-xs flex items-center gap-1.5 cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed"
                                                         >
                                                             Next Question
                                                             <ChevronRight className="w-3.5 h-3.5" />
@@ -859,8 +859,8 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
                                                     {isAnswered && activeQuestion.explanation && (
                                                         <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-xl p-5 mt-4 animate-fade-in-up">
-                                                            <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-1.5 block">Explanation</span>
-                                                            <div className="text-indigo-300 text-sm leading-relaxed flex flex-col gap-1">
+                                                            <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-1.5 block">Explanation</span>
+                                                            <div className="text-indigo-900 dark:text-indigo-300 text-sm leading-relaxed flex flex-col gap-1">
                                                                 {activeQuestion.explanation.split('\n').map((line: string, lineIdx: number) => (
                                                                     line.trim() === ''
                                                                         ? <div key={lineIdx} className="h-2" />
@@ -880,11 +880,11 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                             {/* Key Points */}
                                             {currentPart.keyPoints && currentPart.keyPoints.length > 0 && (
                                                 <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-2xl p-5 mt-6">
-                                                    <h4 className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3">Key Study Points</h4>
+                                                    <h4 className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-widest mb-3">Key Study Points</h4>
                                                     <ul className="space-y-2.5">
                                                         {currentPart.keyPoints.map((point, i) => (
-                                                            <li key={i} className="flex gap-2.5 items-start text-sm text-slate-300">
-                                                                <span className="text-indigo-400 mt-0.5">•</span>
+                                                            <li key={i} className="flex gap-2.5 items-start text-sm text-foreground/80">
+                                                                <span className="text-indigo-500 dark:text-indigo-400 mt-0.5">•</span>
                                                                 <span>{renderTextWithMath(formatTrailingSymbolsAndUnits(point))}</span>
                                                             </li>
                                                         ))}

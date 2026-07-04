@@ -35,7 +35,7 @@ export default function LessonNotes({ lessonId }: LessonNotesProps) {
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="Write your study notes here..."
-                className="w-full min-h-[150px] p-4 rounded-2xl border border-white/10 bg-white/5 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm mb-4 resize-y"
+                className="w-full min-h-[150px] p-4 rounded-2xl border border-border bg-surface/30 text-foreground placeholder:text-muted/50 focus:outline-none focus:border-indigo-500/50 focus:bg-surface/50 transition-all text-sm mb-4 resize-y"
             />
             <div className="flex gap-3">
                 <button
