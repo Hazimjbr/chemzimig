@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
@@ -35,7 +36,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
     if (isLessonPlayer) {
         return (
-            <div className="h-screen bg-[#050510] text-white font-sans overflow-hidden flex flex-col">
+            <div className="h-screen bg-background text-foreground font-sans overflow-hidden flex flex-col transition-colors duration-200">
                 <main className="w-full h-full relative z-0 p-2 pb-0 lg:p-3 lg:pb-0 flex flex-col overflow-hidden">
                     {/* Visual Background Orbs */}
                     <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
@@ -47,7 +48,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     }
 
     return (
-        <div className="flex min-h-screen bg-[#050510] text-white font-sans overflow-hidden">
+        <div className="flex min-h-screen bg-background text-foreground font-sans overflow-hidden transition-colors duration-200">
             {/* Mobile Sidebar Overlay */}
             {isSidebarOpen && (
                 <div 
@@ -58,7 +59,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
             {/* Sidebar */}
             <aside className={`
-                fixed inset-y-0 left-0 z-50 w-72 bg-[#0a0a1f]/80 backdrop-blur-2xl border-r border-white/5
+                fixed inset-y-0 left-0 z-50 w-72 bg-surface/80 backdrop-blur-2xl border-r border-border
                 transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0
                 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
             `}>
@@ -68,7 +69,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
                                 ⚗️
                             </div>
-                            <span className="text-2xl font-bold bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
+                            <span className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
                                 ChemZim
                             </span>
                         </Link>
@@ -87,21 +88,21 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                     className={`
                                         flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200
                                         ${isActive 
-                                            ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 shadow-inner shadow-indigo-500/5' 
-                                            : 'text-slate-400 hover:bg-white/5 hover:text-white'}
+                                            ? 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 border border-indigo-500/20 shadow-inner shadow-indigo-500/5' 
+                                            : 'text-slate-400 hover:bg-white/5 hover:text-foreground'}
                                     `}
                                 >
-                                    <item.icon className={`w-5 h-5 ${isActive ? 'text-indigo-400' : ''}`} />
+                                    <item.icon className={`w-5 h-5 ${isActive ? 'text-indigo-500 dark:text-indigo-400' : ''}`} />
                                     <span className="font-medium">{item.name}</span>
                                 </Link>
                             );
                         })}
 
                         {user?.isAdmin && (
-                            <div className="pt-4 mt-4 border-t border-white/5">
+                            <div className="pt-4 mt-4 border-t border-border">
                                 <Link
                                     href="/admin"
-                                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-emerald-400 hover:bg-emerald-500/10 transition-all border border-transparent hover:border-emerald-500/20"
+                                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-emerald-500 dark:text-emerald-400 hover:bg-emerald-500/10 transition-all border border-transparent hover:border-emerald-500/20"
                                 >
                                     <ShieldCheck className="w-5 h-5" />
                                     <span className="font-medium">Management</span>
@@ -110,9 +111,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         )}
                     </nav>
 
-                    <div className="mt-auto border-t border-white/5 pt-6 space-y-4">
+                    <div className="mt-auto border-t border-border pt-6 space-y-4">
                         <div className="flex items-center gap-3 px-2">
-                            <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-white/10 flex items-center justify-center text-xl overflow-hidden shadow-inner">
+                            <div className="w-10 h-10 rounded-full bg-indigo-500/10 border border-border flex items-center justify-center text-xl overflow-hidden shadow-inner">
                                 {user?.image ? (
                                     (user.image.startsWith('http') || user.image.startsWith('/') || user.image.startsWith('data:')) ? (
                                         <img src={user.image} alt={user.name} className="w-full h-full object-cover" />
@@ -124,14 +125,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 )}
                             </div>
                             <div className="flex flex-col min-w-0">
-                                <span className="text-sm font-semibold truncate text-white/90">{user?.name || 'Student'}</span>
+                                <span className="text-sm font-semibold truncate text-foreground/90">{user?.name || 'Student'}</span>
                                 <span className="text-xs text-slate-500 truncate">Level {level} • {user?.grade || 'No Grade Set'}</span>
                             </div>
                         </div>
                         {user ? (
                             <button
                                 onClick={() => logout()}
-                                className="flex items-center gap-3 w-full px-4 py-3 text-rose-400/80 hover:text-rose-400 hover:bg-rose-500/10 rounded-xl transition-all group"
+                                className="flex items-center gap-3 w-full px-4 py-3 text-rose-500 dark:text-rose-400/80 hover:text-rose-600 dark:hover:text-rose-400 hover:bg-rose-500/10 rounded-xl transition-all group"
                             >
                                 <LogOut className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
                                 <span className="font-medium">Logout</span>
@@ -139,7 +140,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         ) : (
                             <Link
                                 href="/login"
-                                className="flex items-center gap-3 w-full px-4 py-3 text-emerald-400 hover:bg-emerald-500/10 rounded-xl transition-all group border border-transparent hover:border-emerald-500/20"
+                                className="flex items-center gap-3 w-full px-4 py-3 text-emerald-500 dark:text-emerald-400 hover:bg-emerald-500/10 rounded-xl transition-all group border border-transparent hover:border-emerald-500/20"
                             >
                                 <LogOut className="w-5 h-5 group-hover:translate-x-1 transition-transform rotate-180" />
                                 <span className="font-medium">Login</span>
@@ -156,10 +157,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
 
                 {/* Header */}
-                <header className="h-20 border-b border-white/5 bg-[#050510]/40 backdrop-blur-md flex items-center justify-between px-6 lg:px-10 shrink-0 z-10">
+                <header className="h-20 border-b border-border bg-background/40 backdrop-blur-md flex items-center justify-between px-6 lg:px-10 shrink-0 z-10">
                     <button 
                         onClick={() => setIsSidebarOpen(true)}
-                        className="lg:hidden p-2 -ml-2 text-slate-400 hover:text-white transition-colors"
+                        className="lg:hidden p-2 -ml-2 text-slate-400 hover:text-foreground transition-colors"
                     >
                         <Menu className="w-6 h-6" />
                     </button>
@@ -175,14 +176,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         {streak?.currentStreak > 0 && (
                             <div className="hidden md:flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-full">
                                 <span className="text-sm">🔥</span>
-                                <span className="text-sm font-bold text-orange-400">{streak.currentStreak}d</span>
+                                <span className="text-sm font-bold text-orange-500 dark:text-orange-400">{streak.currentStreak}d</span>
                             </div>
                         )}
                         {/* XP Badge */}
-                        <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">
-                            <Trophy className="w-4 h-4 text-amber-400" />
-                            <span className="text-sm font-bold text-amber-500/90">{xp} XP</span>
+                        <div className="hidden md:flex items-center gap-2 bg-white/5 border border-border px-3 py-1.5 rounded-full">
+                            <Trophy className="w-4 h-4 text-amber-500" />
+                            <span className="text-sm font-bold text-amber-500">{xp} XP</span>
                         </div>
+                        {/* Theme Toggle */}
+                        <ThemeToggle />
                     </div>
                 </header>
 

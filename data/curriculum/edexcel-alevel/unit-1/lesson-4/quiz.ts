@@ -81,14 +81,14 @@ export const lessonQuiz = [
   },
   {
     id: "EDEXCEL-U1-L4-Q8-HARD-20260627",
-    question: "An organic compound contains $85.7\\%$ carbon and $14.3\\%$ hydrogen by mass. What is its empirical formula? ($A_r$: $\\text{C}=12.0$, $\\text{H}=1.0$)",
+    question: "An organic compound contains $82.8\\%$ carbon and $17.2\\%$ hydrogen by mass. What is its empirical formula? ($A_r$: $\\text{C}=12.0$, $\\text{H}=1.0$)",
     options: [
-      { text: "$\\text{CH}$" },
-      { text: "$\\text{CH}_2$", isCorrect: true },
       { text: "$\\text{CH}_3$" },
-      { text: "$\\text{C}_2\\text{H}_5$" }
+      { text: "$\\text{C}_2\\text{H}_5$", isCorrect: true },
+      { text: "$\\text{CH}_2$" },
+      { text: "$\\text{C}_3\\text{H}_7$" }
     ],
-    explanation: "Moles of C: $85.7 / 12.0 = 7.14\\text{ mol}$. Moles of H: $14.3 / 1.0 = 14.3\\text{ mol}$. Dividing by the smallest value ($7.14$) gives a C:H ratio of 1:2. Empirical formula is $\\text{CH}_2$."
+    explanation: "Moles of C: $82.8 / 12.0 = 6.90\\text{ mol}$. Moles of H: $17.2 / 1.0 = 17.2\\text{ mol}$. Dividing by the smallest value ($6.90$) gives a C:H ratio of 1 : 2.49, which is approximately 1 : 2.5. Multiplying by 2 to obtain the simplest whole-number ratio gives a C:H ratio of 2:5, so the empirical formula is $\\text{C}_2\\text{H}_5$."
   },
   {
     id: "EDEXCEL-U1-L4-Q9-HARD-20260627",

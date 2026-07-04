@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { GamificationProvider } from "@/contexts/GamificationContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import FloatingAssistant from "@/components/assistant/FloatingAssistant";
 
 const inter = Inter({
@@ -62,14 +63,35 @@ export default function RootLayout({
       lang="en"
       dir="ltr"
       className={`${inter.variable} ${spaceGrotesk.variable}`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col antialiased">
-        <AuthProvider>
-          <GamificationProvider>
-            {children}
-            <FloatingAssistant />
-          </GamificationProvider>
-        </AuthProvider>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme');
+                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                  } else {
+                    document.documentElement.classList.remove('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col antialiased bg-background text-foreground transition-colors duration-200">
+        <ThemeProvider>
+          <AuthProvider>
+            <GamificationProvider>
+              {children}
+              <FloatingAssistant />
+            </GamificationProvider>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

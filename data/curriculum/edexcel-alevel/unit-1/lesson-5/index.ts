@@ -53,6 +53,51 @@ export const parts: LessonPart[] = [
 > > 3. **Explain why it is not twice as strong:**
 > >    * A $\\\\pi$ bond is weaker than a $\\\\sigma$ bond because sideways orbital overlap is less effective than end-on orbital overlap.
 > >    * Therefore, the energy required to break the C=C bond ($\\\\sigma$ + $\\\\pi$) is less than twice the energy required to break a single C-C bond ($\\\\sigma$).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Hybridisation & Bond Angles in Ethene
+> **Question:** In a molecule of ethene ($\\\\text{C}_2\\\\text{H}_4$), what is the type of hybridisation shown by the carbon atoms, and what is the H-C-H bond angle?
+> 
+> * **A)** $sp^3$ hybridisation and $109.5^\\\\circ$
+> * **B)** $sp^2$ hybridisation and $120^\\\\circ$
+> * **C)** $sp$ hybridisation and $180^\\\\circ$
+> * **D)** $sp^2$ hybridisation and $90^\\\\circ$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine the number of electron density regions:**
+> >    * Each carbon atom in ethene is bonded to two hydrogen atoms (via single $\\\\sigma$ bonds) and one carbon atom (via a double bond).
+> >    * This gives 3 regions of electron density around each carbon atom.
+> > 
+> > 2. **Deduce hybridisation:**
+> >    * 3 regions of electron density require 3 hybridised orbitals, which correspond to **$sp^2$ hybridisation**.
+> > 
+> > 3. **Determine geometry and bond angle:**
+> >    * According to electron pair repulsion theory, 3 regions of electron density repel to a trigonal planar arrangement.
+> >    * The ideal bond angle for a trigonal planar shape is **$120^\\\\circ$**.
+> >    * Therefore, the correct option is **B**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Restricted Rotation and Pi Bonding
+> **Question:** Which statement best explains why alkenes can form geometric (cis-trans) isomers while alkanes cannot?
+> 
+> * **A)** Alkenes have polar bonds, whereas alkanes are completely non-polar.
+> * **B)** Alkenes have a planar structure, which allows groups to rotate freely.
+> * **C)** The sideways overlap of p-orbitals forms a $\\\\pi$ bond that restricts rotation.
+> * **D)** The $\\\\sigma$ bond in alkenes is twice as strong as the $\\\\sigma$ bond in alkanes.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Understand geometric isomerism requirements:**
+> >    * Geometric isomerism requires two different groups attached to each carbon of the double bond and **restricted rotation** around that bond.
+> > 
+> > 2. **Analyze restricted rotation:**
+> >    * The carbon-carbon double bond contains a $\\\\pi$ bond formed by the lateral (sideways) overlap of unhybridised p-orbitals.
+> >    * For rotation to occur, this overlap must be broken (requiring high energy).
+> >    * Thus, the $\\\\pi$ bond restricts rotation, keeping the attached groups locked in space.
+> >    * Therefore, the correct option is **C**.
 `,
     keyPoints: [
       'A C=C double bond consists of one strong sigma (σ) bond and one weaker pi (π) bond.',
@@ -538,7 +583,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
   },
   {
     id: 'alkene-addition-reactions-20260627',
-    title: 'Addition Reactions of Alkenes',
+    title: 'Reactions of Alkenes',
     type: 'text',
     content: `
 > [!NOTE]
@@ -552,21 +597,85 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > 
 > **a) Complete Combustion (Excess Oxygen):**
 > * Occurs when there is an excess of oxygen, producing carbon dioxide ($\\\\text{CO}_2$) and water ($\\\\text{H}_2\\\\text{O}$).
+> * Releases the **maximum amount of energy** (highly exothermic) because the fuel is fully oxidized.
 > * *Equation:*
 >   $$\\\\text{C}_2\\\\text{H}_4 + 3\\\\text{O}_2 \\\\rightarrow 2\\\\text{CO}_2 + 2\\\\text{H}_2\\\\text{O}$$
 > 
 > **b) Incomplete Combustion (Lack of Oxygen):**
 > * Occurs when oxygen is limited, producing highly toxic carbon monoxide ($\\\\text{CO}$) or carbon soot (C), and water ($\\\\text{H}_2\\\\text{O}$).
+> * Releases **significantly less energy** compared to complete combustion because the fuel is only partially oxidized.
 > * *Equation:*
 >   $$\\\\text{C}_2\\\\text{H}_4 + 2\\\\text{O}_2 \\\\rightarrow 2\\\\text{CO} + 2\\\\text{H}_2\\\\text{O}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1: Combustion of Ethene
+> **Question:** Write a balanced symbol equation for the complete combustion of ethene.
 > 
-> ---
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the reactants and products:**
+> >    * Reactants: Ethene ($\\\\text{C}_2\\\\text{H}_4$) and oxygen ($\\\\text{O}_2$).
+> >    * Products: Carbon dioxide ($\\\\text{CO}_2$) and water ($\\\\text{H}_2\\\\text{O}$).
+> > 
+> > 2. **Balance the equation:**
+> >    * $\\\\text{C}_2\\\\text{H}_4 + 3\\\\text{O}_2 \\\\rightarrow 2\\\\text{CO}_2 + 2\\\\text{H}_2\\\\text{O}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Incomplete Combustion of Propene
+> **Question:** Write a balanced symbol equation for the incomplete combustion of propene ($\\\\text{C}_3\\\\text{H}_6$) that produces carbon monoxide gas ($\\\\text{CO}$) and water.
 > 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the unbalanced equation:**
+> >    * $\\\\text{C}_3\\\\text{H}_6 + \\\\text{O}_2 \\\\rightarrow \\\\text{CO} + \\\\text{H}_2\\\\text{O}$
+> > 
+> > 2. **Balance the carbon atoms:**
+> >    * There are 3 carbons on the left, so we need 3 $\\\\text{CO}$ on the right:
+> >    * $\\\\text{C}_3\\\\text{H}_6 + \\\\text{O}_2 \\\\rightarrow 3\\\\text{CO} + \\\\text{H}_2\\\\text{O}$
+> > 
+> > 3. **Balance the hydrogen atoms:**
+> >    * There are 6 hydrogens on the left, so we need 3 $\\\\text{H}_2\\\\text{O}$ on the right:
+> >    * $\\\\text{C}_3\\\\text{H}_6 + \\\\text{O}_2 \\\\rightarrow 3\\\\text{CO} + 3\\\\text{H}_2\\\\text{O}$
+> > 
+> > 4. **Balance the oxygen atoms:**
+> >    * The right side has 3 (from CO) + 3 (from H₂O) = 6 oxygen atoms.
+> >    * Therefore, we need 3 $\\\\text{O}_2$ molecules on the left:
+> >    * $\\\\text{C}_3\\\\text{H}_6 + 3\\\\text{O}_2 \\\\rightarrow 3\\\\text{CO} + 3\\\\text{H}_2\\\\text{O}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Flame Characteristics of Alkenes
+> **Question:** When cyclohexene and cyclohexane are burned separately in air, cyclohexene burns with a much more smoky, sooty flame. Explain this observation in terms of their carbon-to-hydrogen ratio.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce their molecular formulas and C:H ratios:**
+> >    * Cyclohexane: $\\\\text{C}_6\\\\text{H}_{12}$ (carbon-to-hydrogen ratio is 1:2 or 50.0%).
+> >    * Cyclohexene: $\\\\text{C}_6\\\\text{H}_{10}$ (carbon-to-hydrogen ratio is 1:1.67 or 60.0%).
+> > 
+> > 2. **Relate to incomplete combustion:**
+> >    * Alkenes like cyclohexene have a higher percentage of carbon by mass compared to alkanes with the same number of carbons.
+> >    * Burning in air does not supply enough oxygen to fully oxidize this high carbon concentration, leading to incomplete combustion.
+> >    * Unburnt carbon particles are released as black soot, resulting in a smoky flame.
+`,
+    keyPoints: [
+      'Alkenes are highly reactive due to the weak pi (π) bond, which easily breaks during addition reactions.',
+      'Alkenes undergo complete combustion to form carbon dioxide and water, or incomplete combustion to form carbon monoxide and soot.'
+    ]
+  },
+  {
+    id: 'electrophilic-addition-mechanism-20260627',
+    title: 'Electrophilic Addition',
+    type: 'text',
+    content: `
+> [!NOTE]
 > ### 🔄 2) Electrophilic Addition
 > **Electrophilic Addition** is a reaction where two molecules react to form a single product. The electron-rich $\\\\pi$ bond in alkenes is easily attacked by electron-deficient species called **electrophiles**, converting unsaturated alkenes to saturated compounds.
 > 
 > * **General Definition:** $\\\\text{Alkene} + \\\\text{Reagent} \\\\rightarrow \\\\text{Single Saturated Product}$
-
+ 
 > [!BOX]
 > ### 📋 Key Addition Reactions (using Propene as Example)
 > 
@@ -599,6 +708,275 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > * *Reagents & Conditions:* Cold concentrated **Sulfuric acid ($\\\\text{H}_2\\\\text{SO}_4$)** catalyst, followed by adding water ($\\\\text{H}_2\\\\text{O(l)}$) and warming.
 > * *Equation:*
 >   $$\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2 + \\\\text{H}_2\\\\text{O(l)} \\\\xrightarrow{\\\\text{conc. } \\\\text{H}_2\\\\text{SO}_4} \\\\text{CH}_3\\\\text{CH(OH)CH}_3$$
+
+> [!IMPORTANT]
+> ### 🧪 Electrophilic Addition Mechanism in Polar Molecules
+> This mechanism describes how electrophiles react with the C=C double bond. Let's look at the mechanism for the reaction of propene with hydrogen bromide (HBr):
+> 
+> 1. **Polarisation of the Electrophile:**
+>    * H-Br is polar because bromine is more electronegative than hydrogen: $\\\\text{H}^{\\\\delta+} - \\\\text{Br}^{\\\\delta-}$.
+> 2. **Attack by the Double Bond:**
+>    * A curly arrow starts from the C=C double bond ($\\\\pi$ electrons) and points to the hydrogen atom ($\\\\text{H}^{\\\\delta+}$) of HBr.
+>    * The H-Br bond breaks heterolytically, with the electron pair moving to the bromine atom (represented by a curly arrow from the H-Br bond to Br).
+> 3. **Formation of Carbocation Intermediate:**
+>    * Hydrogen bonds to the end carbon (C1), leaving the middle carbon (C2) electron-deficient with a positive charge. This species is a secondary **carbocation** ($\\\\text{CH}_3\\\\text{CH}^+\\\\text{CH}_3$).
+>    * A bromide ion ($\\\\text{Br}^-$) is formed.
+> 4. **Nucleophilic Attack:**
+>    * A curly arrow starts from a lone pair on the bromide ion ($\\\\text{Br}^-$) and points to the positively charged carbon atom of the carbocation.
+>    * This forms the final C-Br bond, producing 2-bromopropane.
+
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bg-addition" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070f1e"/>
+      <stop offset="100%" stop-color="#0b1b35"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="380" rx="16" fill="url(#bg-addition)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition Mechanism of HBr to Propene</text>
+  <line x1="80" y1="44" x2="920" y2="44" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ==================== Reactants (Step 1) ==================== -->
+  <!-- Propene -->
+  <text x="110" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <text x="180" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <line x1="128" y1="177" x2="172" y2="177" stroke="#38bdf8" stroke-width="2.5"/>
+  <line x1="128" y1="183" x2="172" y2="183" stroke="#38bdf8" stroke-width="2.5"/>
+
+  <!-- Hydrogens on C1 -->
+  <line x1="102" y1="178" x2="82" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="102" y1="188" x2="82" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Methyl on C2 -->
+  <line x1="190" y1="168" x2="190" y2="145" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="180" y="138" font-size="14" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+
+  <!-- Hydrogen on C2 -->
+  <line x1="190" y1="192" x2="190" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="185" y="232" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- H-Br -->
+  <text x="142" y="260" font-size="15" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="156" y1="256" x2="180" y2="256" stroke="#fb923c" stroke-width="2"/>
+  <text x="186" y="260" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <!-- Dipoles -->
+  <text x="142" y="244" font-size="10" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
+  <text x="190" y="244" font-size="10" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
+
+  <!-- Curly Arrow 1: C=C Double Bond to H(delta+) -->
+  <path d="M150 190 Q120 220 134 256" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Curly Arrow 2: H-Br Bond to Br -->
+  <path d="M168 256 Q178 244 188 250" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== Arrow 1 -> 2 ==================== -->
+  <path d="M260 180 L320 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="290" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
+
+  <!-- ==================== Intermediate (Step 2) ==================== -->
+  <!-- Carbocation intermediate -->
+  <text x="370" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <text x="440" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <line x1="388" y1="180" x2="432" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Hydrogens on C1 (now CH3) -->
+  <line x1="362" y1="178" x2="342" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="328" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="362" y1="188" x2="342" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="328" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="378" y1="168" x2="378" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="373" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Methyl on C2 -->
+  <line x1="448" y1="168" x2="448" y2="145" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="438" y="138" font-size="14" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+
+  <!-- Hydrogen on C2 -->
+  <line x1="448" y1="192" x2="448" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="443" y="232" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Positive charge on C2 -->
+  <circle cx="465" cy="180" r="8" fill="#f43f5e"/>
+  <text x="465" y="183" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+
+  <!-- Bromide Ion (Br-) -->
+  <circle cx="403" cy="261" r="1.5" fill="#fb923c"/>
+  <circle cx="409" cy="261" r="1.5" fill="#fb923c"/>
+  <text x="405" y="278" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <circle cx="428" cy="274" r="7.5" fill="#10b981"/>
+  <text x="428" y="278" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
+
+  <!-- Curly Arrow 3: Br- lone pair to C2(+) -->
+  <path d="M406 256 Q390 220 436 186" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== Arrow 2 -> 3 ==================== -->
+  <path d="M525 180 L585 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="555" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
+
+  <!-- ==================== Product (2-bromopropane) ==================== -->
+  <text x="660" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <text x="730" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <line x1="678" y1="180" x2="722" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Hydrogens on C1 -->
+  <line x1="652" y1="178" x2="632" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="618" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="652" y1="188" x2="632" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="618" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="668" y1="168" x2="668" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="663" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Methyl on C2 -->
+  <line x1="738" y1="168" x2="738" y2="145" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="728" y="138" font-size="14" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+
+  <!-- Hydrogen on C2 -->
+  <line x1="740" y1="178" x2="760" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="764" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Bromine on C2 -->
+  <line x1="738" y1="192" x2="738" y2="225" stroke="#fb923c" stroke-width="2"/>
+  <text x="730" y="242" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+</svg>`)}
+
+> [!BOX]
+> ### 🧪 Electrophilic Addition Mechanism in Non-Polar Molecules
+> Halogenation (e.g., with non-polar $\\\\text{Br}_2$ or other non-polar molecules) starts through an induced dipole:
+> 
+> * **Polarisation:** The double bond (electron rich) in the alkene repels the bonding electrons in the non-polar bond or molecule (such as $\\\\text{H}_2$ or $\\\\text{Br}_2$), producing a dipole moment ($\\\\text{Br}^{\\\\delta+} - \\\\text{Br}^{\\\\delta-}$) which starts the reaction.
+> * **Attack:** The double bond attacks the electrophilic $\\\\text{Br}^{\\\\delta+}$ atom, forming a cyclic bromonium ion (or a standard carbocation intermediate) and a halide ion ($\\\\text{Br}^-$).
+> * **Curly Arrow Rules:** Remember, all curly arrows in these mechanisms MUST start from either a bond (representing bond fission) or from a lone pair of electrons.
+> * **Final Attack:** A curly arrow starts from a lone pair on the bromide ion ($\\\\text{Br}^-$) and points to one of the carbons to form the 1,2-dihalogenoalkane.
+
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="100%" height="auto">
+  <defs>
+    <linearGradient id="bg-halo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070f1e"/>
+      <stop offset="100%" stop-color="#0b1b35"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="380" rx="16" fill="url(#bg-halo)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition Mechanism of Br₂ to Ethene (Halogenation)</text>
+  <line x1="80" y1="44" x2="920" y2="44" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ==================== Reactants (Step 1) ==================== -->
+  <!-- Ethene -->
+  <text x="110" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <text x="180" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <line x1="128" y1="177" x2="172" y2="177" stroke="#38bdf8" stroke-width="2.5"/>
+  <line x1="128" y1="183" x2="172" y2="183" stroke="#38bdf8" stroke-width="2.5"/>
+
+  <!-- Hydrogens on C1 -->
+  <line x1="102" y1="178" x2="82" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="102" y1="188" x2="82" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="68" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Hydrogens on C2 -->
+  <line x1="190" y1="178" x2="210" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="214" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="190" y1="188" x2="210" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="214" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Bromine (Br-Br) -->
+  <text x="142" y="260" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <line x1="150" y1="268" x2="150" y2="294" stroke="#fb923c" stroke-width="2"/>
+  <text x="142" y="315" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <!-- Induced Dipoles -->
+  <text x="165" y="258" font-size="10" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
+  <text x="165" y="313" font-size="10" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
+
+  <!-- Curly Arrow 1: C=C Double Bond to Br(delta+) -->
+  <path d="M150 190 Q120 225 138 248" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Curly Arrow 2: Br-Br Bond to Br(delta-) -->
+  <path d="M150 280 Q130 285 138 298" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== Arrow 1 -> 2 ==================== -->
+  <path d="M260 180 L320 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="290" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
+
+  <!-- ==================== Intermediate (Step 2) ==================== -->
+  <!-- Carbocation intermediate -->
+  <text x="370" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <text x="440" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <line x1="388" y1="180" x2="432" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Bromine on C1 -->
+  <line x1="378" y1="192" x2="378" y2="225" stroke="#fb923c" stroke-width="2"/>
+  <text x="370" y="242" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <!-- Hydrogens on C1 -->
+  <line x1="362" y1="178" x2="342" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="328" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="378" y1="168" x2="378" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="373" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Hydrogens on C2 -->
+  <line x1="450" y1="178" x2="470" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="474" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="448" y1="168" x2="448" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="443" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Positive charge on C2 -->
+  <circle cx="453" cy="192" r="8" fill="#f43f5e"/>
+  <text x="453" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+
+  <!-- Bromide Ion (Br-) -->
+  <circle cx="428" cy="275" r="1.5" fill="#fb923c"/>
+  <circle cx="434" cy="275" r="1.5" fill="#fb923c"/>
+  <text x="430" y="292" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <circle cx="453" cy="288" r="7.5" fill="#10b981"/>
+  <text x="453" y="292" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
+
+  <!-- Curly Arrow 3: Br- lone pair to C2(+) -->
+  <path d="M431 270 Q410 240 436 196" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ==================== Arrow 2 -> 3 ==================== -->
+  <path d="M525 180 L585 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="555" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
+
+  <!-- ==================== Product (1,2-dibromoethane) ==================== -->
+  <text x="660" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <text x="730" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
+  <line x1="678" y1="180" x2="722" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Bromine on C1 -->
+  <line x1="668" y1="192" x2="668" y2="225" stroke="#fb923c" stroke-width="2"/>
+  <text x="660" y="242" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <!-- Bromine on C2 -->
+  <line x1="738" y1="168" x2="738" y2="135" stroke="#fb923c" stroke-width="2"/>
+  <text x="730" y="125" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <!-- Hydrogens on C1 -->
+  <line x1="652" y1="178" x2="632" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="618" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="668" y1="168" x2="668" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="663" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Hydrogens on C2 -->
+  <line x1="740" y1="178" x2="760" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="764" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="738" y1="192" x2="738" y2="225" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="733" y="242" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+</svg>`)}
+> 
+> > [!WARNING]
+> > ### ⚠️ Curly Arrow Conventions
+> > Always ensure that curly arrows start directly from a **bond** or a **lone pair of electrons**. Starting an arrow from an atom label or empty space is a common exam pitfall.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Predicting Reaction Products
@@ -639,104 +1017,87 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > >    * Therefore, the correct option is **B**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Application of Markovnikov's Rule
-> **Question:** According to Markovnikov's rule, when HCl is added to propene, which carbon atom will the hydrogen atom predominantly attach to?
-> 
-> * **A)** The carbon atom with fewer hydrogen substituents.  
-> * **B)** The carbon atom with a greater number of alkyl substituents.  
-> * **C)** The carbon atom with more hydrogen substituents.  
-> * **D)** Either carbon atom of the double bond with equal probability.  
+> #### 📝 Worked Example 3: Drawing Curly Arrows
+> **Question:** Describe what a curly arrow represents in an organic reaction mechanism and where it must start and end.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Recall Markovnikov's rule:**
-> >    * When a protic acid (like HCl) is added to an unsymmetrical alkene, the hydrogen atom (H⁺) attaches to the carbon of the double bond that has the greater number of hydrogen substituents.
+> > 1. **Define the curly arrow:**
+> >    * A curly arrow represents the movement of a **pair of electrons**.
 > > 
-> > 2. **Apply to propene (CH₃-CH=CH₂):**
-> >    * Carbon-1 has 2 hydrogen atoms.
-> >    * Carbon-2 has 1 hydrogen atom.
-> >    * The hydrogen from HCl will predominantly attach to carbon-1 (the carbon with more hydrogen substituents), forming the more stable secondary carbocation intermediate.
-> >    * Therefore, the correct option is **C**.
+> > 2. **Specify start and end points:**
+> >    * The tail of the arrow **must start** from either a covalent bond (representing a pair of bonding electrons) or a lone pair of electrons.
+> >    * The head of the arrow must point exactly to the atom that will receive the electron pair to form a new bond.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Relative Carbocation Stability
-> **Question:** Which of the following carbocation intermediates is the most stable?
+> #### 📝 Worked Example 4: Hydrogenation of Propene
+> **Question:** When propene reacts with hydrogen gas in the presence of a nickel catalyst and heat, what is the main product formed?
 > 
-> * **A)** Primary carbocation  
-> * **B)** Secondary carbocation  
-> * **C)** Methyl carbocation  
-> * **D)** Tertiary carbocation  
+> * **A)** Propane.
+> * **B)** Propan-1-ol.
+> * **C)** Propan-2-ol.
+> * **D)** 1,2-dichloropropane.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Understand carbocation stability:**
-> >    * Carbocations are stabilized by the electron-donating inductive effect of surrounding alkyl groups.
-> >    * The positive charge is dispersed more effectively as the number of alkyl groups increases.
+> > 1. **Identify the reaction type:**
+> >    * Reacting an alkene with hydrogen gas ($\\\\text{H}_2$) in the presence of a nickel catalyst and heat is a **hydrogenation** reaction.
 > > 
-> > 2. **Compare stability:**
-> >    * Methyl (no alkyl groups) < Primary (1 alkyl group) < Secondary (2 alkyl groups) < Tertiary (3 alkyl groups).
-> >    * Tertiary carbocations are the most stable.
-> >    * Therefore, the correct option is **D**.
+> > 2. **Determine the addition product:**
+> >    * Hydrogenation adds two hydrogen atoms across the $\\\\text{C}=\\\\text{C}$ double bond, converting the unsaturated alkene into a saturated alkane.
+> >    * Propene ($\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2$) becomes propane ($\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_3$).
+> > 
+> > 3. **Correct Answer:** **A**
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Bromine Water Addition Mechanism
-> **Question:** When propene reacts with aqueous bromine (bromine water), the major product obtained is 1-bromopropan-2-ol, CH₃CH(OH)CH₂Br, while 1,2-dibromopropane is only formed as a minor product. Explain this observation by referring to the steps of the mechanism.
+> #### 📝 Worked Example 5: Hydrohalogenation of But-2-ene
+> **Question:** Symmetrical but-2-ene reacts with hydrogen chloride at room temperature. Write down the structural formula and IUPAC name of the organic product formed.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Step 1 - Carbocation formation:**
-> >    * The pi (π) electrons of the C=C double bond attack the electrophilic bromine atom in the induced dipole Br⁺-Br⁻. This forms a carbocation intermediate and releases a bromide ion (Br⁻).
+> > 1. **Identify the reaction type:**
+> >    * Reacting an alkene with a hydrogen halide (HCl) is **hydrohalogenation**, where -H and -Cl are added across the C=C double bond.
 > > 
-> > 2. **Step 2 - Nucleophilic competition:**
-> >    * The carbocation intermediate is electron-deficient and can be attacked by any available nucleophile in the solution, which in this case includes both the newly formed bromide ions (Br⁻) and water molecules (H₂O).
+> > 2. **Apply the addition to symmetrical but-2-ene ($\\\\text{CH}_3\\\\text{CH}=\\\\text{CHCH}_3$):**
+> >    * Since the alkene is symmetrical, adding -H to one carbon and -Cl to the other carbon yields the same single product regardless of which carbon receives the chlorine.
+> >    * The product is $\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH(Cl)CH}_3$.
 > > 
-> > 3. **Step 3 - Concentration effect:**
-> >    * Since the reaction takes place in an aqueous solution, the concentration of H₂O molecules is much higher than the concentration of Br⁻ ions. This makes the nucleophilic attack by H₂O on the carbocation much more frequent, resulting in the major product 1-bromopropan-2-ol.
+> > 3. **Name the product:**
+> >    * The longest carbon chain has 4 carbons (butane), and a chlorine substituent is on carbon-2.
+> >    * IUPAC Name: 2-chlorobutane.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Halogenation of Ethene
+> **Question:** Write a balanced chemical equation for the reaction of ethene with chlorine gas, using structural formulas for the organic molecules.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the reactants and type of addition:**
+> >    * Ethene ($\\\\text{CH}_2=\\\\text{CH}_2$) reacts with chlorine ($\\\\text{Cl}_2$) in a **halogenation** addition reaction.
+> >    * Both chlorine atoms add across the C=C double bond, breaking the $\\\\pi$ bond.
+> > 
+> > 2. **Deduce the structure of the product:**
+> >    * Adding a chlorine atom to each carbon of ethene yields 1,2-dichloroethane ($\\\\text{CH}_2\\\\text{ClCH}_2\\\\text{Cl}$).
+> > 
+> > 3. **Write the balanced equation:**
+> >    * $\\\\text{CH}_2=\\\\text{CH}_2 + \\\\text{Cl}_2 \\\\rightarrow \\\\text{CH}_2\\\\text{ClCH}_2\\\\text{Cl}$
+
 `,
     keyPoints: [
-      'Alkenes undergo addition reactions where the weaker pi (π) bond breaks to form two new sigma (σ) bonds.',
-      'Bromine water turns from orange-brown to colourless in the presence of an alkene, serving as a test for unsaturation.',
-      'Hydration of alkenes with steam requires a phosphoric(V) acid catalyst at high temperature and pressure to produce alcohols.'
+      'Electrophilic addition is initiated by the high electron density of the pi (π) bond attacking an electron-deficient electrophile.',
+      'Curly arrows must start from an electron pair (bond or lone pair) and point directly to the electron-accepting atom.',
+      'Non-polar molecules (like Br₂) are polarised as they approach the electron-rich double bond.'
     ]
   },
   {
-    id: 'electrophilic-addition-mechanism-20260627',
-    title: "Electrophilic Addition & Markovnikov's Rule",
+    id: 'markovnikov-carbocation-stability-20260627',
+    title: "Markovnikov's Rule & Carbocation Stability",
     type: 'text',
     content: `
-> [!IMPORTANT]
-> ### 🔄 Electrophilic Addition Mechanism
-> This mechanism describes how electrophiles react with the C=C double bond. Let's look at the mechanism for the reaction of ethene with hydrogen bromide (HBr):
-> 
-> 1. **Polarisation of the Electrophile:**
->    * H-Br is polar because bromine is more electronegative than hydrogen: $\\\\text{H}^{\\\\delta+} - \\\\text{Br}^{\\\\delta-}$.
-> 2. **Attack by the Double Bond:**
->    * A curly arrow starts from the C=C double bond ($\\\\pi$ electrons) and points to the hydrogen atom ($\\\\text{H}^{\\\\delta+}$) of HBr.
->    * The H-Br bond breaks heterolytically, with the electron pair moving to the bromine atom (represented by a curly arrow from the H-Br bond to Br).
-> 3. **Formation of Carbocation Intermediate:**
->    * Hydrogen bonds to one of the carbon atoms, leaving the other carbon electron-deficient with a positive charge. This species is a **carbocation** ($\\\\text{CH}_3\\\\text{CH}_2^+$).
->    * A bromide ion ($\\\\text{Br}^-$) is formed.
-> 4. **Nucleophilic Attack:**
->    * A curly arrow starts from a lone pair on the bromide ion ($\\\\text{Br}^-$) and points to the positively charged carbon atom of the carbocation.
->    * This forms the final C-Br bond, producing bromoethane.
-
-
-> [!BOX]
-> ### 🧪 Halogenation & Induced Dipoles in Non-Polar Molecules
-> Halogenation (e.g., with non-polar $\\\\text{Br}_2$ or other non-polar molecules) starts through an induced dipole:
-> 
-> * **Polarisation:** The double bond (electron rich) in the alkene repels the bonding electrons in the non-polar bond or molecule (such as $\\\\text{H}_2$ or $\\\\text{Br}_2$), producing a dipole moment ($\\\\delta^+ - \\\\delta^-$) which starts the reaction.
-> * **Attack:** The double bond attacks the electrophilic $\\\\text{Br}^{\\\\delta+}$ atom, forming a cyclic bromonium ion (or a standard carbocation intermediate) and a halide ion ($\\\\text{Br}^-$).
-> * **Curly Arrow Rules:** Remember, all curly arrows in these mechanisms MUST start from either a bond (representing bond fission) or from a lone pair of electrons.
-> * **Final Attack:** A curly arrow starts from a lone pair on the bromide ion ($\\\\text{Br}^-$) and points to one of the carbons to form the 1,2-dihalogenoalkane.
-> 
-> > [!WARNING]
-> > ### ⚠️ Curly Arrow Conventions
-> > Always ensure that curly arrows start directly from a **bond** or a **lone pair of electrons**. Starting an arrow from an atom label or empty space is a common exam pitfall.
-
 > [!IMPORTANT]
 > ### ⚖️ Symmetrical vs. Unsymmetrical Alkenes
 > * **Symmetrical Alkene:** The groups attached to each C of the double bond are identical (e.g., ethene, but-2-ene). Reaction with HBr yields only **one** product.
@@ -744,21 +1105,17 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > 
 > > [!IMPORTANT]
 > > ### 🧲 Carbocation Stability Order
-> > Carbocations are classified by the number of alkyl groups attached to the positively charged carbon atom. A tertiary carbocation intermediate is more stable than a secondary carbocation (intermediate) due to the electron-donating inductive effect of more alkyl groups, which is more stable than a primary carbocation:
+> > Carbocations are classified by the number of alkyl groups attached to the positively charged carbon atom. A tertiary carbocation intermediate is more stable than a secondary carbocation (intermediate) due to the electron-donating inductive effect of more alkyl groups:
 > > 
 > > 1. **Primary ($1^{\\\\circ}$):** One alkyl group attached, e.g., $\\\\text{CH}_3\\\\text{CH}_2^+$. Least stable.
 > > 2. **Secondary ($2^{\\\\circ}$):** Two alkyl groups attached, e.g., $(\\\\text{CH}_3)_2\\\\text{CH}^+$. More stable.
 > > 3. **Tertiary ($3^{\\\\circ}$):** Three alkyl groups attached, e.g., $(\\\\text{CH}_3)_3\\\\text{C}^+$. Most stable.
-> > 
-> > **Why are alkyl groups stabilizing?**
-> > Alkyl groups are electron-donating. They push electron density towards the positively charged carbon atom (called the **inductive effect**), spreading and minimizing the positive charge and stabilizing the intermediate.
 > 
-> > [!NOTE]
-> > ### 📜 Markovnikov's Rule
-> > **Markovnikov’s rule:** When a protic acid (HX) is added to an asymmetric alkene, the acidic hydrogen (H⁺) attaches itself to the carbon having a greater number of hydrogen substituents whereas the halide (X⁻) group attaches itself to the carbon atom which has a greater number of alkyl substituents.
-> > 
-> > * **Major Product:** Formed via the **more stable** carbocation intermediate.
-> > * **Minor Product:** Formed via the **less stable** carbocation intermediate.
+> [!NOTE]
+> ### 📜 Markovnikov's Rule
+> **Markovnikov’s rule:** When a protic acid (HX) is added to an asymmetric alkene, the acidic hydrogen (H⁺) attaches itself to the carbon having a greater number of hydrogen substituents whereas the halide (X⁻) group attaches itself to the carbon atom which has a greater number of alkyl substituents.
+> * **Major Product:** Formed via the **more stable** carbocation intermediate.
+> * **Minor Product:** Formed via the **less stable** carbocation intermediate.
 
 ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="auto">
   <defs>
@@ -830,14 +1187,14 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 
   <!-- ==================== PATHWAY ARROWS (STEP 1) ==================== -->
   <!-- Upper Pathway -->
-  <path d="M280 200 Q310 150 350 140" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="325" y="150" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
-  <text x="325" y="162" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Major path</text>
+  <path d="M290 195 Q310 165 335 155" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
+  <text x="325" y="135" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
+  <text x="325" y="147" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Major path</text>
 
   <!-- Lower Pathway -->
-  <path d="M280 280 Q310 330 350 340" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="325" y="330" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">step 1</text>
-  <text x="325" y="342" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Minor path</text>
+  <path d="M290 285 Q310 315 335 325" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
+  <text x="325" y="345" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">step 1</text>
+  <text x="325" y="357" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Minor path</text>
 
   <text x="320" y="246" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">OR</text>
 
@@ -870,7 +1227,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
   <line x1="555" y1="84" x2="580" y2="69" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="585" y="67" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
   <line x1="540" y1="84" x2="520" y2="64" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="508" y="62" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <text x="508" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
   <line x1="557" y1="98" x2="583" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="587" y="126" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
@@ -878,12 +1235,13 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
   <text x="485" y="64" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">More stable (2 alkyl groups)</text>
 
   <!-- Bromide Ion (Br-) -->
-  <rect x="525" y="152" width="40" height="25" rx="5" fill="#1e1e38" stroke="#fb923c" stroke-width="1"/>
+  <circle cx="528" cy="162" r="1.5" fill="#fb923c"/>
+  <circle cx="528" cy="168" r="1.5" fill="#fb923c"/>
   <text x="535" y="169" font-size="14" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
   <circle cx="558" cy="165" r="7.5" fill="#10b981"/>
   <text x="558" y="169" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
   <!-- Curly Arrow 3: Br- lone pair to C2(+) -->
-  <path d="M525 165 Q488 165 488 136" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M528 165 Q488 165 486 138" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
 
 
   <!-- ===== LOWER INTERMEDIATE: Primary Carbocation ===== -->
@@ -920,20 +1278,21 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
   <text x="485" y="432" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Less stable (1 alkyl group)</text>
 
   <!-- Bromide Ion (Br-) -->
-  <rect x="365" y="388" width="40" height="25" rx="5" fill="#1e1e38" stroke="#fb923c" stroke-width="1"/>
+  <circle cx="380" cy="393" r="1.5" fill="#fb923c"/>
+  <circle cx="386" cy="393" r="1.5" fill="#fb923c"/>
   <text x="375" y="405" font-size="14" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
   <circle cx="398" cy="401" r="7.5" fill="#10b981"/>
   <text x="398" y="405" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
   <!-- Curly Arrow 4: Br- lone pair to C1(+) -->
-  <path d="M410 401 Q423 401 423 336" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M383 393 Q423 393 414 346" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
 
 
   <!-- ==================== STEP 2 ARROWS ==================== -->
-  <path d="M620 140 L690 140" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="655" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
+  <path d="M625 140 L670 140" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="648" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
 
-  <path d="M620 340 L690 340" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="655" y="332" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">step 2</text>
+  <path d="M625 340 L670 340" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="648" y="332" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">step 2</text>
 
 
   <!-- ==================== RIGHT: PRODUCTS ==================== -->
@@ -964,7 +1323,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
   <line x1="875" y1="84" x2="900" y2="69" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="905" y="67" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
   <line x1="860" y1="84" x2="840" y2="64" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="828" y="62" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <text x="828" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
   <line x1="877" y1="98" x2="903" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="907" y="126" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
@@ -1001,8 +1360,8 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
   <text x="905" y="267" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
   <line x1="860" y1="284" x2="840" y2="264" stroke="#94a3b8" stroke-width="1.5"/>
   <text x="828" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="877" y1="298" x2="903" y2="314" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="907" y="326" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="877" y1="98" x2="903" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="907" y="126" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
   <!-- Product Labels -->
   <rect x="740" y="400" width="130" height="20" rx="5" fill="#450a0a" stroke="#dc2626" stroke-width="1"/>
@@ -1017,21 +1376,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 </svg>`)}
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Drawing Curly Arrows
-> **Question:** Describe what a curly arrow represents in an organic reaction mechanism and where it must start and end.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Define the curly arrow:**
-> >    * A curly arrow represents the movement of a **pair of electrons**.
-> > 
-> > 2. **Specify start and end points:**
-> >    * The tail of the arrow **must start** from either a covalent bond (representing a pair of bonding electrons) or a lone pair of electrons.
-> >    * The head of the arrow must point exactly to the atom that will receive the electron pair to form a new bond.
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 2: Predicting Major and Minor Products
+> #### 📝 Worked Example 1: Predicting Major and Minor Products
 > **Question:** Propene reacts with hydrogen bromide. Identify the major and minor products, explaining your choice in terms of carbocation stability.
 > 
 > > [!TIP]
@@ -1049,32 +1394,89 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > > 3. **Deduce products:**
 > >    * **Major Product:** 2-bromopropane (formed via the more stable secondary carbocation).
 > >    * **Minor Product:** 1-bromopropane (formed via the less stable primary carbocation).
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 2: Application of Markovnikov's Rule
+> > **Question:** According to Markovnikov's rule, when HCl is added to propene, which carbon atom will the hydrogen atom predominantly attach to?
+> > 
+> > * **A)** The carbon atom with fewer hydrogen substituents.  
+> > * **B)** The carbon atom with a greater number of alkyl substituents.  
+> > * **C)** The carbon atom with more hydrogen substituents.  
+> > * **D)** Either carbon atom of the double bond with equal probability.  
+> > 
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Recall Markovnikov's rule:**
+> > >    * When a protic acid (like HCl) is added to an unsymmetrical alkene, the hydrogen atom (H⁺) attaches to the carbon of the double bond that has the greater number of hydrogen substituents.
+> > > 
+> > > 2. **Apply to propene (CH₃-CH=CH₂):**
+> > >    * Carbon-1 has 2 hydrogen atoms.
+> > >    * Carbon-2 has 1 hydrogen atom.
+> > >    * The hydrogen from HCl will predominantly attach to carbon-1 (the carbon with more hydrogen substituents), forming the more stable secondary carbocation intermediate.
+> > >    * Therefore, the correct option is **C**.
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 3: Relative Carbocation Stability
+> > **Question:** Which of the following carbocation intermediates is the most stable?
+> > 
+> > * **A)** Primary carbocation  
+> > * **B)** Secondary carbocation  
+> > * **C)** Methyl carbocation  
+> > * **D)** Tertiary carbocation  
+> > 
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Understand carbocation stability:**
+> > >    * Carbocations are stabilized by the electron-donating inductive effect of surrounding alkyl groups.
+> > >    * The positive charge is dispersed more effectively as the number of alkyl groups increases.
+> > > 
+> > > 2. **Compare stability:**
+> > >    * Methyl (no alkyl groups) < Primary (1 alkyl group) < Secondary (2 alkyl groups) < Tertiary (3 alkyl groups).
+> > >    * Tertiary carbocations are the most stable.
+> > >    * Therefore, the correct option is **D**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Hydrogenation of Propene
-> **Question:** When propene reacts with hydrogen gas in the presence of a nickel catalyst and heat, what is the main product formed?
-> 
-> * **A)** Propane.
-> * **B)** Propan-1-ol.
-> * **C)** Propan-2-ol.
-> * **D)** 1,2-dichloropropane.
+> #### 📝 Worked Example 4: Tertiary Carbocation Intermediate
+> **Question:** 2-Methylpropene reacts with hydrogen bromide. Identify the IUPAC name of the major product and explain why it is formed in preference to the minor product.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify the reaction type:**
-> >    * Reacting an alkene with hydrogen gas ($\\\\text{H}_2$) in the presence of a nickel catalyst and heat is a **hydrogenation** reaction.
+> > 1. **Deduce the two possible carbocation intermediates:**
+> >    * Addition of $\\\\text{H}^+$ to carbon-1: forms a tertiary carbocation intermediate, $(\\\\text{CH}_3)_3\\\\text{C}^+$ (2-methylpropan-2-yl carbocation).
+> >    * Addition of $\\\\text{H}^+$ to carbon-2: forms a primary carbocation intermediate, $(\\\\text{CH}_3)_2\\\\text{CHCH}_2^+$ (2-methylpropan-1-yl carbocation).
 > > 
-> > 2. **Determine the addition product:**
-> >    * Hydrogenation adds two hydrogen atoms across the $\\\\text{C}=\\\\text{C}$ double bond, converting the unsaturated alkene into a saturated alkane.
-> >    * Propene ($\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2$) becomes propane ($\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_3$).
+> > 2. **Compare stability:**
+> >    * The tertiary carbocation is stabilized by three electron-donating methyl groups via the inductive effect.
+> >    * The primary carbocation is stabilized by only one alkyl group.
+> >    * Thus, the tertiary carbocation intermediate is much more stable and forms preferentially.
 > > 
-> > 3. **Correct Answer:** **A**
+> > 3. **Identify the products:**
+> >    * **Major Product:** 2-bromo-2-methylpropane (formed via the highly stable tertiary carbocation).
+> >    * **Minor Product:** 1-bromo-2-methylpropane (formed via the less stable primary carbocation).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Electrophilic Addition of Interhalogens
+> **Question:** Propene reacts with iodine monochloride ($\\\\text{I}-\\\\text{Cl}$). Identify the major product formed and explain its formation.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine the polarity of the electrophile:**
+> >    * Chlorine is more electronegative than iodine, so the $\\\\text{I}-\\\\text{Cl}$ molecule has a permanent dipole: $\\\\text{I}^{\\\\delta+} - \\\\text{Cl}^{\\\\delta-}$.
+> >    * Therefore, the $\\\\text{I}^{\\\\delta+}$ atom acts as the electrophile.
+> > 
+> > 2. **Deduce the carbocation intermediate:**
+> >    * $\\\\text{I}^+$ adds to carbon-1 (the carbon with more hydrogen atoms) to form the more stable secondary carbocation intermediate: $\\\\text{CH}_3\\\\text{CH}^+-\\\\text{CH}_2\\\\text{I}$.
+> > 
+> > 3. **Attack of the nucleophile:**
+> >    * The nucleophilic chloride ion ($\\\\text{Cl}^-$) attacks the carbocation center at carbon-2.
+> >    * The major product is **2-chloro-1-iodopropane**.
 
 `,
     keyPoints: [
-      'Electrophilic addition is initiated by the high electron density of the pi (π) bond attacking an electron-deficient electrophile.',
-      'Curly arrows must start from an electron pair (bond or lone pair) and point directly to the electron-accepting atom.',
       'Alkyl groups are electron-donating, stabilizing the carbocation intermediate via the inductive effect (3° > 2° > 1°).',
       'Markovnikov’s rule predicts that the major product is formed via the more stable carbocation intermediate.'
     ]
@@ -1085,7 +1487,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🧪 Oxidation of Alkenes to Diols
+> ### 🧪 3) Oxidation of Alkenes to Diols
 > Alkenes are oxidized by **cold, dilute, acidified (with $\\\\text{H}_2\\\\text{SO}_4$) potassium manganate(VII) solution** ($\\\\text{KMnO}_4$):
 > 
 > * **Reaction Details:** The double bond breaks and two hydroxyl (-OH) groups add across the C=C bond to form a **diol**.
@@ -1094,21 +1496,21 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > * **Equations for Propene Oxidation:**
 >   $$\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2 + \\\\text{KMnO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CH}_2\\\\text{OH}$$
 >   $$\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2 + [\\\\text{O}] + \\\\text{H}_2\\\\text{O}\\\\text{(l)} \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CH}_2\\\\text{OH}$$
-> 
-> > [!IMPORTANT]
-> > ### 📦 Addition Polymerisation Definitions
-> > * **Polymer:** A large molecule (macromolecule) made by joining many small molecules together.
-> > * **Monomer:** A small molecule that can be joined with other small molecules to form a long chain unit (large molecule).
-> > * **Polymerisation:** The process of joining many small molecules together to form a large molecule.
-> 
-> > [!BOX]
-> > ### 📋 Common Addition Polymers
-> > | Polymer Name | Monomer Name | Polymerization Reaction |
-> > | :--- | :--- | :--- |
-> > | **Polyethene** | Ethene | $n\\\\text{CH}_2=\\\\text{CH}_2 \\\\rightarrow -[\\\\text{CH}_2-\\\\text{CH}_2]_n-$ |
-> > | **Polypropene** | Propene | $n\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2 \\\\rightarrow -[\\\\text{CH(CH}_3)-\\\\text{CH}_2]_n-$ |
-> > | **Polybut-1-ene** | But-1-ene | $n\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}=\\\\text{CH}_2 \\\\rightarrow -[\\\\text{CH(CH}_2\\\\text{CH}_3)-\\\\text{CH}_2]_n-$ |
-> > | **Polybut-2-ene** | But-2-ene | $n\\\\text{CH}_3\\\\text{CH}=\\\\text{CHCH}_3 \\\\rightarrow -[\\\\text{CH(CH}_3)-\\\\text{CH(CH}_3)]_n-$ |
+
+> [!IMPORTANT]
+> ### 📦 4) Addition Polymerisation
+> * **Polymer:** A large molecule (macromolecule) made by joining many small molecules together.
+> * **Monomer:** A small molecule that can be joined with other small molecules to form a long chain unit (large molecule).
+> * **Polymerisation:** The process of joining many small molecules together to form a large molecule.
+
+> [!BOX]
+> ### 📋 Common Addition Polymers
+> | Polymer Name | Monomer Name | Polymerization Reaction |
+> | :--- | :--- | :--- |
+> | Polyethene | Ethene | nCH₂=CH₂ → -[CH₂-CH₂]ₙ- |
+> | Polypropene | Propene | nCH₃CH=CH₂ → -[CH(CH₃)-CH₂]ₙ- |
+> | Polybut-1-ene | But-1-ene | nCH₃CH₂CH=CH₂ → -[CH(CH₂CH₃)-CH₂]ₙ- |
+> | Polybut-2-ene | But-2-ene | nCH₃CH=CHCH₃ → -[CH(CH₃)-CH(CH₃)]ₙ- |
 
 
 > [!WARNING]
@@ -1139,7 +1541,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > > 2. **Draw the repeating unit:**
 > >    * Change the C=C double bond to a C-C single bond, and draw open bonds extending to the left and right:
 > >      * -[CH₂-CH(CH₃)]-
-> 
+
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Identifying the Monomer from a Complex Polymer Section
 > **Question:** A monomer Q can be polymerized to form R, a polymer used to improve the grip of car tyres. A section of R is shown below:
@@ -1163,7 +1565,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > >    * Number the chain from the end closest to the substituent to give the lowest numbers (1, 2, 3, 4).
 > >    * There is a methyl substituent on carbon-2.
 > >    * Therefore, the IUPAC name of Q is **2-methylbuta-1,3-diene**.
-> 
+
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Calculating Repeating Units from Molecular Mass
 > **Question:** A sample of polyisoprene has a relative molecular mass of 50252. Calculate the number of repeat units in this polymer sample.
@@ -1180,7 +1582,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > > 3. **Calculate the number of repeat units:**
 > >    * Number of repeat units = Polymer Molecular Mass / Repeat Unit Mr
 > >    * Number of units = 50252 / 68 = **739**
-> 
+
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Identifying the Monomer from a Repeat Unit
 > **Question:** What is the IUPAC name of the monomer that forms the repeat unit shown below?
@@ -1205,7 +1607,7 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > > 3. **Identify substituents:**
 > >    * There is a methyl group at carbon-2: **2-methylbut-2-ene**.
 > >    * Therefore, the correct option is **D**.
-> 
+
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Defining a Monomer
 > **Question:** Which of the following statements best describes a monomer?
@@ -1226,6 +1628,44 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > > 
 > > 2. **Select the correct option:**
 > >    * The correct option is **B**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Oxidation of Alkenes to Diols
+> **Question:** Propene reacts with cold, dilute, acidified potassium manganate(VII) solution. State the observation for this reaction and write the structural formula of the organic product.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce the reaction type and products:**
+> >    * Reaction of an alkene with cold, dilute, acidified potassium manganate(VII) ($\\\\text{KMnO}_4$) is **oxidation to a diol** (two -OH groups add across the C=C bond).
+> >    * Propene ($\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2$) forms propan-1,2-diol: $\\\\text{CH}_3\\\\text{CH(OH)CH}_2\\\\text{OH}$.
+> > 
+> > 2. **State the observation:**
+> >    * Acidified potassium manganate(VII) is a purple solution.
+> >    * When it oxidizes the alkene, the purple color decolourises to form a colorless solution.
+> > 
+> > 3. **Formulate the final answer:**
+> >    * Observation: Purple solution decolourises (or turns colorless).
+> >    * Product Structural Formula: $\\\\text{CH}_3\\\\text{CH(OH)CH}_2\\\\text{OH}$.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Polymer Disposal and Environmental Hazards
+> **Question:** Poly(chloroethene) (PVC) releases toxic hydrogen chloride ($\\\\text{HCl}$) gas when incinerated. Write an equation showing how calcium hydroxide, $\\\\text{Ca(OH)}_2$, can be used in waste gas scrubbers to neutralize this toxic emission.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the type of reaction:**
+> >    * Hydrogen chloride ($\\\\text{HCl}$) is an acidic gas.
+> >    * Calcium hydroxide ($\\\\text{Ca(OH)}_2$) is a basic compound (alkali).
+> >    * The reaction is an acid-base neutralization producing a salt (calcium chloride) and water.
+> > 
+> > 2. **Deduce the products:**
+> >    * Acid ($\\\\text{HCl}$) + Base ($\\\\text{Ca(OH)}_2$) $\\\\rightarrow$ Salt ($\\\\text{CaCl}_2$) + Water ($\\\\text{H}_2\\\\text{O}$).
+> > 
+> > 3. **Balance the equation:**
+> >    * $\\\\text{Ca(OH)}_2 + 2\\\\text{HCl} \\\\rightarrow \\\\text{CaCl}_2 + 2\\\\text{H}_2\\\\text{O}$
+
 `,
     keyPoints: [
       'Alkenes are oxidized by cold, dilute, acidified KMnO₄ to form diols, causing the purple solution to decolourise.',
