@@ -1,4 +1,4 @@
-export const lessonTitle = "Arenes, Amines, Amides & Amino Acids";
+export const lessonTitle = "Topic 17: Arenes, Amines, Amides & Amino Acids";
 export const lessonNumber = 6;
 
 export const theoryMarkdown = `

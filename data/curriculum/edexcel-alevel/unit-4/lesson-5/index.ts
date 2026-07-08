@@ -1,4 +1,4 @@
-export const lessonTitle = "Carbonyls, Carboxylic Acids & Chirality";
+export const lessonTitle = "Topic 16: Carbonyls, Carboxylic Acids & Chirality";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `

@@ -11,7 +11,7 @@ import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 import confetti from 'canvas-confetti';
 
-import { getLessonFromRegistry } from '@/data/curriculum/registry';
+import { getLessonFromRegistry, LessonPart } from '@/data/curriculum/registry';
 import TextToSpeech from '@/components/visual/TextToSpeech';
 import LessonNotes from '@/components/visual/LessonNotes';
 import MarkdownCarousel from '@/components/visual/MarkdownCarousel';
@@ -123,7 +123,7 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
     }
 
     if (children.includes('@@@CUSTOM_TABLE_START@@@')) {
-        const parts = children.split(/@@@CUSTOM_TABLE_START@@@(.*?)@@@CUSTOM_TABLE_END@@@/g);
+        const parts = children.split(/@@@CUSTOM_TABLE_START@@@([\s\S]*?)@@@CUSTOM_TABLE_END@@@/g);
         if (parts.length > 1) {
             return (
                 <React.Fragment>
@@ -240,7 +240,7 @@ const formatTrailingSymbolsAndUnits = (text: string): string => {
     // 5. Inline math ending with a number/unit/symbol followed by a period.
     const mathRegex = /\$([^\$]+?(?:\d+|mol|g|dm³|cm³|m³|Pa|kPa|K|NaCl|CO_2|H_2O|Fe|atoms|molecules))\$\./g;
 
-    const parts = text.split(/(@@@CUSTOM_TABLE_START@@@.*?@@@CUSTOM_TABLE_END@@@)/g);
+    const parts = text.split(/(@@@CUSTOM_TABLE_START@@@[\s\S]*?@@@CUSTOM_TABLE_END@@@)/g);
     for (let i = 0; i < parts.length; i++) {
         if (i % 2 === 0) {
             let processed = parts[i];
@@ -475,7 +475,15 @@ const renderContentWithTables = (content: string) => {
             if (currentTableLines.length > 0) {
                 const isBlockquoteTable = /^\s*>/.test(currentTableLines[0]);
                 const prefix = isBlockquoteTable ? '> ' : '';
-                const encoded = encodeURIComponent(currentTableLines.join('\n'));
+                const encoded = encodeURIComponent(currentTableLines.join('\n'))
+                    .replace(/\*/g, '%2A')
+                    .replace(/_/g, '%5F')
+                    .replace(/\(/g, '%28')
+                    .replace(/\)/g, '%29')
+                    .replace(/!/g, '%21')
+                    .replace(/~/g, '%7E')
+                    .replace(/-/g, '%2D')
+                    .replace(/\./g, '%2E');
                 processedLines.push(`${prefix}@@@CUSTOM_TABLE_START@@@${encoded}@@@CUSTOM_TABLE_END@@@`);
                 currentTableLines = [];
             }
@@ -486,7 +494,15 @@ const renderContentWithTables = (content: string) => {
     if (currentTableLines.length > 0) {
         const isBlockquoteTable = /^\s*>/.test(currentTableLines[0]);
         const prefix = isBlockquoteTable ? '> ' : '';
-        const encoded = encodeURIComponent(currentTableLines.join('\n'));
+        const encoded = encodeURIComponent(currentTableLines.join('\n'))
+            .replace(/\*/g, '%2A')
+            .replace(/_/g, '%5F')
+            .replace(/\(/g, '%28')
+            .replace(/\)/g, '%29')
+            .replace(/!/g, '%21')
+            .replace(/~/g, '%7E')
+            .replace(/-/g, '%2D')
+            .replace(/\./g, '%2E');
         processedLines.push(`${prefix}@@@CUSTOM_TABLE_START@@@${encoded}@@@CUSTOM_TABLE_END@@@`);
     }
 
@@ -514,6 +530,47 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
     const { completeLesson, addXP } = useGamification();
     const { updateUser } = useAuth();
 
+    // Determine next / prev lessons and topics
+    const { prevLink, nextLink } = useMemo(() => {
+        let prev = null;
+        let next = null;
+
+        if (topic && curriculum) {
+            // Check if there is a previous lesson in the current topic
+            if (currentLessonNum > 1) {
+                const prevLessonData = getLessonFromRegistry(track, topic.number, currentLessonNum - 1);
+                if (prevLessonData) {
+                    prev = `/dashboard/curriculum/${curriculumId}/${topicId}?lesson=${currentLessonNum - 1}`;
+                }
+            } else {
+                // Check if there is a previous topic
+                const prevTopic = curriculum.topics.find(t => t.number === topic.number - 1);
+                if (prevTopic) {
+                    // Find the last lesson of the previous topic by probing
+                    let lastLessonNum = 1;
+                    while (getLessonFromRegistry(track, prevTopic.number, lastLessonNum + 1) !== null) {
+                        lastLessonNum++;
+                    }
+                    prev = `/dashboard/curriculum/${curriculumId}/${prevTopic.id}?lesson=${lastLessonNum}`;
+                }
+            }
+
+            // Check if there is a next lesson in the current topic
+            const nextLessonData = getLessonFromRegistry(track, topic.number, currentLessonNum + 1);
+            if (nextLessonData) {
+                next = `/dashboard/curriculum/${curriculumId}/${topicId}?lesson=${currentLessonNum + 1}`;
+            } else {
+                // Check if there is a next topic
+                const nextTopic = curriculum.topics.find(t => t.number === topic.number + 1);
+                if (nextTopic) {
+                    next = `/dashboard/curriculum/${curriculumId}/${nextTopic.id}?lesson=1`;
+                }
+            }
+        }
+
+        return { prevLink: prev, nextLink: next };
+    }, [curriculum, topic, currentLessonNum, curriculumId, topicId, track]);
+
     // State for interactive lesson player
     const [currentPartIndex, setCurrentPartIndex] = useState(0);
     const [completed, setCompleted] = useState(false);
@@ -533,7 +590,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
         setQuizFirstAttempts({});
         setQuizActiveIndex(0);
         setQuizCompleted(false);
-    }, [lesson]);
+    }, [lesson, topicId, curriculumId]);
 
     // Save last studied lesson state
     useEffect(() => {
@@ -572,8 +629,36 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
         );
     }
 
-    const hasParts = lessonData && lessonData.parts && lessonData.parts.length > 0;
-    const rawPartsList = lessonData?.parts || [];
+    // Dynamically build parts if not defined (fallback for simple markdown lessons to run them in slide player)
+    const rawPartsList = useMemo(() => {
+        if (lessonData && lessonData.parts && lessonData.parts.length > 0) {
+            return lessonData.parts;
+        }
+        if (theoryContent) {
+            const sections = theoryContent.split(/(?=###\s+\d+\.\s+|###\s+)/);
+            if (sections.length > 1) {
+                return sections.map((section, idx) => {
+                    const match = section.match(/###\s+(?:\d+\.\s+)?([^\n]+)/);
+                    const title = match ? match[1].trim() : (idx === 0 ? 'Introduction' : `Part ${idx + 1}`);
+                    return {
+                        id: `part-${idx + 1}`,
+                        title: title,
+                        type: 'text' as const,
+                        content: section
+                    } as LessonPart;
+                });
+            }
+            return [{
+                id: 'intro',
+                title: 'Lesson Overview',
+                type: 'text' as const,
+                content: theoryContent
+            } as LessonPart];
+        }
+        return [] as LessonPart[];
+    }, [lessonData, theoryContent]);
+
+    const hasParts = rawPartsList.length > 0;
     const rawLessonQuiz = lessonData?.quiz || [];
 
     // Shuffle options once when the lesson data changes
@@ -598,9 +683,10 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
             title: 'Test Your Knowledge 📝',
             type: 'quiz',
             content: '',
-        });
+        } as LessonPart);
     }
-    const currentPart = partsList[currentPartIndex];
+    const safePartIndex = currentPartIndex >= partsList.length ? 0 : currentPartIndex;
+    const currentPart = (partsList[safePartIndex] || { id: '', title: '', type: 'text', content: '' }) as LessonPart;
 
     const handleNext = () => {
         if (currentPartIndex < partsList.length - 1) {
@@ -646,7 +732,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
     const allQuestionsAnswered = Object.keys(quizAnswers).length === lessonQuiz.length;
     const isNextDisabled = currentPart?.id === 'interactive-quiz' && !allQuestionsAnswered;
-    const progress = hasParts ? ((currentPartIndex + 1) / partsList.length) * 100 : 100;
+    const progress = hasParts ? ((safePartIndex + 1) / partsList.length) * 100 : 100;
 
     return (
         <div className="w-full max-w-none h-full flex flex-col overflow-hidden pb-0">
@@ -661,7 +747,17 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                         Back to Syllabus
                     </Link>
                     <h1 className="text-lg md:text-xl font-bold text-foreground leading-tight">
-                        Unit {topic.number} - Topic {currentLessonNum}: {lessonData?.title || topic.title}
+                        {curriculumId.startsWith('edexcel-as') || curriculumId.startsWith('edexcel-a2')
+                            ? (() => {
+                                // Edexcel topics are numbered cumulatively across units:
+                                // AS: Unit 1 = Topics 1-5, Unit 2 = Topics 6-10, Unit 3 = Topic 11
+                                // A2: Unit 4 = Topics 12-17, Unit 5 = Topics 18-21, Unit 6 = Topic 22
+                                const edexcelTopicOffset: Record<number, number> = { 1: 0, 2: 5, 3: 10, 4: 11, 5: 17, 6: 21 };
+                                const offset = edexcelTopicOffset[topic.number] ?? 0;
+                                return `Unit ${topic.number} - Topic ${offset + currentLessonNum}`;
+                            })()
+                            : `Topic ${topic.number} - Lesson ${currentLessonNum}`
+                        }: {lessonData?.title || topic.title}
                     </h1>
                     <p className="text-emerald-500 dark:text-emerald-400 font-medium text-[10px] mt-0.5">
                         {curriculum.title}
@@ -686,17 +782,17 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                 setCurrentPartIndex(idx);
                                                 setCompleted(false);
                                             }}
-                                            className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2.5 cursor-pointer ${currentPartIndex === idx
+                                            className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-2.5 cursor-pointer ${safePartIndex === idx
                                                 ? 'bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 dark:text-indigo-400'
                                                 : 'border border-transparent text-slate-400 hover:text-foreground hover:bg-white/5'
                                                 }`}
                                         >
-                                            <div className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-bold border ${currentPartIndex === idx ? 'border-indigo-500 dark:border-indigo-400 text-indigo-500 dark:text-indigo-400' : 'border-slate-600 text-slate-500'
+                                            <div className={`w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center text-[10px] font-bold border ${safePartIndex === idx ? 'border-indigo-500 dark:border-indigo-400 text-indigo-500 dark:text-indigo-400' : 'border-slate-600 text-slate-500'
                                                 }`}>
                                                 {idx + 1}
                                             </div>
                                             <span className="truncate flex-1">{part.title}</span>
-                                            {idx < currentPartIndex && <CheckCircle size={12} className="text-emerald-500 ml-auto flex-shrink-0" />}
+                                            {idx < safePartIndex && <CheckCircle size={12} className="text-emerald-500 ml-auto flex-shrink-0" />}
                                         </button>
                                     ))}
                                 </div>
@@ -726,7 +822,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                             {sidebarOpen ? <ChevronLeft className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                                         </button>
                                         <div>
-                                            <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Part {currentPartIndex + 1} of {partsList.length}</span>
+                                            <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold uppercase tracking-wider">Part {safePartIndex + 1} of {partsList.length}</span>
                                             <h2 className="text-lg font-bold text-foreground mt-0.5">{currentPart.title}</h2>
                                         </div>
                                     </div>
@@ -737,10 +833,29 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
                                 {/* Completion Card */}
                                 {completed && (
-                                    <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 text-center animate-fade-in-up">
-                                        <span className="text-3xl">🎉</span>
-                                        <h3 className="text-lg font-bold text-emerald-400 mt-2">Lesson Completed!</h3>
-                                        <p className="text-slate-400 text-sm mt-1">Excellent work completing this lesson. You have earned +25 XP!</p>
+                                    <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 text-center animate-fade-in-up flex flex-col items-center gap-4">
+                                        <div>
+                                            <span className="text-3xl">🎉</span>
+                                            <h3 className="text-lg font-bold text-emerald-400 mt-2">Lesson Completed!</h3>
+                                            <p className="text-slate-400 text-sm mt-1">Excellent work completing this lesson. You have earned +25 XP!</p>
+                                        </div>
+                                        <div className="flex flex-wrap gap-3 justify-center mt-2">
+                                            <Link
+                                                href={`/dashboard/curriculum?track=${curriculumId}`}
+                                                className="bg-white/5 hover:bg-white/10 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all border border-white/10"
+                                            >
+                                                Return to Syllabus
+                                            </Link>
+                                            {nextLink && (
+                                                <Link
+                                                    href={nextLink}
+                                                    className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-lg shadow-indigo-500/20 flex items-center gap-1.5"
+                                                >
+                                                    Next Lesson
+                                                    <ChevronRight className="w-4 h-4" />
+                                                </Link>
+                                            )}
+                                        </div>
                                     </div>
                                 )}
 
@@ -775,6 +890,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                     {currentPart.id === 'interactive-quiz' ? (
                                         (() => {
                                             const activeQuestion = lessonQuiz[quizActiveIndex];
+                                            if (!activeQuestion) return null;
                                             const selectedIdx = quizAnswers[quizActiveIndex];
                                             const isAnswered = selectedIdx !== undefined;
 
@@ -882,7 +998,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                 <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-2xl p-5 mt-6">
                                                     <h4 className="text-xs font-bold text-indigo-500 dark:text-indigo-400 uppercase tracking-widest mb-3">Key Study Points</h4>
                                                     <ul className="space-y-2.5">
-                                                        {currentPart.keyPoints.map((point, i) => (
+                                                        {currentPart.keyPoints.map((point: string, i: number) => (
                                                             <li key={i} className="flex gap-2.5 items-start text-sm text-foreground/80">
                                                                 <span className="text-indigo-500 dark:text-indigo-400 mt-0.5">•</span>
                                                                 <span>{renderTextWithMath(formatTrailingSymbolsAndUnits(point))}</span>
@@ -911,20 +1027,30 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                             <div className="flex justify-between items-center gap-4 py-2.5 px-5 border-t border-white/10 bg-white/[0.02] flex-shrink-0">
                                 <button
                                     onClick={handlePrev}
-                                    disabled={currentPartIndex === 0}
+                                    disabled={safePartIndex === 0}
                                     className="flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all border border-white/10 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                                 >
                                     <ChevronLeft className="w-4 h-4" />
                                     Previous
                                 </button>
-                                <button
-                                    onClick={handleNext}
-                                    disabled={isNextDisabled}
-                                    className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-lg shadow-indigo-500/20 disabled:opacity-30 disabled:cursor-not-allowed"
-                                >
-                                    {currentPartIndex === partsList.length - 1 ? 'Finish Lesson' : 'Next Part'}
-                                    <ChevronRight className="w-4 h-4" />
-                                </button>
+                                {completed && nextLink ? (
+                                    <Link
+                                        href={nextLink}
+                                        className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-lg shadow-indigo-500/20"
+                                    >
+                                        Next Lesson
+                                        <ChevronRight className="w-4 h-4" />
+                                    </Link>
+                                ) : (
+                                    <button
+                                        onClick={handleNext}
+                                        disabled={isNextDisabled}
+                                        className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all cursor-pointer shadow-lg shadow-indigo-500/20 disabled:opacity-30 disabled:cursor-not-allowed"
+                                    >
+                                        {safePartIndex === partsList.length - 1 ? 'Finish Lesson' : 'Next Part'}
+                                        <ChevronRight className="w-4 h-4" />
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>

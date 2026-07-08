@@ -18,9 +18,9 @@ ChemZim is built for speed, security, and scientific precision.
 
 ### 🗂️ Scalable Multi-Board Curriculum Registry
 - **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620, `cie-as` for Cambridge AS-Level 9701, `cie-alevel` for AS/A-Level 9701, and `edexcel-alevel` for Pearson Edexcel IAL Chemistry XCH11/YCH11) with dynamic registries for modular lessons, exams, and difficulty levels. Includes automated suffix resolution (`-20260106`) during registry lookups to ensure flawless route-to-data mapping, and robust fallback track matching inside the curriculum page filter to prevent mismatched student tracks from throwing undefined errors.
-- **Granular Lesson Tree:** Maps 56 unique lessons for CIE tracks and 22 lessons (across 6 units) for Edexcel. Pearson Edexcel Unit 1: Topic 1 ("Formulae, Equations and Amount of Substance") is fully completed as a state-of-the-art interactive curriculum featuring 10 slide-based parts, integrated chemical simulators (Avogadro scale, gas laws, reaction animator), and a comprehensive 30-question quiz covering all standard exam concepts.
+- **Granular Lesson Tree:** Maps 56 unique lessons for CIE tracks and 22 lessons (across 6 units) for Edexcel. Fully completed interactive curricula for Edexcel Unit 1 Topic 1, and now completed Unit 4 Topics 12 (Kinetics & Equilibria II), 13 (Entropy & Energetics II), 14 (Chemical Equilibria II), and 15 (Acid-Base Equilibria) with slide-based parts, quantitative practice calculations, and custom unit-tested quizzes.
 - **Security & Authorization Middleware:** Integrated route protection for `edexcel-alevel` and automated student track redirection during login based on registered grades.
-- **Empty-State UI Safeguards:** Integrated safety layout checks in client components (such as `CurriculumView`) to gracefully display warning panels instead of causing Next.js runtime exceptions if no matched curriculum is found.
+- **Empty-State UI Safeguards:** Integrated safety layout checks in client components (such as `CurriculumView`) to gracefully display warning panels instead of causing Next.js runtime exceptions if no matched curriculum is found. Includes mobile-responsive List View optimization preventing overflow bugs.
 
 
 ### ⚙️ Build & Deployment Stability

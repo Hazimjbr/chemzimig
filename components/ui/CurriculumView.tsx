@@ -171,45 +171,45 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                                                             return (
                                                                 <div 
                                                                     key={index}
-                                                                    className={`group flex items-center justify-between p-4 md:p-5 rounded-2xl border transition-all ${
+                                                                    className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 md:p-5 rounded-2xl border transition-all ${
                                                                         isAvailable 
                                                                             ? 'bg-surface border-border hover:border-indigo-500/30 hover:bg-indigo-500/[0.02]' 
                                                                             : 'bg-surface/20 border-dashed border-border opacity-60'
                                                                     }`}
                                                                 >
-                                                                    <div className="flex items-center gap-4 min-w-0">
-                                                                        <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm ${
+                                                                    <div className="flex items-start sm:items-center gap-3 md:gap-4 min-w-0 flex-1">
+                                                                        <div className={`w-8 h-8 md:w-10 md:h-10 rounded-xl flex-shrink-0 flex items-center justify-center font-bold text-xs md:text-sm ${
                                                                             isAvailable 
                                                                                 ? 'bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 border border-indigo-500/20' 
                                                                                 : 'bg-background text-slate-500 border border-border'
                                                                         }`}>
                                                                             {lessonNum}
                                                                         </div>
-                                                                        <div className="min-w-0">
-                                                                            <h4 className={`font-semibold truncate text-base ${isAvailable ? 'text-foreground group-hover:text-indigo-600 dark:group-hover:text-indigo-300' : 'text-slate-500'}`}>
+                                                                        <div className="min-w-0 flex-1">
+                                                                            <h4 className={`font-semibold text-sm md:text-base break-words ${isAvailable ? 'text-foreground group-hover:text-indigo-600 dark:group-hover:text-indigo-300' : 'text-slate-500'}`}>
                                                                                 {subtopic}
                                                                             </h4>
-                                                                            <div className="flex items-center gap-4 text-xs font-semibold text-slate-500 mt-1">
+                                                                            <div className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs font-semibold text-slate-500 mt-1">
                                                                                 <div className="flex items-center gap-1">
-                                                                                    <Clock className="w-3.5 h-3.5" />
+                                                                                    <Clock className="w-3 md:w-3.5 h-3 md:h-3.5" />
                                                                                     <span>15 min</span>
                                                                                 </div>
                                                                                 <div className="flex items-center gap-1">
-                                                                                    <Star className="w-3.5 h-3.5 text-amber-500/60" />
+                                                                                    <Star className="w-3 md:w-3.5 h-3 md:h-3.5 text-amber-500/60" />
                                                                                     <span>+25 XP</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div>
+                                                                    <div className="self-end sm:self-auto flex-shrink-0">
                                                                         {isAvailable ? (
                                                                             <Link
                                                                                 href={`/dashboard/curriculum/${activeCurriculum.id}/${topic.id}?tab=theory&lesson=${lessonNum}`}
-                                                                                className="flex items-center gap-2 bg-indigo-500/10 hover:bg-indigo-500 text-indigo-500 dark:text-indigo-400 hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-all border border-indigo-500/20 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
+                                                                                className="flex items-center justify-center gap-1.5 bg-indigo-500/10 hover:bg-indigo-500 text-indigo-500 dark:text-indigo-400 hover:text-white px-3.5 py-1.5 md:px-4 md:py-2 rounded-xl text-[11px] md:text-xs font-bold transition-all border border-indigo-500/20 group-hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] w-full sm:w-auto"
                                                                             >
                                                                                 Study Lesson
-                                                                                <ChevronRight className="w-4 h-4" />
+                                                                                <ChevronRight className="w-3.5 h-3.5 md:w-4 md:h-4" />
                                                                             </Link>
                                                                         ) : (
                                                                             <div className="flex items-center gap-1 text-slate-600 text-xs font-semibold px-4 py-2">
