@@ -13,26 +13,14 @@ interface PeriodicTableProps {
 export default function PeriodicTable({ isOpen, onClose }: PeriodicTableProps) {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedElement, setSelectedElement] = useState<Element | null>(null);
-    const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-    useEffect(() => {
-        return () => {
-            if (timeoutRef.current) clearTimeout(timeoutRef.current);
-        };
-    }, []);
 
     const handleElementClick = (el: Element) => {
-        if (timeoutRef.current) clearTimeout(timeoutRef.current);
-
         if (selectedElement?.number === el.number) {
             setSelectedElement(null);
             return;
         }
 
         setSelectedElement(el);
-        timeoutRef.current = setTimeout(() => {
-            setSelectedElement(null);
-        }, 3000);
     };
 
     const foundElement = searchTerm
@@ -70,31 +58,39 @@ export default function PeriodicTable({ isOpen, onClose }: PeriodicTableProps) {
                         className="fixed left-1/2 top-1/2 z-[61] w-[95vw] max-w-5xl h-[90vh] bg-[#0a0a1a]/90 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(99,102,241,0.2)] overflow-hidden flex flex-col"
                     >
                         {/* Header */}
-                        <div className="p-4 border-b border-white/5 flex justify-between items-center gap-4 bg-gradient-to-r from-indigo-500/10 to-transparent">
-                            <div className="flex items-center gap-3">
-                                <div className="p-2 bg-indigo-500/20 rounded-lg">
-                                    <Info className="text-indigo-400" size={20} />
+                        <div className="p-3 md:p-4 border-b border-white/5 flex flex-col md:flex-row md:items-center justify-between gap-3 bg-gradient-to-r from-indigo-500/10 to-transparent relative">
+                            <div className="flex items-center justify-between w-full md:w-auto">
+                                <div className="flex items-center gap-2">
+                                    <div className="p-1.5 bg-indigo-500/20 rounded-lg">
+                                        <Info className="text-indigo-400" size={16} />
+                                    </div>
+                                    <h2 className="text-sm md:text-xl font-bold text-white tracking-tight">
+                                        Periodic Table
+                                    </h2>
                                 </div>
-                                <h2 className="text-xl font-bold text-white tracking-tight">
-                                    Interactive Periodic Table
-                                </h2>
+                                <button
+                                    onClick={onClose}
+                                    className="p-1.5 hover:bg-white/5 rounded-full text-white/40 hover:text-white transition-colors md:hidden"
+                                >
+                                    <X size={18} />
+                                </button>
                             </div>
 
                             {/* Search Box */}
-                            <div className="relative flex-1 max-w-sm group">
-                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-indigo-400 transition-colors" size={18} />
+                            <div className="relative w-full md:flex-1 md:max-w-sm group">
+                                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30 group-focus-within:text-indigo-400 transition-colors" size={16} />
                                 <input
                                     type="text"
                                     placeholder="Search (e.g. Iron, Fe, 26)"
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
-                                    className="w-full bg-white/5 border border-white/10 rounded-xl py-2.5 pl-10 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-sm"
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl py-2 pl-9 pr-4 text-white placeholder:text-white/20 focus:outline-none focus:border-indigo-500/50 focus:bg-white/10 transition-all text-xs md:text-sm"
                                 />
                             </div>
 
                             <button
                                 onClick={onClose}
-                                className="p-2.5 hover:bg-white/5 rounded-full text-white/40 hover:text-white transition-colors"
+                                className="hidden md:block p-2 hover:bg-white/5 rounded-full text-white/40 hover:text-white transition-colors"
                             >
                                 <X size={20} />
                             </button>
