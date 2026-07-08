@@ -101,54 +101,54 @@ export default function PeriodicTable({ isOpen, onClose }: PeriodicTableProps) {
                         </div>
 
                         {/* Element Showcase */}
-                        <div className="relative h-28 border-b border-white/5 overflow-hidden flex items-center justify-center">
+                        <div className="relative py-3 px-4 min-h-[90px] md:h-28 border-b border-white/5 overflow-hidden flex items-center justify-center bg-black/20">
                             <AnimatePresence mode="wait">
                                 {(foundElement || selectedElement) ? (
                                     <motion.div
                                         key={(foundElement || selectedElement)?.number}
-                                        initial={{ y: 20, opacity: 0 }}
+                                        initial={{ y: 15, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
-                                        exit={{ y: -20, opacity: 0 }}
-                                        className="flex gap-12 items-center"
+                                        exit={{ y: -15, opacity: 0 }}
+                                        className="flex flex-wrap md:flex-nowrap gap-4 md:gap-12 items-center justify-center"
                                     >
                                         <div className="text-center">
-                                            <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Number</div>
-                                            <div className="text-2xl font-bold text-white">{(foundElement || selectedElement)?.number}</div>
+                                            <div className="text-[8px] md:text-[10px] uppercase tracking-widest text-white/40 mb-0.5">Number</div>
+                                            <div className="text-lg md:text-2xl font-bold text-white">{(foundElement || selectedElement)?.number}</div>
                                         </div>
                                         <div className="text-center">
-                                            <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Symbol</div>
+                                            <div className="text-[8px] md:text-[10px] uppercase tracking-widest text-white/40 mb-0.5">Symbol</div>
                                             <div 
-                                                className="text-5xl font-black"
+                                                className="text-3xl md:text-5xl font-black leading-none"
                                                 style={{ color: categoryColors[(foundElement || selectedElement)!.category] }}
                                             >
                                                 {(foundElement || selectedElement)?.symbol}
                                             </div>
                                         </div>
                                         <div className="text-center">
-                                            <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Name</div>
-                                            <div className="text-2xl font-bold text-white">{(foundElement || selectedElement)?.name}</div>
+                                            <div className="text-[8px] md:text-[10px] uppercase tracking-widest text-white/40 mb-0.5">Name</div>
+                                            <div className="text-lg md:text-2xl font-bold text-white">{(foundElement || selectedElement)?.name}</div>
                                         </div>
                                         <div className="text-center">
-                                            <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Atomic Mass</div>
-                                            <div className="text-2xl font-bold text-white">{formatMass((foundElement || selectedElement)!.mass)}</div>
+                                            <div className="text-[8px] md:text-[10px] uppercase tracking-widest text-white/40 mb-0.5">Atomic Mass</div>
+                                            <div className="text-lg md:text-2xl font-bold text-white">{formatMass((foundElement || selectedElement)!.mass)}</div>
                                         </div>
                                     </motion.div>
                                 ) : (
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
-                                        className="text-white/20 italic text-sm"
+                                        className="text-white/30 italic text-xs md:text-sm text-center px-4"
                                     >
-                                        Hover or search for an element to see details
+                                        Tap or search for an element to see details
                                     </motion.div>
                                 )}
                             </AnimatePresence>
                             {/* Decorative Glow */}
-                            <div className="absolute inset-0 bg-indigo-500/5 blur-3xl rounded-full" />
+                            <div className="absolute inset-0 bg-indigo-500/5 blur-3xl rounded-full pointer-events-none" />
                         </div>
 
                         {/* Grid Container */}
-                        <div className="flex-1 overflow-auto p-8 custom-scrollbar">
+                        <div className="flex-1 overflow-auto p-4 md:p-8 custom-scrollbar">
                             <div
                                 className="grid"
                                 style={{
@@ -182,15 +182,15 @@ export default function PeriodicTable({ isOpen, onClose }: PeriodicTableProps) {
                                                     : `${categoryColors[el.category]}20`,
                                                 border: `1.5px solid ${categoryColors[el.category]}50`,
                                             }}
-                                            className="rounded-lg flex flex-col items-center justify-center cursor-pointer transition-colors relative"
+                                            className="rounded-lg flex flex-col items-center justify-center cursor-pointer transition-colors relative select-none"
                                         >
-                                            <span className="absolute top-1 left-1 text-[8px] opacity-40 font-mono text-white">
+                                            <span className="absolute top-0.5 left-1 text-[7px] md:text-[8px] opacity-40 font-mono text-white pointer-events-none">
                                                 {el.number}
                                             </span>
-                                            <span className={`text-sm font-bold ${isHighlighted || isSelected ? 'text-black' : 'text-white'}`}>
+                                            <span className={`text-xs md:text-sm font-bold ${isHighlighted || isSelected ? 'text-black font-black' : 'text-white'}`}>
                                                 {el.symbol}
                                             </span>
-                                            <span className={`text-[7px] font-medium opacity-60 ${isHighlighted || isSelected ? 'text-black' : 'text-white'}`}>
+                                            <span className={`hidden md:inline text-[7px] font-medium opacity-60 ${isHighlighted || isSelected ? 'text-black' : 'text-white'}`}>
                                                 {formatMass(el.mass)}
                                             </span>
                                         </motion.div>
@@ -200,11 +200,11 @@ export default function PeriodicTable({ isOpen, onClose }: PeriodicTableProps) {
                         </div>
 
                         {/* Legend */}
-                        <div className="p-4 bg-white/5 flex flex-wrap justify-center gap-x-6 gap-y-2 border-t border-white/5">
+                        <div className="p-3 md:p-4 bg-white/5 flex flex-wrap justify-center gap-x-4 md:gap-x-6 gap-y-1.5 md:gap-y-2 border-t border-white/5 overflow-y-auto max-h-[100px] md:max-h-none">
                             {Object.entries(categoryColors).map(([cat, color]) => (
-                                <div key={cat} className="flex items-center gap-2">
-                                    <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: color }} />
-                                    <span className="text-[10px] capitalize text-white/50 tracking-wide font-medium">
+                                <div key={cat} className="flex items-center gap-1.5 md:gap-2">
+                                    <div className="w-2 md:w-2.5 h-2 md:h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />
+                                    <span className="text-[8px] md:text-[10px] capitalize text-white/50 tracking-wide font-medium">
                                         {cat.replace('-', ' ')}
                                     </span>
                                 </div>
