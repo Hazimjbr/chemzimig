@@ -160,7 +160,7 @@ export default function PeriodicTable({ isOpen, onClose }: PeriodicTableProps) {
 
                                     return (
                                         <motion.div
-                                            key={el.number}
+                                            key={`${el.symbol}-${el.number}`}
                                             onClick={() => handleElementClick(el)}
                                             whileHover={{ scale: 1.1, zIndex: 10 }}
                                             animate={{
