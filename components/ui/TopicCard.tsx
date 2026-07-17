@@ -42,9 +42,9 @@ export const TopicCard: React.FC<TopicCardProps> = ({ topic, index, curriculumId
                                 <Link 
                                     key={i} 
                                     href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=${i + 1}`}
-                                    className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
+                                    className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
                                 >
-                                    <Hash className="w-3 h-3 text-emerald-500/70" />
+                                    <Hash className="w-3 h-3 text-emerald-500/70 mt-1 flex-shrink-0" />
                                     <span>{sub}</span>
                                 </Link>
                             ))}
