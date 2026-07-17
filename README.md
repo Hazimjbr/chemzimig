@@ -131,6 +131,22 @@ npm run dev
 
 ---
 
+## 🔮 Future Development Roadmap (Under Study)
+
+### 🤖 AI-Powered Short Answer & Explanation Grading
+We are evaluating the integration of a Large Language Model (LLM) grading system to automatically assess and provide feedback on student-written explanation answers (which are currently manually reviewed or compared statically).
+*   **Approach:** Utilizing lightweight, high-performance models (such as `Gemini 1.5 Flash` via server-side API calls) to evaluate student explanations against the official rubric/model answer.
+*   **Key Capabilities:**
+    *   **Semantic Understanding:** Moving beyond exact string matching to evaluate chemical concepts, allowing synonyms and ignoring minor non-conceptual spelling mistakes.
+    *   **Chemistry-Specific Logic:** Differentiating critical scientific terms (e.g., exothermic vs. endothermic) where spelling is similar but meanings are opposite.
+    *   **Contextual Feedback:** Generating structured JSON responses that include correctness (`isCorrect`), score, and a personalized chemistry-focused explanation detailing missing points (e.g., omitted catalysts, state symbols, or equilibrium shifts).
+*   **Security & Resource Management:**
+    *   Implementing server-side execution to keep API keys secure.
+    *   Caching graded responses in Firebase to avoid redundant API consumption for identical submissions.
+    *   Applying rate-limiting (e.g., max 2-3 grading attempts per student per question) and API quotas on Google Cloud to manage token costs.
+
+---
+
 ## 👨‍💻 Author
 **Hazem Jaber** — Chemistry Expert & Developer
 
