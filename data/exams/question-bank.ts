@@ -1,4 +1,5 @@
 import { Question } from "./types";
+import { svgToken } from "../curriculum/svgToken";
 
 export const questionBank: Question[] = [
   // States of Matter
@@ -611,7 +612,7 @@ questionBank.push(
       { text: "16" }
     ],
     correctAnswer: 1,
-    explanation: "Doubling the pressure of a gaseous mixture doubles the concentration of all gas particles. Since the reaction is second order with respect to X ($2^2 = 4$) and zero order with respect to Y ($2^0 = 1$), the rate increases by a factor of $4 \\times 1 = 4$.",
+    explanation: "Doubling the pressure of a gaseous mixture doubles the concentration of all gas particles.\nSince the reaction is second order with respect to X ($2^2 = 4$) and zero order with respect to Y ($2^0 = 1$), the rate increases by a factor of $4 \\times 1 = 4$.",
     level: 2,
     topic: "edexcel-unit-4",
     curriculum: "edexcel-alevel",
@@ -628,7 +629,7 @@ questionBank.push(
       { text: "Rate = $k[\\text{R}^+][\\text{OH}^-]$" }
     ],
     correctAnswer: 1,
-    explanation: "The rate-determining step is the slow step (Step 1), which involves only the reactant $\\text{RBr}$. Therefore, the reaction is unimolecular ($S_N1$), and the rate equation is $\\text{Rate} = k[\\text{RBr}]$.",
+    explanation: "The rate-determining step is the slow step (Step 1), which involves only the reactant $\\text{RBr}$.\nTherefore, the reaction is unimolecular ($S_N1$), and the rate equation is $\\text{Rate} = k[\\text{RBr}]$.",
     level: 2,
     topic: "edexcel-unit-4",
     curriculum: "edexcel-alevel",
@@ -654,7 +655,7 @@ questionBank.push(
   },
   {
     id: "q_kin_ed_5-20260719",
-    question: "The reaction of acidified aqueous potassium iodide with hydrogen peroxide: $2\\text{I}^-\\text{(aq)} + \\text{H}_2\\text{O}_2\\text{(aq)} + 2\\text{H}^+\\text{(aq)} \\rightarrow \\text{I}_2\\text{(aq)} + 2\\text{H}_2\\text{O}\\text{(l)}$ is thought to involve three steps:\nStep 1 (slow): $\\text{H}_2\\text{O}_2 + \\text{I}^- \\rightarrow \\text{H}_2\\text{O} + \\text{OI}^-$\nStep 2 (fast): $\\text{OI}^- + \\text{H}^+ \\rightarrow \\text{HOI}$\nStep 3 (fast): $\\text{HOI} + \\text{H}^+ + \\text{I}^- \\rightarrow \\text{I}_2 + \\text{H}_2\\text{O}$\nWhich of the following conclusions **cannot** be deduced from this information?",
+    question: "The reaction of acidified aqueous potassium iodide with hydrogen peroxide:\n\n$$2\\text{I}^-\\text{(aq)} + \\text{H}_2\\text{O}_2\\text{(aq)} + 2\\text{H}^+\\text{(aq)} \\rightarrow \\text{I}_2\\text{(aq)} + 2\\text{H}_2\\text{O}\\text{(l)}$$\n\nis thought to involve three steps:\nStep 1 (slow): $\\text{H}_2\\text{O}_2 + \\text{I}^- \\rightarrow \\text{H}_2\\text{O} + \\text{OI}^-$\nStep 2 (fast): $\\text{OI}^- + \\text{H}^+ \\rightarrow \\text{HOI}$\nStep 3 (fast): $\\text{HOI} + \\text{H}^+ + \\text{I}^- \\rightarrow \\text{I}_2 + \\text{H}_2\\text{O}$\nWhich of the following conclusions **cannot** be deduced from this information?",
     options: [
       { text: "The acid is a catalyst." },
       { text: "The reaction is first order with respect to the iodide ion." },
@@ -662,7 +663,7 @@ questionBank.push(
       { text: "The rate equation for the reaction is: rate = $k[\\text{H}_2\\text{O}_2][\\text{I}^-]$" }
     ],
     correctAnswer: 0,
-    explanation: "Looking at the overall equation: $2\\text{I}^- + \\text{H}_2\\text{O}_2 + 2\\text{H}^+ \\rightarrow \\text{I}_2 + 2\\text{H}_2\\text{O}$. Since $\\text{H}^+$ is consumed as a reactant in the overall reaction, it is not a catalyst (a catalyst must be regenerated at the end of the reaction). Therefore, conclusion A cannot be deduced (it is false).",
+    explanation: "Looking at the overall equation:\n$$2\\text{I}^- + \\text{H}_2\\text{O}_2 + 2\\text{H}^+ \\rightarrow \\text{I}_2 + 2\\text{H}_2\\text{O}$$\nSince $\\text{H}^+$ is consumed as a reactant in the overall reaction, it is not a catalyst (a catalyst must be regenerated at the end of the reaction).\nTherefore, conclusion A cannot be deduced (it is false).",
     level: 2,
     topic: "edexcel-unit-4",
     curriculum: "edexcel-alevel",
@@ -671,7 +672,7 @@ questionBank.push(
   },
   {
     id: "q_kin_ed_6-20260719",
-    question: "Propanone and iodine react in acidic aqueous solution: $\\text{CH}_3\\text{COCH}_3 + \\text{I}_2 + \\text{H}^+ \\rightarrow \\text{CH}_3\\text{COCH}_2\\text{I} + 2\\text{H}^+ + \\text{I}^-$. The experimental rate equation is $\\text{Rate} = k[\\text{CH}_3\\text{COCH}_3][\\text{H}^+]$. At initial concentrations $[\\text{CH}_3\\text{COCH}_3] = 0.400\\text{ mol dm}^{-3}$ and $[\\text{H}^+] = 0.200\\text{ mol dm}^{-3}$, the initial rate of reaction was $1.43 \\times 10^{-6}\\text{ mol dm}^{-3}\\text{ s}^{-1}$. Calculate the value of the rate constant $k$, with units.",
+    question: "Propanone and iodine react in acidic aqueous solution:\n\n$$\\text{CH}_3\\text{COCH}_3 + \\text{I}_2 + \\text{H}^+ \\rightarrow \\text{CH}_3\\text{COCH}_2\\text{I} + 2\\text{H}^+ + \\text{I}^-$$\n\nThe experimental rate equation is $\\text{Rate} = k[\\text{CH}_3\\text{COCH}_3][\\text{H}^+]$. At initial concentrations $[\\text{CH}_3\\text{COCH}_3] = 0.400\\text{ mol dm}^{-3}$ and $[\\text{H}^+] = 0.200\\text{ mol dm}^{-3}$, the initial rate of reaction was $1.43 \\times 10^{-6}\\text{ mol dm}^{-3}\\text{ s}^{-1}$. Calculate the value of the rate constant $k$, with units.",
     options: [
       { text: "$1.79 \\times 10^{-5}\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" },
       { text: "$1.79 \\times 10^{-5}\\text{ s}^{-1}$" },
@@ -679,7 +680,7 @@ questionBank.push(
       { text: "$3.58 \\times 10^{-5}\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" }
     ],
     correctAnswer: 0,
-    explanation: "Using the rate equation: $k = \\text{Rate} / ([\\text{CH}_3\\text{COCH}_3][\\text{H}^+]) = 1.43 \\times 10^{-6} / (0.400 \\times 0.200) = 1.43 \\times 10^{-6} / 0.080 = 1.7875 \\times 10^{-5} \\approx 1.79 \\times 10^{-5}$. Units: since the overall order is 2, the units of $k$ are $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
+    explanation: "Using the rate equation:\n$k = \\text{Rate} / ([\\text{CH}_3\\text{COCH}_3][\\text{H}^+]) = 1.43 \\times 10^{-6} / (0.400 \\times 0.200) = 1.7875 \\times 10^{-5} \\approx 1.79 \\times 10^{-5}$.\nUnits: since the overall order is 2, the units of $k$ are $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
     level: 3,
     topic: "edexcel-unit-4",
     curriculum: "edexcel-alevel",
@@ -705,7 +706,7 @@ questionBank.push(
   },
   {
     id: "q_kin_ed_8-20260719",
-    question: "Nitrogen dioxide, $\\text{NO}_2$, decomposes on heating: $2\\text{NO}_2\\text{(g)} \\rightarrow 2\\text{NO(g)} + \\text{O}_2\\text{(g)}$. A plot of $\\ln k$ against $1/T$ yields a straight line with a gradient of $-13500\\text{ K}$. Calculate the activation energy ($E_a$) for this reaction in $\\text{kJ mol}^{-1}$.",
+    question: "Nitrogen dioxide, $\\text{NO}_2$, decomposes on heating:\n\n$$2\\text{NO}_2\\text{(g)} \\rightarrow 2\\text{NO(g)} + \\text{O}_2\\text{(g)}$$\n\nA plot of $\\ln k$ against $1/T$ yields a straight line with a gradient of $-13500\\text{ K}$. Calculate the activation energy ($E_a$) for this reaction in $\\text{kJ mol}^{-1}$.",
     options: [
       { text: "$112\\text{ kJ mol}^{-1}$" },
       { text: "$1.62\\text{ kJ mol}^{-1}$" },
@@ -713,11 +714,203 @@ questionBank.push(
       { text: "$112000\\text{ kJ mol}^{-1}$" }
     ],
     correctAnswer: 0,
-    explanation: "The gradient of the Arrhenius plot is given by $m = -E_a/R$. Rearranging: $E_a = -m \\times R = -(-13500) \\times 8.31 = 112185\\text{ J mol}^{-1}$. In $\\text{kJ mol}^{-1}$, this is $112185 / 1000 = 112\\text{ kJ mol}^{-1}$ (to 3 significant figures).",
+    explanation: "The gradient of the Arrhenius plot is given by $m = -E_a/R$.\nRearranging: $E_a = -m \\times R = -(-13500) \\times 8.31 = 112185\\text{ J mol}^{-1}$.\nIn $\\text{kJ mol}^{-1}$, this is $112185 / 1000 = 112\\text{ kJ mol}^{-1}$ (to 3 significant figures).",
     level: 3,
     topic: "edexcel-unit-4",
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    createdAt: "2026-07-19"
+    createdAt: "2026-07-19",
+    imageHtml: `<svg viewBox="0 0 500 450" class="w-full max-w-[400px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <defs>
+    <pattern id="minorGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="majorGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="url(#minorGrid)"/>
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="60" y="30" width="410" height="360" fill="url(#majorGrid)" />
+  <rect x="60" y="30" width="410" height="360" fill="none" stroke="#475569" stroke-width="1.5" />
+  <g fill="#94a3b8" font-size="11" text-anchor="end" font-weight="500">
+    <text x="50" y="34">9</text>
+    <text x="50" y="74">8</text>
+    <text x="50" y="114">7</text>
+    <text x="50" y="154">6</text>
+    <text x="50" y="194">5</text>
+    <text x="50" y="234">4</text>
+    <text x="50" y="274">3</text>
+    <text x="50" y="314">2</text>
+    <text x="50" y="354">1</text>
+    <text x="50" y="394">0</text>
+  </g>
+  <g fill="#94a3b8" font-size="11" text-anchor="middle" font-weight="500">
+    <text x="60" y="412">1.0</text>
+    <text x="128" y="412">1.1</text>
+    <text x="197" y="412">1.2</text>
+    <text x="265" y="412">1.3</text>
+    <text x="333" y="412">1.4</text>
+    <text x="402" y="412">1.5</text>
+    <text x="470" y="412">1.6</text>
+  </g>
+  <text x="20" y="210" fill="#cbd5e1" font-size="12" font-weight="600" transform="rotate(-90 20 210)" text-anchor="middle">ln k</text>
+  <text x="265" y="438" fill="#cbd5e1" font-size="12" font-weight="600" text-anchor="middle">1/T / 10⁻³ K⁻¹</text>
+  <line x1="60" y1="50" x2="470" y2="374" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
+  <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+    <!-- Point 1 -->
+    <line x1="56" y1="46" x2="64" y2="54" />
+    <line x1="64" y1="46" x2="56" y2="54" />
+    <!-- Point 2 -->
+    <line x1="124" y1="100" x2="132" y2="108" />
+    <line x1="132" y1="100" x2="124" y2="108" />
+    <!-- Point 3 -->
+    <line x1="227" y1="181" x2="235" y2="189" />
+    <line x1="235" y1="181" x2="227" y2="189" />
+    <!-- Point 4 -->
+    <line x1="308" y1="246" x2="316" y2="254" />
+    <line x1="316" y1="246" x2="308" y2="254" />
+    <!-- Point 5 -->
+    <line x1="411" y1="327" x2="419" y2="335" />
+    <line x1="419" y1="327" x2="411" y2="335" />
+  </g>
+</svg>`
+  }
+);
+
+// N2O5 Decomposition Graph SVG
+const n2o5DecayGraphSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="auto" style="background:linear-gradient(135deg,#070f1e 0%,#0b1b35 100%);border-radius:16px;border:1px solid #1e293b;font-family:Inter,sans-serif">
+  <!-- Grid Lines -->
+  <!-- Horizontal Grid -->
+  <line x1="80" y1="282" x2="950" y2="282" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="254" x2="950" y2="254" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="226" x2="950" y2="226" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="198" x2="950" y2="198" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="170" x2="950" y2="170" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="142" x2="950" y2="142" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="114" x2="950" y2="114" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="86" x2="950" y2="86" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="58" x2="950" y2="58" stroke="#1e293b" stroke-width="1" />
+  <line x1="80" y1="30" x2="950" y2="30" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Vertical Grid -->
+  <line x1="167" y1="30" x2="167" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="254" y1="30" x2="254" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="341" y1="30" x2="341" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="428" y1="30" x2="428" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="515" y1="30" x2="515" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="602" y1="30" x2="602" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="689" y1="30" x2="689" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="776" y1="30" x2="776" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="863" y1="30" x2="863" y2="310" stroke="#1e293b" stroke-width="1" />
+  <line x1="950" y1="30" x2="950" y2="310" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Main Axes -->
+  <line x1="80" y1="30" x2="80" y2="310" stroke="#475569" stroke-width="2" />
+  <line x1="80" y1="310" x2="950" y2="310" stroke="#475569" stroke-width="2" />
+
+  <!-- Y-Axis Ticks & Labels -->
+  <text x="70" y="314" font-size="12" fill="#94a3b8" text-anchor="end">0.0</text>
+  <text x="70" y="286" font-size="12" fill="#94a3b8" text-anchor="end">0.2</text>
+  <text x="70" y="258" font-size="12" fill="#94a3b8" text-anchor="end">0.4</text>
+  <text x="70" y="230" font-size="12" fill="#94a3b8" text-anchor="end">0.6</text>
+  <text x="70" y="202" font-size="12" fill="#94a3b8" text-anchor="end">0.8</text>
+  <text x="70" y="174" font-size="12" fill="#94a3b8" text-anchor="end">1.0</text>
+  <text x="70" y="146" font-size="12" fill="#94a3b8" text-anchor="end">1.2</text>
+  <text x="70" y="118" font-size="12" fill="#94a3b8" text-anchor="end">1.4</text>
+  <text x="70" y="90" font-size="12" fill="#94a3b8" text-anchor="end">1.6</text>
+  <text x="70" y="62" font-size="12" fill="#94a3b8" text-anchor="end">1.8</text>
+  <text x="70" y="34" font-size="12" fill="#94a3b8" text-anchor="end">2.0</text>
+  <text x="30" y="170" font-size="12" fill="#e2e8f0" transform="rotate(-90 30 170)" text-anchor="middle">[N₂O₅] / mol dm⁻³</text>
+
+  <!-- X-Axis Ticks & Labels -->
+  <text x="80" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">0</text>
+  <text x="167" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">10</text>
+  <text x="254" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">20</text>
+  <text x="341" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">30</text>
+  <text x="428" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">40</text>
+  <text x="515" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">50</text>
+  <text x="602" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">60</text>
+  <text x="689" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">70</text>
+  <text x="776" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">80</text>
+  <text x="863" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">90</text>
+  <text x="950" y="330" font-size="12" fill="#94a3b8" text-anchor="middle">100</text>
+  <text x="515" y="350" font-size="12" fill="#e2e8f0" text-anchor="middle">Time / minutes</text>
+
+  <!-- Curve -->
+  <path d="M 80,30 L 123.5,81.7 L 167,123.8 L 210.5,158.2 L 254,186.2 L 297.5,209.2 L 341,227.9 L 384.5,243.1 L 428,255.5 L 471.5,265.6 L 515,273.8 L 558.5,280.5 L 602,286.0 L 645.5,290.4 L 689,294.1 L 732.5,297.0 L 776,299.4 L 819.5,301.4 L 863,303.0 L 906.5,304.3 L 950,305.4" fill="none" stroke="#38bdf8" stroke-width="3" />
+</svg>`;
+
+questionBank.push(
+  {
+    id: "q_kin_ed_n2o5_1-20260719",
+    question: "The decomposition of nitrogen pentoxide is represented by:\n\n$$2\\text{N}_2\\text{O}_5\\text{(g)} \\rightarrow 2\\text{N}_2\\text{O}_4\\text{(g)} + \\text{O}_2\\text{(g)}$$\n\nUsing the concentration-time graph below, determine the values of the first two successive half-lives ($t_{1/2}$):",
+    options: [
+      { text: "First $t_{1/2} = 17\\text{ min}$; Second $t_{1/2} = 17\\text{ min}$" },
+      { text: "First $t_{1/2} = 10\\text{ min}$; Second $t_{1/2} = 20\\text{ min}$" },
+      { text: "First $t_{1/2} = 17\\text{ min}$; Second $t_{1/2} = 34\\text{ min}$" },
+      { text: "First $t_{1/2} = 24\\text{ min}$; Second $t_{1/2} = 24\\text{ min}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The initial concentration is $2.0\\text{ mol dm}^{-3}$. Half of this value is $1.0\\text{ mol dm}^{-3}$. Reading from the graph, $[\\text{N}_2\\text{O}_5]$ reaches $1.0\\text{ mol dm}^{-3}$ at $17\\text{ minutes}$. Thus, the first half-life is $17\\text{ minutes}$.\n2. The second half-life is the time taken to drop from $1.0\\text{ mol dm}^{-3}$ to $0.5\\text{ mol dm}^{-3}$. Looking at the graph, the concentration is $0.5\\text{ mol dm}^{-3}$ at $34\\text{ minutes}$.\n3. The time interval is $34 - 17 = 17\\text{ minutes}$. Therefore, both successive half-lives are $17\\text{ minutes}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19",
+    imageHtml: n2o5DecayGraphSvg
+  },
+  {
+    id: "q_kin_ed_n2o5_2-20260719",
+    question: "Using the successive half-lives deduced from the $[\\text{N}_2\\text{O}_5]$ concentration-time graph, determine the order of the reaction with respect to $\\text{N}_2\\text{O}_5$:",
+    options: [
+      { text: "First order, because the successive half-lives are constant." },
+      { text: "Second order, because the concentration decays exponentially." },
+      { text: "Zero order, because the rate of reaction remains constant." },
+      { text: "First order, because the half-life doubles over time." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The successive half-lives for this reaction are constant at approximately $17\\text{ minutes}$.\n2. A constant half-life is the unique characteristic of a first-order reaction.\n3. Therefore, the reaction is first order with respect to $\\text{N}_2\\text{O}_5$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19",
+    imageHtml: n2o5DecayGraphSvg
+  },
+  {
+    id: "q_kin_ed_n2o5_3-20260719",
+    question: "Based on the $[\\text{N}_2\\text{O}_5]$ decay graph, calculate a value for the rate constant, $k$, for this reaction, specifying the correct units:",
+    options: [
+      { text: "$4.1 \\times 10^{-2}\\text{ min}^{-1}$" },
+      { text: "$6.8 \\times 10^{-4}\\text{ min}^{-1}$" },
+      { text: "$1.7 \\times 10^{-2}\\text{ dm}^3\\text{ mol}^{-1}\\text{ min}^{-1}$" },
+      { text: "$2.4 \\times 10^{-2}\\text{ min}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. For a first-order reaction, the rate constant is related to the half-life by: $k = \\ln(2) / t_{1/2}$.\n2. Substituting the half-life $t_{1/2} = 17\\text{ minutes}$: $k = 0.693 / 17 \\approx 0.0408\\text{ min}^{-1}$.\n3. In scientific notation, this is $4.1 \\times 10^{-2}\\text{ min}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19",
+    imageHtml: n2o5DecayGraphSvg
+  },
+  {
+    id: "q_kin_ed_n2o5_4-20260719",
+    question: "Based on the $[\\text{N}_2\\text{O}_5]$ decay graph, calculate the rate of reaction when the concentration of $\\text{N}_2\\text{O}_5$ is $1.50\\text{ mol dm}^{-3}$:",
+    options: [
+      { text: "$6.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" },
+      { text: "$4.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" },
+      { text: "$2.7 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" },
+      { text: "$9.2 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The rate equation for this first-order reaction is: $\\text{Rate} = k[\\text{N}_2\\text{O}_5]$.\n2. Substituting the rate constant $k = 0.0408\\text{ min}^{-1}$ and concentration $[\\text{N}_2\\text{O}_5] = 1.50\\text{ mol dm}^{-3}$: $\\text{Rate} = 0.0408 \\times 1.50 = 0.0612\\text{ mol dm}^{-3}\\text{ min}^{-1}$.\n3. In scientific notation, this is $6.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19",
+    imageHtml: n2o5DecayGraphSvg
   }
 );
