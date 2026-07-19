@@ -16,11 +16,21 @@ export const parts: LessonPart[] = [
         content: `
 > [!NOTE]
 > ### ⏱️ Rate of Reaction and Concentrations
-> The rate of a chemical reaction is proportional to the concentration of reactants raised to a certain power. 
+> The rate of a chemical reaction is proportional to the concentration of reactants raised to a certain power.
+> * **Rate of Reaction Definition:** The rate of reaction can be expressed in two ways:
+>   1. How the concentration of a product increases with time:
+>      $$\\\\text{Rate} = \\\\frac{d[\\\\text{product}]}{dt}$$
+>   2. How the concentration of a reactant decreases with time:
+>      $$\\\\text{Rate} = -\\\\frac{d[\\\\text{reactant}]}{dt}$$
+>      *The negative sign shows that the concentration of the reactant is decreasing, ensuring the calculated rate has a positive value.*
 > * **Rate Equation:** An expression showing how the rate of reaction relates to the concentrations of the reactants:
 >   $$\\\\text{Rate} = k[\\\\text{A}]^x[\\\\text{B}]^y$$
 > * **Rate Constant ($k$):** A proportionality constant that links reaction rate to concentrations at a specific temperature.
 > * **Reaction Orders:** The powers ($x$ and $y$) to which the concentration terms are raised.
+> 
+> > [!WARNING]
+> > ### ⚠️ Exam Order Limit
+> > The values for orders of reaction in rate equations will only ever be $0$, $1$, or $2$ at International A Level.
 
 > [!IMPORTANT]
 > ### 🧮 Types of Reaction Orders
@@ -79,25 +89,53 @@ export const parts: LessonPart[] = [
         type: 'text',
         content: `
 > [!NOTE]
-> ### 📊 Methods of Monitoring Reaction Rates
-> We can determine reaction rates using either continuous monitoring (tracking progress over time) or the initial rates method.
+> ### 📊 Selecting and Justifying Experimental Techniques
+> To follow a reaction, we must choose a technique based on the overall chemical equation and the physical states of the reactants and products:
 > 
-> 1. **Continuous Monitoring:**
->    * *Gas Volume:* Using a gas syringe for reactions producing a gas.
->    * *Mass Loss:* Placing the reaction mixture on a balance (for heavy gases like $\\\\text{CO}_2$).
->    * *Colorimetry:* Measuring absorbance change when a colored species is formed or consumed.
->    * *Electrical Conductivity:* For reactions producing or consuming ions.
->    * *Quenching & Titration:* Stopping the reaction in aliquots at intervals (e.g. by adding cold water or an inhibitor) and titrating.
-> 2. **Initial Rates Method:**
->    * Measuring the time taken for a fixed, small amount of product to form.
->    * *Clock Reactions:* The reaction is timed until a distinct visual change occurs (e.g., starch turns blue-black in the iodine clock).
+> 1. **Measuring Gas Volume Evolved:**
+>    * **Justification:** Suitable if one of the products is a gas.
+>    * **Apparatus:** Collected over water into a measuring cylinder or using a gas syringe. A gas syringe offers higher precision.
+>    * **Example:** Reaction of calcium carbonate with hydrochloric acid:
+>      $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> 
+> 2. **Measuring Mass Change:**
+>    * **Justification:** Suitable when a heavy gas escapes from the reaction flask.
+>    * **Apparatus:** Reaction flask placed on a digital balance. A **cotton wool** plug is placed in the neck of the flask to prevent the loss of liquid spray.
+>    * **Constraint:** Most precise when the gas evolved has a relatively high density (high relative molecular mass) like $\\\\text{CO}_2$. Low-density gases like hydrogen ($\\\\text{H}_2$) cause very small mass changes, making measurement uncertainties too significant.
+> 
+> 3. **Colorimetry (Monitoring Color Change):**
+>    * **Justification:** Suitable when a colored species is formed or consumed.
+>    * **Advantage:** Using a colorimeter provides quantitative, objective measurements and detects far more subtle changes than the human eye.
+>    * **Example:** The reaction between propanone and iodine:
+>      $$\\\\text{CH}_3\\\\text{COCH}_3\\\\text{(aq)} + \\\\text{I}_2\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{COCH}_2\\\\text{I}\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)} + \\\\text{I}^-\\\\text{(aq)}$$
+>      *Note: Iodine ($\\\\text{I}_2$) is the only colored species present, so the decrease in its brown/yellow color is monitored.*
+> 
+> 4. **Analysis by Titration (Quenching):**
+>    * **Justification:** Involves taking small samples (aliquots) at regular intervals.
+>    * **Process:** The reaction in the aliquot is stopped or slowed to almost zero (**quenched**) by adding another substance or immersing it in an ice bath. The aliquot is then titrated to find the concentration.
+>    * **Example (Propanone + Iodine):** Sodium hydrogen carbonate ($\\\\text{NaHCO}_3$) is added to the aliquot to remove the acid catalyst ($H^+$), effectively stopping the reaction. The remaining iodine is then titrated against a standard solution of sodium thiosulfate:
+>      $$\\\\text{I}_2\\\\text{(aq)} + 2\\\\text{S}_2\\\\text{O}_3^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{I}^-\\\\text{(aq)} + \\\\text{S}_4\\\\text{O}_6^{2-}\\\\text{(aq)}$$
+> 
+> 5. **Measuring Electrical Conductivity:**
+>    * **Justification:** Suitable when the total number or type of ions in solution changes during the reaction.
+>    * **Example:**
+>      $$5\\\\text{Br}^-\\\\text{(aq)} + \\\\text{BrO}_3^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
+> 
+> 6. **Other Physical Properties:**
+>    * Includes changes in liquid volume (**dilatometry**), optical activity (**chirality/polarimetry**), and refractive index.
+> 
+> > [!WARNING]
+> > ### ⚠️ Gas Collection Limitation
+> > Reactions producing gases that are highly soluble in water, such as sulfur dioxide ($\\\\text{SO}_2$), cannot be followed using gas collection over water because the gas will dissolve. A gas syringe must be used.
 
 > [!BOX]
 > ### 📈 Concentration-Time Graphs
 > Plotting concentration against time allows us to determine the order from the shape of the curve:
-> * **Zero Order:** A straight line with a constant negative gradient.
+> * **Zero Order:** A straight line with a constant negative gradient. The half-life decreases as the concentration decreases.
 > * **First Order:** A curve with a constant half-life ($t_{1/2}$).
-> * **Second Order:** A steeper curve where the half-life increases as concentration decreases.
+> * **Second Order:** A steeper curve where the half-life increases (doubles) as concentration decreases.
+> 
+> * **Finding Instantaneous Rate:** The rate of reaction at any given time can be determined by drawing a tangent to the curve at that time and calculating its gradient ($\\\\text{Gradient} = \\\\frac{\\\\text{change in concentration}}{\\\\text{change in time}}$). For products (volume-time graph), the curve slopes upwards, and the rate is similarly found from the positive gradient.
 
 > [!IMPORTANT]
 > ### 🧮 Half-Life ($t_{1/2}$)
@@ -105,6 +143,17 @@ export const parts: LessonPart[] = [
 > * For a first-order reaction:
 >   $$t_{1/2} = \\\\frac{\\\\ln 2}{k}$$
 > * A constant half-life confirms a first-order reaction.
+
+> [!BOX]
+> ### 📊 Deducing Order from Rate-Concentration Graphs
+> When using the initial-rate method with reciprocal of time ($1/t$) as a proxy for rate ($\\\\text{rate} \\\\propto 1/t$):
+> * **Zero Order:** Plotting $1/t$ against $[\\\\text{A}]$ gives a horizontal line (rate is independent of concentration).
+> * **First Order:** Plotting $1/t$ against $[\\\\text{A}]$ gives a straight line passing through the origin.
+> * **Second Order:** Plotting $1/t$ against $[\\\\text{A}]$ gives a curve. To confirm second order, plot $1/t$ against $[\\\\text{A}]^2$, which yields a straight line passing through the origin.
+> 
+> > [!WARNING]
+> > ### ⚠️ Check the Graph Axes!
+> > Be extremely careful to check the units and labels on the axes of rate graphs. Graphs with the same shape can mean completely different things depending on the axes (e.g. concentration vs. time has a curve for first-order, but rate vs. concentration has a straight line for first-order).
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Initial Rates Table Analysis
@@ -137,6 +186,29 @@ export const parts: LessonPart[] = [
 > >      $$2.0 \\\\times 10^{-3} = k(0.10)(0.10)^2$$
 > >      $$2.0 \\\\times 10^{-3} = k(0.0010)$$
 > >      $$k = 2.0\\\\text{ dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Justifying Experimental Techniques
+> **Question:** Identify the most suitable experimental technique to follow the rate of each of the following reactions, and explain your choice:
+> 
+> 1. $\\\\text{Mg}\\\\text{(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$
+> 2. $\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3\\\\text{(l)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{CH}_3\\\\text{CH}_2\\\\text{OH}\\\\text{(aq)}$
+> 3. $\\\\text{H}_2\\\\text{(g)} + \\\\text{I}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{HI}\\\\text{(g)}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Magnesium with acid:**
+> >    * *Technique:* Measuring the volume of gas evolved using a gas syringe.
+> >    * *Explanation:* $\\\\text{H}_2$ gas is produced. Measuring mass loss is unsuitable because $\\\\text{H}_2$ has a very low density, leading to negligible mass changes that fall within experimental uncertainty.
+> > 
+> > 2. **Ethyl ethanoate with sodium hydroxide:**
+> >    * *Technique:* Electrical conductivity (or quenching and titrating $\\\\text{OH}^-$).
+> >    * *Explanation:* The highly conductive $\\\\text{OH}^-$ ions are replaced by less conductive $\\\\text{CH}_3\\\\text{COO}^-$ ions, causing a measurable drop in electrical conductivity.
+> > 
+> > 3. **Hydrogen gas with iodine gas:**
+> >    * *Technique:* Colorimetry.
+> >    * *Explanation:* Iodine gas ($\\\\text{I}_2$) is purple, whereas the reactant $\\\\text{H}_2$ and product $\\\\text{HI}$ are colorless. The fading of the purple color can be monitored quantitatively.
 `,
         keyPoints: [
             'Continuous monitoring yields concentration-time graphs, from which tangent gradients give rates.',
@@ -150,16 +222,49 @@ export const parts: LessonPart[] = [
         content: `
 > [!NOTE]
 > ### ⛓️ Multi-Step Reactions & Mechanisms
-> Most organic and inorganic chemical reactions do not occur in a single collision. Instead, they proceed via a series of simple steps called a **reaction mechanism**.
+> Most chemical reactions do not occur in a single collision. For example, consider the acidic redox reaction:
+> $$\\\\text{MnO}_4^-\\\\text{(aq)} + 8\\\\text{H}^+\\\\text{(aq)} + 5\\\\text{Fe}^{2+}\\\\text{(aq)} \\\\rightarrow \\\\text{Mn}^{2+}\\\\text{(aq)} + 4\\\\text{H}_2\\\\text{O}\\\\text{(l)} + 5\\\\text{Fe}^{3+}\\\\text{(aq)}$$
+> For this reaction to occur in a single step, $14$ particles would have to collide simultaneously, with the correct orientation and sufficient energy. The probability of this is statistically zero. Therefore, reactions proceed via a series of simple steps called a **reaction mechanism**.
 > * **Elementary Step:** An individual step in a mechanism.
 > * **Intermediate:** A species formed in one step and consumed in a subsequent step (does not appear in the overall balanced equation).
 > * **Rate-Determining Step (RDS):** The slowest step in a reaction mechanism. It acts as a bottleneck and controls the overall rate.
+> 
+> > [!TIP]
+> > ### 📋 The Student Notes Analogy
+> > Imagine three students preparing study notes:
+> > * **Student 1:** Collects sheets from 10 piles (**SLOW**).
+> > * **Student 2:** Tidies the sheets (**FAST**).
+> > * **Student 3:** Staples the sheets (**FAST**).
+> > 
+> > The overall rate of producing finished notes depends entirely on the speed of **Student 1**. The other students do nothing but wait for Student 1 to finish. Thus, Student 1 represents the rate-determining step.
+ 
+ > [!IMPORTANT]
+ > ### 🗮️ Rules for Connecting Mechanisms to Rate Equations
+ > 1. **Reactant Presence:** All reactant species involved either in, or before, the rate-determining step have an effect on the rate and will appear in the rate equation.
+ > 2. **Reaction Order:** The coefficients of reactants in the RDS (or steps preceding it) match the order of those reactants in the rate equation.
+ > 3. **Species After RDS:** Species participating only in steps AFTER the RDS do not appear in the rate equation (or their concentration effect is negligible because they react in fast steps).
+ > 4. **Species in Large Excess:** A reactant present in such a large excess that its concentration change is negligible will not have a measurable effect on the rate and won't appear in the rate equation.
 
-> [!IMPORTANT]
-> ### 🗮️ Rules for Connecting Mechanisms to Rate Equations
-> 1. Reactants in the rate equation MUST appear in the rate-determining step (or in fast steps preceding it).
-> 2. The coefficients of reactants in the RDS (or steps preceding it) match the order of those reactants in the rate equation.
-> 3. Species participating only in steps AFTER the RDS do not appear in the rate equation.
+> [!BOX]
+> ### 📊 Reaction Energy Profiles: SN1 vs. SN2 Mechanisms
+> The kinetic evidence of halogenoalkane hydrolysis directly distinguishes between two mechanism types:
+> 
+> 1. **Transition State vs. Intermediate:**
+>    * **Intermediate:** A definite chemical species with a finite lifetime (e.g., carbocations, lifetime $\\\\approx 10^{-6}\\\\text{ s}$). Appears as an **energy minimum** (well) on a reaction profile.
+>    * **Transition State:** An unstable arrangement of atoms at the **energy maximum** (peak) of a step. It has a negligible lifetime ($\\\\approx 10^{-15}\\\\text{ s}$, the time of molecular collision).
+> 
+> 2. **SN2 Hydrolysis (Primary Halogenoalkanes):**
+>    * **Rate Equation:** $\\\\text{Rate} = k[\\\\text{RHal}][\\\\text{OH}^-]$ (Bimolecular)
+>    * **Reaction Profile:** Shows a **single peak** (one transition state) representing the simultaneous nucleophilic attack and leaving group departure. No intermediate is formed.
+>    * **Steric Crowding Effect:** Primary halogenoalkanes have small hydrogen atoms surrounding the central carbon, allowing the nucleophile to attack easily. In tertiary halogenoalkanes, three bulky alkyl groups cause steric hindrance/crowding, making the transition state highly unstable (higher $E_a$). Thus, SN2 rates increase in the order: $3^\\\\circ < 2^\\\\circ < 1^\\\\circ$.
+> 
+> 3. **SN1 Hydrolysis (Tertiary Halogenoalkanes):**
+>    * **Rate Equation:** $\\\\text{Rate} = k[\\\\text{RHal}]$ (Unimolecular)
+>    * **Reaction Profile:** Shows **two peaks** (two transition states) separated by a well (the carbocation intermediate minimum).
+>    * **RDS Activation Energy:** The activation energy for the first step (ionization to form the carbocation) is much higher than the second step ($E_a(1) > E_a(2)$), making it the rate-determining step.
+>    * **Inductive Effect:** Alkyl groups donate electrons towards the carbocation carbon, stabilizing the $3^\\\\circ$ carbocation intermediate far more than a $1^\\\\circ$ one. This dramatically lowers $E_a(1)$. Thus, SN1 rates increase in the order: $1^\\\\circ < 2^\\\\circ < 3^\\\\circ$.
+> 
+> *Secondary halogenoalkanes react via a mixture of both SN1 and SN2 mechanisms.*
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Deducing a Mechanism from a Rate Equation
@@ -204,16 +309,32 @@ export const parts: LessonPart[] = [
         content: `
 > [!NOTE]
 > ### 🌡️ Effect of Temperature on Rate Constants
-> Increasing the temperature increases the kinetic energy of particles, which significantly increases the rate of reaction by increasing the rate constant $k$
+> Increasing the temperature increases the rate of reaction by increasing the rate constant $k$. There are two reasons for this:
+> 1. **Fraction of Active Molecules (Major):** A significant increase in the fraction of molecules with energy equal to or greater than the activation energy ($E \\\\ge E_a$).
+> 2. **Collision Frequency (Minor):** A small increase in the frequency of collisions between molecules as they move faster.
+> 
+> *The increase in the fraction of molecules with sufficient energy is by far the most significant factor, while the collision frequency effect is negligible and effectively ignored.*
 > 
 > * **The Arrhenius Equation:**
 >   $$k = A e^{-\\\\frac{E_a}{RT}}$$
 > * Where:
 >   * **$k$** = Rate constant
->   * **$A$** = Arrhenius constant (pre-exponential factor, related to collision frequency and orientation)
+>   * **$A$** = Arrhenius constant (pre-exponential factor, related to collision frequency and collision orientation)
 >   * **$E_a$** = Activation energy (in $\\\\text{J mol}^{-1}$)
 >   * **$R$** = Gas constant ($8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$)
 >   * **$T$** = Temperature (in $\\\\text{Kelvin}$)
+> 
+> * **Significance of the factor $e^{-\\\\frac{E_a}{RT}}$:** This term represents the fraction of collisions that possess energy equal to or greater than $E_a$. For a reaction with $E_a = 60\\\\text{ kJ mol}^{-1}$ at $298\\\\text{ K}$, this fraction is $\\\\approx 3 \\\\times 10^{-11}$ (only one in $3 \\\\times 10^{11}$ collisions has sufficient energy to react).
+> 
+> > [!TIP]
+> > ### 💡 Effect of Activation Energy Magnitude
+> > * Reactions with a **large $E_a$** are slow at room temperature, but their rate increases rapidly (highly sensitive) with an increase in temperature.
+> > * Reactions with a **small $E_a$** are fast, but their rate does not increase as rapidly with temperature.
+> > * Catalyzed reactions have smaller values of $E_a$.
+> 
+> > [!WARNING]
+> > ### ⚠️ Exam Hint
+> > You will always be given the Arrhenius equation if it is needed in an exam question.
 
 > [!IMPORTANT]
 > ### 🧮 Logarithmic Form of the Arrhenius Equation
@@ -226,6 +347,8 @@ export const parts: LessonPart[] = [
 > * **$x$-axis:** $\\\\frac{1}{T}$ (in $\\\\text{K}^{-1}$)
 > * **Gradient ($m$):** $-\\\\frac{E_a}{R}$
 > * **Intercept ($c$):** $\\\\ln A$
+> 
+> *Note: While it is assumed that both $E_a$ and $A$ remain constant over a range of temperatures, their small variations are insignificant compared to the overall temperature effect on the rate constant.*
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Activation Energy
@@ -246,7 +369,67 @@ export const parts: LessonPart[] = [
 `,
         keyPoints: [
             'Always convert temperature to Kelvin (K) when using the Arrhenius equation.',
-            'Ensure the units of Ea match the gas constant units (J/mol) before converting to kJ/mol.'
+            'Ensure the units of Ea match the gas constant units (J/mol) before converting to kJ/mol.',
+            'The exponential term represents the fraction of collisions with energy equal to or greater than the activation energy.'
+        ]
+    },
+    {
+        id: 'catalysis-autocatalysis-u4-l1',
+        title: 'Activation Energy, Catalysis & Autocatalysis',
+        type: 'text',
+        content: `
+> [!NOTE]
+> ### ⚡ Activation Energy ($E_a$) and Transition States
+> * **Activation Energy ($E_a$):** The minimum energy that colliding particles must possess for a reaction to occur.
+> * **Transition State:** The unstable, high-energy state at the peak of the reaction profile diagram. Once reached, reactants can form products and release energy.
+> * **Catalysts:** Substances that increase the reaction rate by providing an alternative reaction route with a lower activation energy, while remaining chemically unchanged at the end of the reaction.
+
+> [!BOX]
+> ### 🧪 Homogeneous vs. Heterogeneous Catalysis
+> 
+> 1. **Homogeneous Catalysts:**
+>    * The catalyst is in the **same phase** as the reactants.
+>    * **Example (Ozone depletion):** Chlorine radicals ($\\\\text{Cl}\\\\bullet$) in the gas phase catalyze the decomposition of ozone gas ($\\\\text{O}_3$):
+>      $$\\\\text{Cl}\\\\bullet\\\\text{(g)} + \\\\text{O}_3\\\\text{(g)} \\\\rightarrow \\\\text{ClO}\\\\bullet\\\\text{(g)} + \\\\text{O}_2\\\\text{(g)}$$
+>      $$\\\\text{ClO}\\\\bullet\\\\text{(g)} + \\\\text{O}_3\\\\text{(g)} \\\\rightarrow 2\\\\text{O}_2\\\\text{(g)} + \\\\text{Cl}\\\\bullet\\\\text{(g)}$$
+>    * **Example (Peroxydisulfate + Iodide):** Catalyzed by $\\\\text{Fe}^{2+}\\\\text{(aq)}$ or $\\\\text{Fe}^{3+}\\\\text{(aq)}$ ions in solution.
+>      *Thermodynamic feasibility is predicted by $E^\\\\circ$ electrode potentials, but the kinetics are accelerated because both steps have lower activation energy than the uncatalyzed reaction.*
+> 
+> 2. **Heterogeneous Catalysts:**
+>    * The catalyst is in a **different phase** from the reactants.
+>    * **Mechanism (Adsorption, Reaction, Desorption):**
+>      1. **Adsorption:** Reactant molecules are adsorbed onto active sites on the solid catalyst surface.
+>      2. **Reaction:** Reactant bonds are weakened, and molecules are held in positions that enable them to react together.
+>      3. **Desorption:** Product molecules leave the surface.
+>    * **Industrial Examples:**
+>      * **Haber Process:** Iron solid catalyst forms an *interstitial hydride* with hydrogen molecules, where hydrogen atoms are held in spaces between metal ions in the lattice, allowing them to react with adsorbed nitrogen.
+>      * **Contact Process:** Solid vanadium(V) oxide ($\\\\text{V}_2\\\\text{O}_5$) catalyst.
+>      * **Catalytic Converters:** Three-way catalytic converters in cars convert toxic gases.
+>    * **Efficiency Factors:**
+>      * **Poisoning:** Trace impurities block active sites (e.g., sulfur poisons nickel catalysts in alkene hydrogenation; lead poisons catalytic converters).
+>      * **Promoters:** Additives that increase efficiency by producing active sites (e.g., $\\\\text{K}_2\\\\text{O}$ and $\\\\text{Al}_2\\\\text{O}_3$ in the Haber Process).
+
+> [!BOX]
+> ### 🔄 Autocatalysis
+> * **Definition:** When one of the reaction products acts as a catalyst for the reaction.
+> * **Example:** The oxidation of ethanedioic acid by manganate(VII) ions, catalyzed by the product manganese(II) ions ($\\\\text{Mn}^{2+}$):
+>   $$5\\\\text{(COOH)}_2\\\\text{(aq)} + 2\\\\text{MnO}_4^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 10\\\\text{CO}_2\\\\text{(g)} + 2\\\\text{Mn}^{2+}\\\\text{(aq)} + 8\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
+> * **Autocatalytic Rate Curve:**
+>   * **Initially slow:** There is no $\\\\text{Mn}^{2+}$ present to catalyze the reaction.
+>   * **Speeds up:** As $\\\\text{Mn}^{2+}$ is produced, it catalyzes the reaction, causing a rapid increase in rate.
+>   * **Slows down:** The rate decreases as reactant concentrations are depleted.
+> 
+> > [!WARNING]
+> > ### ⚠️ Autocatalytic Graph Trap
+> > Do not assume that every sigmoidal (S-shaped) rate curve represents autocatalysis. Similar shapes can be caused by:
+> > 1. Strongly exothermic reactions (where heat released increases the rate).
+> > 2. Slow initial penetration/wetting of a solid reactant surface by a liquid.
+`,
+        keyPoints: [
+            'Homogeneous catalysts are in the same phase as reactants; heterogeneous catalysts are in a different phase.',
+            'Heterogeneous catalysis involves adsorption of reactants onto active sites, reaction, and desorption of products.',
+            'Catalytic poisoning occurs when impurities block active sites, whereas promoters increase the number of active sites.',
+            'In autocatalysis, the reaction starts slowly, accelerates as the catalyst product forms, and then slows down as reactants are depleted.'
         ]
     }
 ];

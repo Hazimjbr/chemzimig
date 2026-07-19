@@ -562,8 +562,6 @@ questionBank.push(
     createdAt: "2026-01-06"
   }
 );
-
-// More Experimental Techniques
 questionBank.push(
   {
     id: "q_exp_2-20260106",
@@ -581,5 +579,145 @@ questionBank.push(
     curriculum: "igcse",
     paperType: "mcq",
     createdAt: "2026-01-06"
+  }
+);
+
+// Edexcel A-Level Unit 4: Kinetics Questions
+questionBank.push(
+  {
+    id: "q_kin_ed_1-20260719",
+    question: "An experiment is set up to measure the rate of hydrolysis of methyl ethanoate:\n\n$$\\text{CH}_3\\text{COOCH}_3 + \\text{H}_2\\text{O} \\rightleftharpoons \\text{CH}_3\\text{COOH} + \\text{CH}_3\\text{OH}$$\n\nThe hydrolysis is very slow in neutral aqueous solution, but when dilute hydrochloric acid is added, the reaction is faster. What is the function of the hydrochloric acid?",
+    options: [
+      { text: "To increase the reaction rate by acting as a catalyst" },
+      { text: "To make sure that the reaction reaches equilibrium" },
+      { text: "To maintain a constant pH during the reaction" },
+      { text: "To dissolve the methyl ethanoate" }
+    ],
+    correctAnswer: 0,
+    explanation: "Dilute hydrochloric acid provides $\\text{H}^+$ ions which act as a catalyst, offering an alternative pathway with a lower activation energy, thereby increasing the rate of hydrolysis.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_2-20260719",
+    question: "For the gaseous reaction $2\\text{X(g)} + \\text{Y(g)} \\rightarrow \\text{Z(g)}$\nthe rate equation is: $\\text{Rate} = k[\\text{X}]^2[\\text{Y}]^0$\nIf the pressure in the reaction vessel is doubled at constant temperature, by what factor does the rate of reaction increase?",
+    options: [
+      { text: "2" },
+      { text: "4" },
+      { text: "8" },
+      { text: "16" }
+    ],
+    correctAnswer: 1,
+    explanation: "Doubling the pressure of a gaseous mixture doubles the concentration of all gas particles. Since the reaction is second order with respect to X ($2^2 = 4$) and zero order with respect to Y ($2^0 = 1$), the rate increases by a factor of $4 \\times 1 = 4$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_3-20260719",
+    question: "The alkaline hydrolysis of $\\text{RBr}$, where $\\text{RBr} = (\\text{CH}_3)_3\\text{CBr}$, takes place in two steps:\nStep 1 (slow): $\\text{RBr} \\rightarrow \\text{R}^+ + \\text{Br}^-$\nStep 2 (fast): $\\text{R}^+ + \\text{OH}^- \\rightarrow \\text{ROH}$\nWhich of the following rate equations is consistent with this mechanism?",
+    options: [
+      { text: "Rate = $k[\\text{OH}^-]$" },
+      { text: "Rate = $k[\\text{RBr}]$" },
+      { text: "Rate = $k[\\text{RBr}][\\text{OH}^-]$" },
+      { text: "Rate = $k[\\text{R}^+][\\text{OH}^-]$" }
+    ],
+    correctAnswer: 1,
+    explanation: "The rate-determining step is the slow step (Step 1), which involves only the reactant $\\text{RBr}$. Therefore, the reaction is unimolecular ($S_N1$), and the rate equation is $\\text{Rate} = k[\\text{RBr}]$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_4-20260719",
+    question: "The table below gives rate data for the reaction between X and Y at constant temperature:\n\n| Experiment | [X] / mol dm⁻³ | [Y] / mol dm⁻³ | Initial rate / mol dm⁻³ s⁻¹ |\n| :---: | :---: | :---: | :---: |\n| 1 | 0.3 | 0.2 | $4.0 \\times 10^{-4}$ |\n| 2 | 0.6 | 0.4 | $1.6 \\times 10^{-3}$ |\n| 3 | 0.6 | 0.8 | $6.4 \\times 10^{-3}$ |\n\nWhat is the rate equation for the reaction?",
+    options: [
+      { text: "Rate = $k[\\text{X}][\\text{Y}]^2$" },
+      { text: "Rate = $k[\\text{X}]^2[\\text{Y}]$" },
+      { text: "Rate = $k[\\text{X}]^2$" },
+      { text: "Rate = $k[\\text{Y}]^2$" }
+    ],
+    correctAnswer: 3,
+    explanation: "1. Compare Exp 2 & 3: [X] is constant, [Y] doubles ($0.4 \\rightarrow 0.8$). The rate increases by a factor of 4 ($1.6 \\times 10^{-3} \\rightarrow 6.4 \\times 10^{-3}$). Since $2^2 = 4$, the reaction is second order with respect to Y.\\n2. Compare Exp 1 & 2: both [X] and [Y] double. The rate increases by a factor of 4 ($4.0 \\times 10^{-4} \\rightarrow 1.6 \\times 10^{-3}$). Since the doubling of [Y] alone accounts for the 4-fold rate increase ($2^2 = 4$), the order with respect to X must be 0. Thus, Rate = $k[\\text{Y}]^2$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_5-20260719",
+    question: "The reaction of acidified aqueous potassium iodide with hydrogen peroxide: $2\\text{I}^-\\text{(aq)} + \\text{H}_2\\text{O}_2\\text{(aq)} + 2\\text{H}^+\\text{(aq)} \\rightarrow \\text{I}_2\\text{(aq)} + 2\\text{H}_2\\text{O}\\text{(l)}$ is thought to involve three steps:\nStep 1 (slow): $\\text{H}_2\\text{O}_2 + \\text{I}^- \\rightarrow \\text{H}_2\\text{O} + \\text{OI}^-$\nStep 2 (fast): $\\text{OI}^- + \\text{H}^+ \\rightarrow \\text{HOI}$\nStep 3 (fast): $\\text{HOI} + \\text{H}^+ + \\text{I}^- \\rightarrow \\text{I}_2 + \\text{H}_2\\text{O}$\nWhich of the following conclusions **cannot** be deduced from this information?",
+    options: [
+      { text: "The acid is a catalyst." },
+      { text: "The reaction is first order with respect to the iodide ion." },
+      { text: "The rate-determining step is: $\\text{H}_2\\text{O}_2 + \\text{I}^- \\rightarrow \\text{H}_2\\text{O} + \\text{OI}^-$" },
+      { text: "The rate equation for the reaction is: rate = $k[\\text{H}_2\\text{O}_2][\\text{I}^-]$" }
+    ],
+    correctAnswer: 0,
+    explanation: "Looking at the overall equation: $2\\text{I}^- + \\text{H}_2\\text{O}_2 + 2\\text{H}^+ \\rightarrow \\text{I}_2 + 2\\text{H}_2\\text{O}$. Since $\\text{H}^+$ is consumed as a reactant in the overall reaction, it is not a catalyst (a catalyst must be regenerated at the end of the reaction). Therefore, conclusion A cannot be deduced (it is false).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_6-20260719",
+    question: "Propanone and iodine react in acidic aqueous solution: $\\text{CH}_3\\text{COCH}_3 + \\text{I}_2 + \\text{H}^+ \\rightarrow \\text{CH}_3\\text{COCH}_2\\text{I} + 2\\text{H}^+ + \\text{I}^-$. The experimental rate equation is $\\text{Rate} = k[\\text{CH}_3\\text{COCH}_3][\\text{H}^+]$. At initial concentrations $[\\text{CH}_3\\text{COCH}_3] = 0.400\\text{ mol dm}^{-3}$ and $[\\text{H}^+] = 0.200\\text{ mol dm}^{-3}$, the initial rate of reaction was $1.43 \\times 10^{-6}\\text{ mol dm}^{-3}\\text{ s}^{-1}$. Calculate the value of the rate constant $k$, with units.",
+    options: [
+      { text: "$1.79 \\times 10^{-5}\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" },
+      { text: "$1.79 \\times 10^{-5}\\text{ s}^{-1}$" },
+      { text: "$7.15 \\times 10^{-6}\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" },
+      { text: "$3.58 \\times 10^{-5}\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "Using the rate equation: $k = \\text{Rate} / ([\\text{CH}_3\\text{COCH}_3][\\text{H}^+]) = 1.43 \\times 10^{-6} / (0.400 \\times 0.200) = 1.43 \\times 10^{-6} / 0.080 = 1.7875 \\times 10^{-5} \\approx 1.79 \\times 10^{-5}$. Units: since the overall order is 2, the units of $k$ are $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_7-20260719",
+    question: "A series of experiments on the reaction $\\text{A} + \\text{B} + \\text{C} \\rightarrow \\text{Products}$ yielded the following initial rate data:\n\n| Exp | [A] / mol dm⁻³ | [B] / mol dm⁻³ | [C] / mol dm⁻³ | Rate / mol dm⁻³ s⁻¹ |\n| :---: | :---: | :---: | :---: | :---: |\n| 1 | 0.100 | 0.100 | 0.100 | $6.20 \\times 10^{-4}$ |\n| 2 | 0.100 | 0.200 | 0.100 | $6.20 \\times 10^{-4}$ |\n| 3 | 0.100 | 0.100 | 0.200 | $2.48 \\times 10^{-3}$ |\n| 4 | 0.200 | 0.100 | 0.100 | $1.24 \\times 10^{-3}$ |\n\nDeduce the rate equation and determine which reactant is unlikely to be in the rate-determining step.",
+    options: [
+      { text: "Rate = $k[\\text{A}][\\text{C}]^2$; B is unlikely to be in the RDS." },
+      { text: "Rate = $k[\\text{A}]^2[\\text{C}]$; B is unlikely to be in the RDS." },
+      { text: "Rate = $k[\\text{A}][\\text{B}][\\text{C}]$; C is unlikely to be in the RDS." },
+      { text: "Rate = $k[\\text{C}]^2$; A and B are unlikely to be in the RDS." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. Compare Exp 1 & 2: doubling [B] has no effect on rate $\\rightarrow$ order wrt B is 0. Thus, B is not involved in the RDS.\\n2. Compare Exp 1 & 3: doubling [C] increases rate by a factor of 4 ($2.48 \\times 10^{-3} / 6.20 \\times 10^{-4} = 4$) $\\rightarrow$ order wrt C is 2.\\n3. Compare Exp 1 & 4: doubling [A] doubles rate ($1.24 \\times 10^{-3} / 6.20 \\times 10^{-4} = 2$) $\\rightarrow$ order wrt A is 1. Thus, Rate = $k[\\text{A}][\\text{C}]^2$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
+  },
+  {
+    id: "q_kin_ed_8-20260719",
+    question: "Nitrogen dioxide, $\\text{NO}_2$, decomposes on heating: $2\\text{NO}_2\\text{(g)} \\rightarrow 2\\text{NO(g)} + \\text{O}_2\\text{(g)}$. A plot of $\\ln k$ against $1/T$ yields a straight line with a gradient of $-13500\\text{ K}$. Calculate the activation energy ($E_a$) for this reaction in $\\text{kJ mol}^{-1}$.",
+    options: [
+      { text: "$112\\text{ kJ mol}^{-1}$" },
+      { text: "$1.62\\text{ kJ mol}^{-1}$" },
+      { text: "$13.5\\text{ kJ mol}^{-1}$" },
+      { text: "$112000\\text{ kJ mol}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "The gradient of the Arrhenius plot is given by $m = -E_a/R$. Rearranging: $E_a = -m \\times R = -(-13500) \\times 8.31 = 112185\\text{ J mol}^{-1}$. In $\\text{kJ mol}^{-1}$, this is $112185 / 1000 = 112\\text{ kJ mol}^{-1}$ (to 3 significant figures).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-19"
   }
 );

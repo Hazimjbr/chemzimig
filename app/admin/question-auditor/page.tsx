@@ -61,6 +61,114 @@ const renderTextWithMath = (text: string): React.ReactNode => {
     return text;
 };
 
+const renderQuestionContent = (text: string): React.ReactNode => {
+    if (!text) return null;
+    
+    const cleanText = text.replace(/\\n/g, '\n');
+    const lines = cleanText.split('\n');
+    
+    if (cleanText.includes('|')) {
+        const elements: React.ReactNode[] = [];
+        let tableRows: string[][] = [];
+        let inTable = false;
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (line.startsWith('|')) {
+                inTable = true;
+                const cells = line.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+                if (cells.every(c => c.startsWith(':') || c.startsWith('-') || c.endsWith(':') || c === '')) {
+                    continue;
+                }
+                tableRows.push(cells);
+            } else {
+                if (inTable && tableRows.length > 0) {
+                    const headers = tableRows[0];
+                    const bodyRows = tableRows.slice(1);
+                    elements.push(
+                        <div key={`table-${i}`} className="overflow-x-auto my-4 rounded-xl border border-white/10 max-w-full">
+                            <table className="min-w-full text-center border-collapse">
+                                <thead className="bg-white/5 border-b border-white/10 text-xs font-bold uppercase tracking-wider text-slate-400">
+                                    <tr>
+                                        {headers.map((h, idx) => (
+                                            <th key={idx} className="p-3">
+                                                {renderTextWithMath(h)}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5 text-sm">
+                                    {bodyRows.map((row, rIdx) => (
+                                        <tr key={rIdx}>
+                                            {row.map((cell, cIdx) => (
+                                                <td key={cIdx} className="p-3 text-slate-300">
+                                                    {renderTextWithMath(cell)}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    );
+                    tableRows = [];
+                    inTable = false;
+                }
+                if (line !== '') {
+                    elements.push(
+                        <div key={`line-${i}`} className="mb-2">
+                            {renderTextWithMath(line)}
+                        </div>
+                    );
+                }
+            }
+        }
+        
+        if (inTable && tableRows.length > 0) {
+            const headers = tableRows[0];
+            const bodyRows = tableRows.slice(1);
+            elements.push(
+                <div key="table-end" className="overflow-x-auto my-4 rounded-xl border border-white/10 max-w-full">
+                    <table className="min-w-full text-center border-collapse">
+                        <thead className="bg-white/5 border-b border-white/10 text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <tr>
+                                {headers.map((h, idx) => (
+                                    <th key={idx} className="p-3">
+                                        {renderTextWithMath(h)}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-white/5 text-sm">
+                            {bodyRows.map((row, rIdx) => (
+                                <tr key={rIdx}>
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className="p-3 text-slate-300">
+                                            {renderTextWithMath(cell)}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        }
+        
+        return <div className="flex flex-col">{elements}</div>;
+    }
+    
+    return (
+        <div className="flex flex-col gap-1.5">
+            {lines.map((line, idx) => (
+                line.trim() === ''
+                    ? <div key={idx} className="h-2" />
+                    : <div key={idx}>{renderTextWithMath(line)}</div>
+            ))}
+        </div>
+    );
+};
+
 const resolveCurriculumTitle = (id: string, unitId: string): string => {
     const cleanId = id.toLowerCase().trim();
     const cleanUnit = unitId.toLowerCase().trim();
@@ -92,12 +200,34 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     if (cleanTrackId === 'igcse') cleanTrackId = 'cie-igcse';
     if (cleanTrackId === 'cie-alevel' || cleanTrackId === 'cie-a2') cleanTrackId = 'cie-alevel';
     
-    let curriculum = allCurricula.find(c => c.id.toLowerCase() === cleanTrackId);
+    // Direct robust mapping for Edexcel units
+    if (cleanTrackId.includes('edexcel')) {
+        if (cleanUnitId.includes('unit-4') || cleanUnitId.includes('u4')) {
+            return "Unit 4: Rates, Equilibria & Further Organic";
+        }
+        if (cleanUnitId.includes('unit-5') || cleanUnitId.includes('u5')) {
+            return "Unit 5: Transition Metals & Organic Nitrogen Chemistry";
+        }
+        if (cleanUnitId.includes('unit-6') || cleanUnitId.includes('u6')) {
+            return "Unit 6: Practical Skills in Chemistry II";
+        }
+        if (cleanUnitId.includes('unit-1') || cleanUnitId.includes('u1')) {
+            return "Unit 1: Structure, Bonding & Intro Organic";
+        }
+        if (cleanUnitId.includes('unit-2') || cleanUnitId.includes('u2')) {
+            return "Unit 2: Energetics, Group Chem & Halogenoalkanes";
+        }
+        if (cleanUnitId.includes('unit-3') || cleanUnitId.includes('u3')) {
+            return "Unit 3: Practical Skills in Chemistry I";
+        }
+    }
+    
+    let curriculum = allCurricula.find(c => c.id.toLowerCase().startsWith(cleanTrackId));
     if (!curriculum && (cleanTrackId === 'edexcel-alevel' || cleanTrackId === 'edexcel-as' || cleanTrackId === 'edexcel-a2')) {
         if (cleanUnitId.includes('unit-4') || cleanUnitId.includes('unit-5') || cleanUnitId.includes('unit-6') || cleanUnitId.includes('u4') || cleanUnitId.includes('u5') || cleanUnitId.includes('u6')) {
-            curriculum = allCurricula.find(c => c.id === 'edexcel-a2');
+            curriculum = allCurricula.find(c => c.id.startsWith('edexcel-a2'));
         } else {
-            curriculum = allCurricula.find(c => c.id === 'edexcel-as');
+            curriculum = allCurricula.find(c => c.id.startsWith('edexcel-as'));
         }
     }
     
@@ -538,7 +668,7 @@ export default function QuestionAuditorPage() {
 
                                 {/* Question Content */}
                                 <div className="text-white text-base md:text-lg font-medium leading-relaxed">
-                                    {renderTextWithMath(q.question)}
+                                    {renderQuestionContent(q.question)}
                                 </div>
 
                                 {/* Options */}
@@ -554,7 +684,7 @@ export default function QuestionAuditorPage() {
                                                         : 'bg-white/[0.01] border-white/5 text-slate-400'
                                                 }`}
                                             >
-                                                <span>{String.fromCharCode(65 + oIdx)}. {opt.text}</span>
+                                                <span className="flex items-center gap-1">{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
                                                 {isCorrect && (
                                                     <span className="text-[10px] font-black uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded">
                                                         Correct Answer
@@ -570,7 +700,7 @@ export default function QuestionAuditorPage() {
                                     <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-2xl p-5 mt-2">
                                         <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2 block">Explanation</span>
                                         <div className="text-slate-300 text-sm leading-relaxed flex flex-col gap-1 font-sans">
-                                            {q.explanation.split('\n').map((line, lineIdx) => (
+                                            {q.explanation.replace(/\\n/g, '\n').split('\n').map((line, lineIdx) => (
                                                 line.trim() === '' 
                                                     ? <div key={lineIdx} className="h-2" /> 
                                                     : <div key={lineIdx}>{renderTextWithMath(line)}</div>
