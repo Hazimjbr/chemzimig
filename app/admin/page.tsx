@@ -285,6 +285,8 @@ function AdminContent() {
     const [isLoadingStudents, setIsLoadingStudents] = useState(false);
     const [studentSearch, setStudentSearch] = useState('');
     const [deviceSubTab, setDeviceSubTab] = useState<'new' | 'all'>('new');
+    const [deviceFilter, setDeviceFilter] = useState<'all' | 'approved' | 'pending' | 'blocked'>('all');
+
 
     const handleStudentDeviceAction = async (action: 'block' | 'unblock' | 'remove', studentId: string, deviceId: string) => {
         if (action === 'remove' && !confirm('Are you sure you want to disconnect and remove this device?')) {
@@ -324,6 +326,11 @@ function AdminContent() {
         });
         return list;
     }, [students]);
+
+    const filteredStudentDevices = React.useMemo(() => {
+        if (deviceFilter === 'all') return allStudentDevices;
+        return allStudentDevices.filter((d: any) => d.status === deviceFilter);
+    }, [allStudentDevices, deviceFilter]);
 
     const fetchStudents = useCallback(async () => {
         setIsLoadingStudents(true);
@@ -849,19 +856,47 @@ function AdminContent() {
                                     <div className="space-y-8 animate-in fade-in duration-500">
                                         {/* Device Stats Row */}
                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl">
+                                            <div 
+                                                onClick={() => { setDeviceSubTab('all'); setDeviceFilter('all'); }}
+                                                className={`p-4 rounded-2xl border transition-all cursor-pointer active:scale-98 ${
+                                                    deviceSubTab === 'all' && deviceFilter === 'all'
+                                                        ? 'bg-indigo-500/10 border-indigo-500/40 shadow-lg shadow-indigo-500/5'
+                                                        : 'bg-white/[0.02] border-white/5 hover:border-white/20 hover:bg-white/[0.04]'
+                                                }`}
+                                            >
                                                 <span className="text-slate-500 text-xs font-bold uppercase block mb-1">Total Devices</span>
                                                 <span className="text-2xl font-black text-white">{authStats?.totalDevices || 0}</span>
                                             </div>
-                                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl">
+                                            <div 
+                                                onClick={() => { setDeviceSubTab('all'); setDeviceFilter('approved'); }}
+                                                className={`p-4 rounded-2xl border transition-all cursor-pointer active:scale-98 ${
+                                                    deviceSubTab === 'all' && deviceFilter === 'approved'
+                                                        ? 'bg-emerald-500/10 border-emerald-500/40 shadow-lg shadow-emerald-500/5'
+                                                        : 'bg-white/[0.02] border-white/5 hover:border-white/20 hover:bg-white/[0.04]'
+                                                }`}
+                                            >
                                                 <span className="text-slate-500 text-xs font-bold uppercase block mb-1">Approved</span>
                                                 <span className="text-2xl font-black text-emerald-400">✓ {authStats?.approvedDevices || 0}</span>
                                             </div>
-                                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl">
+                                            <div 
+                                                onClick={() => { setDeviceSubTab('new'); }}
+                                                className={`p-4 rounded-2xl border transition-all cursor-pointer active:scale-98 ${
+                                                    deviceSubTab === 'new'
+                                                        ? 'bg-amber-500/10 border-amber-500/40 shadow-lg shadow-amber-500/5'
+                                                        : 'bg-white/[0.02] border-white/5 hover:border-white/20 hover:bg-white/[0.04]'
+                                                }`}
+                                            >
                                                 <span className="text-slate-500 text-xs font-bold uppercase block mb-1">Pending</span>
                                                 <span className="text-2xl font-black text-amber-400">⏱ {authStats?.pendingDevices || 0}</span>
                                             </div>
-                                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl">
+                                            <div 
+                                                onClick={() => { setDeviceSubTab('all'); setDeviceFilter('blocked'); }}
+                                                className={`p-4 rounded-2xl border transition-all cursor-pointer active:scale-98 ${
+                                                    deviceSubTab === 'all' && deviceFilter === 'blocked'
+                                                        ? 'bg-rose-500/10 border-rose-500/40 shadow-lg shadow-rose-500/5'
+                                                        : 'bg-white/[0.02] border-white/5 hover:border-white/20 hover:bg-white/[0.04]'
+                                                }`}
+                                            >
                                                 <span className="text-slate-500 text-xs font-bold uppercase block mb-1">Blocked</span>
                                                 <span className="text-2xl font-black text-rose-400">🚫 {authStats?.blockedDevices || 0}</span>
                                             </div>
@@ -871,7 +906,7 @@ function AdminContent() {
                                         <div className="flex bg-white/5 border border-white/10 p-1 rounded-2xl w-fit">
                                             <button
                                                 onClick={() => setDeviceSubTab('new')}
-                                                className={`px-5 py-2.5 rounded-xl font-bold text-xs transition-all ${
+                                                className={`px-5 py-2.5 rounded-xl font-bold text-xs transition-all cursor-pointer ${
                                                     deviceSubTab === 'new'
                                                         ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30'
                                                         : 'text-slate-400 hover:text-white'
@@ -880,8 +915,8 @@ function AdminContent() {
                                                 New Requests ({deviceRequests.length})
                                             </button>
                                             <button
-                                                onClick={() => setDeviceSubTab('all')}
-                                                className={`px-5 py-2.5 rounded-xl font-bold text-xs transition-all ${
+                                                onClick={() => { setDeviceSubTab('all'); setDeviceFilter('all'); }}
+                                                className={`px-5 py-2.5 rounded-xl font-bold text-xs transition-all cursor-pointer ${
                                                     deviceSubTab === 'all'
                                                         ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/30'
                                                         : 'text-slate-400 hover:text-white'
@@ -947,7 +982,7 @@ function AdminContent() {
                                             )
                                         ) : (
                                             /* All Registered Devices Table View */
-                                            allStudentDevices.length > 0 ? (
+                                            filteredStudentDevices.length > 0 ? (
                                                 <div className="overflow-x-auto">
                                                     <table className="w-full text-left border-collapse">
                                                         <thead>
@@ -961,7 +996,7 @@ function AdminContent() {
                                                             </tr>
                                                         </thead>
                                                         <tbody className="divide-y divide-white/5">
-                                                            {allStudentDevices.map((device: any) => (
+                                                            {filteredStudentDevices.map((device: any) => (
                                                                 <tr key={device.id} className="text-sm">
                                                                     <td className="py-4 font-bold text-white">
                                                                         {device.studentName}
@@ -1027,7 +1062,7 @@ function AdminContent() {
                                                 </div>
                                             ) : (
                                                 <div className="p-8 text-center text-slate-500 text-sm">
-                                                    No devices registered yet.
+                                                    No {deviceFilter !== 'all' ? `${deviceFilter} ` : ''}devices registered yet.
                                                 </div>
                                             )
                                         )}
