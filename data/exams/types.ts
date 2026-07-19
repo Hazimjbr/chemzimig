@@ -84,6 +84,8 @@ export interface Question {
   createdAt: string;
   /** Optional HTML table support */
   tableHtml?: string;
+  /** Optional HTML/SVG image/graph support */
+  imageHtml?: string;
 }
 
 /** Exam configuration chosen by the user */
