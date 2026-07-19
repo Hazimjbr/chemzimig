@@ -121,6 +121,9 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
 14. **Markdown Tables inside Blockquotes:**
     - When writing markdown tables inside blockquotes (`>`), do not indent the table rows (e.g., do not write `>    | Column |`). Instead, start the table characters directly after the blockquote prefix (e.g., `> | Column |`), otherwise the markdown parser fails to parse it as a table and compiles it into a single line.
 
+15. **Question Explanation Formatting:**
+    - The explanation (`explanation`) field for all questions in the question bank or quizzes must be written in the form of bullet points, with each bullet point placed on a separate line to ensure maximum clarity for students.
+
 
 
 # Chat Suppression Rules
