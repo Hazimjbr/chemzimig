@@ -30,7 +30,13 @@ export async function addXPToStudentSecure(
         const result = await db.runTransaction(async (transaction) => {
             const doc = await transaction.get(studentRef);
             if (!doc.exists) {
-                throw new Error('Student document not found');
+                // Silent fail: student doc may not exist for admin accounts
+                return {
+                    success: false,
+                    xp: 0,
+                    level: 1,
+                    alreadyCompleted: false
+                };
             }
 
             const data = doc.data() || {};
@@ -71,6 +77,6 @@ export async function addXPToStudentSecure(
         return result;
     } catch (error) {
         console.error('[XP Secure Update] Firestore Transaction failed:', error);
-        throw error;
+        return { success: false, xp: 0, level: 1, alreadyCompleted: false };
     }
 }

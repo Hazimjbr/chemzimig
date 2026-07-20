@@ -25,6 +25,7 @@ interface AuditedQuestion {
     unitTitle: string;
     lessonTitle: string;
     createdAt?: string;
+    imageHtml?: string;
 }
 
 const renderTextWithMath = (text: string): React.ReactNode => {
@@ -274,11 +275,24 @@ export default function QuestionAuditorPage() {
     // Load and build unified question list
     useEffect(() => {
         // 1. Map Exam questions
-        // A. Static questions (from questionBank)
         const staticExamQuestions: AuditedQuestion[] = questionBank.map(q => {
             const unitTitle = resolveUnitTitle(q.topic, q.curriculum);
             const track = resolveCurriculumTitle(q.curriculum, q.topic);
             const level = q.level === 1 ? 'Easy' : q.level === 2 ? 'Medium' : 'Hard';
+            
+            // Resolve exact curriculum lesson title if available
+            let lessonTitle = 'Exam Practice Bank';
+            if (q.lessonNum) {
+                const matchNum = q.topic.match(/unit-(\d+)/) || q.topic.match(/u(\d+)/);
+                const unitNumber = matchNum ? parseInt(matchNum[1], 10) : null;
+                if (unitNumber !== null) {
+                    const registryKey = `${q.curriculum}-unit-${unitNumber}`;
+                    const curriculumLesson = curriculumRegistry[registryKey]?.[q.lessonNum];
+                    lessonTitle = curriculumLesson 
+                        ? `${q.lessonNum}. ${curriculumLesson.title}` 
+                        : `Lesson ${q.lessonNum}`;
+                }
+            }
             
             return {
                 source: 'exam',
@@ -293,8 +307,9 @@ export default function QuestionAuditorPage() {
                 level,
                 track,
                 unitTitle,
-                lessonTitle: 'Exam Practice Bank',
-                createdAt: q.createdAt
+                lessonTitle,
+                createdAt: q.createdAt,
+                imageHtml: q.imageHtml
             };
         });
 
@@ -671,6 +686,11 @@ export default function QuestionAuditorPage() {
                                     {renderQuestionContent(q.question)}
                                 </div>
 
+                                {/* Question Graph / Image */}
+                                {q.imageHtml && (
+                                    <div className="my-4 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: q.imageHtml }} />
+                                )}
+
                                 {/* Options */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                                     {q.options.map((opt, oIdx) => {
@@ -700,11 +720,17 @@ export default function QuestionAuditorPage() {
                                     <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-2xl p-5 mt-2">
                                         <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-2 block">Explanation</span>
                                         <div className="text-slate-300 text-sm leading-relaxed flex flex-col gap-1 font-sans">
-                                            {q.explanation.replace(/\\n/g, '\n').split('\n').map((line, lineIdx) => (
-                                                line.trim() === '' 
-                                                    ? <div key={lineIdx} className="h-2" /> 
-                                                    : <div key={lineIdx}>{renderTextWithMath(line)}</div>
-                                            ))}
+                                             {(() => {
+                                                 const clean = q.explanation
+                                                     .replace(/\\n/g, '\n')
+                                                     .replace(/(?:\s+|\n)*(?=\d+\.\s+[A-Z\u0600-\u06FF])/g, '\n')
+                                                     .replace(/(?:\s+|\n)*(?=[•\*]\s+)/g, '\n');
+                                                 return clean.split('\n').map((line, lineIdx) => (
+                                                     line.trim() === '' 
+                                                         ? <div key={lineIdx} className="h-2" /> 
+                                                         : <div key={lineIdx}>{renderTextWithMath(line)}</div>
+                                                 ));
+                                             })()}
                                         </div>
                                     </div>
                                 )}

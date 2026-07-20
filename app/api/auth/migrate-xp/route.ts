@@ -30,7 +30,8 @@ export async function POST(request: NextRequest) {
         const result = await db.runTransaction(async (transaction) => {
             const doc = await transaction.get(studentRef);
             if (!doc.exists) {
-                throw new Error('Student doc not found');
+                // Silent fail: admin accounts may not have a student document
+                return null;
             }
 
             const data = doc.data() || {};
@@ -46,6 +47,10 @@ export async function POST(request: NextRequest) {
 
             return { xp: serverXP, level: data.level || 1 };
         });
+
+        if (!result) {
+            return NextResponse.json({ success: false, error: 'Student document not found' }, { status: 200 });
+        }
 
         return NextResponse.json({
             success: true,

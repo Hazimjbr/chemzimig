@@ -598,6 +598,7 @@ questionBank.push(
     explanation: "Dilute hydrochloric acid provides $\\text{H}^+$ ions which act as a catalyst, offering an alternative pathway with a lower activation energy, thereby increasing the rate of hydrolysis.",
     level: 1,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -615,6 +616,7 @@ questionBank.push(
     explanation: "Doubling the pressure of a gaseous mixture doubles the concentration of all gas particles.\nSince the reaction is second order with respect to X ($2^2 = 4$) and zero order with respect to Y ($2^0 = 1$), the rate increases by a factor of $4 \\times 1 = 4$.",
     level: 2,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -632,6 +634,7 @@ questionBank.push(
     explanation: "The rate-determining step is the slow step (Step 1), which involves only the reactant $\\text{RBr}$.\nTherefore, the reaction is unimolecular ($S_N1$), and the rate equation is $\\text{Rate} = k[\\text{RBr}]$.",
     level: 2,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -649,6 +652,7 @@ questionBank.push(
     explanation: "1. Compare Exp 2 & 3: [X] is constant, [Y] doubles ($0.4 \\rightarrow 0.8$). The rate increases by a factor of 4 ($1.6 \\times 10^{-3} \\rightarrow 6.4 \\times 10^{-3}$). Since $2^2 = 4$, the reaction is second order with respect to Y.\\n2. Compare Exp 1 & 2: both [X] and [Y] double. The rate increases by a factor of 4 ($4.0 \\times 10^{-4} \\rightarrow 1.6 \\times 10^{-3}$). Since the doubling of [Y] alone accounts for the 4-fold rate increase ($2^2 = 4$), the order with respect to X must be 0. Thus, Rate = $k[\\text{Y}]^2$.",
     level: 2,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -666,6 +670,7 @@ questionBank.push(
     explanation: "Looking at the overall equation:\n$$2\\text{I}^- + \\text{H}_2\\text{O}_2 + 2\\text{H}^+ \\rightarrow \\text{I}_2 + 2\\text{H}_2\\text{O}$$\nSince $\\text{H}^+$ is consumed as a reactant in the overall reaction, it is not a catalyst (a catalyst must be regenerated at the end of the reaction).\nTherefore, conclusion A cannot be deduced (it is false).",
     level: 2,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -683,6 +688,7 @@ questionBank.push(
     explanation: "Using the rate equation:\n$k = \\text{Rate} / ([\\text{CH}_3\\text{COCH}_3][\\text{H}^+]) = 1.43 \\times 10^{-6} / (0.400 \\times 0.200) = 1.7875 \\times 10^{-5} \\approx 1.79 \\times 10^{-5}$.\nUnits: since the overall order is 2, the units of $k$ are $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
     level: 3,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -700,6 +706,7 @@ questionBank.push(
     explanation: "1. Compare Exp 1 & 2: doubling [B] has no effect on rate $\\rightarrow$ order wrt B is 0. Thus, B is not involved in the RDS.\\n2. Compare Exp 1 & 3: doubling [C] increases rate by a factor of 4 ($2.48 \\times 10^{-3} / 6.20 \\times 10^{-4} = 4$) $\\rightarrow$ order wrt C is 2.\\n3. Compare Exp 1 & 4: doubling [A] doubles rate ($1.24 \\times 10^{-3} / 6.20 \\times 10^{-4} = 2$) $\\rightarrow$ order wrt A is 1. Thus, Rate = $k[\\text{A}][\\text{C}]^2$.",
     level: 3,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19"
@@ -717,6 +724,7 @@ questionBank.push(
     explanation: "The gradient of the Arrhenius plot is given by $m = -E_a/R$.\nRearranging: $E_a = -m \\times R = -(-13500) \\times 8.31 = 112185\\text{ J mol}^{-1}$.\nIn $\\text{kJ mol}^{-1}$, this is $112185 / 1000 = 112\\text{ kJ mol}^{-1}$ (to 3 significant figures).",
     level: 3,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19",
@@ -854,6 +862,7 @@ questionBank.push(
     explanation: "1. The initial concentration is $2.0\\text{ mol dm}^{-3}$. Half of this value is $1.0\\text{ mol dm}^{-3}$. Reading from the graph, $[\\text{N}_2\\text{O}_5]$ reaches $1.0\\text{ mol dm}^{-3}$ at $17\\text{ minutes}$. Thus, the first half-life is $17\\text{ minutes}$.\n2. The second half-life is the time taken to drop from $1.0\\text{ mol dm}^{-3}$ to $0.5\\text{ mol dm}^{-3}$. Looking at the graph, the concentration is $0.5\\text{ mol dm}^{-3}$ at $34\\text{ minutes}$.\n3. The time interval is $34 - 17 = 17\\text{ minutes}$. Therefore, both successive half-lives are $17\\text{ minutes}$.",
     level: 2,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19",
@@ -872,6 +881,7 @@ questionBank.push(
     explanation: "1. The successive half-lives for this reaction are constant at approximately $17\\text{ minutes}$.\n2. A constant half-life is the unique characteristic of a first-order reaction.\n3. Therefore, the reaction is first order with respect to $\\text{N}_2\\text{O}_5$.",
     level: 2,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19",
@@ -890,6 +900,7 @@ questionBank.push(
     explanation: "1. For a first-order reaction, the rate constant is related to the half-life by: $k = \\ln(2) / t_{1/2}$.\n2. Substituting the half-life $t_{1/2} = 17\\text{ minutes}$: $k = 0.693 / 17 \\approx 0.0408\\text{ min}^{-1}$.\n3. In scientific notation, this is $4.1 \\times 10^{-2}\\text{ min}^{-1}$.",
     level: 3,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19",
@@ -908,6 +919,7 @@ questionBank.push(
     explanation: "1. The rate equation for this first-order reaction is: $\\text{Rate} = k[\\text{N}_2\\text{O}_5]$.\n2. Substituting the rate constant $k = 0.0408\\text{ min}^{-1}$ and concentration $[\\text{N}_2\\text{O}_5] = 1.50\\text{ mol dm}^{-3}$: $\\text{Rate} = 0.0408 \\times 1.50 = 0.0612\\text{ mol dm}^{-3}\\text{ min}^{-1}$.\n3. In scientific notation, this is $6.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$.",
     level: 3,
     topic: "edexcel-unit-4",
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19",

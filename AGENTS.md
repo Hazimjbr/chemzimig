@@ -124,6 +124,11 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
 15. **Question Explanation Formatting:**
     - The explanation (`explanation`) field for all questions in the question bank or quizzes must be written in the form of bullet points, with each bullet point placed on a separate line to ensure maximum clarity for students.
 
+16. **Smart Question Tagging & Lesson Filtering:**
+    - Every question structure in the question bank (`Question` interface) should include the `lessonNum?: number;` field representing the lesson number it belongs to.
+    - Tag all practice/exam questions with their respective `lessonNum` matching the curriculum registry lesson index.
+    - The Smart Question Auditor dynamically resolves the lesson titles using `q.lessonNum` and `curriculumRegistry` to enable precise dropdown filtering. Do not hardcode `"Exam Practice Bank"` as the lesson title if a lesson number is available.
+
 
 
 # Chat Suppression Rules
@@ -216,5 +221,6 @@ export interface Question {
   source?: string;
   createdAt: string;
   tableHtml?: string;
+  lessonNum?: number;
 }
 ```
