@@ -86,6 +86,8 @@ export interface Question {
   tableHtml?: string;
   /** Optional HTML/SVG image/graph support */
   imageHtml?: string;
+  /** Optional lesson number tag (e.g. 1 or 2) */
+  lessonNum?: number;
 }
 
 /** Exam configuration chosen by the user */
