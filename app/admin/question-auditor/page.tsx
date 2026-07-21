@@ -196,10 +196,16 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     if (/^\d+\./.test(unitId)) return unitId;
     
     const cleanUnitId = unitId.toLowerCase().trim();
+    const cleanUnitIdWithoutSuffix = cleanUnitId.replace(/-\d{8}$/, '');
     let cleanTrackId = trackId.toLowerCase().trim();
     
-    if (cleanTrackId === 'igcse') cleanTrackId = 'cie-igcse';
-    if (cleanTrackId === 'cie-alevel' || cleanTrackId === 'cie-a2') cleanTrackId = 'cie-alevel';
+    // Normalize track IDs
+    if (cleanTrackId === 'igcse' || cleanTrackId === 'cambridge igcse') cleanTrackId = 'cie-igcse';
+    if (cleanTrackId === 'cie-alevel' || cleanTrackId === 'cie-a2' || cleanTrackId === 'cambridge a-level') cleanTrackId = 'cie-alevel';
+    if (cleanTrackId === 'cie-as' || cleanTrackId === 'cambridge as-level') cleanTrackId = 'cie-as';
+    if (cleanTrackId === 'edexcel-igcse' || cleanTrackId === 'edexcel igcse') cleanTrackId = 'edexcel-igcse';
+    if (cleanTrackId === 'edexcel-as' || cleanTrackId === 'edexcel as-level') cleanTrackId = 'edexcel-as';
+    if (cleanTrackId === 'edexcel-a2' || cleanTrackId === 'edexcel a2-level') cleanTrackId = 'edexcel-a2';
     
     // Direct robust mapping for Edexcel units
     if (cleanTrackId.includes('edexcel')) {
@@ -223,7 +229,7 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
         }
     }
     
-    let curriculum = allCurricula.find(c => c.id.toLowerCase().startsWith(cleanTrackId));
+    let curriculum = allCurricula.find(c => c.id.toLowerCase().replace(/-\d{8}$/, '').startsWith(cleanTrackId));
     if (!curriculum && (cleanTrackId === 'edexcel-alevel' || cleanTrackId === 'edexcel-as' || cleanTrackId === 'edexcel-a2')) {
         if (cleanUnitId.includes('unit-4') || cleanUnitId.includes('unit-5') || cleanUnitId.includes('unit-6') || cleanUnitId.includes('u4') || cleanUnitId.includes('u5') || cleanUnitId.includes('u6')) {
             curriculum = allCurricula.find(c => c.id.startsWith('edexcel-a2'));
@@ -245,7 +251,7 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
             }
         }
         
-        const topicById = curriculum.topics.find(t => t.id === cleanUnitId);
+        const topicById = curriculum.topics.find(t => t.id.toLowerCase().replace(/-\d{8}$/, '') === cleanUnitIdWithoutSuffix);
         if (topicById) {
             if (/^unit\s+\d+:/i.test(topicById.title)) {
                 return topicById.title;
