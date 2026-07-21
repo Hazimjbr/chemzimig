@@ -4,10 +4,12 @@ import { cookies } from 'next/headers';
 import { getAdminFirestore } from '@/lib/firebase-admin';
 
 export async function POST(request: NextRequest) {
+    let session: Awaited<ReturnType<typeof verifySession>> = null;
+    let body: any = null;
     try {
         const cookieStore = await cookies();
         const sessionCookie = cookieStore.get('chemzim-session')?.value || cookieStore.get('chemzim')?.value;
-        const session = await verifySession(sessionCookie);
+        session = await verifySession(sessionCookie);
 
         if (!session || !session.id) {
             return NextResponse.json(
@@ -16,7 +18,7 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        const body = await request.json();
+        body = await request.json();
         const { image, lastStudiedLesson } = body;
 
         const db = getAdminFirestore();
@@ -36,15 +38,16 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ success: false, error: 'No data to update' }, { status: 400 });
         }
 
-        // Update student document in Firestore
-        await db.collection('students').doc(session.id).update(updateData);
+        // Update student document in Firestore (merge: true creates doc if missing)
+        await db.collection('students').doc(session.id).set(updateData, { merge: true });
 
         return NextResponse.json({
             success: true,
             updated: updateData
         });
     } catch (error: any) {
-        console.error('[Profile API] Update error:', error);
+        console.error('[Profile API] Update error:', error.code || error.name, '|', error.message);
+        console.error('[Profile API] session.id:', session?.id, '| body keys:', Object.keys(body || {}));
         return NextResponse.json({ success: false, error: error.message || 'Server error' }, { status: 500 });
     }
 }

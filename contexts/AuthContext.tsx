@@ -69,19 +69,8 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 // ============================================
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    const [user, setUser] = useState<AuthUser | null>({
-        id: 'guest_user',
-        username: 'guest',
-        name: 'Guest Chemist',
-        email: 'guest@chemzim.com',
-        isAdmin: true,
-        role: 'admin',
-        authMethod: 'credentials',
-        xp: 1250,
-        level: 5,
-        grade: 'A2 Level'
-    });
-    const [isLoading, setIsLoading] = useState(false);
+    const [user, setUser] = useState<AuthUser | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
     const [deviceInfo, setDeviceInfo] = useState<DeviceInfo | null>(null);
     const [firebaseUser, setFirebaseUser] = useState<User | null>(null);
 

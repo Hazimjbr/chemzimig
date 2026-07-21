@@ -75,5 +75,42 @@ export const lessonQuiz = [
       { text: "9.62 kJ mol⁻¹", isCorrect: false }
     ],
     explanation: "The gradient of an Arrhenius plot is equal to -Ea/R. \nTherefore, -9620 = -Ea / 8.31 \nEa = 9620 × 8.31 = 79942.2 J mol⁻¹ \nConverting to kJ mol⁻¹: 79942.2 / 1000 = 79.9 kJ mol⁻¹ (to 3 significant figures)"
+  },
+
+  // ==========================================
+  // LEVEL 3: ANALYSIS (HARD - 1 Question)
+  // ==========================================
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260708-07",
+    question: "The alkaline hydrolysis of 2-chloro-2-methylpropane is found to be first order with respect to the halogenoalkane and zero order with respect to hydroxide ions. Which statement is correct regarding this reaction?",
+    options: [
+      { text: "It proceeds via an SN2 mechanism involving a transition state.", isCorrect: false },
+      { text: "The rate-determining step is unimolecular and involves the slow ionization of the halogenoalkane.", isCorrect: true },
+      { text: "Doubling the concentration of hydroxide ions doubles the reaction rate.", isCorrect: false },
+      { text: "The reaction involves a transition state in square brackets containing both reactants.", isCorrect: false }
+    ],
+    explanation: "Since the reaction is first order with respect to (CH₃)₃CCl and zero order with respect to OH⁻, it is an SN1 (unimolecular) substitution reaction. The slow, rate-determining step is the unimolecular ionization of the tertiary halogenoalkane to form a carbocation intermediate."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260708-08",
+    question: "The acid-catalyzed iodination of propanone has the rate equation: Rate = k[propanone][H⁺]. If deuterated propanone (CD₃COCD₃) is used instead of CH₃COCH₃, the rate of iodination is found to be slower. What does this kinetic isotope effect provide evidence for?",
+    options: [
+      { text: "Breaking the C-H (or C-D) bond occurs in the rate-determining step.", isCorrect: true },
+      { text: "Iodine is directly involved in the rate-determining step.", isCorrect: false },
+      { text: "The protonation of the carbonyl oxygen is the slow step of the reaction.", isCorrect: false },
+      { text: "The reaction proceeds via an SN2 mechanism with a transition state.", isCorrect: false }
+    ],
+    explanation: "Deuterium (D) forms a stronger bond with carbon than hydrogen (H). Since the rate slows down when using deuterated propanone, this shows that C-H (or C-D) bond breaking occurs during the rate-determining step (which is the slow rearrangement of the protonated intermediate to form the enol)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260708-09",
+    question: "A student plots 1/t (representing rate) against the concentration of reactant [A]. The plot yields a straight line passing through the origin. What is the order of the reaction with respect to A, and what would a plot of 1/t against [A]² look like?",
+    options: [
+      { text: "First order; the plot of 1/t against [A]² would be a curve bending downwards.", isCorrect: true },
+      { text: "Second order; the plot of 1/t against [A]² would be a straight line through the origin.", isCorrect: false },
+      { text: "Zero order; the plot of 1/t against [A]² would be a horizontal line.", isCorrect: false },
+      { text: "First order; the plot of 1/t against [A]² would be a horizontal line.", isCorrect: false }
+    ],
+    explanation: "A straight line through the origin for 1/t vs [A] indicates a first-order reaction. Since rate is proportional to [A]¹, a plot of rate against [A]² would be curved (bending downwards towards the x-axis) because the rate is not proportional to concentration squared."
   }
 ];

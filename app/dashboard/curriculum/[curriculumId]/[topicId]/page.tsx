@@ -222,6 +222,114 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
     return children;
 };
 
+const renderQuestionContent = (text: string): React.ReactNode => {
+    if (!text) return null;
+    
+    const cleanText = text.replace(/\\n/g, '\n');
+    const lines = cleanText.split('\n');
+    
+    if (cleanText.includes('|')) {
+        const elements: React.ReactNode[] = [];
+        let tableRows: string[][] = [];
+        let inTable = false;
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (line.startsWith('|')) {
+                inTable = true;
+                const cells = line.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+                if (cells.every(c => c.startsWith(':') || c.startsWith('-') || c.endsWith(':') || c === '')) {
+                    continue;
+                }
+                tableRows.push(cells);
+            } else {
+                if (inTable && tableRows.length > 0) {
+                    const headers = tableRows[0];
+                    const bodyRows = tableRows.slice(1);
+                    elements.push(
+                        <div key={`table-${i}`} className="overflow-x-auto my-4 rounded-xl border border-white/10 max-w-full">
+                            <table className="min-w-full text-center border-collapse">
+                                <thead className="bg-white/5 border-b border-white/10 text-xs font-bold uppercase tracking-wider text-slate-400">
+                                    <tr>
+                                        {headers.map((h, idx) => (
+                                            <th key={idx} className="p-3">
+                                                {renderTextWithMath(h)}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5 text-sm">
+                                    {bodyRows.map((row, rIdx) => (
+                                        <tr key={rIdx}>
+                                            {row.map((cell, cIdx) => (
+                                                <td key={cIdx} className="p-3 text-slate-300">
+                                                    {renderTextWithMath(cell)}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    );
+                    tableRows = [];
+                    inTable = false;
+                }
+                if (line !== '') {
+                    elements.push(
+                        <div key={`line-${i}`} className="mb-2">
+                            {renderTextWithMath(line)}
+                        </div>
+                    );
+                }
+            }
+        }
+        
+        if (inTable && tableRows.length > 0) {
+            const headers = tableRows[0];
+            const bodyRows = tableRows.slice(1);
+            elements.push(
+                <div key="table-end" className="overflow-x-auto my-4 rounded-xl border border-white/10 max-w-full">
+                    <table className="min-w-full text-center border-collapse">
+                        <thead className="bg-white/5 border-b border-white/10 text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <tr>
+                                {headers.map((h, idx) => (
+                                    <th key={idx} className="p-3">
+                                        {renderTextWithMath(h)}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-white/5 text-sm">
+                            {bodyRows.map((row, rIdx) => (
+                                <tr key={rIdx}>
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className="p-3 text-slate-300">
+                                            {renderTextWithMath(cell)}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        }
+        
+        return <div className="flex flex-col">{elements}</div>;
+    }
+    
+    return (
+        <div className="flex flex-col gap-1.5">
+            {lines.map((line, idx) => (
+                line.trim() === ''
+                    ? <div key={idx} className="h-2" />
+                    : <div key={idx}>{renderTextWithMath(line)}</div>
+            ))}
+        </div>
+    );
+};
+
 const formatTrailingSymbolsAndUnits = (text: string): string => {
     if (!text) return text;
 
@@ -312,12 +420,12 @@ const mdComponents: any = {
     strong: ({ node, children, ...props }: any) => <strong className="text-foreground font-semibold" {...props}>{renderTextWithMath(children)}</strong>,
     em: ({ node, children, ...props }: any) => <em {...props}>{renderTextWithMath(children)}</em>,
     img: ({ node, src, alt, ...props }: any) => (
-        <div className="flex justify-center my-4">
+        <div className="flex justify-center my-4 w-full">
             <img
                 src={src}
                 alt={alt || ''}
-                style={{ maxWidth: '30%', height: 'auto' }}
-                className="rounded-xl border border-border shadow-lg"
+                style={{ maxWidth: '85%', height: 'auto' }}
+                className="rounded-xl border border-border shadow-lg bg-[#070f1e]/40"
                 {...props}
             />
         </div>
@@ -918,8 +1026,12 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                     </div>
 
                                                     <div className="text-foreground text-lg font-semibold leading-relaxed my-2">
-                                                        {renderTextWithMath(activeQuestion.question)}
+                                                        {renderQuestionContent(activeQuestion.question)}
                                                     </div>
+
+                                                    {activeQuestion.imageHtml && (
+                                                        <div className="my-4 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: activeQuestion.imageHtml }} />
+                                                    )}
 
                                                     <div className="grid grid-cols-1 gap-3.5">
                                                         {activeQuestion.options.map((opt: { text: string; isCorrect: boolean }, oIdx: number) => {
@@ -977,11 +1089,17 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                         <div className="bg-indigo-500/10 border border-indigo-500/20 rounded-xl p-5 mt-4 animate-fade-in-up">
                                                             <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-1.5 block">Explanation</span>
                                                             <div className="text-indigo-900 dark:text-indigo-300 text-sm leading-relaxed flex flex-col gap-1">
-                                                                {activeQuestion.explanation.split('\n').map((line: string, lineIdx: number) => (
-                                                                    line.trim() === ''
-                                                                        ? <div key={lineIdx} className="h-2" />
-                                                                        : <div key={lineIdx}>{renderTextWithMath(line)}</div>
-                                                                ))}
+                                                                {(() => {
+                                                                    const clean = activeQuestion.explanation
+                                                                        .replace(/\\n/g, '\n')
+                                                                        .replace(/(?:\s+|\n)*(?=\d+\.\s+[A-Z\u0600-\u06FF])/g, '\n')
+                                                                        .replace(/(?:\s+|\n)*(?=[•\*]\s+)/g, '\n');
+                                                                    return clean.split('\n').map((line: string, lineIdx: number) => (
+                                                                        line.trim() === ''
+                                                                            ? <div key={lineIdx} className="h-2" />
+                                                                            : <div key={lineIdx}>{renderTextWithMath(line)}</div>
+                                                                    ));
+                                                                })()}
                                                             </div>
                                                         </div>
                                                     )}

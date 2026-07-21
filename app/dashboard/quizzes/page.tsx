@@ -28,6 +28,7 @@ interface LocalQuestion {
     rawUnitId: string;
     lessonTitle: string;
     rawLessonNum: number;
+    imageHtml?: string;
 }
 
 const renderTextWithMath = (text: string): React.ReactNode => {
@@ -62,6 +63,114 @@ const renderTextWithMath = (text: string): React.ReactNode => {
     }
     
     return text;
+};
+
+const renderQuestionContent = (text: string): React.ReactNode => {
+    if (!text) return null;
+    
+    const cleanText = text.replace(/\\n/g, '\n');
+    const lines = cleanText.split('\n');
+    
+    if (cleanText.includes('|')) {
+        const elements: React.ReactNode[] = [];
+        let tableRows: string[][] = [];
+        let inTable = false;
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (line.startsWith('|')) {
+                inTable = true;
+                const cells = line.split('|').map(c => c.trim()).filter((_, idx, arr) => idx > 0 && idx < arr.length - 1);
+                if (cells.every(c => c.startsWith(':') || c.startsWith('-') || c.endsWith(':') || c === '')) {
+                    continue;
+                }
+                tableRows.push(cells);
+            } else {
+                if (inTable && tableRows.length > 0) {
+                    const headers = tableRows[0];
+                    const bodyRows = tableRows.slice(1);
+                    elements.push(
+                        <div key={`table-${i}`} className="overflow-x-auto my-4 rounded-xl border border-white/10 max-w-full">
+                            <table className="min-w-full text-center border-collapse">
+                                <thead className="bg-white/5 border-b border-white/10 text-xs font-bold uppercase tracking-wider text-slate-400">
+                                    <tr>
+                                        {headers.map((h, idx) => (
+                                            <th key={idx} className="p-3">
+                                                {renderTextWithMath(h)}
+                                            </th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-white/5 text-sm">
+                                    {bodyRows.map((row, rIdx) => (
+                                        <tr key={rIdx}>
+                                            {row.map((cell, cIdx) => (
+                                                <td key={cIdx} className="p-3 text-slate-300">
+                                                    {renderTextWithMath(cell)}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    );
+                    tableRows = [];
+                    inTable = false;
+                }
+                if (line !== '') {
+                    elements.push(
+                        <div key={`line-${i}`} className="mb-2">
+                            {renderTextWithMath(line)}
+                        </div>
+                    );
+                }
+            }
+        }
+        
+        if (inTable && tableRows.length > 0) {
+            const headers = tableRows[0];
+            const bodyRows = tableRows.slice(1);
+            elements.push(
+                <div key="table-end" className="overflow-x-auto my-4 rounded-xl border border-white/10 max-w-full">
+                    <table className="min-w-full text-center border-collapse">
+                        <thead className="bg-white/5 border-b border-white/10 text-xs font-bold uppercase tracking-wider text-slate-400">
+                            <tr>
+                                {headers.map((h, idx) => (
+                                    <th key={idx} className="p-3">
+                                        {renderTextWithMath(h)}
+                                    </th>
+                                ))}
+                            </tr>
+                        </thead>
+                        <tbody className="divide-y divide-white/5 text-sm">
+                            {bodyRows.map((row, rIdx) => (
+                                <tr key={rIdx}>
+                                    {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className="p-3 text-slate-300">
+                                            {renderTextWithMath(cell)}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        }
+        
+        return <div className="flex flex-col">{elements}</div>;
+    }
+    
+    return (
+        <div className="flex flex-col gap-1.5">
+            {lines.map((line, idx) => (
+                line.trim() === ''
+                    ? <div key={idx} className="h-2" />
+                    : <div key={idx}>{renderTextWithMath(line)}</div>
+            ))}
+        </div>
+    );
 };
 
 const resolveCurriculumTitle = (id: string, unitId: string): string => {
@@ -244,7 +353,8 @@ export default function QuizzesPage() {
                 unitTitle,
                 rawUnitId: q.topic,
                 lessonTitle: 'Exam Practice Bank',
-                rawLessonNum: 0
+                rawLessonNum: 0,
+                imageHtml: q.imageHtml
             };
         });
 
@@ -970,8 +1080,12 @@ export default function QuizzesPage() {
                     <div className="bg-[#0a0a1f]/60 border border-white/5 rounded-3xl p-6 md:p-10 space-y-8">
                         <div className="flex flex-col gap-6">
                             <div className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
-                                {renderTextWithMath(questions[currentQuestionIndex].question)}
+                                {renderQuestionContent(questions[currentQuestionIndex].question)}
                             </div>
+
+                            {questions[currentQuestionIndex].imageHtml && (
+                                <div className="my-4 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: questions[currentQuestionIndex].imageHtml }} />
+                            )}
 
                             <div className="grid gap-3">
                                 {questions[currentQuestionIndex].options.map((option, idx) => {
@@ -1100,7 +1214,19 @@ export default function QuizzesPage() {
                                         <div className="pl-12">
                                             <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-xl p-4 text-indigo-300 text-xs leading-relaxed">
                                                 <span className="font-bold text-indigo-400 uppercase tracking-wider text-[10px] mb-1 block">Explanation</span>
-                                                {renderTextWithMath(q.explanation)}
+                                                <div className="flex flex-col gap-1">
+                                                    {(() => {
+                                                        const clean = q.explanation
+                                                            .replace(/\\n/g, '\n')
+                                                            .replace(/(?:\s+|\n)*(?=\d+\.\s+[A-Z\u0600-\u06FF])/g, '\n')
+                                                            .replace(/(?:\s+|\n)*(?=[•\*]\s+)/g, '\n');
+                                                        return clean.split('\n').map((line, lineIdx) => (
+                                                            line.trim() === ''
+                                                                ? <div key={lineIdx} className="h-2" />
+                                                                : <div key={lineIdx}>{renderTextWithMath(line)}</div>
+                                                        ));
+                                                    })()}
+                                                </div>
                                             </div>
                                         </div>
                                     )}
