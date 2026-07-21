@@ -387,11 +387,11 @@ export const parts: LessonPart[] = [
 > #### Table B: Iodoform Test Results for Alcohols
 > | Alcohol | Structure | Oxidation Product | Test Result |
 > | :--- | :--- | :--- | :--- |
-> | ethanol | $\\text{CH₃CH₂OH}$ | $\\text{CH₃CHO}$ | **positive** |
+> | ethanol | $\\text{CH₃CH₂OH}$ | $\\text{CH₃CHO}$ | positive |
 > | propan-1-ol | $\\text{CH₃CH₂CH₂OH}$ | $\\text{CH₃CH₂CHO}$ | negative |
-> | propan-2-ol | $\\text{CH₃CH(OH)CH₃}$ | $\\text{CH₃COCH₃}$ | **positive** |
+> | propan-2-ol | $\\text{CH₃CH(OH)CH₃}$ | $\\text{CH₃COCH₃}$ | positive |
 > | butan-1-ol | $\\text{CH₃CH₂CH₂CH₂OH}$ | $\\text{CH₃CH₂CH₂CHO}$ | negative |
-> | butan-2-ol | $\\text{CH₃CH(OH)CH₂CH₃}$ | $\\text{CH₃COCH₂CH₃}$ | **positive** |
+> | butan-2-ol | $\\text{CH₃CH(OH)CH₂CH₃}$ | $\\text{CH₃COCH₂CH₃}$ | positive |
 > | 2-methylpropan-1-ol | $\\text{(CH₃)₂CHCH₂OH}$ | $\\text{(CH₃)₂CHCHO}$ | negative |
 
 > [!BOX]
@@ -494,7 +494,7 @@ export const parts: LessonPart[] = [
 >   $$\\text{CH₃CH₂COOCH₃} + \\text{NaOH} \\rightarrow \\text{CH₃CH₂COO}^- + \\text{Na}^+ + \\text{CH₃OH} \\quad \\text{(sodium propanoate + methanol)}$$
 >   * Adding dilute acid converts the salt to propanoic acid: $\\text{CH₃CH₂COO}^- + \\text{H}^+ \\rightarrow \\text{CH₃CH₂COOH}$.
 > * **Saponification of Triglycerides (Soap-making):** Triglycerides (triesters found in vegetable oils/animal fats) react with $\\text{NaOH}$ to yield **glycerol** (propane-1,2,3-triol) and **soaps** (sodium carboxylate salts of long-chain fatty acids like sodium stearate):
->   $$\\text{Triglyceride} + 3\\text{NaOH} \\rightarrow \\text{propane-1,2,3-triol (glycerol)} + 3\\text{C}_{17}\\text{H}_{35}\\text{COO}^-\\text{Na}^+ \\text{ (sodium stearate)}$$
+>   $$\\\\text{Triglyceride} + 3\\\\text{NaOH} \\\\rightarrow \\\\text{propane-1,2,3-triol (glycerol)} + 3\\\\text{C₁₇H₃₅COO}^-\\\\text{Na}^+ \\\\text{ (sodium stearate)}$$
 
 > [!BOX]
 > ### 🧪 Preparation of Carboxylic Acids
@@ -694,7 +694,7 @@ export const parts: LessonPart[] = [
 >   * Diol: **ethane-1,2-diol** ($\\text{HO-CH₂-CH₂-OH}$)
 >   * Dicarboxylic acid: **benzene-1,4-dicarboxylic acid** (terephthalic acid, $\\text{HOOC-C₆H₄-COOH}$)
 > * **Reaction:** Carboxyl $-\\text{COOH}$ groups react with hydroxyl $-\\text{OH}$ groups, eliminating $\\text{H₂O}$ molecules to form ester linkages:
->   $$n\\text{HOOC-C₆H₄-COOH} + n\\text{HO-CH₂CH₂-OH} \\rightarrow \\text{[-CO-C₆H₄-CO-O-CH₂CH₂-O-]}__n + 2n\\text{H₂O}$$
+>   $$n\\\\text{HOOC-C₆H₄-COOH} + n\\\\text{HO-CH₂CH₂-OH} \\\\rightarrow \\\\text{[-CO-C₆H₄-CO-O-CH₂CH₂-O-]}_n + 2n\\\\text{H₂O}$$
 > * **Alternative Monomer (Diacyl Chloride):** We can also use benzene-1,4-dioyl chloride ($\\text{ClOC-C₆H₄-COCl}$) instead of the dicarboxylic acid. The reaction occurs in the same way, but eliminates **hydrogen chloride ($\\text{HCl}$)** instead of water.
 > * **Industrial Choice (Dicarboxylic Acid vs Diacyl Chloride):** Dicarboxylic acids are preferred in industry to avoid the release of toxic, corrosive $\\text{HCl}$ gas, which poses high health, safety, and environmental risks.
 
@@ -756,7 +756,7 @@ export const parts: LessonPart[] = [
 > >    * Diol: $\\text{CH₃CH(OH)CH(OH)CH₃}$ (butane-2,3-diol).
 > 2. **Determine ester linkage formation:** The $-\\text{OH}$ groups of the diol lose $-\\text{H}$ and the $-\\text{COOH}$ groups of the acid lose $-\\text{OH}$, forming water.
 > 3. **Draft the repeat unit:** Link the carbonyls of the acid to the oxygens of the diol:
->    $$\\text{[-CO-CO-O-CH(CH₃)-CH(CH₃)-O-]}__n$$
+>    $$\\\\text{[-CO-CO-O-CH(CH₃)-CH(CH₃)-O-]}_n$$
 `,
         keyPoints: [
             'Acyl chlorides undergo nucleophilic addition-elimination reactions, releasing HCl gas.',
