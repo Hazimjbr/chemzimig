@@ -48,9 +48,11 @@
 - [ ] **Cambridge IGCSE Chemistry (O-Level 0620):** استكمال مراجعة وتدقيق بنك الأسئلة وربطه بالوسوم التربوية المقابلة.
 - [ ] **Cambridge International AS & A Level Chemistry (A-Level 9701):** بناء وتطوير المحتوى العلمي المتقدم والتحديات التقييمية الخاصة بالطلاب للـ AS/A2.
 - [x] **Pearson Edexcel IAL - Unit 1 Topic 1 (مكتمل):** إدخال المحتوى العلمي التفاعلي المكامل لـ 10 أجزاء، وربط المحاكيات، وتطوير بنك الأسئلة الشامل (30 سؤالاً).
-- [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Chemical Equilibria II (مكتمل):** 6 أجزاء تفاعلية كاملة (Kc, Kp, Q vs K, Le Chatelier, Temperature & Equilibria, Entropy & Kp) مع 17 سؤال امتحاني متكامل.
-- [x] **Pearson Edexcel IAL - Unit 4 Topic 15: Acid-Base Equilibria (مكتمل):** 5 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titrations & Indicators, Buffer Solutions, Ka from pH Curves) مع 17 سؤال امتحاني متكامل.
+- [x] **Pearson Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Kc, Kp, Q vs K, Le Chatelier, Temperature & Equilibria, Entropy & Kp) مع 17 سؤال امتحاني متكامل.
+- [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 5 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titrations & Indicators, Buffer Solutions, Ka from pH Curves) مع 17 سؤال امتحاني متكامل.
+- [x] **Pearson Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (مكتمل):** 7 أجزاء تفاعلية كاملة (TLC, GC-MS, HRMS, NMR principles, 13C NMR, Low & High-Res 1H NMR splitting) مع 27 سؤال امتحاني متكامل.
 - [ ] **Pearson Edexcel IAL - بقية الدروس:** كتابة وإدخال المحتوى العلمي التفصيلي وبنك الأسئلة للدروس المتبقية.
+- [x] **Pearson Edexcel IAL - محاذاة السيليبس 100%:** إعادة ترتيب ترقيم المواضيع للوحدات 3 و 4 و 5 و 6 (تبدأ الوحدة 4 من Topic 11 للـ Kinetics وتنتهي عند Topic 15 للكربونيلات والكيرالية، مع نقل مواضيع البنزين والأمينات للوحدة الخامسة لإنهاء تفاوت الأرقام).
 
 ### (3) 🛡️ الهوية الرقمية والدرع السحابي
 - [ ] **Custom Domain:** حجز وربط نطاق دولي للمنصة (مثال: `chemzim.com` أو `chemzim.org`).
@@ -100,8 +102,9 @@
 | ✅ | نظام بث الإعلانات المستهدفة وجدولتها الزمنية الذكية (Targeted Announcements & Scheduling) | 100% |
 | ✅ | نظام اللصق الذكي واستخراج بيانات تسجيل الطلاب وتوليد قوالب الرسائل (Smart Paste Auto-Fill) | 100% |
 | ✅ | محرك تضمين رسومات الـ SVG المدمجة (Inline SVG Asset Engine) | 100% |
-| ✅ | Edexcel IAL - Unit 4 Topic 14: Chemical Equilibria II (6 أجزاء + 17 سؤال امتحاني) | 100% |
-| ✅ | Edexcel IAL - Unit 4 Topic 15: Acid-Base Equilibria (5 أجزاء + 17 سؤال امتحاني) | 100% |
+| ✅ | Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (6 أجزاء + 17 سؤال امتحاني) | 100% |
+| ✅ | Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (5 أجزاء + 17 سؤال امتحاني) | 100% |
+| ✅ | Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (7 أجزاء + 27 سؤال امتحاني) | 100% |
 | 🔄 | بنك أسئلة ومحتوى المناهج البريطانية وتدقيقها (Edexcel Topics المتبقية) | قيد التطوير |
 | 🔄 | حزمة التحسينات الهيكلية والأمنية (Structural & Security Improvements) | قيد التخطيط |
 | 🔄 | تحويل المنصة لتطبيق أوفلاين (PWA) | قيد التخطيط |
@@ -114,10 +117,9 @@
 
 *آخر تحديث: 2026-07-21 — **م. حازم جبر***
 
-**إنجازات جلسة اليوم (2026-07-21) — إصلاح عرض الرموز الشامل:**
-1. **إصلاح شامل لمشاكل عرض KaTeX في Topic 15** (جميع الأجزاء الخمسة): تحويل جميع `\\` المزدوجة الخاطئة إلى `\\\\` الصحيحة في Template Literals داخل ملف `lesson-4/index.ts` لضمان تسليم خط مائل واحد صحيح لمحرك KaTeX في وقت التشغيل.
-2. **إصلاح جداول Markdown** (Tables): استبدال جميع صيغ الرياضيات `$\\frac{...}$` داخل خلايا الجداول (Table A, B، جدول تميؤ الأملاح) بأحرف Unicode المباشرة (`×`, `10⁻¹⁵`, `⇌`) لأن محلل Markdown يجرّد الخطوط المائلة داخل خلايا الجداول.
-3. **إصلاح وسوم `<br>` التي تظهر كنص حرفي**: حذف جميع وسوم `<br>` (22 وسماً) من ملف الدرس واستبدالها بأسطر فارغة تفهمها Markdown تلقائياً، لأن محلل react-markdown لا يدعم وسوم HTML المدمجة بدون إضافة `rehype-raw`.
-4. **إصلاح صيغ معادلة Henderson-Hasselbalch**: تصحيح الـ backslash escaping في معادلات Part 4 (Buffer Solutions) و Part 5 (Ka from pH Curves) مما أدى لظهور النص الحرفي بدلاً من الرياضيات.
-5. **إصلاح خطأ تجميع TypeScript**: حذف حقول `options` المكررة في 3 أسئلة من بنك الأسئلة (TS1117) لاستعادة استقرار البناء.
-6. استكمال **Topic 14 & Topic 15** (إنجازات الجلسة السابقة: 6+5 أجزاء تفاعلية + 34 سؤال امتحاني موسوم بالكامل).
+**إنجازات جلسة اليوم (2026-07-21) — مطيافية التحليل ومواءمة السيليبس:**
+1. **تطوير محتوى مطيافية التحليل الكيميائي الثاني (Unit 5 Lesson 4):** إدخال وإثراء الدرس بالكامل ليشمل Chromatography-MS و High-Res Mass Spectrometry والـ NMR وطيف الرنين الكربوني 13C وطيف الرنين البروتوني 1H بنوعيه منخفض وعالي الدقة وقوانين الانشطار مع حل كافة أسئلتها وإضافة 10 أسئلة امتحانية جديدة لبنك الأسئلة.
+2. **محاذاة ترقيم المواضيع للسيليبس 100%:** تصحيح التفاوت في أرقام مواضيع Edexcel IAL، لتصبح وحدة AS Practical بدون رقم تسلسلي (Unit 3 Practical)، وإرجاع ترقيم Kinetics إلى Topic 11، والكربونيلات إلى Topic 15 ليتطابق مع أوراق الامتحانات الرسمية.
+3. **حذف الدرس السادس من الوحدة الرابعة:** حذف Topic 16 من هيكلية الوحدة الرابعة تماماً وإعادة هيكلة مواضيع الوحدة الخامسة لتبدأ من Topic 16 (Redox Equilibria) التزاماً بنهاية الوحدة الرابعة عند الكربونيلات والكيرالية.
+4. **تحديث ملف التوجيه والتحكم (curriculum.ts):** مزامنة لوحة تحكم الطالب والقائمة الجانبية فورياً لتعكس المواءمة الجديدة.
+5. **تنسيق KaTeX المزدوج وتفادي أخطاء Markdown:** تطبيق قواعد double-escaping لجميع صيغ الرنين ومساحات القمم وتفادي تداخل الرموز والرياضيات.

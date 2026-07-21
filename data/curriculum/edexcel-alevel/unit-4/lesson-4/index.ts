@@ -1,10 +1,10 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Acid-Base Equilibria";
+export const lessonTitle = "Topic 14: Acid-Base Equilibria";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
-# Topic 15: Acid-Base Equilibria
+# Topic 14: Acid-Base Equilibria
 This lesson covers the Brønsted-Lowry acid-base theory, pH calculations for strong and weak acids and bases, the ionic product of water (Kw), Ka and pKa, and buffer solutions.
 `;
 
@@ -693,19 +693,19 @@ export const parts: LessonPart[] = [
 > ### 🧮 Determining Ka from a pH Titration Curve
 > At the **half-equivalence point** (the point where exactly half the volume of base required to reach equivalence has been added):
 > * Exactly half the weak acid HA has been converted into the salt (A⁻).
-> * Therefore, [salt] = [acid], meaning the ratio [salt]/[acid] = 1.
+> * Therefore, $[\\text{salt}] = [\\text{acid}]$, meaning the ratio $\\frac{[\\text{salt}]}{[\\text{acid}]} = 1$
 > * Substituting into the Henderson-Hasselbalch equation:
->   $$\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}(1) = \\\\text{p}K_a$$
+>   $$\\text{pH} = \\text{p}K_a + \\log_{10}(1) = \\text{p}K_a$$
 > * Hence, **the pH at the half-equivalence point is equal to the p$K_a$ of the weak acid**.
-> * From p$K_a$, we calculate $K_a = 10^{-\\\\text{p}K_a}$.
+> * From p$K_a$, we calculate $K_a = 10^{-\\text{p}K_a}$.
 > * *Exam Hint:* Always use the term **half-equivalence point** and NOT half-neutralisation point when determining p$K_a$ of a weak acid.
 
 > [!BOX]
 > ### 🧪 Alternative Half-Volume Method (Practical Skills CP11)
 > We can measure $pK_a$ directly using this experimental method:
-> 1. Pipette $25.0\\\\text{ cm}^3$ of weak acid into a conical flask and add a few drops of phenolphthalein indicator.
-> 2. Titrate against sodium hydroxide until the end point colour is obtained. Note the volume required ($V_{\\\\text{eq}}$).
-> 3. Pipette a fresh $25.0\\\\text{ cm}^3$ sample of the weak acid and add exactly **half the volume** of sodium hydroxide ($\\\\frac{V_{\\\\text{eq}}}{2}$). Do NOT add indicator.
+> 1. Pipette $25.0\\text{ cm}^3$ of weak acid into a conical flask and add a few drops of phenolphthalein indicator.
+> 2. Titrate against sodium hydroxide until the end point colour is obtained. Note the volume required ($V_{\\text{eq}}$).
+> 3. Pipette a fresh $25.0\\text{ cm}^3$ sample of the weak acid and add exactly **half the volume** of sodium hydroxide ($\\frac{V_{\\text{eq}}}{2}$). Do NOT add indicator.
 > 4. Measure the pH of this mixture using a calibrated pH meter. The measured pH is equal to the p$K_a$ value of the acid.
 
 

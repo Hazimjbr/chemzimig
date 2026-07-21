@@ -1,10 +1,10 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Entropy & Energetics II";
+export const lessonTitle = "Topic 12: Entropy and Energetics";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `
-# Topic 13: Entropy & Energetics II
+# Topic 12: Entropy and Energetics
 This lesson covers entropy, Gibbs free energy, lattice enthalpy, Born-Haber cycles, enthalpy of solution, and Hess's Law applications.
 `;
 

@@ -1,10 +1,10 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Chemical Equilibria II";
+export const lessonTitle = "Topic 13: Chemical Equilibria";
 export const lessonNumber = 3;
 
 export const theoryMarkdown = `
-# Topic 14: Chemical Equilibria II
+# Topic 13: Chemical Equilibria
 This lesson covers the quantitative aspects of chemical equilibria, including the deduction and calculation of the equilibrium constants $K_c$ and $K_p$ for both homogeneous and heterogeneous systems.
 `;
 

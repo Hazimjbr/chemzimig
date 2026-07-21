@@ -1308,3 +1308,621 @@ questionBank.push(
     createdAt: "2026-07-21"
   }
 );
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_1-20260721",
+    question: "Which of the following organic structures contains exactly two chiral carbon atoms?",
+    options: [
+      { text: "$\\text{CH}_3\\text{CH(OH)COOH}$" },
+      { text: "$\\text{CH}_3\\text{CHBrCHBrCH}_3$" },
+      { text: "$\\text{CH}_3\\text{CH}_2\\text{CHBrCH}_2\\text{CH}_3$" },
+      { text: "$\\text{CH}_2\\text{ClCH(OH)CH}_2\\text{OH}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. In $\\text{CH}_3\\text{CHBrCHBrCH}_3$, both Carbon-2 and Carbon-3 are bonded to four different groups ($-\\text{H}$, $-\\text{Br}$, $-\\text{CH}_3$, and $-\\text{CHBrCH}_3$). Thus, it contains exactly two chiral centres.\n2. $\\text{CH}_3\\text{CH(OH)COOH}$ contains only one chiral centre (Carbon-2).\n3. $\\text{CH}_3\\text{CH}_2\\text{CHBrCH}_2\\text{CH}_3$ contains no chiral centre because Carbon-3 is bonded to two identical ethyl groups.\n4. $\\text{CH}_2\\text{ClCH(OH)CH}_2\\text{OH}$ contains only one chiral centre (Carbon-2).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_2-20260721",
+    question: "Which mixture is most suitable for safely preparing 2-hydroxypropanenitrile from ethanal in the laboratory?",
+    options: [
+      { text: "Liquid HCN and concentrated sulfuric acid" },
+      { text: "Aqueous potassium cyanide (KCN) and dilute sulfuric acid" },
+      { text: "Gaseous HCN and nickel catalyst" },
+      { text: "KCN and sodium hydroxide" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Hydrogen cyanide (HCN) is extremely toxic and volatile.\n2. To prepare the hydroxynitrile safely, KCN or NaCN is mixed with dilute acid (like $\\text{H}_2\\text{SO}_4$).\n3. This generates HCN in situ and provides a high concentration of the nucleophile $\\text{CN}^-$ to start the reaction at pH 5-8.\n4. Pure liquid HCN is too dangerous, and NaOH would neutralise the proton source needed for the second step.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_3-20260721",
+    question: "When propanal reacts with hydrogen cyanide (HCN) in the presence of potassium cyanide (KCN), the product formed is 2-hydroxybutanenitrile. Why is the product mixture optically inactive?",
+    options: [
+      { text: "The product molecule does not contain a chiral carbon atom" },
+      { text: "The reaction occurs via a symmetrical transition state that blocks stereoisomerism" },
+      { text: "The reactant carbonyl carbon is planar, allowing attack with equal probability from above or below" },
+      { text: "The nucleophile $\\text{CN}^-$ is too small to display steric selectivity" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. The product molecule 2-hydroxybutanenitrile does contain a chiral carbon (Carbon-2) bonded to $-\\text{H}$, $-\\text{OH}$, $-\\text{CN}$, and $-\\text{CH}_2\\text{CH}_3$.\n2. The reactant carbonyl carbon $\\text{C}=\\text{O}$ has trigonal planar geometry.\n3. The nucleophile $\\text{CN}^-$ can attack the planar carbon atom from either above or below the plane with equal (50:50) probability.\n4. This yields equal amounts of the two mirror-image enantiomers, forming a racemic mixture that has no net optical rotation.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_4-20260721",
+    question: "A compound W with formula $\\text{C}_5\\text{H}_{10}\\text{O}$ reacts with 2,4-DNPH to form a red precipitate. When W is treated with alkaline iodine, it forms a yellow precipitate. Which of the following is the correct structure of W?",
+    options: [
+      { text: "Pentan-3-one" },
+      { text: "Pentan-2-one" },
+      { text: "Pentanal" },
+      { text: "2-methylbutanal" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Reacting with 2,4-DNPH confirms W is a carbonyl compound (aldehyde or ketone).\n2. Reacting with alkaline iodine (the iodoform test) to yield a yellow precipitate ($\\text{CHI}_3$) indicates the presence of a methyl carbonyl group ($\\text{CH}_3\\text{-C}=\\text{O}$).\n3. Pentanal and 2-methylbutanal are aldehydes that do not give a positive iodoform test.\n4. Pentan-3-one ($\\text{CH}_3\\text{CH}_2\\text{COCH}_2\\text{CH}_3$) is a ketone but lacks a methyl group directly bonded to the carbonyl carbon.\n5. Pentan-2-one ($\\text{CH}_3\\text{COCH}_2\\text{CH}_2\\text{CH}_3$) has the methyl carbonyl group and yields a positive test.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_5-20260721",
+    question: "Which reagent and observation correctly distinguish between propanal and propanone?",
+    options: [
+      { text: "2,4-DNPH yields a precipitate with propanal but not propanone" },
+      { text: "Tollens' reagent forms a silver mirror with propanal but not propanone" },
+      { text: "Fehling's solution forms a red precipitate with propanone but not propanal" },
+      { text: "Alkaline iodine forms a yellow precipitate with propanal but not propanone" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Propanal is an aldehyde and is easily oxidised. Propanone is a ketone and is resistant to oxidation.\n2. Tollens' reagent contains $[\\text{Ag(NH}_3)_2]^+$, which oxidises aldehydes to carboxylates while being reduced to a metallic silver mirror. Ketones do not react. This is a standard test.\n3. 2,4-DNPH reacts with both to give precipitates.\n4. Fehling's solution reacts with aldehydes, not ketones.\n5. Alkaline iodine reacts with propanone (methyl ketone) but not propanal.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_6-20260721",
+    question: "What is the organic product formed when pentan-3-one is reduced using lithium tetrahydridoaluminate(III), $\\text{LiAlH}_4$, in dry ether?",
+    options: [
+      { text: "Pentan-1-ol" },
+      { text: "Pentan-2-ol" },
+      { text: "Pentan-3-ol" },
+      { text: "Pentanoic acid" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. Pentan-3-one is a ketone: $\\text{CH}_3\\text{CH}_2\\text{COCH}_2\\text{CH}_3$.\n2. Reducing agents like $\\text{LiAlH}_4$ reduce ketones to secondary alcohols.\n3. The carbonyl group $\\text{C}=\\text{O}$ at Carbon-3 is converted into a secondary alcohol group $\\text{-CH(OH)-}$.\n4. Therefore, the product is pentan-3-ol.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_7-20260721",
+    question: "An ester has the structural formula $\\text{CH}_3\\text{CH}_2\\text{COOCH}_3$. Which products are formed when this ester is heated under reflux with aqueous sodium hydroxide?",
+    options: [
+      { text: "Propanoic acid and methanol" },
+      { text: "Sodium propanoate and methanol" },
+      { text: "Sodium ethanoate and ethanol" },
+      { text: "Ethanoic acid and sodium methoxide" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The ester is methyl propanoate ($\\text{CH}_3\\text{CH}_2\\text{COOCH}_3$).\n2. Base hydrolysis using NaOH cleaves the ester bond into a carboxylate salt and an alcohol.\n3. The acid part (propanoate) forms the sodium salt: sodium propanoate ($\\text{CH}_3\\text{CH}_2\\text{COONa}$).\n4. The alcohol part (methyl) forms methanol ($\\text{CH}_3\\text{OH}$).\n5. Base hydrolysis is irreversible and goes to completion.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_8-20260721",
+    question: "Which reagent is used to prepare butanoyl chloride from butanoic acid at room temperature in the laboratory?",
+    options: [
+      { text: "Concentrated hydrochloric acid" },
+      { text: "Phosphorus(V) chloride ($\\text{PCl}_5$)" },
+      { text: "Chlorine gas and UV light" },
+      { text: "Sodium chloride and concentrated sulfuric acid" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Acyl chlorides are prepared by replacing the $-\\text{OH}$ group of a carboxylic acid with a $-\\text{Cl}$ atom.\n2. The standard laboratory reagent for this conversion is phosphorus(V) chloride ($\\text{PCl}_5$) at room temperature.\n3. The reaction produces the acyl chloride, phosphorus oxychloride ($\\text{POCl}_3$), and hydrogen chloride ($\\text{HCl}$) gas.\n4. Concentrated HCl is not reactive enough to convert carboxylic acids to acyl chlorides.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_9-20260721",
+    question: "What is the organic product formed when propanoyl chloride reacts with methylamine ($\\text{CH}_3\\text{NH}_2$)?",
+    options: [
+      { text: "Methyl propanoate" },
+      { text: "N-methylpropanamide" },
+      { text: "Propanamide" },
+      { text: "Methylammonium propanoate" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Acyl chlorides react with primary amines via a nucleophilic addition-elimination mechanism.\n2. The amine nitrogen attacks the carbonyl carbon, and a chloride ion is eliminated alongside a proton.\n3. This forms an N-substituted amide bond.\n4. Propanoyl chloride ($\\text{CH}_3\\text{CH}_2\\text{COCl}$) and methylamine ($\\text{CH}_3\\text{NH}_2$) react to form N-methylpropanamide ($\\text{CH}_3\\text{CH}_2\\text{CONHCH}_3$) and HCl.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_10-20260721",
+    question: "Which of the following statements about condensation polymerisation is correct?",
+    options: [
+      { text: "It requires monomers with carbon-carbon double bonds" },
+      { text: "It produces polymers without releasing any other compounds" },
+      { text: "Polyesters are formed by reacting dicarboxylic acids with diols, eliminating water molecules" },
+      { text: "Condensation polymers are resistant to biodegradation due to strong ester linkages" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. Condensation polymerisation involves monomers with two functional groups reacting together with the elimination of a small molecule like water ($\\text{H}_2\\text{O}$) or hydrogen chloride ($\\text{HCl}$).\n2. Polyesters are formed by reacting a dicarboxylic acid and a diol, forming ester linkages and releasing $\\text{H}_2\\text{O}$. This is correct.\n3. Addition polymerisation requires double bonds and does not release small molecules.\n4. Condensation polymers like polyesters are biodegradable because the ester linkages can be hydrolysed by acids or bases.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_11-20260721",
+    question: "A single enantiomer of an optically active halogenoalkane is reacted with hydroxide ions. The resulting alcohol product is found to be a racemic mixture that is optically inactive. Which mechanism does this reaction follow, and what feature explains this outcome?",
+    options: [
+      { text: "$S_N2$ mechanism, because of Walden inversion" },
+      { text: "$S_N1$ mechanism, because the nucleophile attacks a planar carbocation intermediate with equal probability from either side" },
+      { text: "$S_N2$ mechanism, because the transition state has trigonal bipyramidal geometry" },
+      { text: "$S_N1$ mechanism, because the rate-determining step involves the nucleophile" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. A racemic mixture is formed when both enantiomers are produced in equal (50:50) amounts.\n2. In an $S_N1$ mechanism, the rate-determining step is the ionization of the halogenoalkane to form a planar carbocation intermediate.\n3. The incoming nucleophile ($\\text{OH}^-$) has an equal probability of attacking this planar carbocation from either the left or the right side.\n4. This equal probability of attack results in racemisation (50:50 mixture of enantiomers) and a complete loss of optical activity.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_12-20260721",
+    question: "A single enantiomer of a primary halogenoalkane undergoes nucleophilic substitution via an $S_N2$ mechanism. What is the stereochemical outcome for the carbon atom undergoing substitution?",
+    options: [
+      { text: "Complete racemisation yielding an optically inactive product" },
+      { text: "Inversion of configuration (Walden inversion) yielding a single enantiomer" },
+      { text: "Retention of configuration with no change in spatial arrangement" },
+      { text: "Formation of a mixture of geometric and optical isomers" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The $S_N2$ mechanism is a single-step concerted process.\n2. The nucleophile attacks from the opposite side of the leaving group (backside attack).\n3. As the carbon-halogen bond breaks and the carbon-nucleophile bond forms, the other three groups are pushed through, resulting in an inversion of configuration (Walden inversion).\n4. The product remains optically active as a single enantiomer with inverted configuration.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_13-20260721",
+    question: "The boiling temperatures of butane, propanal, and propan-1-ol are $272\\text{ K}$, $322\\text{ K}$, and $370\\text{ K}$ respectively. Which statement correctly accounts for this trend?",
+    options: [
+      { text: "Propanal forms intermolecular hydrogen bonds, raising its boiling point above butane" },
+      { text: "Propan-1-ol molecules experience only London forces and dipole-dipole interactions" },
+      { text: "Propanal molecules experience dipole-dipole interactions which are stronger than London forces in butane but weaker than hydrogen bonding in propan-1-ol" },
+      { text: "Butane is polar due to the presence of C-H bonds, whereas propanal is completely non-polar" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. Butane is an alkane (non-polar) and experiences only London forces, resulting in the lowest boiling temperature ($272\\text{ K}$).\n2. Propanal is a carbonyl compound and has a polar $\\text{C}=\\text{O}$ double bond, so it experiences permanent dipole-dipole interactions in addition to London forces ($322\\text{ K}$).\n3. Propan-1-ol is an alcohol and contains the $-\\text{OH}$ group, allowing it to form strong intermolecular hydrogen bonds, which require the most energy to break ($370\\text{ K}$).\n4. Carbonyl compounds like propanal cannot form hydrogen bonds with each other because they lack a hydrogen atom bonded to an oxygen.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_14-20260721",
+    question: "Propanone is completely miscible with water, whereas pentan-2-one has a solubility of only $5.6\\text{ g per } 100\\text{ g of water}$ at $298\\text{ K}$. What is the reason for this difference in solubility?",
+    options: [
+      { text: "Pentan-2-one is unable to form hydrogen bonds with water molecules" },
+      { text: "Pentan-2-one has a larger non-polar, hydrophobic hydrocarbon tail which disrupts the water hydrogen-bonding network" },
+      { text: "Propanone reacts chemically with water to form a stable diol intermediate" },
+      { text: "The carbonyl group in pentan-2-one is non-polar due to steric hindrance" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Both propanone and pentan-2-one contain polar $\\text{C}=\\text{O}$ groups and can form hydrogen bonds with water molecules.\n2. However, pentan-2-one has a longer hydrocarbon chain (a 5-carbon chain) compared to propanone (a 3-carbon chain).\n3. This non-polar, hydrophobic alkyl tail disrupts the hydrogen bonds between water molecules without forming strong interactions in return.\n4. As the hydrophobic part of the molecule becomes larger, solubility in water decreases.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_15-20260721",
+    question: "An alcohol is warmed with aqueous iodine in the presence of sodium hydroxide, yielding a yellow precipitate. Which of the following alcohols is it?",
+    options: [
+      { text: "Propan-1-ol" },
+      { text: "2-methylpropan-1-ol" },
+      { text: "Butan-2-ol" },
+      { text: "Butan-1-ol" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. The reaction described is the iodoform (triiodomethane) test, which gives a yellow precipitate of $\\text{CHI}_3$ in the presence of $\\text{CH}_3\\text{CO-}$ or $\\text{CH}_3\\text{CH(OH)-}$ groups.\n2. Propan-1-ol, 2-methylpropan-1-ol, and butan-1-ol are primary alcohols (except propan-1-ol which oxidises to propanal, etc., none contains the $\\text{CH}_3\\text{CH(OH)-}$ group except ethanol).\n3. Butan-2-ol is a secondary alcohol with structure $\\text{CH}_3\\text{CH(OH)CH}_2\\text{CH}_3$, which contains the $\\text{CH}_3\\text{CH(OH)-}$ group.\n4. Therefore, it is oxidised to butanone (a methyl ketone) in situ and reacts with iodine/NaOH to yield the yellow precipitate.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_16-20260721",
+    question: "A sample of a carboxylic acid is analyzed in the vapor phase using mass spectrometry. A peak is observed at an $m/z$ ratio of $120$. Which carboxylic acid is present in the sample?",
+    options: [
+      { text: "Methanoic acid" },
+      { text: "Ethanoic acid" },
+      { text: "Propanoic acid" },
+      { text: "Butanoic acid" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. In the gas phase and in the absence of polar solvents, carboxylic acids exist as stable dimers held together by double hydrogen bonds.\n2. The observed peak at $m/z = 120$ corresponds to the molecular mass of the dimer.\n3. The monomer mass must be exactly half of this dimer mass: $120 / 2 = 60\\text{ g mol}^{-1}$.\n4. An organic compound with a molar mass of $60\\text{ g mol}^{-1}$ containing a carboxyl group ($-\\text{COOH}$) is ethanoic acid ($\\text{CH}_3\\text{COOH}$, $Mr = 15 + 12 + 32 + 1 = 60$).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_17-20260721",
+    question: "Carboxylic acids have higher boiling temperatures than alcohols of similar molecular mass. What is the molecular explanation for this difference?",
+    options: [
+      { text: "Carboxylic acids have three polar bonds, which increases their overall molecular size" },
+      { text: "Carboxylic acid molecules associate via double hydrogen bonds to form stable dimers" },
+      { text: "Alcohols are unable to form intermolecular hydrogen bonds" },
+      { text: "Carboxylic acids are strong acids that completely dissociate in the liquid state" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Both alcohols and carboxylic acids can form intermolecular hydrogen bonds.\n2. However, carboxylic acids can align to form stable dimers, where two molecules are joined by a pair of hydrogen bonds.\n3. These dimers double the effective molecular size and require significantly more thermal energy to vaporise than the single hydrogen-bonded networks of alcohols.\n4. Dissociation to ions does not occur in pure liquid state and is unrelated to boiling point.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_18-20260721",
+    question: "Pentanal, pentan-2-one, and pentan-3-one all have a boiling temperature of $102^\\circ\\text{C}$ and form orange precipitates with 2,4-DNPH. How can a student experimentally identify which specific carbonyl compound is present in an unknown sample?",
+    options: [
+      { text: "By measuring the boiling temperature of the mixture under vacuum" },
+      { text: "By purifying, drying, and measuring the melting temperature of the 2,4-DNPH derivative" },
+      { text: "By using Fehling's solution, which yields a positive test for all three" },
+      { text: "By using Tollens' reagent, which forms a silver mirror with both ketones" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Since all three isomers share the same boiling point ($102^\\circ\\text{C}$), simple distillation cannot distinguish them.\n2. However, the hydrazone derivatives formed when they react with 2,4-DNPH have distinct and characteristic melting temperatures (pentanal derivative: $104^\\circ\\text{C}$; pentan-2-one derivative: $144^\\circ\\text{C}$; pentan-3-one derivative: $156^\\circ\\text{C}$).\n3. By filtering, recrystallising, drying, and measuring the melting point of the derivative, the student can match the experimental value to database records to identify the original compound.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_19-20260721",
+    question: "A triglyceride molecule containing three stearic acid residues (glyceryl tristearate) is heated under reflux with aqueous sodium hydroxide. Which of the following correctly lists the organic products of this reaction?",
+    options: [
+      { text: "Propane-1,2-diol and stearic acid" },
+      { text: "Propane-1,2,3-triol and sodium stearate" },
+      { text: "Propan-1-ol and sodium stearate" },
+      { text: "Propane-1,2,3-triol and ethyl stearate" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Triglycerides are triesters of glycerol (propane-1,2,3-triol) and fatty acids.\n2. Base hydrolysis (saponification) of glyceryl tristearate with NaOH cleaves the three ester linkages.\n3. The alcohol part yields glycerol (propane-1,2,3-triol).\n4. The fatty acid part is deprotonated by NaOH to form its sodium salt: sodium stearate (soap).\n5. Propane-1,2-diol is not glycerol, and free stearic acid is not formed in alkaline conditions.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_20-20260721",
+    question: "A student attempts to prepare a polyester by mixing propanedioic acid ($\\text{HOOCCH}_2\\text{COOH}$) and methanol ($\\text{CH}_3\\text{OH}$). Why does this reaction fail to produce a polymer?",
+    options: [
+      { text: "Propanedioic acid is monofunctional, causing immediate chain termination" },
+      { text: "Methanol is monofunctional, which terminates the carbon chain once it reacts" },
+      { text: "Methanol reacts with itself to form dimethyl ether instead of reacting with the acid" },
+      { text: "An addition polymerisation catalyst is required to initiate the reaction" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. For polymerisation to occur, monomers must be bifunctional (have reactive groups at both ends) to allow the chain to continue growing.\n2. Propanedioic acid is bifunctional (two $-\\text{COOH}$ groups).\n3. Methanol ($\\text{CH}_3\\text{OH}$) is monofunctional (only one $-\\text{OH}$ group).\n4. Once methanol reacts with one carboxyl group of the acid, that end of the molecule is blocked and cannot undergo further esterification, causing chain termination.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_21-20260721",
+    question: "In the industrial production of polyesters like Terylene, benzene-1,4-dicarboxylic acid is reacted with ethane-1,2-diol. Why is the dicarboxylic acid preferred in industry over the corresponding diacyl chloride?",
+    options: [
+      { text: "The reaction with diacyl chloride does not go to completion" },
+      { text: "Diacyl chloride polymerisation releases hazardous and corrosive hydrogen chloride gas" },
+      { text: "Dicarboxylic acid polymerisation occurs at room temperature without heating" },
+      { text: "Diacyl chlorides react with ethane-1,2-diol to form addition polymers instead" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. While diacyl chlorides react very rapidly at room temperature, their condensation polymerisation releases gaseous hydrogen chloride (HCl) as a byproduct.\n2. HCl is highly toxic, acidic, and corrosive, which creates severe health, safety, and equipment corrosion risks in industrial factories.\n3. Using the dicarboxylic acid releases water ($\\text{H}_2\\text{O}$) as a byproduct instead, which is completely safe and environmentally benign.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_22-20260721",
+    question: "A forensic scientist uses combined Gas Chromatography-Mass Spectrometry (GC-MS) to analyze a blood sample. What is the primary advantage of GC-MS over gas chromatography alone?",
+    options: [
+      { text: "GC separates the mixture and MS determines the exact concentration of each component" },
+      { text: "GC separates the components of the mixture and MS identifies each component by its mass spectrum" },
+      { text: "MS separates the mixture and GC is used to detect the retention time" },
+      { text: "GC-MS is a non-destructive technique that allows the sample to be completely recovered" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Gas chromatography (GC) is excellent at separating mixtures but cannot positively identify components because different compounds can have identical retention times.\n2. In GC-MS, GC separates the mixture and each pure component exits the column directly into the mass spectrometer (MS).\n3. The MS bombards the molecules to produce a unique mass spectrum (molecular ion and fragments), allowing positive identification against a database.\n4. Both techniques destroy the sample during detection.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_23-20260721",
+    question: "Which of the following elements contains isotopes that are all suitable for analysis by Nuclear Magnetic Resonance (NMR) spectroscopy?",
+    options: [
+      { text: "Carbon-12 ($^{12}\\text{C}$) and Oxygen-16 ($^{16}\\text{O}$)" },
+      { text: "Carbon-13 ($^{13}\\text{C}$) and Hydrogen-1 ($^{1}\\text{H}$)" },
+      { text: "Oxygen-16 ($^{16}\\text{O}$) and Sulfur-32 ($^{32}\\text{S}$)" },
+      { text: "Helium-4 ($^{4}\\text{He}$) and Carbon-12 ($^{12}\\text{C}$)" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. For a nucleus to be NMR-active, it must possess a net residual nuclear spin.\n2. This occurs only in nuclei with an odd number of nucleons (protons + neutrons).\n3. Carbon-13 ($^{13}\\text{C}$ has 13 nucleons) and Hydrogen-1 ($^{1}\\text{H}$ has 1 nucleon) both have odd nucleon numbers and are NMR-active.\n4. Carbon-12 ($^{12}\\text{C}$), Oxygen-16 ($^{16}\\text{O}$), and Sulfur-32 ($^{32}\\text{S}$) have even numbers of nucleons, meaning their spins cancel out, making them NMR-silent.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_24-20260721",
+    question: "Tetramethylsilane (TMS) is added as a reference standard in proton NMR spectroscopy. Which of the following is NOT a reason why TMS is chosen?",
+    options: [
+      { text: "It contains 12 equivalent hydrogen atoms, yielding a single sharp peak" },
+      { text: "It is chemically inert and does not react with the sample" },
+      { text: "It has a high boiling point and remains in the solution permanently" },
+      { text: "It is highly shielded, producing a signal far to the right of most organic compound peaks" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. TMS has a low boiling point ($26.5^\\circ\\text{C}$), making it highly volatile.\n2. This volatility is a major advantage because it allows TMS to be easily evaporated and removed from the sample after analysis to recover the pure analyte.\n3. The other options are true: it contains 12 equivalent protons (giving one strong peak), is chemically inert, and appears far upfield ($\\delta = 0\\text{ ppm}$).",
+    level: 2,
+    topic: "edexcel-unit-5",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_pp_25-20260721",
+    question: "How can a student easily distinguish between butanal and butanone using low-resolution proton ($^{1}\\text{H}$) NMR spectroscopy?",
+    options: [
+      { text: "Butanone has four peaks in its spectrum, whereas butanal has only three peaks" },
+      { text: "Butanal has four peaks in its spectrum, including a peak at $\\delta \\approx 9.8\\text{ ppm}$, whereas butanone has three peaks and no peak above $\\delta = 3.0\\text{ ppm}$" },
+      { text: "Butanal has a single peak representing all 8 protons, whereas butanone has three peaks" },
+      { text: "Both compounds have three peaks, but butanone has a peak representing a hydroxyl proton" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Butanal ($\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CHO}$) has 4 unique proton environments (terminal $-\\text{CH}_3$, intermediate $-\\text{CH}_2-$, adjacent $-\\text{CH}_2-$, and aldehyde $-\\text{CHO}$). It has 4 peaks, including a highly characteristic downfield aldehyde peak at $\\delta \\approx 9.8\\text{ ppm}$.\n2. Butanone ($\\text{CH}_3\\text{COCH}_2\\text{CH}_3$) has 3 unique proton environments (terminal $-\\text{CH}_3$, adjacent $-\\text{CH}_2-$, and methyl adjacent to carbonyl $-\\text{CH}_3$). It has 3 peaks, all appearing below $\\delta = 3.0\\text{ ppm}$.\n3. Neither compound contains a hydroxyl group.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_26-20260721",
+    question: "What is the expected number of peaks and the simplest ratio of peak areas (integration trace) in the low-resolution proton ($^{1}\\text{H}$) NMR spectrum of propan-2-ol, $\\text{CH}_3\\text{CH(OH)CH}_3$?",
+    options: [
+      { text: "2 peaks with a ratio of $7:1$" },
+      { text: "3 peaks with a ratio of $6:1:1$" },
+      { text: "4 peaks with a ratio of $3:2:2:1$" },
+      { text: "3 peaks with a ratio of $3:3:2$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Propan-2-ol has 8 hydrogen atoms in total.\n2. The six hydrogen atoms in the two terminal methyl ($-\\text{CH}_3$) groups are equivalent due to symmetry, forming 1 environment (6 protons).\n3. The single hydrogen atom on the central carbon ($-\\text{CH}-$) forms a second environment (1 proton).\n4. The hydrogen atom in the alcohol group ($-\\text{OH}$) forms a third environment (1 proton).\n5. Therefore, the spectrum has 3 peaks with a relative area ratio of $6:1:1$.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_pp_27-20260721",
+    question: "Which of the following isomers of pentane ($\\text{C}_5\\text{H}_{12}$) shows exactly one peak in its low-resolution proton ($^{1}\\text{H}$) NMR spectrum?",
+    options: [
+      { text: "Pentane" },
+      { text: "2-methylbutane" },
+      { text: "2,2-dimethylpropane" },
+      { text: "None of the isomers show only one peak" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. A single peak in proton NMR indicates that all hydrogen atoms in the molecule are chemically equivalent.\n2. In 2,2-dimethylpropane (neopentane, $\\text{C(CH}_3\\text{)}_4$), the central carbon has no hydrogens, and the four methyl groups are arranged symmetrically around it.\n3. All 12 hydrogen atoms are in identical environments, yielding exactly 1 peak.\n4. Pentane yields 3 peaks and 2-methylbutane yields 4 peaks.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_org_ed_exam_1-20260721",
+    question: "Which of the following amino acid structures contains exactly two chiral carbon atoms?",
+    options: [
+      { text: "$\\text{H}_2\\text{NCH(COOH)CH}_2\\text{CH}_2\\text{OH}$" },
+      { text: "$\\text{H}_2\\text{NCH(COOH)CH(CH}_3)_2$" },
+      { text: "$\\text{H}_2\\text{NCH(COOH)CH}_2\\text{C}_6\\text{H}_5$" },
+      { text: "$\\text{H}_2\\text{NCH(COOH)CH(CH}_3)\\text{CH}_2\\text{CH}_3$" }
+    ],
+    correctAnswer: 3,
+    explanation: "1. For a carbon atom to be chiral, it must be bonded to four different groups.\n2. In all options, Carbon-2 (carrying $-\\text{NH}_2$ and $-\\text{COOH}$) is chiral.\n3. In option D (isoleucine analogue), Carbon-3 is bonded to $-\\text{H}$, $-\\text{CH}_3$, $-\\text{CH}_2\\text{CH}_3$, and the $-\\text{CH(NH}_2)\\text{COOH}$ group.\n4. Since these four groups are completely different, Carbon-3 is also chiral, giving the molecule exactly two chiral carbon atoms.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_exam_2-20260721",
+    question: "The same carboxylic acid is obtained either by the hydrolysis of a nitrile $P$ or by the oxidation of an alcohol $Q$. Which pair could be $P$ and $Q$?",
+    options: [
+      { text: "$P = \\text{CH}_3\\text{CH}_2\\text{CN}$ and $Q = \\text{CH}_3\\text{CH}_2\\text{OH}$" },
+      { text: "$P = \\text{(CH}_3)_2\\text{CHCN}$ and $Q = \\text{(CH}_3)_3\\text{COH}$" },
+      { text: "$P = \\text{C}_6\\text{H}_5\\text{CH(CH}_3)\\text{CN}$ and $Q = \\text{C}_6\\text{H}_5\\text{CH}_2\\text{CH(OH)CH}_3$" },
+      { text: "$P = \\text{C}_6\\text{H}_5\\text{CH}_2\\text{CN}$ and $Q = \\text{C}_6\\text{H}_5\\text{CH}_2\\text{CH}_2\\text{OH}$" }
+    ],
+    correctAnswer: 3,
+    explanation: "1. Hydrolysis of nitrile $P$ converts the $-\\text{CN}$ group to $-\\text{COOH}$ (maintaining the same carbon skeleton, total carbons = chain carbons + 1).\n2. Oxidation of primary alcohol $Q$ converts the $-\\text{CH}_2\\text{OH}$ group to $-\\text{COOH}$ (maintaining the same total carbon number).\n3. In Option D, nitrile $P$ is phenylethanenitrile (8 carbons), which hydrolyses to phenylethanoic acid ($\\text{C}_6\\text{H}_5\\text{CH}_2\\text{COOH}$).\n4. Alcohol $Q$ is 2-phenylethan-1-ol (8 carbons), which is a primary alcohol and oxidises to phenylethanoic acid ($\\text{C}_6\\text{H}_5\\text{CH}_2\\text{COOH}$).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_exam_3-20260721",
+    question: "Which pair of reactants produces an ester with the molecular formula $\\text{C}_3\\text{H}_7\\text{COOC}_2\\text{H}_5$?",
+    options: [
+      { text: "$\\text{C}_2\\text{H}_5\\text{Cl}$ and $$\\text{C}_3\\text{H}_7\\text{COOH}$" },
+      { text: "$\\text{C}_2\\text{H}_5\\text{OH}$ and $$\\text{C}_3\\text{H}_7\\text{COOH}$" },
+      { text: "$\\text{C}_3\\text{H}_7\\text{OH}$ and $$\\text{C}_2\\text{H}_5\\text{COCl}$" },
+      { text: "$\\text{C}_3\\text{H}_7\\text{OH}$ and $$\\text{C}_2\\text{H}_5\\text{COOH}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The ester formula $\\text{C}_3\\text{H}_7\\text{COOC}_2\\text{H}_5$ is ethyl butanoate.\n2. The carboxylate part is derived from butanoic acid ($\\text{C}_3\\text{H}_7\\text{COOH}$).\n3. The alkyl part is derived from ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$).\n4. Reacting ethanol and butanoic acid under reflux in the presence of an acid catalyst produces ethyl butanoate.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_exam_4-20260721",
+    question: "One of the constituents of beeswax has the formula $\\text{CH}_3\\text{(CH}_2)_{24}\\text{CO}_2\\text{(CH}_2)_{29}\\text{CH}_3$. What are the products of its alkaline hydrolysis?",
+    options: [
+      { text: "$\\text{CH}_3\\text{(CH}_2)_{24}\\text{COOH}$ and $\\text{CH}_3\\text{(CH}_2)_{29}\\text{O}^-$" },
+      { text: "$\\text{CH}_3\\text{(CH}_2)_{24}\\text{COOH}$ and $\\text{CH}_3\\text{(CH}_2)_{29}\\text{OH}$" },
+      { text: "$\\text{CH}_3\\text{(CH}_2)_{24}\\text{COO}^-$ and $\\text{CH}_3\\text{(CH}_2)_{29}\\text{OH}$" },
+      { text: "$\\text{CH}_3\\text{(CH}_2)_{24}\\text{COO}^-$ and $\\text{CH}_3\\text{(CH}_2)_{29}\\text{O}^-$" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. Alkaline hydrolysis of an ester using aqueous base (e.g. NaOH) cleaves the ester bond to form a carboxylate salt/ion and an alcohol.\n2. The carboxylic acid portion ($\\text{CH}_3\\text{(CH}_2)_{24}\\text{COO-}$) is deprotonated in alkaline conditions to yield the carboxylate ion $\\text{CH}_3\\text{(CH}_2)_{24}\\text{COO}^-$.\n3. The alcohol portion yields the long-chain alcohol $\\text{CH}_3\\text{(CH}_2)_{29}\\text{OH}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_exam_5-20260721",
+    question: "An organic compound gives a positive tri-iodomethane (iodoform) test and a yellow precipitate with 2,4-dinitrophenylhydrazine, but does not react with either Tollens' reagent or Fehling's solution. Which compound is it?",
+    options: [
+      { text: "$\\text{CH}_3\\text{CHO}$" },
+      { text: "$\\text{CH}_3\\text{CH}_2\\text{OH}$" },
+      { text: "$\\text{CH}_3\\text{CH}_2\\text{COCH}_3$" },
+      { text: "$\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CHO}$" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. A positive 2,4-DNPH test confirms the presence of a carbonyl group (aldehyde or ketone), ruling out alcohol (B).\n2. No reaction with Tollens' or Fehling's confirms the compound is a ketone rather than an aldehyde, ruling out aldehydes (A and D).\n3. A positive iodoform test confirms the presence of a methyl carbonyl group ($\\text{CH}_3\\text{CO-}$).\n4. Butanone ($\\text{CH}_3\\text{CH}_2\\text{COCH}_3$) contains the methyl ketone group, reacts with 2,4-DNPH, and does not oxidise with Tollens' or Fehling's.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_org_ed_exam_6-20260721",
+    question: "What are the principal inorganic and organic products when propanal reacts with Tollens' reagent?",
+    options: [
+      { text: "$\\text{Ag}$ and $\\text{CH}_3\\text{CH}_2\\text{COOH}$" },
+      { text: "$\\text{Ag}$ and $\\text{CH}_3\\text{CH}_2\\text{COO}^-$" },
+      { text: "$\\text{Ag}_2\\text{O}$ and $\\text{CH}_3\\text{CH}_2\\text{COOH}$" },
+      { text: "$\\text{Ag}_2\\text{O}$ and $\\text{CH}_3\\text{CH}_2\\text{COO}^-$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Tollens' reagent contains ammoniacal silver nitrate, which contains $\\text{Ag}^+$ complexed as $[\\text{Ag(NH}_3)_2]^+$.\n2. The reaction is a redox reaction where the aldehyde is oxidised and the silver ion $\\text{Ag}^+$ is reduced to metallic silver $\\text{Ag(s)}$ (the silver mirror).\n3. Because Tollens' reagent contains ammonia, the solution is alkaline, so the carboxylic acid product (propanoic acid) is deprotonated to form the propanoate ion ($\\text{CH}_3\\text{CH}_2\\text{COO}^-$).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);

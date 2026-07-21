@@ -1,8 +1,9 @@
-export const lessonTitle = "AS Practical Skills and Techniques";
+export const lessonTitle = "Unit 3 Practical: AS Laboratory Skills";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `
-## AS Practical Skills and Techniques
+## Unit 3 Practical: AS Laboratory Skills
 
 _Content coming soon._
 `;
+

@@ -1,10 +1,10 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 17: Arenes, Amines, Amides & Amino Acids";
+export const lessonTitle = "Topic 16: Organic Chemistry: Arenes, Amines, Amides and Amino Acids";
 export const lessonNumber = 6;
 
 export const theoryMarkdown = `
-# Topic 17: Arenes, Amines, Amides & Amino Acids
+# Topic 16: Organic Chemistry: Arenes, Amines, Amides and Amino Acids
 This lesson covers the chemistry of benzene and its derivatives (arenes), organic nitrogen compounds including primary/secondary amines, amides, amino acids, and polymerisation (polyesters and polyamides).
 `;
 

@@ -312,7 +312,7 @@ export const edexcelAsCurriculum: CurriculumLevel = {
       number: 3,
       title: "Unit 3: Practical Skills in Chemistry I",
       subtopics: [
-        "Topic 11: AS Practical Skills and Techniques"
+        "Unit 3 Practical: AS Laboratory Skills"
       ]
     }
   ]
@@ -329,12 +329,11 @@ export const edexcelA2Curriculum: CurriculumLevel = {
       number: 4,
       title: "Unit 4: Rates, Equilibria & Further Organic",
       subtopics: [
-        "Topic 12: Kinetics & Equilibria II",
-        "Topic 13: Entropy & Energetics II",
-        "Topic 14: Chemical Equilibria II",
-        "Topic 15: Acid-Base Equilibria",
-        "Topic 16: Organic Chemistry: Carbonyls, Carboxylic Acids & Chirality",
-        "Topic 17: Organic Chemistry: Arenes, Amines, Amides & Amino Acids"
+        "Topic 11: Kinetics",
+        "Topic 12: Entropy and Energetics",
+        "Topic 13: Chemical Equilibria",
+        "Topic 14: Acid-Base Equilibria",
+        "Topic 15: Organic Chemistry: Carbonyls, Carboxylic Acids and Chirality"
       ]
     },
     {
@@ -342,10 +341,11 @@ export const edexcelA2Curriculum: CurriculumLevel = {
       number: 5,
       title: "Unit 5: Transition Metals & Organic Nitrogen Chemistry",
       subtopics: [
-        "Topic 18: Redox Equilibria",
-        "Topic 19: Transition Metals & Their Chemistry",
-        "Topic 20: Organic Chemistry: Arenes, Nitrogen Compounds & Synthesis",
-        "Topic 21: Modern Analytical Techniques II"
+        "Topic 16: Redox Equilibria",
+        "Topic 17: Transition Metals and their Chemistry",
+        "Topic 18: Organic Chemistry – Arenes",
+        "Topic 19: Organic Nitrogen Compounds: Amines, Amides, Amino Acids and Proteins",
+        "Topic 20: Organic Synthesis"
       ]
     },
     {
@@ -353,7 +353,7 @@ export const edexcelA2Curriculum: CurriculumLevel = {
       number: 6,
       title: "Unit 6: Practical Skills in Chemistry II",
       subtopics: [
-        "Topic 22: A2 Practical Skills and Techniques"
+        "Unit 6 Practical: A2 Laboratory Skills"
       ]
     }
   ]

@@ -1,10 +1,10 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Kinetics & Equilibria II";
+export const lessonTitle = "Topic 11: Kinetics";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `
-# Topic 12: Kinetics & Equilibria II
+# Topic 11: Kinetics
 This lesson covers reaction rates, orders of reaction, rate equations, continuous and initial rate experimental methods, reaction mechanisms, the rate-determining step, and the Arrhenius equation.
 `;
 
