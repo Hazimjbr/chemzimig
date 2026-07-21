@@ -118,7 +118,7 @@ export const parts: LessonPart[] = [
 > > 2. $[\\text{H}^+] = \\frac{K_w}{[\\text{OH}^-]} = \\frac{1.00 \\times 10^{-14}}{0.0500} = 2.00 \\times 10^{-13}\\text{ mol dm}^{-3}$
 > > 3. $\\text{pH} = -\\log(2.00 \\times 10^{-13}) = 12.70$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Conjugate Acids
@@ -131,7 +131,7 @@ export const parts: LessonPart[] = [
 > * (b) $\\text{CH₃NH₂} + \\text{H}^+ \\rightarrow \\text{CH₃NH₃}^+$
 > * (c) $\\text{HSO₄}^- + \\text{H}^+ \\rightarrow \\text{H₂SO₄}$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Conjugate Bases
@@ -144,7 +144,7 @@ export const parts: LessonPart[] = [
 > * (b) $\\text{H₂O}$
 > * (c) $\\text{SO₄}^{2-}$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Identifying Conjugate Pairs
@@ -157,7 +157,7 @@ export const parts: LessonPart[] = [
 > * (b) $\\text{HCO₃}^-$ / $\\text{CO₃}^{2-}$ (conjugate acid-base pair 1) and $\\text{H₃O}^+$ / $\\text{H₂O}$ (conjugate acid-base pair 2)
 > * (c) $\\text{HNO₃}$ / $\\text{NO₃}^-$ (conjugate acid-base pair 1) and $\\text{CH₃COOH₂}^+$ / $\\text{CH₃COOH}$ (conjugate acid-base pair 2)
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Explaining Acid-Base Reactions
@@ -170,7 +170,7 @@ export const parts: LessonPart[] = [
 > 2. $\\text{NH₂}^-$ accepts a proton, acting as a Brønsted-Lowry base.
 > 3. Since proton transfer is involved, this is an acid-base reaction.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 6: pH of Strong Monoprotic Acids (Checkpoint Q1)
@@ -183,7 +183,7 @@ export const parts: LessonPart[] = [
 > * (b) $\\text{pH} = -\\log_{10}(0.500) = 0.30$
 > * (c) $\\text{pH} = -\\log_{10}(0.00405) = 2.39$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 7: pH of Concentrated Partially Dissociated Acid
@@ -195,7 +195,7 @@ export const parts: LessonPart[] = [
 > > 1. $[\\text{H}^+] = 0.55 \\times 10.00 = 5.50\\text{ mol dm}^{-3}$
 > 2. $\\text{pH} = -\\log(5.50) = -0.74$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 8: Calculating [H⁺] from pH
@@ -206,7 +206,7 @@ export const parts: LessonPart[] = [
 > > 
 > 1. $[\\text{H}^+] = 10^{-4.80} = 1.58 \\times 10^{-5}\\text{ mol dm}^{-3}$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 9: pH of a Mixture of Strong Acid and Base (Checkpoint Q2)
@@ -220,7 +220,7 @@ export const parts: LessonPart[] = [
 > 3. $\\text{Total Volume} = 20.0 + 5.0 = 25.0\\text{ cm}^3 = 0.0250\\text{ dm}^3$.
 > 4. $[\\text{H}^+] = \\frac{0.0150}{0.0250} = 0.600\\text{ mol dm}^{-3} \\rightleftharpoons \\text{pH} = -\\log_{10}(0.600) = 0.22$
 
-<br>
+
 
 > [!IMPORTANT]
 > ### 🧮 Calculating the pH of a Dibasic Acid
@@ -235,7 +235,7 @@ export const parts: LessonPart[] = [
 > 3. Solving the quadratic gives $x = 0.0098\\text{ mol dm}^{-3}$
 > 4. Total $[\\text{H}^+] = 0.5098\\text{ mol dm}^{-3} \\implies \\text{pH} = -\\log(0.5098) = 0.293$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 10: pH of Water at Different Temperatures (Checkpoint Q1)
@@ -249,7 +249,7 @@ export const parts: LessonPart[] = [
 > * **Neutrality:** Since $[\\text{H}^+] = [\\text{OH}^-]$ holds true at all temperatures in pure water, it remains neutral.
 > * **Endothermic nature:** Heating water from $293\\text{ K}$ to $298\\text{ K}$ increases $K_w$. According to Le Chatelier's Principle, this shifts the equilibrium to the endothermic direction. Hence, self-ionisation is endothermic.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 11: pH of Strong Bases (Checkpoint Q2)
@@ -366,7 +366,7 @@ export const parts: LessonPart[] = [
 >   4. $[\\text{H}^+] = 10^{-3.00} = 1.00 \\times 10^{-3}\\text{ mol dm}^{-3}$
 >   5. $K_a = \\frac{[\\text{H}^+]^2}{c} = 6.22 \\times 10^{-5}\\text{ mol dm}^{-3}$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Salt Hydrolysis Prediction (Checkpoint Q1 & Q2)
@@ -379,7 +379,7 @@ export const parts: LessonPart[] = [
 > * **(b) $\\text{CH₃COOK}$:** **Alkaline** (salt of weak acid and strong base).
 > * **(c) $\\text{NaCl}$:** **Neutral** (salt of strong acid and strong base).
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 6: Experimental Ka of Chloroethanoic Acid (Checkpoint Q3)
@@ -486,7 +486,7 @@ export const parts: LessonPart[] = [
 > > **(c) Suitable indicator:**
 > * Only **Methyl red** (range 4.2-6.3) falls completely within this vertical region.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Weak Acid-Strong Base Titration Curve (Checkpoint Q2)
@@ -578,7 +578,7 @@ export const parts: LessonPart[] = [
 > >    $$\\frac{[\\text{acid}]}{[\\text{salt}]} = 0.575$$
 > * Therefore, we mix in ratio of $0.575$ of acid for every $1.00$ of salt.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Preparing a Basic Buffer of Specific pH
@@ -605,7 +605,7 @@ export const parts: LessonPart[] = [
 > * **Buffer Capacity:** A measure of the amount of acid or base required to change the pH of a solution significantly.
 > * Jams and preserves use citric acid and sodium citrate buffer systems.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Methanoic Acid Buffer (Checkpoint Q1)
@@ -621,7 +621,7 @@ export const parts: LessonPart[] = [
 > * **(c) Common ion effect:** Adding solid salt shifts equilibrium left, increasing pH slightly.
 > * **(d) Calculation:** Ratio is 2.0. $[\\text{H}^+] = 1.79 \\times 10^{-4} \\times 2.0 = 3.58 \\times 10^{-4}\\text{ mol dm}^{-3} \\implies \\text{pH} = 3.45$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Identifying Buffer Solutions (Checkpoint Q2)
@@ -633,7 +633,7 @@ export const parts: LessonPart[] = [
 > * **Solution A:** Mixing leaves excess $\\text{CH₃COOH}$ and forms salt, so it is a buffer.
 > * **Solution B:** All acid reacts with NaOH, no weak acid remains, so it is not a buffer.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Basic Buffer Salt Concentration (Checkpoint Q3)
@@ -647,7 +647,7 @@ export const parts: LessonPart[] = [
 > 3. $[\\text{NH₄}^+] = 0.05014\\text{ mol dm}^{-3}$ in mixture.
 > 4. Initial concentration of salt used = $0.100\\text{ mol dm}^{-3}$.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 6: Benzoic Acid Buffer Calculation (Checkpoint Q4)
@@ -659,7 +659,7 @@ export const parts: LessonPart[] = [
 > 1. Moles of acid = $0.100\\text{ mol}$, moles of salt = $0.0500\\text{ mol}$.
 > 2. $\\text{pH} = 4.20 + \\log_{10}\\left(\\frac{0.0500}{0.100}\\right) = 3.90$
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 7: Liquid Ammonia Auto-Dissociation (Checkpoint Q5)
@@ -708,7 +708,7 @@ export const parts: LessonPart[] = [
 > 3. Pipette a fresh $25.0\\\\text{ cm}^3$ sample of the weak acid and add exactly **half the volume** of sodium hydroxide ($\\\\frac{V_{\\\\text{eq}}}{2}$). Do NOT add indicator.
 > 4. Measure the pH of this mixture using a calibrated pH meter. The measured pH is equal to the p$K_a$ value of the acid.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Ringed Region on HCl-Ammonia Titration Curve (Checkpoint Q1)
@@ -725,7 +725,7 @@ export const parts: LessonPart[] = [
 > > **(b) Explanation:**
 > * The ringed region is before the equivalence point, where only some of the ammonia has reacted with HCl. This creates a mixture containing both unreacted weak base and conjugate acid. This mixture resists changes in pH, resulting in a very gradual slope.
 
-<br>
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Determining pKa from Curve (Checkpoint Q2)
