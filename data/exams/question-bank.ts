@@ -904,25 +904,407 @@ questionBank.push(
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-19",
-    imageHtml: n2o5DecayGraphSvg
-  },
+  }
+);
+
+questionBank.push(
   {
-    id: "q_kin_ed_n2o5_4-20260719",
-    question: "Based on the $[\\text{N}_2\\text{O}_5]$ decay graph, calculate the rate of reaction when the concentration of $\\text{N}_2\\text{O}_5$ is $1.50\\text{ mol dm}^{-3}$:",
+    id: "q_eq_ed_pp_1-20260721",
+    question: "For the equilibrium reaction:\n\n$$\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)} \\quad \\Delta H^\\theta = -92\\text{ kJ mol}^{-1}$$\n\nWhich change would affect both the value of the equilibrium constant, $K_p$, and the proportion of ammonia present at equilibrium?",
     options: [
-      { text: "$6.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" },
-      { text: "$4.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" },
-      { text: "$2.7 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" },
-      { text: "$9.2 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$" }
+      { text: "Adding a catalyst of finely divided iron" },
+      { text: "Reducing the temperature at constant pressure" },
+      { text: "Increasing the amount of nitrogen" },
+      { text: "Increasing the pressure at constant temperature" }
     ],
-    correctAnswer: 0,
-    explanation: "1. The rate equation for this first-order reaction is: $\\text{Rate} = k[\\text{N}_2\\text{O}_5]$.\n2. Substituting the rate constant $k = 0.0408\\text{ min}^{-1}$ and concentration $[\\text{N}_2\\text{O}_5] = 1.50\\text{ mol dm}^{-3}$: $\\text{Rate} = 0.0408 \\times 1.50 = 0.0612\\text{ mol dm}^{-3}\\text{ min}^{-1}$.\n3. In scientific notation, this is $6.1 \\times 10^{-2}\\text{ mol dm}^{-3}\\text{ min}^{-1}$.",
-    level: 3,
+    correctAnswer: 1,
+    explanation: "1. The equilibrium constant $K_p$ is affected only by changes in temperature.\n2. Since the forward reaction is exothermic, reducing the temperature will shift the equilibrium position to the right, which increases the value of $K_p$ and increases the proportion of ammonia.\n3. Changes in pressure or concentration shift the equilibrium composition but do not alter the value of $K_p$.",
+    level: 1,
     topic: "edexcel-unit-4",
-    lessonNum: 1,
+    lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    createdAt: "2026-07-19",
-    imageHtml: n2o5DecayGraphSvg
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_eq_ed_pp_2-20260721",
+    question: "In a reversible chemical reaction, what is the effect of adding a catalyst on the rate constant $k_1$ for the forward reaction, the rate constant $k_{-1}$ for the backward reaction, and the equilibrium constant $K$?",
+    options: [
+      { text: "$k_1$ increases, $k_{-1}$ decreases, $K$ no effect" },
+      { text: "$k_1$ increases, $k_{-1}$ decreases, $K$ increases" },
+      { text: "$k_1$ increases, $k_{-1}$ increases, $K$ no effect" },
+      { text: "$k_1$ increases, $k_{-1}$ increases, $K$ increases" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. A catalyst increases the rates of both the forward and reverse reactions by providing an alternative pathway with a lower activation energy.\n2. This increases both rate constants $k_1$ and $k_{-1}$ to the same extent.\n3. Since $K = k_1 / k_{-1}$, the equilibrium constant $K$ remains unaffected.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_eq_ed_pp_3-20260721",
+    question: "Hydrogen and iodine vapour exist in equilibrium with hydrogen iodide at a constant temperature in a gas syringe:\n\n$$\\text{H}_2\\text{(g)} + \\text{I}_2\\text{(g)} \\rightleftharpoons 2\\text{HI(g)}$$\n\nWhat will increase when the pressure is increased at constant temperature?",
+    options: [
+      { text: "The activation energy of the reaction" },
+      { text: "The enthalpy change of the reaction" },
+      { text: "$K_p$" },
+      { text: "The partial pressure of hydrogen iodide" }
+    ],
+    correctAnswer: 3,
+    explanation: "1. Increasing the pressure of a gaseous mixture increases the concentration and partial pressure of all component gases.\n2. The activation energy and enthalpy change are independent of pressure.\n3. $K_p$ is only affected by temperature and is constant here.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_eq_ed_pp_4-20260721",
+    question: "A nitrogen-hydrogen mixture, initially in a mole ratio of $1:3$, reaches equilibrium with ammonia when $50\\%$ of the nitrogen has reacted:\n\n$$\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$$\n\nIf the total pressure of the equilibrium mixture is $P$, what is the partial pressure of ammonia at equilibrium?",
+    options: [
+      { text: "$P/6$" },
+      { text: "$P/4$" },
+      { text: "$P/3$" },
+      { text: "$P/2$" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. Start with $1\\text{ mol N}_2$ and $3\\text{ mol H}_2$ (total $4\\text{ mol}$).\n2. If $50\\%$ of $\\text{N}_2$ reacts, $0.5\\text{ mol N}_2$ remains. By stoichiometry, $1.5\\text{ mol H}_2$ reacts ($1.5\\text{ mol}$ remains) and $1.0\\text{ mol NH}_3$ forms.\n3. Total equilibrium moles = $0.5 + 1.5 + 1.0 = 3.0\\text{ mol}$.\n4. Mole fraction of $\\text{NH}_3 = 1.0 / 3.0 = 1/3$.\n5. Partial pressure of $\\text{NH}_3 = \\chi \\times P = P/3$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_eq_ed_pp_5-20260721",
+    question: "Nitrogen dioxide decomposes on heating according to the following equation:\n\n$$2\\text{NO}_2\\text{(g)} \\rightleftharpoons 2\\text{NO(g)} + \\text{O}_2\\text{(g)}$$\n\nWhen $4.0\\text{ mol}$ of nitrogen dioxide is put into a $1\\text{ dm}^3$ container and heated, the equilibrium mixture obtained contains $0.8\\text{ mol}$ of oxygen. What is the numerical expression for $K_c$ at the temperature of the experiment?",
+    options: [
+      { text: "$(0.8 \\times 0.8) / 2.4$" },
+      { text: "$(0.8)^2 \\times 0.8 / 2.4$" },
+      { text: "1.6 \\times 0.8 / (2.4)^2" },
+      { text: "(1.6)^2 \\times 0.8 / (2.4)^2" }
+    ],
+    correctAnswer: 3,
+    explanation: "1. Let volume $V = 1\\text{ dm}^3$. Initial moles: $\\text{NO}_2 = 4.0$, $\\text{NO} = 0$, $\\text{O}_2 = 0$.\n2. Equilibrium moles of $\\text{O}_2 = 0.8\\text{ mol}$. Change in $\\text{O}_2 = +0.8\\text{ mol}$.\n3. By stoichiometry ($2:2:1$): change in $\\text{NO} = +1.6\\text{ mol}$ and change in $\\text{NO}_2 = -1.6\\text{ mol}$.\n4. Equilibrium concentrations: $[\\text{NO}_2] = 2.4\\text{ mol dm}^{-3}$, $[\\text{NO}] = 1.6\\text{ mol dm}^{-3}$, $[\\text{O}_2] = 0.8\\text{ mol dm}^{-3}$.\n5. $K_c = [\\text{NO}]^2[\\text{O}_2] / [\\text{NO}_2]^2 = (1.6)^2 \\times 0.8 / (2.4)^2$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  }
+);
+
+questionBank.push(
+  {
+    id: "q_ab_ed_pp_1-20260721",
+    question: "In an acid–base titration, a $0.10\\text{ mol dm}^{-3}$ solution of a base is added to $25\\text{ cm}^3$ of a $0.10\\text{ mol dm}^{-3}$ solution of an acid. The pH starts at $1.0$ and rises gradually to about $2.0$ at $20\\text{ cm}^3$ added, before rising sharply between pH $3.0$ and $10.0$ near the equivalence point ($25\\text{ cm}^3$). Past $40\\text{ cm}^3$, the pH flattens out around $9.5$. Which titration does this curve represent?",
+    options: [
+      { text: "$\\text{CH}_3\\text{COOH(aq)}$ and $\\text{NH}_3\\text{(aq)}$" },
+      { text: "$\\text{CH}_3\\text{COOH(aq)}$ and $\\text{KOH(aq)}$" },
+      { text: "$\\text{HCl(aq)}$ and $\\text{NH}_3\\text{(aq)}$" },
+      { text: "$\\text{HCl(aq)}$ and $\\text{KOH(aq)}$" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. The initial pH of the solution is $1.0$, which corresponds to a strong acid ($[\\text{H}^+] = 10^{-1.0} = 0.10\\text{ mol dm}^{-3}$). This rules out weak acids like ethanoic acid.\n2. The final pH after adding excess base approaches $9.5$, which is characteristic of a weak base like ammonia (a strong base like KOH would result in a pH close to $13$).\n3. Therefore, the curve represents the titration between a strong acid (HCl) and a weak base (\\text{NH}_3).",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_2-20260721",
+    question: "Hardness in water is determined by titrating a sample against a reagent that forms complex ions. The indicator for this titration requires the pH to be maintained at about $10$. Which mixture, in aqueous solution, could be used to maintain this pH?",
+    options: [
+      { text: "Ammonia and ammonium chloride" },
+      { text: "Ammonium chloride and hydrochloric acid" },
+      { text: "Sodium ethanoate and ethanoic acid" },
+      { text: "Sodium hydroxide and sodium ethanoate" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. To maintain the pH at a constant alkaline value of about $10$, a basic buffer solution is required.\n2. A basic buffer consists of a weak base and its conjugate acid salt.\n3. Ammonia (\\text{NH}_3, weak base) and ammonium chloride (\\text{NH}_4\\text{Cl}, salt of conjugate acid) form a buffer solution that operates in the pH range of $9-11$.\n4. Ethanoate mixtures act as acidic buffers (pH $4-6$), while NaOH/sodium ethanoate is not a buffer system.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_3-20260721",
+    question: "A $1.0 \\times 10^{-2}\\text{ mol dm}^{-3}$ aqueous solution of a weak, monoprotic acid HA has a pH of $4.0$. What is the approximate $\\text{p}K_a$ value for the acid?",
+    options: [
+      { text: "$4.0$" },
+      { text: "$6.0$" },
+      { text: "$7.0$" },
+      { text: "$8.0$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The pH is $4.0$, so the hydrogen ion concentration $[\\text{H}^+] = 10^{-\\text{pH}} = 1.0 \\times 10^{-4}\\text{ mol dm}^{-3}$.\n2. For a weak acid HA, using the simplified expression: $K_a = [\\text{H}^+]^2 / c$.\n3. Substituting the values: $K_a = (1.0 \\times 10^{-4})^2 / (1.0 \\times 10^{-2}) = 1.0 \\times 10^{-8} / 1.0 \\times 10^{-2} = 1.0 \\times 10^{-6}\\text{ mol dm}^{-3}$.\n4. Therefore, $\\text{p}K_a = -\\log_{10}(K_a) = 6.0$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_4-20260721",
+    question: "In the nitrating mixture of concentrated nitric acid and concentrated sulfuric acid, the following equilibrium is established:\n\n$$\\text{HNO}_3 + 2\\text{H}_2\\text{SO}_4 \\rightleftharpoons \\text{NO}_2^+ + 2\\text{HSO}_4^- + \\text{H}_3\\text{O}^+$$\n\nWhich statement correctly describes the role of the species in this equilibrium?",
+    options: [
+      { text: "$\\text{HNO}_3$ and $\\text{NO}_2^+$ are a conjugate acid–base pair" },
+      { text: "The nitric acid acts as an oxidising agent" },
+      { text: "The sulfuric acid acts as a proton donor (acid) and shifts equilibrium by protonating water" },
+      { text: "The sulfuric acid acts as a base" }
+    ],
+    correctAnswer: 2,
+    explanation: "1. Sulfuric acid is a stronger acid than nitric acid and donates protons, acting as an acid (proton donor). This rules out option D.\n2. Nitric acid accepts a proton to form $\\text{H}_2\\text{NO}_3^+$, which then loses water to form the nitronium ion (\\text{NO}_2^+). Thus, HNO_3 acts as a base.\n3. The water released is protonated by another molecule of sulfuric acid to form $\\text{H}_3\\text{O}^+$, acting as a dehydrating effect that shifts the equilibrium to the right.\n4. HNO_3 and NO_2^+ do not differ by a single proton and are not a conjugate pair. The reaction is a non-redox proton transfer, so nitric acid is not acting as an oxidiser.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_5-20260721",
+    question: "A sales leaflet claims that 'applications of a solution of ammonium sulfate, which is acidic, improve the growth of acid-loving rhododendron bushes by increasing the availability of nitrogen and also by increasing the pH of the soil'. What is chemically incorrect about this statement?",
+    options: [
+      { text: "Aqueous ammonium sulfate is not acidic" },
+      { text: "Ammonium sulfate does not dissolve in water" },
+      { text: "Nitrogen must be in its oxidised nitrate form to act as a fertiliser" },
+      { text: "The pH of the soil will be decreased, not increased" }
+    ],
+    correctAnswer: 3,
+    explanation: "1. Ammonium sulfate ((\\text{NH}_4)_2\\text{SO}_4) is a salt of a strong acid (\\text{H}_2\\text{SO}_4) and a weak base (\\text{NH}_3).\n2. The ammonium ion undergoes hydrolysis in water, releasing protons and making the solution acidic: $\\text{NH}_4^+\\text{(aq)} \\rightleftharpoons \\text{NH}_3\\text{(aq)} + \\text{H}^+\\text{(aq)}$.\n3. Since the solution is acidic, applying it to the soil will decrease the soil's pH, making it more acidic (which benefits acid-loving plants), rather than increasing the pH.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_6a-20260721",
+    question: "A sample of fruit juice has a hydrogen ion concentration of $2.50 \\times 10^{-4}\\text{ mol dm}^{-3}$. What is the pH of the fruit juice?",
+    options: [
+      { text: "$3.40$" },
+      { text: "$3.60$" },
+      { text: "$4.00$" },
+      { text: "$4.60$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The formula for pH is: $\\text{pH} = -\\log_{10}[\\text{H}^+]$.\n2. Substituting the hydrogen ion concentration: $\\text{pH} = -\\log_{10}(2.50 \\times 10^{-4}) = 3.60$.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_6b-20260721",
+    question: "A $25.0\\text{ cm}^3$ sample of fruit juice containing a monobasic acid HA is titrated against $0.0100\\text{ mol dm}^{-3}$ sodium hydroxide, requiring exactly $26.70\\text{ cm}^3$ of the base to reach the equivalence point. What is the concentration of HA in the fruit juice?",
+    options: [
+      { text: "0.00936 mol dm⁻³" },
+      { text: "0.0107 mol dm⁻³" },
+      { text: "0.00250 mol dm⁻³" },
+      { text: "0.0125 mol dm⁻³" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The neutralisation reaction is: $\\text{HA} + \\text{NaOH} \\rightarrow \\text{NaA} + \\text{H}_2\\text{O}$ (1:1 ratio).\n2. Moles of NaOH used = $C \\times V = 0.0100\\text{ mol dm}^{-3} \\times 0.02670\\text{ dm}^3 = 2.67 \\times 10^{-4}\\text{ mol}$.\n3. Since the ratio is 1:1, moles of HA in $25.0\\text{ cm}^3 = 2.67 \\times 10^{-4}\\text{ mol}$.\n4. Concentration of HA = $\\text{moles} / \\text{volume} = 2.67 \\times 10^{-4}\\text{ mol} / 0.0250\\text{ dm}^3 = 0.01068\\text{ mol dm}^{-3} \\approx 0.0107\\text{ mol dm}^{-3}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_6c-20260721",
+    question: "A fruit juice contains a monobasic acid HA with total concentration $0.0107\\text{ mol dm}^{-3}$. Under the juice conditions, $[\\text{H}^+] = 2.50 \\times 10^{-4}\\text{ mol dm}^{-3}$ and $K_a = 6.00 \\times 10^{-5}\\text{ mol dm}^{-3}$. What is the concentration of the undissociated acid HA?",
+    options: [
+      { text: "$1.04 \\times 10^{-3}\\text{ mol dm}^{-3}$" },
+      { text: "$8.63 \\times 10^{-3}\\text{ mol dm}^{-3}$" },
+      { text: "$1.04 \\times 10^{-2}\\text{ mol dm}^{-3}$" },
+      { text: "$2.50 \\times 10^{-4}\\text{ mol dm}^{-3}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The dissociation equilibrium is $\\text{HA} \\rightleftharpoons \\text{H}^+ + \\text{A}^-$, with $K_a = [\\text{H}^+][\\text{A}^-] / [\\text{HA}]$.\n2. The total concentration of the acid is $c = [\\text{HA}] + [\\text{A}^-] = 0.01068\\text{ mol dm}^{-3}$.\n3. Rearranging the $K_a$ expression gives: $[\\text{A}^-] = K_a \\times [\\text{HA}] / [\\text{H}^+] = (6.00 \\times 10^{-5} \\times [\\text{HA}]) / (2.50 \\times 10^{-4}) = 0.24 [\\text{HA}]$.\n4. Substituting this into the total concentration expression: $[\\text{HA}] + 0.24 [\\text{HA}] = 1.24 [\\text{HA}] = 0.01068\\text{ mol dm}^{-3}$.\n5. Solving for $[\\text{HA}]$ gives: $[\\text{HA}] = 0.01068 / 1.24 = 8.613 \\times 10^{-3}\\text{ mol dm}^{-3} \\approx 8.63 \\times 10^{-3}\\text{ mol dm}^{-3}$.\n6. (If assuming $[\\text{H}^+] = [\\text{A}^-]$, $[\\text{HA}] = [\\text{H}^+]^2 / K_a = 1.04 \\times 10^{-3}\\text{ mol dm}^{-3}$, but this is incorrect for the juice mixture because other species affect the pH).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_7-20260721",
+    question: "A buffer solution is prepared by adding a solution of $1.00\\text{ mol dm}^{-3}$ sodium hydroxide to a sample of $1.00\\text{ mol dm}^{-3}$ ethanoic acid ($K_a = 1.70 \\times 10^{-5}\\text{ mol dm}^{-3}$ at this temperature) until exactly half of the amount of acid present has reacted. What is the pH of this buffer solution?",
+    options: [
+      { text: "$4.77$" },
+      { text: "$5.07$" },
+      { text: "$5.27$" },
+      { text: "$7.00$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The reaction is: $\\text{CH}_3\\text{COOH} + \\text{NaOH} \\rightarrow \\text{CH}_3\\text{COONa} + \\text{H}_2\\text{O}$.\n2. When exactly half of the acid reacts, the concentration of unreacted weak acid $[\\text{CH}_3\\text{COOH}]$ equals the concentration of the conjugate base salt $[\\text{CH}_3\\text{COO}^-]$.\n3. This is the half-equivalence point. According to the Henderson-Hasselbalch equation: $\\text{pH} = \\text{p}K_a + \\log_{10}([\\text{salt}]/[\\text{acid}]) = \\text{p}K_a + \\log_{10}(1) = \\text{p}K_a$.\n4. $\\text{p}K_a = -\\log_{10}(1.70 \\times 10^{-5}) = 4.77$, so the pH is $4.77$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_8a-20260721",
+    question: "The value of the ionic product of water, $K_w$, is $5.48 \\times 10^{-14}\\text{ mol}^2\\text{ dm}^{-6}$ at $323\\text{ K}$ ($50^\\circ\\text{C}$). What is the pH of pure water at this temperature?",
+    options: [
+      { text: "$6.63$" },
+      { text: "$7.00$" },
+      { text: "$7.37$" },
+      { text: "$14.00$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. In pure water, $[\\text{H}^+] = [\\text{OH}^-]$ (it is neutral).\n2. Therefore, $K_w = [\\text{H}^+]^2 \\implies [\\text{H}^+] = \\sqrt{K_w}$.\n3. At $323\\text{ K}$, $[\\text{H}^+] = \\sqrt{5.48 \\times 10^{-14}} = 2.341 \\times 10^{-7}\\text{ mol dm}^{-3}$.\n4. $\\text{pH} = -\\log_{10}(2.341 \\times 10^{-7}) = 6.63$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_8b-20260721",
+    question: "The ionic product of water, $K_w$, increases from $1.00 \\times 10^{-14}\\text{ mol}^2\\text{ dm}^{-6}$ at $298\\text{ K}$ to $5.48 \\times 10^{-14}\\text{ mol}^2\\text{ dm}^{-6}$ at $323\\text{ K}$. What thermodynamic deduction can be made from this data?",
+    options: [
+      { text: "The dissociation of water is exothermic ($\\Delta H < 0$)" },
+      { text: "The dissociation of water is endothermic ($\\Delta H > 0$)" },
+      { text: "The entropy change of dissociation is negative ($\\Delta S < 0$)" },
+      { text: "The reaction has reached completion at $323\\text{ K}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The dissociation of water is represented by: $\\text{H}_2\\text{O(l)} \\rightleftharpoons \\text{H}^+\\text{(aq)} + \\text{OH}^-\\text{(aq)}$.\n2. As the temperature is increased, $K_w$ increases, meaning the equilibrium position shifts to the right, producing more ions.\n3. According to Le Chatelier's Principle, an increase in temperature shifts the equilibrium in the endothermic direction.\n4. Since increasing the temperature shifts this reaction to the right, the forward dissociation reaction must be endothermic ($\\Delta H^\\theta > 0$).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_9a-20260721",
+    question: "Consider the following two proton transfer equilibria that lie well to the right-hand side:\n\n1) $\\text{CH}_3\\text{COO}^- + \\text{HF} \\rightleftharpoons \\text{CH}_3\\text{COOH} + \\text{F}^-$\n2) $\\text{CH}_3\\text{COOH} + \\text{CN}^- \\rightleftharpoons \\text{CH}_3\\text{COO}^- + \\text{HCN}$\n\nWhat is the correct order of acid strength from strongest to weakest?",
+    options: [
+      { text: "$\\text{HF} > \\text{CH}_3\\text{COOH} > \\text{HCN}$" },
+      { text: "$\\text{HCN} > \\text{CH}_3\\text{COOH} > \\text{HF}$" },
+      { text: "$\\text{CH}_3\\text{COOH} > \\text{HF} > \\text{HCN}$" },
+      { text: "$\\text{HF} > \\text{HCN} > \\text{CH}_3\\text{COOH}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. In equilibrium 1, HF donates a proton to $\\text{CH}_3\\text{COO}^-$. Since the equilibrium lies well to the right, HF is a stronger acid (better proton donor) than $\\text{CH}_3\\text{COOH}$.\n2. In equilibrium 2, $\\text{CH}_3\\text{COOH}$ donates a proton to $\\text{CN}^-$. Since this equilibrium lies well to the right, $\\text{CH}_3\\text{COOH}$ is a stronger acid than HCN.\n3. Combining these results gives the order: $\\text{HF} > \\text{CH}_3\\text{COOH} > \\text{HCN}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_9b-20260721",
+    question: "Liquid ammonia undergoes self-ionisation according to the equation: $\\text{NH}_3 + \\text{NH}_3 \\rightleftharpoons \\text{NH}_4^+ + \\text{NH}_2^-$. How would ammonium chloride (\\text{NH}_4\\text{Cl}) and sodium amide (\\text{NaNH}_2) behave when dissolved in liquid ammonia?",
+    options: [
+      { text: "Ammonium chloride is basic; sodium amide is acidic" },
+      { text: "Ammonium chloride is acidic; sodium amide is basic" },
+      { text: "Both are neutral solutes" },
+      { text: "Ammonium chloride is acidic; sodium amide is neutral" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. In liquid ammonia, the ammonium ion (\\text{NH}_4^+) is the conjugate acid (analogous to $\\text{H}_3\\text{O}^+$ in water), and the amide ion (\\text{NH}_2^-) is the conjugate base (analogous to $\\text{OH}^-$ in water).\n2. Dissolving $\\text{NH}_4\\text{Cl}$ increases the concentration of $\\text{NH}_4^+$, making the solution acidic.\n3. Dissolving $\\text{NaNH}_2$ increases the concentration of $\\text{NH}_2^-$, making the solution basic.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_10a-20260721",
+    question: "Sulfurous acid, $\\text{H}_2\\text{SO}_3$, is a weak dibasic acid with first dissociation constant $K_{a1} = 1.20 \\times 10^{-2}\\text{ mol dm}^{-3}$ at $298\\text{ K}$. What is the approximate pH of a $0.500\\text{ mol dm}^{-3}$ solution of sulfurous acid?",
+    options: [
+      { text: "1.11" },
+      { text: "1.92" },
+      { text: "2.31" },
+      { text: "3.11" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. Using the simplified expression $[\\text{H}^+] = \\sqrt{K_{a1} \\times c}$.\n2. Substituting the values: $[\\text{H}^+] = \\sqrt{1.20 \\times 10^{-2} \\times 0.500} = \\sqrt{6.00 \\times 10^{-3}} = 0.07746\\text{ mol dm}^{-3}$.\n3. $\\text{pH} = -\\log_{10}(0.07746) = 1.11$.\n4. (Solving the quadratic equation $K_a = [\\text{H}^+]^2 / (c - [\\text{H}^+])$ yields $[\\text{H}^+] = 0.0717\\text{ mol dm}^{-3}$, which gives a pH of $1.14$. Both methods show the pH is approximately $1.1$).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_10b-20260721",
+    question: "Calculate the pH of a $0.500\\text{ mol dm}^{-3}$ solution of potassium hydroxide, KOH, at $298\\text{ K}$ ($K_w = 1.00 \\times 10^{-14}\\text{ mol}^2\\text{ dm}^{-6}$).",
+    options: [
+      { text: "13.70" },
+      { text: "14.00" },
+      { text: "12.70" },
+      { text: "13.30" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. KOH is a strong base and dissociates fully, so $[\\text{OH}^-] = 0.500\\text{ mol dm}^{-3}$.\n2. $\\text{pOH} = -\\log_{10}(0.500) = 0.301$.\n3. Since $\\text{pH} + \\text{pOH} = 14.00$ at $298\\text{ K}$: $\\text{pH} = 14.00 - 0.301 = 13.699 \\approx 13.70$.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_11a-20260721",
+    question: "Dilute hydrochloric acid is titrated into sodium carbonate solution, displaying two equivalence points: A (pH $\\approx 8.3$) and B (pH $\\approx 3.7$). Which indicators are most suitable to detect the endpoints at A and B respectively?",
+    options: [
+      { text: "Phenolphthalein for A, Methyl orange for B" },
+      { text: "Methyl orange for A, Phenolphthalein for B" },
+      { text: "Bromothymol blue for both endpoints" },
+      { text: "Phenolphthalein for both endpoints" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The first equivalence point A is in the alkaline region (pH $\\approx 8.3$). Phenolphthalein transition range ($8.2-10.0$) matches this endpoint.\n2. The second equivalence point B is in the acidic region (pH $\\approx 3.7$). Methyl orange transition range ($3.1-4.4$) matches this endpoint.\n3. Therefore, Phenolphthalein is used for the first stage and Methyl orange for the second stage.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_11b-20260721",
+    question: "When titrating dilute hydrochloric acid with sodium carbonate solution, why is the change at the first equivalence point A (forming $\\text{NaHCO}_3$) more difficult to detect than the second equivalence point B (forming $\\text{CO}_2$)?",
+    options: [
+      { text: "The pH changes too rapidly at A" },
+      { text: "The steep vertical section of the curve at A is much shorter and less vertical than at B" },
+      { text: "The reaction at A is highly exothermic, affecting indicator color" },
+      { text: "No indicator transitions in the pH range of A" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. Looking at the titration curve, the steep vertical section of the curve near equivalence point A is short and has a less steep slope than the vertical section near equivalence point B.\n2. Consequently, the pH changes more gradually per drop of acid added at A, making the indicator color transition less sharp and harder to see precisely.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-21"
   }
 );

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { use, useState, useEffect, useMemo } from 'react';
+import React, { use, useState, useEffect, useMemo, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { allCurricula } from '@/data/curriculum';
 
@@ -700,6 +700,15 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
         setQuizCompleted(false);
     }, [lesson, topicId, curriculumId]);
 
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    // Scroll back to top when switching between lesson parts or changing lessons
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTop = 0;
+        }
+    }, [currentPartIndex, lesson]);
+
     // Save last studied lesson state
     useEffect(() => {
         if (lessonData && topic && curriculum) {
@@ -910,7 +919,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                         {/* Active Slide Content Area - Independently scrollable */}
                         <div className="flex-1 flex flex-col overflow-hidden min-h-0">
                             {/* Scrollable Container */}
-                            <div className="flex-1 overflow-y-auto p-6 md:p-8 flex flex-col gap-6">
+                            <div ref={scrollContainerRef} className="flex-1 overflow-y-auto p-6 md:p-8 flex flex-col gap-6">
                                 {/* Progress Bar inside card */}
                                 <div className="w-full h-1 bg-border rounded-full overflow-hidden flex-shrink-0">
                                     <div
