@@ -430,7 +430,12 @@ export default function QuestionAuditorPage() {
             .filter(q => (selectedTrack === 'all' || q.track === selectedTrack) &&
                          (selectedSource === 'all' || q.source === selectedSource))
             .map(q => q.unitTitle)
-    ));
+    )).sort((a, b) => {
+        const numA = parseInt(a.match(/\d+/)?.[0] || '0', 10);
+        const numB = parseInt(b.match(/\d+/)?.[0] || '0', 10);
+        if (numA !== numB) return numA - numB;
+        return a.localeCompare(b);
+    });
     
     const lessonsList = Array.from(new Set(
         allQuestions
@@ -438,7 +443,13 @@ export default function QuestionAuditorPage() {
                          (selectedSource === 'all' || q.source === selectedSource) &&
                          (selectedUnit === 'all' || q.unitTitle === selectedUnit))
             .map(q => q.lessonTitle)
-    )).filter(title => title !== 'Exam Practice Bank');
+    )).filter(title => title !== 'Exam Practice Bank')
+      .sort((a, b) => {
+          const numA = parseInt(a.match(/\d+/)?.[0] || '0', 10);
+          const numB = parseInt(b.match(/\d+/)?.[0] || '0', 10);
+          if (numA !== numB) return numA - numB;
+          return a.localeCompare(b);
+      });
 
     // Filtering Logic
     const filteredQuestions = allQuestions.filter(q => {
