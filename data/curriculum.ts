@@ -286,7 +286,7 @@ export const edexcelAsCurriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-1-20260106",
       number: 1,
-      title: "Unit 1: Structure, Bonding & Intro Organic",
+      title: "Structure, Bonding & Intro Organic",
       subtopics: [
         "Topic 1: Formulae, Equations and Amount of Substance",
         "Topic 2: Atomic Structure & The Periodic Table",
@@ -298,7 +298,7 @@ export const edexcelAsCurriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-2-20260106",
       number: 2,
-      title: "Unit 2: Energetics, Group Chem & Halogenoalkanes",
+      title: "Energetics, Group Chem & Halogenoalkanes",
       subtopics: [
         "Topic 6: Energetics",
         "Topic 7: Intermolecular Forces",
@@ -310,7 +310,7 @@ export const edexcelAsCurriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-3-20260106",
       number: 3,
-      title: "Unit 3: Practical Skills in Chemistry I",
+      title: "Practical Skills in Chemistry I",
       subtopics: [
         "Unit 3 Practical: AS Laboratory Skills"
       ]
@@ -327,7 +327,7 @@ export const edexcelA2Curriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-4-20260106",
       number: 4,
-      title: "Unit 4: Rates, Equilibria & Further Organic",
+      title: "Rates, Equilibria & Further Organic",
       subtopics: [
         "Topic 11: Kinetics",
         "Topic 12: Entropy and Energetics",
@@ -339,7 +339,7 @@ export const edexcelA2Curriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-5-20260106",
       number: 5,
-      title: "Unit 5: Transition Metals & Organic Nitrogen Chemistry",
+      title: "Transition Metals & Organic Nitrogen Chemistry",
       subtopics: [
         "Topic 16: Redox Equilibria",
         "Topic 17: Transition Metals and their Chemistry",
@@ -351,7 +351,7 @@ export const edexcelA2Curriculum: CurriculumLevel = {
     {
       id: "edexcel-unit-6-20260106",
       number: 6,
-      title: "Unit 6: Practical Skills in Chemistry II",
+      title: "Practical Skills in Chemistry II",
       subtopics: [
         "Unit 6 Practical: A2 Laboratory Skills"
       ]

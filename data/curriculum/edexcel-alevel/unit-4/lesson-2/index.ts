@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 12: Entropy and Energetics";
+export const lessonTitle = "Entropy and Energetics";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `

@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 16: Organic Chemistry: Arenes, Amines, Amides and Amino Acids";
+export const lessonTitle = "Organic Chemistry: Arenes, Amines, Amides and Amino Acids";
 export const lessonNumber = 6;
 
 export const theoryMarkdown = `

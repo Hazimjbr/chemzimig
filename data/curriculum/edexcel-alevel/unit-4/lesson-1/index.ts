@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 11: Kinetics";
+export const lessonTitle = "Kinetics";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `

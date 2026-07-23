@@ -864,17 +864,25 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                         Back to Syllabus
                     </Link>
                     <h1 className="text-lg md:text-xl font-bold text-foreground leading-tight">
-                        {curriculumId.startsWith('edexcel-as') || curriculumId.startsWith('edexcel-a2')
-                            ? (() => {
-                                // Edexcel topics are numbered cumulatively across units:
-                                // AS: Unit 1 = Topics 1-5, Unit 2 = Topics 6-10, Unit 3 = Topic 11
-                                // A2: Unit 4 = Topics 12-17, Unit 5 = Topics 18-21, Unit 6 = Topic 22
-                                const edexcelTopicOffset: Record<number, number> = { 1: 0, 2: 5, 3: 10, 4: 11, 5: 17, 6: 21 };
-                                const offset = edexcelTopicOffset[topic.number] ?? 0;
-                                return `Unit ${topic.number} - Topic ${offset + currentLessonNum}`;
-                            })()
-                            : `Topic ${topic.number} - Lesson ${currentLessonNum}`
-                        }: {lessonData?.title || topic.title}
+                        {(() => {
+                            const prefix = curriculumId.startsWith('edexcel-as') || curriculumId.startsWith('edexcel-a2')
+                                ? (() => {
+                                    // Edexcel topics are numbered cumulatively across units:
+                                    // AS: Unit 1 = Topics 1-5, Unit 2 = Topics 6-10, Unit 3 = no numbered topics
+                                    // A2: Unit 4 = Topics 11-15, Unit 5 = Topics 16-20, Unit 6 = no numbered topics
+                                    if (topic.number === 3 || topic.number === 6) {
+                                        // Both Unit3 and Unit6 have no numbered topics, just show lesson title
+                                        return '';
+                                    }
+                                    const edexcelTopicOffset: Record<number, number> = { 1: 0, 2: 5, 4: 10, 5: 15 };
+                                    const offset = edexcelTopicOffset[topic.number] ?? 0;
+                                    return `Unit ${topic.number} - Topic ${offset + currentLessonNum}`;
+                                })()
+                                : `Topic ${topic.number} - Lesson ${currentLessonNum}`;
+
+                            const title = lessonData?.title || topic.title;
+                            return prefix ? `${prefix}: ${title}` : title;
+                        })()}
                     </h1>
                     <p className="text-emerald-500 dark:text-emerald-400 font-medium text-[10px] mt-0.5">
                         {curriculum.title}

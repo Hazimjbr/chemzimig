@@ -112,5 +112,239 @@ export const lessonQuiz = [
       { text: "First order; the plot of 1/t against [A]² would be a horizontal line.", isCorrect: false }
     ],
     explanation: "A straight line through the origin for 1/t vs [A] indicates a first-order reaction. Since rate is proportional to [A]¹, a plot of rate against [A]² would be curved (bending downwards towards the x-axis) because the rate is not proportional to concentration squared."
+  },
+  // ==========================================
+  // ADDED FOR 20 QUESTIONS COMPREHENSIVE COVERAGE
+  // ==========================================
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260721-10",
+    question: "In an iodine clock reaction, the time (t) taken for the blue-black starch-iodine complex to appear is measured. If the concentration of peroxodisulfate ions (S₂O₈²⁻) is doubled, the time (t) taken is halved. What is the order of reaction with respect to S₂O₈²⁻, and what is the relationship between rate and time?",
+    options: [
+      { text: "First order; Rate is directly proportional to t", isCorrect: false },
+      { text: "First order; Rate is proportional to 1/t", isCorrect: true },
+      { text: "Second order; Rate is proportional to 1/t", isCorrect: false },
+      { text: "Zero order; Rate is independent of t", isCorrect: false }
+    ],
+    explanation: "• In clock reactions, the initial rate of reaction is inversely proportional to the time taken for a fixed amount of product to form (Rate ∝ 1/t).\n• Doubling the concentration of peroxodisulfate ions halves the time (t), which means the rate (1/t) is doubled.\n• Since doubling the concentration doubles the rate, the order of reaction with respect to peroxodisulfate is first order."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260721-11",
+    question: "A first-order reaction has a rate constant k = 4.62 × 10⁻³ s⁻¹. Calculate the half-life (t₁/₂) of this reaction.",
+    options: [
+      { text: "150 s", isCorrect: true },
+      { text: "300 s", isCorrect: false },
+      { text: "216 s", isCorrect: false },
+      { text: "462 s", isCorrect: false }
+    ],
+    explanation: "• For a first-order reaction, the relationship between the half-life and the rate constant is: t₁/₂ = ln(2) / k.\n• Substituting the given rate constant: t₁/₂ = 0.693 / (4.62 × 10⁻³ s⁻¹) = 150 s.\n• The half-life of a first-order reaction is constant and completely independent of the initial reactant concentration."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260721-12",
+    question: "The rate constant of a reaction increases by a factor of 4.0 when the temperature is increased from 300 K to 320 K. Calculate the activation energy (Ea) in kJ mol⁻¹. (R = 8.31 J K⁻¹ mol⁻¹)",
+    options: [
+      { text: "55.3 kJ mol⁻¹", isCorrect: true },
+      { text: "57.6 kJ mol⁻¹", isCorrect: false },
+      { text: "115 kJ mol⁻¹", isCorrect: false },
+      { text: "28.8 kJ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "• The two-temperature Arrhenius equation is: ln(k₂/k₁) = -(Ea / R) × (1/T₂ - 1/T₁).\n• Substituting the values: ln(4.0) = -(Ea / 8.31) × (1/320 - 1/300).\n• ln(4.0) = 1.3863, and (1/320 - 1/300) = -2.0833 × 10⁻⁴.\n• 1.3863 = -(Ea / 8.31) × (-2.0833 × 10⁻⁴) which simplifies to 1.3863 = Ea × 2.507 × 10⁻⁵.\n• Ea = 1.3863 / (2.507 × 10⁻⁵) = 55300 J mol⁻¹ = 55.3 kJ mol⁻¹."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260721-13",
+    question: "Why is the reaction between peroxodisulfate ions (S₂O₈²⁻) and iodide ions (I⁻) extremely slow in the absence of a catalyst, and how does Fe²⁺ catalyze it?",
+    options: [
+      { text: "The reactants are oppositely charged, leading to electrostatic repulsion; Fe²⁺ acts as a neutralizer.", isCorrect: false },
+      { text: "Both reactants are negatively charged, leading to electrostatic repulsion; Fe²⁺ provides an alternative pathway by reacting with S₂O₈²⁻ first.", isCorrect: true },
+      { text: "The reaction is highly endothermic; Fe²⁺ lowers the enthalpy change.", isCorrect: false },
+      { text: "Iodine molecules are too large to collide effectively; Fe²⁺ reduces their size.", isCorrect: false }
+    ],
+    explanation: "• Both peroxodisulfate and iodide ions are negatively charged, so they repel each other, resulting in a very high activation energy barrier.\n• Fe²⁺ ions act as a homogeneous catalyst by providing an alternative pathway where oppositely charged species attract.\n• In the first step, Fe²⁺ is oxidized to Fe³⁺ by S₂O₈²⁻: S₂O₈²⁻ + 2Fe²⁺ → 2SO₄²⁻ + 2Fe³⁺.\n• In the second step, Fe³⁺ is reduced back to Fe²⁺ by I⁻: 2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260721-14",
+    question: "A halogenoalkane undergoes nucleophilic substitution. When the concentration of the halogenoalkane is doubled, the rate doubles. When the concentration of the nucleophile is doubled, the rate remains unchanged. What is the mechanism and the stereochemical outcome if a single enantiomer of a chiral reactant is used?",
+    options: [
+      { text: "SN2; inversion of configuration (100% optical activity retained)", isCorrect: false },
+      { text: "SN1; complete racemisation (formation of an optically inactive mixture)", isCorrect: false },
+      { text: "SN1; partial racemisation with major inversion (some loss of optical activity)", isCorrect: true },
+      { text: "SN2; complete racemisation (no optical activity)", isCorrect: false }
+    ],
+    explanation: "• The rate equation is Rate = k[halogenoalkane], indicating an SN1 (unimolecular) mechanism.\n• In SN1, the slow step forms a planar carbocation intermediate, which can be attacked from either side with equal probability, leading to racemisation.\n• In practice, the leaving halide group temporarily shields one side of the carbocation (forming an ion pair).\n• This shielding results in slightly more attack from the opposite side, leading to partial racemisation with a majority of inversion."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260721-15",
+    question: "For the reaction 2NO(g) + O₂(g) → 2NO₂(g), the rate equation is Rate = k[NO]²[O₂]. A proposed mechanism is:\nStep 1 (fast): NO + NO ⇌ N₂O₂\nStep 2 (slow): N₂O₂ + O₂ → 2NO₂\nWhy does this mechanism yield the observed rate equation?",
+    options: [
+      { text: "Step 2 is the rate-determining step, so Rate = k[N₂O₂][O₂]; substituting [N₂O₂] = K[NO]² from the Step 1 equilibrium gives the rate equation.", isCorrect: true },
+      { text: "Step 1 is the rate-determining step, and the rate is simply proportional to the collision frequency of two NO molecules.", isCorrect: false },
+      { text: "The reaction is termolecular and occurs in a single step where three molecules collide simultaneously.", isCorrect: false },
+      { text: "Step 2 is fast, meaning the concentration of N₂O₂ does not affect the rate equation.", isCorrect: false }
+    ],
+    explanation: "• The slow step (Step 2) is the rate-determining step, so the rate is proportional to the concentration of its reactants: Rate = k₂[N₂O₂][O₂].\n• Because N₂O₂ is an intermediate, its concentration must be expressed in terms of the initial reactants.\n• From the fast equilibrium in Step 1: K = [N₂O₂] / [NO]², which rearranges to [N₂O₂] = K[NO]².\n• Substituting this expression into the rate equation gives: Rate = k₂K[NO]²[O₂], which matches the observed rate equation."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260721-16",
+    question: "The following initial rate data was obtained for the reaction A + B → C:\nRun 1: [A] = 0.10 mol dm⁻³, [B] = 0.10 mol dm⁻³, Rate = 2.0 × 10⁻⁴ mol dm⁻³ s⁻¹\nRun 2: [A] = 0.20 mol dm⁻³, [B] = 0.10 mol dm⁻³, Rate = 8.0 × 10⁻⁴ mol dm⁻³ s⁻¹\nRun 3: [A] = 0.20 mol dm⁻³, [B] = 0.20 mol dm⁻³, Rate = 1.6 × 10⁻³ mol dm⁻³ s⁻¹\nDeduce the overall order of the reaction.",
+    options: [
+      { text: "First order", isCorrect: false },
+      { text: "Second order", isCorrect: false },
+      { text: "Third order", isCorrect: true },
+      { text: "Fourth order", isCorrect: false }
+    ],
+    explanation: "• Comparing Run 1 and Run 2: [B] is constant, [A] doubles, and the rate increases by a factor of 4 (8.0 × 10⁻⁴ / 2.0 × 10⁻⁴ = 4). Thus, the order with respect to A is 2.\n• Comparing Run 2 and Run 3: [A] is constant, [B] doubles, and the rate increases by a factor of 2 (1.6 × 10⁻³ / 8.0 × 10⁻⁴ = 2). Thus, the order with respect to B is 1.\n• The overall order is the sum of individual orders: 2 + 1 = 3 (third order)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260721-17",
+    question: "Which of the following reactions can be most appropriately monitored by measuring the change in electrical conductivity?",
+    options: [
+      { text: "CH₃COOCH₂CH₃(l) + H₂O(l) → CH₃COOH(l) + CH₃CH₂OH(l)", isCorrect: false },
+      { text: "CaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)", isCorrect: false },
+      { text: "(CH₃)₃CBr(l) + OH⁻(aq) → (CH₃)₃COH(l) + Br⁻(aq)", isCorrect: false },
+      { text: "CH₃CH₂Br(l) + H₂O(l) → CH₃CH₂OH(l) + H⁺(aq) + Br⁻(aq)", isCorrect: true }
+    ],
+    explanation: "• Electrical conductivity depends on the concentration of mobile ions in the solution.\n• In the correct reaction, neutral reactants (CH₃CH₂Br and H₂O) react to produce ions (H⁺ and Br⁻).\n• The ion concentration increases significantly over time, making conductivity an excellent method.\n• The other reactions either contain no ions, produce neutral substances, or do not change the net concentration of ions."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260721-18",
+    question: "In a catalytic converter, exhaust gases pass over a ceramic honeycomb coated with platinum, palladium, and rhodium. Which statement correctly describes the mechanism of this catalysis?",
+    options: [
+      { text: "Reactants dissolve in the metal layer, react, and precipitate out.", isCorrect: false },
+      { text: "Reactants adsorb onto the active sites of the metal surface, which weakens their bonds and lowers the activation energy.", isCorrect: true },
+      { text: "The catalyst acts as a homogeneous reactant by changing its oxidation state.", isCorrect: false },
+      { text: "The honeycomb structure increases the temperature of the exhaust gases to speed up the reaction.", isCorrect: false }
+    ],
+    explanation: "• Catalytic converters utilize heterogeneous catalysis where the catalyst is in a different phase (solid) than the reactants (gases).\n• Gaseous reactant molecules adsorb (bind) onto active sites on the solid metal surface.\n• Adsorption weakens the covalent bonds within the reactant molecules and brings them into close proximity.\n• After the reaction, product molecules desorb from the surface, freeing active sites for more reactants."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260721-19",
+    question: "For a zero-order reaction with respect to reactant A, what are the shapes of the concentration-time graph and the rate-concentration graph respectively?",
+    options: [
+      { text: "A downward curve bending upwards; a straight line through the origin", isCorrect: false },
+      { text: "A downward straight line; a horizontal straight line above the x-axis", isCorrect: true },
+      { text: "A horizontal straight line; a downward straight line", isCorrect: false },
+      { text: "A downward curve; a horizontal straight line along the x-axis", isCorrect: false }
+    ],
+    explanation: "• For a zero-order reaction, the rate is constant and independent of the concentration of reactant A (Rate = k).\n• Therefore, the rate-concentration graph is a horizontal line above the x-axis at Rate = k.\n• Since the rate of decrease in concentration is constant (d[A]/dt = -k), the concentration of reactant A decreases linearly over time, resulting in a downward straight line."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260721-20",
+    question: "An exothermic reaction has an activation energy (Ea) of +50 kJ mol⁻¹ and an enthalpy change of reaction (ΔH) of -90 kJ mol⁻¹. Deduce the activation energy (Ea) for the reverse reaction.",
+    options: [
+      { text: "+40 kJ mol⁻¹", isCorrect: false },
+      { text: "-40 kJ mol⁻¹", isCorrect: false },
+      { text: "+140 kJ mol⁻¹", isCorrect: true },
+      { text: "-140 kJ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "• The energy profile diagram shows the transition state (peak) is 50 kJ mol⁻¹ above the reactants.\n• Since the reaction is exothermic, the products are 90 kJ mol⁻¹ lower in energy than the reactants.\n• Therefore, the energy barrier from the products back up to the transition state is the sum of the magnitude of the enthalpy change and the forward activation energy.\n• Ea (reverse) = Ea (forward) + |ΔH| = 50 + 90 = 140 kJ mol⁻¹."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260723-21",
+    question: "Which statement correctly describes the difference between a transition state and a reaction intermediate?",
+    options: [
+      { text: "A transition state has a finite lifetime and appears as an energy minimum, while an intermediate is an unstable arrangement at an energy maximum.", isCorrect: false },
+      { text: "A transition state is an unstable arrangement at an energy maximum with a negligible lifetime, while an intermediate is a definite species with a finite lifetime appearing as an energy minimum.", isCorrect: true },
+      { text: "Both transition states and intermediates are stable species that can be isolated and purified.", isCorrect: false },
+      { text: "Transition states only exist in SN2 reactions, while intermediates only exist in SN1 reactions.", isCorrect: false }
+    ],
+    explanation: "Transition State: An unstable arrangement of atoms at the energy maximum (peak) of a reaction step. It has a negligible lifetime (~10⁻¹⁵ seconds, the time of a molecular collision) and cannot be isolated. \nReaction Intermediate: A definite chemical species formed in one step and consumed in a subsequent step. It has a finite lifetime (e.g., carbocations, ~10⁻⁶ seconds) and appears as an energy minimum (well) on the reaction profile diagram."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260723-22",
+    question: "Which of the following reactions is an example of autocatalysis?",
+    options: [
+      { text: "2H₂O₂(aq) → 2H₂O(l) + O₂(g) (catalyzed by MnO₂(s))", isCorrect: false },
+      { text: "5(COOH)₂(aq) + 2MnO₄⁻(aq) + 6H⁺(aq) → 10CO₂(g) + 2Mn²⁺(aq) + 8H₂O(l)", isCorrect: true },
+      { text: "N₂(g) + 3H₂(g) ⇌ 2NH₃(g) (catalyzed by Fe(s))", isCorrect: false },
+      { text: "CH₃COOCH₂CH₃(l) + H₂O(l) → CH₃COOH(aq) + CH₃CH₂OH(l) (catalyzed by H⁺(aq))", isCorrect: false }
+    ],
+    explanation: "Autocatalysis is a process where one of the products of a reaction acts as a catalyst for the reaction itself. \nIn the reaction between ethanedioic acid and manganate(VII) ions, Mn²⁺ ions (a product) act as a catalyst. \nInitially, the reaction is slow (since no Mn²⁺ is present), but it speeds up as Mn²⁺ is formed, demonstrating autocatalysis."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260723-23",
+    question: "The rate curve for an autocatalytic reaction is sigmoidal (S-shaped). Which of the following best explains why the rate increases after the initial slow period?",
+    options: [
+      { text: "The reaction is exothermic and releases heat, increasing the rate.", isCorrect: false },
+      { text: "The concentration of the catalyst product increases as the reaction proceeds.", isCorrect: true },
+      { text: "The reactants become more concentrated as the reaction proceeds.", isCorrect: false },
+      { text: "The activation energy decreases over time.", isCorrect: false }
+    ],
+    explanation: "In autocatalysis, one of the products acts as a catalyst for the reaction. \nInitially, there is very little of this catalytic product, so the reaction proceeds slowly. \nAs the reaction proceeds, the concentration of the catalytic product increases, which increases the rate of reaction. \nThis is why the curve starts with a slow rate, then speeds up (forming the S-shape) before slowing down again as reactants are consumed."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260723-24",
+    question: "Which experimental technique is most suitable for following the rate of the reaction between propanone and iodine in acidic solution?",
+    options: [
+      { text: "Measuring gas volume evolved.", isCorrect: false },
+      { text: "Measuring mass loss.", isCorrect: false },
+      { text: "Colorimetry (monitoring the disappearance of I₂ color).", isCorrect: true },
+      { text: "Measuring electrical conductivity.", isCorrect: false }
+    ],
+    explanation: "The reaction between propanone and iodine in acidic solution consumes I₂, which is brown/yellow in color. \nAll other reactants and products are colorless. \nColorimetry measures the absorbance of light by a colored substance, so we can monitor the decrease in absorbance as I₂ is consumed. \nThis makes colorimetry the ideal technique for this reaction."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-EASY-20260723-25",
+    question: "Why is cotton wool placed in the neck of the flask when measuring the rate of a reaction by mass loss (e.g., calcium carbonate + hydrochloric acid)?",
+    options: [
+      { text: "To absorb the gas produced.", isCorrect: false },
+      { text: "To prevent acid spray from escaping while allowing gas to pass through.", isCorrect: true },
+      { text: "To keep the flask warm.", isCorrect: false },
+      { text: "To act as a catalyst.", isCorrect: false }
+    ],
+    explanation: "Cotton wool is used to prevent any liquid spray (e.g., from the effervescence of the reaction) from escaping the flask. \nIf spray were allowed to escape, it would cause an apparent greater mass loss, leading to inaccurate results. \nThe cotton wool allows the gas (e.g., CO₂) to pass through, so it doesn't interfere with the mass loss measurement."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260723-26",
+    question: "What is the purpose of quenching in kinetic experiments where concentrations are measured by titration?",
+    options: [
+      { text: "To speed up the reaction.", isCorrect: false },
+      { text: "To stop or slow down the reaction so that the concentration at a given time can be measured accurately.", isCorrect: true },
+      { text: "To make the reaction change color.", isCorrect: false },
+      { text: "To increase the concentration of the reactants.", isCorrect: false }
+    ],
+    explanation: "Quenching is a technique used to stop a reaction at a specific time so that we can measure the concentration of reactants or products without further reaction occurring. \nCommon quenching methods include: immersing the sample in an ice bath (cooling to slow the reaction), adding a substance that reacts with one of the reactants, or diluting the sample. \nThis ensures that the titration measures the concentration exactly at the time the sample was quenched."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260723-27",
+    question: "For a second-order reaction (e.g., 2A → products), how does the half-life change as the concentration of A decreases, and what is the shape of the concentration-time graph?",
+    options: [
+      { text: "Half-life is constant; the graph is a curve.", isCorrect: false },
+      { text: "Half-life decreases as concentration decreases; the graph is a straight line.", isCorrect: false },
+      { text: "Half-life increases as concentration decreases; the graph is a steeper curve than first order.", isCorrect: true },
+      { text: "Half-life is constant; the graph is a straight line.", isCorrect: false }
+    ],
+    explanation: "For a second-order reaction, the half-life is inversely proportional to the initial concentration (t₁/₂ = 1/(k[A]₀)). \nAs the concentration of A decreases, the half-life increases (each subsequent half-life is twice as long as the previous one). \nThe concentration-time graph for a second-order reaction is a curve that falls more steeply initially and then more gradually, compared to a first-order reaction."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260723-28",
+    question: "What is catalyst poisoning, and which of the following is an example?",
+    options: [
+      { text: "When a catalyst speeds up the reaction; e.g., Fe in Haber process.", isCorrect: false },
+      { text: "When an impurity blocks the active sites of a catalyst, reducing its effectiveness; e.g., sulfur poisoning Fe in Haber process.", isCorrect: true },
+      { text: "When a catalyst changes phase during the reaction; e.g., V₂O₅ in Contact process.", isCorrect: false },
+      { text: "When a catalyst is used up in the reaction; e.g., MnO₂ in H₂O₂ decomposition.", isCorrect: false }
+    ],
+    explanation: "Catalyst poisoning occurs when a substance (an impurity) adsorbs strongly onto the active sites of a catalyst, preventing reactant molecules from adsorbing. \nThis reduces the effectiveness of the catalyst. \nAn example is sulfur poisoning the iron catalyst in the Haber process: sulfur atoms bind to the iron surface, blocking active sites and reducing catalytic activity."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260723-29",
+    question: "What is a promoter in catalysis, and which of the following is an example?",
+    options: [
+      { text: "A substance that increases the activity of a catalyst; e.g., K₂O/Al₂O₃ in Haber process.", isCorrect: true },
+      { text: "A substance that slows down a reaction; e.g., glycerin in hydrogen peroxide decomposition.", isCorrect: false },
+      { text: "A substance that changes the phase of a catalyst; e.g., water in a reaction.", isCorrect: false },
+      { text: "A substance that replaces a catalyst; e.g., Pt in place of Ni.", isCorrect: false }
+    ],
+    explanation: "A promoter is a substance that increases the activity or selectivity of a catalyst. \nPromoters do not catalyze the reaction themselves but modify the catalyst to work better. \nAn example is K₂O and Al₂O₃ in the Haber process: they promote the iron catalyst by increasing the number of active sites and preventing sintering of the iron particles."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260723-30",
+    question: "In the Arrhenius equation (k = A e^(-Ea/RT)), what does the pre-exponential factor (A) represent?",
+    options: [
+      { text: "The activation energy of the reaction.", isCorrect: false },
+      { text: "The fraction of collisions with energy ≥ Ea.", isCorrect: false },
+      { text: "The frequency of collisions between reactant molecules with the correct orientation for reaction.", isCorrect: true },
+      { text: "The rate constant at infinite temperature.", isCorrect: false }
+    ],
+    explanation: "The pre-exponential factor (A), also called the frequency factor, has two components:\n1. The frequency of collisions between reactant molecules\n2. The fraction of collisions that have the correct orientation for the reaction to occur\nThe term e^(-Ea/RT) represents the fraction of collisions that have energy ≥ Ea (activation energy)."
   }
 ];

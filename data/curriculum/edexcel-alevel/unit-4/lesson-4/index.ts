@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 14: Acid-Base Equilibria";
+export const lessonTitle = "Acid-Base Equilibria";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `

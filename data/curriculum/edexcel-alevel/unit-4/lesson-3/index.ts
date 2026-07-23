@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 13: Chemical Equilibria";
+export const lessonTitle = "Chemical Equilibria";
 export const lessonNumber = 3;
 
 export const theoryMarkdown = `

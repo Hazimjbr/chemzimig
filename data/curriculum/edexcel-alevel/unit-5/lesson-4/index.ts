@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 19: Modern Analytical Techniques II";
+export const lessonTitle = "Modern Analytical Techniques II";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `

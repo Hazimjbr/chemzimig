@@ -1,4 +1,4 @@
-export const lessonTitle = "A2 Practical Skills and Techniques";
+export const lessonTitle = "Unit 6 Practical: A2 Practical Skills and Techniques";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `

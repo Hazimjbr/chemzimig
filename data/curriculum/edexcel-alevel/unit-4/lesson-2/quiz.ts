@@ -207,5 +207,30 @@ export const lessonQuiz = [
       { text: "AgI (Exp: -889, Theo: -778)", isCorrect: true }
     ],
     explanation: "- NaF has a percentage difference of: (918-912)/912 ≈ 0.66%.\n- NaI has a percentage difference of: (705-687)/687 ≈ 2.62%.\n- AgF has a percentage difference of: (958-920)/920 ≈ 4.13%.\n- AgI has a percentage difference of: (889-778)/778 ≈ 14.27%.\n- The large 14.27% difference in AgI indicates significant covalent character due to polarization of the large, polarizable I⁻ ion by the polarizing Ag⁺ cation."
+  },
+  // ==========================================
+  // ADDED FOR 20 QUESTIONS COMPREHENSIVE COVERAGE
+  // ==========================================
+  {
+    id: "EDEXCEL-AL-U4-L2-HARD-20260721-19",
+    question: "Calculate the enthalpy change of solution (ΔH°solution) of anhydrous magnesium chloride, MgCl₂, in kJ mol⁻¹ using the following data:\n• Lattice dissociation enthalpy of MgCl₂ = +2526 kJ mol⁻¹\n• Hydration enthalpy of Mg²⁺(g) = -1920 kJ mol⁻¹\n• Hydration enthalpy of Cl⁻(g) = -364 kJ mol⁻¹",
+    options: [
+      { text: "-122 kJ mol⁻¹", isCorrect: true },
+      { text: "+242 kJ mol⁻¹", isCorrect: false },
+      { text: "-158 kJ mol⁻¹", isCorrect: false },
+      { text: "+606 kJ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "• The dissolution process can be modeled by two steps: breaking the lattice (lattice dissociation, endothermic) and hydrating the gaseous ions (exothermic).\n• ΔH°solution = Lattice dissociation enthalpy + ΔH°hyd(Mg²⁺) + 2 × ΔH°hyd(Cl⁻).\n• Substitute values: ΔH°solution = +2526 + (-1920) + 2 × (-364).\n• Calculate: ΔH°solution = +2526 - 1920 - 728 = -122 kJ mol⁻¹."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260721-20",
+    question: "The table shows standard enthalpy of hydration (ΔH°hydration) values for three halides:\n• Cl⁻ = -364 kJ mol⁻¹\n• Br⁻ = -335 kJ mol⁻¹\n• I⁻ = -293 kJ mol⁻¹\nWhich statement explains this trend?",
+    options: [
+      { text: "Reactivity of halogens decreases down the group.", isCorrect: false },
+      { text: "Ionic radius increases from Cl⁻ to I⁻, resulting in weaker electrostatic attraction between the ions and polar water molecules.", isCorrect: true },
+      { text: "Electron affinity becomes more exothermic down Group VII.", isCorrect: false },
+      { text: "Fluoride is a stronger reducing agent than iodide.", isCorrect: false }
+    ],
+    explanation: "• Enthalpy of hydration is exothermic because ion-dipole bonds are formed between the gaseous ions and polar water molecules.\n• Going down Group VII, the ionic radius increases (Cl⁻ < Br⁻ < I⁻), meaning the charge is spread over a larger volume (lower charge density).\n• As a result, the electrostatic attraction between the halide ions and the water dipoles weakens, making the hydration enthalpy less exothermic (less negative)."
   }
 ];

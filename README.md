@@ -19,6 +19,10 @@ ChemZim is built for speed, security, and scientific precision.
 
 ### 🗂️ Scalable Multi-Board Curriculum Registry
 - **Dynamic Track Loading:** Structured to support international exam boards (`cie-igcse` for Cambridge IGCSE 0620, `cie-as` for Cambridge AS-Level 9701, `cie-alevel` for AS/A-Level 9701, and `edexcel-alevel` for Pearson Edexcel IAL Chemistry XCH11/YCH11) with dynamic registries for modular lessons, exams, and difficulty levels. Includes automated suffix resolution (`-20260106`) during registry lookups to ensure flawless route-to-data mapping, robust fallback track matching, and unified Unit Title resolution inside the Admin Question Auditor dashboard.
+- **Consistent Edexcel Title Formatting:** Updated Unit 3/5/6 title logic to eliminate duplicate "Unit X" text and ensure consistent display:
+  - Unit 3: "Unit 3 Practical: AS Laboratory Skills"
+  - Unit 5 Topic 20: "Unit 5 - Topic 20: Transition Metals & Organic Nitrogen Chemistry"
+  - Unit 6: "Unit 6 Practical: A2 Practical Skills and Techniques"
 - **Granular Lesson Tree & Syllabus Alignment:** Maps 56 unique lessons for CIE tracks and 21 lessons (across 6 units) for Edexcel, aligned 100% with the official Pearson Edexcel IAL syllabus (Topics 11 to 20). Fully completed interactive curricula for:
   - **Edexcel Unit 1 Topic 1:** Formulae, Equations and Amount of Substance.
   - **Edexcel Unit 4 Topics 11-15:** Kinetics, Entropy & Energetics, Chemical Equilibria, Acid-Base Equilibria (including Brønsted-Lowry, Ka/pKa/Kw calculations, salt hydrolysis, buffer solutions, Henderson-Hasselbalch equation, titration curves & indicators, and pKa determination from pH curves), and Carbonyls & Chirality.
@@ -36,7 +40,13 @@ ChemZim is built for speed, security, and scientific precision.
 - **LaTeX Markdown Conflict Prevention:** Escaped chiral asterisks (`*`) in chemistry formulas using `\\ast`, resolved double-underscore bold conflicts (`__n` to `_n`), and replaced subscript braces with unicode subscripts (`C₁₇H₃₅`) to prevent markdown parsers from breaking KaTeX equations.
 
 ### 📝 Smart Exam Engine
-- **Unified Lesson Quizzes:** Standardized all interactive lesson quizzes for Pearson Edexcel Unit 4 (Topics 11 to 15) to contain exactly 20 comprehensive questions per topic, fully covering all syllabus sub-topics with high-order past-paper style scenarios.
+- **Unified Lesson Quizzes:** Standardized all interactive lesson quizzes for Pearson Edexcel Unit 4 (Topics 11 to 15) to contain comprehensive questions per topic, fully covering all syllabus sub-topics with high-order past-paper style scenarios. **Added 9 new questions (total 29) to Unit 4 Topic 11 (Kinetics)** covering:
+  - Autocatalysis (definition & sigmoidal curve shape)
+  - Experimental techniques (colorimetry, mass loss, quenching)
+  - Second-order kinetics (half-life trends)
+  - Catalyst poisoning & promoters
+  - Arrhenius pre-exponential factor (A)
+- **Consistent Explanation Formatting:** Removed bullet points from quiz explanations for consistency (Rule 15 still applies to explanation clarity).
 - **Sovereign Rule on Explanations:** Establishes a project-wide formatting standard (Rule 15) ensuring all exam/quiz explanations are consistently written as bullet points on separate lines for maximal student clarity.
 - **Graphical Exam Questions:** Integrated a detailed, dark-themed concentration-time SVG decay curve for the decomposition of N₂O₅ utilizing the base64 `[INLINE_SVG:]` token engine. Created 4 linked exam questions evaluating successive half-lives, order of reaction, first-order rate constant calculations, and initial rate of reaction calculations at a specific concentration.
 - **Exam & Quiz Session Persistence:** Integrated `sessionStorage` session tracking that dynamically saves answers, progress index, and the randomized question list. Provides students with an interactive "Resume Quiz" dialog upon page refresh or temporary disconnection.
@@ -84,27 +94,65 @@ ChemZim is built for speed, security, and scientific precision.
 ```
 ChemZim/
 ├── app/                    # Next.js App Router (Auth, Dashboard, Exams)
+│   ├── admin/             # Admin dashboard (Question Auditor, Students/Devices management)
+│   ├── api/               # Server API routes (auth, devices, leaderboard, etc.)
+│   ├── dashboard/         # Student dashboard (curriculum, lessons, quizzes, etc.)
+│   └── login/             # Login page
 ├── components/             # UI Components (Landing, Layout, Exam Engine)
-├── contexts/               # Global state (AuthContext, GamificationContext)
-├── data/                   # Curriculum data & Exam banks (TS Files)
+│   ├── assistant/         # Chemistry calculator, periodic table, etc.
+│   ├── auth/              # Login modal
+│   ├── gamification/      # Leaderboard, badges
+│   ├── landing/           # Landing page sections
+│   ├── layout/            # Header, footer
+│   ├── ui/                # Reusable UI components (topic cards, etc.)
+│   └── visual/            # Interactive visualizers (equation animator, gas simulator, etc.)
+├── contexts/               # Global state (AuthContext, GamificationContext, ThemeContext)
+├── data/                   # Curriculum data & Exam banks (TypeScript files)
+│   ├── curriculum/        # Lesson registries for each track/unit/lesson
+│   └── exams/             # Question bank & exam registry
 ├── lib/                    # Core logic (Firebase Admin, Utils, Algorithms)
-├── hooks/                  # Custom React hooks (useAuth, useExam)
-└── public/                 # Assets (3D models, Images)
+├── public/                 # Assets (images, SVGs, etc.)
+├── scripts/                # Utility scripts
+├── types/                  # Type definitions for untyped packages
+├── .gitignore
+├── AGENTS.md
+├── README.md
+├── package.json
+└── tsconfig.json
 ```
 
 ---
 
-## 🚀 Development
+## 🚀 Development & Build Commands
 
+### 📦 Dependencies Installation
 ```bash
-# Install dependencies
+# Install all dependencies
 npm install
+```
 
-# Setup Environment Variables
-# Create .env.local with FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, etc.
+### 🛠️ Setup Environment Variables
+Create a `.env.local` file in the project root with Firebase configuration:
+- `FIREBASE_PROJECT_ID`
+- `FIREBASE_CLIENT_EMAIL`
+- `FIREBASE_PRIVATE_KEY`
+- `NEXTAUTH_URL`
+- `NEXTAUTH_SECRET`
+- `SESSION_SECRET`
 
-# Run development server
+### 🚀 Running the App
+```bash
+# Start development server (runs on port 3001)
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+
+# Run ESLint check
+npm run lint
 ```
 
 ---

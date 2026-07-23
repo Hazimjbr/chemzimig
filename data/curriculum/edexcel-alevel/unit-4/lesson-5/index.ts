@@ -1,6 +1,6 @@
 import { LessonPart } from '../../../registry';
 
-export const lessonTitle = "Topic 15: Organic Chemistry: Carbonyls, Carboxylic Acids and Chirality";
+export const lessonTitle = "Organic Chemistry: Carbonyls, Carboxylic Acids and Chirality";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `
