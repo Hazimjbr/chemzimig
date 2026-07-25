@@ -194,11 +194,11 @@ const ionicLatticeCleavageSvg = `
 `;
 
 export const lessonParts: LessonPart[] = [
-    {
-        id: "ionic-formation",
-        title: "Formation of Ions",
-        type: "text",
-        content: `
+  {
+    id: "ionic-formation",
+    title: "Formation of Ions",
+    type: "text",
+    content: `
 ### ⚛️ How Ions are Formed
 
 An **ion** is an electrically charged particle formed when an atom loses or gains electrons to achieve a stable, full outer shell of electrons (a noble gas configuration).
@@ -214,16 +214,16 @@ An **ion** is an electrically charged particle formed when an atom loses or gain
 >   * Since it has more electrons than protons, it carries a negative charge.
 >   * *Example:* A chlorine atom ($2.8.7$) gains 1 electron to form a chloride ion, $Cl^-$ ($2.8.8$).
         `,
-        keyPoints: [
-            "Metals lose electrons to form positive cations.",
-            "Non-metals gain electrons to form negative anions."
-        ]
-    },
-    {
-        id: "ionic-bonding-lattice",
-        title: "The Ionic Bond & Lattice",
-        type: "text",
-        content: `
+    keyPoints: [
+      "Metals lose electrons to form positive cations.",
+      "Non-metals gain electrons to form negative anions."
+    ]
+  },
+  {
+    id: "ionic-bonding-lattice",
+    title: "The Ionic Bond & Lattice",
+    type: "text",
+    content: `
 ### ⚡ The Ionic Bond
 
 > [!IMPORTANT]
@@ -235,16 +235,16 @@ Ionic compounds do not exist as individual molecules. Instead, they form a **gia
 
 \${svgToken(ionicLatticeStableSvg)}
         `,
-        keyPoints: [
-            "Ionic bonding is the electrostatic attraction between oppositely charged ions.",
-            "Ionic compounds form a regular 3D giant lattice structure."
-        ]
-    },
-    {
-        id: "ionic-properties",
-        title: "Properties of Ionic Compounds",
-        type: "text",
-        content: `
+    keyPoints: [
+      "Ionic bonding is the electrostatic attraction between oppositely charged ions.",
+      "Ionic compounds form a regular 3D giant lattice structure."
+    ]
+  },
+  {
+    id: "ionic-properties",
+    title: "Properties of Ionic Compounds",
+    type: "text",
+    content: `
 ### 📋 Key Properties of Ionic Structures
 
 The physical properties of ionic compounds are directly caused by the nature of the giant ionic lattice and the strong electrostatic forces holding it together.
@@ -263,10 +263,10 @@ The physical properties of ionic compounds are directly caused by the nature of 
 
 \${svgToken(ionicLatticeCleavageSvg)}
         `,
-        keyPoints: [
-            "High melting points are due to strong electrostatic attractions.",
-            "Ionic compounds conduct electricity only when molten or dissolved.",
-            "Brittleness is caused by repulsion between like charges when layers slide."
-        ]
-    }
+    keyPoints: [
+      "High melting points are due to strong electrostatic attractions.",
+      "Ionic compounds conduct electricity only when molten or dissolved.",
+      "Brittleness is caused by repulsion between like charges when layers slide."
+    ]
+  }
 ];

@@ -152,11 +152,11 @@ const macromoleculesSvg = `
 `;
 
 export const lessonParts: LessonPart[] = [
-    {
-        id: "covalent-bonding",
-        title: "Covalent Bonding",
-        type: "text",
-        content: `
+  {
+    id: "covalent-bonding",
+    title: "Covalent Bonding",
+    type: "text",
+    content: `
 ### 🤝 What is a Covalent Bond?
 
 A **covalent bond** is formed when non-metal atoms share pairs of electrons to achieve stable, full outer shells.
@@ -170,16 +170,16 @@ A **covalent bond** is formed when non-metal atoms share pairs of electrons to a
 * **Double Bond:** Two shared pairs of electrons (e.g. $O_2$, $CO_2$).
 * **Triple Bond:** Three shared pairs of electrons (e.g. $N_2$).
         `,
-        keyPoints: [
-            "Covalent bonds are formed by sharing electron pairs between non-metals.",
-            "Bonding arises from the attraction between shared electrons and positive nuclei."
-        ]
-    },
-    {
-        id: "simple-molecular",
-        title: "Simple Molecular Structures",
-        type: "text",
-        content: `
+    keyPoints: [
+      "Covalent bonds are formed by sharing electron pairs between non-metals.",
+      "Bonding arises from the attraction between shared electrons and positive nuclei."
+    ]
+  },
+  {
+    id: "simple-molecular",
+    title: "Simple Molecular Structures",
+    type: "text",
+    content: `
 ### 🧪 Simple Molecular Structures
 
 Most covalent substances exist as **simple molecules** (like $H_2O$, $CO_2$, $CH_4$, $O_2$).
@@ -195,16 +195,16 @@ Most covalent substances exist as **simple molecules** (like $H_2O$, $CO_2$, $CH
 > 3. **Solubility:**
 >    * Usually insoluble in polar water (unless they can form hydrogen bonds), but soluble in non-polar organic solvents.
         `,
-        keyPoints: [
-            "Simple molecules have low melting points due to weak intermolecular forces.",
-            "They do not conduct electricity because they have no free charge carriers."
-        ]
-    },
-    {
-        id: "giant-covalent",
-        title: "Giant Covalent Structures",
-        type: "text",
-        content: `
+    keyPoints: [
+      "Simple molecules have low melting points due to weak intermolecular forces.",
+      "They do not conduct electricity because they have no free charge carriers."
+    ]
+  },
+  {
+    id: "giant-covalent",
+    title: "Giant Covalent Structures",
+    type: "text",
+    content: `
 ### 💎 Giant Covalent Structures (Macromolecules)
 
 Some substances form giant three-dimensional networks of atoms joined by strong covalent bonds. These are called **macromolecules**.
@@ -224,9 +224,9 @@ Some substances form giant three-dimensional networks of atoms joined by strong 
 
 \${svgToken(macromoleculesSvg)}
         `,
-        keyPoints: [
-            "Giant covalent structures have high melting points because strong covalent bonds must be broken.",
-            "Graphite conducts electricity due to delocalised electrons; Diamond and Quartz do not."
-        ]
-    }
+    keyPoints: [
+      "Giant covalent structures have high melting points because strong covalent bonds must be broken.",
+      "Graphite conducts electricity due to delocalised electrons; Diamond and Quartz do not."
+    ]
+  }
 ];

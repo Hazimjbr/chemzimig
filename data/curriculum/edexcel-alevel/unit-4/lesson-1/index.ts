@@ -1,4 +1,5 @@
 import { LessonPart } from '../../../registry';
+import { svgToken } from '../../../svgToken';
 
 export const lessonTitle = "Kinetics";
 export const lessonNumber = 1;
@@ -8,28 +9,7 @@ export const theoryMarkdown = `
 This lesson covers reaction rates, orders of reaction, rate equations, continuous and initial rate experimental methods, reaction mechanisms, the rate-determining step, and the Arrhenius equation.
 `;
 
-export const parts: LessonPart[] = [
-    {
-        id: 'experimental-rates-u4-l1',
-        title: 'Experimental Determination of Rates',
-        type: 'text',
-        content: `
-> [!NOTE]
-> ### 📋 Selecting and Justifying Experimental Techniques
-> To follow a reaction, we must choose an analytical technique based on the chemical nature of the species involved, their state symbols, and their physical properties.
-> 
-> Here are the key methods categorized by their experimental approaches:
-
-> [!BOX]
-> ### 🧪 Measuring Gas Volume Evolved
-> * **Justification:** Suitable if one of the products is a gas.
-> * **Apparatus & Selection:**
->   * **Gas Syringe:** Preferred for high precision.
->   * **Collection over Water (inverted measuring cylinder):** Suitable only for gases with low solubility in water (such as $\\text{O}_2$ and $\\text{H}_2$).
-> * **Example:** Reaction of calcium carbonate with hydrochloric acid:
->   $$\\text{CaCO}_3\\text{(s)} + 2\\text{HCl}\\text{(aq)} \\rightarrow \\text{CaCl}_2\\text{(aq)} + \\text{H}_2\\text{O}\\text{(l)} + \\text{CO}_2\\text{(g)}$$
-> 
-> \${svgToken(\`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const gasCollectionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Experimental Gas Collection Techniques</text>
   <g transform="translate(40, 40)">
     <text x="180" y="20" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">Gas Syringe Method (High Precision)</text>
@@ -82,21 +62,9 @@ export const parts: LessonPart[] = [
     <text x="320" y="270" fill="#f8fafc" font-size="11" text-anchor="middle">Water Trough</text>
     <text x="260" y="70" fill="#f8fafc" font-size="11" text-anchor="middle">Inverted Cylinder</text>
   </g>
-</svg>\`)}
-> 
-> > [!WARNING]
-> > ### ⚠️ Gas Collection Limitation
-> > Reactions producing gases that are highly soluble in water, such as sulfur dioxide ($\\text{SO}_2$), cannot be followed using gas collection over water because the gas will dissolve. A gas syringe must be used.
+</svg>`;
 
-> [!BOX]
-> ### 🎨 Continuous Colorimetry Monitoring
-> * **Justification:** Suitable when a reactant or product in solution is colored (e.g., brown aqueous iodine, $\\text{I}_2\\text{(aq)}$) and changes in concentration over time. A colorimeter measures light absorbance.
-> * **Advantages:** Provides objective, quantitative, and continuous measurements of concentration change.
-> * **Example:** Reaction of propanone with iodine:
->   $$\\text{CH}_3\\text{COCH}_3\\text{(aq)} + \\text{I}_2\\text{(aq)} \\rightarrow \\text{CH}_3\\text{COCH}_2\\text{I}\\text{(aq)} + \\text{H}^+\\text{(aq)} + \\text{I}^-\\text{(aq)}$$
->   *Here, iodine is the only colored species, so we track its color intensity decay.*
-> 
-> \${svgToken(\`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const colorimeterSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <text x="50%" y="35" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Colorimeter Optical Path and Components</text>
   <line x1="160" y1="140" x2="280" y2="140" stroke="#f1f5f9" stroke-width="4" />
   <polygon points="340,140 460,110 460,170" fill="url(#rainbow)" opacity="0.4" />
@@ -146,26 +114,9 @@ export const parts: LessonPart[] = [
     <text x="60" y="145" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">5 Digital Display</text>
     <text x="60" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Absorbance = log(I₀ / I)</text>
   </g>
-</svg>\`)}
+</svg>`;
 
-> [!BOX]
-> ### ⚖️ Quenching and Chemical Titration
-> * **Process:** Taking samples (aliquots) of the reaction mixture at regular intervals, stopping or slowing the reaction immediately (**quenching**), and then titrating the sample to determine reactant/product concentration.
-> * **Quenching Techniques:**
->   1. Rapid cooling in an ice-water bath.
->   2. Adding a chemical that neutralizes/reacts with the catalyst or one of the reactants.
-> * **Example (Propanone-Iodine Reaction):** Sodium hydrogen carbonate ($\\text{NaHCO}_3$) is added to neutralize the acid catalyst ($H^+$), effectively quenching the reaction. The remaining iodine is then titrated against standard sodium thiosulfate:
->   $$\\text{I}_2\\text{(aq)} + 2\\text{S}_2\\text{O}_3^{2-}\\text{(aq)} \\rightarrow 2\\text{I}^-\\text{(aq)} + \\text{S}_4\\text{O}_6^{2-}\\text{(aq)}$$
-
-> [!BOX]
-> ### 📋 Other Physical Monitoring Methods
-> For other reactions, specific physical properties can be monitored continuously:
-> 
-> 1. **Measuring Mass Change:**
->    * **Justification:** Suitable if a heavy gas (e.g. $\\text{CO}_2$) escapes from the flask. A cotton wool plug allows gas to escape but prevents loss of liquid droplets.
->    * **Constraint:** Highly precise for high relative molecular mass gases like $\\text{CO}_2$ ($M_r = 44.0$). Ineffective for very light gases like $\\text{H}_2$ ($M_r = 2.0$) due to large measurement uncertainties.
-> 
-> \${svgToken(\`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const massLossSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Continuous Mass Loss Measurement</text>
   <g transform="translate(100, 40)">
     <rect x="250" y="230" width="300" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2" />
@@ -196,14 +147,9 @@ export const parts: LessonPart[] = [
     <text x="535" y="125" fill="#f8fafc" font-size="10" font-weight="600">like CO₂ (M = 44.0)</text>
     <text x="535" y="145" fill="#94a3b8" font-size="10">Ineffective for light H₂ gas</text>
   </g>
-</svg>\`)}
-> 
-> 2. **Disappearing Cross Method:**
->    * **Justification:** Suitable for reactions that produce an insoluble solid precipitate that makes the solution cloudy.
->    * **Example:** Sodium thiosulfate and hydrochloric acid:
->      $$\\text{Na}_2\\text{S}_2\\text{O}_3\\text{(aq)} + 2\\text{HCl}\\text{(aq)} \\rightarrow 2\\text{NaCl}\\text{(aq)} + \\text{SO}_2\\text{(g)} + \\text{S}\\text{(s)} + \\text{H}_2\\text{O}\\text{(l)}$$
-> 
-> \${svgToken(\`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+</svg>`;
+
+const disappearingCrossSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Disappearing Cross Method (Initial Rate Setup)</text>
   <g transform="translate(150, 40)">
     <text x="100" y="20" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">Start of Reaction (t = 0)</text>
@@ -230,22 +176,90 @@ export const parts: LessonPart[] = [
     <text x="100" y="275" fill="#ef4444" font-size="11" text-anchor="middle" font-weight="bold">Cross is completely obscured</text>
     <text x="100" y="292" fill="#94a3b8" font-size="10" text-anchor="middle">Colloidal sulfur precipitate forms</text>
   </g>
-</svg>\`)}
+</svg>`;
+
+export const parts: LessonPart[] = [
+    {
+        id: 'experimental-rates-u4-l1',
+        title: 'Experimental Determination of Rates',
+        type: 'text',
+        content: `
+> [!NOTE]
+> ### 📋 Selecting and Justifying Experimental Techniques
+> To follow a reaction, we must choose an analytical technique based on the chemical nature of the species involved, their state symbols, and their physical properties.
 > 
-> 3. **Electrical Conductivity:**
+> Here are the key methods categorized by their experimental approaches:
+
+> [!BOX]
+> ### 🧪 Measuring Gas Volume Evolved
+> * **Justification:** Suitable if one of the products is a gas.
+> * **Apparatus & Selection:**
+>   * **Gas Syringe:** Preferred for high precision.
+>   * **Collection over Water (inverted measuring cylinder):** Suitable only for gases with low solubility in water (such as $\\text{O}_2$ and $\\text{H}_2$).
+> * **Example:** Reaction of calcium carbonate with hydrochloric acid:
+>   $$\\text{CaCO}_3\\text{(s)} + 2\\text{HCl}\\text{(aq)} \\rightarrow \\text{CaCl}_2\\text{(aq)} + \\text{H}_2\\text{O}\\text{(l)} + \\text{CO}_2\\text{(g)}$$
+> 
+> ${svgToken(gasCollectionSvg)}
+
+> 
+> > [!WARNING]
+> > ### ⚠️ Gas Collection Limitation
+> > Reactions producing gases that are highly soluble in water, such as sulfur dioxide ($\\text{SO}_2$), cannot be followed using gas collection over water because the gas will dissolve. A gas syringe must be used.
+
+> [!BOX]
+> ### 🎨 Continuous Colorimetry Monitoring
+> * **Justification:** Suitable when a reactant or product in solution is colored (e.g., brown aqueous iodine, $\\text{I}_2\\text{(aq)}$) and changes in concentration over time. A colorimeter measures light absorbance.
+> * **Advantages:** Provides objective, quantitative, and continuous measurements of concentration change.
+> * **Example:** Reaction of propanone with iodine:
+>   $$\\text{CH}_3\\text{COCH}_3\\text{(aq)} + \\text{I}_2\\text{(aq)} \\rightarrow \\text{CH}_3\\text{COCH}_2\\text{I}\\text{(aq)} + \\text{H}^+\\text{(aq)} + \\text{I}^-\\text{(aq)}$$
+>   *Here, iodine is the only colored species, so we track its color intensity decay.*
+> 
+> ${svgToken(colorimeterSvg)}
+
+
+> [!BOX]
+> ### ⚖️ Quenching and Chemical Titration
+> * **Process:** Taking samples (aliquots) of the reaction mixture at regular intervals, stopping or slowing the reaction immediately (**quenching**), and then titrating the sample to determine reactant/product concentration.
+> * **Quenching Techniques:**
+>   1. Rapid cooling in an ice-water bath.
+>   2. Adding a chemical that neutralizes/reacts with the catalyst or one of the reactants.
+> * **Example (Propanone-Iodine Reaction):** Sodium hydrogen carbonate ($\\text{NaHCO}_3$) is added to neutralize the acid catalyst ($H^+$), effectively quenching the reaction. The remaining iodine is then titrated against standard sodium thiosulfate:
+>   $$\\text{I}_2\\text{(aq)} + 2\\text{S}_2\\text{O}_3^{2-}\\text{(aq)} \\rightarrow 2\\text{I}^-\\text{(aq)} + \\text{S}_4\\text{O}_6^{2-}\\text{(aq)}$$
+
+> [!BOX]
+> ### ⚖️ Measuring Mass Change
+> * **Justification:** Suitable if a heavy gas (e.g. $\\text{CO}_2$) escapes from the flask. A cotton wool plug allows gas to escape but prevents loss of liquid droplets.
+> * **Constraint:** Highly precise for high relative molecular mass gases like $\\text{CO}_2$ ($M_r = 44.0$). Ineffective for very light gases like $\\text{H}_2$ ($M_r = 2.0$) due to large measurement uncertainties.
+> 
+> ${svgToken(massLossSvg)}
+
+> [!BOX]
+> ### ⏱️ Disappearing Cross Method
+> * **Justification:** Suitable for reactions that produce an insoluble solid precipitate that makes the solution cloudy.
+> * **Example:** Sodium thiosulfate and hydrochloric acid:
+>   $$\\text{Na}_2\\text{S}_2\\text{O}_3\\text{(aq)} + 2\\text{HCl}\\text{(aq)} \\rightarrow 2\\text{NaCl}\\text{(aq)} + \\text{SO}_2\\text{(g)} + \\text{S}\\text{(s)} + \\text{H}_2\\text{O}\\text{(l)}$$
+> 
+> ${svgToken(disappearingCrossSvg)}
+
+> [!BOX]
+> ### 📋 Other Physical Monitoring Methods
+> For other reactions, specific physical properties can be monitored continuously:
+> 
+> 1. **Electrical Conductivity:**
 >    * **Justification:** Suitable if the concentration or mobility of ions in solution changes during the reaction, causing a drop/increase in conductivity.
 >    * **Example:**
 >      $$5\\text{Br}^-\\text{(aq)} + \\text{BrO}_3^-\\text{(aq)} + 6\\text{H}^+\\text{(aq)} \\rightarrow 3\\text{Br}_2\\text{(aq)} + 3\\text{H}_2\\text{O}\\text{(l)}$$
 > 
-> 4. **pH Measurement:**
+> 2. **pH Measurement:**
 >    * **Justification:** Suitable for reactions where the concentration of hydrogen ions ($\\text{H}^+$) changes significantly.
 >    * **Apparatus:** A digital pH probe or meter.
 > 
-> 5. **Other Physical Properties:**
->    * **Polarimetry:** Monitors optical activity if the chirality of a reactant/product changes.
+> 3. **Other Physical Properties (Dilatometry):**
 >    * **Dilatometry:** Monitors minute changes in volume during liquid reactions.
+
+
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Justifying Experimental Techniques
+> #### 📝 Worked Example 1: Justifying Experimental Techniques
 > **Question:** Identify the most suitable experimental technique to follow the rate of each of the following reactions, and explain your choice:
 > 
 > 1. $\\\\text{Mg}\\\\text{(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$
