@@ -1236,8 +1236,7 @@ export const parts: LessonPart[] = [
       'If the RDS is preceded by a fast equilibrium step, reactants from that equilibrium will appear in the overall rate equation (resolved via Kc substitution).',
       'A catalyst enters the reaction in an early step and is regenerated in a later step, whereas an intermediate is produced first and then consumed.',
       'SN1 mechanisms proceed via two steps (carbocation intermediate) with a first-order rate equation, while SN2 mechanisms occur in a single transition-state step with a second-order rate equation.'
-    ],
-    description: "The rate of this reaction is independent of CO concentration because CO reacts in a fast step after the RDS"
+    ]
   },
   {
     id: 'arrhenius-equation-u4-l1',
