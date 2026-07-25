@@ -575,14 +575,14 @@ const renderContentWithTables = (content: string) => {
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const trimmed = line.trim();
-        const isTableLine = /^(>?\s*\|)/.test(trimmed);
+        const isTableLine = /^[>\s]*\|/.test(trimmed);
 
         if (isTableLine) {
             currentTableLines.push(line);
         } else {
             if (currentTableLines.length > 0) {
-                const isBlockquoteTable = /^\s*>/.test(currentTableLines[0]);
-                const prefix = isBlockquoteTable ? '> ' : '';
+                const match = currentTableLines[0].match(/^([>\s]*)\|/);
+                const prefix = match ? match[1] : '';
                 const encoded = encodeURIComponent(currentTableLines.join('\n'))
                     .replace(/\*/g, '%2A')
                     .replace(/_/g, '%5F')
@@ -600,8 +600,8 @@ const renderContentWithTables = (content: string) => {
     }
 
     if (currentTableLines.length > 0) {
-        const isBlockquoteTable = /^\s*>/.test(currentTableLines[0]);
-        const prefix = isBlockquoteTable ? '> ' : '';
+        const match = currentTableLines[0].match(/^([>\s]*)\|/);
+        const prefix = match ? match[1] : '';
         const encoded = encodeURIComponent(currentTableLines.join('\n'))
             .replace(/\*/g, '%2A')
             .replace(/_/g, '%5F')

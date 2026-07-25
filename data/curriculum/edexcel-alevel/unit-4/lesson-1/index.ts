@@ -273,24 +273,78 @@ const activationEnergyProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" view
     <!-- Product Level at y = 230 -->
     <line x1="50" y1="230" x2="680" y2="230" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" />
 
-    <!-- Reaction Path Curve (Exothermic) -->
+    <!-- Uncatalyzed Reaction Path Curve (Exothermic) -->
     <!-- Reactants: (100, 170) -> Transition State Peak: (380, 80) -> Products: (600, 230) -->
     <path d="M 50,170 L 150,170 C 230,170 300,80 380,80 C 460,80 500,230 600,230 L 700,230" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Catalyzed Reaction Path Curve (Lower Peak at y = 120) -->
+    <path d="M 50,170 L 150,170 C 230,170 300,120 380,120 C 460,120 500,230 600,230 L 700,230" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 4" />
 
     <!-- Labels for Reactants and Products -->
     <text x="100" y="155" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">A + B</text>
     <text x="650" y="215" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">C + D</text>
     <text x="380" y="65" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Transition state</text>
     <circle cx="380" cy="80" r="4" fill="#ef4444" />
+    <circle cx="380" cy="120" r="4" fill="#10b981" />
 
-    <!-- Activation Energy Ea Arrow (Between Reactants at 170 and Peak at 80) -->
-    <line x1="380" y1="170" x2="380" y2="85" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
-    <line x1="380" y1="85" x2="380" y2="165" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
-    <text x="395" y="130" fill="#ef4444" font-size="12" font-weight="bold">Ea</text>
+    <!-- Dashed Horizontal Lines for Transition States -->
+    <line x1="250" y1="80" x2="380" y2="80" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.7" />
+    <line x1="300" y1="120" x2="380" y2="120" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.7" />
+
+    <!-- Uncatalyzed Activation Energy Ea Arrow -->
+    <line x1="250" y1="170" x2="250" y2="85" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
+    <line x1="250" y1="85" x2="250" y2="165" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
+    <text x="240" y="130" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="end">Ea (uncatalyzed)</text>
+
+    <!-- Catalyzed Activation Energy Ea Arrow -->
+    <line x1="300" y1="170" x2="300" y2="125" stroke="#10b981" stroke-width="2" marker-end="url(#profilearrow)" />
+    <line x1="300" y1="125" x2="300" y2="165" stroke="#10b981" stroke-width="2" marker-end="url(#profilearrow)" />
+    <text x="310" y="150" fill="#10b981" font-size="11" font-weight="bold">Ea (catalyzed)</text>
 
     <!-- Enthalpy Change Delta H Arrow (Between Reactants at 170 and Products at 230) -->
-    <line x1="320" y1="175" x2="320" y2="225" stroke="#f59e0b" stroke-width="2" marker-end="url(#profilearrow)" marker-start="url(#profilearrow)" />
-    <text x="335" y="205" fill="#f59e0b" font-size="12" font-weight="bold">ΔH</text>
+    <line x1="280" y1="175" x2="280" y2="225" stroke="#f59e0b" stroke-width="2" marker-end="url(#profilearrow)" marker-start="url(#profilearrow)" />
+    <text x="295" y="205" fill="#f59e0b" font-size="12" font-weight="bold">ΔH</text>
+
+    <!-- Legend -->
+    <rect x="500" y="45" width="200" height="60" rx="6" fill="#0f172a" fill-opacity="0.75" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="515" y1="65" x2="545" y2="65" stroke="#38bdf8" stroke-width="3" />
+    <text x="555" y="69" fill="#94a3b8" font-size="11" font-weight="500">Uncatalyzed pathway</text>
+    <line x1="515" y1="85" x2="545" y2="85" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 3" />
+    <text x="555" y="89" fill="#94a3b8" font-size="11" font-weight="500">Catalyzed pathway</text>
+  </g>
+</svg>`;
+
+const autocatalysisCurveSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="axisarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="labelarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Autocatalysis Rate Curve: Reactant Concentration vs. Time</text>
+  
+  <g transform="translate(150, 40)">
+    <!-- Axes -->
+    <line x1="50" y1="270" x2="50" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#axisarrow)" />
+    <line x1="50" y1="270" x2="750" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#axisarrow)" />
+    
+    <text x="30" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 30 35)" text-anchor="end">Reactant Concentration</text>
+    <text x="740" y="285" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Time</text>
+
+    <!-- Curve -->
+    <path d="M 50,70 L 120,70 C 220,70 230,90 280,150 C 330,210 380,260 550,260 L 700,260" fill="none" stroke="#38bdf8" stroke-width="3" />
+
+    <!-- Labels & Arrows -->
+    <text x="140" y="45" fill="#94a3b8" font-size="11" font-weight="500">The reaction starts off slowly without Mn2+</text>
+    <path d="M 140,50 L 100,65" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow)" />
+
+    <text x="440" y="110" fill="#10b981" font-size="11" font-weight="600">The reaction then speeds up as Mn2+ is formed</text>
+    <path d="M 430,115 L 260,130" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow)" />
+
+    <text x="560" y="210" fill="#94a3b8" font-size="11" font-weight="500">The reaction then slows down as reactants are used up</text>
+    <path d="M 560,215 L 480,240" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow)" />
   </g>
 </svg>`;
 
@@ -471,8 +525,15 @@ const maxwellBoltzmannSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 
     <pattern id="diagonalHatch2" width="10" height="10" patternTransform="rotate(-45 0 0)" patternUnits="userSpaceOnUse">
       <line x1="0" y1="0" x2="0" y2="10" stroke="#f59e0b" stroke-width="2" opacity="0.4" />
     </pattern>
+    <!-- Clip paths to constrain shading under the curves -->
+    <clipPath id="clipBlueCurve">
+      <path d="M 50,260 C 100,60 200,60 300,120 C 400,180 500,220 800,240 L 800,260 Z" />
+    </clipPath>
+    <clipPath id="clipRedCurve">
+      <path d="M 50,260 C 130,120 250,120 350,150 C 450,180 550,200 800,230 L 800,260 Z" />
+    </clipPath>
   </defs>
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Maxwell-Boltzmann Energy Distribution & Catalysis</text>
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Maxwell-Boltzmann Energy Distribution &amp; Catalysis</text>
   
   <g transform="translate(100, 40)">
     <!-- Axes -->
@@ -481,11 +542,11 @@ const maxwellBoltzmannSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 
     <text x="30" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 30 35)" text-anchor="end">Fraction of Molecules</text>
     <text x="840" y="275" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Energy (E)</text>
 
-    <!-- Shaded Areas under curves for Ea and Ea(cat) -->
-    <!-- Ea uncatalyzed at T (550px) -->
-    <!-- Ea catalyzed (380px) -->
-    <path d="M 380,260 L 380,126 Q 440,110 500,85 Q 580,50 680,30 Q 750,20 800,260 Z" fill="url(#diagonalHatch1)" />
-    <path d="M 550,260 L 550,68 Q 630,45 710,25 Q 780,15 800,260 Z" fill="url(#diagonalHatch2)" />
+    <!-- Shaded Areas under curves for Ea and Ea(cat) using clip-paths -->
+    <!-- Ea catalyzed at T (X from 380 to 800, clipped under blue curve) -->
+    <rect x="380" y="0" width="420" height="260" fill="url(#diagonalHatch1)" clip-path="url(#clipBlueCurve)" />
+    <!-- Ea uncatalyzed at T+10K (X from 550 to 800, clipped under red curve) -->
+    <rect x="550" y="0" width="250" height="260" fill="url(#diagonalHatch2)" clip-path="url(#clipRedCurve)" />
 
     <!-- Curve 1 at Temperature T (steeper, peaks early) -->
     <path d="M 50,260 C 100,60 200,60 300,120 C 400,180 500,220 800,240" fill="none" stroke="#3b82f6" stroke-width="3" />
@@ -514,12 +575,45 @@ const maxwellBoltzmannSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 
   </g>
 </svg>`;
 
+const arrheniusGraphSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">The Arrhenius Plot: ln k vs. 1/T</text>
+  
+  <g transform="translate(150, 50)">
+    <!-- Axes -->
+    <line x1="100" y1="240" x2="100" y2="30" stroke="#94a3b8" stroke-width="2" marker-end="url(#bluearrow)" />
+    <line x1="100" y1="240" x2="700" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#bluearrow)" />
+    
+    <!-- Axis Labels -->
+    <text x="50" y="130" fill="#94a3b8" font-size="12" font-weight="600" transform="rotate(-90 50 130)" text-anchor="middle">ln k</text>
+    <text x="710" y="245" fill="#94a3b8" font-size="12" font-weight="600" text-anchor="start">1/T (K⁻¹)</text>
+    
+    <!-- Arrhenius Straight Line -->
+    <line x1="100" y1="70" x2="600" y2="210" stroke="#ef4444" stroke-width="3" />
+    
+    <!-- Intercept Indicator -->
+    <circle cx="100" cy="70" r="5" fill="#ef4444" />
+    <line x1="100" y1="70" x2="160" y2="70" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="170" y="74" fill="#38bdf8" font-size="12" font-weight="bold">Intercept = ln A</text>
+    
+    <!-- Gradient Indicator -->
+    <path d="M 350,140 L 450,140 L 450,168" fill="none" stroke="#eab308" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="465" y="160" fill="#eab308" font-size="12" font-weight="bold">Gradient (m) = -Ea / R</text>
+    
+    <!-- Data Points -->
+    <circle cx="200" cy="98" r="4" fill="#f8fafc" />
+    <circle cx="300" cy="126" r="4" fill="#f8fafc" />
+    <circle cx="400" cy="154" r="4" fill="#f8fafc" />
+    <circle cx="500" cy="182" r="4" fill="#f8fafc" />
+    <circle cx="600" cy="210" r="4" fill="#f8fafc" />
+  </g>
+</svg>`;
+
 export const parts: LessonPart[] = [
-    {
-        id: 'experimental-rates-u4-l1',
-        title: 'Experimental Determination of Rates',
-        type: 'text',
-        content: `
+  {
+    id: 'experimental-rates-u4-l1',
+    title: 'Experimental Determination of Rates',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 📋 Selecting and Justifying Experimental Techniques
 > To follow a reaction, we must choose an analytical technique based on the chemical nature of the species involved, their state symbols, and their physical properties.
@@ -732,18 +826,18 @@ export const parts: LessonPart[] = [
 > 
 > ${svgToken(halfLifeSvg)}
 `,
-        keyPoints: [
-            'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
-            'Quenching stops reactions by rapid cooling or chemical neutralization; weak bases (like NaHCO3) are used to neutralize acid catalysts without causing side-hydrolysis of esters.',
-            'In colorimetry, a filter matching the complementary color of the solution (e.g., a blue filter for an orange-brown bromine solution) must be chosen to ensure maximum light absorbance.',
-            'Clock reactions use a small, limiting reagent to delay color change, allowing the calculation of initial rate (1/t) before reactant concentrations change significantly.'
-        ]
-    },
-    {
-        id: 'rate-equations-orders-u4-l1',
-        title: 'Rate Equations & Reaction Orders',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
+      'Quenching stops reactions by rapid cooling or chemical neutralization; weak bases (like NaHCO3) are used to neutralize acid catalysts without causing side-hydrolysis of esters.',
+      'In colorimetry, a filter matching the complementary color of the solution (e.g., a blue filter for an orange-brown bromine solution) must be chosen to ensure maximum light absorbance.',
+      'Clock reactions use a small, limiting reagent to delay color change, allowing the calculation of initial rate (1/t) before reactant concentrations change significantly.'
+    ]
+  },
+  {
+    id: 'rate-equations-orders-u4-l1',
+    title: 'Rate Equations & Reaction Orders',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### ⏱️ Rate of Reaction and Concentrations
 > The rate of a chemical reaction is proportional to the concentration of reactants raised to a certain power.
@@ -929,24 +1023,24 @@ export const parts: LessonPart[] = [
 > >      $$\\\\text{Rate factor} = 4 \\\\times 1 \\\\times \\\\frac{1}{2} = 2$$
 > >      *Final answer:* The overall rate of reaction doubles (increases by a factor of 2).
 `,
-        keyPoints: [
-            'Reaction orders can only be determined experimentally (e.g. using initial rates table data) and cannot be predicted from the balanced equation stoichiometry.',
-            'The rate constant k links reaction rate to concentrations at a specific temperature; its value is constant at a constant temperature but increases as temperature rises.',
-            'The units of k vary depending on the overall order of the reaction and are deduced by rearranging the rate equation.',
-            'Average rate of reaction is calculated by dividing the change in reactant/product concentration by the time interval (\\\\Delta[C]/\\\\Delta t).',
-            'Predicting the effect of changing concentration on rate involves raising the change factor to the power of the reactant order (e.g., doubling concentration for a second-order reactant increases rate by 2^2 = 4).'
-        ],
-        equationVisualizer: {
-            reactants: [['NO', '#ef4444'], ['O₂', '#3b82f6']],
-            products: [['NO₂', '#10b981']],
-            description: "Nitrogen monoxide reacts with oxygen where the rate depends on [NO]² and [O₂]"
-        }
-    },
-    {
-        id: 'reaction-mechanisms-rds-u4-l1',
-        title: 'Reaction Mechanisms & Rate-Determining Step',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Reaction orders can only be determined experimentally (e.g. using initial rates table data) and cannot be predicted from the balanced equation stoichiometry.',
+      'The rate constant k links reaction rate to concentrations at a specific temperature; its value is constant at a constant temperature but increases as temperature rises.',
+      'The units of k vary depending on the overall order of the reaction and are deduced by rearranging the rate equation.',
+      'Average rate of reaction is calculated by dividing the change in reactant/product concentration by the time interval (\\\\Delta[C]/\\\\Delta t).',
+      'Predicting the effect of changing concentration on rate involves raising the change factor to the power of the reactant order (e.g., doubling concentration for a second-order reactant increases rate by 2^2 = 4).'
+    ],
+    equationVisualizer: {
+      reactants: [['NO', '#ef4444'], ['O₂', '#3b82f6']],
+      products: [['NO₂', '#10b981']],
+      description: "Nitrogen monoxide reacts with oxygen where the rate depends on [NO]² and [O₂]"
+    }
+  },
+  {
+    id: 'reaction-mechanisms-rds-u4-l1',
+    title: 'Reaction Mechanisms & Rate-Determining Step',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### ⛓️ Multi-Step Reactions & Mechanisms
 > Most chemical reactions do not occur in a single collision. For example, consider the acidic redox reaction:
@@ -1052,22 +1146,104 @@ export const parts: LessonPart[] = [
 > >    * Cancel intermediate $\\\\text{NO}_3$ and one $\\\\text{NO}_2$ from both sides:
 > >      $$\\\\text{NO}_2 + \\\\text{CO} \\\\rightarrow \\\\text{NO} + \\\\text{CO}_2$$
 > >    * The mechanism yields the correct overall equation, proving it is consistent.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Mechanism with a Fast Pre-Equilibrium Step
+> **Question:** The oxidation of nitrogen monoxide $2\\\\text{NO(g)} + \\\\text{O}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{NO}_2\\\\text{(g)}$ has the experimental rate equation $\\\\text{Rate} = k[\\\\text{NO}]^2[\\\\text{O}_2]$. Explain how the following mechanism is consistent with this rate equation:
+> 
+> * **Step 1 (fast equilibrium):** $\\\\text{NO} + \\\\text{NO} \\\\rightleftharpoons \\\\text{N}_2\\\\text{O}_2$
+> * **Step 2 (slow / RDS):** $\\\\text{N}_2\\\\text{O}_2 + \\\\text{O}_2 \\\\rightarrow 2\\\\text{NO}_2$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the rate equation for the slow step (RDS):**
+> >    * Step 2 is the RDS, so $\\\\text{Rate} = k_2[\\\\text{N}_2\\\\text{O}_2][\\\\text{O}_2]$.
+> > 
+> > 2. **Substitute the unstable intermediate $[\\\\text{N}_2\\\\text{O}_2]$:**
+> >    * Intermediates cannot appear in final rate equations. From the fast pre-equilibrium in Step 1:
+> >      $$K_c = \\\\frac{[\\\\text{N}_2\\\\text{O}_2]}{[\\\\text{NO}]^2} \\\\implies [\\\\text{N}_2\\\\text{O}_2] = K_c [\\\\text{NO}]^2$$
+> > 
+> > 3. **Combine constants to derive the final rate equation:**
+> >    * Substitute $[\\\\text{N}_2\\\\text{O}_2]$ into the RDS rate equation:
+> >      $$\\\\text{Rate} = k_2 (K_c [\\\\text{NO}]^2) [\\\\text{O}_2] = k [\\\\text{NO}]^2 [\\\\text{O}_2]$$
+> >    * Where overall rate constant $k = k_2 \\\\times K_c$. This matches the experimental rate equation.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Identifying Catalysts vs. Intermediates from Mechanisms
+> **Question:** Stratospheric ozone depletion occurs via the following two-step mechanism:
+> 
+> * **Step 1:** $\\\\text{O}_3\\\\text{(g)} + \\\\text{Cl(g)} \\\\rightarrow \\\\text{ClO(g)} + \\\\text{O}_2\\\\text{(g)}$
+> * **Step 2:** $\\\\text{ClO(g)} + \\\\text{O(g)} \\\\rightarrow \\\\text{Cl(g)} + \\\\text{O}_2\\\\text{(g)}$
+> 
+> 1. Write the overall balanced equation for the reaction.
+> 2. Identify the **catalyst** and the **intermediate**, justifying your choices.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Overall Balanced Equation:**
+> >    * Sum both steps and cancel species appearing on both sides ($\\\\text{Cl}$ and $\\\\text{ClO}$):
+> >      $$\\\\text{O}_3\\\\text{(g)} + \\\\text{O(g)} \\\\rightarrow 2\\\\text{O}_2\\\\text{(g)}$$
+> > 
+> > 2. **Identifying Catalyst & Intermediate:**
+> >    * **Catalyst:** Chlorine free radicals ($\\\\text{Cl}$).
+> >      * *Justification:* $\\\\text{Cl}$ is consumed in Step 1 as a reactant and regenerated in Step 2 as a product. It increases the rate without being permanently used up.
+> >    * **Intermediate:** Chlorine monoxide radicals ($\\\\text{ClO}$).
+> >      * *Justification:* $\\\\text{ClO}$ is produced in Step 1 as a product and subsequently consumed in Step 2 as a reactant. It does not appear in the overall equation.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Distinguishing SN1 vs. SN2 Kinetic Data & Steric Hindrance
+> **Question:** Hydrolysis of primary 1-chlorobutane follows the rate equation $\\\\text{Rate} = k[\\\\text{C}_4\\\\text{H}_9\\\\text{Cl}][\\\\text{OH}^-]$, whereas tertiary 2-chloro-2-methylpropane follows $\\\\text{Rate} = k[\\\\text{C}_4\\\\text{H}_9\\\\text{Cl}]$.
+> 
+> 1. State the mechanism type ($S_N1$ or $S_N2$) for each compound.
+> 2. Explain why tertiary halogenoalkanes undergo $S_N1$ hydrolysis rather than $S_N2$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Mechanism Classification:**
+> >    * **1-chlorobutane:** $S_N2$ mechanism (second-order overall, bimolecular RDS involving both haloalkane and $\\\\text{OH}^-$).
+> >    * **2-chloro-2-methylpropane:** $S_N1$ mechanism (first-order overall, unimolecular RDS involving ionization of haloalkane only).
+> > 
+> > 2. **Explanation of Mechanism Preference:**
+> >    * **Steric Hindrance:** Tertiary halogenoalkanes have three bulky methyl groups surrounding the central carbon, preventing the $\\\\text{OH}^-$ nucleophile from approaching for an $S_N2$ direct attack.
+> >    * **Carbocation Stability:** The $3^\\\\circ$ carbocation formed in $S_N1$ is strongly stabilized by the electron-donating inductive effect of three alkyl groups, lowering $E_a(1)$.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Proposing a Multi-step Mechanism from Initial Rates Data
+> **Question:** A reaction between $\\\\text{A}$, $\\\\text{B}$, and $\\\\text{C}$ has the overall equation $\\\\text{A} + 2\\\\text{B} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$. Initial rates experiments show the reaction is first-order with respect to $\\\\text{A}$, first-order with respect to $\\\\text{B}$, and zero-order with respect to $\\\\text{C}$. Propose a plausible two-step mechanism.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce the rate equation:**
+> >    * $\\\\text{Rate} = k[\\\\text{A}][\\\\text{B}]$ (species $\\\\text{C}$ is zero-order and does not appear in the RDS).
+> > 
+> > 2. **Formulate Step 1 (Slow / RDS):**
+> >    * One molecule of $\\\\text{A}$ reacts with one molecule of $\\\\text{B}$ to form an intermediate $\\\\text{X}$:
+> >      $$\\\\text{Step 1 (slow / RDS): } \\\\text{A} + \\\\text{B} \\\\rightarrow \\\\text{X}$$
+> > 
+> > 3. **Formulate Step 2 (Fast step):**
+> >    * Intermediate $\\\\text{X}$ reacts with the remaining reactants ($\\\\text{B}$ and $\\\\text{C}$) to give products:
+> >      $$\\\\text{Step 2 (fast): } \\\\text{X} + \\\\text{B} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$$
+> >    * Summing Step 1 + Step 2 gives the overall stoichiometry $\\\\text{A} + 2\\\\text{B} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$.
+
 `,
-        keyPoints: [
-            'Intermediate species are never included in the final rate equation.',
-            'A reactant that does not affect the rate (zero order) must react in a fast step after the RDS.'
-        ],
-        equationVisualizer: {
-            reactants: [['NO₂', '#ef4444'], ['CO', '#3b82f6']],
-            products: [['NO', '#10b981'], ['CO₂', '#f59e0b']],
-            description: "The rate of this reaction is independent of CO concentration because CO reacts in a fast step after the RDS"
-        }
-    },
-    {
-        id: 'arrhenius-equation-u4-l1',
-        title: 'Arrhenius Equation & Activation Energy',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Intermediate species are unstable products formed in early steps and consumed in later steps; they must never appear in the final rate equation.',
+      'Reactants with a zero order of reaction do not participate in or before the rate-determining step (RDS), reacting only in subsequent fast steps.',
+      'If the RDS is preceded by a fast equilibrium step, reactants from that equilibrium will appear in the overall rate equation (resolved via Kc substitution).',
+      'A catalyst enters the reaction in an early step and is regenerated in a later step, whereas an intermediate is produced first and then consumed.',
+      'SN1 mechanisms proceed via two steps (carbocation intermediate) with a first-order rate equation, while SN2 mechanisms occur in a single transition-state step with a second-order rate equation.'
+    ],
+    description: "The rate of this reaction is independent of CO concentration because CO reacts in a fast step after the RDS"
+  },
+  {
+    id: 'arrhenius-equation-u4-l1',
+    title: 'Arrhenius Equation & Activation Energy',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🌡️ Effect of Temperature on Rate Constants
 > Increasing the temperature increases the rate of reaction by increasing the rate constant $k$. There are two reasons for this:
@@ -1076,125 +1252,233 @@ export const parts: LessonPart[] = [
 > 
 > *The increase in the fraction of molecules with sufficient energy is by far the most significant factor, while the collision frequency effect is negligible and effectively ignored.*
 > 
-> * **The Arrhenius Equation:**
+> * **The Arrhenius Equation (Exponential Form):**
 >   $$k = A e^{-\\\\frac{E_a}{RT}}$$
+> * **The Arrhenius Equation (Logarithmic Form):**
+>   $$\\\\ln k = -\\\\frac{E_a}{R} \\\\left(\\\\frac{1}{T}\\\\right) + \\\\ln A$$
 > * Where:
 >   * **$k$** = Rate constant
->   * **$A$** = Arrhenius constant (pre-exponential factor, related to collision frequency and collision orientation)
+>   * **$T$** = Absolute temperature (in Kelvin, $\\\\text{K}$)
 >   * **$E_a$** = Activation energy (in $\\\\text{J mol}^{-1}$)
 >   * **$R$** = Gas constant ($8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$)
->   * **$T$** = Temperature (in $\\\\text{Kelvin}$)
-> 
-> * **Significance of the factor $e^{-\\\\frac{E_a}{RT}}$:** This term represents the fraction of collisions that possess energy equal to or greater than $E_a$. For a reaction with $E_a = 60\\\\text{ kJ mol}^{-1}$ at $298\\\\text{ K}$, this fraction is $\\\\approx 3 \\\\times 10^{-11}$ (only one in $3 \\\\times 10^{11}$ collisions has sufficient energy to react).
+>   * **$A$** = Pre-exponential factor (Arrhenius constant, related to collision frequency and orientation)
+>   * **$e^{-\\\\frac{E_a}{RT}}$** = Represents the fraction of collisions that have energy $E \\\\ge E_a$
 > 
 > > [!TIP]
-> > ### 💡 Effect of Activation Energy Magnitude
-> > * Reactions with a **large $E_a$** are slow at room temperature, but their rate increases rapidly (highly sensitive) with an increase in temperature.
-> > * Reactions with a **small $E_a$** are fast, but their rate does not increase as rapidly with temperature.
-> > * Catalyzed reactions have smaller values of $E_a$.
+> > ### 💡 Graphical Determination of Activation Energy (Ea)
+> > By plotting $\\\\ln k$ against $\\\\frac{1}{T}$, a straight line ($y = mx + c$) is obtained:
+> > * **$y$-axis:** $\\\\ln k$
+> > * **$x$-axis:** $\\\\frac{1}{T}$ (in $\\\\text{K}^{-1}$)
+> > * **Gradient ($m$):** $-\\\\frac{E_a}{R}$
+> > * **Intercept ($c$):** $\\\\ln A$
+> > 
+> > *Assumption in Arrhenius Linearity: Although $E_a$ and $A$ vary slightly with temperature, this change is negligible compared to the effect on $k$ and is therefore ignored.*
+> 
+> > [!IMPORTANT]
+> > ### 🧮 Peroxydisulfate and Iodide Reaction Data
+> > The table shows experimental kinetics data for the reaction:
+> > $$\\\\text{S}_2\\\\text{O}_8^{2-}\\\\text{(aq)} + 2\\\\text{I}^-\\\\text{(aq)} \\\\rightarrow 2\\\\text{SO}_4^{2-}\\\\text{(aq)} + \\\\text{I}_2\\\\text{(aq)}$$
+> > 
+> > | $T$ (K) | $k$ | ln $k$ | 1/$T$ (K⁻¹) |
+> > | :--- | :--- | :--- | :--- |
+> > | 300 | 0.00513 | -5.27 | 0.00333 |
+> > | 310 | 0.00833 | -4.79 | 0.00323 |
+> > | 320 | 0.0128 | -4.36 | 0.00313 |
+> > | 330 | 0.0201 | -3.91 | 0.00303 |
+> > | 340 | 0.0301 | -3.50 | 0.00294 |
+> 
+> ${svgToken(arrheniusGraphSvg)}
 > 
 > > [!WARNING]
-> > ### ⚠️ Exam Hint
-> > You will always be given the Arrhenius equation if it is needed in an exam question.
+> > ### ⚠️ Calculations Hint
+> > When calculating $E_a$ from the gradient, your initial answer will be in $\\\\text{J mol}^{-1}$. Always convert it to $\\\\text{kJ mol}^{-1}$ by dividing by 1000 for your final exam answers.
 > 
-> ${svgToken(maxwellBoltzmannSvg)}
-> 
-> [!IMPORTANT]
-> ### 🧮 Logarithmic Form of the Arrhenius Equation
-> To analyze experimental data, we take the natural logarithm ($\\\\ln$) of both sides:
-> 
-> $$\\\\ln k = -\\\\frac{E_a}{RT} + \\\\ln A$$
-> 
-> This is in the form of a straight line equation ($y = mx + c$):
-> * **$y$-axis:** $\\\\ln k$
-> * **$x$-axis:** $\\\\frac{1}{T}$ (in $\\\\text{K}^{-1}$)
-> * **Gradient ($m$):** $-\\\\frac{E_a}{R}$
-> * **Intercept ($c$):** $\\\\ln A$
-> 
-> *Note: While it is assumed that both $E_a$ and $A$ remain constant over a range of temperatures, their small variations are insignificant compared to the overall temperature effect on the rate constant.*
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 1: Calculating Activation Energy
-> **Question:** An Arrhenius plot of $\\\\ln k$ against $\\\\frac{1}{T}$ yields a straight line with a gradient of $-1.20 \\\\times 10^4\\\\text{ K}$. Calculate the activation energy ($E_a$) of the reaction in $\\\\text{kJ mol}^{-1}$ ($R = 8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$)
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 1: Calculating Activation Energy from Experimental Data
+> > **Question:** Using the peroxydisulfate and iodide ions reaction data table above:
+> > 1. Plot a graph of $\\\\ln k$ against $\\\\frac{1}{T}$ to determine the gradient.
+> > 2. Calculate the activation energy ($E_a$) in $\\\\text{kJ mol}^{-1}$ ($R = 8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$).
 > > 
-> > 1. **State the relationship between gradient and $E_a$:**
-> >    $$\\\\text{Gradient} = -\\\\frac{E_a}{R}$$
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Determine the gradient ($m$) of the line:**
+> > >    * Choose two coordinate points from the data table:
+> > >      * $\\\\text{Point 1: } (0.00294, -3.50)$
+> > >      * $\\\\text{Point 2: } (0.00333, -5.27)$
+> > >    * Calculate the gradient:
+> > >      $$\\\\text{Gradient (m)} = \\\\frac{y_2 - y_1}{x_2 - x_1} = \\\\frac{-3.50 - (-5.27)}{0.00294 - 0.00333}$$
+> > >      $$\\\\text{Gradient (m)} = \\\\frac{1.77}{-0.00039} \\\\approx -4538\\\\text{ K}$$
+> > > 
+> > > 2. **Calculate the Activation Energy ($E_a$):**
+> > >    * Use the relationship: $\\\\text{Gradient} = -\\\\frac{E_a}{R}$
+> > >      $$-4538 = -\\\\frac{E_a}{8.31}$$
+> > >      $$E_a = 4538 \\\\times 8.31 \\\\approx 37710\\\\text{ J mol}^{-1}$$
+> > > 
+> > > 3. **Convert to $\\\\text{kJ mol}^{-1}$:**
+> > >      $$E_a = \\\\frac{37710}{1000} = 37.7\\\\text{ kJ mol}^{-1}$$
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 2: Calculating $E_a$ using Two Temperatures
+> > **Question:** The rate constant for a reaction is $1.50 \\\\times 10^{-4}\\\\text{ s}^{-1}$ at $300\\\\text{ K}$ and $7.50 \\\\times 10^{-4}\\\\text{ s}^{-1}$ at $320\\\\text{ K}$.
+> > Calculate the activation energy ($E_a$) of this reaction in $\\\\text{kJ mol}^{-1}$ ($R = 8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$).
 > > 
-> > 2. **Calculate $E_a$ in $\\\\text{J mol}^{-1}$:**
-> >    $$-1.20 \\\\times 10^4 = -\\\\frac{E_a}{8.31}$$
-> >    $$E_a = 1.20 \\\\times 10^4 \\\\times 8.31 = 9.972 \\\\times 10^4\\\\text{ J mol}^{-1}$$
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **State the two-point Arrhenius equation:**
+> > >    $$\\\\ln\\\\left(\\\\frac{k_2}{k_1}\\\\right) = -\\\\frac{E_a}{R}\\\\left(\\\\frac{1}{T_2} - \\\\frac{1}{T_1}\\\\right)$$
+> > > 
+> > > 2. **Substitute the given values into the equation:**
+> > >    * $k_1 = 1.50 \\\\times 10^{-4}\\\\text{ s}^{-1}$ at $T_1 = 300\\\\text{ K}$
+> > >    * $k_2 = 7.50 \\\\times 10^{-4}\\\\text{ s}^{-1}$ at $T_2 = 320\\\\text{ K}$
+> > >    $$\\\\ln\\\\left(\\\\frac{7.50 \\\\times 10^{-4}}{1.50 \\\\times 10^{-4}}\\\\right) = -\\\\frac{E_a}{8.31}\\\\left(\\\\frac{1}{320} - \\\\frac{1}{300}\\\\right)$$
+> > > 
+> > > 3. **Simplify both sides of the equation:**
+> > >    * Left side: $\\\\ln(5) \\\\approx 1.6094$
+> > >    * Right side temperature bracket: $\\\\frac{1}{320} - \\\\frac{1}{300} = 0.003125 - 0.003333 = -2.083 \\\\times 10^{-4}\\\\text{ K}^{-1}$
+> > >    $$1.6094 = -\\\\frac{E_a}{8.31} \\\\times (-2.083 \\\\times 10^{-4})$$
+> > > 
+> > > 4. **Solve for $E_a$:**
+> > >    $$1.6094 = E_a \\\\times \\\\frac{2.083 \\\\times 10^{-4}}{8.31}$$
+> > >    $$1.6094 = E_a \\\\times (2.507 \\\\times 10^{-5})$$
+> > >    $$E_a = \\\\frac{1.6094}{2.507 \\\\times 10^{-5}} \\\\approx 64200\\\\text{ J mol}^{-1}$$
+> > > 
+> > > 5. **Convert the activation energy to $\\\\text{kJ mol}^{-1}$:**
+> > >    $$E_a = \\\\frac{64200}{1000} = 64.2\\\\text{ kJ mol}^{-1}$$
+> 
+> > [!WARNING]
+> > ### ⚠️ Exam Pitfall: Axis Scale Factor ($\\\\times 10^{-3}\\\\text{ K}^{-1}$)
+> > In A-Level exam questions, the $x$-axis ($\\\\frac{1}{T}$) is almost always plotted as $\\\\frac{1}{T} \\\\times 10^{-3}\\\\text{ K}^{-1}$.
+> > When calculating the gradient ($\\\\frac{\\\\Delta y}{\\\\Delta x}$), students often read the coordinate difference on the $x$-axis as (for example) $0.4$ instead of $0.4 \\\\times 10^{-3}$.
+> > **Always multiply your $\\\\Delta x$ value by $10^{-3}$ (or the scale factor shown on the axis) to avoid getting an activation energy that is 1000 times too small!**
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 3: Calculating the Arrhenius Constant ($A$) and its Units
+> > **Question:** A first-order reaction has an activation energy ($E_a$) of $50.0\\\\text{ kJ mol}^{-1}$. At $298\\\\text{ K}$, the rate constant ($k$) is $3.46 \\\\times 10^{-5}\\\\text{ s}^{-1}$.
+> > Calculate the pre-exponential factor ($A$) for this reaction and state its units ($R = 8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$).
 > > 
-> > 3. **Convert to $\\\\text{kJ mol}^{-1}$:**
-> >    $$E_a = \\\\frac{9.972 \\\\times 10^4}{1000} = 99.7\\\\text{ kJ mol}^{-1}$$
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Convert $E_a$ to $\\\\text{J mol}^{-1}$:**
+> > >    * $E_a = 50.0 \\\\times 1000 = 50000\\\\text{ J mol}^{-1}$
+> > > 
+> > > 2. **Rearrange the Arrhenius equation to solve for $A$:**
+> > >    * Starting from: $k = A e^{-\\\\frac{E_a}{RT}}$
+> > >    * Rearranging gives: $A = \\\\frac{k}{e^{-\\\\frac{E_a}{RT}}} = k e^{\\\\frac{E_a}{RT}}$
+> > > 
+> > > 3. **Calculate the exponent term $\\\\frac{E_a}{RT}$:**
+> > >    $$\\\\frac{E_a}{RT} = \\\\frac{50000}{8.31 \\\\times 298} = \\\\frac{50000}{2476.38} \\\\approx 20.191$$
+> > > 
+> > > 4. **Calculate $A$:**
+> > >    $$A = 3.46 \\\\times 10^{-5} \\\\times e^{20.191}$$
+> > >    $$A = 3.46 \\\\times 10^{-5} \\\\times (5.873 \\\\times 10^{8})$$
+> > >    $$A \\\\approx 20300\\\\text{ or } 2.03 \\\\times 10^4$$
+> > > 
+> > > 5. **Determine the units of $A$:**
+> > >    * The exponential term $e^{-\\\\frac{E_a}{RT}}$ has no units (dimensionless).
+> > >    * Therefore, the units of $A$ are identical to the units of $k$.
+> > >    * Since $k$ is given in $\\\\text{s}^{-1}$, the unit of $A$ is $\\\\text{s}^{-1}$.
+> > >    * **Final Answer:** $A = 2.03 \\\\times 10^4\\\\text{ s}^{-1}$
 `,
-        keyPoints: [
-            'Always convert temperature to Kelvin (K) when using the Arrhenius equation.',
-            'Ensure the units of Ea match the gas constant units (J/mol) before converting to kJ/mol.',
-            'The exponential term represents the fraction of collisions with energy equal to or greater than the activation energy.'
-        ]
-    },
-    {
-        id: 'catalysis-autocatalysis-u4-l1',
-        title: 'Activation Energy, Catalysis & Autocatalysis',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Always convert temperature to Kelvin (K) when using the Arrhenius equation.',
+      'Ensure the units of Ea match the gas constant units (J/mol) before converting to kJ/mol.',
+      'The exponential term represents the fraction of collisions with energy equal to or greater than the activation energy.'
+    ]
+  },
+  {
+    id: 'catalysis-autocatalysis-u4-l1',
+    title: 'Activation Energy, Catalysis & Autocatalysis',
+    type: 'text',
+    content: `
 > [!NOTE]
-> ### ⚡ Activation Energy ($E_a$) and Transition States
-> * **Activation Energy ($E_a$):** The minimum energy that colliding particles must possess for a reaction to occur.
-> * **Transition State:** The unstable, high-energy state at the peak of the reaction profile diagram. Once reached, reactants can form products and release energy.
-> * **Catalysts:** Substances that increase the reaction rate by providing an alternative reaction route with a lower activation energy, while remaining chemically unchanged at the end of the reaction.
+> ### ⚡ Catalysts and Activation Energy
+> A catalyst is a substance that increases the rate of a chemical reaction by providing an alternative reaction pathway with a lower activation energy ($E_a$), while remaining chemically unchanged at the end of the reaction. There are two main types of catalysts: homogeneous and heterogeneous.
 > 
 > ${svgToken(activationEnergyProfileSvg)}
 
 > [!BOX]
-> ### 🧪 Homogeneous vs. Heterogeneous Catalysis
+> ### 🧪 Homogeneous Catalysis
+> A homogeneous catalyst is in the **same phase** as the reactants (typically all in aqueous solution or all in the gas phase).
 > 
-> 1. **Homogeneous Catalysts:**
->    * The catalyst is in the **same phase** as the reactants.
->    * **Example (Ozone depletion):** Chlorine radicals ($\\\\text{Cl}\\\\bullet$) in the gas phase catalyze the decomposition of ozone gas ($\\\\text{O}_3$):
->      $$\\\\text{Cl}\\\\bullet\\\\text{(g)} + \\\\text{O}_3\\\\text{(g)} \\\\rightarrow \\\\text{ClO}\\\\bullet\\\\text{(g)} + \\\\text{O}_2\\\\text{(g)}$$
->      $$\\\\text{ClO}\\\\bullet\\\\text{(g)} + \\\\text{O}_3\\\\text{(g)} \\\\rightarrow 2\\\\text{O}_2\\\\text{(g)} + \\\\text{Cl}\\\\bullet\\\\text{(g)}$$
->    * **Example (Peroxydisulfate + Iodide):** Catalyzed by $\\\\text{Fe}^{2+}\\\\text{(aq)}$ or $\\\\text{Fe}^{3+}\\\\text{(aq)}$ ions in solution.
->      *Thermodynamic feasibility is predicted by $E^\\\\circ$ electrode potentials, but the kinetics are accelerated because both steps have lower activation energy than the uncatalyzed reaction.*
+> * **Mechanism:** Transition metal homogeneous catalysts work by temporarily changing oxidation states, forming intermediate species, and providing a pathway with a lower activation energy.
+> * **Key Examples:**
+>   1. **Acid Catalysis:** Many reactions in aqueous solution are catalyzed by H⁺ ions.
+>   2. **Chlorine Radicals in Gas Phase:** UV light breaks C-Cl bonds in CFCs to form chlorine radicals, which catalyze ozone depletion:
+>      * CF₂Cl₂ (g) → •CF₂Cl (g) + Cl• (g)
+>      * Cl• (g) + O₃ (g) → •ClO (g) + O₂ (g)
+>      * •ClO (g) + O₃ (g) → 2O₂ (g) + Cl• (g)
+>   3. **Peroxydisulfate and Iodide Reaction:** Catalyzed by Fe²⁺(aq) or Fe³⁺(aq) ions:
+>      * **Overall Reaction:** S₂O₈²⁻(aq) + 2I⁻(aq) → 2SO₄²⁻(aq) + I₂(aq)
+>      * **Step 1:** S₂O₈²⁻(aq) + 2Fe²⁺(aq) → 2SO₄²⁻(aq) + 2Fe³⁺(aq)
+>      * **Step 2:** 2Fe³⁺(aq) + 2I⁻(aq) → 2Fe²⁺(aq) + I₂(aq)
+>      * *The overall reaction is slow because it requires collision between two negatively charged reactants (S₂O₈²⁻ and I⁻) which repel each other. The iron catalyst provides steps with collisions between oppositely charged species, greatly lowering the activation energy.*
+>   4. **Cobalt(II) Salts:** Co²⁺ acts as a homogeneous catalyst in the reaction between potassium sodium tartrate and hydrogen peroxide (H₂O₂). The cobalt ions change color from pink to green (temporary oxidation state change) and back to pink.
+>   5. **The Enzyme Urease:** A highly specific biological homogeneous catalyst that speeds up the hydrolysis of urea into ammonia (NH₃) and carbon dioxide (CO₂)). Structurally related molecules like thiourea can act as competitive inhibitors.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Explaining Homogeneous Catalysis
+> **Question:** Explain why the reaction between iodide ions ($\\\\text{I}^-$) and peroxydisulfate ions ($\\\\text{S}_2\\\\text{O}_8^{2-}$) is very slow at room temperature without a catalyst, and write two equations to show how $\\\\text{Fe}^{2+}\\\\text{(aq)}$ ions act as a homogeneous catalyst.
 > 
-> 2. **Heterogeneous Catalysts:**
->    * The catalyst is in a **different phase** from the reactants.
->    * **Mechanism (Adsorption, Reaction, Desorption):**
->      1. **Adsorption:** Reactant molecules are adsorbed onto active sites on the solid catalyst surface.
->      2. **Reaction:** Reactant bonds are weakened, and molecules are held in positions that enable them to react together.
->      3. **Desorption:** Product molecules leave the surface.
->    * **Industrial Examples:**
->      * **Haber Process:** Iron solid catalyst forms an *interstitial hydride* with hydrogen molecules, where hydrogen atoms are held in spaces between metal ions in the lattice, allowing them to react with adsorbed nitrogen.
->      * **Contact Process:** Solid vanadium(V) oxide ($\\\\text{V}_2\\\\text{O}_5$) catalyst.
->      * **Catalytic Converters:** Three-way catalytic converters in cars convert toxic gases.
->    * **Efficiency Factors:**
->      * **Poisoning:** Trace impurities block active sites (e.g., sulfur poisons nickel catalysts in alkene hydrogenation; lead poisons catalytic converters).
->      * **Promoters:** Additives that increase efficiency by producing active sites (e.g., $\\\\text{K}_2\\\\text{O}$ and $\\\\text{Al}_2\\\\text{O}_3$ in the Haber Process).
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain the high activation energy of the uncatalyzed reaction:**
+> >    * Both reactant species, $\\\\text{I}^-$ and $\\\\text{S}_2\\\\text{O}_8^{2-}$, are negatively charged ions.
+> >    * They experience strong electrostatic repulsion when they approach each other, which creates a very high activation energy barrier.
+> > 
+> > 2. **Explain the role of the iron catalyst:**
+> >    * $\\\\text{Fe}^{2+}$ is a positively charged ion, which attracts the negatively charged reactant ions, avoiding electrostatic repulsion.
+> >    * Iron is a transition metal that can readily change its oxidation state between $+2$ and $+3$.
+> > 
+> > 3. **Write the equation for Step 1 (oxidation of the catalyst):**
+> >    * The $\\\\text{Fe}^{2+}$ ions react with $\\\\text{S}_2\\\\text{O}_8^{2-}$ first:
+> >      $$\\\\text{S}_2\\\\text{O}_8^{2-}\\\\text{(aq)} + 2\\\\text{Fe}^{2+}\\\\text{(aq)} \\\\rightarrow 2\\\\text{SO}_4^{2-}\\\\text{(aq)} + 2\\\\text{Fe}^{3+}\\\\text{(aq)}$$
+> > 
+> > 4. **Write the equation for Step 2 (regeneration of the catalyst):**
+> >    * The newly formed $\\\\text{Fe}^{3+}$ ions then oxidize the iodide ions, regenerating $\\\\text{Fe}^{2+}$:
+> >      $$2\\\\text{Fe}^{3+}\\\\text{(aq)} + 2\\\\text{I}^-\\\\text{(aq)} \\\\rightarrow 2\\\\text{Fe}^{2+}\\\\text{(aq)} + \\\\text{I}_2\\\\text{(aq)}$$
+
+> [!BOX]
+> ### 🏭 Heterogeneous Catalysis
+> A heterogeneous catalyst is in a **different phase** from the reactants (most commonly a solid catalyst with gaseous or liquid reactants).
+> 
+> * **The Three Stages of Heterogeneous Catalysis:**
+>   1. **Adsorption:** Reactant molecules form weak bonds with active sites on the solid catalyst surface.
+>   2. **Reaction:** The bonds within the reactant molecules are weakened/broken, and new bonds are formed to create the products.
+>   3. **Desorption:** The product molecules break their bonds to the surface active sites and diffuse away.
+> * **Key Industrial Examples:**
+>   * **Haber Process:** Solid iron (Fe) catalyst.
+>     N₂ (g) + 3H₂ (g) ⇌ 2NH₃ (g)
+>   * **Contact Process:** Solid vanadium(V) oxide (V₂O₅) catalyst.
+>     2SO₂ (g) + O₂ (g) ⇌ 2SO₃ (g)
+>   * **Catalytic Converters:** Platinum (Pt), palladium (Pd), and rhodium (Rh) catalysts.
+>     2CO (g) + 2NO (g) → 2CO₂ (g) + N₂ (g)
+> * **Promoters and Poisoning:**
+>   * **Promoters:** Additives that increase catalyst efficiency by creating more active sites (e.g., potassium oxide and aluminum oxide in the Haber process).
+>   * **Poisoning:** Impurities (such as sulfur) adsorb irreversibly to active sites, blocking them and making the catalyst ineffective.
+
+> [!IMPORTANT]
+> ### 🧲 Adsorption Strength & Catalyst Selection
+> For a heterogeneous catalyst to be effective, the strength of adsorption of reactants onto the solid surface must be optimized:
+> * **Too Strong (e.g., Tungsten, W):** Reactants form very strong chemical bonds with the surface. They become immobile on the active sites, and products cannot desorb (leave the surface). This blocks the active sites and stops further reaction.
+> * **Too Weak (e.g., Silver, Ag):** Reactants do not adsorb strongly enough, meaning bonds in the reactants are not weakened, and they do not remain on the surface long enough to react.
+> * **Intermediate Strength (e.g., Pt, Pd, Fe):** Reactants adsorb strongly enough to weaken their internal bonds and hold them in place to react, but weakly enough to allow the products to desorb easily.
 
 > [!BOX]
 > ### 🔄 Autocatalysis
-> * **Definition:** When one of the reaction products acts as a catalyst for the reaction.
+> * **Definition:** A reaction where one of the products acts as a catalyst for the reaction.
 > * **Example:** The oxidation of ethanedioic acid by manganate(VII) ions, catalyzed by the product manganese(II) ions ($\\\\text{Mn}^{2+}$):
 >   $$5\\\\text{(COOH)}_2\\\\text{(aq)} + 2\\\\text{MnO}_4^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 10\\\\text{CO}_2\\\\text{(g)} + 2\\\\text{Mn}^{2+}\\\\text{(aq)} + 8\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
-> * **Autocatalytic Rate Curve:**
->   * **Initially slow:** There is no $\\\\text{Mn}^{2+}$ present to catalyze the reaction.
->   * **Speeds up:** As $\\\\text{Mn}^{2+}$ is produced, it catalyzes the reaction, causing a rapid increase in rate.
->   * **Slows down:** The rate decreases as reactant concentrations are depleted.
+> * **The Autocatalytic Rate Curve (S-Curve):**
+>   1. **Initially slow:** The rate is low at the start because there is no $\\\\text{Mn}^{2+}$ catalyst present.
+>   2. **Rapid acceleration:** As $\\\\text{Mn}^{2+}$ is produced, it catalyzes the reaction, causing the rate to increase rapidly (steep curve).
+>   3. **Deceleration:** The rate slows down as reactants are depleted, eventually stopping when a reactant is fully consumed.
 > 
-> > [!WARNING]
-> > ### ⚠️ Autocatalytic Graph Trap
-> > Do not assume that every sigmoidal (S-shaped) rate curve represents autocatalysis. Similar shapes can be caused by:
-> > 1. Strongly exothermic reactions (where heat released increases the rate).
-> > 2. Slow initial penetration/wetting of a solid reactant surface by a liquid.
-`,
-        keyPoints: [
-            'Homogeneous catalysts are in the same phase as reactants; heterogeneous catalysts are in a different phase.',
-            'Heterogeneous catalysis involves adsorption of reactants onto active sites, reaction, and desorption of products.',
-            'Catalytic poisoning occurs when impurities block active sites, whereas promoters increase the number of active sites.',
-            'In autocatalysis, the reaction starts slowly, accelerates as the catalyst product forms, and then slows down as reactants are depleted.'
-        ]
-    }
+> ${svgToken(autocatalysisCurveSvg)}
+
+    ]
+  }
 ];
