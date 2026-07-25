@@ -990,12 +990,12 @@ export const parts: LessonPart[] = [
 > > [!TIP]
 > > ### 🧮 Theoretical Example of RDS
 > > Consider a multi-step reaction:
-> > $$\text{A} + \text{B} + \text{C} \rightarrow \text{D} + \text{E}$$
+> > $$\\\\text{A} + \\\\text{B} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$$
 > > If the experimentally determined rate equation is:
-> > $$\text{Rate} = k[\text{A}]^m[\text{B}]^n$$
-> > This tells us that species $\text{A}$ and $\text{B}$ must be involved in or before the rate-determining step, while reactant $\text{C}$ participates only in a subsequent fast step.
-> > * **Step 1 (Slow / RDS):** $\text{A} + \text{B} \rightarrow \text{Z}$
-> > * **Step 2 (Fast):** $\text{Z} + \text{C} \rightarrow \text{D} + \text{E}$
+> > $$\\\\text{Rate} = k[\\\\text{A}]^m[\\\\text{B}]^n$$
+> > This tells us that species $\\\\text{A}$ and $\\\\text{B}$ must be involved in or before the rate-determining step, while reactant $\\\\text{C}$ participates only in a subsequent fast step.
+> > * **Step 1 (Slow / RDS):** $\\\\text{A} + \\\\text{B} \\\\rightarrow \\\\text{Z}$
+> > * **Step 2 (Fast):** $\\\\text{Z} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$
 > 
 >  > [!IMPORTANT]
 >  > ### 🗮️ Rules for Connecting Mechanisms to Rate Equations
@@ -1023,13 +1023,13 @@ export const parts: LessonPart[] = [
 >    * **RDS Activation Energy:** The activation energy for the first step (ionization to form the carbocation) is much higher than the second step ($E_a(1) > E_a(2)$), making it the rate-determining step.
 >    * **Inductive Effect:** Alkyl groups donate electrons towards the carbocation carbon, stabilizing the $3^\\\\circ$ carbocation intermediate far more than a $1^\\\\circ$ one. This dramatically lowers $E_a(1)$. Thus, SN1 rates increase in the order: $1^\\\\circ < 2^\\\\circ < 3^\\\\circ$.
 > 
-> *Secondary halogenoalkanes react via a mixture of both SN1 and SN2 mechanisms.*
+> *Secondary halogenoalkane hydrolysis proceeds via a mixture of both SN1 and SN2 mechanisms.*
 > 
 > ${svgToken(reactionEnergyProfilesSvg)}
-> 
+
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Deducing a Mechanism from a Rate Equation
-> **Question:** The reaction $\\\\text{NO}_2\\\\text{(g)} + \\\\text{CO(g)} \\\\rightarrow \\\\text{NO(g)} + \\\\text{CO}_2\\\\text{(g)}$ has the experimental rate equation $\\\\text{Rate} = k[\\\\text{NO}_2]^2$. Explain why the following two-step mechanism is consistent with the rate equation:
+> **Question:** The reaction $\\\\text{NO}_2\\\\text{(g)} + \\\\text{CO(g)} \\\\rightarrow \\\\text{NO(g)} + \\\\text{CO}_2\\\\text{(g)}$ has the experimental rate equation $\\\\text{Rate} = k[\\\\text{NO}_2]\\\^2 . $ Explain why the following two-step mechanism is consistent with the rate equation:
 > 
 > * **Step 1 (slow):** $\\\\text{NO}_2 + \\\\text{NO}_2 \\\\rightarrow \\\\text{NO}_3 + \\\\text{NO}$
 > * **Step 2 (fast):** $\\\\text{NO}_3 + \\\\text{CO} \\\\rightarrow \\\\text{NO}_2 + \\\\text{CO}_2$
