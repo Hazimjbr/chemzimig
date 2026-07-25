@@ -1393,11 +1393,19 @@ export const parts: LessonPart[] = [
     title: 'Activation Energy, Catalysis & Autocatalysis',
     type: 'text',
     content: `
-> [!NOTE]
+> [!BOX]
 > ### ⚡ Catalysts and Activation Energy
 > A catalyst is a substance that increases the rate of a chemical reaction by providing an alternative reaction pathway with a lower activation energy ($E_a$), while remaining chemically unchanged at the end of the reaction. There are two main types of catalysts: homogeneous and heterogeneous.
 > 
 > ${svgToken(activationEnergyProfileSvg)}
+
+> [!BOX]
+> ### 🧪 Why Transition Metals make Excellent Catalysts
+> Transition metals and their compounds are widely used as catalysts due to three main features:
+> 1. **Partially filled d-orbitals:** They can accept electron density from reactant molecules, helping to weaken their chemical bonds.
+> 2. **Variable oxidation states:** They can easily gain or lose electrons, allowing them to participate in oxidation-reduction cycles (such as $\\\\text{Fe}^{2+}/\\\\text{Fe}^{3+}$ in homogeneous catalysis) to form intermediate compounds.
+> 3. **Ability to form coordinate bonds:** The surface of transition metals has active sites where reactants can adsorb through temporary dative covalent bonds.
+
 
 > [!BOX]
 > ### 🧪 Homogeneous Catalysis
@@ -1419,7 +1427,7 @@ export const parts: LessonPart[] = [
 >   5. **The Enzyme Urease:** A highly specific biological homogeneous catalyst that speeds up the hydrolysis of urea into ammonia (NH₃) and carbon dioxide (CO₂)). Structurally related molecules like thiourea can act as competitive inhibitors.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Explaining Homogeneous Catalysis
+> #### 📝 Worked Example 1: Explaining Homogeneous Catalysis
 > **Question:** Explain why the reaction between iodide ions ($\\\\text{I}^-$) and peroxydisulfate ions ($\\\\text{S}_2\\\\text{O}_8^{2-}$) is very slow at room temperature without a catalyst, and write two equations to show how $\\\\text{Fe}^{2+}\\\\text{(aq)}$ ions act as a homogeneous catalyst.
 > 
 > > [!TIP]
@@ -1454,11 +1462,13 @@ export const parts: LessonPart[] = [
 >     N₂ (g) + 3H₂ (g) ⇌ 2NH₃ (g)
 >   * **Contact Process:** Solid vanadium(V) oxide (V₂O₅) catalyst.
 >     2SO₂ (g) + O₂ (g) ⇌ 2SO₃ (g)
->   * **Catalytic Converters:** Platinum (Pt), palladium (Pd), and rhodium (Rh) catalysts.
->     2CO (g) + 2NO (g) → 2CO₂ (g) + N₂ (g)
+>   * **Catalytic Converters:** Platinum (Pt), palladium (Pd), and rhodium (Rh) catalysts used in car exhaust systems to convert pollutant gases into less harmful ones:
+>     * **Reduction/Oxidation Reaction:** $$2\\\\text{CO(g)} + 2\\\\text{NO(g)} \\\\rightarrow 2\\\\text{CO}_2\\\\text{(g)} + \\\\text{N}_2\\\\text{(g)}$$
+>     * **Hydrocarbon Combustion:** $$\\\\text{C}_8\\\\text{H}_{18}\\\\text{(g)} + 12.5\\\\text{O}_2\\\\text{(g)} \\\\rightarrow 8\\\\text{CO}_2\\\\text{(g)} + 9\\\\text{H}_2\\\\text{O(g)}$$
 > * **Promoters and Poisoning:**
 >   * **Promoters:** Additives that increase catalyst efficiency by creating more active sites (e.g., potassium oxide and aluminum oxide in the Haber process).
->   * **Poisoning:** Impurities (such as sulfur) adsorb irreversibly to active sites, blocking them and making the catalyst ineffective.
+>   * **Poisoning:** Impurities (such as sulfur, or lead from leaded petrol in catalytic converters) adsorb irreversibly to active sites, blocking them and making the catalyst permanently ineffective.
+
 
 > [!IMPORTANT]
 > ### 🧲 Adsorption Strength & Catalyst Selection
@@ -1466,6 +1476,25 @@ export const parts: LessonPart[] = [
 > * **Too Strong (e.g., Tungsten, W):** Reactants form very strong chemical bonds with the surface. They become immobile on the active sites, and products cannot desorb (leave the surface). This blocks the active sites and stops further reaction.
 > * **Too Weak (e.g., Silver, Ag):** Reactants do not adsorb strongly enough, meaning bonds in the reactants are not weakened, and they do not remain on the surface long enough to react.
 > * **Intermediate Strength (e.g., Pt, Pd, Fe):** Reactants adsorb strongly enough to weaken their internal bonds and hold them in place to react, but weakly enough to allow the products to desorb easily.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Heterogeneous Catalysis and Catalyst Poisoning
+> **Question:** In a catalytic converter, pollutant gases such as carbon monoxide ($\\\\text{CO}$) and nitrogen monoxide ($\\\\text{NO}$) react on the surface of a platinum catalyst.
+> 1. Describe the three stages of this heterogeneous catalysis.
+> 2. Explain why leaded petrol must not be used in cars equipped with catalytic converters.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Describe the three stages of the reaction on the catalyst surface:**
+> >    * **Adsorption:** Reactant molecules ($\\\\text{CO}$ and $\\\\text{NO}$) form weak bonds with the active sites on the platinum surface. This brings the reactants closer together and weakens their covalent bonds.
+> >    * **Reaction:** The weakened bonds break, and new covalent bonds form to produce carbon dioxide ($\\\\text{CO}_2$) and nitrogen ($\\\\text{N}_2$).
+> >    * **Desorption:** The product molecules ($\\\\text{CO}_2$ and $\\\\text{N}_2$) break their bonds with the platinum surface and diffuse away, freeing up the active sites for new reactant molecules.
+> > 
+> > 2. **Explain the effect of leaded petrol (poisoning):**
+> >    * Lead compounds from the fuel adsorb irreversibly and very strongly onto the active sites of the platinum catalyst.
+> >    * This blocks the active sites, preventing reactant molecules ($\\\\text{CO}$ and $\\\\text{NO}$) from adsorbing.
+> >    * The catalyst is "poisoned" and becomes permanently ineffective.
 
 > [!BOX]
 > ### 🔄 Autocatalysis
@@ -1479,6 +1508,45 @@ export const parts: LessonPart[] = [
 > 
 > ${svgToken(autocatalysisCurveSvg)}
 
+> [!BOX]
+> ### ⚖️ Comparing Homogeneous & Heterogeneous Catalysis
+> | Feature | Homogeneous Catalysis | Heterogeneous Catalysis |
+> | :--- | :--- | :--- |
+> | Phase of Catalyst | Same phase as reactants | Different phase from reactants |
+> | Reaction Site | Throughout the entire volume of the mixture | Only on the solid catalyst surface |
+> | Ease of Separation | Hard and expensive to separate from products | Easy to separate (usually by filtration or simple flow-through) |
+> | Industrial Use | Less preferred for continuous processes | Highly preferred for large-scale continuous processes |
+> | Risk of Poisoning | Low | High (active sites easily blocked by impurities) |
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Explaining Autocatalysis and its Mechanism
+> **Question:** In the oxidation of ethanedioic acid by acidified potassium manganate(VII) solution:
+> 1. Explain why the reaction is initially slow.
+> 2. Write two equations showing how $\\\\text{Mn}^{2+}$ acts as an autocatalyst.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain the initial slow rate:**
+> >    * The reaction is between two negatively charged ions ($\\\\text{MnO}_4^-$ and $\\\\text{C}_2\\\\text{O}_4^{2-}$).
+> >    * These ions repel each other, leading to a high activation energy.
+> >    * Initially, no catalyst ($\\\\text{Mn}^{2+}$) is present to lower the activation energy.
+> > 
+> > 2. **Write the first step of the catalytic mechanism:**
+> >    * The $\\\\text{MnO}_4^-$ ions react with the produced $\\\\text{Mn}^{2+}$ catalyst to form intermediate manganese ions in a lower oxidation state (e.g., $+3$):
+> >      $$4\\\\text{Mn}^{2+}\\\\text{(aq)} + \\\\text{MnO}_4^-\\\\text{(aq)} + 8\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 5\\\\text{Mn}^{3+}\\\\text{(aq)} + 4\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
+> > 
+> > 3. **Write the second step of the catalytic mechanism:**
+> >    * The intermediate $\\\\text{Mn}^{3+}$ ions then oxidize the ethanedioate ions, regenerating the $\\\\text{Mn}^{2+}$ catalyst:
+> >      $$2\\\\text{Mn}^{3+}\\\\text{(aq)} + \\\\text{C}_2\\\\text{O}_4^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{Mn}^{2+}\\\\text{(aq)} + 2\\\\text{CO}_2\\\\text{(g)}$$
+
+
+`,
+    keyPoints: [
+      'Homogeneous catalysts are in the same phase as reactants; heterogeneous catalysts are in a different phase.',
+      'Heterogeneous catalysis involves adsorption of reactants onto active sites, reaction, and desorption of products.',
+      'Catalytic poisoning occurs when impurities block active sites, whereas promoters increase the number of active sites.',
+      'In autocatalysis, the reaction starts slowly, accelerates as the catalyst product forms, and then slows down as reactants are depleted.'
     ]
   }
 ];
