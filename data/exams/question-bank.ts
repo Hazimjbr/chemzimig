@@ -2254,5 +2254,77 @@ questionBank.push(
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_24-20260726",
+    question: "In an iodine clock reaction, a small, constant amount of sodium thiosulfate is added to the reaction mixture along with starch indicator. The initial rate of reaction is approximated as $1/t$, where $t$ is the time taken for the blue-black color to appear. Under which condition is this approximation mathematically valid?",
+    options: [
+      { text: "Only when the concentrations of the reactants remain essentially constant during the timed period (typically less than 10-15% of the reaction has completed)." },
+      { text: "Only when the reaction is zero-order with respect to all reactants." },
+      { text: "Only when the concentration of the sodium thiosulfate is equal to the concentration of the starch indicator." },
+      { text: "Only when the reaction reaches dynamic equilibrium before the color change occurs." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The initial rate is defined as the rate at the very start of the reaction ($t=0$).\n2. The approximation $\\text{Rate} \\approx \\Delta[\\text{Product}] / \\Delta t \\approx 1/t$ assumes that the rate does not change significantly during the measured time interval $t$.\n3. For this assumption to hold true, only a tiny fraction of the reactants should be consumed (usually under 10-15%), so that reactant concentrations, and therefore the rate itself, remain virtually constant.\n4. If too much reactant is consumed, the rate slows down significantly during the timing interval, making the average rate ($1/t$) a poor approximation of the true initial rate.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_25-20260726",
+    question: "A certain chemical reaction has a very large, negative Gibbs free energy change ($\\Delta G = -450\\text{ kJ mol}^{-1}$) at room temperature, yet when reactants are mixed in a beaker, no reaction is observed. Which statement correctly explains this observation?",
+    options: [
+      { text: "The reaction is thermodynamically unstable but kinetically stable due to a very high activation energy ($E_a$)." },
+      { text: "The reaction is thermodynamically stable but kinetically unstable." },
+      { text: "The reaction is endothermic, so it cannot proceed without constant heating." },
+      { text: "The rate constant $k$ is extremely large, causing the reaction to complete instantly before observation." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. A negative $\\Delta G$ indicates that the reaction is thermodynamically feasible and spontaneous.\n2. However, thermodynamics only tells us about the feasibility and position of equilibrium, not how fast the reaction occurs.\n3. If the reaction has a very high activation energy ($E_a$), the rate constant $k$ will be practically zero at room temperature, meaning the reaction is kinetically stable (extremely slow).\n4. Therefore, it does not happen at a measurable rate under standard conditions.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_26-20260726",
+    question: "The acid-catalyzed iodination of propanone is monitored experimentally. The overall equation is:\n\n$$\\text{CH}_3\\text{COCH}_3 + \\text{I}_2 \\xrightarrow{\\text{H}^+} \\text{CH}_3\\text{COCH}_2\\text{I} + \\text{H}^+ + \\text{I}^-$$\n\nThe rate equation is found to be: Rate = $k[\\text{CH}_3\\text{COCH}_3][\\text{H}^+]$. Why does the hydrogen ion ($\\text{H}^+$) appear in the rate equation even though it is a catalyst and is not consumed overall?",
+    options: [
+      { text: "Because the catalyst is involved in the rate-determining step of the reaction mechanism, and its concentration affects the rate." },
+      { text: "Because the reaction is heterogeneous and the catalyst is in the same phase as the reactants." },
+      { text: "Because catalysts change the equilibrium constant of the reaction, shifting the position to the right." },
+      { text: "Because the rate equation must contain every species present in the overall chemical equation." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. A catalyst speed up a reaction by providing an alternative pathway with a lower activation energy.\n2. If the catalyst is involved in the slow, rate-determining step (such as protonating propanone in the first step), its concentration will directly determine the rate of this step.\n3. Therefore, the catalyst concentration must appear in the rate equation.\n4. Species that are not involved in or before the rate-determining step (like $\\text{I}_2$ in this case) do not appear in the rate equation.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_27-20260726",
+    question: "In the Arrhenius equation, $k = A e^{-E_a/RT}$, what are the units of the pre-exponential factor ($A$) for a second-order reaction?",
+    options: [
+      { text: "$\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" },
+      { text: "$\\text{s}^{-1}$" },
+      { text: "$\\text{dm}^6\\text{ mol}^{-2}\\text{ s}^{-1}$" },
+      { text: "It is dimensionless (has no units)." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The term $e^{-E_a/RT}$ is a ratio of energies (since $E_a$ and $RT$ both have units of $\\text{J mol}^{-1}$), meaning it is dimensionless (has no units).\n2. Therefore, the pre-exponential factor ($A$) must have the exact same units as the rate constant ($k$).\n3. For a second-order reaction (Rate = $k[\\text{Reactant}]^2$), the units of $k$ are: $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.\n4. Thus, the units of $A$ are also $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
   }
 );

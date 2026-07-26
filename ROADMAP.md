@@ -107,7 +107,7 @@
 | ✅ | Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (6 أجزاء + 17 سؤال امتحاني) | 100% |
 | ✅ | Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (5 أجزاء + 17 سؤال امتحاني) | 100% |
 | ✅ | Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (7 أجزاء + 27 سؤال امتحاني) | 100% |
-| 🔄 | بنك أسئلة ومحتوى المناهج البريطانية وتدقيقها (Edexcel Topics المتبقية) | قيد التطوير |
+| 🔄 | بنك أسئلة ومحتوى المناهج البريطانية وتدقيقها (تم إدراج 42 سؤالاً لـ Edexcel Topics المتبقية) | قيد التطوير |
 | 🔄 | حزمة التحسينات الهيكلية والأمنية (Structural & Security Improvements) | قيد التخطيط |
 | 🔄 | تحويل المنصة لتطبيق أوفلاين (PWA) | قيد التخطيط |
 | 🔄 | حجز الدومين والدفاع السحابي (Cloudflare) | قيد التخطيط |
