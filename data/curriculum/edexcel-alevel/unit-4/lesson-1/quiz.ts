@@ -346,5 +346,49 @@ export const lessonQuiz = [
       { text: "The rate constant at infinite temperature.", isCorrect: false }
     ],
     explanation: "The pre-exponential factor (A), also called the frequency factor, has two components:\n1. The frequency of collisions between reactant molecules\n2. The fraction of collisions that have the correct orientation for the reaction to occur\nThe term e^(-Ea/RT) represents the fraction of collisions that have energy ≥ Ea (activation energy)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260726-31",
+    question: "In the heterogeneous catalytic hydrogenation of alkenes, metals like tungsten (W) and silver (Ag) are poor catalysts compared to nickel (Ni) or platinum (Pt). Which of the following statements correctly explains this observation?",
+    options: [
+      { text: "Tungsten adsorbs reactant molecules too weakly, whereas silver adsorbs them too strongly.", isCorrect: false },
+      { text: "Tungsten adsorbs reactant molecules too strongly, blocking active sites, whereas silver adsorbs them too weakly to weaken their bonds.", isCorrect: true },
+      { text: "Both tungsten and silver poison the catalyst by forming permanent covalent bonds with nickel.", isCorrect: false },
+      { text: "Silver has a higher density than tungsten, preventing reactants from diffusing to the surface.", isCorrect: false }
+    ],
+    explanation: "• For a heterogeneous catalyst to be effective, the adsorption of reactants must be of intermediate strength.\n• If adsorption is too strong (e.g., tungsten), the reactant molecules are bound too tightly and cannot move on the surface or desorb, blocking active sites.\n• If adsorption is too weak (e.g., silver), the reactants are not held on the surface long enough and their internal bonds are not sufficiently weakened to react."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260726-32",
+    question: "The acid-catalyzed iodination of propanone has the rate equation: Rate = k[propanone][H⁺]. If the concentration of iodine is tripled, what is the effect on the rate of reaction, and what does this indicate about the reaction mechanism?",
+    options: [
+      { text: "The rate is tripled; iodine is involved in the rate-determining step.", isCorrect: false },
+      { text: "The rate remains unchanged; iodine is involved in a fast step after the rate-determining step.", isCorrect: true },
+      { text: "The rate is tripled; iodine acts as a catalyst in the reaction.", isCorrect: false },
+      { text: "The rate remains unchanged; iodine is not involved in any step of the reaction mechanism.", isCorrect: false }
+    ],
+    explanation: "• Since iodine does not appear in the rate equation, the order of reaction with respect to iodine is zero.\n• Therefore, changing the concentration of iodine has no effect on the overall rate of the reaction.\n• This indicates that iodine is involved in a fast step of the mechanism that occurs after the slow, rate-determining step."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260726-33",
+    question: "A student wants to determine the instantaneous rate of a reaction at exactly 60 seconds using a concentration-time graph. What is the correct procedure to achieve this?",
+    options: [
+      { text: "Divide the initial concentration by 60 seconds.", isCorrect: false },
+      { text: "Draw a tangent to the curve at t = 60 seconds and calculate the gradient of this tangent.", isCorrect: true },
+      { text: "Divide the concentration at 60 seconds by 60.", isCorrect: false },
+      { text: "Find the time when the concentration is halved and calculate ln(2) divided by that time.", isCorrect: false }
+    ],
+    explanation: "• The instantaneous rate at any specific time is equal to the gradient of the concentration-time curve at that precise point.\n• This is determined by drawing a tangent line to the curve at that time (t = 60 s) and calculating its gradient (change in concentration divided by change in time)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260726-34",
+    question: "A first-order reaction has a rate constant k = 1.25 × 10⁻⁴ s⁻¹ at 300 K. The activation energy (Ea) is 85.0 kJ mol⁻¹. Calculate the Arrhenius pre-exponential factor (A) at this temperature. (R = 8.31 J K⁻¹ mol⁻¹)",
+    options: [
+      { text: "8.02 × 10¹⁰ s⁻¹", isCorrect: true },
+      { text: "2.02 × 10⁻¹⁹ s⁻¹", isCorrect: false },
+      { text: "8.02 × 10⁷ s⁻¹", isCorrect: false },
+      { text: "1.25 × 10⁻⁴ s⁻¹", isCorrect: false }
+    ],
+    explanation: "• Rearranging the Arrhenius equation $k = A e^{-\\frac{E_a}{RT}}$ gives: $A = k e^{\\frac{E_a}{RT}}$.\n• First, convert $E_a$ to $\\text{J mol}^{-1}$: $E_a = 85.0 \\text{ kJ mol}^{-1} = 85000 \\text{ J mol}^{-1}$.\n• Calculate the exponent term: $\\frac{E_a}{RT} = \\frac{85000}{8.31 \\times 300} = \\frac{85000}{2493} \\approx 34.095$.\n• Calculate the exponential factor: $e^{34.095} \\approx 6.417 \\times 10^{14}$.\n• Calculate $A$: $A = (1.25 \\times 10^{-4} \\text{ s}^{-1}) \\times (6.417 \\times 10^{14}) = 8.02 \\times 10^{10} \\text{ s}^{-1}$ (matching the units of $k$ for a first-order reaction)."
   }
 ];

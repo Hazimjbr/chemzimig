@@ -773,6 +773,7 @@ function AdminContent() {
                                                          </thead>
                                                          <tbody className="divide-y divide-white/5">
                                                              {students
+                                                                 .filter(s => s.id && s.username)
                                                                  .filter(s => {
                                                                      if (!studentSearch) return true;
                                                                      const query = studentSearch.toLowerCase();
@@ -1075,7 +1076,7 @@ function AdminContent() {
                                             </div>
                                         ) : (
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                                {students
+                                                {students.filter(s => s.id && s.username)
                                                     .filter(s => {
                                                         if (!studentSearch) return true;
                                                         const query = studentSearch.toLowerCase();

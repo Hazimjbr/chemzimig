@@ -1908,21 +1908,351 @@ questionBank.push(
     createdAt: "2026-07-21"
   },
   {
-    id: "q_org_ed_exam_6-20260721",
-    question: "What are the principal inorganic and organic products when propanal reacts with Tollens' reagent?",
+    id: "q_kin_ed_exam_9-20260726",
+    question: "The reaction energy profile for a two-step reaction is shown in the diagram below:\n\nWhich step is the rate-determining step, and what is its activation energy?",
     options: [
-      { text: "$\\text{Ag}$ and $\\text{CH}_3\\text{CH}_2\\text{COOH}$" },
-      { text: "$\\text{Ag}$ and $\\text{CH}_3\\text{CH}_2\\text{COO}^-$" },
-      { text: "$\\text{Ag}_2\\text{O}$ and $\\text{CH}_3\\text{CH}_2\\text{COOH}$" },
-      { text: "$\\text{Ag}_2\\text{O}$ and $\\text{CH}_3\\text{CH}_2\\text{COO}^-$" }
+      { text: "Step 1; $+150\\text{ kJ mol}^{-1}$" },
+      { text: "Step 2; $+80\\text{ kJ mol}^{-1}$" },
+      { text: "Step 1; $+250\\text{ kJ mol}^{-1}$" },
+      { text: "Step 2; $+30\\text{ kJ mol}^{-1}$" }
     ],
-    correctAnswer: 1,
-    explanation: "1. Tollens' reagent contains ammoniacal silver nitrate, which contains $\\text{Ag}^+$ complexed as $[\\text{Ag(NH}_3)_2]^+$.\n2. The reaction is a redox reaction where the aldehyde is oxidised and the silver ion $\\text{Ag}^+$ is reduced to metallic silver $\\text{Ag(s)}$ (the silver mirror).\n3. Because Tollens' reagent contains ammonia, the solution is alkaline, so the carboxylic acid product (propanoic acid) is deprotonated to form the propanoate ion ($\\text{CH}_3\\text{CH}_2\\text{COO}^-$).",
+    correctAnswer: 0,
+    explanation: "1. The rate-determining step is the slowest step, which corresponds to the step with the highest activation energy barrier.\n2. The activation energy for Step 1 is the difference between Peak 1 (TS1) and the reactants: $250 - 100 = 150\\text{ kJ mol}^{-1}$.\n3. The activation energy for Step 2 is the difference between Peak 2 (TS2) and the intermediate valley: $180 - 150 = 30\\text{ kJ mol}^{-1}$.\n4. Therefore, Step 1 is the rate-determining step with an activation energy of $+150\\text{ kJ mol}^{-1}$.",
     level: 2,
     topic: "edexcel-unit-4",
-    lessonNum: 5,
+    lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    createdAt: "2026-07-21"
+    createdAt: "2026-07-26",
+    imageHtml: `<svg viewBox="0 0 550 380" class="w-full max-w-[400px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <defs>
+    <marker id="arrow-head" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <line x1="70" y1="320" x2="70" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-head)" />
+  <line x1="70" y1="320" x2="510" y2="320" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-head)" />
+  <text x="30" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 30 35)" text-anchor="end">Energy / kJ mol⁻¹</text>
+  <text x="500" y="338" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Reaction Coordinate</text>
+  <path d="M 70,220 C 110,220 150,70 190,70 C 230,70 250,170 290,170 C 330,170 350,140 370,140 C 390,140 410,270 450,270" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <line x1="70" y1="220" x2="110" y2="220" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" />
+  <line x1="70" y1="70" x2="190" y2="70" stroke="#ef4444" stroke-width="1" stroke-dasharray="3 3" />
+  <line x1="70" y1="170" x2="290" y2="170" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3" />
+  <line x1="70" y1="140" x2="370" y2="140" stroke="#eab308" stroke-width="1" stroke-dasharray="3 3" />
+  <line x1="70" y1="270" x2="450" y2="270" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3" />
+  
+  <line x1="65" y1="70" x2="70" y2="70" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="60" y="74" fill="#cbd5e1" font-size="10" text-anchor="end">250</text>
+  
+  <line x1="65" y1="140" x2="70" y2="140" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="60" y="144" fill="#cbd5e1" font-size="10" text-anchor="end">180</text>
+  
+  <line x1="65" y1="170" x2="70" y2="170" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="60" y="174" fill="#cbd5e1" font-size="10" text-anchor="end">150</text>
+  
+  <line x1="65" y1="220" x2="70" y2="220" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="60" y="224" fill="#cbd5e1" font-size="10" text-anchor="end">100</text>
+  
+  <line x1="65" y1="270" x2="70" y2="270" stroke="#94a3b8" stroke-width="1.5" />
+  <text x="60" y="274" fill="#cbd5e1" font-size="10" text-anchor="end">50</text>
+  
+  <text x="120" y="215" fill="#cbd5e1" font-size="10">Reactants</text>
+  <text x="200" y="65" fill="#ef4444" font-size="10">TS1</text>
+  <text x="300" y="165" fill="#cbd5e1" font-size="10">Intermediate</text>
+  <text x="380" y="135" fill="#eab308" font-size="10">TS2</text>
+  <text x="460" y="265" fill="#cbd5e1" font-size="10">Products</text>
+</svg>`
+  },
+  {
+    id: "q_kin_ed_exam_10-20260726",
+    question: "To follow the rate of reaction between propanone and iodine using a colorimeter, a student first constructs the calibration curve shown below. Why is this curve essential for the experiment?",
+    options: [
+      { text: "To prove that the reaction is zero-order with respect to iodine." },
+      { text: "To convert the measured absorbance values at different times into actual iodine concentrations." },
+      { text: "To calculate the activation energy using the Beer-Lambert law." },
+      { text: "To determine the rate constant k directly from the gradient." }
+    ],
+    correctAnswer: 1,
+    explanation: "1. A colorimeter measures absorbance, which depends on the intensity of light transmitted through the solution.\n2. To calculate rate equations and rate constants, we need concentration values rather than raw absorbance values.\n3. The calibration curve provides a direct reference to translate absorbance readings at specific times into actual concentrations of iodine in mol dm⁻³.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26",
+    imageHtml: `<svg viewBox="0 0 500 380" class="w-full max-w-[400px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <line x1="60" y1="320" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" />
+  <line x1="60" y1="320" x2="460" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <text x="35" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 35 35)" text-anchor="end">Absorbance (at 480 nm)</text>
+  <text x="450" y="360" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">[I₂] / mol dm⁻³</text>
+  <line x1="60" y1="320" x2="420" y2="80" stroke="#10b981" stroke-width="3" />
+  <circle cx="150" cy="260" r="4" fill="#ef4444" />
+  <circle cx="240" cy="200" r="4" fill="#ef4444" />
+  <circle cx="330" cy="140" r="4" fill="#ef4444" />
+  <circle cx="420" cy="80" r="4" fill="#ef4444" />
+  <text x="50" y="324" fill="#94a3b8" font-size="10" text-anchor="end">0.0</text>
+  <text x="50" y="264" fill="#94a3b8" font-size="10" text-anchor="end">0.2</text>
+  <text x="50" y="204" fill="#94a3b8" font-size="10" text-anchor="end">0.4</text>
+  <text x="50" y="144" fill="#94a3b8" font-size="10" text-anchor="end">0.6</text>
+  <text x="50" y="84" fill="#94a3b8" font-size="10" text-anchor="end">0.8</text>
+  <text x="60" y="340" fill="#94a3b8" font-size="10" text-anchor="middle">0.0</text>
+  <text x="150" y="340" fill="#94a3b8" font-size="10" text-anchor="middle">0.002</text>
+  <text x="240" y="340" fill="#94a3b8" font-size="10" text-anchor="middle">0.004</text>
+  <text x="330" y="340" fill="#94a3b8" font-size="10" text-anchor="middle">0.006</text>
+  <text x="420" y="340" fill="#94a3b8" font-size="10" text-anchor="middle">0.008</text>
+</svg>`
+  },
+  {
+    id: "q_kin_ed_exam_11-20260726",
+    question: "The rate data below was obtained for the reaction: $2\\text{NO(g)} + \\text{O}_2\\text{(g)} \\rightarrow 2\\text{NO}_2\\text{(g)}$ at a constant temperature:\n\n| Experiment | [NO] / mol dm⁻³ | [O₂] / mol dm⁻³ | Initial rate / mol dm⁻³ s⁻¹ |\n| :---: | :---: | :---: | :---: |\n| 1 | 0.010 | 0.010 | $1.2 \\times 10^{-4}$ |\n| 2 | 0.020 | 0.010 | $4.8 \\times 10^{-4}$ |\n| 3 | 0.010 | 0.020 | $2.4 \\times 10^{-4}$ |\n\nUsing this data, calculate the value and state the units of the rate constant, $k$:",
+    options: [
+      { text: "$1.2 \\times 10^2\\text{ dm}^6\\text{ mol}^{-2}\\text{ s}^{-1}$" },
+      { text: "$1.2\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" },
+      { text: "$1.2 \\times 10^4\\text{ dm}^6\\text{ mol}^{-2}\\text{ s}^{-1}$" },
+      { text: "$1.2 \\times 10^2\\text{ dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. Compare Exp 1 & 2: [O₂] is constant, [NO] doubles. The rate increases by a factor of 4 ($4.8 \\times 10^{-4} / 1.2 \\times 10^{-4} = 4$). Order with respect to NO is 2.\n2. Compare Exp 1 & 3: [NO] is constant, [O₂] doubles. The rate doubles ($2.4 \\times 10^{-4} / 1.2 \\times 10^{-4} = 2$). Order with respect to O₂ is 1.\n3. The rate equation is Rate = k[NO]²[O₂] (overall order = 3).\n4. Calculate k: $k = \\text{Rate} / ([\\text{NO}]^2[\\text{O}_2]) = (1.2 \\times 10^{-4}) / (0.010^2 \\times 0.010) = 1.2 \\times 10^2\\text{ dm}^6\\text{ mol}^{-2}\\text{ s}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_12-20260726",
+    question: "A student collected the following data for Arrhenius values of a chemical reaction:\n\n| Temperature T / K | 1/T / 10⁻³ K⁻¹ | ln(k / s⁻¹) |\n| :---: | :---: | :---: |\n| 300 | 3.33 | -10.0 |\n| 320 | 3.13 | -7.7 |\n\nCalculate the activation energy ($E_a$) of the reaction using this data. ($R = 8.31\\text{ J K}^{-1}\\text{ mol}^{-1}$)",
+    options: [
+      { text: "$95.6\\text{ kJ mol}^{-1}$" },
+      { text: "$95600\\text{ kJ mol}^{-1}$" },
+      { text: "$11.5\\text{ kJ mol}^{-1}$" },
+      { text: "$47.8\\text{ kJ mol}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The gradient ($m$) of the ln k against 1/T plot is $m = -E_a / R$.\n2. Calculate $m$: $m = \\Delta \\ln k / \\Delta (1/T) = (-7.7 - (-10.0)) / (3.13 \\times 10^{-3} - 3.33 \\times 10^{-3}) = 2.3 / (-0.20 \\times 10^{-3}) = -11500\\text{ K}$.\n3. Calculate $E_a$: $E_a = -m \\times R = -(-11500) \\times 8.31 = 95565\\text{ J mol}^{-1}$.\n4. Convert to kJ mol⁻¹: $95565 / 1000 = 95.6\\text{ kJ mol}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_13-20260726",
+    question: "A student plots the graph shown below during the kinetic investigation of the reaction: $\\text{2A} \\rightarrow \\text{Products}$.\n\nWhat is the overall order of the reaction with respect to A, and what does the gradient of the line represent?",
+    options: [
+      { text: "First order; the gradient represents $-k$" },
+      { text: "Second order; the gradient represents $+k$" },
+      { text: "Second order; the gradient represents $-k$" },
+      { text: "Zero order; the gradient represents $+k$" }
+    ],
+    correctAnswer: 1,
+    explanation: "1. For a second-order reaction (Rate = k[A]²), the integrated rate equation is: 1/[A] = kt + 1/[A]₀.\n2. A plot of 1/[A] against time (t) yields a straight line with a positive gradient.\n3. The positive gradient of this line is equal to the rate constant, +k.\n4. Plots of ln[A] vs time (which are linear for first-order reactions) have a negative gradient (-k).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26",
+    imageHtml: `<svg viewBox="0 0 500 380" class="w-full max-w-[400px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <line x1="60" y1="320" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" />
+  <line x1="60" y1="320" x2="460" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <text x="35" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 35 35)" text-anchor="end">1 / [A] / dm³ mol⁻¹</text>
+  <text x="450" y="350" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Time / s</text>
+  <line x1="60" y1="280" x2="420" y2="80" stroke="#38bdf8" stroke-width="3" />
+  <text x="50" y="284" fill="#94a3b8" font-size="10" text-anchor="end">10</text>
+  <text x="50" y="84" fill="#94a3b8" font-size="10" text-anchor="end">90</text>
+  <text x="60" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">0</text>
+  <text x="420" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">90</text>
+</svg>`
+  },
+  {
+    id: "q_kin_ed_exam_14-20260726",
+    question: "Reaction X has an activation energy ($E_a$) of $+40\\text{ kJ mol}^{-1}$, while Reaction Y has an activation energy of $+120\\text{ kJ mol}^{-1}$. If the temperature of both reactions is increased from $300\\text{ K}$ to $310\\text{ K}$ at constant concentration, which reaction experiences the greater proportional increase in rate, and why?",
+    options: [
+      { text: "Reaction X; because a lower activation energy means molecules collide more frequently." },
+      { text: "Reaction Y; because the fraction of molecules with energy $\\ge E_a$ increases much more significantly for reactions with a higher energy barrier." },
+      { text: "Reaction X; because raising the temperature by $10\\text{ K}$ always doubles the rate of low $E_a$ reactions." },
+      { text: "Reaction Y; because the rate constant k is inversely proportional to temperature in the Arrhenius equation." }
+    ],
+    correctAnswer: 1,
+    explanation: "1. The fraction of molecules with energy $\\ge E_a$ is represented by the term $e^{-E_a/RT}$ in the Arrhenius equation.\n2. For reactions with a high activation energy ($E_a$), raising the temperature shifts the Maxwell-Boltzmann distribution, causing a very large proportional increase in the number of molecules capable of reacting.\n3. For low $E_a$ reactions, a large fraction of molecules already has enough energy, so the increase is proportionally smaller.\n4. Therefore, Reaction Y experiences a much greater proportional increase in rate.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_15-20260726",
+    question: "The graph below shows how the initial rate of a heterogeneous, metal-catalyzed gas reaction changes as the pressure of the gaseous reactant is increased:\n\nWhich statement correctly explains the shape of the curve at high pressures?",
+    options: [
+      { text: "The reaction becomes zero-order because the active sites on the catalyst surface are completely saturated with reactant molecules." },
+      { text: "The reaction becomes first-order because the high pressure poisons the catalyst surface permanently." },
+      { text: "The reaction rate decreases because reactant molecules desorb too rapidly from the surface." },
+      { text: "The activation energy increases at high pressures, preventing further rate increases." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. At low pressures (left side), the rate is proportional to pressure (first-order) because more active sites become occupied as pressure increases.\n2. At high pressures (right side), the rate levels off and becomes independent of pressure (zero-order).\n3. This occurs because all available active sites on the solid catalyst surface are fully occupied (saturated) with adsorbed reactant molecules.\n4. Adding more pressure cannot increase the rate further since there are no free sites for additional reactants to adsorb and react.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26",
+    imageHtml: `<svg viewBox="0 0 500 380" class="w-full max-w-[400px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <line x1="60" y1="320" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" />
+  <line x1="60" y1="320" x2="460" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <text x="35" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 35 35)" text-anchor="end">Initial Rate of Reaction</text>
+  <text x="450" y="340" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Reactant Pressure / atm</text>
+  <path d="M 60,320 Q 200,120 300,120 L 460,120" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <text x="380" y="105" fill="#10b981" font-size="10" font-weight="bold">Zero-Order (Saturation)</text>
+</svg>`
+  },
+  {
+    id: "q_kin_ed_exam_16-20260726",
+    question: "When evaluating catalysts for a large-scale chemical process, a green chemistry perspective favors heterogeneous catalysts over homogeneous catalysts. What is the primary chemical reason for this preference?",
+    options: [
+      { text: "Heterogeneous catalysts are easily separated from the reaction products by filtration, minimizing energy use and waste." },
+      { text: "Heterogeneous catalysts always have lower activation energies than homogeneous catalysts." },
+      { text: "Heterogeneous catalysts are not susceptible to catalyst poisoning by impurities." },
+      { text: "Heterogeneous catalysts react in the same phase as the reactants, increasing collision frequency." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. One of the key principles of green chemistry is to prevent waste and minimize energy use.\n2. Homogeneous catalysts are in the same phase as products, making separation difficult, chemical-intensive, and energy-consuming (e.g., fractional distillation).\n3. Heterogeneous catalysts are in a different phase (solid) from the liquid or gas reaction mixture, allowing easy separation by simple filtration or flow-through systems.\n4. While homogeneous catalysts are often highly active, the ease of recycling and waste prevention makes heterogeneous catalysts greener in large-scale industry.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_17-20260726",
+    question: "In a kinetic study of the acid-catalyzed hydrolysis of methyl ethanoate, samples are quenched and titrated with standard $\\text{NaOH(aq)}$. If the volume of $\\text{NaOH}$ required at time $t$ is $V_t$ and the volume required at completion (time $\\infty$) is $V_\\infty$, which expression is directly proportional to the concentration of the ester remaining at time $t$?",
+    options: [
+      { text: "$V_\\infty - V_t$" },
+      { text: "$V_t$" },
+      { text: "$V_\\infty$" },
+      { text: "$V_t - V_0$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The base ($\\text{NaOH}$) reacts with the ethanoic acid produced during the reaction.\n2. The total volume at completion ($V_\\infty$) represents the total amount of acid produced, which is equal to the initial concentration of the ester.\n3. The volume at time $t$ ($V_t$) represents the amount of acid produced up to time $t$.\n4. Therefore, the difference ($V_\\infty - V_t$) is proportional to the remaining unreacted ester concentration.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_18-20260726",
+    question: "For the first-order decomposition of gas A: $\\text{A(g)} \\rightarrow \\text{B(g)} + \\text{C(g)}$. The initial pressure of A is $P_0$. At time $t$, the total pressure of the mixture is $P_{\\text{total}}$. What is the expression for the partial pressure of reactant A ($P_{\\text{A}}$) at time $t$?",
+    options: [
+      { text: "$2P_0 - P_{\\text{total}}$" },
+      { text: "$P_{\\text{total}} - P_0$" },
+      { text: "$P_0 - P_{\\text{total}}$" },
+      { text: "$\\frac{P_{\\text{total}} - P_0}{2}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "1. Let $x$ be the decrease in partial pressure of A at time $t$, so $P_{\\text{A}} = P_0 - x$.\n2. The partial pressures of the products are $P_{\\text{B}} = x$ and $P_{\\text{C}} = x$.\n3. The total pressure is the sum of all partial pressures: $P_{\\text{total}} = (P_0 - x) + x + x = P_0 + x$.\n4. Rearranging for $x$ gives: $x = P_{\\text{total}} - P_0$.\n5. Substitute $x$ back into the expression for A: $P_{\\text{A}} = P_0 - (P_{\\text{total}} - P_0) = 2P_0 - P_{\\text{total}}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_19-20260726",
+    question: "The reaction between ethanedioic acid and acidified manganate(VII) ions is slow initially but accelerates as $\\text{Mn}^{2+}\\text{(aq)}$ ions are formed. How can the initial slow period (induction period) of this reaction be avoided in a laboratory experiment?",
+    options: [
+      { text: "By adding a few drops of manganese(II) sulfate solution before starting the reaction." },
+      { text: "By bubbling carbon dioxide gas through the mixture." },
+      { text: "By conducting the reaction in an ice bath." },
+      { text: "By adding concentrated hydrochloric acid as a dehydrating agent." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The reaction is autocatalytic, where $\\text{Mn}^{2+}$ is the product that acts as the catalyst.\n2. Initially, no $\\text{Mn}^{2+}$ is present, which is why the reaction starts very slowly (the induction period).\n3. Adding a few drops of manganese(II) sulfate ($\\text{MnSO}_4$) introduces $\\text{Mn}^{2+}$ ions from the start.\n4. This immediately provides the catalyst, allowing the reaction to proceed rapidly from the beginning.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_20-20260726",
+    question: "A halogenoalkane undergoes substitution. When the reaction is conducted in a polar protic solvent (such as an ethanol-water mixture), the rate is independent of the nucleophile concentration (first-order). When conducted in a polar aprotic solvent (such as propanone), the rate depends on both the halogenoalkane and the nucleophile concentration (second-order). Which statement correctly explains this observation?",
+    options: [
+      { text: "Polar protic solvents stabilize the carbocation intermediate via hydrogen bonding, favoring the SN1 mechanism, whereas polar aprotic solvents do not stabilize the intermediate, forcing the reaction via SN2." },
+      { text: "Polar aprotic solvents increase the activation energy of the SN1 mechanism by protonating the nucleophile." },
+      { text: "Polar protic solvents increase the rate of SN2 reactions by solvating the leaving halide group very strongly." },
+      { text: "The reaction in propanone is faster because propanone acts as a catalyst for the SN1 mechanism." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. Polar protic solvents (containing O-H or N-H groups) can solvate and stabilize both the leaving halide ion and the carbocation intermediate through hydrogen bonding. This lowers the activation energy for the slow ionization step, favoring the SN1 mechanism (first-order).\n2. Polar aprotic solvents (like propanone) lack H-bond donors and cannot stabilize the carbocation intermediate effectively.\n3. In addition, aprotic solvents do not strongly solvate (cage) the nucleophile. This leaves the nucleophile highly reactive and free to attack the carbon atom directly, favoring the bimolecular SN2 mechanism (second-order).\n4. Therefore, changing the solvent from protic to aprotic changes the mechanism and the observed rate equation.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_21_star-20260726",
+    question: "* [★ Star Question] A student is designing a laboratory experiment to determine the activation energy ($E_a$) of a chemical reaction using the Arrhenius equation. Which of the following lists the correct assignment of variables to construct a valid Arrhenius plot?",
+    options: [
+      { text: "Independent variable: Temperature ($T$); Dependent variable: Rate constant ($k$); Control variable: Concentrations of reactants." },
+      { text: "Independent variable: Rate constant ($k$); Dependent variable: Temperature ($T$); Control variable: Concentrations of reactants." },
+      { text: "Independent variable: Temperature ($T$); Dependent variable: Initial rate; Control variable: Temperature." },
+      { text: "Independent variable: Concentrations of reactants; Dependent variable: Rate constant ($k$); Control variable: Temperature." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. To construct an Arrhenius plot ($\\ln k$ vs $1/T$), the student must deliberately vary the temperature, making Temperature ($T$) the independent variable.\n2. For each temperature, the rate constant ($k$) is determined (calculated from the measured initial rate), making the rate constant ($k$) the dependent variable.\n3. The concentrations of all reactants must be kept constant (controlled) across all experiments so that change in rate is solely due to the change in temperature.\n4. Therefore, option A is the correct experimental setup.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_22_star-20260726",
+    question: "* [★ Star Question] In the stratosphere, ozone ($\\text{O}_3$) is decomposed by chlorine free radicals ($\\text{Cl}^\\bullet$) via the following mechanism:\n\nStep 1 (slow): $\\text{Cl}^\\bullet\\text{(g)} + \\text{O}_3\\text{(g)} \\rightarrow \\text{ClO}^\\bullet\\text{(g)} + \\text{O}_2\\text{(g)}$\nStep 2 (fast): $\\text{ClO}^\\bullet\\text{(g)} + \\text{O}\\text{(g)} \\rightarrow \\text{Cl}^\\bullet\\text{(g)} + \\text{O}_2\\text{(g)}$\n\nWhich of the following correctly identifies the rate equation for this ozone depletion and the role of $\\text{ClO}^\\bullet$?",
+    options: [
+      { text: "Rate = $k[\\text{O}_3][\\text{Cl}^\\bullet]$; $\\text{ClO}^\\bullet$ acts as an intermediate." },
+      { text: "Rate = $k[\\text{O}_3]$; $\\text{ClO}^\\bullet$ acts as a catalyst." },
+      { text: "Rate = $k[\\text{ClO}^\\bullet][\\text{O}]$; $\\text{ClO}^\\bullet$ acts as a catalyst." },
+      { text: "Rate = $k[\\text{O}_3][\\text{Cl}^\\bullet]$; $\\text{ClO}^\\bullet$ acts as a catalyst." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. The rate-determining step is the slow step (Step 1). The reactants in this step are $\\text{Cl}^\\bullet$ and $\\text{O}_3$. Thus, the rate equation is: Rate = $k[\\text{O}_3][\\text{Cl}^\\bullet]$.\n2. $\\text{ClO}^\\bullet$ is produced in the first step and consumed in the second step. It does not appear in the overall chemical equation, meaning it acts as a reaction intermediate.\n3. $\\text{Cl}^\\bullet$ is consumed in the first step and regenerated in the second step, meaning it acts as a homogeneous catalyst.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
+  },
+  {
+    id: "q_kin_ed_exam_23_star-20260726",
+    question: "* [★ Star Question] The decomposition of a gaseous substance was studied at a constant temperature. When the initial concentration was $1.0\\text{ mol dm}^{-3}$, the first half-life was found to be $15\\text{ seconds}$. When the concentration decreased to $0.5\\text{ mol dm}^{-3}$, the second half-life was measured to be $30\\text{ seconds}$. Deduce the order of the reaction and explain how this relationship relates to the rate constant.",
+    options: [
+      { text: "Second-order; the half-life is inversely proportional to the initial concentration ($t_{1/2} = 1/(k[\\text{A}]_0)$)." },
+      { text: "First-order; the half-life is constant and independent of the concentration ($t_{1/2} = \\ln 2 / k$)." },
+      { text: "Zero-order; the half-life is directly proportional to the concentration ($t_{1/2} = [\\text{A}]_0 / 2k$)." },
+      { text: "Second-order; the half-life doubles because the rate constant $k$ decreases as concentration decreases." }
+    ],
+    correctAnswer: 0,
+    explanation: "1. For a second-order reaction, the half-life is inversely proportional to the initial concentration of reactants: $t_{1/2} = 1 / (k[\\text{A}]_0)$.\n2. When the concentration is halved ($1.0 \\rightarrow 0.5\\text{ mol dm}^{-3}$), the half-life should double ($15 \\rightarrow 30\\text{ seconds}$), which matches the experimental results.\n3. First-order half-life is constant (independent of concentration), and zero-order half-life decreases as concentration decreases.\n4. Note that the rate constant $k$ is constant at a constant temperature and does not change with concentration.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-07-26"
   }
 );

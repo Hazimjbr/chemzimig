@@ -51,7 +51,7 @@ export const lessonQuiz = [
     explanation: "* The numerical value of Kc is altered only by changes in temperature.\n* For an exothermic forward reaction, increasing the temperature causes the equilibrium to shift in the endothermic reverse direction to absorb heat.\n* This shift decreases the concentration of products and increases reactants, decreasing the value of Kc."
   },
   {
-    id: "EDEXCEL-AL-U4-L3-MEDIUM-22060708-06",
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260708-06",
     question: "A dynamic equilibrium is set up between carbon monoxide, hydrogen, and methanol: CO(g) + 2H₂(g) ⇌ CH₃OH(g). The equilibrium concentrations are [CO] = 3.1 × 10⁻³ mol dm⁻³, [H₂] = 2.4 × 10⁻² mol dm⁻³, and [CH₃OH] = 2.6 × 10⁻⁵ mol dm⁻³. Calculate the value of Kc.",
     options: [
       { text: "14.6 dm⁶ mol⁻²", isCorrect: true },

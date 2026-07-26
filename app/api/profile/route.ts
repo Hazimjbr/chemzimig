@@ -39,6 +39,13 @@ export async function POST(request: NextRequest) {
         }
 
         // Update student document in Firestore (merge: true creates doc if missing)
+        if (session.isAdmin) {
+            return NextResponse.json({
+                success: true,
+                message: 'Admin profile update bypassed (no student document needed)'
+            });
+        }
+
         await db.collection('students').doc(session.id).set(updateData, { merge: true });
 
         return NextResponse.json({

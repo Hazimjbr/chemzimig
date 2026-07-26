@@ -5,7 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { 
-    Search, Filter, ShieldAlert, ArrowLeft, Check, AlertTriangle, Eye, Calendar, BookOpen, Layers, CheckCircle2, RefreshCw
+    Search, Filter, ShieldAlert, ArrowLeft, Check, AlertTriangle, Eye, Calendar, BookOpen, Layers, CheckCircle2, RefreshCw, X
 } from 'lucide-react';
 import { questionBank, examsRegistry } from '@/data/exams';
 import { curriculumRegistry } from '@/data/curriculum/registry';
@@ -620,7 +620,18 @@ export default function QuestionAuditorPage() {
 
                     {/* 6. Date Added */}
                     <div className="flex flex-col gap-1.5">
-                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Date Added</label>
+                        <div className="flex justify-between items-center">
+                            <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Date Added</label>
+                            {dateFrom && (
+                                <button 
+                                    onClick={() => setDateFrom('')}
+                                    className="text-rose-400 hover:text-rose-300 transition-all cursor-pointer p-0.5"
+                                    title="Clear date"
+                                >
+                                    <X className="w-3 h-3" />
+                                </button>
+                            )}
+                        </div>
                         <input 
                             type="date"
                             value={dateFrom}
@@ -631,7 +642,18 @@ export default function QuestionAuditorPage() {
 
                     {/* 7. Search / Filter */}
                     <div className="flex flex-col gap-1.5">
-                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Search / Filter</label>
+                        <div className="flex justify-between items-center">
+                            <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Search / Filter</label>
+                            {searchQuery && (
+                                <button 
+                                    onClick={() => setSearchQuery('')}
+                                    className="text-rose-400 hover:text-rose-300 transition-all cursor-pointer p-0.5"
+                                    title="Clear search"
+                                >
+                                    <X className="w-3 h-3" />
+                                </button>
+                            )}
+                        </div>
                         <div className="relative">
                             <input 
                                 type="text"
@@ -721,7 +743,7 @@ export default function QuestionAuditorPage() {
                                                         : 'bg-white/[0.01] border-white/5 text-slate-400'
                                                 }`}
                                             >
-                                                <span className="flex items-center gap-1">{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
+                                                <span dir="ltr" className="text-left flex-1">{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
                                                 {isCorrect && (
                                                     <span className="text-[10px] font-black uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded">
                                                         Correct Answer

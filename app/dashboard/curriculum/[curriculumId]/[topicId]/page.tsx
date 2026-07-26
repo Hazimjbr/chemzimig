@@ -1074,7 +1074,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                                     onClick={() => handleSelectOption(quizActiveIndex, oIdx)}
                                                                     className={`w-full text-left p-4 rounded-xl border transition-all text-sm flex items-center justify-between ${optionStyle} ${!isAnswered ? 'cursor-pointer' : ''}`}
                                                                 >
-                                                                    <span>{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
+                                                                    <span dir="ltr" className="text-left flex-1">{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
                                                                     {isAnswered && isCorrect && <span className="text-emerald-600 dark:text-emerald-400 text-xs font-bold bg-emerald-500/10 px-2 py-0.5 rounded-md">Correct</span>}
                                                                     {isAnswered && isSelected && !isCorrect && <span className="text-rose-600 dark:text-rose-400 text-xs font-bold bg-rose-500/10 px-2 py-0.5 rounded-md">Incorrect</span>}
                                                                 </button>
