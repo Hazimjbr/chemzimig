@@ -2203,7 +2203,7 @@ questionBank.push(
   },
   {
     id: "q_kin_ed_exam_21_star-20260726",
-    question: "* [★ Star Question] A student is designing a laboratory experiment to determine the activation energy ($E_a$) of a chemical reaction using the Arrhenius equation. Which of the following lists the correct assignment of variables to construct a valid Arrhenius plot?",
+    question: "[★ Star Question] A student is designing a laboratory experiment to determine the activation energy ($E_a$) of a chemical reaction using the Arrhenius equation. Which of the following lists the correct assignment of variables to construct a valid Arrhenius plot?",
     options: [
       { text: "Independent variable: Temperature ($T$); Dependent variable: Rate constant ($k$); Control variable: Concentrations of reactants." },
       { text: "Independent variable: Rate constant ($k$); Dependent variable: Temperature ($T$); Control variable: Concentrations of reactants." },
@@ -2221,7 +2221,7 @@ questionBank.push(
   },
   {
     id: "q_kin_ed_exam_22_star-20260726",
-    question: "* [★ Star Question] In the stratosphere, ozone ($\\text{O}_3$) is decomposed by chlorine free radicals ($\\text{Cl}^\\bullet$) via the following mechanism:\n\nStep 1 (slow): $\\text{Cl}^\\bullet\\text{(g)} + \\text{O}_3\\text{(g)} \\rightarrow \\text{ClO}^\\bullet\\text{(g)} + \\text{O}_2\\text{(g)}$\nStep 2 (fast): $\\text{ClO}^\\bullet\\text{(g)} + \\text{O}\\text{(g)} \\rightarrow \\text{Cl}^\\bullet\\text{(g)} + \\text{O}_2\\text{(g)}$\n\nWhich of the following correctly identifies the rate equation for this ozone depletion and the role of $\\text{ClO}^\\bullet$?",
+    question: "[★ Star Question] In the stratosphere, ozone ($\\text{O}_3$) is decomposed by chlorine free radicals ($\\text{Cl}^\\bullet$) via the following mechanism:\n\nStep 1 (slow): $\\text{Cl}^\\bullet\\text{(g)} + \\text{O}_3\\text{(g)} \\rightarrow \\text{ClO}^\\bullet\\text{(g)} + \\text{O}_2\\text{(g)}$\nStep 2 (fast): $\\text{ClO}^\\bullet\\text{(g)} + \\text{O}\\text{(g)} \\rightarrow \\text{Cl}^\\bullet\\text{(g)} + \\text{O}_2\\text{(g)}$\n\nWhich of the following correctly identifies the rate equation for this ozone depletion and the role of $\\text{ClO}^\\bullet$?",
     options: [
       { text: "Rate = $k[\\text{O}_3][\\text{Cl}^\\bullet]$; $\\text{ClO}^\\bullet$ acts as an intermediate." },
       { text: "Rate = $k[\\text{O}_3]$; $\\text{ClO}^\\bullet$ acts as a catalyst." },
@@ -2239,7 +2239,7 @@ questionBank.push(
   },
   {
     id: "q_kin_ed_exam_23_star-20260726",
-    question: "* [★ Star Question] The decomposition of a gaseous substance was studied at a constant temperature. When the initial concentration was $1.0\\text{ mol dm}^{-3}$, the first half-life was found to be $15\\text{ seconds}$. When the concentration decreased to $0.5\\text{ mol dm}^{-3}$, the second half-life was measured to be $30\\text{ seconds}$. Deduce the order of the reaction and explain how this relationship relates to the rate constant.",
+    question: "[★ Star Question] The decomposition of a gaseous substance was studied at a constant temperature. When the initial concentration was $1.0\\text{ mol dm}^{-3}$, the first half-life was found to be $15\\text{ seconds}$. When the concentration decreased to $0.5\\text{ mol dm}^{-3}$, the second half-life was measured to be $30\\text{ seconds}$. Deduce the order of the reaction and explain how this relationship relates to the rate constant.",
     options: [
       { text: "Second-order; the half-life is inversely proportional to the initial concentration ($t_{1/2} = 1/(k[\\text{A}]_0)$)." },
       { text: "First-order; the half-life is constant and independent of the concentration ($t_{1/2} = \\ln 2 / k$)." },

@@ -314,7 +314,7 @@ export const parts: LessonPart[] = [
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Calculating K from Gibbs Free Energy
-> **Question:** A reaction has a standard Gibbs Free Energy change ($\\\\Delta G^\\\\theta$) of $-5.80\\\\text{ J mol}^{-1}$ (or standard free energy change $\\\\Delta G^\\\\theta = -5.80\\\\text{ kJ mol}^{-1}$) at $298\\\\text{ K}$. Calculate the value of the equilibrium constant $K$ at this temperature.
+> **Question:** A reaction has a standard Gibbs Free Energy change ($\\\\Delta G^\\\\theta$) of $-5.80\\\\text{ kJ mol}^{-1}$ at $298\\\\text{ K}$. Calculate the value of the equilibrium constant $K$ at this temperature.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -557,7 +557,7 @@ export const parts: LessonPart[] = [
 > [!IMPORTANT]
 > ### 🧮 Enthalpy Cycle for Solution
 > Using Hess's Law, the relationship between lattice enthalpy, hydration enthalpies, and enthalpy of solution is best shown by an energy level cycle:
-> $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = -\\\\Delta H_{\\\\text{latt(formation)}}^\\\\theta + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{cation}) + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{anion})$$
+> $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = -\\\\Delta H_{\\\\text{latt}}\\\\text{(formation)}^\\\\theta + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{cation}) + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{anion})$$
 > 
 > ![Dissolution Enthalpy Cycle of NaCl](/images/lessons/dissolution_cycle_nacl.svg)
 
@@ -576,7 +576,7 @@ export const parts: LessonPart[] = [
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Apply the enthalpy cycle:**
-> >    $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = \\\\Delta H_{\\\\text{latt(dissociation)}}^\\\\theta + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{Na}^+) + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{Cl}^-)$$
+> >    $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = \\\\Delta H_{\\\\text{latt}}\\\\text{(dissociation)}^\\\\theta + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{Na}^+) + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{Cl}^-)$$
 > > 
 > > 2. **Substitute values:**
 > >    $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = (+788) + (-406) + (-363)$$
