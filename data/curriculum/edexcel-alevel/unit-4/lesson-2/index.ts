@@ -663,10 +663,11 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > ### ⚡ Gibbs Free Energy ($G$)
 > The **Gibbs Free Energy** ($G$) combines both enthalpy and entropy into a single criterion for predicting whether a reaction is thermodynamically feasible (spontaneous) under constant temperature and pressure.
 > 
-> It is derived directly from the total entropy equation by multiplying by $-T$:
-> $$-T\\\\Delta S^\\\\theta\\\\text{(total)} = \\\\Delta H^\\\\theta - T\\\\Delta S^\\\\theta\\\\text{(system)}$$
-> We define:
-> $$\\\\Delta G^\\\\theta = -T\\\\Delta S^\\\\theta\\\\text{(total)}$$
+> It is derived directly from the total entropy equation:
+> $$\\\\Delta G = \\\\Delta H - T\\\\Delta S_{\\\\text{system}}$$
+> 
+> Since a negative $\\\\Delta G$ directly corresponds to a positive $\\\\Delta S_{\\\\text{total}}$:
+> $$\\\\Delta S_{\\\\text{total}} = -\\\\frac{\\\\Delta G}{T}$$
 
 > [!IMPORTANT]
 > ### 🧮 Gibbs Free Energy Equation
@@ -676,7 +677,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > * **$\\\\Delta G^\\\\theta$** = Standard Gibbs free energy change ($\\\\text{kJ mol}^{-1}$)
 > * **$\\\\Delta H^\\\\theta$** = Standard enthalpy change ($\\\\text{kJ mol}^{-1}$)
 > * **$T$** = Temperature ($\\\\text{Kelvin}$)
-> * **$\\\\Delta S^\\\\theta$** = Standard entropy change of the system ($\\\\text{kJ K}^{-1}\\\\text{ mol}^{-1}$ — note: **convert** from J!)
+> * **$\\\\Delta S^\\\\theta$** = Standard entropy change of the system ($\\\\text{kJ K}^{-1}\\\\text{ mol}^{-1}$ — note: **convert** from J)
 > 
 > **Feasibility Criterion:**
 > * **$\\\\Delta G < 0$:** Reaction is thermodynamically feasible (spontaneous).
@@ -687,39 +688,55 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > ### ⚠️ Common Pitfall — Unit Conversion
 > $\\\\Delta H^\\\\theta$ is usually given in **kJ mol⁻¹** while $\\\\Delta S^\\\\theta$ is in **J K⁻¹ mol⁻¹**. You MUST convert $\\\\Delta S^\\\\theta$ to **kJ K⁻¹ mol⁻¹** by dividing by 1000 before substituting into the Gibbs equation, otherwise the calculation will be wrong by a factor of 1000.
 
+&nbsp;
+
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Gibbs Free Energy Calculation
-> **Question:** A reaction has $\\\\Delta H^\\\\theta = -286\\\\text{ kJ mol}^{-1}$ and $\\\\Delta S^\\\\theta = -163\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$. Calculate $\\\\Delta G^\\\\theta$ at $298\\\\text{ K}$ and determine whether the reaction is feasible.
+> #### 📝 Worked Example 1: Decomposition of Calcium Carbonate
+> **Question:** For the decomposition of calcium carbonate at $298\\\\text{ K}$:
+> $$\\\\text{CaCO}_{3(s)} \\\\rightarrow \\\\text{CaO}_{(s)} + \\\\text{CO}_{2(g)}$$
+> Given the following standard data:
+> * $\\\\Delta H^\\\\theta = +178\\\\text{ kJ mol}^{-1}$
+> * $\\\\Delta S_{\\\\text{system}}^\\\\theta = +160.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$
+> 
+> 1. Calculate $\\\\Delta G^\\\\theta$ for this reaction at $298\\\\text{ K}$.
+> 2. State and explain whether the reaction is thermodynamically feasible at this temperature.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Convert $\\\\Delta S^\\\\theta$ to $\\\\text{kJ K}^{-1}\\\\text{ mol}^{-1}$:**
-> >    $$\\\\Delta S^\\\\theta = \\\\frac{-163}{1000} = -0.163\\\\text{ kJ K}^{-1}\\\\text{ mol}^{-1}$$
+> >    $$\\\\Delta S^\\\\theta = \\\\frac{+160.4}{1000} = +0.1604\\\\text{ kJ K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
-> > 2. **Apply the Gibbs equation:**
+> > 2. **Substitute into the Gibbs equation:**
 > >    $$\\\\Delta G^\\\\theta = \\\\Delta H^\\\\theta - T\\\\Delta S^\\\\theta$$
-> >    $$\\\\Delta G^\\\\theta = -286 - (298 \\\\times -0.163)$$
-> >    $$\\\\Delta G^\\\\theta = -286 + 48.57 = -237.4\\\\text{ kJ mol}^{-1}$$
+> >    $$\\\\Delta G^\\\\theta = +178 - (298 \\\\times +0.1604)$$
+> >    $$\\\\Delta G^\\\\theta = +178 - 47.8 = +130.2\\\\text{ kJ mol}^{-1}$$
 > > 
-> > 3. **Feasibility:** Since $\\\\Delta G^\\\\theta$ is **negative**, the reaction is thermodynamically feasible at $298\\\\text{ K}$
+> > 3. **Feasibility:** The reaction is **not feasible** (not spontaneous) at $298\\\\text{ K}$ because $\\\\Delta G^\\\\theta$ is positive ($+130.2\\\\text{ kJ mol}^{-1}$).
+
+&nbsp;
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Finding Temperature for Feasibility
-> **Question:** A reaction has $\\\\Delta H^\\\\theta = +180\\\\text{ kJ mol}^{-1}$ and $\\\\Delta S^\\\\theta = +360\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$. Calculate the minimum temperature for the reaction to become thermodynamically feasible.
+> #### 📝 Worked Example 2: Finding Maximum Temperature for Feasibility
+> **Question:** A certain reaction has a standard enthalpy change $\\\\Delta H^\\\\theta = -92.2\\\\text{ kJ mol}^{-1}$ and a standard entropy change $\\\\Delta S_{\\\\text{system}}^\\\\theta = -199\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$. Calculate the maximum temperature (in Kelvin) up to which this reaction remains thermodynamically feasible.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Set $\\\\Delta G = 0$ at the boundary of feasibility:**
-> >    $$0 = \\\\Delta H^\\\\theta - T\\\\Delta S^\\\\theta$$
+> > 1. **Condition for feasibility limit:** At the threshold of feasibility, $\\\\Delta G^\\\\theta = 0$:
+> >    $$\\\\Delta H^\\\\theta - T\\\\Delta S^\\\\theta = 0 \\\\implies \\\\Delta H^\\\\theta = T\\\\Delta S^\\\\theta$$
+> > 
+> > 2. **Rearrange to solve for $T$:**
 > >    $$T = \\\\frac{\\\\Delta H^\\\\theta}{\\\\Delta S^\\\\theta}$$
 > > 
-> > 2. **Substitute values (converting $\\\\Delta S^\\\\theta$ to $\\\\text{kJ K}^{-1}\\\\text{ mol}^{-1}$):**
-> >    $$\\\\Delta S^\\\\theta = \\\\frac{+360}{1000} = +0.360\\\\text{ kJ K}^{-1}\\\\text{ mol}^{-1}$$
-> >    $$T = \\\\frac{+180}{+0.360} = 500\\\\text{ K}$$
+> > 3. **Convert units to match (use Joules):**
+> >    $$\\\\Delta H^\\\\theta = -92.2 \\\\times 1000 = -92200\\\\text{ J mol}^{-1}$$
+> >    $$\\\\Delta S^\\\\theta = -199\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
-> > 3. **Conclusion:** Above $500\\\\text{ K}$, $\\\\Delta G$ becomes negative and the reaction is feasible.
+> > 4. **Substitute values:**
+> >    $$T = \\\\frac{-92200}{-199} = 463.3\\\\text{ K}$$
+> > 
+> > 5. **Conclusion:** The reaction is feasible **below** $463.3\\\\text{ K}$ because $\\\\Delta H$ is negative and the negative $T\\\\Delta S$ term (which acts as a positive contribution to $\\\\Delta G$) becomes too large at higher temperatures.
 
 > [!NOTE]
 > ### 🔗 The Thermodynamic Link to Equilibrium
