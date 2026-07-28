@@ -625,23 +625,23 @@ export const parts: LessonPart[] = [
 > * **Justification:** Suitable if one of the products is a gas.
 > * **Apparatus & Selection:**
 >   * **Gas Syringe:** Preferred for high precision.
->   * **Collection over Water (inverted measuring cylinder):** Suitable only for gases with low solubility in water (such as $\\text{O}_2$ and $\\text{H}_2$).
+>   * **Collection over Water (inverted measuring cylinder):** Suitable only for gases with low solubility in water (such as $\\\\text{O}_2$ and $\\\\text{H}_2$).
 > * **Example:** Reaction of calcium carbonate with hydrochloric acid:
->   $$\\text{CaCO}_3\\text{(s)} + 2\\text{HCl}\\text{(aq)} \\rightarrow \\text{CaCl}_2\\text{(aq)} + \\text{H}_2\\text{O}\\text{(l)} + \\text{CO}_2\\text{(g)}$$
+>   $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)} + \\\\text{CO}_2\\\\text{(g)}$$
 > 
 > ${svgToken(gasCollectionSvg)}
 
 > 
 > > [!WARNING]
 > > ### ⚠️ Gas Collection Limitation
-> > Reactions producing gases that are highly soluble in water, such as sulfur dioxide ($\\text{SO}_2$), cannot be followed using gas collection over water because the gas will dissolve. A gas syringe must be used.
+> > Reactions producing gases that are highly soluble in water, such as sulfur dioxide ($\\\\text{SO}_2$), cannot be followed using gas collection over water because the gas will dissolve. A gas syringe must be used.
 
 > [!BOX]
 > ### 🎨 Continuous Colorimetry Monitoring
-> * **Justification:** Suitable when a reactant or product in solution is colored (e.g., brown aqueous iodine, $\\text{I}_2\\text{(aq)}$) and changes in concentration over time. A colorimeter measures light absorbance.
+> * **Justification:** Suitable when a reactant or product in solution is colored (e.g., brown aqueous iodine, $\\\\text{I}_2\\\\text{(aq)}$) and changes in concentration over time. A colorimeter measures light absorbance.
 > * **Advantages:** Provides objective, quantitative, and continuous measurements of concentration change.
 > * **Example:** Reaction of propanone with iodine:
->   $$\\text{CH}_3\\text{COCH}_3\\text{(aq)} + \\text{I}_2\\text{(aq)} \\rightarrow \\text{CH}_3\\text{COCH}_2\\text{I}\\text{(aq)} + \\text{H}^+\\text{(aq)} + \\text{I}^-\\text{(aq)}$$
+>   $$\\\\text{CH}_3\\\\text{COCH}_3\\\\text{(aq)} + \\\\text{I}_2\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{COCH}_2\\\\text{I}\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)} + \\\\text{I}^-\\\\text{(aq)}$$
 >   *Here, iodine is the only colored species, so we track its color intensity decay.*
 > 
 > ${svgToken(colorimeterSvg)}
@@ -653,13 +653,13 @@ export const parts: LessonPart[] = [
 > * **Quenching Techniques:**
 >   1. Rapid cooling in an ice-water bath.
 >   2. Adding a chemical that neutralizes/reacts with the catalyst or one of the reactants.
-> * **Example (Propanone-Iodine Reaction):** Sodium hydrogen carbonate ($\text{NaHCO}_3$) is added to neutralize the acid catalyst ($\text{H}^+$), effectively quenching the reaction. The remaining iodine is then titrated against standard sodium thiosulfate:
->   $$\\text{I}_2\\text{(aq)} + 2\\text{S}_2\\text{O}_3^{2-}\\text{(aq)} \\rightarrow 2\\text{I}^-\\text{(aq)} + \\text{S}_4\\text{O}_6^{2-}\\text{(aq)}$$
+> * **Example (Propanone-Iodine Reaction):** Sodium hydrogen carbonate ($\\\\text{NaHCO}_3$) is added to neutralize the acid catalyst ($\\\\text{H}^+$), effectively quenching the reaction. The remaining iodine is then titrated against standard sodium thiosulfate:
+>   $$\\\\text{I}_2\\\\text{(aq)} + 2\\\\text{S}_2\\\\text{O}_3^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{I}^-\\\\text{(aq)} + \\\\text{S}_4\\\\text{O}_6^{2-}\\\\text{(aq)}$$
 
 > [!BOX]
 > ### ⚖️ Measuring Mass Change
-> * **Justification:** Suitable if a heavy gas (e.g. $\\text{CO}_2$) escapes from the flask. A cotton wool plug allows gas to escape but prevents loss of liquid droplets.
-> * **Constraint:** Highly precise for high relative molecular mass gases like $\\text{CO}_2$ ($M_r = 44.0$). Ineffective for very light gases like $\\text{H}_2$ ($M_r = 2.0$) due to large measurement uncertainties.
+> * **Justification:** Suitable if a heavy gas (e.g. $\\\\text{CO}_2$) escapes from the flask. A cotton wool plug allows gas to escape but prevents loss of liquid droplets.
+> * **Constraint:** Highly precise for high relative molecular mass gases like $\\\\text{CO}_2$ ($M_r = 44.0$). Ineffective for very light gases like $\\\\text{H}_2$ ($M_r = 2.0$) due to large measurement uncertainties.
 > 
 > ${svgToken(massLossSvg)}
 
@@ -667,7 +667,7 @@ export const parts: LessonPart[] = [
 > ### ⏱️ Disappearing Cross Method
 > * **Justification:** Suitable for reactions that produce an insoluble solid precipitate that makes the solution cloudy.
 > * **Example:** Sodium thiosulfate and hydrochloric acid:
->   $$\\text{Na}_2\\text{S}_2\\text{O}_3\\text{(aq)} + 2\\text{HCl}\\text{(aq)} \\rightarrow 2\\text{NaCl}\\text{(aq)} + \\text{SO}_2\\text{(g)} + \\text{S}\\text{(s)} + \\text{H}_2\\text{O}\\text{(l)}$$
+>   $$\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3\\\\text{(aq)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow 2\\\\text{NaCl}\\\\text{(aq)} + \\\\text{SO}_2\\\\text{(g)} + \\\\text{S}\\\\text{(s)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
 > 
 > ${svgToken(disappearingCrossSvg)}
 
@@ -678,10 +678,10 @@ export const parts: LessonPart[] = [
 > 1. **Electrical Conductivity:**
 >    * **Justification:** Suitable if the concentration or mobility of ions in solution changes during the reaction, causing a drop/increase in conductivity.
 >    * **Example:**
->      $$5\\text{Br}^-\\text{(aq)} + \\text{BrO}_3^-\\text{(aq)} + 6\\text{H}^+\\text{(aq)} \\rightarrow 3\\text{Br}_2\\text{(aq)} + 3\\text{H}_2\\text{O}\\text{(l)}$$
+>      $$5\\\\text{Br}^-\\\\text{(aq)} + \\\\text{BrO}_3^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
 > 
 > 2. **pH Measurement:**
->    * **Justification:** Suitable for reactions where the concentration of hydrogen ions ($\\text{H}^+$) changes significantly.
+>    * **Justification:** Suitable for reactions where the concentration of hydrogen ions ($\\\\text{H}^+$) changes significantly.
 >    * **Apparatus:** A digital pH probe or meter.
 > 
 > 3. **Other Physical Properties (Dilatometry):**
@@ -703,7 +703,7 @@ export const parts: LessonPart[] = [
 > > 
 > > 1. **Magnesium with acid:**
 > >    * *Technique:* Measuring the volume of gas evolved using a gas syringe.
-> >    * *Explanation:* $\\\\text{H}_2$ gas is produced. Measuring mass loss is unsuitable because $\\\\text{H}_2$ has a very low density, leading to negligible mass changes that fall within experimental uncertainty.
+> >    * *Explanation:* $\\\\text{H}_2$ gas is produced. Measuring mass loss is unsuitable because hydrogen gas ($\\\\text{H}_2$) has a very low molar mass ($2.0\\\\text{ g mol}^{-1}$), meaning the decrease in mass as the gas escapes is extremely small and cannot be measured accurately with standard laboratory balances.
 > > 
 > > 2. **Ethyl ethanoate with sodium hydroxide:**
 > >    * *Technique:* Electrical conductivity (or quenching and titrating $\\\\text{OH}^-$).
@@ -712,32 +712,32 @@ export const parts: LessonPart[] = [
 > > 3. **Hydrogen gas with iodine gas:**
 > >    * *Technique:* Colorimetry.
 > >    * *Explanation:* Iodine gas ($\\\\text{I}_2$) is purple, whereas the reactant $\\\\text{H}_2$ and product $\\\\text{HI}$ are colorless. The fading of the purple color can be monitored quantitatively.
-
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 2: Evaluating Experimental Design & Systematic Errors
-> **Question:** In an experiment to follow the rate of carbon dioxide evolution from the reaction of calcium carbonate with hydrochloric acid:
-> $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)} + \\\\text{CO}_2\\\\text{(g)}$$
-> A student evaluates two possible experimental setups:
-> * **Setup A:** Adding calcium carbonate chips to the flask, then pouring HCl from a measuring cylinder and quickly sealing the flask with a rubber bung connected to a gas syringe.
-> * **Setup B:** Using a divided flask (or suspending the solid in a small tube above the acid using a thread), sealing the flask first, and then tilting/shaking it to mix the reactants and start the reaction.
 > 
-> 1. Explain the major source of systematic error in **Setup A** and how it affects the recorded rate.
-> 2. Explain how **Setup B** eliminates this error.
-> 3. Suggest one advantage of using a gas syringe over gas collection over water if the laboratory temperature fluctuates during the experiment.
 > 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 2: Evaluating Experimental Design & Systematic Errors
+> > **Question:** In an experiment to follow the rate of carbon dioxide evolution from the reaction of calcium carbonate with hydrochloric acid:
+> > $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> > A student evaluates two possible experimental setups:
+> > * **Setup A:** Adding calcium carbonate chips to the flask, then pouring HCl from a measuring cylinder and quickly sealing the flask with a rubber bung connected to a gas syringe.
+> > * **Setup B:** Using a divided flask (or suspending the solid in a small tube above the acid using a thread), sealing the flask first, and then tilting/shaking it to mix the reactants and start the reaction.
 > > 
-> > 1. **Systematic error in Setup A:**
-> >    * *Source:* Gas loss occurs during the delay between pouring the acid and sealing the rubber bung.
-> >    * *Effect on rate:* The measured volume of carbon dioxide will be lower than the true volume, resulting in an underestimated initial reaction rate.
+> > 1. Explain the major source of systematic error in **Setup A** and how it affects the recorded rate.
+> > 2. Explain how **Setup B** eliminates this error.
+> > 3. Suggest one advantage of using a gas syringe over gas collection over water if the laboratory temperature fluctuates during the experiment.
 > > 
-> > 2. **Mitigation in Setup B:**
-> >    * *Explanation:* By keeping reactants separate until the apparatus is fully sealed, no gas can escape when the reaction is initiated by tilting/shaking. This ensures all evolved gas is captured.
-> > 
-> > 3. **Advantage of Gas Syringe:**
-> >    * *Explanation:* Carbon dioxide gas is partially soluble in water. Temperature fluctuations affect gas solubility in water (solubility decreases as temperature increases), which would introduce unpredictable errors in gas volume measurements over water. A gas syringe avoids water contact entirely.
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Systematic error in Setup A:**
+> > >    * *Source:* Gas loss occurs during the delay between pouring the acid and sealing the rubber bung.
+> > >    * *Effect on rate:* The measured volume of carbon dioxide will be lower than the true volume, resulting in an underestimated initial reaction rate.
+> > > 
+> > > 2. **Mitigation in Setup B:**
+> > >    * *Explanation:* By keeping reactants separate until the apparatus is fully sealed, no gas can escape when the reaction is initiated by tilting/shaking. This ensures all evolved gas is captured.
+> > > 
+> > > 3. **Advantage of Gas Syringe:**
+> > >    * *Explanation:* Carbon dioxide gas ($\\\\text{CO}_2$) is moderately soluble in water. If collected over water, some of the $\\\\text{CO}_2$ dissolves, leading to underestimated volume readings. A gas syringe avoids water contact entirely. Furthermore, temperature fluctuations affect gas solubility in water (solubility decreases as temperature increases), introducing unpredictable errors.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Chemical Selection for Quenching
@@ -821,10 +821,58 @@ export const parts: LessonPart[] = [
 > Plotting reactant concentration against time gives a curve from which we can determine the reaction order and half-life:
 > * **Half-Life ($t_{1/2}$):** The time taken for the concentration of a reactant to fall to half of its initial value.
 > * **First-Order Half-Life:** For a first-order reaction, the half-life is constant and is independent of the initial concentration:
->   $$t_{1/2} = \frac{\ln 2}{k}$$
+>   $$t_{1/2} = \\\\frac{\\\\ln 2}{k}$$
 >   *As shown in the graph below, the time taken for $[A]$ to decrease from $120$ to $60$ is $100\text{ s}$, from $60$ to $30$ is another $100\text{ s}$, and from $30$ to $15$ is also $100\text{ s}$. This constant half-life of $100\text{ s}$ confirms a first-order reaction.*
 > 
 > ${svgToken(halfLifeSvg)}
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Graph Analysis of Compound P Decomposition
+> **Question:** A compound P decomposes when heated. The graph shows the change in concentration when a sample of P is heated:
+> * At $t = 0\\\\text{ s}$, $[\\\\text{P}] = 5.8\\\\text{ units}$
+> * At $t = 350\\\\text{ s}$, $[\\\\text{P}] = 2.9\\\\text{ units}$
+> * At $t = 700\\\\text{ s}$, $[\\\\text{P}] = 1.45\\\\text{ units}$
+> * At $t = 1050\\\\text{ s}$, $[\\\\text{P}] = 0.72\\\\text{ units}$
+> 
+> 1. State what is meant by the term half-life of reaction.
+> 2. Use the data to show that the decomposition of P is a first-order reaction.
+> 3. Explain the effect on the half-life of doubling the initial concentration of P.
+> 4. Calculate the rate constant, $k$, for this reaction using the expression $k = \\\\frac{0.693}{\\\\text{half-life}}$.
+> 5. Write the rate equation for this reaction.
+> 6. Use the data to:
+>    a) Determine the concentration of P at $800\\\\text{ s}$ (given as $1.75\\\\text{ units}$).
+>    b) Calculate the rate of reaction at $800\\\\text{ s}$.
+> 7. Describe how you could determine the reaction rate at $800\\\\text{ s}$ directly from the graph.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Definition of Half-life:**
+> >    The time taken for the concentration of a reactant to decrease to half of its initial value.
+> > 
+> > 2. **Show First-order Reaction:**
+> >    * First half-life (from $5.8$ to $2.9\\\\text{ units}$): $t_{1/2} = 350 - 0 = 350\\\\text{ s}$.
+> >    * Second half-life (from $2.9$ to $1.45\\\\text{ units}$): $t_{1/2} = 700 - 350 = 350\\\\text{ s}$.
+> >    * Third half-life (from $1.45$ to $0.72\\\\text{ units}$): $t_{1/2} = 1050 - 700 = 350\\\\text{ s}$.
+> >    * *Conclusion:* Since successive half-lives are constant ($\\\\approx 350\\\\text{ s}$), the reaction is first-order with respect to P.
+> > 
+> > 3. **Effect of Doubling Concentration:**
+> >    The half-life will remain unchanged because the half-life of a first-order reaction is independent of the initial concentration.
+> > 
+> > 4. **Calculate rate constant, $k$:**
+> >    $$k = \\\\frac{0.693}{t_{1/2}} = \\\\frac{0.693}{350} = 1.98 \\\\times 10^{-3}\\\\text{ s}^{-1}$$
+> > 
+> > 5. **Write rate equation:**
+> >    $$\\\\text{rate} = k[\\\\text{P}]$$
+> > 
+> > 6. **Calculations at $800\\\\text{ s}$:**
+> >    * **a)** From the graph, concentration of P at $800\\\\text{ s}$ is $1.75\\\\text{ units}$ (or between $1.7$ and $1.8$).
+> >    * **b)** $\\\\text{rate} = k[\\\\text{P}] = (1.98 \\\\times 10^{-3}\\\\text{ s}^{-1}) \\\\times (1.75\\\\text{ units}) = 3.47 \\\\times 10^{-3}\\\\text{ units s}^{-1}$.
+> > 
+> > 7. **Determine rate directly from graph:**
+> >    Draw a tangent to the curve at $t = 800\\\\text{ s}$ and calculate the gradient (slope) of this tangent: $\\\\text{gradient} = \\\\frac{\\\\Delta\\\\text{concentration}}{\\\\Delta\\\\text{time}}$. The magnitude of this gradient represents the rate at that instant.
 `,
     keyPoints: [
       'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
@@ -961,11 +1009,13 @@ export const parts: LessonPart[] = [
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Deducing Rate Equation & Constant from Table Data
-> **Question:** The reaction between compounds $\\\\text{A}$ and $\\\\text{B}$ was studied, and the following initial rates were obtained at a constant temperature:
+> The following initial rates were obtained at a constant temperature:
 > 
-> * **Experiment 1:** $[\\\\text{A}] = 0.100\\\\text{ mol dm}^{-3}$, $[\\\\text{B}] = 0.100\\\\text{ mol dm}^{-3}$, $\\\\text{Initial Rate} = 2.00 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}\\\\text{ s}^{-1}$
-> * **Experiment 2:** $[\\\\text{A}] = 0.200\\\\text{ mol dm}^{-3}$, $[\\\\text{B}] = 0.100\\\\text{ mol dm}^{-3}$, $\\\\text{Initial Rate} = 8.00 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}\\\\text{ s}^{-1}$
-> * **Experiment 3:** $[\\\\text{A}] = 0.100\\\\text{ mol dm}^{-3}$, $[\\\\text{B}] = 0.200\\\\text{ mol dm}^{-3}$, $\\\\text{Initial Rate} = 4.00 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}\\\\text{ s}^{-1}$
+> | Experiment | [A] / mol dm⁻³ | [B] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
+> | :---: | :---: | :---: | :---: |
+> | 1 | 0.100 | 0.100 | 2.00 × 10⁻³ |
+> | 2 | 0.200 | 0.100 | 8.00 × 10⁻³ |
+> | 3 | 0.100 | 0.200 | 4.00 × 10⁻³ |
 > 
 > 1. Deduce the order of reaction with respect to $\\\\text{A}$, showing your reasoning.
 > 2. Deduce the order of reaction with respect to $\\\\text{B}$, showing your reasoning.
@@ -975,11 +1025,11 @@ export const parts: LessonPart[] = [
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Deduce order with respect to A:**
+> > 1. **Deduce order with respect to $\\\\text{A}$:**
 > >    * *Reasoning:* Compare Experiment 1 and Experiment 2 where $[\\\\text{B}]$ is kept constant at $0.100\\\\text{ mol dm}^{-3}$. As $[\\\\text{A}]$ is doubled (from $0.100$ to $0.200$), the rate increases by a factor of 4 (from $2.00 \\\\times 10^{-3}$ to $8.00 \\\\times 10^{-3}$).
 > >    * *Mathematical relation:* Since $2^{\\\\text{order}} = 4$, the order with respect to $\\\\text{A}$ is 2 (Second Order).
 > > 
-> > 2. **Deduce order with respect to B:**
+> > 2. **Deduce order with respect to $\\\\text{B}$:**
 > >    * *Reasoning:* Compare Experiment 1 and Experiment 3 where $[\\\\text{A}]$ is kept constant at $0.100\\\\text{ mol dm}^{-3}$. As $[\\\\text{B}]$ is doubled (from $0.100$ to $0.200$), the rate doubles (from $2.00 \\\\times 10^{-3}$ to $4.00 \\\\times 10^{-3}$).
 > >    * *Mathematical relation:* Since $2^{\\\\text{order}} = 2$, the order with respect to $\\\\text{B}$ is 1 (First Order).
 > > 
@@ -989,14 +1039,65 @@ export const parts: LessonPart[] = [
 > > 
 > > 4. **Calculate rate constant k and units:**
 > >    * *Calculation:* Rearrange the rate equation using data from Experiment 1:
-> >      $$k = \\\\dfrac{\\\\text{Rate}}{[\\\\text{A}]^2[\\\\text{B}]} = \\\\dfrac{2.00 \\\\times 10^{-3}}{(0.100)^2 \\\\times (0.100)}$$
-> >      $$k = \\\\dfrac{2.00 \\\\times 10^{-3}}{0.010 \\\\times 0.100} = \\\\dfrac{2.00 \\\\times 10^{-3}}{1.00 \\\\times 10^{-3}} = 2.00$$
+> >      $$k = \\\\frac{\\\\text{Rate}}{[\\\\text{A}]^2[\\\\text{B}]} = \\\\frac{2.00 \\\\times 10^{-3}}{(0.100)^2 \\\\times (0.100)}$$
+> >      $$k = \\\\frac{2.00 \\\\times 10^{-3}}{0.010 \\\\times 0.100} = \\\\frac{2.00 \\\\times 10^{-3}}{1.00 \\\\times 10^{-3}} = 2.00$$
 > >    * *Units:*
-> >      $$\\\\text{Units} = \\\\dfrac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})^2 \\\\times (\\\\text{mol dm}^{-3})} = \\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$$
+> >      $$\\\\text{Units} = \\\\frac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})^2 \\\\times (\\\\text{mol dm}^{-3})} = \\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$$
 > >      *Final answer:* $k = 2.00\\\\text{ dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$
 
+&nbsp;
+
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Predicting Concentration Change Effects on Rate
+> #### 📝 Worked Example 5: Deducing Rate Equation & Constant for 3-Reactant Bromate Reaction
+> **Question:** The reaction between bromide ions ($\\\\text{Br}^-$), bromate(V) ions ($\\\\text{BrO}_3^-$), and hydrogen ions ($\\\\text{H}^+$) in aqueous solution was studied:
+> $$5\\\\text{Br}^-\\\\text{(aq)} + \\\\text{BrO}_3^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O(l)}$$
+> The following initial rates were obtained at a constant temperature:
+> 
+> | Experiment | [Br⁻(aq)] / mol dm⁻³ | [BrO₃⁻(aq)] / mol dm⁻³ | [H⁺(aq)] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
+> | :---: | :---: | :---: | :---: | :---: |
+> | 1 | 0.10 | 0.10 | 0.10 | 1.2 × 10⁻³ |
+> | 2 | 0.10 | 0.20 | 0.10 | 2.4 × 10⁻³ |
+> | 3 | 0.30 | 0.10 | 0.10 | 3.6 × 10⁻³ |
+> | 4 | 0.10 | 0.20 | 0.20 | 9.6 × 10⁻³ |
+> 
+> 
+> 1. Deduce the order of reaction with respect to $\\\\text{Br}^-$, showing your reasoning.
+> 2. Deduce the order of reaction with respect to $\\\\text{BrO}_3^-$, showing your reasoning.
+> 3. Deduce the order of reaction with respect to $\\\\text{H}^+$, showing your reasoning.
+> 4. Write the rate equation for this reaction.
+> 5. Calculate the value of the rate constant $k$ using Experiment 1, stating its units.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce order with respect to $\\\\text{Br}^-$:**
+> >    * Compare Experiment 1 and Experiment 3: $[\\\\text{BrO}_3^-]$ and $[\\\\text{H}^+]$ are constant. $[\\\\text{Br}^-]$ triples (from $0.10$ to $0.30$), and initial rate triples (from $1.2 \\\\times 10^{-3}$ to $3.6 \\\\times 10^{-3}$).
+> >    * Since $3^{\\\\text{order}} = 3$, the order with respect to $\\\\text{Br}^-$ is 1 (First Order).
+> > 
+> > 2. **Deduce order with respect to $\\\\text{BrO}_3^-$:**
+> >    * Compare Experiment 1 and Experiment 2: $[\\\\text{Br}^-]$ and $[\\\\text{H}^+]$ are constant. $[\\\\text{BrO}_3^-]$ doubles (from $0.10$ to $0.20$), and initial rate doubles (from $1.2 \\\\times 10^{-3}$ to $2.4 \\\\times 10^{-3}$).
+> >    * Since $2^{\\\\text{order}} = 2$, the order with respect to $\\\\text{BrO}_3^-$ is 1 (First Order).
+> > 
+> > 3. **Deduce order with respect to $\\\\text{H}^+$:**
+> >    * Compare Experiment 2 and Experiment 4: $[\\\\text{Br}^-]$ and $[\\\\text{BrO}_3^-]$ are constant. $[\\\\text{H}^+]$ doubles (from $0.10$ to $0.20$), and initial rate increases by a factor of 4 (from $2.4 \\\\times 10^{-3}$ to $9.6 \\\\times 10^{-3}$).
+> >    * Since $2^{\\\\text{order}} = 4$, the order with respect to $\\\\text{H}^+$ is 2 (Second Order).
+> > 
+> > 4. **Write the rate equation:**
+> >    $$\\\\text{rate} = k[\\\\text{Br}^-][\\\\text{BrO}_3^-][\\\\text{H}^+]^2$$
+> > 
+> > 5. **Calculate rate constant $k$ and units:**
+> >    * Rearrange the rate equation using Experiment 1:
+> >      $$k = \\\\frac{\\\\text{rate}}{[\\\\text{Br}^-][\\\\text{BrO}_3^-][\\\\text{H}^+]^2}$$
+> >      $$k = \\\\frac{1.2 \\\\times 10^{-3}}{(0.10) \\\\times (0.10) \\\\times (0.10)^2}$$
+> >      $$k = \\\\frac{1.2 \\\\times 10^{-3}}{0.010 \\\\times 0.010} = \\\\frac{1.2 \\\\times 10^{-3}}{0.0001} = 12$$
+> >    * **Units:**
+> >      $$\\\\text{Units} = \\\\frac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3}) \\\\times (\\\\text{mol dm}^{-3}) \\\\times (\\\\text{mol dm}^{-3})^2} = \\\\text{dm}^9\\\\text{ mol}^{-3}\\\\text{ s}^{-1}$$
+> >      *Final answer:* $k = 12\\\\text{ dm}^9\\\\text{ mol}^{-3}\\\\text{ s}^{-1}$
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Predicting Concentration Change Effects on Rate
 > **Question:** A chemical reaction has the rate equation:
 > $$\\\\text{Rate} = k[\\\\text{X}]^2[\\\\text{Y}]^0[\\\\text{Z}]^1$$
 > 
@@ -1229,6 +1330,124 @@ export const parts: LessonPart[] = [
 > >      $$\\\\text{Step 2 (fast): } \\\\text{X} + \\\\text{B} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$$
 > >    * Summing Step 1 + Step 2 gives the overall stoichiometry $\\\\text{A} + 2\\\\text{B} + \\\\text{C} \\\\rightarrow \\\\text{D} + \\\\text{E}$.
 
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Evaluating Proposed Mechanisms for Ethanal & HCN
+> **Question:** The reaction between ethanal ($\\\\text{CH}_3\\\\text{CHO}$) and hydrogen cyanide ($\\\\text{HCN}$) is given by:
+> $$\\\\text{CH}_3\\\\text{CHO} + \\\\text{HCN} \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CN}$$
+> Two mechanisms have been proposed for this reaction:
+> * **Mechanism 1:**
+>   * Step 1: $\\\\text{CH}_3\\\\text{CHO} + \\\\text{H}^+ \\\\rightarrow [\\\\text{CH}_3\\\\text{CHOH}]^+$
+>   * Step 2: $[\\\\text{CH}_3\\\\text{CHOH}]^+ + \\\\text{CN}^- \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CN}$
+> * **Mechanism 2:**
+>   * Step 1: $\\\\text{CH}_3\\\\text{CHO} + \\\\text{CN}^- \\\\rightarrow [\\\\text{CH}_3\\\\text{CHOCN}]^-$
+>   * Step 2: $[\\\\text{CH}_3\\\\text{CHOCN}]^- + \\\\text{H}^+ \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CN}$
+> 
+> The experimentally determined rate equation is $\\\\text{rate} = k[\\\\text{CH}_3\\\\text{CHO}][\\\\text{CN}^-][\\\\text{H}^+]^0$.
+> 1. Explain which of the two mechanisms is consistent with the rate equation.
+> 2. Identify which step in this mechanism is the rate-determining step (RDS).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Mechanism Selection:**
+> >    * **Mechanism 2 is consistent.**
+> >    * *Explanation:* The rate equation is $\\\\text{rate} = k[\\\\text{CH}_3\\\\text{CHO}][\\\\text{CN}^-]$ (since $[\\\\text{H}^+]^0 = 1$). This dictates that the rate-determining step must involve exactly one molecule of ethanal ($\\\\text{CH}_3\\\\text{CHO}$) and one cyanide ion ($\\\\text{CN}^-$). Step 1 of Mechanism 2 has $\\\\text{CH}_3\\\\text{CHO}$ and $\\\\text{CN}^-$ as reactants, whereas Step 1 of Mechanism 1 involves $\\\\text{H}^+$ (which is zero-order and cannot participate in the RDS).
+> > 
+> > 2. **Identify the Rate-Determining Step:**
+> >    * **Step 1** is the rate-determining step because its reactants match the species and stoichiometry found in the rate equation.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Proving Pre-Equilibrium Mechanism Consistency ($2\text{H}_2 + 2\text{NO}$)
+> **Question:** The overall equation for the reaction between hydrogen and nitrogen monoxide is:
+> $$2\\\\text{H}_2\\\\text{(g)} + 2\\\\text{NO(g)} \\\\rightarrow 2\\\\text{H}_2\\\\text{O(g)} + \\\\text{N}_2\\\\text{(g)}$$
+> The experimentally determined rate equation is $\\\\text{rate} = k[\\\\text{H}_2][\\\\text{NO}]^2$.
+> A proposed mechanism is:
+> * **Step 1 (fast equilibrium):** $2\\\\text{NO(g)} \\\\rightleftharpoons \\\\text{N}_2\\\\text{O}_2\\\\text{(g)}$
+> * **Step 2 (slow):** $\\\\text{N}_2\\\\text{O}_2\\\\text{(g)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow \\\\text{H}_2\\\\text{O(g)} + \\\\text{N}_2\\\\text{O(g)}$
+> * **Step 3 (fast):** $\\\\text{N}_2\\\\text{O(g)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow \\\\text{N}_2\\\\text{(g)} + \\\\text{H}_2\\\\text{O(g)}$
+> 
+> Is this mechanism consistent with the rate equation? Explain your answer.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the RDS & Formulate initial rate equation:**
+> >    * Step 2 is the slow step (RDS), so its rate equation is:
+> >      $$\\\\text{rate} = k_2 [\\\\text{N}_2\\\\text{O}_2][\\\\text{H}_2]$$
+> > 
+> > 2. **Express the intermediate $[\\\\text{N}_2\\\\text{O}_2]$ in terms of reactants:**
+> >    * Since $\\\\text{N}_2\\\\text{O}_2$ is an intermediate, it cannot appear in the final rate equation. From the fast pre-equilibrium in Step 1:
+> >      $$\\\\text{Rate}_1\\\\text{(forward)} = \\\\text{Rate}_1\\\\text{(reverse)} \\\\implies k_1 [\\\\text{NO}]^2 = k_{-1} [\\\\text{N}_2\\\\text{O}_2]$$
+> >      $$[\\\\text{N}_2\\\\text{O}_2] = \\\\frac{k_1}{k_{-1}} [\\\\text{NO}]^2$$
+> > 
+> > 3. **Substitute intermediate into the RDS rate equation:**
+> >    * Substitute $[\\\\text{N}_2\\\\text{O}_2]$ into Step 2:
+> >      $$\\\\text{rate} = k_2 \\\\left(\\\\frac{k_1}{k_{-1}} [\\\\text{NO}]^2\\\\right) [\\\\text{H}_2] = k [\\\\text{H}_2][\\\\text{NO}]^2$$
+> >    * *Conclusion:* Yes, it is fully consistent because the derived rate equation matches the experimental rate equation.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Chlorine Mechanism & Pseudo-First-Order Kinetics in Large Excess
+> **Question 1:** Assume the following proposed reaction mechanism is correct:
+> * **Step 1 (slow):** $\\\\text{Cl}_2 \\\\rightarrow 2\\\\text{Cl}^\\\\bullet$
+> * **Step 2 (fast):** $\\\\text{H}_2 + \\\\text{Cl}^\\\\bullet \\\\rightarrow \\\\text{HCl} + \\\\text{H}^\\\\bullet$
+> * **Step 3 (fast):** $\\\\text{H}^\\\\bullet + \\\\text{Cl}^\\\\bullet \\\\rightarrow \\\\text{HCl}$
+> 
+> a) Write the overall equation for the reaction.
+> b) Write a rate equation consistent with this mechanism.
+> c) Predict the effect on the rate of doubling $[\\\\text{Cl}_2]$ and doubling $[\\\\text{H}_2]$.
+> 
+> **Question 2:** The nucleophilic substitution of $\\\\text{CH}_3\\\\text{Cl}$ with $\\\\text{OH}^-$ is second-order overall ($\\\\text{rate} = k[\\\\text{CH}_3\\\\text{Cl}][\\\\text{OH}^-]$). However, when carried out using a large excess of $\\\\text{OH}^-$, the reaction becomes first-order overall. Explain this observation.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Chlorine Mechanism Analysis:**
+> >    * **a) Overall Equation:** Sum all steps and cancel intermediates ($\\\\text{Cl}^\\\\bullet$ and $\\\\text{H}^\\\\bullet$):
+> >      $$\\\\text{Cl}_{2\\\\text{(g)}} + \\\\text{H}_{2\\\\text{(g)}} \\\\rightarrow 2\\\\text{HCl}_{\\\\text{(g)}}$$
+> >    * **b) Rate Equation:** Since Step 1 is the slow step (RDS), $\\\\text{rate} = k[\\\\text{Cl}_2]$.
+> >    * **c) Effect of doubling concentrations:**
+> >      * Doubling $[\\\\text{Cl}_2]$ doubles the rate ($\\\\times 2$) because the reaction is first-order w.r.t. $\\\\text{Cl}_2$.
+> >      * Doubling $[\\\\text{H}_2]$ has no effect on the rate (zero-order) because $\\\\text{H}_2$ only reacts in fast steps after the RDS.
+> > 
+> > 2. **Pseudo-First-Order Kinetics:**
+> >    * When $\\\\text{OH}^-$ is present in a large excess, its concentration change during the reaction is negligible ($[\\\\text{OH}^-] \\\\approx \\\\text{constant}$).
+> >    * The term $[\\\\text{OH}^-]$ is absorbed into the rate constant:
+> >      $$k' = k [\\\\text{OH}^-]$$
+> >    * The rate equation simplifies to $\\\\text{rate} = k'[\\\\text{CH}_3\\\\text{Cl}]$, causing the reaction to display **pseudo-first-order kinetics**.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: 4-Step Mechanism & Intermediates Cancellation
+> **Question:** Bromine can be formed by the oxidation of hydrogen bromide with oxygen. A proposed 4-step mechanism is:
+> * **Step 1:** $\\\\text{HBr} + \\\\text{O}_2 \\\\rightarrow \\\\text{HBrO}_2$
+> * **Step 2:** $\\\\text{HBrO}_2 + \\\\text{HBr} \\\\rightarrow 2\\\\text{HBrO}$
+> * **Step 3:** $\\\\text{HBrO} + \\\\text{HBr} \\\\rightarrow \\\\text{Br}_2 + \\\\text{H}_2\\\\text{O}$
+> * **Step 4:** $\\\\text{HBrO} + \\\\text{HBr} \\\\rightarrow \\\\text{Br}_2 + \\\\text{H}_2\\\\text{O}$
+> 
+> The experimentally determined rate equation is $\\\\text{rate} = k[\\\\text{HBr}][\\\\text{O}_2]$.
+> 1. Explain which of the four steps is the rate-determining step.
+> 2. Write the overall balanced equation for the reaction.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the Rate-Determining Step:**
+> >    * **Step 1 is the rate-determining step.**
+> >    * *Reasoning:* The rate equation $\\\\text{rate} = k[\\\\text{HBr}][\\\\text{O}_2]$ shows first-order dependence on both $\\\\text{HBr}$ and $\\\\text{O}_2$. Step 1 is the only step whose reactants match these exact species and 1:1 stoichiometry, making it the slow bottleneck step.
+> > 
+> > 2. **Write the Overall Balanced Equation:**
+> >    * Add all 4 steps together:
+> >      $$4\\\\text{HBr} + \\\\text{O}_2 + \\\\text{HBrO}_2 + 2\\\\text{HBrO} \\\\rightarrow \\\\text{HBrO}_2 + 2\\\\text{HBrO} + 2\\\\text{Br}_2 + 2\\\\text{H}_2\\\\text{O}$$
+> >    * Cancel intermediates ($\\\\text{HBrO}_2$ and $2\\\\text{HBrO}$) appearing on both sides:
+> >      $$4\\\\text{HBr}_{\\\\text{(aq)}} + \\\\text{O}_{2\\\\text{(g)}} \\\\rightarrow 2\\\\text{Br}_{2\\\\text{(l)}} + 2\\\\text{H}_2\\\\text{O}_{\\\\text{(l)}}$$
+
 `,
     keyPoints: [
       'Intermediate species are unstable products formed in early steps and consumed in later steps; they must never appear in the final rate equation.',
@@ -1352,10 +1571,63 @@ export const parts: LessonPart[] = [
 > > When calculating the gradient ($\\\\frac{\\\\Delta y}{\\\\Delta x}$), students often read the coordinate difference on the $x$-axis as (for example) $0.4$ instead of $0.4 \\\\times 10^{-3}$.
 > > **Always multiply your $\\\\Delta x$ value by $10^{-3}$ (or the scale factor shown on the axis) to avoid getting an activation energy that is 1000 times too small!**
 > 
+> &nbsp;
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 4: Explaining Temperature Effect via Arrhenius Equation
+> > **Question:** Use the Arrhenius equation to explain why an increase in temperature results in an increase in the rate of reaction.
+> > 
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **State the Arrhenius Equation:**
+> > >    * The relationship is given by:
+> > >      $$k = A e^{-\\\\frac{E_a}{RT}}$$
+> > > 
+> > > 2. **Analyze the Exponential Term:**
+> > >    * As temperature ($T$) increases, the fraction term $\\\\frac{E_a}{RT}$ decreases.
+> > >    * Consequently, the negative exponent term $-\\\\frac{E_a}{RT}$ becomes less negative.
+> > >    * This causes the exponential factor $e^{-\\\\frac{E_a}{RT}}$ to increase significantly.
+> > > 
+> > > 3. **Link to Rate of Reaction:**
+> > >    * Since $k$ is directly proportional to $e^{-\\\\frac{E_a}{RT}}$, the rate constant ($k$) increases.
+> > >    * Because the rate of reaction is directly proportional to the rate constant ($\\\\text{rate} = k[\\\\text{reactants}]^n$), a larger $k$ results in an increased rate of reaction.
+> > >    * *(Note: Physically, at higher temperatures, a much larger fraction of molecules possess energy greater than or equal to the activation energy, $E_a$).*
+> 
+> &nbsp;
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 5: Calculating $E_a$ from two-point Rate Constants
+> > **Question:** The rate constant, $k$, for a reaction increases from $10.0\\\\text{ s}^{-1}$ to $100.0\\\\text{ s}^{-1}$ when the temperature is increased from $300\\\\text{ K}$ to $400\\\\text{ K}$.
+> > Calculate the activation energy, $E_a$, for this reaction in $\\\\text{kJ mol}^{-1}$ ($R = 8.31\\\\text{ J mol}^{-1}\\\\text{ K}^{-1}$).
+> > 
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **State the two-point Arrhenius equation:**
+> > >    $$\\\\ln\\\\left(\\\\frac{k_2}{k_1}\\\\right) = \\\\frac{E_a}{R}\\\\left(\\\\frac{T_2 - T_1}{T_1 T_2}\\\\right)$$
+> > > 
+> > > 2. **Identify given data:**
+> > >    * $k_1 = 10.0\\\\text{ s}^{-1}$ at $T_1 = 300\\\\text{ K}$
+> > >    * $k_2 = 100.0\\\\text{ s}^{-1}$ at $T_2 = 400\\\\text{ K}$
+> > >    * $R = 8.31\\\\text{ J mol}^{-1}\\\\text{ K}^{-1}$
+> > > 
+> > > 3. **Substitute values and simplify:**
+> > >    $$\\\\ln\\\\left(\\\\frac{100.0}{10.0}\\\\right) = \\\\frac{E_a}{8.31}\\\\left(\\\\frac{400 - 300}{300 \\\\times 400}\\\\right)$$
+> > >    $$\\\\ln(10) = \\\\frac{E_a}{8.31}\\\\left(\\\\frac{100}{120000}\\\\right)$$
+> > >    $$2.3026 = \\\\frac{E_a}{8.31} \\\\times 0.0008333$$
+> > > 
+> > > 4. **Solve for $E_a$:**
+> > >    $$2.3026 = E_a \\\\times (1.0028 \\\\times 10^{-4})$$
+> > >    $$E_a = \\\\frac{2.3026}{1.0028 \\\\times 10^{-4}} \\\\approx 22962\\\\text{ J mol}^{-1}$$
+> > > 
+> > > 5. **Convert to $\\\\text{kJ mol}^{-1}$:**
+> > >    $$E_a = \\\\frac{22962}{1000} \\\\approx 23.0\\\\text{ kJ mol}^{-1}$$
+> 
+> &nbsp;
+> 
 > > [!EXAMPLE]
 > > #### 📝 Worked Example 3: Calculating the Arrhenius Constant ($A$) and its Units
-> > **Question:** A first-order reaction has an activation energy ($E_a$) of $50.0\\\\text{ kJ mol}^{-1}$. At $298\\\\text{ K}$, the rate constant ($k$) is $3.46 \\\\times 10^{-5}\\\\text{ s}^{-1}$.
-> > Calculate the pre-exponential factor ($A$) for this reaction and state its units ($R = 8.31\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$).
 > > 
 > > > [!TIP]
 > > > **🔑 Step-by-step Solution:**
@@ -1539,7 +1811,39 @@ export const parts: LessonPart[] = [
 > >    * The intermediate $\\\\text{Mn}^{3+}$ ions then oxidize the ethanedioate ions, regenerating the $\\\\text{Mn}^{2+}$ catalyst:
 > >      $$2\\\\text{Mn}^{3+}\\\\text{(aq)} + \\\\text{C}_2\\\\text{O}_4^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{Mn}^{2+}\\\\text{(aq)} + 2\\\\text{CO}_2\\\\text{(g)}$$
 
+&nbsp;
 
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Quantities Required for Homogeneous Catalysts
+> **Question:** Explain why only a small quantity of a homogeneous catalyst is required in order for it to be effective in a chemical reaction.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Catalyst Regeneration:**
+> >    * A catalyst is not consumed (used up) during the overall reaction.
+> >    * It participates in an intermediate step to provide an alternative pathway with a lower activation energy, but it is regenerated intact at the end of the catalytic cycle.
+> > 
+> > 2. **Continuous Recycling:**
+> >    * Because the catalyst molecule is continually regenerated, a small initial amount can process large quantities of reactant molecules in rapid succession.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Tetraethyl Lead & Poisoning of Catalytic Converters
+> **Question:** Cars in some parts of the world run on leaded petrol. Leaded petrol contains a compound called tetraethyl lead, $(\\\\text{CH}_3\\\\text{CH}_2)_4\\\\text{Pb}$. Tetraethyl lead reacts in the engine with oxygen to form lead and lead(II) oxide ($\\\\text{PbO}$), which remove radical intermediates in combustion. 1,2-dibromoethane is added to remove excess lead as volatile lead(II) bromide ($\\\\text{PbBr}_2$).
+> 
+> Suggest why a catalytic converter cannot be used in a car running on leaded petrol.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the Poisoning Mechanism:**
+> >    * Lead and lead(II) oxide compounds (or lead particles) coat and bind strongly to the active sites on the platinum/palladium/rhodium surface inside the catalytic converter.
+> > 
+> > 2. **Explain the Effect on Catalytic Activity:**
+> >    * This strong, irreversible binding **blocks active sites**, preventing reactant gases ($\\\\text{CO}$, $\\\\text{NO}$, and unburnt hydrocarbons) from adsorbing onto the catalyst surface.
+> >    * As a result, the catalyst is permanently **poisoned** and rendered completely ineffective.
 `,
     keyPoints: [
       'Homogeneous catalysts are in the same phase as reactants; heterogeneous catalysts are in a different phase.',

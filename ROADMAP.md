@@ -52,7 +52,9 @@
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 5 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titrations & Indicators, Buffer Solutions, Ka from pH Curves) مع 17 سؤال امتحاني متكامل.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 12: Entropy and Energetics (مكتمل):** 7 أجزاء تفاعلية كاملة (Entropy, System/Surroundings/Total Entropy, Gibbs Free Energy, Born-Haber Cycles, Covalent Character, Enthalpy of Solution & Hydration, Group 2 Solubility Trends) مع إعادة تنسيق الأمثلة المحلولة 100%، وتدقيق 34 صندوق ملاحظات بالإيموجي، وضبط صيغ KaTeX، وإعادة هيكلة كويز الدرس (20 سؤالاً) وتزويده بـ lessonNum: 2 وتنسيق الشروحات بنقاط منسقة.
 - [x] **Pearson Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (مكتمل):** 7 أجزاء تفاعلية كاملة (TLC, GC-MS, HRMS, NMR principles, 13C NMR, Low & High-Res 1H NMR splitting) مع 27 سؤال امتحاني متكامل.
+- [x] **Pearson Edexcel IAL - Unit 4 Topic 11: Kinetics (مكتمل):** إدخال وتطوير المحتوى التفاعلي المتكامل لـ 6 أجزاء (معدلات السرعة، معادلات ورتب التفاعل، فترات عمر النصف وتفكك المركب P بيانياً، آليات التفاعل والخطوة المحددة للسرعة، أثر الحرارة ومعادلة أرينيوس، والحفز المتجانس وغير المتجانس والتسمم بالرصاص) مع إضافة وتوثيق 14 مثالاً امتحانياً تفصيلياً من أوراق المنهج.
 - [ ] **Pearson Edexcel IAL - بقية الدروس:** كتابة وإدخال المحتوى العلمي التفصيلي وبنك الأسئلة للدروس المتبقية.
+
 - [x] **Pearson Edexcel IAL - محاذاة السيليبس 100%:** إعادة ترتيب ترقيم المواضيع للوحدات 3 و 4 و 5 و 6 (تبدأ الوحدة 4 من Topic 11 للـ Kinetics وتنتهي عند Topic 15 للكربونيلات والكيرالية، مع نقل مواضيع البنزين والأمينات للوحدة الخامسة لإنهاء تفاوت الأرقام).
 
 ### (3) 🛡️ الهوية الرقمية والدرع السحابي
