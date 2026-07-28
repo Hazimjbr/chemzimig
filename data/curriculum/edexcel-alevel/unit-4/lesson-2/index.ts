@@ -96,11 +96,11 @@ const reactionEnergyProfilesSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewB
 </svg>`;
 
 export const parts: LessonPart[] = [
-    {
-        id: 'energetics-enthalpy-review-u4-l2',
-        title: 'Introduction: Chemical Energetics Review',
-        type: 'text',
-        content: `
+  {
+    id: 'energetics-enthalpy-review-u4-l2',
+    title: 'Introduction: Chemical Energetics Review',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### ⚡ Chemical Energetics and Enthalpy
 > **Chemical Energetics** focuses on the transfer of thermal energy during chemical reactions. 
@@ -211,18 +211,18 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > >    * Process: Gaseous ions form ionic bonds to produce solid sodium chloride.
 > >    * Classification: **Exothermic** (bond making releases energy).
 `,
-        keyPoints: [
-            'Enthalpy change represents the difference between the enthalpy of products and reactants.',
-            'Exothermic reactions release heat energy to the surroundings, leading to a negative enthalpy change (ΔH < 0).',
-            'Endothermic reactions absorb heat energy from the surroundings, leading to a positive enthalpy change (ΔH > 0).',
-            'Products of exothermic reactions are more energetically stable because they exist at a lower potential energy level.'
-        ]
-    },
-    {
-        id: 'entropy-spontaneous-u4-l2',
-        title: 'Entropy & Chemical Reactions',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Enthalpy change represents the difference between the enthalpy of products and reactants.',
+      'Exothermic reactions release heat energy to the surroundings, leading to a negative enthalpy change (ΔH < 0).',
+      'Endothermic reactions absorb heat energy from the surroundings, leading to a positive enthalpy change (ΔH > 0).',
+      'Products of exothermic reactions are more energetically stable because they exist at a lower potential energy level.'
+    ]
+  },
+  {
+    id: 'entropy-spontaneous-u4-l2',
+    title: 'Entropy & Chemical Reactions',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🌀 Spontaneous Processes
 > A **spontaneous process** is a chemical or physical change that occurs naturally without the need for continuous external intervention (such as heating or electrical input).
@@ -481,17 +481,18 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > >    * The actual system entropy change is positive ($+22\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$) because different molecules ($\\\\text{HI}$) have different chemical structures, different vibrational modes, and more available microstates compared to the homonuclear diatomic molecules ($\\\\text{H}_2$ and $\\\\text{I}_2$), giving a slightly higher overall molar entropy.
 > >    * Furthermore, the total entropy change ($\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$) will not be zero because it depends on both this positive system entropy change and the heat exchanged with the surroundings (enthalpy of reaction, which changes surroundings entropy).
 `,
-        keyPoints: [
-            'Entropy is a state function, like enthalpy, so the path of the reaction does not matter.',
-            'Gases have much higher molar entropies than liquids or solids due to greater molecular freedom.',
-            'Changes in the number of gas molecules or states of matter are the primary factors determining system entropy changes.'
-        ]
-    },
-    {
-        id: 'entropy-surroundings-total-u4-l2',
-        title: 'Total Entropy & Spontaneity',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Entropy measures disorder and energy dispersal. The Boltzmann formula (S = k ln W) relates entropy to available microstates (W).',
+      'The Third Law of Thermodynamics states a perfect crystal at 0 K has zero entropy because there is only one microstate (W = 1).',
+      'Physical state changes and changes in gaseous moles are the dominant qualitative factors determining the sign of ΔS(system).',
+      'Homonuclear and heteronuclear diatomic gases (e.g. H₂ vs. HI) have different structures and vibrational modes, giving different molar entropies.'
+    ]
+  },
+  {
+    id: 'entropy-surroundings-total-u4-l2',
+    title: 'Total Entropy & Spontaneity',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🌍 System vs. Surroundings
 > * **System:** The specific chemical species (reactants and products) taking part in the chemical reaction.
@@ -518,22 +519,22 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > * **Endothermic Reactions ($\\\\Delta H &gt; 0$):**
 >   1. Heat is absorbed from the surroundings.
 >   2. The kinetic energy and motion of the surroundings particles decrease.
->   3. Surroundings entropy change is negative ($\\\\Delta S_{\\\\text{surroundings}} &lt; 0$).
+>   3. Surroundings entropy change is negative ($\Delta S_{\text{surroundings}} < 0$).
 
 > [!WARNING]
 > ### ⚠️ Crucial Exam Note — Unit Matching
-> Enthalpy change ($\\\\Delta H$) is usually measured in **kJ mol⁻¹**, whereas entropy values are in **J K⁻¹ mol⁻¹**. You MUST convert $\\\\Delta H$ from $\\\\text{kJ mol}^{-1}$ to $\\\\text{J mol}^{-1}$ (by multiplying by 1000) before calculating surroundings entropy change, otherwise the units will not match.
+> Enthalpy change ($\Delta H$) is usually measured in **kJ mol⁻¹**, whereas entropy values are in **J K⁻¹ mol⁻¹**. You MUST convert $\Delta H$ from $\text{kJ mol}^{-1}$ to $\text{J mol}^{-1}$ (by multiplying by 1000) before calculating surroundings entropy change, otherwise the units will not match.
 
 > [!BOX]
 > ### 📋 Spontaneity Conditions Summary Table
-> | ΔS(total) | ΔS(system) | ΔS(surroundings) | Conditions |
-> | :---: | :---: | :---: | :--- |
-> | $+$ | $+$ | $+$ | |
-> | $+$ | $+$ | $-$ | ΔS(system) > ΔS(surroundings) |
-> | $+$ | $-$ | $+$ | ΔS(system) < ΔS(surroundings) |
-> | $-$ | $-$ | $-$ | |
-> | $-$ | $+$ | $-$ | ΔS(system) < ΔS(surroundings) |
-> | $-$ | $-$ | $+$ | ΔS(system) > ΔS(surroundings) |
+> | ΔS(total) | ΔS(system) | ΔS(surroundings) | Conditions | Examples |
+> | :---: | :---: | :---: | :--- | :--- |
+> | $+$ | $+$ | $+$ | | 2H₂O₂(aq) → 2H₂O(l) + O₂(g) |
+> | $+$ | $+$ | $-$ | ΔS(system) > ΔS(surroundings) | Ba(OH)₂·8H₂O(s) + 2NH₄Cl(s) → BaCl₂(s) + 10H₂O(l) + 2NH₃(g) |
+> | $+$ | $-$ | $+$ | ΔS(system) < ΔS(surroundings) | Mg(s) + ½O₂(g) → MgO(s) |
+> | $-$ | $-$ | $-$ | | 2MgO(s) → 2Mg(s) + O₂(g) |
+> | $-$ | $+$ | $-$ | ΔS(system) < ΔS(surroundings) | CaCO₃(s) → CaO(s) + CO₂(g) (at 298 K) |
+> | $-$ | $-$ | $+$ | ΔS(system) > ΔS(surroundings) | H₂O(l) → H₂O(s) (at 278 K) |
 
 > [!BOX]
 > ### 🏭 Application: The Haber Process
@@ -645,17 +646,19 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > >      $$\\\\Delta S_{\\\\text{total}} = -22.0 + 21.6 = -0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} < 0$, freezing is not spontaneous at $+5\\\\text{ °C}$
 `,
-        keyPoints: [
-            'Always convert enthalpy change (ΔH) to J mol⁻¹ before calculating surroundings entropy change.',
-            'For a reaction to be feasible, the total entropy change must be positive, even if the system entropy change is negative.',
-            'A reaction may be thermodynamically feasible but fail to occur due to kinetic constraints (high activation energy).'
-        ]
-    },
-    {
-        id: 'gibbs-free-energy-u4-l2',
-        title: 'Gibbs Free Energy & Equilibrium',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Spontaneity (feasibility) requires a positive total entropy change: ΔS(total) = ΔS(system) + ΔS(surroundings) > 0.',
+      'Always convert enthalpy change (ΔH) to J mol⁻¹ (multiply by 1000) before calculating surroundings entropy change (ΔS_surroundings = -ΔH/T).',
+      'For exothermic reactions, increasing temperature makes the surroundings entropy term less positive, reducing feasibility (e.g. Haber Process).',
+      'Thermodynamic stability relates to feasibility (ΔS_total > 0), whereas kinetic stability relates to the rate of reaction and activation energy (Ea) barrier.',
+      'Supplying a set amount of heat increases the entropy of a colder substance more than a hotter substance (due to T in the denominator).'
+    ]
+  },
+  {
+    id: 'gibbs-free-energy-u4-l2',
+    title: 'Gibbs Free Energy & Equilibrium',
+    type: 'text',
+    content: `
 > [!BOX]
 > ### ⚡ Gibbs Free Energy ($G$)
 > The **Gibbs Free Energy** ($G$) combines both enthalpy and entropy into a single criterion for predicting whether a reaction is thermodynamically feasible (spontaneous) under constant temperature and pressure.
@@ -766,18 +769,18 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > > 
 > > 5. **Conclusion:** Since $K = 10.4$ (which is greater than 1), the products are favoured at equilibrium.
 `,
-        keyPoints: [
-            'A negative ΔG guarantees thermodynamic feasibility, but does not mean the reaction is fast (kinetically controlled).',
-            'At the temperature where ΔG = 0, the reaction is at equilibrium and both T·ΔS and ΔH are equal.',
-            'Ensure ΔG° is converted to J mol⁻¹ when using the R value of 8.31 J K⁻¹ mol⁻¹ in standard thermodynamic calculations.',
-            'A reaction with a negative ΔG° will have an equilibrium constant K greater than 1.'
-        ]
-    },
-    {
-        id: 'lattice-enthalpy-u4-l2',
-        title: 'Lattice Enthalpy & Born-Haber Cycles',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'A negative ΔG guarantees thermodynamic feasibility, but does not mean the reaction is fast (kinetically controlled).',
+      'At the temperature where ΔG = 0, the reaction is at equilibrium and both T·ΔS and ΔH are equal.',
+      'Ensure ΔG° is converted to J mol⁻¹ when using the R value of 8.31 J K⁻¹ mol⁻¹ in standard thermodynamic calculations.',
+      'A reaction with a negative ΔG° will have an equilibrium constant K greater than 1.'
+    ]
+  },
+  {
+    id: 'lattice-enthalpy-u4-l2',
+    title: 'Lattice Enthalpy & Born-Haber Cycles',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🔗 Lattice Enthalpy
 > **Lattice Formation Enthalpy:** The standard enthalpy change when **one mole** of an ionic lattice is formed from its gaseous ions under standard conditions.
@@ -893,22 +896,22 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > ### 💡 The Conclusion
 > The extra energy required to form the highly charged $\\\\text{Ca}^{2+}$ and $\\\\text{O}^{2-}$ ions is **more than compensated for** by the much larger (more exothermic) lattice energy of the $\\\\text{Ca}^{2+}\\\\text{O}^{2-}$ lattice ($-3401$ vs $-650\\\\text{ kJ mol}^{-1}$). This makes $\\\\text{Ca}^{2+}\\\\text{O}^{2-}$ energetically far more favourable than $\\\\text{Ca}^+\\\\text{O}^-$.
 `,
-        keyPoints: [
-            'Lattice enthalpy becomes more exothermic (more negative) as ionic charges increase or ionic radii decrease.',
-            'The Born-Haber cycle uses Hess\'s Law to determine lattice enthalpies which cannot be measured directly.',
-            'Although forming doubly-charged ions requires much more energy, the resulting lattice is extremely stable, making oxides like CaO highly exothermic and thermodynamically stable.'
-        ],
-        equationVisualizer: {
-            reactants: [['Na⁺(g)', '#f97316'], ['Cl⁻(g)', '#22c55e']],
-            products: [['NaCl(s)', '#6366f1']],
-            description: "Formation of the ionic lattice of NaCl from gaseous ions releases lattice enthalpy"
-        }
-    },
-    {
-        id: 'polarisation-covalent-character-u4-l2',
-        title: 'Polarisation & Covalent Character',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Lattice enthalpy becomes more exothermic (more negative) as ionic charges increase or ionic radii decrease.',
+      'The Born-Haber cycle uses Hess\'s Law to determine lattice enthalpies which cannot be measured directly.',
+      'Although forming doubly-charged ions requires much more energy, the resulting lattice is extremely stable, making oxides like CaO highly exothermic and thermodynamically stable.'
+    ],
+    equationVisualizer: {
+      reactants: [['Na⁺(g)', '#f97316'], ['Cl⁻(g)', '#22c55e']],
+      products: [['NaCl(s)', '#6366f1']],
+      description: "Formation of the ionic lattice of NaCl from gaseous ions releases lattice enthalpy"
+    }
+  },
+  {
+    id: 'polarisation-covalent-character-u4-l2',
+    title: 'Polarisation & Covalent Character',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🧪 Experimental vs. Theoretical Lattice Energies
 > A comparison of the experimental lattice energy value (Born-Haber cycle) with the theoretical value (electrostatic theory) indicates the degree of covalent character in an ionic bond:
@@ -945,17 +948,17 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > * Consequently, the silver nucleus exerts a much stronger electrostatic pull on the anion's electron cloud, leading to significantly greater polarisation and covalent character.
 > * For the same reason, **zinc compounds** ($\\\\text{Zn}^{2+}$ which has a $d^{10}$ shell) also exhibit high covalent character.
 `,
-        keyPoints: [
-            'Cation polarizing power increases with high charge and small ionic radius (high charge density).',
-            'Anion polarisability increases with high charge and large ionic radius.',
-            'Cations with d¹⁰ outer configurations (like Ag⁺ and Zn²⁺) have poorer shielding, resulting in unexpectedly high polarizing power.'
-        ]
-    },
-    {
-        id: 'enthalpy-solution-u4-l2',
-        title: 'Enthalpy of Solution & Dissolving Process',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Cation polarizing power increases with high charge and small ionic radius (high charge density).',
+      'Anion polarisability increases with high charge and large ionic radius.',
+      'Cations with d¹⁰ outer configurations (like Ag⁺ and Zn²⁺) have poorer shielding, resulting in unexpectedly high polarizing power.'
+    ]
+  },
+  {
+    id: 'enthalpy-solution-u4-l2',
+    title: 'Enthalpy of Solution & Dissolving Process',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 💧 Enthalpy of Solution ($\\\\Delta H_{\\\\text{sol}}^\\\\theta$)
 > The standard enthalpy of solution is the enthalpy change when **one mole** of solute dissolves in excess water to form an infinitely dilute solution:
@@ -1038,16 +1041,16 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > | CuSO₄ | -73 | +245 | -192 | +53 | soluble |
 > | CaSO₄ | -18 | +60 | -145 | -85 | insoluble |
 `,
-        keyPoints: [
-            'Enthalpy of hydration is always exothermic because water molecules form ion-dipole interactions with the dissolved ions.',
-            'Solubilities of ionic solids are determined by the balance of enthalpy of solution and system entropy changes.'
-        ]
-    },
-    {
-        id: 'group2-solubility-trends-u4-l2',
-        title: 'Group 2 Solubility Trends',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Enthalpy of hydration is always exothermic because water molecules form ion-dipole interactions with the dissolved ions.',
+      'Solubilities of ionic solids are determined by the balance of enthalpy of solution and system entropy changes.'
+    ]
+  },
+  {
+    id: 'group2-solubility-trends-u4-l2',
+    title: 'Group 2 Solubility Trends',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 📉 Solubility Trends in Group 2 Compounds
 > In Group 2, the solubility of hydroxides and sulfates follows opposite trends down the group:
@@ -1082,9 +1085,9 @@ ${svgToken(reactionEnergyProfilesSvg)}
 >   2. **Entropy Factor:** Although the cation hydration entropy becomes **more positive** down the group (favouring solubility), the decrease in surroundings entropy ($\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$) is much larger than the increase in system entropy ($\\\\Delta S^\\\\theta_{\\\\text{system}}$).
 >   3. **Conclusion:** The dominant enthalpy/surroundings factor overrides the system entropy, causing the solubility of Group 2 metal sulfates to **decrease** down the group (from $\\\\text{MgSO}_4$ to $\\\\text{BaSO}_4$).
 `,
-        keyPoints: [
-            'For small anions like OH⁻, lattice enthalpy decreases faster than hydration enthalpy down the group, increasing solubility.',
-            'For large anions like SO₄²⁻, lattice enthalpy changes very little while hydration enthalpy drops significantly down the group, decreasing solubility.'
-        ]
-    }
+    keyPoints: [
+      'For small anions like OH⁻, lattice enthalpy decreases faster than hydration enthalpy down the group, increasing solubility.',
+      'For large anions like SO₄²⁻, lattice enthalpy changes very little while hydration enthalpy drops significantly down the group, decreasing solubility.'
+    ]
+  }
 ];
