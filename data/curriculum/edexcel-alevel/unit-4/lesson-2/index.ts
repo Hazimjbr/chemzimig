@@ -1,4 +1,5 @@
 import { LessonPart } from '../../../registry';
+import { svgToken } from '../../../svgToken';
 
 export const lessonTitle = "Entropy and Energetics";
 export const lessonNumber = 2;
@@ -8,26 +9,274 @@ export const theoryMarkdown = `
 This lesson covers entropy, Gibbs free energy, lattice enthalpy, Born-Haber cycles, enthalpy of solution, and Hess's Law applications.
 `;
 
+const reactionEnergyProfilesSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="axis-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+    </marker>
+    <marker id="arrow-red-down" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444" />
+    </marker>
+    <marker id="arrow-blue-up" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+    </marker>
+    <marker id="dot-grey" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5">
+      <circle cx="5" cy="5" r="3.5" fill="#64748b" />
+    </marker>
+  </defs>
+  
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">Reaction Energy Profiles</text>
+  
+  <!-- Left Panel: Exothermic Reaction -->
+  <g transform="translate(60, 40)">
+    <text x="180" y="20" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="600">Exothermic Reaction</text>
+    
+    <!-- Axes -->
+    <path d="M 40,240 L 40,40" stroke="#94a3b8" stroke-width="2" marker-end="url(#axis-arrow)" />
+    <text x="20" y="140" fill="#94a3b8" font-size="11" text-anchor="middle" transform="rotate(-90 20 140)">Energy (H)</text>
+    
+    <path d="M 40,240 L 340,240" stroke="#94a3b8" stroke-width="2" marker-end="url(#axis-arrow)" />
+    <text x="190" y="260" fill="#94a3b8" font-size="11" text-anchor="middle">Reaction Progression</text>
+    
+    <!-- Curve (Reactants at 170, Peak at 70, Products at 220) -->
+    <path d="M 40,170 L 110,170 C 150,170 160,70 190,70 C 220,70 230,220 270,220 L 330,220" fill="none" stroke="#ef4444" stroke-width="3" />
+    
+    <!-- Dotted lines for levels -->
+    <line x1="110" y1="170" x2="230" y2="170" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3" />
+    <line x1="200" y1="220" x2="280" y2="220" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3" />
+    <line x1="130" y1="70" x2="190" y2="70" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3" />
+    
+    <!-- Arrows -->
+    <!-- Ea (Green arrow with dot at the reactant line, pointing up to the peak line) -->
+    <line x1="140" y1="170" x2="140" y2="70" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)" marker-start="url(#dot-grey)" />
+    <text x="155" y="125" fill="#10b981" font-size="11" font-weight="bold">Ea</text>
+    
+    <!-- ΔH (Red arrow starting at the reactant line and pointing down to the product line) -->
+    <line x1="210" y1="170" x2="210" y2="220" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red-down)" />
+    <text x="160" y="195" fill="#ef4444" font-size="11" font-weight="bold">ΔH &lt; 0</text>
+    
+    <text x="75" y="160" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Reactants</text>
+    <text x="300" y="210" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Products</text>
+  </g>
+  
+  <!-- Right Panel: Endothermic Reaction -->
+  <g transform="translate(560, 40)">
+    <text x="180" y="20" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="600">Endothermic Reaction</text>
+    
+    <!-- Axes -->
+    <path d="M 40,240 L 40,40" stroke="#94a3b8" stroke-width="2" marker-end="url(#axis-arrow)" />
+    <text x="20" y="140" fill="#94a3b8" font-size="11" text-anchor="middle" transform="rotate(-90 20 140)">Energy (H)</text>
+    
+    <path d="M 40,240 L 340,240" stroke="#94a3b8" stroke-width="2" marker-end="url(#axis-arrow)" />
+    <text x="190" y="260" fill="#94a3b8" font-size="11" text-anchor="middle">Reaction Progression</text>
+    
+    <!-- Curve (Reactants at 220, Peak at 70, Products at 170) -->
+    <path d="M 40,220 L 110,220 C 150,220 160,70 190,70 C 220,70 230,170 270,170 L 330,170" fill="none" stroke="#3b82f6" stroke-width="3" />
+    
+    <!-- Dotted lines for levels -->
+    <line x1="110" y1="220" x2="230" y2="220" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3" />
+    <line x1="200" y1="170" x2="280" y2="170" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3" />
+    <line x1="130" y1="70" x2="190" y2="70" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3 3" />
+    
+    <!-- Arrows -->
+    <!-- Ea (Green arrow with dot at the reactant line, pointing up to the peak line) -->
+    <line x1="140" y1="220" x2="140" y2="70" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)" marker-start="url(#dot-grey)" />
+    <text x="155" y="150" fill="#10b981" font-size="11" font-weight="bold">Ea</text>
+    
+    <!-- ΔH (Blue arrow starting at the reactant line and pointing up to the product line) -->
+    <line x1="210" y1="220" x2="210" y2="170" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue-up)" />
+    <text x="160" y="195" fill="#3b82f6" font-size="11" font-weight="bold">ΔH &gt; 0</text>
+    
+    <text x="75" y="210" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Reactants</text>
+    <text x="300" y="160" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Products</text>
+  </g>
+</svg>`;
+
 export const parts: LessonPart[] = [
+    {
+        id: 'energetics-enthalpy-review-u4-l2',
+        title: 'Introduction: Chemical Energetics Review',
+        type: 'text',
+        content: `
+> [!NOTE]
+> ### ⚡ Chemical Energetics and Enthalpy
+> **Chemical Energetics** focuses on the transfer of thermal energy during chemical reactions. 
+> 
+> * **Enthalpy ($H$):** The heat content of a system at constant pressure. We cannot measure absolute enthalpy, only the change in enthalpy during a process.
+> * **Enthalpy Change ($\\\\Delta H$):** The transfer of thermal energy between a reaction system and its surroundings:
+>   $$\\\\Delta H = H_{\\\\text{products}} - H_{\\\\text{reactants}}$$
+>   $$\\\\Delta H = \\\\text{energy in} - \\\\text{energy out}$$
+
+> [!BOX]
+> ### 🔥 Exothermic Reactions
+> **Exothermic reactions** transfer thermal energy from the system to the surroundings.
+> 
+> 1. **Direction of Heat Flow:** Reactants $\\\\rightarrow$ Products $+$ Energy
+> 2. **Surroundings Temperature:** The temperature of the surroundings increases.
+> 3. **Energy Levels:** Products have lower energy than the reactants.
+> 4. **Energetic Stability:** Products are more **energetically stable** than reactants.
+> 5. **Temperature Favorability:** Low temperatures favor exothermic reactions.
+> 6. **Enthalpy Change Sign:** $\\\\Delta H$ has a **negative** sign ($\\\\Delta H &lt; 0$).
+> 7. **Reaction Initiation:** Some reactions occur spontaneously without heating, while others need initial heat to break the first bonds, after which the energy released sustains the reaction.
+> 
+> **Common Examples:**
+> * Iron and sulphur:
+>   $$\\\\text{Fe(s)} + \\\\text{S(s)} \\\\rightarrow \\\\text{FeS(s)} \\\\quad \\\\Delta H = -2100\\\\text{ kJ}$$
+> * Quicklime and water:
+>   $$\\\\text{CaO(s)} + \\\\text{H}_2\\\\text{O(l)} \\\\rightarrow \\\\text{Ca(OH)}_2\\\\text{(aq)} + \\\\text{energy}$$
+> * Precipitation:
+>   $$\\\\text{AgNO}_3\\\\text{(aq)} + \\\\text{NaCl(aq)} \\\\rightarrow \\\\text{NaNO}_3\\\\text{(aq)} + \\\\text{AgCl(s)} \\\\quad \\\\text{(white precipitate)}$$
+> * Neutralization of acids by alkalis.
+> * Combustion of fuels.
+> * Bond making processes:
+>   $$\\\\text{H} + \\\\text{H} \\\\rightarrow \\\\text{H-H} + \\\\text{energy}$$
+
+> [!BOX]
+> ### ❄️ Endothermic Reactions
+> **Endothermic reactions** absorb thermal energy from the surroundings into the system.
+> 
+> 1. **Direction of Heat Flow:** Reactants $+$ Energy $\\\\rightarrow$ Products
+> 2. **Surroundings Temperature:** The temperature of the surroundings decreases.
+> 3. **Energy Levels:** Products have higher energy than the reactants.
+> 4. **Energetic Stability:** Reactants are more **energetically stable** than products.
+> 5. **Temperature Favorability:** High temperatures favor endothermic reactions.
+> 6. **Enthalpy Change Sign:** $\\\\Delta H$ has a **positive** sign ($\\\\Delta H &gt; 0$).
+> 7. **Reaction Initiation:** Continuous heat must be supplied until the reaction is complete.
+> 
+> **Common Examples:**
+> * Thermal decomposition of calcium carbonate:
+>   $$\\\\text{CaCO}_3\\\\text{(s)} \\\\rightarrow \\\\text{CaO(s)} + \\\\text{CO}_2\\\\text{(g)} \\\\quad \\\\Delta H = +178\\\\text{ kJ}$$
+> * Barium hydroxide and ammonium chloride:
+>   $$\\\\text{Ba(OH)}_2\\\\text{(aq)} + 2\\\\text{NH}_4\\\\text{Cl(s)} + \\\\text{energy} \\\\rightarrow \\\\text{BaCl}_2\\\\text{(aq)} + 2\\\\text{H}_2\\\\text{O(l)} + 2\\\\text{NH}_3\\\\text{(g)}$$
+> * Photosynthesis.
+> * Cooking food.
+> * Citric acid and sodium hydrogencarbonate.
+> * Sports injury cold packs.
+> * Bond breaking processes:
+>   $$\\\\text{H-H} + \\\\text{energy} \\\\rightarrow \\\\text{H} + \\\\text{H}$$
+
+${svgToken(reactionEnergyProfilesSvg)}
+
+> [!BOX]
+> ### 📈 Reaction Energy Profile Diagrams
+> * **Activation Energy ($E_a$):** The minimum energy colliding particles must possess for a reaction to occur. This is the energy barrier shown as a peak.
+> * **Exothermic curve:** Starts higher (reactants) and ends lower (products).
+> * **Endothermic curve:** Starts lower (reactants) and ends higher (products).
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1: Enthalpy Change Calculation & Classification
+> **Question:** A reaction converting nitrogen dioxide to dinitrogen tetroxide has the following enthalpy values:
+> * $H_{\\\\text{reactants}} = 33.18\\\\text{ kJ mol}^{-1}$
+> * $H_{\\\\text{products}} = 9.16\\\\text{ kJ mol}^{-1}$
+> 
+> 1. Calculate the enthalpy change ($\\\\Delta H$) for the reaction.
+> 2. Classify the reaction as exothermic or endothermic.
+> 3. State whether the reactants or products are more energetically stable.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the Enthalpy Change:**
+> >    $$\\\\Delta H = H_{\\\\text{products}} - H_{\\\\text{reactants}}$$
+> >    $$\\\\Delta H = 9.16 - 33.18 = -24.02\\\\text{ kJ mol}^{-1}$$
+> > 
+> > 2. **Classify the Reaction:**
+> >    Since $\\\\Delta H$ is negative ($-24.02\\\\text{ kJ mol}^{-1}$), the reaction is **exothermic**
+> > 
+> > 3. **Identify Energetic Stability:**
+> >    In an exothermic reaction, the products have lower energy than the reactants, which makes the **products** more energetically stable than the reactants.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Energy Changes in Bond Processes
+> **Question:** Identify whether bond breaking or bond making is happening in each of the following equations, and classify them as exothermic or endothermic:
+> 
+> 1. $\\\\text{Cl-Cl} \\\\rightarrow \\\\text{Cl} + \\\\text{Cl}$
+> 2. $\\\\text{Na}^+\\\\text{(g)} + \\\\text{Cl}^-\\\\text{(g)} \\\\rightarrow \\\\text{NaCl(s)}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze Equation 1:**
+> >    * Process: A single chlorine-chlorine bond is broken to form two individual chlorine atoms.
+> >    * Classification: **Endothermic** (requires energy input to overcome the attractive force of the bond).
+> > 
+> > 2. **Analyze Equation 2:**
+> >    * Process: Gaseous ions form ionic bonds to produce solid sodium chloride.
+> >    * Classification: **Exothermic** (bond making releases energy).
+`,
+        keyPoints: [
+            'Enthalpy change represents the difference between the enthalpy of products and reactants.',
+            'Exothermic reactions release heat energy to the surroundings, leading to a negative enthalpy change (ΔH < 0).',
+            'Endothermic reactions absorb heat energy from the surroundings, leading to a positive enthalpy change (ΔH > 0).',
+            'Products of exothermic reactions are more energetically stable because they exist at a lower potential energy level.'
+        ]
+    },
     {
         id: 'entropy-spontaneous-u4-l2',
         title: 'Entropy & Chemical Reactions',
         type: 'text',
         content: `
 > [!NOTE]
-> ### 🌀 Entropy (S)
-> **Entropy** is a measure of the degree of disorder or randomness in a system. Systems naturally tend to move towards states of higher entropy (greater disorder).
+> ### 🌀 Spontaneous Processes
+> A **spontaneous process** is a chemical or physical change that occurs naturally without the need for continuous external intervention (such as heating or electrical input).
 > 
-> * **Units:** $\\\\text{J K}^{-1}\\\\text{ mol}^{-1}$
-> * **Absolute Entropy:** Unlike enthalpy, absolute values of entropy can be measured (entropy of a perfect crystal at 0 K is zero — the Third Law of Thermodynamics).
+> **Common Examples:**
+> * **Freezing water:** Spontaneous at low temperatures (such as $-20\\\\text{ °C}$)
+> * **Diffusion:** The mixing of two unreactive gases in a closed container.
+> * **Rusting:** Iron reacting with water and oxygen over time.
+
+> [!BOX]
+> ### 🌌 The Second Law of Thermodynamics
+> The Second Law governs the direction of spontaneous changes in the universe:
+> 
+> 1. **Entropy Increase:** In any spontaneous process, the total entropy (randomness or disorder) of an isolated system and its surroundings always increases.
+> 2. **Energy Quality and Dispersal:** Energy spontaneously tends to flow from being localized or concentrated to becoming more dispersed or spread out among available microstates (quantized energy states at the microscopic level).
+> 3. **Heat Engines and Directionality:**
+>    * Heat cannot spontaneously flow from a colder object to a hotter object without the input of external work.
+>    * No heat engine can convert $100\\\\%$ of thermal energy into useful work.
+
+> [!NOTE]
+> ### 🌀 Entropy (S)
+> **Entropy** ($S$) is a fundamental thermodynamic property of matter.
+> 
+> * **Disorder:** It measures the degree of disorder or randomness within a system.
+> * **Energy Dispersal:** It describes the ways in which energy is dispersed (distributed among available energy quanta).
+> * **Units:** Measured in $\\\\text{J K}^{-1}$ or $\\\\text{J K}^{-1}\\\\text{ mol}^{-1}$ for molar entropy.
+
+> [!IMPORTANT]
+> ### 🧮 Microstates & The Boltzmann Formula
+> At a microscopic level, entropy is directly related to the number of microstates (ways energy and particles can be arranged):
+> $$\\\\text{S} = k \\\\ln \\\\text{W}$$
+> 
+> Where:
+> * **$k$** = The Boltzmann constant ($1.38 \\\\times 10^{-23}\\\\text{ J K}^{-1}$)
+> * **$W$** = The number of possible ways to arrange molecules and distribute energy (microstates)
+
+> [!BOX]
+> ### ❄️ The Third Law of Thermodynamics
+> The **Third Law of Thermodynamics** states that the entropy of a perfect crystal at absolute zero ($0\\\\text{ K}$) is zero.
+> 
+> * **Perfect Crystal:** The internal lattice structure is perfectly ordered and identical throughout the substance, with zero vibration.
+> * **Microstate Analysis:** In a perfect crystal at $0\\\\text{ K}$, there is only one possible arrangement ($W = 1$).
+> * **Mathematical Proof:** Since $\\\\ln(1) = 0$, substituting this into the Boltzmann formula yields:
+>   $$S = k \\\\ln(1) = 0$$
 
 > [!TIP]
-> ### 🧪 Factors That Increase Entropy
-> 1. **Change of state:** Entropy increases as matter becomes less ordered:
->    $$S(\\\\text{solid}) < S(\\\\text{liquid}) < S(\\\\text{gas})$$
-> 2. **Dissolution:** Dissolving a solid in water increases entropy (ions become dispersed).
-> 3. **Increasing moles of gas:** When the number of moles of gas increases in a reaction.
-> 4. **Increasing temperature:** Higher temperature = more thermal motion and disorder.
+> ### 🧪 Key Trends in Entropy
+> 1. **Physical States:** Entropy increases as substances transition toward more disordered states where particles have more freedom of movement:
+>    $$S_{\\\\text{solid}} &lt; S_{\\\\text{liquid}} &lt; S_{\\\\text{gas}}$$
+>    * *Example:* The standard molar entropy of solid water is much lower than gaseous water:
+>      * $S^\\\\theta\\\\text{[H}_2\\\\text{O(s)]} = 48\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$
+>      * $S^\\\\theta\\\\text{[H}_2\\\\text{O(g)]} = 189\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$
+> 2. **Temperature:** Increasing the temperature provides more energy quanta, which significantly increases the number of ways that energy can be distributed among the particles.
+> 3. **Number of Particles:** Reactions that result in an increase in the number of moles (particularly gaseous moles) lead to a positive $\\\\Delta S_{\\\\text{system}}$ due to the increased number of possible arrangements.
 
 > [!IMPORTANT]
 > ### 🧮 Entropy Change of a Reaction ($\\\\Delta S^\\\\theta\\\\text{(system)}$)
@@ -36,6 +285,8 @@ export const parts: LessonPart[] = [
 > * **Positive $\\\\Delta S\\\\text{(system)}$:** Entropy increases (system becomes more disordered — favourable).
 > * **Negative $\\\\Delta S\\\\text{(system)}$:** Entropy decreases (system becomes more ordered — unfavourable).
 
+&nbsp;
+
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Entropy Change of System (CaCO₃ decomposition)
 > **Question:** For the reaction $\\\\text{CaCO₃(s)} \\\\rightarrow \\\\text{CaO(s)} + \\\\text{CO₂(g)}$, use the data below to calculate the standard entropy change of the system ($\\\\Delta S^\\\\theta\\\\text{(system)}$).
@@ -43,8 +294,8 @@ export const parts: LessonPart[] = [
 > | Substance | S° (J K⁻¹ mol⁻¹) |
 > | :--- | :---: |
 > | CaCO₃(s) | 92.9 |
-> | CaO(s) | 39.8 |
-> | CO₂(g) | 213.7 |
+> | CaO(s) | 39.7 |
+> | CO₂(g) | 213.6 |
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -54,9 +305,11 @@ export const parts: LessonPart[] = [
 > > 
 > > 2. **Substitute values:**
 > >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = [S\\\\text{(CaO)} + S\\\\text{(CO₂)}] - S\\\\text{(CaCO₃)}$$
-> >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = [39.8 + 213.7] - 92.9 = +160.6\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
+> >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = [39.7 + 213.6] - 92.9 = +160.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
 > > 3. **Interpretation:** The positive $\\\\Delta S^\\\\theta\\\\text{(system)}$ is expected because one mole of gas ($\\\\text{CO₂}$) is produced from a solid reactant, significantly increasing disorder.
+
+&nbsp;
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Calculating Entropy Change of System (Ammonia synthesis)
@@ -79,6 +332,26 @@ export const parts: LessonPart[] = [
 > >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = 384.6 - 583.4 = -198.8\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
 > > 3. **Interpretation:** The negative $\\\\Delta S^\\\\theta\\\\text{(system)}$ value indicates that the system has become more ordered. This is expected because 4 moles of gaseous reactants combine to produce only 2 moles of gaseous product, leading to a decrease in molecular dispersal.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Boltzmann Formula and the Third Law
+> **Question:** 
+> 1. Use the Boltzmann formula to calculate the absolute entropy of a perfectly ordered system with only $1$ possible microstate ($W = 1$).
+> 2. Explain why raising the temperature of a perfect crystal from $0\\\\text{ K}$ to $298\\\\text{ K}$ increases its entropy.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate entropy for $W = 1$:**
+> >    * Boltzmann formula: $S = k \\\\ln W$
+> >    * Substitute values: $S = (1.38 \\\\times 10^{-23}) \\\\times \\\\ln(1) = 0\\\\text{ J K}^{-1}$
+> > 
+> > 2. **Explain temperature effect:**
+> >    * At $0\\\\text{ K}$, particles have no thermal motion or vibration, resulting in a single arrangement ($W = 1$).
+> >    * Raising the temperature provides energy quanta to the crystal lattice, causing the particles to vibrate.
+> >    * This energy distribution increases the number of available microstates ($W &gt; 1$), thereby increasing the entropy.
 
 > [!BOX]
 > ### 📊 Reactions Involving Changes of State
@@ -106,6 +379,107 @@ export const parts: LessonPart[] = [
 >   * 1.5 moles of reactants (solid and gas) form 1 mole of solid product.
 >   * Since gas is consumed, $\\\\Delta S\\\\text{(system)}$ is negative.
 >   * However, the reaction is highly exothermic, meaning $\\\\Delta S\\\\text{(surroundings)}$ is large and positive, outweighing the negative system entropy, so $\\\\Delta S\\\\text{(total)} > 0$ and the reaction is spontaneous.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Entropy Changes in Reactions Involving Changes of State
+> **Question:** Hydrated barium hydroxide and solid ammonium chloride react endothermically according to the following equation:
+> $$\\\\text{Ba(OH)}_2\\\\cdot8\\\\text{H}_2\\\\text{O(s)} + 2\\\\text{NH}_4\\\\text{Cl(s)} \\\\rightarrow \\\\text{BaCl}_2\\\\text{(s)} + 10\\\\text{H}_2\\\\text{O(l)} + 2\\\\text{NH}_3\\\\text{(g)}$$
+> Explain, in terms of entropy changes of the system and surroundings, why this reaction is spontaneous at room temperature even though it is highly endothermic.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze the system entropy change ($\\\\Delta S_{\\\\text{system}}$):**
+> >    * On the reactant side, there are $3$ moles of highly ordered solids.
+> >    * On the product side, there are $13$ moles of products, consisting of $1$ mole of solid, $10$ moles of liquid water, and $2$ moles of ammonia gas.
+> >    * Transitioning from solid reactants to liquid and gaseous products results in a massive increase in disorder, so $\\\\Delta S_{\\\\text{system}}$ is large and positive.
+> > 
+> > 2. **Analyze the surroundings entropy change ($\\\\Delta S_{\\\\text{surroundings}}$):**
+> >    * Since the reaction is highly endothermic ($\\\\Delta H &gt; 0$), it absorbs heat from the surroundings.
+> >    * This decreases the thermal energy of the surroundings, making $\\\\Delta S_{\\\\text{surroundings}}$ negative.
+> > 
+> > 3. **Combine to evaluate spontaneity ($\\\\Delta S_{\\\\text{total}}$):**
+> >    * For a reaction to be spontaneous, the total entropy change must be positive: $\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}} &gt; 0$
+> >    * Because the positive increase in system entropy ($\\\\Delta S_{\\\\text{system}}$) is extremely large, it easily outweighs the negative surroundings entropy change ($\\\\Delta S_{\\\\text{surroundings}}$), resulting in a positive total entropy change.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Entropy Changes in Reactions Involving Moles of Gas
+> **Question:** Predict the sign of the system entropy change ($\\\\Delta S_{\\\\text{system}}$) for the combustion of magnesium, and explain your answer:
+> $$\\\\text{Mg(s)} + \\\\frac{1}{2}\\\\text{O}_2\\\\text{(g)} \\\\rightarrow \\\\text{MgO(s)}$$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare physical states of reactants and products:**
+> >    * Reactants consist of $1$ mole of solid magnesium ($\\\\text{Mg}$) and $0.5$ moles of gaseous oxygen ($\\\\text{O}_2$)
+> >    * Products consist of $1$ mole of solid magnesium oxide ($\\\\text{MgO}$)
+> > 
+> > 2. **Identify the change in gaseous moles:**
+> >    * Gaseous reactants = $0.5$ moles.
+> >    * Gaseous products = $0$ moles.
+> >    * The reaction involves a net consumption of gas (from $0.5$ moles to $0$ moles).
+> > 
+> > 3. **Determine the sign of $\\\\Delta S_{\\\\text{system}}$:**
+> >    * Because gas molecules have much higher entropy than solids, consuming gas molecules significantly reduces the disorder of the system.
+> >    * Therefore, the system entropy change is negative ($\\\\Delta S_{\\\\text{system}} < 0$)
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Qualitative Predictions of System Entropy Change
+> **Question:** Predict whether there is likely to be an increase, a decrease, or no change in the entropy of the system in each of the following reactions. In each case, give your reasons:
+> 
+> 1. $\\\\text{CuSO}_4\\\\cdot 5\\\\text{H}_2\\\\text{O(s)} \\\\rightarrow \\\\text{CuSO}_4\\\\text{(s)} + 5\\\\text{H}_2\\\\text{O(l)}$
+> 
+> 2. $\\\\text{HCl(g)} + \\\\text{NH}_3\\\\text{(g)} \\\\rightarrow \\\\text{NH}_4\\\\text{Cl(s)}$
+> 
+> 3. $\\\\text{SO}_2\\\\text{(g)} + \\\\frac{1}{2}\\\\text{O}_2\\\\text{(g)} \\\\rightarrow \\\\text{SO}_3\\\\text{(g)}$
+> 
+> 4. $\\\\text{Co(H}_2\\\\text{O)}_6^{2+}\\\\text{(aq)} + \\\\text{EDTA}^{2-}\\\\text{(aq)} \\\\rightarrow \\\\text{Co(EDTA)(aq)} + 6\\\\text{H}_2\\\\text{O(l)}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Dehydration of copper sulfate:**
+> >    * **Prediction:** Increase in entropy ($\\\\Delta S_{\\\\text{system}} > 0$)
+> >    * **Reason:** A solid reactant breaks down into a solid product and several moles of liquid ($5$ moles of $\\\\text{H}_2\\\\text{O}$). Liquids have a much higher degree of freedom and energy dispersal than solids, leading to an increase in system entropy.
+> > 
+> > 2. **Formation of ammonium chloride:**
+> >    * **Prediction:** Decrease in entropy ($\\\\Delta S_{\\\\text{system}} < 0$)
+> >    * **Reason:** Two moles of gas react to form a single mole of solid. Gases have maximum entropy, while solids have minimal entropy; thus, the disorder and energy dispersal decrease significantly.
+> > 
+> > 3. **Oxidation of sulfur dioxide:**
+> >    * **Prediction:** Decrease in entropy ($\\\\Delta S_{\\\\text{system}} < 0$)
+> >    * **Reason:** There is a reduction in the total number of moles of gas from $1.5$ moles on the reactant side to $1$ mole on the product side, resulting in a decrease in the available microstates and spatial distribution of gaseous particles.
+> > 
+> > 4. **Complexation with EDTA (The Chelate Effect):**
+> >    * **Prediction:** Increase in entropy ($\\\\Delta S_{\\\\text{system}} > 0$)
+> >    * **Reason:** Two aqueous reactant species react to form seven product species ($1$ complex ion + $6$ free water molecules). The significant increase in the number of free particles in solution increases the system entropy.
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Entropy Change in the $\\\\text{H}_2\\\\text{(g)} + \\\\text{I}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{HI(g)}$ Reaction
+> **Question:** This question is about the following reaction:
+> $$\\\\text{H}_2\\\\text{(g)} + \\\\text{I}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{HI(g)}$$
+> 
+> 1. State why you might predict that the entropy change in the system ($\\\\Delta S_{\\\\text{system}}$) for this reaction is zero.
+> 
+> 2. The actual standard system entropy change ($\\\\Delta S^\\\\theta_{\\\\text{system}}$) for this reaction is $+22\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$. Explain why the system entropy change for this reaction is not zero.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Predicting zero entropy change:**
+> >    * You might predict it to be zero because there is **no change in the total number of moles of gas** from reactants to products ($2$ moles of gas $\\\\rightarrow 2$ moles of gas).
+> > 
+> > 2. **Explaining the non-zero actual entropy change:**
+> >    * The actual system entropy change is positive ($+22\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$) because different molecules ($\\\\text{HI}$) have different chemical structures, different vibrational modes, and more available microstates compared to the homonuclear diatomic molecules ($\\\\text{H}_2$ and $\\\\text{I}_2$), giving a slightly higher overall molar entropy.
+> >    * Furthermore, the total entropy change ($\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$) will not be zero because it depends on both this positive system entropy change and the heat exchanged with the surroundings (enthalpy of reaction, which changes surroundings entropy).
 `,
         keyPoints: [
             'Entropy is a state function, like enthalpy, so the path of the reaction does not matter.',
@@ -119,28 +493,64 @@ export const parts: LessonPart[] = [
         type: 'text',
         content: `
 > [!NOTE]
-> ### 🌍 Entropy of the Surroundings ($\\\\Delta S_{\\\\text{surroundings}}$)
-> The entropy of the surroundings depends on the heat transferred into or out of the surroundings from the reaction system:
-> * In an **exothermic reaction**, heat energy is released to the surroundings. This increases the thermal motion of the surroundings molecules, leading to an **increase** in surroundings entropy.
-> * In an **endothermic reaction**, heat energy is absorbed from the surroundings. This decreases the surroundings' thermal motion, leading to a **decrease** in surroundings entropy.
-> 
-> This is expressed mathematically as:
-> $$\\\\Delta S^\\\\theta\\\\text{(surroundings)} = -\\\\frac{\\\\Delta H^\\\\theta}{T}$$
-> * **$\\\\Delta H^\\\\theta$** is the enthalpy change of the system in $\\\\text{J mol}^{-1}$
-> * **$T$** is the temperature in Kelvin
+> ### 🌍 System vs. Surroundings
+> * **System:** The specific chemical species (reactants and products) taking part in the chemical reaction.
+> * **Surroundings:** Everything else in the universe other than the reaction system (such as the solvent, the container, or the air).
 
-> [!IMPORTANT]
-> ### 🧮 Total Entropy Change ($\\\\Delta S_{\\\\text{total}}$)
-> The Second Law of Thermodynamics states that for any spontaneous (feasible) process, the total entropy change must be positive:
-> $$\\\\Delta S^\\\\theta\\\\text{(total)} = \\\\Delta S^\\\\theta\\\\text{(system)} + \\\\Delta S^\\\\theta\\\\text{(surroundings)}$$
-> $$\\\\Delta S^\\\\theta\\\\text{(total)} = \\\\Delta S^\\\\theta\\\\text{(system)} - \\\\frac{\\\\Delta H^\\\\theta}{T}$$
-> * **$\\\\Delta S_{\\\\text{total}} > 0$:** The reaction is thermodynamically feasible (spontaneous).
-> * **$\\\\Delta S_{\\\\text{total}} < 0$:** The reaction is not feasible under these conditions.
+> [!BOX]
+> ### 🌌 The Second Law of Thermodynamics (Total Entropy)
+> The Second Law dictates that for a process to be spontaneous (feasible), the total entropy change of the universe must increase:
+> $$\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}} &gt; 0$$
+> 
+> * **$\\\\Delta S_{\\\\text{total}} &gt; 0$:** The reaction is feasible (spontaneous).
+> * **$\\\\Delta S_{\\\\text{total}} &lt; 0$:** The reaction is not feasible under standard conditions.
+
+> [!NOTE]
+> ### 🌍 Entropy of the Surroundings ($\\\\Delta S_{\\\\text{surroundings}}$)
+> The surroundings act as a reservoir for heat exchanged during a reaction:
+> $$\\\\Delta S^\\\\theta\\\\text{(surroundings)} = -\\\\frac{\\\\Delta H^\\\\theta}{T}$$
+> 
+> * **Exothermic Reactions ($\\\\Delta H &lt; 0$):**
+>   1. Heat is released to the surroundings.
+>   2. The kinetic energy and motion of the surroundings particles increase.
+>   3. Surroundings entropy change is positive ($\\\\Delta S_{\\\\text{surroundings}} &gt; 0$).
+> 
+> * **Endothermic Reactions ($\\\\Delta H &gt; 0$):**
+>   1. Heat is absorbed from the surroundings.
+>   2. The kinetic energy and motion of the surroundings particles decrease.
+>   3. Surroundings entropy change is negative ($\\\\Delta S_{\\\\text{surroundings}} &lt; 0$).
+
+> [!WARNING]
+> ### ⚠️ Crucial Exam Note — Unit Matching
+> Enthalpy change ($\\\\Delta H$) is usually measured in **kJ mol⁻¹**, whereas entropy values are in **J K⁻¹ mol⁻¹**. You MUST convert $\\\\Delta H$ from $\\\\text{kJ mol}^{-1}$ to $\\\\text{J mol}^{-1}$ (by multiplying by 1000) before calculating surroundings entropy change, otherwise the units will not match.
+
+> [!BOX]
+> ### 📋 Spontaneity Conditions Summary Table
+> | ΔS(total) | ΔS(system) | ΔS(surroundings) | Conditions |
+> | :---: | :---: | :---: | :--- |
+> | $+$ | $+$ | $+$ | |
+> | $+$ | $+$ | $-$ | ΔS(system) > ΔS(surroundings) |
+> | $+$ | $-$ | $+$ | ΔS(system) < ΔS(surroundings) |
+> | $-$ | $-$ | $-$ | |
+> | $-$ | $+$ | $-$ | ΔS(system) < ΔS(surroundings) |
+> | $-$ | $-$ | $+$ | ΔS(system) > ΔS(surroundings) |
+
+> [!BOX]
+> ### 🏭 Application: The Haber Process
+> For the exothermic synthesis of ammonia:
+> $$\\\\text{N}_2\\\\text{(g)} + 3\\\\text{H}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{NH}_3\\\\text{(g)}$$
+> 
+> 1. **Enthalpy Sign:** The reaction is exothermic, so $\\\\Delta H$ is negative.
+> 2. **Temperature Effect:** At high temperatures, the surroundings term $-\\\\frac{\\\\Delta H}{T}$ becomes smaller in magnitude, making it less positive.
+> 3. **Feasibility Result:** Consequently, $\\\\Delta S_{\\\\text{total}}$ becomes more negative (or less positive), making the reaction less feasible at high temperatures. This shifts the equilibrium position to the left, decreasing the equilibrium constant ($K_p$).
+
+&nbsp;
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Surroundings Entropy Change (Water synthesis)
-> **Question:** Calculate the surroundings entropy change ($\\\\Delta S^\\\\theta\\\\text{(surroundings)}$) at $298\\\\text{ K}$ when one mole of hydrogen gas is burned in oxygen to form water:
-> $$\\\\text{H₂(g)} + \\\\frac{1}{2}\\\\text{O₂(g)} \\\\rightarrow \\\\text{H₂O(l)} \\\\quad \\\\Delta H^\\\\theta = -286\\\\text{ kJ mol}^{-1}$$
+> **Question:** Hydrogen gas is burned in oxygen to form liquid water at $298\\\\text{ K}$ according to the following equation:
+> $$\\\\frac{1}{2}\\\\text{O}_2\\\\text{(g)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow \\\\text{H}_2\\\\text{O(l)} \\\\quad \\\\Delta H = -286\\\\text{ kJ mol}^{-1}$$
+> Calculate the standard surroundings entropy change ($\\\\Delta S^\\\\theta\\\\text{(surroundings)}$).
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -151,68 +561,89 @@ export const parts: LessonPart[] = [
 > > 2. **Apply the surroundings formula:**
 > >    $$\\\\Delta S^\\\\theta\\\\text{(surroundings)} = -\\\\frac{\\\\Delta H^\\\\theta}{T}$$
 > >    $$\\\\Delta S^\\\\theta\\\\text{(surroundings)} = -\\\\frac{-286000}{298} = +959.7\\\\text{ J K}^{-1}\\\\text{ mol}^{-1} \\\\approx +960\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
-> > 
-> > 3. **Interpretation:** The positive surroundings entropy change reflects that this is a highly exothermic reaction. Heat released to the surroundings increases the thermal chaos of the surrounding air molecules.
+
+&nbsp;
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Calculating Total Entropy Change (Water synthesis)
-> **Question:** Using the data from the previous example, and knowing that the system entropy change ($\\\\Delta S^\\\\theta\\\\text{(system)}$) for the synthesis of water is $-163.2\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$, calculate the total entropy change ($\\\\Delta S^\\\\theta\\\\text{(total)}$) at $298\\\\text{ K}$ and state whether the reaction is feasible.
+> **Question:** Using the data from the previous example and the table below, calculate the standard system entropy change ($\\\\Delta S^\\\\theta\\\\text{(system)}$) and the total entropy change ($\\\\Delta S^\\\\theta\\\\text{(total)}$) for the synthesis of water at $298\\\\text{ K}$:
+> 
+> | Substance | S° (J K⁻¹ mol⁻¹) |
+> | :--- | :---: |
+> | H₂(g) | 130.6 |
+> | O₂(g) | 205 |
+> | H₂O(l) | 69.9 |
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Apply the total entropy equation:**
-> >    $$\\\\Delta S^\\\\theta\\\\text{(total)} = \\\\Delta S^\\\\theta\\\\text{(system)} + \\\\Delta S^\\\\theta\\\\text{(surroundings)}$$
+> > 1. **Calculate the system entropy change ($\\\\Delta S^\\\\theta\\\\text{(system)}$):**
+> >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = S^\\\\theta\\\\text{[H}_2\\\\text{O(l)]} - \\\\left( S^\\\\theta\\\\text{[H}_2\\\\text{(g)]} + \\\\frac{1}{2}\\\\text{S}^\\\\theta\\\\text{[O}_2\\\\text{(g)]} \\\\right)$$
+> >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = 69.9 - (130.6 + \\\\frac{1}{2} \\\\times 205) = -163.2\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
-> > 2. **Substitute values:**
+> > 2. **Calculate the total entropy change ($\\\\Delta S^\\\\theta\\\\text{(total)}$):**
+> >    $$\\\\Delta S^\\\\theta\\\\text{(total)} = \\\\Delta S^\\\\theta\\\\text{(system)} + \\\\Delta S^\\\\theta\\\\text{(surroundings)}$$
 > >    $$\\\\Delta S^\\\\theta\\\\text{(total)} = -163.2 + 960 = +796.8\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
-> > 3. **Conclusion:** Since $\\\\Delta S^\\\\theta\\\\text{(total)}$ is positive ($+796.8 > 0$), the reaction is thermodynamically feasible. The large positive surroundings entropy change more than compensates for the negative system entropy change.
+> > 3. **Conclusion:** Since $\\\\Delta S^\\\\theta\\\\text{(total)}$ is positive ($+796.8 &gt; 0$), the reaction is thermodynamically spontaneous.
+
+&nbsp;
 
 > [!BOX]
 > ### 🛡️ Thermodynamic vs. Kinetic Stability
-> If a reaction has a positive total entropy change ($\\\\Delta S_{\\\\text{total}} > 0$), it is **thermodynamically feasible**. However, it might not happen at all at room temperature:
-> * **Thermodynamic Stability:** Relates to the feasibility based on entropy and energy change.
-> * **Kinetic Stability:** Relates to the rate of reaction and activation energy.
-> * *Example:* The combustion of methane:
->   $$\\\\text{CH₄(g)} + 2\\\\text{O₂(g)} \\\\rightarrow \\\\text{CO₂(g)} + 2\\\\text{H₂O(l)} \\\\quad \\\\Delta S^\\\\theta\\\\text{(total)} = +2.95\\\\text{ kJ K}^{-1}\\\\text{ mol}^{-1}$$
->   * This reaction is thermodynamically feasible and spontaneous.
->   * Methane and oxygen do not react when mixed at room temperature until ignited by a spark.
->   * Methane is thermodynamically unstable relative to its products, but it is **kinetically stable** because it has a very high activation energy barrier.
-
+> To predict whether a reaction will actually happen, we must separate its thermodynamic feasibility from its kinetic rate:
+> 
+> * **Spontaneous (Thermodynamically Feasible):** A reaction that has a positive total entropy change ($\\\\Delta S_{\\\\text{total}} > 0$). This occurs naturally without continuous external intervention once initiated.
+> * **Kinetically Stable:** A reaction that is thermodynamically feasible but does not occur at a measurable rate because it has a very high activation energy ($E_a$) barrier.
+> 
+> **Example: Combustion of Methane**
+> $$\\\\text{CH}_4\\\\text{(g)} + 2\\\\text{O}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> * **$\\\\Delta H^\\\\theta$** = $-890.3\\\\text{ kJ mol}^{-1}$
+> * **$\\\\Delta S_{\\\\text{total}}$** = $+2.95\\\\text{ kJ K}^{-1}\\\\text{ mol}^{-1}$
+> * *Explanation:* Despite being thermodynamically unstable (highly spontaneous and feasible), a mixture of methane and oxygen is kinetically stable at room temperature. It requires a spark to overcome the activation energy barrier ($E_a$) before the reaction can proceed.
+ 
 > [!BOX]
-> ### 🌡️ The Role of Temperature on Feasibility
-> The surroundings entropy change is directly dependent on temperature ($\\\\Delta S_{\\\\text{surroundings}} = -\\\\Delta H / T$):
-> * At **higher temperatures**, the surroundings term $- \\\\Delta H / T$ becomes smaller in magnitude.
-> * Therefore, the surroundings contribution to the total entropy change decreases at high temperatures.
-> * This means that for exothermic reactions (where surroundings term is positive), increasing temperature actually makes the reaction less feasible.
-
+> ### 🌡️ Temperature Dependence of Surroundings Entropy
+> The increase in entropy resulting from supplying a certain amount of heat to an object depends on the temperature of the system:
+> * Supplying the same amount of heat to a cold substance will increase its entropy **more** than supplying it to a hotter substance.
+> * This explains why the temperature $T$ is in the denominator of the surroundings entropy formula:
+>   $$\\\\Delta S_{\\\\text{surroundings}} = -\\\\frac{\\\\Delta H}{T}$$
+ 
+&nbsp;
+ 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Why Does Water Freeze?
-> **Question:** Water freezes to ice according to the equation: $\\\\text{H₂O(l)} \\\\rightarrow \\\\text{H₂O(s)} \\\\quad \\\\Delta H = -6010\\\\text{ J mol}^{-1}$.
-> The system entropy values are: $S^\\\\theta\\\\text{[H₂O(l)]} = 69.9\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$ and $S^\\\\theta\\\\text{[H₂O(s)]} = 47.9\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$.
-> Show by calculation whether water will freeze spontaneously at $+5\\\\text{ °C}$ ($278\\\\text{ K}$) and at $-5\\\\text{ °C}$ ($268\\\\text{ K}$).
+> #### 📝 Worked Example 3: Spontaneity of Freezing Water
+> **Question:** Water freezes to ice according to the following equation:
+> $$\\\\text{H}_2\\\\text{O(l)} \\\\rightarrow \\\\text{H}_2\\\\text{O(s)} \\\\quad \\\\Delta H = -6010\\\\text{ J mol}^{-1}$$
+> Use the data in the table below to calculate whether water will freeze spontaneously at $+5\\\\text{ °C}$ ($278\\\\text{ K}$) and at $-5\\\\text{ °C}$ ($268\\\\text{ K}$).
+> 
+> | Substance | S° (J K⁻¹ mol⁻¹) |
+> | :--- | :---: |
+> | H₂O(l) | 69.9 |
+> | H₂O(s) | 47.9 |
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Calculate the system entropy change ($\\\\Delta S\\\\text{(system)}$):**
-> >    $$\\\\Delta S\\\\text{(system)} = S\\\\text{(ice)} - S\\\\text{(water)}$$
-> >    $$\\\\Delta S\\\\text{(system)} = 47.9 - 69.9 = -22.0\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
+> > 1. **Calculate the system entropy change ($\\\\Delta S_{\\\\text{system}}$):**
+> >    $$\\\\Delta S_{\\\\text{system}} = S^\\\\theta\\\\text{[H}_2\\\\text{O(s)]} - S^\\\\theta\\\\text{[H}_2\\\\text{O(l)]}$$
+> >    $$\\\\Delta S_{\\\\text{system}} = 47.9 - 69.9 = -22.0\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
-> > 2. **Calculate feasibility at $+5\\\\text{ °C}$ ($278\\\\text{ K}$):**
+> > 2. **Calculate spontaneity at $-5\\\\text{ °C}$ ($268\\\\text{ K}$):**
 > >    * Calculate surroundings entropy change:
-> >      $$\\\\Delta S\\\\text{(surroundings)} = -\\\\frac{-6010}{278} = +21.6\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
+> >      $$\\\\Delta S_{\\\\text{surroundings}} = -\\\\frac{-6010}{268} = +22.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > >    * Calculate total entropy change:
-> >      $$\\\\Delta S\\\\text{(total)} = -22.0 + 21.6 = -0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
-> >    * *Conclusion:* Since $\\\\Delta S\\\\text{(total)}$ is negative, freezing is not spontaneous at $+5\\\\text{ °C}$
+> >      $$\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$$
+> >      $$\\\\Delta S_{\\\\text{total}} = -22.0 + 22.4 = +0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
+> >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} > 0$, freezing is spontaneous at $-5\\\\text{ °C}$
 > > 
-> > 3. **Calculate feasibility at $-5\\\\text{ °C}$ ($268\\\\text{ K}$):**
+> > 3. **Calculate spontaneity at $+5\\\\text{ °C}$ ($278\\\\text{ K}$):**
 > >    * Calculate surroundings entropy change:
-> >      $$\\\\Delta S\\\\text{(surroundings)} = -\\\\frac{-6010}{268} = +22.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
+> >      $$\\\\Delta S_{\\\\text{surroundings}} = -\\\\frac{-6010}{278} = +21.6\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > >    * Calculate total entropy change:
-> >      $$\\\\Delta S\\\\text{(total)} = -22.0 + 22.4 = +0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
-> >    * *Conclusion:* Since $\\\\Delta S\\\\text{(total)}$ is positive, freezing is spontaneous at $-5\\\\text{ °C}$
+> >      $$\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$$
+> >      $$\\\\Delta S_{\\\\text{total}} = -22.0 + 21.6 = -0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
+> >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} < 0$, freezing is not spontaneous at $+5\\\\text{ °C}$
 `,
         keyPoints: [
             'Always convert enthalpy change (ΔH) to J mol⁻¹ before calculating surroundings entropy change.',
@@ -622,8 +1053,6 @@ export const parts: LessonPart[] = [
 > In Group 2, the solubility of hydroxides and sulfates follows opposite trends down the group:
 > * **Metal Hydroxides:** Solubility **increases** down the group.
 > * **Metal Sulfates:** Solubility **decreases** down the group.
-> 
-> We can explain these trends quantitatively using the thermodynamic changes involved in dissolving these compounds.
 
 > [!BOX]
 > ### 🧪 Solubility of Group 2 Metal Hydroxides
@@ -635,11 +1064,9 @@ export const parts: LessonPart[] = [
 > | Ba(OH)₂ | -52 | +174 | Ba²⁺(aq) | +10 |
 > 
 > * **Explanation of the Trend:**
->   1. As you go down Group 2, cation size increases, so both lattice enthalpy and hydration enthalpy decrease.
->   2. Because the hydroxide ion ($\\\\text{OH}^-$) is small, the lattice enthalpy decreases faster than the cation hydration enthalpy.
->   3. Consequently, the enthalpy of solution ($\\\\Delta H_{\\\\text{sol}}^\\\\theta$) becomes **more exothermic** (more negative) down the group, which increasingly favours dissolving.
->   4. In addition, larger cations have a weaker ordering effect on surrounding water molecules. Therefore, the standard entropy of the hydrated cation increases (becomes less negative/more positive) down the group, which also increasingly favours dissolving.
->   5. Both factors cause the solubility of Group 2 hydroxides to increase down the group.
+>   1. **Enthalpy Factor:** Down the group, $\\\\Delta_{\\\\text{sol}}H^\\\\theta$ becomes **more negative** (more exothermic) because the small size of the hydroxide ion ($\\\\text{OH}^-$) causes lattice enthalpy to decrease faster than the cation hydration enthalpy. This means $\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$ becomes **more positive**, which favours solubility.
+>   2. **Entropy Factor:** Larger cations have a weaker ordering effect on surrounding water molecules. Therefore, the standard entropy of the hydrated cation becomes **less negative** (more positive down the group), increasing $\\\\Delta S^\\\\theta_{\\\\text{system}}$, which also favours solubility.
+>   3. **Conclusion:** Since both the enthalpy and entropy factors favour dissolution, the solubility of Group 2 metal hydroxides **increases** down the group (from $\\\\text{Mg(OH)}_2$ to $\\\\text{Ba(OH)}_2$).
 
 > [!BOX]
 > ### 🧪 Solubility of Group 2 Metal Sulfates
@@ -651,12 +1078,9 @@ export const parts: LessonPart[] = [
 > | BaSO₄ | +19 | -63 | Ba²⁺(aq) | +10 |
 > 
 > * **Explanation of the Trend:**
->   1. The sulfate ion ($\\\\text{SO₄}^{2-}$) is very large.
->   2. As cation size increases down the group, the lattice enthalpy decreases very little because the large sulfate anion dominates the lattice structure.
->   3. However, the hydration enthalpy of the cation decreases significantly because the charge density of the cation drops.
->   4. Consequently, the enthalpy of solution ($\\\\Delta H_{\\\\text{sol}}^\\\\theta$) becomes **less exothermic** (more endothermic) down the group, which opposes dissolving.
->   5. Although the entropy of the hydrated cation becomes less negative down the group, this positive effect is much smaller than the unfavourable change in enthalpy of solution.
->   6. Therefore, the total entropy change ($\\\\Delta S^\\\\theta\\\\text{(total)}$) becomes less positive/more negative, causing the solubility of sulfates to decrease down the group.
+>   1. **Enthalpy Factor:** Down the group, $\\\\Delta_{\\\\text{sol}}H^\\\\theta$ becomes **less negative** (shifting toward endothermic) because the sulfate ion ($\\\\text{SO}_4^{2-}$) is very large, causing lattice enthalpy to decrease very little while cation hydration enthalpy drops significantly. This makes $\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$ **less positive**, which favours insolubility.
+>   2. **Entropy Factor:** Although the cation hydration entropy becomes **more positive** down the group (favouring solubility), the decrease in surroundings entropy ($\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$) is much larger than the increase in system entropy ($\\\\Delta S^\\\\theta_{\\\\text{system}}$).
+>   3. **Conclusion:** The dominant enthalpy/surroundings factor overrides the system entropy, causing the solubility of Group 2 metal sulfates to **decrease** down the group (from $\\\\text{MgSO}_4$ to $\\\\text{BaSO}_4$).
 `,
         keyPoints: [
             'For small anions like OH⁻, lattice enthalpy decreases faster than hydration enthalpy down the group, increasing solubility.',
