@@ -782,42 +782,47 @@ ${svgToken(reactionEnergyProfilesSvg)}
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🔗 Lattice Enthalpy
-> **Lattice Formation Enthalpy:** The standard enthalpy change when **one mole** of an ionic lattice is formed from its gaseous ions under standard conditions.
-> $$\\\\text{Na}^+\\\\text{(g)} + \\\\text{Cl}^-\\\\text{(g)} \\\\rightarrow \\\\text{NaCl(s)} \\\\quad \\\\Delta H_{\\\\text{latt}}^\\\\theta$$
-> * Lattice formation enthalpy is always **exothermic** (negative) as the ionic lattice is more stable.
-> * **Lattice Dissociation Enthalpy** is equal in magnitude but **endothermic** (positive) — the reverse process.
-> 
-> * **Example:** Standard lattice energy of $\\\\text{NaCl}$ is $-780\\\\text{ kJ mol}^{-1}$. For $\\\\text{MgCl₂}$, it is $-2526\\\\text{ kJ mol}^{-1}$ due to higher ionic charge on magnesium ($+2$) and more cation-anion interactions.
+> ### 🔗 Lattice Energy ($\\\\Delta_{\\\\text{LE}}H^\\\\theta$)
+> The standard enthalpy change when **one mole** of an ionic solid is formed from its constituent gaseous ions under standard conditions:
+> $$\\\\text{Na}^+\\\\text{(g)} + \\\\text{Cl}^-\\\\text{(g)} \\\\rightarrow \\\\text{NaCl(s)} \\\\quad \\\\Delta_{\\\\text{LE}}H^\\\\theta$$
+> * Lattice energy is always **exothermic** (negative) as energy is released when the ionic lattice is formed.
 
 > [!BOX]
-> ### 📋 Factors Affecting Lattice Enthalpy
-> 1. **Ionic Charge:** Higher charges on the ions result in stronger electrostatic forces of attraction, releasing more energy when the lattice forms (more exothermic lattice energy).
-> 2. **Ionic Radius (Distance between ion centres):** Smaller ions can pack closer together, which increases the electrostatic attraction and makes the lattice energy more exothermic.
+> ### 📋 Definitions of Thermodynamic Cycle Steps
+> * **Standard Enthalpy Change of Atomization ($\\\\Delta_{\\\\text{at}}H^\\\\theta$):** The enthalpy change when one mole of gaseous atoms is formed from an element in its standard state. Breaking bonds is always **endothermic** (positive):
+>   $$\\\\frac{1}{2}\\\\text{Cl}_2\\\\text{(g)} \\\\rightarrow \\\\text{Cl(g)}$$
 > 
-> | Compound | Inter-ionic Distance (nm) | Charges on Ions | Lattice Energy (kJ mol⁻¹) |
-> | :--- | :---: | :---: | :---: |
-> | LiF | 0.207 | +1, -1 | -1031 |
-> | NaF | 0.235 | +1, -1 | -918 |
-> | CaF₂ | 0.233 | +2, -1 | -2630 |
-> | Li₂O | 0.214 | +1, -2 | -2814 |
-> | MgO | 0.212 | +2, -2 | -3791 |
-> | Al₂O₃ | 0.193 | +3, -2 | -15504 |
+> * **First Ionization Energy ($\\\\Delta_{\\\\text{ion}}H^\\\\theta$ or $IE_1$):** The enthalpy change required to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous $1+$ ions. Always **endothermic** (positive):
+>   $$\\\\text{Na(g)} \\\\rightarrow \\\\text{Na}^+\\\\text{(g)} + e^-$$
+> 
+> * **First Electron Affinity ($1^{\\\\text{st}}EA$):** The enthalpy change when each atom in one mole of gaseous atoms gains one electron to form one mole of gaseous $1-$ ions. Mostly **exothermic** (negative):
+>   $$\\\\text{O(g)} + e^- \\\\rightarrow \\\\text{O}^-\\\\text{(g)}$$
+> 
+> * **Second Electron Affinity ($2^{\\\\text{nd}}EA$):** The enthalpy change when one mole of gaseous $1-$ ions gains one electron to form one mole of gaseous $2-$ ions. Always **endothermic** (positive) because energy is required to overcome the repulsion between the negative ion and the incoming electron:
+>   $$\\\\text{O}^-\\\\text{(g)} + e^- \\\\rightarrow \\\\text{O}^{2-}\\\\text{(g)}$$
+> 
+> * **Standard Enthalpy of Formation ($\\\\Delta_f H^\\\\theta$):** The enthalpy change when one mole of a compound is formed from its constituent elements in their standard states under standard conditions:
+>   $$\\\\text{Na(s)} + \\\\frac{1}{2}\\\\text{Cl}_2\\\\text{(g)} \\\\rightarrow \\\\text{NaCl(s)}$$
 
 > [!BOX]
-> ### 📋 Definitions for Born-Haber Cycle Steps
-> 1. **Enthalpy of Atomisation ($\\\\Delta H_{\\\\text{at}}^\\\\theta$):** Enthalpy change when **one mole of gaseous atoms** is formed from the element in its standard state.
-> 2. **First Ionisation Energy ($IE_1$):** Energy to remove the first electron from one mole of gaseous atoms.
-> 3. **Second Ionisation Energy ($IE_2$):** Energy to remove the second electron from one mole of gaseous +1 ions.
-> 4. **Electron Affinity ($EA$):** Energy change when one mole of gaseous atoms gains one electron to form gaseous anions.
->    * **Note:** $1\\\\text{st } EA$ is always **exothermic** (negative) because the electron is attracted to the nucleus.
->    * **Note:** $2\\\\text{nd } EA$ is always **endothermic** (positive) because energy is required to overcome the electrostatic repulsion between the negative anion and the incoming electron.
-> 5. **Enthalpy of Formation ($\\\\Delta H_f^\\\\theta$):** Enthalpy change when one mole of compound is formed from elements in standard states.
+> ### ⚡ Factors Affecting Lattice Energy
+> The strength of the ionic bond increases (becomes more exothermic) based on the following factors:
+> 
+> 1. **Ionic Charge:** Higher charges (e.g. $\\\\text{Mg}^{2+}$ vs. $\\\\text{Na}^+$) result in stronger electrostatic attraction and a larger magnitude of lattice energy.
+> 2. **Ionic Radius:** Smaller ions pack closer together, decreasing the **inter-ionic distance**, allowing the charges to get closer and increasing electrostatic attraction.
+> 3. **Charge Density:** Defined mathematically as:
+>    $$\\\\text{Charge density} \\\\propto \\\\frac{\\\\text{charge}}{\\\\text{radius}^2}$$
+>    A higher charge density in cations increases the magnitude of the lattice energy ($\\\\Delta_{\\\\text{LE}}H^\\\\theta$).
 
 > [!IMPORTANT]
-> ### 🧮 Born-Haber Cycle (Hess's Law)
-> By Hess's Law, the sum of all enthalpy changes around the Born-Haber cycle must equal zero:
-> $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}(\\\\text{metal}) + \\\\Delta H_{\\\\text{at}}(\\\\text{non-metal}) + IE_1 + EA + \\\\Delta H_{\\\\text{latt}}^\\\\theta$$
+> ### 🧮 Born-Haber Cycle Construction Steps
+> To calculate the Lattice Energy, the Born-Haber cycle must be constructed in the following logical steps:
+> 
+> 1. **Enthalpy of Formation:** $\\\\text{Metal(s)} + \\\\text{Non-metal(standard state)} \\\\rightarrow \\\\text{Ionic Solid(s)}$
+> 2. **Atomization of Metal and Non-metal:** $\\\\text{M(g)}$ and $\\\\text{X(g)}$
+> 3. **First (and Second) Ionization Energy of Metal:** $\\\\text{M(g)} \\\\rightarrow \\\\text{M}^+\\\\text{(g)} + e^-$
+> 4. **First (and Second) Electron Affinity of Non-metal:** $\\\\text{X(g)} + e^- \\\\rightarrow \\\\text{X}^-\\\\text{(g)}$
+> 5. **Lattice Energy:** $\\\\text{M}^+\\\\text{(g)} + \\\\text{X}^-\\\\text{(g)} \\\\rightarrow \\\\text{MX(s)}$
 
 > [!BOX]
 > ### 📊 Born-Haber Cycle Diagram for NaCl
@@ -827,12 +832,12 @@ ${svgToken(reactionEnergyProfilesSvg)}
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Lattice Enthalpy for NaCl
-> **Question:** Use the data below to calculate the lattice formation enthalpy of sodium chloride ($\\\\Delta H_{\\\\text{latt}}^\\\\theta$):
+> **Question:** Use the data below to calculate the lattice formation enthalpy of sodium chloride ($\\\\Delta_{\\\\text{LE}}H^\\\\theta$):
 >
 > | Enthalpy Term | Value (kJ mol⁻¹) |
 > | :--- | :---: |
 > | ΔHf° (NaCl) | -411 |
-> | ΔHat° (Na) | +108 |
+> | ΔHat° (Na) | +107 |
 > | ΔHat° (Cl) | +122 |
 > | IE₁ (Na) | +496 |
 > | EA₁ (Cl) | -349 |
@@ -840,16 +845,128 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Apply the Born-Haber equation:**
-> >    $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}(\\\\text{Na}) + \\\\Delta H_{\\\\text{at}}(\\\\text{Cl}) + IE_1(\\\\text{Na}) + EA_1(\\\\text{Cl}) + \\\\Delta H_{\\\\text{latt}}^\\\\theta$$
+> > 1. **Apply the Born-Haber equation (Hess's Law):**
+> >    $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}(\\\\text{Na}) + \\\\Delta H_{\\\\text{at}}(\\\\text{Cl}) + IE_1(\\\\text{Na}) + EA_1(\\\\text{Cl}) + \\\\Delta_{\\\\text{LE}}H^\\\\theta$$
 > > 
-> > 2. **Rearrange to find $\\\\Delta H_{\\\\text{latt}}^\\\\theta$:**
-> >    $$\\\\Delta H_{\\\\text{latt}}^\\\\theta = \\\\Delta H_f^\\\\theta - [\\\\Delta H_{\\\\text{at}}(\\\\text{Na}) + \\\\Delta H_{\\\\text{at}}(\\\\text{Cl}) + IE_1(\\\\text{Na}) + EA_1(\\\\text{Cl})]$$
+> > 2. **Rearrange to find $\\\\Delta_{\\\\text{LE}}H^\\\\theta$:**
+> >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = \\\\Delta H_f^\\\\theta - [\\\\Delta H_{\\\\text{at}}(\\\\text{Na}) + \\\\Delta H_{\\\\text{at}}(\\\\text{Cl}) + IE_1(\\\\text{Na}) + EA_1(\\\\text{Cl})]$$
 > > 
 > > 3. **Substitute values:**
-> >    $$\\\\Delta H_{\\\\text{latt}}^\\\\theta = -411 - [+108 + 122 + 496 + (-349)]$$
-> >    $$\\\\Delta H_{\\\\text{latt}}^\\\\theta = -411 - [+377] = -788\\\\text{ kJ mol}^{-1}$$
-
+> >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = -411 - [+107 + 122 + 496 + (-349)]$$
+> >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = -411 - [+376] = -787\\\\text{ kJ mol}^{-1}$$
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Calculating Lattice Enthalpy for $\\\\text{MgCl}_2$ (Coefficient multiplier trick)
+> **Question:** Use the standard thermodynamic data below to calculate the standard lattice formation energy of magnesium chloride ($\\\\Delta_{\\\\text{LE}}H^\\\\theta\\\\text{[MgCl}_2\\\\text{(s)]}$):
+> 
+> * **Standard Enthalpy of Formation of $\\\\text{MgCl}_2\\\\text{(s)}$:** $-642\\\\text{ kJ mol}^{-1}$
+> * **Standard Enthalpy of Atomization of Mg(s):** $+148\\\\text{ kJ mol}^{-1}$
+> * **First Ionization Energy of Mg(g):** $+738\\\\text{ kJ mol}^{-1}$
+> * **Second Ionization Energy of Mg(g):** $+1451\\\\text{ kJ mol}^{-1}$
+> * **Standard Enthalpy of Atomization of $\\\\text{Cl}_2\\\\text{(g)}$ ($\\\\frac{1}{2}\\\\text{Cl}_2 \\\\rightarrow \\\\text{Cl}$):** $+122\\\\text{ kJ mol}^{-1}$
+> * **First Electron Affinity of Cl(g):** $-349\\\\text{ kJ mol}^{-1}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify coefficient multipliers (The Exam Trap):**
+> >    * Magnesium chloride contains **two** chlorine atoms per formula unit ($\\\\text{MgCl}_2$).
+> >    * Therefore, we must multiply the enthalpy of atomization of chlorine and the electron affinity of chlorine by **2** in our Hess\'s Law cycle:
+> >      $$\\\\Delta H_{\\\\text{at}}\\\\text{(Cl total)} = 2 \\\\times 122 = +244\\\\text{ kJ mol}^{-1}$$
+> >      $$\\\\Delta EA_1\\\\text{(Cl total)} = 2 \\\\times (-349) = -698\\\\text{ kJ mol}^{-1}$$
+> > 
+> > 2. **Apply the Hess\'s Law equation:**
+> >    $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}\\\\text{(Mg)} + IE_1\\\\text{(Mg)} + IE_2\\\\text{(Mg)} + 2\\\\Delta H_{\\\\text{at}}\\\\text{(Cl)} + 2EA_1\\\\text{(Cl)} + \\\\Delta_{\\\\text{LE}}H^\\\\theta\\\\text{[MgCl}_2\\\\text{(s)]}$$
+> > 
+> > 3. **Rearrange to calculate lattice energy:**
+> >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = \\\\Delta H_f^\\\\theta - [\\\\Delta H_{\\\\text{at}}\\\\text{(Mg)} + IE_1\\\\text{(Mg)} + IE_2\\\\text{(Mg)} + 2\\\\Delta H_{\\\\text{at}}\\\\text{(Cl)} + 2EA_1\\\\text{(Cl)}]$$
+> >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = -642 - [+148 + 738 + 1451 + 244 - 698]$$
+> >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = -642 - [1883] = -2525\\\\text{ kJ mol}^{-1}$$
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Born-Haber Cycle analysis for Magnesium Oxide
+> **Question:** The Born-Haber cycle can be used to calculate the lattice energy $\\\\Delta_{\\\\text{LE}}H$ for magnesium oxide ($\\\\text{MgO}$):
+> 
+> * **Standard Enthalpy of Formation ($\\\\Delta H_1$):** $-602\\\\text{ kJ mol}^{-1}$
+> * **Standard Enthalpy of Atomization of Mg ($\\\\Delta H_2$):** $+148\\\\text{ kJ mol}^{-1}$
+> * **First Ionization Energy of Mg ($\\\\Delta H_3$):** $+738\\\\text{ kJ mol}^{-1}$
+> * **Second Ionization Energy of Mg:** $+1451\\\\text{ kJ mol}^{-1}$
+> * **Standard Enthalpy of Atomization of Oxygen ($\\\\Delta_{\\\\text{at}}H[\\\\frac{1}{2}\\\\text{O}_2]$):** $+249\\\\text{ kJ mol}^{-1}$
+> * **Combined Electron Affinities ($1^{\\\\text{st}}EA + 2^{\\\\text{nd}}EA$):** $+657\\\\text{ kJ mol}^{-1}$
+> 
+> 1. State the names for each of the enthalpy changes labelled $\\\\Delta H_1$, $\\\\Delta H_2$, and $\\\\Delta H_3$.
+> 2. Give the formula missing at the top of the cycle, indicated by a (?). Give the state symbols.
+> 3. Suggest why the second electron affinity of oxygen is endothermic.
+> 4. Use the information in the Born-Haber cycle to calculate the lattice energy of magnesium oxide, $\\\\Delta_{\\\\text{LE}}H\\\\text{[MgO(s)]}$.
+> 5. Explain how the lattice energy of barium oxide ($\\\\text{BaO}$) differs from that of magnesium oxide ($\\\\text{MgO}$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the enthalpy labels:**
+> >    * **$\\\\Delta H_1$:** Standard Enthalpy of Formation of $\\\\text{MgO(s)}$ ($\\\\Delta_f H^\\\\theta$).
+> >    * **$\\\\Delta H_2$:** Standard Enthalpy of Atomization of Magnesium ($\\\\Delta_{\\\\text{at}}H^\\\\theta$ for Mg).
+> >    * **$\\\\Delta H_3$:** First Ionization Energy of Magnesium ($1^{\\\\text{st}}IE$).
+> > 
+> > 2. **Identify the species at the top of the cycle (?):**
+> >    * The species at the top represent the fully ionized gaseous metal and non-metal ions:
+> >      $$\\\\text{Mg}^{2+}\\\\text{(g)} + \\\\text{O}^{2-}\\\\text{(g)}$$
+> > 
+> > 3. **Explain the endothermic second electron affinity:**
+> >    * The second electron affinity involves adding a negatively charged electron ($e^-$) to an already negatively charged gaseous ion ($\\\\text{O}^-$).
+> >    * A strong electrostatic repulsion occurs between the incoming electron and the negative $\\\\text{O}^-$ ion.
+> >    * Energy must be supplied (work done) to overcome this repulsion, making the overall process endothermic ($+798\\\\text{ kJ mol}^{-1}$).
+> > 
+> > 4. **Calculate the lattice energy:**
+> >    * Using Hess\'s Law:
+> >      $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}\\\\text{(Mg)} + \\\\Delta H_{\\\\text{at}}\\\\text{(O)} + IE_1\\\\text{(Mg)} + IE_2\\\\text{(Mg)} + (EA_1 + EA_2)\\\\text{(O)} + \\\\Delta_{\\\\text{LE}}H$$
+> >      $$-602 = (+148) + (+249) + (+738) + (+1451) + (+657) + \\\\Delta_{\\\\text{LE}}H$$
+> >      $$-602 = +3243 + \\\\Delta_{\\\\text{LE}}H$$
+> >      $$\\\\Delta_{\\\\text{LE}}H = -602 - 3243 = -3845\\\\text{ kJ mol}^{-1}$$
+> > 
+> > 5. **Compare BaO to MgO:**
+> >    * The barium ion ($\\\\text{Ba}^{2+}$) has a larger ionic radius than the magnesium ion ($\\\\text{Mg}^{2+}$) because it has more electron shells.
+> >    * This leads to a longer inter-ionic distance in $\\\\text{BaO}$ compared to $\\\\text{MgO}$.
+> >    * Consequently, the electrostatic attraction between the ions in $\\\\text{BaO}$ is weaker, meaning the lattice energy of barium oxide is **less exothermic** (smaller in magnitude) than that of magnesium oxide.
+ 
+&nbsp;
+ 
+> [!BOX]
+> ### 🔍 Qualitative Comparison: Charge vs. Size Factors
+> Electrostatic attraction in ionic lattices is governed by Coulomb\'s Law, where attraction is proportional to the product of ionic charges and inversely proportional to the inter-ionic distance:
+> 
+> * **Charge Factor:** Doubling the charge of the ions quadruples the electrostatic force of attraction.
+> * **Size Factor:** Smaller ions pack closer together, resulting in a shorter inter-ionic distance and stronger electrostatic attraction.
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Comparing NaF vs. KCl (Size Factor)
+> **Question:** Explain why the lattice energy of sodium fluoride, $\\\\text{NaF}$ ($-918\\\\text{ kJ mol}^{-1}$), is larger (i.e. more negative) than the lattice energy of potassium chloride, $\\\\text{KCl}$ ($-711\\\\text{ kJ mol}^{-1}$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare ionic radii:** Both $\\\\text{Na}^+$ and $\\\\text{F}^-$ ions are smaller in ionic radius than $\\\\text{K}^+$ and $\\\\text{Cl}^-$ ions respectively.
+> > 2. **Relate to inter-ionic distance:** This results in a shorter inter-ionic distance in the $\\\\text{NaF}$ lattice compared to the $\\\\text{KCl}$ lattice.
+> > 3. **Relate to electrostatic attraction:** Consequently, the electrostatic attraction between the ions in $\\\\text{NaF}$ is stronger, releasing more energy when the lattice forms, leading to a larger (more negative) lattice energy.
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Comparing CaO vs. KF (Charge Factor)
+> **Question:** Explain why the lattice energy of calcium oxide, $\\\\text{Ca}^{2+}\\\\text{O}^{2-}$ ($-3401\\\\text{ kJ mol}^{-1}$), is approximately four times larger (i.e. more negative) than the lattice energy of potassium fluoride, $\\\\text{K}^+\\\\text{F}^-$ ($-821\\\\text{ kJ mol}^{-1}$), given that their ionic radii are comparable:
+> * Ionic radii: $\\\\text{Ca}^{2+} = 0.100\\\\text{ nm}$; $\\\\text{K}^+ = 0.138\\\\text{ nm}$; $\\\\text{O}^{2-} = 0.140\\\\text{ nm}$; $\\\\text{F}^- = 0.133\\\\text{ nm}$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare ionic charges:** In $\\\\text{CaO}$, the ions carry higher charges ($\\\\text{Ca}^{2+}$ and $\\\\text{O}^{2-}$) compared to the single charges in $\\\\text{KF}$ ($\\\\text{K}^+$ and $\\\\text{F}^-$).
+> > 2. **Apply electrostatic principles:** Lattice energy is proportional to the product of the ionic charges ($Q_1 \\\\times Q_2$). The product of charges for $\\\\text{CaO}$ is $(+2) \\\\times (-2) = -4$, whereas for $\\\\text{KF}$ it is $(+1) \\\\times (-1) = -1$.
+> > 3. **Formulate the conclusion:** Although the ionic radii are comparable (meaning the inter-ionic distance is similar), the higher ionic charges in $\\\\text{CaO}$ create a much stronger electrostatic attraction, making its lattice energy roughly four times larger.
+ 
 > [!BOX]
 > ### 🛡️ Theoretical vs. Experimental Lattice Energy
 > Lattice energy can also be calculated theoretically using electrostatic theory, assuming the compound consists of purely spherical ions acting as point charges:
@@ -897,9 +1014,11 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > The extra energy required to form the highly charged $\\\\text{Ca}^{2+}$ and $\\\\text{O}^{2-}$ ions is **more than compensated for** by the much larger (more exothermic) lattice energy of the $\\\\text{Ca}^{2+}\\\\text{O}^{2-}$ lattice ($-3401$ vs $-650\\\\text{ kJ mol}^{-1}$). This makes $\\\\text{Ca}^{2+}\\\\text{O}^{2-}$ energetically far more favourable than $\\\\text{Ca}^+\\\\text{O}^-$.
 `,
     keyPoints: [
-      'Lattice enthalpy becomes more exothermic (more negative) as ionic charges increase or ionic radii decrease.',
-      'The Born-Haber cycle uses Hess\'s Law to determine lattice enthalpies which cannot be measured directly.',
-      'Although forming doubly-charged ions requires much more energy, the resulting lattice is extremely stable, making oxides like CaO highly exothermic and thermodynamically stable.'
+      'Lattice energy becomes more exothermic as ionic charges increase, ionic radii decrease, or charge density (charge/radius²) increases.',
+      'The Born-Haber cycle uses Hess\'s Law to calculate lattice energies which cannot be measured directly.',
+      'For salts with multiple anions (e.g. MgCl₂), you must multiply the atomization enthalpy and electron affinity of the non-metal by their stoichiometric coefficient (e.g. multiply by 2).',
+      'The Second Electron Affinity (e.g. O⁻ → O²⁻) is always endothermic (positive) due to electrostatic repulsion between the negative ion and the incoming electron.',
+      'Although forming highly charged ions (like Ca²⁺ and O²⁻) requires huge energy inputs, the highly exothermic lattice energy of the resulting solid compensates for it, making oxides thermodynamically stable.'
     ],
     equationVisualizer: {
       reactants: [['Na⁺(g)', '#f97316'], ['Cl⁻(g)', '#22c55e']],
@@ -914,44 +1033,98 @@ ${svgToken(reactionEnergyProfilesSvg)}
     content: `
 > [!NOTE]
 > ### 🧪 Experimental vs. Theoretical Lattice Energies
-> A comparison of the experimental lattice energy value (Born-Haber cycle) with the theoretical value (electrostatic theory) indicates the degree of covalent character in an ionic bond:
-> * **Purely Ionic Model:** Theoretical calculations assume that ions are perfectly spherical point charges in contact, with no distortion of electron density.
-> * **Covalent Bonding Evidence:** If the experimental lattice energy is significantly **more exothermic** (more negative) than the theoretical value, it indicates that the bonding has significant **covalent character**, which strengthens the bond beyond pure electrostatic attraction.
+> A comparison of the experimental lattice energy value (derived from real-world Born-Haber cycles) with the theoretical value (calculated from electrostatic point-charge theory) indicates the degree of covalent character:
+> * **Theoretical Value:** Calculated assuming a "purely ionic" model where ions behave as perfectly spherical, undistorted point charges in contact.
+> * **Experimental Value:** Derived from real thermodynamic cycles (Born-Haber).
+> * **Covalent Character Indicator:** If the experimental value is significantly **more exothermic** (more negative) than the theoretical value, it indicates a significant **covalent character** due to polarization of the anion, which creates additional electron-density overlap.
 > 
-> | Compound | Experimental Lattice Energy (kJ mol⁻¹) | Theoretical Lattice Energy (kJ mol⁻¹) | Percentage Difference |
-> | :--- | :---: | :---: | :---: |
-> | NaF | -918 | -912 | 0.66% |
-> | NaCl | -780 | -770 | 1.30% |
-> | NaBr | -742 | -735 | 0.95% |
-> | AgF | -958 | -920 | 4.13% |
-> | AgCl | -905 | -833 | 8.64% |
-> | AgBr | -891 | -816 | 9.19% |
+> | Compound | Exp. ΔLEH° (kJ/mol) | Theo. ΔLEH° (kJ/mol) | % Difference | Bonding Nature |
+> | :--- | :---: | :---: | :---: | :--- |
+> | NaF | -918 | -912 | 0.66% | Almost 100% Ionic |
+> | NaCl | -780 | -770 | 1.28% | Almost 100% Ionic |
+> | NaBr | -742 | -735 | 0.95% | Almost 100% Ionic |
+> | AgF | -958 | -920 | 4.13% | Low Covalent Character |
+> | AgCl | -905 | -833 | 8.64% | Moderate Covalent Character |
+> | AgBr | -891 | -816 | 9.19% | Moderate Covalent Character |
+> | AgI | -889 | -778 | 12.49% | Significant Covalent Character |
 
 > [!BOX]
-> ### 🌌 Polarisation of Anions (Fajan's Rules)
+> ### 🌌 Polarization of Anions (Fajan's Rules)
 > Covalent character arises when the positive charge of the cation attracts the outer electrons of the anion, pulling them towards itself and distorting the anion's electron cloud.
 > 
 > ![Polarisation of Anions](/images/lessons/polarisation_anions.svg)
-
 > 
-> Polarisation is increased by:
-> 1. **High charge and small size of the cation:** A small cation with a high charge (e.g. $\\\\text{Mg}^{2+}$ or $\\\\text{Al}^{3+}$) has a very **high charge density**, giving it high polarizing power.
->    $$\\\\text{Charge density} \\\\propto \\\\frac{\\\\text{charge}}{r^2}$$
-> 2. **High charge and large size of the anion:** A large anion (e.g. $\\\\text{I}^-$) has its outer electrons far from the nucleus, shielded by inner shells. This makes the electron cloud highly **polarisable** (easily distorted).
+> **Polarization increases when:**
+> 1. **Cation has high Polarizing Power:** High charge and small radius (**High Charge Density**).
+>    $$\\\\text{Charge density} \\\\propto \\\\frac{\\\\text{charge}}{\\\\text{radius}^2}$$
+> 2. **Anion has high Polarizability:** High charge and large radius. The outer valence electrons are further from the nucleus and held less tightly, making the electron cloud **easily distorted**.
+
+> [!IMPORTANT]
+> ### ⚠️ Exam Key Points & Applications
+> * **Distortion of Anion:** Polarization results in the distortion of the electron cloud of the anion, leading to electron density overlap between adjacent ions.
+> * **Effect on Solubility:** Higher covalent character (e.g. in $\\\\text{AgCl}$ or $\\\\text{AgI}$) significantly **reduces solubility in water** compared to purely ionic compounds (like $\\\\text{AgF}$ or $\\\\text{NaCl}$) because water molecules cannot easily hydrate the covalently-bonded lattice.
 
 > [!BOX]
 > ### 🔬 Case Study: The Covalency of Silver Compounds (d¹⁰ configuration)
-> Even though $\\\\text{Ag}^+$ has a lower charge density than $\\\\text{Na}^+$ (due to its larger ionic radius: $0.126\\\\text{ nm}$ for $\\\\text{Ag}^+$ vs $0.095\\\\text{ nm}$ for $\\\\text{Na}^+$), silver halides exhibit **far greater covalent character** than sodium halides:
-> * Na⁺ has a **$1s^2 2s^2 2p^6$** noble gas electronic configuration.
-> * Ag⁺ has a **$[\\\\text{Kr}] 4d^{10}$** electronic configuration.
+> Even though $\text{Ag}^+$ has a lower charge density than $\text{Na}^+$ (due to its larger ionic radius: $0.126\text{ nm}$ for $\text{Ag}^+$ vs $0.095\text{ nm}$ for $\text{Na}^+$), silver halides exhibit **far greater covalent character** than sodium halides:
+> * $\text{Na}^+$ has a stable **$1s^2 2s^2 2p^6$** noble gas electronic configuration.
+> * $\text{Ag}^+$ has a **$[\text{Kr}] 4d^{10}$** electronic configuration.
 > * **Shielding Effect:** The outer $d^{10}$ shell of silver is much less effective at shielding the positive nuclear charge than the $p^6$ shell of sodium.
 > * Consequently, the silver nucleus exerts a much stronger electrostatic pull on the anion's electron cloud, leading to significantly greater polarisation and covalent character.
-> * For the same reason, **zinc compounds** ($\\\\text{Zn}^{2+}$ which has a $d^{10}$ shell) also exhibit high covalent character.
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Comparing CaF₂ vs. AgF
+> **Question:** The experimental and theoretical lattice energies, in $\text{kJ mol}^{-1}$, of calcium fluoride ($\text{CaF}_2$) and silver fluoride ($\text{AgF}$) are given below:
+> * **$\text{CaF}_2$:** Experimental = $-2630$, Theoretical = $-2609$
+> * **$\text{AgF}$:** Experimental = $-958$, Theoretical = $-920$
+> 
+> Suggest why there is good agreement between the two values for $\text{CaF}_2$, but there is a significant difference between the two values for $\text{AgF}$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain CaF₂ agreement:** For $\text{CaF}_2$, the experimental and theoretical values are very close because it behaves as an almost purely ionic compound with spherical ions, meaning the purely electrostatic point-charge model applies very well.
+> > 2. **Explain AgF difference:** For $\text{AgF}$, the experimental lattice energy is significantly more negative than the theoretical value. This difference indicates a **significant covalent character** due to the **polarization** of the fluoride anion by the silver cation ($\text{Ag}^+$), which has high polarizing power due to its poorly shielding $d^{10}$ electronic configuration.
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Cation Polarizing Power Order (Calculations)
+> **Question:** Place the following cations in order of increasing polarizing power:
+> * $\text{Mg}^{2+} (0.072\text{ nm})$, $\text{Al}^{3+} (0.053\text{ nm})$, $\text{Li}^+ (0.074\text{ nm})$, $\text{Na}^+ (0.102\text{ nm})$, $\text{Ca}^{2+} (0.100\text{ nm})$, $\text{K}^+ (0.138\text{ nm})$.
+> * Support your conclusion with suitable calculations.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the governing property:** Polarizing power depends on **charge density** ($\frac{\text{charge}}{\text{radius}^2}$).
+> > 2. **Calculate the charge density for each cation:**
+> >    * $\text{K}^+ = \frac{1}{(0.138)^2} = 53$
+> >    * $\text{Na}^+ = \frac{1}{(0.102)^2} = 96$
+> >    * $\text{Li}^+ = \frac{1}{(0.074)^2} = 183$
+> >    * $\text{Ca}^{2+} = \frac{2}{(0.100)^2} = 200$
+> >    * $\text{Mg}^{2+} = \frac{2}{(0.072)^2} = 386$
+> >    * $\text{Al}^{3+} = \frac{3}{(0.053)^2} = 1068$
+> > 3. **Arrange in order of increasing polarizing power:**
+> >    $$\text{K}^+ < \text{Na}^+ < \text{Li}^+ < \text{Ca}^{2+} < \text{Mg}^{2+} < \text{Al}^{3+}$$
+ 
+&nbsp;
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Conceptual Questions on Polarization
+> 1. Explain what is meant by the term **"polarized"** in this context.
+> 2. **Compare O²⁻ and S²⁻ polarisability:** The sulfide ion ($\text{S}^{2-}$) is more easily polarised. It is larger than the oxide ion, meaning its outer electrons are further from the nucleus and held less tightly, making it more easily distorted (higher polarisability).
+> 3. **Explain the non-existence of $\text{Na}^{2+}\text{O}^{2-}$:**
+>    * **Reason:** Forming $\text{Na}^{2+}$ requires a second ionization energy for sodium, which is extremely large and endothermic because the second electron is removed from a stable, inner shell (noble gas configuration: $2p^6 \rightarrow 2p^5$). The lattice energy released when forming the lattice is insufficient to compensate for this massive energy cost.
+>    * **Further energy change required:** The second ionization energy of sodium ($2^{\text{nd}}IE$ of Na).
 `,
     keyPoints: [
-      'Cation polarizing power increases with high charge and small ionic radius (high charge density).',
-      'Anion polarisability increases with high charge and large ionic radius.',
-      'Cations with d¹⁰ outer configurations (like Ag⁺ and Zn²⁺) have poorer shielding, resulting in unexpectedly high polarizing power.'
+      'Cation polarizing power increases with high charge and small ionic radius (high charge density: charge/radius²).',
+      'Anion polarisability increases with high charge and large ionic radius (electrons further from nucleus and less tightly held).',
+      'Cations with d¹⁰ outer configurations (like Ag⁺ and Zn²⁺) have poorer shielding, resulting in unexpectedly high polarizing power.',
+      'Significant differences between experimental and theoretical lattice energies indicate covalent character due to anion polarization, which reduces water solubility.'
     ]
   },
   {
@@ -960,21 +1133,24 @@ ${svgToken(reactionEnergyProfilesSvg)}
     type: 'text',
     content: `
 > [!NOTE]
-> ### 💧 Enthalpy of Solution ($\\\\Delta H_{\\\\text{sol}}^\\\\theta$)
-> The standard enthalpy of solution is the enthalpy change when **one mole** of solute dissolves in excess water to form an infinitely dilute solution:
-> $$\\\\text{NaCl(s)} \\\\rightarrow \\\\text{Na}^+\\\\text{(aq)} + \\\\text{Cl}^-\\\\text{(aq)} \\\\quad \\\\Delta H_{\\\\text{sol}}^\\\\theta$$
-> * Can be exothermic or endothermic depending on the relative magnitudes of lattice enthalpy and hydration enthalpy.
-> * **Infinite Dilution:** It is important to specify infinite dilution because as solution becomes more diluted, the ions move further apart (endothermic) and also become more hydrated (exothermic). Infinite dilution is the point where further dilution has no measurable effect on enthalpy.
+> ### 💧 Enthalpy of Solution ($\\\\Delta_{\\\\text{sol}}H^\\\\theta$)
+> The standard enthalpy of solution is the enthalpy change when **one mole** of solute dissolves in excess water to form an infinitely dilute solution. This can be either **exothermic** or **endothermic** (e.g. $\\\\text{NaCl}$ is $+11.0\\\\text{ kJ mol}^{-1}$ vs. $\\\\text{NaOH}$ is $-44.5\\\\text{ kJ mol}^{-1}$):
+> $$\\\\text{NaCl(s)} + \\\\text{aq} \\\\rightarrow \\\\text{Na}^+\\\\text{(aq)} + \\\\text{Cl}^-\\\\text{(aq)}$$
+> * **Infinite Dilution:** It is important to specify infinite dilution because as a solution becomes more diluted, the ions move further apart (endothermic) and also become more hydrated (exothermic). Infinite dilution is the point where further dilution has no measurable effect on enthalpy.
 
 > [!BOX]
-> ### 🌊 Enthalpy of Hydration ($\\\\Delta H_{\\\\text{hyd}}^\\\\theta$)
-> The enthalpy of hydration is the enthalpy change when **one mole of gaseous ions** dissolves in excess water to form an infinitely dilute solution:
-> $$\\\\text{Na}^+\\\\text{(g)} \\\\xrightarrow{\\\\text{water}} \\\\text{Na}^+\\\\text{(aq)} \\\\quad \\\\Delta H_{\\\\text{hyd}}^\\\\theta$$
-> * Always **exothermic** (negative) as ion-dipole interactions with water release energy.
-> * **Attraction:** Oxygen atoms ($\\\\delta^-$) in water are attracted to cations, and hydrogen atoms ($\\\\delta^+$) are attracted to anions (or form hydrogen bonds with them).
+> ### 🌊 Enthalpy of Hydration ($\\\\Delta_{\\\\text{hyd}}H^\\\\theta$)
+> The enthalpy of hydration is the enthalpy change when **one mole of gaseous ions** dissolves in water to form one mole of hydrated ions. This is **always exothermic** (negative) due to the release of energy when strong ion-dipole attractions form between the ions and water molecules:
+> $$\\\\text{Na}^+\\\\text{(g)} + \\\\text{aq} \\\\rightarrow \\\\text{Na}^+\\\\text{(aq)}$$
+> * **Ion-Dipole Orientation:** The polar water molecules orient themselves around the ions:
+>   * Oxygen atoms (carrying a partial negative charge $\\\\delta^-$) are attracted to and point towards **cations** (like $\\\\text{Na}^+$).
+>   * Hydrogen atoms (carrying a partial positive charge $\\\\delta^+$) are attracted to and point towards **anions** (like $\\\\text{Cl}^-$).
+> 
+> ![Gaseous Ion Hydration Diagram](/images/lessons/ion_hydration.svg)
+> 
 > * **Factors Affecting Hydration Enthalpy:**
->   1. **Ionic Charge:** Hydration enthalpy is much more negative for doubly charged ions (e.g. $\\\\text{Mg}^{2+}$ is $-1920\\\\text{ kJ mol}^{-1}$) than singly charged ions (e.g. $\\\\text{Na}^+$ is $-406\\\\text{ kJ mol}^{-1}$) due to stronger electrostatic attraction to water.
->   2. **Ionic Radius:** Decreases down a group (becomes less negative) because larger ions have a lower charge density and weaker attraction to water.
+>   1. **Ionic Charge:** A higher ionic charge results in a stronger electrostatic attraction with water molecules, making the hydration enthalpy **more negative** (e.g. $\\\\text{Mg}^{2+}$ is $-1920\\\\text{ kJ mol}^{-1}$ vs. $\\\\text{Na}^+$ is $-406\\\\text{ kJ mol}^{-1}$).
+>   2. **Ionic Radius:** Larger ionic radii down a group lead to a weaker attraction to water molecules due to lower charge density, making the hydration enthalpy **less negative** (more positive).
 > 
 > | Ion | Ionic Radius (nm) | Hydration Enthalpy (kJ mol⁻¹) |
 > | :--- | :---: | :---: |
@@ -989,9 +1165,15 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > | I⁻ | 0.215 | -293 |
 
 > [!IMPORTANT]
-> ### 🧮 Enthalpy Cycle for Solution
-> Using Hess's Law, the relationship between lattice enthalpy, hydration enthalpies, and enthalpy of solution is best shown by an energy level cycle:
-> $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = -\\\\Delta H_{\\\\text{latt}}\\\\text{(formation)}^\\\\theta + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{cation}) + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{anion})$$
+> ### 🧮 Enthalpy Cycle for Solution (Hess's Law)
+> Using Hess's Law, the relationship between lattice enthalpy, hydration enthalpies, and enthalpy of solution is governed by the following cycle:
+> $$\\\\Delta_{\\\\text{sol}}H^\\\\theta = \\\\sum \\\\Delta_{\\\\text{hyd}}H^\\\\theta(\\\\text{ions}) + \\\\Delta H_{\\\\text{latt}}\\\\text{(dissociation)}^\\\\theta$$
+> Or when using the lattice formation energy:
+> $$\\\\Delta_{\\\\text{sol}}H^\\\\theta = -\\\\Delta H_{\\\\text{latt}}\\\\text{(formation)}^\\\\theta + \\\\Delta_{\\\\text{hyd}}H^\\\\theta(\\\\text{cation}) + \\\\Delta_{\\\\text{hyd}}H^\\\\theta(\\\\text{anion})$$
+> 
+> > [!WARNING]
+> > ### ⚠️ Edexcel Exam Note — Lattice Energy Direction
+> > Edexcel exam questions often provide the **lattice energy of formation** (which is exothermic/negative). However, the dissolving cycle requires breaking the lattice (the **lattice dissociation enthalpy**), which is the endothermic reverse ($-\\\\Delta_{\\\\text{LE}}H^\\\\theta\\\\text{(formation)}$). Always verify the sign of the lattice energy term before performing calculations!
 > 
 > ![Dissolution Enthalpy Cycle of NaCl](/images/lessons/dissolution_cycle_nacl.svg)
 
@@ -1011,12 +1193,108 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > > 
 > > 1. **Apply the enthalpy cycle:**
 > >    $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = \\\\Delta H_{\\\\text{latt}}\\\\text{(dissociation)}^\\\\theta + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{Na}^+) + \\\\Delta H_{\\\\text{hyd}}^\\\\theta(\\\\text{Cl}^-)$$
+> >    $$\Delta H_{\text{sol}}^\theta = \Delta H_{\text{latt}}\text{(dissociation)}^\theta + \Delta H_{\text{hyd}}^\theta(\text{Na}^+) + \Delta H_{\text{hyd}}^\theta(\text{Cl}^-)$$
 > > 
 > > 2. **Substitute values:**
-> >    $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = (+788) + (-406) + (-363)$$
-> >    $$\\\\Delta H_{\\\\text{sol}}^\\\\theta = +788 - 769 = +19\\\\text{ kJ mol}^{-1}$$
+> >    $$\Delta H_{\text{sol}}^\theta = (+788) + (-406) + (-363)$$
+> >    $$\Delta H_{\text{sol}}^\theta = +788 - 769 = +19\text{ kJ mol}^{-1}$$
 > > 
 > > 3. **Interpretation:** The slightly endothermic value indicates the lattice is slightly stronger than the combined hydration enthalpies. NaCl still dissolves because entropy increases significantly.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Hydration Diagrams & Interactions (KF)
+> **Question:** When potassium fluoride ($\text{KF}$) dissolves in water, the lattice breaks up and the potassium and fluoride ions become hydrated.
+> 
+> 1. Draw diagrams or describe the spatial arrangement to represent:
+>    * a) A hydrated potassium ion ($\text{K}^+$)
+>    * b) A hydrated fluoride ion ($\text{F}^-$)
+> 2. Name the type of interaction that occurs between the water molecules and the ion for both the hydrated potassium ion and the fluoride ion. Describe how each interaction occurs.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Describe/Draw the arrangement of water molecules:**
+> >    * **a) Hydrated Potassium Ion ($\text{K}^+$):** The potassium ion is surrounded by water molecules with the partially negative oxygen atoms ($\delta^-$) pointing directly towards the positive $\text{K}^+$ ion.
+> >    * **b) Hydrated Fluoride Ion ($\text{F}^-$):** The fluoride ion is surrounded by water molecules with the partially positive hydrogen atoms ($\delta^+$) pointing directly towards the negative $\text{F}^-$ ion.
+> > 
+> > 2. **Identify and describe the interactions:**
+> >    * **Potassium ion ($\text{K}^+$):** An **ion-dipole interaction** occurs. This happens due to the electrostatic attraction between the positive charge of the potassium ion and the partially negative oxygen atoms ($\delta^-$) of the polar water molecules.
+> >    * **Fluoride ion ($\text{F}^-$):** Both **ion-dipole interactions** and **hydrogen bonding** occur. This happens because the fluoride ion ($\text{F}^-$) is very small, highly electronegative, and has high charge density, allowing it to form strong hydrogen bonds with the partially positive hydrogen atoms ($\delta^+$) of the water molecules.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Calculating Hydration Enthalpy from Dissolution Data ($\text{MgCl}_2$)
+> **Question:** Use the standard thermodynamic data below involved when magnesium chloride dissolves in water to calculate the standard enthalpy change of hydration of the chloride ion, $\Delta_{\text{hyd}}H^\theta\text{[Cl}^-\text{(g)]}$:
+> 
+> * **Standard Enthalpy of Solution of $\text{MgCl}_2\text{(s)}$ ($\Delta_{\text{sol}}H^\theta$):** $-155\text{ kJ mol}^{-1}$
+> * **Standard Lattice Formation Energy of $\text{MgCl}_2\text{(s)}$ ($\Delta_{\text{LE}}H^\theta$):** $-2526\text{ kJ mol}^{-1}$
+> * **Standard Enthalpy of Hydration of $\text{Mg}^{2+}\text{(g)}$ ($\Delta_{\text{hyd}}H^\theta$):** $-1920\text{ kJ mol}^{-1}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the Hess's Law equation:**
+> >    * Recall that the dissolving cycle uses the **lattice dissociation enthalpy** ($+\Delta_{\text{LE}}H^\theta\text{(dissociation)}$), which is the endothermic reverse of the lattice formation energy ($+2526\text{ kJ mol}^{-1}$):
+> >      $$\Delta_{\text{sol}}H^\theta = \Delta_{\text{hyd}}H^\theta\text{(Mg}^{2+}\text{)} + 2 \times \Delta_{\text{hyd}}H^\theta\text{(Cl}^-\text{)} + \Delta H_{\text{latt}}\text{(dissociation)}^\theta$$
+> > 
+> > 2. **Substitute the known values into the equation (Note: account for $2\text{Cl}^-$ ions):**
+> >      $$-155 = -1920 + 2\Delta_{\text{hyd}}H^\theta\text{(Cl}^-\text{)} + 2526$$
+> >      $$-155 = 606 + 2\Delta_{\text{hyd}}H^\theta\text{(Cl}^-\text{)}$$
+> > 
+> > 3. **Solve for $\Delta_{\text{hyd}}H^\theta\text{[Cl}^-\text{(g)]}$:**
+> >      $$2\Delta_{\text{hyd}}H^\theta\text{(Cl}^-\text{)} = -155 - 606 = -761\text{ kJ mol}^{-1}$$
+> >      $$\Delta_{\text{hyd}}H^\theta\text{(Cl}^-\text{)} = \frac{-761}{2} = -380.5\text{ kJ mol}^{-1}$$
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Hess Cycle Analysis for Lithium Fluoride
+> **Question:** A Hess cycle for the dissolving of lithium fluoride ($\text{LiF}$) in water is constructed with the following details:
+> * **Top Box:** $\text{Li}^+\text{(g)} + \text{F}^-\text{(g)}$
+> * **Bottom Left Box:** $\text{Li}^+\text{F}^-\text{(s)}$
+> * **Bottom Right Box (Empty):** To be completed.
+> * **Arrow 1 (Top to Bottom Left):** $\Delta H_1$ (pointing downwards from gaseous ions to solid lattice).
+> * **Arrow 2 (Top to Bottom Right):** $\Delta H_2 = -1018\text{ kJ mol}^{-1}$ (pointing from gaseous ions to aqueous solution).
+> * **Arrow 3 (Bottom Left to Bottom Right):** $\Delta_{\text{sol}}H$ (pointing from solid lattice to aqueous solution).
+> 
+> 1. Complete the cycle by stating what should be in the empty bottom-right box.
+> 2. State the name of the enthalpy change represented by $\Delta H_1$.
+> 3. Apply Hess's Law to obtain an expression for $\Delta_{\text{sol}}H$ in terms of $\Delta H_1$ and $\Delta H_2$.
+> 4. Calculate $\Delta_{\text{sol}}H\text{[LiF(s)]}$, given that the standard lattice energy $\Delta H_1 = -1031\text{ kJ mol}^{-1}$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Complete the empty box:** The bottom-right box represents the dissolved hydrated ions:
+> >    $$\text{Li}^+\text{(aq)} + \text{F}^-\text{(aq)}$$
+> > 
+> > 2. **Name the enthalpy change $\Delta H_1$:** Since the arrow points from gaseous ions to the solid ionic lattice, $\Delta H_1$ represents the **standard lattice formation enthalpy** (or negative of lattice dissociation energy).
+> > 
+> > 3. **Apply Hess's Law:**
+> >    * Following the arrows, the path from gaseous ions to aqueous solution directly ($\Delta H_2$) is equal to forming the solid first ($\Delta H_1$) and then dissolving it ($\Delta_{\text{sol}}H$):
+> >      $$\Delta H_1 + \Delta_{\text{sol}}H = \Delta H_2$$
+> >      $$\Delta_{\text{sol}}H = \Delta H_2 - \Delta H_1$$
+> > 
+> > 4. **Calculate $\Delta_{\text{sol}}H$:**
+> >      $$\Delta_{\text{sol}}H = (-1018) - (-1031)$$
+> >      $$\Delta_{\text{sol}}H = -1018 + 1031 = +13\text{ kJ mol}^{-1}$$
+> >    * *Note:* The positive value indicates that dissolving $\text{LiF}$ is endothermic.
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Qualitative Thermometer Experiment (NaF)
+> **Question:** The standard enthalpy change of solution of sodium fluoride ($\text{NaF}$) is $+0.3\text{ kJ mol}^{-1}$. A sample of sodium fluoride of mass $1\text{ g}$ is added to $250\text{ cm}^3$ of water in a beaker and stirred with a thermometer graduated in intervals of $1\text{ °C}$. Explain what is likely to happen to the reading on the thermometer as the sodium fluoride dissolves. No calculation is necessary.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the energetic nature of the reaction:** The standard enthalpy change of solution is endothermic ($\Delta_{\text{sol}}H^\theta = +0.3\text{ kJ mol}^{-1}$). This means the dissolving process absorbs heat energy from the water surroundings.
+> > 2. **Analyze the magnitude of heat change:** However, because the enthalpy change is extremely small ($+0.3\text{ kJ mol}^{-1}$) and the mass used is very small ($1\text{ g}$, which is $\approx 0.024\text{ moles}$) relative to the large volume of water ($250\text{ cm}^3$), the amount of heat absorbed is negligible.
+> > 3. **Conclude based on thermometer graduation:** The resulting temperature drop of the water will be extremely minimal (less than $0.05\text{ °C}$). Since the thermometer is only graduated in $1\text{ °C}$ intervals, this change is too small to be detected. Therefore, the **thermometer reading is likely to stay the same (no observable change)**.
 
 > [!BOX]
 > ### 🧼 Why Do Some Solids Dissolve? (Entropy & Enthalpy balance)
@@ -1029,6 +1307,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 >   * $\\\\Delta S_{\\\\text{surroundings}} = -\\\\frac{+25800}{298} = -86.6\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$
 >   * $\\\\Delta S_{\\\\text{total}} = +108.7 - 86.6 = +22.1\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$
 >   * Since $\\\\Delta S_{\\\\text{total}}$ is positive, ammonium nitrate dissolves spontaneously at $298\\\\text{ K}$ despite being endothermic.
+
 
 > [!BOX]
 > ### 📋 Table A: Thermodynamic data for dissolving ionic solids at 298 K
@@ -1053,9 +1332,23 @@ ${svgToken(reactionEnergyProfilesSvg)}
     content: `
 > [!NOTE]
 > ### 📉 Solubility Trends in Group 2 Compounds
-> In Group 2, the solubility of hydroxides and sulfates follows opposite trends down the group:
-> * **Metal Hydroxides:** Solubility **increases** down the group.
-> * **Metal Sulfates:** Solubility **decreases** down the group.
+> The solubility of Group 2 ionic compounds depends on two main thermodynamic factors:
+> 1. **Enthalpy change of solution** ($\\\\Delta_{\\\\text{sol}}H^\\\\theta$)
+> 2. **Entropy change of the system** ($\\\\Delta S_{\\\\text{system}}^\\\\theta$)
+> 
+> The overall feasibility of dissolving is determined by the total entropy change:
+> $$\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$$
+> 
+> The dissolving process involves a balance between the **endothermic breaking of the lattice** and the **exothermic hydration of the resulting ions**.
+ 
+> [!BOX]
+> ### 📊 Thermodynamic Trend Comparison Table
+> | Factor / Trend | Hydroxides (Increase Down Group) | Sulfates (Decrease Down Group) |
+> | :--- | :--- | :--- |
+> | **$\\\\Delta_{\\\\text{sol}}H^\\\\theta$** | Becomes **more negative** (exothermic) | Becomes **more positive** (endothermic) |
+> | **$\\\\Delta S_{\\\\text{surr}}$** | Becomes **more positive** | Becomes **more negative** |
+> | **Reasoning** | The lattice energy ($\\\\Delta H_{\\\\text{latt}}$) decreases more rapidly than the cation hydration enthalpy ($\\\\Delta_{\\\\text{hyd}}H$) | The cation hydration enthalpy ($\\\\Delta_{\\\\text{hyd}}H$) of the cation decreases more rapidly than the lattice energy ($\\\\Delta H_{\\\\text{latt}}$) |
+> | **Quantitative Synthesis** | $\\\\Delta S_{\\\\text{total}}$ becomes **more positive** | The decrease in $\\\\Delta S_{\\\\text{surr}}$ ($368\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$) outweighs the increase in cation hydration entropy ($148\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$) |
 
 > [!BOX]
 > ### 🧪 Solubility of Group 2 Metal Hydroxides
@@ -1066,11 +1359,11 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > | Sr(OH)₂ | -46 | +154 | Sr²⁺(aq) | -33 |
 > | Ba(OH)₂ | -52 | +174 | Ba²⁺(aq) | +10 |
 > 
-> * **Explanation of the Trend:**
->   1. **Enthalpy Factor:** Down the group, $\\\\Delta_{\\\\text{sol}}H^\\\\theta$ becomes **more negative** (more exothermic) because the small size of the hydroxide ion ($\\\\text{OH}^-$) causes lattice enthalpy to decrease faster than the cation hydration enthalpy. This means $\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$ becomes **more positive**, which favours solubility.
->   2. **Entropy Factor:** Larger cations have a weaker ordering effect on surrounding water molecules. Therefore, the standard entropy of the hydrated cation becomes **less negative** (more positive down the group), increasing $\\\\Delta S^\\\\theta_{\\\\text{system}}$, which also favours solubility.
+> * **Explanation of the Hydroxide Trend:**
+>   1. **Enthalpy Factor:** Down the group, $\\\\Delta_{\\\\text{sol}}H^\\\\theta$ becomes **more negative** (more exothermic) because the small size of the hydroxide ion ($\\\\text{OH}^-$) causes lattice enthalpy to decrease faster than the cation hydration enthalpy. This means $\\\\Delta S_{\\\\text{surroundings}}$ becomes **more positive**, which favours solubility.
+>   2. **Entropy Factor:** Larger cations have a weaker ordering effect on surrounding water molecules. Therefore, the standard entropy of the hydrated cation becomes **less negative** (more positive down the group), increasing $\\\\Delta S_{\\\\text{system}}$, which also favours solubility.
 >   3. **Conclusion:** Since both the enthalpy and entropy factors favour dissolution, the solubility of Group 2 metal hydroxides **increases** down the group (from $\\\\text{Mg(OH)}_2$ to $\\\\text{Ba(OH)}_2$).
-
+ 
 > [!BOX]
 > ### 🧪 Solubility of Group 2 Metal Sulfates
 > | Sulfate | ΔHsol (kJ mol⁻¹) | ΔSsurr (J K⁻¹ mol⁻¹) | Hydrated Cation | Cation Entropy (J K⁻¹ mol⁻¹) |
@@ -1080,10 +1373,10 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > | SrSO₄ | -9 | +30 | Sr²⁺(aq) | -33 |
 > | BaSO₄ | +19 | -63 | Ba²⁺(aq) | +10 |
 > 
-> * **Explanation of the Trend:**
->   1. **Enthalpy Factor:** Down the group, $\\\\Delta_{\\\\text{sol}}H^\\\\theta$ becomes **less negative** (shifting toward endothermic) because the sulfate ion ($\\\\text{SO}_4^{2-}$) is very large, causing lattice enthalpy to decrease very little while cation hydration enthalpy drops significantly. This makes $\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$ **less positive**, which favours insolubility.
->   2. **Entropy Factor:** Although the cation hydration entropy becomes **more positive** down the group (favouring solubility), the decrease in surroundings entropy ($\\\\Delta S^\\\\theta_{\\\\text{surroundings}}$) is much larger than the increase in system entropy ($\\\\Delta S^\\\\theta_{\\\\text{system}}$).
->   3. **Conclusion:** The dominant enthalpy/surroundings factor overrides the system entropy, causing the solubility of Group 2 metal sulfates to **decrease** down the group (from $\\\\text{MgSO}_4$ to $\\\\text{BaSO}_4$).
+> * **Explanation of the Sulfate Trend:**
+>   1. **Enthalpy Factor:** Down the group, $\\\\Delta_{\\\\text{sol}}H^\\\\theta$ becomes **less negative** (shifting toward endothermic) because the sulfate ion ($\\\\text{SO}_4^{2-}$) is very large, causing lattice enthalpy to decrease very little while cation hydration enthalpy drops significantly. This makes $\\\\Delta S_{\\\\text{surroundings}}$ **less positive**, which favours insolubility.
+>   2. **Entropy Factor:** Although the cation hydration entropy becomes **more positive** down the group (favouring solubility), the decrease in surroundings entropy ($\\\\Delta S_{\\\\text{surroundings}}$) is much larger than the increase in system entropy ($\\\\Delta S_{\\\\text{system}}$).
+>   3. **Conclusion:** For Sulfates, as the cation size increases from $\\\\text{Mg}^{2+}$ to $\\\\text{Ba}^{2+}$, the ($\\\\Delta S_{\\\\text{total}}$) becomes more negative, rendering the dissolving process thermodynamically non-spontaneous and the compounds insoluble.
 `,
     keyPoints: [
       'For small anions like OH⁻, lattice enthalpy decreases faster than hydration enthalpy down the group, increasing solubility.',

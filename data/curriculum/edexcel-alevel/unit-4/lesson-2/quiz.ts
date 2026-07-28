@@ -253,5 +253,125 @@ export const lessonQuiz = [
       { text: "Fluoride is a stronger reducing agent than iodide.", isCorrect: false }
     ],
     explanation: "• Enthalpy of hydration is exothermic because ion-dipole bonds are formed between the gaseous ions and polar water molecules.\n• Going down Group VII, the ionic radius increases ($\\text{Cl}^- < \\text{Br}^- < \\text{I}^-$), meaning the charge is spread over a larger volume (lower charge density).\n• As a result, the electrostatic attraction between the halide ions and the water dipoles weakens, making the hydration enthalpy less exothermic (less negative)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-21",
+    lessonNum: 2,
+    question: "In the Born-Haber cycle for magnesium oxide, what are the names of the enthalpy changes labelled $\\Delta H_1$, $\\Delta H_2$, and $\\Delta H_3$?",
+    options: [
+      { text: "$\\Delta H_1$ = Atomisation of Mg, $\\Delta H_2$ = 1st Ionisation Energy of Mg, $\\Delta H_3$ = Formation of MgO", isCorrect: true },
+      { text: "$\\Delta H_1$ = Formation of MgO, $\\Delta H_2$ = 2nd Ionisation Energy of Mg, $\\Delta H_3$ = Lattice Energy of MgO", isCorrect: false },
+      { text: "$\\Delta H_1$ = Atomisation of Mg, $\\Delta H_2$ = 2nd Ionisation Energy of Mg, $\\Delta H_3$ = Formation of MgO", isCorrect: false },
+      { text: "$\\Delta H_1$ = Sublimation of Mg, $\\Delta H_2$ = 1st Ionisation Energy of Mg, $\\Delta H_3$ = Lattice Energy of MgO", isCorrect: false }
+    ],
+    explanation: "• $\\Delta H_1$ is the change from solid magnesium $\\text{Mg(s)}$ to gaseous magnesium atoms $\\text{Mg(g)}$, which is the standard enthalpy of atomisation of magnesium.\n• $\\Delta H_2$ is the change from gaseous magnesium atoms $\\text{Mg(g)}$ to gaseous singly charged magnesium ions $\\text{Mg}^+\\text{(g)} + \\text{e}^-$, which is the first ionisation energy of magnesium.\n• $\\Delta H_3$ is the change from the elements in their standard states $\\text{Mg(s)} + 0.5\\text{O}_2\\text{(g)}$ to the solid ionic lattice $\\text{Mg}^{2+}\\text{O}^{2-}\\text{(s)}$, which is the standard enthalpy of formation of magnesium oxide."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-22",
+    lessonNum: 2,
+    question: "What is the missing formula that should be placed in the box at the very top of the Born-Haber cycle for magnesium oxide?",
+    options: [
+      { text: "$\\text{Mg}^{2+}\\text{(g)} + \\text{O}^{2-}\\text{(g)}$", isCorrect: true },
+      { text: "$\\text{Mg(g)} + \\text{O(g)}$", isCorrect: false },
+      { text: "$\\text{Mg}^+\\text{(g)} + \\text{O}^-\\text{(g)}$", isCorrect: false },
+      { text: "$\\text{Mg}^{2+}\\text{(g)} + \\text{O(g)} + 2\\text{e}^-$", isCorrect: false }
+    ],
+    explanation: "• The box at the very top of the cycle represents the isolated gaseous ions before they condense to form the ionic lattice.\n• For magnesium oxide, these ions are $\\text{Mg}^{2+}\\text{(g)}$ and $\\text{O}^{2-}\\text{(g)}$.\n• The step going down from these gaseous ions to the solid lattice $\\text{Mg}^{2+}\\text{O}^{2-}\\text{(s)}$ releases energy equal to the lattice energy of formation."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-23",
+    lessonNum: 2,
+    question: "Why is the second electron affinity of oxygen endothermic ($2^{\\text{nd}}EA = +798\\text{ kJ mol}^{-1}$) while the first electron affinity is exothermic?",
+    options: [
+      { text: "Electrostatic repulsion occurs between the negatively charged $\\text{O}^-\\text{(g)}$ ion and the incoming negative electron.", isCorrect: true },
+      { text: "More energy is needed to break the stable noble gas configuration of the oxide ion.", isCorrect: false },
+      { text: "The oxygen atom has a very small atomic radius, which prevents it from accepting a second electron easily.", isCorrect: false },
+      { text: "The second electron is added to an orbital at a much higher principal energy level.", isCorrect: false }
+    ],
+    explanation: "• The first electron affinity adds a negative electron to a neutral oxygen atom, which is an attractive process and releases energy (exothermic).\n• The second electron affinity adds a negative electron to an already negatively charged $\\text{O}^-$ ion.\n• The electrostatic repulsion between these two negative charges must be overcome, which requires an input of energy (endothermic)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-24",
+    lessonNum: 2,
+    question: "Which of the following sets of energy changes must be determined in order to find the lattice energy of sodium fluoride ($\\text{NaF}$) using a Born-Haber cycle?",
+    options: [
+      { text: "Enthalpy of formation of $\\text{NaF}$, atomisation of $\\text{Na}$, 1st IE of $\\text{Na}$, atomisation of $\\text{F}_2$, and 1st EA of $\\text{F}$.", isCorrect: true },
+      { text: "Enthalpy of formation of $\\text{NaF}$, 1st IE of $\\text{Na}$, 2nd IE of $\\text{Na}$, and electron affinity of $\\text{F}$.", isCorrect: false },
+      { text: "Atomisation of $\\text{Na}$, 1st IE of $\\text{Na}$, 1st EA of $\\text{F}$, and hydration enthalpies of $\\text{Na}^+$ and $\\text{F}^-$.", isCorrect: false },
+      { text: "Lattice dissociation energy of $\\text{NaF}$, atomisation of $\\text{Na}$, 1st IE of $\\text{Na}$, and bond energy of $\\text{F-F}$.", isCorrect: false }
+    ],
+    explanation: "• A Born-Haber cycle connects the elements in standard states to the gaseous ions and the solid lattice.\n• To calculate the lattice energy of $\\text{NaF}$, we need:\n1. $\\Delta H_f^\\theta$ of $\\text{NaF(s)}$ (elements to lattice)\n2. $\\Delta H_{\\text{at}}^\\theta$ of sodium (solid to gas)\n3. $1^{\\text{st}}IE$ of sodium (gaseous atom to gaseous $+1$ ion)\n4. $\\Delta H_{\\text{at}}^\\theta$ of fluorine (gas molecules to gaseous atoms, equivalent to $0.5 \\times$ bond energy of $\\text{F-F}$)\n5. $1^{\\text{st}}EA$ of fluorine (gaseous atom to gaseous $-1$ ion)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-HARD-20260728-25",
+    lessonNum: 2,
+    question: "Using the experimental lattice energies and standard hydration enthalpies below, determine which of the four compounds is the most soluble:\n• Experimental Lattice Energy (formation): $\\text{NaF} = -918$, $\\text{NaI} = -705$, $\\text{AgF} = -958$, $\\text{AgI} = -889\\text{ kJ mol}^{-1}$\n• Hydration Enthalpies: $\\text{Na}^+ = -406$, $\\text{Ag}^+ = -464$, $\\text{F}^- = -506$, $\\text{I}^- = -293\\text{ kJ mol}^{-1}$",
+    options: [
+      { text: "$\\text{AgF}$", isCorrect: true },
+      { text: "$\\text{NaF}$", isCorrect: false },
+      { text: "$\\text{NaI}$", isCorrect: false },
+      { text: "$\\text{AgI}$", isCorrect: false }
+    ],
+    explanation: "• Enthalpy of solution is calculated as: $\\Delta H_{\\text{sol}}^\\theta = -\\Delta H_{\\text{latt}}\\text{(formation)} + \\Delta H_{\\text{hyd}}(\\text{cation}) + \\Delta H_{\\text{hyd}}(\\text{anion})$.\n• For $\\text{NaF}$: $\\Delta H_{\\text{sol}} = -(-918) + (-406) + (-506) = +6\\text{ kJ mol}^{-1}$.\n• For $\\text{NaI}$: $\\Delta H_{\\text{sol}} = -(-705) + (-406) + (-293) = +6\\text{ kJ mol}^{-1}$.\n• For $\\text{AgF}$: $\\Delta H_{\\text{sol}} = -(-958) + (-464) + (-506) = -12\\text{ kJ mol}^{-1}$ (exothermic).\n• For $\\text{AgI}$: $\\Delta H_{\\text{sol}} = -(-889) + (-464) + (-293) = +132\\text{ kJ mol}^{-1}$.\n• Since $\\text{AgF}$ has the most exothermic (negative) enthalpy of solution, it is the most soluble compound."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-26",
+    lessonNum: 2,
+    question: "Which of the following chemical processes is correctly matched with the expected sign of its system entropy change ($\\Delta S_{\\text{system}}$)?",
+    options: [
+      { text: "$\\text{H}_2\\text{O(s)} \\rightarrow \\text{H}_2\\text{O(l)} \\quad (\\Delta S_{\\text{system}} = +)$", isCorrect: true },
+      { text: "$\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightarrow 2\\text{NH}_3\\text{(g)} \\quad (\\Delta S_{\\text{system}} = +)$", isCorrect: false },
+      { text: "$2\\text{Na(s)} + \\text{O}_2\\text{(g)} \\rightarrow \\text{Na}_2\\text{O}_2\\text{(s)} \\quad (\\Delta S_{\\text{system}} = +)$", isCorrect: false },
+      { text: "$\\text{S(s)} + \\text{O}_2\\text{(g)} \\rightarrow \\text{SO}_2\\text{(g)} \\quad (\\Delta S_{\\text{system}} = \\text{highly negative})$", isCorrect: false }
+    ],
+    explanation: "• Melting solid water to liquid water increases disorder, making $\\Delta S_{\\text{system}}$ positive ($+$).\n• In the Haber process ($\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$), 4 moles of gas react to form 2 moles of gas, reducing disorder ($\\Delta S_{\\text{system}}$ is negative).\n• Reacting solid sodium and oxygen gas to form a solid product reduces the number of gas particles, resulting in a negative entropy change.\n• Producing 1 mole of $\\text{SO}_2\\text{(g)}$ from 1 mole of $\\text{O}_2\\text{(g)}$ results in a very small change in entropy, not highly negative."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-HARD-20260728-27",
+    lessonNum: 2,
+    question: "Magnesium carbonate decomposes endothermically at high temperatures: $\\text{MgCO}_3\\text{(s)} \\rightarrow \\text{MgO(s)} + \\text{CO}_2\\text{(g)}$ ($\\Delta H^\\theta = +117\\text{ kJ mol}^{-1}$). Using the standard entropies:\n• $S^\\theta(\\text{MgCO}_3) = 65.7 \\mid S^\\theta(\\text{MgO}) = 27.0 \\mid S^\\theta(\\text{CO}_2) = 214.0\\text{ J K}^{-1}\\text{ mol}^{-1}$\nWhich statement correctly shows why magnesium carbonate is stable at $298\\text{ K}$?",
+    options: [
+      { text: "$\\Delta S_{\\text{total}} = -217\\text{ J K}^{-1}\\text{ mol}^{-1}$, which is negative, making the reaction non-feasible.", isCorrect: true },
+      { text: "$\\Delta S_{\\text{system}} = -175.3\\text{ J K}^{-1}\\text{ mol}^{-1}$, which decreases the randomness of the reaction.", isCorrect: false },
+      { text: "$\\Delta S_{\\text{surroundings}} = +393\\text{ J K}^{-1}\\text{ mol}^{-1}$, which fails to outweigh the system entropy decrease.", isCorrect: false },
+      { text: "$\\Delta H^\\theta$ is endothermic, and endothermic reactions are never feasible at room temperature.", isCorrect: false }
+    ],
+    explanation: "• Calculate the system entropy: $\\Delta S_{\\text{system}} = 27.0 + 214.0 - 65.7 = +175.3\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• Calculate the surroundings entropy: $\\Delta S_{\\text{surroundings}} = -\\Delta H^\\theta / T = -117000 / 298 = -392.6\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• Calculate the total entropy: $\\Delta S_{\\text{total}} = +175.3 + (-392.6) = -217.3\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• Since $\\Delta S_{\\text{total}}$ is negative, the reaction is not feasible, making the magnesium carbonate stable against decomposition at $298\\text{ K}$."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-28",
+    lessonNum: 2,
+    question: "The combustion of hydrogen ($\\text{H}_2 + 0.5\\text{O}_2 \\rightarrow \\text{H}_2\\text{O}$) is highly thermodynamically feasible ($\\Delta S_{\\text{total}} = +795\\text{ J K}^{-1}\\text{ mol}^{-1}$). Explain why hydrogen does not react with oxygen at room temperature unless the mixture is ignited.",
+    options: [
+      { text: "The reaction has a very high activation energy, making it kinetically stable at room temperature.", isCorrect: true },
+      { text: "The reaction is endothermic, so it cannot initiate without external heat energy.", isCorrect: false },
+      { text: "At room temperature, the total entropy change is actually negative.", isCorrect: false },
+      { text: "Oxygen is chemically inert at room temperature due to its strong triple bond.", isCorrect: false }
+    ],
+    explanation: "• Thermodynamic feasibility (indicated by a positive $\\Delta S_{\\text{total}}$ or negative $\\Delta G$) only tells us whether a reaction *can* occur, not how fast it will occur.\n• The reaction between hydrogen and oxygen has a high activation energy barrier.\n• At room temperature, very few colliding molecules have energy greater than the activation energy, so the rate of reaction is negligible. The mixture is kinetically stable.\n• Ignition provides the energy required to overcome the activation energy barrier, initiating the reaction."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-MEDIUM-20260728-29",
+    lessonNum: 2,
+    question: "What is the standard pressure value represented by the standard symbol ($^\\theta$) for thermodynamic measurements?",
+    options: [
+      { text: "$100\\text{ kPa}$", isCorrect: true },
+      { text: "$1.00\\text{ kPa}$", isCorrect: false },
+      { text: "$10.0\\text{ kPa}$", isCorrect: false },
+      { text: "$1000\\text{ kPa}$", isCorrect: false }
+    ],
+    explanation: "• The standard symbol ($^\\theta$) specifies a standard pressure of $100\\text{ kPa}$ (equivalent to $1\\text{ bar}$).\n• Previously, $1\\text{ atm}$ ($101.3\\text{ kPa}$) was used, but IUPAC has updated the standard pressure to $100\\text{ kPa}$."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L2-HARD-20260728-30",
+    lessonNum: 2,
+    question: "For the reversible reaction: $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$, the total standard entropy change is negative ($\\Delta S_{\\text{total}}^\\theta(700\\text{ K}) = -78.7\\text{ J K}^{-1}\\text{ mol}^{-1}$). What does this indicate about the equilibrium mixture at $700\\text{ K}$?",
+    options: [
+      { text: "The equilibrium mixture contains a high proportion of reactants (nitrogen and hydrogen) and a low proportion of ammonia.", isCorrect: true },
+      { text: "The reaction is completely impossible and no ammonia is formed at all.", isCorrect: false },
+      { text: "The equilibrium mixture contains a high proportion of ammonia and a low proportion of reactants.", isCorrect: false },
+      { text: "The reaction goes to completion in the forward direction.", isCorrect: false }
+    ],
+    explanation: "• A negative total entropy change ($\\Delta S_{\\text{total}} < 0$) indicates that the forward reaction is not spontaneous under these conditions.\n• For a reversible reaction, this means the equilibrium position lies to the left (favouring the reactants).\n• Therefore, the equilibrium mixture will contain a high proportion of the reactants ($\\text{N}_2$ and $\\text{H}_2$) and only a low proportion of the product ($\\text{NH}_3$)."
   }
 ];
