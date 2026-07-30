@@ -15,7 +15,7 @@ export async function exportElementAsImage(elementId: string, fileName: string =
             scale: 2, // High resolution output
             useCORS: true,
             backgroundColor: '#070f1e', // ChemZim signature dark background
-        });
+        } as any);
 
         const link = document.createElement('a');
         link.download = fileName;
