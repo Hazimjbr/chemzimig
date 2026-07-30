@@ -44,6 +44,7 @@ function JarSimulator({ substance, moles }: { substance: Substance; moles: numbe
         observer.observe(canvas);
         return () => observer.disconnect();
     }, []);
+
     useEffect(() => {
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -121,7 +122,6 @@ function JarSimulator({ substance, moles }: { substance: Substance; moles: numbe
             particlesRef.current.forEach((p) => {
                 if (substance.state === 'solid') {
                     // Solid vibration: Oscillate slightly around original coordinates
-                    const vibrationSpeed = 0.15;
                     const vibrationAmplitude = 1.0;
                     p.x = p.originalX + (Math.random() - 0.5) * vibrationAmplitude;
                     p.y = p.originalY + (Math.random() - 0.5) * vibrationAmplitude;
@@ -202,16 +202,16 @@ export default function AvogadroScale() {
             </div>
 
             {/* Scale Comparison Container */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 
                 {/* Panel A */}
                 <div className="bg-white/[0.02] border border-white/5 rounded-xl p-4 flex flex-col gap-4">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2">
                         <span className="text-xs font-bold text-indigo-300">Substance A</span>
                         <select
                             value={substanceA.formula}
                             onChange={(e) => setSubstanceA(substances.find(s => s.formula === e.target.value) || substances[0])}
-                            className="bg-slate-900 border border-white/10 text-white rounded-lg px-2.5 py-1 text-xs focus:outline-none focus:border-indigo-500 cursor-pointer"
+                            className="bg-slate-900 border border-white/10 text-white rounded-lg px-2.5 py-1 text-xs focus:outline-none focus:border-indigo-500 cursor-pointer max-w-[130px] sm:max-w-[160px] truncate"
                         >
                             {substances.map(s => (
                                 <option key={s.formula} value={s.formula}>{s.name} ({s.formula})</option>
@@ -270,12 +270,12 @@ export default function AvogadroScale() {
 
                 {/* Panel B */}
                 <div className="bg-white/[0.02] border border-white/5 rounded-xl p-4 flex flex-col gap-4">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-2">
                         <span className="text-xs font-bold text-purple-300">Substance B</span>
                         <select
                             value={substanceB.formula}
                             onChange={(e) => setSubstanceB(substances.find(s => s.formula === e.target.value) || substances[3])}
-                            className="bg-slate-900 border border-white/10 text-white rounded-lg px-2.5 py-1 text-xs focus:outline-none focus:border-purple-500 cursor-pointer"
+                            className="bg-slate-900 border border-white/10 text-white rounded-lg px-2.5 py-1 text-xs focus:outline-none focus:border-purple-500 cursor-pointer max-w-[130px] sm:max-w-[160px] truncate"
                         >
                             {substances.map(s => (
                                 <option key={s.formula} value={s.formula}>{s.name} ({s.formula})</option>

@@ -1029,12 +1029,12 @@ export const edexcelAlevelFlashcards: Flashcard[] = [
         examinerTip: 'Hydroxide ion ($OH^-$) acts as a nucleophile attacking the electron-deficient Carbon atom.'
     },
 
-    // Unit 4 Flashcards
+    // Unit 4 - Topic 11: Kinetics (Lesson 1)
     {
         id: 'ed-u4-l1-1',
         unitNum: 4,
         lessonNum: 1,
-        category: 'Kinetics',
+        category: 'Kinetics & Orders',
         question: 'What is the definition of Overall Order of Reaction?',
         answer: 'The sum of the powers (orders) to which the reactant concentrations are raised in the rate equation.',
         examinerTip: 'Do not confuse overall order with the molecularity of an individual elementary step.'
@@ -1043,9 +1043,397 @@ export const edexcelAlevelFlashcards: Flashcard[] = [
         id: 'ed-u4-l1-2',
         unitNum: 4,
         lessonNum: 1,
-        category: 'Kinetics',
+        category: 'Kinetics & Orders',
         question: 'What are the units of rate constant (k) for a Zero-Order reaction?',
         answer: '$\\text{mol dm}^{-3} \\text{s}^{-1}$',
-        examinerTip: 'Zero order means rate = k, so units of k equal units of rate.'
+        examinerTip: 'Zero order means Rate = k, so units of k equal units of rate.'
+    },
+    {
+        id: 'ed-u4-l1-3',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Kinetics & Orders',
+        question: 'What are the units of rate constant (k) for a First-Order reaction?',
+        answer: '$\\text{s}^{-1}$',
+        examinerTip: 'Rearrange $k = \\text{Rate} / [A]$ to get $(\\text{mol dm}^{-3} \\text{s}^{-1}) / (\\text{mol dm}^{-3}) = \\text{s}^{-1}$.'
+    },
+    {
+        id: 'ed-u4-l1-4',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Kinetics & Orders',
+        question: 'What are the units of rate constant (k) for a Second-Order reaction?',
+        answer: '$\\text{dm}^3 \\text{mol}^{-1} \\text{s}^{-1}$',
+        examinerTip: 'Rearrange $k = \\text{Rate} / [A]^2$ to deduce units.'
+    },
+    {
+        id: 'ed-u4-l1-5',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Kinetics & Orders',
+        question: 'What are the units of rate constant (k) for a Third-Order reaction?',
+        answer: '$\\text{dm}^6 \\text{mol}^{-2} \\text{s}^{-1}$',
+        examinerTip: 'Rearrange $k = \\text{Rate} / ([A]^2[B])$ to deduce units.'
+    },
+    {
+        id: 'ed-u4-l1-6',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Experimental Methods',
+        question: 'Why is measuring mass loss unsuitable for reactions releasing Hydrogen gas ($\text{H}_2$)?',
+        answer: 'Hydrogen gas has an extremely low molar mass ($2.0\\text{ g mol}^{-1}$), so the mass decrease is too small to be measured accurately on standard laboratory balances.',
+        examinerTip: 'Use a gas syringe instead to collect $\\text{H}_2$ gas volume.'
+    },
+    {
+        id: 'ed-u4-l1-7',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Experimental Methods',
+        question: 'How should a colorimeter filter be selected for monitoring a colored solution?',
+        answer: 'Choose a filter with the complementary color to the solution to ensure maximum absorbance of light.',
+        examinerTip: 'For an orange-brown bromine solution, select a blue filter.'
+    },
+    {
+        id: 'ed-u4-l1-8',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Experimental Methods',
+        question: 'What is Quenching in chemical kinetics?',
+        answer: 'Stopping or rapidly slowing down a reaction at a specific instant by rapid cooling or neutralizing a catalyst/reactant before titration.',
+        examinerTip: 'Use weak bases like $\\text{NaHCO}_3$ to neutralize acid catalysts without hydrolyzing esters.'
+    },
+    {
+        id: 'ed-u4-l1-9',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Half-Life & Graphs',
+        question: 'What is the key characteristic of the half-life ($t_{1/2}$) of a First-Order reaction?',
+        answer: 'The half-life is constant and independent of the initial reactant concentration ($t_{1/2} = \\frac{\\ln 2}{k}$).',
+        examinerTip: 'Successive half-lives on a concentration-time graph will be equal for first-order reactions.'
+    },
+    {
+        id: 'ed-u4-l1-10',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Reaction Mechanisms',
+        question: 'Define Rate-Determining Step (RDS).',
+        answer: 'The slowest elementary step in a multi-step reaction mechanism, which acts as a bottleneck and controls the overall rate.',
+        examinerTip: 'Species in or before the RDS appear in the rate equation.'
+    },
+    {
+        id: 'ed-u4-l1-11',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Reaction Mechanisms',
+        question: 'Distinguish between a Catalyst and a Reaction Intermediate in a mechanism.',
+        answer: 'A catalyst is consumed in an early step and regenerated in a later step; an intermediate is formed in an early step and consumed in a later step.',
+        examinerTip: 'Neither appears in the overall balanced equation, but catalysts can appear in rate equations.'
+    },
+    {
+        id: 'ed-u4-l1-12',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Reaction Mechanisms',
+        question: 'Compare $S_N1$ and $S_N2$ energy profiles and rate equations.',
+        answer: '$S_N1$ has 2 energy peaks (carbocation intermediate) and rate = $k[\\text{RHal}]$; $S_N2$ has 1 energy peak (single transition state) and rate = $k[\\text{RHal}][\\text{OH}^-]$.',
+        examinerTip: 'Tertiary haloalkanes undergo $S_N1$ due to steric hindrance and carbocation stabilization.'
+    },
+    {
+        id: 'ed-u4-l1-13',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Arrhenius Equation',
+        question: 'State the logarithmic form of the Arrhenius Equation and explain how $E_a$ is determined graphically.',
+        answer: '$\\ln k = -\\frac{E_a}{R}\\left(\\frac{1}{T}\\right) + \\ln A$. Plot $\\ln k$ vs $1/T$; the gradient $m = -E_a/R$.',
+        examinerTip: 'Multiply gradient by $-R$ ($-8.31$) to get $E_a$ in $\\text{J mol}^{-1}$, then divide by 1000 for $\\text{kJ mol}^{-1}$.'
+    },
+    {
+        id: 'ed-u4-l1-14',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Arrhenius Equation',
+        question: 'What does the exponential factor $e^{-E_a/RT}$ represent in the Arrhenius equation?',
+        answer: 'The fraction of molecular collisions that possess energy equal to or greater than the activation energy ($E \\ge E_a$).',
+        examinerTip: 'Increasing temperature makes $-E_a/RT$ less negative, exponentially increasing $k$.'
+    },
+    {
+        id: 'ed-u4-l1-15',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Catalysis',
+        question: 'Distinguish between Homogeneous and Heterogeneous catalysts.',
+        answer: 'Homogeneous catalysts are in the same phase as reactants; Heterogeneous catalysts are in a different phase from reactants.',
+        examinerTip: 'Transition metals excel as catalysts due to variable oxidation states and partially filled d-orbitals.'
+    },
+    {
+        id: 'ed-u4-l1-16',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Catalysis',
+        question: 'What are the three stages of Heterogeneous Catalysis on a solid surface?',
+        answer: '1. Adsorption of reactants onto active sites; 2. Reaction and bond weakening; 3. Desorption of products.',
+        examinerTip: 'Catalyst poisoning occurs when impurities (e.g. Lead, Sulfur) adsorb irreversibly to active sites.'
+    },
+    {
+        id: 'ed-u4-l1-17',
+        unitNum: 4,
+        lessonNum: 1,
+        category: 'Catalysis',
+        question: 'Define Autocatalysis and give an example.',
+        answer: 'A reaction where one of the products acts as a catalyst for the reaction (e.g. $\\text{Mn}^{2+}$ in $\\text{MnO}_4^- / \\text{C}_2\\text{O}_4^{2-}$).',
+        examinerTip: 'Autocatalysis exhibits a characteristic S-shaped rate curve (slow start, rapid acceleration, deceleration).'
+    },
+
+    // Unit 4 - Topic 12: Entropy and Energetics (Lesson 2)
+    {
+        id: 'ed-u4-l2-1',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Entropy & Energetics',
+        question: 'Define Entropy ($S$) and state the Boltzmann Formula.',
+        answer: 'Entropy measures the degree of disorder and energy dispersal in a system. $S = k \\ln W$, where $W$ is the number of microstates.',
+        examinerTip: 'Standard entropy units are $\\text{J K}^{-1} \\text{mol}^{-1}$.'
+    },
+    {
+        id: 'ed-u4-l2-2',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Entropy & Energetics',
+        question: 'What is the Third Law of Thermodynamics?',
+        answer: 'The entropy of a perfect crystal at absolute zero ($0\\text{ K}$) is zero ($S = 0$).',
+        examinerTip: 'At $0\\text{ K}$, there is only one possible arrangement ($W = 1$), so $\\ln(1) = 0$.'
+    },
+    {
+        id: 'ed-u4-l2-3',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Entropy Calculations',
+        question: 'How is the Entropy Change of Surroundings ($\\Delta S_{\\text{surroundings}}$) calculated?',
+        answer: '$\\Delta S_{\\text{surroundings}} = -\\frac{\\Delta H}{T}$',
+        examinerTip: 'Must convert $\\Delta H$ from $\\text{kJ mol}^{-1}$ to $\\text{J mol}^{-1}$ (multiply by 1000) before dividing by $T$.'
+    },
+    {
+        id: 'ed-u4-l2-4',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Spontaneity',
+        question: 'State the Second Law of Thermodynamics (Total Entropy criterion for spontaneity).',
+        answer: 'A reaction is spontaneous (feasible) if $\\Delta S_{\\text{total}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}} > 0$.',
+        examinerTip: 'Endothermic reactions can be spontaneous if system entropy increase is large enough.'
+    },
+    {
+        id: 'ed-u4-l2-5',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Gibbs Free Energy',
+        question: 'State the Gibbs Free Energy Equation and the criterion for feasibility.',
+        answer: '$\\Delta G^\\theta = \\Delta H^\\theta - T\\Delta S^\\theta$. A reaction is feasible if $\\Delta G^\\theta < 0$.',
+        examinerTip: 'Convert $\\Delta S^\\theta$ to $\\text{kJ K}^{-1} \\text{mol}^{-1}$ (divide by 1000) to match $\\Delta H^\\theta$ in $\\text{kJ mol}^{-1}$.'
+    },
+    {
+        id: 'ed-u4-l2-6',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Gibbs & Equilibrium',
+        question: 'How is $\\Delta G^\\theta$ related to the Equilibrium Constant ($K$)?',
+        answer: '$\\Delta G^\\theta = -RT \\ln K$',
+        examinerTip: 'A negative $\\Delta G^\\theta$ gives $\\ln K > 0$, meaning $K > 1$ and products are favoured.'
+    },
+    {
+        id: 'ed-u4-l2-7',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Lattice Energy',
+        question: 'Define Standard Lattice Formation Energy ($\\Delta_{\\text{LE}}H^\\theta$).',
+        answer: 'The enthalpy change when one mole of an ionic solid is formed from its constituent gaseous ions under standard conditions.',
+        examinerTip: 'Lattice formation enthalpy is always exothermic (negative).'
+    },
+    {
+        id: 'ed-u4-l2-8',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Born-Haber Cycles',
+        question: 'Why is the Second Electron Affinity (e.g. $\\text{O}^- + e^- \\rightarrow \\text{O}^{2-}$) always endothermic?',
+        answer: 'Because energy is required to overcome the strong electrostatic repulsion between the negative ion and the incoming electron.',
+        examinerTip: 'First electron affinity is exothermic, but second is always endothermic.'
+    },
+    {
+        id: 'ed-u4-l2-9',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Polarisation',
+        question: 'State Fajan\'s Rules for anion polarisation and covalent character.',
+        answer: 'Polarisation increases with high cation charge density (small radius, high charge) and high anion polarisability (large radius, high charge).',
+        examinerTip: 'Covalent character makes experimental lattice energy more exothermic than theoretical point-charge models.'
+    },
+    {
+        id: 'ed-u4-l2-10',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Dissolution Energetics',
+        question: 'State the Hess\'s Law relationship between Enthalpy of Solution, Lattice Energy, and Hydration Enthalpy.',
+        answer: '$\\Delta_{\\text{sol}}H^\\theta = \\Delta H_{\\text{latt(dissociation)}}^\\theta + \\sum \\Delta_{\\text{hyd}}H^\\theta(\\text{ions})$',
+        examinerTip: 'Hydration enthalpy is always exothermic (negative) due to ion-dipole attractions with water.'
+    },
+    {
+        id: 'ed-u4-l2-11',
+        unitNum: 4,
+        lessonNum: 2,
+        category: 'Group 2 Trends',
+        question: 'Explain why Group 2 Hydroxide solubility increases down the group.',
+        answer: 'Lattice energy decreases faster than cation hydration enthalpy down the group due to small $\\text{OH}^-$ ions, making $\\Delta H_{\\text{sol}}$ more exothermic.',
+        examinerTip: 'Group 2 Sulfates decrease in solubility down the group because $\\text{SO}_4^{2-}$ is very large.'
+    },
+
+    // Unit 4 - Topic 13: Chemical Equilibria (Lesson 3)
+    {
+        id: 'ed-u4-l3-1',
+        unitNum: 4,
+        lessonNum: 3,
+        category: 'Equilibrium Constants',
+        question: 'What is the expression for $K_c$ for the reaction $a\\text{A} + b\\text{B} \\rightleftharpoons c\\text{C} + d\\text{D}$?',
+        answer: '$K_c = \\frac{[\\text{C}]^c [\\text{D}]^d}{[\\text{A}]^a [\\text{B}]^b}$',
+        examinerTip: 'Only aqueous and gaseous species are included in $K_c$; pure solids and liquids are omitted.'
+    },
+    {
+        id: 'ed-u4-l3-2',
+        unitNum: 4,
+        lessonNum: 3,
+        category: 'Equilibrium Constants',
+        question: 'How is Partial Pressure ($p_A$) calculated from total pressure ($P_{\\text{total}}$)?',
+        answer: '$p_A = \\text{Mole Fraction of A} \\times P_{\\text{total}}$, where $\\text{Mole Fraction} = \\frac{n_A}{n_{\\text{total}}}$.',
+        examinerTip: 'The sum of all mole fractions equals 1.0; the sum of all partial pressures equals $P_{\\text{total}}$.'
+    },
+    {
+        id: 'ed-u4-l3-3',
+        unitNum: 4,
+        lessonNum: 3,
+        category: 'Equilibrium Constants',
+        question: 'What is the sole factor that changes the numerical value of equilibrium constants $K_c$ and $K_p$?',
+        answer: 'Temperature.',
+        examinerTip: 'Changes in concentration, pressure, or adding a catalyst do NOT change the value of $K_c$ or $K_p$.'
+    },
+    {
+        id: 'ed-u4-l3-4',
+        unitNum: 4,
+        lessonNum: 3,
+        category: 'Le Chatelier & Kc',
+        question: 'How does an increase in temperature affect $K_c$ for an exothermic reaction?',
+        answer: 'Increasing temperature decreases the value of $K_c$ because the equilibrium shifts to the left (endothermic direction).',
+        examinerTip: 'For endothermic reactions, increasing temperature increases the value of $K_c$.'
+    },
+
+    // Unit 4 - Topic 14: Acid-Base Equilibria (Lesson 4)
+    {
+        id: 'ed-u4-l4-1',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'Acid-Base Theory',
+        question: 'Define Brønsted-Lowry Acid and Base.',
+        answer: 'Brønsted-Lowry Acid is a proton ($\\text{H}^+$) donor; Brønsted-Lowry Base is a proton acceptor.',
+        examinerTip: 'Conjugate acid-base pairs differ by exactly one $\\text{H}^+$ proton.'
+    },
+    {
+        id: 'ed-u4-l4-2',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'pH Calculations',
+        question: 'Define pH and state the formula to calculate $[\text{H}^+]$ from pH.',
+        answer: '$\\text{pH} = -\\log_{10}[\\text{H}^+]$ and $[\\text{H}^+] = 10^{-\\text{pH}}$.',
+        examinerTip: 'A decrease of 1 pH unit represents a tenfold increase in $[\\text{H}^+]$.'
+    },
+    {
+        id: 'ed-u4-l4-3',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'Ionic Product of Water',
+        question: 'State the expression for the Ionic Product of Water ($K_w$) and its value at $298\\text{ K}$.',
+        answer: '$K_w = [\\text{H}^+][\\text{OH}^-] = 1.00 \\times 10^{-14} \\text{ mol}^2 \\text{dm}^{-6}$ at $298\\text{ K}$.',
+        examinerTip: 'Auto-ionization of water is endothermic, so $K_w$ increases as temperature increases, lowering pure water pH.'
+    },
+    {
+        id: 'ed-u4-l4-4',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'Weak Acids',
+        question: 'State the Acid Dissociation Constant ($K_a$) expression for a weak acid $\\text{HA}$.',
+        answer: '$K_a = \\frac{[\\text{H}^+][\\text{A}^-]}{[\\text{HA}]}$, simplified for weak acid alone to $K_a = \\frac{[\\text{H}^+]^2}{[\\text{HA}]}$.',
+        examinerTip: 'Smaller $K_a$ (or larger $p K_a = -\\log K_a$) indicates a weaker acid.'
+    },
+    {
+        id: 'ed-u4-l4-5',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'Buffer Solutions',
+        question: 'Define a Buffer Solution and state its composition.',
+        answer: 'A solution that resists changes in pH when small amounts of acid or alkali are added. Composed of a weak acid and its conjugate base salt.',
+        examinerTip: 'Henderson-Hasselbalch equation: $\\text{pH} = p K_a + \\log_{10}\\left(\\frac{[\\text{salt}]}{[\\text{acid}]}\\right)$.'
+    },
+
+    // Unit 4 - Topic 15: Carbonyls, Carboxylic Acids & Chirality (Lesson 5)
+    {
+        id: 'ed-u4-l5-1',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Stereochemistry',
+        question: 'Define Chiral Centre and Enantiomers.',
+        answer: 'A chiral centre is a carbon atom bonded to 4 different atoms/groups. Enantiomers are non-superimposable mirror image stereoisomers.',
+        examinerTip: 'Enantiomers rotate plane-polarised light in equal and opposite directions.'
+    },
+    {
+        id: 'ed-u4-l5-2',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Stereochemistry',
+        question: 'What is a Racemic Mixture (Racemate) and why is it optically inactive?',
+        answer: 'An equimolar (50:50) mixture of two enantiomers. It is optically inactive because the opposite rotations cancel out.',
+        examinerTip: '$S_N1$ mechanism yields a racemic mixture because nucleophile attacks planar carbocation from top or bottom with equal probability.'
+    },
+    {
+        id: 'ed-u4-l5-3',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Carbonyls',
+        question: 'How do Fehling\'s and Tollens\' reagents distinguish Aldehydes from Ketones?',
+        answer: 'Aldehydes form a silver mirror with Tollens\' and a red $\\text{Cu}_2\\text{O}$ precipitate with Fehling\'s. Ketones show no reaction.',
+        examinerTip: 'Aldehydes are easily oxidized to carboxylic acids, whereas ketones resist mild oxidation.'
+    },
+    {
+        id: 'ed-u4-l5-4',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Carbonyls',
+        question: 'What is the reagent and observation for 2,4-DNPH (Brady\'s Reagent) test?',
+        answer: '2,4-dinitrophenylhydrazine forms an orange/yellow precipitate with both aldehydes and ketones.',
+        examinerTip: 'Melting point of purified derivative identifies the specific carbonyl compound.'
+    },
+    {
+        id: 'ed-u4-l5-5',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Carbonyls',
+        question: 'What mechanism occurs when $\\text{HCN}$ (with $\\text{KCN}$ catalyst) reacts with a carbonyl compound?',
+        answer: 'Nucleophilic Addition, forming a hydroxynitrile.',
+        examinerTip: 'Cyanide ion ($\\text{CN}^-$) attacks the electron-deficient carbonyl carbon.'
+    },
+    {
+        id: 'ed-u4-l5-6',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Carboxylic Acids',
+        question: 'Why do Carboxylic Acids have higher boiling points than alcohols of similar $M_r$?',
+        answer: 'Carboxylic acids form stable hydrogen-bonded dimers in liquid and gas phases, doubling their effective molecular size.',
+        examinerTip: 'Dimers require significantly more energy to vaporize.'
+    },
+    {
+        id: 'ed-u4-l5-7',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Polymers',
+        question: 'What type of polymerisation forms Polyesters and Polyamides?',
+        answer: 'Condensation Polymerisation, accompanied by the loss of small molecules like $\\text{H}_2\\text{O}$ or $\\text{HCl}$.',
+        examinerTip: 'Dicarboxylic acid + Diol forms Polyester (ester link $-\\text{COO}-$).'
     }
 ];
+
+
