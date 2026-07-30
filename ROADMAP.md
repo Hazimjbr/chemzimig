@@ -18,9 +18,13 @@
 
 ## 🧪 الميل الثاني: محرك المناهج ونظام النقاط (مكتمل)
 
-### 📝 المناهج والامتحانات والتقييم
+### 📝 المناهج والامتحانات والتقييم والبيئة المؤتمتة
 - ✅ **Syllabus Porting:** نقل وتجهيز هيكلية المناهج الدولية (IGCSE, AS Level, A2 Level).
 - ✅ **KaTeX Integration:** تفعيل محرك كتابة المعادلات الكيميائية والرياضية بدقة ممتازة على الواجهة.
+- ✅ **Automated Testing Suite (Vitest):** بناء بيئة الاختبارات المؤتمتة باستخدام Vitest و JSDOM و React Testing Library وتفعيل فحص سلامة سجل المناهج (`npm test`).
+- ✅ **Smart Content & ID Linter:** دمج سكربتات التدقيق التلقائي للمحتوى وراموز صيغ KaTeX وفحص المعرفات المكررة (`scripts/lint-content.js` و `scripts/find-duplicate-ids.js`).
+- ✅ **Interactive 3D & Recharts Visualization:** تفعيل الرسومات ثلاثية الأبعاد (Three.js / React Three Fiber) ومخططات الحركية الكيميائية التفاعلية (`Recharts` / `KineticsChart.tsx`).
+- ✅ **DOM-to-Image Export Utility:** إضافة أداة تصدير الملاحظات وبطاقات المراجعة كصور PNG عالية الدقة (`html2canvas` / `lib/export-image.ts`) وتأسيس مجلد النسخ الاحتياطية (`backups/`).
 - ✅ **Gamification System:** نقل وحساب نقاط الخبرة (XP)، مستويات الطلاب (Levels)، وحساب الأيام المتتالية للدراسة (Daily Streaks).
 
 ---

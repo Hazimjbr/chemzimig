@@ -82,11 +82,13 @@ ChemZim is built for speed, security, and scientific precision.
 
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
+- **Testing & QA:** Vitest, JSDOM, React Testing Library, Custom Content Linter & ID Checker
 - **Database/Auth:** Firebase (Admin SDK) + NextAuth.js
 - **Styling:** Tailwind CSS 4
-- **Animations:** Framer Motion
+- **Animations:** Framer Motion, Lottie React
 - **Scientific Tools:** KaTeX, React Katex
-- **Visualization:** Three.js / React Three Fiber
+- **Visualization & Graphing:** Three.js / React Three Fiber, Recharts
+- **Utilities & Export:** HTML2Canvas, Cheerio
 
 ---
 
@@ -141,10 +143,19 @@ Create a `.env.local` file in the project root with Firebase configuration:
 - `NEXTAUTH_SECRET`
 - `SESSION_SECRET`
 
-### 🚀 Running the App
+### 🚀 Running & Testing Commands
 ```bash
 # Start development server (runs on port 3001)
 npm run dev
+
+# Run Vitest automated unit test suite
+npm test
+
+# Run content & KaTeX syntax auditor
+npm run lint:content
+
+# Scan curriculum & exam banks for duplicate IDs
+npm run check:duplicates
 
 # Build for production
 npm run build
