@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
@@ -65,8 +66,10 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <script
+      <body className="min-h-screen flex flex-col antialiased bg-background text-foreground transition-colors duration-200">
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -82,8 +85,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="min-h-screen flex flex-col antialiased bg-background text-foreground transition-colors duration-200">
         <ThemeProvider>
           <AuthProvider>
             <GamificationProvider>

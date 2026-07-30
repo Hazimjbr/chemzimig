@@ -15,6 +15,8 @@ import {
     ChevronRight 
 } from 'lucide-react';
 import { getLessonFromRegistry } from '@/data/curriculum/registry';
+import { CurriculumJourney3D } from './CurriculumJourney3D';
+import { StudentCommandCenter } from './StudentCommandCenter';
 
 interface CurriculumViewProps {
     curricula: CurriculumLevel[];
@@ -118,19 +120,26 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({ curricula }) => 
                 >
                     {activeCurriculum && (
                         <div>
+                            {/* Student Command Center (Gamification Hub) */}
+                            <StudentCommandCenter 
+                                curriculumTitle={activeCurriculum.title} 
+                                curriculumId={activeCurriculum.id}
+                            />
+
                             {/* Curriculum Headers */}
-                            <div className="mb-8">
-                                <h2 className="text-3xl font-bold text-foreground mb-2">{activeCurriculum.title}</h2>
-                                <p className="text-muted">{activeCurriculum.description}</p>
+                            <div className="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-border pb-4">
+                                <div>
+                                    <h2 className="text-3xl font-bold text-foreground mb-1">{activeCurriculum.title}</h2>
+                                    <p className="text-muted">{activeCurriculum.description}</p>
+                                </div>
                             </div>
 
                             {/* View Modes Render */}
                             {viewMode === 'grid' ? (
-                                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                                    {activeCurriculum.topics.map((topic, index) => (
-                                        <TopicCard key={topic.id} topic={topic} index={index} curriculumId={activeCurriculum.id} />
-                                    ))}
-                                </div>
+                                <CurriculumJourney3D 
+                                    topics={activeCurriculum.topics} 
+                                    curriculumId={activeCurriculum.id} 
+                                />
                             ) : (
                                 <div className="space-y-8">
                                     {activeCurriculum.topics.map((topic) => {

@@ -16,6 +16,7 @@ export interface LessonPart {
     };
     avogadroScale?: boolean;
     massSpecSimulator?: boolean;
+    titrationSimulator?: boolean;
 }
 
 export interface LessonRegistryItem {

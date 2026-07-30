@@ -88,6 +88,12 @@ export interface Question {
   imageHtml?: string;
   /** Optional lesson number tag (e.g. 1 or 2) */
   lessonNum?: number;
+  /** Optional structured marking scheme for paper 4 / written questions */
+  markingScheme?: {
+    marks: number;
+    points: { mark: number; keyword: string; text: string }[];
+    examinerTips?: string;
+  };
 }
 
 /** Exam configuration chosen by the user */

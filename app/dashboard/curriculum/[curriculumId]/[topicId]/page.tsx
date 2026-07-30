@@ -29,7 +29,17 @@ const MassSpecSimulator = dynamic(() => import('@/components/visual/MassSpecSimu
     ssr: false,
     loading: () => <div className="h-[250px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
 });
+const TitrationSimulator = dynamic(() => import('@/components/visual/TitrationSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[400px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const FlashcardsDeck = dynamic(() => import('@/components/visual/FlashcardsDeck'), {
+    ssr: false,
+    loading: () => <div className="h-[300px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
 
+import { edexcelAlevelFlashcards } from '@/data/curriculum/edexcel-alevel/flashcards';
+import { cieIgcseFlashcards } from '@/data/curriculum/cie-igcse/flashcards';
 import { useGamification } from '@/contexts/GamificationContext';
 import { useAuth } from '@/contexts/AuthContext';
 
@@ -1010,6 +1020,11 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                     <MassSpecSimulator />
                                 )}
 
+                                {/* Dynamic Titration Virtual Lab simulator rendered when defined on the active lesson part */}
+                                {currentPart.titrationSimulator && (
+                                    <TitrationSimulator />
+                                )}
+
                                 {/* Slide Main Content */}
                                 <div className="bg-surface/30 border border-border rounded-2xl p-6 md:p-8">
                                     {currentPart.id === 'interactive-quiz' ? (
@@ -1021,6 +1036,25 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
                                             return (
                                                 <div className="flex flex-col gap-6">
+                                                    {/* Warm-Up Flashcards Deck at beginning of Quiz */}
+                                                    {(() => {
+                                                        const activeDataset = curriculumId.includes('edexcel') ? edexcelAlevelFlashcards : cieIgcseFlashcards;
+                                                        // Filter by current unit and exact lesson number
+                                                        const unitMatch = topicId.match(/unit-(\d+)/);
+                                                        const currentUnitNum = unitMatch ? parseInt(unitMatch[1], 10) : 1;
+                                                        
+                                                        const filteredCards = activeDataset.filter(c => 
+                                                            c.unitNum === currentUnitNum && (c.lessonNum === currentLessonNum || !c.lessonNum)
+                                                        );
+                                                        const finalCards = filteredCards.length > 0 ? filteredCards : activeDataset.filter(c => c.unitNum === currentUnitNum);
+
+                                                        return (
+                                                            <FlashcardsDeck 
+                                                                title={`Lesson ${currentLessonNum} Active Recall Warm-Up 🃏`}
+                                                                cards={finalCards}
+                                                            />
+                                                        );
+                                                    })()}
                                                     {allQuestionsAnswered && (
                                                         <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 text-center animate-fade-in-up">
                                                             <div className="text-emerald-500 dark:text-emerald-400 font-bold text-sm">🏆 Quiz Completed!</div>

@@ -57,7 +57,14 @@ ChemZim is built for speed, security, and scientific precision.
 - **Grouped Randomization:** Questions sharing a scientific context (diagrams, tables) are presented together as a cohesive unit.
 - **Scientific Rendering:** Full **KaTeX** support for chemistry notation and a custom **SmartText** engine for flawless mixed-content rendering.
 
-### 🚀 Premium Interactive UX
+### 🚀 Premium Interactive UX & Gamification Hub
+- **Student Command Center:** Smart daily dashboard header rendering real-time Level progress, XP counters, active Daily Streaks (🔥), recommended next lesson quick-resume buttons, and live Micro-Practice Chemistry Challenges (+50 XP).
+- **3D Curriculum Journey:** Interactive unit cards featuring 3D Tilt perspective physics (`framer-motion`), neon hover glows, and complete scrollable lesson listings.
+- **Centralized Virtual Chemistry Lab Hub (`components/visual/`):** Reusable interactive laboratory simulation components decoupled from curriculum registries:
+  - `TitrationSimulator.tsx`: Real-time acid-base titration canvas simulation with dynamic pH curve calculation, burette liquid fill levels, indicator color transition mechanics (Phenolphthalein colorless to pink), and equivalence point alerts.
+  - `GasLawSimulator.tsx`, `MassSpecSimulator.tsx`, `AvogadroScale.tsx`, `EquationAnimator.tsx`.
+- **Examiner Eye & Interactive Marking Schemes (`StructuredQuestionCard.tsx`):** Paper 4 / Structured Theory questions with interactive self-grading checkboxes, key phrase highlighting (`[+1 mark]`), and official Cambridge/Edexcel examiner warning panels (`Examiner Eye 👁️`).
+- **3D Active Recall Flashcards Deck (`FlashcardsDeck.tsx`):** Interactive 3D flip card engine integrated as a warm-up phase in quiz slides, populated by topic-specific datasets (`edexcel-alevel/flashcards.ts` & `cie-igcse/flashcards.ts`) covering key definitions, mathematical equations, and examiner tips for Units 1 & 2.
 - **Viewport-Aware Canvas Optimization:** Utilizes `IntersectionObserver` loops to automatically pause heavy simulator animation loops (such as `GasLawSimulator.tsx`, `AvogadroScale.tsx`, and `MassSpecSimulator.tsx`) when they scroll out of view, dramatically conserving client hardware resources. Loaded dynamically on-demand using Next.js lazy-loading dynamic imports (`{ ssr: false }`).
 - **Mobile Table Optimization:** Responsive Markdown/HTML table injection that automatically prevents font-shrinking on mobile layout by implementing custom `[CUSTOM_TABLE:]` token parsing within study blockquotes.
 - **3D Molecular Visualization:** Interactive atomic models using **React Three Fiber**.
