@@ -11,7 +11,7 @@ export interface Flashcard {
 }
 
 export const edexcelAlevelFlashcards: Flashcard[] = [
-    // Unit 1 - Lesson 1: The Mole & Avogadro
+    // Unit 1 - Topic 1: Formulae, Equations and Amount of Substance (Lesson 1)
     {
         id: 'ed-u1-l1-1',
         unitNum: 1,
@@ -19,124 +19,933 @@ export const edexcelAlevelFlashcards: Flashcard[] = [
         category: 'Moles & Avogadro',
         question: 'What is Avogadro\'s Constant ($N_A$) value and unit?',
         answer: '$6.02 \\times 10^{23} \\text{ mol}^{-1}$',
-        examinerTip: 'It represents the exact number of particles in one mole of any substance.'
+        examinerTip: 'It represents the exact number of elementary particles in one mole of any substance.'
     },
     {
         id: 'ed-u1-l1-2',
         unitNum: 1,
         lessonNum: 1,
         category: 'Moles & Avogadro',
-        question: 'Define Relative Atomic Mass ($A_r$).',
-        answer: 'The weighted average mass of an atom of an element relative to 1/12th the mass of a Carbon-12 atom.',
-        examinerTip: 'Always include "weighted average" and reference Carbon-12.'
+        question: 'Define the Mole ($n$).',
+        answer: 'The amount of substance containing the same number of elementary particles as there are atoms in exactly $12\\text{ g}$ of Carbon-12.',
+        examinerTip: 'Moles = Mass / Molar Mass ($n = m / M_r$).'
     },
-
-    // Unit 1 - Lesson 2: Relative Masses
     {
-        id: 'ed-u1-l2-1',
+        id: 'ed-u1-l1-3',
         unitNum: 1,
-        lessonNum: 2,
+        lessonNum: 1,
+        category: 'Moles & Avogadro',
+        question: 'Define Relative Atomic Mass ($A_r$).',
+        answer: 'The weighted average mass of an atom of an element relative to 1/12th the mass of an atom of Carbon-12.',
+        examinerTip: 'Always include "weighted average mass" and reference Carbon-12.'
+    },
+    {
+        id: 'ed-u1-l1-4',
+        unitNum: 1,
+        lessonNum: 1,
+        category: 'Relative Masses',
+        question: 'Why is Carbon-12 ($^{12}\\text{C}$) used as the international reference standard for atomic masses?',
+        answer: 'Because it has a stable abundance and its relative mass is defined as exactly 12.000.',
+        examinerTip: 'All relative atomic and molecular masses are dimensionless ratios compared to 1/12th of Carbon-12.'
+    },
+    {
+        id: 'ed-u1-l1-5',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Relative Masses',
         question: 'Define Relative Molecular Mass ($M_r$).',
-        answer: 'The average mass of a molecule compared to 1/12th the mass of an atom of Carbon-12.',
-        examinerTip: 'Used for simple covalent molecules like $H_2O$ and $CO_2$.'
+        answer: 'The weighted average mass of a molecule compared to 1/12th the mass of an atom of Carbon-12.',
+        examinerTip: 'Used for simple covalent molecules like $\\text{H}_2\\text{O}$ and $\\text{CO}_2$.'
     },
     {
-        id: 'ed-u1-l2-2',
+        id: 'ed-u1-l1-6',
         unitNum: 1,
-        lessonNum: 2,
+        lessonNum: 1,
         category: 'Relative Masses',
         question: 'Define Relative Formula Mass ($M_r$).',
         answer: 'The sum of the relative atomic masses of atoms in a formula unit of an ionic compound.',
-        examinerTip: 'Used for ionic networks like $NaCl$ where discrete molecules do not exist.'
+        examinerTip: 'Used for ionic networks like $\\text{NaCl}$ where discrete molecules do not exist.'
     },
-
-    // Unit 1 - Lesson 3: Chemical & Ionic Equations
     {
-        id: 'ed-u1-l3-1',
+        id: 'ed-u1-l1-7',
         unitNum: 1,
-        lessonNum: 3,
+        lessonNum: 1,
+        category: 'Relative Masses',
+        question: 'What is Molar Mass ($M$) and its SI unit?',
+        answer: 'The mass of one mole of a substance, expressed in $\\text{g mol}^{-1}$.',
+        examinerTip: 'Molar mass has units ($\\text{g mol}^{-1}$), whereas $A_r$ and $M_r$ are unitless ratios.'
+    },
+    {
+        id: 'ed-u1-l1-8',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Ionic Equations',
         question: 'What are Spectator Ions in an ionic equation?',
         answer: 'Ions that exist in the same state on both reactant and product sides without taking part in the chemical reaction.',
         examinerTip: 'Always omit spectator ions when writing a net ionic equation.'
     },
-
-    // Unit 1 - Lesson 4: Empirical & Molecular Formulae
     {
-        id: 'ed-u1-l4-1',
+        id: 'ed-u1-l1-9',
         unitNum: 1,
-        lessonNum: 4,
+        lessonNum: 1,
+        category: 'Ionic Equations',
+        question: 'What is the net ionic equation for strong acid-alkali neutralization?',
+        answer: '$\\text{H}^+\\text{(aq)} + \\text{OH}^-\\text{(aq)} \\rightarrow \\text{H}_2\\text{O(l)}$',
+        examinerTip: 'State symbols $(\\text{aq})$ and $(\\text{l})$ are mandatory in ionic equations.'
+    },
+    {
+        id: 'ed-u1-l1-10',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Empirical Formula',
         question: 'Define Empirical Formula.',
         answer: 'The simplest whole-number ratio of atoms of each element in a compound.',
         examinerTip: 'Calculate by dividing mass/percentage by Ar, then dividing by smallest mole value.'
     },
-
-    // Unit 1 - Lesson 5: Reactions of Acids
     {
-        id: 'ed-u1-l5-1',
+        id: 'ed-u1-l1-11',
         unitNum: 1,
-        lessonNum: 5,
+        lessonNum: 1,
+        category: 'Empirical Formula',
+        question: 'Define Molecular Formula.',
+        answer: 'The actual number of atoms of each element present in one molecule of a compound.',
+        examinerTip: '$\\text{Molecular Formula} = k \\times (\\text{Empirical Formula})$, where $k = M_r / \\text{Empirical Mass}$.'
+    },
+    {
+        id: 'ed-u1-l1-12',
+        unitNum: 1,
+        lessonNum: 1,
+        category: 'Hydrated Salts',
+        question: 'What is Water of Crystallization?',
+        answer: 'Water molecules chemically bonded into the crystalline structure of a hydrated salt.',
+        examinerTip: 'Heating to constant mass removes all water of crystallization to form the anhydrous salt.'
+    },
+    {
+        id: 'ed-u1-l1-13',
+        unitNum: 1,
+        lessonNum: 1,
+        category: 'Hydrated Salts',
+        question: 'Distinguish between Hydrated and Anhydrous salts.',
+        answer: 'Hydrated salts contain water of crystallization in their lattice, whereas anhydrous salts have lost all water.',
+        examinerTip: 'Hydrated copper(II) sulfate is blue ($\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$); anhydrous is white ($\\text{CuSO}_4$).'
+    },
+    {
+        id: 'ed-u1-l1-14',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Acids & Salts',
         question: 'What are the products of an Acid + Metal Carbonate reaction?',
         answer: '$\\text{Salt} + \\text{Water} + \\text{Carbon Dioxide}$',
         examinerTip: 'Effervescence (bubbling) indicates carbon dioxide gas evolution.'
     },
-
-    // Unit 1 - Lesson 6: Preparation of Salts
     {
-        id: 'ed-u1-l6-1',
+        id: 'ed-u1-l1-15',
         unitNum: 1,
-        lessonNum: 6,
-        category: 'Salts Preparation',
-        question: 'Why is excess insoluble metal oxide added when preparing a soluble salt?',
-        answer: 'To ensure all the acid is completely neutralized and reacted.',
-        examinerTip: 'The excess insoluble solid is removed by filtration.'
+        lessonNum: 1,
+        category: 'Acids & Salts',
+        question: 'What are the products of an Acid + Reactive Metal reaction?',
+        answer: '$\\text{Salt} + \\text{Hydrogen Gas}$',
+        examinerTip: 'Hydrogen gas is tested with a burning splint (squeaky pop test).'
     },
-
-    // Unit 1 - Lesson 7: Solutions & Concentrations
     {
-        id: 'ed-u1-l7-1',
+        id: 'ed-u1-l1-16',
         unitNum: 1,
-        lessonNum: 7,
+        lessonNum: 1,
+        category: 'Salts Preparation',
+        question: 'Why is excess insoluble metal oxide added when preparing a soluble salt from acid?',
+        answer: 'To ensure all the acid is completely neutralized and reacted.',
+        examinerTip: 'The excess insoluble solid is removed by filtration before crystallization.'
+    },
+    {
+        id: 'ed-u1-l1-17',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Solutions & Concentrations',
         question: 'What is the formula for Concentration in $\\text{mol dm}^{-3}$?',
         answer: '$\\text{Concentration} = \\frac{\\text{Moles (mol)}}{\\text{Volume (dm}^3\\text{)}}$',
         examinerTip: 'To convert $\\text{cm}^3$ to $\\text{dm}^3$, divide by 1000.'
     },
-
-    // Unit 1 - Lesson 8: Gas Volumes & Ideal Gas Law
     {
-        id: 'ed-u1-l8-1',
+        id: 'ed-u1-l1-18',
         unitNum: 1,
-        lessonNum: 8,
+        lessonNum: 1,
+        category: 'Solutions & Concentrations',
+        question: 'What is a Standard Solution in volumetric analysis?',
+        answer: 'A solution of accurately known concentration.',
+        examinerTip: 'Prepared by dissolving a known mass of solute in a volumetric flask.'
+    },
+    {
+        id: 'ed-u1-l1-19',
+        unitNum: 1,
+        lessonNum: 1,
+        category: 'Gas Volumes',
+        question: 'What is the Molar Gas Volume ($V_m$) at Room Temperature and Pressure (RTP)?',
+        answer: '$24.0 \\text{ dm}^3 \\text{ mol}^{-1}$ (or $24,000 \\text{ cm}^3 \\text{ mol}^{-1}$).',
+        examinerTip: 'One mole of any gas occupies $24.0 \\text{ dm}^3$ at $298\\text{ K}$ and $101\\text{ kPa}$.'
+    },
+    {
+        id: 'ed-u1-l1-20',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Ideal Gas Law',
         question: 'What is the Ideal Gas Equation and its SI units?',
         answer: '$PV = nRT$ (where $P$ is in Pa, $V$ in $\\text{m}^3$, $T$ in Kelvin).',
         examinerTip: 'Critical unit conversions: $1 \\text{ m}^3 = 1000 \\text{ dm}^3$ and $T(\\text{K}) = \\text{°C} + 273$.'
     },
-
-    // Unit 1 - Lesson 9: Yield & Atom Economy
     {
-        id: 'ed-u1-l9-1',
+        id: 'ed-u1-l1-21',
         unitNum: 1,
-        lessonNum: 9,
+        lessonNum: 1,
         category: 'Yield & Atom Economy',
         question: 'How is Percentage Yield calculated?',
         answer: '$\\text{\\% Yield} = \\frac{\\text{Actual Yield}}{\\text{Theoretical Yield}} \\times 100$',
         examinerTip: 'Yield is affected by incomplete reactions, side reactions, or product loss during purification.'
     },
-
-    // Unit 1 - Lesson 10: Experimental Uncertainty
     {
-        id: 'ed-u1-l10-1',
+        id: 'ed-u1-l1-22',
         unitNum: 1,
-        lessonNum: 10,
+        lessonNum: 1,
+        category: 'Yield & Atom Economy',
+        question: 'How is Atom Economy calculated and why is high atom economy desirable?',
+        answer: '$\\text{\\% Atom Economy} = \\frac{\\text{Molar Mass of Desired Product}}{\\text{Total Molar Mass of All Reactants}} \\times 100$. High atom economy minimizes industrial waste.',
+        examinerTip: 'Addition reactions have $100\\%$ atom economy because only one product is formed.'
+    },
+    {
+        id: 'ed-u1-l1-23',
+        unitNum: 1,
+        lessonNum: 1,
         category: 'Uncertainty',
         question: 'How do you calculate Percentage Uncertainty of a burette reading (2 readings)?',
         answer: '$\\text{\\% Uncertainty} = \\frac{2 \\times \\text{Uncertainty of Equipment}}{\\text{Measured Volume}} \\times 100$',
         examinerTip: 'Burettes require 2 readings (initial & final), so double the equipment uncertainty.'
+    },
+
+    // Unit 1 - Topic 2: Atomic Structure & The Periodic Table (Lesson 2)
+    {
+        id: 'ed-u1-l2-1',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Atomic Structure',
+        question: 'What are the relative mass and relative charge of a Proton, Neutron, and Electron?',
+        answer: 'Proton: mass = $1$, charge = $+1$. Neutron: mass = $1$, charge = $0$. Electron: mass = $1/1840$, charge = $-1$.',
+        examinerTip: 'Protons and neutrons form the central nucleus; electrons orbit in outer shells.'
+    },
+    {
+        id: 'ed-u1-l2-2',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Atomic Structure',
+        question: 'Define Atomic Number ($Z$) and Mass Number ($A$).',
+        answer: 'Atomic number ($Z$) is the number of protons in the nucleus. Mass number ($A$) is the total number of protons and neutrons.',
+        examinerTip: 'Atomic number uniquely identifies an element. Mass number is always a whole integer.'
+    },
+    {
+        id: 'ed-u1-l2-3',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Isotopes',
+        question: 'Define Isotopes and explain why they share identical chemical properties.',
+        answer: 'Atoms of the same element with the same number of protons but different numbers of neutrons. They share identical chemical properties because they have the same electronic configuration.',
+        examinerTip: 'Physical properties (density, rate of diffusion) differ slightly due to different atomic masses.'
+    },
+    {
+        id: 'ed-u1-l2-4',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Isotopes',
+        question: 'Define Relative Isotopic Mass.',
+        answer: 'The mass of an atom of an isotope relative to 1/12th the mass of an atom of Carbon-12.',
+        examinerTip: 'Applies to a specific individual isotope (e.g., Chlorine-35 vs Chlorine-37).'
+    },
+    {
+        id: 'ed-u1-l2-5',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Mass Spectrometry',
+        question: 'What are the 5 main stages of Time of Flight (TOF) Mass Spectrometry?',
+        answer: '1. Vaporization, 2. Ionization, 3. Acceleration, 4. Ion Drift (Flight Tube), 5. Detection.',
+        examinerTip: 'All ions are accelerated to have the same kinetic energy ($KE = \\frac{1}{2}mv^2$).'
+    },
+    {
+        id: 'ed-u1-l2-6',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Mass Spectrometry',
+        question: 'What equation represents Electron Impact Ionization in Mass Spectrometry?',
+        answer: '$X\\text{(g)} + e^- \\rightarrow X^+\\text{(g)} + 2e^-$',
+        examinerTip: 'Used for elements and low mass organic compounds; high-energy electrons knock off an electron, which can cause fragmentation.'
+    },
+    {
+        id: 'ed-u1-l2-7',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Mass Spectrometry',
+        question: 'What equation represents Electrospray Ionization in Mass Spectrometry?',
+        answer: '$X\\text{(g)} + \\text{H}^+ \\rightarrow X\\text{H}^+\\text{(g)}$',
+        examinerTip: 'A soft ionization technique used for large biological molecules; adds a proton, giving a peak at $M_r + 1$.'
+    },
+    {
+        id: 'ed-u1-l2-8',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Mass Spectrometry',
+        question: 'How does ion mass ($m$) affect the time of flight ($t$) in a TOF mass spectrometer?',
+        answer: 'All ions gain identical kinetic energy ($KE$), so lighter ions ($m/z$) travel faster and reach the detector in a shorter time ($t \\propto \\sqrt{m}$).',
+        examinerTip: '$KE = \\frac{1}{2}m v^2 \\implies v = \\sqrt{\\frac{2KE}{m}}$.'
+    },
+    {
+        id: 'ed-u1-l2-9',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Mass Spectrometry',
+        question: 'How is Relative Atomic Mass ($A_r$) calculated from a mass spectrum?',
+        answer: '$A_r = \\frac{\\sum (\\text{Isotopic Mass} \\times \\text{Abundance})}{\\sum \\text{Total Abundance}}$',
+        examinerTip: 'Total abundance can be percentages (summing to 100) or relative peak heights.'
+    },
+    {
+        id: 'ed-u1-l2-10',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Electronic Configuration',
+        question: 'Define an Atomic Orbital.',
+        answer: 'A region of space around the nucleus that can hold up to two electrons with opposite spins.',
+        examinerTip: 'Opposite spins (Pauli Exclusion Principle) minimize electrostatic repulsion between electrons in the same orbital.'
+    },
+    {
+        id: 'ed-u1-l2-11',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Electronic Configuration',
+        question: 'Describe the 3D shapes of an $s$ orbital and a $p$ orbital.',
+        answer: 'An $s$ orbital is spherical. A $p$ orbital has a dumbbell shape (oriented along the x, y, or z axis).',
+        examinerTip: '$s$ subshells contain 1 orbital; $p$ subshells contain 3 degenerate orbitals ($p_x, p_y, p_z$).'
+    },
+    {
+        id: 'ed-u1-l2-12',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Electronic Configuration',
+        question: 'How many electrons can be held in $s$, $p$, $d$, and $f$ subshells?',
+        answer: '$s = 2$, $p = 6$, $d = 10$, $f = 14$ electrons.',
+        examinerTip: 'Number of orbitals per subshell = $1, 3, 5, 7$; each orbital holds 2 electrons.'
+    },
+    {
+        id: 'ed-u1-l2-13',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Electronic Configuration',
+        question: 'What is the filling order of subshells up to $4p$?',
+        answer: '$1s^2 \\ 2s^2 \\ 2p^6 \\ 3s^2 \\ 3p^6 \\ 4s^2 \\ 3d^{10} \\ 4p^6$',
+        examinerTip: '$4s$ subshell fills BEFORE $3d$ because $4s$ is at a lower energy level than $3d$ in uncharged atoms.'
+    },
+    {
+        id: 'ed-u1-l2-14',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Electronic Configuration',
+        question: 'What are the electronic configurations of Chromium ($\\text{Cr}, Z=24$) and Copper ($\\text{Cu}, Z=29$)?',
+        answer: 'Chromium: $[\\text{Ar}] 4s^1 3d^5$. Copper: $[\\text{Ar}] 4s^1 3d^{10}$.',
+        examinerTip: 'Half-filled ($3d^5$) and fully-filled ($3d^{10}$) subshells provide extra stability.'
+    },
+    {
+        id: 'ed-u1-l2-15',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Electronic Configuration',
+        question: 'Which electrons are lost first when a transition metal forms a cation?',
+        answer: 'The $4s$ electrons are lost BEFORE the $3d$ electrons (e.g. $\\text{Fe}^{2+}$ is $[\\text{Ar}] 3d^6$, NOT $[\\text{Ar}] 4s^2 3d^4$).',
+        examinerTip: 'Once filled, $3d$ electrons repel $4s$, pushing $4s$ to a higher energy level.'
+    },
+    {
+        id: 'ed-u1-l2-16',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'Define First Ionization Energy ($\\text{IE}_1$) and write its general equation.',
+        answer: 'The energy required to remove 1 mole of electrons from 1 mole of gaseous atoms to form 1 mole of gaseous $1+$ ions: $X\\text{(g)} \\rightarrow X^+\\text{(g)} + e^-$.',
+        examinerTip: 'Always include state symbols $(\\text{g})$ on both sides.'
+    },
+    {
+        id: 'ed-u1-l2-17',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'What three factors determine the magnitude of First Ionization Energy?',
+        answer: '1. Nuclear charge (proton count), 2. Atomic radius (distance to outer shell), 3. Shielding effect by inner shells.',
+        examinerTip: 'Increased nuclear charge increases attraction; increased radius and shielding decrease attraction.'
+    },
+    {
+        id: 'ed-u1-l2-18',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'What is the general trend in First Ionization Energy across Period 3 (Na to Ar) and why?',
+        answer: 'General INCREASE. Nuclear charge increases while shielding remains roughly constant, pulling outer electrons closer.',
+        examinerTip: 'Note the two dips at Aluminium (Group 3) and Sulfur (Group 6).'
+    },
+    {
+        id: 'ed-u1-l2-19',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'Why is the First Ionization Energy of Aluminium lower than Magnesium?',
+        answer: 'Aluminium\'s outer electron is in a $3p$ orbital, which is higher in energy and shielded by the filled $3s^2$ subshell.',
+        examinerTip: '$3p$ electron is further from the nucleus and easier to remove than a $3s$ electron.'
+    },
+    {
+        id: 'ed-u1-l2-20',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'Why is the First Ionization Energy of Sulfur lower than Phosphorus?',
+        answer: 'Sulfur has a paired electron in one of its $3p$ orbitals ($\\uparrow\\downarrow$). Spin pair repulsion makes this electron easier to remove.',
+        examinerTip: 'Phosphorus has singly occupied $3p$ orbitals ($\\uparrow \\ \\uparrow \\ \\uparrow$).'
+    },
+    {
+        id: 'ed-u1-l2-21',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'What is the trend in First Ionization Energy down Group 2 (Be to Ba) and why?',
+        answer: 'DECREASES down the group. Atomic radius and inner shell shielding increase, overriding the increase in nuclear charge.',
+        examinerTip: 'Outer electrons are further from nucleus and experience weaker electrostatic attraction.'
+    },
+    {
+        id: 'ed-u1-l2-22',
+        unitNum: 1,
+        lessonNum: 2,
+        category: 'Ionization Energy',
+        question: 'How do successive ionization energy values provide evidence for electron shells?',
+        answer: 'Large jumps between successive ionization energies indicate the removal of an electron from a new inner shell closer to the nucleus.',
+        examinerTip: 'Count electrons removed BEFORE the first major jump to determine the element\'s group number.'
+    },
+
+    // Unit 1 - Topic 3: Bonding & Structure (Lesson 3)
+    {
+        id: 'ed-u1-l3-1',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Valency & Naming',
+        question: 'What is Valency and how is it determined for main group elements?',
+        answer: 'Valency is the combining power of an atom (number of bonds it can form). Groups I-IV valency = group number; Groups V-VII valency = 8 - group number.',
+        examinerTip: 'Transition metals show variable valencies indicated by Roman numerals e.g. Iron(III) = valency 3.'
+    },
+    {
+        id: 'ed-u1-l3-2',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Valency & Naming',
+        question: 'What do chemical name suffixes -ide and -ate indicate?',
+        answer: '-ide indicates a binary compound of two elements (e.g. Sodium chloride). -ate indicates a polyatomic anion containing oxygen (e.g. Calcium carbonate).',
+        examinerTip: 'Prefixes mono-, di-, tri- specify atom counts in simple covalent molecules (e.g. Carbon dioxide).'
+    },
+    {
+        id: 'ed-u1-l3-3',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Ionic Bonding',
+        question: 'Define Ionic Bonding.',
+        answer: 'The strong electrostatic attraction between oppositely charged ions formed by electron transfer.',
+        examinerTip: 'Ionic bond strength increases with higher ionic charges and smaller ionic radii.'
+    },
+    {
+        id: 'ed-u1-l3-4',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Ionic Radius',
+        question: 'What is the trend in ionic radius across an Isoelectronic Series of ions (e.g. $\\text{N}^{3-}, \\text{O}^{2-}, \\text{F}^-, \\text{Na}^+, \\text{Mg}^{2+}, \\text{Al}^{3+}$)?',
+        answer: 'Ionic radius DECREASES as atomic number increases. All have 10 electrons, but increasing proton count pulls electron shells closer.',
+        examinerTip: 'Cations are always smaller than their neutral parent atoms; anions are always larger.'
+    },
+    {
+        id: 'ed-u1-l3-5',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Ionic Polarization',
+        question: 'What factors increase the Polarization of an anion by a cation (Fajans\' Rules)?',
+        answer: 'High charge density of cation (small ionic radius & high charge) and high polarizability of anion (large ionic radius & high charge).',
+        examinerTip: 'Greater polarization distorts the electron cloud of the anion, introducing covalent character into ionic bonds.'
+    },
+    {
+        id: 'ed-u1-l3-6',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Covalent Bonding',
+        question: 'Define Covalent Bonding.',
+        answer: 'The strong electrostatic attraction between a shared pair of electrons and the nuclei of the bonded atoms.',
+        examinerTip: 'Occurs between non-metal atoms.'
+    },
+    {
+        id: 'ed-u1-l3-7',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Covalent Bonding',
+        question: 'What is a Dative (Coordinate) Covalent Bond?',
+        answer: 'A covalent bond in which BOTH shared electrons are provided by the same atom.',
+        examinerTip: 'Requires one atom with a lone pair and another with an empty orbital (e.g. $\\text{NH}_4^+$, $\\text{H}_3\\text{O}^+$, $\\text{BF}_3 \\leftarrow \\text{NH}_3$).'
+    },
+    {
+        id: 'ed-u1-l3-8',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Metallic Bonding',
+        question: 'Define Metallic Bonding and factors affecting its strength.',
+        answer: 'Electrostatic attraction between positive metal cations and a delocalized sea of electrons. Strength increases with higher cation charge, smaller cation radius, and more delocalized electrons.',
+        examinerTip: 'Aluminum ($1269^\\circ\\text{C}$) has a higher melting point than Sodium ($98^\\circ\\text{C}$) due to $\\text{Al}^{3+}$ vs $\\text{Na}^+$.'
+    },
+    {
+        id: 'ed-u1-l3-9',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is VSEPR Theory?',
+        answer: 'Valence Shell Electron Pair Repulsion theory states that electron pairs around a central atom position themselves as far apart as possible to minimize repulsion.',
+        examinerTip: 'Repulsion order: Lone pair - lone pair > lone pair - bonding pair > bonding pair - bonding pair.'
+    },
+    {
+        id: 'ed-u1-l3-10',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is the shape and bond angle of Carbon Dioxide ($\\text{CO}_2$) and Beryllium Chloride ($\\text{BeCl}_2$)?',
+        answer: 'Linear shape with a bond angle of $180^\\circ$ (2 bonding regions, 0 lone pairs).',
+        examinerTip: 'Double bonds count as a single region of electron density in VSEPR theory.'
+    },
+    {
+        id: 'ed-u1-l3-11',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is the shape and bond angle of Boron Trifluoride ($\\text{BF}_3$)?',
+        answer: 'Trigonal Planar shape with a bond angle of $120^\\circ$ (3 bonding pairs, 0 lone pairs).',
+        examinerTip: 'Boron is electron deficient with only 6 electrons in its outer shell.'
+    },
+    {
+        id: 'ed-u1-l3-12',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is the shape and bond angle of Methane ($\\text{CH}_4$)?',
+        answer: 'Tetrahedral shape with a bond angle of $109.5^\\circ$ (4 bonding pairs, 0 lone pairs).',
+        examinerTip: 'Adding 1 lone pair reduces the bond angle by approximately $2.5^\\circ$.'
+    },
+    {
+        id: 'ed-u1-l3-13',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is the shape and bond angle of Ammonia ($\\text{NH}_3$)?',
+        answer: 'Trigonal Pyramidal shape with a bond angle of $107^\\circ$ (3 bonding pairs, 1 lone pair).',
+        examinerTip: 'The lone pair repels more strongly than bonding pairs, reducing the angle from $109.5^\\circ$ to $107^\\circ$.'
+    },
+    {
+        id: 'ed-u1-l3-14',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is the shape and bond angle of Water ($\\text{H}_2\\text{O}$)?',
+        answer: 'Non-linear / Bent shape with a bond angle of $104.5^\\circ$ (2 bonding pairs, 2 lone pairs).',
+        examinerTip: '2 lone pairs reduce the tetrahedral $109.5^\\circ$ angle by $2 \\times 2.5^\\circ = 5^\\circ$.'
+    },
+    {
+        id: 'ed-u1-l3-15',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Shapes of Molecules',
+        question: 'What is the shape and bond angles of Sulfur Hexafluoride ($\\text{SF}_6$)?',
+        answer: 'Octahedral shape with bond angles of $90^\\circ$ (6 bonding pairs, 0 lone pairs).',
+        examinerTip: 'Sulfur expands its octet to hold 12 valence electrons.'
+    },
+    {
+        id: 'ed-u1-l3-16',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Electronegativity',
+        question: 'Define Electronegativity.',
+        answer: 'The power of an atom to attract the electron density in a covalent bond towards itself.',
+        examinerTip: 'Fluorine is the most electronegative element; trend increases up and across the Periodic Table.'
+    },
+    {
+        id: 'ed-u1-l3-17',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Polarity',
+        question: 'Why is Carbon Tetrachloride ($\\text{CCl}_4$) non-polar despite having polar $\\text{C}-\\text{Cl}$ bonds?',
+        answer: '$\\text{CCl}_4$ has a symmetrical tetrahedral shape, so individual bond dipoles cancel out, resulting in zero net dipole moment.',
+        examinerTip: 'Asymmetrical polar molecules like $\\text{CHCl}_3$ or $\\text{H}_2\\text{O}$ have a permanent net dipole.'
+    },
+    {
+        id: 'ed-u1-l3-18',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Giant Lattices',
+        question: 'Why are Giant Ionic Lattices brittle?',
+        answer: 'When a mechanical force shifts layers of ions, ions of like charges align next to each other. Repulsion between like charges breaks the lattice apart.',
+        examinerTip: 'Ionic compounds conduct electricity ONLY when molten or in aqueous solution where ions are free to move.'
+    },
+    {
+        id: 'ed-u1-l3-19',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Giant Lattices',
+        question: 'Why does Graphite conduct electricity while Diamond does not?',
+        answer: 'Graphite has delocalized $\\pi$ electrons free to move along its hexagonal layers (3 bonds per C). Diamond uses all 4 outer electrons in localized single covalent bonds.',
+        examinerTip: 'Graphite also acts as a lubricant because weak London forces allow layers to slide.'
+    },
+    {
+        id: 'ed-u1-l3-20',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Giant Lattices',
+        question: 'What is Graphene and its unique properties?',
+        answer: 'A single 2D layer of carbon atoms arranged in a hexagonal honeycomb lattice. It is 1 atom thick, exceptionally strong, lightweight, transparent, and highly conductive.',
+        examinerTip: 'Graphene is the fundamental structural element of graphite and carbon nanotubes.'
+    },
+    {
+        id: 'ed-u1-l3-21',
+        unitNum: 1,
+        lessonNum: 3,
+        category: 'Simple Molecular Lattices',
+        question: 'Why do Simple Molecular structures (e.g. $\\text{I}_2, \\text{H}_2\\text{O}$) have low melting points?',
+        answer: 'Only weak intermolecular forces (London forces / hydrogen bonds) between molecules are broken when melting, requiring little energy. Strong covalent bonds inside molecules remain intact.',
+        examinerTip: 'Simple molecular substances do NOT conduct electricity because they have no mobile ions or delocalized electrons.'
+    },
+
+    // Unit 1 - Topic 4: Introductory Organic Chemistry & Alkanes (Lesson 4)
+    {
+        id: 'ed-u1-l4-1',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Hazards & Risk',
+        question: 'Distinguish between a Hazard and a Risk in organic chemistry experiments.',
+        answer: 'A Hazard is the inherent potential of a substance or process to cause harm. A Risk is the likelihood of harm occurring under specific exposure conditions.',
+        examinerTip: 'Risk can be reduced by using smaller quantities, fume cupboards, or lower concentrations without changing the hazard.'
+    },
+    {
+        id: 'ed-u1-l4-2',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Organic Formulae',
+        question: 'Define Empirical, Molecular, Structural, Displayed, and Skeletal formulas.',
+        answer: 'Empirical = simplest ratio of atoms; Molecular = actual number of atoms; Structural = shows carbon arrangement; Displayed = shows all atoms & bonds; Skeletal = shows carbon skeleton lines.',
+        examinerTip: 'Skeletal formulas omit C and H attached to C, showing carbon vertices and functional groups.'
+    },
+    {
+        id: 'ed-u1-l4-3',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Organic Basics',
+        question: 'Define a Homologous Series.',
+        answer: 'A family of organic compounds with the same functional group, same general formula, similar chemical reactivity, and a gradual trend in physical properties.',
+        examinerTip: 'Each consecutive member differs by a $-\\text{CH}_2-$ unit.'
+    },
+    {
+        id: 'ed-u1-l4-4',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Nomenclature',
+        question: 'State the primary rules for naming branched organic compounds according to IUPAC.',
+        answer: '1. Find the longest continuous carbon chain. 2. Number from the end nearest a substituent. 3. List alkyl side-chains alphabetically with locant numbers.',
+        examinerTip: 'Di-, tri-, tetra- prefixes do NOT alter alphabetical ordering (e.g. ethyl before dimethyl).'
+    },
+    {
+        id: 'ed-u1-l4-5',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Isomerism',
+        question: 'Define Structural Isomerism and name its three types.',
+        answer: 'Compounds with the same molecular formula but different structural formulas. Types: 1. Chain, 2. Position, 3. Functional Group isomerism.',
+        examinerTip: 'Chain isomers have different carbon skeleton branching.'
+    },
+    {
+        id: 'ed-u1-l4-6',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Isomerism',
+        question: 'Define Functional Group Isomerism and list common functional group isomer pairs.',
+        answer: 'Isomers with the same molecular formula but different functional groups. Pairs: Alkenes & Cycloalkanes ($C_n H_{2n}$), Alcohols & Ethers ($C_n H_{2n+2}O$), Carboxylic Acids & Esters ($C_n H_{2n}O_2$).',
+        examinerTip: 'Cyclohexane ($C_6H_{12}$) and Hex-1-ene ($C_6H_{12}$) are functional group isomers.'
+    },
+    {
+        id: 'ed-u1-l4-7',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Bond Fission',
+        question: 'Compare Homolytic Fission and Heterolytic Fission.',
+        answer: 'Homolytic: Covalent bond breaks with each atom taking 1 electron $\\rightarrow$ 2 free radicals. Heterolytic: Bond breaks with 1 atom taking both electrons $\\rightarrow$ positive and negative ions.',
+        examinerTip: 'Single-headed "fish-hook" arrows represent 1 electron movement; double-headed arrows represent 2 electron movement.'
+    },
+    {
+        id: 'ed-u1-l4-8',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Reactions Basics',
+        question: 'Distinguish between a Nucleophile and an Electrophile.',
+        answer: 'A Nucleophile is an electron-pair donor (e.g. $\\text{OH}^-$, $\\text{NH}_3$). An Electrophile is an electron-pair acceptor (e.g. $\\text{H}^+$, $\\text{NO}_2^+$, $\\text{Br}^{\\delta+}$).',
+        examinerTip: 'Nucleophiles attack electron-deficient carbon centers; electrophiles attack electron-rich $C=C$ bonds.'
+    },
+    {
+        id: 'ed-u1-l4-9',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Alkanes Properties',
+        question: 'How does carbon chain length and branching affect alkane boiling points?',
+        answer: 'Longer chains increase boiling points (larger surface area for London forces). Branching decreases boiling points (spherical shape reduces surface contact area).',
+        examinerTip: 'Pentane ($36^\\circ\\text{C}$) > 2-Methylbutane ($28^\\circ\\text{C}$) > 2,2-Dimethylpropane ($10^\\circ\\text{C}$).'
+    },
+    {
+        id: 'ed-u1-l4-10',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Crude Oil',
+        question: 'Explain how Fractional Distillation separates crude oil components.',
+        answer: 'Crude oil is vaporized and fed into a fractionating column (hot at bottom, cool at top). Hydrocarbons condense at different heights according to their boiling points.',
+        examinerTip: 'Short-chain hydrocarbons have lower boiling points and emerge near the top.'
+    },
+    {
+        id: 'ed-u1-l4-11',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Crude Oil',
+        question: 'Compare Thermal Cracking and Catalytic Cracking conditions and products.',
+        answer: 'Thermal: high temp ($1000^\\circ\\text{C}$) & high pressure $\\rightarrow$ high yield of alkenes. Catalytic: moderate temp ($450^\\circ\\text{C}$), zeolite catalyst $\\rightarrow$ branched alkanes, cycloalkanes & aromatics.',
+        examinerTip: 'Cracking breaks strong $C-C$ $\\sigma$ bonds in long-chain alkanes.'
+    },
+    {
+        id: 'ed-u1-l4-12',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Combustion',
+        question: 'Why is Carbon Monoxide ($CO$) a dangerous pollutant produced during incomplete combustion?',
+        answer: 'It is a toxic, colorless, odorless gas that binds irreversibly to hemoglobin, reducing oxygen transport in the blood.',
+        examinerTip: 'Incomplete combustion occurs when oxygen supply is limited.'
+    },
+    {
+        id: 'ed-u1-l4-13',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Pollution',
+        question: 'How are Nitrogen Oxides ($NO_x$) formed in car engines and why are they harmful?',
+        answer: 'Extreme spark temperatures cause atmospheric $\\text{N}_2$ and $\\text{O}_2$ to react ($N_2 + O_2 \\rightarrow 2NO$). $NO_x$ causes acid rain and photochemical smog.',
+        examinerTip: 'Catalytic converters remove $NO$ via $2\\text{CO} + 2\\text{NO} \\rightarrow 2\\text{CO}_2 + \\text{N}_2$.'
+    },
+    {
+        id: 'ed-u1-l4-14',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Free Radical Substitution',
+        question: 'What is a Free Radical and how is it formed?',
+        answer: 'A species with an unpaired electron, formed by homolytic fission of a covalent bond.',
+        examinerTip: 'Represented with a dot (e.g. $\\text{Cl}^\\bullet$).'
+    },
+    {
+        id: 'ed-u1-l4-15',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Free Radical Substitution',
+        question: 'Write the Initiation step equation for the reaction of Methane with Chlorine.',
+        answer: '$\\text{Cl}_2 \\xrightarrow{\\text{UV light}} 2\\text{Cl}^\\bullet$',
+        examinerTip: 'UV light provides energy required to break the $\\text{Cl}-\\text{Cl}$ bond homolytically.'
+    },
+    {
+        id: 'ed-u1-l4-16',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Free Radical Substitution',
+        question: 'Write the two Propagation step equations for chlorination of methane.',
+        answer: '1) $\\text{CH}_4 + \\text{Cl}^\\bullet \\rightarrow {}^\\bullet\\text{CH}_3 + \\text{HCl}$ \n2) ${}^\\bullet\\text{CH}_3 + \\text{Cl}_2 \\rightarrow \\text{CH}_3\\text{Cl} + \\text{Cl}^\\bullet$',
+        examinerTip: 'Propagation steps maintain the free radical chain reaction.'
+    },
+    {
+        id: 'ed-u1-l4-17',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Free Radical Substitution',
+        question: 'What happens in a Termination step? Give an equation showing Ethane formation during methane chlorination.',
+        answer: 'Two free radicals collide and combine to form a stable non-radical molecule, stopping the chain. Equation: ${}^\\bullet\\text{CH}_3 + {}^\\bullet\\text{CH}_3 \\rightarrow \\text{C}_2\\text{H}_6$.',
+        examinerTip: 'Traces of ethane in products prove the presence of methyl free radicals ($^\\bullet\\text{CH}_3$).'
+    },
+    {
+        id: 'ed-u1-l4-18',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Free Radical Substitution',
+        question: 'Why is free radical substitution inefficient for synthesizing a pure haloalkane?',
+        answer: 'Multi-substitution occurs producing mixtures ($\\text{CH}_2\\text{Cl}_2, \\text{CHCl}_3, \\text{CCl}_4$), and positional isomers form on longer carbon chains.',
+        examinerTip: 'Using a large excess of methane maximizes chloromethane ($\text{CH}_3\text{Cl}$).'
+    },
+    {
+        id: 'ed-u1-l4-19',
+        unitNum: 1,
+        lessonNum: 4,
+        category: 'Fuels & Biofuels',
+        question: 'What is Carbon Neutrality in the context of Biofuels?',
+        answer: 'Carbon neutral means the amount of $\\text{CO}_2$ released during biofuel combustion equals the amount of $\\text{CO}_2$ absorbed by crops during photosynthesis.',
+        examinerTip: 'Fossil fuels used in harvesting, transport, and fertilizer production mean biofuels are not $100\\%$ carbon neutral in practice.'
+    },
+
+    // Unit 1 - Topic 5: Alkenes (Lesson 5)
+    {
+        id: 'ed-u1-l5-1',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Alkenes Structure',
+        question: 'Describe the bonding in a $C=C$ double bond in Alkenes.',
+        answer: 'Consists of one $\\sigma$ (sigma) bond (head-on orbital overlap) and one $\\pi$ (pi) bond (sideways overlap of $p$ orbitals above and below the $C=C$ plane).',
+        examinerTip: 'The $\\pi$ bond is weaker than the $\\sigma$ bond and restricts rotation around the double bond axis.'
+    },
+    {
+        id: 'ed-u1-l5-2',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Alkenes Geometry',
+        question: 'What is the hybridisation, shape, and bond angle around each carbon in a $C=C$ double bond?',
+        answer: '$sp^2$ hybridisation, Trigonal Planar shape, and a bond angle of $120^\\circ$.',
+        examinerTip: 'The molecule is completely planar around the $C=C$ double bond.'
+    },
+    {
+        id: 'ed-u1-l5-3',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Stereoisomerism',
+        question: 'What two conditions are required for $E/Z$ (stereoisomerism) to occur in alkenes?',
+        answer: '1. Restricted rotation around the $C=C$ double bond. \n2. Two DIFFERENT groups attached to EACH carbon atom of the $C=C$.',
+        examinerTip: 'Use CIP priority rules: $Z$ = high priority groups on same side (Zame side); $E$ = high priority on opposite sides.'
+    },
+    {
+        id: 'ed-u1-l5-4',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Stereoisomerism',
+        question: 'State the Cahn-Ingold-Prelog (CIP) priority rules for assigning $E/Z$ stereoisomers.',
+        answer: 'Higher atomic number = higher priority. If high priority groups are on the same side of $C=C$, it is the $Z$-isomer; if on opposite sides, it is the $E$-isomer.',
+        examinerTip: 'If atoms attached directly to $C=C$ are identical, compare atoms bonded next down the chain.'
+    },
+    {
+        id: 'ed-u1-l5-5',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Electrophilic Addition',
+        question: 'Define an Electrophile and explain why alkenes undergo electrophilic addition.',
+        answer: 'An Electrophile is an electron-pair acceptor. Alkenes undergo electrophilic addition because the $\\pi$ bond in $C=C$ is an area of high electron density.',
+        examinerTip: 'Electrophilic addition breaks the $\\pi$ bond to form two new $\\sigma$ bonds.'
+    },
+    {
+        id: 'ed-u1-l5-6',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Electrophilic Addition',
+        question: 'How does non-polar Bromine ($\\text{Br}_2$) act as an electrophile when reacting with an alkene?',
+        answer: 'As $\\text{Br}_2$ approaches the electron-rich $C=C$ double bond, electron repulsion induces a dipole ($\\text{Br}^{\\delta+} - \\text{Br}^{\\delta-}$).',
+        examinerTip: 'Heterolytic fission of $\\text{Br}-\\text{Br}$ forms a bromide ion ($\\text{Br}^-$) and a carbocation intermediate.'
+    },
+    {
+        id: 'ed-u1-l5-7',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Electrophilic Addition',
+        question: 'What is observed when Bromine water is added to an Alkene?',
+        answer: 'Orange bromine water turns COLORLESS (decolourizes) as addition across $C=C$ forms a dibromoalkane.',
+        examinerTip: 'This is the classic qualitative test for unsaturation ($C=C$ double bonds).'
+    },
+    {
+        id: 'ed-u1-l5-8',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Electrophilic Addition',
+        question: 'What is the product when an alkene reacts with Hydrogen Bromide ($\\text{HBr}$)?',
+        answer: 'A bromoalkane (e.g. $\\text{CH}_2=\\text{CH}_2 + \\text{HBr} \\rightarrow \\text{CH}_3\\text{CH}_2\\text{Br}$).',
+        examinerTip: 'Occurs at room temperature via electrophilic addition.'
+    },
+    {
+        id: 'ed-u1-l5-9',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Markovnikov Rule',
+        question: 'State Markovnikov\'s Rule for electrophilic addition of $HX$ to unsymmetrical alkenes.',
+        answer: 'When $HX$ adds to an unsymmetrical alkene, $H^+$ attaches to the carbon with more hydrogen atoms, forming the major product via the most stable carbocation.',
+        examinerTip: 'Carbocation stability trend: Tertiary ($3^\\circ$) > Secondary ($2^\\circ$) > Primary ($1^\\circ$) due to alkyl group electron-donating inductive effects.'
+    },
+    {
+        id: 'ed-u1-l5-10',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Carbocation Stability',
+        question: 'Explain why Tertiary ($3^\\circ$) carbocations are more stable than Primary ($1^\\circ$) carbocations.',
+        answer: 'Tertiary carbocations have 3 electron-donating alkyl groups attached to the positive carbon. Alkyl groups push electron density (+I inductive effect), dispersing the positive charge.',
+        examinerTip: 'Greater charge dispersion = greater carbocation stability.'
+    },
+    {
+        id: 'ed-u1-l5-11',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Hydration of Alkenes',
+        question: 'What are the industrial conditions and product for the Hydration of Ethene?',
+        answer: 'Steam ($\\text{H}_2\\text{O(g)}$), Concentrated Phosphoric Acid catalyst ($\\text{H}_3\\text{PO}_4$), $300^\\circ\\text{C}$, 60-70 atm. Product: Ethanol ($\\text{CH}_3\\text{CH}_2\\text{OH}$).',
+        examinerTip: 'Reversible addition reaction with $100\\%$ atom economy.'
+    },
+    {
+        id: 'ed-u1-l5-12',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Hydrogenation',
+        question: 'What are the conditions for Catalytic Hydrogenation of Alkenes to Alkanes?',
+        answer: 'Hydrogen gas ($\\text{H}_2$), Nickel catalyst ($Ni$), temperature around $150^\\circ\\text{C}$.',
+        examinerTip: 'Used industrially to harden unsaturated vegetable oils to make margarine.'
+    },
+    {
+        id: 'ed-u1-l5-13',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Oxidation of Alkenes',
+        question: 'What reagent and observation are associated with mild oxidation of alkenes to diols?',
+        answer: 'Cold, dilute acidified Potassium Manganate(VII) ($\\text{KMnO}_4$). Purple solution turns COLORLESS (or brown $\\text{MnO}_2$ precipitate forms).',
+        examinerTip: 'Ethene oxidation yields Ethane-1,2-diol ($\\text{HO-CH}_2\\text{-CH}_2\\text{-OH}$).'
+    },
+    {
+        id: 'ed-u1-l5-14',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Addition Polymerization',
+        question: 'Describe Addition Polymerization of Alkenes and define a repeat unit.',
+        answer: 'Unsaturated alkene monomers join together by opening $C=C$ double bonds to form long-chain saturated polymers. The repeat unit is the specific arrangement of atoms yielding the polymer upon repetition.',
+        examinerTip: 'Repeat units must have single bonds only and open bonds extending through square brackets with subscript $n$.'
+    },
+    {
+        id: 'ed-u1-l5-15',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Polymers & Environment',
+        question: 'Why are addition polymers non-biodegradable?',
+        answer: 'Polymer chains consist of strong, non-polar $C-C$ and $C-H$ $\\sigma$ bonds that are resistant to chemical and bacterial breakdown.',
+        examinerTip: 'Inertness of non-polar single bonds causes accumulation in landfills and oceans.'
+    },
+    {
+        id: 'ed-u1-l5-16',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Waste Management',
+        question: 'Compare recycling, incineration, and feedstock recycling for waste polymer disposal.',
+        answer: 'Recycling = melting & remolding; Incineration = burning for energy (produces $\\text{CO}_2$ & toxic gases); Feedstock recycling = breaking polymers into monomers for new synthesis.',
+        examinerTip: 'Incineration of PVC produces toxic $\\text{HCl}$ gas, which must be neutralized using base scrubbers.'
+    },
+    {
+        id: 'ed-u1-l5-17',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Sustainable Chemistry',
+        question: 'How do biodegradable and plant-based polymers reduce environmental impact?',
+        answer: 'Biodegradable polymers contain ester or amide links broken down by microorganisms. Plant-based polymers conserve finite crude oil reserves.',
+        examinerTip: 'Photodegradable polymers contain bonds broken down by absorption of UV light.'
+    },
+    {
+        id: 'ed-u1-l5-18',
+        unitNum: 1,
+        lessonNum: 5,
+        category: 'Flue Gas Treatment',
+        question: 'Why must flue gases from PVC incineration be treated with Calcium Oxide ($\\text{CaO}$)?',
+        answer: 'Incineration of PVC releases corrosive, toxic Hydrogen Chloride gas ($\\text{HCl}$). Calcium Oxide is a basic oxide that neutralizes $\\text{HCl}$: $\\text{CaO} + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O}$.',
+        examinerTip: 'Base scrubbing prevents acid rain caused by $\\text{HCl}$ emissions.'
     },
 
     // Unit 2 AS Flashcards (Energetics, Group Chem & Halogenoalkanes)

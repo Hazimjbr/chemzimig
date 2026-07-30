@@ -1050,7 +1050,7 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
                                                         return (
                                                             <FlashcardsDeck 
-                                                                title={`Lesson ${currentLessonNum} Active Recall Warm-Up 🃏`}
+                                                                title={`Topic ${currentLessonNum} Active Recall Warm-Up 🃏`}
                                                                 cards={finalCards}
                                                             />
                                                         );
