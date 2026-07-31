@@ -33,6 +33,10 @@ const TitrationSimulator = dynamic(() => import('@/components/visual/TitrationSi
     ssr: false,
     loading: () => <div className="h-[400px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
 });
+const MolecularShapeSimulator = dynamic(() => import('@/components/visual/MolecularShapeSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[300px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
 const FlashcardsDeck = dynamic(() => import('@/components/visual/FlashcardsDeck'), {
     ssr: false,
     loading: () => <div className="h-[300px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
@@ -602,7 +606,18 @@ const renderContentWithTables = (content: string) => {
     let lastIndex = 0;
     let match: RegExpExecArray | null;
 
+    const isIndexInTableLine = (str: string, index: number): boolean => {
+        const lineStart = str.lastIndexOf('\n', index) + 1;
+        let lineEnd = str.indexOf('\n', index);
+        if (lineEnd === -1) lineEnd = str.length;
+        const line = str.substring(lineStart, lineEnd);
+        return /^[>\s]*\|/.test(line.trim());
+    };
+
     while ((match = svgSplitPattern.exec(content)) !== null) {
+        if (isIndexInTableLine(content, match.index)) {
+            continue;
+        }
         if (match.index > lastIndex) {
             segments.push({ type: 'text', content: content.slice(lastIndex, match.index) });
         }
@@ -1086,6 +1101,11 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 {/* Dynamic Titration Virtual Lab simulator rendered when defined on the active lesson part */}
                                 {currentPart.titrationSimulator && (
                                     <TitrationSimulator />
+                                )}
+
+                                {/* Dynamic Molecular Shape (VSEPR) Explorer rendered when defined on the active lesson part */}
+                                {currentPart.molecularShapeSimulator && (
+                                    <MolecularShapeSimulator />
                                 )}
 
                                 {/* Slide Main Content */}

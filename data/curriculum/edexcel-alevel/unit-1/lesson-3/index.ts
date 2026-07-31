@@ -578,41 +578,44 @@ export const parts: LessonPart[] = [
 > >    * $\\text{AlCl}_3$ dimerizes into stable $\\text{Al}_2\\text{Cl}_6$, whereas $\\text{BCl}_3$ remains monomeric due to the small size of boron preventing dimer formation
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Identifying Dative Covalent Bonds
-> **Question:** Which of the following species contains a dative covalent bond? Explain your reasoning.
-> * **A:** $\\text{Cl}_2$
-> * **B:** $\\text{CH}_4$
-> * **C:** $\\text{NH}_4^+$
-> * **D:** $\\text{H}_2\\text{O}$
+> #### 📝 Worked Example 3: Anomalous Bond Enthalpy of Fluorine (F₂)
+> **Question:** The bond enthalpy of the halogen diatomic molecules generally decreases down the group. However, the bond enthalpy of F–F in fluorine gas (158 kJ/mol) is anomalously weak compared to Cl–Cl in chlorine gas (242 kJ/mol), despite fluorine atoms being smaller. Explain this anomaly.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Analyze simple molecules:**
-> >    * $\\text{Cl}_2$, $\\text{CH}_4$, and $\\text{H}_2\\text{O}$ contain only normal covalent bonds where each bonded atom shares one electron to form the shared pair.
-> > 2. **Analyze ammonium ion ($\\\\text{NH}_4^+$):**
-> >    * Formed when an ammonia molecule ($\\\\text{NH}_3$) reacts with a hydrogen ion ($\\\\text{H}^+$).
-> >    * The nitrogen atom has a lone pair of electrons which it donates to the empty $1s$ orbital of the $\\\\text{H}^+$ ion.
-> > 3. **Conclude:**
-> >    * Therefore, $\\\\text{NH}_4^+$ contains a dative covalent bond, making **Option C** the correct answer.
+> > 1. **Compare atomic sizes and bond lengths:**
+> >    * Fluorine atoms are in Period 2 and are smaller than chlorine atoms (Period 3).
+> >    * As a result, the F–F covalent bond length is extremely short, bringing the nuclei and the non-bonding valence electron shells of the two atoms very close together.
+> > 
+> > 2. **Analyze lone pair repulsion:**
+> >    * Each fluorine atom possesses three non-bonding lone pairs of electrons in its valence shell.
+> >    * Because the bond length is so short, these highly concentrated lone pairs on adjacent fluorine atoms are brought into close proximity.
+> >    * This creates intense electrostatic repulsion between the lone pairs of the two fluorine atoms.
+> > 
+> > 3. **Conclude the effect on bond strength:**
+> >    * This strong inter-electron repulsion opposes the attractive force of the shared bonding pair, significantly weakening the covalent bond and reducing the F–F bond enthalpy.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Electronegativity Difference & Bond Character
-> **Question:** If the electronegativity difference ($\\Delta\\text{EN}$) between two bonded atoms is 1.8, what type of bond is generally formed?
-> * **A:** Nonpolar covalent
-> * **B:** Polar covalent
-> * **C:** Ionic
-> * **D:** Metallic
+> #### 📝 Worked Example 4: Explaining Boiling Point Trends in Halogens
+> **Question:** Explain the trend in the boiling points of the halogens: chlorine (-34°C), bromine (59°C), and iodine (184°C).
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Apply electronegativity ranges:**
-> >    * $\\\\Delta\\\\text{EN} < 0.5$: Non-polar covalent (equal sharing).
-> >    * $\\\\Delta\\\\text{EN} = 0.5 - 2.0$: Polar covalent (unequal sharing).
-> >    * $\\\\Delta\\\\text{EN} > 2.0$: Ionic (complete electron transfer).
-> > 2. **Conclude:**
-> >    * Since 1.8 lies within the $0.5 - 2.0$ range, it is classified as a **polar covalent bond** (Option B).
+> > 1. **Identify the structure and forces:**
+> >    * Halogens are simple molecular structures consisting of non-polar diatomic molecules (Cl₂, Br₂, I₂).
+> >    * To boil these substances, weak intermolecular forces (temporary dipole-induced dipole forces or London dispersion forces) must be overcome, not covalent bonds.
+> > 
+> > 2. **Analyze the number of electrons:**
+> >    * Down Group 7, the number of shells and total electrons per molecule increases: Cl₂ (34), Br₂ (70), I₂ (106).
+> > 
+> > 3. **Relate electrons to polarizability:**
+> >    * An increase in the number of electrons makes the electron cloud larger and more easily polarized (higher polarizability).
+> >    * This leads to stronger temporary dipole-induced dipole attractions (London forces) between adjacent molecules.
+> > 
+> > 4. **Conclude:**
+> >    * Stronger intermolecular forces require more thermal energy to overcome, resulting in a steady increase in boiling point down the group from Cl₂ to I₂.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Dative Covalent Bonding in Aluminium Chloride Dimer (Al₂Cl₆)
@@ -827,6 +830,64 @@ export const parts: LessonPart[] = [
 > > 3. **Analyse chemical resistance (corrosion):**
 > >    * Aluminium reacts rapidly with oxygen in the air to form a tough, protective surface layer of aluminium oxide ($\\\\text{Al}_2\\\\text{O}_3$)
 > >    * This layer is impermeable and completely protects the inner metal from further chemical weathering and corrosion, ensuring long-term durability in outdoor conditions
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Identifying Structure and Bonding from Physical Properties
+> **Question:** The table below shows the physical properties of four substances, P, Q, R, and S.
+> 
+> | Substance | Melting Point (°C) | Electrical Conductivity as Solid | Electrical Conductivity as Liquid | Solubility in Water |
+> | :---: | :---: | :---: | :---: | :---: |
+> | P | 1085 | Good | Good | Insoluble |
+> | Q | -114 | Poor | Poor | Soluble |
+> | R | 801 | Poor | Good | Soluble |
+> | S | 3550 | Poor | Poor | Insoluble |
+> 
+> Deduce the structure and bonding type for each substance.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce for Substance P:**
+> >    * High melting point (1085°C) and conducts electricity in both solid and liquid states.
+> >    * This is typical of a metal with free mobile delocalised electrons.
+> >    * **Structure and Bonding:** Giant metallic lattice.
+> > 
+> > 2. **Deduce for Substance Q:**
+> >    * Low melting point (-114°C) and poor conductivity in all states.
+> >    * This indicates that only weak intermolecular forces are broken, and there are no mobile ions or delocalised electrons.
+> >    * **Structure and Bonding:** Simple molecular (covalent bonding within molecules).
+> > 
+> > 3. **Deduce for Substance R:**
+> >    * High melting point (801°C), poor solid conductivity but good liquid conductivity.
+> >    * This shows that ions are fixed in a lattice in the solid state but become mobile charge carriers when molten.
+> >    * **Structure and Bonding:** Giant ionic lattice.
+> > 
+> > 4. **Deduce for Substance S:**
+> >    * Extremely high melting point (3550°C) and poor conductivity in all states.
+> >    * This indicates a strong 3D network of atoms held entirely by strong covalent bonds with no mobile charged particles.
+> >    * **Structure and Bonding:** Giant covalent lattice.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Explaining Why Alloys are Harder than Pure Metals
+> **Question:** Brass is an alloy of copper and zinc. Explain why brass is harder and less malleable than pure copper.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Describe pure copper structure:**
+> >    * Pure copper has a regular giant metallic lattice.
+> >    * The copper cations are all of the same size and are arranged in uniform, neat layers that can slide over one another easily when a force is applied.
+> > 
+> > 2. **Describe brass (alloy) structure:**
+> >    * Brass is formed by adding zinc atoms into the copper lattice.
+> >    * Zinc atoms/ions are of a different size compared to copper atoms/ions.
+> > 
+> > 3. **Analyze the effect on layers:**
+> >    * The introduction of different-sized zinc atoms disrupts the regular arrangement and distorts the neat, uniform layers of the copper lattice.
+> > 
+> > 4. **Conclude:**
+> >    * This distortion makes it much more difficult for the layers of ions to slide over each other, making the alloy (brass) harder and less malleable than the pure metal.
+
     `,
     keyPoints: [
       'Metallic bonding consists of positive metal ions attracted to delocalised electrons.',
@@ -838,8 +899,10 @@ export const parts: LessonPart[] = [
   {
     id: 'molecular-shapes-20260106',
     title: 'Shapes of Molecules & Ions (EPR / VSEPR)',
-    type: 'text',
+    type: 'simulation',
+    molecularShapeSimulator: true,
     content: `
+
 > [!NOTE]
 > ### 📐 Electron-pair Repulsion Theory (EPR) & VSEPR
 > The shape of a molecule or polyatomic ion is determined by the repulsion between electron pairs around the central atom:
@@ -957,6 +1020,50 @@ export const parts: LessonPart[] = [
 > > 3. **Apply repulsion and geometry:**
 > >    * The 4 bonding pairs repel each other to get as far apart as possible to minimize repulsion.
 > >    * With 4 bonding pairs and 0 lone pairs, the ion adopts a **Tetrahedral** shape with a bond angle of **109.5°**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Shape of a Molecule with 6 Bonding Regions (SF₆)
+> **Question:** Predict the shape and bond angles of sulfur hexafluoride, SF₆, using the electron-pair repulsion theory.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine central atom valence electrons:**
+> >    * Sulfur is in Group 16, contributing 6 valence electrons.
+> >    * The 6 fluorine atoms each share 1 electron, forming 6 bonding pairs (total = 12 electrons in the valence shell, expanding the octet).
+> > 
+> > 2. **Classify electron pairs:**
+> >    * There are 6 bonding pairs and 0 lone pairs surrounding the central sulfur atom.
+> > 
+> > 3. **Apply the repulsion principle:**
+> >    * These 6 bonding regions of electron density repel each other and arrange themselves as far apart as possible to achieve maximum separation and minimum repulsion.
+> > 
+> > 4. **Conclude the shape and angles:**
+> >    * The maximum separation for 6 electron domains is achieved in an **Octahedral** geometry.
+> >    * Due to symmetrical repulsion, all adjacent bond angles are exactly **90°** (and opposite bonds are **180°**).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Shape of a Molecule with Lone Pairs and 4 Bonds (XeF₄)
+> **Question:** Deduce the shape and bond angles of xenon tetrafluoride, XeF₄, using the electron-pair repulsion theory.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine central atom valence electrons:**
+> >    * Xenon is a noble gas in Group 18, so it has 8 valence electrons.
+> >    * The 4 fluorine atoms each share 1 electron, forming 4 bonding pairs (total = 12 electrons in the valence shell).
+> > 
+> > 2. **Classify electron pairs:**
+> >    * Total valence electrons = 8 (from Xe) + 4 (from 4 F) = 12 electrons (6 pairs).
+> >    * There are 4 bonding pairs and 2 lone pairs surrounding the central xenon atom.
+> > 
+> > 3. **Analyze the spatial arrangement of pairs:**
+> >    * 6 electron pairs orient in an octahedral parent geometry.
+> >    * To minimize repulsion, the 2 lone pairs (which repel most strongly) position themselves as far apart as possible: at opposite axial positions (180° apart).
+> > 
+> > 4. **Conclude shape and angle:**
+> >    * The remaining 4 bonding pairs lie in a single flat plane.
+> >    * Therefore, the actual shape of the molecule is **Square Planar** with bond angles of exactly **90°**.
      `,
     keyPoints: [
       'EPR/VSEPR theory states that electron pairs repel to get as far apart as possible to minimize repulsion.',
@@ -1011,20 +1118,22 @@ export const parts: LessonPart[] = [
 >   * In contrast, the jet of a **non-polar liquid** (like hexane or cyclohexane) will show **no deflection** when the charged rod is brought near.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Identifying Unknown Structures
-> **Question:** A solid substance Y has a melting point of 801°C. It is an electrical insulator as a solid but conducts electricity when molten. Classify the structure and bonding of Y.
+> #### 📝 Worked Example 1: Solubility and Intermolecular Forces
+> **Question:** Explain, in terms of intermolecular forces and bonding, why iodine (I₂) is highly soluble in cyclohexane but almost insoluble in water.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Analyse the melting point:**
-> >    * A melting point of 801°C indicates a giant lattice structure with strong bonding (rules out simple molecular).
-> > 2. **Analyse solid conductivity:**
-> >    * Insulator in solid state rules out metallic bonding (which conducts in solid) and graphite.
-> > 3. **Analyse liquid conductivity:**
-> >    * Conducting when molten means mobile ions are released upon melting, which is the defining characteristic of ionic structures.
-> > 4. **Conclude:**
-> >    * Substance Y is a **Giant Ionic Lattice** held together by **Ionic Bonding** (it is actually sodium chloride, NaCl).
+> > 1. **Analyze the bonding and forces in iodine and cyclohexane:**
+> >    * Iodine (I₂) is a non-polar simple molecular element, and cyclohexane is a non-polar solvent. Both are held together by weak temporary dipole-induced dipole forces (London dispersion forces).
+> >    * When iodine dissolves in cyclohexane, the new London forces formed between the iodine molecules and the solvent molecules are similar in strength to the forces being broken. Thus, they mix easily.
+> > 
+> > 2. **Analyze the bonding and forces in water:**
+> >    * Water (H₂O) is a polar solvent whose molecules are held together by strong hydrogen bonds (in addition to London forces).
+> > 
+> > 3. **Explain why iodine is insoluble in water:**
+> >    * The electrostatic attraction between the non-polar iodine molecules and the polar water molecules is very weak.
+> >    * This weak attraction does not release enough energy to overcome and break the strong hydrogen bonds holding the water molecules together. Hence, iodine cannot dissolve in water.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Polarity of Trigonal Pyramidal Molecules

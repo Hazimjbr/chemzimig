@@ -52,6 +52,9 @@
 - [ ] **Cambridge IGCSE Chemistry (O-Level 0620):** استكمال مراجعة وتدقيق بنك الأسئلة وربطه بالوسوم التربوية المقابلة.
 - [ ] **Cambridge International AS & A Level Chemistry (A-Level 9701):** بناء وتطوير المحتوى العلمي المتقدم والتحديات التقييمية الخاصة بالطلاب للـ AS/A2.
 - [x] **Pearson Edexcel IAL - Unit 1 Topic 1 (مكتمل):** إدخال المحتوى العلمي التفاعلي المكامل لـ 10 أجزاء، وربط المحاكيات، وتطوير بنك الأسئلة الشامل (30 سؤالاً).
+- [x] **Pearson Edexcel IAL - Unit 1 Topic 3: Bonding & Structure (مكتمل):** مراجعة شاملة وإثراء 6 أجزاء كاملة بأمثلة امتحانية مستهدفة (فلور وشذوذ طاقة الرابطة، تدرج الهالوجينات، استنتاج البنية والتخصص، صلابة السبائك، SF₆ وXeF₄)، وبناء وتشغيل محاكي VSEPR التفاعلي (`MolecularShapeSimulator.tsx`) بدعم 9 أشكال جزيئية مع إشارات الأزواج غير الرابطة (e⁻e⁻) وتجاوب كامل مع الشاشات الصغيرة.
+- [x] **Pearson Edexcel IAL - Unit 1 Topic 4: Introductory Organic Chemistry & Alkanes — Part 1 & 2 (مكتمل):** إضافة مثالين امتحانيين مستهدفين لقسم السلامة (تصريف الغازات الحمضية بمحلول NaOH، ومقارنة احتياطات مواد مختلفة)؛ وإضافة مثالين لقسم الصيغ العضوية (مقارنة نقاط الغليان ببنية المتشعبة، وتحويل الصيغة البنائية المعقدة لصيغة هيكلية بمجموعات وظيفية متعددة).
+- [x] **Pearson Edexcel IAL - Unit 1 Topic 5: Alkenes — Enrichment (مكتمل):** إضافة التطبيق الصناعي للهدرجة (صناعة المارجرين بمحفز النيكل عند ~200°C) في قسم Electrophilic Addition، وتفعيل محاكي المعادلة المتحركة `equationVisualizer` لتفاعل Br₂ مع الإيثين مع وصف ربطه باختبار ماء البروم.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Kc, Kp, Q vs K, Le Chatelier, Temperature & Equilibria, Entropy & Kp) مع 17 سؤال امتحاني متكامل.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 5 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titrations & Indicators, Buffer Solutions, Ka from pH Curves) مع 17 سؤال امتحاني متكامل.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 12: Entropy and Energetics (مكتمل):** 7 أجزاء تفاعلية كاملة (Entropy, System/Surroundings/Total Entropy, Gibbs Free Energy, Born-Haber Cycles, Covalent Character, Enthalpy of Solution & Hydration, Group 2 Solubility Trends) مع إعادة تنسيق الأمثلة المحلولة 100%، وتدقيق 34 صندوق ملاحظات بالإيموجي، وضبط صيغ KaTeX، وإعادة هيكلة كويز الدرس (20 سؤالاً) وتزويده بـ lessonNum: 2 وتنسيق الشروحات بنقاط منسقة.
@@ -131,7 +134,27 @@
 
 ---
 
-*آخر تحديث: 2026-07-28 — **م. حازم جبر***
+*آخر تحديث: 2026-07-31 — **م. حازم جبر***
+
+**إنجازات جلسة اليوم (2026-07-31) — محاكي VSEPR وإثراء Topics 3، 4، 5 لـ Edexcel AS Unit 1:**
+1. **بناء محاكي VSEPR التفاعلي (`MolecularShapeSimulator.tsx`):**
+   - إنشاء مكوّن تفاعلي كامل في `components/visual/` يدعم 9 أشكال جزيئية (Linear، Trigonal Planar، Tetrahedral، Trigonal Pyramidal، Bent، Trigonal Bipyramidal، Seesaw، Octahedral، Square Planar).
+   - ترميز الأزواج غير الرابطة بالرمز `e⁻e⁻` داخل دوائر منقطة لتمييزها بصرياً عن الذرات الطرفية.
+   - تجاوب كامل مع الشاشات الصغيرة: تمرير أفقي لأزرار الأشكال، SVG fluid مع `preserveAspectRatio`، تخطيط `lg:flex-row` بدل `md:flex-row` لمنع الانضغاط بجانب القائمة الجانبية.
+   - تسجيل المحاكي في `registry.ts` ووصله بـ `page.tsx` وتفعيله في القسم الخامس من Topic 3.
+2. **إثراء Topic 3: Bonding & Structure:**
+   - Part 3: أمثلة شذوذ طاقة رابطة الفلور وتدرج طاقة روابط الهالوجينات.
+   - Part 4: مثال استنتاج البنية/التخصص، ومثال صلابة السبائك.
+   - Part 5: مثالان لجزيئات الغلاف الممتد SF₆ وXeF₄ مع المحاكي.
+   - Part 6: مثال مقارنة الذوبانية بناءً على قطبية الجزيء.
+3. **إثراء Topic 4 Part 1 & 2:**
+   - Part 1: Example 5 (تصريف HCl بـ NaOH/Scrubbing) وExample 6 (مقارنة احتياطات Cyclohexane وHNO₃ المركز).
+   - Part 2: Example 6 (مقارنة نقاط الغليان للمتشعبات وربطها بقوى لندن) وExample 7 (تحويل صيغة بنائية معقدة متعددة المجموعات إلى هيكلية).
+4. **إثراء Topic 5: Alkenes Part 4:**
+   - إضافة التطبيق الصناعي للهدرجة: صناعة المارجرين بمحفز Ni عند ~200°C مع التحكم في درجة التصلب.
+   - تفعيل `equationVisualizer` لتفاعل `CH₂=CH₂ + Br₂` مع وصف يربطه باختبار ماء البروم (decolorisation test).
+
+&nbsp;
 
 **إنجازات جلسة اليوم (2026-07-28) — إثراء إنثالبي الذوبان والإماهة وتوسيع الكويز لـ Topic 12:**
 1. **إثراء وتوسيع درس "إنثالبي الذوبان والإماهة" (Unit 4 Topic 12 Lesson 2):**

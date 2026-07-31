@@ -98,6 +98,40 @@ export const parts: LessonPart[] = [
 > >    * For rotation to occur, this overlap must be broken (requiring high energy).
 > >    * Thus, the $\\\\pi$ bond restricts rotation, keeping the attached groups locked in space.
 > >    * Therefore, the correct option is **C**.
+
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Comparing Bond Lengths and Bond Enthalpies
+> **Question:** Compare the carbon-carbon bond length and bond enthalpy of ethane (C₂H₆) and ethene (C₂H₄), and explain these differences.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare bond strength (bond enthalpy):**
+> >    * Ethane has a C-C single bond with a lower bond enthalpy (~347 kJ/mol). Ethene has a C=C double bond with a higher bond enthalpy (~612 kJ/mol).
+> >    * The C=C double bond contains two pairs of shared electrons (one σ and one π bond), which increases the electron density between the two carbon nuclei, requiring more energy to break.
+> > 2. **Compare bond length:**
+> >    * Ethane has a longer C-C bond (~0.154 nm), whereas ethene has a shorter C=C bond (~0.134 nm).
+> >    * The increased negative charge density of the double bond creates a stronger electrostatic attraction between the positive carbon nuclei and the shared electrons, pulling the nuclei closer together.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Counting Sigma and Pi Bonds in Propene
+> **Question:** Propene has the structural formula CH₃CH=CH₂. Deduce the total number of sigma (σ) and pi (π) bonds in a single molecule of propene.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Count the single bonds (Sigma σ bonds) from the displayed structure:**
+> >    * There are 6 C-H single bonds (3 on the methyl group, 1 on the middle carbon, and 2 on the terminal CH₂ carbon).
+> >    * There is 1 C-C single bond.
+> >    * The C=C double bond consists of exactly 1 σ bond (and 1 π bond).
+> >    * Total σ bonds = 6 + 1 + 1 = **8**.
+> > > 2. **Count the double bonds (Pi π bonds):**
+> > >    * The C=C double bond contains exactly 1 π bond formed by the sideways overlap of p-orbitals.
+> > >    * Total π bonds = **1**.
+> > > 3. **Conclusion:**
+> > >    * Propene contains **8 σ bonds** and **1 π bond**.
+
 `,
     keyPoints: [
       'A C=C double bond consists of one strong sigma (σ) bond and one weaker pi (π) bond.',
@@ -572,8 +606,47 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > > 2. **Determine priority on the second carbon (bonded to CH₃ and Br):**
 > >    * Bromine (atomic number 35) has a higher priority than the carbon of the methyl group (atomic number 6). So, **Br** is prioritized.
 > > 3. **Compare the prioritized groups:**
-> >    * To assign E/Z, we look at the positions of the highest priority groups, which are **Cl** and **Br**.
 > > 4. **Correct Answer:** **B**
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Explaining Why a Molecule Does Not Show E/Z Isomerism
+> **Question:** Explain why but-2-ene shows geometric (E/Z) isomerism, but but-1-ene does not.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **State the general criteria for geometric isomerism:**
+> >    * There must be restricted rotation around the carbon-carbon double bond (due to the presence of a π bond).
+> >    * Each carbon atom of the C=C double bond must be attached to two different groups.
+> > 2. **Analyze the structure of but-2-ene (CH₃CH=CHCH₃):**
+> >    * The double bond is between carbon-2 and carbon-3.
+> >    * Carbon-2 is bonded to H and CH₃ (two different groups). Carbon-3 is bonded to H and CH₃ (two different groups).
+> >    * Therefore, but-2-ene satisfies both conditions and shows E/Z isomerism.
+> > 3. **Analyze the structure of but-1-ene (CH₂=CHCH₂CH₃):**
+> >    * The double bond is between carbon-1 and carbon-2.
+> >    * Carbon-1 is bonded to two identical hydrogen atoms (H and H).
+> >    * Because carbon-1 is bonded to identical groups, but-1-ene cannot form geometric isomers.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Complex CIP Priority Assignment
+> **Question:** Determine whether the stereoisomer described below has the E or Z configuration:
+> * Left Carbon: bonded to a methyl group (-CH₃) and an ethyl group (-CH₂CH₃).
+> * Right Carbon: bonded to a propyl group (-CH₂CH₂CH₃) and an isopropyl group (-CH(CH₃)₂).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine priority on the Left Carbon:**
+> >    * Compare the first atoms: Both groups connect via a carbon atom.
+> >    * Compare the next atoms: The carbon in -CH₃ is bonded to (H, H, H). The carbon in -CH₂CH₃ is bonded to (C, H, H).
+> >    * Since carbon has a higher atomic number than hydrogen, the ethyl group (-CH₂CH₃) has higher priority.
+> > 2. **Determine priority on the Right Carbon:**
+> >    * Compare the first atoms: Both groups connect via a carbon atom.
+> >    * Compare the next atoms: The carbon in the isopropyl group (-CH(CH₃)₂) is bonded to two carbons and one hydrogen (C, C, H). The carbon in the propyl group (-CH₂CH₂CH₃) is bonded to one carbon and two hydrogens (C, H, H).
+> >    * Comparing the lists (C, C, H) vs (C, H, H): The second atom list of the isopropyl group contains a carbon atom which has a higher atomic number than the hydrogen in the propyl group list.
+> >    * Therefore, the isopropyl group (-CH(CH₃)₂) has higher priority.
+> > 3. **Deduce configuration:**
+> >    * If the high-priority groups (ethyl on the left, isopropyl on the right) are on the same side of the double bond, it is the **Z-isomer**. If they are on opposite sides, it is the **E-isomer**.
 `,
     keyPoints: [
       'Stereoisomers share the same structural formula but have a different arrangement of atoms in space.',
@@ -659,6 +732,29 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > >    * Alkenes like cyclohexene have a higher percentage of carbon by mass compared to alkanes with the same number of carbons.
 > >    * Burning in air does not supply enough oxygen to fully oxidize this high carbon concentration, leading to incomplete combustion.
 > >    * Unburnt carbon particles are released as black soot, resulting in a smoky flame.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Deriving the General Equation for Alkene Combustion
+> **Question:** Derive the general balanced symbol equation for the complete combustion of any acyclic alkene of molecular formula CₙH₂ₙ in terms of n.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the unbalanced general equation:**
+> >    * CₙH₂ₙ + x O₂ → y CO₂ + z H₂O
+> > 2. **Balance Carbon (C) atoms:**
+> >    * There are n carbon atoms on the reactant side. To balance, we must have n molecules of carbon dioxide on the product side:
+> >    * y = n
+> > 3. **Balance Hydrogen (H) atoms:**
+> >    * There are 2n hydrogen atoms on the reactant side. To balance, we must have n molecules of water on the product side:
+> >    * z = n
+> > 4. **Balance Oxygen (O) atoms:**
+> >    * The product side now contains 2n oxygen atoms (from n CO₂) and n oxygen atoms (from n H₂O), making a total of 3n oxygen atoms.
+> >    * Since each oxygen molecule is diatomic (O₂), we divide the total by 2 to find the coefficient of oxygen gas:
+> >    * x = 1.5n (or 3n/2)
+> > 5. **Write the final balanced general equation:**
+> >    * CₙH₂ₙ + 1.5n O₂ → n CO₂ + n H₂O
+
 `,
     keyPoints: [
       'Alkenes are highly reactive due to the weak pi (π) bond, which easily breaks during addition reactions.',
@@ -669,6 +765,16 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
     id: 'electrophilic-addition-mechanism-20260627',
     title: 'Electrophilic Addition',
     type: 'text',
+    equationVisualizer: {
+      reactants: [
+        ['CH₂=CH₂', '#38bdf8'],
+        ['Br₂',       '#f97316']
+      ],
+      products: [
+        ['CH\u2082BrCH\u2082Br', '#10b981']
+      ],
+      description: 'Electrophilic addition of Bromine (Br\u2082) across the C=C double bond of Ethene to form colourless 1,2-dibromoethane. This is the basis of the bromine water test for alkenes: the reddish-brown colour of Br\u2082 is decolourised as it reacts across the double bond.'
+    },
     content: `
 > [!NOTE]
 > ### 🔄 2) Electrophilic Addition
@@ -683,6 +789,10 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > * *Reagents & Conditions:* Hydrogen gas ($\\\\text{H}_2$), heated in the presence of a **Nickel (Ni)** catalyst.
 > * *Equation:*
 >   $$\\\\text{CH}_3\\\\text{CH}=\\\\text{CH}_2 + \\\\text{H}_2 \\\\xrightarrow{\\\\text{Ni, heat}} \\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_3$$
+> * **Industrial Application — Margarine Production:**
+>   * Unsaturated vegetable oils (containing C=C double bonds) are **hardened** by reacting with excess hydrogen gas in the presence of a **finely divided nickel catalyst** at approximately **200 °C**.
+>   * This converts the liquid unsaturated oils into solid or semi-solid saturated fats, producing **margarine** (and other solid cooking fats).
+>   * The degree of hardening can be controlled by adjusting the amount of hydrogen used, allowing production of both soft-spread and hard-block margarine.
 > 
 > **b) Halogenation (Adding halogens to produce di-substituted halogenoalkanes):**
 > * *Reagents & Conditions:* Halogen (e.g., $\\\\text{Cl}_2$ or $\\\\text{Br}_2$) at room temperature.
@@ -1086,6 +1196,39 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width
 > > 3. **Write the balanced equation:**
 > >    * $\\\\text{CH}_2=\\\\text{CH}_2 + \\\\text{Cl}_2 \\\\rightarrow \\\\text{CH}_2\\\\text{ClCH}_2\\\\text{Cl}$
 
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Explaining the Bromine Water Reaction Products
+> **Question:** When propene reacts with bromine water, a mixture of products is formed, with 1-bromopropan-2-ol being the major organic product. Explain why 1-bromopropan-2-ol is formed rather than 1,2-dibromopropane, and why the -OH group attaches to carbon-2.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain the first step of addition:**
+> >    * The electrophilic bromine molecule is polarized by the electron-rich C=C double bond. The double bond attacks the Br atom, forming a secondary carbocation intermediate (CH₃CH⁺CH₂Br) and a bromide ion (Br⁻).
+> > 2. **Explain why the product contains -OH instead of -Br:**
+> >    * The reaction takes place in aqueous solution (bromine water). Water molecules (H₂O) are present in a much higher concentration than bromide ions (Br⁻).
+> >    * Therefore, a water molecule is much more likely to act as the nucleophile and attack the positive carbon of the carbocation intermediate, which then loses a proton (H⁺) to form the alcohol group (-OH).
+> > 3. **Explain the regioselectivity (-OH on carbon-2):**
+> >    * The secondary carbocation intermediate (CH₃CH⁺CH₂Br) is more stable than the primary carbocation intermediate (CH₃CH(Br)CH₂⁺) due to the electron-donating inductive effect of the alkyl group.
+> >    * Thus, the water nucleophile attacks the more stable secondary carbocation at carbon-2, placing the -OH group on carbon-2 and the bromine atom on carbon-1.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Describing the Electrophilic Addition Mechanism
+> **Question:** Describe the step-by-step mechanism for the reaction between ethene and hydrogen bromide (HBr). Outline the electron movements and state the type of bond fission that occurs.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Describe Step 1 (Polarisation and Electrophilic Attack):**
+> >    * The H-Br molecule is polar (Hδ⁺-Brδ⁻) due to the electronegativity difference.
+> >    * A curly arrow is drawn from the C=C double bond (electron-rich region) to the hydrogen atom (Hδ⁺).
+> > 2. **Identify the bond fission:**
+> >    * The H-Br bond breaks heterolytically, where both bonding electrons move to the bromine atom. This is shown by a curly arrow from the H-Br bond to the Br atom.
+> >    * This forms a primary carbocation intermediate (CH₃CH₂⁺) and a bromide ion (Br⁻).
+> > 3. **Describe Step 2 (Nucleophilic Attack):**
+> >    * A curly arrow is drawn from a lone pair of electrons on the bromide ion (Br⁻) to the positively charged carbon atom of the carbocation.
+> >    * This forms a new C-Br covalent bond, yielding the final product: bromoethane.
+
 `,
     keyPoints: [
       'Electrophilic addition is initiated by the high electron density of the pi (π) bond attacking an electron-deficient electrophile.',
@@ -1475,6 +1618,40 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > >    * The nucleophilic chloride ion ($\\\\text{Cl}^-$) attacks the carbocation center at carbon-2.
 > >    * The major product is **2-chloro-1-iodopropane**.
 
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Explaining Carbocation Stability via the Inductive Effect
+> **Question:** Explain, in terms of the inductive effect of alkyl groups, why a tertiary carbocation is more stable than a primary carbocation.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Define the inductive effect of alkyl groups:**
+> >    * Alkyl groups (such as methyl or ethyl groups) are electron-donating. They push negative electron density along the covalent bonds towards the positively charged carbon atom.
+> > 2. **Explain positive charge dispersal:**
+> >    * By donating electron density, alkyl groups help disperse (spread out) the positive charge on the carbon atom. Dispersing the charge stabilizes the carbocation intermediate.
+> > 3. **Compare tertiary and primary carbocations:**
+> >    * A tertiary carbocation has three electron-donating alkyl groups attached to the positive carbon, dispersing the charge very effectively.
+> >    * In contrast, a primary carbocation has only one alkyl group attached, dispersing the charge much less effectively. Thus, tertiary carbocations are significantly more stable.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Predicting Hydration Products of But-1-ene
+> **Question:** When but-1-ene (CH₃CH₂CH=CH₂) reacts with steam in the presence of a phosphoric acid catalyst, two different alcohols can be formed. Identify the IUPAC name of the major product, and draw the structure of the carbocation intermediate that leads to its formation.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the reaction type and electrophile:**
+> >    * The reaction is hydration, where H⁺ (from the acid catalyst) acts as the electrophile.
+> > 2. **Deduce the two possible carbocation intermediates:**
+> >    * Addition of H⁺ to carbon-1 yields a secondary carbocation: CH₃CH₂CH⁺CH₃
+> >    * Addition of H⁺ to carbon-2 yields a primary carbocation: CH₃CH₂CH₂CH₂⁺
+> > 3. **Apply Markovnikov's rule and carbocation stability:**
+> >    * The secondary carbocation (CH₃CH₂CH⁺CH₃) is more stable than the primary carbocation because it has two alkyl groups (methyl and ethyl) donating electron density to stabilize the positive charge.
+> >    * Therefore, the reaction proceeds predominantly via this more stable secondary carbocation intermediate.
+> > 4. **Deduce the major product:**
+> >    * The nucleophilic water molecule (H₂O) attacks the secondary carbocation at carbon-2, forming **butan-2-ol** as the major product.
+> >    * The intermediate carbocation structure is: CH₃CH₂CH⁺CH₃
+
 `,
     keyPoints: [
       'Alkyl groups are electron-donating, stabilizing the carbocation intermediate via the inductive effect (3° > 2° > 1°).',
@@ -1665,6 +1842,23 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width
 > > 
 > > 3. **Balance the equation:**
 > >    * $\\\\text{Ca(OH)}_2 + 2\\\\text{HCl} \\\\rightarrow \\\\text{CaCl}_2 + 2\\\\text{H}_2\\\\text{O}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Drawing a Polymer Section showing Three Repeat Units
+> **Question:** Draw a section of the polymer poly(propene) showing three repeat units.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the repeat unit of poly(propene):**
+> >    * The monomer is propene (CH₃-CH=CH₂).
+> >    * The repeat unit is -[CH₂-CH(CH₃)]-.
+> > 2. **Chain three repeat units together:**
+> >    * Join three of these repeating units in a row, keeping the methyl groups attached to alternating carbon atoms:
+> >    * -CH₂-CH(CH₃)-CH₂-CH(CH₃)-CH₂-CH(CH₃)-
+> > 3. **Draw the final section with extension bonds:**
+> >    * Place brackets around the structure with open-ended single bonds (extension bonds) passing through the brackets on both ends to represent the continuous polymer chain:
+> >    * -[CH₂-CH(CH₃)-CH₂-CH(CH₃)-CH₂-CH(CH₃)]-
 
 `,
     keyPoints: [
