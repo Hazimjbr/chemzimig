@@ -443,7 +443,23 @@ const mdComponents: any = {
 
     a: ({ node, children, ...props }: any) => {
         const hrefStr = props.href || '';
-        const hasCustomTable = hrefStr.includes('CUSTOM_TABLE') || (typeof children === 'string' && children.includes('CUSTOM_TABLE')) || (Array.isArray(children) && children.some(c => typeof c === 'string' && c.includes('CUSTOM_TABLE')));
+        const childStr = typeof children === 'string' ? children : (Array.isArray(children) ? children.join('') : '');
+
+        // Handle [INLINE_SVG:...] tokens that ReactMarkdown misinterprets as links
+        // ReactMarkdown sees [INLINE_SVG:encoded](...) or [INLINE_SVG:encoded] as a link
+        const inlineSvgMatch = childStr.match(/^INLINE_SVG:([\s\S]+)$/);
+        if (inlineSvgMatch) {
+            try {
+                const svgHtml = decodeURIComponent(inlineSvgMatch[1]);
+                return (
+                    <div className="flex justify-center my-4" dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                );
+            } catch {
+                return null;
+            }
+        }
+
+        const hasCustomTable = hrefStr.includes('CUSTOM_TABLE') || childStr.includes('CUSTOM_TABLE');
         if (hasCustomTable) {
             return <>{renderTextWithMath(children)}</>;
         }
@@ -578,6 +594,52 @@ const mdComponents: any = {
 const renderContentWithTables = (content: string) => {
     if (!content) return null;
 
+    // Pre-extract [INLINE_SVG:...] tokens before ReactMarkdown sees the content.
+    // ReactMarkdown misinterprets these large tokens (it splits them or treats them as links).
+    // We split the full content at SVG boundaries and render each piece independently.
+    const svgSplitPattern = /\[INLINE_SVG:([\s\S]*?)\]/g;
+    const segments: Array<{ type: 'text' | 'svg'; content: string }> = [];
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = svgSplitPattern.exec(content)) !== null) {
+        if (match.index > lastIndex) {
+            segments.push({ type: 'text', content: content.slice(lastIndex, match.index) });
+        }
+        segments.push({ type: 'svg', content: match[1] });
+        lastIndex = match.index + match[0].length;
+    }
+    if (lastIndex < content.length) {
+        segments.push({ type: 'text', content: content.slice(lastIndex) });
+    }
+
+    // If no SVG tokens found, process as before
+    if (segments.length === 0 || (segments.length === 1 && segments[0].type === 'text')) {
+        return renderMarkdownSegment(segments[0]?.content ?? content);
+    }
+
+    return (
+        <React.Fragment>
+            {segments.map((seg, idx) => {
+                if (seg.type === 'svg') {
+                    try {
+                        const svgHtml = decodeURIComponent(seg.content);
+                        return (
+                            <div key={idx} className="flex justify-center my-4 w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                        );
+                    } catch {
+                        return null;
+                    }
+                }
+                return <React.Fragment key={idx}>{renderMarkdownSegment(seg.content)}</React.Fragment>;
+            })}
+        </React.Fragment>
+    );
+};
+
+const renderMarkdownSegment = (content: string) => {
+    if (!content || !content.trim()) return null;
+
     const lines = content.split('\n');
     const processedLines: string[] = [];
     let currentTableLines: string[] = [];
@@ -630,6 +692,7 @@ const renderContentWithTables = (content: string) => {
         </ReactMarkdown>
     );
 };
+
 
 export default function TopicPage({ params, searchParams }: TopicPageProps) {
     const { curriculumId, topicId } = use(params);

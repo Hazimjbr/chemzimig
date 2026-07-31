@@ -87,7 +87,45 @@ export const parts: LessonPart[] = [
 > > 3. **Calculate electrons:**
 > >    * The $-1$ charge indicates a gain of 1 electron
 > >    * Electrons = Protons $+$ Charge magnitude = $17 + 1 = 18$
-        `,
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Deducing Chemical Symbol from Subatomic Particles
+> **Question:** An ion has a mass number of $56$, a charge of $+3$, and contains $23$ electrons. Deduce the complete chemical symbol for this ion, including the atomic number, mass number, and charge
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the atomic number (proton number, $Z$):**
+> >    * For a positive ion (cation): $\\\\text{Charge} = \\\\text{Protons} - \\\\text{Electrons}$
+> >    * $+3 = \\\\text{Protons} - 23 \\\\implies \\\\text{Protons} = 23 + 3 = 26$
+> >    * The atomic number ($Z$) is **26**
+> > 
+> > 2. **Identify the element using the Periodic Table:**
+> >    * The element with atomic number $26$ is Iron (Fe)
+> > 
+> > 3. **Determine the number of neutrons:**
+> >    * $\\\\text{Neutrons} = A - Z = 56 - 26 = 30$
+> > 
+> > 4. **Write the complete chemical symbol:**
+> >    * Write the mass number ($56$) as a superscript and the atomic number ($26$) as a subscript on the left of the chemical symbol
+> >    * Include the charge ($3+$) as a superscript on the right: **$^{56}_{26}\\\\text{Fe}^{3+}$**
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Explaining Physical Differences between Isotopes
+> **Question:** State and explain why a sample of gas containing the Chlorine-37 isotope, $^{37}\\\\text{Cl}_2$, diffuses more slowly than a sample containing the Chlorine-35 isotope, $^{35}\\\\text{Cl}_2$, at the same temperature
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the relative molecular masses of both gas molecules:**
+> >    * $Mr(^{35}\\\\text{Cl}_2) = 2 \\\\times 35.0 = 70.0$
+> >    * $Mr(^{37}\\\\text{Cl}_2) = 2 \\\\times 37.0 = 74.0$
+> > 
+> > 2. **Relate molecular mass to rate of physical diffusion:**
+> >    * At any given temperature, all gas molecules share the same average kinetic energy ($KE = \\\\frac{1}{2}mv^2$)
+> >    * Consequently, molecules with a larger mass ($m$) must travel at a lower average velocity ($v$)
+> >    * Since $^{37}\\\\text{Cl}_2$ molecules are heavier ($Mr = 74.0$) than $^{35}\\\\text{Cl}_2$ molecules ($Mr = 70.0$), they move slower at the same temperature and therefore diffuse at a lower rate
+`,
     keyPoints: [
       'Protons and neutrons occupy the dense central nucleus.',
       'Isotopes share identical electronic structures, resulting in identical chemical reactivity.',
@@ -434,14 +472,6 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Isotopic Peak Patterns of Bromine (Br₂)
-> **Question:** Bromine has two naturally occurring isotopes: $^{79}\\text{Br}$ (abundance $50.7\\%$) and $^{81}\\text{Br}$ (abundance $49.3\\%$), which can be approximated as a $1:1$ ratio. Describe the expected molecular ion peaks in the mass spectrum of diatomic bromine gas ($\\text{Br}_2$) and deduce their relative peak height ratio
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Deduce possible isotopic combinations for $\\text{Br}_2$:**
-> >    * Combination 1: $^{79}\\text{Br} - ^{79}\\text{Br} \\implies m/z = 79 + 79 = 158$
-> >    * Combination 2: $^{79}\\text{Br} - ^{81}\\text{Br}$ or $^{81}\\text{Br} - ^{79}\\text{Br} \\implies m/z = 79 + 81 = 160$
 > **Question:** Bromine has two naturally occurring isotopes: $^{79}\text{Br}$ (abundance $50.7\%$) and $^{81}\text{Br}$ (abundance $49.3\%$), which can be approximated as a $1:1$ ratio. Describe the expected molecular ion peaks in the mass spectrum of diatomic bromine gas ($\text{Br}_2$) and deduce their relative peak height ratio
 > 
 > > [!TIP]
@@ -458,6 +488,27 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 > > 3. **Deduce peak height ratio:**
 > >    * Converting probabilities ($\frac{1}{4} : \frac{2}{4} : \frac{1}{4}$) gives a simplified ratio:
 > >      $$\text{Ratio of peaks (158 : 160 : 162)} = 1:2:1$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Time-of-Flight (TOF) Mass Calculations
+> **Question:** In a Time-of-Flight (TOF) mass spectrometer, all ions are accelerated to have the same kinetic energy ($KE$). An ion of $^{79}\text{Br}^+$ has a flight time of $2.73 \times 10^{-5}\text{ s}$ to travel along a drift tube of length $d$. Calculate the flight time, in seconds, of a $^{81}\text{Br}^+$ ion traveling through the same drift tube under the same conditions. Give your answer to 3 significant figures
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce the relationship between flight time ($t$) and isotopic mass ($m$):**
+> >    * Kinetic energy is constant for all accelerated ions: $KE = \frac{1}{2}mv^2$
+> >    * Since velocity is distance over time ($v = \frac{d}{t}$), we can substitute: $KE = \frac{1}{2}m\left(\frac{d}{t}\right)^2 \implies t = d\sqrt{\frac{m}{2KE}}$
+> >    * Since the drift tube length ($d$) and kinetic energy ($KE$) are constant, flight time is directly proportional to the square root of the mass ($t \propto \sqrt{m}$):
+> >      $$\frac{t_1}{t_2} = \sqrt{\frac{m_1}{m_2}}$$
+> > 
+> > 2. **Rearrange the formula to solve for the flight time of the heavier $^{81}\text{Br}^+$ ion ($t_2$):**
+> >    $$t_2 = t_1 \times \sqrt{\frac{m_2}{m_1}}$$
+> > 
+> > 3. **Substitute the values and calculate the final flight time:**
+> >    * Let $t_1 = 2.73 \times 10^{-5}\text{ s}$, $m_1 = 79$ (mass of $^{79}\text{Br}^+$), and $m_2 = 81$ (mass of $^{81}\text{Br}^+$)
+> >    $$t_2 = (2.73 \times 10^{-5}\text{ s}) \times \sqrt{\frac{81}{79}}$$
+> >    $$t_2 = (2.73 \times 10^{-5}\text{ s}) \times 1.0126 = 2.76 \times 10^{-5}\text{ s}$$
          `,
     keyPoints: [
       'All ions in a TOF spectrometer are accelerated to have the same kinetic energy.',
@@ -480,9 +531,95 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 > [!IMPORTANT]
 > ### 🧮 Orbitals and Filling Sequence
 > * **Orbital:** A region within an atom where there is a high probability (usually $>95\%$) of finding an electron. Each orbital can hold up to $2$ electrons with opposite spins
-> * **Types of Orbitals:**
->    * **s orbital:** One spherical orbital per shell, present in all shells
->    * **p orbitals:** Three dumbbell-shaped orbitals ($p_x, p_y, p_z$) orientated along perpendicular axes, present from $n \ge 2$
+> * **s orbital:** One spherical orbital per shell, present in all shells
+> * **p orbitals:** Three dumbbell-shaped orbitals ($p_x, p_y, p_z$) orientated along perpendicular axes, present from $n \\\\ge 2$
+
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+    <linearGradient id="orbSGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+    <linearGradient id="orbPPos" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <linearGradient id="orbPNeg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+    <pattern id="orbGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="360" fill="url(#orbBg)" stroke="#1e293b" stroke-width="2" rx="8" />
+  <rect width="1000" height="360" fill="url(#orbGrid)" rx="8" />
+
+  <text x="500" y="30" fill="#c7d2fe" font-size="14" font-weight="700" text-anchor="middle" font-family="system-ui, sans-serif">Shapes and Spatial Orientation of s and p Orbitals</text>
+
+  <!-- 1. s ORBITAL -->
+  <g>
+    <line x1="200" y1="90" x2="200" y2="270" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="100" y1="180" x2="300" y2="180" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="130" y1="250" x2="270" y2="110" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <text x="200" y="82" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">z</text>
+    <text x="308" y="184" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">y</text>
+    <text x="276" y="108" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">x</text>
+    <circle cx="200" cy="180" r="55" fill="url(#orbSGrad)" opacity="0.85" />
+    <text x="200" y="295" fill="#c7d2fe" font-size="13" font-weight="700" font-family="system-ui, sans-serif" text-anchor="middle">s Orbital</text>
+    <text x="200" y="315" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Spherical &amp; Non-directional</text>
+  </g>
+
+  <!-- 2. px ORBITAL -->
+  <g>
+    <line x1="450" y1="90" x2="450" y2="270" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="350" y1="180" x2="550" y2="180" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="380" y1="250" x2="520" y2="110" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <text x="450" y="82" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">z</text>
+    <text x="558" y="184" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">y</text>
+    <text x="526" y="108" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">x</text>
+    <g transform="rotate(-45, 450, 180)">
+      <ellipse cx="415" cy="180" rx="38" ry="22" fill="url(#orbPPos)" opacity="0.85" />
+      <ellipse cx="485" cy="180" rx="38" ry="22" fill="url(#orbPNeg)" opacity="0.85" />
+    </g>
+    <text x="450" y="295" fill="#c7d2fe" font-size="13" font-weight="700" font-family="system-ui, sans-serif" text-anchor="middle">p<tspan dy="3" font-size="9">x</tspan> Orbital</text>
+    <text x="450" y="315" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Lobe alignment along x-axis</text>
+  </g>
+
+  <!-- 3. py ORBITAL -->
+  <g>
+    <line x1="700" y1="90" x2="700" y2="270" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="600" y1="180" x2="800" y2="180" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="630" y1="250" x2="770" y2="110" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <text x="700" y="82" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">z</text>
+    <text x="808" y="184" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">y</text>
+    <text x="776" y="108" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">x</text>
+    <ellipse cx="660" cy="180" rx="38" ry="22" fill="url(#orbPPos)" opacity="0.85" />
+    <ellipse cx="740" cy="180" rx="38" ry="22" fill="url(#orbPNeg)" opacity="0.85" />
+    <text x="700" y="295" fill="#c7d2fe" font-size="13" font-weight="700" font-family="system-ui, sans-serif" text-anchor="middle">p<tspan dy="3" font-size="9">y</tspan> Orbital</text>
+    <text x="700" y="315" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Lobe alignment along y-axis</text>
+  </g>
+
+  <!-- 4. pz ORBITAL -->
+  <g>
+    <line x1="900" y1="90" x2="900" y2="270" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="800" y1="180" x2="1000" y2="180" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <line x1="830" y1="250" x2="970" y2="110" stroke="#475569" stroke-width="1.5" opacity="0.5" stroke-dasharray="2 2" />
+    <text x="900" y="82" fill="#64748b" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">z</text>
+    <text x="1008" y="184" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">y</text>
+    <text x="976" y="108" fill="#64748b" font-size="10" font-family="system-ui, sans-serif">x</text>
+    <ellipse cx="900" cy="140" rx="22" ry="38" fill="url(#orbPPos)" opacity="0.85" />
+    <ellipse cx="900" cy="220" rx="22" ry="38" fill="url(#orbPNeg)" opacity="0.85" />
+    <text x="900" y="295" fill="#c7d2fe" font-size="13" font-weight="700" font-family="system-ui, sans-serif" text-anchor="middle">p<tspan dy="3" font-size="9">z</tspan> Orbital</text>
+    <text x="900" y="315" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Lobe alignment along z-axis</text>
+  </g>
+</svg>`)}
+
 > * **Energy Sequence:** Electrons fill orbitals in order of increasing energy:
 >   $$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^{10} 4p^6 5s^2 4d^{10} 5p^6 6s^2 4f^{14} 5d^{10} 6p^6 7s^2 5f^{14} 6d^{10} 7p^6 8s^2$$
 > * **Model Development:** The electronic structure model has been developed from:
@@ -641,7 +778,51 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 > > 4. **Calculate the total number of occupied orbitals:**
 > >    * Total occupied orbitals = $1 \\text{ (from } 1s) + 1 \\text{ (from } 2s) + 3 \\text{ (from } 2p) + 1 \\text{ (from } 3s) + 3 \\text{ (from } 3p)$
 > >    * This gives a total of 9 occupied orbitals
-        `,
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Explaining the Trend in Atomic Radius Across Period 3
+> **Question:** Describe and explain the trend in atomic radius for the elements across Period 3 from Sodium (Na) to Argon (Ar)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **State the general trend across the period:**
+> >    * Atomic radius decreases across Period 3 from Sodium to Argon
+> > 
+> > 2. **Explain the effect of nuclear charge:**
+> >    * Across Period 3, the number of protons in the nucleus increases (nuclear charge increases from $+11$ in Na to $+18$ in Ar)
+> > 
+> > 3. **Explain the shielding effect:**
+> >    * The outer-shell valence electrons are added to the same principal quantum shell ($n=3$), which means the shielding effect remains approximately constant across the period
+> > 
+> > 4. **Combine these factors to explain the final attraction:**
+> >    * Because the nuclear charge increases while the shielding remains constant, the electrostatic attraction between the positive nucleus and the negative outer-shell electrons becomes stronger
+> >    * This stronger pull draws the outer electrons closer to the nucleus, resulting in a smaller atomic radius
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Deducing Electronic Configuration from Period and Group
+> **Question:** An element is located in Period 4 and Group 15 of the Periodic Table. Identify the block of this element and write its condensed (noble gas) electronic configuration
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the block of the element:**
+> >    * Elements in Groups 13–18 have their outermost valence electrons in the $p$ sublevel
+> >    * Therefore, this element belongs to the **p-block**
+> > 
+> > 2. **Identify the element and the nearest preceding noble gas:**
+> >    * The element in Period 4, Group 15 is Arsenic (As, Atomic number $Z = 33$)
+> >    * The nearest preceding noble gas is Argon ([Ar] with 18 electrons)
+> > 
+> > 3. **Distribute the remaining electrons:**
+> >    * The remaining $15$ electrons ($33 - 18 = 15$) are filled into the $4s$, $3d$, and $4p$ subshells:
+> >      * $4s$ is filled first: $4s^2$ (2 electrons)
+> >      * $3d$ is filled next: $3d^{10}$ (10 electrons)
+> >      * The remaining electrons fill the $4p$ subshell: $4p^3$ (3 electrons)
+> > 
+> > 4. **Write the condensed configuration:**
+> >    * As = **[Ar] $4s^2 3d^{10} 4p^3$** (or **[Ar] $3d^{10} 4s^2 4p^3$**)
+`,
     keyPoints: [
       'An orbital is a probability density map holding at most two paired electrons.',
       '4s is filled before 3d because it is at a lower energy level in neutral atoms.',
@@ -821,19 +1002,61 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Melting Point Difference of Group 4 Elements (Carbon vs Silicon)
-> **Question:** Both carbon (diamond) and silicon form giant covalent lattices in Group 14 (Group IV). However, the melting temperature of carbon ($3550^\\\\circ\\\\text{C}$) is significantly higher than that of silicon ($1414^\\\\circ\\\\text{C}$). What is the primary reason for this difference?
+> **Question:** Both carbon (diamond) and silicon form giant covalent lattices in Group 14 (Group IV). However, the melting temperature of carbon ($3550^\\circ\\text{C}$) is significantly higher than that of silicon ($1414^\\circ\\text{C}$). What is the primary reason for this difference?
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Compare atomic sizes of Carbon and Silicon:**
 > >    * Carbon is in Period 2 and has a smaller atomic radius than Silicon, which is in Period 3
+> > 
 > > 2. **Analyze the effect on covalent bond strength:**
-> >    * Because the Carbon atoms are smaller, the shared electron pairs in the $\\\\text{C-C}$ bond are closer to the nuclei, resulting in stronger electrostatic attraction forces
-> >    * Therefore, $\\\\text{C-C}$ covalent bonds are shorter and significantly stronger than $\\\\text{Si-Si}$ covalent bonds
+> >    * Because the Carbon atoms are smaller, the shared electron pairs in the $\text{C-C}$ bond are closer to the nuclei, resulting in stronger electrostatic attraction forces
+> >    * Therefore, $\text{C-C}$ covalent bonds are shorter and significantly stronger than $\text{Si-Si}$ covalent bonds
+> > 
 > > 3. **Relate bond strength to melting point:**
-> >    * Since the giant covalent lattice of diamond is held together by these stronger and shorter $\\\\text{C-C}$ bonds, much more thermal energy is required to break them compared to the weaker $\\\\text{Si-Si}$ bonds in silicon, leading to a much higher melting point
-        `,
+> >    * Since the giant covalent lattice of diamond is held together by these stronger and shorter $\text{C-C}$ bonds, much more thermal energy is required to break them compared to the weaker $\text{Si-Si}$ bonds in silicon, leading to a much higher melting point
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Writing Successive Ionization Energy Equations
+> **Question:** Write the chemical equation, including state symbols, representing the second ionization energy of Magnesium (Mg)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Understand the definition of Second Ionization Energy:**
+> >    * It is the energy required to remove one electron from each $1+$ ion in one mole of gaseous ions to form one mole of gaseous $2+$ ions
+> > 
+> > 2. **Identify reactants and products:**
+> >    * Reactant: Gaseous Magnesium cation, $\text{Mg}^+\text{(g)}$
+> >    * Products: Gaseous Magnesium $2+$ cation, $\text{Mg}^{2+}\text{(g)}$, and the removed electron, $e^-$
+> > 
+> > 3. **Write the balanced chemical equation:**
+> >    $$\\\\text{Mg}^+\\\\text{(g)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(g)} + e^-$$
+> >    * *Warning:* Writing $\\\\text{Mg(g)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(g)} + 2e^-$ is incorrect as this represents the sum of the first and second ionization energies
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Explaining Ionization Energy Dip between Group 2 and Group 13
+> **Question:** Explain why the first ionization energy of Aluminium (Al, $I_1 = 578\\\\text{ kJ mol}^{-1}$) is lower than that of Magnesium (Mg, $I_1 = 738\\\\text{ kJ mol}^{-1}$), despite Aluminium having a greater nuclear charge
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the electronic configurations of both elements:**
+> >    * Magnesium ($Z = 12$): $1s^2 2s^2 2p^6 3s^2$
+> >    * Aluminium ($Z = 13$): $1s^2 2s^2 2p^6 3s^2 3p^1$
+> > 
+> > 2. **Compare the orbitals of the outer-shell electrons being removed:**
+> >    * For Magnesium, the outermost electron is removed from the $3s$ subshell
+> >    * For Aluminium, the outermost electron is removed from the $3p$ subshell
+> > 
+> > 3. **Analyze energy level and shielding differences:**
+> >    * The $3p$ subshell is at a higher energy level than the $3s$ subshell, meaning the electron is further from the nucleus
+> >    * The $3p^1$ electron in Aluminium also experiences additional shielding from the inner filled $3s^2$ subshell
+> > 
+> > 4. **Conclude the comparison:**
+> >    * Due to the higher energy level and increased shielding, the electrostatic attraction between the positive nucleus and the outer $3p$ electron is weaker in Aluminium, making it easier to remove than the outer $3s$ electron in Magnesium
+`,
     keyPoints: [
       'First ionization energy equations must always include gaseous state symbols (g).',
       'Successive ionization energies always increase because the remaining electrons are pulled closer by a constant positive nuclear charge.',
