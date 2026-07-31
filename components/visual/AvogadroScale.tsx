@@ -8,12 +8,13 @@ interface Substance {
     formula: string;
     mr: number;
     color: string;
-    state: 'solid' | 'gas';
+    state: 'solid' | 'gas' | 'liquid';
 }
 
 const substances: Substance[] = [
     { name: 'Helium', formula: 'He', mr: 4.0, color: '#60a5fa', state: 'gas' },
     { name: 'Carbon', formula: 'C', mr: 12.0, color: '#94a3b8', state: 'solid' },
+    { name: 'Water', formula: 'H₂O', mr: 18.0, color: '#38bdf8', state: 'liquid' },
     { name: 'Oxygen gas', formula: 'O₂', mr: 32.0, color: '#f87171', state: 'gas' },
     { name: 'Carbon Dioxide', formula: 'CO₂', mr: 44.0, color: '#a78bfa', state: 'gas' }
 ];
@@ -75,6 +76,20 @@ function JarSimulator({ substance, moles }: { substance: Substance; moles: numbe
                     originalY: py
                 });
             }
+        } else if (substance.state === 'liquid') {
+            // Liquid particles: kept at the bottom portion, flowing/sliding slowly
+            const speedMagnitude = 0.6;
+            for (let i = 0; i < count; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                tempParticles.push({
+                    x: 15 + Math.random() * (width - 30),
+                    y: height - 10 - Math.random() * 30,
+                    vx: Math.cos(angle) * speedMagnitude,
+                    vy: Math.sin(angle) * speedMagnitude,
+                    originalX: 0,
+                    originalY: 0
+                });
+            }
         } else {
             // Gas particles: Random positions with velocities inversely proportional to square root of molar mass (Graham's Law)
             const speedMagnitude = 3.5 / Math.sqrt(substance.mr); // Helium is fast, CO2 is slow
@@ -125,6 +140,41 @@ function JarSimulator({ substance, moles }: { substance: Substance; moles: numbe
                     const vibrationAmplitude = 1.0;
                     p.x = p.originalX + (Math.random() - 0.5) * vibrationAmplitude;
                     p.y = p.originalY + (Math.random() - 0.5) * vibrationAmplitude;
+                } else if (substance.state === 'liquid') {
+                    // Liquid physics: gravity, viscosity, higher thermal jitter, and packing constraints with a wave/sloshing surface
+                    p.vx += (Math.random() - 0.5) * 0.35;
+                    p.vy += (Math.random() - 0.5) * 0.35 + 0.15; // gravity bias
+                    
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    // Apply viscosity / damping
+                    p.vx *= 0.94;
+                    p.vy *= 0.94;
+
+                    // Bounce left/right
+                    if (p.x - 3.5 < 10) {
+                        p.x = 10 + 3.5;
+                        p.vx = -p.vx * 0.4;
+                    } else if (p.x + 3.5 > width - 10) {
+                        p.x = width - 10 - 3.5;
+                        p.vx = -p.vx * 0.4;
+                    }
+
+                    // Bounce bottom
+                    if (p.y + 3.5 > height - 5) {
+                        p.y = height - 5 - 3.5;
+                        p.vy = -p.vy * 0.2;
+                    }
+
+                    // Dynamic wave surface level constraint (rises with moles, ripples like a wave)
+                    const time = Date.now() / 200;
+                    const wave = Math.sin((p.x / width) * Math.PI * 2 + time) * 3.5;
+                    const maxLiquidHeight = height - 10 - Math.ceil(particlesRef.current.length / 2.8) + wave;
+                    if (p.y - 3.5 < maxLiquidHeight) {
+                        p.y = maxLiquidHeight + 3.5;
+                        p.vy = Math.abs(p.vy) * 0.4; // push downwards
+                    }
                 } else {
                     // Gas Brownian motion: move and bounce off boundaries
                     p.x += p.vx;
@@ -336,7 +386,7 @@ export default function AvogadroScale() {
 
             {/* Avogadro's Concept Insight Callout */}
             <div className="bg-indigo-500/5 border border-indigo-500/10 rounded-xl p-3.5 text-xs text-slate-300 leading-relaxed">
-                💡 <span className="font-semibold text-indigo-400">Avogadro's Principle:</span> Notice that if you set both Substance A and Substance B to <span className="text-white font-semibold">1.00 mol</span>, their jars contain the **exact same number of particles** (<span className="text-indigo-400 font-mono">6.02 × 10²³</span>), yet their weights on the scales are **vastly different** ({massA.toFixed(1)}g vs {massB.toFixed(1)}g) because the mass of each individual particle is different!
+                💡 <span className="font-semibold text-indigo-400">Avogadro's Principle:</span> Notice that if you set both Substance A and Substance B to <span className="text-white font-semibold">1.00 mol</span>, their jars contain the <span className="text-white font-semibold">exact same number of particles</span> (<span className="text-indigo-400 font-mono">6.02 × 10²³</span>), yet their weights on the scales are <span className="text-white font-semibold">vastly different</span> ({massA.toFixed(1)}g vs {massB.toFixed(1)}g) because the mass of each individual particle is different!
             </div>
         </div>
     );

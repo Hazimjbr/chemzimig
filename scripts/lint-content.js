@@ -114,7 +114,7 @@ function checkFile(filePath) {
 
         warnings.forEach(warn => {
             console.log(`  ${colors.yellow}⚠ Line ${warn.line}:${colors.reset} ${warn.message}`);
-            console.log(`    ${colors.yellow}→ ${err.suggestion || ''}${colors.reset}`);
+            console.log(`    ${colors.yellow}→ ${warn.suggestion || ''}${colors.reset}`);
             totalWarnings++;
         });
     }

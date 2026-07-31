@@ -197,32 +197,27 @@ export const parts: LessonPart[] = [
         content: `
 > [!BOX]
 > ### ⚖️ Relative Masses & Standards
-> * **Mass Number:** Must be an **integer** because it represents the summation of protons and neutrons in the nucleus of an atom.
-> * **Relative Atomic Mass ($Ar$):** The weighted mean (average) mass of an atom of an element compared with (related to) $\\frac{1}{12}$ of the mass of a carbon-12 atom.
->    * *Examples:* $Ar(\\text{H}) = 1$, $Ar(\\text{O}) = 16$. (Note: Relative masses have **no physical units** or are expressed in **amu** - atomic mass units).
-
-> [!BOX]
-> ### 💎 Why Carbon-12 is the Standard
-> Carbon-12 ($^{12}\\text{C}$) is used as the international reference standard for relative atomic mass because:
-> 1. It has a highly stable and constant relative abundance (whereas the isotopic abundance of other elements can vary).
-> 2. Its atomic mass is mathematically defined as exactly $12$, which is very close to a whole number.
-
-> [!BOX]
-> ### 🔗 Relative Molecular and Formula Masses
-> * **Relative Molecular Mass ($Mr$):** The average mass of a covalent molecule compared with (related to) $\\frac{1}{12}$ of the mass of a carbon-12 atom.
->    * *Examples:*
->       * $Mr(\\text{H}_2) = 2 \\times 1 = 2$ (no unit)
->       * $Mr(\\text{H}_2\\text{O}) = (2 \\times 1) + 16 = 18$ (no unit)
-> * **Relative Formula Mass ($Mr$):** The average mass of giant ionic structures or giant covalent lattices compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
->    * *Examples:*
->       * Ionic Compound: $Mr(\\text{Na}_2\\text{O}) = (2 \\times 23) + 16 = 62$ (no unit)
->       * Giant Covalent: $Mr(\\text{SiO}_2) = 28.1 + (2 \\times 16) = 60.1$ (no unit)
-
-> [!BOX]
-> ### ⚖️ Molar Mass
-> * **Molar Mass ($M$ or $Mr$):** The mass of $1\\text{ mole}$ of a substance, expressed in grams per mole ($\\text{g mol}^{-1}$)
-> * **The Molar Mass Equation:**
->   $$\\text{Molar Mass } (\\text{g mol}^{-1}) = \\frac{\\text{Mass } (\\text{g})}{\\text{Amount } (\\text{mol})}$$
+> * **Relative Isotopic Mass:** The mass of an atom of an isotope of an element compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom. (Each isotope has a specific mass, e.g., $^{35}\\text{Cl} = 35.0$, $^{37}\\text{Cl} = 37.0$).
+> * **Relative Atomic Mass ($Ar$):** The weighted average mass of an atom of an element compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom. (Considers isotopic abundance).
+>    * *Examples:* $Ar(\\text{H}) = 1.0$, $Ar(\\text{O}) = 16.0$. (Relative masses have **no physical units**).
+> * **Standard:** Carbon-12 ($^{12}\\text{C}$) is used as the international reference standard for relative atomic mass because it has a highly stable abundance and its atomic mass is defined as exactly 12.
+> 
+> > [!BOX]
+> > ### 🔗 Relative Molecular and Formula Masses
+> > * **Relative Molecular Mass ($Mr$):** The average mass of a molecule of a covalent substance compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
+> >    * *Examples:*
+> >       * $Mr(\\text{H}_2) = 2 \\times 1.0 = 2.0$
+> >       * $Mr(\\text{H}_2\\text{O}) = (2 \\times 1.0) + 16.0 = 18.0$
+> > * **Relative Formula Mass ($Mr$):** The average mass of a formula unit of giant ionic or giant covalent structures compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
+> >    * *Examples:*
+> >       * Ionic Compound: $Mr(\\text{Na}_2\\text{O}) = (2 \\times 23.0) + 16.0 = 62.0$
+> >       * Giant Covalent: $Mr(\\text{SiO}_2) = 28.1 + (2 \\times 16.0) = 60.1$
+> 
+> > [!BOX]
+> > ### ⚖️ Molar Mass
+> > * **Molar Mass ($M$):** The mass of one mole of a substance, expressed in grams per mole ($\\text{g mol}^{-1}$).
+> > * **The Molar Mass Equation:**
+> >   $$\\text{Molar Mass } (\\text{g mol}^{-1}) = \\frac{\\text{Mass } (\\text{g})}{\\text{Amount } (\\text{mol})}$$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Handling Water of Crystallization
@@ -937,6 +932,24 @@ export const parts: LessonPart[] = [
 > > 4. **Crystallize and dry the salt:**
 > >    * Heat the resulting neutral solution to the crystallization point, allow to cool slowly to form crystals, filter, and dry with filter paper
 
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Testing for Saturation and Washing Precipitates
+> **Question:** During the preparation of salt crystals, describe how a student can determine when a heated solution is ready for crystallization. Additionally, explain why an insoluble precipitate of lead(II) sulfate, PbSO₄, is washed with cold distilled water rather than warm water
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain the method to check for saturation (the crystallization point):**
+> >    * Dip a clean, cold glass rod into the hot evaporating salt solution
+> >    * Withdraw the rod and observe the tip for a few seconds
+> >    * If small crystals form immediately on the cold glass surface, the solution has reached saturation and is ready for crystallization
+> > 
+> > 2. **Explain the purpose of washing the precipitate:**
+> >    * Rinsing the residue with distilled water removes any remaining soluble spectator ions (e.g., sodium and nitrate ions) adhering to the surface of the crystals
+> > 
+> > 3. **Explain why cold water is preferred over warm water:**
+> >    * Lead(II) sulfate has a very low solubility, but its solubility increases as temperature rises
+> >    * Using *cold* water minimizes the amount of lead(II) sulfate that dissolves during the washing process, preventing loss of product and maximizing the percentage yield
 `,
         keyPoints: [
             'Use the excess method when the starting base is insoluble; filter to remove excess solid.',
@@ -963,6 +976,23 @@ export const parts: LessonPart[] = [
 >   $$\\text{Concentration (ppm)} = \\frac{\\text{Mass of Solute}}{\\text{Total Mass of Solution}} \\times 10^6$$
 > 
 > * *Conversion:* $1\\text{ dm}^3 = 1000\\text{ cm}^3$.
+
+> [!BOX]
+> ### 🧪 Core Practical 1: Preparing a Standard Solution
+> A **standard solution** is a solution of known concentration. The exact steps to prepare $250.0\text{ cm}^3$ of standard solution from a solid are:
+> 
+> 1. **Weigh the solid:** Weigh the mass of the solid beaker/weighing bottle on a 2-decimal balance. Transfer the solid to a clean beaker, and reweigh the empty bottle to calculate the exact mass transferred by difference.
+> 2. **Dissolve the solid:** Add about $100\text{ cm}^3$ of distilled water to the beaker. Stir continuously with a glass rod until the solid has dissolved completely.
+> 3. **Quantitative Transfer:** Pour the solution through a clean funnel into a $250.0\text{ cm}^3$ volumetric flask. Rinse the beaker, glass rod, and funnel several times with distilled water, transferring all washings into the volumetric flask.
+> 4. **Make up to the mark:** Add distilled water to the flask until the level is just below the graduation mark. Use a teat pipette to add water dropwise until the bottom of the meniscus is exactly on the graduation line at eye level.
+> 5. **Homogenize:** Insert the stopper securely into the flask and invert it several times to mix the solution thoroughly.
+
+> [!NOTE]
+> ### 🧪 Titration & Concordant Titres
+> When analyzing titration results, we must only use **concordant titres** to calculate the mean titre.
+> * **Definition:** Concordant titres are volume readings that are within $\pm 0.10\text{ cm}^3$ of each other.
+> * **Rough Titre:** The initial rough titration is used to locate the approximate end point and is **never** included in the concordant calculations.
+> * **Calculating Mean Titre:** Select only the concordant runs, and find their average.
 
 > [!BOX]
 > ### 🧪 Titration Equivalence
@@ -1063,6 +1093,62 @@ export const parts: LessonPart[] = [
 > > 4. **Calculate the concentration of the $\\text{HCl}$ solution:**
 > >    $$C(\\text{HCl}) = \\frac{n}{V} = \\frac{3.12 \\times 10^{-3}\\text{ mol}}{\\left(\\frac{25.0}{1000}\\right)\\text{ dm}^3} = 0.125\\text{ mol dm}^{-3}$$
 
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Titration with Dilution and Non-1:2 Stoichiometry
+> **Question:** A student dissolves $1.325\\text{ g}$ of anhydrous sodium carbonate, $\\text{Na}_2\\text{CO}_3$, in distilled water and makes the volume up to $250.0\\text{ cm}^3$ in a volumetric flask. A $25.0\\text{ cm}^3$ aliquot of this solution is titrated against hydrochloric acid, HCl. It requires $20.00\\text{ cm}^3$ of the acid for complete neutralization. Calculate the concentration of the hydrochloric acid in $\\text{mol dm}^{-3}$
+> *(Relative atomic masses: $\\text{Na}=23.0, \\text{C}=12.0, \\text{O}=16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the molar mass ($Mr$) of sodium carbonate, $\\text{Na}_2\\text{CO}_3$:**
+> >    $$Mr(\\\\text{Na}_2\\\\text{CO}_3) = (2 \\\\times 23.0) + 12.0 + (3 \\\\times 16.0) = 106.0\\\\text{ g mol}^{-1}$$
+> > 
+> > 2. **Calculate the total moles of $\\text{Na}_2\\text{CO}_3$ dissolved in $250.0\\text{ cm}^3$:**
+> >    $$n_{\\\\text{total}} = \\\\frac{m}{Mr} = \\\\frac{1.325\\\\text{ g}}{106.0\\\\text{ g mol}^{-1}} = 0.0125\\\\text{ mol}$$
+> > 
+> > 3. **Calculate the moles of $\\text{Na}_2\\text{CO}_3$ present in the $25.0\\text{ cm}^3$ aliquot:**
+> >    $$n_{\\\\text{aliquot}} = n_{\\\\text{total}} \\\\times \\\\frac{V_{\\\\text{aliquot}}}{V_{\\\\text{total}}}$$
+> > 
+> >    $$n_{\\\\text{aliquot}} = 0.0125\\\\text{ mol} \\\\times \\\\frac{25.0}{250.0} = 1.25 \\\\times 10^{-3}\\\\text{ mol}$$
+> > 
+> > 4. **Write the balanced chemical equation to find the stoichiometric ratio:**
+> >    $$\\\\text{Na}_2\\\\text{CO}_3\\\\text{(aq)} + 2\\\\text{HCl(aq)} \\\\rightarrow 2\\\\text{NaCl(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> >    * The stoichiometric ratio of sodium carbonate to hydrochloric acid is 1:2
+> > 
+> > 5. **Calculate the moles of HCl reacted:**
+> >    $$n(\\\\text{HCl}) = 2 \\\\times n_{\\\\text{aliquot}}$$
+> > 
+> >    $$n(\\\\text{HCl}) = 2 \\\\times (1.25 \\\\times 10^{-3}\\\\text{ mol}) = 2.50 \\\\times 10^{-3}\\\\text{ mol}$$
+> > 
+> > 6. **Calculate the concentration of the hydrochloric acid:**
+> >    $$C(\\\\text{HCl}) = \\\\frac{n}{V}$$
+> > 
+> >    $$C(\\\\text{HCl}) = \\\\frac{2.50 \\\\times 10^{-3}\\\\text{ mol}}{\\\\left(\\\\frac{20.00}{1000}\\\\right)\\\\text{ dm}^3} = 0.125\\\\text{ mol dm}^{-3}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Selecting Concordant Titres
+> **Question:** A student performs a titration and records the following volume readings:
+> * Rough Titre: $24.50\\\\text{ cm}^3$
+> * Titre 1: $23.85\\\\text{ cm}^3$
+> * Titre 2: $23.95\\\\text{ cm}^3$
+> * Titre 3: $23.70\\\\text{ cm}^3$
+> * Titre 4: $23.90\\\\text{ cm}^3$
+> Identify the concordant titres and calculate the mean titre value that the student should use in their calculation.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Exclude the rough titre:**
+> >    * The rough run ($24.50\\\\text{ cm}^3$) is only a rough guide and must be discarded from the final mean calculation
+> > 
+> > 2. **Identify the concordant titres (within $\\\\pm 0.10\\\\text{ cm}^3$ of each other):**
+> >    * Titre 1 ($23.85\\\\text{ cm}^3$), Titre 2 ($23.95\\\\text{ cm}^3$), and Titre 4 ($23.90\\\\text{ cm}^3$) all lie within a range of $0.10\\\\text{ cm}^3$
+> >    * Titre 3 ($23.70\\\\text{ cm}^3$) is not concordant as it is too far from the other values, so it is discarded
+> > 
+> > 3. **Calculate the average of the concordant titres:**
+> >    $$\\\\text{Mean Titre} = \\\\frac{23.85 + 23.95 + 23.90}{3} = 23.90\\\\text{ cm}^3$$
 `,
         keyPoints: [
             '1 dm³ is exactly equal to 1000 cm³.',
@@ -1118,6 +1204,16 @@ export const parts: LessonPart[] = [
 >   $$P = \\frac{RTd}{M_r} \\implies M_r = \\frac{RTd}{P}$$
 >   *Note: If density $d$ is in $\\text{g dm}^{-3}$ or $\\text{g cm}^{-3}$, it must be converted to $\\text{g m}^{-3}$ to remain compatible with SI units ($P$ in $\\text{Pa}$ and $R = 8.31$):*
 >   $$d(\\text{g m}^{-3}) = d(\\text{g dm}^{-3}) \\times 1000$$
+
+> [!NOTE]
+> ### 🎈 Assumptions of the Kinetic Theory of Ideal Gases
+> For the ideal gas equation $PV = nRT$ to hold true, we assume that:
+> 
+> 1. **Negligible Molecular Volume:** The actual volume of the gas molecules themselves is completely negligible compared to the total volume occupied by the gas
+> 2. **No Intermolecular Forces:** There are no attractive or repulsive forces between the gas molecules
+> 3. **Elastic Collisions:** All collisions between gas molecules, and between the molecules and the container walls, are perfectly elastic (no kinetic energy is lost)
+> 
+> **Deviation in Real Gases:** Real gases deviate from ideal behavior at **very high pressures** (where molecular volume becomes significant relative to the compressed space) and **very low temperatures** (where molecules move slowly enough for weak intermolecular forces to hold them together)
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Moles of Nitrogen Gas
@@ -1237,6 +1333,36 @@ export const parts: LessonPart[] = [
 > > 5. **Convert the volume from $\\text{m}^3$ to $\\text{dm}^3$:**
 > >    * Since $1\\text{ m}^3 = 1000\\text{ dm}^3$:
 > >      $$V = 4.067 \\times 10^{-3} \\times 1000 = 4.07\\text{ dm}^3$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Reacting Gas Volumes (Avogadro's Law)
+> **Question:** Propane gas, C₃H₈, reacts with oxygen according to the equation:
+> $$\\\\text{C}_3\\\\text{H}_8\\\\text{(g)} + 5\\\\text{O}_2\\\\text{(g)} \\\\rightarrow 3\\\\text{CO}_2\\\\text{(g)} + 4\\\\text{H}_2\\\\text{O(l)}$$
+> A mixture containing $20\\\\text{ cm}^3$ of propane and $120\\\\text{ cm}^3$ of oxygen is ignited. After the reaction is complete, the mixture is cooled back to room temperature and pressure. Calculate the total volume of gas remaining.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Apply Avogadro's Law of reacting volumes:**
+> >    * Under constant temperature and pressure, gas volume ratios are identical to the mole ratios in the balanced chemical equation
+> > 
+> > 2. **Determine the limiting and excess reactants:**
+> >    * According to the equation, $1\\\\text{ volume of C}_3\\\\text{H}_8$ reacts with $5\\\\text{ volumes of O}_2$
+> >    * To react all $20\\\\text{ cm}^3$ of propane, the volume of oxygen required is: $20 \\\\times 5 = 100\\\\text{ cm}^3$
+> >    * Since we have $120\\\\text{ cm}^3$ of oxygen, oxygen is in excess and propane is the limiting reactant
+> > 
+> > 3. **Calculate the volume of unreacted excess oxygen gas remaining:**
+> >    $$\\\\text{Remaining volume of O}_2 = 120\\\\text{ cm}^3 - 100\\\\text{ cm}^3 = 20\\\\text{ cm}^3$$
+> > 
+> > 4. **Calculate the volume of carbon dioxide gas produced:**
+> >    * According to the equation, $1\\\\text{ volume of C}_3\\\\text{H}_8$ produces $3\\\\text{ volumes of CO}_2$
+> >    $$\\\\text{Volume of CO}_2 \\\\text{ produced} = 20 \\\\times 3 = 60\\\\text{ cm}^3$$
+> > 
+> > 5. **Calculate the total volume of gas remaining:**
+> >    * Note that water is formed as a liquid, so its volume is negligible
+> >    * The remaining gas mixture consists only of unreacted oxygen and the carbon dioxide produced:
+> >    $$\\\\text{Total gas volume} = V(\\\\text{unreacted O}_2) + V(\\\\text{produced CO}_2)$$
+> >    $$\\\\text{Total gas volume} = 20\\\\text{ cm}^3 + 60\\\\text{ cm}^3 = 80\\\\text{ cm}^3$$
 `,
         keyPoints: [
             'In pV = nRT, volume MUST be converted to m³.',
@@ -1395,6 +1521,35 @@ export const parts: LessonPart[] = [
 > > 
 > > 4. **Calculate the percentage atom economy:**
 > >    $$\\%\\text{ Atom Economy} = \\left(\\frac{111.6}{243.6}\\right) \\times 100 = 45.8\\%$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Combining Percentage Purity and Percentage Yield
+> **Question:** A $5.00\\text{ g}$ sample of impure calcium carbonate, CaCO₃, reacts with excess hydrochloric acid according to the equation:
+> $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> The sample is $80.0\\%$ pure calcium carbonate by mass. Calculate the mass of carbon dioxide gas, in grams, obtained if the reaction has a $85.0\\%$ percentage yield.
+> *(Relative atomic masses: $\\text{Ca}=40.1, \\text{C}=12.0, \\text{O}=16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the mass of pure calcium carbonate in the sample:**
+> >    $$\\\\text{Mass of pure CaCO}_3 = 5.00\\\\text{ g} \\\\times \\\\frac{80.0}{100} = 4.00\\\\text{ g}$$
+> > 
+> > 2. **Calculate the molar mass ($Mr$) of calcium carbonate, $\\text{CaCO}_3$:**
+> >    $$Mr(\\\\text{CaCO}_3) = 40.1 + 12.0 + (3 \\\\times 16.0) = 100.1\\\\text{ g mol}^{-1}$$
+> > 
+> > 3. **Calculate the moles of reacting calcium carbonate:**
+> >    $$n(\\\\text{CaCO}_3) = \\\\frac{4.00\\\\text{ g}}{100.1\\\\text{ g mol}^{-1}} \\\\approx 0.0400\\\\text{ mol}$$
+> > 
+> > 4. **Determine the theoretical moles of carbon dioxide produced (1:1 ratio):**
+> >    $$n(\\\\text{CO}_2) = 0.0400\\\\text{ mol}$$
+> > 
+> > 5. **Calculate the theoretical mass of carbon dioxide ($Mr = 44.0\\text{ g mol}^{-1}$):**
+> >    $$\\\\text{Theoretical Mass of CO}_2 = 0.0400\\\\text{ mol} \\\\times 44.0\\\\text{ g mol}^{-1} = 1.76\\\\text{ g}$$
+> > 
+> > 6. **Apply the percentage yield to find the actual mass of carbon dioxide obtained:**
+> >    $$\\\\text{Actual Mass} = \\\\text{Theoretical Mass} \\\\times \\\\frac{\\\\%\\\\text{ Yield}}{100}$$
+> >    $$\\\\text{Actual Mass} = 1.76\\\\text{ g} \\\\times \\\\frac{85.0}{100} = 1.50\\\\text{ g}$$
 `,
         keyPoints: [
             'High yield does not necessarily mean high atom economy.',
@@ -1524,6 +1679,51 @@ export const parts: LessonPart[] = [
 > > 3. **Calculate the percentage uncertainty:**
 > >    $$\\text{Percentage Uncertainty} = \\frac{\\text{Absolute Uncertainty}}{\\text{Volume Measured}} \\times 100\\%$$
 > >    $$\\text{Percentage Uncertainty} = \\left(\\frac{0.5}{50.0}\\right) \\times 100 = 1.0\\%$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Calculating Total Percentage Uncertainty for an Experiment
+> **Question:** In a calorimeter experiment to determine enthalpy change, a student:
+> * Measures $50.0\\\\text{ cm}^3$ of water using a measuring cylinder (accuracy $\\\\pm 0.5\\\\text{ cm}^3$, 1 reading)
+> * Weighs $2.50\\\\text{ g}$ of a salt by difference using a balance (accuracy $\\\\pm 0.005\\\\text{ g}$ per reading, 2 readings)
+> * Records a temperature rise of $8.5^\\\\circ\\\\text{C}$ using a thermometer (accuracy $\\\\pm 0.1^\\\\circ\\\\text{C}$ per reading, 2 readings)
+> Calculate the total percentage uncertainty for this experiment.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the percentage uncertainty for the measuring cylinder:**
+> >    $$\\\\%\\\\text{ Uncertainty}_{\\\\text{volume}} = \\\\frac{0.5}{50.0} \\\\times 100 = 1.00\\\\%$$
+> > 
+> > 2. **Calculate the percentage uncertainty for the balance (2 readings):**
+> >    $$\\\\text{Absolute Uncertainty} = 2 \\\\times 0.005\\\\text{ g} = 0.010\\\\text{ g}$$
+> >    $$\\\\%\\\\text{ Uncertainty}_{\\\\text{mass}} = \\\\frac{0.010}{2.50} \\\\times 100 = 0.40\\\\%$$
+> > 
+> > 3. **Calculate the percentage uncertainty for the thermometer (2 readings):**
+> >    $$\\\\text{Absolute Uncertainty} = 2 \\\\times 0.1^\\\\circ\\\\text{C} = 0.2^\\\\circ\\\\text{C}$$
+> >    $$\\\\%\\\\text{ Uncertainty}_{\\\\text{temperature}} = \\\\frac{0.2}{8.5} \\\\times 100 \\\\approx 2.35\\\\%$$
+> > 
+> > 4. **Add the individual percentage uncertainties together to find the total:**
+> >    $$\\\\text{Total Percentage Uncertainty} = 1.00\\\\% + 0.40\\\\% + 2.35\\\\% = 3.75\\\\%$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Deducing the Minimum Measurement Value to Limit Error
+> **Question:** A student weighs a sample of sodium hydrogencarbonate by difference (requiring two readings) on a balance accurate to $\\\\pm 0.001\\\\text{ g}$ per reading. Calculate the minimum mass of sample, in grams, that must be weighed to ensure the percentage uncertainty in the mass does not exceed $0.10\\\%$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the absolute uncertainty for the two balance readings:**
+> >    $$\\\\text{Absolute Uncertainty} = 2 \\\\times 0.001\\\\text{ g} = 0.002\\\\text{ g}$$
+> > 
+> > 2. **Set up the percentage uncertainty equation with the maximum limit of 0.10%:**
+> >    $$\\\\%\\\\text{ Uncertainty} = \\\\frac{\\\\text{Absolute Uncertainty}}{\\\\text{Mass}} \\\\times 100 \\\\le 0.10\\\\%$$
+> > 
+> >    $$0.10 \\\\ge \\\\frac{0.002}{\\\\text{Mass}} \\\\times 100$$
+> > 
+> > 3. **Rearrange the inequality to solve for the mass:**
+> >    $$\\\\text{Mass} \\\\ge \\\\frac{0.002 \\\\times 100}{0.10}$$
+> >    $$\\\\text{Mass} \\\\ge 2.00\\\\text{ g}$$
+> >    * Therefore, the minimum mass that must be weighed is **2.00 g**
 `,
         keyPoints: [
             'Always count the number of readings taken with the measuring instrument, such as two readings for a burette titration.',
