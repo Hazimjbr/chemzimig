@@ -712,32 +712,31 @@ export const parts: LessonPart[] = [
 > > 3. **Hydrogen gas with iodine gas:**
 > >    * *Technique:* Colorimetry.
 > >    * *Explanation:* Iodine gas ($\\\\text{I}_2$) is purple, whereas the reactant $\\\\text{H}_2$ and product $\\\\text{HI}$ are colorless. The fading of the purple color can be monitored quantitatively.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Evaluating Experimental Design & Systematic Errors
+> **Question:** In an experiment to follow the rate of carbon dioxide evolution from the reaction of calcium carbonate with hydrochloric acid:
+> $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> A student evaluates two possible experimental setups:
+> * **Setup A:** Adding calcium carbonate chips to the flask, then pouring HCl from a measuring cylinder and quickly sealing the flask with a rubber bung connected to a gas syringe.
+> * **Setup B:** Using a divided flask (or suspending the solid in a small tube above the acid using a thread), sealing the flask first, and then tilting/shaking it to mix the reactants and start the reaction.
 > 
+> 1. Explain the major source of systematic error in **Setup A** and how it affects the recorded rate.
+> 2. Explain how **Setup B** eliminates this error.
+> 3. Suggest one advantage of using a gas syringe over gas collection over water if the laboratory temperature fluctuates during the experiment.
 > 
-> > [!EXAMPLE]
-> > #### 📝 Worked Example 2: Evaluating Experimental Design & Systematic Errors
-> > **Question:** In an experiment to follow the rate of carbon dioxide evolution from the reaction of calcium carbonate with hydrochloric acid:
-> > $$\\\\text{CaCO}_3\\\\text{(s)} + 2\\\\text{HCl}\\\\text{(aq)} \\\\rightarrow \\\\text{CaCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O}\\\\text{(l)} + \\\\text{CO}_2\\\\text{(g)}$$
-> > A student evaluates two possible experimental setups:
-> > * **Setup A:** Adding calcium carbonate chips to the flask, then pouring HCl from a measuring cylinder and quickly sealing the flask with a rubber bung connected to a gas syringe.
-> > * **Setup B:** Using a divided flask (or suspending the solid in a small tube above the acid using a thread), sealing the flask first, and then tilting/shaking it to mix the reactants and start the reaction.
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
 > > 
-> > 1. Explain the major source of systematic error in **Setup A** and how it affects the recorded rate.
-> > 2. Explain how **Setup B** eliminates this error.
-> > 3. Suggest one advantage of using a gas syringe over gas collection over water if the laboratory temperature fluctuates during the experiment.
+> > 1. **Systematic error in Setup A:**
+> >    * *Source:* Gas loss occurs during the delay between pouring the acid and sealing the rubber bung.
+> >    * *Effect on rate:* The measured volume of carbon dioxide will be lower than the true volume, resulting in an underestimated initial reaction rate.
 > > 
-> > > [!TIP]
-> > > **🔑 Step-by-step Solution:**
-> > > 
-> > > 1. **Systematic error in Setup A:**
-> > >    * *Source:* Gas loss occurs during the delay between pouring the acid and sealing the rubber bung.
-> > >    * *Effect on rate:* The measured volume of carbon dioxide will be lower than the true volume, resulting in an underestimated initial reaction rate.
-> > > 
-> > > 2. **Mitigation in Setup B:**
-> > >    * *Explanation:* By keeping reactants separate until the apparatus is fully sealed, no gas can escape when the reaction is initiated by tilting/shaking. This ensures all evolved gas is captured.
-> > > 
-> > > 3. **Advantage of Gas Syringe:**
-> > >    * *Explanation:* Carbon dioxide gas ($\\\\text{CO}_2$) is moderately soluble in water. If collected over water, some of the $\\\\text{CO}_2$ dissolves, leading to underestimated volume readings. A gas syringe avoids water contact entirely. Furthermore, temperature fluctuations affect gas solubility in water (solubility decreases as temperature increases), introducing unpredictable errors.
+> > 2. **Mitigation in Setup B:**
+> >    * *Explanation:* By keeping reactants separate until the apparatus is fully sealed, no gas can escape when the reaction is initiated by tilting/shaking. This ensures all evolved gas is captured.
+> > 
+> > 3. **Advantage of Gas Syringe:**
+> >    * *Explanation:* Carbon dioxide gas ($\\\\text{CO}_2$) is moderately soluble in water. If collected over water, some of the $\\\\text{CO}_2$ dissolves, leading to underestimated volume readings. A gas syringe avoids water contact entirely. Furthermore, temperature fluctuations affect gas solubility in water (solubility decreases as temperature increases), introducing unpredictable errors.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Chemical Selection for Quenching
@@ -811,40 +810,38 @@ export const parts: LessonPart[] = [
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Filter Selection:**
-> >    * *Verdict:* A blue filter (or complementary color filter around $470\\\\text{ nm}$) should be selected.
+> >    * *Verdict:* A blue filter (or complementary color filter around $470\text{ nm}$) should be selected.
 > > 
 > > 2. **Explanation:**
 > >    * *Reasoning:* An orange-brown solution appears orange because it transmits orange light and absorbs its complementary color, which is blue. Selecting a blue filter ensures maximum absorbance of light by the bromine molecules, leading to the highest sensitivity and accuracy in the absorbance readings.
-> 
+
 > [!IMPORTANT]
-> ### 🧮 Concentration-Time Graphs & Half-Life ($t_{1/2}$)
+> ### 🧮 Concentration-Time Graphs & Half-Life (t₁/₂)
 > Plotting reactant concentration against time gives a curve from which we can determine the reaction order and half-life:
-> * **Half-Life ($t_{1/2}$):** The time taken for the concentration of a reactant to fall to half of its initial value.
+> * **Half-Life (t₁/₂):** The time taken for the concentration of a reactant to fall to half of its initial value.
 > * **First-Order Half-Life:** For a first-order reaction, the half-life is constant and is independent of the initial concentration:
->   $$t_{1/2} = \\\\frac{\\\\ln 2}{k}$$
->   *As shown in the graph below, the time taken for $[A]$ to decrease from $120$ to $60$ is $100\text{ s}$, from $60$ to $30$ is another $100\text{ s}$, and from $30$ to $15$ is also $100\text{ s}$. This constant half-life of $100\text{ s}$ confirms a first-order reaction.*
+>   **t₁/₂ = ln(2) / k**
+>   *As shown in the graph below, the time taken for [A] to decrease from 120 to 60 is 100 s, from 60 to 30 is another 100 s, and from 30 to 15 is also 100 s. This constant half-life of 100 s confirms a first-order reaction.*
 > 
 > ${svgToken(halfLifeSvg)}
-
-&nbsp;
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 7: Graph Analysis of Compound P Decomposition
 > **Question:** A compound P decomposes when heated. The graph shows the change in concentration when a sample of P is heated:
-> * At $t = 0\\\\text{ s}$, $[\\\\text{P}] = 5.8\\\\text{ units}$
-> * At $t = 350\\\\text{ s}$, $[\\\\text{P}] = 2.9\\\\text{ units}$
-> * At $t = 700\\\\text{ s}$, $[\\\\text{P}] = 1.45\\\\text{ units}$
-> * At $t = 1050\\\\text{ s}$, $[\\\\text{P}] = 0.72\\\\text{ units}$
+> * At t = 0 s, [P] = 5.8 units
+> * At t = 350 s, [P] = 2.9 units
+> * At t = 700 s, [P] = 1.45 units
+> * At t = 1050 s, [P] = 0.72 units
 > 
 > 1. State what is meant by the term half-life of reaction.
 > 2. Use the data to show that the decomposition of P is a first-order reaction.
 > 3. Explain the effect on the half-life of doubling the initial concentration of P.
-> 4. Calculate the rate constant, $k$, for this reaction using the expression $k = \\\\frac{0.693}{\\\\text{half-life}}$.
+> 4. Calculate the rate constant, k, for this reaction using the expression k = 0.693 / t₁/₂.
 > 5. Write the rate equation for this reaction.
 > 6. Use the data to:
->    a) Determine the concentration of P at $800\\\\text{ s}$ (given as $1.75\\\\text{ units}$).
->    b) Calculate the rate of reaction at $800\\\\text{ s}$.
-> 7. Describe how you could determine the reaction rate at $800\\\\text{ s}$ directly from the graph.
+>    a) Determine the concentration of P at 800 s (given as 1.75 units).
+>    b) Calculate the rate of reaction at 800 s.
+> 7. Describe how you could determine the reaction rate at 800 s directly from the graph.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -853,32 +850,96 @@ export const parts: LessonPart[] = [
 > >    The time taken for the concentration of a reactant to decrease to half of its initial value.
 > > 
 > > 2. **Show First-order Reaction:**
-> >    * First half-life (from $5.8$ to $2.9\\\\text{ units}$): $t_{1/2} = 350 - 0 = 350\\\\text{ s}$.
-> >    * Second half-life (from $2.9$ to $1.45\\\\text{ units}$): $t_{1/2} = 700 - 350 = 350\\\\text{ s}$.
-> >    * Third half-life (from $1.45$ to $0.72\\\\text{ units}$): $t_{1/2} = 1050 - 700 = 350\\\\text{ s}$.
-> >    * *Conclusion:* Since successive half-lives are constant ($\\\\approx 350\\\\text{ s}$), the reaction is first-order with respect to P.
+> >    * First half-life (from 5.8 to 2.9 units): t₁/₂ = 350 - 0 = 350 s.
+> >    * Second half-life (from 2.9 to 1.45 units): t₁/₂ = 700 - 350 = 350 s.
+> >    * Third half-life (from 1.45 to 0.72 units): t₁/₂ = 1050 - 700 = 350 s.
+> >    * *Conclusion:* Since successive half-lives are constant (350 s), the reaction is first-order with respect to P.
 > > 
 > > 3. **Effect of Doubling Concentration:**
 > >    The half-life will remain unchanged because the half-life of a first-order reaction is independent of the initial concentration.
 > > 
-> > 4. **Calculate rate constant, $k$:**
-> >    $$k = \\\\frac{0.693}{t_{1/2}} = \\\\frac{0.693}{350} = 1.98 \\\\times 10^{-3}\\\\text{ s}^{-1}$$
+> > 4. **Calculate rate constant, k:**
+> >    k = 0.693 / t₁/₂ = 0.693 / 350 s = 1.98 × 10⁻³ s⁻¹
 > > 
 > > 5. **Write rate equation:**
-> >    $$\\\\text{rate} = k[\\\\text{P}]$$
+> >    rate = k[P]
 > > 
-> > 6. **Calculations at $800\\\\text{ s}$:**
-> >    * **a)** From the graph, concentration of P at $800\\\\text{ s}$ is $1.75\\\\text{ units}$ (or between $1.7$ and $1.8$).
-> >    * **b)** $\\\\text{rate} = k[\\\\text{P}] = (1.98 \\\\times 10^{-3}\\\\text{ s}^{-1}) \\\\times (1.75\\\\text{ units}) = 3.47 \\\\times 10^{-3}\\\\text{ units s}^{-1}$.
+> > 6. **Calculations at 800 s:**
+> >    * **a)** From the graph, concentration of P at 800 s is 1.75 units.
+> >    * **b)** rate = k[P] = (1.98 × 10⁻³ s⁻¹) × (1.75 units) = 3.47 × 10⁻³ units s⁻¹
 > > 
 > > 7. **Determine rate directly from graph:**
-> >    Draw a tangent to the curve at $t = 800\\\\text{ s}$ and calculate the gradient (slope) of this tangent: $\\\\text{gradient} = \\\\frac{\\\\Delta\\\\text{concentration}}{\\\\Delta\\\\text{time}}$. The magnitude of this gradient represents the rate at that instant.
+> >    Draw a tangent to the curve at t = 800 s and calculate the gradient (slope) of this tangent: gradient = Δconcentration / Δtime. The magnitude of this gradient represents the rate at that instant.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Proving First-Order Kinetics from a ln[A] vs Time Graph
+> **Question:** A student monitors the decomposition of compound Q and records the following concentration data:
+>
+> | Time / s | [Q] / mol dm⁻³ | ln[Q] |
+> | :---: | :---: | :---: |
+> | 0 | 0.800 | −0.223 |
+> | 100 | 0.491 | −0.712 |
+> | 200 | 0.301 | −1.200 |
+> | 300 | 0.185 | −1.687 |
+> | 400 | 0.114 | −2.170 |
+>
+> 1. State what type of graph should be plotted to confirm that the reaction is first order with respect to Q, and describe the expected result.
+> 2. Use the data to confirm that the reaction is first order.
+> 3. Determine the rate constant, k, from the gradient of the ln[Q] vs time graph, and state its units.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> >
+> > 1. **Graph type and expected result:**
+> >    * Plot ln[Q] (y-axis) against time / s (x-axis).
+> >    * For a first-order reaction, this graph should yield a **straight line with a negative gradient**, since the integrated first-order rate law gives: ln[Q] = -kt + ln[Q]₀
+> >
+> > 2. **Confirm first-order kinetics:**
+> >    * The ln[Q] values decrease by a constant amount per unit time interval:
+> >      * 100 s: Δln[Q] = -0.712 - (-0.223) = -0.489
+> >      * 100 s: Δln[Q] = -1.200 - (-0.712) = -0.488
+> >      * 100 s: Δln[Q] = -1.687 - (-1.200) = -0.487
+> >    * The constant decrease in ln[Q] per fixed time interval confirms the plot is linear. Therefore, the reaction is **first order** with respect to Q.
+> >
+> > 3. **Calculate the rate constant k:**
+> >    * The gradient of the ln[Q] vs time graph equals -k:
+> >      Gradient = Δln[Q] / Δtime = (-2.170 - (-0.223)) / (400 - 0) = -1.947 / 400 = -4.87 × 10⁻³ s⁻¹
+> >    * Therefore: k = 4.87 × 10⁻³ s⁻¹
+> >    * **Units:** s⁻¹ (consistent with a first-order rate constant)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Evaluating Mass Loss vs Gas Syringe for H₂-Producing Reactions
+> **Question:** Zinc metal reacts with dilute sulfuric acid according to the equation:
+> $$\\\\text{Zn(s)} + \\\\text{H}_2\\\\text{SO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{ZnSO}_4\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
+> A student suggests following the reaction rate by placing the flask on a balance and recording the decrease in mass over time.
+>
+> 1. Explain why measuring mass loss is **not** a suitable technique for this reaction, despite a gas being produced.
+> 2. Suggest a more appropriate experimental technique and justify your choice.
+> 3. State one reason why collecting H₂ gas over water would also be unsuitable in this experiment.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> >
+> > 1. **Why mass loss is unsuitable:**
+> >    * Hydrogen gas (H₂) has a very low molar mass of only 2.0 g mol⁻¹
+> >    * Even when several moles of H₂ are produced, the total mass lost from the flask is extremely small (e.g., producing 0.01 mol H₂ loses only 0.020 g).
+> >    * This mass loss falls within the uncertainty of standard laboratory balances (typically ±0.01 g), making the measurements unreliable and the calculated rates inaccurate.
+> >
+> > 2. **More appropriate technique:**
+> >    * Use a **gas syringe** connected to the sealed flask to measure the volume of H₂ evolved over time.
+> >    * *Justification:* The gas syringe directly measures volume changes, which are large and easily measurable even for small amounts of H₂ produced, giving an accurate and continuous record of gas evolution.
+> >
+> > 3. **Why gas collection over water is also unsuitable:**
+> >    * Although H₂ has low solubility in water (making it theoretically collectible over water), the practical issue is that very light gas bubbles escape rapidly and are difficult to direct into the collection tube, leading to significant gas loss and underestimated volumes.
+> >    * Additionally, water vapour pressure introduces a systematic error in the recorded gas volume at elevated temperatures.
 `,
     keyPoints: [
       'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
       'Quenching stops reactions by rapid cooling or chemical neutralization; weak bases (like NaHCO3) are used to neutralize acid catalysts without causing side-hydrolysis of esters.',
       'In colorimetry, a filter matching the complementary color of the solution (e.g., a blue filter for an orange-brown bromine solution) must be chosen to ensure maximum light absorbance.',
-      'Clock reactions use a small, limiting reagent to delay color change, allowing the calculation of initial rate (1/t) before reactant concentrations change significantly.'
+      'Clock reactions use a small, limiting reagent to delay color change, allowing the calculation of initial rate (1/t) before reactant concentrations change significantly.',
+      'Plotting ln[A] against time gives a straight line for a first-order reaction; the gradient equals −k and has units of s⁻¹.',
+      'Mass loss is an unreliable technique for reactions producing low molar mass gases (e.g., H₂, Mr = 2.0) because the mass change is too small to measure accurately; a gas syringe is preferred.'
     ]
   },
   {
@@ -1123,13 +1184,90 @@ export const parts: LessonPart[] = [
 > >      $$\\\\text{Rate factor} = (2)^2 \\\\times (3)^0 \\\\times \\\\left(\\\\frac{1}{2}\\\\right)^1$$
 > >      $$\\\\text{Rate factor} = 4 \\\\times 1 \\\\times \\\\frac{1}{2} = 2$$
 > >      *Final answer:* The overall rate of reaction doubles (increases by a factor of 2).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Deducing Orders with Non-Isolated Conditions & Calculating Unknown Concentrations
+> **Question:** The initial rate of the reaction between compounds D and E was investigated at a constant temperature:
+> $$\\\\text{D} + \\\\text{E} \\\\rightarrow \\\\text{Products}$$
+> The following table shows the experimental results:
+>
+> | Experiment | [D] / mol dm⁻³ | [E] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
+> | :---: | :---: | :---: | :---: |
+> | 1 | 0.150 | 0.200 | $3.00 \\\\times 10^{-4}$ |
+> | 2 | 0.300 | 0.200 | $1.20 \\\\times 10^{-3}$ |
+> | 3 | 0.450 | 0.400 | $5.40 \\\\times 10^{-3}$ |
+> | 4 | $x$ | 0.600 | $1.62 \\\\times 10^{-2}$ |
+>
+> 1. Deduce the order of reaction with respect to D, showing your reasoning from the data.
+> 2. Deduce the order of reaction with respect to E. Note that there are no two experiments where [D] is held constant while [E] varies. Show your step-by-step reasoning.
+> 3. Write the rate equation for the reaction and calculate the rate constant, $k$, stating its units.
+> 4. Calculate the unknown concentration $x$ of reactant D in Experiment 4.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> >
+> > 1. **Deduce order with respect to D:**
+> >    * Compare Experiment 1 and Experiment 2: $[\\\\text{E}]$ is constant at $0.200\\\\text{ mol dm}^{-3}$. $[\\\\text{D}]$ is doubled (from $0.150$ to $0.300$).
+> >    * The initial rate increases by: $\\\\frac{1.20 \\\\times 10^{-3}}{3.00 \\\\times 10^{-4}} = 4$
+> >    * Since $2^{\\\\text{order}} = 4$, the order with respect to D is **2** (Second Order).
+> >
+> > 2. **Deduce order with respect to E:**
+> >    * Compare Experiment 2 and Experiment 3: Both tacks change. $[\\\\text{D}]$ increases from $0.300$ to $0.450$ (factor of $1.5$). $[\\\\text{E}]$ doubles from $0.200$ to $0.400$ (factor of $2$).
+> >    * Let the order with respect to E be $y$. We know:
+> >      $$\\\\text{Rate factor} = (1.5)^2 \\\\times (2)^y = \\\\frac{5.40 \\\\times 10^{-3}}{1.20 \\\\times 10^{-3}}$$
+> >      $$2.25 \\\\times 2^y = 4.5$$
+> >      $$2^y = \\\\frac{4.5}{2.25} = 2$$
+> >    * Since $2^y = 2$, the order with respect to E is **1** (First Order).
+> >
+> > 3. **Write rate equation & calculate $k$:**
+> >    * *Rate Equation:* $\\\\text{Rate} = k[\\\\text{D}]^2[\\\\text{E}]$
+> >    * Rearranging for $k$ using Experiment 1:
+> >      $$k = \\\\frac{\\\\text{Rate}}{[\\\\text{D}]^2[\\\\text{E}]} = \\\\frac{3.00 \\\\times 10^{-4}}{(0.150)^2 \\\\times (0.200)}$$
+> >      $$k = \\\\frac{3.00 \\\\times 10^{-4}}{0.0225 \\\\times 0.200} = \\\\frac{3.00 \\\\times 10^{-4}}{4.50 \\\\times 10^{-3}} = 0.0667$$
+> >    * *Units:* $\\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$ (for third-order reaction)
+> >    * *Final Answer:* $k = 0.0667\\\\text{ dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$
+> >
+> > 4. **Calculate unknown concentration $x$:**
+> >    * Substitute Experiment 4 data into the rate equation:
+> >      $$\\\\text{Rate}_4 = k[\\\\text{D}]_4^2[\\\\text{E}]_4 \\\\implies 1.62 \\\\times 10^{-2} = 0.0667 \\\\times x^2 \\\\times (0.600)$$
+> >      $$1.62 \\\\times 10^{-2} = 0.0400 \\\\times x^2$$
+> >      $$x^2 = \\\\frac{1.62 \\\\times 10^{-2}}{0.0400} = 0.405$$
+> >      $$x = \\\\sqrt{0.405} = 0.636\\\\text{ mol dm}^{-3}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: The Isolation Method & Pseudo-First-Order Kinetics
+> **Question:** The hydrolysis of ethyl ethanoate was monitored in the presence of an acid catalyst:
+> $$\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\xrightarrow{\\\\text{H}^+} \\\\text{CH}_3\\\\text{COOH(aq)} + \\\\text{CH}_3\\\\text{CH}_2\\\\text{OH(aq)}$$
+> The reaction rate is found to follow the rate law: $\\\\text{Rate} = k[\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3][\\\\text{H}_2\\\\text{O}]$.
+> In a laboratory experiment, the initial concentration of ethyl ethanoate is $0.020\\\\text{ mol dm}^{-3}$, while the water concentration is approximately $55.5\\\\text{ mol dm}^{-3}$ (in huge excess).
+>
+> 1. Explain why the reaction appears to follow first-order kinetics (pseudo-first-order) with respect to ethyl ethanoate under these conditions.
+> 2. Write the simplified rate equation that represents this pseudo-first-order reaction, defining the relationship between the apparent rate constant ($k_{\\\\text{obs}}$) and the true rate constant ($k$).
+> 3. Suggest one advantage of using the isolation method (large excess of all reactants except one) in kinetic investigations.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> >
+> > 1. **Explain Pseudo-First-Order behavior:**
+> >    * Because water ($\\\\text{H}_2\\\\text{O}$) is in massive excess compared to ethyl ethanoate ($55.5\\\\text{ mol dm}^{-3}$ vs $0.020\\\\text{ mol dm}^{-3}$), the concentration of water remains virtually unchanged (constant) throughout the reaction.
+> >    * Since $[\\\\text{H}_2\\\\text{O}]$ is effectively constant, the rate depends only on the changing concentration of ethyl ethanoate.
+> >
+> > 2. **Simplified Rate Equation:**
+> >    * The simplified rate equation is:
+> >      $$\\\\text{Rate} = k_{\\\\text{obs}}[\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3]$$
+> >    * Where $k_{\\\\text{obs}} = k[\\\\text{H}_2\\\\text{O}]$. Under these conditions, the product of the true rate constant $k$ and the constant water concentration is grouped into a single observable rate constant.
+> >
+> > 3. **Advantage of Isolation Method:**
+> >    * It simplifies the mathematical analysis. By keeping the concentrations of all reactants except one constant, we can isolate and determine the order with respect to that single reactant directly from concentration-time or rate-concentration graphs.
 `,
     keyPoints: [
       'Reaction orders can only be determined experimentally (e.g. using initial rates table data) and cannot be predicted from the balanced equation stoichiometry.',
       'The rate constant k links reaction rate to concentrations at a specific temperature; its value is constant at a constant temperature but increases as temperature rises.',
       'The units of k vary depending on the overall order of the reaction and are deduced by rearranging the rate equation.',
       'Average rate of reaction is calculated by dividing the change in reactant/product concentration by the time interval (\\\\Delta[C]/\\\\Delta t).',
-      'Predicting the effect of changing concentration on rate involves raising the change factor to the power of the reactant order (e.g., doubling concentration for a second-order reactant increases rate by 2^2 = 4).'
+      'Predicting the effect of changing concentration on rate involves raising the change factor to the power of the reactant order (e.g., doubling concentration for a second-order reactant increases rate by 2^2 = 4).',
+      'In tables where no two experiments keep a reactant constant, use a previously determined order to set up a ratio equation and isolate the unknown order.',
+      'Under pseudo-first-order conditions (isolation method), a reactant in massive excess has a virtually constant concentration; its term is absorbed into the observed rate constant (k_obs).'
     ],
     equationVisualizer: {
       reactants: [['NO', '#ef4444'], ['O₂', '#3b82f6']],
