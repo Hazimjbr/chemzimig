@@ -246,3 +246,9 @@
      - **Hard (5 أسئلة):** حساب $\Delta H^\theta$ بالكامل من بيانات الإنتروبي، درجة الانتقال لتفاعل $\Delta H < 0$ و $\Delta S_{\text{sys}} < 0$، تأثير درجة الحرارة على $K$ لتفاعل طارد للحرارة، حساب $\Delta H$ لتوازن $\text{Fe}^{2+}/\text{Ag}^+$، مقارنة Ea مقابل $K$ في جدوى التفاعل.
    - إصلاح خطأ Build ECMAScript (فاصلة مفقودة بين عناصر مصفوفة الأسئلة).
 
+3. **إضافة رسمة Autocatalysis S-Curve التفاعلية في Topic 13 Part 5:**
+   - نقل وتكييف رسمة منحنى التحفيز الذاتي (S-shaped curve) من Topic 11 (Kinetics) إلى موقعها المناسب في Topic 13 Part 5 (Temperature & Equilibria) عند شرح ظاهرة Autocatalysis.
+   - تخصيص الرسمة لـ Topic 13 بإضافة مثال كيميائي دقيق (تفاعل MnO₄⁻ مع C₂O₄²⁻ وتكوّن Mn²⁺ كمحفز ذاتي).
+   - إضافة أرقام دائرية ①②③ لتمييز المراحل الثلاث بوضوح (Slow Start, Acceleration, Deceleration).
+   - استخدام marker IDs فريدة (`axisarrow-l3`, `labelarrow-l3`) لمنع تعارض عناصر SVG عند عرض الدرسين معاً في نفس الصفحة.
+

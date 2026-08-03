@@ -1,6 +1,43 @@
 import { LessonPart } from '../../../registry';
 import { svgToken } from '../../../svgToken';
 
+const autocatalysisCurveSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="axisarrow-l3" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="labelarrow-l3" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
+    </marker>
+    <marker id="labelarrow-l3g" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#10b981" />
+    </marker>
+  </defs>
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Autocatalysis: Reactant Concentration vs. Time</text>
+  <g transform="translate(150, 40)">
+    <!-- Axes -->
+    <line x1="50" y1="270" x2="50" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#axisarrow-l3)" />
+    <line x1="50" y1="270" x2="750" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#axisarrow-l3)" />
+    <text x="-10" y="155" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 -10 155)" text-anchor="middle">[Reactant] / mol dm&#x207B;&#xB3;</text>
+    <text x="740" y="290" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Time</text>
+    <!-- S-Curve -->
+    <path d="M 50,70 L 120,70 C 220,70 230,90 280,150 C 330,210 380,260 550,260 L 700,260" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <!-- Phase 1: Slow start -->
+    <text x="140" y="45" fill="#94a3b8" font-size="11" font-weight="500">Slow start — no autocatalyst product yet</text>
+    <path d="M 140,50 L 100,65" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow-l3)" />
+    <!-- Phase 2: Acceleration -->
+    <text x="370" y="108" fill="#10b981" font-size="11" font-weight="600">Speeds up as autocatalyst product forms</text>
+    <path d="M 370,113 L 265,138" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow-l3g)" />
+    <!-- Phase 3: Slowdown -->
+    <text x="480" y="215" fill="#94a3b8" font-size="11" font-weight="500">Slows as reactants are depleted</text>
+    <path d="M 480,220 L 430,245" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow-l3)" />
+    <!-- Phase labels at bottom -->
+    <text x="85" y="295" fill="#64748b" font-size="9.5" text-anchor="middle">① Slow</text>
+    <text x="265" y="295" fill="#64748b" font-size="9.5" text-anchor="middle">② Acceleration</text>
+    <text x="490" y="295" fill="#64748b" font-size="9.5" text-anchor="middle">③ Deceleration</text>
+  </g>
+</svg>`;
+
 export const lessonTitle = "Chemical Equilibria";
 export const lessonNumber = 3;
 
@@ -1216,13 +1253,20 @@ ${svgToken(`<svg viewBox="0 0 1000 360" class="w-full h-auto rounded-lg border b
 > * Therefore, adding a catalyst does not shift the equilibrium position or change the equilibrium composition; it only decreases the time required to reach equilibrium.
 
 > [!NOTE]
-> ### 🔄 Autocatalysis
-> In some chemical reactions, one of the products formed acts as a catalyst for the reaction. This phenomenon is known as **autocatalysis**.
-> * **Concentration-Time Profile:** Autocatalyzed reactions exhibit a characteristic **S-shaped curve** on a concentration-time graph.
+> ### 🔄 Autocatalysis in Equilibrium Reactions
+> In some chemical reactions, one of the products formed acts as a catalyst for the reaction itself. This phenomenon is known as **autocatalysis**.
+>
+> **Classic Example:** The reaction of ethanedioate ions with manganate(VII) ions:
+> $$\\text{MnO}_4^-(\\text{aq}) + \\text{C}_2\\text{O}_4^{2-}(\\text{aq}) \\rightarrow \\text{Mn}^{2+}(\\text{aq}) + \\text{CO}_2(\\text{g})$$
+> The Mn²⁺ ions formed are the **autocatalyst** — they catalyse further reaction between MnO₄⁻ and C₂O₄²⁻.
+>
+> ${svgToken(autocatalysisCurveSvg)}
+>
+> * **Concentration-Time Profile:** The graph above shows the characteristic **S-shaped (sigmoidal) curve**.
 > * **Phases of the Reaction:**
->   1. **Slow Start:** The reaction starts slowly because no catalyst is initially present.
->   2. **Rapid Acceleration:** As the reaction proceeds, the autocatalyst product is formed, speeding up the rate.
->   3. **Deceleration:** Finally, the rate slows down as reactants are depleted.
+>   1. **① Slow Start:** Reaction is slow initially — no autocatalyst (Mn²⁺) is yet present.
+>   2. **② Rapid Acceleration:** Mn²⁺ builds up and catalyses the reaction, dramatically increasing the rate.
+>   3. **③ Deceleration:** Eventually, reactants (MnO₄⁻, C₂O₄²⁻) are depleted and the rate falls to zero.
 `,
         keyPoints: [
             'Reaction quotient Q has the same mathematical form as K but uses non-equilibrium values.',
