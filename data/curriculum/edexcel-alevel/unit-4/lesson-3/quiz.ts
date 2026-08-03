@@ -229,5 +229,170 @@ export const lessonQuiz = [
       { text: "-62.1 kJ mol⁻¹", isCorrect: false }
     ],
     explanation: "* First, find surroundings entropy: ΔStotal = ΔSsystem + ΔSsurroundings\n* +47.64 = -208.3 + ΔSsurroundings ⟹ ΔSsurroundings = +255.94 J K⁻¹ mol⁻¹\n* Use the surroundings entropy equation: ΔSsurroundings = -ΔH / T\n* +255.94 = -ΔH / 298 ⟹ ΔH = -255.94 × 298 = -76270 J mol⁻¹ ≈ -76.3 kJ mol⁻¹"
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-EASY-20260803-21",
+    question: "Which equation correctly relates the standard total entropy change to the equilibrium constant K?",
+    options: [
+      { text: "ΔS°total = R ln K", isCorrect: true },
+      { text: "ΔS°total = R × K", isCorrect: false },
+      { text: "ΔS°total = RT ln K", isCorrect: false },
+      { text: "ΔS°total = -R ln K", isCorrect: false }
+    ],
+    explanation: "* The thermodynamic relationship linking entropy and the equilibrium constant is: ΔS°total = R ln K.\n* Where R = 8.31 J K⁻¹ mol⁻¹ is the gas constant.\n* This can be rearranged to K = e^(ΔS°total / R)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-EASY-20260803-22",
+    question: "A reaction has a large positive ΔS°total (≫ 0). What does this tell us about the equilibrium constant K?",
+    options: [
+      { text: "K ≫ 1 — reaction proceeds virtually to completion", isCorrect: true },
+      { text: "K ≪ 1 — equilibrium lies far to the left", isCorrect: false },
+      { text: "K = 1 — equal amounts of reactants and products", isCorrect: false },
+      { text: "K = 0 — reaction does not proceed", isCorrect: false }
+    ],
+    explanation: "* Since ΔS°total = R ln K, a large positive ΔS°total means ln K is large and positive.\n* Therefore K ≫ 1 and the equilibrium position lies far to the right.\n* The reaction goes virtually to completion."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-EASY-20260803-23",
+    question: "What does it mean for a reaction to be 'thermodynamically feasible but kinetically stable' at room temperature?",
+    options: [
+      { text: "ΔS°total > 0 but activation energy is so high the reaction does not proceed without a catalyst or ignition source", isCorrect: true },
+      { text: "ΔS°total < 0 and K < 1 at room temperature", isCorrect: false },
+      { text: "The reaction proceeds rapidly without any energy input", isCorrect: false },
+      { text: "The forward and reverse rates are equal at room temperature", isCorrect: false }
+    ],
+    explanation: "* Thermodynamically feasible means ΔS°total > 0 (K > 1) — the reaction is energetically favourable.\n* Kinetically stable means the activation energy Eₐ is very high, so molecules cannot overcome it at room temperature.\n* Example: a H₂ / O₂ gas mixture sits indefinitely at room temperature but explodes when ignited."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-24",
+    question: "The standard total entropy change for a reaction is +24.93 J K⁻¹ mol⁻¹. Calculate K at this temperature. (R = 8.31 J K⁻¹ mol⁻¹)",
+    options: [
+      { text: "K ≈ 20.1", isCorrect: true },
+      { text: "K ≈ 3.00", isCorrect: false },
+      { text: "K ≈ 62.1", isCorrect: false },
+      { text: "K ≈ 0.05", isCorrect: false }
+    ],
+    explanation: "* Use K = e^(ΔS°total / R).\n* ΔS°total / R = 24.93 / 8.31 = 2.998 ≈ 3.00.\n* K = e^3.00 ≈ 20.1.\n* This moderate K confirms significant concentrations of both reactants and products at equilibrium."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-25",
+    question: "A reaction has K = 1.00 × 10⁻⁵. Calculate ΔS°total. (R = 8.31 J K⁻¹ mol⁻¹)",
+    options: [
+      { text: "ΔS°total = −95.6 J K⁻¹ mol⁻¹", isCorrect: true },
+      { text: "ΔS°total = +95.6 J K⁻¹ mol⁻¹", isCorrect: false },
+      { text: "ΔS°total = −41.6 J K⁻¹ mol⁻¹", isCorrect: false },
+      { text: "ΔS°total = +41.6 J K⁻¹ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "* Use ΔS°total = R ln K.\n* ln(1.00 × 10⁻⁵) = −5 × ln(10) = −5 × 2.303 = −11.51.\n* ΔS°total = 8.31 × (−11.51) = −95.6 J K⁻¹ mol⁻¹.\n* The negative value confirms equilibrium lies far to the left (K ≪ 1)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-26",
+    question: "CaCO₃(s) ⇌ CaO(s) + CO₂(g), ΔH° = +177.9 kJ mol⁻¹, ΔS°system = +160.4 J K⁻¹ mol⁻¹. Calculate ΔS°surroundings at 293 K.",
+    options: [
+      { text: "−607.2 J K⁻¹ mol⁻¹", isCorrect: true },
+      { text: "+607.2 J K⁻¹ mol⁻¹", isCorrect: false },
+      { text: "−151.7 J K⁻¹ mol⁻¹", isCorrect: false },
+      { text: "+160.4 J K⁻¹ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "* ΔS°surroundings = −ΔH / T.\n* ΔS°surroundings = −177900 / 293 = −607.2 J K⁻¹ mol⁻¹.\n* The negative sign reflects that an endothermic reaction absorbs heat from the surroundings, decreasing their entropy."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-27",
+    question: "Using the CaCO₃ decomposition data (ΔS°total at 293 K = −446.8 J K⁻¹ mol⁻¹), what can be concluded about the reaction at 293 K?",
+    options: [
+      { text: "The reaction is non-spontaneous at 293 K because ΔS°total < 0", isCorrect: true },
+      { text: "The reaction is spontaneous at 293 K because ΔH > 0", isCorrect: false },
+      { text: "The reaction is spontaneous because a gas is produced", isCorrect: false },
+      { text: "The reaction is at equilibrium at 293 K", isCorrect: false }
+    ],
+    explanation: "* ΔS°total = ΔS°system + ΔS°surroundings = +160.4 + (−607.2) = −446.8 J K⁻¹ mol⁻¹.\n* Since ΔS°total < 0, the reaction is non-spontaneous at 293 K.\n* The reaction only becomes spontaneous above approximately 1109 K, where ΔS°total becomes positive."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-28",
+    question: "For CaCO₃(s) ⇌ CaO(s) + CO₂(g), ΔH° = +177.9 kJ mol⁻¹ and ΔS°system = +160.4 J K⁻¹ mol⁻¹. At what temperature does the reaction become spontaneous?",
+    options: [
+      { text: "Above approximately 1109 K", isCorrect: true },
+      { text: "Above approximately 293 K", isCorrect: false },
+      { text: "Above approximately 838 K", isCorrect: false },
+      { text: "The reaction is never spontaneous as ΔH > 0", isCorrect: false }
+    ],
+    explanation: "* At the transition temperature: ΔS°total = 0.\n* ΔS°system + ΔS°surroundings = 0 → ΔS°system = ΔH / T.\n* T = ΔH / ΔS°system = 177900 / 160.4 ≈ 1109 K.\n* Above 1109 K, ΔS°total becomes positive and decomposition is spontaneous."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-29",
+    question: "A reaction has ΔS°system = −65.0 J K⁻¹ mol⁻¹ and ΔS°total = +19.93 J K⁻¹ mol⁻¹ at 298 K. Calculate ΔH° for the reaction.",
+    options: [
+      { text: "ΔH° = −25.3 kJ mol⁻¹", isCorrect: true },
+      { text: "ΔH° = +25.3 kJ mol⁻¹", isCorrect: false },
+      { text: "ΔH° = −84.9 kJ mol⁻¹", isCorrect: false },
+      { text: "ΔH° = +39.3 kJ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "* ΔS°surroundings = ΔS°total − ΔS°system = +19.93 − (−65.0) = +84.93 J K⁻¹ mol⁻¹.\n* ΔS°surroundings = −ΔH / T → ΔH = −ΔS°surroundings × T.\n* ΔH = −84.93 × 298 = −25,309 J mol⁻¹ ≈ −25.3 kJ mol⁻¹.\n* The negative sign confirms this is an exothermic reaction."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-30",
+    question: "For the Haber Process: N₂(g) + 3H₂(g) ⇌ 2NH₃(g), ΔH° = −92 kJ mol⁻¹. What happens to K as temperature increases and why?",
+    options: [
+      { text: "K decreases because ΔS°surroundings becomes less positive, reducing ΔS°total", isCorrect: true },
+      { text: "K increases because higher temperature always increases entropy", isCorrect: false },
+      { text: "K is unchanged because it only depends on concentration", isCorrect: false },
+      { text: "K increases because the forward exothermic reaction is favoured by heat", isCorrect: false }
+    ],
+    explanation: "* ΔS°surroundings = −ΔH / T = +92000 / T (positive because ΔH < 0).\n* As T increases, ΔS°surroundings decreases (becomes less positive).\n* ΔS°total = ΔS°system + ΔS°surroundings therefore decreases.\n* Since K = e^(ΔS°total / R), a lower ΔS°total gives a smaller K.\n* Consistent with Le Chatelier: raising temperature shifts exothermic equilibria to the left, decreasing K."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-31",
+    question: "A reaction has ΔH° = −85 kJ mol⁻¹ and ΔS°system = −120 J K⁻¹ mol⁻¹. At what temperature does the reaction change from spontaneous to non-spontaneous?",
+    options: [
+      { text: "T ≈ 708 K", isCorrect: true },
+      { text: "T ≈ 525 K", isCorrect: false },
+      { text: "T ≈ 850 K", isCorrect: false },
+      { text: "The reaction is always spontaneous", isCorrect: false }
+    ],
+    explanation: "* At the transition temperature, ΔS°total = 0.\n* ΔS°system + (−ΔH / T) = 0 → −120 + 85000 / T = 0.\n* T = 85000 / 120 ≈ 708 K.\n* Below 708 K: ΔS°total > 0 (spontaneous). Above 708 K: ΔS°total < 0 (non-spontaneous).\n* This occurs because the large positive ΔS°surroundings dominates at lower temperatures."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-32",
+    question: "For Fe²⁺(aq) + Ag⁺(aq) ⇌ Fe³⁺(aq) + Ag(s): ΔS°total = +47.64 J K⁻¹ mol⁻¹, ΔS°system = −208.3 J K⁻¹ mol⁻¹ at 298 K. Calculate ΔH° in kJ mol⁻¹.",
+    options: [
+      { text: "−76.3 kJ mol⁻¹", isCorrect: true },
+      { text: "+76.3 kJ mol⁻¹", isCorrect: false },
+      { text: "−255.9 kJ mol⁻¹", isCorrect: false },
+      { text: "+255.9 kJ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "* ΔS°surroundings = ΔS°total − ΔS°system = +47.64 − (−208.3) = +255.94 J K⁻¹ mol⁻¹.\n* ΔS°surroundings = −ΔH / T → +255.94 = −ΔH / 298.\n* ΔH = −255.94 × 298 = −76,270 J mol⁻¹ = −76.3 kJ mol⁻¹.\n* The negative sign confirms this is exothermic — consistent with the large positive ΔS°surroundings."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-33",
+    question: "Why is the thermodynamic equilibrium constant K dimensionless, even when experimental Kc or Kp values have units?",
+    options: [
+      { text: "Each concentration/pressure is divided by its standard value (1 mol dm⁻³ or 1 atm), giving a pure number", isCorrect: true },
+      { text: "Because K is calculated from mole fractions which are always unitless", isCorrect: false },
+      { text: "Because ΔS°total has no units so K must also be unitless", isCorrect: false },
+      { text: "Because K only applies to gas-phase reactions where pressure cancels", isCorrect: false }
+    ],
+    explanation: "* In the thermodynamic derivation, each concentration term is divided by the standard concentration c° = 1 mol dm⁻³, making each term dimensionless.\n* Similarly, each partial pressure is divided by standard pressure p° = 1 atm.\n* Since the numerical value of the standard is 1, the numbers remain unchanged but units cancel.\n* Therefore K is always dimensionless in the thermodynamic sense."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-EASY-20260803-34",
+    question: "The surroundings entropy change is given by ΔSsurr = −ΔH / T. For an exothermic reaction (ΔH < 0) at 298 K, what is the sign of ΔSsurr?",
+    options: [
+      { text: "Positive — heat released to surroundings increases their entropy", isCorrect: true },
+      { text: "Negative — exothermic reactions always decrease surroundings entropy", isCorrect: false },
+      { text: "Zero — surroundings entropy only changes for endothermic reactions", isCorrect: false },
+      { text: "Cannot be determined without knowing ΔSsystem", isCorrect: false }
+    ],
+    explanation: "* ΔSsurr = −ΔH / T.\n* For an exothermic reaction: ΔH < 0, so −ΔH > 0, and ΔSsurr > 0.\n* When heat is released to the surroundings, the particles in the surroundings gain kinetic energy and their entropy increases.\n* This is why many exothermic reactions are spontaneous — the positive ΔSsurr can outweigh a negative ΔSsystem."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-35",
+    question: "Two reactions both have ΔS°total = +50 J K⁻¹ mol⁻¹. Reaction A has Eₐ = 20 kJ mol⁻¹; Reaction B has Eₐ = 200 kJ mol⁻¹. Which statement is correct?",
+    options: [
+      { text: "Reaction A proceeds rapidly; Reaction B is kinetically stable and needs a catalyst or high temperature", isCorrect: true },
+      { text: "Both reactions proceed at the same rate since they have the same K", isCorrect: false },
+      { text: "Reaction B proceeds faster because higher Eₐ releases more energy", isCorrect: false },
+      { text: "Neither reaction proceeds because ΔS°total is too small", isCorrect: false }
+    ],
+    explanation: "* Both reactions are thermodynamically feasible with the same K = e^(50/8.31) ≈ 400.\n* Rate depends on activation energy, not thermodynamics.\n* Reaction A (Eₐ = 20 kJ mol⁻¹): many molecules have sufficient energy at room temperature — fast reaction.\n* Reaction B (Eₐ = 200 kJ mol⁻¹): very few molecules have sufficient energy — kinetically stable, needs a catalyst or high temperature.\n* This illustrates the fundamental difference between thermodynamic feasibility and kinetic stability."
   }
 ];
