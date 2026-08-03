@@ -394,5 +394,60 @@ export const lessonQuiz = [
       { text: "Neither reaction proceeds because ΔS°total is too small", isCorrect: false }
     ],
     explanation: "* Both reactions are thermodynamically feasible with the same K = e^(50/8.31) ≈ 400.\n* Rate depends on activation energy, not thermodynamics.\n* Reaction A (Eₐ = 20 kJ mol⁻¹): many molecules have sufficient energy at room temperature — fast reaction.\n* Reaction B (Eₐ = 200 kJ mol⁻¹): very few molecules have sufficient energy — kinetically stable, needs a catalyst or high temperature.\n* This illustrates the fundamental difference between thermodynamic feasibility and kinetic stability."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-36",
+    question: "The relation between Kp and Kc is given by: Kp = Kc(0.0821 T)^(Δn). For the following equilibrium at 500 K:\n2P(g) + Q(g) ⇌ R(g)\nWhat is the value of the exponent Δn?",
+    options: [
+      { text: "-2", isCorrect: true },
+      { text: "+2", isCorrect: false },
+      { text: "-1", isCorrect: false },
+      { text: "+1", isCorrect: false }
+    ],
+    explanation: "* The term Δn represents the change in the number of moles of gaseous products minus gaseous reactants.\n* For the equation: 2P(g) + Q(g) ⇌ R(g), the number of gaseous product moles is 1 (from R).\n* The number of gaseous reactant moles is 2 + 1 = 3 (from 2P and Q).\n* Therefore, Δn = 1 - 3 = -2."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-37",
+    question: "Consider the equilibrium reaction: H₂(g) + I₂(g) ⇌ 2HI(g). In a 1.0 dm³ container, the equilibrium concentrations determined from a reaction graph are [HI] = 3.5 × 10⁻³ mol dm⁻³, [H₂] = [I₂] = 0.35 × 10⁻³ mol dm⁻³. Calculate Kc for this reaction.",
+    options: [
+      { text: "100", isCorrect: true },
+      { text: "10", isCorrect: false },
+      { text: "100 dm³ mol⁻¹", isCorrect: false },
+      { text: "10 dm³ mol⁻¹", isCorrect: false }
+    ],
+    explanation: "* Write the Kc expression: Kc = [HI]² / ([H₂][I₂]).\n* Substitute the equilibrium values: Kc = (3.5 × 10⁻³)² / ((0.35 × 10⁻³) × (0.35 × 10⁻³)).\n* Calculate the quotient: Kc = (1.225 × 10⁻⁵) / (1.225 × 10⁻⁷) = 100.\n* In this reaction, Δn = 2 - (1 + 1) = 0, so the units cancel out completely, making Kc unitless."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-38",
+    question: "The equilibrium constant K for a reaction at 300 K is 2.50 × 10⁴. Using the relation ΔS°total = R ln K (where R = 8.31 J mol⁻¹ K⁻¹), calculate the total entropy change for the reaction.",
+    options: [
+      { text: "+84.1 J mol⁻¹ K⁻¹", isCorrect: true },
+      { text: "-84.1 J mol⁻¹ K⁻¹", isCorrect: false },
+      { text: "+25.2 J mol⁻¹ K⁻¹", isCorrect: false },
+      { text: "+198.4 J mol⁻¹ K⁻¹", isCorrect: false }
+    ],
+    explanation: "* Substitute K and R values into the equation: ΔS°total = R ln K.\n* Calculate natural log: ln(2.50 × 10⁴) = ln(25000) ≈ 10.1266.\n* Multiply by the gas constant: ΔS°total = 8.31 × 10.1266 ≈ +84.15 J mol⁻¹ K⁻¹.\n* The positive total entropy change confirms that the reaction is thermodynamically spontaneous at this temperature."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-MEDIUM-20260803-39",
+    question: "For the exothermic industrial reaction: 2P(g) + Q(g) ⇌ R(g) (ΔH < 0), thermodynamics predicts the highest yield of R(g) is achieved at low temperatures. Why is a high compromise temperature used industrially instead?",
+    options: [
+      { text: "To increase the rate of reaction to make the process commercially viable", isCorrect: true },
+      { text: "To shift the equilibrium position to the right to increase the yield of R", isCorrect: false },
+      { text: "To increase the activation energy of the forward reaction", isCorrect: false },
+      { text: "To increase the value of Kp for this exothermic reaction", isCorrect: false }
+    ],
+    explanation: "* Although a lower temperature shifts the equilibrium to the product side, the rate of reaction would be too slow.\n* A high compromise temperature provides react gas molecules with higher kinetic energy, leading to more frequent and successful collisions.\n* This allows the system to reach equilibrium quickly enough to be profitable, despite a slightly lower yield."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L3-HARD-20260803-40",
+    question: "Consider the equilibrium reaction: CH₄(g) + H₂O(g) ⇌ CO(g) + 3H₂(g) carried out at 2.0 atm pressure. At equilibrium, the amounts are: CH₄ = 0.80 mol, H₂O = 0.80 mol, CO = 1.20 mol, and H₂ = 3.60 mol. Calculate the value and units of Kp.",
+    options: [
+      { text: "8.54 atm²", isCorrect: true },
+      { text: "4.27 atm²", isCorrect: false },
+      { text: "8.54 atm⁻²", isCorrect: false },
+      { text: "2.14 (no units)", isCorrect: false }
+    ],
+    explanation: "* Calculate total number of moles at equilibrium: Ntotal = 0.80 + 0.80 + 1.20 + 3.60 = 6.40 mol.\n* Find mole fractions (χ = n / Ntotal):\n  * χ(CH₄) = χ(H₂O) = 0.80 / 6.40 = 0.125\n  * χ(CO) = 1.20 / 6.40 = 0.1875\n  * χ(H₂) = 3.60 / 6.40 = 0.5625\n* Determine partial pressures (p = χ × Ptotal, where Ptotal = 2.0 atm):\n  * p(CH₄) = p(H₂O) = 0.125 × 2.0 = 0.25 atm\n  * p(CO) = 0.1875 × 2.0 = 0.375 atm\n  * p(H₂) = 0.5625 × 2.0 = 1.125 atm\n* Substitute into the Kp expression: Kp = (p(CO) × p(H₂)³) / (p(CH₄) × p(H₂O))\n  * Kp = (0.375 × 1.125³) / (0.25 × 0.25) = (0.375 × 1.4238) / 0.0625 = 0.5339 / 0.0625 ≈ 8.54\n* Determine units: (atm × atm³) / (atm × atm) = atm²"
   }
 ];
