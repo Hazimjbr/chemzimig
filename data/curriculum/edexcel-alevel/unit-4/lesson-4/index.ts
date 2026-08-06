@@ -167,6 +167,63 @@ const hclAmmoniaTitrationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox=
   <path d="M 60 286 C 100 282, 140 270, 164 250 C 176 230, 178 180, 180 170 C 182 160, 184 120, 200 112 C 240 108, 340 108, 440 108" fill="none" stroke="#0284c7" stroke-width="3" />
 </svg>`;
 
+const weakAcidKaDeterminationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" class="w-full max-w-[460px] mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Grid Lines -->
+  <line x1="60" y1="320" x2="480" y2="320" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="280" x2="480" y2="280" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="240" x2="480" y2="240" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="200" x2="480" y2="200" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="160" x2="480" y2="160" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="120" x2="480" y2="120" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="80" x2="480" y2="80" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="40" x2="480" y2="40" stroke="#1e293b" stroke-width="1" />
+
+  <!-- Dotted lines for half-equivalence (10 cm3 -> pH 4.76) -->
+  <line x1="140" y1="320" x2="140" y2="225" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3" />
+  <line x1="60" y1="225" x2="140" y2="225" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="140" cy="225" r="5" fill="#10b981" />
+  <text x="150" y="220" fill="#10b981" font-size="11" font-weight="bold">Half-equivalence (pH = 4.76)</text>
+
+  <!-- Dotted lines for equivalence (20 cm3 -> pH 8.8) -->
+  <line x1="220" y1="320" x2="220" y2="144" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" />
+  <line x1="60" y1="144" x2="220" y2="144" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3" />
+  <circle cx="220" cy="144" r="5" fill="#ef4444" />
+  <text x="230" y="140" fill="#ef4444" font-size="11" font-weight="bold">Equivalence Point (pH = 8.8)</text>
+
+  <!-- Axes -->
+  <line x1="60" y1="20" x2="60" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <line x1="60" y1="320" x2="490" y2="320" stroke="#94a3b8" stroke-width="2" />
+
+  <!-- Y-Axis Ticks & Labels (pH 0 to 14) -->
+  <line x1="55" y1="320" x2="60" y2="320" stroke="#94a3b8" stroke-width="2" /><text x="45" y="324" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">0</text>
+  <line x1="55" y1="280" x2="60" y2="280" stroke="#94a3b8" stroke-width="2" /><text x="45" y="284" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">2</text>
+  <line x1="55" y1="240" x2="60" y2="240" stroke="#94a3b8" stroke-width="2" /><text x="45" y="244" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">4</text>
+  <line x1="55" y1="200" x2="60" y2="200" stroke="#94a3b8" stroke-width="2" /><text x="45" y="204" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">6</text>
+  <line x1="55" y1="160" x2="60" y2="160" stroke="#94a3b8" stroke-width="2" /><text x="45" y="164" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">8</text>
+  <line x1="55" y1="120" x2="60" y2="120" stroke="#94a3b8" stroke-width="2" /><text x="45" y="124" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">10</text>
+  <line x1="55" y1="80" x2="60" y2="80" stroke="#94a3b8" stroke-width="2" /><text x="45" y="84" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">12</text>
+  <line x1="55" y1="40" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" /><text x="45" y="44" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">14</text>
+  <text x="20" y="170" fill="#f8fafc" font-size="14" font-weight="bold" transform="rotate(-90 20 170)" text-anchor="middle">pH</text>
+
+  <!-- X-Axis Ticks & Labels (Volume 0 to 50) -->
+  <line x1="60" y1="320" x2="60" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="60" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">0</text>
+  <line x1="140" y1="320" x2="140" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="140" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">10</text>
+  <line x1="220" y1="320" x2="220" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="220" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">20</text>
+  <line x1="300" y1="320" x2="300" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="300" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">30</text>
+  <line x1="380" y1="320" x2="380" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="380" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">40</text>
+  <line x1="460" y1="320" x2="460" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="460" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">50</text>
+  <text x="275" y="365" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Volume of NaOH added/cm³</text>
+
+  <!-- Curve: Weak Acid + Strong Base -->
+  <path d="M 60 260 
+           C 90 250, 110 235, 140 225 
+           C 180 215, 210 205, 218 170
+           C 220 150, 220 120, 222 100
+           C 225 80, 260 65, 340 55
+           C 400 50, 440 50, 480 50" 
+        fill="none" stroke="#a855f7" stroke-width="3" />
+</svg>`;
+
 const titrationCurvesDashboardSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 410" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <text x="490" y="24" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">pH Titration Curves &amp; Indicator Transition Ranges</text>
 
@@ -613,58 +670,111 @@ ${svgToken(protonTransferSvg)}
 > > 1. $[\\text{H}^+] = 10^{-4.80} = 1.58 \\times 10^{-5}\\text{ mol dm}^{-3}$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 10: pH of a Mixture of Strong Acid and Base (Checkpoint Q2)
-> **Question:** Calculate pH of mixture of $20.0\\text{ cm}^3$ of $1.00\\text{ mol dm}^{-3}$ HCl and $5.0\\text{ cm}^3$ of $1.00\\text{ mol dm}^{-3}$ NaOH
+> #### 📝 Worked Example 10: pH of Mixtures of Strong Acids & Bases
+> **Question:** Calculate the pH at $298\\\\text{ K}$ of:
+> * **(a) Acid in Excess:** A mixture of $20.0\\\\text{ cm}^3$ of $1.00\\\\text{ mol dm}^{-3}\\\\text{ HCl}$ and $5.0\\\\text{ cm}^3$ of $1.00\\\\text{ mol dm}^{-3}\\\\text{ NaOH}$.
+> * **(b) Base in Excess:** A mixture of $10.0\\\\text{ cm}^3$ of $0.100\\\\text{ mol dm}^{-3}\\\\text{ HCl}$ and $40.0\\\\text{ cm}^3$ of $0.200\\\\text{ mol dm}^{-3}\\\\text{ NaOH}$.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. $\\text{Moles H}^+ = 1.00 \\times 0.0200 = 0.0200\\text{ mol}$, moles $\\text{OH}^- = 1.00 \\times 0.0050 = 0.0050\\text{ mol}$
-> > 2. $\\text{Excess H}^+ = 0.0200 - 0.0050 = 0.0150\\text{ mol}$
-> > 3. $\\text{Total Volume} = 20.0 + 5.0 = 25.0\\text{ cm}^3 = 0.0250\\text{ dm}^3$
-> > 4. $[\\text{H}^+] = \\frac{0.0150}{0.0250} = 0.600\\text{ mol dm}^{-3} \\implies \\text{pH} = -\\log_{10}(0.600) = 0.22$
+> > **(a) Acid in Excess Solution:**
+> > * 1. **Calculate moles of each reactant:**
+> >      $$\\\\text{Moles of H}^+ = 0.0200\\\\text{ dm}^3 \\\\times 1.00\\\\text{ mol dm}^{-3} = 0.0200\\\\text{ mol}$$
+> >      $$\\\\text{Moles of OH}^- = 0.0050\\\\text{ dm}^3 \\\\times 1.00\\\\text{ mol dm}^{-3} = 0.0050\\\\text{ mol}$$
+> > * 2. **Calculate excess moles of H⁺:**
+> >      $$\\\\text{Excess Moles of H}^+ = 0.0200\\\\text{ mol} - 0.0050\\\\text{ mol} = 0.0150\\\\text{ mol}$$
+> > * 3. **Calculate total volume of mixture:**
+> >      $$\\\\text{Total Volume} = 20.0\\\\text{ cm}^3 + 5.0\\\\text{ cm}^3 = 25.0\\\\text{ cm}^3 = 0.0250\\\\text{ dm}^3$$
+> > * 4. **Calculate [H⁺] and pH:**
+> >      $$[\\\\text{H}^+] = \\\\frac{0.0150\\\\text{ mol}}{0.0250\\\\text{ dm}^3} = 0.600\\\\text{ mol dm}^{-3}$$
+> >      $$\\\\text{pH} = -\\\\log_{10}(0.600) = \\\\mathbf{0.22}$$
+> > 
+> > **(b) Base in Excess Solution:**
+> > * 1. **Calculate moles of each reactant:**
+> >      $$\\\\text{Moles of H}^+ = 0.0100\\\\text{ dm}^3 \\\\times 0.100\\\\text{ mol dm}^{-3} = 1.00 \\\\times 10^{-3}\\\\text{ mol}$$
+> >      $$\\\\text{Moles of OH}^- = 0.0400\\\\text{ dm}^3 \\\\times 0.200\\\\text{ mol dm}^{-3} = 8.00 \\\\times 10^{-3}\\\\text{ mol}$$
+> > * 2. **Calculate excess moles of OH⁻:**
+> >      $$\\\\text{Excess Moles of OH}^- = 8.00 \\\\times 10^{-3}\\\\text{ mol} - 1.00 \\\\times 10^{-3}\\\\text{ mol} = 7.00 \\\\times 10^{-3}\\\\text{ mol}$$
+> > * 3. **Calculate total volume of mixture:**
+> >      $$\\\\text{Total Volume} = 10.0\\\\text{ cm}^3 + 40.0\\\\text{ cm}^3 = 50.0\\\\text{ cm}^3 = 0.0500\\\\text{ dm}^3$$
+> > * 4. **Calculate [OH⁻] and pOH:**
+> >      $$[\\\\text{OH}^-] = \\\\frac{7.00 \\\\times 10^{-3}\\\\text{ mol}}{0.0500\\\\text{ dm}^3} = 0.140\\\\text{ mol dm}^{-3}$$
+> >      $$\\\\text{pOH} = -\\\\log_{10}(0.140) = 0.85$$
+> > * 5. **Calculate pH at 298 K:**
+> >      $$\text{pH} = 14.00 - \text{pOH} = 14.00 - 0.85 = \mathbf{13.15}$$
 
 > [!IMPORTANT]
 > ### 🧮 Calculating the pH of a Dibasic Acid
-> Sulfuric acid ($\text{H₂SO₄}$) dissociates:
-> * $\text{Stage 1: H₂SO₄(aq)} \rightarrow \text{H}^+\text{(aq)} + \text{HSO₄}^-\text{(aq)}$ (100% dissociated)
-> * $\text{Stage 2: HSO₄}^-\text{(aq)} \rightleftharpoons \text{H}^+\text{(aq)} + \text{SO₄}^{2-}\text{(aq)}$ ($K_a = 0.0100\text{ mol dm}^{-3}$)
+> Sulfuric acid ($\\\\text{H}_2\\\\text{SO}_4$) dissociates:
+> * $\\\\text{Stage 1: H}_2\\\\text{SO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{H}^+\\\\text{(aq)} + \\\\text{HSO}_4^-\\\\text{(aq)}$ (100% dissociated)
+> * $\\\\text{Stage 2: HSO}_4^-\\\\text{(aq)} \\\\rightleftharpoons \\\\text{H}^+\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)}$ ($K_a = 0.0100\\\\text{ mol dm}^{-3}$)
 > 
-> For a $0.500\text{ mol dm}^{-3}$ solution of $\text{H₂SO₄}$:
-> 1. Stage 1 yields $[\text{H}^+] = 0.500\text{ mol dm}^{-3}$ and $[\text{HSO₄}^-] = 0.500\text{ mol dm}^{-3}$
-> 2. Let $x$ be the Stage 2 $\text{H}^+$ concentration:
->    $$K_a = \frac{(0.500 + x)x}{0.500 - x} = 0.0100$$
-> 3. Solving the quadratic gives $x = 0.0098\text{ mol dm}^{-3}$
-> 4. Total $[\text{H}^+] = 0.5098\text{ mol dm}^{-3} \implies \text{pH} = -\log(0.5098) = 0.293$
-
+> For a $0.500\\\\text{ mol dm}^{-3}$ solution of $\\\\text{H}_2\\\\text{SO}_4$:
+> 1. Stage 1 yields $[\\\\text{H}^+] = 0.500\\\\text{ mol dm}^{-3}$ and $[\\\\text{HSO}_4^-] = 0.500\\\\text{ mol dm}^{-3}$
+> 2. Let $x$ be the Stage 2 $\\\\text{H}^+$ concentration:
+>    $$K_a = \\\\frac{(0.500 + x)x}{0.500 - x} = 0.0100$$
+> 3. Solving the quadratic gives $x = 0.0098\\\\text{ mol dm}^{-3}$
+> 4. Total $[\\\\text{H}^+] = 0.5098\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pH} = -\\\\log_{10}(0.5098) = 0.293$
+ 
 > [!EXAMPLE]
-> #### 📝 Worked Example 11: pH of Water at Different Temperatures (Checkpoint Q1)
-> **Question:** Calculate water pH at (i) $298\text{ K}$ and (ii) $293\text{ K}$
+> #### 📝 Worked Example 11: pH of Diluted Acids & Bases
+> **Question:** Calculate the pH at $298\\\\text{ K}$ of the following diluted solutions:
+> * **(a) Acid Dilution:** A $10.0\\\\text{ cm}^3$ sample of $0.100\\\\text{ mol dm}^{-3}\\\\text{ HCl(aq)}$ is diluted with distilled water to make a total volume of $1.00\\\\text{ dm}^3$.
+> * **(b) Base Dilution:** A $25.0\\\\text{ cm}^3$ sample of $0.0500\\\\text{ mol dm}^{-3}\\\\text{ NaOH(aq)}$ is diluted with distilled water to make a total volume of $500\\\\text{ cm}^3$.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > * **(i) At $298\text{ K}$:** $[\text{H}^+] = 1.00 \times 10^{-7}\text{ mol dm}^{-3} \implies \text{pH} = 7.00$
-> > * **(ii) At $293\text{ K}$:** $[\text{H}^+] = \sqrt{6.81 \times 10^{-15}} = 8.252 \times 10^{-8}\text{ mol dm}^{-3} \implies \text{pH} = 7.08$
-> > * **Neutrality:** Since $[\text{H}^+] = [\text{OH}^-]$ holds true at all temperatures in pure water, it remains neutral.
-> > * **Endothermic nature:** Heating water from $293\text{ K}$ to $298\text{ K}$ increases $K_w$. According to Le Chatelier's Principle, this shifts the equilibrium to the endothermic direction. Hence, self-ionisation is endothermic.
-
+> > **(a) Acid Dilution Solution:**
+> > * 1. **Calculate the moles of H⁺ in the original sample:**
+> >      $$\\\\text{Moles of H}^+ = C_1 \\\\times V_1 = 0.100\\\\text{ mol dm}^{-3} \\\\times 0.0100\\\\text{ dm}^3 = 1.00 \\\\times 10^{-3}\\\\text{ mol}$$
+> > * 2. **Calculate the new concentration (C₂) in the diluted volume (V₂ = 1.00 dm³):**
+> >      $$C_2 = \\\\frac{\\\\text{Moles}}{V_2} = \\\\frac{1.00 \\\\times 10^{-3}\\\\text{ mol}}{1.00\\\\text{ dm}^3} = 1.00 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}$$
+> > * 3. **Calculate the new pH:**
+> >      $$\\\\text{pH} = -\\\\log_{10}(1.00 \\\\times 10^{-3}) = \\\\mathbf{3.00}$$
+> > 
+> > **(b) Base Dilution Solution:**
+> > * 1. **Calculate the moles of OH⁻ in the original sample:**
+> >      $$\\\\text{Moles of OH}^- = C_1 \\\\times V_1 = 0.0500\\\\text{ mol dm}^{-3} \\\\times 0.0250\\\\text{ dm}^3 = 1.25 \\\\times 10^{-3}\\\\text{ mol}$$
+> > * 2. **Calculate the new concentration (C₂) in the diluted volume (V₂ = 0.500 dm³):**
+> >      $$C_2 = \\\\frac{\\\\text{Moles}}{V_2} = \\\\frac{1.25 \\\\times 10^{-3}\\\\text{ mol}}{0.500\\\\text{ dm}^3} = 2.50 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}$$
+> > * 3. **Calculate pOH of the diluted solution:**
+> >      $$\\\\text{pOH} = -\\\\log_{10}(2.50 \\\\times 10^{-3}) = 2.60$$
+> > * 4. **Calculate pH at 298 K:**
+> >      $$\\\\text{pH} = 14.00 - \\\\text{pOH} = 14.00 - 2.60 = \\\\mathbf{11.40}$$
+ 
 > [!EXAMPLE]
-> #### 📝 Worked Example 12: pH of Strong Bases (Checkpoint Q2)
-> **Question:** Calculate the pH at $298\text{ K}$ of: (a) $0.0100$ NaOH, (b) $0.0500$ Ca(OH)2, (c) $0.0315$ KOH
+> #### 📝 Worked Example 12: pH of Water at Different Temperatures (Checkpoint Q1)
+> **Question:** Calculate water pH at (i) $298\\\\text{ K}$ and (ii) $293\\\\text{ K}$
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > * **(a) NaOH:** $[\text{OH}^-] = 0.0100 \implies \text{pOH} = 2.00 \implies \text{pH} = 12.00$
-> > * **(b) $\text{Ca(OH)₂}$:** Releases 2 moles of hydroxide: $[\text{OH}^-] = 0.100 \implies \text{pOH} = 1.00 \implies \text{pH} = 13.00$
-> > * **(c) KOH:** $[\text{OH}^-] = 0.0315 \implies \text{pOH} = 1.50 \implies \text{pH} = 12.50$
+> > * **(i) At $298\\\\text{ K}$:** $[\\\\text{H}^+] = 1.00 \\\\times 10^{-7}\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pH} = 7.00$
+> > * **(ii) At $293\\\\text{ K}$:** $[\\\\text{H}^+] = \\\\sqrt{6.81 \\\\times 10^{-15}} = 8.252 \\\\times 10^{-8}\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pH} = 7.08$
+> > * **Neutrality:** Since $[\\\\text{H}^+] = [\\\\text{OH}^-]$ holds true at all temperatures in pure water, it remains neutral.
+> > * **Endothermic nature:** Heating water from $293\\\\text{ K}$ to $298\\\\text{ K}$ increases $K_w$. According to Le Chatelier's Principle, this shifts the equilibrium to the endothermic direction. Hence, self-ionisation is endothermic.
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 13: pH of Strong Bases (Checkpoint Q2)
+> **Question:** Calculate the pH at $298\\\\text{ K}$ of: (a) $0.0100\\\\text{ mol dm}^{-3}\\\\text{ NaOH}$, (b) $0.0500\\\\text{ mol dm}^{-3}\\\\text{ Ca(OH)}_2$, (c) $0.0315\\\\text{ mol dm}^{-3}\\\\text{ KOH}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > * **(a) NaOH:** $[\\\\text{OH}^-] = 0.0100\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pOH} = 2.00 \\\\implies \\\\text{pH} = 12.00$
+> > * **(b) $\\\\text{Ca(OH)}_2$:** Releases 2 moles of hydroxide: $[\\\\text{OH}^-] = 0.100\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pOH} = 1.00 \\\\implies \\\\text{pH} = 13.00$
+> > * **(c) KOH:** $[\\\\text{OH}^-] = 0.0315\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pOH} = 1.50 \\\\implies \\\\text{pH} = 12.50$
+ 
 `,
     keyPoints: [
       'A Brønsted-Lowry acid is a proton donor; a base is a proton acceptor.',
       'Conjugate acid-base pairs differ by exactly one H⁺ ion.',
       'Amphiprotic substances can both donate and accept protons.',
-      'Strong acids dissociate fully, whereas weak acids dissociate partially.'
+      'Strong acids and bases dissociate fully, whereas weak ones dissociate partially.',
+      'For mixtures of strong acids and bases, the pH is determined by the concentration of the excess reactant.',
+      'Dilution of a strong acid or base changes the pH according to the new total volume of the solution.'
     ],
     equationVisualizer: {
       reactants: [['HCl', '#3b82f6'], ['H₂O', '#10b981']],
@@ -846,11 +956,68 @@ ${svgToken(protonTransferSvg)}
 > > 2. **Comparison Logic:** Comparing $K_a(\\\\text{HCOOH})$ and $K_a(\\\\text{NH}_4^+)$ determines the pH outcome:
 > >    * If $K_a(\\\\text{HCOOH}) > K_a(\\\\text{NH}_4^+)$, the solution is slightly acidic.
 > >    * If $K_a(\\\\text{HCOOH}) < K_a(\\\\text{NH}_4^+)$, the solution is alkaline.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Percentage Dissociation and Dilution
+> **Question:** Ethanoic acid ($\\\\text{CH}_3\\\\text{COOH}$) has $K_a = 1.74 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}$ at $298\\\\text{ K}$.
+> 1. Calculate the pH and the percentage dissociation of ethanoic acid in a $0.100\\\\text{ mol dm}^{-3}$ solution.
+> 2. Calculate the pH and the percentage dissociation of ethanoic acid in a diluted $0.00100\\\\text{ mol dm}^{-3}$ solution.
+> 3. Compare these values and explain the effect of dilution on percentage dissociation using Le Chatelier's principle.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > **(a) Calculation for $0.100\\\\text{ mol dm}^{-3}$ solution:**
+> > * 1. **Calculate [H⁺]:**
+> >      $$[\\\\text{H}^+] = \\\\sqrt{K_a \\\\times c} = \\\\sqrt{1.74 \\\\times 10^{-5} \\\\times 0.100} = 1.319 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}$$
+> > * 2. **Calculate pH:**
+> >      $$\\\\text{pH} = -\\\\log_{10}(1.319 \\\\times 10^{-3}) = \\\\mathbf{2.88}$$
+> > * 3. **Calculate percentage dissociation:**
+> >      $$\\\\text{Percentage dissociation} = \\\\frac{[\\\\text{H}^+]}{c} \\\\times 100\\\\% = \\\\frac{1.319 \\\\times 10^{-3}}{0.100} \\\\times 100\\\\% = \\\\mathbf{1.32\\\\%}$$
+> > 
+> > **(b) Calculation for diluted $0.00100\\\\text{ mol dm}^{-3}$ solution:**
+> > * 1. **Calculate [H⁺]:**
+> >      $$[\\\\text{H}^+] = \\\\sqrt{K_a \\\\times c} = \\\\sqrt{1.74 \\\\times 10^{-5} \\\\times 0.00100} = 1.319 \\\\times 10^{-4}\\\\text{ mol dm}^{-3}$$
+> > * 2. **Calculate pH:**
+> >      $$\\\\text{pH} = -\\\\log_{10}(1.319 \\\\times 10^{-4}) = \\\\mathbf{3.88}$$
+> > * 3. **Calculate percentage dissociation:**
+> >      $$\\\\text{Percentage dissociation} = \\\\frac{[\\\\text{H}^+]}{c} \\\\times 100\\\\% = \\\\frac{1.319 \\\\times 10^{-4}}{0.00100} \\\\times 100\\\\% = \\\\mathbf{13.2\\\\%}$$
+> > 
+> > **(c) Effect of Dilution & Le Chatelier's Principle:**
+> > * 1. **Comparison:** Dilution of the acid by a factor of 100 (from $0.100$ to $0.00100\\\\text{ mol dm}^{-3}$) increases the percentage dissociation from $1.32\\\\%$ to $13.2\\\\%$ (a 10-fold increase).
+> > * 2. **Equilibrium explanation:** The dissociation equation is:
+> >      $$\\\\text{CH}_3\\\\text{COOH(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\rightleftharpoons \\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{H}_3\\\\text{O}^+\\\\text{(aq)}$$
+> > * 3. Diluting the solution decreases the concentration of all aqueous particles. According to Le Chatelier's principle, the system shifts to the right (the side with more aqueous species, $2$ ions vs $1$ molecule) to oppose the decrease in concentration, leading to a higher fraction of dissociated acid.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Comparing Acid Strength (Inductive Effect)
+> **Question:** Explain why chloroethanoic acid ($\\\\text{CH}_2\\\\text{ClCOOH}$, $\\\\text{p}K_a = 2.86$) is a significantly stronger acid than ethanoic acid ($\\\\text{CH}_3\\\\text{COOH}$, $\\\\text{p}K_a = 4.76$) at $298\\\\text{ K}$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > * 1. **Identify the structural difference:**
+> >      Chloroethanoic acid contains a highly electronegative chlorine atom in place of one hydrogen atom in the methyl group of ethanoic acid.
+> > * 2. **Explain the electron-withdrawing inductive effect:**
+> >      * The chlorine atom is highly electronegative and pulls electron density towards itself through the $\\\\sigma$-bonds.
+> >      * This is known as the **electron-withdrawing inductive effect**.
+> > * 3. **Explain conjugate base stability:**
+> >      * When the acid dissociates, it forms a conjugate base: the chloroethanoate anion ($\\\\text{CH}_2\\\\text{ClCOO}^-$).
+> >      * The electron-withdrawing chlorine atom disperses (spreads out) the negative charge of the carboxylate group ($\\\\text{-COO}^-$).
+> >      * Dispersing the negative charge stabilizes the conjugate base anion.
+> > * 4. **Compare with the ethanoate anion:**
+> >      * In the ethanoate anion ($\\\\text{CH}_3\\\\text{COO}^-$), the methyl group ($\\\\text{-CH}_3$) has an electron-donating inductive effect, which concentrates the negative charge on the carboxylate group, making it less stable and more reactive.
+> > * 5. **Relate stability to acid strength:**
+> >      * Because the chloroethanoate conjugate base is more stable, the dissociation equilibrium lies further to the right:
+> >        $$\\\\text{CH}_2\\\\text{ClCOOH(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\rightleftharpoons \\\\text{CH}_2\\\\text{ClCOO}^-\\\\text{(aq)} + \\\\text{H}_3\\\\text{O}^+\\\\text{(aq)}$$
+> >      * Therefore, chloroethanoic acid dissociates to a greater extent, yielding a higher $K_a$ (and a lower $\\\\text{p}K_a = 2.86$ compared to $4.76$).
 `,
     keyPoints: [
       'Ka is the acid dissociation constant and is temperature-dependent.',
       'pKa is a logarithmic index of Ka, where lower pKa indicates a stronger acid.',
-      'The simplified formula [H⁺] = √(Ka × c) assumes negligible dissociation of HA.'
+      'The simplified formula [H⁺] = √(Ka × c) assumes negligible dissociation of HA.',
+      'Diluting a weak acid increases its percentage dissociation as the equilibrium shifts to oppose the concentration drop.',
+      'Carboxylic acid strength is increased by electron-withdrawing substituents (like chlorine) which stabilize the conjugate base anion.'
     ]
   },
   {
@@ -973,12 +1140,54 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > **(c) Differences with dilute acid ($0.0500\\\\text{ mol dm}^{-3}$):**
 > > * 1. The initial pH will be higher (less acidic, starting around pH 3.03).
 > > * 2. The volume of NaOH required to reach equivalence will be halved ($12.5\\\\text{ cm}^3$ instead of $25.0\\\\text{ cm}^3$).
+ 
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Ka Determination & Diprotic Stoichiometry
+> **Question:** 
+> 1. A student titrates $25.0\\\\text{ cm}^3$ of an unknown weak monoprotic acid ($\\\\text{HA}$) with $0.100\\\\text{ mol dm}^{-3}\\\\text{ NaOH(aq)}$. The resulting titration curve is shown below. Use the graph to determine:
+>    * The volume of $\\\\text{NaOH}$ required to reach equivalence.
+>    * The $\\\\text{p}K_a$ and the acid dissociation constant ($K_a$) of the weak acid.
+> 
+> ${svgToken(weakAcidKaDeterminationSvg)}
+> 
+> 2. The student then titrates a separate $25.0\\\\text{ cm}^3$ sample of a diprotic acid ($\\\\text{H}_2\\\\text{Y}$) of concentration $0.0500\\\\text{ mol dm}^{-3}$ with the same $0.100\\\\text{ mol dm}^{-3}\\\\text{ NaOH(aq)}$. Calculate the volume of $\\\\text{NaOH}$ required to reach the second equivalence point.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > **(a) Monoprotic Acid Ka Determination:**
+> > * **Equivalence volume:** Read the volume at the center of the steep vertical section of the curve:
+> >   $$\\\\text{Volume} = \\\\mathbf{20.0\\\\text{ cm}^3}$$
+> > * **pKa & Ka calculation:**
+> >   * 1. The half-equivalence point occurs at exactly half the equivalence volume:
+> >        $$\\\\text{Half-equivalence volume} = \\\\frac{20.0\\\\text{ cm}^3}{2} = 10.0\\\\text{ cm}^3$$
+> >   * 2. At the half-equivalence point, exactly half the acid $\\\\text{HA}$ has been neutralized into its conjugate base $\\\\text{A}^-$, so $[\\\\text{HA}] = [\\\\text{A}^-]$.
+> >   * 3. Substituting this into the $K_a$ expression gives $\\\\text{pH} = \\\\text{p}K_a$.
+> >   * 4. Read the pH at $10.0\\\\text{ cm}^3$ from the graph:
+> >        $$\\\\text{p}K_a = \\\\text{pH} = \\\\mathbf{4.76}$$
+> >   * 5. Convert $\\\\text{p}K_a$ to $K_a$:
+> >        $$K_a = 10^{-\\\\text{p}K_a} = 10^{-4.76} = \\\\mathbf{1.74 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}}$$
+> > 
+> > **(b) Diprotic Acid Stoichiometry:**
+> > * 1. **Write the overall neutralization equation:**
+> >      $$\\\\text{H}_2\\\\text{Y(aq)} + 2\\\\text{NaOH(aq)} \\\\rightarrow \\\\text{Na}_2\\\\text{Y(aq)} + 2\\\\text{H}_2\\\\text{O(l)}$$
+> > * 2. **Determine reactant stoichiometry:**
+> >      One mole of diprotic acid reacts with two moles of sodium hydroxide:
+> >      $$\\\\text{Reacting mole ratio } \\\\text{H}_2\\\\text{Y} : \\\\text{NaOH} = 1 : 2$$
+> > * 3. **Calculate moles of diprotic acid used:**
+> >      $$\\\\text{Moles of }\\\\text{H}_2\\\\text{Y} = 0.0250\\\\text{ dm}^3 \\\\times 0.0500\\\\text{ mol dm}^{-3} = 1.25 \\\\times 10^{-3}\\\\text{ mol}$$
+> > * 4. **Calculate moles of NaOH needed for complete neutralization:**
+> >      $$\\\\text{Moles of NaOH} = 2 \\\\times (1.25 \\\\times 10^{-3}\\\\text{ mol}) = 2.50 \\\\times 10^{-3}\\\\text{ mol}$$
+> > * 5. **Calculate the volume of NaOH solution required:**
+> >      $$\\\\text{Volume} = \\\\frac{\\\\text{Moles}}{\\\\text{Concentration}} = \\\\frac{2.50 \\\\times 10^{-3}\\\\text{ mol}}{0.100\\\\text{ mol dm}^{-3}} = 0.0250\\\\text{ dm}^3 = \\\\mathbf{25.0\\\\text{ cm}^3}$$
 
 `,
     keyPoints: [
       'Equivalence point pH is determined by salt hydrolysis and depends on acid/base strengths.',
       'An indicator is suitable only if its transition range lies within the steep vertical section of the titration curve.',
-      'Diprotic acids display two distinct equivalence points on their pH titration curves.'
+      'Diprotic acids display two distinct equivalence points on their pH titration curves.',
+      'At the half-equivalence point of a weak acid titration, pH = pKa, allowing experimental determination of Ka.',
+      'The volume of base required to reach the second equivalence point of a diprotic acid is exactly twice that of the first.'
     ]
   },
   {
