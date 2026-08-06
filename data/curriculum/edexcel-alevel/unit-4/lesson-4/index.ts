@@ -61,6 +61,112 @@ const protonTransferSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 
   <text x="740" y="279" fill="#6ee7b7" font-size="10" font-weight="bold" text-anchor="middle">Conjugate Acid-Base Pair 2 (differs by 1 H⁺)</text>
 </svg>`;
 
+const diphoticAcidSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" class="w-full max-w-[460px] mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Grid Lines (horizontal) -->
+  <line x1="60" y1="320" x2="480" y2="320" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="280" x2="480" y2="280" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="240" x2="480" y2="240" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="200" x2="480" y2="200" stroke="#1e293b" stroke-width="1" stroke-dasharray="3,3" />
+  <line x1="60" y1="160" x2="480" y2="160" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="120" x2="480" y2="120" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="80" x2="480" y2="80" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="40" x2="480" y2="40" stroke="#1e293b" stroke-width="1" />
+  <!-- Red dashed equivalence indicators -->
+  <line x1="60" y1="190" x2="200" y2="190" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" />
+  <line x1="200" y1="190" x2="200" y2="320" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" />
+  <line x1="60" y1="100" x2="340" y2="100" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" />
+  <line x1="340" y1="100" x2="340" y2="320" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,4" />
+  <!-- Axes -->
+  <line x1="60" y1="20" x2="60" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <line x1="60" y1="320" x2="490" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <!-- Y-Axis Ticks & Labels (pH 0 to 14) -->
+  <line x1="55" y1="320" x2="60" y2="320" stroke="#94a3b8" stroke-width="2" /><text x="45" y="324" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">0</text>
+  <line x1="55" y1="300" x2="60" y2="300" stroke="#94a3b8" stroke-width="2" /><text x="45" y="304" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">1</text>
+  <line x1="55" y1="280" x2="60" y2="280" stroke="#94a3b8" stroke-width="2" /><text x="45" y="284" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">2</text>
+  <line x1="55" y1="260" x2="60" y2="260" stroke="#94a3b8" stroke-width="2" /><text x="45" y="264" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">3</text>
+  <line x1="55" y1="240" x2="60" y2="240" stroke="#94a3b8" stroke-width="2" /><text x="45" y="244" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">4</text>
+  <line x1="55" y1="220" x2="60" y2="220" stroke="#94a3b8" stroke-width="2" /><text x="45" y="224" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">5</text>
+  <line x1="55" y1="200" x2="60" y2="200" stroke="#94a3b8" stroke-width="2" /><text x="45" y="204" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">6</text>
+  <line x1="55" y1="180" x2="60" y2="180" stroke="#94a3b8" stroke-width="2" /><text x="45" y="184" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">7</text>
+  <line x1="55" y1="160" x2="60" y2="160" stroke="#94a3b8" stroke-width="2" /><text x="45" y="164" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">8</text>
+  <line x1="55" y1="140" x2="60" y2="140" stroke="#94a3b8" stroke-width="2" /><text x="45" y="144" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">9</text>
+  <line x1="55" y1="120" x2="60" y2="120" stroke="#94a3b8" stroke-width="2" /><text x="45" y="124" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">10</text>
+  <line x1="55" y1="100" x2="60" y2="100" stroke="#94a3b8" stroke-width="2" /><text x="45" y="104" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">11</text>
+  <line x1="55" y1="80" x2="60" y2="80" stroke="#94a3b8" stroke-width="2" /><text x="45" y="84" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">12</text>
+  <line x1="55" y1="60" x2="60" y2="60" stroke="#94a3b8" stroke-width="2" /><text x="45" y="64" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">13</text>
+  <line x1="55" y1="40" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" /><text x="45" y="44" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="end">14</text>
+  <text x="20" y="170" fill="#f8fafc" font-size="14" font-weight="bold" transform="rotate(-90 20 170)" text-anchor="middle">pH</text>
+  <!-- X-Axis Ticks & Labels (Volume 0 to 50) -->
+  <line x1="60" y1="320" x2="60" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="60" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">0</text>
+  <line x1="100" y1="320" x2="100" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="100" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">5</text>
+  <line x1="140" y1="320" x2="140" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="140" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">10</text>
+  <line x1="180" y1="320" x2="180" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="180" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">15</text>
+  <line x1="220" y1="320" x2="220" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="220" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">20</text>
+  <line x1="260" y1="320" x2="260" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="260" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">25</text>
+  <line x1="300" y1="320" x2="300" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="300" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">30</text>
+  <line x1="340" y1="320" x2="340" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="340" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">35</text>
+  <line x1="380" y1="320" x2="380" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="380" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">40</text>
+  <line x1="420" y1="320" x2="420" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="420" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">45</text>
+  <line x1="460" y1="320" x2="460" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="460" y="342" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">50</text>
+  <text x="270" y="365" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Volume of base added/cm³</text>
+  <!-- The Diprotic Curve Path (Blue S-shape) -->
+  <path d="M 60 260 C 100 240, 140 240, 180 220 C 192 210, 196 200, 200 190 C 204 180, 208 150, 220 150 C 250 150, 290 150, 320 140 C 334 135, 338 120, 340 100 C 342 80, 346 55, 370 50 C 400 44, 440 40, 480 38" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <!-- Labels & Pointers -->
+  <text x="80" y="145" fill="#f8fafc" font-size="12" font-weight="bold">First equivalence point</text>
+  <path d="M 190 142 L 198 180" fill="none" stroke="#f8fafc" stroke-width="1" />
+  <polygon points="198,180 195,174 201,176" fill="#f8fafc" />
+  <text x="140" y="85" fill="#f8fafc" font-size="12" font-weight="bold">Second equivalence point</text>
+  <path d="M 270 82 L 333 97" fill="none" stroke="#f8fafc" stroke-width="1" />
+  <polygon points="333,97 326,94 329,100" fill="#f8fafc" />
+</svg>`;
+
+const hclAmmoniaTitrationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" class="w-full max-w-[460px] mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Grid Lines -->
+  <line x1="60" y1="320" x2="480" y2="320" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="280" x2="480" y2="280" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="240" x2="480" y2="240" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="200" x2="480" y2="200" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="160" x2="480" y2="160" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="120" x2="480" y2="120" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="80" x2="480" y2="80" stroke="#1e293b" stroke-width="1" />
+  <line x1="60" y1="40" x2="480" y2="40" stroke="#1e293b" stroke-width="1" />
+  <!-- Axes -->
+  <line x1="60" y1="20" x2="60" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <line x1="60" y1="320" x2="490" y2="320" stroke="#94a3b8" stroke-width="2" />
+  <!-- Y-Axis Ticks & Labels (pH 0 to 14) -->
+  <line x1="55" y1="320" x2="60" y2="320" stroke="#94a3b8" stroke-width="2" /><text x="45" y="324" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">0</text>
+  <line x1="55" y1="300" x2="60" y2="300" stroke="#94a3b8" stroke-width="2" /><text x="45" y="304" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">1</text>
+  <line x1="55" y1="280" x2="60" y2="280" stroke="#94a3b8" stroke-width="2" /><text x="45" y="284" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">2</text>
+  <line x1="55" y1="260" x2="60" y2="260" stroke="#94a3b8" stroke-width="2" /><text x="45" y="264" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">3</text>
+  <line x1="55" y1="240" x2="60" y2="240" stroke="#94a3b8" stroke-width="2" /><text x="45" y="244" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">4</text>
+  <line x1="55" y1="220" x2="60" y2="220" stroke="#94a3b8" stroke-width="2" /><text x="45" y="224" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">5</text>
+  <line x1="55" y1="200" x2="60" y2="200" stroke="#94a3b8" stroke-width="2" /><text x="45" y="204" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">6</text>
+  <line x1="55" y1="180" x2="60" y2="180" stroke="#94a3b8" stroke-width="2" /><text x="45" y="184" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">7</text>
+  <line x1="55" y1="160" x2="60" y2="160" stroke="#94a3b8" stroke-width="2" /><text x="45" y="164" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">8</text>
+  <line x1="55" y1="140" x2="60" y2="140" stroke="#94a3b8" stroke-width="2" /><text x="45" y="144" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">9</text>
+  <line x1="55" y1="120" x2="60" y2="120" stroke="#94a3b8" stroke-width="2" /><text x="45" y="124" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">10</text>
+  <line x1="55" y1="100" x2="60" y2="100" stroke="#94a3b8" stroke-width="2" /><text x="45" y="104" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">11</text>
+  <line x1="55" y1="80" x2="60" y2="80" stroke="#94a3b8" stroke-width="2" /><text x="45" y="84" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">12</text>
+  <line x1="55" y1="60" x2="60" y2="60" stroke="#94a3b8" stroke-width="2" /><text x="45" y="64" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">13</text>
+  <line x1="55" y1="40" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" /><text x="45" y="44" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">14</text>
+  <text x="20" y="170" fill="#f8fafc" font-size="14" font-weight="bold" transform="rotate(-90 20 170)" text-anchor="middle">pH</text>
+  <!-- X-Axis Ticks & Labels (Volume 0 to 50) -->
+  <line x1="60" y1="320" x2="60" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="60" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">0</text>
+  <line x1="100" y1="320" x2="100" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="100" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">5</text>
+  <line x1="140" y1="320" x2="140" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="140" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">10</text>
+  <line x1="180" y1="320" x2="180" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="180" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">15</text>
+  <line x1="220" y1="320" x2="220" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="220" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">20</text>
+  <line x1="260" y1="320" x2="260" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="260" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">25</text>
+  <line x1="300" y1="320" x2="300" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="300" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">30</text>
+  <line x1="340" y1="320" x2="340" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="340" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">35</text>
+  <line x1="380" y1="320" x2="380" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="380" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">40</text>
+  <line x1="420" y1="320" x2="420" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="420" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">45</text>
+  <line x1="460" y1="320" x2="460" y2="325" stroke="#94a3b8" stroke-width="2" /><text x="460" y="342" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">50</text>
+  <text x="275" y="365" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Volume of ammonia solution added/cm³</text>
+  <!-- Curve: Strong Acid + Ammonia (Weak Base) -->
+  <path d="M 60 286 C 100 282, 140 270, 164 250 C 176 230, 178 180, 180 170 C 182 160, 184 120, 200 112 C 240 108, 340 108, 440 108" fill="none" stroke="#0284c7" stroke-width="3" />
+</svg>`;
+
 const titrationCurvesDashboardSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 410" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <text x="490" y="24" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">pH Titration Curves &amp; Indicator Transition Ranges</text>
 
@@ -757,8 +863,8 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > [!NOTE]
 > ### 📊 Acid-Base Titrations & Equivalence Point
 > * **Equivalence Point:**
->   1. The point during a titration (strong base with strong/weak acid, or strong acid with strong/weak base) where the quantity of added titrant is chemically equivalent to the quantity of the substance being titrated.
->   2. In an acid-base titration, it occurs when the moles of H⁺ ions completely equal the moles of OH⁻ ions (n(acid) = n(base)), resulting in a complete neutralization of the solution.
+>   1. The point during a titration (strong base with strong or weak acid/base) where the quantity of added titrant is chemically equivalent to the quantity of the substance being titrated.
+>   2. In an acid-base titration, it occurs when the moles of H⁺ ions exactly equal the moles of OH⁻ ions ($n_{\text{acid}} = n_{\text{base}}$), resulting in a complete neutralization of the solution.
 > * **End Point:** The point in a titration where the indicator undergoes a complete colour change.
 > * **Neutralisation vs Equivalence:** The equivalence point is **only pH 7.00** for strong acid-strong base titrations. For weak-strong combinations, the pH at equivalence is determined by salt hydrolysis and is either above or below 7.00.
 
@@ -784,9 +890,6 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > An indicator is a weak acid ($\\\\text{HIn}$) that has a different colour from its conjugate base ($\\\\text{In}^-$):
 > $$\\\\text{HIn(aq)} \\\\rightleftharpoons \\\\text{H}^+\\\\text{(aq)} + \\\\text{In}^-\\\\text{(aq)}$$
 > 
-> The indicator constant is defined as:
-> $$K_{\\\\text{In}} = \\\\frac{[\\\\text{H}^+][\\\\text{In}^-]}{[\\\\text{HIn}]}$$
-> 
 > * **End Point:** At the end point of the titration, the indicator is halfway through its colour change, meaning $[\\\\text{HIn}] = [\\\\text{In}^-]$.
 > * Therefore, $[\\\\text{H}^+] = K_{\\\\text{In}}$, and the **pH at colour change is equal to $\\\\text{p}K_{\\\\text{In}}$**.
 > * **Colour Range:** Colour change occurs over a pH range of approximately $\\\\text{pH} = \\\\text{p}K_{\\\\text{In}} \\\\pm 1.0$
@@ -805,55 +908,71 @@ ${svgToken(titrationCurvesDashboardSvg)}
  
 > [!IMPORTANT]
 > ### 🧮 Titration Curves with Diprotic Acids
-> A diprotic acid ($\\\\text{H₂X}$) dissociates in two stages:
-> $$\\\\text{H₂X(aq)} \\\\rightarrow \\\\text{H}^+\\\\text{(aq)} + \\\\text{HX}^-\\\\text{(aq)}$$
-> $$\\\\text{HX}^-\\\\text{(aq)} \\\\rightleftharpoons \\\\text{H}^+\\\\text{(aq)} + \\\\text{X}^{2-}\\\\text{(aq)}$$
 > 
-> * **Two Equivalence Points:** The titration curve of a diprotic acid with a strong base exhibits two distinct equivalence points.
-> * **Stoichiometric Volumes:** The volume of base required to reach the second equivalence point is exactly **twice** the volume required to reach the first equivalence point.
->   * *Step 1:* $\\\\text{H₂X} + \\\\text{NaOH} \\\\rightarrow \\\\text{NaHX} + \\\\text{H₂O}$ (volume $V_1$)
->   * *Step 2:* $\\\\text{NaHX} + \\\\text{NaOH} \\\\rightarrow \\\\text{Na₂X} + \\\\text{H₂O}$ (volume $V_2 = 2 V_1$)
- 
+> ${svgToken(diphoticAcidSvg)}
+> 
+> * **Diprotic Acid:** An acid that produces two $\\\\text{H}^+$ ions per acid molecule. Examples of diprotic acids are sulfuric acid ($\\\\text{H}_2\\\\text{SO}_4$) and carbonic acid ($\\\\text{H}_2\\\\text{CO}_3$).
+> * **Dissociation Stages:** Dissociates in water in two stages:
+>   $$\\\\text{H}_2\\\\text{X(aq)} \\\\rightleftharpoons \\\\text{H}^+\\\\text{(aq)} + \\\\text{HX}^-\\\\text{(aq)}$$
+>   $$\\\\text{HX}^-\\\\text{(aq)} \\\\rightleftharpoons \\\\text{H}^+\\\\text{(aq)} + \\\\text{X}^{2-}\\\\text{(aq)}$$
+> * **Two Equivalence Points:** The titration curves of diprotic acids feature two equivalence points.
+>   * *From the beginning to the first equivalence point:* $\\\\text{H}_2\\\\text{X} + \\\\text{NaOH} \\\\rightarrow \\\\text{NaHX} + \\\\text{H}_2\\\\text{O}$
+>   * *From the first equivalence point to the second equivalence point:* $\\\\text{NaHX} + \\\\text{NaOH} \\\\rightarrow \\\\text{Na}_2\\\\text{X} + 2\\\\text{H}_2\\\\text{O}$
+>   * *Overall reaction (from beginning through to the second equivalence point):* $\\\\text{H}_2\\\\text{X} + 2\\\\text{NaOH} \\\\rightarrow \\\\text{Na}_2\\\\text{X} + 2\\\\text{H}_2\\\\text{O}$
+>   * *Volume relationship:* The volume of $\\\\text{NaOH}$ added to reach the second equivalence point is exactly **twice** the volume required to reach the first equivalence point.
+
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Hydrochloric Acid & Ammonia Titration (Checkpoint Q1)
-> **Question:** Ammonia titrated with HCl. Equivalence occurs at $15.0\\text{ cm}^3$ HCl.
+> #### 📝 Worked Example 1: Hydrochloric Acid & Ammonia Titration
+> **Question:** The equation for the reaction between hydrochloric acid and ammonia is:
+> $$\\\\text{HCl(aq)} + \\\\text{NH}_3\\\\text{(aq)} \\\\rightarrow \\\\text{NH}_4\\\\text{Cl(aq)}$$
+> A $25.0\\\\text{ cm}^3$ sample of $0.0200\\\\text{ mol dm}^{-3}\\\\text{ HCl(aq)}$ was placed in a conical flask. Aqueous ammonia was added gradually from a burette and the pH was measured after each addition, until the pH no longer changed. The pH curve for this titration is shown below.
+> 
+> ${svgToken(hclAmmoniaTitrationSvg)}
+> 
+> 1. State how the curve suggests that ammonia is a weak base.
+> 2. Use the information given to calculate the concentration of the ammonia solution.
+> 3. Explain which of these three indicators is the most suitable for this titration: Methyl Orange (range 3.1-4.4), Methyl Red (range 4.2-6.3), or Phenolphthalein (range 8.2-10.0).
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > **(a) Weak base evidence:**
-> > * The pH of the mixture past the equivalence point flattens out around pH 10 to 11.
-> > * If it were a strong base, the pH would continue rising to 13 or 14.
+> > * The final pH levels off around pH 10.5 - 11 (rather than high pH 12 - 14), and the equivalence point lies in the acidic region below pH 7.
 > > 
 > > **(b) Ammonia concentration calculation:**
-> > 1. Write the balanced equation: HCl + NH₃ → NH₄Cl (1:1 ratio)
-> > 2. Moles of HCl = C × V = 0.0200 × 0.0250 = 5.00 × 10⁻⁴ mol
-> > 3. Moles of NH₃ reacting = 5.00 × 10⁻⁴ mol
-> > 4. Concentration of NH₃ = 5.00 × 10⁻⁴ / 0.0150 = **0.0333 mol dm⁻³**
+> > * 1. **Calculate moles of HCl used:**
+> >      $$\\\\text{Moles of HCl} = 0.0250\\\\text{ dm}^3 \\\\times 0.0200\\\\text{ mol dm}^{-3} = 5.00 \\\\times 10^{-4}\\\\text{ mol}$$
+> > * 2. **Read equivalence volume of ammonia from the graph:**
+> >      $$\\\\text{Volume} = 15.0\\\\text{ cm}^3 = 0.0150\\\\text{ dm}^3$$
+> > * 3. **Calculate concentration of ammonia:**
+> >      $$[\\\\text{NH}_3] = \\\\frac{5.00 \\\\times 10^{-4}\\\\text{ mol}}{0.0150\\\\text{ dm}^3} = \\\\mathbf{0.0333\\\\text{ mol dm}^{-3}}$$
 > > 
 > > **(c) Suitable indicator:**
-> > * The strong acid / weak base curve has a vertical section only in the **acidic** region (pH ~3 to ~7).
-> > * Only **Methyl red** (range 4.2–6.3) falls completely within this vertical region.
+> > * **Methyl red**. Because its pH color change range (4.2 to 6.3) falls completely within the steep vertical section of the titration curve (pH 3.5 to 7.5).
 
- 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Weak Acid-Strong Base Titration Curve (Checkpoint Q2)
-> **Question:** Describe ethanoic acid titration with NaOH.
+> #### 📝 Worked Example 2: Weak Acid-Strong Base Titration Curve
+> **Question:** This question is about an aqueous solution of $0.100\\\\text{ mol dm}^{-3}\\\\text{ CH}_3\\\\text{COOH}$:
+> 1. Calculate the pH at $298\\\\text{ K}$ of this solution $[K_a = 1.74 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}\\\\text{ at }298\\\\text{ K}]$.
+> 2. Sketch the pH titration curve for the addition of $50.0\\\\text{ cm}^3$ of $0.100\\\\text{ mol dm}^{-3}\\\\text{ NaOH(aq)}$ to $25.0\\\\text{ cm}^3$ of the solution.
+> 3. State two differences in the pH curve that would be obtained if the titration were repeated using $25.0\\\\text{ cm}^3$ of $0.0500\\\\text{ mol dm}^{-3}\\\\text{ CH}_3\\\\text{COOH(aq)}$ instead of $25.0\\\\text{ cm}^3$ of $0.100\\\\text{ mol dm}^{-3}\\\\text{ CH}_3\\\\text{COOH(aq)}$.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > **(a) Weak acid pH:**
-> > * $[\\text{H}^+] = \\sqrt{K_a \\times c} = 1.319 \\times 10^{-3}\\text{ mol dm}^{-3} \\implies \\text{pH} = 2.88$
+> > **(a) pH calculation:**
+> > * $[\\\\text{H}^+] = \\\\sqrt{K_a \\\\times [\\\\text{CH}_3\\\\text{COOH}]} = \\\\sqrt{1.74 \\\\times 10^{-5} \\\\times 0.100} = 1.319 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}$
+> > * $\\\\text{pH} = -\\\\log_{10}(1.319 \\\\times 10^{-3}) = \\\\mathbf{2.88}$
 > > 
-> > **(b) Titration Curve Description:**
-> > * Start: pH begins at 2.88.
-> > * Equivalence Point: Occurs at exactly $25.0\\text{ cm}^3$ NaOH added, where the pH rises steeply and the midpoint is alkaline ($\\text{pH} \\approx 8.7$)
-> > * End: Past $25.0\\text{ cm}^3$, the curve flattens out, approaching a pH of $\approx 12.5$ after $50.0\\text{ cm}^3$ is added.
+> > **(b) Key Features to Include on Your Sketch:**
+> > * **Start Point:** Begins at pH 2.88 (on the y-axis at $0\\\\text{ cm}^3$).
+> > * **Buffer Region:** Curves gently upward from $0\\\\text{ cm}^3$ to $25\\\\text{ cm}^3$, passing through $\\\\text{pH} = \\\\text{p}K_a = 4.76$ at $12.5\\\\text{ cm}^3$.
+> > * **Equivalence Point:** Vertical region occurs at $25.0\\\\text{ cm}^3$ of NaOH, centered above neutral ($\\\\text{pH} \\\\approx 8.7$).
+> > * **Final Plateau:** Curve flattens out around pH 12.5 - 13 as total volume reaches $50.0\\\\text{ cm}^3$.
 > > 
-> > **(c) Differences with dilute acid (0.0500 mol dm⁻³):**
-> > * 1. The starting pH will be higher (3.03 instead of 2.88).
-> > * 2. The volume of NaOH required to reach equivalence will be halved (12.5 cm³).
+> > **(c) Differences with dilute acid ($0.0500\\\\text{ mol dm}^{-3}$):**
+> > * 1. The initial pH will be higher (less acidic, starting around pH 3.03).
+> > * 2. The volume of NaOH required to reach equivalence will be halved ($12.5\\\\text{ cm}^3$ instead of $25.0\\\\text{ cm}^3$).
 
 `,
     keyPoints: [
@@ -1045,10 +1164,10 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > At the **half-equivalence point**:
 > 1. The point during the titration of a weak acid (or weak base) where exactly half of the original analyte has been neutralized by the titrant.
 > 2. The point where half of the acid has been neutralized.
-> 3. At this specific point, [HA] = [A⁻]. Substituting this into the Ka expression reveals that:
->    $$K_a = \\frac{[\\text{H}^+][\\text{A}^-]}{[\\text{HA}]} \\implies \\text{pH} = \\text{p}K_a$$
-> 4. This is the standard experimental method for determining the Ka of an unknown weak acid.
-> * *Exam Hint:* Always use the term **half-equivalence point** and NOT half-neutralisation point when determining pKa of a weak acid.
+> 3. At this specific point, $[\\\\text{HA}] = [\\\\text{A}^-]$. Substituting this into the $K_a$ expression reveals that:
+>    $$K_a = \\\\frac{[\\\\text{H}^+][\\\\text{A}^-]}{[\\\\text{HA}]} \\\\implies \\\\text{pH} = \\\\text{p}K_a$$
+> 4. This is the standard experimental method for determining the $K_a$ of an unknown weak acid.
+> * *Exam Hint:* Always use the term **half-equivalence point** and NOT half-neutralisation point when determining p$K_a$ of a weak acid.
 
 
 > [!BOX]

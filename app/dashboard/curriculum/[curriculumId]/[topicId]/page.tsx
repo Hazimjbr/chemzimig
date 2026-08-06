@@ -617,8 +617,16 @@ const renderContentWithTables = (content: string) => {
         return /^[>\s]*\|/.test(line.trim());
     };
 
+    const isIndexInBlockquoteLine = (str: string, index: number): boolean => {
+        const lineStart = str.lastIndexOf('\n', index) + 1;
+        let lineEnd = str.indexOf('\n', index);
+        if (lineEnd === -1) lineEnd = str.length;
+        const line = str.substring(lineStart, lineEnd);
+        return /^[>\s]*>/.test(line.trim());
+    };
+
     while ((match = svgSplitPattern.exec(content)) !== null) {
-        if (isIndexInTableLine(content, match.index)) {
+        if (isIndexInTableLine(content, match.index) || isIndexInBlockquoteLine(content, match.index)) {
             continue;
         }
         if (match.index > lastIndex) {
