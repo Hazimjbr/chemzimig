@@ -56,7 +56,7 @@
 - [x] **Pearson Edexcel IAL - Unit 1 Topic 4: Introductory Organic Chemistry & Alkanes — Part 1 & 2 (مكتمل):** إضافة مثالين امتحانيين مستهدفين لقسم السلامة (تصريف الغازات الحمضية بمحلول NaOH، ومقارنة احتياطات مواد مختلفة)؛ وإضافة مثالين لقسم الصيغ العضوية (مقارنة نقاط الغليان ببنية المتشعبة، وتحويل الصيغة البنائية المعقدة لصيغة هيكلية بمجموعات وظيفية متعددة).
 - [x] **Pearson Edexcel IAL - Unit 1 Topic 5: Alkenes — Enrichment (مكتمل):** إضافة التطبيق الصناعي للهدرجة (صناعة المارجرين بمحفز النيكل عند ~200°C) في قسم Electrophilic Addition، وتفعيل محاكي المعادلة المتحركة `equationVisualizer` لتفاعل Br₂ مع الإيثين مع وصف ربطه باختبار ماء البروم.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Kc, Kp, Q vs K, Le Chatelier, Temperature & Equilibria, Entropy & Kp) مع 17 سؤال امتحاني متكامل.
-- [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 5 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titrations & Indicators, Buffer Solutions, Ka from pH Curves) مع 17 سؤال امتحاني متكامل.
+- [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titration Curves & Indicators, Buffer Solutions, Ka from pH Curves) مع **35 سؤال امتحاني شامل**. إعادة تصميم رسمة SVG لمنحنيات المعايرة الأربعة بالكامل لتطابق الكتاب المدرسي: محاور pH كاملة (0-14) وحجم كامل (0-50 cm³)، خطوط منقطة حمراء عند نقطة التكافؤ، ومنحنيات Bezier S-Shape دقيقة لكل حالة مع نطاقات الدليل Phenolphthalein و Methyl Orange.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 12: Entropy and Energetics (مكتمل):** 7 أجزاء تفاعلية كاملة (Entropy, System/Surroundings/Total Entropy, Gibbs Free Energy, Born-Haber Cycles, Covalent Character, Enthalpy of Solution & Hydration, Group 2 Solubility Trends) مع إعادة تنسيق الأمثلة المحلولة 100%، وتدقيق 34 صندوق ملاحظات بالإيموجي، وضبط صيغ KaTeX، وإعادة هيكلة كويز الدرس (20 سؤالاً) وتزويده بـ lessonNum: 2 وتنسيق الشروحات بنقاط منسقة.
 - [x] **Pearson Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (مكتمل):** 7 أجزاء تفاعلية كاملة (TLC, GC-MS, HRMS, NMR principles, 13C NMR, Low & High-Res 1H NMR splitting) مع 27 سؤال امتحاني متكامل.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 11: Kinetics (مكتمل):** إدخال وتطوير المحتوى التفاعلي المتكامل لـ 6 أجزاء (معدلات السرعة، معادلات ورتب التفاعل، فترات عمر النصف وتفكك المركب P بيانياً، آليات التفاعل والخطوة المحددة للسرعة، أثر الحرارة ومعادلة أرينيوس، والحفز المتجانس وغير المتجانس والتسمم بالرصاص) مع إضافة وتوثيق 14 مثالاً امتحانياً تفصيلياً من أوراق المنهج.
@@ -122,7 +122,7 @@
 | ✅ | نظام اللصق الذكي واستخراج بيانات تسجيل الطلاب وتوليد قوالب الرسائل (Smart Paste Auto-Fill) | 100% |
 | ✅ | محرك تضمين رسومات الـ SVG المدمجة (Inline SVG Asset Engine) | 100% |
 | ✅ | Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (7 أجزاء + 40 سؤال امتحاني وتطوير رسوم الأسهم والاتزان) | 100% |
-| ✅ | Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (5 أجزاء + 17 سؤال امتحاني) | 100% |
+| ✅ | Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (6 أجزاء + **35 سؤال امتحاني** + SVG منحنيات معايرة دقيقة) | 100% |
 | ✅ | Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (7 أجزاء + 27 سؤال امتحاني) | 100% |
 | 🔄 | بنك أسئلة ومحتوى المناهج البريطانية وتدقيقها (تم إدراج 42 سؤالاً لـ Edexcel Topics المتبقية) | قيد التطوير |
 | 🔄 | حزمة التحسينات الهيكلية والأمنية (Structural & Security Improvements) | قيد التخطيط |
@@ -134,7 +134,7 @@
 
 ---
 
-*آخر تحديث: 2026-08-01 — **م. حازم جبر***
+*آخر تحديث: 2026-08-06 — **م. حازم جبر***
 
 **إنجازات جلسة اليوم (2026-08-01) — المجسمات الجزيئية التفاعلية ثلاثية الأبعاد (3D):**
 1. **تحديث محاكي VSEPR التفاعلي (`MolecularShapeSimulator.tsx`):**
@@ -226,7 +226,26 @@
 
 &nbsp;
 
-**إنجازات جلسة اليوم (2026-08-03) — القسم 6: Entropy & Equilibrium Constants (Topic 13 Part 6):**
+**إنجازات جلسة اليوم (2026-08-06) — إعادة تصميم رسمة منحنيات المعايرة الأربعة (SVG) وإصلاح أخطاء البناء:**
+1. **إعادة تصميم رسمة منحنيات معايرة pH الأربعة (Unit 4 Topic 14):**
+   - إعادة كتابة `titrationCurvesDashboardSvg` بالكامل من الصفر لتطابق الكتاب المدرسي المرجعي.
+   - محور pH كامل من 0 إلى 14 بعلامات عند 0, 2, 4, 6, 7, 8, 10, 12, 14.
+   - محور الحجم كامل من 0 إلى 50 cm³ بعلامات عند 0, 10, 20, 25, 30, 40, 50.
+   - خطوط منقطة حمراء (`#ef4444`) تتقاطع عند نقطة التكافؤ في كل لوحة.
+   - منحنيات Bezier دقيقة رياضياً لكل حالة:
+     - **Strong / Strong:** تكافؤ pH=7، قفزة رأسية pH 3→11.
+     - **Strong / Weak:** تكافؤ pH≈5.2 (حمضي)، قفزة pH 3→7.
+     - **Weak / Strong:** تكافؤ pH≈8.87 (قلوي)، قفزة pH 7→11.
+     - **Weak / Weak:** قطعة منحدرة بدون جزء رأسي حاد.
+   - نطاقا دليلي Phenolphthalein (8.2-10.0) و Methyl Orange (3.1-4.4) بإحداثيات دقيقة على لوحة Strong/Strong.
+   - حل خطأ بناء `Expected ident` الناتج عن بقايا كود SVG القديم عقب عملية الاستبدال.
+
+2. **تصحيح أخطاء LaTeX وتنظيف الرموز (الجلسة السابقة):**
+   - إصلاح جميع رموز `backtick` و `backslash` غير المُبرَّرة في template literals لـ Topic 14 Part 2 (الأحماض الضعيفة).
+   - تحويل خلايا الجداول من KaTeX إلى Unicode آمن لمنع تصادم محلل Markdown مع الخطوط المائلة.
+   - إزالة وسوم HTML الخام `<br>` واستبدالها بفراغ سطر لدعم `react-markdown` الافتراضي.
+
+
 1. **إتمام وتوثيق القسم السادس من درس Chemical Equilibria (Unit 4 Topic 13):**
    - تدريس العلاقة الترموديناميكية الجوهرية: $\Delta S^\theta_{\text{total}} = R \ln K$ وعكسها $K = e^{\Delta S^\theta_{\text{total}} / R}$.
    - إضافة رسمة SVG مخصصة توضح الرابط بين قيمة $K$ وموضع الاتزان (يسار — يمين) ومفهوم الجدوى الترموديناميكية مقابل الثبات الحركي.
