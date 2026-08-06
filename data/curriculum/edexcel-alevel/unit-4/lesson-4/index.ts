@@ -758,9 +758,10 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > ### 📊 Acid-Base Titrations & Equivalence Point
 > * **Equivalence Point:**
 >   1. The point during a titration (strong base with strong/weak acid, or strong acid with strong/weak base) where the quantity of added titrant is chemically equivalent to the quantity of the substance being titrated.
->   2. In an acid-base titration, it occurs when the moles of $\text{H}^+$ ions completely equal the moles of $\text{OH}^-$ ions ($n_{\text{acid}} = n_{\text{base}}$), resulting in a complete neutralization of the solution.
+>   2. In an acid-base titration, it occurs when the moles of H⁺ ions completely equal the moles of OH⁻ ions (n(acid) = n(base)), resulting in a complete neutralization of the solution.
 > * **End Point:** The point in a titration where the indicator undergoes a complete colour change.
 > * **Neutralisation vs Equivalence:** The equivalence point is **only pH 7.00** for strong acid-strong base titrations. For weak-strong combinations, the pH at equivalence is determined by salt hydrolysis and is either above or below 7.00.
+
 
 > [!IMPORTANT]
 > ### 📈 The Four pH Titration Curves & Profiles
@@ -825,17 +826,16 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > * If it were a strong base, the pH would continue rising to 13 or 14.
 > > 
 > > **(b) Ammonia concentration calculation:**
-> > 1. Write the balanced equation: $\\\\text{HCl} + \\\\text{NH₃} \\\\rightarrow \\\\text{NH₄Cl}$ (1:1 ratio)
-> > 2. Moles of HCl = $C \\\\times V = 0.0200 \\\\times 0.0250 = 5.00 \\\\times 10^{-4}\\\\text{ mol}$
-> > 3. Moles of NH₃ reacting = $5.00 \\\\times 10^{-4}\\\\text{ mol}$
-> > 3. Moles of NH₃ reacting = $5.00 \\times 10^{-4}\\text{ mol}$
-> > 4. Concentration of NH₃ = $5.00 \\times 10^{-4} / 0.0150 = 0.0333\\text{ mol dm}^{-3}$
+> > 1. Write the balanced equation: HCl + NH₃ → NH₄Cl (1:1 ratio)
+> > 2. Moles of HCl = C × V = 0.0200 × 0.0250 = 5.00 × 10⁻⁴ mol
+> > 3. Moles of NH₃ reacting = 5.00 × 10⁻⁴ mol
+> > 4. Concentration of NH₃ = 5.00 × 10⁻⁴ / 0.0150 = **0.0333 mol dm⁻³**
 > > 
 > > **(c) Suitable indicator:**
-> * Only **Methyl red** (range 4.2-6.3) falls completely within this vertical region.
+> > * The strong acid / weak base curve has a vertical section only in the **acidic** region (pH ~3 to ~7).
+> > * Only **Methyl red** (range 4.2–6.3) falls completely within this vertical region.
 
-
-
+ 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Weak Acid-Strong Base Titration Curve (Checkpoint Q2)
 > **Question:** Describe ethanoic acid titration with NaOH.
@@ -851,9 +851,10 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > * Equivalence Point: Occurs at exactly $25.0\\text{ cm}^3$ NaOH added, where the pH rises steeply and the midpoint is alkaline ($\\text{pH} \\approx 8.7$)
 > > * End: Past $25.0\\text{ cm}^3$, the curve flattens out, approaching a pH of $\approx 12.5$ after $50.0\\text{ cm}^3$ is added.
 > > 
-> > **(c) Differences with dilute acid ($0.0500$ mol dm⁻³):**
-> * 1. The starting pH will be higher ($3.03$ instead of $2.88$).
-> * 2. The volume of NaOH required to reach equivalence will be halved ($12.5$ cm3).
+> > **(c) Differences with dilute acid (0.0500 mol dm⁻³):**
+> > * 1. The starting pH will be higher (3.03 instead of 2.88).
+> > * 2. The volume of NaOH required to reach equivalence will be halved (12.5 cm³).
+
 `,
     keyPoints: [
       'Equivalence point pH is determined by salt hydrolysis and depends on acid/base strengths.',
@@ -924,7 +925,7 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > >    $$[\\text{H}^+] = K_a \\times \\frac{[\\text{acid}]}{[\\text{salt}]}$$
 > > 3. **Solve for the ratio:**
 > >    $$\\frac{[\\text{acid}]}{[\\text{salt}]} = 0.575$$
-> * Therefore, we mix in ratio of $0.575$ of acid for every $1.00$ of salt.
+> > * Therefore, we mix in ratio of 0.575 of acid for every 1.00 of salt.
 
 
 
@@ -936,8 +937,9 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. $[\\text{H}^+] = 1.585 \\times 10^{-10}\\text{ mol dm}^{-3}$
-> > 2. $\\frac{[\\text{NH₃}]}{[\\text{NH₄}^+]} = \\frac{K_a}{[\\text{H}^+]} = 3.56$
-> * We mix **3.56 volumes of ammonia** with **1 volume of ammonium chloride**.
+> > 2. $$\\frac{[\\text{NH₃}]}{[\\text{NH₄}^+]} = \\frac{K_a}{[\\text{H}^+]} = 3.56$$
+> > * We mix **3.56 volumes of ammonia** with **1 volume of ammonium chloride**.
+
 
 > [!BOX]
 > ### 🩸 Biological Buffers: Blood pH Control
@@ -962,12 +964,12 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Definition:** A buffer solution minimizes pH changes when small amounts of acid/base are added.
-> * **(b) Mechanism:** HCOOH is weak acid and HCOOK provides $\\text{HCOO}^-$.
->   * Added $\\text{H}^+$: $\\text{HCOO}^- + \\text{H}^+ \\rightarrow \\text{HCOOH}$
->   * Added $\\text{OH}^-$: $\\text{HCOOH} + \\text{OH}^- \\rightarrow \\text{HCOO}^- + \\text{H₂O}$
-> * **(c) Common ion effect:** Adding solid salt shifts equilibrium left, increasing pH slightly.
-> * **(d) Calculation:** Ratio is 2.0. $[\\text{H}^+] = 1.79 \\times 10^{-4} \\times 2.0 = 3.58 \\times 10^{-4}\\text{ mol dm}^{-3} \\implies \\text{pH} = 3.45$
+> > **(a) Definition:** A buffer solution minimizes pH changes when small amounts of acid/base are added.
+> > **(b) Mechanism:** HCOOH is weak acid and HCOOK provides HCOO⁻.
+> >    * Added H⁺: HCOO⁻ + H⁺ → HCOOH
+> >    * Added OH⁻: HCOOH + OH⁻ → HCOO⁻ + H₂O
+> > **(c) Common ion effect:** Adding solid salt shifts equilibrium left, increasing pH slightly.
+> > **(d) Calculation:** Ratio is 2.0. [H⁺] = 1.79 × 10⁻⁴ × 2.0 = 3.58 × 10⁻⁴ mol dm⁻³ ⇒ pH = 3.45
 
 
 
@@ -978,8 +980,8 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **Solution A:** Mixing leaves excess $\\text{CH₃COOH}$ and forms salt, so it is a buffer.
-> * **Solution B:** All acid reacts with NaOH, no weak acid remains, so it is not a buffer.
+> > * **Solution A:** Mixing leaves excess CH₃COOH and forms salt, so it is a buffer.
+> > * **Solution B:** All acid reacts with NaOH, no weak acid remains, so it is not a buffer.
 
 
 
@@ -990,10 +992,10 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> 1. $[\\text{H}^+] = 10^{-9.55} = 2.818 \\times 10^{-10}\\text{ mol dm}^{-3}$
-> 2. $[\\text{NH₃}]_{\\text{eq}} = 0.100\\text{ mol dm}^{-3}$
-> 3. $[\\text{NH₄}^+] = 0.05014\\text{ mol dm}^{-3}$ in mixture.
-> 4. Initial concentration of salt used = $0.100\\text{ mol dm}^{-3}$.
+> > 1. [H⁺] = 10⁻⁹·⁵⁵ = 2.818 × 10⁻¹⁰ mol dm⁻³
+> > 2. [NH₃] = 0.100 mol dm⁻³ (equilibrium)
+> > 3. [NH₄⁺] = 0.05014 mol dm⁻³ in mixture
+> > 4. Initial concentration of salt used = **0.100 mol dm⁻³**
 
 
 
@@ -1004,8 +1006,8 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> 1. Moles of acid = $0.100\\text{ mol}$, moles of salt = $0.0500\\text{ mol}$.
-> 2. $\\text{pH} = 4.20 + \\log_{10}\\left(\\frac{0.0500}{0.100}\\right) = 3.90$
+> > 1. Moles of acid = 0.100 mol, moles of salt = 0.0500 mol
+> > 2. pH = 4.20 + log₁₀(0.0500 / 0.100) = **3.90**
 
 
 
@@ -1016,8 +1018,9 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Amphoteric:** One ammonia molecule behaves as acid (donates proton) and another as base (accepts proton).
-> * **(b) Classifications:** (i) Acidic, (ii) Basic, (iii) Basic.
+> > * **(a) Amphoteric:** One ammonia molecule behaves as acid (donates proton) and another as base (accepts proton).
+> > * **(b) Classifications:** (i) Acidic, (ii) Basic, (iii) Basic.
+
 `,
     keyPoints: [
       'Buffers require a reservoir of both weak acid/base and its conjugate salt.',
@@ -1042,10 +1045,11 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > At the **half-equivalence point**:
 > 1. The point during the titration of a weak acid (or weak base) where exactly half of the original analyte has been neutralized by the titrant.
 > 2. The point where half of the acid has been neutralized.
-> 3. At this specific point, $[\text{HA}] = [\text{A}^-]$. Substituting this into the $K_a$ expression reveals that:
->    $$K_a = \frac{[\text{H}^+][\text{A}^-]}{[\text{HA}]} \implies \text{pH} = \text{p}K_a$$
-> 4. This is the standard experimental method for determining the $K_a$ of an unknown weak acid.
-> * *Exam Hint:* Always use the term **half-equivalence point** and NOT half-neutralisation point when determining p$K_a$ of a weak acid.
+> 3. At this specific point, [HA] = [A⁻]. Substituting this into the Ka expression reveals that:
+>    $$K_a = \\frac{[\\text{H}^+][\\text{A}^-]}{[\\text{HA}]} \\implies \\text{pH} = \\text{p}K_a$$
+> 4. This is the standard experimental method for determining the Ka of an unknown weak acid.
+> * *Exam Hint:* Always use the term **half-equivalence point** and NOT half-neutralisation point when determining pKa of a weak acid.
+
 
 > [!BOX]
 > ### 🧪 Alternative Half-Volume Method (Practical Skills CP11)
@@ -1070,7 +1074,7 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > * A **buffer solution** (consisting of the weak base ammonia, NH₃, and its conjugate acid salt ammonium chloride, NH₄Cl).
 > > 
 > > **(b) Explanation:**
-> * The ringed region is before the equivalence point, where only some of the ammonia has reacted with HCl. This creates a mixture containing both unreacted weak base and conjugate acid. This mixture resists changes in pH, resulting in a very gradual slope.
+> > * The ringed region is before the equivalence point, where only some of the ammonia has reacted with HCl. This creates a mixture containing both unreacted weak base and conjugate acid. This mixture resists changes in pH, resulting in a very gradual slope.
 
 
 
@@ -1081,13 +1085,14 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * 1. **Identify the half-equivalence volume:**
->      $$\\\\text{Volume} = \\\\frac{15.0}{2} = 7.5\\\\text{ cm}^3$$
-> * 2. **Locate the pH at this volume:**
->      * From the titration curve, the pH when $7.5\\text{ cm}^3$ NaOH is added is $4.50$.
-> * 3. **State the relationship:**
->      * At the half-equivalence point, $[\\text{acid}] = [\\text{salt}]$, so $\\text{pH} = \\text{p}K_a$.
-> * Therefore, $\\text{p}K_a = 4.50$.
+> > * 1. **Identify the half-equivalence volume:**
+> >      * Volume = 15.0 / 2 = **7.5 cm³**
+> > * 2. **Locate the pH at this volume:**
+> >      * From the titration curve, the pH when 7.5 cm³ NaOH is added is **4.50**.
+> > * 3. **State the relationship:**
+> >      * At the half-equivalence point, [acid] = [salt], so pH = pKa.
+> > * Therefore, **pKa = 4.50**
+
 `,
     keyPoints: [
       'At the half-equivalence point of a weak acid-strong base titration, pH equals pKa.',
