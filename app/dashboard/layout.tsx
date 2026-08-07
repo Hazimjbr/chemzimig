@@ -80,7 +80,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             `}>
                 <div className="flex flex-col h-full p-6">
                     <div className="flex items-center justify-between mb-10">
-                        <Link href={isDentalUser ? "/dashboard/dental" : "/dashboard"} className="flex items-center gap-3 group">
+                        <Link href="/" className="flex items-center gap-3 group">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
                                 {isDentalUser ? '🦷' : '⚗️'}
                             </div>
