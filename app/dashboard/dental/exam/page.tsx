@@ -15,7 +15,11 @@ import {
   Award,
   BarChart2,
   Lock,
-  MessageCircle
+  MessageCircle,
+  Eye,
+  BookOpen,
+  Check,
+  X
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { ALL_DENTAL_QUESTIONS, DENTAL_CATEGORIES, recordDentalAnswer, extractAllChapters } from '@/lib/dental-store';
@@ -42,6 +46,7 @@ export default function DentalExamPage() {
 
   // Share Card state
   const [isExporting, setIsExporting] = useState<boolean>(false);
+  const [showReview, setShowReview] = useState<boolean>(false);
 
   // Load chapters on mount
   useEffect(() => {
@@ -113,6 +118,7 @@ export default function DentalExamPage() {
     setCurrentIndex(0);
     setUserAnswers({});
     setIsTimeUp(false);
+    setShowReview(false);
     
     if (timeLimitMinutes === 9999) {
       setSecondsRemaining(999999); // Untimed
@@ -577,12 +583,107 @@ export default function DentalExamPage() {
                   <span>{isExporting ? 'Generating Image...' : 'Download Share Card'}</span>
                 </button>
                 <button
+                  onClick={() => setShowReview(prev => !prev)}
+                  className={`px-6 py-3.5 rounded-xl border font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer w-full ${
+                    showReview
+                      ? 'bg-indigo-500/20 border-indigo-500 text-indigo-300'
+                      : 'bg-white/5 hover:bg-white/10 border-white/10 text-white'
+                  }`}
+                >
+                  <Eye className="w-4 h-4" />
+                  <span>{showReview ? 'Hide Review' : 'Review Answers 🔍'}</span>
+                </button>
+                <button
                   onClick={() => setExamState('SETUP')}
                   className="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-sm transition-all cursor-pointer w-full"
                 >
-                  Take New Exam 🔄
+                  New Exam 🔄
                 </button>
               </div>
+
+              {/* Interactive Review Section */}
+              {showReview && (
+                <div className="space-y-6 mt-8 text-left border-t border-white/10 pt-8 max-w-2xl mx-auto">
+                  <h3 className="text-lg font-bold text-white flex items-center gap-2 mb-4">
+                    <BookOpen className="w-5 h-5 text-indigo-400" />
+                    <span>Detailed Questions Review</span>
+                  </h3>
+                  
+                  {examQuestions.map((q, idx) => {
+                    const selectedIdx = userAnswers[q.id];
+                    const isCorrect = selectedIdx === q.correctAnswer;
+                    
+                    return (
+                      <div
+                        key={q.id}
+                        className={`p-6 rounded-2xl border backdrop-blur-xl transition-all ${
+                          isCorrect
+                            ? 'bg-emerald-500/[0.02] border-emerald-500/10'
+                            : 'bg-rose-500/[0.02] border-rose-500/10'
+                        }`}
+                      >
+                        <div className="flex items-start justify-between gap-4">
+                          <div>
+                            <span className="text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider bg-white/5 border border-white/5 text-slate-400 mb-2 inline-block">
+                              Question {idx + 1} of {examQuestions.length} — {q.category}
+                            </span>
+                            <h4 className="text-sm font-extrabold text-white leading-relaxed mt-1">
+                              {q.question}
+                            </h4>
+                          </div>
+                          
+                          <span
+                            className={`px-2 py-1 rounded-lg border text-[10px] font-black shrink-0 ${
+                              isCorrect
+                                ? 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
+                                : 'bg-rose-500/10 border-rose-500/20 text-rose-400'
+                            }`}
+                          >
+                            {isCorrect ? '✓ CORRECT' : '✗ INCORRECT'}
+                          </span>
+                        </div>
+
+                        {/* Options */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+                          {q.options.map((opt, oIdx) => {
+                            const isThisCorrect = oIdx === q.correctAnswer;
+                            const isThisSelected = oIdx === selectedIdx;
+                            
+                            let optStyle = "bg-white/[0.01] border-white/5 text-slate-300";
+                            let icon = null;
+
+                            if (isThisCorrect) {
+                              optStyle = "bg-emerald-500/10 border-emerald-500/20 text-emerald-400 font-extrabold";
+                              icon = <Check className="w-4 h-4 shrink-0 text-emerald-400" />;
+                            } else if (isThisSelected) {
+                              optStyle = "bg-rose-500/10 border-rose-500/20 text-rose-400 font-extrabold";
+                              icon = <X className="w-4 h-4 shrink-0 text-rose-400" />;
+                            }
+
+                            return (
+                              <div
+                                key={oIdx}
+                                className={`p-3 rounded-xl border text-xs flex items-center justify-between gap-2 ${optStyle}`}
+                              >
+                                <span>{opt}</span>
+                                {icon}
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        {/* Explanation */}
+                        {q.explanation && (
+                          <div className="mt-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 text-xs text-slate-400 space-y-2 leading-relaxed">
+                            <span className="font-extrabold text-indigo-400 block">📚 Explanation & Study Notes:</span>
+                            <div className="whitespace-pre-line font-medium">{q.explanation}</div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           )}
         </>
