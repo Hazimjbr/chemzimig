@@ -67,33 +67,33 @@ export default function HeroSection() {
           ) : (
             <>
               {/* Floating Molar Tooth (Top Right) */}
-              <div className="absolute top-[15%] right-[15%] animate-float opacity-20 text-indigo-400">
-                <svg width="70" height="70" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="absolute top-[15%] right-[15%] animate-float opacity-35 text-indigo-400">
+                <svg width="80" height="80" viewBox="0 0 100 100" fill="currentColor" fillOpacity="0.06" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M25 35 C 25 22, 35 20, 50 25 C 65 20, 75 22, 75 35 C 75 52, 70 65, 65 72 C 60 78, 62 88, 60 92 C 58 92, 54 85, 50 78 C 46 85, 42 92, 40 92 C 38 88, 40 78, 35 72 C 30 65, 25 52, 25 35 Z" />
-                  <path d="M35 38 C 45 42, 55 42, 65 38" />
-                  <path d="M50 25 L 50 48" />
+                  <path d="M35 38 C 45 42, 55 42, 65 38" fill="none" />
+                  <path d="M50 25 L 50 48" fill="none" />
                 </svg>
               </div>
 
               {/* Floating Dental Handpiece / Drill (Bottom Left) */}
-              <div className="absolute bottom-[20%] left-[10%] animate-float-slow opacity-15 text-teal-400">
-                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="absolute bottom-[20%] left-[10%] animate-float-slow opacity-30 text-teal-400">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="currentColor" fillOpacity="0.06" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   {/* Handle body */}
                   <path d="M20 80 L 50 50 C 53 47, 57 47, 60 50 L 70 60" />
                   {/* Head angle */}
-                  <path d="M70 60 L 80 40 L 85 45 L 75 65 Z" />
+                  <path d="M70 60 L 80 40 L 85 45 L 75 65 Z" fill="currentColor" fillOpacity="0.1" />
                   {/* Drill bur */}
-                  <line x1="82.5" y1="42.5" x2="90" y2="35" stroke="currentColor" strokeWidth="2" />
+                  <line x1="82.5" y1="42.5" x2="90" y2="35" stroke="currentColor" strokeWidth="3" />
                   {/* Water spray drops */}
-                  <circle cx="92" cy="30" r="1.5" fill="currentColor" opacity="0.8" />
-                  <circle cx="86" cy="27" r="1" fill="currentColor" opacity="0.6" />
-                  <circle cx="95" cy="37" r="1" fill="currentColor" opacity="0.6" />
+                  <circle cx="92" cy="30" r="2" fill="currentColor" opacity="0.9" />
+                  <circle cx="86" cy="27" r="1.5" fill="currentColor" opacity="0.7" />
+                  <circle cx="95" cy="37" r="1.5" fill="currentColor" opacity="0.7" />
                 </svg>
               </div>
 
               {/* Floating Dental Braces / Ortho (Top Left) */}
-              <div className="absolute top-[30%] left-[8%] animate-float opacity-15 text-indigo-300" style={{ animationDelay: "2s" }}>
-                <svg width="75" height="60" viewBox="0 0 100 80" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="absolute top-[30%] left-[8%] animate-float opacity-35 text-indigo-300" style={{ animationDelay: "2s" }}>
+                <svg width="85" height="70" viewBox="0 0 100 80" fill="currentColor" fillOpacity="0.06" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   {/* Tooth 1 */}
                   <path d="M10 20 C 10 10, 20 8, 25 10 C 30 8, 40 10, 40 20 C 40 35, 10 35, 10 20 Z" />
                   {/* Tooth 2 */}
@@ -101,29 +101,29 @@ export default function HeroSection() {
                   {/* Tooth 3 */}
                   <path d="M70 20 C 70 10, 80 8, 85 10 C 90 8, 100 10, 100 20 C 100 35, 70 35, 70 20 Z" />
                   {/* Bracket 1 */}
-                  <rect x="20" y="16" width="10" height="8" rx="1" fill="none" stroke="currentColor" strokeWidth="1" />
+                  <rect x="20" y="16" width="10" height="8" rx="1.5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.5" />
                   {/* Bracket 2 */}
-                  <rect x="50" y="16" width="10" height="8" rx="1" fill="none" stroke="currentColor" strokeWidth="1" />
+                  <rect x="50" y="16" width="10" height="8" rx="1.5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.5" />
                   {/* Bracket 3 */}
-                  <rect x="80" y="16" width="10" height="8" rx="1" fill="none" stroke="currentColor" strokeWidth="1" />
+                  <rect x="80" y="16" width="10" height="8" rx="1.5" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.5" />
                   {/* Archwire passing through */}
-                  <path d="M5 20 Q 50 24 95 20" stroke="currentColor" strokeWidth="2.5" />
+                  <path d="M5 20 Q 50 24 95 20" stroke="currentColor" strokeWidth="3" fill="none" />
                 </svg>
               </div>
 
               {/* Floating Dental Chair (Bottom Right) */}
-              <div className="absolute bottom-[25%] right-[8%] animate-float-slow opacity-20 text-teal-300" style={{ animationDelay: "1s" }}>
-                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="absolute bottom-[25%] right-[8%] animate-float-slow opacity-35 text-teal-300" style={{ animationDelay: "1s" }}>
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="currentColor" fillOpacity="0.06" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   {/* Backrest & Headrest */}
                   <path d="M25 45 C 25 35, 30 30, 35 30 L 40 30" />
-                  <rect x="30" y="22" width="10" height="6" rx="2" />
+                  <rect x="30" y="22" width="10" height="6" rx="2" fill="currentColor" fillOpacity="0.2" />
                   {/* Seat base and leg rest */}
                   <path d="M28 48 C 35 50, 50 50, 55 55 L 75 75 L 85 75" />
                   {/* Support stand base */}
-                  <path d="M45 52 L 45 78 L 65 78" />
+                  <path d="M45 52 L 45 78 L 65 78" fill="none" />
                   {/* Overhead Light stand */}
-                  <path d="M35 78 L 35 50 Q 35 35 48 35" />
-                  <ellipse cx="52" cy="35" rx="5" ry="3" />
+                  <path d="M35 78 L 35 50 Q 35 35 48 35" fill="none" />
+                  <ellipse cx="52" cy="35" rx="5" ry="3" fill="currentColor" fillOpacity="0.3" />
                 </svg>
               </div>
             </>
