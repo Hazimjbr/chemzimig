@@ -14834,5 +14834,285 @@
     "explanation": "Necrotizing sialometaplasia is a benign, self-limiting inflammatory condition. Because of squamous metaplasia, it clinically and histologically mimics SCC or mucoepidermoid carcinoma. It resolves spontaneously in 6-8 weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 213)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1244,
+    "question": "A patient presents with sudden, brief, electric shock-like stabbing pain on the right side of their face, lasting only a few seconds. The pain is triggered by light touch during washing or shaving. What is the most likely diagnosis?",
+    "options": [
+      "Atypical facial pain",
+      "Trigeminal neuralgia",
+      "Acute irreversible pulpitis",
+      "Temporal arteritis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Trigeminal neuralgia is characterized by sudden, brief, unilateral stabbing shock-like pain triggered by innocuous stimuli (such as washing, shaving, or talking) in trigger zones corresponding to trigeminal branches.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 227)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1245,
+    "question": "Which of the following medications is the first-line pharmacotherapy for trigeminal neuralgia, where a positive treatment response is considered virtually diagnostic?",
+    "options": [
+      "Amitriptyline",
+      "Carbamazepine",
+      "Prednisolone",
+      "Ibuprofen"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Carbamazepine is the first-choice medical therapy for classical trigeminal neuralgia. Significant pain relief following its administration strongly supports the diagnosis of trigeminal neuralgia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 227)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1246,
+    "question": "During the long-term administration of Carbamazepine for facial pain, what is a critical hematological adverse effect that requires periodic blood monitoring?",
+    "options": [
+      "Severe megaloblastic anemia",
+      "Bone marrow suppression (specifically leukopenia and agranulocytosis)",
+      "Acute thrombocytosis",
+      "Hemophilic bleeding tendency"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Carbamazepine can cause bone marrow suppression, leading to leukopenia, aplastic anemia, or agranulocytosis. Regular complete blood count (CBC) monitoring is required during long-term therapy.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 227)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1247,
+    "question": "A patient complains of severe, stabbing, sharp pain in the throat, tonsillar fossa, and base of the tongue that is triggered specifically by swallowing or yawning. Which neuralgia is described?",
+    "options": [
+      "Trigeminal neuralgia",
+      "Glossopharyngeal neuralgia",
+      "Post-herpetic neuralgia",
+      "Sphenopalatine neuralgia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Glossopharyngeal neuralgia presents with severe stabbing pain in the distribution of cranial nerve IX (pharynx, tonsil, posterior tongue, ear), triggered by swallowing, talking, or yawning.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 229)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1248,
+    "question": "An elderly patient presents with a severe headache, tenderness over the temple, and pain in the jaw muscles when chewing food (jaw claudication). Laboratory test shows a highly elevated ESR. What is the primary clinical risk if this condition is left untreated?",
+    "options": [
+      "Permanent facial nerve paralysis",
+      "Sudden, irreversible blindness (loss of vision)",
+      "Osteonecrosis of the mandibular angle",
+      "Complete destruction of the TMJ articular disc"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Giant-cell arteritis (temporal arteritis) is an inflammatory vasculitis. Laceration or occlusion of the ophthalmic artery can cause sudden, irreversible blindness. High-dose steroids must be initiated immediately.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 233)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1249,
+    "question": "What is the definitive diagnostic procedure to confirm a clinical suspicion of giant-cell (temporal) arteritis?",
+    "options": [
+      "Aspiration biopsy of the parotid gland",
+      "Temporal artery biopsy demonstrating multinucleated giant cells and vascular inflammation",
+      "Labial salivary gland biopsy",
+      "Contrast sialography of the submandibular duct"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Definitive diagnosis of giant-cell arteritis requires a temporal artery biopsy, showing chronic inflammatory infiltration, fragmentation of the internal elastic lamina, and multinucleated giant cells.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 233)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1250,
+    "question": "Post-herpetic neuralgia is a chronic pain condition. How is it defined regarding the duration of symptoms following the acute shingles rash?",
+    "options": [
+      "Pain that persists for more than 24 hours after vesicles rupture",
+      "Pain that persists for more than 3 months after the healing of the acute herpes zoster skin lesions",
+      "Pain that occurs only during the vesicular stage of primary herpes",
+      "Pain that resolves within 7 days of starting acyclovir therapy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Post-herpetic neuralgia is defined as neuropathic pain that persists for more than 3 months (some criteria say 1 month) after the cutaneous lesions of herpes zoster (shingles) have fully healed.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 231)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1251,
+    "question": "A postmenopausal female patient complains of a continuous, burning sensation in the anterior two-thirds of her tongue. Clinical examination shows normal oral mucosa with no visible lesions. What is the most likely diagnosis?",
+    "options": [
+      "Reticular lichen planus",
+      "Burning mouth syndrome (BMS)",
+      "Erosive candidiasis",
+      "Atypical facial pain"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Burning mouth syndrome is characterized by a burning sensation of the oral mucosa (most commonly the tongue) in the absence of any clinically identifiable local lesions or systemic causes.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 231)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1252,
+    "question": "A patient presents with persistent, deep, aching facial pain that does not conform to any anatomical nerve distribution and has no identifiable local cause. Standard analgesics provide no relief. What is the diagnosis and recommended medical management?",
+    "options": [
+      "Trigeminal neuralgia managed with Carbamazepine",
+      "Atypical facial pain (persistent idiopathic facial pain) managed with low-dose tricyclic antidepressants (e.g., Amitriptyline)",
+      "Temporal arteritis managed with high-dose Prednisolone",
+      "Post-herpetic neuralgia managed with topical acyclovir cream"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Atypical facial pain (persistent idiopathic facial pain) presents as chronic, deep, non-anatomical pain. It does not respond to conventional analgesics but is managed with low-dose tricyclic antidepressants (Amitriptyline).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 231)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1253,
+    "question": "Regarding the microanatomy of the TMJ articular disc, which of the following is true concerning its vascularity and innervation?",
+    "options": [
+      "The disc is highly vascular and richly innervated throughout its entire structure",
+      "The central zone of the disc is completely avascular and lacks nerve fibers",
+      "The posterior attachment (retrodiscal pad) is avascular and non-innervated",
+      "Only the anterior band of the disc contains sensory nerve endings"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The articular disc is composed of dense fibrous connective tissue. Its central bearing zone is avascular and non-innervated, adapted to withstand load. In contrast, the posterior retrodiscal tissue is highly vascular and innervated.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 239)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1254,
+    "question": "A patient presents with bilateral dull aching pain in the masseter muscles, limited mouth opening, and clicking of the TMJ. They have a history of nocturnal bruxism. Radiographs show no joint space narrowing or condylar remodeling. What is the most likely diagnosis?",
+    "options": [
+      "Osteoarthrosis of the condyle",
+      "Temporomandibular pain dysfunction syndrome (TMPDS / myofascial pain)",
+      "Rheumatoid arthritis of the TMJ",
+      "True fibrous ankylosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "TMPDS is a myofascial pain disorder characterized by joint/muscle pain, clicking, and restricted opening, frequently linked to muscular parafunction (bruxism) without radiological bony changes.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 241)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1255,
+    "question": "What is the recommended initial management approach for a patient diagnosed with temporomandibular pain dysfunction syndrome (TMPDS)?",
+    "options": [
+      "Immediate surgical condylectomy",
+      "Conservative, non-invasive therapies (reassurance, soft diet, analgesics, and an occlusal splint)",
+      "Intra-articular injection of systemic corticosteroids",
+      "Irreversible occlusal grinding and orthodontic alignment"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Initial therapy for TMPDS should always be conservative and reversible. This includes reassurance, soft diet, simple analgesics, thermotherapy, and a stabilization splint (nightguard). Surgery is rarely indicated.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 241)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1256,
+    "question": "In TMJ internal derangement, what characterizes disc displacement with reduction?",
+    "options": [
+      "The disc remains permanently displaced anterior to the condyle during all jaw movements, locking the jaw",
+      "The disc is displaced anteriorly at rest but slips back over the condyle during mouth opening, producing a click",
+      "The disc undergoes complete fibrous ankylosis to the articular eminence",
+      "The condyle undergoes severe bony erosion and resorption"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In disc displacement with reduction, the disc is positioned anteriorly in the closed joint. Upon opening, the condyle slides forward and pops back under the disc (reduces), causing a characteristic click.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 241)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1257,
+    "question": "What happens clinically when a patient's TMJ disc displacement progresses from 'with reduction' to 'without reduction'?",
+    "options": [
+      "The clicking sound becomes much louder and continuous",
+      "The joint clicks disappear, and the patient experiences sudden, severe limitation of mouth opening (closed lock)",
+      "The condyle undergoes complete subluxation out of the fossa",
+      "The patient develops bilateral anesthesia of the lower lip"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When a displaced disc no longer reduces (displacement without reduction), the clicking stops because the condyle cannot pass over the folded disc. The disc acts as a mechanical block, causing limited opening (closed lock).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 241)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1258,
+    "question": "How is 'true' TMJ ankylosis distinguished from 'false' ankylosis?",
+    "options": [
+      "True ankylosis involves bony or fibrous fusion within the joint itself, while false ankylosis is caused by extra-articular restrictions (e.g., muscle spasm, scarring)",
+      "True ankylosis occurs only in children, while false ankylosis affects elderly patients",
+      "True ankylosis is treated solely with antibiotics, while false ankylosis requires surgery",
+      "True ankylosis is highly painful, whereas false ankylosis is completely painless"
+    ],
+    "correctAnswer": 0,
+    "explanation": "True (intra-articular) ankylosis involves direct fusion between the condyle and temporal bone. False (extra-articular) ankylosis is limitation of movement caused by extra-articular factors like muscular fibrosis or coronoid hyperplasia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 242)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1259,
+    "question": "A patient with long-standing rheumatoid arthritis develops progressive resorption of both TMJ condyles. What classic occlusal change is expected?",
+    "options": [
+      "Severe mandibular prognathism",
+      "Progressive anterior open bite due to retropositioning of the mandible",
+      "Complete crossbite of all posterior teeth",
+      "An increase in the vertical dimension of occlusion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rheumatoid arthritis can destroy the condyles bilaterally, causing loss of posterior vertical height of the mandible. The mandible retropositions and rotates backwards, creating an anterior open bite.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 241)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1260,
+    "question": "In patients with myofascial pain, what are 'trigger points' and how do they behave?",
+    "options": [
+      "Points on the skin that trigger an electric shock-like neuralgia when lightly touched",
+      "Hyperirritable spots in skeletal muscle that are painful on compression and give rise to characteristic referred pain",
+      "Microscopic fractures within the cortical bone of the condyle",
+      "Areas on the occlusal surfaces of teeth that cause immediate TMJ clicking"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Myofascial trigger points are localized, tender areas in taut bands of skeletal muscle (e.g. masseter, temporalis). Palpation produces local pain and referred pain to distant sites (such as adjacent teeth).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 241)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1261,
+    "question": "Which radiographic imaging modality is best suited to evaluate the soft-tissue components of the TMJ, specifically the position and morphology of the articular disc?",
+    "options": [
+      "Orthopantomogram (OPG)",
+      "Magnetic Resonance Imaging (MRI)",
+      "Cone Beam Computed Tomography (CBCT)",
+      "Transpharyngeal radiograph"
+    ],
+    "correctAnswer": 1,
+    "explanation": "MRI is the gold standard for TMJ soft-tissue evaluation. It provides excellent contrast resolution, allowing precise visualization of the articular disc position, morphology, and retrodiscal tissue.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 239)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1262,
+    "question": "Carbamazepine is a potent inducer of hepatic microsomal enzymes (cytochrome P450). What is a clinical implication of this drug interaction?",
+    "options": [
+      "It increases the serum half-life and toxicity of concurrent medications",
+      "It accelerates the metabolism and reduces the clinical efficacy of drugs like oral contraceptives and Warfarin",
+      "It completely blocks the absorption of local anesthetics",
+      "It prevents the renal excretion of paracetamol"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Carbamazepine induces hepatic enzymes, accelerating the metabolism of other drugs metabolized by the liver, such as warfarin and oral contraceptives, reducing their clinical efficacy.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 227)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1263,
+    "question": "Which of the following clinical features helps differentiate glossopharyngeal neuralgia from trigeminal neuralgia?",
+    "options": [
+      "Glossopharyngeal neuralgia pain is chronic and dull, while trigeminal pain is electric",
+      "Glossopharyngeal neuralgia is triggered by swallowing, chewing, or talking, with pain localized to the pharynx, tonsillar fossa, and ear",
+      "Glossopharyngeal neuralgia responds only to high-dose intravenous corticosteroids",
+      "Glossopharyngeal neuralgia causes permanent numbness of the lower lip"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Glossopharyngeal neuralgia pain is triggered by swallowing, cold drinks, or yawning, and is localized to the throat, posterior tongue, and ear. Trigeminal neuralgia is triggered by touching facial skin.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 229)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
