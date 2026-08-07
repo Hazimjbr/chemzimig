@@ -136,17 +136,24 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
     const [solvedQuestions, setSolvedQuestions] = useState<Record<string, SolvedQuestionStatus>>({});
 
     const isSyncing = useRef(false);
+    // Store user.id in a ref so syncPendingXP can read it without user in its dependency array
+    const userIdRef = useRef<string | null>(null);
+    userIdRef.current = user?.id ?? null;
 
     const saveState = useCallback((key: string, value: any) => {
-        if (!user) return;
-        const prefix = `gamify_${user.id}_`;
+        const uid = userIdRef.current;
+        if (!uid) return;
+        const prefix = `gamify_${uid}_`;
         localStorage.setItem(`${prefix}${key}`, JSON.stringify(value));
-    }, [user]);
+    }, []);
 
     // WAL pending queue syncing mechanism
+    // NOTE: Does NOT call updateUser to avoid triggering the user→useEffect→syncPendingXP loop.
+    // XP is persisted to localStorage and Firestore; AuthContext re-reads it on next session verify.
     const syncPendingXP = useCallback(async () => {
-        if (!user || isSyncing.current) return;
-        const prefix = `gamify_${user.id}_`;
+        const uid = userIdRef.current;
+        if (!uid || isSyncing.current) return;
+        const prefix = `gamify_${uid}_`;
         const queueKey = `${prefix}xp_queue`;
 
         const savedQueue = localStorage.getItem(queueKey);
@@ -170,12 +177,12 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                 const updatedQueue = queue.filter(item => !result.syncedEventIds.includes(item.eventId));
                 localStorage.setItem(queueKey, JSON.stringify(updatedQueue));
 
-                // Update single source of truth XP state from server
+                // Update local XP state only — do NOT call updateUser here
+                // (calling updateUser changes the user object → triggers useEffect([user]) → infinite loop)
                 if (typeof result.xp === 'number') {
                     setXP(result.xp);
                     setLevel(result.level);
-                    saveState('xp', result.xp);
-                    updateUser({ xp: result.xp, level: result.level });
+                    localStorage.setItem(`${prefix}xp`, JSON.stringify(result.xp));
                 }
             }
         } catch (e) {
@@ -183,7 +190,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
         } finally {
             isSyncing.current = false;
         }
-    }, [user, saveState, updateUser]);
+    }, []);
 
     // Trigger migration of legacy XP if Firestore contains 0 XP
     const migrateLegacyXP = useCallback(async (legacyXP: number) => {
@@ -208,6 +215,9 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
     }, [user, saveState, updateUser]);
 
     // Load initial data from localStorage and fetch Firestore state
+    // Depend on user.id only (not the full user object) to avoid re-running when AuthContext
+    // updates other fields (e.g. grade or lastLogin) mid-session
+    const userId = user?.id;
     useEffect(() => {
         if (user) {
             const loadAndMigrate = async () => {
@@ -276,7 +286,8 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
             loadAndMigrate();
         }
         setIsLoading(false);
-    }, [user, migrateLegacyXP, syncPendingXP]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [userId]); // Only re-run when user switches accounts, not on every user object mutation
 
     // Sync online detection to trigger pending syncs
     useEffect(() => {
