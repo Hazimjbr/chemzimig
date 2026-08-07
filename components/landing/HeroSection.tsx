@@ -5,11 +5,18 @@ import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import LoginModal from "@/components/auth/LoginModal";
 import { Stethoscope, Sparkles, BookOpen, Trophy, ArrowRight, Shield } from "lucide-react";
+import { useEffect } from "react";
 
 export default function HeroSection() {
   const { isAuthenticated } = useAuth();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<"chemistry" | "dental">("chemistry");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    localStorage.setItem("active_specialty", activeTab);
+    window.dispatchEvent(new Event("specialty-change"));
+  }, [activeTab]);
 
   return (
     <>
