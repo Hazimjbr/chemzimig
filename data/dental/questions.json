@@ -17074,5 +17074,1405 @@
     "explanation": "Canine substitution involves orthodontically moving the permanent canine mesially into the missing lateral incisor space, followed by cosmetic reshaping (grinding canine tip, composite/veneer) to aesthetically replace the lateral incisor.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 178)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Orthodontics & Diagnosis",
     "level": "Level 3"
+  },
+  {
+    "id": 1404,
+    "question": "A patient undergoing tooth extraction under local anesthesia suddenly develops severe stridor, facial angioedema, hypotension, and generalized urticaria. What is the immediate first-line emergency medication and recommended dose for an adult?",
+    "options": [
+      "Intravenous hydrocortisone 200 mg",
+      "Intramuscular Adrenaline (Epinephrine) 1:1000, 0.5 mg (0.5 mL) into the anterolateral thigh",
+      "Sublingual Nitroglycerin spray",
+      "Oral Chlorpheniramine 10 mg"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Anaphylaxis is a life-threatening type I hypersensitivity reaction. Immediate administration of IM Adrenaline 1:1000 (0.5 mg for adults) into the mid-anterolateral thigh is the single most critical life-saving drug.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 30)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1405,
+    "question": "What is the mechanism of action of Adrenaline (Epinephrine) in reversing the severe pathophysiology of anaphylactic shock?",
+    "options": [
+      "Alpha-1 agonist (vasoconstriction to restore blood pressure), Beta-1 agonist (increases cardiac output), and Beta-2 agonist (bronchodilation and suppression of mediator release)",
+      "Pure histamine-1 receptor blocker",
+      "Direct inhibition of cyclooxygenase-2 (COX-2) enzymes",
+      "Parasympathetic stimulation causing bradycardia"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Adrenaline acts as a potent alpha-1 agonist (counteracting vasodilation/edema), beta-1 agonist (increasing heart rate and contractility), and beta-2 agonist (relieving bronchospasm and stopping mast cell degranulation).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 30)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1406,
+    "question": "Which local anesthetic agent is metabolized primarily in the plasma by serum pseudocholinesterase rather than in the liver, giving it an exceptionally short elimination half-life of 20-30 minutes?",
+    "options": [
+      "Lidocaine",
+      "Articaine",
+      "Bupivacaine",
+      "Prilocaine"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Articaine contains a thiophene ring and an additional ester group. It is unique among amides because ~90% of it is rapidly hydrolyzed by serum esterases in blood plasma, leading to lower systemic toxicity potential.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 48)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1407,
+    "question": "A patient administered excessive doses of Prilocaine local anesthetic develops cyanosis, dyspnea, and chocolate-brown colored blood that fails to turn red upon exposure to oxygen. What is the diagnosis and antidote?",
+    "options": [
+      "Local Anesthetic Systemic Toxicity (LAST); treat with Intralipid 20%",
+      "Methemoglobinemia; treat with Intravenous Methylene Blue (1-2 mg/kg)",
+      "Malignant hyperthermia; treat with Dantrolene",
+      "Anaphylactic shock; treat with adrenaline"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Prilocaine metabolite (o-toluidine) oxidizes hemoglobin to methemoglobin, reducing oxygen carrying capacity. Methemoglobinemia causes cyanosis and brown blood. The specific antidote is IV Methylene Blue.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 49)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1408,
+    "question": "What is the recommended emergency treatment for severe Local Anesthetic Systemic Toxicity (LAST) presenting with seizures and cardiovascular collapse?",
+    "options": [
+      "Intravenous 20% Lipid Emulsion (Intralipid) therapy",
+      "Intravenous Flumazenil",
+      "Oral activated charcoal",
+      "Intramuscular atropine"
+    ],
+    "correctAnswer": 0,
+    "explanation": "IV 20% Lipid Emulsion (Intralipid) acts as a 'lipid sink', extracting lipophilic local anesthetics (especially bupivacaine or lidocaine) from plasma and cardiac tissue, reversing LAST cardiac toxicity.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 50)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1409,
+    "question": "Why should Non-Steroidal Anti-Inflammatory Drugs (NSAIDs) be avoided in patients taking Lithium for bipolar disorder?",
+    "options": [
+      "NSAIDs cause severe oral ulceration when combined with lithium",
+      "NSAIDs reduce renal lithium clearance, leading to elevated plasma lithium levels and severe toxicity (tremors, ataxia, renal failure)",
+      "NSAIDs destroy the blood-brain barrier",
+      "NSAIDs completely block lithium absorption in the gut"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NSAIDs inhibit renal prostaglandin synthesis, reducing renal blood flow and decreasing lithium excretion by 30-50%. This can rapidly precipitate lethal lithium toxicity.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 32)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1410,
+    "question": "Which dental antibiotic carries the highest risk of causing Clostridioides difficile (C. diff) pseudomembranous colitis, presenting with severe bloody diarrhea and abdominal cramps?",
+    "options": [
+      "Amoxicillin",
+      "Clindamycin",
+      "Metronidazole",
+      "Erythromycin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "While many broad-spectrum antibiotics can cause C. diff colitis, Clindamycin is notoriously associated with suppressing normal gut flora, permitting overgrowth of toxin-producing C. difficile.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 34)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1411,
+    "question": "Metronidazole is highly effective against obligate anaerobic dental bacteria. What critical warning regarding alcohol intake must be given to patients taking Metronidazole?",
+    "options": [
+      "It causes immediate tooth staining when mixed with wine",
+      "It triggers a Disulfiram-like reaction (severe facial flushing, vomiting, tachycardia, and throbbing headache)",
+      "It causes hyper-calcification of enamel",
+      "It neutralizes the antibiotic instantly"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Metronidazole inhibits aldehyde dehydrogenase. Consuming alcohol while taking metronidazole leads to accumulation of acetaldehyde, producing a violent disulfiram-like reaction.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 34)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1412,
+    "question": "Which antimicrobial agent is the drug of choice for treating acute necrotizing ulcerative gingivitis (ANUG) or pericoronitis in a patient with systemic involvement?",
+    "options": [
+      "Nystatin suspension",
+      "Metronidazole (400 mg three times daily for 3 days)",
+      "Ciprofloxacin",
+      "Fluconazole"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ANUG is caused by anaerobic spirochetes and fusobacteria (Fusospirochetal complex). Metronidazole is the specific drug of choice due to its potent activity against obligate anaerobes.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 62)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1413,
+    "question": "What is the specific reversal agent (antidote) for Benzodiazepine overdose (e.g., Midazolam toxicity during IV conscious sedation)?",
+    "options": [
+      "Naloxone",
+      "Flumazenil (IV 200 micrograms over 15 seconds)",
+      "Atropine",
+      "Protamine sulfate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Flumazenil is a specific competitive antagonist at the GABA-A receptor benzodiazepine binding site, rapidly reversing central respiratory depression and sedation caused by midazolam.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 45)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1414,
+    "question": "What is the specific competitive opioid antagonist used to reverse severe respiratory depression caused by Opioid toxicity (e.g. Morphine or Fentanyl)?",
+    "options": [
+      "Flumazenil",
+      "Naloxone (IV/IM 400 micrograms)",
+      "Neostigmine",
+      "Sugammadex"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Naloxone is a pure competitive opioid receptor antagonist that rapidly reverses opioid-induced respiratory depression, sedation, and hypotension.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 45)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1415,
+    "question": "Why is Aspirin contraindicated in children and adolescents under 16 years of age presenting with viral infections (such as flu or chickenpox)?",
+    "options": [
+      "It causes rapid permanent discoloration of erupting permanent teeth",
+      "It is strongly associated with Reye's Syndrome (acute encephalopathy and fatty liver failure)",
+      "It causes severe allergic asthma in 100% of children",
+      "It prevents normal skeletal jaw growth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Aspirin administration to children during viral illnesses is linked to Reye's Syndrome—a rare but severe, life-threatening condition characterized by acute liver failure and cerebral edema.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 31)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1416,
+    "question": "A patient taking ACE Inhibitors (e.g. Enalapril) for hypertension requires dental treatment. What common oral side effect is specifically linked to ACE inhibitor therapy?",
+    "options": [
+      "Persistent dry cough, altered taste sensation (dysgeusia), and potential angioedema",
+      "Severe gingival enlargement",
+      "Hyper-salivation",
+      "Black hairy tongue"
+    ],
+    "correctAnswer": 0,
+    "explanation": "ACE inhibitors prevent bradykinin degradation. Bradykinin accumulation frequently induces a dry intractable cough, altered taste (dysgeusia), and occasionally life-threatening oral/facial angioedema.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 32)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1417,
+    "question": "Which class of antihypertensive medications is most notoriously associated with Drug-Induced Gingival Overgrowth (enlargement)?",
+    "options": [
+      "Beta-blockers (Propranolol)",
+      "Dihydropyridine Calcium Channel Blockers (specifically Nifedipine and Amlodipine)",
+      "Thiazide diuretics (Bendroflumethiazide)",
+      "ACE Inhibitors (Lisinopril)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Calcium channel blockers (especially Nifedipine and Amlodipine), along with Cyclosporine (immunosuppressant) and Phenytoin (anticonvulsant), are the classic triad of drugs causing gingival enlargement.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 32)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1418,
+    "question": "A patient experiencing a severe vasovagal syncope (fainting) episode in the dental chair fails to regain consciousness after being placed in a flat (supine) position with legs elevated. What emergency drug should be administered if severe bradycardia persists?",
+    "options": [
+      "Intravenous Atropine (0.6 mg)",
+      "Oral Diazepam",
+      "Sublingual Nitroglycerin",
+      "Inhaled Salbutamol"
+    ],
+    "correctAnswer": 0,
+    "explanation": "If vasovagal syncope is complicated by severe, persistent vagal bradycardia (heart rate < 40 bpm) that does not respond to supine positioning, IV Atropine (an anticholinergic) is administered.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 28)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1419,
+    "question": "What is the recommended maximum cumulative lifetime dose of Paracetamol (Acetaminophen) per 24 hours for a healthy adult to prevent acute hepatotoxicity?",
+    "options": [
+      "2 grams (2000 mg)",
+      "4 grams (4000 mg; eight 500 mg tablets)",
+      "8 grams (8000 mg)",
+      "10 grams (10000 mg)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The maximum recommended 24-hour adult dose of Paracetamol is 4 grams (1 g every 4-6 hours, max 4 doses). Higher doses deplete hepatic glutathione, causing toxic NAPQI metabolite liver necrosis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 31)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1420,
+    "question": "Which systemic condition requires antibiotic prophylaxis prior to surgical dental procedures according to American Heart Association (AHA) guidelines?",
+    "options": [
+      "Coronary artery stent placed 2 years ago",
+      "Repaired congenital heart defect with residual shunts or prosthetic material at the site",
+      "Pacemaker placement 6 months ago",
+      "History of rheumatic fever without valvular dysfunction"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AHA guidelines state that repaired congenital heart disease with residual defects at or adjacent to the site of a prosthetic patch/device remains a high-risk indication for endocarditis prophylaxis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 22)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1421,
+    "question": "What is the rationale for avoiding systemic Tetracycline antibiotics in pregnant women (after 16 weeks gestation) and children under 8 years of age?",
+    "options": [
+      "Tetracyclines cause immediate acute renal failure in children",
+      "Tetracyclines chelate with calcium and deposit in developing bones and teeth, causing permanent yellow-brown discolouration and enamel hypoplasia",
+      "Tetracyclines cause immediate premature closure of cranial sutures",
+      "Tetracyclines trigger severe allergic gingivitis in 100% of cases"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tetracyclines chelate calcium ions and incorporate into calcifying dentin and enamel during tooth germ development, resulting in permanent intrinsic dark staining and enamel hypoplasia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 34)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1422,
+    "question": "A patient on long-term systemic Corticosteroid therapy presents for an extensive 3-hour periodontal surgery under local anesthesia. What is the standard steroid supplementation (cover) protocol?",
+    "options": [
+      "Stop corticosteroid medication 3 days before surgery",
+      "Double the oral maintenance steroid dose on the day of surgery (or give IV Hydrocortisone 100 mg pre-op) to prevent acute adrenal crisis",
+      "Switch the patient to oral aspirin 300 mg",
+      "No modification is required for surgical stress"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For major surgical stress in patients with HPA axis suppression, doubling the oral steroid dose or administering 100 mg IV hydrocortisone pre-operatively supplies essential stress cortisol.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 25)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1423,
+    "question": "Which of the following local anesthetics should be used with extreme caution or reduced dosage in patients taking Non-Selective Beta-Blockers (such as Propranolol)?",
+    "options": [
+      "Plain Lidocaine without vasoconstrictor",
+      "Local anesthetics containing Adrenaline (Epinephrine), because non-selective beta-blockade leaves alpha-1 receptors unopposed, risking severe hypertension and reflex bradycardia",
+      "Prilocaine without vasoconstrictor",
+      "Mepivacaine 3% plain"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Propranolol blocks beta-1 and beta-2 receptors. Exogenous adrenaline stimulates vascular alpha-1 receptors without beta-2 vasodilation, resulting in severe acute hypertension and reflex bradycardia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 50)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1424,
+    "question": "A patient presents with a midfacial fracture following a motor vehicle accident. Physical examination reveals mobility of the entire hard palate and upper dental arch relative to the upper face, while the nasal bridge and orbits remain stable. What is the Le Fort classification of this fracture?",
+    "options": [
+      "Le Fort I (horizontal fracture / Guerin fracture)",
+      "Le Fort II (pyramidal fracture)",
+      "Le Fort III (craniofacial dysjunction)",
+      "Subcondylar fracture"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Le Fort I is a horizontal fracture running above the apices of the teeth and nasal floor, separating the palate and maxilla alveolar process from the midface (floating palate).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 125)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1425,
+    "question": "A trauma patient presents with a pyramidal fracture extending from the nasal bridge, through the infraorbital rim, across the lacrimal bones, and down through the pterygoid plates. What is the diagnosis?",
+    "options": [
+      "Le Fort I fracture",
+      "Le Fort II fracture (pyramidal fracture)",
+      "Le Fort III fracture",
+      "Zygomaticomaxillary complex (ZMC) fracture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Le Fort II is a pyramidal fracture involving the nasal bones, lacrimal bones, infraorbital rim, and pterygoid plates, separating the central midface from the cranium.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 125)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1426,
+    "question": "A high-velocity facial impact results in complete separation of the facial skeleton from the base of the skull (craniofacial dysjunction), with fracture lines passing through the frontonasal suture, zygomaticofrontal sutures, and zygomatic arches. What is this fracture type?",
+    "options": [
+      "Le Fort I fracture",
+      "Le Fort II fracture",
+      "Le Fort III fracture (craniofacial dysjunction)",
+      "Bilateral condylar neck fracture"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Le Fort III represents complete craniofacial dysjunction where the entire facial skeleton detaches from the cranial base, extending through frontonasal and zygomaticofrontal sutures and arches.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 126)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1427,
+    "question": "What is the classic clinical sign of an isolated Zygomaticomaxillary Complex (ZMC) fracture (tripod fracture)?",
+    "options": [
+      "Floating maxilla palate mobility",
+      "Flatness (depression) of the cheek prominence, subconjunctival ecchymosis, paresthesia of the infraorbital nerve, and step-off at the orbital rim",
+      "Bilateral anterior open bite with retrognathism",
+      "Severe tongue macroglossia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ZMC (tripod) fractures involve the zygomatic arch, frontal process, and infraorbital rim. Classic features include cheek flattening, infraorbital nerve numbness (V2), subconjunctival hemorrhage, and bony stepping.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 128)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1428,
+    "question": "A patient suffers a traumatic blow to the chin. Radiographs reveal a fracture of the symphysis. What co-existing mandibular fracture must be carefully ruled out due to indirect force transmission?",
+    "options": [
+      "Bilateral condylar neck fractures",
+      "Le Fort I horizontal maxilla fracture",
+      "Coronoid process avulsion fracture",
+      "Stafne defect"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Impact to the symphysis/parasymphysis forces the mandible backward, transmitting kinetic energy up the rami and frequently causing secondary bilateral condylar neck fractures.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 120)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1429,
+    "question": "In a unilateral mandibular condylar neck fracture, how does the patient's mandible deviate upon mouth opening?",
+    "options": [
+      "Deviates towards the contralateral (uninjured) side",
+      "Deviates towards the affected (injured) side due to unopposed action of the contralateral lateral pterygoid muscle",
+      "Deviates directly posteriorly with zero lateral shift",
+      "No deviation occurs upon opening"
+    ],
+    "correctAnswer": 1,
+    "explanation": "On opening, the lateral pterygoid muscle on the fractured side is non-functional. The healthy lateral pterygoid on the opposite side pulls the mandible forward, causing deviation TOWARDS the injured side.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 121)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1430,
+    "question": "What is the characteristic clinical presentation of bilateral mandibular condylar neck fractures?",
+    "options": [
+      "Severe mandibular prognathism with crossbite",
+      "Anterior open bite with premature occlusal contact on posterior molars and retropositioning of the chin",
+      "Deep overbite with proclined central incisors",
+      "Unilateral facial nerve paralysis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bilateral condylar fractures cause bilateral loss of ramus height. The elevator muscles pull the rami upward, causing the mandible to tilt back, resulting in premature posterior molar contact and an anterior open bite.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 121)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1431,
+    "question": "What is Coleman's Sign, and what specific facial injury does it indicate?",
+    "options": [
+      "Cheek indentation indicating a zygomatic arch fracture",
+      "Ecchymosis (bruising) in the lingual sulcus/floor of the mouth, pathognomonic of a mandibular fracture",
+      "Periorbital ecchymosis indicating orbital roof fracture",
+      "Pulsating bleeding from Stensen's duct"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Coleman's sign is sublingual hematoma/ecchymosis in the floor of the mouth. It is pathognomonic for a fracture of the body or symphysis of the mandible.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 120)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1432,
+    "question": "A patient experiences a surgical transection of the Inferior Alveolar Nerve during third molar extraction. What form of peripheral nerve injury is this, according to Seddon's classification?",
+    "options": [
+      "Neurapraxia (conduction block with intact axon and sheath)",
+      "Axonotmesis (disrupted axon with intact epineurium)",
+      "Neurotmesis (complete severance of all nerve structures)",
+      "Hyperalgesia"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Neurotmesis is the most severe nerve injury, involving complete anatomical disruption (severance) of the axon, myelin, and surrounding connective tissue sheaths (endoneurium, perineurium, epineurium).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 98)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1433,
+    "question": "What is Neurapraxia under Seddon's classification of nerve injuries, and what is the typical prognosis?",
+    "options": [
+      "Complete nerve division requiring micro-surgical nerve grafting",
+      "Mildest form of injury involving temporary conduction block without structural axon disruption; full recovery occurs spontaneously within days to weeks",
+      "Permanent painful neuroma formation",
+      "Irreversible loss of taste sensation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Neurapraxia is a transient physiological conduction block (often due to mild traction or edema) with complete preservation of nerve architecture. Spontaneous full sensory recovery occurs in days to weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 98)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1434,
+    "question": "When an Oroantral Communication (OAC) greater than 5 mm occurs during maxillary first molar extraction, what is the surgical flap procedure of choice for immediate primary closure?",
+    "options": [
+      "Gingivectomy flap",
+      "Buccal Advanced Flap (Rehrmann flap) or Palatal Rotation Flap",
+      "Coronally advanced flap without periosteal releasing incision",
+      "Free gingival graft from palate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An OAC > 5 mm requires immediate surgical closure to prevent chronic oroantral fistula and sinusitis. A Buccal Advancement Flap (Rehrmann flap) with periosteal scoring is the most common technique.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 95)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1435,
+    "question": "What is the primary risk if a small root tip is accidentally displaced into the Maxillary Sinus during extraction attempt, and the sinus membrane is torn?",
+    "options": [
+      "Acute trigeminal neuralgia",
+      "Development of acute/chronic maxillary sinusitis and oroantral fistula formation",
+      "Permanent hearing loss",
+      "Mandibular subluxation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Displacing a root into the sinus introduces oral flora and foreign material into the antrum, predisposing the patient to purulent maxillary sinusitis and persistent oroantral fistula.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 95)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1436,
+    "question": "Which surgical technique is used to remove a foreign body or root fragment displaced deep into the maxillary sinus via an anterior antral wall fenestration?",
+    "options": [
+      "Caldwell-Luc Procedure",
+      "Bilateral Sagittal Split Osteotomy",
+      "Alveoloplasty",
+      "Coronoidectomy"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Caldwell-Luc operation creates an entry window into the maxillary sinus through the canine fossa (above premolars) to retrieve foreign bodies, roots, or large antral polyps.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 96)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1437,
+    "question": "What is an Autogenous Bone Graft (Autograft) in oral and maxillofacial reconstructive surgery, and what is its primary advantage?",
+    "options": [
+      "Bone harvested from a human cadaver; zero immune reaction",
+      "Bone harvested from the patient's own body (e.g. iliac crest, chin, or ramus); possesses osteogenic, osteoinductive, and osteoconductive properties without rejection",
+      "Synthetic calcium phosphate granules",
+      "Bovine-derived deproteinized bone matrix"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Autogenous bone (harvested from the patient) remains the gold standard because it supplies live osteoblasts (osteogenesis), growth factors (osteoinduction), and scaffold (osteoconduction) with zero rejection.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 110)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1438,
+    "question": "What is an Allograft material (such as Freeze-Dried Bone Allograft - FDBA)?",
+    "options": [
+      "Bone harvested from a synthetic polymer factory",
+      "Bone harvested from a donor of the same species (human cadaveric tissue bank)",
+      "Bone harvested from bovine (cow) origin",
+      "Bone harvested from the patient's own iliac crest"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Allografts are bone matrices harvested from genetically non-identical individuals of the same species (human tissue banks). Xenografts come from animal species (bovine), and Alloplasts are synthetic.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 110)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1439,
+    "question": "What is Ludwig's Angina, and what anatomical fascial spaces are bilaterally involved in this life-threatening infection?",
+    "options": [
+      "A benign salivary gland cyst of the sublingual gland",
+      "A rapidly spreading, bilateral cellulitis involving the submandibular, sublingual, and submental spaces simultaneously, causing airway obstruction",
+      "Unilateral abscess of the canine space",
+      "Infection confined exclusively to the parotid gland capsule"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ludwig's angina is a life-threatening, rapidly expanding bilateral cellulitis of the submandibular, sublingual, and submental spaces, causing floor-of-mouth elevation and fatal airway compromise.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1440,
+    "question": "What is the single most critical priority in the emergency management of a patient presenting with Ludwig's Angina?",
+    "options": [
+      "Immediate scaling and root planing",
+      "Securing and protecting the airway (endotracheal intubation or tracheostomy)",
+      "Prescribing oral amoxicillin and discharging home",
+      "Applying topical ice packs to the cheek"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Airway maintenance is paramount. As the sublingual and submandibular spaces swell, the tongue is forced up and back, occluding the pharynx. Securing the airway precedes all surgical incisions.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1441,
+    "question": "A patient presents with an acute infection of the Canine Space following a periapical abscess on a maxillary canine. What clinical feature characteristically develops?",
+    "options": [
+      "Elevation of the floor of the mouth",
+      "Obliteration of the nasolabial fold, swelling of the upper lip and lower eyelid, and closure of the eye",
+      "Severe trismus with inability to open the mouth > 5 mm",
+      "Numbness of the chin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The canine space lies between levator labii superioris and levator anguli oris. Infection causes facial edema that erases the nasolabial fold and swells the upper lip and lower eyelid, closing the eye.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 73)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1442,
+    "question": "Infection from the canine space or midfacial dangerous zone can spread retrogradely via the ophthalmic veins to cause which life-threatening intracranial vascular thrombosis?",
+    "options": [
+      "Sagittal sinus thrombosis",
+      "Cavernous Sinus Thrombosis",
+      "Carotid artery aneurysm",
+      "Internal jugular vein sclerosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Facial veins lack valves. Infection from the upper lip or canine space can travel via retrograde venous flow through the angular and ophthalmic veins directly into the cavernous sinus, causing fatal thrombosis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 74)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1443,
+    "question": "What is the primary anatomical boundary that determines whether a mandibular molar infection drains intra-orally into the buccal vestibule or extra-orally into the submandibular space?",
+    "options": [
+      "The attachment line of the Mylohyoid Muscle on the medial surface of the mandible relative to the molar root apices",
+      "The length of the inferior alveolar nerve canal",
+      "The thickness of the lingual cortical plate only",
+      "The depth of the mental foramen"
+    ],
+    "correctAnswer": 0,
+    "explanation": "If molar root apices lie ABOVE the mylohyoid muscle attachment line, infection spreads intra-orally into the sublingual space/vestibule. If apices extend BELOW the attachment line, infection spreads to the submandibular space.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 74)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1444,
+    "question": "During endodontic microsurgery (apicoectomy), how much of the apical root tip must be resected to eliminate the majority of apical canal ramifications and lateral deltas?",
+    "options": [
+      "1 millimetre",
+      "3 millimetres at a 90-degree angle to the long axis of the root",
+      "5 millimetres at a 45-degree bevel angle",
+      "7 millimetres with beveling towards the buccal"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Resecting 3 mm of the apical root tip at a 90° angle to the long axis removes 98% of apical ramifications and 93% of lateral canals, providing a clean surface for retro-filling.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 68)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1445,
+    "question": "What is the recommended depth and preparation design for an ultrasonic retro-cavity preparation during root-end surgery (apicoectomy)?",
+    "options": [
+      "1 mm depth prepared with a round bur",
+      "At least 3 mm depth prepared along the long axis of the root canal using ultrasonic tips, creating parallel walls",
+      "5 mm depth prepared with a diamond taper bur",
+      "Superficial etching with phosphoric acid only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ultrasonic root-end preparation requires at least 3 mm of depth oriented precisely along the long axis of the canal, ensuring retention and adequate thickness of root-end filling material.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 68)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1446,
+    "question": "Which anatomical variation is commonly present in the mesial root of mandibular first molars, requiring careful identification to prevent endodontic failure?",
+    "options": [
+      "Middle Mesial (MM) canal, present in up to 15-20% of cases",
+      "C-shaped canal in 90% of Caucasian males",
+      "Three separate apical foramina in 100% of cases",
+      "Single massive palatal canal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The mesial root of mandibular first molars contains a Middle Mesial (MM) canal located in the isthmus between MB and ML canals in up to 15-20% of teeth.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 53)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1447,
+    "question": "Which tooth configuration frequently displays a 'C-shaped' root canal system, characterized by a continuous ribbon-shaped canal orifice, most commonly seen in East Asian populations?",
+    "options": [
+      "Maxillary central incisor",
+      "Mandibular second molar",
+      "Maxillary first premolar",
+      "Mandibular canine"
+    ],
+    "correctAnswer": 1,
+    "explanation": "C-shaped canals occur predominantly in mandibular second molars due to failure of Hertwig's epithelial root sheath to fuse on the buccal or lingual surface. They require thorough chemical irrigation due to complex web-like anatomy.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 54)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1448,
+    "question": "When a Nickel-Titanium (NiTi) rotary instrument separates (breaks) in the apical third of a root canal without pre-existing periapical pathology, what is the safest clinical approach?",
+    "options": [
+      "Perform immediate extraction",
+      "Attempt conservative bypass or obturate up to the level of the fragment if bypass is impossible, followed by long-term clinical and radiographic monitoring",
+      "Push the fragment into the periapical space with a heavy spreader",
+      "Fill the canal with concentrated formocresol"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Separated NiTi instruments in the apical third without periapical disease have a favorable prognosis. If bypassing is impossible without excessive dentin removal, cleaning and obturating to the fragment level is recommended.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 64)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1449,
+    "question": "What is the primary cause of Cyclic Fatigue failure in rotary Nickel-Titanium endodontic files?",
+    "options": [
+      "Excessive apical pushing force applied by the operator",
+      "Repeated cycles of tension and compression created when the file rotates inside a curved canal, causing metal structural fatigue without prior visible warning",
+      "Corrosion caused by EDTA irrigation",
+      "Sterilization in the autoclave"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cyclic fatigue occurs when a file rotates in a curved canal; the outer wall undergoes extension (tension) while the inner wall undergoes compression. Repeated stress cycles cause sudden file fracture without binding.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 64)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1450,
+    "question": "What is Torsional Fatigue failure in rotary endodontic files?",
+    "options": [
+      "File separation caused by thermal expansion",
+      "File separation occurring when the tip or portion of the file binds tightly in a narrow canal while the motor continues to rotate the shaft",
+      "File breakage caused by submersion in sodium hypochlorite",
+      "Bending of the file tip during storage"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Torsional stress occurs when the file tip binds in a narrow canal wall while the shank continues rotating. When the torque limit of the alloy is exceeded, the file twists and breaks.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 64)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1451,
+    "question": "Which bacterial species is most persistently associated with failed endodontic treatment cases requiring root canal retreatment (secondary endodontic infection)?",
+    "options": [
+      "Streptococcus mutans",
+      "Enterococcus faecalis",
+      "Porphyromonas gingivalis",
+      "Actinomyces israelii"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Enterococcus faecalis is a Gram-positive facultative anaerobe capable of surviving harsh endodontic environments, invading dentinal tubules, and resisting NaOCl/Ca(OH)2 action, making it the chief cause of retreatment failure.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 66)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1452,
+    "question": "What is the function of Calcium Hydroxide Ca(OH)2 when placed as an inter-appointment intracanal medicament?",
+    "options": [
+      "Etching the dentinal tubules for resin bonding",
+      "High alkaline pH (~12.5) exerts potent antibacterial action, denatures bacterial endotoxins, and dissolves organic tissue remnants",
+      "Bleaching internal coronal tooth structure",
+      "Setting into a hard permanent root filling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ca(OH)2 releases hydroxyl ions creating a high pH (~12.5) that damages bacterial cell membranes, inactivates LPS endotoxins, and aids organic tissue dissolution during multi-appointment therapy.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 60)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1453,
+    "question": "Why is Calcium Hydroxide ineffective against Enterococcus faecalis in failed root canal cases?",
+    "options": [
+      "E. faecalis produces acid that instantly turns Ca(OH)2 into water",
+      "E. faecalis possesses a proton pump mechanism that maintains intracellular homeostasis despite high extracellular pH",
+      "E. faecalis is an obligate virus",
+      "E. faecalis lives only inside metal posts"
+    ],
+    "correctAnswer": 1,
+    "explanation": "E. faecalis resists Ca(OH)2 because its cell membrane contains a functioning proton pump that actively pumps H+ ions into the cytoplasm, keeping its internal pH stable even at environmental pH 11.5-12.0.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 66)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1454,
+    "question": "What is the recommended canal irrigant or medicament specifically indicated to eliminate Enterococcus faecalis during endodontic retreatment?",
+    "options": [
+      "2% Chlorhexidine gluconate (liquid or gel)",
+      "3% Hydrogen peroxide",
+      "Formocresol",
+      "Normal saline"
+    ],
+    "correctAnswer": 0,
+    "explanation": "2% Chlorhexidine gluconate exhibits potent bactericidal activity against E. faecalis and possesses high substantivity, adhering to dentin walls to prevent re-colonization.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 66)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1455,
+    "question": "What severe chemical precipitate forms if Sodium Hypochlorite (NaOCl) and Chlorhexidine (CHX) are mixed directly inside a root canal without intermediate flushing with saline?",
+    "options": [
+      "Calcium carbonate powder",
+      "Para-chloroaniline (PCA), a brownish-orange toxic precipitate that stains dentin and is potentially carcinogenic",
+      "Pure chlorine gas",
+      "Clear gelatin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mixing NaOCl and CHX produces a brownish-orange precipitate called para-chloroaniline (PCA). PCA occludes dentinal tubules, stains tooth structure, and possesses potential cytotoxicity and carcinogenicity.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 59)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1456,
+    "question": "What is the primary advantage of Bioceramic Root Canal Sealers (such as premixed calcium silicate sealers) over traditional resin-based sealers?",
+    "options": [
+      "They set within 5 seconds under halogen light",
+      "They are hydrophilic, expand slightly upon setting, form hydroxyapatite at the dentin interface, and exhibit outstanding biocompatibility and sealability",
+      "They can be completely dissolved using warm water",
+      "They require no gutta-percha cone"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bioceramic sealers (calcium silicate-based) utilize moisture in dentinal tubules to set. They expand slightly, form a bio-active hydroxyapatite bond, and demonstrate zero shrinkage and superior biocompatibility.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 61)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1457,
+    "question": "What anatomical canal structure is routinely searched for under the mesial marginal ridge in maxillary first molars (MB2 canal)?",
+    "options": [
+      "Second mesiobuccal canal (MB2), located lingual/palatal to the main MB1 orifice",
+      "Distopalatal accessory canal",
+      "Radix entomolaris",
+      "C-shaped lingual groove"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The MB2 canal is present in over 70-90% of maxillary first molars. It is located palatal/lingual to the MB1 orifice along a groove toward the palatal canal. Failure to treat MB2 is a leading cause of upper molar failure.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 53)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1458,
+    "question": "What is Radix Entomolaris in mandibular molar anatomy?",
+    "options": [
+      "A third root located on the distolingual aspect of a mandibular first molar",
+      "An extra mesial root on maxillary premolars",
+      "A fused single root on lower incisors",
+      "A pulp stone filling the entire pulp chamber"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Radix Entomolaris is a supernumerary third root located distolingually on mandibular first molars (prevalent in Asian populations). Radix Paramolaris is located mesiobuccally.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 54)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1459,
+    "question": "How is an Electronic Apex Locator (EAL) able to accurately determine the location of the apical foramen (apical constriction)?",
+    "options": [
+      "By measuring thermal changes in the PDL",
+      "By measuring electrical impedance/resistance between the endodontic file tip inside the canal and an electrode placed on the patient's lip",
+      "By emitting low-dose X-ray beams from the file tip",
+      "By calculating file rotation speed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Apex locators measure electrical impedance. The resistance between the PDL mucosa and lip mucosa is a constant value (~6.5 kilohms). When the file tip reaches the apical constriction/PDL junction, the circuit registers this reference value.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 57)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1460,
+    "question": "What is the 'Apical Constriction' (Minor Apical Diameter) in endodontic length determination?",
+    "options": [
+      "The radiographic apex visible on an X-ray film",
+      "The narrowest apical portion of the root canal, located 0.5 to 1.0 mm short of the anatomical apical foramen, representing the ideal termination limit for shaping and obturation",
+      "The outer border of the cementum-enamel junction",
+      "The entrance of the canal at the pulp chamber floor"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The apical constriction (minor diameter) is the narrowest point of the canal system, where pulpal tissue transitions into periodontal tissue. It is the ideal physiological boundary for canal obturation.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 56)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1461,
+    "question": "What is the effect of 'Zip' formation (apical transportation) during endodontic hand filing of curved canals?",
+    "options": [
+      "An hourglass enlargement of the middle third",
+      "An elliptical deformation of the apical foramen created on the outer wall of the curve when rigid files straighten out, compromising the apical seal",
+      "Fracture of the coronal enamel cusp",
+      "Perforation through the furcation floor"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Apical zipping occurs when stiff files tend to straighten inside a curved canal, removing dentin from the outer wall of the curve at the apex, producing an elliptical non-circular shape that is difficult to seal.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 62)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1462,
+    "question": "Which obturation technique utilizes a heated motor-driven alpha-phase gutta-percha injection gun to backfill root canals following master cone placement?",
+    "options": [
+      "Cold lateral compaction",
+      "Thermoplasticized Warm Gutta-Percha Technique (Obtura system)",
+      "Single cone cold technique",
+      "Paste filling with lentulo spiral"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Thermoplasticized warm gutta-percha systems heat alpha-phase gutta-percha to ~160-200°C, injecting viscous flowable gutta-percha into the canal to fill irregular anatomical extensions and lateral canals.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 61)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1463,
+    "question": "A patient presents with a persistent sinus tract (fistula) draining buccal to a non-vital upper lateral incisor. What happens to the sinus tract after successful root canal disinfection and obturation?",
+    "options": [
+      "It requires surgical excision and skin grafting",
+      "It resolves and heals spontaneously within 7 to 14 days without surgical intervention",
+      "It converts into a permanent radicular cyst",
+      "It causes immediate numbness of the upper lip"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An endodontic sinus tract is an epithelium-lined drain formed in response to periapical suppuration. Once the primary bacterial reservoir inside the canal is eliminated, the sinus tract heals spontaneously in 1-2 weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 55)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1464,
+    "question": "What is the minimal facial enamel reduction thickness required for a porcelain laminate veneer restoration to avoid over-contouring while providing adequate ceramic thickness?",
+    "options": [
+      "0.1 mm facial reduction",
+      "0.3 mm to 0.5 mm in the gingival/middle third and 0.7 mm in the incisal third, keeping the preparation entirely within enamel",
+      "1.5 mm to 2.0 mm uniform reduction down to deep dentin",
+      "No reduction is required for any porcelain veneer"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Porcelain laminate veneers require conservative facial reduction (0.3-0.5 mm gingivally, 0.7 mm incisally) strictly within enamel to maintain maximum bond strength and structural rigidity.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 46)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1465,
+    "question": "Why is keeping a porcelain veneer preparation margin entirely in ENAMEL critical for long-term clinical success?",
+    "options": [
+      "Enamel prevents composite resin from setting",
+      "Etched enamel provides a predictable, durable micro-mechanical bond with 25-30 MPa bond strength, preventing microleakage and debonding",
+      "Dentin turns black under porcelain veneers",
+      "Enamel dissolves hydrofluoric acid"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Enamel bonding via total-etch technique provides an impervious, durable hermetic seal. Bonding to dentin is subject to hydrolytic degradation over time, elevating marginal discoloration and failure risks.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 46)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1466,
+    "question": "In Munsell's Color System used in dental shade matching, what does 'Hue' represent?",
+    "options": [
+      "The relative lightness or darkness of a color (value)",
+      "The basic color family or color name (e.g. Red, Yellow, Green, or A/B/C/D in Vita shade guide)",
+      "The intensity or saturation of a specific color (chroma)",
+      "The degree of fluorescence under ultraviolet light"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hue is the attribute of a color that enables it to be classified as red, yellow, blue, etc. In the Vita Classical shade guide, Hues are categorized into A (reddish-brown), B (reddish-yellow), C (greyish), D (reddish-grey).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 49)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1467,
+    "question": "In shade matching, what does 'Value' describe, and why is it considered the single most critical color dimension in esthetic dentistry?",
+    "options": [
+      "The intensity of yellow pigments; critical for canine teeth",
+      "The relative brightness (lightness to darkness) on a scale from black (0) to white (10); eyes perceive value differences before hue or chroma differences",
+      "The price of the ceramic restoration",
+      "The thickness of the opaque core"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Value represents brightness (amount of gray/lightness). Human eyes contain rod cells that are highly sensitive to value differences. A mismatch in Value is instantly noticeable compared to small mismatches in Hue or Chroma.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 49)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1468,
+    "question": "What is 'Metamerism' in dental shade selection?",
+    "options": [
+      "The fluorescence of enamel under UV black light",
+      "The optical phenomenon where two objects appear to be an exact shade match under one light source (e.g. clinic daylight) but appear distinctly different under another light source (e.g. incandescent bulbs)",
+      "The gradual fading of composite resin colors over 10 years",
+      "The optical illusion of tooth lengthening"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Metamerism occurs when two materials (such as natural enamel and ceramic porcelain) have different spectral reflectance curves but appear identical under one illuminant, yet mismatch under different lighting conditions.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 50)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1469,
+    "question": "Which lighting condition and protocol is ideal for accurate shade selection in the dental clinic?",
+    "options": [
+      "Direct illumination under high-intensity dental operatory lamp light for 5 minutes continuously",
+      "Natural daylight (or color-corrected light at 5500 K color temperature, Ra > 90), evaluated at eye level within 5 seconds before eye fatigue occurs",
+      "Dim room lighting with blue curing light activated",
+      "Shade selection performed after complete rubber dam isolation for 1 hour"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Shade matching should occur under color-corrected 5500 K light (D55 daylight). Quick glances (3-5 seconds) prevent cone fatigue. Rubber dam drying must be avoided because dehydrated teeth appear unnaturally white.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 50)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1470,
+    "question": "Why does a tooth appear unnaturally bright and opaque white immediately after rubber dam removal following a 2-hour restorative appointment?",
+    "options": [
+      "Rubber dam releases sulfur gas that bleaches enamel",
+      "Enamel dehydration causes water loss from inter-prismatic spaces, increasing light scattering (refractive index changes) and raising Value",
+      "Composite resin monomer fumes coat adjacent teeth",
+      "Phosphoric acid vapors bleach adjacent enamel"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dehydration replaces water in enamel pores with air (refractive index 1.0 vs water 1.33). This dramatic difference causes increased light refraction, making dehydrated enamel look artificially chalky white (high value).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 50)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1471,
+    "question": "What is Opalescence in natural dental enamel and ceramic materials?",
+    "options": [
+      "The absorption of UV light and emission of blue light",
+      "The optical property where enamel appears bluish in reflected light and orange/yellow in transmitted light, caused by selective scattering of short wavelength light by hydroxyapatite crystals",
+      "The total reflection of red light",
+      "The darkening of tooth structure with age"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Opalescence mimics precious opal. Small enamel hydroxyapatite crystals scatter short blue light wavelengths (reflected light), while transmitting longer red/orange wavelengths (transmitted light), creating incisal halo effects.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 51)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1472,
+    "question": "What is Fluorescence in natural teeth?",
+    "options": [
+      "The scattering of visible red light from the dentin",
+      "The absorption of invisible ultraviolet (UV) light energy and its instantaneous re-emission as visible longer-wavelength blue-white light, occurring primarily in dentin",
+      "The reflection of green light by GIC fillings",
+      "The reflection of mirror surfaces under room light"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fluorescence occurs mainly in dentin due to organic photosensitive amino acids (tryptophan). Dentin absorbs invisible UV light (300-400 nm) and emits visible bluish-white light (400-450 nm), giving teeth vitality.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 51)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1473,
+    "question": "What is the recommended design of the incisal preparation margin for a maxillary porcelain veneer when incisal length needs to be increased by 1.5 mm?",
+    "options": [
+      "Window (intra-enamel) preparation",
+      "Incisal Butt-joint preparation or Incisal Overlap (Palatal Chamfer) preparation",
+      "Feather-edge preparation",
+      "360-degree full-coverage shoulder preparation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When lengthening incisal edges (1.0 - 2.0 mm), an Incisal Butt-Joint or Palatal Chamfer (overlap) design provides a definite seat, supports ceramic against vertical shear forces, and improves esthetics.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 46)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1474,
+    "question": "In Digital Smile Design (DSD) and anterior facial esthetics, what is the 'Interpupillary Line', and how does it relate to the occlusal plane?",
+    "options": [
+      "A vertical line passing through the tip of the nose",
+      "A horizontal line connecting the centers of the pupils; the maxillary incisal plane and commissural line should be parallel to the interpupillary line",
+      "A line connecting the tragus of the ear to the ala of the nose",
+      "A curved line following the lower lip contour"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The interpupillary line is the primary horizontal facial reference line. Ideally, the incisal plane, occlusal plane, and commissural line should be parallel to the interpupillary line to achieve facial symmetry.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 32)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1475,
+    "question": "What is Camper's Line (Ala-Tragus Line) used for in prosthodontics?",
+    "options": [
+      "Determining the vertical height of the chin",
+      "Establishing the anteroposterior tilt of the maxillary occlusal plane, running from the inferior border of the ala of the nose to the tragus of the ear",
+      "Measuring the width of central incisors",
+      "Determining canine guidance angle"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Camper's Line runs from the inferior border of the ala of the nose to the superior border of the tragus of the ear. The posterior occlusal plane of wax rims/dentures is set parallel to Camper's Line.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 110)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1476,
+    "question": "What is the 'Golden Proportion' ratio used in anterior maxillary dental esthetics, as described by Lombardi and Levin?",
+    "options": [
+      "1 : 1 : 1 ratio for all six anteriors",
+      "The apparent width of the maxillary lateral incisor is 61.8% (0.618) of the central incisor, and the apparent width of the canine is 61.8% of the lateral incisor when viewed from the front",
+      "1.5 : 2.0 : 2.5 ratio based on root length",
+      "Central incisor width equals canine length"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Golden Proportion (1 : 0.618) describes the perceived frontal width ratio: Central Incisor = 1.618, Lateral Incisor = 1.0 (61.8% of central), and Canine = 0.618 (61.8% of lateral) when viewed directly from the front.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 33)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1477,
+    "question": "In anterior esthetic restorations, what is the ideal position of the Gingival Zenith of a maxillary central incisor relative to its vertical long axis?",
+    "options": [
+      "Directly on the central vertical long axis",
+      "Located slightly distal (approx. 1 mm) to the long axis of the tooth",
+      "Located 2 mm mesial to the long axis",
+      "At the incisal third of the crown"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The gingival zenith (highest point of the gingival margin contour) of maxillary central incisors and canines is located slightly distal (0.5 - 1.0 mm) to the long axis of the tooth. For lateral incisors, it is centered.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 33)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1478,
+    "question": "Which cement is contraindicated for luting all-ceramic translucent veneers or lithium disilicate crowns due to post-cementation color instability and marginal discoloration over time?",
+    "options": [
+      "Light-cure resin cement",
+      "Self-curing or dual-cure resin cements containing Tertiary Amine initiators",
+      "Bioceramic cement",
+      "Pure glass ionomer cement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dual-cure and self-cure resin cements contain aromatic tertiary amines (co-initiators for benzoyl peroxide). Over time, tertiary amines oxidize under UV light, causing yellow-brown marginal discoloration of thin ceramic veneers.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 47)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1479,
+    "question": "What is the luting cement of choice for ultra-thin (0.3 - 0.5 mm) translucent porcelain laminate veneers, ensuring unlimited working time and zero amine-induced yellowing?",
+    "options": [
+      "Pure Light-Cured Resin Cement (Amine-free photo-initiator formulation)",
+      "Zinc phosphate cement",
+      "Polycarboxylate cement",
+      "Reinforced zinc oxide eugenol"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Light-cure resin cements are amine-free (using camphorquinone photo-initiators only). They offer unlimited working time for precise veneer placement and exceptional long-term color stability without yellowing.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 47)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1480,
+    "question": "Which surface conditioning primer contains MDP (10-Methacryloyloxydecyl dihydrogen phosphate) monomer, creating a strong chemical bond to Zirconia and base-metal alloys?",
+    "options": [
+      "Silane coupling agent alone",
+      "Phosphate-monomer primers (e.g. Z-Prime Plus or Monobond Plus)",
+      "37% Phosphoric acid gel",
+      "10% Polyacrylic acid"
+    ],
+    "correctAnswer": 1,
+    "explanation": "MDP monomer contains a functional phosphate ester group that forms a durable ionic-covalent chemical bond with metal oxides (zirconia, alumina, titanium), essential for bonding non-retentive zirconia restorations.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 48)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1481,
+    "question": "What is the function of Silane Coupling Agent when applied to hydrofluoric-acid etched feldspathic porcelain or lithium disilicate?",
+    "options": [
+      "It etches the silica glass phase",
+      "It acts as a bifunctional molecule, forming siloxane (-Si-O-Si-) covalent bonds with ceramic silica at one end, and copolymerizing with resin cement monomers at the other end",
+      "It lubricates the crown during seating",
+      "It acts as a cavity varnish to prevent thermal sensitivity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Silane is a bifunctional organosilane molecule. Its silanol group binds chemically to silicon dioxide in etched glass-ceramic, while its methacrylate group copolymerizes with methacrylate resin cement.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 46)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1482,
+    "question": "What is the consequence of applying 37% Phosphoric Acid to Zirconia after sandblasting during try-in procedures?",
+    "options": [
+      "It increases bond strength by 500%",
+      "Phosphates in phosphoric acid occupy and contaminate active binding sites on the zirconia surface, severely reducing resin bond strength unless cleaned with alkaline solutions (e.g. ZirClean or NaOH)",
+      "It etches zirconia to a depth of 1 mm",
+      "It turns zirconia translucent"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Phosphoric acid contamination fills oxide binding sites on zirconia with phosphate ions, blocking MDP primers from bonding. Zirconia try-in contamination MUST be cleaned with sodium hydroxide or sandblasting, NOT phosphoric acid.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 48)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1483,
+    "question": "In composite resin restorations, what is 'Crazing' or micro-cracking of the porcelain/resin interface often caused by?",
+    "options": [
+      "Polishing under dry conditions with high-speed diamond burs, causing thermal shock and rapid micro-fracturing",
+      "Soaking the tooth in normal saline",
+      "Using self-etch adhesive primers",
+      "Curing with LED light for 40 seconds"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Finishing or grinding ceramic or composite restorations without adequate water coolant generates intense localized frictional heat, causing micro-cracking (crazing) and structural failure of the material.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 42)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1484,
+    "question": "What is the recommended maximum concentration of Nitrous Oxide (N2O) relative to Oxygen (O2) administered during inhalation conscious sedation in pediatric dentistry?",
+    "options": [
+      "100% Nitrous Oxide without Oxygen",
+      "Maximum 70% Nitrous Oxide with a minimum of 30% Oxygen to prevent hypoxia",
+      "50% Nitrous Oxide with 10% Oxygen",
+      "90% Nitrous Oxide with 10% Carbon Dioxide"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Inhalation sedation equipment features a safety cut-off that prevents delivery of > 70% N2O, ensuring a minimum of 30% oxygen (higher than atmospheric 21% O2) to prevent diffusion hypoxia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 44)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1485,
+    "question": "What essential safety procedure must be performed at the conclusion of Nitrous Oxide / Oxygen conscious sedation before disconnecting the patient from the nasal mask?",
+    "options": [
+      "Administer 100% Nitrous oxide for 5 minutes",
+      "Administer 100% pure Oxygen for at least 3 to 5 minutes to flush N2O from the lungs and prevent Diffusion Hypoxia",
+      "Inject IV Flumazenil",
+      "Have the patient hold their breath for 2 minutes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "N2O rapidly diffuses from blood into alveoli upon termination. Administering 100% O2 for 3-5 minutes prevents N2O from diluting alveolar oxygen concentration, preventing Diffusion Hypoxia (Fink effect).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 44)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1486,
+    "question": "What is Diffusion Hypoxia (the Fink Effect) following Nitrous Oxide sedation?",
+    "options": [
+      "Permanent lung tissue fibrosis",
+      "Rapid outpouring of Nitrous Oxide into alveoli upon cessation of administration, diluting oxygen partial pressure and causing transient arterial hypoxia if 100% oxygen is not given",
+      "Severe brain edema caused by high oxygen",
+      "Allergic reaction to the rubber tubing"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because N2O is poorly soluble in blood, large volumes rapidly escape from blood into the lungs when mask flow stops. This dilutes alveolar O2, causing transient hypoxia unless 100% O2 is breathed.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 44)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1487,
+    "question": "Which medical condition is an absolute CONTRAINDICATION for Nitrous Oxide / Oxygen inhalation sedation due to the risk of dangerous gas expansion within closed air spaces?",
+    "options": [
+      "Mild dental anxiety",
+      "Middle ear infection (otitis media), recent tympanoplasty, acute sinusitis, or severe bullous emphysema",
+      "Well-controlled asthma",
+      "Class I malocclusion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "N2O diffuses into closed air-containing body spaces 34 times faster than nitrogen leaves, causing pressure buildup. It is contraindicated in acute otitis media, recent eye/ear surgery, or pneumothorax.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 44)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1488,
+    "question": "In pediatric behavior management, what is the 'Tell-Show-Do' technique?",
+    "options": [
+      "Telling the child to be quiet, showing them a syringe, and doing the procedure forcefully",
+      "Explaining the procedure in age-appropriate language (Tell), demonstrating it on a model or finger (Show), and then performing the procedure as described (Do)",
+      "Hypnotizing the child while parents wait outside",
+      "Showing the child dental radiographs for 30 minutes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tell-Show-Do is a foundational behavior guidance technique. The clinician explains what will happen in non-frightening terms (Tell), demonstrates with non-threatening sensations (Show), and executes (Do).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 131)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1489,
+    "question": "What is the primary rationale for placing a Rubber Dam during pediatric operative dentistry and endodontic procedures?",
+    "options": [
+      "To increase treatment cost",
+      "To protect the child's airway from accidental aspiration/ingestion of small instruments or materials, isolate the field, improve visibility, and enhance behavior",
+      "To avoid using local anesthesia",
+      "To procline primary incisors"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rubber dam is mandatory in pediatric dentistry to prevent foreign body aspiration, protect soft tissues from caustic irrigants, control moisture for adhesive restorations, and calm the child.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 134)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1490,
+    "question": "What is Frankl's Behavior Rating Scale used for in pediatric dentistry?",
+    "options": [
+      "Measuring caries risk scores",
+      "Categorizing a child's cooperative behavior into 4 ratings (Rating 1: Definitely Negative to Rating 4: Definitely Positive)",
+      "Calculating local anesthetic volume",
+      "Determining eruption ages of molars"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Frankl's scale classifies pediatric behavior: 1 = Definitely Negative (refusal), 2 = Negative (reluctant), 3 = Positive (cautious acceptance), and 4 = Definitely Positive (good rapport/enjoyment).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 131)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1491,
+    "question": "Which systemic genetic disorder is characterized by trisomy 21, presenting with macroglossia, delayed tooth eruption, high prevalence of severe periodontitis, microdontia, and congenital heart defects?",
+    "options": [
+      "Cerebral Palsy",
+      "Down Syndrome",
+      "Fragile X Syndrome",
+      "Turner Syndrome"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Down Syndrome (Trisomy 21) individuals exhibit characteristic features: relative macroglossia, class III malocclusion, high periodontal destruction rate (due to immune dysregulation), and cardiac anomalies.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 156)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1492,
+    "question": "Why is pre-operative antibiotic prophylaxis or cardiology clearance mandatory before invasive dental extractions in many children with Down Syndrome?",
+    "options": [
+      "Down syndrome children have 100% resistance to local anesthetics",
+      "Up to 40-50% of children with Down Syndrome have Congenital Heart Defects (e.g. Endocardial Cushion Defect, Ventricular Septal Defect) elevating infective endocarditis risk",
+      "Down syndrome causes acute liver failure",
+      "Down syndrome children cannot absorb oral penicillins"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Approximately 40-50% of infants with Down Syndrome are born with congenital heart malformations (AV canal defects, VSDs). Cardiac status must be verified to assess endocarditis prophylaxis needs.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 156)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1493,
+    "question": "A patient with Cerebral Palsy exhibits severe involuntary muscle spasms, abnormal head movements, and hyperactive gag reflex. What is the most appropriate patient management adaptation?",
+    "options": [
+      "Hold the head down forcefully without support",
+      "Use soft physical supports (neck pillows/body wraps), mouth props, shorter appointments, and consider conscious sedation or GA for extensive dental care",
+      "Avoid all dental treatment permanently",
+      "Use full-strength formocresol as a mouthwash"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cerebral palsy patients have motor tone disruption. Comfort positioning with beanbags/headrests, rubber dams, mouth props, and gentle reassurance minimize spasm-induced injuries during care.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 157)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1494,
+    "question": "Which oral manifestations are frequently observed in patients diagnosed with Autism Spectrum Disorder (ASD)?",
+    "options": [
+      "Enamel fluorosis and taurodontism",
+      "High prevalence of dental caries and soft-tissue injury due to bruxism, pouching of food, self-injurious behavior, and difficulties with oral hygiene uncooperativeness",
+      "Congenital absence of all primary molars",
+      "Hyper-salivation with black stains"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Autistic individuals often exhibit sensory sensitivities, food pouching, and self-injurious habits (lip/cheek biting). Dental caries and gingivitis are common due to oral care resistance.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 158)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1495,
+    "question": "What is the recommended behavioral accommodation when treating a child with Autism Spectrum Disorder in the dental office?",
+    "options": [
+      "Play loud music and turn on multiple flashing overhead lights",
+      "Create a predictable, quiet environment with reduced sensory stimuli (dim light, low noise), maintain consistent staff, and use visual picture cards (PECS)",
+      "Change the dentist at every single appointment",
+      "Shout instructions clearly"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Autistic patients benefit from sensory desensitization: low noise, minimal lights, predictable routines, clear visual aids (PECS cards), and familiar dental staff.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 158)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1496,
+    "question": "A child presents with multiple unexplained oral soft tissue lacerations, torn labial frenum, fractured teeth, and circular facial skin burns. What legal and professional obligation must the dentist fulfill?",
+    "options": [
+      "Ignore the injuries and treat the teeth only",
+      "Document all physical injuries thoroughly with clinical photographs and report suspected Child Physical Abuse (Non-Accidental Injury) to child protection authorities immediately",
+      "Prescribe systemic antibiotics and discharge home",
+      "Ask the child to leave the office"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Torn labial frenum in a non-ambulatory infant or unexplained facial burns/bruises are red flags for Child Abuse (Non-Accidental Injury). Dentists are legally mandated reporters to child protection agencies.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 160)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1497,
+    "question": "What is the characteristic oral presentation of Cleidocranial Dysplasia?",
+    "options": [
+      "Early loss of all permanent incisors",
+      "Multiple impacted supernumerary teeth, delayed eruption of permanent teeth, prolonged retention of primary teeth, and absent/hypoplastic clavicles",
+      "Single massive pulp stone in every tooth",
+      "Bilateral parotid pleomorphic adenoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cleidocranial dysplasia (RUNX2 gene mutation) is characterized by absent/underdeveloped clavicles (shoulders can touch in midline), multiple impacted supernumerary teeth, and delayed permanent tooth eruption.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 154)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1498,
+    "question": "Which hereditary syndrome features the triad of Multiple Intestinal Polyps, Multiple Osteomas of the jaws, and Epidermoid Cysts, with a 100% risk of malignant gastrointestinal transformation if untreated?",
+    "options": [
+      "Gorlin-Goltz syndrome",
+      "Gardner Syndrome",
+      "Peutz-Jeghers syndrome",
+      "McCune-Albright syndrome"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Gardner Syndrome (autosomal dominant variant of FAP) presents with jaw osteomas, supernumerary teeth, epidermoid skin cysts, and intestinal polyps that undergo 100% malignant transformation into adenocarcinoma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 170)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1499,
+    "question": "What is the classic triad of McCune-Albright Syndrome?",
+    "options": [
+      "Multiple OKCs, bifid ribs, and falx cerebri calcification",
+      "Polyostotic Fibrous Dysplasia, Cafe-au-lait skin macules with irregular 'Coast of Maine' borders, and hyper-functioning endocrinopathies (e.g. Precocious Puberty)",
+      "Cleft palate, micrognathia, and glossoptosis",
+      "Dry mouth, dry eyes, and rheumatoid arthritis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "McCune-Albright syndrome (GNAS mutation) features polyostotic fibrous dysplasia, unilateral cafe-au-lait skin spots with jagged borders ('Coast of Maine'), and endocrine abnormalities (precocious puberty).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 114)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1500,
+    "question": "What is the Pierre Robin Sequence (Triad) observed in newborns?",
+    "options": [
+      "Macroglossia, prognathism, and supernumerary teeth",
+      "Micrognathia (small mandible), Glossoptosis (backward displacement of tongue), and U-shaped Cleft Palate, causing severe airway obstruction",
+      "Bilateral cleft lip, blindness, and deafness",
+      "Ankylosis of TMJ, fibrous dysplasia, and cafe-au-lait spots"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pierre Robin Sequence is a developmental triad: micrognathia causes the tongue to fall back (glossoptosis), obstructing airway and preventing palatal shelf fusion, resulting in a U-shaped cleft palate.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 118)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1501,
+    "question": "What is Treacher Collins Syndrome (Mandibulofacial Dysostosis)?",
+    "options": [
+      "An autosomal dominant disorder characterized by hypoplasia of zygomatic bones and mandible, antimongoloid slanting palpebral fissures, coloboma of eyelids, and external ear anomalies",
+      "An infectious bacterial disease causing parotid necrosis",
+      "A condition involving hyper-calcification of all primary teeth",
+      "A form of oral squamous cell carcinoma in infants"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Treacher Collins syndrome (TCOF1 gene mutation) affects first and second branchial arch structures: severe malar/mandibular hypoplasia, slanting eyes (coloboma), deformed ears, and conductive hearing loss.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 118)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1502,
+    "question": "What is the recommended management for a child presenting with Silver Diamine Fluoride (SDF 38%) therapy for arresting active asymptomatic coronal dentin caries?",
+    "options": [
+      "Inject SDF into the pulp chamber directly",
+      "Isolate tooth, dry, apply 38% SDF with microbrush for 1 minute to arrest caries (causes dark black staining of carious dentin), and inform parents of stain",
+      "Mix SDF with phosphoric acid and etch for 10 minutes",
+      "Extract the tooth immediately after application"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Silver Diamine Fluoride (38% SDF) releases silver (antimicrobial) and fluoride (remineralizing). It effectively arrests active dentin caries in young children, turning carious lesion dark black (informing parents is mandatory).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 135)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1503,
+    "question": "Which emergency medication should be administered to a child experiencing an acute local anesthetic overdose presenting with generalized muscular twitching and seizures?",
+    "options": [
+      "Maintain airway, administer 100% oxygen, protect from self-injury, and administer IV/Buccal Midazolam or IV Lipid Emulsion if toxicity is severe",
+      "Inject 2 g of Amoxicillin IV",
+      "Give oral paracetamol syrup 500 mg",
+      "Place patient in Trendelenburg position and apply ice"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Management of local anesthetic toxicity involves securing the airway, 100% O2 delivery, controlling seizures with anticonvulsants (Midazolam/Diazepam), and CPR/Intralipid infusion if cardiac arrest occurs.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 4, p. 50)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
   }
 ]
