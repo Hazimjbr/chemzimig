@@ -188,6 +188,7 @@ export function filterDentalQuestions(options?: {
   level?: string;
   onlyBookmarks?: boolean;
   onlyMistakes?: boolean;
+  onlyNew?: boolean;
   searchQuery?: string;
   chapter?: string;
 }): DentalQuestion[] {
@@ -212,6 +213,10 @@ export function filterDentalQuestions(options?: {
 
   if (options?.onlyMistakes) {
     list = list.filter(q => stats.mistakeIds.includes(q.id));
+  }
+
+  if (options?.onlyNew) {
+    list = list.filter(q => q.id >= 1075);
   }
 
   if (options?.searchQuery) {

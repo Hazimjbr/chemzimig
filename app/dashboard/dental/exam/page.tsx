@@ -36,6 +36,7 @@ export default function DentalExamPage() {
   const [selectedChapter, setSelectedChapter] = useState<string>('All');
   const [allChapters, setAllChapters] = useState<string[]>([]);
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number>(15);
+  const [onlyNew, setOnlyNew] = useState<boolean>(false);
 
   // Load chapters on mount
   useEffect(() => {
@@ -80,6 +81,10 @@ export default function DentalExamPage() {
     
     if (selectedChapter !== 'All') {
       pool = pool.filter(q => q.explanation.includes(selectedChapter));
+    }
+
+    if (onlyNew) {
+      pool = pool.filter(q => q.id >= 1075);
     }
 
     if (pool.length === 0) {
@@ -318,6 +323,31 @@ export default function DentalExamPage() {
                     <option value={90}>90 Minutes</option>
                     <option value={9999}>Untimed (Relaxed Study Mode)</option>
                   </select>
+                </div>
+
+                {/* Master Extra Questions Only Toggle */}
+                <div className="flex items-center justify-between p-4 bg-white/[0.02] border border-white/5 rounded-xl">
+                  <div className="space-y-0.5">
+                    <label className="text-xs font-bold text-white block">
+                      Newly Extracted Questions Only (Master Extra)
+                    </label>
+                    <span className="text-[10px] text-slate-500 block">
+                      Limit this exam session to only the {ALL_DENTAL_QUESTIONS.filter(q => q.id >= 1075).length} custom questions extracted from Master Dentistry books.
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setOnlyNew(!onlyNew)}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none cursor-pointer ${
+                      onlyNew ? 'bg-amber-500' : 'bg-slate-800'
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        onlyNew ? 'translate-x-6' : 'translate-x-1'
+                      }`}
+                    />
+                  </button>
                 </div>
 
                 {/* Duration Notice */}

@@ -50,6 +50,7 @@ function DentalStudyContent() {
   const [allChapters, setAllChapters] = useState<string[]>([]);
   const [onlyBookmarks, setOnlyBookmarks] = useState<boolean>(initialFilter === 'bookmarks');
   const [onlyMistakes, setOnlyMistakes] = useState<boolean>(initialFilter === 'mistakes');
+  const [onlyNew, setOnlyNew] = useState<boolean>(false);
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const [filteredQuestions, setFilteredQuestions] = useState<DentalQuestion[]>([]);
@@ -80,6 +81,7 @@ function DentalStudyContent() {
       chapter: selectedChapter,
       onlyBookmarks,
       onlyMistakes,
+      onlyNew,
       searchQuery
     });
     
@@ -92,7 +94,7 @@ function DentalStudyContent() {
     setIsAnswered(false);
     setShowExplanation(false);
     setShowLockModal(false);
-  }, [selectedCategory, selectedLevel, selectedChapter, onlyBookmarks, onlyMistakes, searchQuery, hasFullAccess]);
+  }, [selectedCategory, selectedLevel, selectedChapter, onlyBookmarks, onlyMistakes, onlyNew, searchQuery, hasFullAccess]);
 
   const currentQuestion = filteredQuestions[currentIndex];
   const isBookmarked = currentQuestion ? userStats.bookmarkedIds.includes(currentQuestion.id) : false;
@@ -255,6 +257,19 @@ function DentalStudyContent() {
           >
             <AlertCircle className="w-3.5 h-3.5" />
             <span>Mistakes ({userStats.mistakeIds.length})</span>
+          </button>
+
+          {/* New / Extra Questions Toggle */}
+          <button
+            onClick={() => setOnlyNew(!onlyNew)}
+            className={`px-3 py-2 rounded-xl text-xs font-semibold border transition-all flex items-center justify-center gap-1.5 w-full sm:w-auto ${
+              onlyNew 
+                ? 'bg-amber-500/20 text-amber-400 border-amber-500/40 shadow-lg shadow-amber-500/5' 
+                : 'bg-white/5 text-slate-400 border-border hover:bg-white/10'
+            }`}
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Master Extra ({ALL_DENTAL_QUESTIONS.filter(q => q.id >= 1075).length})</span>
           </button>
         </div>
       </div>
