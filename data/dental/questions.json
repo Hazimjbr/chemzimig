@@ -12468,5 +12468,19 @@
     "explanation": "Due to low tensile strength and brittleness, conventional GIC is not suitable as a core build-up material for anterior teeth subject to lateral forces.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (p. 90)",
     "category": "General Dentistry",
     "level": "Level 3"
+  },
+  {
+    "id": 1075,
+    "question": "Regarding Intramuscular Injections in dental patients, which of the following statements is true?",
+    "options": [
+      "Should not be given to patients with a bleeding disorder (e.g. haemophilia)",
+      "Are not appropriate for drug delivery in any medical emergency",
+      "Produce the fastest absorption when a gluteal muscle is used",
+      "Cannot be used to mimic cortisol secretion in patients on long-term corticosteroids"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Intramuscular injections should not be given to patients with a bleeding disorder as they can cause a large hematoma. In dentistry, an inferior alveolar nerve block in such patients could cause bleeding into the pterygomandibular space, obstructing the airway.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 40)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
   }
 ]
