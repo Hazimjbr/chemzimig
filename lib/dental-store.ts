@@ -161,12 +161,35 @@ export function toggleDentalBookmark(questionId: number): boolean {
   return isBookmarked;
 }
 
+export function extractAllChapters(): string[] {
+  const chapters = new Set<string>();
+  ALL_DENTAL_QUESTIONS.forEach(q => {
+    // Look for patterns like 'Master Dentistry Vol. X, Ch. Y' or 'Master Dentistry Vol. X'
+    const exp = q.explanation;
+    const match = exp.match(/Book Reference:\s*([^\n\(\)]+)/);
+    if (match) {
+      chapters.add(match[1].trim());
+    } else {
+      const match2 = exp.match(/Reference:\s*([^\n\(\)]+)/);
+      if (match2) {
+        chapters.add(match2[1].trim());
+      }
+    }
+  });
+  
+  // Sort chapters cleanly: Volume 1 first, then Volume 2, and chapter numbers sequentially
+  return Array.from(chapters).sort((a, b) => {
+    return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
+  });
+}
+
 export function filterDentalQuestions(options?: {
   category?: string;
   level?: string;
   onlyBookmarks?: boolean;
   onlyMistakes?: boolean;
   searchQuery?: string;
+  chapter?: string;
 }): DentalQuestion[] {
   let list = ALL_DENTAL_QUESTIONS;
   const stats = getDentalUserStats();
@@ -177,6 +200,10 @@ export function filterDentalQuestions(options?: {
 
   if (options?.level && options.level !== 'All') {
     list = list.filter(q => q.level === options.level);
+  }
+
+  if (options?.chapter && options.chapter !== 'All') {
+    list = list.filter(q => q.explanation.includes(options.chapter!));
   }
 
   if (options?.onlyBookmarks) {

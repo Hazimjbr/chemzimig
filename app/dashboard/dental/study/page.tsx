@@ -28,7 +28,8 @@ import {
   filterDentalQuestions, 
   recordDentalAnswer, 
   toggleDentalBookmark, 
-  getDentalUserStats 
+  getDentalUserStats,
+  extractAllChapters 
 } from '@/lib/dental-store';
 import { DentalQuestion, DentalCategory, DentalLevel, DentalUserStats } from '@/data/dental/types';
 import { useGamification } from '@/contexts/GamificationContext';
@@ -45,6 +46,8 @@ export default function DentalStudyPage() {
 
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [selectedLevel, setSelectedLevel] = useState<string>('All');
+  const [selectedChapter, setSelectedChapter] = useState<string>('All');
+  const [allChapters, setAllChapters] = useState<string[]>([]);
   const [onlyBookmarks, setOnlyBookmarks] = useState<boolean>(initialFilter === 'bookmarks');
   const [onlyMistakes, setOnlyMistakes] = useState<boolean>(initialFilter === 'mistakes');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -66,6 +69,7 @@ export default function DentalStudyPage() {
 
   useEffect(() => {
     setUserStats(getDentalUserStats());
+    setAllChapters(extractAllChapters());
   }, []);
 
   // Update questions whenever filters change
@@ -73,6 +77,7 @@ export default function DentalStudyPage() {
     const list = filterDentalQuestions({
       category: selectedCategory,
       level: selectedLevel,
+      chapter: selectedChapter,
       onlyBookmarks,
       onlyMistakes,
       searchQuery
@@ -87,7 +92,7 @@ export default function DentalStudyPage() {
     setIsAnswered(false);
     setShowExplanation(false);
     setShowLockModal(false);
-  }, [selectedCategory, selectedLevel, onlyBookmarks, onlyMistakes, searchQuery, hasFullAccess]);
+  }, [selectedCategory, selectedLevel, selectedChapter, onlyBookmarks, onlyMistakes, searchQuery, hasFullAccess]);
 
   const currentQuestion = filteredQuestions[currentIndex];
   const isBookmarked = currentQuestion ? userStats.bookmarkedIds.includes(currentQuestion.id) : false;
@@ -212,6 +217,18 @@ export default function DentalStudyPage() {
             <option value="Level 1">Level 1 (Core)</option>
             <option value="Level 2">Level 2 (Intermediate)</option>
             <option value="Level 3">Level 3 (Advanced)</option>
+          </select>
+
+          {/* Chapter Dropdown */}
+          <select
+            value={selectedChapter}
+            onChange={(e) => setSelectedChapter(e.target.value)}
+            className="bg-slate-900/80 border border-border rounded-xl px-3 py-1.5 text-xs font-medium text-white focus:outline-none focus:border-indigo-500 max-w-[180px] truncate"
+          >
+            <option value="All">All Chapters</option>
+            {allChapters.map(ch => (
+              <option key={ch} value={ch} title={ch}>{ch}</option>
+            ))}
           </select>
 
           {/* Bookmarks Toggle */}
