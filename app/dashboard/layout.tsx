@@ -44,7 +44,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const { user, logout } = useAuth();
     const { xp, level, streak } = useGamification();
 
-    const isDentalUser = user?.grade?.toLowerCase().includes('dental') || false;
+    const isDentalPath = pathname?.startsWith('/dashboard/dental') || false;
+    const isDentalUser = isDentalPath || user?.grade?.toLowerCase().includes('dental') || false;
     const navItems = isDentalUser ? dentalNavItems : chemistryNavItems;
 
     const isLessonPlayer = pathname?.startsWith('/dashboard/curriculum/') && pathname.split('/').length > 4;
