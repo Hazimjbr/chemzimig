@@ -29,7 +29,20 @@ export async function GET(request: NextRequest) {
             }
         }
 
-        return NextResponse.json({ success: true });
+        return NextResponse.json({
+            success: true,
+            user: {
+                id: student.id,
+                username: student.username,
+                name: student.name,
+                email: student.email || undefined,
+                image: student.image || undefined,
+                grade: student.grade || undefined,
+                isAdmin: student.isAdmin || false,
+                role: student.role || 'student',
+                authMethod: 'credentials'
+            }
+        });
     } catch (error) {
         console.error('[Verify API] Error:', error);
         return NextResponse.json({ success: false, error: 'Verification failed' }, { status: 500 });

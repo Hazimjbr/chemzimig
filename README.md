@@ -219,6 +219,7 @@ npm run lint
   - **Anatomical Dental Aesthetics & Branding:** Replaced general medical graphics with custom molar tooth and clinical floating SVGs (braces, handpiece drills, modern dental chairs). Replaced leftover stethoscope icons (`Stethoscope` / `🩺`) in the sidebar, dashboard headers, and category diagnostics with the molar tooth `🦷` for unified dentistry branding.
   - **Vercel Invite URL:** Updated the admin student credentials template to copy `https://chemzim.vercel.app/` directly for instant production login access.
   - **Inline Curriculum Editor:** Transformed the static curriculum tag in the Admin Panel student accounts list into an interactive dropdown select, allowing administrators to update any student's curriculum or upgrade them to the Dental Board instantly on Firestore via a secure API request (`update-grade`).
+  - **Dynamic Session Re-Verification:** Modified `/api/auth/verify` to return the updated user document and updated the `checkStoredSession` logic in `AuthContext` to instantly synchronize state and `localStorage` with the latest server data on page refresh or window focus.
   - **Telegram Bot Publishing:** Integrated local-only extraction protection for new board MCQs while keeping core channel sync active.
 
 - 🧪 **Dashboard Header Link:** Standardized the sidebar "ChemZim" logo in the student dashboard layout to navigate back to the landing page (`/`).

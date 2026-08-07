@@ -207,7 +207,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // 3. Check Stored Session (for Students)
     // ----------------------------------------
 
-    // Helper: Verify user against DB (Active Guard)
     const verifySessionWithDB = async (userData: AuthUser, sessionFingerprint?: string, checkFingerprint: boolean = true) => {
         try {
             const params = new URLSearchParams({
@@ -220,11 +219,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             const response = await fetch(`/api/auth/verify?${params.toString()}`);
             const result = await response.json();
             
-            return result.success === true;
+            return result;
 
         } catch (dbError) {
             console.error('[Auth] Validation failed:', dbError);
-            return true; // Permissive on network error for UX
+            return null;
         }
     };
 
@@ -257,17 +256,19 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
                     // B. Database Check (Backend Level - The Fix)
                     if (isValidSession) {
-                        const isDbValid = await verifySessionWithDB(
+                        const verifyResult = await verifySessionWithDB(
                             userData,
                             sessionData.fingerprint,
                             userData.authMethod === 'credentials'
                         );
 
-                        if (isDbValid) {
-                            setUser(userData);
+                        if (verifyResult && verifyResult.success === true) {
+                            const updatedUser = verifyResult.user ? { ...userData, ...verifyResult.user } : userData;
+                            setUser(updatedUser);
+                            localStorage.setItem('auth_user', JSON.stringify(updatedUser));
                             try {
                                 const { mergeDentalCloudData } = await import('@/lib/dental-store');
-                                mergeDentalCloudData(userData.dentalBookmarks, userData.dentalMistakes);
+                                mergeDentalCloudData(updatedUser.dentalBookmarks, updatedUser.dentalMistakes);
                             } catch (e) {
                                 console.warn('Could not merge dental cloud data:', e);
                             }
@@ -277,7 +278,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                     } else {
                         clearSession();
                     }
-
                 } else {
                     // Session expired
                     clearSession();
