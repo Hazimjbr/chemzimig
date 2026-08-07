@@ -14554,5 +14554,285 @@
     "explanation": "High-risk strains of Human Papillomavirus (specifically HPV 16 and 18) are major causative factors in oropharyngeal cancers (tonsils, base of tongue), showing different clinical behaviors than tobacco-induced SCC.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1224,
+    "question": "Which of the following salivary glands is the most common site for sialolithiasis (salivary calculi formation), and why?",
+    "options": [
+      "Parotid gland, due to high amylase enzyme content",
+      "Submandibular gland, due to viscous secretion, high calcium concentration, and an upward/tortuous duct path",
+      "Sublingual gland, due to the presence of multiple ducts of Rivinus",
+      "Minor salivary glands of the hard palate, due to local trauma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Around 80% of salivary calculi occur in the submandibular gland. This is attributed to the alkaline, highly viscous mucinous saliva with high concentrations of calcium and phosphate, coupled with Wharton's duct being long, tortuous, and running upwards.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 209)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1225,
+    "question": "A patient presents with a slowly growing swelling under their left jaw. The swelling becomes painful and increases in size specifically during meals, then slowly subsides. What is the most likely diagnosis?",
+    "options": [
+      "Pleomorphic adenoma of the submandibular gland",
+      "Sialolithiasis (ductal obstruction)",
+      "Acute bacterial sialadenitis",
+      "Sjogren's syndrome"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mealtime swelling and pain is the classic symptom of salivary duct obstruction (sialolithiasis). Saliva production is stimulated by food, but cannot drain, causing pressure and swelling of the gland.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 209)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1226,
+    "question": "Under which of the following clinical conditions is performing a contrast sialogram contraindicated?",
+    "options": [
+      "Chronic salivary duct obstruction",
+      "Acute salivary gland infection (acute sialadenitis)",
+      "Suspected Sjogren's syndrome",
+      "Persistent dry mouth (xerostomia)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sialography is contraindicated during acute infection because cannulation and contrast medium injection under pressure can aggravate the pain and spread the infection retrogradely into the gland parenchyma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 211)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1227,
+    "question": "What is the key histopathological difference between a mucus extravasation phenomenon (mucocele) and a mucus retention cyst?",
+    "options": [
+      "Extravasation mucoceles are malignant, whereas retention cysts are benign",
+      "Extravasation mucoceles are pseudocysts unlined by epithelium, whereas retention cysts are lined by ductal epithelium",
+      "Extravasation mucoceles occur only in the parotid, whereas retention cysts occur only in the sublingual gland",
+      "Extravasation mucoceles contain highly calcified salivary stones"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Extravasation mucoceles are pseudocysts caused by trauma to the duct, leaking mucin into the connective tissue where it is wall-off by granulation tissue (no epithelium). Retention mucoceles are true cysts lined by epithelium.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 213)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1228,
+    "question": "A ranula is a large, bluish, fluctuant swelling in the floor of the mouth. From which salivary gland does a ranula typically originate?",
+    "options": [
+      "Submandibular salivary gland",
+      "Sublingual salivary gland",
+      "Parotid salivary gland",
+      "Minor salivary glands of the tongue"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A ranula is a mucus extravasation pseudocyst arising specifically from the sublingual salivary gland in the floor of the mouth, named for its resemblance to the underbelly of a frog.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 213)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1229,
+    "question": "What is a 'plunging ranula', and what anatomical structure does it penetrate?",
+    "options": [
+      "A ranula that penetrates the buccinator muscle to present in the cheek",
+      "A ranula that herniates through the mylohyoid muscle to present as a neck mass in the submandibular space",
+      "A ranula that enters the maxillary sinus through an extraction socket",
+      "A retention cyst of the parotid gland that compresses the facial nerve"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A plunging ranula occurs when mucus extravasation dissects through or around the posterior border of the mylohyoid muscle, presenting as a soft fluctuant swelling in the submandibular region of the neck.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 213)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1230,
+    "question": "What is the clinical triad that characterizes secondary Sjogren's syndrome?",
+    "options": [
+      "Xerostomia, micrognathia, and osteomas",
+      "Xerostomia, keratoconjunctivitis sicca (dry eyes), and an associated connective tissue disease (commonly Rheumatoid Arthritis)",
+      "Absent clavicles, supernumerary teeth, and parotid swelling",
+      "Xerostomia, uveitis, and bilateral mucosal desquamation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Secondary Sjogren's syndrome is diagnosed when xerostomia (dry mouth) and keratoconjunctivitis sicca (dry eyes) occur in association with a systemic connective tissue autoimmune disease, most commonly rheumatoid arthritis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 215)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1231,
+    "question": "Which diagnostic gold standard biopsy procedure is used to histologically confirm a suspected diagnosis of Sjogren's syndrome?",
+    "options": [
+      "Incisional biopsy of the parotid gland",
+      "Labial salivary gland biopsy (lower lip)",
+      "Aspiration biopsy of the submandibular gland",
+      "Excisional biopsy of the sublingual gland"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Labial salivary gland biopsy of the lower lip is the diagnostic standard. It avoids facial nerve risks of parotid biopsy and shows characteristic focal lymphocytic sialadenitis (focus score >= 1 focus per 4 mm2).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 215)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1232,
+    "question": "What is the characteristic radiographic appearance of the parotid gland on a sialogram in a patient with Sjogren's syndrome?",
+    "options": [
+      "A single large radiopaque stone blocking the main duct orifice",
+      "Punctate sialectasia, displaying a 'cherry-blossom' or 'snowstorm' pattern",
+      "Complete absence of minor and major duct branches with normal parenchyma",
+      "A displacement of the duct system resembling a 'hand-holding-a-ball'"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sialography in Sjogren's syndrome shows sialectasia (dilation of peripheral ductules), which creates a classic 'cherry-blossom' or 'snowstorm' appearance due to leakage of contrast medium into damaged parenchyma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 215)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1233,
+    "question": "Patients with Sjogren's syndrome have a significantly increased risk of developing which of the following malignancies?",
+    "options": [
+      "Squamous cell carcinoma of the tongue",
+      "Non-Hodgkin B-cell lymphoma",
+      "Adenoid cystic carcinoma",
+      "Mucoepidermoid carcinoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Due to chronic polyclonal B-cell proliferation within salivary parenchyma, patients with Sjogren's syndrome have a 44-fold increased risk of developing malignant B-cell non-Hodgkin lymphoma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 215)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1234,
+    "question": "What is the most common benign salivary gland tumor, and what is its typical histological appearance?",
+    "options": [
+      "Warthin's tumor, displaying papillary cystic structures and oncocytes",
+      "Pleomorphic adenoma (benign mixed tumor), showing a mixture of epithelial/myoepithelial cells in a chondromyxoid stroma",
+      "Mucoepidermoid carcinoma, showing epidermoid and mucous cells",
+      "Oncocytoma, showing sheets of granular eosinophilic cells"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pleomorphic adenoma accounts for about 70-80% of all salivary gland tumors. Histopathology reveals a 'mixed' pattern of epithelial and myoepithelial cells embedded in a variable mucoid, myxoid, or chondroid stroma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1235,
+    "question": "Why is simple 'shelling out' (enucleation) of a pleomorphic adenoma contraindicated as a surgical treatment?",
+    "options": [
+      "Because the tumor is highly malignant and requires chemotherapy",
+      "Because the tumor lacks a complete capsule and has microscopic pseudopods, leading to high rates of multifocal recurrence",
+      "Because the tumor cells will immediately metastasize if the capsule is cut",
+      "Because it causes massive internal hemorrhage from the carotid artery"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pleomorphic adenomas have thin, incomplete capsules with microscopic tumor projections (pseudopods) extending into normal tissue. Simple enucleation leaves these behind, leading to recurrence.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1236,
+    "question": "Which salivary gland tumor occurs almost exclusively in the parotid gland, displays a strong association with smoking, and affects predominantly older males?",
+    "options": [
+      "Pleomorphic adenoma",
+      "Warthin's tumor (adenolymphoma)",
+      "Adenoid cystic carcinoma",
+      "Acinic cell carcinoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Warthin's tumor (adenolymphoma) occurs almost exclusively in the parotid gland. It shows a strong association with smoking and is most commonly found in older males, with a 10% rate of bilaterality.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1237,
+    "question": "Which malignant salivary gland neoplasm is the most common salivary cancer, histologically characterized by a mixture of mucous-secreting cells, epidermoid cells, and intermediate cells?",
+    "options": [
+      "Adenoid cystic carcinoma",
+      "Mucoepidermoid carcinoma",
+      "Acinic cell carcinoma",
+      "Pleomorphic adenoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mucoepidermoid carcinoma is the most common malignant salivary gland tumor. Histologically, it is composed of varying proportions of mucus-producing cells, epidermoid (squamous) cells, and intermediate cells.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1238,
+    "question": "Which histological pattern is most characteristic of the cribriform variant of adenoid cystic carcinoma, often described as a 'Swiss cheese' appearance?",
+    "options": [
+      "Solid sheets of poorly differentiated cells with necrosis",
+      "Duct-like spaces and cystic cavities filled with mucinous material, resembling holes in Swiss cheese",
+      "Double-layered papillary projections lined by oncocytes",
+      "Islands of squamous cells with keratin pearl formation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The cribriform pattern of adenoid cystic carcinoma shows islands of epithelial cells containing multiple cylinder-like spaces filled with basophilic mucinous material, creating a classic 'Swiss cheese' look.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1239,
+    "question": "Which of the following biological behaviors is a classic clinical characteristic of adenoid cystic carcinoma of the minor salivary glands?",
+    "options": [
+      "Spontaneous regression without surgical intervention",
+      "Marked propensity for perineural invasion, causing early pain and nerve paralysis",
+      "Complete encapsulation preventing local tissue infiltration",
+      "Exclusively hematogenous spread to bone within the first month"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Adenoid cystic carcinoma has a notorious tendency for perineural invasion, traveling along nerve sheaths far beyond surgical margins, causing early facial pain or nerve paralysis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1240,
+    "question": "Frey's syndrome (gustatory sweating) is a complication that can occur after parotidectomy. What is the pathological mechanism behind this syndrome?",
+    "options": [
+      "Injury to the facial nerve causing hyperactive sweating of the neck",
+      "Aberrant regeneration of parasympathetic secretomotor fibers of the auriculotemporal nerve to supply sympathetic sweat glands in the overlying skin",
+      "Blocked salivary ducts leading to accumulation of fluid in skin pores",
+      "Allergic hypersensitivity to suture materials used in parotid surgery"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Frey's syndrome is caused by misdirected regeneration of parasympathetic secretomotor fibers of the auriculotemporal nerve (which originally supplied the parotid) to instead innervate sympathetic sweat glands in the cheek skin.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1241,
+    "question": "Which clinical test is diagnostic for Frey's syndrome (gustatory sweating) by demonstrating sweat production on the cheek skin during mastication?",
+    "options": [
+      "Schirmer's test",
+      "Minor's starch-iodine test",
+      "Sialography test",
+      "Toluidine blue staining test"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Minor's starch-iodine test is diagnostic. The cheek is painted with iodine, allowed to dry, and starch powder is applied. During eating, sweating turns the starch-iodine mixture blue-black.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1242,
+    "question": "Sialosis (sialadenosis) is a non-inflammatory, non-neoplastic, bilateral enlargement of the parotid glands. It is frequently associated with which of the following systemic conditions?",
+    "options": [
+      "Chronic peptic ulcer disease and hypertension",
+      "Alcoholic liver disease, diabetes mellitus, and eating disorders (such as bulimia)",
+      "Systemic lupus erythematosus and iron deficiency anemia",
+      "Primary hyperparathyroidism and osteoporosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sialosis is a salivary hypertrophy associated with metabolic/systemic conditions, including endocrine disorders (diabetes), malnutrition, alcoholism, and bulimia (due to repeated autonomic stimulation).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 219)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1243,
+    "question": "A patient presents with a deep, crater-like, painful ulcer on the posterior hard palate that appeared rapidly. Biopsy shows lobular necrosis of salivary glands and squamous metaplasia of ducts. What is the diagnosis and management?",
+    "options": [
+      "Mucoepidermoid carcinoma; requires radical maxillectomy",
+      "Necrotizing sialometaplasia; requires reassurance as it is self-limiting and resolves in 6-8 weeks",
+      "Squamous cell carcinoma; requires wide surgical resection",
+      "Pleomorphic adenoma; requires superficial parotidectomy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Necrotizing sialometaplasia is a benign, self-limiting inflammatory condition. Because of squamous metaplasia, it clinically and histologically mimics SCC or mucoepidermoid carcinoma. It resolves spontaneously in 6-8 weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 13, p. 213)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
