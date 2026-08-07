@@ -13070,5 +13070,75 @@
     "explanation": "The development and high success rate of osseointegrated dental implants has largely superseded the need for complex preprosthetic surgical procedures that were previously required to improve conventional denture retention.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Prosthodontics & Radiology",
     "level": "Level 2"
+  },
+  {
+    "id": 1118,
+    "question": "During the extraction of a fractured palatal root of a maxillary first molar, the root fragment suddenly disappears and is pushed superiorly. What is the most appropriate immediate clinical protocol?",
+    "options": [
+      "Vigorously syringe the socket with saline to flush the root tip out",
+      "Stop the procedure immediately, obtain a radiograph to locate the fragment, and refer the patient for surgical retrieval if displaced into the sinus",
+      "Pack the socket firmly with oxidized cellulose and discharge the patient with antibiotics",
+      "Use a curved root elevator blindly inside the socket to feel for and retrieve the root tip"
+    ],
+    "correctAnswer": 1,
+    "explanation": "If a maxillary root tip is displaced, blind attempts to retrieve it must be avoided to prevent further displacement. The clinician should stop, take radiographs to confirm if it has entered the maxillary sinus, and refer the patient to an oral surgeon.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1119,
+    "question": "Which of the following surgical precautions is most critical during the removal of impacted mandibular third molars to prevent permanent damage to the adjacent lingual nerve?",
+    "options": [
+      "Placing the relieving incision on the lingual aspect of the alveolar crest",
+      "Designing a buccal mucoperiosteal flap and gently utilizing a lingual retractor (e.g. Howarth) to shield the lingual soft tissues during bone removal",
+      "Aggressively curetting the socket after tooth delivery to remove the dental follicle",
+      "Removing the protective buccal bone entirely from the lingual direction"
+    ],
+    "correctAnswer": 1,
+    "explanation": "To protect the lingual nerve (which runs close to the lingual plate of the third molar), surgical incisions are kept buccal, and a lingual retractor is carefully placed to protect the lingual soft tissue flap during bone guttering.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1120,
+    "question": "A patient receiving high-dose intravenous bisphosphonate therapy (e.g., zoledronic acid) for bone metastasis requires extraction of a severely infected tooth. What is the primary clinical complication the patient must be warned about?",
+    "options": [
+      "Severe intraoperative hemorrhage requiring blood transfusion",
+      "Medication-Related Osteonecrosis of the Jaw (MRONJ)",
+      "Rapid bone hyperplasia leading to severe exostosis at the socket site",
+      "Failure of all amide-type local anesthetics due to bone sclerosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Patients on high-dose IV bisphosphonates are at high risk of developing Medication-Related Osteonecrosis of the Jaw (MRONJ) after invasive dental procedures like extractions due to suppressed osteoclastic activity and impaired bone remodeling.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1121,
+    "question": "In dental implantology, how do 'primary stability' and 'secondary stability' of an implant differ during the healing stages?",
+    "options": [
+      "Primary stability is achieved via chemical bonding, while secondary stability is purely physical",
+      "Primary stability is the mechanical locking of the implant at placement, while secondary stability is biological anchorage achieved through osseointegration",
+      "Primary stability requires fibrous tissue growth, while secondary stability requires titanium surface degradation",
+      "Primary stability is significantly weaker in dense bone than in trabecular bone"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Primary stability is the initial mechanical anchorage achieved immediately upon implant placement. Secondary stability is the biological stability achieved over weeks as new bone forms and integrates with the implant surface (osseointegration).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1122,
+    "question": "Why is the pain associated with dry socket (alveolar osteitis) typically severe, throbbing, and poorly controlled by standard over-the-counter analgesics?",
+    "options": [
+      "Because of direct retrograde bacterial migration into the inferior alveolar nerve sheath",
+      "Because loss of the blood clot exposes the alveolar bone walls, leaving sensory nerve endings directly exposed to oral fluids, air, and mechanical stimuli",
+      "Because of systemic release of fibrinolytic enzymes causing widespread pulpitis in adjacent teeth",
+      "Because the socket becomes occluded by sharp bone osteophytes that compress blood vessels"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The breakdown of the blood clot exposes the bony socket walls (localized osteitis), leaving the sensory nerve endings in the periodontal ligament remnants exposed to external thermal, chemical, and mechanical stimuli in the mouth, causing severe pain.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
