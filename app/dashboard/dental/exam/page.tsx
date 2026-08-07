@@ -248,25 +248,21 @@ export default function DentalExamPage() {
                   <label className="text-xs font-bold text-white uppercase tracking-wider block">
                     1. Select Number of Questions
                   </label>
-                  <div className="grid grid-cols-5 gap-2">
-                    {[10, 20, 30, 50, 100].map(count => (
-                      <button
-                        key={count}
-                        onClick={() => {
-                          setQuestionCount(count);
-                          setTimeLimitMinutes(count === 10 ? 10 : count === 20 ? 20 : count === 30 ? 30 : count === 50 ? 50 : 90);
-                        }}
-                        className={`py-3 px-1 rounded-xl border text-center transition-all ${
-                          questionCount === count
-                            ? 'bg-amber-500/20 border-amber-500/60 text-amber-400 font-bold shadow-lg shadow-amber-500/10'
-                            : 'bg-white/5 border-border text-slate-300 hover:bg-white/10'
-                        }`}
-                      >
-                        <div className="text-base font-black">{count}</div>
-                        <div className="text-[9px] text-slate-500 mt-0.5">MCQs</div>
-                      </button>
-                    ))}
-                  </div>
+                  <select
+                    value={questionCount}
+                    onChange={(e) => {
+                      const count = Number(e.target.value);
+                      setQuestionCount(count);
+                      setTimeLimitMinutes(count === 10 ? 10 : count === 20 ? 20 : count === 30 ? 30 : count === 50 ? 50 : 90);
+                    }}
+                    className="w-full bg-slate-900/80 border border-border rounded-xl p-3 text-xs font-semibold text-white focus:outline-none focus:border-amber-500 cursor-pointer"
+                  >
+                    <option value={10}>10 MCQs (Short Session)</option>
+                    <option value={20}>20 MCQs</option>
+                    <option value={30}>30 MCQs</option>
+                    <option value={50}>50 MCQs</option>
+                    <option value={100}>100 MCQs (Full Exam)</option>
+                  </select>
                 </div>
 
                 {/* Specialty Focus Selection */}
