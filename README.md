@@ -208,14 +208,16 @@ npm run lint
   - **Features Consolidation:** Removed the duplicate Features section from the landing page and navigation menu to streamline content presentation.
   - **Curriculum Badge Redesign:** Updated the header badge to "Cambridge • Edexcel • AP • IB • EST & More" to represent current and upcoming international curriculum tracks.
   - **Premium Stats & Benefits Cards:** Refined the homepage statistics cards to showcase key benefits instead of redundant numbers, including "3,000+ Practice Questions (Covering all major boards)", "Instant Mark Schemes & Hints", "3 Difficulty Levels", and "100% Exam-Aligned".
-- 🦷 **Dentistry Board MCQs & Exam Simulator Module (Completed)** — Built a comprehensive prep platform for dental licensing exams (MFDs, MJDF, ORE) containing 921 high-yield clinical questions from Master Dentistry:
+- 🦷 **Dentistry Board MCQs & Exam Simulator Module (Completed)** — Built a comprehensive prep platform for dental licensing exams (MFDs, MJDF, ORE, NDEB, INBDE) containing **1,340 high-yield clinical questions** (including **429 Master Extra** board-level scenario questions from Master Dentistry Vol. 1 & 2):
+  - **Interactive Exam Review Mode & Score Share Card:** Added an interactive post-exam review mode with color-coded answers and detailed explanations, along with high-tech neon Score Share Cards exportable as PNG images (`html2canvas`).
+  - **Category Diagnostics & Chapter Analytics:** Integrated category performance progress bars (Periodontics, Endodontics, Oral Surgery, Orthodontics, Prosthodontics, Paediatrics, Pharmacology) and dynamic chapter-by-chapter filtering for extracted Master Extra questions.
   - **Cloud Sync Integration:** Fully synchronized local student bookmarks and mistakes with Firestore in the background (`/api/dental/sync`) with automatic merge on login and boot.
   - **Admin Analytics Dashboard:** Integrated real-time dentistry metrics inside the Admin panel, calculating total dental students, active accounts, total XP, and bookmark/mistake counts.
-  - **Topic-based / Chapter Filtering:** Enabled students to filter practice questions dynamically by specific book chapters (e.g. Master Dentistry Vol. 1, Ch. 3) parsed directly from clinical explanations.
+  - **Topic-based / Chapter Filtering:** Enabled students to filter practice questions dynamically by specific book chapters (e.g. Master Dentistry Vol. 1, Ch. 10 Cysts, Ch. 11 Mucosal Diseases, Ch. 12 Oral Cancer, Ch. 13 Salivary, etc.) parsed directly from clinical explanations.
   - **Custom Quick Mock Exams:** Upgraded the simulator with custom presets (10, 20, 30, 50, 100 MCQs), custom time limits (including Untimed Study Mode), and chapter focus.
   - **Auto-Submit on Timeout:** Engineered a bulletproof countdown fallback that automatically submits the exam on time limit expiry, marking all unanswered questions as incorrect and routing them directly to the Mistakes Bank, with a clear results notification banner.
   - **Anatomical Dental Aesthetics:** Replaced general medical graphics with custom molar tooth and clinical floating SVGs (braces, handpiece drills, modern dental chairs).
-  - **Telegram Bot Publishing:** Fully synchronized new dentistry questions to the `@dentistry_mcqs_2026` channel.
+  - **Telegram Bot Publishing:** Integrated local-only extraction protection for new board MCQs while keeping core channel sync active.
 
 - 🧪 **Dashboard Header Link:** Standardized the sidebar "ChemZim" logo in the student dashboard layout to navigate back to the landing page (`/`).
 - 🤖 **AI-Agent Context Optimization (`AGENTS.md`)** — Documented workspace-specific rules, Scientific Constants, and Core TypeScript Schemas (Student, Device, LessonPart, Question) directly in the local rules configuration to enable zero-search, context-aware co-authoring for AI assistants.
