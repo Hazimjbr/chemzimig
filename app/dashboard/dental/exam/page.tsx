@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { 
   Trophy, 
@@ -164,6 +164,22 @@ export default function DentalExamPage() {
   const answeredCount = Object.keys(userAnswers).length;
   const correctCount = examQuestions.filter(q => userAnswers[q.id] === q.correctAnswer).length;
   const scorePct = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
+  // Group results by category for Diagnostics
+  const categoryStats = useMemo(() => {
+    const stats: Record<string, { total: number; correct: number }> = {};
+    examQuestions.forEach(q => {
+      const isCorrect = userAnswers[q.id] === q.correctAnswer;
+      if (!stats[q.category]) {
+        stats[q.category] = { total: 0, correct: 0 };
+      }
+      stats[q.category].total += 1;
+      if (isCorrect) {
+        stats[q.category].correct += 1;
+      }
+    });
+    return stats;
+  }, [examQuestions, userAnswers]);
 
   const formatTime = (secs: number) => {
     const m = Math.floor(secs / 60);
@@ -571,6 +587,52 @@ export default function DentalExamPage() {
                   </div>
                 </div>
               )}
+
+              {/* Category Performance Diagnostics Panel */}
+              <div className="bg-surface/60 border border-white/5 rounded-3xl p-6 md:p-8 backdrop-blur-xl max-w-md mx-auto space-y-4 shadow-xl">
+                <div className="flex items-center gap-2 border-b border-white/5 pb-3">
+                  <BarChart2 className="w-5 h-5 text-indigo-400" />
+                  <h3 className="text-sm font-black text-white uppercase tracking-wider">
+                    Performance Diagnostics
+                  </h3>
+                </div>
+
+                <div className="space-y-4 text-left">
+                  {Object.entries(categoryStats).map(([catName, stat]) => {
+                    const pct = Math.round((stat.correct / stat.total) * 100);
+                    
+                    // Determine colors based on score percentage
+                    let colorClass = "text-rose-400";
+                    let barColorClass = "bg-rose-500 shadow-[0_0_8px_rgba(244,63,94,0.4)]";
+                    
+                    if (pct >= 70) {
+                      colorClass = "text-emerald-400";
+                      barColorClass = "bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.4)]";
+                    } else if (pct >= 40) {
+                      colorClass = "text-amber-400";
+                      barColorClass = "bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.4)]";
+                    }
+
+                    return (
+                      <div key={catName} className="space-y-1.5">
+                        <div className="flex items-center justify-between text-[11px] font-bold">
+                          <span className="text-slate-300 truncate max-w-[240px]">{catName}</span>
+                          <span className={`${colorClass} font-extrabold`}>
+                            {stat.correct}/{stat.total} ({pct}%)
+                          </span>
+                        </div>
+                        {/* Progress Bar Container */}
+                        <div className="w-full h-2 rounded-full bg-white/5 overflow-hidden border border-white/5">
+                          <div
+                            className={`h-full rounded-full transition-all duration-500 ${barColorClass}`}
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
