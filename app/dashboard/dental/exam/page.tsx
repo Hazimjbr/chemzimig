@@ -18,7 +18,7 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { ALL_DENTAL_QUESTIONS, DENTAL_CATEGORIES, recordDentalAnswer } from '@/lib/dental-store';
+import { ALL_DENTAL_QUESTIONS, DENTAL_CATEGORIES, recordDentalAnswer, extractAllChapters } from '@/lib/dental-store';
 import { DentalQuestion, DentalCategory } from '@/data/dental/types';
 import { useGamification } from '@/contexts/GamificationContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -31,9 +31,16 @@ export default function DentalExamPage() {
   const hasFullAccess = user?.isAdmin || user?.grade === 'dentistry';
 
   // Setup options
-  const [questionCount, setQuestionCount] = useState<number>(20);
+  const [questionCount, setQuestionCount] = useState<number>(10);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [timeLimitMinutes, setTimeLimitMinutes] = useState<number>(20);
+  const [selectedChapter, setSelectedChapter] = useState<string>('All');
+  const [allChapters, setAllChapters] = useState<string[]>([]);
+  const [timeLimitMinutes, setTimeLimitMinutes] = useState<number>(15);
+
+  // Load chapters on mount
+  useEffect(() => {
+    setAllChapters(extractAllChapters());
+  }, []);
 
   // Active Exam state
   const [examState, setExamState] = useState<ExamState>('SETUP');
@@ -44,7 +51,7 @@ export default function DentalExamPage() {
 
   // Timer countdown effect
   useEffect(() => {
-    if (examState !== 'ACTIVE' || secondsRemaining <= 0) return;
+    if (examState !== 'ACTIVE' || secondsRemaining <= 0 || timeLimitMinutes === 9999) return;
 
     const interval = setInterval(() => {
       setSecondsRemaining(prev => {
@@ -58,7 +65,7 @@ export default function DentalExamPage() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [examState, secondsRemaining]);
+  }, [examState, secondsRemaining, timeLimitMinutes]);
 
   const startExam = () => {
     if (!hasFullAccess) return; // Prevent starting if trial
@@ -66,6 +73,15 @@ export default function DentalExamPage() {
     let pool = ALL_DENTAL_QUESTIONS;
     if (selectedCategory !== 'All') {
       pool = pool.filter(q => q.category === selectedCategory);
+    }
+    
+    if (selectedChapter !== 'All') {
+      pool = pool.filter(q => q.explanation.includes(selectedChapter));
+    }
+
+    if (pool.length === 0) {
+      alert("No questions found matching this custom configuration! Try selecting a different category or chapter.");
+      return;
     }
 
     // Shuffle and pick
@@ -75,7 +91,12 @@ export default function DentalExamPage() {
     setExamQuestions(selected);
     setCurrentIndex(0);
     setUserAnswers({});
-    setSecondsRemaining(timeLimitMinutes * 60);
+    
+    if (timeLimitMinutes === 9999) {
+      setSecondsRemaining(999999); // Untimed
+    } else {
+      setSecondsRemaining(timeLimitMinutes * 60);
+    }
     setExamState('ACTIVE');
   };
 
@@ -206,28 +227,28 @@ export default function DentalExamPage() {
                 </div>
               </div>
 
-              <div className="bg-surface/80 border border-border rounded-3xl p-6 md:p-8 backdrop-blur-xl space-y-8 shadow-2xl">
+              <div className="bg-surface/80 border border-border rounded-3xl p-6 md:p-8 backdrop-blur-xl space-y-6 shadow-2xl animate-in fade-in duration-500">
                 {/* Question Count Selection */}
                 <div className="space-y-3">
-                  <label className="text-sm font-bold text-white uppercase tracking-wider block">
+                  <label className="text-xs font-bold text-white uppercase tracking-wider block">
                     1. Select Number of Questions
                   </label>
-                  <div className="grid grid-cols-3 gap-4">
-                    {[20, 50, 100].map(count => (
+                  <div className="grid grid-cols-5 gap-2">
+                    {[10, 20, 30, 50, 100].map(count => (
                       <button
                         key={count}
                         onClick={() => {
                           setQuestionCount(count);
-                          setTimeLimitMinutes(count === 20 ? 20 : count === 50 ? 50 : 90);
+                          setTimeLimitMinutes(count === 10 ? 10 : count === 20 ? 20 : count === 30 ? 30 : count === 50 ? 50 : 90);
                         }}
-                        className={`p-4 rounded-2xl border text-center transition-all ${
+                        className={`py-3 px-1 rounded-xl border text-center transition-all ${
                           questionCount === count
                             ? 'bg-amber-500/20 border-amber-500/60 text-amber-400 font-bold shadow-lg shadow-amber-500/10'
                             : 'bg-white/5 border-border text-slate-300 hover:bg-white/10'
                         }`}
                       >
-                        <div className="text-xl font-black">{count}</div>
-                        <div className="text-xs text-slate-400 mt-1">Questions</div>
+                        <div className="text-base font-black">{count}</div>
+                        <div className="text-[9px] text-slate-500 mt-0.5">MCQs</div>
                       </button>
                     ))}
                   </div>
@@ -235,13 +256,13 @@ export default function DentalExamPage() {
 
                 {/* Specialty Focus Selection */}
                 <div className="space-y-3">
-                  <label className="text-sm font-bold text-white uppercase tracking-wider block">
-                    2. Select Specialty Focus
+                  <label className="text-xs font-bold text-white uppercase tracking-wider block">
+                    2. Specialty Focus (Optional)
                   </label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-slate-900/80 border border-border rounded-2xl p-4 text-sm font-semibold text-white focus:outline-none focus:border-amber-500"
+                    className="w-full bg-slate-900/80 border border-border rounded-xl p-3 text-xs font-semibold text-white focus:outline-none focus:border-amber-500"
                   >
                     <option value="All">Comprehensive Exam (All 6 Specialties)</option>
                     {DENTAL_CATEGORIES.map(cat => (
@@ -250,18 +271,61 @@ export default function DentalExamPage() {
                   </select>
                 </div>
 
+                {/* Chapter Focus Selection */}
+                <div className="space-y-3">
+                  <label className="text-xs font-bold text-white uppercase tracking-wider block">
+                    3. Chapter Focus (Optional)
+                  </label>
+                  <select
+                    value={selectedChapter}
+                    onChange={(e) => setSelectedChapter(e.target.value)}
+                    className="w-full bg-slate-900/80 border border-border rounded-xl p-3 text-xs font-semibold text-white focus:outline-none focus:border-amber-500"
+                  >
+                    <option value="All">All Chapters / Topics</option>
+                    {allChapters.map(ch => (
+                      <option key={ch} value={ch}>{ch}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Custom Time Limit */}
+                <div className="space-y-3">
+                  <label className="text-xs font-bold text-white uppercase tracking-wider block">
+                    4. Select Time Limit
+                  </label>
+                  <select
+                    value={timeLimitMinutes}
+                    onChange={(e) => setTimeLimitMinutes(Number(e.target.value))}
+                    className="w-full bg-slate-900/80 border border-border rounded-xl p-3 text-xs font-semibold text-white focus:outline-none focus:border-amber-500"
+                  >
+                    <option value={5}>5 Minutes (Sprint)</option>
+                    <option value={10}>10 Minutes</option>
+                    <option value={15}>15 Minutes</option>
+                    <option value={20}>20 Minutes</option>
+                    <option value={30}>30 Minutes</option>
+                    <option value={45}>45 Minutes</option>
+                    <option value={60}>60 Minutes (Standard)</option>
+                    <option value={90}>90 Minutes</option>
+                    <option value={9999}>Untimed (Relaxed Study Mode)</option>
+                  </select>
+                </div>
+
                 {/* Duration Notice */}
-                <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-4 flex items-center gap-3 text-amber-300 text-xs">
+                <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 flex items-center gap-3 text-amber-300 text-xs">
                   <Clock className="w-5 h-5 shrink-0 text-amber-400" />
                   <span>
-                    Exam duration will be set to <strong>{timeLimitMinutes} minutes</strong> ({timeLimitMinutes * 60} seconds).
+                    {timeLimitMinutes === 9999 ? (
+                      <span>Exam simulator will run in <strong>Untimed Study Mode</strong>. Take your time!</span>
+                    ) : (
+                      <span>Exam duration will be set to <strong>{timeLimitMinutes} minutes</strong> ({timeLimitMinutes * 60} seconds).</span>
+                    )}
                   </span>
                 </div>
 
                 {/* Start Button */}
                 <button
                   onClick={startExam}
-                  className="w-full py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-extrabold text-base shadow-xl shadow-amber-500/25 transition-all hover:scale-[1.01] active:scale-[0.99]"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-extrabold text-sm shadow-xl shadow-amber-500/25 transition-all hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
                 >
                   Start Exam Now 🚀
                 </button>
