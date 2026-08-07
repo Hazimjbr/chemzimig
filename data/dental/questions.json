@@ -13994,5 +13994,285 @@
     "explanation": "Gingival cysts of the newborn (Bohn's nodules or Epstein's pearls) are small keratin-filled cysts derived from dental lamina remnants. They are self-limiting and resolve spontaneously within a few weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 161)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1184,
+    "question": "Which of the following clinical descriptions is characteristic of a minor aphthous ulcer?",
+    "options": [
+      "Painful, diameter > 10 mm, leaves a permanent scar, and resolves in 6 weeks",
+      "Painful, diameter < 10 mm, heals without scarring in 10 to 14 days, and occurs on non-keratinized mucosa",
+      "Painless, pinpoint lesions that merge and occur predominantly on the hard palate",
+      "Extremely painful, deep ulcers that occur exclusively on the gingival margin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Minor aphthous ulcers represent the most common form of recurrent aphthous stomatitis. They are painful, small (< 10 mm), heal without scarring within 10-14 days, and occur on non-keratinized mobile mucosa.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 175)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1185,
+    "question": "How does a major aphthous ulcer (Sutton's disease) differ clinically from a minor aphthous ulcer?",
+    "options": [
+      "Major aphthous ulcers are painless and heal within 3 days",
+      "Major aphthous ulcers are larger (> 10 mm), deeper, take weeks to heal, and frequently leave scars",
+      "Major aphthous ulcers occur exclusively in newborns",
+      "Major aphthous ulcers are associated with hyperkeratosis of the tongue"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Major aphthous ulcers are deeper, larger (> 10 mm), extremely painful, take up to 6 weeks to heal, and characteristically heal with scarring.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 175)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1186,
+    "question": "A patient presents with dozens of tiny, painful, pinpoint oral ulcers (1-2 mm) that coalesce to form larger irregular erosions across the soft palate and buccal mucosa. What is the most likely diagnosis?",
+    "options": [
+      "Primary herpetic gingivostomatitis",
+      "Herpetiform aphthous ulceration",
+      "Minor aphthous stomatitis",
+      "Erythema multiforme"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Herpetiform ulceration is characterized by multiple (up to 100) tiny pinpoint ulcers that can occur anywhere on the mucosa and tend to coalesce into larger sheets of ulceration.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 175)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1187,
+    "question": "Which histopathological features are diagnostic of oral lichen planus?",
+    "options": [
+      "Intraepithelial clefting with acantholytic cells (Tzanck cells)",
+      "Liquefaction degeneration of the basal layer and a band-like T-lymphocytic infiltrate at the dermo-epidermal junction",
+      "Subepithelial splitting with separation of hemidesmosomes",
+      "Hyperplastic parakeratinized epithelium with abundant microabscesses"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Oral lichen planus histopathology shows hyperkeratosis, liquefaction degeneration of the basal cell layer, Civatte bodies (apoptotic keratinocytes), and a characteristic band-like T-lymphocytic infiltrate in the upper lamina propria.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1188,
+    "question": "What is the clinical term used to describe the lace-like network of fine white lines observed on the buccal mucosa in reticular lichen planus?",
+    "options": [
+      "Wickham's striae",
+      "Nikolsky lines",
+      "Koebner lines",
+      "Liesegang bands"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Reticular lichen planus presents as asymptomatic, bilateral white lace-like striae on the buccal mucosa, known clinically as Wickham's striae.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1189,
+    "question": "Which of the following drug classes is most frequently implicated in triggering oral lichenoid drug reactions that mimic lichen planus clinically and histopathologically?",
+    "options": [
+      "Broad-spectrum penicillins",
+      "Antihypertensives (such as beta-blockers and ACE inhibitors) and NSAIDs",
+      "Antifungals like fluconazole",
+      "Systemic corticosteroids"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Lichenoid drug reactions can be caused by drugs including NSAIDs, beta-blockers, ACE inhibitors, sulfonylureas, and gold salts. The lesions often present unilaterally.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1190,
+    "question": "In pemphigus vulgaris, autoantibodies target which of the following cellular components, leading to intraepithelial blister formation (acantholysis)?",
+    "options": [
+      "Hemidesmosomes in the basement membrane",
+      "Desmoglein 3 (component of desmosomes)",
+      "Laminin 5 in the lamina lucida",
+      "Type VII collagen fibrils"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pemphigus vulgaris is a life-threatening autoimmune disease where IgG autoantibodies target Desmoglein 3 in desmosomes, causing loss of cell-to-cell adhesion (acantholysis) and intraepithelial splitting.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 180)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1191,
+    "question": "What is the Nikolsky sign, and how does it present in a patient with active pemphigus vulgaris?",
+    "options": [
+      "The development of a white line on the tongue when rubbed",
+      "The detachment or peeling of the clinically normal epithelium when lateral pressure is applied",
+      "Sudden severe pain in the TMJ upon mandibular deviation",
+      "Severe spasm of the masseter muscle when light tapping is applied"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A positive Nikolsky sign is the stripping or blister formation of clinically normal-looking mucosa or skin upon gentle lateral rubbing pressure, indicating poor epithelial cell cohesion.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 180)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1192,
+    "question": "In mucous membrane pemphigoid (cicatricial pemphigoid), what is the molecular target of the autoantibodies, and where does the tissue clefting occur?",
+    "options": [
+      "Desmoglein 1 within the spinous layer",
+      "Hemidesmosomes/Basement membrane zone proteins, causing subepithelial clefting",
+      "Desmoglein 3, causing intraepithelial clefting",
+      "Actin filaments within basal cell cytoplasm, causing intracellular lysis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In pemphigoid, autoantibodies target hemidesmosomal proteins (like BP180) in the basement membrane, leading to separation of the entire epithelium from the underlying connective tissue (subepithelial split).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 181)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1193,
+    "question": "Which of the following is a critical extra-oral complication of mucous membrane pemphigoid that requires mandatory referral to an ophthalmologist?",
+    "options": [
+      "Bilateral cataracts due to autoantibody deposition",
+      "Ocular scarring (symblepharon) leading to blindness",
+      "Acute glaucoma due to pupil block",
+      "Exophthalmos and severe retinal detachment"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mucous membrane pemphigoid frequently affects conjunctival mucosa. Chronic inflammation leads to scarring, adhesions between the eyelid and eyeball (symblepharon), and can result in blindness.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 181)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1194,
+    "question": "Desquamative gingivitis is characterized by bright red, painful, peeling gingiva. It is a clinical presentation of which of the following groups of diseases?",
+    "options": [
+      "Acute necrotizing ulcerative gingivitis and primary herpes",
+      "Lichen planus, mucous membrane pemphigoid, and pemphigus vulgaris",
+      "Leukoplakia, erythroplakia, and oral submucous fibrosis",
+      "Candidiasis, angular cheilitis, and denture stomatitis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Desquamative gingivitis is not a diagnosis but a clinical term. It represents the gingival presentation of mucocutaneous diseases, most commonly lichen planus, pemphigoid, or pemphigus vulgaris.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1195,
+    "question": "A patient presents with rapid onset of blood-crusted lips, painful oral erosions, and diagnostic target ('bulls-eye') skin lesions on their hands following a cold sore episode. What is the most likely diagnosis?",
+    "options": [
+      "Pemphigus vulgaris",
+      "Erythema multiforme",
+      "Stevens-Johnson syndrome",
+      "Lichen planus"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Erythema multiforme presents with hemorrhagic crusting of the lips, extensive oral ulcers, and targetoid skin lesions. It is often triggered by herpes simplex virus (HSV) or medications.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1196,
+    "question": "A patient presents with creamy white patches on the soft palate. The patches can be easily wiped away with a tongue depressor, leaving an erythematous, bleeding base. What type of candidiasis is this?",
+    "options": [
+      "Chronic hyperplastic candidiasis",
+      "Pseudomembranous candidiasis (thrush)",
+      "Acute erythematous candidiasis",
+      "Chronic atrophic candidiasis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pseudomembranous candidiasis (thrush) presents as semi-adherent white plaques resembling milk curds, which can be wiped off to expose an erythematous, painful, or bleeding mucosa underneath.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 184)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1197,
+    "question": "A patient presents with a painful red tongue following a 10-day course of broad-spectrum antibiotics. There are no white plaques. What is the most likely diagnosis?",
+    "options": [
+      "Chronic hyperplastic candidiasis",
+      "Acute erythematous candidiasis",
+      "Pseudomembranous candidiasis",
+      "Median rhomboid glossitis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Acute erythematous candidiasis is often triggered by broad-spectrum antibiotics, which suppress normal oral flora. It presents as a painful, burning red mucosa with loss of tongue papillae.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 184)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1198,
+    "question": "Which form of oral candidiasis presents as a white plaque on the buccal mucosa or tongue that cannot be rubbed off, and carries a significant risk of dysplastic changes (premalignant potential)?",
+    "options": [
+      "Pseudomembranous candidiasis",
+      "Chronic hyperplastic candidiasis (candidal leukoplakia)",
+      "Denture stomatitis",
+      "Angular cheilitis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Chronic hyperplastic candidiasis presents as a firm white plaque that cannot be scraped off. It carries a risk of epithelial dysplasia and progression to squamous cell carcinoma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 184)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1199,
+    "question": "An elderly edentulous patient presents with soreness, erythema, and deep fissuring at the corners of their mouth. What are the primary microbiological causes and dental predisposing factors for this condition?",
+    "options": [
+      "Streptococcus mutans and increased vertical dimension of occlusion",
+      "Candida albicans / Staphylococcus aureus, and reduced vertical dimension of occlusion (overclosure)",
+      "Lactobacillus species and excessive salivary flow",
+      "Herpes simplex virus and heavy smoking"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Angular cheilitis is typically a mixed infection of Candida albicans and Staphylococcus aureus. It is predisposed by skin folding at the mouth corners due to reduced vertical dimension (overclosure) in denture wearers.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 184)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1200,
+    "question": "A 3-year-old child presents with high fever, malaise, lymphadenopathy, and generalized painful, bleeding gingiva with widespread small oral vesicles. What is the most likely diagnosis?",
+    "options": [
+      "Recurrent herpes labialis",
+      "Primary herpetic gingivostomatitis",
+      "Herpetiform aphthous ulceration",
+      "Acute necrotizing ulcerative gingivitis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Primary herpetic gingivostomatitis is caused by initial infection with HSV-1. It presents in young children with systemic symptoms, generalized marginal gingivitis, and widespread painful vesicles.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 177)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1201,
+    "question": "Where does the herpes simplex virus (HSV-1) remain latent in the human body between clinical episodes of recurrent herpes labialis (cold sores)?",
+    "options": [
+      "Within the basal epithelial cells of the lip mucosa",
+      "Within the sensory neurones of the trigeminal ganglion",
+      "Within the regional cervical lymph nodes",
+      "Within the salivary gland ductal epithelium"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Following primary HSV-1 infection, the virus travels up sensory nerve fibers and remains latent in the trigeminal ganglion. Reactivation leads to recurrent herpes labialis (cold sores) at the lip margin.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 177)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1202,
+    "question": "A patient presents with recurrent, painful oral aphthae, recurrent genital ulceration, and inflammatory eye disease (uveitis). What systemic disease is described?",
+    "options": [
+      "Sjogren's syndrome",
+      "Behcet's disease",
+      "Reiter's syndrome",
+      "Crohn's disease"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Behcet's disease is a multisystem vasculitis. The diagnosis is clinical, characterized by the triad of recurrent oral ulcers, genital ulcers, and uveitis/ocular lesions.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 176)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1203,
+    "question": "A patient presents with a painful vesicular eruption in the external auditory meatus, unilateral facial nerve paralysis, and loss of taste on the anterior two-thirds of the tongue. What is the diagnosis?",
+    "options": [
+      "Bell's palsy due to Herpes Simplex",
+      "Ramsay Hunt syndrome (Varicella zoster reactivation)",
+      "Trigeminal neuralgia",
+      "Meniere's disease"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ramsay Hunt syndrome is caused by reactivation of Varicella Zoster virus in the geniculate ganglion. It presents as facial palsy, vesicles in the external ear, and loss of taste/hearing disturbances.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 177)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
