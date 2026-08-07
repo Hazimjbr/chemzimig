@@ -12,7 +12,8 @@ import {
     Menu,
     X,
     ShieldCheck,
-    Crown
+    Crown,
+    Stethoscope
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
@@ -20,6 +21,7 @@ import ThemeToggle from '@/components/ui/ThemeToggle';
 
 const navItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'Dental MCQs', href: '/dashboard/dental', icon: Stethoscope },
     { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
