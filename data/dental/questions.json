@@ -12496,5 +12496,19 @@
     "explanation": "Anaphylaxis is a severe, life-threatening systemic hypersensitivity reaction mediated by IgE antibodies. These antibodies bind to mast cells and basophils, triggering the rapid release of histamine and other vasoactive mediators. Epinephrine (adrenaline) administered intramuscularly in the anterolateral aspect of the middle third of the thigh is the immediate first-line treatment.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 2"
+  },
+  {
+    "id": 1077,
+    "question": "Regarding the dental management of a pregnant patient, which of the following statements is true?",
+    "options": [
+      "A pregnant woman who faints should be placed in the supine position with a slight tilt to the left side",
+      "NSAIDs are the first choice of analgesics for dental pain in all trimesters of pregnancy",
+      "Dental radiographs are completely contraindicated throughout the entire pregnancy",
+      "The second trimester is the most critical period where dental treatment must be absolutely avoided"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A pregnant patient who faints should be placed in the supine position with a slight lateral tilt to the left. This prevents the gravid uterus from compressing the inferior vena cava and aorta (Supine Hypotensive Syndrome), which reduces cardiac output. NSAIDs should be avoided (especially in the 3rd trimester to prevent premature closure of the ductus arteriosus). The 2nd trimester is actually the safest period for dental procedures.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
   }
 ]
