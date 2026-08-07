@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useAuth } from "@/contexts/AuthContext";
 import LoginModal from "@/components/auth/LoginModal";
-import { Lock, User as UserIcon, LogOut, LayoutDashboard, ChevronDown, Bell, Stethoscope, Award, BookOpen } from "lucide-react";
+import { Lock, User as UserIcon, LogOut, LayoutDashboard, ChevronDown, Bell, Award, BookOpen } from "lucide-react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -178,7 +178,10 @@ export default function Header() {
                     <circle cx="14" cy="11" r="0.8" fill="white" opacity="0.6" />
                   </svg>
                 ) : (
-                  <Stethoscope className="w-5 h-5 text-white relative z-10" />
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white relative z-10">
+                    <path d="M12 2C8.5 2 6 4.5 6 8c0 3.5 1.5 5.5 3 7.5S11 19.5 11 22h2c0-2.5 2-4.5 2-6.5s3-4 3-7.5c0-3.5-2.5-6-6-6z" />
+                    <path d="M9.5 15.5c1.5 1 3.5 1 5 0" />
+                  </svg>
                 )}
               </div>
             </div>

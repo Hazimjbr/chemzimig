@@ -66,12 +66,17 @@ export default function HeroSection() {
             </>
           ) : (
             <>
-              {/* Floating Tooth / Medical Icons */}
-              <div className="absolute top-[15%] right-[15%] animate-float opacity-20 text-gold-400">
-                <Stethoscope className="w-16 h-16" />
+              {/* Floating Tooth / Dental Icons */}
+              <div className="absolute top-[15%] right-[15%] animate-float opacity-20 text-indigo-400">
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2C8.5 2 6 4.5 6 8c0 3.5 1.5 5.5 3 7.5S11 19.5 11 22h2c0-2.5 2-4.5 2-6.5s3-4 3-7.5c0-3.5-2.5-6-6-6z" />
+                  <path d="M9.5 15.5c1.5 1 3.5 1 5 0" />
+                </svg>
               </div>
               <div className="absolute bottom-[20%] left-[10%] animate-float-slow opacity-15 text-teal-400">
-                <Shield className="w-20 h-20" />
+                <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2C8.5 2 6 4.5 6 8c0 3.5 1.5 5.5 3 7.5S11 19.5 11 22h2c0-2.5 2-4.5 2-6.5s3-4 3-7.5c0-3.5-2.5-6-6-6z" />
+                </svg>
               </div>
             </>
           )}
@@ -121,7 +126,7 @@ export default function HeroSection() {
               <h1 className="text-4xl sm:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-tight leading-[1.1] mb-4">
                 <span className="text-white">Master Dental MCQs</span>
                 <br />
-                <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">Professional Prep</span> 🩺
+                <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">Professional Prep</span> 🦷
               </h1>
               <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
                 Practice 911 clinical questions for MFDs, MJDF, ORE, and Board Exams with detailed Master Dentistry textbook references.
