@@ -19,20 +19,29 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
-const navItems = [
+const chemistryNavItems = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-    { name: 'Dental MCQs', href: '/dashboard/dental', icon: Stethoscope },
     { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
     { name: 'Profile', href: '/dashboard/profile', icon: User },
 ];
 
+const dentalNavItems = [
+    { name: 'Dashboard', href: '/dashboard/dental', icon: LayoutDashboard },
+    { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
+    { name: 'Profile', href: '/dashboard/profile', icon: User },
+];
+
+
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const pathname = usePathname();
     const { user, logout } = useAuth();
     const { xp, level, streak } = useGamification();
+
+    const isDentalUser = user?.grade?.toLowerCase().includes('dental') || false;
+    const navItems = isDentalUser ? dentalNavItems : chemistryNavItems;
 
     const isLessonPlayer = pathname?.startsWith('/dashboard/curriculum/') && pathname.split('/').length > 4;
 
@@ -69,10 +78,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     <div className="flex items-center justify-between mb-10">
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
-                                ⚗️
+                                {isDentalUser ? '🦷' : '⚗️'}
                             </div>
                             <span className="text-2xl font-bold bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-                                ChemZim
+                                {isDentalUser ? 'Dentistry' : 'ChemZim'}
                             </span>
                         </Link>
                         <button onClick={() => setIsSidebarOpen(false)} className="lg:hidden text-slate-400">
@@ -123,12 +132,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                         <span className="text-2xl">{user.image}</span>
                                     )
                                 ) : (
-                                    '👤'
+                                    isDentalUser ? '🦷' : '👤'
                                 )}
                             </div>
                             <div className="flex flex-col min-w-0">
                                 <span className="text-sm font-semibold truncate text-foreground/90">{user?.name || 'Student'}</span>
-                                <span className="text-xs text-slate-500 truncate">Level {level} • {user?.grade || 'No Grade Set'}</span>
+                                <span className="text-xs text-slate-500 truncate">{isDentalUser ? 'Dental Prep Track' : `Level ${level} • ${user?.grade || 'No Grade'}`}</span>
                             </div>
                         </div>
                         {user ? (
@@ -175,17 +184,19 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
                     <div className="flex items-center gap-4">
                         {/* Streak Badge */}
-                        {streak?.currentStreak > 0 && (
+                        {!isDentalUser && streak?.currentStreak > 0 && (
                             <div className="hidden md:flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-full">
                                 <span className="text-sm">🔥</span>
                                 <span className="text-sm font-bold text-orange-500 dark:text-orange-400">{streak.currentStreak}d</span>
                             </div>
                         )}
                         {/* XP Badge */}
-                        <div className="hidden md:flex items-center gap-2 bg-white/5 border border-border px-3 py-1.5 rounded-full">
-                            <Trophy className="w-4 h-4 text-amber-500" />
-                            <span className="text-sm font-bold text-amber-500">{xp} XP</span>
-                        </div>
+                        {!isDentalUser && (
+                            <div className="hidden md:flex items-center gap-2 bg-white/5 border border-border px-3 py-1.5 rounded-full">
+                                <Trophy className="w-4 h-4 text-amber-500" />
+                                <span className="text-sm font-bold text-amber-500">{xp} XP</span>
+                            </div>
+                        )}
                         {/* Theme Toggle */}
                         <ThemeToggle />
                     </div>
