@@ -13140,5 +13140,75 @@
     "explanation": "The breakdown of the blood clot exposes the bony socket walls (localized osteitis), leaving the sensory nerve endings in the periodontal ligament remnants exposed to external thermal, chemical, and mechanical stimuli in the mouth, causing severe pain.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1123,
+    "question": "In the classification of mandibular third molar impactions, which of the following radiographic angulations is generally considered the most difficult and complex to remove surgically?",
+    "options": [
+      "Mesioangular impaction",
+      "Distoangular impaction",
+      "Horizontal impaction",
+      "Vertical impaction with divergent roots"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Distoangular impactions in the mandible are considered the most difficult to remove because the pathway of withdrawal of the tooth is directed posteriorly into the ramus, requiring significant bone removal and tooth sectioning.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1124,
+    "question": "A patient with a history of radiotherapy (dose > 60 Gy) for oral cancer requires extraction of a non-vital, severely decayed mandibular premolar. What is the most appropriate preventive management protocol to minimize the risk of osteoradionecrosis (ORN)?",
+    "options": [
+      "Perform immediate extraction under local anesthesia containing high-dose adrenaline to prevent systemic spread",
+      "Avoid extractions by using root canal therapy if possible; if extraction is unavoidable, perform it with minimal trauma under antibiotic cover and consider hyperbaric oxygen",
+      "Prescribe oral Metronidazole for 3 days and leave the tooth untreated to avoid mechanical bone trauma",
+      "Perform surgical alveolar decortication of the entire arch quadrant prior to extracting the tooth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Osteoradionecrosis is a serious risk in irradiated jaws due to compromised vascularity. Whenever possible, extractions are avoided via root canal therapy. If unavoidable, the procedure must be atraumatic, under antibiotic prophylaxis, and with consideration of hyperbaric oxygen therapy.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1125,
+    "question": "What are the primary mechanical principles utilized by dental elevators (such as straight or Coupland elevators) to luxate teeth during extraction?",
+    "options": [
+      "The screw-and-thread principle",
+      "The lever principle (first-class lever), the wedge principle, and the wheel-and-axle principle",
+      "The pulley-and-tension system principle",
+      "The elastic deformation and tensile stress principle"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dental elevators function using three main mechanical principles: the wedge (to enter and expand the socket), the lever (to lift the root), and the wheel-and-axle (rotational forces to luxate the tooth).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1126,
+    "question": "Which type of bone grafting material is considered the gold standard in dental implantology and maxillofacial reconstruction because it possesses osteogenic, osteoinductive, and osteoconducive properties simultaneously?",
+    "options": [
+      "Xenografts (derived from non-human species, e.g., bovine bone)",
+      "Autogenous bone graft (harvested from the patient's own body)",
+      "Alloplastic materials (synthetic materials, e.g., beta-tricalcium phosphate)",
+      "Allografts (harvested from human cadaver donors)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Autogenous bone is the gold standard because it contains viable osteoblasts and growth factors, providing osteogenesis, osteoinduction, and osteoconduction without risk of immunological rejection.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1127,
+    "question": "During the surgical extraction of a deeply impacted lower third molar in an elderly osteoporotic patient, a loud crack is heard, and the mandible immediately deviates. What is the most likely diagnosis and immediate action required?",
+    "options": [
+      "Temporomandibular joint dislocation; perform immediate manual reduction",
+      "Iatrogenic mandibular fracture; take radiographs to confirm and stabilize the mandible (e.g., intermaxillary fixation)",
+      "Acute masseter muscle spasm; inject local anesthetic into the muscle body",
+      "Localized alveolar bone plate fracture; no treatment or stabilization is needed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Deeply impacted third molars or atrophic jaws are susceptible to iatrogenic mandibular fracture during extraction. If suspected, radiographs must confirm the fracture, followed by immediate stabilization and surgical reduction.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
