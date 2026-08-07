@@ -1,5 +1,3 @@
-import html2canvas from 'html2canvas';
-
 /**
  * Capture an HTML element by ID and trigger a browser PNG download.
  */
@@ -11,6 +9,8 @@ export async function exportElementAsImage(elementId: string, fileName: string =
     }
 
     try {
+        const html2canvasModule = await import('html2canvas');
+        const html2canvas = html2canvasModule.default || html2canvasModule;
         const canvas = await html2canvas(element, {
             scale: 2, // High resolution output
             useCORS: true,
