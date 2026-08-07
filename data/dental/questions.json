@@ -12538,5 +12538,75 @@
     "explanation": "An acute asthma attack triggered by anxiety during dental sedation should be managed immediately by administering 2 puffs of a short-acting beta-2 agonist (such as Salbutamol/Albuterol) using a spacer device. The patient should be kept in an upright position to ease breathing. Epinephrine is reserved for life-threatening bronchoconstriction or anaphylaxis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 2"
+  },
+  {
+    "id": 1080,
+    "question": "In the management of a patient who has suffered a maxillofacial injury, which of the following is true regarding pain control?",
+    "options": [
+      "Opioid analgesics are the drug of first choice and should be given immediately regardless of head injury status",
+      "Opioid analgesics should be avoided in patients with potential head injuries as they can interfere with neurological pupil observations",
+      "Paracetamol is contraindicated in all patients with maxillofacial trauma",
+      "Codeine is completely contraindicated in head injury management due to cardiovascular instability"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Opioid analgesics can cause pupillary constriction (miosis) and depress consciousness, which interferes with critical neurological and pupillary observations required for head injury patients. Codeine does not cause this problem and can be safely used.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 63)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1081,
+    "question": "Regarding the administration of dental local anesthetics, which of the following is true regarding latex allergy?",
+    "options": [
+      "Local anesthetic solutions chemically contain natural latex proteins",
+      "The rubber bung/diaphragm inside the local anesthetic cartridge may contain latex, which can trigger an allergic reaction",
+      "Patients with latex allergy can only receive prilocaine without epinephrine",
+      "Latex allergy is never triggered by dental anesthetic cartridges under any clinical circumstances"
+    ],
+    "correctAnswer": 1,
+    "explanation": "While the anesthetic solution itself contains no latex, the rubber plunger or diaphragm inside the glass cartridge may contain natural rubber latex, which can potentially trigger an allergic reaction in highly sensitive patients.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 63)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1082,
+    "question": "A patient who has abused cocaine within the past 24 hours requires a local anesthetic injection. What is the primary concern if an anesthetic containing adrenaline (epinephrine) is administered?",
+    "options": [
+      "Complete failure of the local anesthetic to achieve pulpal anesthesia",
+      "Severe localized tissue necrosis at the injection site due to vasodilation",
+      "Risk of ventricular tachycardia or cardiac arrhythmias due to exaggerated adrenergic responses",
+      "Rapid metabolism of the local anesthetic resulting in immediate toxicity"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Cocaine sensitizes the myocardium to catecholamines and prevents norepinephrine reuptake. Administering local anesthetics with adrenaline can precipitate severe, potentially fatal cardiac arrhythmias, including ventricular tachycardia or severe hypertension.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 63)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1083,
+    "question": "Regarding the use of local anesthetics with adrenaline (epinephrine) in patients with thyroid disorders:",
+    "options": [
+      "Epinephrine should be avoided in uncontrolled hyperthyroid patients as it could precipitate a thyroid crisis (storm)",
+      "Epinephrine is absolutely contraindicated in patients taking stable, controlled thyroid hormone replacement therapy",
+      "Hyperthyroid patients show reduced sensitivity to catecholamines",
+      "Felypressin is less safe than epinephrine for hyperthyroid patients"
+    ],
+    "correctAnswer": 0,
+    "explanation": "In uncontrolled hyperthyroidism, patients are highly sensitive to catecholamines, and administering epinephrine can precipitate a life-threatening thyrotoxic crisis (thyroid storm). However, patients on controlled thyroid replacement therapy can safely receive normal doses.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 63)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1084,
+    "question": "During IV sedation with Midazolam in the dental clinic, reversal of sedation becomes necessary. Which of the following is true regarding the administration of Flumazenil?",
+    "options": [
+      "An initial dose of 1 mg should be given as a rapid bolus",
+      "If the desired level of consciousness is not obtained, further doses of 100 micrograms (0.1 mg) may be injected every minute up to a maximum of 1 mg",
+      "Flumazenil has a longer half-life than Midazolam, preventing resedation",
+      "Complete arousal should always be achieved immediately rather than maintaining a light degree of postoperative sedation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For midazolam reversal, the initial dose of flumazenil is 200 micrograms (0.2 mg) IV over 15 seconds. Subsequent doses of 100 micrograms (0.1 mg) can be given every 60 seconds as needed up to a maximum of 1.0 mg. Flumazenil has a shorter half-life than midazolam, meaning resedation is possible and patients must be monitored.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 64)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
   }
 ]
