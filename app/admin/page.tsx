@@ -1259,6 +1259,7 @@ function AdminContent() {
                                                             <option value="edexcel-igcse">Edexcel IGCSE ⚡</option>
                                                             <option value="edexcel-as">Edexcel AS-Level 🧬</option>
                                                             <option value="edexcel-a2">Edexcel A2-Level 🛡️</option>
+                                                            <option value="dentistry">Dental Board MCQs 🦷</option>
                                                         </select>
                                                     </div>
                                                 </div>

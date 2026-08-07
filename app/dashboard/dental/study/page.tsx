@@ -17,7 +17,9 @@ import {
   Sparkles,
   RotateCcw,
   Trophy,
-  AlertCircle
+  AlertCircle,
+  Lock,
+  MessageCircle
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -30,6 +32,7 @@ import {
 } from '@/lib/dental-store';
 import { DentalQuestion, DentalCategory, DentalLevel, DentalUserStats } from '@/data/dental/types';
 import { useGamification } from '@/contexts/GamificationContext';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function DentalStudyPage() {
   const searchParams = useSearchParams();
@@ -37,6 +40,8 @@ export default function DentalStudyPage() {
   const initialFilter = searchParams.get('filter');
 
   const { addXP } = useGamification();
+  const { user } = useAuth();
+  const hasFullAccess = user?.isAdmin || user?.grade === 'dentistry';
 
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [selectedLevel, setSelectedLevel] = useState<string>('All');
@@ -49,6 +54,7 @@ export default function DentalStudyPage() {
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
   const [showExplanation, setShowExplanation] = useState<boolean>(false);
+  const [showLockModal, setShowLockModal] = useState<boolean>(false);
 
   const [userStats, setUserStats] = useState<DentalUserStats>({
     answeredCount: 0,
@@ -71,12 +77,17 @@ export default function DentalStudyPage() {
       onlyMistakes,
       searchQuery
     });
-    setFilteredQuestions(list);
+    
+    // If not full access, slice list to max 5 questions
+    const finalQuestions = hasFullAccess ? list : list.slice(0, 5);
+    
+    setFilteredQuestions(finalQuestions);
     setCurrentIndex(0);
     setSelectedOption(null);
     setIsAnswered(false);
     setShowExplanation(false);
-  }, [selectedCategory, selectedLevel, onlyBookmarks, onlyMistakes, searchQuery]);
+    setShowLockModal(false);
+  }, [selectedCategory, selectedLevel, onlyBookmarks, onlyMistakes, searchQuery, hasFullAccess]);
 
   const currentQuestion = filteredQuestions[currentIndex];
   const isBookmarked = currentQuestion ? userStats.bookmarkedIds.includes(currentQuestion.id) : false;
@@ -103,6 +114,8 @@ export default function DentalStudyPage() {
       setSelectedOption(null);
       setIsAnswered(false);
       setShowExplanation(false);
+    } else if (!hasFullAccess) {
+      setShowLockModal(true);
     }
   };
 
@@ -146,9 +159,14 @@ export default function DentalStudyPage() {
             <h1 className="text-lg font-bold text-white flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-indigo-400" />
               <span>Dental Study Mode</span>
+              {!hasFullAccess && (
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 font-bold uppercase tracking-wider">
+                  Trial
+                </span>
+              )}
             </h1>
             <p className="text-xs text-slate-400">
-              {filteredQuestions.length} Questions matching criteria
+              {hasFullAccess ? `${filteredQuestions.length} Questions matching criteria` : '5 Preview questions unlocked'}
             </p>
           </div>
         </div>
@@ -377,13 +395,75 @@ export default function DentalStudyPage() {
 
             <button
               onClick={handleNext}
-              disabled={currentIndex === filteredQuestions.length - 1}
               className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-500 disabled:opacity-30 disabled:pointer-events-none text-white font-bold text-sm shadow-lg shadow-indigo-500/25 transition-all"
             >
               <span>Next</span>
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
+        </div>
+      )}
+
+      {/* 🔒 Locked Preview Modal Popup */}
+      {showLockModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+          <motion.div 
+            initial={{ scale: 0.95, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className="w-full max-w-lg bg-surface/90 border border-indigo-500/30 rounded-[2rem] p-8 text-center space-y-6 shadow-2xl relative overflow-hidden"
+          >
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none" />
+            
+            <div className="w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mx-auto text-2xl shadow-xl shadow-indigo-500/10">
+              <Lock className="w-8 h-8" />
+            </div>
+
+            <div className="space-y-2">
+              <h3 className="text-2xl font-black text-white">Unlock All 911 Dental Questions!</h3>
+              <p className="text-slate-400 text-xs leading-relaxed max-w-sm mx-auto">
+                You have reached the end of the trial preview. Upgrade your subscription to unlock complete clinical sets.
+              </p>
+            </div>
+
+            {/* Features Checklist */}
+            <div className="bg-white/5 border border-white/5 rounded-2xl p-4 text-left space-y-2.5 max-w-sm mx-auto text-xs">
+              <div className="flex items-center gap-2 text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Full access to all 911 clinical questions</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Textbook page references (Master Dentistry)</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Full Exam Simulator with Custom Timers</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Weak-areas and mistakes history tracking</span>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col gap-3 pt-2">
+              <a
+                href="https://t.me/dentistry_mcqs_2026"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 text-white font-extrabold text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Request Activation from Admin</span>
+              </a>
+              <button
+                onClick={() => setShowLockModal(false)}
+                className="w-full py-3.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white font-bold text-xs transition-all"
+              >
+                Close Preview
+              </button>
+            </div>
+          </motion.div>
         </div>
       )}
     </div>
