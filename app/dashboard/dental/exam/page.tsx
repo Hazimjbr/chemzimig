@@ -49,6 +49,8 @@ export default function DentalExamPage() {
   const [userAnswers, setUserAnswers] = useState<Record<number, number>>({}); // questionId -> optionIdx
   const [secondsRemaining, setSecondsRemaining] = useState<number>(0);
 
+  const [isTimeUp, setIsTimeUp] = useState<boolean>(false);
+
   // Timer countdown effect
   useEffect(() => {
     if (examState !== 'ACTIVE' || secondsRemaining <= 0 || timeLimitMinutes === 9999) return;
@@ -57,7 +59,8 @@ export default function DentalExamPage() {
       setSecondsRemaining(prev => {
         if (prev <= 1) {
           clearInterval(interval);
-          finishExam();
+          setIsTimeUp(true);
+          finishExam(true); // pass true to indicate it was auto-submitted on timeout
           return 0;
         }
         return prev - 1;
@@ -91,6 +94,7 @@ export default function DentalExamPage() {
     setExamQuestions(selected);
     setCurrentIndex(0);
     setUserAnswers({});
+    setIsTimeUp(false);
     
     if (timeLimitMinutes === 9999) {
       setSecondsRemaining(999999); // Untimed
@@ -106,17 +110,23 @@ export default function DentalExamPage() {
     setUserAnswers(prev => ({ ...prev, [qId]: optionIdx }));
   };
 
-  const finishExam = () => {
+  const finishExam = (wasTimeout = false) => {
     setExamState('RESULTS');
+    if (wasTimeout) {
+      setIsTimeUp(true);
+    }
 
     // Record stats & add XP
     let correct = 0;
     examQuestions.forEach(q => {
       const selected = userAnswers[q.id];
       const isCorrect = selected === q.correctAnswer;
-      if (isCorrect) correct += 1;
-      if (selected !== undefined) {
-        recordDentalAnswer(q.id, q.category, isCorrect);
+      if (isCorrect) {
+        correct += 1;
+        recordDentalAnswer(q.id, q.category, true);
+      } else {
+        // Either wrong answer or unanswered due to timeout -> record as mistake!
+        recordDentalAnswer(q.id, q.category, false);
       }
     });
 
@@ -352,7 +362,7 @@ export default function DentalExamPage() {
                 </div>
 
                 <button
-                  onClick={finishExam}
+                  onClick={() => finishExam(false)}
                   className="px-4 py-2 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-400 border border-rose-500/30 text-xs font-bold transition-all"
                 >
                   Submit Exam
@@ -451,6 +461,16 @@ export default function DentalExamPage() {
                     Here is your performance summary for this exam session.
                   </p>
                 </div>
+
+                {isTimeUp && (
+                  <div className="bg-rose-500/10 border border-rose-500/25 text-rose-400 rounded-2xl p-4 text-xs font-semibold max-w-md mx-auto flex items-center gap-3 text-left animate-in fade-in slide-in-from-top-3 duration-300">
+                    <Clock className="w-5 h-5 shrink-0 text-rose-500" />
+                    <div>
+                      <p className="font-extrabold text-sm mb-0.5">⏰ Time's Up!</p>
+                      <p className="text-slate-400 font-medium leading-relaxed">Your exam was automatically submitted. All unanswered questions were marked incorrect and added to your Mistakes Bank.</p>
+                    </div>
+                  </div>
+                )}
 
                 {/* Score Ring / Badge */}
                 <div className="inline-flex flex-col items-center justify-center p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md min-w-[200px]">
