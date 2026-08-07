@@ -41,7 +41,7 @@ function DentalStudyContent() {
   const initialFilter = searchParams.get('filter');
 
   const { addXP } = useGamification();
-  const { user } = useAuth();
+  const { user, isLoading } = useAuth();
   const hasFullAccess = user?.isAdmin || user?.grade === 'dentistry';
 
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
@@ -80,6 +80,8 @@ function DentalStudyContent() {
 
   // Update questions whenever filters change
   useEffect(() => {
+    if (isLoading) return; // Wait for auth load to prevent premature slicing
+
     const list = filterDentalQuestions({
       category: selectedCategory,
       level: selectedLevel,
@@ -94,15 +96,34 @@ function DentalStudyContent() {
     const finalQuestions = hasFullAccess ? list : list.slice(0, 5);
     
     setFilteredQuestions(finalQuestions);
-    setCurrentIndex(0);
+    
+    // Restore last active question from localStorage if it exists in the list
+    let startIdx = 0;
+    const lastQIdStr = localStorage.getItem('chemzim_dental_study_last_question_id');
+    if (lastQIdStr) {
+      const lastQId = parseInt(lastQIdStr, 10);
+      const savedIndex = finalQuestions.findIndex(q => q.id === lastQId);
+      if (savedIndex !== -1) {
+        startIdx = savedIndex;
+      }
+    }
+    
+    setCurrentIndex(startIdx);
     setSelectedOption(null);
     setIsAnswered(false);
     setShowExplanation(false);
     setShowLockModal(false);
-  }, [selectedCategory, selectedLevel, selectedChapter, onlyBookmarks, onlyMistakes, onlyNew, searchQuery, hasFullAccess]);
+  }, [selectedCategory, selectedLevel, selectedChapter, onlyBookmarks, onlyMistakes, onlyNew, searchQuery, hasFullAccess, isLoading]);
 
   const currentQuestion = filteredQuestions[currentIndex];
   const isBookmarked = currentQuestion ? userStats.bookmarkedIds.includes(currentQuestion.id) : false;
+
+  // Persist current question ID to localStorage
+  useEffect(() => {
+    if (currentQuestion && !isLoading) {
+      localStorage.setItem('chemzim_dental_study_last_question_id', String(currentQuestion.id));
+    }
+  }, [currentQuestion, isLoading]);
 
   const handleSelectOption = (idx: number) => {
     if (isAnswered || !currentQuestion) return;
@@ -304,8 +325,9 @@ function DentalStudyContent() {
         <div className="space-y-6">
           {/* Progress Bar & Header */}
           <div className="flex items-center justify-between text-xs text-slate-400 px-1">
-            <span className="font-semibold text-indigo-400">
-              Question {currentIndex + 1} of {filteredQuestions.length}
+            <span className="font-semibold text-indigo-400 flex items-center gap-2">
+              <span>Question {currentIndex + 1} of {filteredQuestions.length}</span>
+              <span className="text-slate-500 dark:text-slate-400 font-mono text-[10px] bg-slate-100 dark:bg-slate-900 border border-border px-1.5 py-0.5 rounded-md">ID: #{currentQuestion.id}</span>
             </span>
             <div className="flex items-center gap-2">
               <span className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300 font-medium">
