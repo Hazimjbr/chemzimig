@@ -14274,5 +14274,285 @@
     "explanation": "Ramsay Hunt syndrome is caused by reactivation of Varicella Zoster virus in the geniculate ganglion. It presents as facial palsy, vesicles in the external ear, and loss of taste/hearing disturbances.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 11, p. 177)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1204,
+    "question": "Erythroplakia has an extremely high risk of malignant transformation. What do biopsies of erythroplakia typically reveal histopathologically?",
+    "options": [
+      "Hyperkeratosis with no signs of cellular atypia",
+      "Severe epithelial dysplasia or carcinoma in situ in up to 85-90% of cases",
+      "Dense fibrous connective tissue with chronic inflammatory infiltration only",
+      "Liquefaction degeneration of the basal layer resembling lichen planus"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Erythroplakia is clinically defined as a bright red, velvety patch. Unlike leukoplakia, the vast majority of erythroplakia cases (85-90%) demonstrate severe dysplasia, carcinoma in situ, or invasive squamous cell carcinoma at the time of biopsy.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1205,
+    "question": "Regarding the clinical progression of oral leukoplakia, which of the following represents a recognized paradox in malignant transformation risk?",
+    "options": [
+      "Leukoplakia in heavy smokers has a higher malignant transformation rate than in non-smokers",
+      "Leukoplakia in non-smokers carries a significantly higher risk of malignant transformation than in smokers",
+      "Homogenous leukoplakia has a higher transformation rate than speckled leukoplakia",
+      "Leukoplakia on the hard palate has the highest transformation rate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Although smoking is a major etiologic factor for leukoplakia, idiopathic leukoplakia arising in non-smokers has a significantly higher rate of malignant transformation, as it represents a primary genetic mutation rather than a reactive lesion.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1206,
+    "question": "Which of the following cellular changes is considered a histopathological feature of epithelial dysplasia?",
+    "options": [
+      "Regular, uniform basal cell stratification",
+      "Drop-shaped rete processes, nuclear pleomorphism, hyperchromatism, and increased mitotic figures",
+      "Thickening of the spinous layer without nuclear changes",
+      "Abundant deposition of intercellular amyloid-like proteins"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Histopathological features of epithelial dysplasia include loss of cellular polarity, drop-shaped rete pegs, nuclear hyperchromatism, pleomorphism, altered nuclear-to-cytoplasmic ratio, and abnormal mitoses.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1207,
+    "question": "How is 'carcinoma in situ' defined histologically in oral pathology?",
+    "options": [
+      "Invasive squamous cell carcinoma that has spread to regional lymph nodes",
+      "Severe epithelial dysplasia involving the full thickness of the epithelium but without breaching the basement membrane",
+      "A benign epithelial tumor containing numerous mitotic figures",
+      "A metastatic lesion originating from a distant primary visceral organ"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Carcinoma in situ represents the most severe stage of epithelial dysplasia, where dysplastic features involve the entire thickness of the epithelium but the basement membrane remains completely intact.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1208,
+    "question": "What is the most common type of malignant neoplasm arising in the oral cavity, representing over 90% of all oral cancers?",
+    "options": [
+      "Adenoid cystic carcinoma",
+      "Squamous cell carcinoma (SCC)",
+      "Mucoepidermoid carcinoma",
+      "Osteosarcoma of the jaw"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Squamous cell carcinoma (SCC) is by far the most common oral malignancy, arising from the mucosal stratified squamous epithelium lining the oral cavity.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 193)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1209,
+    "question": "Which anatomical sites in the oral cavity are classified as high-risk areas, showing the highest incidence of squamous cell carcinoma?",
+    "options": [
+      "Hard palate and attached gingival tissues",
+      "Floor of the mouth and the ventral/lateral surfaces of the tongue",
+      "Dorsum of the tongue and buccal vestibule",
+      "Upper lip mucosa and soft palate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The floor of the mouth and the ventrolateral aspects of the tongue are the most common sites for oral cancer, likely due to carcinogens pooling in these dependent areas.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1210,
+    "question": "In the TNM clinical staging system for oral squamous cell carcinoma, how is a T1 primary tumor defined?",
+    "options": [
+      "Tumor size is greater than 4 cm in its greatest dimension",
+      "Tumor size is 2 cm or less in its greatest dimension",
+      "Tumor has invaded adjacent deep structures like cortical bone",
+      "Tumor size is between 2 cm and 4 cm"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In the TNM classification, T represents the size of the primary tumor: T1 is a tumor 2 cm or less in its greatest dimension; T2 is 2-4 cm; T3 is >4 cm; and T4 is a tumor invading deep structures.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 199)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1211,
+    "question": "Under the TNM staging system for oral cancer, what does an N1 designation represent regarding regional lymph node involvement?",
+    "options": [
+      "Metastasis in multiple bilateral lymph nodes, all less than 6 cm",
+      "Metastasis in a single ipsilateral lymph node, 3 cm or less in greatest dimension",
+      "Metastasis in a single contralateral lymph node, greater than 3 cm",
+      "No evidence of regional lymph node metastasis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "N1 indicates metastasis in a single ipsilateral (same side) lymph node, 3 cm or less in greatest dimension. N2 represents larger or multiple nodes, and N3 represents nodes > 6 cm.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 199)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1212,
+    "question": "In the TNM staging system, which classification represents the presence of distant metastases (e.g., spread to lungs, liver, or bone)?",
+    "options": [
+      "M0",
+      "M1",
+      "Mx",
+      "N3"
+    ],
+    "correctAnswer": 1,
+    "explanation": "M represents distant metastasis: M0 indicates no distant metastasis, and M1 indicates the presence of distant metastasis (e.g., spread to lungs, brain, liver, or bones).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 199)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1213,
+    "question": "According to clinical survival data for oral squamous cell carcinoma, what are the approximate 5-year survival rates for Stage I and Stage IV disease, respectively?",
+    "options": [
+      "99% for Stage I and 80% for Stage IV",
+      "Around 80% for Stage I and 15% for Stage IV",
+      "50% for Stage I and 50% for Stage IV",
+      "20% for Stage I and 5% for Stage IV"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Early-stage (Stage I) oral cancer has a favorable prognosis with an 80% 5-year survival rate. Advanced disease (Stage IV) with distant spread has a poor prognosis, dropping survival to around 15%.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 199)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1214,
+    "question": "A patient presents with dry, scaly, and blurred margins on their lower lip border. They have a history of chronic outdoor sun exposure. What is the most likely diagnosis?",
+    "options": [
+      "Angular cheilitis",
+      "Actinic cheilitis",
+      "Exfoliative cheilitis",
+      "Primary herpes labialis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Actinic cheilitis is a premalignant condition affecting the lower lip vermilion border caused by chronic ultraviolet radiation exposure, predisposing the patient to lip squamous cell carcinoma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1215,
+    "question": "When performing an incisional biopsy of a suspected malignant oral mucosal lesion, which of the following is a critical surgical requirement?",
+    "options": [
+      "The biopsy must be taken from the central necrotic area only",
+      "The specimen must include a representative sample of the lesion, including the transition zone between diseased and normal tissue",
+      "The biopsy must be superficial to avoid damaging underlying bone",
+      "No normal tissue should be included to minimize postoperative bleeding"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An incisional biopsy must contain a representative wedge of tissue that includes both diseased and normal tissue at the margin, allowing the pathologist to compare and assess depth of invasion.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 197)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1216,
+    "question": "A patient originally from South Asia presents with severe, progressive limitation of mouth opening (trismus), mucosal rigidity, and fibrous bands in the buccal mucosa. What is the likely diagnosis and etiologic agent?",
+    "options": [
+      "Liched planus due to gold restoration allergy",
+      "Oral submucous fibrosis (OSF) due to betel quid / areca nut chewing",
+      "Stevens-Johnson syndrome due to sulfonamides",
+      "Actinomycosis due to tooth extraction trauma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Oral submucous fibrosis (OSF) is a chronic, progressive, high-risk premalignant condition associated with areca nut/betel quid chewing. It results in submucosal collagen deposition, severe trismus, and mucosal burning.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1217,
+    "question": "Which clinical variant of leukoplakia has the highest risk of malignant transformation?",
+    "options": [
+      "Homogenous thin leukoplakia",
+      "Speckled leukoplakia (erythroleukoplakia)",
+      "Reticular leukoplakia",
+      "Hairy leukoplakia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Speckled leukoplakia (erythroleukoplakia) features a mixed white and red surface. It carries a much higher risk of dysplastic changes and malignant transformation than homogenous white plaques.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1218,
+    "question": "Plummer-Vinson syndrome (Paterson-Kelly syndrome) is associated with an increased risk of squamous cell carcinoma of the upper gastrointestinal tract and post-cricoid area. What are its classic features?",
+    "options": [
+      "Trismus, macroglossia, and supernumerary teeth",
+      "Iron deficiency anemia, dysphagia (esophageal webs), and glossitis",
+      "Absent clavicles, skin fibromas, and multiple osteomas",
+      "Thrombocytopenia, bleeding gums, and parotid swelling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Plummer-Vinson syndrome consists of iron deficiency anemia, dysphagia (due to esophageal webs), and atrophic glossitis. It is a recognized predisposing factor for post-cricoid carcinoma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1219,
+    "question": "What is the recommended clinical safe margin of normal-appearing tissue that should be resected during the wide surgical excision of an oral squamous cell carcinoma?",
+    "options": [
+      "1 to 2 millimetres",
+      "1 to 1.5 centimetres",
+      "Exactly 5 centimetres",
+      "No margins are needed if post-op radiotherapy is planned"
+    ],
+    "correctAnswer": 1,
+    "explanation": "To ensure complete removal of microscopic tumor extensions (infiltrative margins), surgical resection of oral SCC must include a 1 to 1.5 cm margin of healthy tissue surrounding the tumor.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 199)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1220,
+    "question": "Which chairside diagnostic aid can be used to stain areas of mucosal dysplasia or early carcinoma to assist in selecting biopsy sites?",
+    "options": [
+      "Methylene blue",
+      "Toluidine blue",
+      "Fluorescein dye",
+      "Gram stain solution"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Toluidine blue is a basic metachromatic dye that binds selectively to DNA. Dysplastic or malignant tissues have high DNA content and take up the stain, showing dark blue discoloration.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 197)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1221,
+    "question": "A patient presents with a slowly growing, exophytic, warty, white mucosal lesion. Histological analysis reveals low-grade papillary epithelial proliferation without cytological atypia or basement membrane breach. What is the most likely diagnosis?",
+    "options": [
+      "Invasive squamous cell carcinoma",
+      "Verrucous carcinoma (Ackerman's tumor)",
+      "Speckled leukoplakia",
+      "Oral papilloma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Verrucous carcinoma (Ackerman's tumor) is a slow-growing, low-grade variant of SCC. It is locally invasive but has very low metastatic potential, presenting as a warty white plaque.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 201)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1222,
+    "question": "Historically, which systemic infectious disease is associated with an increased incidence of carcinoma of the dorsum of the tongue?",
+    "options": [
+      "Tuberculosis",
+      "Tertiary Syphilis",
+      "Primary Actinomycosis",
+      "Chronic Candidiasis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tertiary syphilis, specifically syphilitic glossitis, has a historically strong association with the development of squamous cell carcinoma on the dorsum of the tongue.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1223,
+    "question": "Which of the following viruses is increasingly recognized as a key etiologic factor in a subset of head and neck cancers, specifically oropharyngeal squamous cell carcinomas?",
+    "options": [
+      "Herpes simplex virus (HSV-1)",
+      "Human Papillomavirus (HPV, particularly types 16 and 18)",
+      "Epstein-Barr virus (EBV)",
+      "Cytomegalovirus (CMV)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "High-risk strains of Human Papillomavirus (specifically HPV 16 and 18) are major causative factors in oropharyngeal cancers (tonsils, base of tongue), showing different clinical behaviors than tobacco-induced SCC.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 12, p. 195)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
