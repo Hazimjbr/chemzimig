@@ -13714,5 +13714,285 @@
     "explanation": "Unilateral condylar hyperplasia causes elongation of the mandibular ramus on the affected side (e.g., right), pushing the chin and mandible to the opposite side (left) and causing occlusal disturbances like a posterior open bite.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 9, p. 151)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1164,
+    "question": "Which of the following cellular structures is the source of the epithelial lining in a radicular (periapical) cyst?",
+    "options": [
+      "Reduced enamel epithelium",
+      "Rest sheets of Serres",
+      "Cell rests of Malassez",
+      "Dental lamina remnants"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Radicular cysts are inflammatory cysts of odontogenic origin. The epithelial lining is derived from the proliferation of the rests of Malassez (remnants of Hertwig's epithelial root sheath) stimulated by inflammation from a non-vital tooth.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 159)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1165,
+    "question": "How does a dentigerous (follicular) cyst originate pathologically, and where does its lining attach to the tooth structure?",
+    "options": [
+      "From the dental lamina, attaching to the root bifurcation",
+      "From fluid accumulation between the outer and inner enamel epithelium, attaching at the cementoenamel junction (CEJ)",
+      "From inflammatory stimulation of Malassez rests, attaching to the root apex",
+      "From invagination of oral mucosal epithelium, attaching to the cusp tip"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A dentigerous cyst forms from fluid accumulation between the reduced enamel epithelium and the crown of an unerupted tooth, and its lining characteristically attaches at the cementoenamel junction (CEJ).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 161)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1166,
+    "question": "Which histological features are characteristic of an odontogenic keratocyst (OKC)?",
+    "options": [
+      "Thick, irregular, non-keratinized epithelial lining with prominent rete pegs",
+      "A thin, uniform parakeratinized stratified squamous epithelium with palisaded basal cells and a corrugated surface",
+      "Lining containing numerous mucous cells and ciliated columnar epithelium",
+      "Loose myxoid connective tissue containing nests of odontogenic epithelium"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Histologically, an OKC features a thin (6-8 cell layers), uniform parakeratinized stratified squamous epithelium with a corrugated surface, a prominent palisaded basal layer of hyperchromatic cells, and no rete pegs.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 162)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1167,
+    "question": "A patient presents with multiple bilateral odontogenic keratocysts (OKCs) of the jaws, bifid ribs, and calcification of the falx cerebri. What genetic syndrome should be suspected?",
+    "options": [
+      "Gardner syndrome",
+      "Nevoid basal cell carcinoma syndrome (Gorlin-Goltz syndrome)",
+      "Cleidocranial dysplasia",
+      "Peutz-Jeghers syndrome"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Nevoid Basal Cell Carcinoma Syndrome (Gorlin-Goltz syndrome) is characterized by multiple jaw OKCs, basal cell carcinomas of the skin, skeletal anomalies (such as bifid ribs), and calcification of the falx cerebri.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 162)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1168,
+    "question": "Which of the following biological behaviors best describes ameloblastoma, the most common benign epithelial odontogenic tumor?",
+    "options": [
+      "Encapsulated, slowly growing, and non-invasive",
+      "Locally invasive into surrounding bone but lacks metastatic potential",
+      "Highly metastatic to regional lymph nodes and lungs",
+      "Self-limiting developmental anomaly that ceases growth at tooth maturity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ameloblastoma is a benign but locally invasive epithelial odontogenic tumor. It infiltrates surrounding trabecular bone spaces beyond its apparent radiographic boundaries, but does not metastasize.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 165)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1169,
+    "question": "How are compound and complex odontomas distinguished radiographically and histopathologically?",
+    "options": [
+      "Compound odontomas contain dynamic vascular tissue, whereas complex odontomas contain only necrotic bone",
+      "Compound odontomas present as multiple small tooth-like structures (denticles), whereas complex odontomas present as a disorganized mass of dental hard tissues",
+      "Compound odontomas are malignant neoplasms, whereas complex odontomas are benign hamartomas",
+      "Compound odontomas occur exclusively in the mandible, whereas complex odontomas occur only in the maxilla"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Odontomas are hamartomas. Compound type consists of multiple small tooth-like structures (denticles) resembling a cluster of teeth. Complex type is a single radiopaque mass of disordered enamel, dentin, and cementum.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 169)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1170,
+    "question": "A 14-year-old female presents with a slowly growing swelling in the anterior maxilla. Radiograph shows a well-defined radiolucency associated with the crown of an unerupted canine, containing fine radiopaque flecks. What is the most likely diagnosis?",
+    "options": [
+      "Unicystic ameloblastoma",
+      "Adenomatoid odontogenic tumor (AOT)",
+      "Calcifying epithelial odontogenic tumor (CEOT)",
+      "Odontogenic myxoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Adenomatoid Odontogenic Tumor (AOT) commonly occurs in young females in the anterior maxilla, associated with an unerupted canine. Radiographically, it is a radiolucency around the crown that may contain tiny radiopaque flecks ('snowflakes').\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 167)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1171,
+    "question": "Which histopathological findings are diagnostic of a Calcifying Epithelial Odontogenic Tumor (CEOT / Pindborg tumor)?",
+    "options": [
+      "Stellate reticulum-like areas and palisaded columnar epithelial cells",
+      "Sheets of polyhedral epithelial cells, eosinophilic amyloid-like deposits, and Liesegang calcification rings",
+      "Large duct-like structures lined by cuboidal cells and abundant clear cells",
+      "Loose myxomatous tissue resembling dental papilla with minimal epithelium"
+    ],
+    "correctAnswer": 1,
+    "explanation": "CEOT (Pindborg tumor) histopathologically demonstrates sheets of polyhedral epithelial cells showing cellular atypia (without malignancy), eosinophilic amyloid-like deposits, and concentric calcification rings (Liesegang rings).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 167)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1172,
+    "question": "A patient presents with a well-defined radiopaque mass attached to the apical third of the root of a vital lower first molar. The mass is surrounded by a thin radiolucent halo. What is the most likely diagnosis?",
+    "options": [
+      "Condensing osteitis",
+      "Cementoblastoma",
+      "Osteoid osteoma",
+      "Idiopathic osteosclerosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cementoblastoma is a benign neoplasm of cementum. It presents as a radiopaque mass fused to the root of a vital tooth, surrounded by a thin, uniform radiolucent zone.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 171)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1173,
+    "question": "Why do odontogenic keratocysts (OKCs) exhibit a high recurrence rate after conservative surgical treatment (enucleation)?",
+    "options": [
+      "Because the epithelial cells have malignant potential to migrate into lymph vessels",
+      "Because of the thin, friable cyst wall and the presence of microcysts (satellite cysts) in the surrounding connective tissue",
+      "Because the cyst fluid contains active bone-resorbing osteoclasts",
+      "Because the lining cells are highly resistant to all local tissue antiseptics"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The high recurrence rate of OKCs is due to their thin, friable walls which tend to tear during enucleation, leaving epithelial remnants behind, and the presence of satellite (daughter) cysts in the capsule wall.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 162)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1174,
+    "question": "How does the clinical management of a unicystic ameloblastoma differ from a multicystic (solid) ameloblastoma?",
+    "options": [
+      "Unicystic ameloblastoma is highly malignant and requires chemotherapy",
+      "Unicystic ameloblastoma can often be treated conservatively by enucleation, whereas solid ameloblastoma requires block resection with 1 cm margins",
+      "Unicystic ameloblastoma requires no surgical treatment as it undergoes spontaneous regression",
+      "Solid ameloblastoma is treated solely with antibiotics and local drainage"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unicystic ameloblastoma behaves less aggressively and can often be treated conservatively with enucleation. In contrast, solid/multicystic ameloblastoma is highly invasive and requires block resection with a safety margin.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 166)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1175,
+    "question": "What is the pathological definition of a true cyst of the oral cavity and jaws?",
+    "options": [
+      "A fluid-filled bony cavity with no cellular lining",
+      "A pathological cavity filled with fluid or semi-fluid contents, lined by epithelium",
+      "A solid mass of fibrous connective tissue containing nests of malignant cells",
+      "A localized collection of purulent exudate surrounded by granulation tissue"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A true cyst is defined as a pathological cavity containing fluid, semi-fluid, or gas, which is lined by epithelium. Pseudocysts (like simple bone cysts) lack an epithelial lining.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 157)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1176,
+    "question": "Under what clinical circumstances is marsupialization preferred over direct enucleation for the initial management of a jaw cyst?",
+    "options": [
+      "For small cysts that are easy to access surgically",
+      "For very large cysts where direct enucleation risks jaw fracture, nerve damage, or devitalizing adjacent healthy teeth",
+      "If the cyst is suspected to be a malignant sarcoma",
+      "For recurrent cysts that did not respond to previous block resection"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Marsupialization (decompression) reduces cyst size by creating a surgical window, allowing bone healing. It is used for large cysts to protect anatomical structures before definitive removal.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 159)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1177,
+    "question": "A patient presents with a swelling in the anterior midline of the hard palate. Radiograph shows a well-defined, heart-shaped radiolucency between the roots of the vital maxillary central incisors. What is the most likely diagnosis?",
+    "options": [
+      "Radicular cyst associated with tooth 11",
+      "Nasopalatine duct cyst (incisive canal cyst)",
+      "Median palatal cyst",
+      "Lateral periodontal cyst"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The nasopalatine duct cyst is a non-odontogenic cyst presenting as a heart-shaped radiolucency in the midline of the anterior maxilla between central incisors (which remain vital).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 163)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1178,
+    "question": "A infant presents with a bluish, fluctuant swelling on the alveolar ridge over an erupting primary incisor. What is the most appropriate management?",
+    "options": [
+      "Immediate surgical enucleation under general anesthesia",
+      "Reassurance and monitoring, as the cyst usually ruptures spontaneously during tooth eruption",
+      "A course of systemic antibiotics and dynamic aspiration",
+      "Marsupialization with block resection of the adjacent primary tooth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An eruption cyst (eruption hematoma) is a soft-tissue analog of a dentigerous cyst. It generally ruptures spontaneously, so reassurance and monitoring are the treatment of choice.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 161)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1179,
+    "question": "A routine radiograph reveals a small, well-defined radiolucency situated laterally between the roots of the vital mandibular canine and first premolar. What is the most likely diagnosis?",
+    "options": [
+      "Radicular cyst",
+      "Lateral periodontal cyst",
+      "Dentigerous cyst",
+      "Odontogenic keratocyst"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A lateral periodontal cyst is a non-inflammatory developmental cyst occurring on the lateral root surface, typically in the mandibular canine-premolar region associated with vital teeth.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 162)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1180,
+    "question": "A 10-year-old child presents with a well-defined radiolucency in the posterior mandible associated with an unerupted molar. Histology shows a mixture of odontogenic epithelium and embryonic connective tissue resembling dental papilla, without hard tissue. What is the most likely diagnosis?",
+    "options": [
+      "Ameloblastoma",
+      "Ameloblastic fibroma",
+      "Compound odontoma",
+      "Odontogenic myxoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Ameloblastic fibroma is a true mixed tumor occurring in young patients (first two decades) in the posterior mandible, presenting as a radiolucency over an unerupted molar, showing both epithelial and ectomesenchymal components.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 169)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1181,
+    "question": "Which odontogenic tumor presents radiographically as a poorly defined multilocular radiolucency with a 'tennis-racket' or 'soap-bubble' pattern, and histologically shows stellate cells in a loose myxoid stroma?",
+    "options": [
+      "Ameloblastoma",
+      "Odontogenic myxoma",
+      "Calcifying epithelial odontogenic tumor",
+      "Cementoblastoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Odontogenic myxoma is an invasive tumor showing a multilocular 'soap-bubble' or 'tennis-racket' radiolucency. Histology displays sparse spindle and stellate cells in an abundant, loose myxoid matrix.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 171)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1182,
+    "question": "A routine radiograph shows a well-defined radiolucency below the inferior alveolar nerve canal near the angle of the mandible. The tooth-bearing area is healthy. What is the diagnosis and management?",
+    "options": [
+      "Mandibular ameloblastoma; requires block resection",
+      "Stafne bone defect (static bone cavity); requires no treatment",
+      "Odontogenic keratocyst; requires enucleation",
+      "Residual cyst; requires immediate surgical debridement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Stafne bone defect is a developmental depression on the medial surface of the mandible containing salivary gland tissue. Located below the mandibular canal, it is asymptomatic and requires no treatment.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 165)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1183,
+    "question": "A newborn infant presents with small, multiple, white keratin-filled papules along the alveolar ridge mucosa. What is the diagnosis and management?",
+    "options": [
+      "Congenital epulis; requires immediate laser excision",
+      "Gingival cysts of the newborn (Bohn's nodules/Epstein's pearls); require no treatment",
+      "Eruption cysts; require surgical marsupialization",
+      "Neonatal candidiasis; requires topical antifungal therapy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Gingival cysts of the newborn (Bohn's nodules or Epstein's pearls) are small keratin-filled cysts derived from dental lamina remnants. They are self-limiting and resolve spontaneously within a few weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 10, p. 161)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
