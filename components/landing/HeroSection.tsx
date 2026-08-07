@@ -68,14 +68,19 @@ export default function HeroSection() {
             <>
               {/* Floating Tooth / Dental Icons */}
               <div className="absolute top-[15%] right-[15%] animate-float opacity-20 text-indigo-400">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2C8.5 2 6 4.5 6 8c0 3.5 1.5 5.5 3 7.5S11 19.5 11 22h2c0-2.5 2-4.5 2-6.5s3-4 3-7.5c0-3.5-2.5-6-6-6z" />
-                  <path d="M9.5 15.5c1.5 1 3.5 1 5 0" />
+                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  {/* Outer Crown outline with 4 distinct cusps */}
+                  <path d="M25 35 C 25 22, 35 20, 50 25 C 65 20, 75 22, 75 35 C 75 52, 70 65, 65 72 C 60 78, 62 88, 60 92 C 58 92, 54 85, 50 78 C 46 85, 42 92, 40 92 C 38 88, 40 78, 35 72 C 30 65, 25 52, 25 35 Z" />
+                  {/* Fissures/lines on the occlusal/crown surface */}
+                  <path d="M35 38 C 45 42, 55 42, 65 38" />
+                  <path d="M50 25 L 50 48" />
                 </svg>
               </div>
               <div className="absolute bottom-[20%] left-[10%] animate-float-slow opacity-15 text-teal-400">
-                <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2C8.5 2 6 4.5 6 8c0 3.5 1.5 5.5 3 7.5S11 19.5 11 22h2c0-2.5 2-4.5 2-6.5s3-4 3-7.5c0-3.5-2.5-6-6-6z" />
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M25 35 C 25 22, 35 20, 50 25 C 65 20, 75 22, 75 35 C 75 52, 70 65, 65 72 C 60 78, 62 88, 60 92 C 58 92, 54 85, 50 78 C 46 85, 42 92, 40 92 C 38 88, 40 78, 35 72 C 30 65, 25 52, 25 35 Z" />
+                  <path d="M35 38 C 45 42, 55 42, 65 38" />
+                  <path d="M50 25 L 50 48" />
                 </svg>
               </div>
             </>
