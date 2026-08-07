@@ -433,7 +433,7 @@ export default function DentalExamPage() {
 
               {/* Question Card */}
               <div className="bg-surface/80 border border-border rounded-3xl p-6 md:p-8 backdrop-blur-xl shadow-2xl space-y-6">
-                <h2 className="text-lg md:text-xl font-bold text-white leading-relaxed">
+                <h2 className="text-lg md:text-xl font-bold text-foreground leading-relaxed">
                   {examQuestions[currentIndex].question}
                 </h2>
 
@@ -448,11 +448,11 @@ export default function DentalExamPage() {
                         onClick={() => handleSelectOption(idx)}
                         className={`w-full text-left p-4 rounded-2xl border transition-all flex items-center gap-3 ${
                           isSelected
-                            ? 'bg-amber-500/20 border-amber-500/60 text-amber-300 font-bold shadow-lg shadow-amber-500/10'
-                            : 'bg-white/5 border-border text-slate-300 hover:bg-white/10'
+                            ? 'bg-amber-500/20 border-amber-500/60 text-amber-600 dark:text-amber-300 font-bold shadow-lg shadow-amber-500/10'
+                            : 'bg-white/5 border-border text-slate-800 dark:text-slate-300 hover:bg-white/10'
                         }`}
                       >
-                        <span className="w-7 h-7 rounded-xl bg-slate-900/60 border border-white/10 text-xs font-bold flex items-center justify-center shrink-0">
+                        <span className="w-7 h-7 rounded-xl bg-slate-100 dark:bg-slate-900/60 border border-border text-foreground/80 text-xs font-bold flex items-center justify-center shrink-0">
                           {String.fromCharCode(65 + idx)}
                         </span>
                         <span className="text-sm md:text-base leading-snug">{opt}</span>
@@ -667,7 +667,7 @@ export default function DentalExamPage() {
               {/* Interactive Review Section */}
               {showReview && (
                 <div className="space-y-6 mt-8 text-left border-t border-white/10 pt-8 max-w-2xl mx-auto">
-                  <h3 className="text-lg font-bold text-white flex items-center gap-2 mb-4">
+                  <h3 className="text-lg font-bold text-foreground flex items-center gap-2 mb-4">
                     <BookOpen className="w-5 h-5 text-indigo-400" />
                     <span>Detailed Questions Review</span>
                   </h3>
@@ -690,7 +690,7 @@ export default function DentalExamPage() {
                             <span className="text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider bg-white/5 border border-white/5 text-slate-400 mb-2 inline-block">
                               Question {idx + 1} of {examQuestions.length} — {q.category}
                             </span>
-                            <h4 className="text-sm font-extrabold text-white leading-relaxed mt-1">
+                            <h4 className="text-sm font-extrabold text-foreground leading-relaxed mt-1">
                               {q.question}
                             </h4>
                           </div>
@@ -705,19 +705,19 @@ export default function DentalExamPage() {
                             {isCorrect ? '✓ CORRECT' : '✗ INCORRECT'}
                           </span>
                         </div>
-
+ 
                         {/* Options */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
                           {q.options.map((opt, oIdx) => {
                             const isThisCorrect = oIdx === q.correctAnswer;
                             const isThisSelected = oIdx === selectedIdx;
                             
-                            let optStyle = "bg-white/[0.01] border-white/5 text-slate-300";
+                            let optStyle = "bg-white/[0.01] border-white/5 text-slate-700 dark:text-slate-300";
                             let icon = null;
-
+                            
                             if (isThisCorrect) {
-                              optStyle = "bg-emerald-500/10 border-emerald-500/20 text-emerald-400 font-extrabold";
-                              icon = <Check className="w-4 h-4 shrink-0 text-emerald-400" />;
+                              optStyle = "bg-emerald-500/10 border-emerald-500/20 text-emerald-500 dark:text-emerald-400 font-extrabold";
+                              icon = <Check className="w-4 h-4 shrink-0 text-emerald-500 dark:text-emerald-400" />;
                             } else if (isThisSelected) {
                               optStyle = "bg-rose-500/10 border-rose-500/20 text-rose-400 font-extrabold";
                               icon = <X className="w-4 h-4 shrink-0 text-rose-400" />;

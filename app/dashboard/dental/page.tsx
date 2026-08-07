@@ -142,7 +142,7 @@ export default function DentalDashboardPage() {
 
       {/* Modes Grid */}
       <div>
-        <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+        <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
           <Layers className="w-5 h-5 text-indigo-400" />
           <span>Practice & Exam Modes</span>
         </h2>
@@ -155,10 +155,10 @@ export default function DentalDashboardPage() {
             <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <BookOpen className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+            <h3 className="text-lg font-bold text-foreground group-hover:text-indigo-400 transition-colors">
               Study Mode
             </h3>
-            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-relaxed">
               Practice questions topic by topic with instant clinical explanations & references.
             </p>
             <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-indigo-400 group-hover:translate-x-1 transition-transform">
@@ -166,7 +166,7 @@ export default function DentalDashboardPage() {
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
-
+ 
           {/* Card 2: Exam Simulator */}
           <Link 
             href="/dashboard/dental/exam"
@@ -175,10 +175,10 @@ export default function DentalDashboardPage() {
             <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Trophy className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+            <h3 className="text-lg font-bold text-foreground group-hover:text-amber-400 transition-colors">
               Exam Simulator
             </h3>
-            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-relaxed">
               Simulate real MFDs/ORE exam environments with 50/100 random questions & countdown timer.
             </p>
             <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-amber-400 group-hover:translate-x-1 transition-transform">
@@ -186,7 +186,7 @@ export default function DentalDashboardPage() {
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
-
+ 
           {/* Card 3: Mistakes Bank */}
           <Link 
             href="/dashboard/dental/study?filter=mistakes"
@@ -195,7 +195,7 @@ export default function DentalDashboardPage() {
             <div className="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <AlertCircle className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-white group-hover:text-rose-400 transition-colors flex items-center justify-between">
+            <h3 className="text-lg font-bold text-foreground group-hover:text-rose-400 transition-colors flex items-center justify-between">
               <span>Mistakes Bank</span>
               {stats.mistakeIds.length > 0 && (
                 <span className="text-xs px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-400 font-bold border border-rose-500/30">
@@ -203,7 +203,7 @@ export default function DentalDashboardPage() {
                 </span>
               )}
             </h3>
-            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-relaxed">
               Review and retry questions you answered incorrectly in past sessions.
             </p>
             <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-rose-400 group-hover:translate-x-1 transition-transform">
@@ -211,7 +211,7 @@ export default function DentalDashboardPage() {
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
-
+ 
           {/* Card 4: Bookmarks */}
           <Link 
             href="/dashboard/dental/study?filter=bookmarks"
@@ -220,7 +220,7 @@ export default function DentalDashboardPage() {
             <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Bookmark className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors flex items-center justify-between">
+            <h3 className="text-lg font-bold text-foreground group-hover:text-emerald-400 transition-colors flex items-center justify-between">
               <span>Saved Bookmarks</span>
               {stats.bookmarkedIds.length > 0 && (
                 <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
@@ -228,7 +228,7 @@ export default function DentalDashboardPage() {
                 </span>
               )}
             </h3>
-            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 leading-relaxed">
               Access important questions you bookmarked during study sessions.
             </p>
             <div className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-emerald-400 group-hover:translate-x-1 transition-transform">
@@ -241,7 +241,7 @@ export default function DentalDashboardPage() {
 
       {/* Categories Breakdown Grid */}
       <div>
-        <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+        <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
           <GraduationCap className="w-5 h-5 text-indigo-400" />
           <span>Dental Specialties</span>
         </h2>
@@ -262,24 +262,24 @@ export default function DentalDashboardPage() {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-3xl">{cat.icon}</span>
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">
+                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-black/5 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-border">
                       {hasFullAccess ? `${catQuestions.length} Questions` : 'Trial Preview'}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-white group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-base font-bold text-foreground group-hover:text-indigo-400 transition-colors">
                     {cat.name}
                   </h3>
-                  <p className="text-slate-400 text-xs mt-1.5 leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-400 text-xs mt-1.5 leading-relaxed">
                     {cat.description}
                   </p>
                 </div>
 
                 <div className="mt-5 pt-4 border-t border-border/50">
                   <div className="flex items-center justify-between text-xs mb-1.5">
-                    <span className="text-slate-400 font-medium">Progress</span>
+                    <span className="text-slate-500 dark:text-slate-400 font-medium">Progress</span>
                     <span className="text-indigo-400 font-bold">{progressPct}%</span>
                   </div>
-                  <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                  <div className="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
                     <div 
                       className="bg-gradient-to-r from-indigo-500 to-sky-400 h-full rounded-full transition-all duration-500"
                       style={{ width: `${progressPct}%` }}
