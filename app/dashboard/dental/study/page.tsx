@@ -194,12 +194,12 @@ export default function DentalStudyPage() {
           <span>Filters</span>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2">
           {/* Category Dropdown */}
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="bg-slate-900/80 border border-border rounded-xl px-3 py-1.5 text-xs font-medium text-white focus:outline-none focus:border-indigo-500"
+            className="bg-slate-900/80 border border-border rounded-xl px-3 py-2 text-xs font-medium text-white focus:outline-none focus:border-indigo-500 col-span-2 sm:col-span-auto w-full sm:w-auto"
           >
             <option value="All">All Specialties (6)</option>
             {DENTAL_CATEGORIES.map(cat => (
@@ -211,9 +211,9 @@ export default function DentalStudyPage() {
           <select
             value={selectedLevel}
             onChange={(e) => setSelectedLevel(e.target.value)}
-            className="bg-slate-900/80 border border-border rounded-xl px-3 py-1.5 text-xs font-medium text-white focus:outline-none focus:border-indigo-500"
+            className="bg-slate-900/80 border border-border rounded-xl px-3 py-2 text-xs font-medium text-white focus:outline-none focus:border-indigo-500 w-full sm:w-auto"
           >
-            <option value="All">All Difficulty Levels</option>
+            <option value="All">All Difficulty</option>
             <option value="Level 1">Level 1 (Core)</option>
             <option value="Level 2">Level 2 (Intermediate)</option>
             <option value="Level 3">Level 3 (Advanced)</option>
@@ -223,7 +223,7 @@ export default function DentalStudyPage() {
           <select
             value={selectedChapter}
             onChange={(e) => setSelectedChapter(e.target.value)}
-            className="bg-slate-900/80 border border-border rounded-xl px-3 py-1.5 text-xs font-medium text-white focus:outline-none focus:border-indigo-500 max-w-[180px] truncate"
+            className="bg-slate-900/80 border border-border rounded-xl px-3 py-2 text-xs font-medium text-white focus:outline-none focus:border-indigo-500 w-full sm:w-auto sm:max-w-[200px] truncate"
           >
             <option value="All">All Chapters</option>
             {allChapters.map(ch => (
@@ -234,7 +234,7 @@ export default function DentalStudyPage() {
           {/* Bookmarks Toggle */}
           <button
             onClick={() => setOnlyBookmarks(!onlyBookmarks)}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all flex items-center gap-1.5 ${
+            className={`px-3 py-2 rounded-xl text-xs font-semibold border transition-all flex items-center justify-center gap-1.5 w-full sm:w-auto ${
               onlyBookmarks 
                 ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' 
                 : 'bg-white/5 text-slate-400 border-border hover:bg-white/10'
@@ -247,7 +247,7 @@ export default function DentalStudyPage() {
           {/* Mistakes Toggle */}
           <button
             onClick={() => setOnlyMistakes(!onlyMistakes)}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all flex items-center gap-1.5 ${
+            className={`px-3 py-2 rounded-xl text-xs font-semibold border transition-all flex items-center justify-center gap-1.5 w-full sm:w-auto col-span-2 sm:col-span-auto ${
               onlyMistakes 
                 ? 'bg-rose-500/20 text-rose-400 border-rose-500/40' 
                 : 'bg-white/5 text-slate-400 border-border hover:bg-white/10'
@@ -351,13 +351,13 @@ export default function DentalStudyPage() {
                       key={idx}
                       disabled={isAnswered}
                       onClick={() => handleSelectOption(idx)}
-                      className={`w-full text-left p-4 rounded-2xl border transition-all duration-200 flex items-center justify-between gap-4 ${stateStyle}`}
+                      className={`w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all duration-200 flex items-center justify-between gap-3 ${stateStyle}`}
                     >
-                      <div className="flex items-center gap-3">
-                        <span className="w-7 h-7 rounded-xl bg-slate-900/60 border border-white/10 text-xs font-bold flex items-center justify-center shrink-0">
+                      <div className="flex items-center gap-2.5 sm:gap-3">
+                        <span className="w-6.5 h-6.5 sm:w-7 sm:h-7 rounded-xl bg-slate-900/60 border border-white/10 text-[10px] sm:text-xs font-bold flex items-center justify-center shrink-0">
                           {String.fromCharCode(65 + idx)}
                         </span>
-                        <span className="text-sm md:text-base leading-snug">{opt}</span>
+                        <span className="text-xs sm:text-sm md:text-base leading-snug">{opt}</span>
                       </div>
 
                       {isAnswered && (
