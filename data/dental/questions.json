@@ -13280,5 +13280,75 @@
     "explanation": "Grafted bone requires approximately 4 to 6 months to become vascularized, undergo remodeling, and integrate with the surrounding bone to provide a stable, load-bearing site for dental implants.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Prosthodontics & Radiology",
     "level": "Level 2"
+  },
+  {
+    "id": 1133,
+    "question": "During the extraction of a maxillary first molar with widely divergent roots that are radiographically close to the sinus floor, what is the best surgical approach to prevent creating an oroantral communication (OAC)?",
+    "options": [
+      "Applying heavy apical force with the forceps to push the roots out",
+      "Sectioning the tooth into individual roots and extracting each root fragment separately along its own pathway of withdrawal",
+      "Using a wide straight elevator to luxate the tooth using maximum rotational force",
+      "Syringing the socket with pressurized cold saline during the luxation movements"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sectioning a multirooted tooth with divergent or sinus-approximating roots converts a complex force distribution into simple vertical extractions of single roots, minimizing the risk of fracturing the sinus floor.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1134,
+    "question": "A patient taking Rivaroxaban (a direct oral anticoagulant - DOAC) for stroke prevention requires the extraction of two simple teeth. Which of the following is the most appropriate clinical management strategy?",
+    "options": [
+      "Stop Rivaroxaban for 5 days preoperatively to avoid life-threatening bleeding",
+      "Do not stop Rivaroxaban; perform the extraction ideally in the morning, schedule it at the trough drug level, and use local hemostatic measures",
+      "Interrupt Rivaroxaban therapy and initiate bridging therapy with subcutaneous low-molecular-weight heparin",
+      "Instruct the patient to double their Rivaroxaban dose on the day of the extraction to encourage healing"
+    ],
+    "correctAnswer": 1,
+    "explanation": "DOACs should not be routinely discontinued for minor dental procedures. Scheduling the procedure in the morning and at the trough drug level (before the next dose) combined with local hemostasis is sufficient to manage bleeding risks safely.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1135,
+    "question": "What is the primary clinical function of a Mitchell's trimmer instrument during surgical dental extraction procedures?",
+    "options": [
+      "Sectioning multirooted teeth into individual roots",
+      "Reflecting and detaching the mucoperiosteum from the underlying bone surface",
+      "Grasping and retrieving deep root tips from the socket base",
+      "Passing suture threads through the gingival margins"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mitchell's trimmer is a specialized periosteal elevator used primarily to dissect, detach, and reflect the mucoperiosteal tissues away from the underlying bone to visualize the surgical site.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1136,
+    "question": "What is the primary rationale for titanium implant surface modifications, such as sandblasting and acid-etching?",
+    "options": [
+      "To reduce the manufacturing cost of titanium implants",
+      "To increase the surface area and stimulate faster, stronger bone-to-implant contact (osseointegration)",
+      "To insulate the implant and prevent the patient from experiencing thermal sensitivity",
+      "To make the implant body more flexible under heavy occlusal forces"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Toughening implant surfaces (sandblasting, acid-etching) increases surface area and creates micro-roughness, which enhances osteoblast adhesion, leading to accelerated and improved osseointegration.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1137,
+    "question": "Which biochemical process explains the premature breakdown and dissolution of the blood clot in alveolar osteitis (dry socket)?",
+    "options": [
+      "Activation of tissue plasminogen activators (fibrinolysis) by trauma or bacterial infection",
+      "Chemical dissolution of the clot due to local oral pH dropping below 4.5",
+      "Inactivation of calcium clotting factors by salivary amylase",
+      "Prolonged local vasoconstriction preventing fibrin mesh formation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Dry socket is characterized by premature lysis of the blood clot. Trauma or bacterial enzymes activate plasminogen activators, converting plasminogen to plasmin, which degrades the fibrin matrix (fibrinolysis).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
