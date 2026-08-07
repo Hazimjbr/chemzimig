@@ -12482,5 +12482,19 @@
     "explanation": "Intramuscular injections should not be given to patients with a bleeding disorder as they can cause a large hematoma. In dentistry, an inferior alveolar nerve block in such patients could cause bleeding into the pterygomandibular space, obstructing the airway.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 40)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 2"
+  },
+  {
+    "id": 1076,
+    "question": "Regarding Anaphylaxis in the dental clinic, which of the following statements is true?",
+    "options": [
+      "Is mediated by IgE antibodies, which cause the release of histamine and other vasoactive mediators",
+      "Is most frequently caused by NSAIDs (Non-steroidal anti-inflammatory drugs) in dental practice",
+      "Immediate first-line management is to immediately transfer the patient to a hospital before administering epinephrine",
+      "The gluteal muscle is the preferred site for intramuscular injection of epinephrine"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Anaphylaxis is a severe, life-threatening systemic hypersensitivity reaction mediated by IgE antibodies. These antibodies bind to mast cells and basophils, triggering the rapid release of histamine and other vasoactive mediators. Epinephrine (adrenaline) administered intramuscularly in the anterolateral aspect of the middle third of the thigh is the immediate first-line treatment.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
   }
 ]
