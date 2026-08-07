@@ -82,6 +82,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setFirebaseUser(null);
         localStorage.removeItem('auth_user');
         localStorage.removeItem('auth_session');
+        localStorage.removeItem('user_is_dental'); // Clear dental sidebar cache
+        localStorage.removeItem('last_mode');       // Clear last mode cache
+
         clearFingerprint();
         
         // Clear middleware session cookie via server

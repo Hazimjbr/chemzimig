@@ -13,16 +13,17 @@ export default function LeaderboardPage() {
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [loading, setLoading] = useState(true);
     const [filter, setFilter] = useState<LeaderboardPeriod>('all');
+    const [gradeFilter, setGradeFilter] = useState<string>('all');
     const { user } = useAuth();
 
     useEffect(() => {
         fetchLeaderboard();
-    }, [filter]);
+    }, [filter, gradeFilter]);
 
     const fetchLeaderboard = async () => {
         setLoading(true);
         try {
-            const res = await fetch(`/api/leaderboard?period=${filter}&limit=50`);
+            const res = await fetch(`/api/leaderboard?period=${filter}&grade=${gradeFilter}&limit=50`);
             const data = await res.json();
             if (data.success) {
                 setLeaderboard(data.leaderboard);
@@ -120,6 +121,12 @@ export default function LeaderboardPage() {
                         <div className={`flex items-center justify-center gap-2 font-bold uppercase tracking-widest text-xs ${filter === 'mad-scientist' ? 'text-green-400' : 'text-indigo-400'}`}>
                             {filter === 'mad-scientist' ? (
                                 <><Beaker size={14} /> Top Lab Performers <Beaker size={14} /></>
+                            ) : gradeFilter === 'dentistry' ? (
+                                <><span>🦷</span> Dental Board Rankings <span>🦷</span></>
+                            ) : gradeFilter === 'igcse' ? (
+                                <><Sword size={14} /> IGCSE Chemistry Rankings <Sword size={14} /></>
+                            ) : gradeFilter === 'alevel' ? (
+                                <><Sword size={14} /> A-Level Chemistry Rankings <Sword size={14} /></>
                             ) : (
                                 <><Sword size={14} /> Season 1 <Sword size={14} /></>
                             )}
@@ -127,8 +134,8 @@ export default function LeaderboardPage() {
                     </motion.div>
                 </div>
 
-                {/* Filters */}
-                <div className="flex justify-center gap-2 mb-10 flex-wrap">
+                {/* Period Filters */}
+                <div className="flex justify-center gap-2 mb-4 flex-wrap">
                     {[
                         { key: 'all', label: 'ALL TIME' },
                         { key: 'monthly', label: 'MONTHLY' },
@@ -151,6 +158,30 @@ export default function LeaderboardPage() {
                                 {tab.icon && <span className="mr-1">{tab.icon}</span>}
                                 {tab.label}
                             </span>
+                        </button>
+                    ))}
+                </div>
+
+                {/* Curriculum / Grade Filter Row */}
+                <div className="flex justify-center gap-2 mb-10 flex-wrap">
+                    {[
+                        { key: 'all', label: '🌐 All Students' },
+                        { key: 'dentistry', label: '🦷 Dental Board' },
+                        { key: 'igcse', label: '⚗️ IGCSE' },
+                        { key: 'alevel', label: '🔬 A-Level' },
+                    ].map(tab => (
+                        <button
+                            key={tab.key}
+                            onClick={() => setGradeFilter(tab.key)}
+                            className={`px-3.5 py-1.5 rounded-full font-bold text-[11px] border transition-all ${
+                                gradeFilter === tab.key
+                                    ? tab.key === 'dentistry'
+                                        ? 'bg-indigo-500/20 border-indigo-500/60 text-indigo-300'
+                                        : 'bg-white/10 border-white/30 text-white'
+                                    : 'bg-white/[0.03] border-white/10 text-slate-500 hover:text-slate-300 hover:border-white/20'
+                            }`}
+                        >
+                            {tab.label}
                         </button>
                     ))}
                 </div>

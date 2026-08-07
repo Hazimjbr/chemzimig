@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
@@ -44,9 +44,45 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     const { user, logout } = useAuth();
     const { xp, level, streak } = useGamification();
 
-    const isDentalPath = pathname?.startsWith('/dashboard/dental') || false;
-    const isDentalUser = isDentalPath || user?.grade?.toLowerCase().includes('dental') || false;
+    // ─── "Last Mode" Tracking (Solution A) ────────────────────────────────────
+    // lastMode tracks which section the user last actively visited.
+    // Rules:
+    //  - /dashboard/dental/*   → last_mode = 'dental'
+    //  - /dashboard, /dashboard/curriculum/*, /dashboard/quizzes/* → last_mode = 'chemistry'
+    //  - /dashboard/leaderboard, /dashboard/profile (shared) → read last_mode, don't update it
+    //
+    // HYDRATION NOTE: We start with 'chemistry' as a safe SSR default, then
+    // immediately sync from localStorage in useEffect after client mount.
+    // The sidebar is hidden (opacity-0) until mounted to avoid the flash.
+    // ──────────────────────────────────────────────────────────────────────────
+
+    const [lastMode, setLastMode] = useState<'dental' | 'chemistry'>('chemistry');
+
+    // Single effect: runs on mount and on every pathname change.
+    // On mount → read stored last_mode from localStorage.
+    // On pathname change to a section page → write new last_mode.
+    // On shared pages (leaderboard, profile) → do nothing (keep last_mode as-is).
+    useEffect(() => {
+        if (pathname?.startsWith('/dashboard/dental')) {
+            localStorage.setItem('last_mode', 'dental');
+            setLastMode('dental');
+        } else if (
+            pathname === '/dashboard' ||
+            pathname?.startsWith('/dashboard/curriculum') ||
+            pathname?.startsWith('/dashboard/quizzes')
+        ) {
+            localStorage.setItem('last_mode', 'chemistry');
+            setLastMode('chemistry');
+        } else {
+            // Shared page (leaderboard, profile, etc.) → restore from localStorage
+            const stored = localStorage.getItem('last_mode') as 'dental' | 'chemistry' | null;
+            if (stored) setLastMode(stored);
+        }
+    }, [pathname]);
+
+    const isDentalUser = lastMode === 'dental';
     const navItems = isDentalUser ? dentalNavItems : chemistryNavItems;
+
 
     const isLessonPlayer = pathname?.startsWith('/dashboard/curriculum/') && pathname.split('/').length > 4;
 
