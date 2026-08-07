@@ -13000,5 +13000,75 @@
     "explanation": "Corticosteroids suppress the inflammatory response. This can mask the typical warning signs of spreading infection (pain, heat, redness, swelling) while concurrently lowering the patient's resistance, allowing rapid spread.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 3"
+  },
+  {
+    "id": 1113,
+    "question": "Which of the following groups of factors represents recognized predisposing factors for the development of dry socket (alveolar osteitis) following a dental extraction?",
+    "options": [
+      "Young male patient, non-smoker, and prophylactic antibiotic use",
+      "Smoking, hormone contraceptives (estrogens), and surgical extraction trauma",
+      "Frequent warm saline rinses, Vitamin C use, and non-steroidal analgesics",
+      "The use of local anesthetics containing felypressin rather than adrenaline"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Predisposing factors for dry socket (alveolar osteitis) include smoking, local bone trauma during surgery, the vasoconstrictor in local anesthetics, and the use of oral contraceptives (which increase fibrinolytic activity due to estrogens).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1114,
+    "question": "A patient presents with severe, radiating pain 3 days after the extraction of a lower molar. Examination reveals a socket devoid of a blood clot with exposed bone, which is extremely sensitive to touch. What is the most appropriate immediate management?",
+    "options": [
+      "Vigorously curetting the socket wall under local anesthesia to stimulate fresh blood flow",
+      "Irrigating the socket gently with warm saline and placing a protective sedative dressing",
+      "Prescribing a course of systemic broad-spectrum antibiotics and avoiding local interventions",
+      "Immediately raising a mucoperiosteal flap and performing surgical bone debridement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dry socket is managed palliatively by gently irrigating the socket with warm saline to remove food debris and applying a sedative dressing (such as bismuth iodoform paraffin paste [BIPP] or Alvogyl) to protect exposed nerve endings. Curetting is contraindicated as it increases pain and delays healing.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1115,
+    "question": "How is 'osseointegration' of titanium dental implants defined according to Branemark's clinical and histological criteria?",
+    "options": [
+      "The development of a dense fibrous connective tissue interface between the bone and the implant surface",
+      "Direct structural and functional anchorage of the implant to the surrounding bone without the growth of intervening fibrous tissue",
+      "The chemical bonding of titanium oxide directly to host organic collagen molecules",
+      "Complete replacement of peri-implant bone with a calcified cement sheath"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Osseointegration is the direct structural and functional connection between living bone and the surface of a load-bearing implant, achieved and maintained without any intervening fibrous tissue layer at the interface.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1116,
+    "question": "A patient returns to the clinic bleeding continuously two hours after a routine tooth extraction. What is the most appropriate and effective initial local clinical protocol to control the hemorrhage?",
+    "options": [
+      "Instructing the patient to rinse vigorously with cold water for 15 minutes",
+      "Debriding the socket, placing a local hemostatic agent (e.g., oxidized cellulose), suturing the wound margins, and having the patient bite on a gauze pack",
+      "Administering a deep local anesthetic injection with adrenaline directly into the socket apex",
+      "Instructing the patient to perform moderate exercise to reduce peripheral blood pressure"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Management of postoperative bleeding involves locating the source, cleaning the socket of old loose clots, inserting a localized hemostatic agent, suturing to approximate soft tissues, and applying pressure with a gauze pack.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1117,
+    "question": "Which of the following clinical innovations has largely superseded the need for extensive preprosthetic surgeries (such as major sulcus deepening and large alveolar ridge bone grafts) in modern dental practice?",
+    "options": [
+      "Chemical bone morphogenetic protein injections",
+      "Osseointegrated dental implants",
+      "Hydroxyapatite granules injected subperiosteally",
+      "Custom-fabricated subperiosteal frame structures"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The development and high success rate of osseointegrated dental implants has largely superseded the need for complex preprosthetic surgical procedures that were previously required to improve conventional denture retention.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
   }
 ]
