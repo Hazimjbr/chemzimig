@@ -48,10 +48,11 @@ export default function DentalExamPage() {
   const [isExporting, setIsExporting] = useState<boolean>(false);
   const [showReview, setShowReview] = useState<boolean>(false);
 
-  // Load chapters on mount
+  // Load chapters when onlyNew toggle changes
   useEffect(() => {
-    setAllChapters(extractAllChapters());
-  }, []);
+    setAllChapters(extractAllChapters(onlyNew));
+    setSelectedChapter('All');
+  }, [onlyNew]);
 
   const handleDownloadCard = async () => {
     setIsExporting(true);

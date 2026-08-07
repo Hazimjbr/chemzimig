@@ -161,18 +161,29 @@ export function toggleDentalBookmark(questionId: number): boolean {
   return isBookmarked;
 }
 
-export function extractAllChapters(): string[] {
+export function extractAllChapters(onlyNew?: boolean): string[] {
   const chapters = new Set<string>();
-  ALL_DENTAL_QUESTIONS.forEach(q => {
-    // Look for patterns like 'Master Dentistry Vol. X, Ch. Y' or 'Master Dentistry Vol. X'
+  let pool = ALL_DENTAL_QUESTIONS;
+  if (onlyNew) {
+    pool = pool.filter(q => q.id >= 1075);
+  }
+  pool.forEach(q => {
     const exp = q.explanation;
-    const match = exp.match(/Book Reference:\s*([^\n\(\)]+)/);
+    const match = exp.match(/Book Reference:\s*([^\n]+)/);
     if (match) {
-      chapters.add(match[1].trim());
+      let refText = match[1].trim();
+      // Remove page numbers, e.g. ", p. 159" or "p. 159"
+      refText = refText.replace(/,\s*p\.\s*\d+/g, "").replace(/p\.\s*\d+/g, "").replace(/\s*p\.\s*\d+/g, "");
+      // Clean up empty parentheses
+      refText = refText.replace(/\(\s*\)/g, "").trim();
+      chapters.add(refText);
     } else {
-      const match2 = exp.match(/Reference:\s*([^\n\(\)]+)/);
+      const match2 = exp.match(/Reference:\s*([^\n]+)/);
       if (match2) {
-        chapters.add(match2[1].trim());
+        let refText = match2[1].trim();
+        refText = refText.replace(/,\s*p\.\s*\d+/g, "").replace(/p\.\s*\d+/g, "").replace(/\s*p\.\s*\d+/g, "");
+        refText = refText.replace(/\(\s*\)/g, "").trim();
+        chapters.add(refText);
       }
     }
   });

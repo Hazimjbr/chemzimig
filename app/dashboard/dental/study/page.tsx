@@ -70,8 +70,13 @@ function DentalStudyContent() {
 
   useEffect(() => {
     setUserStats(getDentalUserStats());
-    setAllChapters(extractAllChapters());
   }, []);
+
+  // Reload chapters when onlyNew toggle changes
+  useEffect(() => {
+    setAllChapters(extractAllChapters(onlyNew));
+    setSelectedChapter('All');
+  }, [onlyNew]);
 
   // Update questions whenever filters change
   useEffect(() => {
