@@ -12510,5 +12510,33 @@
     "explanation": "A pregnant patient who faints should be placed in the supine position with a slight lateral tilt to the left. This prevents the gravid uterus from compressing the inferior vena cava and aorta (Supine Hypotensive Syndrome), which reduces cardiac output. NSAIDs should be avoided (especially in the 3rd trimester to prevent premature closure of the ductus arteriosus). The 2nd trimester is actually the safest period for dental procedures.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 2"
+  },
+  {
+    "id": 1078,
+    "question": "A Type 1 diabetic patient takes their insulin dose in the morning but omits food before their dental appointment. If they lose consciousness during treatment, which is the most appropriate immediate first-line management?",
+    "options": [
+      "Administration of intramuscular glucagon",
+      "Intravenous administration of 50% glucose solution",
+      "Administration of oral sugar drinks or glucose tablets",
+      "Injection of 1 mg intravenous epinephrine"
+    ],
+    "correctAnswer": 0,
+    "explanation": "If a diabetic patient becomes unconscious (severe hypoglycaemia), oral sugar is contraindicated due to airway aspiration risk. The immediate first-line management in a dental clinic is the administration of 1 mg intramuscular glucagon. Intravenous glucose requires venous access and is usually administered upon transfer to emergency hospital care if glucagon is ineffective.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1079,
+    "question": "A young patient undergoing inhalational sedation starts to feel short of breath and displays irritability and anxiety. She is diagnosed with an acute asthma attack. What is the most appropriate immediate step in her management?",
+    "options": [
+      "Administer 2 puffs of a beta-2 agonist (e.g. Salbutamol) via a spacer device",
+      "Immediately administer intramuscular epinephrine (1:1000)",
+      "Lay the patient fully flat in the supine position",
+      "Administer intravenous hydrocortisone"
+    ],
+    "correctAnswer": 0,
+    "explanation": "An acute asthma attack triggered by anxiety during dental sedation should be managed immediately by administering 2 puffs of a short-acting beta-2 agonist (such as Salbutamol/Albuterol) using a spacer device. The patient should be kept in an upright position to ease breathing. Epinephrine is reserved for life-threatening bronchoconstriction or anaphylaxis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
   }
 ]
