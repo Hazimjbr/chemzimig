@@ -133,85 +133,61 @@ export default function HeroSection() {
         {/* Main Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-6">
           
-          {/* 1. Tab Switcher (Interactive Pill) */}
-          <div className="inline-flex p-1 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl mb-4 animate-fade-in-up">
-            <button
-              onClick={() => setActiveTab("chemistry")}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                activeTab === "chemistry"
-                  ? "bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 shadow-lg"
-                  : "text-slate-400 hover:text-white"
-              }`}
-            >
-              ⚗️ Chemistry Academy
-            </button>
-            <button
-              onClick={() => setActiveTab("dental")}
-              className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                activeTab === "dental"
-                  ? "bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-lg shadow-indigo-500/25"
-                  : "text-slate-400 hover:text-white"
-              }`}
-            >
-              🦷 Dental Prep Portal
-            </button>
+          {/* Badge Tag */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl mb-2 animate-fade-in-up">
+            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <span className="text-xs font-semibold tracking-wide text-slate-300">
+              International Chemistry & Dental Exam Prep Platform
+            </span>
           </div>
 
           {/* Heading & Intro */}
-          {activeTab === "chemistry" ? (
-            <div className="animate-fade-in-up">
-              <h1 className="text-4xl sm:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-tight leading-[1.1] mb-4">
-                <span className="text-white">Master Chemistry</span>
-                <br />
-                <span className="text-gradient-hero">The Smart Way</span>
-              </h1>
-              <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-                Practice with real past paper questions from international exam boards, track your progress with gamified learning, and conquer Chemistry.
-              </p>
-            </div>
-          ) : (
-            <div className="animate-fade-in-up">
-              <h1 className="text-4xl sm:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-tight leading-[1.1] mb-4">
-                <span className="text-white">Master Dental MCQs</span>
-                <br />
-                <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">Professional Prep</span> 🦷
-              </h1>
-              <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-                Practice 911 clinical questions for MFDs, MJDF, ORE, and Board Exams with detailed Master Dentistry textbook references.
-              </p>
-            </div>
-          )}
+          <div className="animate-fade-in-up">
+            <h1 className="text-4xl sm:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-tight leading-[1.1] mb-4">
+              <span className="text-white">Master Science & Board Exams</span>
+              <br />
+              <span className="text-gradient-hero">The Smart Way</span>
+            </h1>
+            <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+              Select your academic specialization to practice with real past paper questions, interactive diagnostic simulators, and gamified mastery tracks.
+            </p>
+          </div>
 
-          {/* 2. Dual Path Cards (Dual Grid) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto pt-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          {/* Dual Path Cards (Interactive Track Selection) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto pt-4 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             
             {/* Card 1: Chemistry Path */}
             <div 
               onClick={() => setActiveTab("chemistry")}
-              className={`group cursor-pointer rounded-2xl p-6 text-left border transition-all duration-300 backdrop-blur-xl flex flex-col justify-between ${
+              className={`group cursor-pointer rounded-2xl p-6 text-left border transition-all duration-300 backdrop-blur-xl flex flex-col justify-between relative overflow-hidden ${
                 activeTab === "chemistry"
-                  ? "bg-gold-950/20 border-gold-500/40 shadow-xl shadow-gold-500/5 scale-[1.02]"
-                  : "bg-surface/40 border-border hover:border-gold-500/20 hover:bg-surface/60"
+                  ? "bg-gold-950/30 border-gold-500/50 shadow-2xl shadow-gold-500/10 scale-[1.02]"
+                  : "bg-surface/40 border-border hover:border-gold-500/30 hover:bg-surface/60 opacity-80 hover:opacity-100"
               }`}
             >
+              {activeTab === "chemistry" && (
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gold-500/10 rounded-full blur-xl pointer-events-none" />
+              )}
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl">⚗️</span>
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-gold-500/10 text-gold-400 border border-gold-500/20">
-                    High School
+                    High School Track
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-gold-400 transition-colors">
+                <h3 className="text-xl font-bold text-white group-hover:text-gold-400 transition-colors">
                   Chemistry Curriculum
                 </h3>
-                <p className="text-slate-400 text-xs mt-2 leading-relaxed">
-                  CIE IGCSE, AS/A-Level, and Edexcel syllabus alignment. Includes diagnostic tests, syllabus notes, and progress levels.
+                <p className="text-slate-300 text-xs mt-2 leading-relaxed">
+                  CIE IGCSE, AS/A-Level, and Edexcel syllabus alignment. Includes interactive simulators, worked examples, and mistake inbox.
                 </p>
               </div>
-              <div className="mt-6 flex items-center justify-between">
-                <span className="text-[10px] text-slate-500 font-semibold">12+ curriculum modules</span>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-gold-400 group-hover:translate-x-1 transition-transform">
-                  <span>Explore Path</span>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <span className="text-[11px] text-slate-400 font-semibold">12+ Curriculum Modules</span>
+                <span className={`inline-flex items-center gap-1 text-xs font-bold transition-all ${
+                  activeTab === "chemistry" ? "text-gold-400 translate-x-1" : "text-slate-400 group-hover:text-gold-400 group-hover:translate-x-1"
+                }`}>
+                  <span>{activeTab === "chemistry" ? "Active Path ✓" : "Select Path"}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -220,30 +196,35 @@ export default function HeroSection() {
             {/* Card 2: Dental Path */}
             <div 
               onClick={() => setActiveTab("dental")}
-              className={`group cursor-pointer rounded-2xl p-6 text-left border transition-all duration-300 backdrop-blur-xl flex flex-col justify-between ${
+              className={`group cursor-pointer rounded-2xl p-6 text-left border transition-all duration-300 backdrop-blur-xl flex flex-col justify-between relative overflow-hidden ${
                 activeTab === "dental"
-                  ? "bg-indigo-950/20 border-indigo-500/40 shadow-xl shadow-indigo-500/5 scale-[1.02]"
-                  : "bg-surface/40 border-border hover:border-indigo-500/20 hover:bg-surface/60"
+                  ? "bg-indigo-950/30 border-indigo-500/50 shadow-2xl shadow-indigo-500/10 scale-[1.02]"
+                  : "bg-surface/40 border-border hover:border-indigo-500/30 hover:bg-surface/60 opacity-80 hover:opacity-100"
               }`}
             >
+              {activeTab === "dental" && (
+                <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-xl pointer-events-none" />
+              )}
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-3xl">🦷</span>
                   <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                    Professional
+                    Professional Board
                   </span>
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
+                <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                   Dental Board Exam MCQs
                 </h3>
-                <p className="text-slate-400 text-xs mt-2 leading-relaxed">
-                  911 ORE, MJDF, MFDs preparation questions. Features timed exam simulators, custom study modes, and weak-area analysis.
+                <p className="text-slate-300 text-xs mt-2 leading-relaxed">
+                  1,340 clinical questions for NDEB, INBDE, ORE, and MFDs. Features Master Dentistry references, category diagnostics, and PNG card sharing.
                 </p>
               </div>
-              <div className="mt-6 flex items-center justify-between">
-                <span className="text-[10px] text-slate-500 font-semibold">911 clinical questions</span>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-indigo-400 group-hover:translate-x-1 transition-transform">
-                  <span>Explore Path</span>
+              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <span className="text-[11px] text-slate-400 font-semibold">1,340 Clinical Board MCQs</span>
+                <span className={`inline-flex items-center gap-1 text-xs font-bold transition-all ${
+                  activeTab === "dental" ? "text-indigo-400 translate-x-1" : "text-slate-400 group-hover:text-indigo-400 group-hover:translate-x-1"
+                }`}>
+                  <span>{activeTab === "dental" ? "Active Path ✓" : "Select Path"}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -251,30 +232,30 @@ export default function HeroSection() {
 
           </div>
 
-          {/* CTA Buttons */}
+          {/* CTA Action Button */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             {isAuthenticated ? (
               <Link
                 href={activeTab === "chemistry" ? "/dashboard" : "/dashboard/dental"}
-                className={`group px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer ${
+                className={`group px-9 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105 flex items-center gap-2.5 cursor-pointer ${
                   activeTab === "chemistry"
                     ? "bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 shadow-xl shadow-gold-500/25"
                     : "bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-xl shadow-indigo-500/25"
                 }`}
               >
-                Go to {activeTab === "chemistry" ? "Chemistry Dashboard" : "Dental Prep Portal"}
+                <span>Enter {activeTab === "chemistry" ? "Chemistry Academy" : "Dental Prep Portal"}</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             ) : (
               <button
                 onClick={() => setIsLoginOpen(true)}
-                className={`group px-8 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105 flex items-center gap-2 cursor-pointer ${
+                className={`group px-9 py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-105 flex items-center gap-2.5 cursor-pointer ${
                   activeTab === "chemistry"
                     ? "bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 shadow-xl shadow-gold-500/25"
                     : "bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-xl shadow-indigo-500/25"
                 }`}
               >
-                Start Practicing Now
+                <span>Start {activeTab === "chemistry" ? "Chemistry Prep" : "Dental Prep"} Now</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             )}
