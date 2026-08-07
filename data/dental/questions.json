@@ -15114,5 +15114,285 @@
     "explanation": "Glossopharyngeal neuralgia pain is triggered by swallowing, cold drinks, or yawning, and is localized to the throat, posterior tongue, and ear. Trigeminal neuralgia is triggered by touching facial skin.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 14, p. 229)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1264,
+    "question": "Regarding the biological risks of ionizing radiation, which of the following is a characteristic of stochastic effects?",
+    "options": [
+      "They exhibit a clear threshold dose below which the effect does not occur",
+      "The probability of occurrence increases with dose, but the severity of the effect is independent of the dose",
+      "The severity of the effect increases proportionally with the dose received",
+      "They only occur at extremely high doses, such as in radiotherapy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Stochastic effects (e.g., radiation-induced cancer or genetic mutations) have no threshold dose. Any exposure, no matter how small, carries a probability of causing the effect, but the severity is independent of the dose.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 251)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1265,
+    "question": "Which of the following biological effects of ionizing radiation is classified as a deterministic (tissue reaction) effect?",
+    "options": [
+      "Radiation-induced leukemia",
+      "Salivary gland cancer",
+      "Radiation-induced cataract formation",
+      "Genetic mutations in offspring"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Deterministic effects (tissue reactions) have a threshold dose below which they do not occur. Above this threshold, the severity of the tissue damage (such as cataracts, skin erythema, or xerostomia) increases with the dose.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 251)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1266,
+    "question": "What is the primary objective of the ALARP principle in dental radiology?",
+    "options": [
+      "To maximize the brightness and contrast of all panoramic films",
+      "To ensure that all patient radiation exposures are kept as low as reasonably practicable",
+      "To eliminate the need for thyroid collars in all clinical situations",
+      "To restrict radiography to patients over the age of 18 only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ALARP stands for 'As Low As Reasonably Practicable' (similar to ALARA). It dictates that diagnostic exposures must be minimized while still obtaining adequate diagnostic information.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 250)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1267,
+    "question": "What is the statutory annual effective dose limit for classified radiation workers (dental staff members exposed to radiation)?",
+    "options": [
+      "1 mSv per year",
+      "20 mSv per year",
+      "50 mSv per year",
+      "100 mSv per year"
+    ],
+    "correctAnswer": 1,
+    "explanation": "According to the UK Ionising Radiations Regulations (and international standards), the annual limit on effective dose for employees (classified radiation workers) is 20 mSv per year.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 252)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1268,
+    "question": "What is the statutory annual effective dose limit for members of the general public and non-classified dental staff members?",
+    "options": [
+      "1 mSv per year",
+      "10 mSv per year",
+      "20 mSv per year",
+      "50 mSv per year"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The annual effective dose limit for members of the public (and non-classified staff who do not directly work with radiation) is 1 mSv per year.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 252)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1269,
+    "question": "According to quality assurance guidelines for dental radiography, what are the target percentage standards for Grade 1 (excellent) and Grade 3 (unacceptable) images, respectively?",
+    "options": [
+      "At least 50% Grade 1, and no more than 20% Grade 3",
+      "At least 70% Grade 1, and no more than 10% Grade 3",
+      "At least 90% Grade 1, and no more than 1% Grade 3",
+      "At least 30% Grade 1, and no more than 30% Grade 3"
+    ],
+    "correctAnswer": 1,
+    "explanation": "UK guidelines specify target standards for image quality: Grade 1 (excellent, no errors) should be >= 70%; Grade 2 (diagnostically acceptable, minor errors) <= 20%; and Grade 3 (unacceptable, non-diagnostic) <= 10%.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 253)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1270,
+    "question": "What is the defined boundaries of a 'controlled area' around a dental X-ray source operating up to 70 kVp?",
+    "options": [
+      "Within 1.5 metres of the primary X-ray tube head and the patient in any direction",
+      "Within 5 metres of the primary X-ray tube head",
+      "Only the room directly behind the plasterboard partition",
+      "Within 3 metres in the line of the primary beam only"
+    ],
+    "correctAnswer": 0,
+    "explanation": "For X-ray units operating up to 70 kVp, the controlled area is designated as the region within 1.5 meters of the primary tube head and patient in any direction, unless shielded.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 252)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1271,
+    "question": "What is the recommended guideline regarding the routine use of lead aprons for patients undergoing routine dental radiography?",
+    "options": [
+      "Lead aprons are mandatory for all adult bitewing radiographs",
+      "There is no clinical justification for the routine use of lead aprons in dental radiography, except when the primary beam is directed at the thyroid (e.g. in some pediatric occlusal views)",
+      "Lead aprons must be worn by all staff members in the room during exposure",
+      "Lead aprons are contraindicated in all dental radiographs because they scatter radiation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Modern fast film and digital sensors reduce dose significantly. Lead aprons provide no significant protection against internal scatter and are not routinely justified, except when the primary beam is directed towards the thyroid gland.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 250)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1272,
+    "question": "How much does switching from a round collimator to a rectangular collimator reduce the radiation dose received by the patient?",
+    "options": [
+      "No reduction, it only improves image clarity",
+      "By approximately 50%",
+      "By less than 10%",
+      "It increases the dose because it concentrates the beam"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rectangular collimation limits the primary beam size to match the film/sensor dimensions, reducing the volume of irradiated patient tissue and lowering patient dose by about 50% compared to round collimators.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 250)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1273,
+    "question": "Why is the minimum tube voltage for dental X-ray equipment restricted to 60 kVp?",
+    "options": [
+      "Lower voltages cannot penetrate dental hard tissues at all",
+      "Lower voltages produce low-energy photons that are absorbed by the patient's skin and do not contribute to the image, increasing dose uselessly",
+      "Higher voltages prevent the X-ray tube from overheating",
+      "Lower voltages require too long of an exposure time"
+    ],
+    "correctAnswer": 1,
+    "explanation": "X-rays produced at voltages below 60 kVp contain a high proportion of low-energy (soft) photons. These lack energy to penetrate the jaw and are absorbed by skin tissues, increasing patient dose without improving the image.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 250)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1274,
+    "question": "Which of the following is considered a somatic stochastic risk of dental radiography?",
+    "options": [
+      "Development of thyroid cancer or leukemia",
+      "Erythema of the skin on the cheek",
+      "Genetic mutations in the patient's future children",
+      "Severe mucositis of the oral cavity"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Somatic risks affect the exposed individual. Stochastic somatic risks of low-dose dental radiography include a small probability of inducing malignancies like leukemia, thyroid, or salivary gland cancer.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 16, p. 251)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1275,
+    "question": "In the hierarchy of clinical evidence in Evidence-Based Dentistry (EBD), which study design represents the highest level of evidence?",
+    "options": [
+      "Cohort studies",
+      "Systematic reviews and Meta-analyses of randomized controlled trials (RCTs)",
+      "Case-control studies",
+      "Expert opinion papers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Systematic reviews and meta-analyses pool data from multiple high-quality randomized controlled trials (RCTs), providing the highest level of clinical evidence to guide decision-making.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 3)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 2"
+  },
+  {
+    "id": 1276,
+    "question": "Why is randomization critical in the design of clinical trials comparing two dental materials?",
+    "options": [
+      "It guarantees that the trial is completed faster",
+      "It distributes confounding variables equally between groups, minimizing allocation bias",
+      "It eliminates the need for informed consent",
+      "It ensures that both groups receive identical dosages of anesthesia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Randomization ensures that patient characteristics (known and unknown confounding variables) are balanced across treatment groups, preventing bias in patient selection and allocation.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 5)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 2"
+  },
+  {
+    "id": 1277,
+    "question": "A study follows two groups of patients over 5 years—one group with dental implants and another without—to observe the development of peri-implantitis. What study design is this?",
+    "options": [
+      "Retrospective Case-control study",
+      "Prospective Cohort study",
+      "Randomized Controlled Trial",
+      "Cross-sectional survey"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A cohort study is a prospective observational study that follows a group of subjects exposed to a risk factor (or intervention) and compares them to an unexposed group over time to see who develops the disease.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 5)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 2"
+  },
+  {
+    "id": 1278,
+    "question": "A clinical investigator identifies 50 patients with oral cancer and 50 healthy controls, then looks back at their medical records to analyze past alcohol consumption. What study design is this?",
+    "options": [
+      "Prospective Cohort study",
+      "Retrospective Case-control study",
+      "Meta-analysis",
+      "Randomized clinical trial"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Case-control studies are retrospective. They start with a population that has the disease (cases) and a healthy population (controls), then look back in time to compare exposure to risk factors.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 5)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 2"
+  },
+  {
+    "id": 1279,
+    "question": "What does the sensitivity of a diagnostic dental test measure?",
+    "options": [
+      "The test's ability to correctly identify patients who do NOT have the disease",
+      "The test's ability to correctly identify patients WHO HAVE the disease (True Positive Rate)",
+      "The probability of the patient experiencing pain during the test",
+      "The speed at which the diagnostic test results are obtained"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sensitivity is the proportion of true positives correctly identified by a test (e.g. the percentage of patients with caries who test positive for caries).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 7)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 3"
+  },
+  {
+    "id": 1280,
+    "question": "What does the specificity of a diagnostic test measure?",
+    "options": [
+      "The test's ability to correctly identify subjects who do NOT have the disease (True Negative Rate)",
+      "The test's ability to diagnose a specific subtype of bacteria",
+      "The accuracy of the test when performed by a specialist",
+      "The probability that a positive test result is a false alarm"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Specificity measures the test's ability to identify true negatives, correctly excluding those who do not have the disease (e.g. patients without caries who test negative).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 7)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 3"
+  },
+  {
+    "id": 1281,
+    "question": "To obtain valid informed consent from a patient before a surgical tooth extraction, which of the following elements must be satisfied?",
+    "options": [
+      "The patient must sign the form, regardless of whether they understood the options",
+      "The patient must be competent, fully informed of risks/benefits/alternatives, and act voluntarily",
+      "The patient must pay for the treatment in advance",
+      "Consent is only valid if witnessed by a legal notary"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Valid informed consent requires three elements: competence of the patient to make decisions, adequate disclosure of information (risks, benefits, costs, and alternatives), and voluntariness.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 2, p. 11)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 2"
+  },
+  {
+    "id": 1282,
+    "question": "What is the primary goal of a clinical audit cycle in a dental practice?",
+    "options": [
+      "To audit and verify the financial accounting of the practice",
+      "To systematically review and improve the quality of patient care against defined standards",
+      "To identify and fire underperforming dental nurses",
+      "To publish novel clinical research in high-impact journals"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Clinical audit is a quality improvement process that seeks to improve patient care and outcomes through systematic review of care against explicit criteria, followed by implementation of change.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 9)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 2"
+  },
+  {
+    "id": 1283,
+    "question": "How do clinical guidelines differ from clinical protocols in professional dental practice?",
+    "options": [
+      "Guidelines are legally binding laws, whereas protocols are optional suggestions",
+      "Guidelines are systematically developed statements to assist clinician decision-making (flexible), whereas protocols are rigid instructions that must be followed precisely",
+      "Guidelines only apply to specialists, whereas protocols apply to general practitioners",
+      "Guidelines are set by patients, whereas protocols are set by dentists"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Guidelines assist in decision-making and are flexible, allowing clinical judgment based on patient preferences. Protocols are rigid, step-by-step instructions that must be strictly adhered to.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 9)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "General Dentistry",
+    "level": "Level 3"
   }
 ]
