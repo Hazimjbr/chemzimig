@@ -82,6 +82,15 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ success: true, isActive: !current });
         }
 
+        if (action === 'update-grade') {
+            const { grade } = body;
+            if (!grade) {
+                return NextResponse.json({ success: false, error: 'Grade is required' }, { status: 400 });
+            }
+            await studentRef.update({ grade });
+            return NextResponse.json({ success: true });
+        }
+
         if (action === 'reset-password') {
             const { newPassword } = body;
             if (!newPassword || newPassword.trim().length < 6) {

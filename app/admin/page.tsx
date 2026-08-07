@@ -637,6 +637,7 @@ function AdminContent() {
                                                          <option value="edexcel-igcse" className="bg-[#0b0b1a] text-slate-300">Edexcel IGCSE</option>
                                                          <option value="edexcel-as" className="bg-[#0b0b1a] text-slate-300">Edexcel AS-Level</option>
                                                          <option value="edexcel-a2" className="bg-[#0b0b1a] text-slate-300">Edexcel A2-Level</option>
+                                                         <option value="dentistry" className="bg-[#0b0b1a] text-slate-300">Dental Board 🦷</option>
                                                      </select>
                                                  </div>
 
@@ -819,9 +820,37 @@ function AdminContent() {
                                                                              {student.username}
                                                                          </td>
                                                                          <td className="py-4">
-                                                                             <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-bold text-slate-300 capitalize">
-                                                                                 {student.grade ? student.grade.replace('-', ' ') : 'N/A'}
-                                                                             </span>
+                                                                             <select
+                                                                                 value={student.grade || ''}
+                                                                                 onChange={async (e) => {
+                                                                                     const newGrade = e.target.value;
+                                                                                     try {
+                                                                                         const res = await fetch('/api/admin/students', {
+                                                                                             method: 'POST',
+                                                                                             headers: { 'Content-Type': 'application/json' },
+                                                                                             body: JSON.stringify({ action: 'update-grade', studentId: student.id, grade: newGrade })
+                                                                                         });
+                                                                                         const data = await res.json();
+                                                                                         if (data.success) {
+                                                                                             fetchStudents();
+                                                                                         } else {
+                                                                                             alert(data.error || 'Failed to update curriculum');
+                                                                                         }
+                                                                                     } catch (err) {
+                                                                                         console.error(err);
+                                                                                         alert('Connection error');
+                                                                                     }
+                                                                                 }}
+                                                                                 className="bg-[#0b0b1a] text-slate-300 border border-white/10 rounded-lg px-2.5 py-1 outline-none text-xs font-bold cursor-pointer"
+                                                                             >
+                                                                                 <option value="cie-igcse">Cambridge IGCSE</option>
+                                                                                 <option value="cie-as">Cambridge AS-Level</option>
+                                                                                 <option value="cie-alevel">Cambridge A-Level</option>
+                                                                                 <option value="edexcel-igcse">Edexcel IGCSE</option>
+                                                                                 <option value="edexcel-as">Edexcel AS-Level</option>
+                                                                                 <option value="edexcel-a2">Edexcel A2-Level</option>
+                                                                                 <option value="dentistry">Dental Board 🦷</option>
+                                                                             </select>
                                                                          </td>
                                                                          <td className="py-4 text-xs font-semibold text-slate-400">
                                                                              {student.devices?.length || 0} device(s)

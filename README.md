@@ -216,7 +216,9 @@ npm run lint
   - **Topic-based / Chapter Filtering:** Enabled students to filter practice questions dynamically by specific book chapters (e.g. Master Dentistry Vol. 1, Ch. 10 Cysts, Ch. 11 Mucosal Diseases, Ch. 12 Oral Cancer, Ch. 13 Salivary, etc.) parsed directly from clinical explanations.
   - **Custom Quick Mock Exams:** Upgraded the simulator with custom presets (10, 20, 30, 50, 100 MCQs), custom time limits (including Untimed Study Mode), and chapter focus.
   - **Auto-Submit on Timeout:** Engineered a bulletproof countdown fallback that automatically submits the exam on time limit expiry, marking all unanswered questions as incorrect and routing them directly to the Mistakes Bank, with a clear results notification banner.
-  - **Anatomical Dental Aesthetics:** Replaced general medical graphics with custom molar tooth and clinical floating SVGs (braces, handpiece drills, modern dental chairs).
+  - **Anatomical Dental Aesthetics & Branding:** Replaced general medical graphics with custom molar tooth and clinical floating SVGs (braces, handpiece drills, modern dental chairs). Replaced leftover stethoscope icons (`Stethoscope` / `🩺`) in the sidebar, dashboard headers, and category diagnostics with the molar tooth `🦷` for unified dentistry branding.
+  - **Vercel Invite URL:** Updated the admin student credentials template to copy `https://chemzim.vercel.app/` directly for instant production login access.
+  - **Inline Curriculum Editor:** Transformed the static curriculum tag in the Admin Panel student accounts list into an interactive dropdown select, allowing administrators to update any student's curriculum or upgrade them to the Dental Board instantly on Firestore via a secure API request (`update-grade`).
   - **Telegram Bot Publishing:** Integrated local-only extraction protection for new board MCQs while keeping core channel sync active.
 
 - 🧪 **Dashboard Header Link:** Standardized the sidebar "ChemZim" logo in the student dashboard layout to navigate back to the landing page (`/`).
