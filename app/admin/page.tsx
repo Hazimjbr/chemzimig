@@ -332,6 +332,23 @@ function AdminContent() {
         return allStudentDevices.filter((d: any) => d.status === deviceFilter);
     }, [allStudentDevices, deviceFilter]);
 
+    const dentalStats = React.useMemo(() => {
+        const dentalStudents = students.filter(s => s.grade === 'dentistry');
+        const total = dentalStudents.length;
+        const active = dentalStudents.filter(s => s.isActive).length;
+        const totalXP = dentalStudents.reduce((sum, s) => sum + (s.xp || 0), 0);
+        const totalBookmarks = dentalStudents.reduce((sum, s) => sum + (s.dentalBookmarks?.length || 0), 0);
+        const totalMistakes = dentalStudents.reduce((sum, s) => sum + (s.dentalMistakes?.length || 0), 0);
+
+        return {
+            total,
+            active,
+            totalXP,
+            totalBookmarks,
+            totalMistakes
+        };
+    }, [students]);
+
     const fetchStudents = useCallback(async () => {
         setIsLoadingStudents(true);
         try {
@@ -414,7 +431,7 @@ function AdminContent() {
     useEffect(() => {
         if (user?.isAdmin) {
             fetchDevices();
-            if (activeTab === 'students' || activeTab === 'devices' || activeTab === 'progress') {
+            if (activeTab === 'students' || activeTab === 'devices' || activeTab === 'progress' || activeTab === 'overview' || activeTab === 'analytics') {
                 fetchStudents();
             }
             if (activeTab === 'announcements') {
@@ -1208,6 +1225,35 @@ function AdminContent() {
                                                 <span>Fri</span>
                                                 <span>Sat</span>
                                                 <span>Sun</span>
+                                            </div>
+                                        </div>
+
+                                        {/* 🦷 Dentistry Platform Analytics Section */}
+                                        <div className="space-y-4 pt-4 border-t border-white/5">
+                                            <div className="flex items-center gap-2 text-indigo-400 text-sm font-bold uppercase tracking-wider">
+                                                <span>🦷 Dentistry Platform Analytics</span>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
+                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Total Dental Students</span>
+                                                    <p className="text-2xl font-black text-white">{dentalStats.total}</p>
+                                                    <span className="text-[10px] text-slate-400">Registered accounts</span>
+                                                </div>
+                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
+                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Active Dental Users</span>
+                                                    <p className="text-2xl font-black text-emerald-400">{dentalStats.active}</p>
+                                                    <span className="text-[10px] text-slate-400">Unsuspended accounts</span>
+                                                </div>
+                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
+                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Total Dental XP Issued</span>
+                                                    <p className="text-2xl font-black text-amber-400">{dentalStats.totalXP} XP</p>
+                                                    <span className="text-[10px] text-slate-400">Practicing points issued</span>
+                                                </div>
+                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
+                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Bookmarks & Mistakes</span>
+                                                    <p className="text-2xl font-black text-indigo-400">{dentalStats.totalBookmarks} / {dentalStats.totalMistakes}</p>
+                                                    <span className="text-[10px] text-slate-400">Total items synchronized</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
