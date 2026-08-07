@@ -12958,5 +12958,47 @@
     "explanation": "The surgical management of Ludwig's angina involves wide bilateral extra-oral incisions to drain the submandibular spaces, and intra-oral incisions to drain the sublingual spaces, placing drains to maintain patency.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1110,
+    "question": "A young adult presents with sudden-onset severe gingival pain, halitosis, and bleeding. Intra-oral examination reveals characteristic 'punched-out' crater-like ulcerations of the interdental papillae covered by a grey pseudomembrane. Which of the following is the first-line systemic antibiotic indicated for the anaerobes causing this condition?",
+    "options": [
+      "Amoxicillin",
+      "Metronidazole",
+      "Erythromycin",
+      "Clindamycin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The clinical features describe Acute Necrotizing Ulcerative Gingivitis (ANUG), caused by a fuso-spirochaetal bacterial complex. Metronidazole is highly effective against these obligate anaerobes and is the drug of choice.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 83)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1111,
+    "question": "Which of the following anatomical features allows retrograde spread of acute dental infections from the upper face and lips to the cavernous sinus within the cranium?",
+    "options": [
+      "The absence of lymph nodes in the facial soft tissues",
+      "The presence of valveless veins in the facial and ophthalmic venous systems",
+      "High hydrostatic pressure in the facial and angular arteries",
+      "The thinness and porosities of the maxillary cortical bone plates"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The veins of the face and ophthalmic system lack valves, allowing blood to flow in either direction. An infection in the upper face can propagate retrogradely directly into the cavernous sinus.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1112,
+    "question": "A patient taking long-term systemic corticosteroids requires treatment for an acute dental infection. What is the primary clinical concern regarding corticosteroid use in this scenario?",
+    "options": [
+      "It will cause hyperthermia and exaggerated facial swelling immediately",
+      "It suppresses the immune system and masks the classic signs of inflammation, allowing infection to spread rapidly without obvious early symptoms",
+      "It causes severe localized vasodilation leading to uncontrolled hemorrhage",
+      "It chemically neutralizes local anesthetics, preventing adequate pain control"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Corticosteroids suppress the inflammatory response. This can mask the typical warning signs of spreading infection (pain, heat, redness, swelling) while concurrently lowering the patient's resistance, allowing rapid spread.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
   }
 ]
