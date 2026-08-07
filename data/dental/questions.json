@@ -13630,5 +13630,89 @@
     "explanation": "A Le Fort II fracture is a pyramidal fracture. The fracture line extends from the nasal bones through the lacrimal bones, orbital floor, infraorbital rim, and down through the pterygoid plates.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 140)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1158,
+    "question": "A patient sustains a Le Fort III fracture and presents with a continuous watery discharge from the nose. Which of the following laboratory findings confirms that the fluid is cerebrospinal fluid (CSF) rather than nasal mucus?",
+    "options": [
+      "High concentrations of mucin and protein",
+      "The presence of glucose and beta-2 transferrin",
+      "The fluid turning bright yellow when exposed to air",
+      "Marked elevation of salivary amylase activity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cerebrospinal fluid (CSF) contains glucose (unlike nasal mucus) and beta-2 transferrin, which is a protein found exclusively in CSF, perilymph, and aqueous humor, serving as a specific biomarker.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 140)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1159,
+    "question": "Which maxillary fracture runs horizontally above the teeth roots, through the maxillary sinus, and septum, resulting in a freely mobile or 'floating' dentoalveolar segment?",
+    "options": [
+      "Le Fort I fracture",
+      "Le Fort II fracture",
+      "Le Fort III fracture",
+      "Bilateral condylar fracture"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A Le Fort I fracture (transverse maxillary fracture) detaches the tooth-bearing segment of the maxilla from the midface skeleton, leaving it mobile (floating).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 140)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1160,
+    "question": "What is the typical recommended chronological timeline for performing surgical closure of a cleft lip and a cleft palate in a newborn?",
+    "options": [
+      "Cleft lip closure at 3 months, and cleft palate closure at 9 to 18 months",
+      "Cleft lip closure at 12 months, and cleft palate closure at 5 years",
+      "Both cleft lip and palate are closed simultaneously within 24 hours of birth",
+      "Cleft lip closure at 6 years, and cleft palate closure at 12 years"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Cleft lip is repaired early (around 3 months) to improve aesthetics and feeding. Cleft palate is repaired later (9-18 months) to allow jaw growth and facilitate normal speech development before speech patterns are established.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 9, p. 147)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1161,
+    "question": "During orthognathic surgery, a bilateral sagittal split osteotomy (BSSO) is performed to reposition the mandible. Which sensory nerve is most vulnerable to postoperative paresthesia or damage during this procedure?",
+    "options": [
+      "Facial nerve (cranial nerve VII)",
+      "Inferior alveolar nerve",
+      "Lingual nerve",
+      "Glossopharyngeal nerve"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because the sagittal osteotomy cuts are made through the mandibular ramus and body close to the mandibular canal, the inferior alveolar nerve is highly susceptible to stretching, compression, or injury.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 9, p. 153)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1162,
+    "question": "What is the classic clinical triad of congenital anomalies that defines the Pierre Robin sequence in neonates?",
+    "options": [
+      "Macroglossia, cleft lip, and clavicular hypoplasia",
+      "Micrognathia, glossoptosis (retrodisplaced tongue), and cleft palate",
+      "Craniosynostosis, syndactyly, and midface retrusion",
+      "Mandibular prognathism, supernumerary teeth, and multiple osteomas"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pierre Robin sequence is characterized by micrognathia (small mandible), glossoptosis (tongue falling backward into the airway), and cleft palate, which often causes respiratory distress at birth.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 9, p. 147)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1163,
+    "question": "A 20-year-old patient presents with progressive deviation of the chin to the left side and a posterior open bite on the right side. Radiographic evaluation shows enlargement of the right condylar head and neck. What is the most likely diagnosis?",
+    "options": [
+      "Left condylar hypoplasia",
+      "Right condylar hyperplasia",
+      "Bilateral condylar ankylosis",
+      "Mandibular fracture at the symphysis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unilateral condylar hyperplasia causes elongation of the mandibular ramus on the affected side (e.g., right), pushing the chin and mandible to the opposite side (left) and causing occlusal disturbances like a posterior open bite.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 9, p. 151)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
