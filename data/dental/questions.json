@@ -13350,5 +13350,145 @@
     "explanation": "Dry socket is characterized by premature lysis of the blood clot. Trauma or bacterial enzymes activate plasminogen activators, converting plasminogen to plasmin, which degrades the fibrin matrix (fibrinolysis).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1138,
+    "question": "Which of the following biological mechanisms explains why women taking estrogen-containing oral contraceptives have a significantly higher risk of developing alveolar osteitis (dry socket)?",
+    "options": [
+      "Estrogen causes localized chemical vasoconstriction of alveolar bone capillaries",
+      "Estrogens indirectly stimulate the fibrinolytic system in the blood, leading to premature clot dissolution",
+      "Estrogen suppresses the local salivary immunoglobulin IgA secretion",
+      "Oral contraceptives alter salivary calcium concentration, preventing clot mineral stability"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Estrogens increase the synthesis of clotting factors but also boost the activation of tissue plasminogen activators, leading to increased fibrinolysis, which prematurely dissolves the blood clot in the socket.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1139,
+    "question": "If fibrous connective tissue grows between the host bone and a dental implant body instead of bone-to-implant contact during the healing phase, what is this clinical outcome called?",
+    "options": [
+      "Fibrous integration with adequate shock-absorption",
+      "Fibrous encapsulation (signifying implant failure)",
+      "Normal reactive callus formation",
+      "Lytic osteoclasis with bone consolidation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fibrous encapsulation indicates a failure of osseointegration. Histologically, a fibrous tissue sheath wraps the implant instead of direct bone contact, leading to clinical mobility and implant failure.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1140,
+    "question": "What are the three main active ingredients of the classic BIPP paste used as a palliative antiseptic dressing for managing dry socket?",
+    "options": [
+      "Benzocaine, Ibuprofen, and Petrolatum",
+      "Bismuth subnitrate, Iodoform, and Liquid Paraffin",
+      "Boric acid, Iodine, and Petrolatum",
+      "Bacitracin, Isoflurane, and Propylene glycol"
+    ],
+    "correctAnswer": 1,
+    "explanation": "BIPP paste contains Bismuth subnitrate (soothing/antiseptic), Iodoform (antibacterial), and Liquid Paraffin (lubricant/carrier). It acts to protect exposed bone and soothe pain.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1141,
+    "question": "Why does the risk of Medication-Related Osteonecrosis of the Jaw (MRONJ) persist for many years even after a patient completely stops taking oral or IV bisphosphonate therapy?",
+    "options": [
+      "Because the drug circulates in the blood plasma indefinitely",
+      "Because bisphosphonates bind to hydroxyapatite and have an extremely long half-life in bone, often exceeding 10 years",
+      "Because the drug permanently damages minor salivary glands, leading to xerostomia",
+      "Because the medication alters soft tissue mucosal genes permanently"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bisphosphonates are incorporated into the bone mineral matrix. Because bone remodeling is slow, the drug remains in the skeleton with a half-life of over 10 years, maintaining the MRONJ risk long-term.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1142,
+    "question": "During a lateral window sinus lift procedure for dental implants, which blood vessel located within the lateral maxillary sinus wall is most at risk of laceration and severe bleeding?",
+    "options": [
+      "Greater palatine artery",
+      "Alveolar antral artery",
+      "Facial artery",
+      "Sphenopalatine artery"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The alveolar antral artery runs intraosseously or extraosseously along the lateral wall of the maxillary sinus. Accidentally transecting it during bony window preparation can cause significant hemorrhage.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1143,
+    "question": "When does an acute oroantral communication (OAC) created during extraction officially transform into a chronic oroantral fistula (OAF)?",
+    "options": [
+      "Immediately upon tooth extraction if the sinus floor is breached",
+      "When the communication tract becomes lined by epithelium from the oral cavity and maxillary sinus",
+      "Only when the entire maxillary sinus becomes filled with a necrotic blood clot",
+      "If the patient develops concurrent facial nerve palsy on the affected side"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An oroantral communication becomes a fistula when oral and sinus epithelia migrate and line the canal, forming a continuous epithelialized tract that prevents spontaneous healing.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 117)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1144,
+    "question": "Which surgical technique is most commonly used to close a large, acute oroantral communication (OAC) using the adjacent vestibular tissues?",
+    "options": [
+      "Free mucosal graft harvested from the forearm",
+      "Buccal advancement flap (Berger's flap)",
+      "Temporalis muscle rotation flap",
+      "Hard palate osteotomy and repositioning"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The buccal advancement flap (Berger's flap) is the most common technique. A broad-based buccal flap is reflected and the periosteum is incised at the base to allow tension-free advancement over the socket.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 117)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1145,
+    "question": "An elderly patient presents with progressive, bilateral expansion of the maxillary alveolar ridge, causing spacing of their teeth and making their old complete denture too tight. Which bone disease is most likely?",
+    "options": [
+      "Monostotic fibrous dysplasia",
+      "Paget's disease of bone (osteitis deformans)",
+      "Ameloblastoma",
+      "Condensing osteitis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Paget's disease in the jaws characteristically affects the maxilla more than the mandible, leading to bilateral ridge expansion, spreading of teeth, and dentures becoming too tight.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 119)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1146,
+    "question": "What are the primary clinical complications associated with performing dental extractions in a patient with active Paget's disease of the maxilla?",
+    "options": [
+      "Mild sensory paresthesia of the tongue and palate",
+      "Severe hemorrhage during the hypervascular phase and high susceptibility to infection/osteomyelitis during the sclerotic phase",
+      "Immediate failure of local anesthesia due to high local calcium levels",
+      "Severe anaphylactic allergic reactions to amide local anesthetics"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In Paget's disease, the bone is highly vascular during the early active phase (bleeding risk) and poorly vascularized/highly sclerotic in late stages (prone to osteomyelitis and dry socket due to ischemia).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 119)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1147,
+    "question": "Under which of the following conditions is it clinically acceptable to leave a fractured root tip fragment in the alveolar socket rather than attempting surgical retrieval?",
+    "options": [
+      "If the fragment is > 10 mm and associated with periapical pathology",
+      "If the root tip is small (< 3-4 mm), vital, uninfected, deep in bone, and retrieval attempts pose a high risk of nerve damage or displacement into the sinus",
+      "If the patient has a history of previous radiotherapy to the jaw",
+      "In all routine third molar extractions regardless of root infection status"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Small (< 3-4 mm) uninfected root tips can be left in place if surgical retrieval would cause excessive bone loss, risk inferior alveolar nerve injury, or risk pushing the tip into the maxillary sinus.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
