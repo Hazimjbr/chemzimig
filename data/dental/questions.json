@@ -12608,5 +12608,215 @@
     "explanation": "For midazolam reversal, the initial dose of flumazenil is 200 micrograms (0.2 mg) IV over 15 seconds. Subsequent doses of 100 micrograms (0.1 mg) can be given every 60 seconds as needed up to a maximum of 1.0 mg. Flumazenil has a shorter half-life than midazolam, meaning resedation is possible and patients must be monitored.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (p. 64)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 3"
+  },
+  {
+    "id": 1085,
+    "question": "A patient presents with a rapidly spreading cellulitis of the floor of the mouth, causing bilateral swelling of the submandibular and sublingual spaces, elevated tongue, and difficulty breathing. Which of the following conditions is most likely described?",
+    "options": [
+      "Vincent's angina",
+      "Ludwig's angina",
+      "Cervicofacial actinomycosis",
+      "Cavernous sinus thrombosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cellulitis involving the tissue spaces on both sides of the floor of the mouth (submandibular, sublingual, and submental spaces bilaterally) is described as Ludwig's angina. This is a life-threatening airway emergency requiring urgent treatment.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1086,
+    "question": "A patient presents with multiple discharging sinuses in the skin of the angle of the jaw following recent dental extraction. Clinical examination of the pus reveals bright yellow granules. Which of the following is the most likely pathogen?",
+    "options": [
+      "Staphylococcus aureus",
+      "Actinomyces israelii",
+      "Mycobacterium tuberculosis",
+      "Prevotella intermedia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Infection with Actinomyces species, most commonly A. israelii, characteristically presents with multiple discharging skin sinuses and pus containing bright yellow 'sulphur' granules, which represent masses of filamentous anaerobic Gram-positive bacteria.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1087,
+    "question": "Which of the following clinical features is considered an important diagnostic symptom of acute osteomyelitis of the mandible, distinguishing it from local dental abscesses?",
+    "options": [
+      "Severe pain and localized tooth mobility",
+      "Bilateral lymphadenopathy",
+      "Developing numbness or paraesthesia of the lower lip on the affected side",
+      "Trismus (limitation of mouth opening)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "An important diagnostic symptom of acute osteomyelitis of the mandible is the development of numbness or paraesthesia of the lower lip on the affected side (Vincent's sign), caused by pressure or inflammation of the inferior alveolar nerve within the bony canal.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 73)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1088,
+    "question": "In the radiographic and pathological evaluation of chronic osteomyelitis of the jaws, what do the terms 'sequestrum' and 'involucrum' represent?",
+    "options": [
+      "Sequestrum is a pocket of pus, and Involucrum is a calcified dental cyst",
+      "Sequestrum is an island of necrotic bone, and Involucrum is the surrounding sheath of new vital bone",
+      "Sequestrum is the healthy vital bone, and Involucrum is the fibrous connective tissue",
+      "Sequestrum is the cortical bone, and Involucrum is the cancellous marrow cavity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Chronic osteomyelitis leads to pus accumulation and the formation of sequestra, which are isolated islands of necrotic bone. The sheath of new reactive vital bone formed around the sequestrum is called the involucrum.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 77)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1089,
+    "question": "A 22-year-old patient presents with acute pericoronitis around a partially erupted lower third molar. What are the most common bacterial species associated with this type of infection?",
+    "options": [
+      "Streptococcus mutans and Lactobacillus acidophilus",
+      "Anaerobic bacteria, such as Prevotella intermedia and Fusobacterium species",
+      "Staphylococcus epidermidis and Enterococcus faecalis",
+      "Pseudomonas aeruginosa and Escherichia coli"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pericoronitis is primarily caused by mixed anaerobic bacteria growing under the gum flap (operculum) of partially erupted teeth, including Prevotella intermedia, Fusobacterium species, and Peptostreptococcus.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 77)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1090,
+    "question": "A patient with acute pericoronitis of the lower right third molar presents with severe difficulty swallowing (dysphagia) and localized neck pain. Which of the following tissue spaces has the infection most likely spread into?",
+    "options": [
+      "Buccal space",
+      "Submasseteric space",
+      "Lateral pharyngeal space",
+      "Canine space"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Bilateral or unilateral spread of pericoronal infection posteriorly and medially often involves the lateral pharyngeal space. This produces severe dysphagia and is a warning sign of potential airway compromise.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1091,
+    "question": "What is the primary local pathophysiological factor that predisposes a patient to the development of chronic osteomyelitis and sequestra formation following acute jaw infection?",
+    "options": [
+      "Increased osteoblastic alkaline phosphatase activity",
+      "Depressed immune response or compromised local blood supply to the bone",
+      "High vascularity and extensive collateral circulation of the bone",
+      "Immediate surgical drainage of the cortical bone abscess"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The development of chronic osteomyelitis is highly favored by factors that compromise bone blood supply (e.g. radiation, osteopetrosis) or depress the host immune response, leading to bone ischemia, necrosis, and subsequent sequestrum formation.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 77)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1092,
+    "question": "A patient presents with an acute cellulitis of the upper face originating from an infected upper lip piercing. They suddenly develop high fever, severe headache, bilateral proptosis, and ophthalmoplegia. Which of the following life-threatening complications is described?",
+    "options": [
+      "Ludwig's angina",
+      "Cavernous sinus thrombosis",
+      "Acute osteomyelitis of the maxilla",
+      "Bilateral facial nerve palsy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Infection in the upper face may spread intracranially via the facial vein and ophthalmic veins (which lack valves) to the cavernous sinus, leading to cavernous sinus thrombosis. Clinical signs include high fever, proptosis, and cranial nerve palsies controlling eye movement.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1093,
+    "question": "Which of the following represents the recommended antibiotic regimen for the management of chronic cervicofacial actinomycosis?",
+    "options": [
+      "A short 3-day course of oral Amoxicillin",
+      "5 to 7 days of Metronidazole",
+      "Long-term antibiotic therapy, typically intravenous Penicillin G for 2-6 weeks followed by oral Penicillin V for several months",
+      "A single dose of intramuscular Azithromycin"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Actinomyces species are anaerobic Gram-positive filamentous bacteria that require prolonged courses of antibiotic therapy (typically penicillin) for several weeks to months to ensure full eradication and prevent recurrence.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1094,
+    "question": "Which of the following is an early radiographic sign associated with acute inflammation of the periapical tissues of a non-vital tooth?",
+    "options": [
+      "Thickening of the lamina dura and hypercementosis",
+      "Loss or discontinuity of the lamina dura at the root apex",
+      "Widening of the alveolar crestal bone only",
+      "Diffuse sclerosing osteitis throughout the mandible"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Early radiographic findings of periapical inflammation include loss or discontinuity of the lamina dura at the apex of the root, often accompanied by a slight widening of the periodontal ligament space.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 73)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1095,
+    "question": "In patients diagnosed with acute osteomyelitis of the mandible, how long should systemic antibiotic therapy be continued after clinical control of the acute infection is achieved?",
+    "options": [
+      "At least 3 days",
+      "At least 2 weeks",
+      "Exactly 24 hours post-surgical drainage",
+      "No systemic antibiotics are required if debridement is performed"
+    ],
+    "correctAnswer": 1,
+    "explanation": "To ensure eradication of bacteria from the bone marrow and prevent progression to chronic osteomyelitis, systemic antibiotics should be continued for at least 2 weeks after the control of the acute infection.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1096,
+    "question": "During the surgical incision and drainage of a patient presenting with facial cellulitis, which of the following is typically released from the tissues?",
+    "options": [
+      "Thick, creamy, yellow pus only",
+      "Abundant calcified sulfur granules",
+      "Little or no pus, but mainly tissue fluid (serous exudate)",
+      "Dense avascular fibrous tissue"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Because cellulitis is a diffuse, spreading inflammation of soft tissue without a localized cavity, surgical incision typically releases tissue fluid (edema) and serous exudate rather than thick creamy pus.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1097,
+    "question": "Although Actinomyces species are normal commensals of the oral cavity, what is the primary predisposing factor that allows them to invade deep tissues and cause cervicofacial actinomycosis?",
+    "options": [
+      "A high dietary sugar intake and poor oral hygiene",
+      "Mucosal trauma, such as a tooth extraction or jaw fracture",
+      "Frequent use of high-concentration fluoride rinses",
+      "Hypersecretion of minor salivary glands"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Actinomyces species cannot penetrate intact mucosal barriers. A history of trauma, such as a tooth extraction, jaw fracture, or mucosal laceration, is required to introduce the bacteria into deep tissues.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1098,
+    "question": "A patient presents with acute pericoronitis of the lower left third molar. Intra-oral examination reveals severe trauma and indentation on the overlying operculum. What is the most appropriate immediate palliative measure?",
+    "options": [
+      "Immediate surgical extraction of the lower third molar during the acute phase",
+      "Evaluating and potentially grinding down or extracting the opposing over-erupted upper third molar",
+      "Placing a temporary composite restoration on the lower third molar",
+      "Injecting long-acting local anesthetic directly into the inflamed operculum"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A very frequent finding in lower third molar pericoronitis is trauma to the swollen operculum from an opposing, often over-erupted, upper third molar. Grinding or extracting the opposing upper tooth relieves the mechanical trauma and aids resolution of the acute episode.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 77)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1099,
+    "question": "What is the characteristic radiographic appearance of chronic periapical periodontitis (periapical granuloma) associated with a non-vital tooth?",
+    "options": [
+      "Diffusely demarcated radiopacity at the root apex",
+      "A well-defined radiolucency associated with the root apex",
+      "Vertical root fracture and lateral periodontal bone loss",
+      "Intact lamina dura with no apical bone density changes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Chronic periapical periodontitis (or periapical granuloma) presents radiographically as a well-defined radiolucency at the apex of the involved non-vital root, representing localized bone resorption replaced by inflammatory granulation tissue.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 73)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
