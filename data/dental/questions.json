@@ -15394,5 +15394,285 @@
     "explanation": "Guidelines assist in decision-making and are flexible, allowing clinical judgment based on patient preferences. Protocols are rigid, step-by-step instructions that must be strictly adhered to.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 1, p. 9)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "General Dentistry",
     "level": "Level 3"
+  },
+  {
+    "id": 1284,
+    "question": "According to guidelines (NICE / AHA), which of the following cardiac patients belongs to the highest risk category and requires mandatory antibiotic prophylaxis before invasive dental procedures?",
+    "options": [
+      "Patients with a history of coronary artery bypass graft (CABG) surgery",
+      "Patients with prosthetic heart valves or those with a history of infective endocarditis (IE)",
+      "Patients with mild mitral valve prolapse without regurgitation",
+      "Patients with a history of well-controlled hypertension"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Antibiotic prophylaxis is recommended only for patients at the highest risk of adverse outcomes from infective endocarditis: those with prosthetic heart valves, a history of previous IE, and congenital heart disease (unrepaired cyanotic).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 22)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1285,
+    "question": "What is the standard first-line oral antibiotic prophylaxis regimen for an adult patient at high risk of infective endocarditis before an extraction?",
+    "options": [
+      "Amoxicillin 500 mg orally, 1 hour before the procedure",
+      "Amoxicillin 2 g orally, 1 hour before the procedure",
+      "Clindamycin 600 mg orally, 1 hour before the procedure",
+      "Erythromycin 1 g orally, 2 hours before the procedure"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The standard regimen for adult patients is Amoxicillin 2 g (or 50 mg/kg for children) administered orally 30 to 60 minutes before the dental procedure.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 22)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1286,
+    "question": "If an adult patient requiring infective endocarditis prophylaxis has a documented severe allergy to penicillin (anaphylaxis), which of the following is the standard alternative antibiotic regimen?",
+    "options": [
+      "Ampicillin 2 g orally, 1 hour before",
+      "Clindamycin 600 mg orally, 1 hour before",
+      "Cephalexin 2 g orally, 1 hour before",
+      "Metronidazole 500 mg orally, 1 hour before"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For patients allergic to penicillin, Clindamycin 600 mg orally (or Azithromycin/Clarithromycin 500 mg) is the standard alternative prophylaxis agent.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 22)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1287,
+    "question": "A patient taking Warfarin is scheduled for a routine single tooth extraction. What is the recommended management protocol regarding their INR level?",
+    "options": [
+      "The Warfarin dose must be discontinued for 5 days, regardless of the INR level",
+      "The extraction can safely proceed if the INR is checked within 24-72 hours and is 3.5 or less, without altering the Warfarin dose",
+      "The INR must be reduced to less than 1.0 before any surgical intervention",
+      "The patient must be switched to heparin for 48 hours prior to extraction"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Guidelines state that routine dental extractions can be safely performed without stopping Warfarin if the patient's INR is <= 3.5. Discontinuing Warfarin increases thromboembolic risk unnecessarily.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 23)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1288,
+    "question": "A patient receiving therapeutic doses of unfractionated heparin requires an urgent dental extraction. How many hours should elapse after stopping the heparin infusion before performing the surgery?",
+    "options": [
+      "At least 48 hours",
+      "4 to 6 hours",
+      "Exactly 24 hours",
+      "No delay is needed as heparin does not affect surgical bleeding"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unfractionated heparin has a short half-life (about 1.5 hours). Safe surgical treatment can usually be undertaken 4 to 6 hours after stopping the infusion, once clotting times return to normal.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 23)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1289,
+    "question": "Hemophilia A is an inherited bleeding disorder. Which coagulation factor is deficient, and which clotting test is characteristically prolonged?",
+    "options": [
+      "Factor IX deficiency; prolonged PT",
+      "Factor VIII deficiency; prolonged APTT",
+      "Factor VII deficiency; prolonged bleeding time",
+      "von Willebrand factor deficiency; prolonged thrombin time"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hemophilia A is an X-linked recessive disorder characterized by a deficiency of Factor VIII. Because Factor VIII is in the intrinsic pathway, it results in a prolonged Activated Partial Thromboplastin Time (APTT).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 23)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1290,
+    "question": "Which of the following is true regarding von Willebrand disease (vWD), the most common inherited bleeding disorder?",
+    "options": [
+      "It affects only males and causes a prolonged PT",
+      "It involves a defect in platelet adhesion, resulting in a prolonged bleeding time and potentially a prolonged APTT",
+      "It is treated primarily with high doses of aspirin",
+      "It presents with isolated joint bleeding (hemarthrosis) only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "von Willebrand disease is characterized by a deficiency or dysfunction of von Willebrand factor (vWF). Because vWF mediates platelet adhesion, it causes a prolonged bleeding time. Since vWF also stabilizes Factor VIII, the APTT may also be prolonged.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 23)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1291,
+    "question": "A patient with rheumatoid arthritis has been taking 15 mg of Prednisolone daily for the past 6 months. What clinical risk does this pose during major dental surgical procedures?",
+    "options": [
+      "Severe localized osteomyelitis of the jaw",
+      "Secondary adrenal insufficiency and potential adrenal crisis due to suppression of the hypothalamic-pituitary-adrenal axis",
+      "Severe drug interaction with local anesthetic adrenaline",
+      "Spontaneous bleeding due to steroid-induced thrombocytopenia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Long-term high-dose steroid therapy suppresses the adrenal cortex. Under the stress of surgery, the body cannot produce adequate endogenous cortisol, which can lead to life-threatening acute adrenal crisis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 25)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1292,
+    "question": "Which commonly prescribed dental analgesic class should be avoided or used with extreme caution in patients with a history of moderate-to-severe asthma?",
+    "options": [
+      "Paracetamol",
+      "Non-steroidal anti-inflammatory drugs (NSAIDs, e.g., Ibuprofen, Aspirin)",
+      "Opioid analgesics",
+      "Corticosteroids"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NSAIDs can trigger severe, life-threatening bronchospasm in up to 10-20% of asthmatic patients (aspirin-induced asthma) due to shunting of arachidonic acid metabolism to the leukotriene pathway.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 27)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1293,
+    "question": "A patient experiences an acute bronchospasm (asthma attack) during dental treatment. What is the immediate first-line drug therapy to administer?",
+    "options": [
+      "Intramuscular adrenaline 1:1000",
+      "Inhaled Salbutamol (beta-2 agonist) via inhaler",
+      "Oral Prednisolone 40 mg",
+      "Intravenous Hydrocortisone 100 mg"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The immediate first-line treatment for an acute mild-to-moderate asthma attack is the administration of a fast-acting bronchodilator, such as an inhaled beta-2 agonist (Salbutamol/Albuterol).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 27)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1294,
+    "question": "When managing a patient with severe chronic obstructive pulmonary disease (COPD) in the dental clinic, why should high-flow oxygen therapy be avoided during an emergency?",
+    "options": [
+      "It causes severe mucosal irritation and bleeding",
+      "It can suppress the patient's hypoxic respiratory drive, leading to respiratory depression or arrest",
+      "It causes immediate coronary vasoconstriction",
+      "It reacts with local anesthetics to produce toxicity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Severe COPD patients adapt to chronic carbon dioxide retention, and their drive to breathe becomes dependent on low blood oxygen levels (hypoxic drive). Giving high-flow oxygen removes this drive, which can cause respiratory arrest.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 27)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1295,
+    "question": "A diabetic patient becomes confused, sweaty, and starts trembling during their dental appointment. They are conscious and able to swallow. What is the immediate management?",
+    "options": [
+      "Administer 10 units of soluble insulin subcutaneously",
+      "Give oral glucose (e.g., sugar solution, fruit juice, or glucose gel) immediately",
+      "Inject 1 mg of glucagon intramuscularly",
+      "Place the patient in a Trendelenburg position and monitor vitals"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The clinical presentation is highly indicative of hypoglycemia. For a conscious patient who can safely swallow, oral administration of rapid-acting carbohydrates (glucose) is the immediate treatment of choice.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 25)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1296,
+    "question": "A patient experiences a generalized tonic-clonic seizure in the dental chair. The seizure does not subside after 5 minutes. What is the diagnosis, and what emergency drug should be administered?",
+    "options": [
+      "Vasovagal syncope; administer smelling salts",
+      "Status epilepticus; administer buccal or intranasal Midazolam (10 mg)",
+      "Hypoglycemic coma; administer insulin",
+      "Anaphylactic shock; administer intramuscular adrenaline"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A seizure lasting more than 5 minutes or recurrent seizures without recovery is status epilepticus, a medical emergency. First-line management in a dental clinic is buccal or intranasal Midazolam (10 mg).\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 29)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1297,
+    "question": "A pregnant patient in her third trimester suddenly feels faint, dizzy, and hypotensive when placed in a supine position in the dental chair. What is the pathological mechanism, and how is it corrected?",
+    "options": [
+      "Supine hypotensive syndrome caused by compression of the inferior vena cava by the gravid uterus; corrected by tilting the patient to her left side",
+      "Hyperventilation syndrome caused by dental anxiety; corrected by breathing into a paper bag",
+      "Postural hypotension caused by adrenaline absorption; corrected by vertical positioning",
+      "Hypoglycemia; corrected by administering intravenous glucose"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Supine hypotensive syndrome occurs in late pregnancy when the heavy uterus compresses the inferior vena cava, decreasing venous return to the heart. Rolling the patient onto her left side relieves the pressure.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 29)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1298,
+    "question": "Why is the use of non-steroidal anti-inflammatory drugs (NSAIDs) contraindicated during the third trimester of pregnancy?",
+    "options": [
+      "They cause maternal liver failure",
+      "They can cause premature closure of the fetal ductus arteriosus and delay the onset of labor",
+      "They lead to cleft lip and palate in the fetus",
+      "They trigger gestational diabetes in the mother"
+    ],
+    "correctAnswer": 1,
+    "explanation": "NSAIDs inhibit prostaglandin synthesis. In the third trimester, this can cause premature closure of the fetal ductus arteriosus, pulmonary hypertension in the newborn, and can prolong labor.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 29)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1299,
+    "question": "A patient with end-stage renal disease undergoing hemodialysis requires a dental extraction. When is the optimal time to schedule their appointment?",
+    "options": [
+      "Immediately before their scheduled dialysis session",
+      "On the day after a dialysis session, to allow heparin to clear and ensure optimal metabolic status",
+      "During the dialysis session in the hospital",
+      "Exactly 1 week after the last dialysis session"
+    ],
+    "correctAnswer": 1,
+    "explanation": "During hemodialysis, patients receive heparin, which increases bleeding risk. The day after dialysis is optimal because the heparin has cleared, and the patient is in their best physiological state.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 29)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1300,
+    "question": "What is the recommended maximum dose of adrenaline (epinephrine) when administering local anesthesia to a patient with significant cardiovascular disease?",
+    "options": [
+      "No limit is required if the patient is taking beta-blockers",
+      "0.04 mg (equivalent to approximately 2 cartridges of 1:100,000 adrenaline)",
+      "0.2 mg (equivalent to 10 cartridges of 1:100,000 adrenaline)",
+      "Adrenaline is absolutely contraindicated in all cardiac patients; only plain lidocaine can be used"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For patients with significant cardiac disease, the cardiac dose of epinephrine is limited to 0.04 mg. This corresponds to approximately 2 cartridges of 2% lidocaine with 1:100,000 epinephrine.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 21)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1301,
+    "question": "Following a myocardial infarction (heart attack), how long should elective, non-emergency dental treatment be postponed?",
+    "options": [
+      "At least 6 weeks",
+      "At least 6 months",
+      "Exactly 1 year",
+      "No delay is required if the patient takes aspirin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Elective dental treatment should be postponed for at least 6 months following a myocardial infarction, as the risk of re-infarction or life-threatening arrhythmias is highest during this window.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 21)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1302,
+    "question": "A patient with severe liver cirrhosis requires dental treatment. Which pharmacological consideration is most important regarding local anesthetics?",
+    "options": [
+      "Amide local anesthetics (e.g., Lidocaine) are metabolized by the liver, requiring dose reduction to prevent toxicity",
+      "Ester local anesthetics are metabolized by the liver and must be avoided",
+      "Adrenaline should be increased to promote rapid liver clearance",
+      "All local anesthetics are completely contraindicated in liver disease"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Amide local anesthetics are metabolized primarily by liver microsomal enzymes. In patients with severe liver dysfunction (cirrhosis), clearance is reduced, increasing risk of systemic toxicity.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 23)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 3"
+  },
+  {
+    "id": 1303,
+    "question": "A patient with a history of angina experiences sudden substernal chest pain during a restorative procedure. What is the immediate pharmacological intervention?",
+    "options": [
+      "Administer 100 mg of intravenous hydrocortisone",
+      "Administer sublingual Glyceryl Trinitrate (GTN) spray or tablet",
+      "Inject intramuscular adrenaline 1:1000",
+      "Give oral glucose solution"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For an acute angina episode, the immediate treatment is administration of sublingual glyceryl trinitrate (GTN). It is a vasodilator that reduces myocardial oxygen demand and dilates coronary arteries.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 21)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
   }
 ]
