@@ -12818,5 +12818,75 @@
     "explanation": "Chronic periapical periodontitis (or periapical granuloma) presents radiographically as a well-defined radiolucency at the apex of the involved non-vital root, representing localized bone resorption replaced by inflammatory granulation tissue.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 73)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1100,
+    "question": "A patient presents with severe trismus (mouth opening < 10 mm) and deep-seated pain behind the angle of the jaw following pericoronitis of the lower right third molar, but exhibits no clinically obvious extra-oral facial swelling. Which tissue space is most likely involved?",
+    "options": [
+      "Sublingual space",
+      "Submasseteric space",
+      "Submandibular space",
+      "Pterygomandibular space"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Infections of the submasseteric space (situated between the masseter muscle and the lateral surface of the ramus) typically present with severe, rapid-onset trismus and deep pain, but very little extra-oral swelling.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1101,
+    "question": "Which of the following is the definitive diagnostic laboratory method to differentiate cervicofacial actinomycosis from chronic necrotic osteomyelitis of the mandible?",
+    "options": [
+      "Orthopantomogram (OPG) demonstrating localized radiolucency",
+      "Microscopic evaluation of sulfur granules demonstrating Gram-positive branching filamentous bacteria",
+      "Complete blood count (CBC) demonstrating leukocytosis and elevated ESR",
+      "Magnetic resonance imaging (MRI) of the masticatory spaces"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Definitive diagnosis of actinomycosis is achieved by demonstrating the presence of sulfur granules in the discharge, which microscopically show Gram-positive branching filamentous rods characteristic of Actinomyces species.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1102,
+    "question": "A routine radiograph reveals a well-demarcated, uniform radiopacity surrounding the apex of a non-vital, heavily decayed lower first molar. There is no cortical expansion or root resorption. Which of the following is the most likely diagnosis?",
+    "options": [
+      "Focal cemento-osseous dysplasia",
+      "Condensing osteitis",
+      "Cementoblastoma",
+      "Idiopathic osteosclerosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Condensing osteitis is a localized osteosclerotic bone reaction to low-grade, chronic periapical inflammation from a non-vital tooth. It is differentiated from idiopathic osteosclerosis, which is associated with vital teeth and requires no treatment.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 73)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1103,
+    "question": "An acute periapical abscess of the maxillary canine (tooth 13) has perforated the buccal cortical plate superior to the origin of the levator anguli oris muscle. Into which space will the infection directly drain?",
+    "options": [
+      "Buccal space",
+      "Canine space",
+      "Infratemporal space",
+      "Pterygomandibular space"
+    ],
+    "correctAnswer": 1,
+    "explanation": "If a maxillary canine infection perforates the buccal bone above the origin of the levator anguli oris muscle, it enters the canine space, leading to marked swelling of the upper lip, canine fossa, and lower eyelid.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1104,
+    "question": "A patient with advanced Ludwig's angina develops acute dyspnea, stridor, and inability to clear secretions. What is the most appropriate and safest protocol for securing the patient's airway?",
+    "options": [
+      "Immediate intravenous bolus of high-dose corticosteroids",
+      "Urgent awake fiberoptic intubation or surgical airway (Tracheostomy/Cricothyroidotomy)",
+      "Placing the patient supine and administering oxygen via a high-flow non-rebreather mask",
+      "Performing immediate bilateral intra-oral incisions under local anesthesia to relieve swelling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In patients with severe Ludwig's angina and airway compromise, blind oral or nasal intubation is highly dangerous due to epiglottic and pharyngeal edema. The gold standard is a controlled awake fiberoptic intubation or immediate surgical airway under local anesthesia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
