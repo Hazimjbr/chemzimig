@@ -12888,5 +12888,75 @@
     "explanation": "In patients with severe Ludwig's angina and airway compromise, blind oral or nasal intubation is highly dangerous due to epiglottic and pharyngeal edema. The gold standard is a controlled awake fiberoptic intubation or immediate surgical airway under local anesthesia.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1105,
+    "question": "A patient presenting with an acute dental abscess exhibits a swollen cervical lymph node that is tender to touch, soft in consistency, and easily mobile. What is the most likely diagnosis of this lymph node status?",
+    "options": [
+      "Neoplastic lymphadenopathy",
+      "Acute inflammatory lymphadenopathy",
+      "Chronic fibrotic lymph node",
+      "Malignant lymphoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Acute inflammatory lymph node enlargement characteristically presents as soft, tender to palpation, and mobile. In contrast, neoplastic nodes are typically hard, non-tender, and fixed to surrounding tissues.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1106,
+    "question": "In long-standing cases of chronic pericoronitis associated with a partially erupted lower third molar, what is the primary specific radiological sign that can be observed?",
+    "options": [
+      "Complete external resorption of the adjacent second molar root",
+      "Enlargement of the follicular space around the crown with surrounding osteosclerosis",
+      "Significant narrowing of the inferior alveolar canal",
+      "Pathological fracture of the mandibular ramus"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Long-standing chronic pericoronitis typically shows a localized radiolucency representing enlargement of the follicular space around the crown, often bordered by a thin line of osteosclerosis representing bone reaction to chronic inflammation.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 77)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1107,
+    "question": "A patient diagnosed with acute osteomyelitis of the mandible has a history of immediate anaphylactic hypersensitivity to penicillin. Which of the following is the most appropriate alternative antibiotic choice due to its excellent bone penetration?",
+    "options": [
+      "Amoxicillin-clavulanic acid (Co-amoxiclav)",
+      "Clindamycin",
+      "Cephalexin",
+      "Ampicillin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "For penicillin-allergic patients, clindamycin is an excellent alternative for treating osteomyelitis because it has high bone penetration properties and is highly effective against oral anaerobic bacteria.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1108,
+    "question": "Which of the following teeth are most frequently associated with the development of odontogenic maxillary sinusitis due to the close proximity of their root apices to the sinus floor?",
+    "options": [
+      "Maxillary central and lateral incisors",
+      "Maxillary first and second molars",
+      "Maxillary canines only",
+      "Mandibular first molars"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because the roots of the maxillary first and second molars lie closest to the floor of the maxillary sinus, periapical infections or dental extractions involving these teeth are the most common causes of odontogenic sinusitis.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 81)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1109,
+    "question": "Where should surgical drains typically be placed during the debridement and management of advanced Ludwig's angina?",
+    "options": [
+      "Intra-orally in the buccal vestibule only",
+      "Bilaterally in the submandibular spaces extra-orally, and in the sublingual spaces intra-orally",
+      "Unilaterally in the submental space only",
+      "Trans-sinusally via a Caldwell-Luc window approach"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The surgical management of Ludwig's angina involves wide bilateral extra-oral incisions to drain the submandibular spaces, and intra-oral incisions to drain the sublingual spaces, placing drains to maintain patency.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 5, p. 75)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
   }
 ]
