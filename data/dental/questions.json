@@ -15674,5 +15674,1405 @@
     "explanation": "For an acute angina episode, the immediate treatment is administration of sublingual glyceryl trinitrate (GTN). It is a vasodilator that reduces myocardial oxygen demand and dilates coronary arteries.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 3, p. 21)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Pharmacology & General Medicine",
     "level": "Level 2"
+  },
+  {
+    "id": 1304,
+    "question": "A 32-year-old patient presents with intense, spontaneous, lingering pain in the lower left molar that worsens at night and is exacerbated by cold liquids. Electric pulp test yields a hyper-response. Radiographs reveal deep occlusal caries close to the pulp chamber with a normal periodontal ligament space. What is the definitive diagnosis and recommended treatment?",
+    "options": [
+      "Reversible pulpitis; place a direct pulp cap and composite restoration",
+      "Symptomatic irreversible pulpitis; initiate root canal treatment or pulpectomy",
+      "Symptomatic apical periodontitis; perform occlusal adjustment and prescribe antibiotics",
+      "Pulp necrosis; perform incision and drainage"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Spontaneous, lingering pain (especially to thermal stimuli and at night) is the hallmark of symptomatic irreversible pulpitis. The inflamed pulp lacks the capacity to heal, requiring non-surgical root canal therapy or extraction.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 55)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1305,
+    "question": "During endodontic instrumentation of a curved mesiobuccal canal of a maxillary first molar, the clinician experiences a sudden loss of working length and a ledge is created. What is the most appropriate initial step to bypass the ledge?",
+    "options": [
+      "Use a large rigid rotary file with heavy apical pressure to cut through the ledge",
+      "Place a distinct curve near the tip of a small K-file (#10 or #15) and gently rotate it to slide past the ledge",
+      "Fill the canal immediately up to the ledge with gutta-percha",
+      "Perform surgical apicoectomy immediately"
+    ],
+    "correctAnswer": 1,
+    "explanation": "To bypass a ledge, a small hand file (#10 or #15) with a slight pre-curvature at the tip is gently negotiated past the obstruction. Once past, short pushing-pulling strokes are used to smooth the ledge before carefully re-establishing working length.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 62)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1306,
+    "question": "A patient presents with a furcal perforation occurring during access cavity preparation of a lower molar. What material is considered the gold standard for immediate repair due to its biocompatibility and moisture tolerance?",
+    "options": [
+      "Glass Ionomer Cement (GIC)",
+      "Mineral Trioxide Aggregate (MTA)",
+      "Zinc Oxide Eugenol (ZOE)",
+      "Composite resin with self-etch adhesive"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Mineral Trioxide Aggregate (MTA) is the gold standard for perforation repair. It is biocompatible, hydrophilic (sets in the presence of moisture/blood), forms a tight seal, and stimulates cementum and bone formation.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 65)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1307,
+    "question": "Which irrigating solution used during root canal obturation dissolves organic necrotic tissue pulpal remnants while acting as an effective antimicrobial agent?",
+    "options": [
+      "17% Ethylenediaminetetraacetic acid (EDTA)",
+      "Sodium Hypochlorite (NaOCl 0.5% - 5.25%)",
+      "0.2% Chlorhexidine gluconate",
+      "3% Hydrogen peroxide"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sodium hypochlorite (NaOCl) is the primary endodontic irrigant because of its unique dual ability to dissolve organic pulpal tissue remnants and exert broad-spectrum antimicrobial action.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 58)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1308,
+    "question": "What is the primary role of 17% EDTA when used as a final rinse in endodontic chemo-mechanical preparation?",
+    "options": [
+      "Dissolution of necrotic soft tissue pulp fragments",
+      "Removal of the inorganic component of the smear layer to open dentinal tubules",
+      "Inactivation of bacterial lipopolysaccharides (endotoxins)",
+      "Bleaching of internal coronal tooth discolouration"
+    ],
+    "correctAnswer": 1,
+    "explanation": "17% EDTA is a chelating agent that dissolves the inorganic component (calcium phosphate) of the smear layer created during mechanical instrumentation, exposing clean dentinal tubules for sealer penetration.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 58)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1309,
+    "question": "A 40-year-old patient reports sharp pain on release of biting pressure on a mandibular first molar. Cold test produces a transient response. Visually, no caries is noted, but transillumination shows a narrow line across the marginal ridge. What is the most likely diagnosis?",
+    "options": [
+      "Vertical root fracture",
+      "Cracked tooth syndrome",
+      "Reversible pulpitis",
+      "Symptomatic apical periodontitis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pain upon release of biting pressure (the 'rebound' effect) combined with transillumination findings is classic for Cracked Tooth Syndrome. The crack allows micro-movement of tooth segments under occlusion.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 69)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1310,
+    "question": "Which anatomical feature of the maxillary first premolar makes it particularly susceptible to mesial root perforations or strip perforations during endodontic shaping?",
+    "options": [
+      "A prominent developmental concavity (groove) on the mesial aspect of the root",
+      "The presence of three distinct roots in over 90% of cases",
+      "An extremely wide circular distal root apex",
+      "Hypercementosis at the apical third"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The mesial aspect of the maxillary first premolar root has a deep developmental concavity (invagination), making the dentin wall very thin at this location and increasing the risk of strip perforation during filing.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 54)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1311,
+    "question": "A traumatized central incisor exhibits pinkish discoloration in the coronal third of the tooth. Radiographs reveal a ballooning, symmetric radiolucent enlargement of the root canal space. What is the diagnosis?",
+    "options": [
+      "External cervical resorption",
+      "Internal root resorption",
+      "Pulp canal obliteration (calcific metamorphosis)",
+      "Apical radicular cyst"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Internal root resorption is caused by osteoclastic action of inflamed pulpal tissue resorbing dentin from within the canal. The pink crown appearance ('pink spot of Mummery') occurs when vascular granulation tissue approaches enamel.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 67)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1312,
+    "question": "In total-etch (etch-and-rinse) bonding systems, what happens if dentin is excessively air-dried after phosphoric acid etching?",
+    "options": [
+      "It enhances monomer penetration into dentinal tubules",
+      "The collagen fiber network collapses, preventing resin monomer infiltration and leading to weak bond strength and post-operative sensitivity",
+      "It neutralizes the residual acid completely",
+      "It promotes hybrid layer hyper-calcification"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Over-drying etched dentin causes the exposed collagen fibril matrix to collapse into a dense barrier, blocking hydrophilic resin monomers from penetrating and forming an effective hybrid layer.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 35)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1313,
+    "question": "Which mechanism accounts for the true chemical bonding of Glass Ionomer Cements (GIC) to enamel and dentin structure?",
+    "options": [
+      "Micromechanical interlocking into acid-etched micropores",
+      "Ionic chelation of polyacrylic acid carboxylate groups with calcium ions in hydroxyapatite",
+      "Covalent bonding between silica glass and collagen fibers",
+      "Polymerization shrinkage stress relaxation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GIC forms a genuine chemical bond to tooth structure via ionic exchange, where carboxylate groups (-COOH) of the polyacrylic acid chelate with calcium ions embedded in tooth hydroxyapatite.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 38)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1314,
+    "question": "When placing posterior composite resin restorations, why is the incremental layering technique (placing layers <= 2 mm) recommended?",
+    "options": [
+      "To prevent shade mismatch with natural dentin",
+      "To reduce polymerization shrinkage stress and ensure adequate light-cure depth throughout the material",
+      "To increase the release of fluoride ions to adjacent enamel",
+      "To eliminate the need for matrix band placement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Incremental placement (<= 2 mm thick) ensures complete light penetration for curing throughout the layer while minimizing the overall C-factor and C-factor-associated polymerization shrinkage stress.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 42)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1315,
+    "question": "What is the C-factor (Cavity Configuration Factor) of a Class I occlusal cavity preparation, and how does a high C-factor impact composite resin restorations?",
+    "options": [
+      "C-factor = 0.2; reduces debonding risks",
+      "C-factor = 5 (5 bonded walls to 1 unbonded wall); high risk of polymerization shrinkage stress causing marginal leakage",
+      "C-factor = 1; ensures optimal self-curing",
+      "C-factor = 3; indicates minimal stress on cavity walls"
+    ],
+    "correctAnswer": 1,
+    "explanation": "C-factor is the ratio of bonded to unbonded surfaces. A Class I box has 5 bonded surfaces and 1 unbonded surface (C-factor = 5), generating high contraction stress that can rupture the adhesive interface.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 42)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1316,
+    "question": "A patient experiences sharp, short pain when cold food touches a tooth recently restored with a deep amalgam restoration. What is the most likely cause?",
+    "options": [
+      "Irreversible pulpitis caused by bacterial leakage",
+      "Thermal sensitivity due to high thermal conductivity of amalgam without an adequate insulating liner/base",
+      "Galvanic shock between amalgam and gold crown",
+      "Root fracture during matrix band removal"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dental amalgam has high thermal conductivity. In deep preparations close to the pulp, failure to place an insulating cavity liner or base allows rapid cold transfer, stimulating dentinal fluid movement.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 40)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1317,
+    "question": "Which component of resin-based composites imparts radiopacity, allowing post-operative radiographic evaluation of margins and recurrent caries?",
+    "options": [
+      "Bis-GMA monomer matrix",
+      "Barium, strontium, or zircon-containing glass filler particles",
+      "Camphorquinone photoinitiator",
+      "Silane coupling agent"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Heavy metal glass fillers containing barium, strontium, or zirconium are incorporated into composite formulations to render the material radiopaque on radiographs for marginal diagnostics.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 41)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1318,
+    "question": "During root canal retreatment, which solvent is widely utilized for softening gutta-percha to facilitate mechanical removal?",
+    "options": [
+      "Sodium hypochlorite",
+      "Chloroform or Chloroform alternatives (e.g., Orange oil, Eucalyptol)",
+      "17% EDTA",
+      "Formocresol"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Gutta-percha can be chemically softened using organic solvents like chloroform, eucalyptol, or orange oil, allowing re-instrumentation files to penetrate and remove the old obturation material.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 66)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1319,
+    "question": "What is the phenomenon of 'Smear Layer' creation on dentin walls during rotary cavity preparation or root canal instrumentation?",
+    "options": [
+      "A hyper-mineralized zone of enamel protective crystalline prisms",
+      "An amorphous layer of microcrystalline debris (collagen, hydroxyapatite, bacteria, process remnants) adhering to dentin walls",
+      "A pristine layer of un-decalcified intertubular dentin",
+      "A layer of bacterial biofilm that cannot be chemically dissolved"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cutting or grinding dentin produces a 1-2 micron thick amorphous smear layer containing shattered hydroxyapatite, denatured collagen, cell processes, and bacteria that plugs dentinal tubules.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 34)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1320,
+    "question": "In non-vital tooth bleaching (internal walking bleach technique), which bleaching agent is mixed with water or saline and placed in the pulp chamber?",
+    "options": [
+      "37% Phosphoric acid",
+      "Sodium perborate",
+      "10% Carbamide peroxide gel only",
+      "Sodium hypochlorite 5.25%"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The walking bleach technique uses Sodium Perborate mixed with water or saline placed inside the pulp chamber (sealed with GIC) for 3-7 days. It releases hydrogen peroxide safely inside the tooth.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 68)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1321,
+    "question": "What serious complication can arise following internal bleaching of non-vital teeth if an adequate cervical barrier (such as 2 mm of GIC) is NOT placed over the gutta-percha filling?",
+    "options": [
+      "Invasive cervical root resorption",
+      "Acute pulpal necrosis",
+      "Hypercementosis at the apex",
+      "Periodontal pocket formation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Failure to place a protective cervical seal (e.g. 2 mm Glass Ionomer) below the CEJ allows bleaching chemicals to diffuse through dentinal tubules into the PDL, triggering invasive cervical resorption.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 68)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1322,
+    "question": "Which dental restorative material exhibits 'biomimetic' behavior by releasing fluoride ions and expanding slightly due to water absorption, matching the coefficient of thermal expansion of dentin?",
+    "options": [
+      "Dental Amalgam",
+      "Glass Ionomer Cement (GIC)",
+      "Microfilled Composite Resin",
+      "Zirconia Ceramics"
+    ],
+    "correctAnswer": 1,
+    "explanation": "GIC has thermal expansion properties almost identical to natural dentin, adheres chemically, releases fluoride, and absorbs water, making it a biomimetic dentin replacement material.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 38)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 2"
+  },
+  {
+    "id": 1323,
+    "question": "A patient experiences an acute hypochlorite accident where NaOCl extrudes beyond the apical foramen into peri-apical tissues. What is the immediate recommended emergency response?",
+    "options": [
+      "Perform immediate apical apicoectomy",
+      "Reassure patient, control severe pain with analgesics/local anesthesia, apply cold compresses initially, and prescribe systemic antibiotics/analgesics",
+      "Inject 17% EDTA into the periapical tissue to neutralize the acid",
+      "Forcefully irrigate the canal with 37% phosphoric acid"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A NaOCl accident causes severe pain, swelling, and tissue necrosis. Immediate management involves reassuring the patient, pain relief (local anesthetic/analgesics), cold compresses, and antibiotic coverage.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 3, p. 59)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Endodontics & Restorative",
+    "level": "Level 3"
+  },
+  {
+    "id": 1324,
+    "question": "According to the AAP/EFP 2018 Classification of Periodontal and Peri-Implant Diseases, how is Periodontitis Staging primarily determined?",
+    "options": [
+      "Based strictly on the patient's age and systemic smoking status",
+      "Based on the severity of clinical attachment loss (CAL), radiographic bone loss, and tooth loss due to periodontitis",
+      "Based on the bleeding on probing percentage only",
+      "Based on the presence of Porphyromonas gingivalis in subgingival plaque"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Periodontitis Staging (Stages I to IV) measures disease severity and complexity at presentation, primarily based on interdental clinical attachment loss (CAL), radiographic coronal bone loss, and tooth loss due to periodontitis.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 82)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1325,
+    "question": "How is Periodontitis Grading (Grades A, B, C) defined under the 2018 AAP/EFP classification system?",
+    "options": [
+      "It measures the color and shape of marginal gingival tissue",
+      "It assesses the rate of periodontitis progression, response to therapy, and risk factors (e.g. smoking, diabetes)",
+      "It determines the patient's eligibility for dental insurance coverage",
+      "It measures the depth of furcation defects only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Periodontitis Grading (Grade A: slow, Grade B: moderate, Grade C: rapid progression) reflects the biological rate of disease progression, taking into account systemic risk modifiers like smoking and HbA1c levels.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 82)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1326,
+    "question": "Which specific peri-pathogenic bacterium is strongly implicated as a primary pathogen in the etiology of Stage C generalized aggressive periodontitis (formerly localized aggressive periodontitis)?",
+    "options": [
+      "Streptococcus mutans",
+      "Aggregatibacter actinomycetemcomitans (Aa)",
+      "Lactobacillus acidophilus",
+      "Actinomyces israelii"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Aggregatibacter actinomycetemcomitans (Aa) produces leukotoxin that destroys host neutrophils and is heavily associated with rapid-onset periodontitis in adolescents and young adults.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 78)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1327,
+    "question": "What is the biological width of the periodontal attachment apparatus, and what is its average dimensions around a natural tooth?",
+    "options": [
+      "The distance between the incisal edge and CEJ (approx. 10 mm)",
+      "The combined height of the junctional epithelium (1.0 mm) and supracrestal connective tissue attachment (1.0 mm), averaging approximately 2.04 mm",
+      "The depth of the healthy gingival sulcus (approx. 5.0 mm)",
+      "The thickness of the facial cortical bone plate (approx. 0.5 mm)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Biological width (supracrestal tissue attachment) consists of the junctional epithelium (~0.97 mm) and supracrestal connective tissue (~1.07 mm), totaling ~2.04 mm. Violating it with restorative margins triggers bone resorption.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 86)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1328,
+    "question": "What clinical complication occurs when a crown margin breaches (violates) the biological width of a tooth?",
+    "options": [
+      "Enamel hyper-calcification",
+      "Persistent gingival inflammation, bleeding on probing, and unpredictable localized alveolar bone loss",
+      "Rapid pulpal necrosis",
+      "Hypercementosis at the root apex"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Restorative margins placed within the biological width space (< 2 mm from alveolar crest) cause chronic immune inflammation, tissue breakdown, and localized bone loss as the body attempts to re-establish attachment width.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 86)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1329,
+    "question": "A patient presents with a deep 6 mm vertical infrabony defect on the mesial aspect of a lower molar. Which surgical technique is designed to achieve true periodontal regeneration (formation of new bone, cementum, and PDL)?",
+    "options": [
+      "Gingivectomy",
+      "Guided Tissue Regeneration (GTR) using barrier membranes and bone grafts",
+      "Apically repositioned flap",
+      "Subgingival scaling and root planing alone"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Guided Tissue Regeneration (GTR) utilizes a cell-exclusion barrier membrane (often with bone grafts) to prevent fast-growing epithelial cells from migrating down, allowing osteoblasts and PDL cells to regenerate lost attachment.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1330,
+    "question": "How is Peri-implant Mucositis distinguished from Peri-implantitis around dental implants?",
+    "options": [
+      "Peri-implant mucositis involves severe progressive bone loss, whereas peri-implantitis does not",
+      "Peri-implant mucositis is reversible soft-tissue inflammation without marginal bone loss, whereas peri-implantitis involves soft-tissue inflammation accompanied by progressive crestal bone loss",
+      "Peri-implant mucositis occurs only around titanium implants, whereas peri-implantitis affects zirconia implants",
+      "Peri-implant mucositis requires implant removal, whereas peri-implantitis requires scaling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Peri-implant mucositis is localized soft tissue inflammation (bleeding/erythema) without loss of supporting bone (reversible). Peri-implantitis involves inflammation combined with progressive loss of supporting peri-implant bone.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 94)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1331,
+    "question": "What is Osseointegration in implant dentistry, as originally defined by Branemark?",
+    "options": [
+      "A fibrous tissue capsule surrounding the implant screw",
+      "A direct structural and functional connection between living bone and the surface of a load-bearing implant, visible at the light microscopic level",
+      "An allergic tissue reaction to titanium ions",
+      "The chemical bonding of ceramic hydroxyapatite to enamel"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Osseointegration is the direct contact of healthy, living bone tissue with the surface of a titanium implant under functional load, without an intervening fibrous tissue layer.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 93)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1332,
+    "question": "Which of the following systemic factors is considered a strong relative contraindication for dental implant placement due to significantly increased failure rates and risk of peri-implantitis?",
+    "options": [
+      "Well-controlled hypertension",
+      "Heavy cigarette smoking (> 10-15 cigarettes/day) and uncontrolled diabetes (HbA1c > 8%)",
+      "Mild osteoarthrosis of the knee",
+      "History of appendectomy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Uncontrolled diabetes impairs microvascular healing and neutrophil function, while heavy smoking alters bone metabolism and vascularity, markedly elevating implant failure and peri-implantitis risks.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 94)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1333,
+    "question": "During dental implant site preparation, what maximum temperature threshold should NOT be exceeded during bone drilling to prevent osteonecrosis (thermal bone injury)?",
+    "options": [
+      "37°C for 1 minute",
+      "47°C for 1 minute",
+      "60°C for 30 seconds",
+      "100°C for 10 seconds"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bone tissue is sensitive to thermal trauma. Exceeding 47°C for 1 minute during osteotomy drilling causes irreversible heat-induced hyperemia, necrosis of osteocytes, and failure of osseointegration.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 93)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1334,
+    "question": "Which class of medication is strongly associated with Medication-Related Osteonecrosis of the Jaw (MRONJ) following invasive dental procedures such as extractions or implant placement?",
+    "options": [
+      "Penicillin antibiotics",
+      "Bisphosphonates (e.g. Alendronate, Zoledronic acid) and Rank-ligand inhibitors (Denosumab)",
+      "Proton pump inhibitors (Omeprazole)",
+      "Antihistamines (Cetirizine)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "MRONJ is a severe adverse effect of antiresorptive (bisphosphonates, denosumab) and antiangiogenic drugs. It manifests as exposed non-vital bone in the maxillofacial region persisting for > 8 weeks.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 96)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1335,
+    "question": "Which elastomeric impression material exhibits the highest tear strength and excellent dimensional stability, but possesses hydrophobic properties requiring a dry field?",
+    "options": [
+      "Irreversible Hydrocolloid (Alginate)",
+      "Addition Silicone (Polyvinyl Siloxane - PVS)",
+      "Polyether",
+      "Polysulfide"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Addition Silicones (PVS) offer outstanding dimensional stability and elastic recovery. However, they are naturally hydrophobic, requiring meticulous moisture control during crown and bridge impressions.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 44)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1336,
+    "question": "What is the primary advantage of Polyether impression materials compared to Polyvinyl Siloxane (PVS)?",
+    "options": [
+      "Polyether is completely taste-free and sweet",
+      "Polyether is hydrophilic, allowing accurate detail reproduction in the presence of minor moisture",
+      "Polyether can be stored in water for 3 weeks without dimensional change",
+      "Polyether has lower stiffness, making it easy to remove from severe undercuts"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Polyether impression materials are intrinsically hydrophilic, making them less sensitive to minor moisture during impression taking than hydrophobic silicones. However, they absorb water if stored in liquid.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 44)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1337,
+    "question": "What happens if an Alginate (irreversible hydrocolloid) impression is left uncovered on the laboratory bench for 2 hours before pouring?",
+    "options": [
+      "It absorbs atmospheric oxygen and expands",
+      "It undergoes Syneresis (water loss), leading to shrinkage and significant dimensional distortion",
+      "It sets into a hard rigid stone matrix",
+      "Its tear strength increases tenfold"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Alginate is subject to Imbibition (absorbing water and expanding in liquid) and Syneresis (exuding water and shrinking in dry air). Leaving it uncovered causes rapid dimensional distortion.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 43)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1338,
+    "question": "Which surgical flap design is most suitable for crown lengthening procedures in the anterior maxilla to preserve keratinized gingiva while exposing sound tooth structure?",
+    "options": [
+      "Gingivectomy incision",
+      "Apically Repositioned Flap with osseous recontouring",
+      "Envelope flap with no vertical incisions",
+      "Free gingival graft"
+    ],
+    "correctAnswer": 1,
+    "explanation": "An Apically Repositioned Flap (ARF) combined with bone recontouring exposes sound tooth structure above the alveolar crest while preserving the full width of keratinized tissue.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 88)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1339,
+    "question": "What is the primary microbiological rationale for using systemically administered Adjunctive Antibiotics (e.g. Amoxicillin + Metronidazole) in the management of severe periodontitis?",
+    "options": [
+      "To substitute for mechanical subgingival scaling",
+      "To eradicate tissue-invasive periodontal pathogens (such as Aa and P. gingivalis) in deep pockets and anatomical complexities unreachable by hand instruments",
+      "To prevent dental caries on exposed root surfaces",
+      "To suppress salivary flow during scaling"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Systemic antibiotics (Amoxicillin 500 mg + Metronidazole 400 mg) reach tissue-invasive pathogens (like Aa) residing within pocket soft tissues and furcations that cannot be mechanically debrided.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 84)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1340,
+    "question": "Which cell type is the first to arrive at the site of acute periodontal inflammation in response to subgingival plaque bacterial chemotactic signals?",
+    "options": [
+      "Plasma cells",
+      "Polymorphonuclear Neutrophils (PMNs)",
+      "T-lymphocytes",
+      "Mast cells"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Neutrophils (PMNs) are the primary cellular defense line. They rapidly migrate from gingival plexus blood vessels into the junctional epithelium and sulcus to phagocytose invading bacterial plaque.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 76)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1341,
+    "question": "A Grade II Furcation Involvement on a mandibular first molar is clinically defined as:",
+    "options": [
+      "Firth-degree supragingival recession without bone loss",
+      "Horizontal bone loss extending greater than 3 mm into the furcation, but not completely through to the opposite side",
+      "Through-and-through probe penetration completely from buccal to lingual",
+      "Total vertical bone loss under all roots"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Grade I is incipient (<= 3 mm horizontal probe penetration). Grade II is cul-de-sac (> 3 mm horizontal penetration, but not through-and-through). Grade III is through-and-through furcation loss.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 80)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1342,
+    "question": "What is the key mechanism of action of Chlorhexidine Gluconate (0.12% - 0.2%) as an anti-plaque oral rinse?",
+    "options": [
+      "High substantivity, binding to oral tissues and releasing gradually over 8-12 hours to exert bactericidal and bacteriostatic effects",
+      "Immediate oxidation of salivary enzymes",
+      "Acid neutralization within dental plaque",
+      "Systemic absorption through buccal mucosa"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Chlorhexidine possesses high substantivity—it binds to mucosal surfaces, pellicle, and hydroxyapatite, releasing slowly over 8-12 hours to disrupt bacterial cell membranes.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 4, p. 83)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 2"
+  },
+  {
+    "id": 1343,
+    "question": "Which ceramic restorative material exhibits 'transformation toughening', where mechanical stress triggers a phase transformation from tetragonal to monoclinic crystal structure, halting crack propagation?",
+    "options": [
+      "Feldspathic porcelain",
+      "Yttria-stabilized Tetragonal Zirconia Polycrystal (Y-TZP Zirconia)",
+      "Leucite-reinforced glass-ceramic",
+      "Lithium disilicate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Zirconia (Y-TZP) undergoes transformation toughening. High stress at a crack tip causes tetragonal crystals to transform into larger monoclinic crystals, creating compressive forces that stop the crack.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 48)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Periodontics & Dental Materials",
+    "level": "Level 3"
+  },
+  {
+    "id": 1344,
+    "question": "What is the formula used to calculate the Occlusal Vertical Dimension (OVD) in edentulous patients using face-bow and wax rim measurements?",
+    "options": [
+      "OVD = Vertical Dimension at Rest (VDR) + Freeway Space (FWS)",
+      "OVD = Vertical Dimension at Rest (VDR) - Freeway Space (FWS)",
+      "OVD = Freeway Space (FWS) - Vertical Dimension at Rest (VDR)",
+      "OVD = Total Mandibular Length / 2"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The formula is OVD = VDR - FWS. In healthy edentulous individuals, the freeway space (interocclusal rest space) typically measures 2 to 4 mm when the mandible is in its physiological rest position.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 112)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1345,
+    "question": "What clinical signs and symptoms develop if a complete denture is fabricated with an excessively high Occlusal Vertical Dimension (over-opened OVD)?",
+    "options": [
+      "Cheek biting, angular cheilitis, and deep facial wrinkles",
+      "Masticatory muscle fatigue, TMJ pain, clicking of teeth during speech, and rapid residual ridge resorption",
+      "Tongue thrusting and hyper-salivation only",
+      "Anterior crossbite and Class III jaw relationship"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Excessive OVD encroaches on the freeway space, leaving the elevator muscles under constant tension. This causes muscle soreness, TMJ discomfort, 'clack' sounds during speech, and accelerated bone resorption.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 112)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1346,
+    "question": "Which specific design feature of the RPI clasp assembly system (Rest, Proximal plate, I-bar) minimizes harmful torquing stresses on abutment teeth in distal extension removable partial dentures (Kennedy Class I & II)?",
+    "options": [
+      "The I-bar retentive arm disengages from the undercut of the abutment tooth during occlusal loading",
+      "The occlusal rest is placed on the distal side of the abutment tooth",
+      "The proximal plate binds tightly into the distal undercut during chewing",
+      "The framework is cast entirely in soft gold"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The RPI system uses a mesial rest. Under distal extension occlusal loading, the framework rotates around the mesial rest pivot, causing the I-bar to move down and forward into the undercut, disengaging from the tooth and avoiding tipping forces.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 118)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1347,
+    "question": "According to Ante's Law in fixed prosthodontics, what is the guideline regarding the total periodontal ligament area of abutment teeth supporting a fixed partial denture (bridge)?",
+    "options": [
+      "The combined pericemental surface area of the abutment teeth should be equal to or greater than that of the teeth to be replaced by pontics",
+      "The length of the pontic span must not exceed 5 mm",
+      "Abutment teeth must always be endodontically treated before bridge placement",
+      "The total root volume of pontics must equal the pulp volume of abutments"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Ante's Law states that the total root surface area (PDL attachment area) of abutment teeth supporting a bridge must equal or exceed the total root surface area of the teeth being replaced by pontics.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 124)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1348,
+    "question": "What is the primary function of a surveyor during the diagnostic design phase of a removable partial denture (RPD)?",
+    "options": [
+      "To measure the chewing efficiency of natural molars",
+      "To identify path of insertion, location of heights of contour (survey lines), undercuts, and guiding planes on master casts",
+      "To polish the acrylic base of the denture",
+      "To measure saliva pH and viscosity"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A dental surveyor is an instrument used to determine the relative parallelism of tooth and soft tissue surfaces, locating height of contour, usable undercuts, and establishing the path of placement/removal.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 116)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1349,
+    "question": "Which tooth preparation margin design is essential for all-ceramic crowns (such as lithium disilicate or feldspathic porcelain) to prevent ceramic fracture under occlusal force?",
+    "options": [
+      "Feather-edge (knife-edge) margin",
+      "Deep 90-degree Shoulder or heavy Chamfer margin with rounded internal line angles",
+      "Beveled shoulder margin",
+      "Subgingival knife margin with 45-degree bevel"
+    ],
+    "correctAnswer": 1,
+    "explanation": "All-ceramic restorations require a smooth 90° shoulder or heavy chamfer (1.0 - 1.5 mm width) with rounded internal line angles to provide adequate ceramic thickness and eliminate stress concentrations.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 120)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1350,
+    "question": "What is the Ferrule Effect in the restoration of endodontically treated teeth with posts and crowns?",
+    "options": [
+      "A layer of opaque cement placed over metal posts",
+      "A 360-degree continuous ring of sound dentin structure (minimum 1.5 - 2.0 mm height) encircled by the crown margin above the preparation margin",
+      "The internal retention provided by parallel post walls",
+      "The flexibility matching between gutta-percha and fiber posts"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The ferrule effect is a 1.5-2.0 mm vertical wall of sound dentin encircled 360° by the crown collar. It resists lateral leverage forces, dramatically reducing root fracture risk in endodontically treated teeth.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 128)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1351,
+    "question": "Which type of post is preferred for restoring a root-filled incisor with minimal coronal tooth structure due to its elastic modulus being close to natural dentin?",
+    "options": [
+      "Cast gold post and core",
+      "Glass fiber-reinforced resin post",
+      "Custom-milled titanium post",
+      "Stainless steel threaded post"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fiber posts have a modulus of elasticity (~20 GPa) similar to natural dentin (~18 GPa). This allows stress distribution along the root, reducing catastrophic vertical root fracture risks associated with rigid metal posts.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 128)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1352,
+    "question": "What is the primary cause of Porcelain Chipping (delamination) in porcelain-fused-to-metal (PFM) or layered zirconia restorations?",
+    "options": [
+      "Mismatch in the Coefficient of Thermal Expansion (CTE) between the core framework and veneer porcelain, or inadequate anatomical core support",
+      "Using resin cement instead of zinc phosphate",
+      "Excessive thickness of metal coping (> 2 mm)",
+      "Polishing the porcelain with diamond paste post-glazing"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Porcelain chipping is often triggered by thermal expansion mismatch between core and veneer, or failure to design the core framework to anatomically support uniform layers (1.0-1.5 mm) of veneering ceramic.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 122)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1353,
+    "question": "What anatomical landmark on the posterior mandible serves as a reliable guide for establishing the occlusal plane height in complete denture fabrication?",
+    "options": [
+      "Mental foramen",
+      "Junction of the anterior and middle third of the Retromolar Pad",
+      "Submandibular fossa",
+      "Mylohyoid ridge apex"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The retromolar pad is a stable anatomical landmark. The posterior height of the mandibular occlusal plane should align with the junction of the middle and upper third of the retromolar pad.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 110)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1354,
+    "question": "In complete denture prosthodontics, what is the 'Post-Dam' (Posterior Palatal Seal), and where is it carved on the maxillary master cast?",
+    "options": [
+      "A groove cut along the incisive papilla to increase retention",
+      "A seal created by soft tissue displacement along the vibrating line (junction of hard and soft palate) to maintain vacuum retention during function",
+      "A metal wire embedded in the anterior border of the denture base",
+      "A relief area carved over the mid-palatal suture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The posterior palatal seal (post-dam) is placed at the soft tissue junction between hard and soft palates (vibrating line). It compensates for acrylic polymerization shrinkage and maintains peripheral suction.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 111)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1355,
+    "question": "What is the consequence of Relief failure over the Mid-Palatal Suture (torus palatinus) in a complete upper denture?",
+    "options": [
+      "Hyper-salivation and gagging",
+      "Denture rocking (instability) over the unyielding fulcrum during mastication, causing midline denture fracture",
+      "Increased retention and border seal",
+      "Rapid anterior ridge resorption"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The mid-palatal suture has thin mucosa overlying dense bone. If not relieved, the denture fulcrums over this central hard area during biting, causing instability and eventual midline flexural fatigue fracture.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 110)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1356,
+    "question": "Which surface treatment is required to create micro-mechanical retentive etched patterns on the internal surface of a Lithium Disilicate (e.max) glass-ceramic restoration before bonding?",
+    "options": [
+      "Air-abrasion with 50-micron aluminum oxide (sandblasting)",
+      "Etching with 4.9% - 9.5% Hydrofluoric Acid (HF) for 20-60 seconds, followed by silane coupling agent application",
+      "Etching with 37% Phosphoric acid for 10 minutes",
+      "Polishing with pumice and rubber cup"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Hydrofluoric acid (HF) selectively dissolves the glass matrix of lithium disilicate, creating micropores. Silane is then applied to chemically link the ceramic silica to the resin cement.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 46)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1357,
+    "question": "Why is Hydrofluoric Acid (HF) etching ineffective on high-strength Zirconia crowns?",
+    "options": [
+      "Zirconia contains too much water",
+      "Zirconia is a non-glassy polycrystalline ceramic devoid of a silica glass phase",
+      "HF acid turns zirconia into soft liquid powder",
+      "Zirconia can only be etched with concentrated nitric acid"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Zirconia is a polycrystalline ceramic without a glass phase. Because HF acid specifically attacks glass matrix, it has no etching effect on zirconia. Airborne particle abrasion (sandblasting) + MDP primer is used instead.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 2, p. 48)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1358,
+    "question": "What is the primary function of a Major Connector in a Cobalt-Chromium Removable Partial Denture (RPD)?",
+    "options": [
+      "To provide direct retention against dislodgement",
+      "To connect components from one side of the arch to the other, providing rigidity and distributing functional loads",
+      "To replace missing incisors directly",
+      "To prevent food impaction under clasps"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The major connector is the central framework component connecting all parts of the RPD across the arch. Rigidity is essential to distribute masticatory loads broadly across abutments and residual ridges.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 116)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1359,
+    "question": "In Kennedy Class I mandibular removable partial dentures, which major connector design is preferred when the floor of the mouth is shallow (< 7 mm distance to gingival margins)?",
+    "options": [
+      "Lingual bar",
+      "Lingual plate (Linguoplate)",
+      "Sublingual bar",
+      "Continuous labial bar"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A lingual bar requires at least 7-8 mm of vertical space between the floor of the mouth and the free gingival margin. When space is < 7 mm, a Lingual Plate is indicated to avoid impinging on soft tissues.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 117)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1360,
+    "question": "What is Bennett Movement in occlusion and mandibular kinematics?",
+    "options": [
+      "The pure vertical opening of the mandible around the hinge axis",
+      "The bodily lateral movement (side-shift) of the working side condyle towards the working side during lateral excursion",
+      "The forward translation of both condyles during protrusion",
+      "The retrusion of the mandible during swallowing"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bennett movement (lateral side-shift) is the bodily lateral movement of the working-side condyle during lateral jaw movement, accompanied by orbiting movement of the non-working condyle.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 108)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1361,
+    "question": "What is Christensen's Phenomenon in complete denture occlusion?",
+    "options": [
+      "The clicking noise produced by ill-fitting dentures",
+      "The posterior space (gap) created between upper and lower occlusion rims/teeth during mandibular protrusion",
+      "The immediate dislodgement of the lower denture upon swallowing",
+      "The rotation of the maxillary denture around the incisive papilla"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Christensen's phenomenon is the open space that develops posteriorly between occlusal surfaces of upper and lower teeth/wax rims when the mandible protrudes forward, caused by downward condylar guidance slope.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 111)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1362,
+    "question": "Which type of occlusal scheme is designed into complete dentures to maintain denture stability and prevent tipping during eccentric jaw movements?",
+    "options": [
+      "Mutually Protected Occlusion (Canine Guidance)",
+      "Bilateral Balanced Occlusion",
+      "Group Function Occlusion",
+      "Anterior Open Occlusion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bilateral Balanced Occlusion provides continuous simultaneous contact of upper and lower teeth on both working and non-working sides in all eccentric positions, preventing denture tipping.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 113)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1363,
+    "question": "What is Kelly's Combination Syndrome, occurring when a complete upper denture opposes natural lower anterior teeth and a Kennedy Class I partial denture?",
+    "options": [
+      "Severe tongue macroglossia and salivary hyper-secretion",
+      "Severe resorption of anterior maxillary ridge, tuberosity hypertrophy, papillary hyperplasia of hard palate, extrusion of lower anterior teeth, and posterior mandibular ridge resorption",
+      "Bilateral parotid gland enlargement and dry mouth",
+      "Anterior crossbite with TMJ ankylosis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Combination Syndrome is caused by heavy occlusal forces from natural lower anteriors against an upper denture. It causes premaxillary ridge loss, flabby ridge, palatal hyperplasia, tuberosity enlargement, and lower anterior extrusion.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 5, p. 114)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1364,
+    "question": "What is the recommended emergency treatment and storage medium protocol for an avulsed permanent upper central incisor in a 9-year-old child when replantation cannot be performed immediately at the scene?",
+    "options": [
+      "Scrub the root surface with soap and store in tap water",
+      "Handle tooth by crown only, do not scrub root, store immediately in Hank's Balanced Salt Solution (HBSS), cold milk, or saline, and replant ASAP",
+      "Wrap in dry tissue paper and place on ice",
+      "Place tooth in concentrated sodium hypochlorite"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Avulsed permanent teeth must be kept moist in a physiologically compatible medium (HBSS, milk, or saline) to preserve periodontal ligament (PDL) cell viability. The root surface should never be scrubbed.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 145)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1365,
+    "question": "Why is replantation strictly CONTRAINDICATED for an avulsed primary (deciduous) upper central incisor in a 3-year-old child?",
+    "options": [
+      "Primary teeth cannot form a clot",
+      "Replantation poses a severe risk of damaging the underlying permanent tooth germ (unruptured incisor successor) and causing infection/ankylosis",
+      "Primary roots do not have periodontal ligament fibers",
+      "It triggers immediate allergic reaction"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Avulsed primary teeth should never be replanted. Replantation can push bacteria or the primary tooth apex into the permanent tooth follicle, causing enamel hypoplasia or physical developmental arrest.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 146)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1366,
+    "question": "An 8-year-old child presents 2 hours after a fall with a complicated crown fracture of a permanent central incisor, exposing 1.5 mm of vital pulp. The tooth has an open apex (immature root). What is the preferred pulp therapy?",
+    "options": [
+      "Complete pulpectomy and root canal obturation with gutta-percha",
+      "Partial Pulpotomy (Cvek Pulpotomy) using MTA or Calcium Hydroxide to preserve pulp vitality and allow continued apexogenesis",
+      "Direct pulp cap with zinc phosphate cement",
+      "Immediate extraction and space maintainer placement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cvek partial pulpotomy involves removing 1-2 mm of inflamed coronal pulp beneath the exposure, sealing with MTA/Ca(OH)2. This preserves radicular pulp vitality, enabling physiological root lengthening and apexogenesis.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 142)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1367,
+    "question": "What is Apexification in endodontic management of immature non-vital permanent incisors?",
+    "options": [
+      "Physiological root development in a vital pulp",
+      "A method to induce a calcified apical barrier (or place an artificial MTA apical plug) in a non-vital tooth with an open apex before root canal obturation",
+      "Surgical resection of the apical 3 mm of the root",
+      "Filling the canal with silver points"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Apexification is performed in non-vital immature teeth with open apices. Long-term Ca(OH)2 therapy or an immediate MTA apical plug creates a hard tissue apical barrier, allowing subsequent gutta-percha condensation.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 143)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1368,
+    "question": "What is the preferred pulp therapy for a primary second molar with a large carious pulp exposure, where the coronal pulp exhibits vital bleeding that stops within 2-3 minutes after gentle cotton pellet pressure?",
+    "options": [
+      "Direct pulp cap with composite resin",
+      "Formocresol or Ferric Sulfate Pulpotomy followed by stainless steel crown placement",
+      "Root canal treatment with gutta-percha",
+      "Immediate extraction"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In primary teeth with vital carious coronal pulp exposure (without radicular pathology), a pulpotomy (removing coronal pulp and treating radicular stumps with MTA, ferric sulfate, or formocresol) is the treatment of choice.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 138)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1369,
+    "question": "Why is formocresol being increasingly replaced by MTA or Ferric Sulfate in primary tooth pulpotomy procedures?",
+    "options": [
+      "Formocresol causes teeth to turn blue",
+      "Concerns over potential cytotoxicity, systemic distribution, and potential mutagenicity/carcinogenicity of formaldehyde",
+      "Formocresol is too expensive",
+      "Formocresol dissolves stainless steel crowns"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Formocresol contains formaldehyde. Concerns regarding systemic distribution, tissue cytotoxicity, and potential carcinogenicity have led international pediatric guidelines to recommend MTA, Biodentine, or Ferric Sulfate instead.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 138)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1370,
+    "question": "Which material is used for root canal obturation in a primary molar undergoing Pulpectomy (root canal treatment)?",
+    "options": [
+      "Standard Gutta-percha points with resin sealer",
+      "Resorbable paste (such as Zinc Oxide Eugenol or iodoform/calcium hydroxide paste - Vitapex)",
+      "Silver endodontic points",
+      "Composite flowable resin"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Primary root canals must be obturated with a resorbable material (ZOE or Vitapex) so that the filling resorbs at a similar rate to the natural physiological resorption of the primary root during permanent tooth eruption.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 139)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1371,
+    "question": "A 5-year-old child prematurely loses a primary second molar due to severe caries. What space maintainer is indicated to prevent the un-erupted first permanent molar from drifting mesially?",
+    "options": [
+      "Band and Loop space maintainer",
+      "Distal Shoe space maintainer",
+      "Nance palatal arch",
+      "Removable acrylic plate with teeth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When a primary second molar is lost before the first permanent molar has erupted, a Distal Shoe space maintainer is required. Its intra-gingival extension guides the unerupted permanent molar into position.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 148)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1372,
+    "question": "Which space maintainer appliance is indicated following the premature loss of a single primary first molar when the primary second molar and primary canine are present?",
+    "options": [
+      "Distal Shoe space maintainer",
+      "Band and Loop space maintainer",
+      "Lingual holding arch",
+      "Frankel II appliance"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A Band and Loop space maintainer is a fixed unilateral appliance used to hold space after premature loss of a single primary first molar, placing the band on the primary second molar.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 148)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1373,
+    "question": "A 7-year-old child presents with severe enamel hypoplasia and chalky, discoloured, sensitive permanent first molars and central incisors. What is the clinical diagnosis?",
+    "options": [
+      "Amelogenesis imperfecta",
+      "Molar Incisor Hypomineralisation (MIH)",
+      "Fluorosis",
+      "Dentinogenesis imperfecta"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Molar Incisor Hypomineralisation (MIH) is a systemic developmental defect affecting 1 to 4 permanent first molars, frequently accompanied by affected permanent incisors, presenting as demarcated enamel opacities.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 150)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1374,
+    "question": "Which hereditary enamel defect affects all primary and permanent teeth, presenting with thin or absent enamel, yellow-brown discolouration, and normal underlying dentin and pulp chambers?",
+    "options": [
+      "Amelogenesis Imperfecta",
+      "Dentinogenesis Imperfecta",
+      "Dentinal Dysplasia Type I",
+      "Regional Odontodysplasia (Ghost Teeth)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Amelogenesis Imperfecta is a group of hereditary enamel defects (hypoplastic, hypomaturation, hypocalcified) affecting all teeth in both dentitions without systemic manifestations.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 152)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1375,
+    "question": "What are the classic radiographic features of Dentinogenesis Imperfecta Type II (Hereditary Opalescent Dentin)?",
+    "options": [
+      "Enamel opacities with enlarged pulp chambers",
+      "Bulbous crowns, marked cervical constrictions, early pulp chamber obliteration, and short thin roots",
+      "Ghost teeth with wide open root canals",
+      "Multiple impacted supernumerary teeth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dentinogenesis Imperfecta Type II exhibits opalescent amber teeth. Radiographs characteristically show bulbous crowns, distinct cervical constrictions, rapid pulpal obliteration, and short roots.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 152)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1376,
+    "question": "What is the recommended splinting type and duration for a replanted permanent upper central incisor following an avulsion injury with an extra-oral dry time < 60 minutes?",
+    "options": [
+      "Rigid acrylic splint for 3 months",
+      "Flexible (non-rigid) splint (e.g. composite and wire/fishing line) for 2 weeks",
+      "Rigid arch bar splint for 6 weeks",
+      "No splinting is required"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Current dental trauma guidelines recommend a flexible splint for 2 weeks for avulsed permanent teeth. Flexible splinting permits physiological micro-movement, minimizing ankylosis and replacement resorption.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 145)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1377,
+    "question": "A 2-year-old child suffers an intrusion injury to a primary upper central incisor, where the tooth is driven apically into the alveolar bone towards the labial side (away from the permanent successor). What is the recommended management?",
+    "options": [
+      "Immediate surgical re-positioning and rigid splinting",
+      "Allow the intruded primary tooth to re-erupt spontaneously over 1-6 months",
+      "Perform immediate pulpectomy",
+      "Extract all primary anterior teeth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "If an intruded primary incisor is displaced labially (away from the permanent germ), it should be left to re-erupt spontaneously. Most intruded primary teeth re-erupt successfully within 1 to 6 months.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 146)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1378,
+    "question": "What is Replacement Resorption (Ankylosis) following traumatic avulsion of a tooth?",
+    "options": [
+      "Resorption of dentin caused by active pulpal infection",
+      "Direct fusion of alveolar bone with root dentin/cementum following destruction of the periodontal ligament, leading to gradual replacement of root structure by bone",
+      "Formation of new secondary cementum over the root apex",
+      "Dissolution of the clinical crown by salivary acids"
+    ],
+    "correctAnswer": 1,
+    "explanation": "When PDL cells die (e.g. long dry extra-oral time), osteoclasts resorb root dentin and osteoblasts lay down bone in direct contact with the root. The tooth becomes ankylosed and is gradually replaced by bone.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 145)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 3"
+  },
+  {
+    "id": 1379,
+    "question": "What is the Hall Technique in pediatric restorative dentistry?",
+    "options": [
+      "Surgical crown lengthening under general anesthesia",
+      "A non-invasive technique for restoring carious primary molars by sealing caries under a preformed stainless steel crown without local anesthesia or caries removal",
+      "Bleaching primary incisors with 35% hydrogen peroxide",
+      "Placing direct composite veneers on primary canines"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Hall Technique involves cementing a preformed stainless steel crown over a carious primary molar using glass ionomer cement, without local anesthesia, tooth preparation, or caries removal, effectively sealing the caries.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 136)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1381,
+    "question": "Which post-procedural complication frequently occurs in young children following inferior alveolar nerve block anesthesia, and how is it prevented/managed?",
+    "options": [
+      "Trigeminal neuralgia; treated with carbamazepine",
+      "Self-inflicted soft tissue lip/cheek biting due to prolonged numbness; prevented by parental warnings and placing a cotton roll",
+      "Immediate bilateral facial nerve paralysis",
+      "Submandibular gland sialolithiasis"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Children often chew or bite their numb lip/cheek following local anesthesia, leading to painful traumatic ulceration. Parents must be warned to monitor the child closely until sensation returns.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 133)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1382,
+    "question": "What is the recommended concentration of fluoride in toothpaste for children aged 3 to 6 years according to international pediatric dental guidelines?",
+    "options": [
+      "500 ppm fluoride pea-sized amount",
+      "1000 ppm to 1450 ppm fluoride, using a pea-sized amount twice daily",
+      "5000 ppm fluoride high-strength paste",
+      "Fluoride-free toothpaste only"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Guidelines recommend that children aged 3 to 6 years use a toothpaste containing 1000 ppm to 1450 ppm fluoride, applying a pea-sized amount twice daily under adult supervision.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 130)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1383,
+    "question": "Which developmental anomaly presents radiographically as a 'tooth within a tooth', caused by invagination of the enamel organ into the dental papilla before calcification?",
+    "options": [
+      "Dens Evaginatus",
+      "Dens in Dente (Dens Invaginatus)",
+      "Taurodontism",
+      "Dilaceration"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Dens in Dente (Dens Invaginatus) is an invagination of enamel and dentin into the pulp chamber, most commonly affecting maxillary lateral incisors, predisposing the tooth to early pulpal necrosis.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 154)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1380,
+    "question": "Which of the following local anesthetic guidelines is critical in pediatric dentistry to prevent systemic local anesthetic toxicity (overdose) in young children?",
+    "options": [
+      "Always use 4% Articaine for all nerve blocks in children under 4 years old",
+      "Calculate maximum allowable dose based strictly on child body weight (mg/kg) before administering local anesthetic",
+      "Administer at least 4 cartridges for any restorative procedure",
+      "Avoid using vasoconstrictors in all pediatric local anesthetics"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Because of lower body weight, children are at much higher risk of local anesthetic toxicity. Maximum safe dose must always be calculated based on weight (e.g., Lidocaine max 4.4 mg/kg).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 6, p. 132)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Paediatric Dentistry & Trauma",
+    "level": "Level 2"
+  },
+  {
+    "id": 1384,
+    "question": "In cephalometric analysis, what does the ANB angle measure, and what is its normal value range for a skeletal Class I relationship?",
+    "options": [
+      "Measures upper incisor inclination; normal range = 10 to 15 degrees",
+      "Measures the relative anteroposterior relationship between the maxilla (SNA) and mandible (SNB); normal range = 2 to 4 degrees",
+      "Measures vertical face height ratio; normal range = 50 to 60%",
+      "Measures lower incisor to mandibular plane angle; normal range = 90 degrees"
+    ],
+    "correctAnswer": 1,
+    "explanation": "ANB angle = SNA minus SNB. It indicates skeletal sagittal jaw relationship. ANB = 2° to 4° represents Skeletal Class I. ANB > 4° represents Skeletal Class II, and ANB < 2° represents Skeletal Class III.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 165)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1385,
+    "question": "A patient presents with ANB angle of 7 degrees, SNA of 84 degrees, and SNB of 77 degrees. What is the underlying skeletal relationship?",
+    "options": [
+      "Skeletal Class I",
+      "Skeletal Class II due to mandibular retrognathism",
+      "Skeletal Class III due to maxillary retrognathism",
+      "Skeletal Class II due to maxillary prognathism"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Normal SNA is ~82° and SNB is ~80°. Here SNA is normal (84°), but SNB is reduced (77°), giving ANB = 7° (> 4°), confirming a Skeletal Class II pattern secondary to mandibular retrognathism.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 165)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1386,
+    "question": "What is the primary objective of functional appliances (such as the Twin Block or Frankel II) in orthodontic treatment for growing children with Skeletal Class II Division 1 malocclusion?",
+    "options": [
+      "To expand the maxillary dental arch laterally",
+      "To encourage forward mandibular growth (and restrict maxillary growth) during the pubertal growth spurt by holding the mandible in a protruded position",
+      "To extract primary canine teeth",
+      "To retract upper central incisors rigidly into sound bone"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Functional appliances (e.g. Twin Block) hold the mandible forward, utilizing muscle forces to stimulate condylar growth and mandibular remodeling in growing Class II patients during growth spurts.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 172)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1387,
+    "question": "What is the definition of Class II Division 2 malocclusion under British Standards Institute (BSI) classification?",
+    "options": [
+      "Class II molar relationship with proclined upper central incisors and increased overjet",
+      "Class II molar relationship with retroclined upper central incisors, proclined or overlapping upper lateral incisors, and deep overbite",
+      "Edge-to-edge incisor relationship with negative overjet",
+      "Unilateral posterior crossbite with mandibular shift"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Class II Division 2 features retroclined upper central incisors, proclined/overlapping upper lateral incisors, reduced overjet, and a characteristic deep traumatic overbite.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 160)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1388,
+    "question": "Which biological tissue reaction occurs on the 'Pressure Side' of the periodontal ligament during light, continuous orthodontic tooth movement?",
+    "options": [
+      "Osteoblastic osteoid formation and bone deposition",
+      "Hyalinization, local hypoxia, and osteoclastic frontal bone resorption",
+      "Rapid necrosis of root cementum",
+      "Dentin sclerosis and canal calcification"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Orthodontic pressure causes PDL compression. On the pressure side, blood flow decreases, signaling osteoclasts to resorb bone (frontal resorption). On the tension side, osteoblasts deposit new bone.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 168)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1389,
+    "question": "What happens if excessive, heavy orthodontic forces are applied to a tooth during archwire active retraction?",
+    "options": [
+      "Faster and painless tooth movement",
+      "Severe PDL hyalinization (aseptic necrosis), delayed undermining bone resorption, increased pain, and root resorption risks",
+      "Immediate ankylosis of the tooth",
+      "Hyper-calcification of alveolar crestal bone"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Heavy forces crush PDL capillaries, causing avascular sterile necrosis (hyalinization). Tooth movement stops until macrophages remove hyalinized tissue via undermining (rearward) resorption, elevating root resorption risks.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 168)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1390,
+    "question": "What is a Transpalatal Arch (TPA) or Nance Appliance used for in fixed orthodontic therapy?",
+    "options": [
+      "To procline lower incisors forward",
+      "To provide Anchorage Control by preventing unwanted mesial tipping or movement of maxillary permanent first molars",
+      "To intrude upper lateral incisors",
+      "To expand the mandible laterally"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Transpalatal arches (TPA) and Nance appliances are palatal anchorage devices. They stabilize maxillary molars against unwanted forward mesial movement when retracting anterior teeth.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 170)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1391,
+    "question": "A 10-year-old child presents with a unilateral posterior crossbite affecting the premolars and molars, accompanied by a mandibular displacement (functional shift) on closing. What is the recommended treatment timing and appliance?",
+    "options": [
+      "Postpone all treatment until age 18 for orthognathic surgery",
+      "Early maxillary expansion (using a Quad-helix or removable expansion plate) to correct the transverse discrepancy and eliminate the functional shift",
+      "Extract lower first molars immediately",
+      "Place a fixed chin cup appliance"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Unilateral crossbites with a functional shift should be treated early in the mixed dentition using slow or rapid maxillary expansion (e.g. Quad-helix) to expand the narrow maxilla and center the mandible.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 174)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1392,
+    "question": "Which tooth in the permanent human dentition (excluding third molars) is most commonly impacted or ectopically erupted?",
+    "options": [
+      "Mandibular central incisor",
+      "Maxillary Permanent Canine",
+      "Mandibular first premolar",
+      "Maxillary central incisor"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Maxillary permanent canines have the longest development path and erupt last anteriorly, making them the most frequently impacted teeth after third molars (~2% of the population, 85% palatal impaction).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 176)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1393,
+    "question": "Which radiograph localization technique (Clark's Rule / Tube Shift Technique) is used to determine whether an impacted maxillary canine is positioned palatally or buccally?",
+    "options": [
+      "SLOB Rule (Same Lingual, Opposite Buccal)",
+      "Bishara's Rule",
+      "Steiner's Analysis",
+      "Ricketts Analysis"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Clark's SLOB Rule (Same Lingual, Opposite Buccal) uses two radiographs with different tube angles. If the impacted tooth moves in the SAME direction as the X-ray tube shift, it is located LINGUALLY (palatally).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 176)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1394,
+    "question": "What is the primary cause of orthodontic relapse following completion of fixed appliance therapy, particularly for rotated incisors?",
+    "options": [
+      "Over-calcification of the hybrid layer",
+      "Recoil of stretched supra-alveolar free gingival and transseptal fibers, which take up to 232 days to reorganize",
+      "Enamel wear on canine cusps",
+      "Continuous tongue growth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Supracrestal transseptal and free gingival fibers remodel very slowly (taking up to 1 year). Their elastic recoil pulls rotated teeth back towards their original position, necessitating retention or pericision (CSF).\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 180)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1395,
+    "question": "What minor surgical procedure is performed to cut supracrestal elastic fibers around severely rotated teeth to reduce orthodontic relapse?",
+    "options": [
+      "Gingivectomy",
+      "Circumferential Supracrestal Fiberotomy (CSF / Pericision)",
+      "Apically repositioned flap",
+      "Frenectomy"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Pericision (Circumferential Supracrestal Fiberotomy) involves inserting a blade into the sulcus down to the bone crest to sever transseptal fibers around rotated teeth, significantly reducing relapse.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 180)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1396,
+    "question": "What is Bolton's Analysis in orthodontic treatment planning?",
+    "options": [
+      "A calculation of bone density in the mandibular symphysis",
+      "A mathematical calculation of tooth-size discrepancies comparing the total mesiodistal widths of maxillary versus mandibular teeth",
+      "A measure of TMJ space on MRI",
+      "A formula to calculate local anesthetic volume"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Bolton's analysis evaluates the ratio of mesiodistal widths of maxillary to mandibular teeth. A Bolton discrepancy (e.g. oversized lower anteriors) prevents ideal Class I canine/molar relationship and normal overbite/overjet.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 166)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1397,
+    "question": "A adult patient presents with severe Skeletal Class III malocclusion (ANB = -5 degrees) due to marked mandibular prognathism. What is the definitive treatment option?",
+    "options": [
+      "Removable expansion plate alone",
+      "Combined Orthognathic Surgery (Bilateral Sagittal Split Osteotomy - BSSO) and pre- and post-surgical fixed orthodontics",
+      "Twin Block functional appliance",
+      "Serial extractions of primary teeth"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Severe skeletal Class III in non-growing adults (ANB < -4°) cannot be corrected by tooth movement alone. Combined orthognathic surgery (BSSO mandibular setback) and fixed orthodontics is required.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1398,
+    "question": "What is the function of De-decompensation in pre-surgical orthodontic treatment prior to orthognathic surgery?",
+    "options": [
+      "To align teeth to fit the underlying skeletal jaw bases, removing natural dental compensations so that the full magnitude of the skeletal defect is unmasked for surgical correction",
+      "To mask the skeletal deformity completely without surgery",
+      "To expand the airway prior to general anesthesia",
+      "To bonding temporary crowns over all molars"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Teeth naturally tip to compensate for jaw mismatches. Pre-surgical orthodontics 'de-compensates' teeth (moving them into correct position relative to their own jaw base), revealing the true skeletal discrepancy.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 182)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
+  },
+  {
+    "id": 1399,
+    "question": "Which cephalometric landmark represents the midpoint of the sella turcica (pituitary fossa)?",
+    "options": [
+      "Nasion (N)",
+      "Sella (S)",
+      "Point A (Subspinale)",
+      "Point B (Supramentale)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Sella (S) is the geometric center of the pituitary fossa (sella turcica) in the sphenoid bone, serving as a key cranial base reference point in lateral cephalometry.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 164)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1400,
+    "question": "What is Point A (Subspinale) in cephalometric landmarks?",
+    "options": [
+      "The most anterior point on the nasal bone",
+      "The deepest midline concavity on the anterior profile of the maxilla between the anterior nasal spine and the alveolar crest",
+      "The lowest point on the inferior border of the mandibular ramus",
+      "The posterior border of the hard palate"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Point A (Subspinale) is the deepest midline concavity on the premaxilla between the Anterior Nasal Spine (ANS) and prosthion, representing the anterior boundary of the maxilla.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 164)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1401,
+    "question": "What is the primary risk associated with orthodontic tooth movement in a patient with active, untreated periodontitis?",
+    "options": [
+      "Spontaneous enamel cracking",
+      "Accelerated, irreversible periodontal attachment loss and rapid bone destruction",
+      "Conversion of GIC fillings to composite",
+      "Hyper-salivation"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Orthodontic forces in the presence of active plaque-induced inflammation cause rapid, severe destruction of the periodontal ligament and alveolar bone. Periodontitis MUST be controlled before starting orthodontics.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 169)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1402,
+    "question": "Which of the following is considered an iatrogenic sequela of prolonged fixed orthodontic treatment, particularly when heavy forces or long treatment durations (> 2 years) are used?",
+    "options": [
+      "Apical Root Resorption",
+      "Hypercementosis",
+      "Enamel pearls",
+      "Ankylosis of TMJ"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Apical root resorption is a recognized risk of orthodontic movement. Risk factors include excessive force, prolonged treatment time (> 2 years), triangular root morphology, and genetic predisposition.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 169)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 2"
+  },
+  {
+    "id": 1403,
+    "question": "In interdisciplinary treatment planning for a patient missing a maxillary lateral incisor, what is the 'Canine Substitution' approach?",
+    "options": [
+      "Extracting the canine and placing an implant",
+      "Moving the permanent canine orthodontically into the lateral incisor position and reshaping its crown (grinding tip/bleaching/composite veneer) to mimic a lateral incisor",
+      "Replacing both canine and lateral incisor with a cobalt-chromium partial denture",
+      "Autotransplanting a lower premolar into the canine space"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Canine substitution involves orthodontically moving the permanent canine mesially into the missing lateral incisor space, followed by cosmetic reshaping (grinding canine tip, composite/veneer) to aesthetically replace the lateral incisor.\n\n🏛️ Book Reference: Master Dentistry Vol. 2 (Ch. 7, p. 178)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Orthodontics & Diagnosis",
+    "level": "Level 3"
   }
 ]
