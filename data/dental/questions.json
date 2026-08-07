@@ -13210,5 +13210,75 @@
     "explanation": "Deeply impacted third molars or atrophic jaws are susceptible to iatrogenic mandibular fracture during extraction. If suspected, radiographs must confirm the fracture, followed by immediate stabilization and surgical reduction.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 3"
+  },
+  {
+    "id": 1128,
+    "question": "To prevent necrosis and subsequent dehiscence of a mucoperiosteal flap during surgical tooth extraction, what is the golden rule for flap design and base width?",
+    "options": [
+      "The base of the flap must be narrower than the free margin to maximize surgical access",
+      "The base of the flap must be wider than the free margin to ensure an adequate blood supply to the tissues",
+      "The suture line must lie directly over the bony defect to prevent saliva ingress",
+      "Releasing incisions must be designed directly through the center of interdental papillae"
+    ],
+    "correctAnswer": 1,
+    "explanation": "To ensure adequate vascular supply to the flap margins, the base must be wider than the free edge. Furthermore, flap margins must sit over sound vital bone rather than over the surgical bony defect.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1129,
+    "question": "Following a complex surgical extraction of a deeply impacted lower right third molar, a patient complains of persistent numbness in the right half of their lower lip and chin. Which nerve was most likely injured?",
+    "options": [
+      "Facial nerve (cranial nerve VII)",
+      "Inferior alveolar nerve (cranial nerve V3)",
+      "Lingual nerve",
+      "Long buccal nerve"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The inferior alveolar nerve runs inside the mandibular canal near third molar roots and supplies sensation to lower teeth. Its terminal branch, the mental nerve, supplies sensation to the chin and lower lip. Injury presents as numbness in these areas.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 87)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1130,
+    "question": "Which of the following suture materials is widely used as a resorbable suture in oral surgery, and what is its typical absorption duration in oral tissues?",
+    "options": [
+      "Black silk (absorbs within 7 days)",
+      "Polyglactin 910 / Vicryl (absorbs over 2 to 4 weeks)",
+      "Monofilament nylon (absorbs within 14 days)",
+      "Stainless steel wire (absorbs within 6 months)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Polyglactin 910 (Vicryl) is a synthetic, braided, resorbable suture material. It undergoes hydrolysis and is typically resorbed and cleared from the oral cavity in approximately 2 to 4 weeks. Black silk is non-resorbable.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1131,
+    "question": "A 65-year-old patient on long-term low-dose Aspirin (75 mg daily) for cardiac protection requires the extraction of two teeth. What is the recommended management according to current clinical guidelines?",
+    "options": [
+      "Stop Aspirin therapy 7 days before the extraction to prevent severe hemorrhage",
+      "Do not stop Aspirin; proceed with extractions and manage bleeding locally using hemostatic agents and sutures",
+      "Switch the patient to Warfarin therapy for 3 days prior to the extraction",
+      "Stop Aspirin for 24 hours preoperatively and resume with a double dose postoperatively"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Low-dose antiplatelet therapy (Aspirin 75-150 mg) should not be stopped for minor dental surgeries due to the risk of thromboembolic events. Bleeding can be safely managed locally using sutures and hemostatic sponges.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Pharmacology & General Medicine",
+    "level": "Level 2"
+  },
+  {
+    "id": 1132,
+    "question": "After performing a bone grafting procedure to augment a deficient alveolar ridge, what is the typical healing period required for bone incorporation before implants can be placed?",
+    "options": [
+      "2 to 4 weeks",
+      "4 to 6 months",
+      "Exactly 12 months",
+      "5 to 7 days"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Grafted bone requires approximately 4 to 6 months to become vascularized, undergo remodeling, and integrate with the surrounding bone to provide a stable, load-bearing site for dental implants.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 91)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Prosthodontics & Radiology",
+    "level": "Level 2"
   }
 ]
