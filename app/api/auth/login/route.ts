@@ -53,6 +53,8 @@ export async function POST(request: NextRequest) {
                 isAdmin: result.student.isAdmin || false,
                 role: result.student.role || 'student',
                 track,
+                dentalBookmarks: result.student.dentalBookmarks || [],
+                dentalMistakes: result.student.dentalMistakes || [],
             };
 
             const response = NextResponse.json({

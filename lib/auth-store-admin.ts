@@ -39,6 +39,8 @@ export interface Student {
     notes_internal?: string;
     xp?: number;
     level?: number;
+    dentalBookmarks?: number[];
+    dentalMistakes?: number[];
 }
 
 export interface DeviceRequest {
@@ -395,6 +397,17 @@ export async function getStudentById(id: string): Promise<Student | undefined> {
     const db = getDB();
     const snap = await db.collection(STUDENTS_COLLECTION).doc(id).get();
     return snap.exists ? (snap.data() as Student) : undefined;
+}
+
+export async function updateStudentData(id: string, data: Partial<Student>): Promise<boolean> {
+    try {
+        const db = getDB();
+        await db.collection(STUDENTS_COLLECTION).doc(id).update(data);
+        return true;
+    } catch (e) {
+        console.error(`[updateStudentData] Error updating student ${id}:`, e);
+        return false;
+    }
 }
 
 // ============ Device Management ============

@@ -66,6 +66,52 @@ export function saveDentalUserStats(stats: DentalUserStats) {
   }
 }
 
+export async function syncDentalToCloud(bookmarkedIds: number[], mistakeIds: number[]) {
+  if (typeof window === 'undefined') return false;
+  try {
+    const rawUser = localStorage.getItem('auth_user');
+    if (!rawUser) return false;
+    
+    const response = await fetch('/api/dental/sync', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ dentalBookmarks: bookmarkedIds, dentalMistakes: mistakeIds })
+    });
+    return response.ok;
+  } catch (e) {
+    console.warn('[syncDentalToCloud] Failed to sync data to Firestore:', e);
+    return false;
+  }
+}
+
+export function mergeDentalCloudData(cloudBookmarks?: number[], cloudMistakes?: number[]) {
+  const stats = getDentalUserStats();
+  let changed = false;
+
+  if (cloudBookmarks && Array.isArray(cloudBookmarks)) {
+    cloudBookmarks.forEach(id => {
+      if (!stats.bookmarkedIds.includes(id)) {
+        stats.bookmarkedIds.push(id);
+        changed = true;
+      }
+    });
+  }
+
+  if (cloudMistakes && Array.isArray(cloudMistakes)) {
+    cloudMistakes.forEach(id => {
+      if (!stats.mistakeIds.includes(id)) {
+        stats.mistakeIds.push(id);
+        changed = true;
+      }
+    });
+  }
+
+  if (changed) {
+    saveDentalUserStats(stats);
+  }
+  return stats;
+}
+
 export function recordDentalAnswer(questionId: number, category: string, isCorrect: boolean) {
   const stats = getDentalUserStats();
   
@@ -87,6 +133,10 @@ export function recordDentalAnswer(questionId: number, category: string, isCorre
   }
 
   saveDentalUserStats(stats);
+  
+  // Trigger silent cloud sync in the background
+  syncDentalToCloud(stats.bookmarkedIds, stats.mistakeIds);
+  
   return stats;
 }
 
@@ -104,6 +154,10 @@ export function toggleDentalBookmark(questionId: number): boolean {
   }
 
   saveDentalUserStats(stats);
+  
+  // Trigger silent cloud sync in the background
+  syncDentalToCloud(stats.bookmarkedIds, stats.mistakeIds);
+  
   return isBookmarked;
 }
 

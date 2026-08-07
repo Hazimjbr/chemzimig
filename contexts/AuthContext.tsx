@@ -30,6 +30,8 @@ export interface AuthUser {
         lessonTitle: string;
         updatedAt: string;
     };
+    dentalBookmarks?: number[];
+    dentalMistakes?: number[];
 }
 
 interface LoginCredentials {
@@ -263,6 +265,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
                         if (isDbValid) {
                             setUser(userData);
+                            try {
+                                const { mergeDentalCloudData } = await import('@/lib/dental-store');
+                                mergeDentalCloudData(userData.dentalBookmarks, userData.dentalMistakes);
+                            } catch (e) {
+                                console.warn('Could not merge dental cloud data:', e);
+                            }
                         } else {
                             clearSession();
                         }
@@ -338,9 +346,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                     role: result.user.role || (result.user.isAdmin ? 'admin' : 'student'),
                     authMethod: 'credentials',
                     track: result.user.track,
+                    dentalBookmarks: result.user.dentalBookmarks,
+                    dentalMistakes: result.user.dentalMistakes,
                 };
 
                 setUser(authUser);
+                try {
+                    const { mergeDentalCloudData } = await import('@/lib/dental-store');
+                    mergeDentalCloudData(authUser.dentalBookmarks, authUser.dentalMistakes);
+                } catch (e) {
+                    console.warn('Could not merge dental cloud data:', e);
+                }
                 localStorage.setItem('auth_user', JSON.stringify(authUser));
                 localStorage.setItem('auth_session', JSON.stringify({
                     fingerprint: device.fingerprint,
