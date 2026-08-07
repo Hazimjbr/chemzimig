@@ -22,6 +22,8 @@ import { ALL_DENTAL_QUESTIONS, DENTAL_CATEGORIES, recordDentalAnswer, extractAll
 import { DentalQuestion, DentalCategory } from '@/data/dental/types';
 import { useGamification } from '@/contexts/GamificationContext';
 import { useAuth } from '@/contexts/AuthContext';
+import { exportElementAsImage } from '@/lib/export-image';
+import { Download } from 'lucide-react';
 
 type ExamState = 'SETUP' | 'ACTIVE' | 'RESULTS';
 
@@ -38,10 +40,21 @@ export default function DentalExamPage() {
   const [timeLimitMinutes, setTimeLimitMinutes] = useState<number>(15);
   const [onlyNew, setOnlyNew] = useState<boolean>(false);
 
+  // Share Card state
+  const [isExporting, setIsExporting] = useState<boolean>(false);
+
   // Load chapters on mount
   useEffect(() => {
     setAllChapters(extractAllChapters());
   }, []);
+
+  const handleDownloadCard = async () => {
+    setIsExporting(true);
+    setTimeout(async () => {
+      await exportElementAsImage('dental-share-card', `dental-score-${scorePct}.png`);
+      setIsExporting(false);
+    }, 150);
+  };
 
   // Active Exam state
   const [examState, setExamState] = useState<ExamState>('SETUP');
@@ -475,65 +488,100 @@ export default function DentalExamPage() {
 
           {/* ----------------- STATE 3: RESULTS ----------------- */}
           {examState === 'RESULTS' && (
-            <div className="space-y-6 text-center">
-              <div className="bg-surface/80 border border-border rounded-3xl p-8 md:p-12 backdrop-blur-xl space-y-6 shadow-2xl">
-                <div className="w-20 h-20 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 flex items-center justify-center mx-auto text-4xl shadow-xl shadow-amber-500/20">
-                  🏆
-                </div>
-
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-extrabold text-white">Exam Completed!</h2>
-                  <p className="text-slate-400 text-sm">
-                    Here is your performance summary for this exam session.
-                  </p>
-                </div>
-
-                {isTimeUp && (
-                  <div className="bg-rose-500/10 border border-rose-500/25 text-rose-400 rounded-2xl p-4 text-xs font-semibold max-w-md mx-auto flex items-center gap-3 text-left animate-in fade-in slide-in-from-top-3 duration-300">
-                    <Clock className="w-5 h-5 shrink-0 text-rose-500" />
-                    <div>
-                      <p className="font-extrabold text-sm mb-0.5">⏰ Time's Up!</p>
-                      <p className="text-slate-400 font-medium leading-relaxed">Your exam was automatically submitted. All unanswered questions were marked incorrect and added to your Mistakes Bank.</p>
+            <div className="space-y-8 text-center max-w-2xl mx-auto">
+              {/* Dynamic Shareable Card */}
+              <div 
+                id="dental-share-card"
+                className="relative overflow-hidden bg-slate-950 border-2 border-amber-500/30 rounded-3xl p-8 md:p-10 shadow-[0_0_50px_rgba(245,158,11,0.1)] text-center space-y-6"
+              >
+                {/* Glowing Background Orbs */}
+                <div className="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none" />
+                
+                {/* Card Header */}
+                <div className="flex items-center justify-between border-b border-white/5 pb-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-sm font-black text-slate-950 shadow-md">
+                      🦷
                     </div>
+                    <span className="text-xs font-black tracking-widest text-white uppercase">ChemZim Dental</span>
                   </div>
-                )}
-
-                {/* Score Ring / Badge */}
-                <div className="inline-flex flex-col items-center justify-center p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md min-w-[200px]">
-                  <div className="text-4xl font-black text-amber-400">{scorePct}%</div>
-                  <div className="text-xs text-slate-400 mt-1">
-                    {correctCount} out of {totalQuestions} Correct
+                  <div className="text-[10px] font-bold text-slate-400 bg-white/5 px-2.5 py-1 rounded-full border border-white/5">
+                    BOARD PREP SIMULATOR
                   </div>
                 </div>
 
-                {/* Status Message */}
-                <div className="max-w-md mx-auto">
-                  {scorePct >= 70 ? (
-                    <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-4 text-emerald-300 text-sm font-semibold">
-                      🎉 Outstanding! You passed the exam simulation threshold (70%+).
+                {/* Main Content */}
+                <div className="py-4 space-y-4">
+                  <Award className="w-16 h-16 text-amber-400 mx-auto drop-shadow-[0_0_15px_rgba(245,158,11,0.4)] animate-bounce" />
+                  
+                  <div className="space-y-1">
+                    <span className="text-[10px] font-bold tracking-widest text-amber-500/80 uppercase">
+                      Certificate of Performance
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-black text-white truncate px-2">
+                      {user?.name || 'Dr. Dental Candidate'}
+                    </h3>
+                  </div>
+
+                  {/* Score circle */}
+                  <div className="relative inline-flex items-center justify-center p-8 rounded-full bg-gradient-to-b from-amber-500/10 to-orange-500/5 border border-amber-500/20 shadow-inner w-32 h-32 mx-auto">
+                    <div className="text-center">
+                      <div className="text-3xl font-black text-amber-400 leading-none">{scorePct}%</div>
+                      <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider mt-1">Score</div>
                     </div>
-                  ) : (
-                    <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-4 text-amber-300 text-sm font-semibold">
-                      💪 Keep practicing! Re-visit Study Mode to strengthen weak topics.
+                  </div>
+
+                  {/* Stats Table */}
+                  <div className="grid grid-cols-2 gap-2 max-w-sm mx-auto">
+                    <div className="bg-white/[0.02] border border-white/5 rounded-xl p-3">
+                      <div className="text-xs text-slate-400">Result</div>
+                      <div className={`text-sm font-extrabold mt-0.5 ${scorePct >= 70 ? 'text-emerald-400' : 'text-amber-400'}`}>
+                        {scorePct >= 70 ? 'PASSED' : 'PRACTICING'}
+                      </div>
                     </div>
-                  )}
+                    <div className="bg-white/[0.02] border border-white/5 rounded-xl p-3">
+                      <div className="text-xs text-slate-400">Accuracy</div>
+                      <div className="text-sm font-extrabold mt-0.5 text-white">
+                        {correctCount} / {totalQuestions} Correct
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                {/* Actions */}
-                <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-                  <button
-                    onClick={() => setExamState('SETUP')}
-                    className="px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/25 transition-all"
-                  >
-                    Take Another Exam 🔄
-                  </button>
-                  <Link
-                    href="/dashboard/dental/study"
-                    className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-sm backdrop-blur-md transition-all"
-                  >
-                    Back to Study Mode 📚
-                  </Link>
+                {/* Footer Branding */}
+                <div className="border-t border-white/5 pt-4 flex items-center justify-between text-[10px] text-slate-500 font-medium">
+                  <span>Verify at: chemzim.com/dental</span>
+                  <span>Issued on {new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                 </div>
+              </div>
+
+              {isTimeUp && (
+                <div className="bg-rose-500/10 border border-rose-500/25 text-rose-400 rounded-2xl p-4 text-xs font-semibold max-w-md mx-auto flex items-center gap-3 text-left">
+                  <Clock className="w-5 h-5 shrink-0 text-rose-500" />
+                  <div>
+                    <p className="font-extrabold text-sm mb-0.5">⏰ Time's Up!</p>
+                    <p className="text-slate-400 font-medium leading-relaxed">Your exam was automatically submitted. All unanswered questions were marked incorrect and added to your Mistakes Bank.</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
+                <button
+                  onClick={handleDownloadCard}
+                  disabled={isExporting}
+                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-slate-950 font-black text-sm shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer w-full"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>{isExporting ? 'Generating Image...' : 'Download Share Card'}</span>
+                </button>
+                <button
+                  onClick={() => setExamState('SETUP')}
+                  className="px-6 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-bold text-sm transition-all cursor-pointer w-full"
+                >
+                  Take New Exam 🔄
+                </button>
               </div>
             </div>
           )}
