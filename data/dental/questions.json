@@ -13490,5 +13490,145 @@
     "explanation": "Small (< 3-4 mm) uninfected root tips can be left in place if surgical retrieval would cause excessive bone loss, risk inferior alveolar nerve injury, or risk pushing the tip into the maxillary sinus.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 6, p. 89)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
     "category": "Oral Surgery & Pathology",
     "level": "Level 2"
+  },
+  {
+    "id": 1148,
+    "question": "Which of the following serum biochemical profiles is characteristically seen in patients with active, advanced Paget's disease of the bone?",
+    "options": [
+      "Markedly elevated serum calcium with normal phosphorus levels",
+      "Markedly elevated serum alkaline phosphatase (ALP) with normal serum calcium and phosphorus",
+      "Severely reduced serum parathyroid hormone (PTH) levels",
+      "Elevated serum amylase combined with elevated blood glucose levels"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Paget's disease is characterized by intense bone turnover. The key laboratory finding is a markedly raised serum alkaline phosphatase (ALP), reflecting high osteoblastic activity, while serum calcium and phosphate remain normal.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 119)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1149,
+    "question": "A young patient presents with absent clavicles and delayed eruption of permanent teeth. Panoramic radiograph reveals multiple unerupted supernumerary teeth in both jaws. What is the most likely diagnosis?",
+    "options": [
+      "Osteopetrosis",
+      "Cleidocranial dysplasia",
+      "Gardner's syndrome",
+      "Polyostotic fibrous dysplasia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Cleidocranial dysplasia is an autosomal dominant condition characterized by clavicular hypoplasia or aplasia, delayed closure of fontanelles, prolonged retention of primary teeth, and numerous supernumerary teeth.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 109)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1150,
+    "question": "What is the primary pathological reason for the high risk of severe osteomyelitis following dental extractions in patients with osteopetrosis (marble bone disease)?",
+    "options": [
+      "Massive vascular hyperplasia of the jaw bones",
+      "The bone becomes extremely dense, avascular (ischemic), and has severely compromised remodeling capacity",
+      "High sensitivity of osteoclasts to local anesthetics containing adrenaline",
+      "Complete absence of cortical bone plates in the mandible"
+    ],
+    "correctAnswer": 1,
+    "explanation": "In osteopetrosis, defective osteoclast activity leads to overly dense, poorly vascularized bone. The lack of blood supply (ischemia) impairs host defenses and bone healing, making the jaw highly susceptible to osteomyelitis after minor trauma.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 109)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1151,
+    "question": "A panoramic radiograph of a teenager shows a unilateral, poorly defined radiopacity of the maxilla with a characteristic 'ground-glass' or 'orange-peel' appearance that blends gradually into normal bone. What is the most likely diagnosis?",
+    "options": [
+      "Ameloblastoma",
+      "Fibrous dysplasia",
+      "Paget's disease",
+      "Cementoblastoma"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Fibrous dysplasia typically presents in young patients as a unilateral bone expansion with a ground-glass radiographic appearance. The lesion merges imperceptibly with normal bone without a distinct radiolucent border.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 113)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1152,
+    "question": "A patient presents with a severe throbbing ache over the right cheek that radiates to the upper teeth. The pain worsens significantly when they bend their head forward. All maxillary teeth test vital. What is the most likely diagnosis?",
+    "options": [
+      "Acute irreversible pulpitis of multiple maxillary molars",
+      "Acute maxillary sinusitis",
+      "Temporomandibular joint dysfunction (TMD)",
+      "Classical trigeminal neuralgia of the maxillary branch"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Acute maxillary sinusitis causes throbbing pain in the cheek and maxillary teeth (due to proximity of dental nerves to the sinus floor). Pain increases on bending forward as sinus fluid shifts and increases pressure.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 7, p. 121)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1153,
+    "question": "A patient presents to the emergency room with an acute anterior dislocation of the temporomandibular joint (TMJ). What is the correct hand positioning and movement to perform a manual reduction?",
+    "options": [
+      "Press the mandible firmly upward and backward with high force",
+      "Apply downward pressure on the posterior mandibular teeth, while concurrently pushing the chin upward and backward",
+      "Pull the chin forward and downward only to disengage the condyle",
+      "Rotate the mandible to the left and right in a grinding motion"
+    ],
+    "correctAnswer": 1,
+    "explanation": "To reduce a TMJ dislocation, the clinician presses downward on the posterior mandibular teeth (to guide the condyle inferiorly below the articular eminence) and simultaneously pushes the chin upward and backward.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 15, p. 242)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1154,
+    "question": "An elderly, completely edentulous patient sustains a fracture of the body of the mandible. Which of the following conservative methods is used to stabilize the fracture using the patient's existing dentures?",
+    "options": [
+      "Stainless steel arch bars wired to the gingival margin",
+      "Gunning splint (utilizing modified dentures secured with circumferential and circumzygomatic wires)",
+      "Immediate rigid plating without open surgical access",
+      "Intermaxillary fixation using orthodontic brackets"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Gunning splints use the patient's modified dentures (or custom acrylic plates) secured via wires to the maxilla and mandible to immobilize the jaws and stabilize the fracture in edentulous patients.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 138)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 3"
+  },
+  {
+    "id": 1155,
+    "question": "A patient presents with flattening of the cheek prominence, anesthesia of the upper lip, diplopia, and limited mouth opening following facial trauma. Which of the following is the most likely injury?",
+    "options": [
+      "Mandibular condylar fracture",
+      "Zygomatic complex (ZMC) fracture",
+      "Le Fort I fracture of the maxilla",
+      "Isolated nasal bone fracture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A zygomatic complex fracture disrupts the zygoma. Signs include flattening of the cheek, diplopia (due to orbital floor displacement), paresthesia of the infraorbital nerve (lip/cheek numbness), and trismus.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 141)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1156,
+    "question": "A patient with a unilateral fracture of the right mandibular condyle is asked to protrude and open their mouth. What deviation of the mandible is typically expected?",
+    "options": [
+      "The mandible will deviate to the left side (away from the fracture)",
+      "The mandible will deviate to the right side (toward the side of the fracture)",
+      "The mandible will protrude straight forward without any deviation",
+      "The mandible will remain locked in maximum closure and cannot open"
+    ],
+    "correctAnswer": 1,
+    "explanation": "On opening, the healthy left lateral pterygoid muscle protrudes the left condyle, while the fractured right side cannot. This causes the mandible to deviate toward the fractured (right) side.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 138)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
+  },
+  {
+    "id": 1157,
+    "question": "Which of the following maxillary fractures is characterized as a pyramidal fracture, passing through the nasal bones, lacrimal bones, orbital floor, and infraorbital margin?",
+    "options": [
+      "Le Fort I fracture",
+      "Le Fort II fracture",
+      "Le Fort III fracture",
+      "Mandibular symphysis fracture"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A Le Fort II fracture is a pyramidal fracture. The fracture line extends from the nasal bones through the lacrimal bones, orbital floor, infraorbital rim, and down through the pterygoid plates.\n\n🏛️ Book Reference: Master Dentistry Vol. 1 (Ch. 8, p. 140)\n🔗 Study Link: https://pubmed.ncbi.nlm.nih.gov/38667434/",
+    "category": "Oral Surgery & Pathology",
+    "level": "Level 2"
   }
 ]
