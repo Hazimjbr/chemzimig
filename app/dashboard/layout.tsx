@@ -19,8 +19,12 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 
+const ToothIcon = ({ className }: { className?: string }) => (
+    <span className={`text-lg leading-none ${className || ''}`}>🦷</span>
+);
+
 const chemistryNavItems = [
-    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
+    { name: 'Study Hub', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
@@ -28,7 +32,7 @@ const chemistryNavItems = [
 ];
 
 const dentalNavItems = [
-    { name: 'Dashboard', href: '/dashboard/dental', icon: LayoutDashboard },
+    { name: 'Exam Simulator', href: '/dashboard/dental', icon: LayoutDashboard },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
     { name: 'Profile', href: '/dashboard/profile', icon: User },
 ];
@@ -76,7 +80,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             `}>
                 <div className="flex flex-col h-full p-6">
                     <div className="flex items-center justify-between mb-10">
-                        <Link href="/" className="flex items-center gap-3 group">
+                        <Link href={isDentalUser ? "/dashboard/dental" : "/dashboard"} className="flex items-center gap-3 group">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
                                 {isDentalUser ? '🦷' : '⚗️'}
                             </div>

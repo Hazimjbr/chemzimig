@@ -30,7 +30,7 @@ export const DENTAL_CATEGORIES: { name: DentalCategory; icon: string; descriptio
   },
   { 
     name: 'Periodontics', 
-    icon: '🩺', 
+    icon: '🦷', 
     description: 'Gingival diseases, periodontal surgery, scaling & root planing',
     color: 'from-purple-500/20 to-violet-500/20 border-purple-500/30 text-purple-400'
   },

@@ -86,7 +86,7 @@ export default function DentalDashboardPage() {
               <span>MFDs, MJDF, ORE & Master Dentistry</span>
             </div>
             <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-              Dental MCQs <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">Prep Portal</span> 🩺
+              Dental MCQs <span className="bg-gradient-to-r from-indigo-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">Prep Portal</span> 🦷
             </h1>
             <p className="text-slate-300 text-sm md:text-base leading-relaxed">
               Master 911 clinical questions with detailed explanations and Master Dentistry (Vol 1 & 2) textbook references.

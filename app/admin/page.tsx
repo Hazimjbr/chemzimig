@@ -744,7 +744,7 @@ function AdminContent() {
                                                      </div>
                                                      <button 
                                                          onClick={() => {
-                                                             const inviteMsg = `Welcome to ChemZim! 👋\n\nYour account has been created successfully.\n\n🔐 Credentials:\nUsername: ${createdCredentials.username}\nPassword: ${createdCredentials.password || '••••••••'}\n\n🔗 Access here: ${window.location.origin}/login`;
+                                                             const inviteMsg = `Welcome to ChemZim! 👋\n\nYour account has been created successfully.\n\n🔐 Credentials:\nUsername: ${createdCredentials.username}\nPassword: ${createdCredentials.password || '••••••••'}\n\n🔗 Access here: https://chemzim.vercel.app/`;
                                                              navigator.clipboard.writeText(inviteMsg);
                                                              setCopiedField('invite');
                                                              setTimeout(() => setCopiedField(null), 1500);
