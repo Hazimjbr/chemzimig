@@ -54,11 +54,11 @@ const protonTransferSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 
   
   <path d="M 180,180 C 180,240 680,240 680,180" fill="none" stroke="#3b82f6" stroke-width="2" />
   <rect x="380" y="205" width="240" height="20" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1" />
-  <text x="500" y="219" fill="#93c5fd" font-size="10" font-weight="bold" text-anchor="middle">Conjugate Acid-Base Pair 1 (differs by 1 H⁺)</text>
+  <text x="500" y="219" fill="#93c5fd" font-size="11" font-weight="bold" text-anchor="middle">Conjugate Acid-Base Pair 1 (differs by 1 H⁺)</text>
 
   <path d="M 420,180 C 420,300 920,300 920,180" fill="none" stroke="#10b981" stroke-width="2" />
   <rect x="620" y="265" width="240" height="20" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1" />
-  <text x="740" y="279" fill="#6ee7b7" font-size="10" font-weight="bold" text-anchor="middle">Conjugate Acid-Base Pair 2 (differs by 1 H⁺)</text>
+  <text x="740" y="279" fill="#6ee7b7" font-size="11" font-weight="bold" text-anchor="middle">Conjugate Acid-Base Pair 2 (differs by 1 H⁺)</text>
 </svg>`;
 
 const diphoticAcidSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" class="w-full max-w-[460px] mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
@@ -230,217 +230,184 @@ const titrationCurvesDashboardSvg = `<svg xmlns="http://www.w3.org/2000/svg" vie
   <!-- ===== PANEL 1: Strong Acid / Strong Base ===== -->
   <g transform="translate(10, 38)">
     <rect x="0" y="0" width="228" height="355" rx="8" fill="#0f172a" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
-    <text x="114" y="20" text-anchor="middle" fill="#38bdf8" font-size="11" font-weight="bold">Strong Acid / Strong Base</text>
+    <text x="114" y="20" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">Strong Acid / Strong Base</text>
 
     <!-- Indicator bands (within plot area x=42..210, y=40..310) -->
-    <!-- Phenolphthalein 8.2-10.0 → y=310-(8.2/14)*270=310-157.9=152.1 to y=310-(10/14)*270=310-192.9=117.1 -->
     <rect x="42" y="117" width="168" height="36" fill="#ef4444" fill-opacity="0.12" stroke="#ef4444" stroke-dasharray="3 2" stroke-width="0.8"/>
-    <text x="44" y="130" fill="#fca5a5" font-size="8" font-weight="bold">Phenolphthalein (8.2 – 10.0)</text>
-    <!-- Methyl Orange 3.1-4.4 → y=310-(3.1/14)*270=310-59.8=250.2 to y=310-(4.4/14)*270=310-84.9=225.1 -->
+    <text x="46" y="130" fill="#fca5a5" font-size="11" font-weight="bold">Phenolphthalein (8.2 – 10.0)</text>
     <rect x="42" y="225" width="168" height="26" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-dasharray="3 2" stroke-width="0.8"/>
-    <text x="44" y="241" fill="#fcd34d" font-size="8" font-weight="bold">Methyl Orange (3.1 – 4.4)</text>
+    <text x="46" y="241" fill="#fcd34d" font-size="11" font-weight="bold">Methyl Orange (3.1 – 4.4)</text>
 
     <!-- Axes: plot area x=42..210, y=40..310 -->
     <line x1="42" y1="310" x2="210" y2="310" stroke="#64748b" stroke-width="1.5"/>
     <line x1="42" y1="310" x2="42" y2="40" stroke="#64748b" stroke-width="1.5"/>
 
     <!-- Y-axis labels (pH 0-14, every 2) -->
-    <!-- y = 310 - (pH/14)*270 -->
-    <text x="38" y="313" fill="#94a3b8" font-size="7" text-anchor="end">0</text>
-    <text x="38" y="275" fill="#94a3b8" font-size="7" text-anchor="end">2</text>
-    <text x="38" y="236" fill="#94a3b8" font-size="7" text-anchor="end">4</text>
-    <text x="38" y="194" fill="#94a3b8" font-size="7" text-anchor="end">6</text>
-    <text x="38" y="175" fill="#94a3b8" font-size="7" text-anchor="end">7</text>
-    <text x="38" y="156" fill="#94a3b8" font-size="7" text-anchor="end">8</text>
-    <text x="38" y="117" fill="#94a3b8" font-size="7" text-anchor="end">10</text>
-    <text x="38" y="78" fill="#94a3b8" font-size="7" text-anchor="end">12</text>
-    <text x="38" y="43" fill="#94a3b8" font-size="7" text-anchor="end">14</text>
-    <text x="12" y="175" fill="#94a3b8" font-size="9" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
+    <text x="36" y="314" fill="#94a3b8" font-size="11" text-anchor="end">0</text>
+    <text x="36" y="276" fill="#94a3b8" font-size="11" text-anchor="end">2</text>
+    <text x="36" y="237" fill="#94a3b8" font-size="11" text-anchor="end">4</text>
+    <text x="36" y="195" fill="#94a3b8" font-size="11" text-anchor="end">6</text>
+    <text x="36" y="176" fill="#94a3b8" font-size="11" text-anchor="end">7</text>
+    <text x="36" y="157" fill="#94a3b8" font-size="11" text-anchor="end">8</text>
+    <text x="36" y="118" fill="#94a3b8" font-size="11" text-anchor="end">10</text>
+    <text x="36" y="79" fill="#94a3b8" font-size="11" text-anchor="end">12</text>
+    <text x="36" y="44" fill="#94a3b8" font-size="11" text-anchor="end">14</text>
+    <text x="12" y="175" fill="#94a3b8" font-size="12" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
 
     <!-- X-axis labels (0,10,20,25,30,40,50) -->
-    <!-- x = 42 + (vol/50)*168 -->
-    <text x="42" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">0</text>
-    <text x="76" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">10</text>
-    <text x="109" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">20</text>
-    <text x="126" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">25</text>
-    <text x="143" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">30</text>
-    <text x="176" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">40</text>
-    <text x="210" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">50</text>
-    <text x="126" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Vol / cm³</text>
+    <text x="42" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">0</text>
+    <text x="76" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">10</text>
+    <text x="109" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">20</text>
+    <text x="126" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">25</text>
+    <text x="143" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">30</text>
+    <text x="176" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">40</text>
+    <text x="210" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">50</text>
+    <text x="126" y="337" fill="#94a3b8" font-size="12" text-anchor="middle">Vol / cm³</text>
 
-    <!-- Guide grid: pH=7 at y=175, vol=25 at x=126 -->
+    <!-- Guide grid -->
     <line x1="42" y1="175" x2="210" y2="175" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
     <line x1="126" y1="310" x2="126" y2="40" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
 
-    <!-- Red equivalence dashed lines: vol=25 (pH=7) → x=126, y=175 -->
+    <!-- Red equivalence dashed lines -->
     <line x1="42" y1="175" x2="126" y2="175" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
     <line x1="126" y1="175" x2="126" y2="310" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
 
-    <!-- CURVE: Strong Acid/Strong Base. pH 1→7(sharp)→12.2 -->
-    <!-- vol=0,pH=1 → y=310-(1/14)*270=290.7≈291 -->
-    <!-- vol=24,pH=3.09 → y=310-(3.09/14)*270=250.5≈251, x=42+(24/50)*168=122.6≈123 -->
-    <!-- vol=24.9,pH=4.08 → x=125.7, y=310-78.7=231.3≈231 -->
-    <!-- vol=25,pH=7 → x=126, y=175 -->
-    <!-- vol=25.1,pH=9.92 → x=126.3, y=310-191.2=118.8≈119 -->
-    <!-- vol=26,pH=10.91 → x=129.4, y=310-210.4=99.6≈100 -->
-    <!-- vol=30,pH=11.68 → x=143, y=310-225.3=84.7≈85 -->
-    <!-- vol=50,pH=12.22 → x=210, y=310-235.7=74.3≈74 -->
     <path d="M 42,291 C 76,288 109,278 123,251 C 124.5,238 125,205 126,175 C 126.5,145 127,119 130,100 C 137,85 176,75 210,74" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
 
     <!-- Equivalence dot -->
     <circle cx="126" cy="175" r="4" fill="#ef4444"/>
-    <text x="132" y="172" fill="#ef4444" font-size="8" font-weight="bold">pH=7, V=25 cm³</text>
+    <text x="132" y="172" fill="#ef4444" font-size="11" font-weight="bold">pH=7, V=25 cm³</text>
 
-    <text x="114" y="348" fill="#38bdf8" font-size="9.5" text-anchor="middle" font-weight="600">Vertical section: pH 3 → 11</text>
+    <text x="114" y="348" fill="#38bdf8" font-size="12" text-anchor="middle" font-weight="600">Vertical section: pH 3 → 11</text>
   </g>
 
   <!-- ===== PANEL 2: Strong Acid / Weak Base ===== -->
   <g transform="translate(253, 38)">
     <rect x="0" y="0" width="228" height="355" rx="8" fill="#0f172a" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
-    <text x="114" y="20" text-anchor="middle" fill="#fb7185" font-size="11" font-weight="bold">Strong Acid / Weak Base</text>
+    <text x="114" y="20" text-anchor="middle" fill="#fb7185" font-size="12" font-weight="bold">Strong Acid / Weak Base</text>
 
     <line x1="42" y1="310" x2="210" y2="310" stroke="#64748b" stroke-width="1.5"/>
     <line x1="42" y1="310" x2="42" y2="40" stroke="#64748b" stroke-width="1.5"/>
 
-    <text x="38" y="313" fill="#94a3b8" font-size="7" text-anchor="end">0</text>
-    <text x="38" y="275" fill="#94a3b8" font-size="7" text-anchor="end">2</text>
-    <text x="38" y="236" fill="#94a3b8" font-size="7" text-anchor="end">4</text>
-    <text x="38" y="194" fill="#94a3b8" font-size="7" text-anchor="end">6</text>
-    <text x="38" y="175" fill="#94a3b8" font-size="7" text-anchor="end">7</text>
-    <text x="38" y="156" fill="#94a3b8" font-size="7" text-anchor="end">8</text>
-    <text x="38" y="117" fill="#94a3b8" font-size="7" text-anchor="end">10</text>
-    <text x="38" y="78" fill="#94a3b8" font-size="7" text-anchor="end">12</text>
-    <text x="38" y="43" fill="#94a3b8" font-size="7" text-anchor="end">14</text>
-    <text x="12" y="175" fill="#94a3b8" font-size="9" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
+    <text x="36" y="314" fill="#94a3b8" font-size="11" text-anchor="end">0</text>
+    <text x="36" y="276" fill="#94a3b8" font-size="11" text-anchor="end">2</text>
+    <text x="36" y="237" fill="#94a3b8" font-size="11" text-anchor="end">4</text>
+    <text x="36" y="195" fill="#94a3b8" font-size="11" text-anchor="end">6</text>
+    <text x="36" y="176" fill="#94a3b8" font-size="11" text-anchor="end">7</text>
+    <text x="36" y="157" fill="#94a3b8" font-size="11" text-anchor="end">8</text>
+    <text x="36" y="118" fill="#94a3b8" font-size="11" text-anchor="end">10</text>
+    <text x="36" y="79" fill="#94a3b8" font-size="11" text-anchor="end">12</text>
+    <text x="36" y="44" fill="#94a3b8" font-size="11" text-anchor="end">14</text>
+    <text x="12" y="175" fill="#94a3b8" font-size="12" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
 
-    <text x="42" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">0</text>
-    <text x="76" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">10</text>
-    <text x="109" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">20</text>
-    <text x="126" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">25</text>
-    <text x="143" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">30</text>
-    <text x="176" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">40</text>
-    <text x="210" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">50</text>
-    <text x="126" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Vol / cm³</text>
+    <text x="42" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">0</text>
+    <text x="76" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">10</text>
+    <text x="109" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">20</text>
+    <text x="126" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">25</text>
+    <text x="143" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">30</text>
+    <text x="176" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">40</text>
+    <text x="210" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">50</text>
+    <text x="126" y="337" fill="#94a3b8" font-size="12" text-anchor="middle">Vol / cm³</text>
 
     <line x1="42" y1="175" x2="210" y2="175" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
     <line x1="126" y1="310" x2="126" y2="40" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
 
-    <!-- Equivalence at pH≈5.2 → y=310-(5.2/14)*270=310-100.3=209.7≈210 -->
+    <!-- Equivalence at pH≈5.2 -->
     <line x1="42" y1="210" x2="126" y2="210" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
     <line x1="126" y1="210" x2="126" y2="310" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
 
-    <!-- CURVE: Strong Acid/Weak Base. pH 1→5.2(less sharp)→8.5 -->
-    <!-- vol=0,pH=1 → y=291 -->
-    <!-- vol=24,pH=2.9 → x=122.6, y=310-(2.9/14)*270=255.9≈256 -->
-    <!-- vol=25,pH=5.2 → x=126, y=210 -->
-    <!-- vol=26,pH=7.0 → x=129.4, y=175 -->
-    <!-- vol=30,pH=8.0 → x=143, y=310-154.3=155.7≈156 -->
-    <!-- vol=50,pH=9.0 → x=210, y=310-173.6=136.4≈136 -->
     <path d="M 42,291 C 76,287 109,272 123,256 C 124.5,246 125,228 126,210 C 127,192 128,177 130,168 C 137,152 176,139 210,136" fill="none" stroke="#fb7185" stroke-width="2.5" stroke-linecap="round"/>
 
     <circle cx="126" cy="210" r="4" fill="#ef4444"/>
-    <text x="132" y="208" fill="#ef4444" font-size="8" font-weight="bold">pH &lt; 7</text>
+    <text x="132" y="208" fill="#ef4444" font-size="11" font-weight="bold">pH &lt; 7</text>
 
-    <text x="114" y="348" fill="#fb7185" font-size="9.5" text-anchor="middle" font-weight="600">Vertical section: pH 3 → 7</text>
+    <text x="114" y="348" fill="#fb7185" font-size="12" text-anchor="middle" font-weight="600">Vertical section: pH 3 → 7</text>
   </g>
 
   <!-- ===== PANEL 3: Weak Acid / Strong Base ===== -->
   <g transform="translate(496, 38)">
     <rect x="0" y="0" width="228" height="355" rx="8" fill="#0f172a" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
-    <text x="114" y="20" text-anchor="middle" fill="#34d399" font-size="11" font-weight="bold">Weak Acid / Strong Base</text>
+    <text x="114" y="20" text-anchor="middle" fill="#34d399" font-size="12" font-weight="bold">Weak Acid / Strong Base</text>
 
     <line x1="42" y1="310" x2="210" y2="310" stroke="#64748b" stroke-width="1.5"/>
     <line x1="42" y1="310" x2="42" y2="40" stroke="#64748b" stroke-width="1.5"/>
 
-    <text x="38" y="313" fill="#94a3b8" font-size="7" text-anchor="end">0</text>
-    <text x="38" y="275" fill="#94a3b8" font-size="7" text-anchor="end">2</text>
-    <text x="38" y="236" fill="#94a3b8" font-size="7" text-anchor="end">4</text>
-    <text x="38" y="194" fill="#94a3b8" font-size="7" text-anchor="end">6</text>
-    <text x="38" y="175" fill="#94a3b8" font-size="7" text-anchor="end">7</text>
-    <text x="38" y="156" fill="#94a3b8" font-size="7" text-anchor="end">8</text>
-    <text x="38" y="117" fill="#94a3b8" font-size="7" text-anchor="end">10</text>
-    <text x="38" y="78" fill="#94a3b8" font-size="7" text-anchor="end">12</text>
-    <text x="38" y="43" fill="#94a3b8" font-size="7" text-anchor="end">14</text>
-    <text x="12" y="175" fill="#94a3b8" font-size="9" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
+    <text x="36" y="314" fill="#94a3b8" font-size="11" text-anchor="end">0</text>
+    <text x="36" y="276" fill="#94a3b8" font-size="11" text-anchor="end">2</text>
+    <text x="36" y="237" fill="#94a3b8" font-size="11" text-anchor="end">4</text>
+    <text x="36" y="195" fill="#94a3b8" font-size="11" text-anchor="end">6</text>
+    <text x="36" y="176" fill="#94a3b8" font-size="11" text-anchor="end">7</text>
+    <text x="36" y="157" fill="#94a3b8" font-size="11" text-anchor="end">8</text>
+    <text x="36" y="118" fill="#94a3b8" font-size="11" text-anchor="end">10</text>
+    <text x="36" y="79" fill="#94a3b8" font-size="11" text-anchor="end">12</text>
+    <text x="36" y="44" fill="#94a3b8" font-size="11" text-anchor="end">14</text>
+    <text x="12" y="175" fill="#94a3b8" font-size="12" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
 
-    <text x="42" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">0</text>
-    <text x="76" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">10</text>
-    <text x="109" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">20</text>
-    <text x="126" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">25</text>
-    <text x="143" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">30</text>
-    <text x="176" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">40</text>
-    <text x="210" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">50</text>
-    <text x="126" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Vol / cm³</text>
+    <text x="42" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">0</text>
+    <text x="76" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">10</text>
+    <text x="109" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">20</text>
+    <text x="126" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">25</text>
+    <text x="143" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">30</text>
+    <text x="176" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">40</text>
+    <text x="210" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">50</text>
+    <text x="126" y="337" fill="#94a3b8" font-size="12" text-anchor="middle">Vol / cm³</text>
 
     <line x1="42" y1="175" x2="210" y2="175" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
     <line x1="126" y1="310" x2="126" y2="40" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
 
-    <!-- Equivalence at pH≈8.87 → y=310-(8.87/14)*270=310-170.9=139.1≈139 -->
+    <!-- Equivalence at pH≈8.87 -->
     <line x1="42" y1="139" x2="126" y2="139" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
     <line x1="126" y1="139" x2="126" y2="310" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
 
-    <!-- CURVE: Weak Acid/Strong Base. Starts pH≈2.87 (buffer region is flatter) -->
-    <!-- vol=0,pH=2.87 → y=310-(2.87/14)*270=254.7≈255 -->
-    <!-- vol=12.5,pH=4.76(pKa) → x=42+(12.5/50)*168=84, y=310-(4.76/14)*270=218.1≈218 -->
-    <!-- vol=20,pH=5.4 → x=109, y=310-(5.4/14)*270=206.0≈206 -->
-    <!-- vol=24,pH=6.2 → x=122.6, y=310-(6.2/14)*270=190.5≈191 -->
-    <!-- vol=25,pH=8.87 → x=126, y=139 -->
-    <!-- vol=26,pH=11.3 → x=129.4, y=310-(11.3/14)*270=92.3≈92 -->
-    <!-- vol=30,pH=11.96 → x=143, y=310-(11.96/14)*270=79.5≈80 -->
-    <!-- vol=50,pH=12.5 → x=210, y=310-(12.5/14)*270=69.4≈69 -->
     <path d="M 42,255 C 76,240 109,211 122,191 C 124,179 125,160 126,139 C 127,118 128,92 130,84 C 137,76 176,70 210,69" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"/>
 
     <circle cx="126" cy="139" r="4" fill="#ef4444"/>
-    <text x="132" y="137" fill="#ef4444" font-size="8" font-weight="bold">pH &gt; 7</text>
+    <text x="132" y="137" fill="#ef4444" font-size="11" font-weight="bold">pH &gt; 7</text>
 
-    <text x="114" y="348" fill="#34d399" font-size="9.5" text-anchor="middle" font-weight="600">Vertical section: pH 7 → 11</text>
+    <text x="114" y="348" fill="#34d399" font-size="12" text-anchor="middle" font-weight="600">Vertical section: pH 7 → 11</text>
   </g>
 
   <!-- ===== PANEL 4: Weak Acid / Weak Base ===== -->
   <g transform="translate(739, 38)">
     <rect x="0" y="0" width="228" height="355" rx="8" fill="#0f172a" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
-    <text x="114" y="20" text-anchor="middle" fill="#a78bfa" font-size="11" font-weight="bold">Weak Acid / Weak Base</text>
+    <text x="114" y="20" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="bold">Weak Acid / Weak Base</text>
 
     <line x1="42" y1="310" x2="210" y2="310" stroke="#64748b" stroke-width="1.5"/>
     <line x1="42" y1="310" x2="42" y2="40" stroke="#64748b" stroke-width="1.5"/>
 
-    <text x="38" y="313" fill="#94a3b8" font-size="7" text-anchor="end">0</text>
-    <text x="38" y="275" fill="#94a3b8" font-size="7" text-anchor="end">2</text>
-    <text x="38" y="236" fill="#94a3b8" font-size="7" text-anchor="end">4</text>
-    <text x="38" y="194" fill="#94a3b8" font-size="7" text-anchor="end">6</text>
-    <text x="38" y="175" fill="#94a3b8" font-size="7" text-anchor="end">7</text>
-    <text x="38" y="156" fill="#94a3b8" font-size="7" text-anchor="end">8</text>
-    <text x="38" y="117" fill="#94a3b8" font-size="7" text-anchor="end">10</text>
-    <text x="38" y="78" fill="#94a3b8" font-size="7" text-anchor="end">12</text>
-    <text x="38" y="43" fill="#94a3b8" font-size="7" text-anchor="end">14</text>
-    <text x="12" y="175" fill="#94a3b8" font-size="9" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
+    <text x="36" y="314" fill="#94a3b8" font-size="11" text-anchor="end">0</text>
+    <text x="36" y="276" fill="#94a3b8" font-size="11" text-anchor="end">2</text>
+    <text x="36" y="237" fill="#94a3b8" font-size="11" text-anchor="end">4</text>
+    <text x="36" y="195" fill="#94a3b8" font-size="11" text-anchor="end">6</text>
+    <text x="36" y="176" fill="#94a3b8" font-size="11" text-anchor="end">7</text>
+    <text x="36" y="157" fill="#94a3b8" font-size="11" text-anchor="end">8</text>
+    <text x="36" y="118" fill="#94a3b8" font-size="11" text-anchor="end">10</text>
+    <text x="36" y="79" fill="#94a3b8" font-size="11" text-anchor="end">12</text>
+    <text x="36" y="44" fill="#94a3b8" font-size="11" text-anchor="end">14</text>
+    <text x="12" y="175" fill="#94a3b8" font-size="12" text-anchor="middle" transform="rotate(-90,12,175)">pH</text>
 
-    <text x="42" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">0</text>
-    <text x="76" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">10</text>
-    <text x="109" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">20</text>
-    <text x="126" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">25</text>
-    <text x="143" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">30</text>
-    <text x="176" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">40</text>
-    <text x="210" y="321" fill="#94a3b8" font-size="7" text-anchor="middle">50</text>
-    <text x="126" y="333" fill="#94a3b8" font-size="8" text-anchor="middle">Vol / cm³</text>
+    <text x="42" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">0</text>
+    <text x="76" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">10</text>
+    <text x="109" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">20</text>
+    <text x="126" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">25</text>
+    <text x="143" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">30</text>
+    <text x="176" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">40</text>
+    <text x="210" y="324" fill="#94a3b8" font-size="11" text-anchor="middle">50</text>
+    <text x="126" y="337" fill="#94a3b8" font-size="12" text-anchor="middle">Vol / cm³</text>
 
     <line x1="42" y1="175" x2="210" y2="175" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
     <line x1="126" y1="310" x2="126" y2="40" stroke="#334155" stroke-width="0.8" stroke-dasharray="3 3"/>
 
-    <!-- Inflection near pH=7 → x=126, y=175 (dashed, not a true sharp equivalence) -->
+    <!-- Inflection near pH=7 -->
     <line x1="42" y1="175" x2="126" y2="175" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
     <line x1="126" y1="175" x2="126" y2="310" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4 2.5"/>
 
-    <!-- CURVE: Weak Acid/Weak Base. Gradual S, no sharp section -->
-    <!-- vol=0,pH=2.87 → y=255 -->
-    <!-- vol=25,pH=7.0 → x=126, y=175 (gentle inflection) -->
-    <!-- vol=50,pH=9.5 → x=210, y=310-(9.5/14)*270=127.1≈127 -->
     <path d="M 42,255 C 76,242 109,217 126,175 C 143,133 176,128 210,127" fill="none" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/>
 
     <circle cx="126" cy="175" r="4" fill="#ef4444"/>
-    <text x="132" y="172" fill="#ef4444" font-size="8" font-weight="bold">Inflection ~7</text>
+    <text x="132" y="172" fill="#ef4444" font-size="11" font-weight="bold">Inflection ~7</text>
 
-    <text x="114" y="348" fill="#f43f5e" font-size="9.5" text-anchor="middle" font-weight="bold">No Vertical Section!</text>
+    <text x="114" y="348" fill="#f43f5e" font-size="12" text-anchor="middle" font-weight="bold">No Vertical Section!</text>
   </g>
 </svg>`;
 
@@ -856,7 +823,7 @@ ${svgToken(protonTransferSvg)}
 >     $$\\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\rightleftharpoons \\\\text{CH}_3\\\\text{COOH(aq)} + \\\\text{OH}^-\\\\text{(aq)}$$
 > * **Strong Acid + Weak Base (Acidic, pH < 7):** Conjugate acid hydrolyses water.
 >   * *Ammonium Hydrolysis:* The ammonium ion reacts with water to produce hydronium ($\\\\text{H}_3\\\\text{O}^+$) ions:
->     $$\\\\text{NH}_{4}^+\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\rightleftharpoons \\\\text{NH}_{3}\\\\text{(> ### 📉 Effect of Dilution on pH
+>     $$\\\\text{NH}_4^+\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\rightleftharpoons \\\\text{NH}_3\\\\text{(aq)} + \\\\text{H}_3\\\\text{O}^+\\\\text{(aq)}$$
 > * **Strong Acids:** pH increases by exactly **1.0 unit** for each 10-fold dilution (e.g. $0.100\\\\text{ mol dm}^{-3}$ HCl pH = 1.00; diluted to $0.0100$ pH = 2.00)
 >   * *Dilution Limit:* A $1.00 \\\\times 10^{-8}\\\\text{ mol dm}^{-3}$ solution of HCl is not pH 8.00. Water self-ionisation contributes $1.00 \\\\times 10^{-7}\\\\text{ mol dm}^{-3}$ $\\\\text{H}^+$, keeping pH close to 7.00 ($\\\\approx 6.98$)
 > * **Weak Acids:** pH increases by approximately **0.5 units** for each 10-fold dilution (e.g. $0.100\\\\text{ mol dm}^{-3}$ ethanoic acid pH = 2.88; diluted to $0.0100$ pH = 3.38)
@@ -1174,13 +1141,7 @@ ${svgToken(titrationCurvesDashboardSvg)}
 > > * 2. **Determine reactant stoichiometry:**
 > >      One mole of diprotic acid reacts with two moles of sodium hydroxide:
 > >      $$\\\\text{Reacting mole ratio } \\\\text{H}_2\\\\text{Y} : \\\\text{NaOH} = 1 : 2$$
-> > * 3. **Calculate moles of diprotic acid used:**
-> >      $$\\\\text{Moles of }\\\\text{H}_2\\\\text{Y} = 0.0250\\\\text{ dm}^3 \\\\times 0.0500\\\\text{ mol dm}^{-3} = 1.25 \\\\times 10^{-3}\\\\text{ mol}$$
-> > * 4. **Calculate moles of NaOH needed for complete neutralization:**
-> >      $$\\\\text{Moles of NaOH} = 2 \\\\times (1.25 \\\\times 10^{-3}\\\\text{ mol}) = 2.50 \\\\times 10^{-3}\\\\text{ mol}$$
-> > * 5. **Calculate the volume of NaOH solution required:**
 > >      $$\\\\text{Volume} = \\\\frac{\\\\text{Moles}}{\\\\text{Concentration}} = \\\\frac{2.50 \\\\times 10^{-3}\\\\text{ mol}}{0.100\\\\text{ mol dm}^{-3}} = 0.0250\\\\text{ dm}^3 = \\\\mathbf{25.0\\\\text{ cm}^3}$$
-
 `,
     keyPoints: [
       'Equivalence point pH is determined by salt hydrolysis and depends on acid/base strengths.',
@@ -1197,164 +1158,264 @@ ${svgToken(titrationCurvesDashboardSvg)}
     content: `
 > [!NOTE]
 > ### 🛡️ What is a Buffer Solution?
-> A **buffer solution** minimizes the change in pH when small amounts of acid or base are added to it:
+> A **buffer solution** is a system that minimizes the change in pH (resists pH change) when small amounts of acid or base are added to it:
 > 
-> * **Acidic Buffer:** Prepared by mixing a weak acid (HA) with its conjugate base salt ($\\text{A}^-$), e.g., ethanoic acid ($\\text{CH₃COOH}$) and sodium ethanoate ($\\text{CH₃COONa}$). It maintains a pH less than 7.00.
-> * **Basic Buffer:** Prepared by mixing a weak base and its conjugate acid salt, e.g., ammonia ($\\text{NH₃}$) and ammonium chloride ($\\text{NH₄Cl}$). It maintains a pH greater than 7.00.
+> * **Acidic Buffer Solution:** Prepared by mixing a weak acid ($\\\\text{HA}$) with its conjugate base salt ($\\\\text{A}^-$), e.g., ethanoic acid ($\\\\text{CH}_3\\\\text{COOH}$) and sodium ethanoate ($\\\\text{CH}_3\\\\text{COONa}$). It maintains a pH less than 7.00
+> * **Basic Buffer Solution:** Prepared by mixing a weak base and its conjugate acid salt, e.g., ammonia ($\\\\text{NH}_3$) and ammonium chloride ($\\\\text{NH}_4\\\\text{Cl}$). It maintains a pH greater than 7.00
 
 > [!IMPORTANT]
-> ### ⚙️ How Buffer Action Works
-> **1. Acidic Buffer (e.g., $\\text{CH₃COOH}$ / $\\text{CH₃COO}^-$):**
+> ### ⚙️ How Buffer Action Works (Le Chatelier's Principle)
+> **1. Acidic Buffer (e.g., $\\\\text{CH}_3\\\\text{COOH}$ / $\\\\text{CH}_3\\\\text{COO}^-$):**
 > * **Reaction equilibria:**
->   * $\\text{CH₃COOH(aq)} \\rightleftharpoons \\text{CH₃COO}^-\\text{(aq)} + \\text{H}^+\\text{(aq)}$ (Slight dissociation, large reservoir of $\\text{CH₃COOH}$)
->   * $\\text{CH₃COONa(aq)} \\rightarrow \\text{CH₃COO}^-\\text{(aq)} + \\text{Na}^+\\text{(aq)}$ (Complete dissociation, large reservoir of $\\text{CH₃COO}^-$)
-> * **When acid ($\\text{H}^+$) is added:**
->   $$\\text{CH₃COO}^-\\text{(aq)} + \\text{H}^+\\text{(aq)} \\rightarrow \\text{CH₃COOH(aq)}$$
-> * **When base ($\\text{OH}^-$) is added:**
->   $$\\text{CH₃COOH(aq)} + \\text{OH}^-\\text{(aq)} \\rightarrow \\text{CH₃COO}^-\\text{(aq)} + \\text{H₂O(l)}$$
+>   * Ethanoic acid dissociation:
+>     $$\\\\text{CH}_3\\\\text{COOH(aq)} \\\\rightleftharpoons \\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)}$$
+>     (Slight dissociation, providing a large reservoir of unreacted $\\\\text{CH}_3\\\\text{COOH}$ molecules)
+>   * Sodium ethanoate dissociation:
+>     $$\\\\text{CH}_3\\\\text{COONa(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{Na}^+\\\\text{(aq)}$$
+>     (Complete dissociation, providing a large reservoir of conjugate base $\\\\text{CH}_3\\\\text{COO}^-$ ions)
+> * **When acid ($\\\\text{H}^+$) is added:**
+>   * The added protons react with the large reservoir of conjugate base ($\\\\text{CH}_3\\\\text{COO}^-$) to form $\\\\text{CH}_3\\\\text{COOH}$:
+>     $$\\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{COOH(aq)}$$
+>   * The dissociation equilibrium shifts to the left, removing the added $\\\\text{H}^+$ ions.
+> * **When base ($\\\\text{OH}^-$) is added:**
+>   * The added hydroxide ions react with $\\\\text{H}^+$ to form water:
+>     $$\\\\text{H}^+\\\\text{(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{H}_2\\\\text{O(l)}$$
+>   * This removes $\\\\text{H}^+$ from the system, causing the weak acid ($\\\\text{CH}_3\\\\text{COOH}$) to dissociate further.
+>   * The equilibrium shifts to the right, restoring the $[\\\\text{H}^+]$:
+>     $$\\\\text{CH}_3\\\\text{COOH(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{COO}^-\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)}$$
 > 
-> **2. Basic Buffer (e.g., $\\text{NH₃}$ / $\\text{NH₄}^+$):**
-> * **Reaction equilibrium:** $\\text{NH₄}^+\\text{(aq)} \\rightleftharpoons \\text{NH₃(aq)} + \\text{H}^+\\text{(aq)}$
-> * **When acid ($\\text{H}^+$) is added:** $\\text{NH₃(aq)} + \\text{H}^+\\text{(aq)} \\rightarrow \\text{NH₄}^+\\text{(aq)}$
-> * **When base ($\\text{OH}^-$) is added:** $\\text{NH₄}^+\\text{(aq)} + \\text{OH}^-\\text{(aq)} \\rightarrow \\text{NH₃(aq)} + \\text{H₂O(l)}$
+> **2. Basic Buffer (e.g., $\\\\text{NH}_3$ / $\\\\text{NH}_4^+$):**
+> * **Reaction equilibrium:**
+>   $$\\\\text{NH}_4^+\\\\text{(aq)} \\\\rightleftharpoons \\\\text{NH}_3\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)}$$
+> * **When acid ($\\\\text{H}^+$) is added:**
+>   * The added protons react with the ammonia reservoir:
+>     $$\\\\text{NH}_3\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{NH}_4^+\\\\text{(aq)}$$
+> * **When base ($\\\\text{OH}^-$) is added:**
+>   * The hydroxide ions react with the ammonium reservoir:
+>     $$\\\\text{NH}_4^+\\\\text{(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{NH}_3\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)}$$
 
 > [!BOX]
 > ### 🧮 Mathematical Proof of Buffer Efficiency
-> Imagine $1.00\\text{ dm}^3$ of buffer made by mixing equal volumes of $1.00\\text{ mol dm}^{-3}$ ethanoic acid and $1.00\\text{ mol dm}^{-3}$ sodium ethanoate.
-> * Due to equal volume mixing, both concentrations are halved to $0.500\\text{ mol dm}^{-3}$ each.
-> * Initial pH ($K_a = 1.74 \\times 10^{-5}$):
->   $$[\\text{H}^+] = K_a \\times \\frac{[\\text{acid}]}{[\\text{salt}]} = 1.74 \\times 10^{-5} \\implies \\text{pH} = 4.76$$
-> 
-> Now add $1.00 \\times 10^{-2}\\text{ mol}$ of HCl ($0.0100\\text{ mol}$ $\\text{H}^+$) to the buffer:
-> * The added $\\text{H}^+$ reacts with $\\text{CH₃COO}^-$:
->   * Moles of $\\text{CH₃COOH}$ increases: $0.510\\text{ mol}$
->   * Moles of $\\text{CH₃COO}^-$ decreases: $0.490\\text{ mol}$
-> * New $[\\text{H}^+]$ calculation:
->   $$[\\text{H}^+] = 1.74 \\times 10^{-5} \\times \\frac{0.510}{0.490} = 1.81 \\times 10^{-5}\\text{ mol dm}^{-3} \\implies \\text{pH} = 4.74$$
-> * The pH dropped by only **0.02 units** (from 4.76 to 4.74)!
-> * **Comparison:** Adding $0.0100\\text{ mol}$ of HCl to $1.00\\text{ dm}^3$ of pure water changes pH from 7.00 to 2.00 (a drop of **5.00 units**).
+> Imagine $1.00\\\\text{ dm}^3$ of buffer made by mixing equal volumes of $1.00\\\\text{ mol dm}^{-3}$ ethanoic acid and $1.00\\\\text{ mol dm}^{-3}$ sodium ethanoate:
+> * Due to equal volume mixing, both concentrations are halved to $0.500\\\\text{ mol dm}^{-3}$ each.
+> * Initial pH ($K_a = 1.74 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}$):
+>   $$[\\\\text{H}^+] = K_a \\\\times \\\\frac{[\\\\text{acid}]}{[\\\\text{salt}]} = 1.74 \\\\times 10^{-5} \\\\implies \\\\text{pH} = 4.76$$
+> * Now add $1.00 \\\\times 10^{-2}\\\\text{ mol}$ of $\\\\text{HCl}$ ($0.0100\\\\text{ mol}$ of $\\\\text{H}^+$) to the buffer:
+>   * Moles of $\\\\text{CH}_3\\\\text{COOH}$ increases: $0.510\\\\text{ mol}$
+>   * Moles of $\\\\text{CH}_3\\\\text{COO}^-$ decreases: $0.490\\\\text{ mol}$
+>   * New $[\\\\text{H}^+]$ calculation:
+>     $$[\\\\text{H}^+] = 1.74 \\\\times 10^{-5} \\\\times \\\\frac{0.510}{0.490} = 1.81 \\\\times 10^{-5}\\\\text{ mol dm}^{-3} \\\\implies \\\\text{pH} = 4.74$$
+>   * The pH dropped by only **0.02 units** (from 4.76 to 4.74)
+>   * **Comparison:** Adding $0.0100\\\\text{ mol}$ of $\\\\text{HCl}$ to $1.00\\\\text{ dm}^3$ of pure water changes pH from 7.00 to 2.00 (a drop of **5.00 units**).
+
+> [!IMPORTANT]
+> ### 🧮 Henderson-Hasselbalch Equation
+> Rearranging the acid dissociation expression $[\\\\text{H}^+] = K_a \\\\times \\\\frac{[\\\\text{HA}]}{[\\\\text{A}^-]}$ and taking negative logarithms yields:
+> $$\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}\\\\left(\\\\frac{[\\\\text{A}^-]}{[\\\\text{HA}]}\\\\right)$$
+> * Alternatively, written as:
+>   $$\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}\\\\left(\\\\frac{[\\\\text{salt}]}{[\\\\text{acid}]}\\\\right) \\\\quad \\\\text{or} \\\\quad \\\\text{pH} = \\\\text{p}K_a - \\\\log_{10}\\\\left(\\\\frac{[\\\\text{acid}]}{[\\\\text{salt}]}\\\\right)$$
+> * For a basic buffer:
+>   $$\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}\\\\left(\\\\frac{[\\\\text{base}]}{[\\\\text{conjugate acid}]}\\\\right)$$
 
 > [!BOX]
-> ### 🧮 Henderson-Hasselbalch Equation
-> Taking negative logarithms of the rearranged $K_a$ equation yields:
-> $$\\text{pH} = \\text{p}K_a + \\log_{10}\\left(\\frac{[\\text{salt}]}{[\\text{acid}]}\\right)$$
-> * For a basic buffer: $\\text{pH} = \\text{p}K_a + \\log_{10}\\left(\\frac{[\\text{base}]}{[\\text{conjugate acid}]}\\right)$
+> ### 🩸 Biological Applications of Buffers: Blood pH
+> * **Blood pH Maintenance:** Human arterial blood plasma pH must be kept within a narrow range between **7.35 and 7.45** to ensure proper enzyme function and oxygen transport.
+> * **The Carbonic Acid System:** This is the primary buffer in blood, utilizing hydrogen carbonate (HCO₃⁻) and carbonic acid (H₂CO₃):
+>   $$CO₂\\\\text{(aq)} + H₂O\\\\text{(l)} \\\\rightleftharpoons H₂CO₃\\\\text{(aq)} \\\\rightleftharpoons HCO₃^-\\\\text{(aq)} + H^+\\\\text{(aq)}$$
+> * **Mechanism of Action:**
+>   * If blood becomes too acidic (excess H⁺), the hydrogen carbonate (HCO₃⁻) reacts with H⁺ to form carbonic acid (H₂CO₃), shifting the equilibrium to the left.
+>   * If blood becomes too alkaline (depleted H⁺), carbonic acid (H₂CO₃) dissociates to release more H⁺ ions, shifting the equilibrium to the right.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Preparing an Acidic Buffer of Specific pH
-> **Question:** Prepare pH 5.00 buffer using ethanoic acid and sodium ethanoate.
+> **Question:** How would you prepare an acidic buffer solution of pH 5.00 at a temperature of $298\\\\text{ K}$ using ethanoic acid and sodium ethanoate? $[K_a = 1.74 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}]$
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Find $[\\text{H}^+]$ from target pH:**
-> >    $$[\\text{H}^+] = 10^{-5.00} = 1.00 \\times 10^{-5}\\text{ mol dm}^{-3}$$
-> > 2. **Substitute into rearranged Ka expression:**
-> >    $$[\\text{H}^+] = K_a \\times \\frac{[\\text{acid}]}{[\\text{salt}]}$$
-> > 3. **Solve for the ratio:**
-> >    $$\\frac{[\\text{acid}]}{[\\text{salt}]} = 0.575$$
-> > * Therefore, we mix in ratio of 0.575 of acid for every 1.00 of salt.
-
-
-
+> > 1. **Determine the required hydrogen ion concentration:**
+> >      $$[\\\\text{H}^+] = 10^{-\\\\text{pH}} = 10^{-5.00} = 1.00 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}$$
+> > 
+> > 2. **Rearrange the buffer expression to solve for the acid-to-salt ratio:**
+> >      $$[\\\\text{H}^+] = K_a \\\\times \\\\frac{[\\\\text{acid}]}{[\\\\text{salt}]} \\\\implies \\\\frac{[\\\\text{acid}]}{[\\\\text{salt}]} = \\\\frac{[\\\\text{H}^+]}{K_a}$$
+> >      $$\\\\frac{[\\\\text{acid}]}{[\\\\text{salt}]} = \\\\frac{1.00 \\\\times 10^{-5}}{1.74 \\\\times 10^{-5}} = 0.575$$
+> > 
+> > 3. **State the preparation details:**
+> >      * Mix equal volumes of $0.575\\\\text{ mol dm}^{-3}$ ethanoic acid and $1.00\\\\text{ mol dm}^{-3}$ sodium ethanoate.
+> >      * Or mix any concentrations of acid and salt that maintain a $0.575 : 1$ molar ratio.
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Preparing a Basic Buffer of Specific pH
-> **Question:** Mix NH3 and NH4Cl for pH 9.80 buffer.
+> **Question:** In what proportions should we mix $0.100\\\\text{ mol dm}^{-3}$ solutions of ammonia and ammonium chloride to obtain a buffer of pH 9.80? $[K_a(\\\\text{NH}_4^+) = 5.62 \\\\times 10^{-10}\\\\text{ mol dm}^{-3}]$
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. $[\\text{H}^+] = 1.585 \\times 10^{-10}\\text{ mol dm}^{-3}$
-> > 2. $$\\frac{[\\text{NH₃}]}{[\\text{NH₄}^+]} = \\frac{K_a}{[\\text{H}^+]} = 3.56$$
-> > * We mix **3.56 volumes of ammonia** with **1 volume of ammonium chloride**.
-
-
-> [!BOX]
-> ### 🩸 Biological Buffers: Blood pH Control
-> * Arterial blood plasma pH must be kept between **7.35 and 7.45**.
-> * **The Primary Blood Buffer:** Carbonic acid ($\\text{H₂CO₃}$) and hydrogen carbonate ion ($\\text{HCO₃}^-$):
->   $$\\text{H₂CO₃(aq)} \\rightleftharpoons \\text{HCO₃}^-\\text{(aq)} + \\text{H}^+\\text{(aq)}$$
-> * **Respiration Connection:** Carbonic acid is in equilibrium with dissolved carbon dioxide:
->   $$\\text{CO₂(g)} \\rightleftharpoons \\text{CO₂(aq)} + \\text{H₂O(l)} \\rightleftharpoons \\text{H₂CO₃(aq)}$$
-
-> [!BOX]
-> ### 🍎 Buffers in Food Preservation
-> * Spoilage bacteria thrive near neutral pH (6.6 to 7.5) and are restricted below 4.4.
-> * **Buffer Capacity:** A measure of the amount of acid or base required to change the pH of a solution significantly.
-> * Jams and preserves use citric acid and sodium citrate buffer systems.
-
-
+> > 1. **Write the dissociation equation:**
+> >      $$\\\\text{NH}_4^+\\\\text{(aq)} \\\\rightleftharpoons \\\\text{NH}_3\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)}$$
+> > 
+> > 2. **Rearrange the Ka expression for the base-to-acid ratio:**
+> >      $$\\\\frac{[\\\\text{NH}_3]}{[\\\\text{NH}_4^+]} = \\\\frac{K_a}{[\\\\text{H}^+]}$$
+> > 
+> > 3. **Calculate the hydrogen ion concentration from the target pH:**
+> >      $$[\\\\text{H}^+] = 10^{-\\\\text{pH}} = 10^{-9.80} = 1.58 \\\\times 10^{-10}\\\\text{ mol dm}^{-3}$$
+> > 
+> > 4. **Calculate the ratio:**
+> >      $$\\\\frac{[\\\\text{NH}_3]}{[\\\\text{NH}_4^+]} = \\\\frac{5.62 \\\\times 10^{-10}}{1.58 \\\\times 10^{-10}} = 3.56$$
+> > 
+> > 5. **State the volume ratio:**
+> >      * Mix the solutions in a volume ratio of $3.56$ of $\\\\text{NH}_3\\\\text{(aq)}$ to $1$ of $\\\\text{NH}_4\\\\text{Cl(aq)}$ (a ratio of $3.56 : 1$).
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Methanoic Acid Buffer (Checkpoint Q1)
-> **Question:** Define buffer.
+> #### 📝 Worked Example 3: Methanoic Acid Buffer Action
+> **Question:** Explain how an aqueous solution containing a mixture of methanoic acid, $\\\\text{HCOOH}$, and potassium methanoate, $\\\\text{HCOOK}$, acts as a buffer.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > **(a) Definition:** A buffer solution minimizes pH changes when small amounts of acid/base are added.
-> > **(b) Mechanism:** HCOOH is weak acid and HCOOK provides HCOO⁻.
-> >    * Added H⁺: HCOO⁻ + H⁺ → HCOOH
-> >    * Added OH⁻: HCOOH + OH⁻ → HCOO⁻ + H₂O
-> > **(c) Common ion effect:** Adding solid salt shifts equilibrium left, increasing pH slightly.
-> > **(d) Calculation:** Ratio is 2.0. [H⁺] = 1.79 × 10⁻⁴ × 2.0 = 3.58 × 10⁻⁴ mol dm⁻³ ⇒ pH = 3.45
-
-
+> > 1. **Identify the reservoirs present in the mixture:**
+> >      * The weak acid $\\\\text{HCOOH}$ dissociates only slightly, providing a large reservoir of un-dissociated acid molecules.
+> >      * The soluble salt $\\\\text{HCOOK}$ dissociates completely, providing a large reservoir of conjugate base methanoate ions ($\\\\text{HCOO}^-$).
+> > 
+> > 2. **Show the reaction when acid is added:**
+> >      * Added $\\\\text{H}^+$ ions react with the conjugate base reservoir:
+> >        $$\\\\text{HCOO}^-\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{HCOOH(aq)}$$
+> > 
+> > 3. **Show the reaction when alkali is added:**
+> >      * Added $\\\\text{OH}^-$ ions react with the weak acid reservoir:
+> >        $$\\\\text{HCOOH(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{HCOO}^-\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)}$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Identifying Buffer Solutions (Checkpoint Q2)
-> **Question:** Identify Solution A vs B.
+> #### 📝 Worked Example 4: Effect of Adding Salt on Buffer pH
+> **Question:** A buffer solution contains equal concentrations of methanoic acid and potassium methanoate. Explain the effect on the pH of this solution of adding some solid potassium methanoate.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > * **Solution A:** Mixing leaves excess CH₃COOH and forms salt, so it is a buffer.
-> > * **Solution B:** All acid reacts with NaOH, no weak acid remains, so it is not a buffer.
-
-
+> > 1. **Predict pH change:**
+> >      * The pH will increase slightly (become more basic).
+> > 
+> > 2. **Explain using the buffer relationship:**
+> >      * Adding solid $\\\\text{HCOOK}$ increases the concentration of conjugate base ions, $[\\\\text{HCOO}^-]$
+> >      * According to the expression $[\\\\text{H}^+] = K_a \\\\times \\\\frac{[\\\\text{HCOOH}]}{[\\\\text{HCOO}^-]}$, increasing the denominator $[\\\\text{HCOO}^-]$ decreases the hydrogen ion concentration $[\\\\text{H}^+]$
+> >      * A lower $[\\\\text{H}^+]$ results in a higher pH value.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Basic Buffer Salt Concentration (Checkpoint Q3)
-> **Question:** NH3 + NH4Cl pH 9.55 buffer. Calculate NH4Cl used.
+> #### 📝 Worked Example 5: Methanoic Acid Buffer Calculation
+> **Question:** Calculate the pH, at $298\\\\text{ K}$, of a buffer solution made by mixing equal volumes of $1.00\\\\text{ mol dm}^{-3}$ methanoic acid and $0.500\\\\text{ mol dm}^{-3}$ potassium methanoate. $[K_a(\\\\text{HCOOH}) = 1.79 \\\\times 10^{-4}\\\\text{ mol dm}^{-3}]$
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. [H⁺] = 10⁻⁹·⁵⁵ = 2.818 × 10⁻¹⁰ mol dm⁻³
-> > 2. [NH₃] = 0.100 mol dm⁻³ (equilibrium)
-> > 3. [NH₄⁺] = 0.05014 mol dm⁻³ in mixture
-> > 4. Initial concentration of salt used = **0.100 mol dm⁻³**
-
-
+> > 1. **Determine concentrations after mixing:**
+> >      * Since equal volumes are mixed, the total volume doubles, halving both concentrations:
+> >        $$[\\\\text{HCOOH}] = 0.500\\\\text{ mol dm}^{-3}$$
+> >        $$[\\\\text{HCOO}^-] = 0.250\\\\text{ mol dm}^{-3}$$
+> > 
+> > 2. **Calculate $[H^+]$:**
+> >      $$[\\\\text{H}^+] = K_a \\\\times \\\\frac{[\\\\text{HCOOH}]}{[\\\\text{HCOO}^-]} = 1.79 \\\\times 10^{-4} \\\\times \\\\frac{0.500}{0.250} = 3.58 \\\\times 10^{-4}\\\\text{ mol dm}^{-3}$$
+> > 
+> > 3. **Calculate pH:**
+> >      $$\\\\text{pH} = -\\\\log_{10}(3.58 \\\\times 10^{-4}) = 3.45$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 6: Benzoic Acid Buffer Calculation (Checkpoint Q4)
-> **Question:** 12.20 g benzoic acid and 7.20 g sodium benzoate in 1.00 dm3.
+> #### 📝 Worked Example 6: Identifying Buffer Solutions
+> **Question:** A student prepares two solutions.
+> * **Solution A** is prepared by mixing $50\\\\text{ cm}^3$ of $0.100\\\\text{ mol dm}^{-3}\\\\text{ CH}_3\\\\text{COOH}$ with $25\\\\text{ cm}^3$ of $0.100\\\\text{ mol dm}^{-3}\\\\text{ NaOH}$
+> * **Solution B** is prepared by mixing $25\\\\text{ cm}^3$ of $0.200\\\\text{ mol dm}^{-3}\\\\text{ CH}_3\\\\text{COOH}$ with $50\\\\text{ cm}^3$ of $0.100\\\\text{ mol dm}^{-3}\\\\text{ NaOH}$
+> Explain why Solution A is a buffer solution but Solution B is not.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. Moles of acid = 0.100 mol, moles of salt = 0.0500 mol
-> > 2. pH = 4.20 + log₁₀(0.0500 / 0.100) = **3.90**
-
-
+> > 1. **Analyze Solution A:**
+> >      * Moles of $\\\\text{CH}_3\\\\text{COOH} = 0.0500 \\\\times 0.100 = 0.0050\\\\text{ mol}$
+> >      * Moles of $\\\\text{NaOH} = 0.0250 \\\\times 0.100 = 0.0025\\\\text{ mol}$
+> >      * The strong base $\\\\text{NaOH}$ reacts completely with the acid:
+> >        $$\\\\text{CH}_3\\\\text{COOH} + \\\\text{NaOH} \\\\rightarrow \\\\text{CH}_3\\\\text{COONa} + \\\\text{H}_2\\\\text{O}$$
+> >      * Remaining acid: $0.0050 - 0.0025 = 0.0025\\\\text{ mol}$
+> >      * Conjugate base salt formed: $0.0025\\\\text{ mol}$
+> >      * Since it contains significant amounts of both weak acid and its conjugate base, Solution A acts as a buffer.
+> > 
+> > 2. **Analyze Solution B:**
+> >      * Moles of $\\\\text{CH}_3\\\\text{COOH} = 0.0250 \\\\times 0.200 = 0.0050\\\\text{ mol}$
+> >      * Moles of $\\\\text{NaOH} = 0.0500 \\\\times 0.100 = 0.0050\\\\text{ mol}$
+> >      * Complete neutralization occurs because moles of acid equal moles of base.
+> >      * No unreacted weak acid remains in solution, only salt and water. Therefore, Solution B is not a buffer.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 7: Liquid Ammonia Auto-Dissociation (Checkpoint Q5)
-> **Question:** Ammonia auto-dissociation and solute classification.
+> #### 📝 Worked Example 7: Basic Buffer Concentration Calculation
+> **Question:** A buffer solution was made by mixing $50\\\\text{ cm}^3$ of $0.200\\\\text{ mol dm}^{-3}$ aqueous ammonia, $\\\\text{NH}_3\\\\text{(aq)}$, with $50\\\\text{ cm}^3$ of aqueous ammonium chloride. The pH of the resulting solution was $9.55$ Calculate the concentration of the $\\\\text{NH}_4\\\\text{Cl}$ used. $[K_a(\\\\text{NH}_4^+) = 5.62 \\\\times 10^{-10}\\\\text{ mol dm}^{-3}]$
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > * **(a) Amphoteric:** One ammonia molecule behaves as acid (donates proton) and another as base (accepts proton).
-> > * **(b) Classifications:** (i) Acidic, (ii) Basic, (iii) Basic.
+> > 1. **Calculate the hydrogen ion concentration from pH:**
+> >      $$[\\\\text{H}^+] = 10^{-9.55} = 2.82 \\\\times 10^{-10}\\\\text{ mol dm}^{-3}$$
+> > 
+> > 2. **Calculate ammonia concentration in the mixture:**
+> >      * Since equal volumes ($50\\\\text{ cm}^3$ each) are mixed, the total volume is doubled, halving the concentration:
+> >        $$[\\\\text{NH}_3]_{\\\\text{mix}} = \\\\frac{0.200}{2} = 0.100\\\\text{ mol dm}^{-3}$$
+> > 
+> > 3. **Use the Ka expression to find the ammonium concentration in the mixture:**
+> >      $$K_a = \\\\frac{[\\\\text{NH}_3][\\\\text{H}^+]}{[\\\\text{NH}_4^+]} \\\\implies [\\\\text{NH}_4^+]_{\\\\text{mix}} = \\\\frac{[\\\\text{NH}_3]_{\\\\text{mix}} [\\\\text{H}^+]}{K_a}$$
+> >      $$[\\\\text{NH}_4^+]_{\\\\text{mix}} = \\\\frac{0.100 \\\\times 2.82 \\\\times 10^{-10}}{5.62 \\\\times 10^{-10}} = 0.0501\\\\text{ mol dm}^{-3}$$
+> > 
+> > 4. **Calculate the initial concentration of ammonium chloride used:**
+> >      * The concentration in the mixture was halved during mixing, so multiply by 2:
+> >        $$\\\\text{Initial } [\\\\text{NH}_4\\\\text{Cl}] = 0.0501 \\\\times 2 = 0.100\\\\text{ mol dm}^{-3}$$
 
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Benzoic Acid Buffer Calculation
+> **Question:** Calculate the pH, at $298\\\\text{ K}$, of a buffer solution containing $12.20\\\\text{ g}$ of benzoic acid ($\\\\text{C}_6\\\\text{H}_5\\\\text{COOH}$) and $7.20\\\\text{ g}$ of sodium benzoate ($\\\\text{C}_6\\\\text{H}_5\\\\text{COONa}$) in $1.00\\\\text{ dm}^3$ of solution. $[\\\\text{p}K_a(\\\\text{C}_6\\\\text{H}_5\\\\text{COOH}) = 4.20]$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the molar masses:**
+> >      * $M_r(\\\\text{C}_6\\\\text{H}_5\\\\text{COOH}) = 122.12\\\\text{ g mol}^{-1}$
+> >      * $M_r(\\\\text{C}_6\\\\text{H}_5\\\\text{COONa}) = 144.10\\\\text{ g mol}^{-1}$
+> > 
+> > 2. **Calculate the moles of acid and salt:**
+> >      * $\\\\text{Moles of acid} = \\\\frac{12.20}{122.12} = 0.0999\\\\text{ mol}$
+> >      * $\\\\text{Moles of salt} = \\\\frac{7.20}{144.10} = 0.0500\\\\text{ mol}$
+> > 
+> > 3. **Apply the Henderson-Hasselbalch equation:**
+> >      $$\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}\\\\left(\\\\frac{[\\\\text{salt}]}{[\\\\text{acid}]}\\\\right)$$
+> >      $$\\\\text{pH} = 4.20 + \\\\log_{10}\\\\left(\\\\frac{0.0500}{0.0999}\\\\right) = 4.20 + (-0.301) = 3.90$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Self-Dissociation of Liquid Ammonia
+> **Question:** Like water, liquid ammonia undergoes self-dissociation:
+> $$2\\\\text{NH}_3 \\\\rightleftharpoons \\\\text{NH}_4^+ + \\\\text{NH}_2^-$$
+> 1. Explain why ammonia can be classified as an amphoteric substance in this system.
+> 2. For each of the following substances, indicate whether a solution of it in liquid ammonia will be 'acidic', 'basic', or 'neutral':
+>    * Ammonium chloride ($\\\\text{NH}_4\\\\text{Cl}$)
+>    * Sodium amide ($\\\\text{NaNH}_2$)
+>    * Potassium hydroxide ($\\\\text{KOH}$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain the amphoteric nature:**
+> >      * An amphoteric substance can act as both a Brønsted-Lowry acid and base.
+> >      * In this self-dissociation, one ammonia molecule acts as an acid by donating a proton ($\\\\text{H}^+$) to form the amide ion ($\\\\text{NH}_2^-$).
+> >      * Another ammonia molecule acts as a base by accepting a proton to form the ammonium ion ($\\\\text{NH}_4^+$).
+> > 
+> > 2. **Classify the solute solutions:**
+> >      * **Ammonium chloride ($\\\\text{NH}_4\\\\text{Cl}$):** **Acidic** (it increases the concentration of $\\\\text{NH}_4^+$, which is the solvent cation).
+> >      * **Sodium amide ($\\\\text{NaNH}_2$):** **Basic** (it increases the concentration of $\\\\text{NH}_2^-$, which is the solvent anion).
+> >      * **Potassium hydroxide ($\\\\text{KOH}$):** **Basic** (hydroxide ions accept protons from $\\\\text{NH}_4^+$ or react with $\\\\text{NH}_3$ to generate $\\\\text{NH}_2^-$).
 `,
     keyPoints: [
       'Buffers require a reservoir of both weak acid/base and its conjugate salt.',
       'Henderson-Hasselbalch allows direct calculation of buffer pH from concentrations.',
       'When acid and salt concentrations are equal, pH equals pKa.'
-    ]
+    ],
+    equationVisualizer: {
+      reactants: [['NH₃', '#3b82f6'], ['NH₃', '#3b82f6']],
+      products: [['NH₄⁺', '#10b981'], ['NH₂⁻', '#ef4444']],
+      description: "Self-dissociation of liquid ammonia (one molecule acts as a proton donor/acid, the other as a proton acceptor/base)."
+    }
   },
   {
     id: 'buffer-titrations-ka-u4-l4',
@@ -1363,63 +1424,90 @@ ${svgToken(titrationCurvesDashboardSvg)}
     content: `
 > [!NOTE]
 > ### 📊 Buffer Action during a Titration
-> In the titration curve of a weak acid with a strong base:
-> * Initial: There is a small rapid initial pH rise of about $1.5$ pH units when the strong base is first added.
-> * Buffer range: Following this initial rise, the curve shows a very gradual slope called the **buffer range**.
-> * In this range, there is a considerable concentration of both weak acid (HA) and conjugate base (A⁻), displaying buffer action.
+> In the titration curve of a weak acid with a strong base (or a weak base with a strong acid):
+> * **Initial pH Jump:** When the titrant is first added, there is a fairly rapid initial change of about $1.5$ pH units before the buffer region is established
+> * **Buffer Region:** Following the initial jump, the curve features a very gradual slope called the **buffer range**
+> * **Species Coexistence:** Within this range, significant concentrations of both the unreacted weak species and its conjugate partner coexist in solution, creating a buffer system that resists rapid pH changes.
+>   * *For Weak Acid + Strong Base:* The solution contains a reservoir of unreacted weak acid ($\\\\text{HA}$) and its conjugate base ($\\\\text{A}^-$)
+>   * *For Weak Base + Strong Acid:* The solution contains a reservoir of unreacted weak base ($\\\\text{NH}_3$) and its conjugate acid ($\\\\text{NH}_4^+$)
 
 > [!IMPORTANT]
 > ### 🧮 Determining Ka from a pH Titration Curve
-> At the **half-equivalence point**:
-> 1. The point during the titration of a weak acid (or weak base) where exactly half of the original analyte has been neutralized by the titrant.
-> 2. The point where half of the acid has been neutralized.
-> 3. At this specific point, $[\\\\text{HA}] = [\\\\text{A}^-]$. Substituting this into the $K_a$ expression reveals that:
->    $$K_a = \\\\frac{[\\\\text{H}^+][\\\\text{A}^-]}{[\\\\text{HA}]} \\\\implies \\\\text{pH} = \\\\text{p}K_a$$
-> 4. This is the standard experimental method for determining the $K_a$ of an unknown weak acid.
-> * *Exam Hint:* Always use the term **half-equivalence point** and NOT half-neutralisation point when determining p$K_a$ of a weak acid.
-
+> The **half-equivalence point** is the point during the titration of a weak acid (or weak base) where exactly half of the original analyte has been neutralized by the titrant:
+> 1. At this specific point, the concentration of the weak acid equals the concentration of its conjugate base salt:
+>    $$[\\\\text{HA}] = [\\\\text{A}^-]$$
+> 2. Substituting this equality into the acid dissociation constant ($K_a$) expression:
+>    $$K_a = \\\\frac{[\\\\text{H}^+][\\\\text{A}^-]}{[\\\\text{HA}]} \\\\implies K_a = [\\\\text{H}^+]$$
+> 3. Taking the negative logarithm of both sides:
+>    $$\\\\text{pH} = \\\\text{p}K_a$$
+> * **Exam Tip:** Always use the term **half-equivalence point** (and not half-neutralisation point) when explaining the experimental determination of $\\\\text{p}K_a$ from a pH curve
 
 > [!BOX]
-> ### 🧪 Alternative Half-Volume Method (Practical Skills CP11)
-> We can measure $pK_a$ directly using this experimental method:
-> 1. Pipette $25.0\\text{ cm}^3$ of weak acid into a conical flask and add a few drops of phenolphthalein indicator.
-> 2. Titrate against sodium hydroxide until the end point colour is obtained. Note the volume required ($V_{\\text{eq}}$).
-> 3. Pipette a fresh $25.0\\text{ cm}^3$ sample of the weak acid and add exactly **half the volume** of sodium hydroxide ($\\frac{V_{\\text{eq}}}{2}$). Do NOT add indicator.
-> 4. Measure the pH of this mixture using a calibrated pH meter. The measured pH is equal to the p$K_a$ value of the acid.
-
-
+> ### 🧪 The Half-Volume Method (Practical Skills CP11)
+> This standard experimental procedure determines the $K_a$ of an unknown weak acid:
+> 1. Pipette $25.0\\\\text{ cm}^3$ of the weak acid into a conical flask and add a few drops of phenolphthalein indicator.
+> 2. Titrate against sodium hydroxide of known concentration until a permanent pale pink end-point is reached. Note the equivalence volume ($V_{\\\\text{eq}}$).
+> 3. Pipette a fresh, separate $25.0\\\\text{ cm}^3$ sample of the same weak acid into another conical flask (do NOT add indicator).
+> 4. Add exactly **half the volume** of sodium hydroxide solution ($\\\\frac{V_{\\\\text{eq}}}{2}$) to this flask.
+> 5. Measure the pH of this mixture using a calibrated pH meter.
+> 6. Because this is the half-equivalence point, the measured $\\\\text{pH}$ value is directly equal to $\\\\text{p}K_a$
+> 7. Calculate $K_a$ using the relation:
+>    $$K_a = 10^{-\\\\text{p}K_a}$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Ringed Region on HCl-Ammonia Titration Curve (Checkpoint Q1)
-> **Question:** A student titrates hydrochloric acid into ammonia solution.
-> (a) Name the type of solution formed in the ringed region at the start of the titration.
-> (b) Explain how you deduced your answer to part (a).
+> #### 📝 Worked Example 1: Ringed Region on HCl-Ammonia Titration Curve
+> **Question:** A student carried out a titration by adding hydrochloric acid to ammonia solution. A sketch graph of pH against volume of hydrochloric acid added shows a ringed region near the start where the pH decreases very gradually.
+> 1. Name the type of solution formed in this ringed region.
+> 2. Explain how you deduced your answer.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > **(a) Solution type:**
-> > * A **buffer solution** (consisting of the weak base ammonia, NH₃, and its conjugate acid salt ammonium chloride, NH₄Cl).
+> > 1. **Identify the solution type:**
+> >    * A **buffer solution**
 > > 
-> > **(b) Explanation:**
-> > * The ringed region is before the equivalence point, where only some of the ammonia has reacted with HCl. This creates a mixture containing both unreacted weak base and conjugate acid. This mixture resists changes in pH, resulting in a very gradual slope.
-
-
+> > 2. **Explain the deduction:**
+> >    * In this region, only some of the weak base ammonia ($\\\\text{NH}_3$) has reacted with the hydrochloric acid.
+> >    * Therefore, unreacted weak base ($\\\\text{NH}_3$) and its conjugate acid ($\\\\text{NH}_4^+$ from the formed $\\\\text{NH}_4\\\\text{Cl}$) co-exist in significant concentrations.
+> >    * The curve shows a very gradual change in pH upon adding acid, which is the characteristic behavior of a buffer system resisting pH change.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Determining pKa from Curve (Checkpoint Q2)
-> **Question:** A titration curve of a weak acid shows an equivalence point at $15.0\\\\text{ cm}^3$ NaOH added. The pH at the half-equivalence point ($7.5\\\\text{ cm}^3$ NaOH added) is $4.50$. Determine the $pK_a$ value for the acid.
+> #### 📝 Worked Example 2: Determining Ka from a Titration Curve
+> **Question:** A student titrates $25.0\\\\text{ cm}^3$ of a weak monoprotic acid ($\\\\text{HA}$) with $0.100\\\\text{ mol dm}^{-3}\\\\text{ NaOH(aq)}$. The equivalence point is reached after adding $25.0\\\\text{ cm}^3$ of $\\\\text{NaOH}$. The pH at the half-equivalence point ($12.5\\\\text{ cm}^3$ of $\\\\text{NaOH}$ added) is $4.80$. Calculate the acid dissociation constant ($K_a$) of the weak acid.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > * 1. **Identify the half-equivalence volume:**
-> >      * Volume = 15.0 / 2 = **7.5 cm³**
-> > * 2. **Locate the pH at this volume:**
-> >      * From the titration curve, the pH when 7.5 cm³ NaOH is added is **4.50**.
-> > * 3. **State the relationship:**
-> >      * At the half-equivalence point, [acid] = [salt], so pH = pKa.
-> > * Therefore, **pKa = 4.50**
+> > 1. **Identify the half-equivalence volume:**
+> >    * The equivalence volume is $25.0\\\\text{ cm}^3$
+> >    * The half-equivalence volume occurs at:
+> >      $$\\\\text{Volume} = \\\\frac{25.0\\\\text{ cm}^3}{2} = 12.5\\\\text{ cm}^3$$
+> > 
+> > 2. **State the pH-pKa relationship:**
+> >    * At the half-equivalence point, $[\\\\text{HA}] = [\\\\text{A}^-]$
+> >    * Therefore, $\\\\text{pH} = \\\\text{p}K_a = 4.80$
+> > 
+> > 3. **Calculate Ka:**
+> >    * Convert $\\\\text{p}K_a$ to $K_a$:
+> >      $$K_a = 10^{-\\\\text{p}K_a} = 10^{-4.80} = 1.58 \\\\times 10^{-5}\\\\text{ mol dm}^{-3}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Finding pKa from a Curve
+> **Question:** A titration curve for a weak acid shows that the vertical jump occurs at $16.0\\\\text{ cm}^3$ of $\\\\text{NaOH(aq)}$ added. Use the curve to determine the $\\\\text{p}K_a$ value for the acid and explain your steps.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify equivalence volume:**
+> >    * The equivalence point occurs at the vertical jump at $16.0\\\\text{ cm}^3$
+> > 
+> > 2. **Calculate half-equivalence volume:**
+> >    * Find the half-volume:
+> >      $$\\\\text{Half-volume} = \\\\frac{16.0\\\\text{ cm}^3}{2} = 8.0\\\\text{ cm}^3$$
+> > 
+> > 3. **Read pKa from the graph:**
+> >    * Locate $8.0\\\\text{ cm}^3$ on the x-axis, project vertically up to the titration curve, and read the corresponding pH value on the y-axis.
+> >    * This pH value is equal to the $\\\\text{p}K_a$ of the acid, which is approximately $4.60$
 
 `,
     keyPoints: [

@@ -56,7 +56,7 @@
 - [x] **Pearson Edexcel IAL - Unit 1 Topic 4: Introductory Organic Chemistry & Alkanes — Part 1 & 2 (مكتمل):** إضافة مثالين امتحانيين مستهدفين لقسم السلامة (تصريف الغازات الحمضية بمحلول NaOH، ومقارنة احتياطات مواد مختلفة)؛ وإضافة مثالين لقسم الصيغ العضوية (مقارنة نقاط الغليان ببنية المتشعبة، وتحويل الصيغة البنائية المعقدة لصيغة هيكلية بمجموعات وظيفية متعددة).
 - [x] **Pearson Edexcel IAL - Unit 1 Topic 5: Alkenes — Enrichment (مكتمل):** إضافة التطبيق الصناعي للهدرجة (صناعة المارجرين بمحفز النيكل عند ~200°C) في قسم Electrophilic Addition، وتفعيل محاكي المعادلة المتحركة `equationVisualizer` لتفاعل Br₂ مع الإيثين مع وصف ربطه باختبار ماء البروم.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 13: Chemical Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Kc, Kp, Q vs K, Le Chatelier, Temperature & Equilibria, Entropy & Kp) مع 17 سؤال امتحاني متكامل.
-- [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titration Curves & Indicators, Buffer Solutions, Ka from pH Curves) مع **35 سؤال امتحاني شامل**. إعادة تصميم رسمة SVG لمنحنيات المعايرة الأربعة بالكامل لتطابق الكتاب المدرسي، مع هيكلة وتنسيق المثال الأول والثاني بالكامل داخل صناديق `[!EXAMPLE]` و `[!TIP]` منفصلة ونظيفة، وحل مشكلة انقسام الصناديق في محرك الدروس (`page.tsx`) عبر استخراج الصور المتجهية وتفادي تقطيع الـ blockquotes. إضافة المثال الثالث المحلول لتحديد Ka بيانيّاً وحسابات الأحماض ثنائية البروتون (Stoichiometry)، والمثال السادس لحساب النسبة المئوية للتفكك وتأثير التخفيف وفق قاعدة لوشاتيليه، والمثال السابع للمقارنة بين قوة الأحماض الكربوكسيلية بناءً على التأثير الحثي الساحب للإلكترونات (Inductive Effect)، وتحديث المثال العاشر ليشمل خلط حمض وقاعدة في حالة فائض القاعدة (Base in Excess)، والمثال الحادي عشر لحسابات التخفيف (Dilution) المستقلة، ومعالجة رموز KaTeX وهروب LaTeX الرباعي في صناديق حمض الكبريتيك ثنائي البروتون وتأثير الحرارة على تفكك الماء والقواعد القوية، وتحديث نقاط المراجعة الدراسية (Key Study Points) لجميع الأقسام لتطابق هذه التحديثات.
+- [x] **Pearson Edexcel IAL - Unit 4 Topic 14: Acid-Base Equilibria (مكتمل):** 6 أجزاء تفاعلية كاملة (Brønsted-Lowry & pH, Weak Acids/Ka/pKa, Titration Curves & Indicators, Buffer Solutions, Ka from pH Curves) مع **35 سؤال امتحاني شامل** و **8 بطاقات Active Recall تفاعلية**. إعادة تصميم رسمة SVG لمنحنيات المعايرة الأربعة بالكامل لتطابق الكتاب المدرسي وتعديل خطوطها وتباينها (تصغير الخطوط لأكثر من 11) وتجاوبها، مع هيكلة وتنسيق المثال الأول والثاني بالكامل داخل صناديق `[!EXAMPLE]` و `[!TIP]` منفصلة ونظيفة، وحل مشكلة انقسام الصناديق في محرك الدروس (`page.tsx`) عبر استخراج الصور المتجهية وتفادي تقطيع الـ blockquotes. إضافة المثال الثالث المحلول لتحديد Ka بيانيّاً وحسابات الأحماض ثنائية البروتون (Stoichiometry)، والمثال السادس لحساب النسبة المئوية للتفكك وتأثير التخفيف وفق قاعدة لوشاتيليه، والمثال السابع للمقارنة بين قوة الأحماض الكربوكسيلية بناءً على التأثير الحثي الساحب للإلكترونات (Inductive Effect)، وتحديث المثال العاشر ليشمل خلط حمض وقاعدة في حالة فائض القاعدة (Base in Excess)، والمثال الحادي عشر لحسابات التخفيف (Dilution) المستقلة، ومعالجة رموز KaTeX وهروب LaTeX الرباعي في صناديق حمض الكبريتيك ثنائي البروتون وتأثير الحرارة على تفكك الماء والقواعد القوية، وتحديث نقاط المراجعة الدراسية (Key Study Points) لجميع الأقسام، ودمج محاكي المعادلات المتحرك `equationVisualizer` لمعادلة التفكك الذاتي للأمونيا بداخل قسم Buffer Solutions.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 12: Entropy and Energetics (مكتمل):** 7 أجزاء تفاعلية كاملة (Entropy, System/Surroundings/Total Entropy, Gibbs Free Energy, Born-Haber Cycles, Covalent Character, Enthalpy of Solution & Hydration, Group 2 Solubility Trends) مع إعادة تنسيق الأمثلة المحلولة 100%، وتدقيق 34 صندوق ملاحظات بالإيموجي، وضبط صيغ KaTeX، وإعادة هيكلة كويز الدرس (20 سؤالاً) وتزويده بـ lessonNum: 2 وتنسيق الشروحات بنقاط منسقة.
 - [x] **Pearson Edexcel IAL - Unit 5 Topic 20: Modern Analytical Techniques II (مكتمل):** 7 أجزاء تفاعلية كاملة (TLC, GC-MS, HRMS, NMR principles, 13C NMR, Low & High-Res 1H NMR splitting) مع 27 سؤال امتحاني متكامل.
 - [x] **Pearson Edexcel IAL - Unit 4 Topic 11: Kinetics (مكتمل):** إدخال وتطوير المحتوى التفاعلي المتكامل لـ 6 أجزاء (معدلات السرعة، معادلات ورتب التفاعل، فترات عمر النصف وتفكك المركب P بيانياً، آليات التفاعل والخطوة المحددة للسرعة، أثر الحرارة ومعادلة أرينيوس، والحفز المتجانس وغير المتجانس والتسمم بالرصاص) مع إضافة وتوثيق 14 مثالاً امتحانياً تفصيلياً من أوراق المنهج.
@@ -329,3 +329,29 @@
      - **السؤال 38 (Hard):** حساب التغير الكلي في الإنتروبيا $\Delta S^\theta_{\text{total}}$ من ثابت الاتزان $K$ عند $300\text{ K}$.
      - **السؤال 39 (Medium):** التبرير الحركي والاقتصادي لاستخدام درجات الحرارة المرتفعة صناعياً في التفاعلات الطاردة للحرارة.
      - **السؤال 40 (Hard):** حساب قيمة ووحدة $K_p$ بالخطوات الرياضية التفصيلية لخليط اتزان غازي من الميثان والهيدروجين.
+
+**إنجازات جلسة اليوم (2026-08-07) — قائمة المنافسة، الشريط الجانبي، وإصلاح Hydration:**
+
+1. **فلترة قائمة المنافسة (Leaderboard) حسب المنهج:**
+   - إضافة صف تبويبات ثانٍ في صفحة الـ Leaderboard يتيح التصفية حسب التخصص: `🌐 All Students` / `🦷 Dental Board` / `⚗️ IGCSE` / `🔬 A-Level`.
+   - تعديل الـ API (`/api/leaderboard`) لقبول بارامتر `?grade=` يُفلتر نتائج Firestore قبل الإرجاع.
+   - العنوان الفرعي يتغير ديناميكياً حسب التبويب المختار (مثال: *🦷 Dental Board Rankings*).
+
+2. **إقصاء حسابات الأدمن والـ Moderator من قائمة المنافسة:**
+   - فلترة أي حساب يحمل `isAdmin: true` أو `role: 'admin'` أو `role: 'moderator'` قبل بناء القائمة.
+
+3. **إصلاح ثبات الشريط الجانبي لطلاب الأسنان (Dental Sidebar Persistence):**
+   - **جذر المشكلة:** `isDentalUser` كان يعتمد على `user.grade` الذي يكون `undefined` لحسابات الأدمن أو خلال مرحلة تحميل الـ Auth، مما يجعل قائمة Chemistry تظهر بدلاً من Dental عند الانتقال لـ Leaderboard أو Profile.
+   - **الحل (Solution A — Last Mode Tracking):** بدلاً من الاعتماد على `user.grade`، يتتبع النظام آخر قسم زاره المستخدم (`last_mode` في `localStorage`):
+     - `/dashboard/dental/*` → يُحفظ `last_mode = 'dental'`
+     - `/dashboard` أو `/dashboard/curriculum/*` → يُحفظ `last_mode = 'chemistry'`
+     - الصفحات المشتركة (Leaderboard, Profile) → تقرأ `last_mode` فقط دون تعديله.
+   - **نظيف للأدمن والطلاب** بدون الاعتماد على حقل `grade` نهائياً.
+   - **مسح Cache عند Logout:** يُحذف `last_mode` من `localStorage` عند تسجيل الخروج.
+
+4. **إصلاح Hydration Mismatch في الشريط الجانبي:**
+   - `useState(() => localStorage.getItem('last_mode'))` كان يُسبب Hydration error لأن السيرفر لا يملك `localStorage`.
+   - الحل: بدء `useState('chemistry')` كقيمة آمنة للـ SSR، ثم مزامنة `localStorage` في `useEffect([pathname])` فور تحميل العميل.
+
+5. **إصلاح Build Error في الـ Leaderboard API:**
+   - إعادة كتابة [`route.ts`](file:///c:/Users/admin/Projects/chemzim/app/api/leaderboard/route.ts) بالكامل من الصفر لحل خطأ Turbopack الناتج عن نسخة Cache تالفة.
