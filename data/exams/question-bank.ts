@@ -1306,6 +1306,60 @@ questionBank.push(
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-21"
+  },
+  {
+    id: "q_ab_ed_pp_12-20260810",
+    question: "Which of the following represents a conjugate acid–base pair, with the acid listed first?",
+    options: [
+      { text: "$\\text{H}_3\\text{O}^+ / \\text{OH}^-$" },
+      { text: "$\\text{H}_2\\text{SO}_4 / \\text{SO}_4^{2-}$" },
+      { text: "$\\text{NH}_4^+ / \\text{NH}_3$" },
+      { text: "$\\text{H}_2\\text{O} / \\text{H}_3\\text{O}^+$" }
+    ],
+    correctAnswer: 2,
+    explanation: "• A conjugate acid–base pair consists of two species that differ by exactly one proton ($\\text{H}^+$).\n• The acid is the proton donor, and the base is the proton acceptor.\n• $\\text{NH}_4^+$ donates one proton to form its conjugate base $\\text{NH}_3$.\n• The other pairs do not differ by exactly one proton or have the base listed first.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ab_ed_pp_13-20260810",
+    question: "A buffer solution is prepared containing $0.200\\text{ mol dm}^{-3}$ methanoic acid, HCOOH, and $0.150\\text{ mol dm}^{-3}$ sodium methanoate, HCOONa. The acid dissociation constant, $K_a$, of methanoic acid is $1.60 \\times 10^{-4}\\text{ mol dm}^{-3}$ at $298\\text{ K}$. What is the pH of this buffer solution?",
+    options: [
+      { text: "3.67" },
+      { text: "3.80" },
+      { text: "3.92" },
+      { text: "4.12" }
+    ],
+    correctAnswer: 0,
+    explanation: "• Use the Henderson-Hasselbalch equation: $\\text{pH} = \\text{p}K_a + \\log_{10}([\\text{conjugate base}] / [\\text{weak acid}])$.\n• Calculate $\\text{p}K_a = -\\log_{10}(1.60 \\times 10^{-4}) = 3.796$.\n• Substitute concentrations: $\\text{pH} = 3.796 + \\log_{10}(0.150 / 0.200)$.\n• $\\text{pH} = 3.796 + \\log_{10}(0.75) = 3.796 - 0.125 = 3.671 \\approx 3.67$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ab_ed_pp_14-20260810",
+    question: "On a titration curve obtained by adding a strong base to a weak acid, what name is given to the region where the pH increases very slowly before the equivalence point?",
+    options: [
+      { text: "The equivalence region" },
+      { text: "The buffer region" },
+      { text: "The neutralisation region" },
+      { text: "The end point" }
+    ],
+    correctAnswer: 1,
+    explanation: "• As strong base is added to the weak acid, some of the weak acid is converted into its conjugate base salt, creating a mixture of both species.\n• This mixture acts as a buffer solution, resisting large changes in pH upon further addition of base.\n• This portion of the curve is therefore called the buffer region, where the pH rises gradually.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
   }
 );
 
@@ -2319,12 +2373,372 @@ questionBank.push(
       { text: "It is dimensionless (has no units)." }
     ],
     correctAnswer: 0,
-    explanation: "1. The term $e^{-E_a/RT}$ is a ratio of energies (since $E_a$ and $RT$ both have units of $\\text{J mol}^{-1}$), meaning it is dimensionless (has no units).\n2. Therefore, the pre-exponential factor ($A$) must have the exact same units as the rate constant ($k$).\n3. For a second-order reaction (Rate = $k[\\text{Reactant}]^2$), the units of $k$ are: $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.\n4. Thus, the units of $A$ are also $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
+    explanation: "• The term $e^{-E_a/RT}$ is a ratio of energies (since $E_a$ and $RT$ both have units of $\\text{J mol}^{-1}$), meaning it is dimensionless (has no units).\n• Therefore, the pre-exponential factor ($A$) must have the exact same units as the rate constant ($k$).\n• For a second-order reaction (Rate = $k[\\text{Reactant}]^2$), the units of $k$ are: $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.\n• Thus, the units of $A$ are also $\\text{dm}^3\\text{ mol}^{-1}\\text{ s}^{-1}$.",
     level: 3,
     topic: "edexcel-unit-4",
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-07-26"
+  },
+  {
+    id: "q_ent_ed_exam_01-20260810",
+    question: "Which of the following processes results in a decrease in the entropy of the system?",
+    options: [
+      { text: "$\\text{H}_2\\text{O(l)} \\rightarrow \\text{H}_2\\text{O(g)}$" },
+      { text: "$\\text{N}_2\\text{O}_4\\text{(g)} \\rightarrow 2\\text{NO}_2\\text{(g)}$" },
+      { text: "$\\text{H}_2\\text{O(l)} \\rightarrow \\text{H}_2\\text{O(s)}$" },
+      { text: "$\\text{NaCl(s)} + \\text{aq} \\rightarrow \\text{Na}^+\\text{(aq)} + \\text{Cl}^-\\text{(aq)}$" }
+    ],
+    correctAnswer: 2,
+    explanation: "• Freezing of water ($\\text{H}_2\\text{O(l)} \\rightarrow \\text{H}_2\\text{O(s)}$) shifts molecules from a disordered liquid state to a highly ordered solid lattice.\n• This decreases the number of ways of arranging the particles and their energy, resulting in a negative entropy change ($\\Delta S_{\\text{system}} < 0$).\n• Evaporation, decomposition into more gas moles, and dissolving solids all increase disorder (positive entropy change).",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_02-20260810",
+    question: "The standard standard entropies for $\\text{N}_2\\text{(g)}$, $\\text{H}_2\\text{(g)}$, and $\\text{NH}_3\\text{(g)}$ are $191.6$, $130.6$, and $192.3\\text{ J K}^{-1}\\text{ mol}^{-1}$ respectively. Calculate the standard entropy change of the system ($\\Delta S^{\\theta}_{\\text{system}}$) for: $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightarrow 2\\text{NH}_3\\text{(g)}$",
+    options: [
+      { text: "$-198.8\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$-129.9\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$+198.8\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$-384.6\\text{ J K}^{-1}\\text{ mol}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "• The formula for entropy of the system is: $\\Delta S^{\\theta}_{\\text{system}} = \\sum S^{\\theta}(\\text{products}) - \\sum S^{\\theta}(\\text{reactants})$.\n• Products: $2 \\times S^{\\theta}(\\text{NH}_3) = 2 \\times 192.3 = 384.6\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• Reactants: $S^{\\theta}(\\text{N}_2) + 3 \\times S^{\\theta}(\\text{H}_2) = 191.6 + 3(130.6) = 191.6 + 391.8 = 583.4\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• $\\Delta S^{\\theta}_{\\text{system}} = 384.6 - 583.4 = -198.8\\text{ J K}^{-1}\\text{ mol}^{-1}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_03-20260810",
+    question: "What is the primary thermodynamic condition for a chemical reaction to be feasible (spontaneous) at a given temperature?",
+    options: [
+      { text: "The system entropy change ($\\Delta S_{\\text{system}}$) must be positive." },
+      { text: "The enthalpy change ($\\Delta H$) must be highly negative." },
+      { text: "The Gibbs free energy change ($\\Delta G$) must be less than or equal to zero." },
+      { text: "The total entropy change ($\\Delta S_{\\text{total}}$) must be negative." }
+    ],
+    correctAnswer: 2,
+    explanation: "• For any process to be feasible, the total entropy change ($\\Delta S_{\\text{total}}$) must be positive ($\\Delta S_{\\text{total}} > 0$).\n• Because Gibbs free energy is related by $\\Delta G = -T \\Delta S_{\\text{total}}$, a positive total entropy change corresponds directly to a negative Gibbs free energy change ($\\Delta G \\le 0$).\n• Hence, a reaction is thermodynamically feasible only when $\\Delta G \\le 0$.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_04-20260810",
+    question: "For a reaction, $\\Delta H^{\\theta} = +135\\text{ kJ mol}^{-1}$ and $\\Delta S^{\\theta}_{\\text{system}} = +245\\text{ J K}^{-1}\\text{ mol}^{-1}$. Above which temperature does this reaction become feasible?",
+    options: [
+      { text: "$273\\text{ K}$" },
+      { text: "$551\\text{ K}$" },
+      { text: "$0.55\\text{ K}$" },
+      { text: "$1.81\\text{ K}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "• A reaction becomes feasible when $\\Delta G = \\Delta H - T \\Delta S_{\\text{system}} \\le 0$.\n• At the boundary where feasibility begins: $\\Delta H = T \\Delta S_{\\text{system}} \\implies T = \\Delta H / \\Delta S_{\\text{system}}$.\n• Convert $\\Delta H$ to joules: $+135\\text{ kJ mol}^{-1} = +135,000\\text{ J mol}^{-1}$.\n• Calculate $T$: $T = 135,000 / 245 = 551.02\\text{ K}$.\n• Since both $\\Delta H$ and $\\Delta S$ are positive, the reaction is feasible at high temperatures, i.e., above $551\\text{ K}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_05-20260810",
+    question: "Which equation represents the correct relationship to calculate the entropy change of the surroundings ($\\Delta S_{\\text{surroundings}}$)?",
+    options: [
+      { text: "$\\Delta S_{\\text{surroundings}} = \\Delta H / T$" },
+      { text: "$\\Delta S_{\\text{surroundings}} = -\\Delta H / T$" },
+      { text: "$\\Delta S_{\\text{surroundings}} = T \\Delta H$" },
+      { text: "$\\Delta S_{\\text{surroundings}} = -\\Delta G / T$" }
+    ],
+    correctAnswer: 1,
+    explanation: "• The entropy change of the surroundings is determined by the heat transferred to or from the surroundings at a constant temperature $T$.\n• An exothermic reaction (negative $\\Delta H$) releases heat to the surroundings, increasing their entropy, so the sign must be opposite to that of $\\Delta H$.\n• The correct thermodynamic relationship is: $\\Delta S_{\\text{surroundings}} = -\\Delta H / T$.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_06-20260810",
+    question: "An industrial reaction has an enthalpy change of $\\Delta H^{\\theta} = -92.2\\text{ kJ mol}^{-1}$. Calculate the standard entropy change of the surroundings ($\\Delta S^{\\theta}_{\\text{surroundings}}$) at $298\\text{ K}$.",
+    options: [
+      { text: "$+309.4\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$-309.4\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$+0.31\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$+3.23\\text{ J K}^{-1}\\text{ mol}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "• Use the formula: $\\Delta S^{\\theta}_{\\text{surroundings}} = -\\Delta H / T$.\n• Convert $\\Delta H$ to joules: $-92.2\\text{ kJ mol}^{-1} = -92,200\\text{ J mol}^{-1}$.\n• Substitute values: $\\Delta S^{\\theta}_{\\text{surroundings}} = -(-92,200) / 298 = +309.4\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• The positive value reflects the exothermic nature increasing the thermal disorder of the surroundings.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_07-20260810",
+    question: "Calculate the total entropy change ($\\Delta S^{\\theta}_{\\text{total}}$) for a reaction at $298\\text{ K}$ where $\\Delta S^{\\theta}_{\\text{system}} = -198.8\\text{ J K}^{-1}\\text{ mol}^{-1}$ and $\\Delta S^{\\theta}_{\\text{surroundings}} = +309.4\\text{ J K}^{-1}\\text{ mol}^{-1}$.",
+    options: [
+      { text: "$-508.2\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$+110.6\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$-110.6\\text{ J K}^{-1}\\text{ mol}^{-1}$" },
+      { text: "$+508.2\\text{ J K}^{-1}\\text{ mol}^{-1}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "• The total entropy change is the sum of system and surroundings entropy changes: $\\Delta S^{\\theta}_{\\text{total}} = \\Delta S^{\\theta}_{\\text{system}} + \\Delta S^{\\theta}_{\\text{surroundings}}$.\n• Substitute the values: $\\Delta S^{\\theta}_{\\text{total}} = -198.8 + 309.4 = +110.6\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n• Since the total entropy change is positive, the reaction is thermodynamically feasible at this temperature.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_08-20260810",
+    question: "Which of the following equations correctly relates Gibbs free energy change ($\\Delta G$) to the total entropy change ($\\Delta S_{\\text{total}}$)?",
+    options: [
+      { text: "$\\Delta G = T \\Delta S_{\\text{total}}$" },
+      { text: "$\\Delta G = -T \\Delta S_{\\text{total}}$" },
+      { text: "$\\Delta G = -\\Delta S_{\\text{total}} / T$" },
+      { text: "$\\Delta G = \\Delta H - T \\Delta S_{\\text{total}}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "• Standard Gibbs free energy change is derived directly from the total entropy equation: $\\Delta S_{\\text{total}} = \\Delta S_{\\text{system}} - \\Delta H/T$.\n• Multiplying the entire equation by $-T$ gives: $-T\\Delta S_{\\text{total}} = \\Delta H - T\\Delta S_{\\text{system}}$.\n• Since $\\Delta G = \\Delta H - T\\Delta S_{\\text{system}}$, we substitute to get: $\\Delta G = -T \\Delta S_{\\text{total}}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_09-20260810",
+    question: "Which statement defines the standard lattice energy of an ionic compound?",
+    options: [
+      { text: "The enthalpy change when one mole of an ionic solid is formed from its gaseous ions under standard conditions." },
+      { text: "The enthalpy change when one mole of an ionic solid is dissolved in water to form gaseous ions." },
+      { text: "The enthalpy change when one mole of an ionic solid is formed from its elements in standard states." },
+      { text: "The enthalpy change when one mole of gaseous atoms is formed from the element in its standard state." }
+    ],
+    correctAnswer: 0,
+    explanation: "• Lattice energy (specifically lattice formation enthalpy) is the enthalpy change when one mole of an ionic solid is formed from its constituent gaseous ions under standard conditions.\n• It is always exothermic (negative) due to the electrostatic attraction between oppositely charged ions.\n• The reverse process is lattice dissociation enthalpy, which is endothermic.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_10-20260810",
+    question: "Calculate the lattice energy of sodium chloride using the following Born-Haber data:\n$\\Delta H^{\\theta}_{\\text{f}}(\\text{NaCl}) = -411\\text{ kJ mol}^{-1}$\n$\\Delta H^{\\theta}_{\\text{atomisation}}(\\text{Na}) = +107\\text{ kJ mol}^{-1}$\n1st Ionisation Energy of Na $= +496\\text{ kJ mol}^{-1}$\n$\\Delta H^{\\theta}_{\\text{atomisation}}(\\text{Cl}) = +122\\text{ kJ mol}^{-1}$\n1st Electron Affinity of Cl $= -349\\text{ kJ mol}^{-1}$",
+    options: [
+      { text: "$-787\\text{ kJ mol}^{-1}$" },
+      { text: "$-376\\text{ kJ mol}^{-1}$" },
+      { text: "$-711\\text{ kJ mol}^{-1}$" },
+      { text: "$+787\\text{ kJ mol}^{-1}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "• Apply Hess's Law to the Born-Haber cycle:\n• $\\Delta H^{\\theta}_{\\text{f}} = \\Delta H^{\\theta}_{\\text{atomisation}}(\\text{Na}) + \\text{IE}_1(\\text{Na}) + \\Delta H^{\\theta}_{\\text{atomisation}}(\\text{Cl}) + \\text{EA}_1(\\text{Cl}) + \\Delta H^{\\theta}_{\\text{lattice}}$.\n• Substitute values: $-411 = +107 + 496 + 122 - 349 + \\Delta H^{\\theta}_{\\text{lattice}}$.\n• $-411 = 376 + \\Delta H^{\\theta}_{\\text{lattice}}$.\n• $\\Delta H^{\\theta}_{\\text{lattice}} = -411 - 376 = -787\\text{ kJ mol}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_11-20260810",
+    question: "Why is the experimental lattice energy of silver iodide ($-887\\text{ kJ mol}^{-1}$) significantly more exothermic than the theoretical lattice energy calculated using a purely ionic model ($-808\\text{ kJ mol}^{-1}$)?",
+    options: [
+      { text: "Silver iodide contains a large amount of covalent character due to polarization of the iodide ion." },
+      { text: "Silver ions are larger and have a higher charge density than sodium ions." },
+      { text: "The iodide ion has a small ionic radius and polarizes the silver cation." },
+      { text: "The ionic model calculations do not account for electrostatic repulsions." }
+    ],
+    correctAnswer: 0,
+    explanation: "• The theoretical model assumes ions are perfect, unpolarizable spheres (purely ionic bonding).\n• Silver ions ($\\text{Ag}^+$) are polarising due to their d-subshell configuration, and iodide ions ($\\text{I}^-$) are large and easily polarizable.\n• This leads to electron cloud distortion and significant covalent character, which strengthens the bonding and makes the actual lattice energy more exothermic than predicted.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_12-20260810",
+    question: "Which combination of cation and anion properties results in the greatest degree of polarization and covalent character in an ionic compound?",
+    options: [
+      { text: "Large cation with high charge; small anion with low charge." },
+      { text: "Small cation with high charge; large anion with high charge." },
+      { text: "Small cation with low charge; large anion with low charge." },
+      { text: "Large cation with low charge; small anion with high charge." }
+    ],
+    correctAnswer: 1,
+    explanation: "• Polarization increases when the cation has a high charge density (high charge and small ionic radius) to strongly attract electron density.\n• Polarization also increases when the anion is large and has a high charge (high polarizability), making its electron cloud easily distorted.\n• Therefore, a small, highly charged cation and a large, highly charged anion yield the highest covalent character.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_13-20260810",
+    question: "Which of the following gaseous ions would have the most exothermic (most negative) enthalpy of hydration ($\\Delta H^{\\theta}_{\\text{hyd}}$)?",
+    options: [
+      { text: "$\\text{Na}^+$" },
+      { text: "$\\text{Mg}^{2+}$" },
+      { text: "$\\text{Ca}^{2+}$" },
+      { text: "$\\text{Ba}^{2+}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "• Enthalpy of hydration is the enthalpy change when gaseous ions dissolve in water to form hydrated ions.\n• It depends on charge density: ions with higher charge and smaller radii attract water molecules more strongly.\n• $\\text{Mg}^{2+}$ has a $+2$ charge and is smaller than $\\text{Ca}^{2+}$ and $\\text{Ba}^{2+}$, giving it a higher charge density than all other options.\n• Thus, $\\text{Mg}^{2+}$ has the most exothermic hydration enthalpy.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_14-20260810",
+    question: "Using the enthalpy cycle for dissolving an ionic solid, which expression correctly relates the enthalpy of solution ($\\Delta H_{\\text{sol}}$), lattice energy ($\\Delta H_{\\text{lattice}}$), and hydration enthalpies ($\\Delta H_{\\text{hyd}}$)?",
+    options: [
+      { text: "$\\Delta H_{\\text{sol}} = \\Delta H_{\\text{hyd}}(\\text{cations}) + \\Delta H_{\\text{hyd}}(\\text{anions}) - \\Delta H_{\\text{lattice}}$" },
+      { text: "$\\Delta H_{\\text{sol}} = \\Delta H_{\\text{lattice}} - [\\Delta H_{\\text{hyd}}(\\text{cations}) + \\Delta H_{\\text{hyd}}(\\text{anions})]$" },
+      { text: "$\\Delta H_{\\text{sol}} = \\Delta H_{\\text{lattice}} + \\Delta H_{\\text{hyd}}(\\text{cations}) + \\Delta H_{\\text{hyd}}(\\text{anions})$" },
+      { text: "$\\Delta H_{\\text{sol}} = \\Delta H_{\\text{hyd}}(\\text{cations}) - \\Delta H_{\\text{lattice}}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "• Dissolving an ionic solid involves two conceptual steps: breaking the lattice into gaseous ions ($-\\Delta H_{\\text{lattice}}$, since lattice energy is defined as formation, this is endothermic) and hydrating the gaseous ions ($\\sum \\Delta H_{\\text{hyd}}$, exothermic).\n• Therefore: $\\Delta H_{\\text{sol}} = \\Delta H_{\\text{hyd}}(\\text{cations}) + \\Delta H_{\\text{hyd}}(\\text{anions}) - \\Delta H_{\\text{lattice}}$.\n• Note: Since $\\Delta H_{\\text{lattice}}$ is negative, subtracting it makes the term positive (representing the energy required to break the lattice).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_15-20260810",
+    question: "Why does the solubility of Group 2 sulfates decrease down the group from $\\text{MgSO}_4$ to $\\text{BaSO}_4$?",
+    options: [
+      { text: "The hydration enthalpy of the cation decreases more rapidly down the group than the lattice energy." },
+      { text: "The lattice energy of the sulfate increases down the group." },
+      { text: "The sulfate ion is small, so lattice energy decreases rapidly down the group." },
+      { text: "The hydration enthalpy of the sulfate ion increases down the group." }
+    ],
+    correctAnswer: 0,
+    explanation: "• The sulfate ion ($\\text{SO}_4^{2-}$) is large, so down the group, the lattice energy decreases slowly as the cation size increases.\n• However, the hydration enthalpy of the cation decreases rapidly as the cation radius increases from $\\text{Mg}^{2+}$ to $\\text{Ba}^{2+}$.\n• Since hydration enthalpy decreases more rapidly than the lattice energy, the process of dissolving becomes less exothermic (more endothermic) down the group, decreasing solubility.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_16-20260810",
+    question: "Why does the solubility of Group 2 hydroxides increase down the group from $\\text{Mg(OH)}_2$ to $\\text{Ba(OH)}_2$?",
+    options: [
+      { text: "The hydroxide ion is small, so the lattice energy decreases more rapidly down the group than the cation hydration enthalpy." },
+      { text: "The lattice energy of the hydroxides increases down the group." },
+      { text: "The hydration enthalpy of the cations increases down the group." },
+      { text: "The hydroxide ion becomes more polarizable down the group." }
+    ],
+    correctAnswer: 0,
+    explanation: "• The hydroxide ion ($\\text{OH}^-$) is small.\n• As the cation size increases down the group, the lattice energy decreases rapidly because both ions are relatively small, making the lattice highly sensitive to size changes.\n• This rapid decrease in lattice energy outweighs the decrease in cation hydration enthalpy down the group.\n• Consequently, the enthalpy of solution becomes more exothermic (or less endothermic) down the group, increasing solubility.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_17-20260810",
+    question: "Under which thermodynamic conditions is a chemical reaction feasible at all temperatures?",
+    options: [
+      { text: "$\\Delta H$ is negative and $\\Delta S_{\\text{system}}$ is positive." },
+      { text: "$\\Delta H$ is positive and $\\Delta S_{\\text{system}}$ is negative." },
+      { text: "$\\Delta H$ is negative and $\\Delta S_{\\text{system}}$ is negative." },
+      { text: "$\\Delta H$ is positive and $\\Delta S_{\\text{system}}$ is positive." }
+    ],
+    correctAnswer: 0,
+    explanation: "• Feasibility requires $\\Delta G = \\Delta H - T \\Delta S_{\\text{system}} \\le 0$.\n• If $\\Delta H$ is negative (exothermic) and $\\Delta S_{\\text{system}}$ is positive (disorder increases), then: $\\Delta G = (-\\text{value}) - T(+\\text{value})$.\n• Since $T$ in Kelvin is always positive, $\\Delta G$ is guaranteed to be negative at all temperatures.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_18-20260810",
+    question: "Under which thermodynamic conditions is a chemical reaction not feasible at any temperature?",
+    options: [
+      { text: "$\\Delta H$ is positive and $\\Delta S_{\\text{system}}$ is negative." },
+      { text: "$\\Delta H$ is negative and $\\Delta S_{\\text{system}}$ is positive." },
+      { text: "$\\Delta H$ is negative and $\\Delta S_{\\text{system}}$ is negative." },
+      { text: "$\\Delta H$ is positive and $\\Delta S_{\\text{system}}$ is positive." }
+    ],
+    correctAnswer: 0,
+    explanation: "• Feasibility requires $\\Delta G = \\Delta H - T \\Delta S_{\\text{system}} \\le 0$.\n• If $\\Delta H$ is positive (endothermic) and $\\Delta S_{\\text{system}}$ is negative (order increases), then: $\\Delta G = (+\\text{value}) - T(-\\text{value}) = (+\\text{value}) + T(\\text{value})$.\n• Since both terms are positive, $\\Delta G$ is guaranteed to be positive at all temperatures, meaning the reaction is never feasible.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_19-20260810",
+    question: "Why is the second electron affinity of oxygen ($\\text{O}^-\\text{(g)} + \\text{e}^- \\rightarrow \\text{O}^{2-}\\text{(g)}$) an endothermic process, whereas the first electron affinity is exothermic?",
+    options: [
+      { text: "Energy is required to overcome the electrostatic repulsion between the negative $\\text{O}^-$ ion and the incoming electron." },
+      { text: "Energy is released when the electron enters the 2p orbital." },
+      { text: "The oxide ion $\\text{O}^{2-}$ is less stable than the $\\text{O}^-$ ion in the gas phase." },
+      { text: "The first electron affinity requires ionization energy." }
+    ],
+    correctAnswer: 0,
+    explanation: "• The first electron affinity adds an electron to a neutral atom, which is exothermic due to the attraction of the nucleus.\n• The second electron affinity adds a negative electron to an already negatively charged ion ($\\text{O}^-$).\n• Work must be done to overcome the strong electrostatic repulsion between the negative ion and the incoming electron, which requires energy input (making it endothermic).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
+  },
+  {
+    id: "q_ent_ed_exam_20-20260810",
+    question: "When solid ammonium nitrate dissolves in water, the temperature of the mixture drops significantly, yet the process is feasible. What is the explanation for this?",
+    options: [
+      { text: "The process is endothermic, but is driven by a large increase in entropy of the system upon dissolution." },
+      { text: "The enthalpy of solution is highly exothermic, overriding the entropy change." },
+      { text: "The reaction is non-spontaneous and requires continuous heating to proceed." },
+      { text: "The entropy of the surroundings increases to compensate for the temperature drop." }
+    ],
+    correctAnswer: 0,
+    explanation: "• A drop in temperature indicates that the process is endothermic ($\\Delta H > 0$).\n• For the dissolving to be feasible, $\\Delta G = \\Delta H - T \\Delta S_{\\text{system}} \\le 0$ must be satisfied.\n• Dissolving a solid crystal lattice into mobile, hydrated ions increases system disorder significantly ($\\Delta S_{\\text{system}} > 0$).\n• At room temperature, the $T \\Delta S_{\\text{system}}$ term is larger than the positive $\\Delta H$, making $\\Delta G$ negative.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    createdAt: "2026-08-10"
   }
-);
+)
