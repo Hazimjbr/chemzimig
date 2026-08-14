@@ -1,4 +1,5 @@
 import { LessonPart } from '../../../registry';
+import { svgToken } from '../../../svgToken';
 
 export const lessonTitle = "Organic Chemistry: Carbonyls, Carboxylic Acids and Chirality";
 export const lessonNumber = 5;
@@ -7,6 +8,583 @@ export const theoryMarkdown = `
 # Topic 15: Organic Chemistry: Carbonyls, Carboxylic Acids and Chirality
 This lesson covers structural isomerism vs stereoisomerism, chirality, optical activity, polarimetry, the stereochemical outcomes of SN1 and SN2 reaction mechanisms, carbonyl compounds (bonding, physical properties, redox, chemical tests, and addition mechanisms), carboxylic acids (bonding, nomenclature, dimerisation, preparations, and reactions), esters (nomenclature, smells, and saponification), acyl chlorides, and polyesters (condensation polymerisation).
 `;
+
+const polarisationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Unpolarized vs. Plane-Polarized Light</text>
+  
+  <!-- Left Side: Unpolarized Light representation -->
+  <g transform="translate(100, 180)">
+    <!-- Light source representation -->
+    <circle cx="-30" cy="0" r="15" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="-30" cy="0" r="5" fill="#fff" />
+    <!-- Starburst arrows for unpolarized light -->
+    <path d="M 30,0 L 90,0 M 60,-30 L 60,30 M 39,-21 L 81,21 M 39,21 L 81,-21" stroke="#94a3b8" stroke-width="2" />
+    <path d="M 90,0 L 85,-4 L 85,4 Z M 60,30 L 56,25 L 64,25 Z M 60,-30 L 56,-25 L 64,-25 Z M 81,21 L 76,22 L 80,16 Z M 81,-21 L 76,-22 L 80,-16 Z" fill="#94a3b8" />
+    <text x="60" y="50" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">Oscillates in all planes</text>
+    <text x="60" y="65" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Unpolarized Light</text>
+  </g>
+  
+  <!-- Middle: Light waves propagation -->
+  <g transform="translate(250, 180)">
+    <!-- Horizontal wave (blue, unpolarized component) -->
+    <path d="M 0,0 Q 30,50 60,0 T 120,0 T 180,0 T 240,0" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-opacity="0.4" />
+    <!-- Vertical wave (yellow/orange, which will pass) -->
+    <path d="M 0,0 Q 30,-60 60,0 T 120,0 T 180,0 T 240,0" fill="none" stroke="#f59e0b" stroke-width="2.5" />
+    
+    <text x="120" y="-70" fill="#f59e0b" font-size="11" text-anchor="middle">Vertical Wave Component</text>
+    <text x="120" y="70" fill="#0ea5e9" font-size="11" text-anchor="middle" fill-opacity="0.7">Horizontal Wave Component</text>
+  </g>
+  
+  <!-- The Filter -->
+  <g transform="translate(500, 70)">
+    <!-- 3D grid filter -->
+    <rect x="0" y="0" width="40" height="220" rx="4" fill="#1e293b" stroke="#475569" stroke-width="2" />
+    <!-- Slits -->
+    <line x1="20" y1="10" x2="20" y2="210" stroke="#f8fafc" stroke-width="3" stroke-dasharray="10 6" />
+    <text x="20" y="240" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Polarizing Filter</text>
+    <text x="20" y="255" fill="#94a3b8" font-size="10" text-anchor="middle">(Vertical Slits)</text>
+  </g>
+  
+  <!-- Right Side: Plane polarized light wave -->
+  <g transform="translate(560, 180)">
+    <!-- Only vertical wave continues -->
+    <path d="M 0,0 Q 30,-60 60,0 T 120,0 T 180,0 T 240,0" fill="none" stroke="#f59e0b" stroke-width="2.5" />
+    <!-- Blue wave is blocked -->
+    <path d="M 0,0 L 20,0" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-dasharray="2 2" stroke-opacity="0.3" />
+    
+    <text x="120" y="-70" fill="#f59e0b" font-size="11" text-anchor="middle">Oscillates in a single plane</text>
+    <text x="120" y="50" fill="#f59e0b" font-size="12" font-weight="bold" text-anchor="middle">Plane-Polarized Light</text>
+  </g>
+</svg>`;
+
+const polarimeterSetupSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Polarimeter Instrumental Setup</text>
+  
+  <!-- Axis line connecting everything -->
+  <line x1="50" y1="180" x2="900" y2="180" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 5" />
+  
+  <!-- 1. Monochromatic Light Source -->
+  <g transform="translate(100, 180)">
+    <circle cx="0" cy="0" r="25" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="2" />
+    <path d="M -8,-8 L 8,8 M -8,8 L 8,-8 M -12,0 L 12,0 M 0,-12 L 0,12" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#fff" />
+    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Light Source</text>
+    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Monochromatic)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 160,180 L 190,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  
+  <!-- 2. Polarizer -->
+  <g transform="translate(240, 180)">
+    <circle cx="0" cy="0" r="30" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <!-- vertical lines to indicate polarizer slits -->
+    <line x1="0" y1="-25" x2="0" y2="25" stroke="#f8fafc" stroke-width="2" />
+    <line x1="-10" y1="-20" x2="-10" y2="20" stroke="#475569" stroke-width="1" />
+    <line x1="10" y1="-20" x2="10" y2="20" stroke="#475569" stroke-width="1" />
+    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Polarizer</text>
+    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Produces polarised light)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 300,180 L 330,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  
+  <!-- 3. Sample Tube -->
+  <g transform="translate(450, 180)">
+    <!-- The cylinder container -->
+    <rect x="-80" y="-20" width="160" height="40" rx="5" fill="#1e293b" fill-opacity="0.6" stroke="#94a3b8" stroke-width="2" />
+    <rect x="-70" y="-15" width="140" height="30" rx="3" fill="#10b981" fill-opacity="0.15" />
+    <!-- Rotating arrow inside indicating optical activity -->
+    <path d="M -30,-5 Q 0,-15 30,-5" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#curve-arrow)" />
+    <text x="0" y="35" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Sample Tube</text>
+    <text x="0" y="48" fill="#10b981" font-size="9" font-weight="bold" text-anchor="middle">Optically Active Solution</text>
+    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Rotates plane of light)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 570,180 L 600,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  
+  <!-- 4. Analyzer -->
+  <g transform="translate(680, 180)">
+    <circle cx="0" cy="0" r="30" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <!-- rotated slit by angle alpha (e.g. 30 deg) -->
+    <line x1="-13" y1="-22" x2="13" y2="22" stroke="#f59e0b" stroke-width="2.5" />
+    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Analyzer</text>
+    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Rotated to detect angle &amp; direction)</text>
+    <!-- Angle alpha display -->
+    <path d="M 0,-30 A 30 30 0 0 1 15,-26" fill="none" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="18" y="-35" fill="#f59e0b" font-size="10" font-weight="bold">α</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 740,180 L 770,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  
+  <!-- 5. Viewer -->
+  <g transform="translate(830, 180)">
+    <!-- Eye shape -->
+    <path d="M -20,0 C -10,-15 10,-15 20,0 C 10,15 -10,15 -20,0 Z" fill="none" stroke="#f8fafc" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#38bdf8" />
+    <circle cx="0" cy="0" r="2.5" fill="#000" />
+    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Viewer</text>
+    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Sees max brightness at angle α)</text>
+  </g>
+  
+  <!-- Definitions for arrows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+    </marker>
+    <marker id="curve-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+</svg>`;
+
+const chiralVsAchiralSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Vertical separator dividing Chiral and Achiral -->
+  <line x1="500" y1="20" x2="500" y2="340" stroke="#1e293b" stroke-width="2" />
+  
+  <!-- Left Side: Chiral Molecules -->
+  <g transform="translate(0, 0)">
+    <text x="250" y="30" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">CHIRAL CENTRE (Asymmetric Carbon)</text>
+    <text x="250" y="50" text-anchor="middle" fill="#94a3b8" font-size="10">Non-superimposable mirror images (lacks plane of symmetry)</text>
+    
+    <!-- Mirror Plane Line -->
+    <line x1="250" y1="80" x2="250" y2="280" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="250" y="73" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">MIRROR</text>
+    
+    <!-- Left Enantiomer: CHFClBr -->
+    <g transform="translate(130, 180)">
+      <!-- Carbon Center -->
+      <circle cx="0" cy="0" r="14" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+      <text x="0" y="4" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">C*</text>
+      
+      <!-- H (top) -->
+      <line x1="0" y1="-14" x2="0" y2="-55" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="0" cy="-55" r="10" fill="#475569" />
+      <text x="0" y="-51" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+      
+      <!-- F (left) -->
+      <line x1="-14" y1="0" x2="-55" y2="0" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="-55" cy="0" r="12" fill="#10b981" />
+      <text x="-55" y="4" fill="#fff" font-size="10" text-anchor="middle">F</text>
+      
+      <!-- Cl (wedge down-right) -->
+      <path d="M 8,-11 L 35,-45 L 43,-38 Z" fill="#3b82f6" />
+      <circle cx="39" cy="-41" r="12" fill="#3b82f6" />
+      <text x="39" y="-37" fill="#fff" font-size="10" text-anchor="middle">Cl</text>
+      
+      <!-- Br (dash down-left) -->
+      <line x1="-8" y1="11" x2="-35" y2="45" stroke="#ef4444" stroke-width="3" stroke-dasharray="3 3" />
+      <circle cx="-35" cy="45" r="14" fill="#ef4444" />
+      <text x="-35" y="49" fill="#fff" font-size="10" text-anchor="middle">Br</text>
+    </g>
+    
+    <!-- Right Enantiomer (Mirror reflection) -->
+    <g transform="translate(370, 180)">
+      <!-- Carbon Center -->
+      <circle cx="0" cy="0" r="14" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+      <text x="0" y="4" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">C*</text>
+      
+      <!-- H (top) -->
+      <line x1="0" y1="-14" x2="0" y2="-55" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="0" cy="-55" r="10" fill="#475569" />
+      <text x="0" y="-51" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+      
+      <!-- F (right) -->
+      <line x1="14" y1="0" x2="55" y2="0" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="55" cy="0" r="12" fill="#10b981" />
+      <text x="55" y="4" fill="#fff" font-size="10" text-anchor="middle">F</text>
+      
+      <!-- Cl (wedge down-left) -->
+      <path d="M -8,-11 L -35,-45 L -43,-38 Z" fill="#3b82f6" />
+      <circle cx="-39" cy="-41" r="12" fill="#3b82f6" />
+      <text x="-39" y="-37" fill="#fff" font-size="10" text-anchor="middle">Cl</text>
+      
+      <!-- Br (dash down-right) -->
+      <line x1="8" y1="11" x2="35" y2="45" stroke="#ef4444" stroke-width="3" stroke-dasharray="3 3" />
+      <circle cx="35" cy="45" r="14" fill="#ef4444" />
+      <text x="35" y="49" fill="#fff" font-size="10" text-anchor="middle">Br</text>
+    </g>
+    
+    <!-- Cannot be superimposed text -->
+    <path d="M 220,310 L 280,310" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="250" y="325" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="bold">CANNOT BE SUPERIMPOSED</text>
+  </g>
+  
+  <!-- Right Side: Achiral Molecules -->
+  <g transform="translate(500, 0)">
+    <text x="250" y="30" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">ACHIRAL MOLECULE</text>
+    <text x="250" y="50" text-anchor="middle" fill="#94a3b8" font-size="10">Superimposable mirror images (possesses plane of symmetry)</text>
+    
+    <!-- Mirror Plane Line -->
+    <line x1="250" y1="80" x2="250" y2="280" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="250" y="73" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">MIRROR</text>
+    
+    <!-- Left Achiral: CH2ClF -->
+    <g transform="translate(130, 180)">
+      <!-- Carbon Center -->
+      <circle cx="0" cy="0" r="14" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+      <text x="0" y="4" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">C</text>
+      
+      <!-- H (top) -->
+      <line x1="0" y1="-14" x2="0" y2="-55" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="0" cy="-55" r="10" fill="#475569" />
+      <text x="0" y="-51" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+      
+      <!-- H (left) -->
+      <line x1="-14" y1="0" x2="-55" y2="0" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="-55" cy="0" r="10" fill="#475569" />
+      <text x="-55" y="4" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+      
+      <!-- Cl (wedge down-right) -->
+      <path d="M 8,-11 L 35,-45 L 43,-38 Z" fill="#3b82f6" />
+      <circle cx="39" cy="-41" r="12" fill="#3b82f6" />
+      <text x="39" y="-37" fill="#fff" font-size="10" text-anchor="middle">Cl</text>
+      
+      <!-- F (dash down-left) -->
+      <line x1="-8" y1="11" x2="-35" y2="45" stroke="#10b981" stroke-width="3" stroke-dasharray="3 3" />
+      <circle cx="-35" cy="45" r="12" fill="#10b981" />
+      <text x="-35" y="49" fill="#fff" font-size="10" text-anchor="middle">F</text>
+    </g>
+    
+    <!-- Right Achiral (Mirror reflection) -->
+    <g transform="translate(370, 180)">
+      <!-- Carbon Center -->
+      <circle cx="0" cy="0" r="14" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+      <text x="0" y="4" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">C</text>
+      
+      <!-- H (top) -->
+      <line x1="0" y1="-14" x2="0" y2="-55" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="0" cy="-55" r="10" fill="#475569" />
+      <text x="0" y="-51" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+      
+      <!-- H (right) -->
+      <line x1="14" y1="0" x2="55" y2="0" stroke="#f8fafc" stroke-width="2" />
+      <circle cx="55" cy="0" r="10" fill="#475569" />
+      <text x="55" y="4" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+      
+      <!-- Cl (wedge down-left) -->
+      <path d="M -8,-11 L -35,-45 L -43,-38 Z" fill="#3b82f6" />
+      <circle cx="-39" cy="-41" r="12" fill="#3b82f6" />
+      <text x="-39" y="-37" fill="#fff" font-size="10" text-anchor="middle">Cl</text>
+      
+      <!-- F (dash down-right) -->
+      <line x1="8" y1="11" x2="35" y2="45" stroke="#10b981" stroke-width="3" stroke-dasharray="3 3" />
+      <circle cx="35" cy="45" r="12" fill="#10b981" />
+      <text x="35" y="49" fill="#fff" font-size="10" text-anchor="middle">F</text>
+    </g>
+    
+    <!-- Can be superimposed text -->
+    <path d="M 220,310 L 280,310" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="250" y="325" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">CAN BE SUPERIMPOSED (180° Rotation)</text>
+  </g>
+</svg>`;
+
+const lacticAcidEnantiomersSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Optical Isomers of Lactic Acid (2-hydroxypropanoic acid)</text>
+  
+  <!-- Mirror Plane Line -->
+  <line x1="500" y1="60" x2="500" y2="300" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+  <text x="500" y="53" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">MIRROR PLANE</text>
+  
+  <!-- Left Enantiomer -->
+  <g transform="translate(250, 180)">
+    <!-- Carbon Center -->
+    <circle cx="0" cy="0" r="14" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+    <text x="0" y="4" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">C*</text>
+    
+    <!-- COOH (pointing straight up) -->
+    <line x1="0" y1="-14" x2="0" y2="-60" stroke="#f8fafc" stroke-width="2" />
+    <rect x="-25" y="-80" width="50" height="20" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1" />
+    <text x="0" y="-66" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">COOH</text>
+    
+    <!-- CH3 (pointing down-left) -->
+    <line x1="-10" y1="10" x2="-45" y2="45" stroke="#f8fafc" stroke-width="2" />
+    <rect x="-70" y="45" width="40" height="20" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <text x="-50" y="59" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- OH (wedge pointing down-right - towards viewer) -->
+    <path d="M 10,10 L 40,45 L 48,37 Z" fill="#ef4444" />
+    <circle cx="44" cy="41" r="14" fill="#ef4444" />
+    <text x="44" y="45" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">OH</text>
+    
+    <!-- H (dashed line pointing back-right - away from viewer) -->
+    <line x1="8" y1="-8" x2="45" y2="-45" stroke="#a855f7" stroke-width="3" stroke-dasharray="3 3" />
+    <circle cx="45" cy="-45" r="12" fill="#a855f7" />
+    <text x="45" y="-41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">H</text>
+    
+    <text x="0" y="100" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">(+) Lactic Acid</text>
+  </g>
+  
+  <!-- Right Enantiomer (Mirror Image) -->
+  <g transform="translate(750, 180)">
+    <!-- Carbon Center -->
+    <circle cx="0" cy="0" r="14" fill="#1e293b" stroke="#f8fafc" stroke-width="2" />
+    <text x="0" y="4" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">C*</text>
+    
+    <!-- COOH (pointing straight up) -->
+    <line x1="0" y1="-14" x2="0" y2="-60" stroke="#f8fafc" stroke-width="2" />
+    <rect x="-25" y="-80" width="50" height="20" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-width="1" />
+    <text x="0" y="-66" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">COOH</text>
+    
+    <!-- CH3 (pointing down-right) -->
+    <line x1="10" y1="10" x2="45" y2="45" stroke="#f8fafc" stroke-width="2" />
+    <rect x="30" y="45" width="40" height="20" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <text x="50" y="59" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- OH (wedge pointing down-left - towards viewer/mirror) -->
+    <path d="M -10,10 L -40,45 L -48,37 Z" fill="#ef4444" />
+    <circle cx="-44" cy="41" r="14" fill="#ef4444" />
+    <text x="-44" y="45" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">OH</text>
+    
+    <!-- H (dashed line pointing back-left - away from viewer) -->
+    <line x1="-8" y1="-8" x2="-45" y2="-45" stroke="#a855f7" stroke-width="3" stroke-dasharray="3 3" />
+    <circle cx="-45" cy="-45" r="12" fill="#a855f7" />
+    <text x="-45" y="-41" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">H</text>
+    <text x="0" y="100" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">(-) Lactic Acid</text>
+  </g>
+  
+  <text x="50%" y="330" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="bold">NON-SUPERIMPOSABLE MIRROR IMAGES</text>
+</svg>`;
+
+const sn2StereochemistrySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 430" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Header Badge -->
+  <rect x="25" y="20" width="450" height="50" rx="6" fill="#38bdf8" fill-opacity="0.1" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.3" />
+  <text x="250" y="40" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="bold">SN2 Mechanism (Concerted Inversion)</text>
+  <text x="250" y="56" text-anchor="middle" fill="#94a3b8" font-size="9.5">Primary &amp; Secondary Halogenoalkanes (Walden Inversion)</text>
+
+  <!-- 1. Reactant + Backside Attack (x: 40..170, y: 190) -->
+  <g>
+    <!-- Nucleophile HO- -->
+    <text x="35" y="194" fill="#10b981" font-size="13" font-weight="bold">HO⁻</text>
+    <!-- Attack curved arrow -->
+    <path d="M 60,182 Q 80,168 100,182" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrow-green)" />
+    
+    <!-- Central Carbon -->
+    <circle cx="112" cy="190" r="12" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="112" y="194" fill="#f8fafc" font-size="10" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- CH3 (up) -->
+    <line x1="112" y1="178" x2="112" y2="148" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="112" y="142" fill="#f8fafc" font-size="10" text-anchor="middle">CH₃</text>
+    
+    <!-- H (dash down-left) -->
+    <line x1="104" y1="198" x2="88" y2="222" stroke="#f8fafc" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="84" y="234" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+    
+    <!-- F (wedge down-right) -->
+    <path d="M 119,198 L 134,222 L 142,216 Z" fill="#38bdf8" />
+    <text x="138" y="234" fill="#38bdf8" font-size="10" text-anchor="middle">F</text>
+    
+    <!-- Leaving group Br (red) -->
+    <line x1="124" y1="190" x2="152" y2="190" stroke="#ef4444" stroke-width="2" />
+    <text x="162" y="194" fill="#ef4444" font-size="11" font-weight="bold">Br</text>
+  </g>
+  
+  <!-- Arrow to Transition State -->
+  <path d="M 182,190 L 208,190" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  
+  <!-- 2. Transition State (x: 215..315, y: 190) -->
+  <g>
+    <!-- Brackets -->
+    <path d="M 222,135 L 212,135 L 212,245 L 222,245" fill="none" stroke="#94a3b8" stroke-width="1.5" />
+    <path d="M 297,135 L 307,135 L 307,245 L 297,245" fill="none" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="322" y="140" fill="#f8fafc" font-size="14" font-weight="bold">⁻</text>
+    
+    <!-- Partial bond HO··· -->
+    <text x="218" y="194" fill="#10b981" font-size="10" font-weight="bold">HO</text>
+    <line x1="236" y1="190" x2="250" y2="190" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2.5 2" />
+    
+    <!-- Central Carbon -->
+    <circle cx="260" cy="190" r="10" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="260" y="194" fill="#f8fafc" font-size="10" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- Partial bond ···Br -->
+    <line x1="270" y1="190" x2="284" y2="190" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2.5 2" />
+    <text x="288" y="194" fill="#ef4444" font-size="10" font-weight="bold">Br</text>
+    
+    <!-- Planar vertical groups -->
+    <line x1="260" y1="180" x2="260" y2="150" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="260" y="144" fill="#f8fafc" font-size="10" text-anchor="middle">CH₃</text>
+    
+    <line x1="254" y1="198" x2="244" y2="222" stroke="#f8fafc" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="240" y="234" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+    
+    <path d="M 266,198 L 276,222 L 283,217 Z" fill="#38bdf8" />
+    <text x="280" y="234" fill="#38bdf8" font-size="10" text-anchor="middle">F</text>
+    
+    <!-- Label under TS -->
+    <text x="260" y="270" fill="#94a3b8" font-size="9.5" font-weight="bold" text-anchor="middle">Transition State</text>
+  </g>
+  
+  <!-- Arrow to Product -->
+  <path d="M 322,190 L 348,190" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+  
+  <!-- 3. Inverted Product (x: 355..470, y: 190) -->
+  <g>
+    <!-- HO group bonded -->
+    <text x="352" y="194" fill="#10b981" font-size="11" font-weight="bold">HO</text>
+    <line x1="372" y1="190" x2="388" y2="190" stroke="#10b981" stroke-width="1.8" />
+    
+    <!-- Central Carbon -->
+    <circle cx="398" cy="190" r="10" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="398" y="194" fill="#f8fafc" font-size="10" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- CH3 (up) -->
+    <line x1="398" y1="180" x2="398" y2="148" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="398" y="142" fill="#f8fafc" font-size="10" text-anchor="middle">CH₃</text>
+    
+    <!-- Inverted F (wedge down-left) -->
+    <path d="M 392,198 L 377,222 L 384,226 Z" fill="#38bdf8" />
+    <text x="376" y="238" fill="#38bdf8" font-size="10" text-anchor="middle">F</text>
+    
+    <!-- Inverted H (dash down-right) -->
+    <line x1="404" y1="198" x2="420" y2="222" stroke="#f8fafc" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="424" y="234" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+    
+    <!-- Leaving Br- -->
+    <text x="437" y="194" fill="#ef4444" font-size="10" font-weight="bold">+ Br⁻</text>
+  </g>
+  
+  <!-- Bottom Result Badge -->
+  <rect x="25" y="365" width="450" height="38" rx="6" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1" stroke-opacity="0.4" />
+  <text x="250" y="388" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">100% Inversion (Single Optically Active Enantiomer)</text>
+  
+  <!-- Definitions -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#10b981" />
+    </marker>
+  </defs>
+</svg>`;
+
+const sn1StereochemistrySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 430" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Header Badge -->
+  <rect x="25" y="20" width="450" height="50" rx="6" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.3" />
+  <text x="250" y="40" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="bold">SN1 Mechanism (Planar Intermediate &amp; Racemisation)</text>
+  <text x="250" y="56" text-anchor="middle" fill="#94a3b8" font-size="9.5">Tertiary &amp; Secondary Halogenoalkanes (Two-Step Pathway)</text>
+
+  <!-- 1. Step 1: Reactant (x: 55, y: 190) -->
+  <g transform="translate(0, -10)">
+    <circle cx="55" cy="200" r="10" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="55" y="204" fill="#f8fafc" font-size="10" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- CH3 (up) -->
+    <line x1="55" y1="190" x2="55" y2="158" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="55" y="152" fill="#f8fafc" font-size="10" text-anchor="middle">CH₃</text>
+    
+    <!-- H (dash down-left) -->
+    <line x1="49" y1="208" x2="38" y2="230" stroke="#f8fafc" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="35" y="242" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+    
+    <!-- F (wedge down-right) -->
+    <path d="M 61,208 L 72,230 L 79,225 Z" fill="#38bdf8" />
+    <text x="75" y="242" fill="#38bdf8" font-size="10" text-anchor="middle">F</text>
+    
+    <!-- Br leaving (red) -->
+    <line x1="65" y1="200" x2="88" y2="200" stroke="#ef4444" stroke-width="2" />
+    <text x="94" y="204" fill="#ef4444" font-size="11" font-weight="bold">Br</text>
+  </g>
+  
+  <!-- Step 1 Arrow -->
+  <g transform="translate(0, -10)">
+    <path d="M 110,200 L 138,200" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+    <text x="124" y="190" fill="#94a3b8" font-size="8.5" text-anchor="middle">Slow (r.d.s)</text>
+    <text x="124" y="215" fill="#ef4444" font-size="8.5" font-weight="bold" text-anchor="middle">− Br⁻</text>
+  </g>
+  
+  <!-- 2. Step 1 Product: Planar Carbocation Intermediate (x: 185, y: 190) -->
+  <g transform="translate(0, -10)">
+    <circle cx="185" cy="200" r="13" fill="#1e293b" stroke="#fbbf24" stroke-width="1.8" />
+    <text x="185" y="204" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="middle">C⁺</text>
+    
+    <!-- Planar Trigonal (120 deg) -->
+    <line x1="185" y1="187" x2="185" y2="155" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="185" y="149" fill="#f8fafc" font-size="10" text-anchor="middle">CH₃</text>
+    
+    <line x1="174" y1="208" x2="154" y2="228" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="150" y="238" fill="#f8fafc" font-size="10" text-anchor="middle">H</text>
+    
+    <line x1="196" y1="208" x2="216" y2="228" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="220" y="238" fill="#38bdf8" font-size="10" text-anchor="middle">F</text>
+    
+    <!-- Label -->
+    <text x="185" y="260" fill="#f8fafc" font-size="9" font-weight="bold" text-anchor="middle">Planar Intermediate</text>
+    <text x="185" y="272" fill="#94a3b8" font-size="8" text-anchor="middle">(Equal attack 50:50)</text>
+  </g>
+  
+  <!-- 3. Two-Way Attack Paths & Products -->
+  <!-- (A) Front Face Attack (Top Branch) -->
+  <g transform="translate(0, -10)">
+    <path d="M 205,188 Q 235,140 275,135" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrow-green)" />
+    <text x="245" y="125" fill="#10b981" font-size="8.5" font-weight="bold">HO⁻ Attack (50%)</text>
+    
+    <!-- Top Product (Inverted Enantiomer) -->
+    <g transform="translate(340, 135)">
+      <text x="-32" y="4" fill="#10b981" font-size="10" font-weight="bold">HO</text>
+      <line x1="-14" y1="0" x2="-2" y2="0" stroke="#10b981" stroke-width="1.5" />
+      <circle cx="8" cy="0" r="9" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5" />
+      <text x="8" y="4" fill="#f8fafc" font-size="9" font-weight="bold" text-anchor="middle">C</text>
+      
+      <line x1="8" y1="-9" x2="8" y2="-28" stroke="#f8fafc" stroke-width="1.5" />
+      <text x="8" y="-33" fill="#f8fafc" font-size="9" text-anchor="middle">CH₃</text>
+      
+      <path d="M 3,6 L -8,20 L -2,24 Z" fill="#38bdf8" />
+      <text x="-5" y="32" fill="#38bdf8" font-size="9" text-anchor="middle">F</text>
+      
+      <line x1="13" y1="6" x2="24" y2="20" stroke="#f8fafc" stroke-width="1.5" stroke-dasharray="2 2" />
+      <text x="26" y="28" fill="#f8fafc" font-size="9" text-anchor="middle">H</text>
+      
+      <text x="50" y="2" fill="#38bdf8" font-size="9.5" font-weight="bold">(+) Enantiomer</text>
+      <text x="50" y="14" fill="#94a3b8" font-size="8">(50% yield)</text>
+    </g>
+  </g>
+  
+  <!-- (B) Back Face Attack (Bottom Branch) -->
+  <g transform="translate(0, -10)">
+    <path d="M 185,213 Q 240,300 265,265" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 2" marker-end="url(#arrow-green)" />
+    <text x="245" y="292" fill="#10b981" font-size="8.5" font-weight="bold">HO⁻ Attack (50%)</text>
+    
+    <!-- Bottom Product (Retained Enantiomer) -->
+    <g transform="translate(340, 265)">
+      <circle cx="8" cy="0" r="9" fill="#1e293b" stroke="#f8fafc" stroke-width="1.5" />
+      <text x="8" y="4" fill="#f8fafc" font-size="9" font-weight="bold" text-anchor="middle">C</text>
+      
+      <line x1="8" y1="-9" x2="8" y2="-28" stroke="#f8fafc" stroke-width="1.5" />
+      <text x="8" y="-33" fill="#f8fafc" font-size="9" text-anchor="middle">CH₃</text>
+      
+      <line x1="17" y1="0" x2="29" y2="0" stroke="#10b981" stroke-width="1.5" />
+      <text x="33" y="4" fill="#10b981" font-size="10" font-weight="bold">OH</text>
+      
+      <path d="M 13,6 L 24,20 L 18,24 Z" fill="#38bdf8" />
+      <text x="21" y="32" fill="#38bdf8" font-size="9" text-anchor="middle">F</text>
+      
+      <line x1="3" y1="6" x2="-8" y2="20" stroke="#f8fafc" stroke-width="1.5" stroke-dasharray="2 2" />
+      <text x="-10" y="28" fill="#f8fafc" font-size="9" text-anchor="middle">H</text>
+      
+      <text x="62" y="2" fill="#fbbf24" font-size="9.5" font-weight="bold">(-) Enantiomer</text>
+      <text x="62" y="14" fill="#94a3b8" font-size="8">(50% yield)</text>
+    </g>
+  </g>
+  
+  <!-- Bottom Result Badge -->
+  <rect x="25" y="365" width="450" height="38" rx="6" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.4" />
+  <text x="250" y="388" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">50:50 Racemic Mixture (Net 0° Rotation → Optically Inactive)</text>
+
+  <!-- Definitions -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#10b981" />
+    </marker>
+  </defs>
+</svg>`;
 
 export const parts: LessonPart[] = [
     {
@@ -22,32 +600,46 @@ export const parts: LessonPart[] = [
 >    * *Position Isomerism:* Functional group attached to different carbon atoms.
 >    * *Functional Group Isomerism:* Different functional groups present (e.g., aldehydes vs ketones).
 > * **Stereoisomerism:** Compounds with the same structural formula but their atoms are arranged differently in three dimensions:
->    * *Geometric Isomerism ($E$-$Z$ / $cis$-$trans$):* Arises due to restricted rotation about a double bond (e.g., $\\text{C}=\\text{C}$).
+>    * *Geometric Isomerism ($E$-$Z$ / $cis$-$trans$):* Arises due to restricted rotation about a double bond (e.g., \\\\text{C}=\\\\text{C}).
 >    * *Optical Isomerism (Chirality):* Arises in molecules containing a chiral centre, resulting in non-superimposable mirror images.
 
 > [!IMPORTANT]
-> ### 🪞 Chirality & Enantiomers
-> * **Chiral Centre (Asymmetric Carbon):** A carbon atom bonded to **four different atoms or groups of atoms**. It is denoted with an asterisk ($*$).
-> * **Enantiomers (Optical Isomers):** Two molecules that are non-superimposable mirror images of each other.
-> * **Optical Activity:** Enantiomers have identical physical properties (melting point, solubility, etc.) except for how they interact with plane-polarised monochromatic light:
->    * One enantiomer rotates the plane of polarised light clockwise (dextrorotatory, represented as $+$).
->    * The other rotates it by the exact same angle anticlockwise (laevorotatory, represented as $-$).
+> ### 🪞 Chirality & Optical Activity
+> * **Optical Activity:** The ability of a compound to rotate the plane of plane-polarised light.
+> * **Chiral Centre (Asymmetric Carbon):** A carbon atom bonded to **four different atoms or groups of atoms**. It is denoted with an asterisk (*). The presence of a chiral centre results in a molecule that lacks a plane of symmetry (asymmetric).
+> * **Enantiomers (Optical Isomers):** Optical isomers that are non-superimposable mirror images of each other. They rotate the plane of polarised light by equal angles in opposite directions.
+> * **Properties of Enantiomers:**
+>    * *Physical Properties:* Identical (melting point, boiling point, density, etc.) **except** they rotate plane-polarised light in opposite directions (e.g., $+60^{\\\\circ}$ and $-60^{\\\\circ}$).
+>    * *Chemical Properties:* Identical **except** when reacting with other chiral molecules (e.g., chiral enzymes or receptors in biological systems).
 > * **Racemic Mixture (Racemate):** An equimolar mixture containing equal amounts (50:50 ratio) of both enantiomers. It is **optically inactive** because the opposite rotations cancel each other out.
-> * **Chiral Drawing Rules:** Draw 3D tetrahedral diagrams using:
->    * Straight lines for bonds in the plane of the paper.
->    * Wedges for bonds pointing out of the paper towards you.
->    * Dashes for bonds pointing into the paper away from you.
->    * Draw the mirror plane as a dashed vertical line and show the mirror images facing each other.
+> 
+> > [!TIP]
+> > ### ✏️ Exam Technique: Drawing Optical Isomers
+> > 1. **Always use 3D wedge/dash representation:** Draw structures using tetrahedral shape representation (two lines in the plane, one wedge pointing towards you, and one dashed line pointing away from you).
+> > 2. **Identify the chiral carbon:** Clearly mark the asymmetric carbon atom with an asterisk (*).
+> > 3. **Draw the mirror image:** Draw a vertical mirror plane, and construct the second enantiomer as a reflected image of the first.
+> 
+${svgToken(chiralVsAchiralSvg)}
 
 > [!BOX]
 > ### 🔬 Plane-Polarised Light & Polarimetry
 > * **Plane-Polarised Light:** Monochromatic light (light of a single frequency) whose waves oscillate in a single plane. Unpolarised light oscillates in all planes perpendicular to the direction of travel.
-> * **Polariser:** A filter (like a Polaroid sheet) that absorbs all oscillations of light except those in a single plane, converting unpolarised light into plane-polarised light.
-> * **Polarimeter:** An instrument used to measure the optical rotation of a substance:
->   1. Monochromatic light passes through a polariser.
->   2. The resulting plane-polarised light passes through a sample tube containing the solution of the optically active substance.
->   3. The plane of polarised light is rotated by angle $\\alpha$.
->   4. The rotated light passes through a second polarising filter (the **analyser**), which is rotated until maximum light intensity is seen. The angle of rotation $\\alpha$ is measured.
+> * **Polarizer:** A filter that converts unpolarised light into plane-polarised light.
+> * **Analyzer:** A second filter rotated to detect the angle and direction of optical rotation.
+> * **Polarimeter Setup:** The sequence of components in a polarimeter measurement:
+>   $$\\\\text{Monochromatic Light Source} \\\\rightarrow \\\\text{Polarizer} \\\\rightarrow \\\\text{Sample Tube} \\\\rightarrow \\\\text{Analyser} \\\\rightarrow \\\\text{Viewer}$$
+>   * *Dextrorotatory ($+$):* Clockwise rotation of the plane of light.
+>   * *Laevorotatory ($-$):* Anticlockwise rotation of the plane of light.
+> 
+${svgToken(polarisationSvg)}
+
+${svgToken(polarimeterSetupSvg)}
+
+> [!TIP]
+> ### ⏱️ Optical Activity as a Kinetic Tool
+> * **Tracking Reaction Rates:** Measuring changes in optical rotation over time using a **polarimeter** (polarimetry) can be used to track the rate of a reaction.
+>    * This is highly useful because it allows continuous tracking in real-time without disturbing or quenching the reaction mixture.
+> * **Determining Reaction Order:** Plotting optical rotation against time allows kinetic analysis (e.g., determining half-lives or drawing tangent lines to calculate initial rates) to determine the reaction order.
 
 > [!BOX]
 > ### 🍇 History & Tartaric Acid
@@ -63,17 +655,17 @@ export const parts: LessonPart[] = [
 > ### 📋 Analyzing Chirality in Organic Structures
 > Let's analyze the following structures to determine if they possess chiral centres:
 > 
-> * **1. $\\text{CBr₂ClF}$:** The central carbon atom is bonded to two bromine atoms. Since they are identical, there are only three different groups attached. Thus, there is **no chiral centre**.
+> * **1. $\\\\text{CBr₂ClF}$:** The central carbon atom is bonded to two bromine atoms. Since they are identical, there are only three different groups attached. Thus, there is **no chiral centre**.
 > * **2. $\\\\text{CH₃CHBrCH₂CH₃}$:** Carbon-2 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₃}$, and $-\\\\text{CH₂CH₃}$. Since these four groups are entirely different, Carbon-2 is a **chiral centre**: $\\\\text{CH₃C}^{\\\\ast}\\\\text{HBrCH₂CH₃}$
-> * **3. $\\text{CH₃CH₂CHBrCH₂CH₃}$:** Carbon-3 is bonded to $-\\text{H}$, $-\\text{Br}$, and two identical ethyl ($-\\text{CH₂CH₃}$) groups. Thus, there is **no chiral centre**.
-> * **4. $\\text{CH₃CH₂CHBrCHBrCH₃}$:**
->    * Carbon-3 is bonded to $-\\text{H}$, $-\\text{Br}$, $-\\text{CH₂CH₃}$, and $-\\text{CHBrCH₃}$. These four groups are different, so Carbon-3 is a **chiral centre**.
->    * Carbon-4 is bonded to $-\\text{H}$, $-\\text{Br}$, $-\\text{CH₃}$, and $-\\text{CH₂CHBrCH₂CH₃}$. These four groups are different, so Carbon-4 is also a **chiral centre**.
+> * **3. $\\\\text{CH₃CH₂CHBrCH₂CH₃}$:** Carbon-3 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, and two identical ethyl ($-\\\\text{CH₂CH₃}$) groups. Thus, there is **no chiral centre**.
+> * **4. $\\\\text{CH₃CH₂CHBrCHBrCH₃}$:**
+>    * Carbon-3 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₂CH₃}$, and $-\\\\text{CHBrCH₃}$. These four groups are different, so Carbon-3 is a **chiral centre**.
+>    * Carbon-4 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₃}$, and $-\\\\text{CH₂CHBrCH₂CH₃}$. These four groups are different, so Carbon-4 is also a **chiral centre**.
 
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Polariser Checkpoint Q1
+> #### 📝 Worked Example 1: Polariser
 > **Question:** Outline how a polariser works.
 > 
 > > [!TIP]
@@ -87,26 +679,66 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Analyzing Enantiomer Mixtures (Checkpoint Q2)
-> **Question:** A dextrorotatory enantiomer has an optical rotation of $+43^\\circ$. A mixture of this enantiomer and its laevorotatory enantiomer has a rotation of $-10^\\circ$. What does this information indicate about the composition of this mixture?
+> #### 📝 Worked Example 2: Analyzing Enantiomer Mixtures
+> **Question:** A dextrorotatory enantiomer has an optical rotation of $+43^{\\\\circ}$. A mixture of this enantiomer and its laevorotatory enantiomer has a rotation of $-10^{\\\\circ}$. What does this information indicate about the composition of this mixture?
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify enantiomer rotations:** The pure dextrorotatory ($+$) enantiomer rotates polarised light by $+43^\\circ$. The pure laevorotatory ($-$) enantiomer rotates light by $-43^\\circ$.
-> > 2. **Analyze mixture rotation:** The mixture has a net rotation of $-10^\\circ$.
-> > 3. **Deduce excess:** Since the rotation is negative, the mixture must contain an excess of the laevorotatory enantiomer.
-> > 4. **Calculate composition proportion:**
+> > 1. **Deduce whether the mixture is racemic:** Since the net optical rotation is not $0^{\\\\circ}$, the mixture is **not racemic** (it is not equimolar).
+> > 2. **Deduce which enantiomer is in excess:** Since the net observed rotation is negative ($-10^{\\\\circ}$), the mixture contains an **excess of the laevorotatory ($-$) enantiomer**.
+> > 3. **Optional Quantitative Analysis (Calculating exact percentages):**
 > >    * Let $x$ be the mole fraction of the laevorotatory enantiomer, and $(1-x)$ be the fraction of the dextrorotatory enantiomer.
 > >    * Net rotation: $x(-43) + (1-x)(+43) = -10$
-> >    * $-43x + 43 - 43x = -10 \\implies -86x = -53 \\implies x \\approx 0.616$ (or $61.6\\%$)
-> >    * Dextrorotatory fraction = $1 - 0.616 = 0.384$ (or $38.4\\%$)
-> > 5. **Conclusion:** The mixture consists of approximately $61.6\\%$ of the laevorotatory enantiomer and $38.4\\%$ of the dextrorotatory enantiomer.
+> >    * $-43x + 43 - 43x = -10 \\\\implies -86x = -53 \\\\implies x \\\\approx 0.616$ (or $61.6\%$)
+> >    * Dextrorotatory fraction = $1 - 0.616 = 0.384$ (or $38.4\%$)
+> >    * Thus, the mixture consists of approximately $61.6\%$ of the laevorotatory enantiomer and $38.4\%$ of the dextrorotatory enantiomer.
+
+<br>
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Drawing 3D Enantiomers of Lactic Acid
+> **Question:** Draw the 3D tetrahedral structures of the two enantiomers of 2-hydroxypropanoic acid (lactic acid) to show they are non-superimposable mirror images.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the chiral carbon and its four groups:**
+> >    * The central carbon (Carbon-2) is bonded to four different groups: $-\\\\text{H}$, $-\\\\text{CH}_3$, $-\\\\text{OH}$, and $-\\\\text{COOH}$
+> > 2. **Draw the first enantiomer in 3D:**
+> >    * Place the chiral carbon in the centre.
+> >    * Draw two bonds in the plane of the paper (e.g. $-\\\\text{COOH}$ pointing up, $-\\\\text{CH}_3$ pointing down-left).
+> >    * Draw a wedge for a group pointing towards you (e.g. $-\\\\text{OH}$ pointing down-right).
+> >    * Draw a dashed bond for a group pointing away (e.g. $-\\\\text{H}$ pointing back).
+> > 3. **Draw the mirror plane:**
+> >    * Draw a vertical dashed line to represent the mirror.
+> > 4. **Draw the reflected mirror image:**
+> >    * Reflect the structure on the other side of the mirror plane so that the groups face the mirror (e.g. $-\\\\text{OH}$ wedge points down-left towards the mirror, $-\\\\text{CH}_3$ points down-right away from the mirror).
+
+${svgToken(lacticAcidEnantiomersSvg)}
+
+<br>
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Identifying Chiral Centres in Amino Acids
+> **Question:** Alanine is an amino acid with the structural formula $\\\\text{CH}_3\\\\text{CH(NH}_2\\\\text{)COOH}$. Identify the chiral centre in alanine and explain why it is chiral.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze each carbon atom in the molecule:**
+> >    * **Carbon-1 (carboxylic acid carbon):** Part of the $-\\\\text{COOH}$ group. It has a double bond to oxygen, so it is only bonded to three groups. It cannot be chiral.
+> >    * **Carbon-3 (methyl carbon):** Part of the $-\\\\text{CH}_3$ group. It is bonded to three identical hydrogen atoms, so it cannot be chiral.
+> >    * **Carbon-2 (alpha carbon):** Bonded to four distinct groups: $-\\\\text{H}$, $-\\\\text{CH}_3$, $-\\\\text{NH}_2$, and $-\\\\text{COOH}$
+> > 2. **Formulate the explanation:**
+> >    * Carbon-2 is the chiral centre because it is bonded to four different atoms or groups of atoms.
+> >    * This asymmetric arrangement means the molecule lacks a plane of symmetry, resulting in two non-superimposable mirror images (enantiomers).
 `,
         keyPoints: [
             'A polariser converts unpolarised light into plane-polarised light by absorbing oscillations in all but one plane.',
             'A polarimeter measures the angle of rotation of plane-polarised light.',
-            'An excess of one enantiomer over another results in a net optical rotation corresponding to the dominant isomer.'
+            'An excess of one enantiomer over another results in a net optical rotation corresponding to the dominant isomer.',
+            'Optical activity can be used as a kinetic tool to track reaction rates and determine reaction order by monitoring changes in optical rotation over time using a polarimeter.'
         ]
     },
     {
@@ -119,7 +751,12 @@ export const parts: LessonPart[] = [
 > Nucleophilic substitution reactions of halogenoalkanes can proceed via two primary mechanisms:
 > * **$S_N2$ (Substitution Nucleophilic Bimolecular):** A single-step mechanism where bond-forming and bond-breaking occur simultaneously.
 > * **$S_N1$ (Substitution Nucleophilic Unimolecular):** A two-step mechanism involving the formation of a carbocation intermediate.
+> * **Secondary Halogenoalkanes:** Can react via both $S_N1$ and $S_N2$ pathways, depending on the solvent, nucleophile concentration, and structure.
 > * **Stereochemical Evidence:** The change in optical activity of the reactants and products provides definitive evidence of the reaction mechanism.
+
+${svgToken(sn2StereochemistrySvg)}
+
+${svgToken(sn1StereochemistrySvg)}
 
 > [!IMPORTANT]
 > ### ⚛️ The $S_N2$ Mechanism & Stereochemical Inversion
@@ -296,7 +933,7 @@ export const parts: LessonPart[] = [
 > [!WARNING]
 > ### 🪞 Planar Carbonyls & Racemic Mixtures
 > If we start with an unsymmetrical carbonyl compound (such as propanal or phenylethanone), the product hydroxynitrile contains a chiral carbon.
-> * **Planar Geometry:** The carbonyl group $\\text{C}=\\text{O}$ is **planar** (trigonal planar arrangement with $120^\\circ$ bond angles around the carbonyl carbon).
+> * **Planar Geometry:** The carbonyl group $\\\\text{C}=\\\\text{O}$ is **planar** (trigonal planar arrangement with $120^{\\\\circ}$ bond angles around the carbonyl carbon).
 > * **Equal Probability:** The nucleophile $\\text{CN}^-$ can attack the planar carbon atom from **above or below the plane with equal (50:50) probability**.
 > * **Racemic Product:** Because attack from above yields one enantiomer, and attack from below yields the mirror image, equal amounts of both enantiomers are formed.
 > * **Optical Inactivity:** This 50:50 mixture is called a **racemic mixture** (or racemate). It is optically inactive because the clockwise rotation of light by one enantiomer is exactly cancelled out by the anticlockwise rotation of the other.
@@ -335,6 +972,26 @@ export const parts: LessonPart[] = [
 >    * Propanal ($\\text{CH₃CH₂CHO}$) is an aldehyde but does not contain a methyl group directly bonded to the carbonyl carbon (negative test).
 >    * Propanone ($\\text{CH₃COCH₃}$) contains the methyl carbonyl group (positive test).
 > 3. **Conclusion:** Therefore, compound X must be **propanone** as it is the only compound that reacts positively with both reagents.
+> 
+> <br>
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 3: Optical Inactivity of Ethanal & HCN Addition Product
+> > **Question:** Explain why the reaction of ethanal ($\\\\text{CH}_3\\\\text{CHO}$) with HCN (in the presence of KCN) produces an optically inactive mixture.
+> > 
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Identify the geometry of the reactant carbonyl group:**
+> > >    * The carbonyl group ($\\\\text{C}=\\\\text{O}$) in ethanal has a trigonal planar shape around the carbonyl carbon atom.
+> > > 2. **Analyze the nucleophilic attack probability:**
+> > >    * The cyanide ion nucleophile ($:\\\\text{CN}^-$) can attack the planar carbonyl carbon with equal probability from either above or below the plane (50:50 ratio).
+> > > 3. **Explain the stereochemical outcome:**
+> > >    * Because the reactant has different groups attached to the carbonyl carbon ($-\\\\text{H}$ and $-\\\\text{CH}_3$), the addition of $-\\\\text{CN}$ creates a chiral centre.
+> > >    * Attack from above yields one enantiomer, while attack from below yields the mirror-image enantiomer.
+> > > 4. **Conclude on optical activity:**
+> > >    * An equimolar (50:50) mixture of the two enantiomers is formed, which is a racemic mixture.
+> > >    * The racemic mixture is optically inactive because the clockwise rotation of plane-polarised light by one enantiomer is exactly cancelled out by the anticlockwise rotation of the other.
 `,
         keyPoints: [
             'HCN addition mechanism is catalysed by CN⁻, which is regenerated in the second step.',
@@ -401,13 +1058,13 @@ export const parts: LessonPart[] = [
 > * **Derivative Identification:** Individual carbonyl compounds can be identified by matching the experimental melting point of their purified 2,4-DNPH derivative to database values.
 > 
 > #### Table C: Boiling Temperatures vs. Derivative Melting Temperatures
-> | Carbonyl Compound | Boiling Temperature ($^\\circ\\text{C}$) | Melting Temperature of 2,4-DNPH Derivative ($^\\circ\\text{C}$) |
+> | Carbonyl Compound | Boiling Temperature ($^{\\\\circ}\\\\text{C}$) | Melting Temperature of 2,4-DNPH Derivative ($^{\\\\circ}\\\\text{C}$) |
 > | :--- | :--- | :--- |
 > | pentanal | 102 | 104 |
 > | pentan-2-one | 102 | 144 |
 > | pentan-3-one | 102 | 156 |
 > 
-> * **Significance:** Although pentanal, pentan-2-one, and pentan-3-one all have identical boiling points ($102^\\circ\\text{C}$), they can be easily distinguished and identified by measuring the melting points of their derivatives ($104^\\circ\\text{C}$, $144^\\circ\\text{C}$, and $156^\\circ\\text{C}$ respectively).
+> * **Significance:** Although pentanal, pentan-2-one, and pentan-3-one all have identical boiling points ($102^{\\\\circ}\\\\text{C}$), they can be easily distinguished and identified by measuring the melting points of their derivatives ($104^{\\\\circ}\\\\text{C}$, $144^{\\\\circ}\\\\text{C}$, and $156^{\\\\circ}\\\\text{C}$ respectively).
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Redox Products (Checkpoint Q1)
@@ -731,7 +1388,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Polymerisation Limits (Checkpoint Q1)
+> #### 📝 Worked Example 3: Polymerisation Limits 
 > **Question:** Why is it not possible to make a polymer by reacting together molecules of $\\text{HOOCCH₂COOH}$ and $\\text{CH₃OH}$?
 > 
 > > [!TIP]
@@ -745,7 +1402,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Polymer Repeat Unit Drawing (Checkpoint Q2)
+> #### 📝 Worked Example 4: Polymer Repeat Unit Drawing
 > **Question:** Draw the repeat unit of the polymer formed between molecules of $\\text{HOOCCOOH}$ and $\\text{CH₃CH(OH)CH(OH)CH₃}$.
 > 
 > > [!TIP]
