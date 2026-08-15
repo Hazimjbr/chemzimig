@@ -1369,6 +1369,33 @@ export const edexcelAlevelFlashcards: Flashcard[] = [
         answer: 'A solution that resists changes in pH when small amounts of acid or alkali are added. Composed of a weak acid and its conjugate base salt.',
         examinerTip: 'Henderson-Hasselbalch equation: $\\text{pH} = p K_a + \\log_{10}\\left(\\frac{[\\text{salt}]}{[\\text{acid}]}\\right)$.'
     },
+    {
+        id: 'ed-u4-l4-6',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'Ka from pH Curves',
+        question: 'What is the relationship between pH and pKa at the half-equivalence point of a weak acid titration?',
+        answer: '$\\text{pH} = \\text{p}K_a$ (because the concentrations of weak acid and its conjugate base are equal, $[\\text{HA}] = [\\text{A}^-]$).',
+        examinerTip: 'Always use the term half-equivalence point (not half-neutralisation point) when explaining this relationship.'
+    },
+    {
+        id: 'ed-u4-l4-7',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'The Half-Volume Method',
+        question: 'Explain the experimental half-volume method to find the pKa of an unknown weak acid.',
+        answer: 'Titrate one sample to find the equivalence volume $V_{\\text{eq}}$. Add exactly half this volume ($\\frac{V_{\\text{eq}}}{2}$) of base to a fresh sample of the same acid, then measure the pH.',
+        examinerTip: 'The measured pH of the half-neutralised mixture is directly equal to the $\\text{p}K_a$ of the acid, and $K_a = 10^{-\\text{p}K_a}$.'
+    },
+    {
+        id: 'ed-u4-l4-8',
+        unitNum: 4,
+        lessonNum: 4,
+        category: 'Titration Buffer Action',
+        question: 'What is the buffer region on a weak acid-strong base titration curve?',
+        answer: 'A region of gradual pH change following the initial rapid pH jump, where significant concentrations of both unreacted weak acid and its conjugate base coexist.',
+        examinerTip: 'This region acts as a buffer system, resisting changes in pH upon the addition of more base.'
+    },
 
     // Unit 4 - Topic 15: Carbonyls, Carboxylic Acids & Chirality (Lesson 5)
     {

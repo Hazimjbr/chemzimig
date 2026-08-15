@@ -14,7 +14,7 @@ import { cookies } from 'next/headers';
 
 async function checkAdmin() {
     const cookieStore = await cookies();
-    const sessionCookie = cookieStore.get('chemzim-session')?.value || cookieStore.get('chemzim')?.value;
+    const sessionCookie = cookieStore.get('chemzim-admin')?.value || cookieStore.get('chemzim-student')?.value || cookieStore.get('chemzim-session')?.value || cookieStore.get('chemzim')?.value;
     const session = await verifySession(sessionCookie);
     return session && session.isAdmin;
 }

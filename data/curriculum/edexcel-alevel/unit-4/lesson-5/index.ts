@@ -586,6 +586,139 @@ const sn1StereochemistrySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="
   </defs>
 </svg>`;
 
+const propanalDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 180" class="w-full max-w-[320px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Left Methyl Carbon (C3) -->
+  <text x="80" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <text x="40" y="95" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="50" y1="90" x2="70" y2="90" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="80" y="45" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="80" y1="52" x2="80" y2="80" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="80" y="145" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="80" y1="102" x2="80" y2="130" stroke="#94a3b8" stroke-width="2" />
+  
+  <!-- C-C Bond -->
+  <line x1="92" y1="90" x2="148" y2="90" stroke="#94a3b8" stroke-width="2" />
+
+  <!-- Middle Carbon (C2) -->
+  <text x="160" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <text x="160" y="45" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="160" y1="52" x2="160" y2="80" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="160" y="145" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="160" y1="102" x2="160" y2="130" stroke="#94a3b8" stroke-width="2" />
+  
+  <!-- C-C Bond -->
+  <line x1="172" y1="90" x2="228" y2="90" stroke="#94a3b8" stroke-width="2" />
+
+  <!-- Carbonyl Carbon (C1) -->
+  <text x="240" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  
+  <!-- C=O Bond -->
+  <line x1="237" y1="80" x2="237" y2="52" stroke="#ef4444" stroke-width="2" />
+  <line x1="243" y1="80" x2="243" y2="52" stroke="#ef4444" stroke-width="2" />
+  <text x="240" y="45" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+  
+  <!-- C-H Bond -->
+  <line x1="252" y1="90" x2="308" y2="90" stroke="#94a3b8" stroke-width="2" />
+  <text x="318" y="95" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+</svg>`;
+
+const propanoneDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 180" class="w-full max-w-[320px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Left Carbon (C1) -->
+  <text x="80" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <text x="40" y="95" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="50" y1="90" x2="70" y2="90" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="80" y="45" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="80" y1="52" x2="80" y2="80" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="80" y="145" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="80" y1="102" x2="80" y2="130" stroke="#94a3b8" stroke-width="2" />
+  
+  <!-- C-C Bond -->
+  <line x1="92" y1="90" x2="148" y2="90" stroke="#94a3b8" stroke-width="2" />
+
+  <!-- Middle Carbonyl Carbon (C2) -->
+  <text x="160" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  
+  <!-- C=O Bond -->
+  <line x1="157" y1="80" x2="157" y2="52" stroke="#ef4444" stroke-width="2" />
+  <line x1="163" y1="80" x2="163" y2="52" stroke="#ef4444" stroke-width="2" />
+  <text x="160" y="45" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+  
+  <!-- C-C Bond -->
+  <line x1="172" y1="90" x2="228" y2="90" stroke="#94a3b8" stroke-width="2" />
+
+  <!-- Right Carbon (C3) -->
+  <text x="240" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <text x="280" y="95" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="252" y1="90" x2="270" y2="90" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="240" y="45" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="240" y1="52" x2="240" y2="80" stroke="#94a3b8" stroke-width="2" />
+  
+  <text x="240" y="145" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+  <line x1="240" y1="102" x2="240" y2="130" stroke="#94a3b8" stroke-width="2" />
+</svg>`;
+
+const propanoneSolubilitySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" class="w-full max-w-[420px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Propanone Molecule -->
+  <g transform="translate(30, 20)">
+    <!-- Central C -->
+    <text x="80" y="100" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- CH3 groups -->
+    <text x="30" y="55" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+    <line x1="45" y1="62" x2="68" y2="88" stroke="#94a3b8" stroke-width="2" />
+    
+    <text x="30" y="145" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+    <line x1="45" y1="138" x2="68" y2="112" stroke="#94a3b8" stroke-width="2" />
+    
+    <!-- C=O Double Bond -->
+    <line x1="92" y1="96" x2="138" y2="96" stroke="#ef4444" stroke-width="2" />
+    <line x1="92" y1="102" x2="138" y2="102" stroke="#ef4444" stroke-width="2" />
+    
+    <!-- Oxygen -->
+    <text x="150" y="105" fill="#ef4444" font-size="15" font-weight="bold" text-anchor="middle">O</text>
+    
+    <!-- Dipole and Lone Pairs -->
+    <text x="150" y="75" fill="#ef4444" font-size="11" text-anchor="middle">δ⁻</text>
+    <text x="80" y="75" fill="#38bdf8" font-size="11" text-anchor="middle">δ⁺</text>
+    
+    <!-- Lone pairs on oxygen -->
+    <circle cx="163" cy="90" r="1.5" fill="#ef4444" />
+    <circle cx="168" cy="93" r="1.5" fill="#ef4444" />
+    
+    <circle cx="163" cy="110" r="1.5" fill="#ef4444" />
+    <circle cx="168" cy="107" r="1.5" fill="#ef4444" />
+  </g>
+  
+  <!-- Hydrogen Bond -->
+  <line x1="205" y1="125" x2="270" y2="125" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" />
+  <text x="238" y="115" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Hydrogen bond</text>
+  
+  <!-- Water Molecule -->
+  <g transform="translate(280, 70)">
+    <!-- Hydrogen bonded to oxygen of propanone -->
+    <text x="10" y="55" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">H</text>
+    <text x="10" y="37" fill="#38bdf8" font-size="10" text-anchor="middle">δ⁺</text>
+    
+    <!-- O-H covalent bond -->
+    <line x1="20" y1="55" x2="50" y2="70" stroke="#94a3b8" stroke-width="2" />
+    
+    <!-- Oxygen of water -->
+    <text x="60" y="80" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+    <text x="73" y="70" fill="#ef4444" font-size="10" text-anchor="middle">δ⁻</text>
+    
+    <!-- O-H covalent bond to the other hydrogen -->
+    <line x1="70" y1="83" x2="100" y2="97" stroke="#94a3b8" stroke-width="2" />
+    <text x="110" y="105" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">H</text>
+    <text x="110" y="87" fill="#38bdf8" font-size="10" text-anchor="middle">δ⁺</text>
+  </g>
+</svg>`;
+
 export const parts: LessonPart[] = [
     {
         id: 'chirality-optical-isomerism-u4-l5',
@@ -600,7 +733,7 @@ export const parts: LessonPart[] = [
 >    * *Position Isomerism:* Functional group attached to different carbon atoms.
 >    * *Functional Group Isomerism:* Different functional groups present (e.g., aldehydes vs ketones).
 > * **Stereoisomerism:** Compounds with the same structural formula but their atoms are arranged differently in three dimensions:
->    * *Geometric Isomerism ($E$-$Z$ / $cis$-$trans$):* Arises due to restricted rotation about a double bond (e.g., \\\\text{C}=\\\\text{C}).
+>    * *Geometric Isomerism ($E$-$Z$ / $cis$-$trans$):* Arises due to restricted rotation about a double bond (e.g., $\\\\text{C}=\\\\text{C}$).
 >    * *Optical Isomerism (Chirality):* Arises in molecules containing a chiral centre, resulting in non-superimposable mirror images.
 
 > [!IMPORTANT]
@@ -662,8 +795,6 @@ ${svgToken(polarimeterSetupSvg)}
 >    * Carbon-3 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₂CH₃}$, and $-\\\\text{CHBrCH₃}$. These four groups are different, so Carbon-3 is a **chiral centre**.
 >    * Carbon-4 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₃}$, and $-\\\\text{CH₂CHBrCH₂CH₃}$. These four groups are different, so Carbon-4 is also a **chiral centre**.
 
-<br>
-
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Polariser
 > **Question:** Outline how a polariser works.
@@ -675,8 +806,6 @@ ${svgToken(polarimeterSetupSvg)}
 > > 2. A polariser consists of a material (like Polaroid) containing aligned long-chain molecules.
 > > 3. It absorbs all components of light oscillations except those oscillating in a single specific plane.
 > > 4. Consequently, only light oscillating in that single plane passes through, yielding plane-polarised light.
-
-<br>
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Analyzing Enantiomer Mixtures
@@ -693,8 +822,6 @@ ${svgToken(polarimeterSetupSvg)}
 > >    * $-43x + 43 - 43x = -10 \\\\implies -86x = -53 \\\\implies x \\\\approx 0.616$ (or $61.6\%$)
 > >    * Dextrorotatory fraction = $1 - 0.616 = 0.384$ (or $38.4\%$)
 > >    * Thus, the mixture consists of approximately $61.6\%$ of the laevorotatory enantiomer and $38.4\%$ of the dextrorotatory enantiomer.
-
-<br>
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Drawing 3D Enantiomers of Lactic Acid
@@ -716,8 +843,6 @@ ${svgToken(polarimeterSetupSvg)}
 > >    * Reflect the structure on the other side of the mirror plane so that the groups face the mirror (e.g. $-\\\\text{OH}$ wedge points down-left towards the mirror, $-\\\\text{CH}_3$ points down-right away from the mirror).
 
 ${svgToken(lacticAcidEnantiomersSvg)}
-
-<br>
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Identifying Chiral Centres in Amino Acids
@@ -794,8 +919,6 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * Wrap the entire structure in square brackets with a negative charge outside:
 > >      $$\\left[ \\text{NC} \\cdots \\text{C(H)(CH₃)(CH₂CH₃)} \\cdots \\text{Br} \\right]^-$$
 
-<br>
-
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: SN1 Mechanism & Optical Inactivity (Checkpoint Q2)
 > **Question:** 2-Bromopropane and cyanide ions react together by an $S_N1$ mechanism. Explain why there is no change in optical activity in this reaction.
@@ -870,32 +993,45 @@ ${svgToken(sn1StereochemistrySvg)}
 > * **Tail-Off:** As the carbon chain length increases, solubility **decreases** rapidly. This is because the non-polar, hydrophobic hydrocarbon tail of the molecule becomes larger and disrupts the hydrogen bonding network of water.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Displayed Formulas (Checkpoint Q1)
-> **Question:** Write the displayed formula for: (a) propanal, (b) propanone.
+> #### 📝 Worked Example 1: Displayed Formulas
+> **Question:** Write the displayed formula for:
+> 1. Propanal
+> 2. Propanone
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Propanal (CH₃CH₂CHO):** Display a 3-carbon chain. Carbon-1 carries double-bonded oxygen and single-bonded hydrogen:
-> >   $$\\text{H-C(H)(H)-C(H)(H)-C(=O)-H}$$
-> * **(b) Propanone (CH₃COCH₃):** Display a 3-carbon chain. Carbon-2 (middle carbon) carries double-bonded oxygen, flanked by two methyl groups:
-> >   $$\\text{H-C(H)(H)-C(=O)-C(H)(H)-H}$$
-
-<br>
+> > 1. **Definition of Displayed Formula:**
+> >    * A displayed formula shows all the atoms and all the covalent bonds present in a molecule (every single $\\text{C-H}$, $\\text{C-C}$, and the $\\text{C=O}$ double bond must be explicitly drawn)
+> > 2. **Propanal (CH₃CH₂CHO):**
+> >    * In propanal, the carbonyl carbon is at the end of the chain (Carbon-1) bonded to a hydrogen atom and a double-bonded oxygen atom.
+> >    * [INLINE_SVG:propanal_displayed]
+> > 3. **Propanone (CH₃COCH₃):**
+> >    * In propanone, the carbonyl carbon is the central carbon (Carbon-2) bonded to two methyl groups ($-\\text{CH}_3$) and a double-bonded oxygen atom.
+> >    * [INLINE_SVG:propanone_displayed]
+> 
+> ${svgToken(propanalDisplayedSvg)}
+> 
+> 
+> ${svgToken(propanoneDisplayedSvg)}
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Solubility Explanation (Checkpoint Q2)
+> #### 📝 Worked Example 2: Solubility Explanation
 > **Question:** Draw a diagram and explain why propanone is soluble in water.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> 1. **Identify the solvent and solute:** Water is $\\text{H₂O}$, propanone is $\\text{(CH₃)₂C=O}$.
-> 2. **Specify the polarities:** Oxygen of propanone carries a partial negative charge ($\\text{O}^{\\delta-}$). Hydrogen of water carries a partial positive charge ($\\text{H}^{\\delta+}$).
-> 3. **Explain the attraction:** A hydrogen bond forms between the lone pairs on the carbonyl oxygen atom ($\u200B^{\\delta-}$) and the hydrogen atom ($\u200B^{\\delta+}$) of the water molecule.
-> 4. **Diagram layout:**
->    $$\\text{(CH₃)₂C=O}^{\\delta-} \\cdots \\text{H}^{\\delta+}\\text{-O-H}$$
->    The dotted line represents the strong hydrogen bond. This interaction releases enough energy to allow propanone to dissolve in water.
+> > 1. **Explain the solubility of propanone in water:**
+> >    * Although propanone cannot form intermolecular hydrogen bonds with itself (because it has no hydrogen atom directly attached to an electronegative oxygen), it has a polar carbonyl group ($\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$).
+> >    * The lone pairs of electrons on the carbonyl oxygen atom can accept hydrogen bonds from the partially positive hydrogen atoms ($\\text{H}^{\\delta+}$) of surrounding water molecules.
+> >    * This favorable interaction releases enough hydration energy to allow small ketone molecules to mix completely with water.
+> > 2. **Key Mark Scheme Requirements for Full Marks:**
+> >    * **Lone Pair:** At least one lone pair of electrons clearly shown on the oxygen atom of the propanone molecule ($:\\text{O}$).
+> >    * **Dipoles / Partial Charges:** Correct dipoles shown on both the $\\text{C=O}$ bond ($\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) and the $\\text{O-H}$ bond of water ($\\text{O}^{\\delta-}-\\text{H}^{\\delta+}$).
+> >    * **Hydrogen Bond Representation:** The hydrogen bond is drawn as a dashed/dotted line ($\\cdots$) starting directly from the lone pair on the carbonyl oxygen to the partially positive hydrogen ($\\text{H}^{\\delta+}$) of the water molecule.
+> 
+> ${svgToken(propanoneSolubilitySvg)}
 `,
         keyPoints: [
             'Aldehydes carry terminal carbonyl groups; ketones carry internal carbonyl groups.',

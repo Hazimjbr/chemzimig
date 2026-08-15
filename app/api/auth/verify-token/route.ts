@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getAdminAuth, getAdminFirestore } from '@/lib/firebase-admin';
 import { isAdmin as checkAdminEmail } from '@/lib/admin-config';
-import { createSessionToken, getSessionCookieOptions } from '@/lib/session';
+import { createSessionToken, getAdminCookieOptions } from '@/lib/session';
 
 export async function POST(request: NextRequest) {
     try {
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
             name: decodedToken.name || email.split('@')[0],
         });
 
-        const cookieOptions = getSessionCookieOptions();
+        const cookieOptions = getAdminCookieOptions();
         response.cookies.set({
             ...cookieOptions,
             value: token,

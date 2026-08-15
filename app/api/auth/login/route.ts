@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { authenticateStudent, initializeAdmin } from '@/lib/auth-store-admin';
-import { createSessionToken, getSessionCookieOptions } from '@/lib/session';
+import { createSessionToken, getStudentCookieOptions } from '@/lib/session';
+import { checkRateLimit, recordFailedAttempt, clearRateLimit } from '@/lib/rate-limiter';
 
 export async function POST(request: NextRequest) {
     try {
@@ -23,7 +24,19 @@ export async function POST(request: NextRequest) {
 
         // Get IP address
         const forwardedFor = request.headers.get('x-forwarded-for');
-        const ipAddress = forwardedFor ? forwardedFor.split(',')[0] : 'unknown';
+        const ipAddress = forwardedFor ? forwardedFor.split(',')[0].trim() : 'unknown';
+
+        // ── Rate Limit Check ──────────────────────────────────
+        const rateCheck = checkRateLimit(username, ipAddress);
+        if (!rateCheck.allowed) {
+            return NextResponse.json(
+                { success: false, error: rateCheck.reason },
+                {
+                    status: 429,
+                    headers: { 'Retry-After': String(rateCheck.retryAfterSeconds) },
+                }
+            );
+        }
 
         // Ensure admin exists
         await initializeAdmin();
@@ -35,6 +48,9 @@ export async function POST(request: NextRequest) {
             { ...deviceInfo, ipAddress }
         );
         if (result.success && result.student) {
+            // ── Clear rate limit on successful login ──────────
+            clearRateLimit(username);
+
             const gradeVal = result.student.grade || 'cie-igcse';
             const validTracks = ['cie-igcse', 'cie-as', 'cie-alevel', 'edexcel-igcse', 'edexcel-as', 'edexcel-a2'];
             const track = validTracks.includes(gradeVal)
@@ -73,13 +89,20 @@ export async function POST(request: NextRequest) {
                 track,
             });
 
-            const cookieOptions = getSessionCookieOptions();
+            const cookieOptions = getStudentCookieOptions();
             response.cookies.set({
                 ...cookieOptions,
                 value: token,
             });
 
             return response;
+        }
+
+        // ── Record failed attempt ────────────────────────────
+        // Only count actual auth failures (wrong password, user not found)
+        // Don't count device-pending as a "failed attempt"
+        if (!result.requiresDeviceApproval) {
+            recordFailedAttempt(username, ipAddress);
         }
 
         return NextResponse.json({

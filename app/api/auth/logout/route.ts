@@ -4,6 +4,10 @@ import { cookies } from 'next/headers';
 export async function POST() {
     try {
         const cookieStore = await cookies();
+        // Clear new separated cookies
+        cookieStore.delete('chemzim-student');
+        cookieStore.delete('chemzim-admin');
+        // Clear legacy cookies
         cookieStore.delete('chemzim');
         cookieStore.delete('chemzim-session');
 

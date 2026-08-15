@@ -15,6 +15,7 @@ import { getLessonFromRegistry, LessonPart } from '@/data/curriculum/registry';
 import TextToSpeech from '@/components/visual/TextToSpeech';
 import LessonNotes from '@/components/visual/LessonNotes';
 import MarkdownCarousel from '@/components/visual/MarkdownCarousel';
+import SafeHTML from '@/components/ui/SafeHTML';
 
 const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { ssr: false });
 const GasLawSimulator = dynamic(() => import('@/components/visual/GasLawSimulator'), {
@@ -639,23 +640,58 @@ const renderContentWithTables = (content: string) => {
         segments.push({ type: 'text', content: content.slice(lastIndex) });
     }
 
+    // Group consecutive svg segments, skipping empty whitespace segments to allow merging
+    const groupedSegments: Array<{ type: 'text'; content: string } | { type: 'svg-group'; svgs: string[] }> = [];
+    for (const seg of segments) {
+        if (seg.type === 'text') {
+            if (seg.content.trim() === '' && groupedSegments.length > 0 && groupedSegments[groupedSegments.length - 1].type === 'svg-group') {
+                continue;
+            }
+            groupedSegments.push({ type: 'text', content: seg.content });
+        } else if (seg.type === 'svg') {
+            const last = groupedSegments[groupedSegments.length - 1];
+            if (last && last.type === 'svg-group') {
+                last.svgs.push(seg.content);
+            } else {
+                groupedSegments.push({ type: 'svg-group', svgs: [seg.content] });
+            }
+        }
+    }
+
     // If no SVG tokens found, process as before
-    if (segments.length === 0 || (segments.length === 1 && segments[0].type === 'text')) {
+    if (groupedSegments.length === 0 || (groupedSegments.length === 1 && groupedSegments[0].type === 'text')) {
         return renderMarkdownSegment(segments[0]?.content ?? content);
     }
 
     return (
         <React.Fragment>
-            {segments.map((seg, idx) => {
-                if (seg.type === 'svg') {
-                    try {
-                        const svgHtml = decodeURIComponent(seg.content);
-                        return (
-                            <div key={idx} className="flex justify-center my-4 w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: svgHtml }} />
-                        );
-                    } catch {
-                        return null;
+            {groupedSegments.map((seg, idx) => {
+                if (seg.type === 'svg-group') {
+                    if (seg.svgs.length === 1) {
+                        try {
+                            const svgHtml = decodeURIComponent(seg.svgs[0]);
+                            return (
+                                <div key={idx} className="flex justify-center my-4 w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                            );
+                        } catch {
+                            return null;
+                        }
                     }
+
+                    return (
+                        <div key={idx} className="flex flex-col lg:flex-row gap-6 my-6 w-full justify-center items-stretch">
+                            {seg.svgs.map((svgContent, sIdx) => {
+                                try {
+                                    const svgHtml = decodeURIComponent(svgContent);
+                                    return (
+                                        <div key={sIdx} className="flex-1 min-w-[280px] flex justify-center overflow-x-auto rounded-lg" dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                                    );
+                                } catch {
+                                    return null;
+                                }
+                            })}
+                        </div>
+                    );
                 }
                 return <React.Fragment key={idx}>{renderMarkdownSegment(seg.content)}</React.Fragment>;
             })}

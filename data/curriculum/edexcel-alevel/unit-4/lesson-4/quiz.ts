@@ -232,5 +232,225 @@ export const lessonQuiz = [
       { text: "The base used is not strong enough to neutralize both protons in a single stage.", isCorrect: false }
     ],
     explanation: "• A diprotic acid neutralizes in two distinct steps: H₂A ⇌ HA⁻ + H⁺ (Ka₁) and HA⁻ ⇌ A²⁻ + H⁺ (Ka₂).\n• Because Ka₁ is much larger than Ka₂ (typically by a factor of 10⁴ or more), the first proton is neutralized completely before the second proton begins to react.\n• This sequential ionization results in two separate equivalence points and two vertical regions on the titration curve."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-21",
+    question: "In an acid-base titration, a 0.10 mol dm⁻³ solution of a base is added to 25 cm³ of a 0.10 mol dm⁻³ solution of an acid. The pH titration curve starts at pH ≈ 1, has an equivalence point at 25 cm³ with pH ≈ 5, and ends at pH ≈ 9.5. This titration could represent the reaction between which species?",
+    options: [
+      { text: "CH₃COOH(aq) and NH₃(aq)", isCorrect: false },
+      { text: "CH₃COOH(aq) and KOH(aq)", isCorrect: false },
+      { text: "HCl(aq) and NH₃(aq)", isCorrect: true },
+      { text: "HCl(aq) and KOH(aq)", isCorrect: false }
+    ],
+    explanation: "• The starting pH of approximately 1 indicates a strong acid (HCl).\n• The final pH of approximately 9.5 indicates a weak base (NH₃).\n• A titration of a strong acid with a weak base yields an acidic equivalence point (pH < 7, around 5) due to the hydrolysis of the conjugate acid (NH₄⁺).\n• Therefore, this curve represents the titration of HCl(aq) with NH₃(aq)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-22",
+    question: "Hardness in water can be determined by titrating a sample against a reagent that forms complex ions with dissolved metal ions. The indicator for this titration requires the pH to be maintained at about 10. Which mixture in aqueous solution could be used to maintain this pH?",
+    options: [
+      { text: "ammonia and ammonium chloride", isCorrect: true },
+      { text: "ammonium chloride and hydrochloric acid", isCorrect: false },
+      { text: "sodium ethanoate and ethanoic acid", isCorrect: false },
+      { text: "sodium hydroxide and sodium ethanoate", isCorrect: false }
+    ],
+    explanation: "• A basic buffer is required to maintain a pH of approximately 10.\n• A mixture of a weak base (ammonia, NH₃) and its conjugate acid salt (ammonium chloride, NH₄Cl) forms a basic buffer system with an effective pH range of 8.2 to 10.2.\n• The other options either form acidic buffers (sodium ethanoate and ethanoic acid) or are not buffer systems."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-23",
+    question: "The following equilibrium exists in a mixture of concentrated nitric acid and concentrated sulfuric acid:\n\nHNO₃ + 2H₂SO₄ ⇌ NO₂⁺ + 2HSO₄⁻ + H₃O⁺\n\nWhich statement is correct for this system?",
+    options: [
+      { text: "HNO₃ and NO₂⁺ are a conjugate acid-base pair.", isCorrect: false },
+      { text: "The nitric acid acts as an oxidising agent.", isCorrect: false },
+      { text: "The sulfuric acid acts as a dehydrating agent.", isCorrect: false },
+      { text: "The sulfuric acid acts as a Brønsted-Lowry acid.", isCorrect: true }
+    ],
+    explanation: "• In this reaction, sulfuric acid (H₂SO₄) donates a proton to nitric acid (HNO₃), yielding HSO₄⁻.\n• Because H₂SO₄ is a proton donor, it acts as a Brønsted-Lowry acid.\n• Nitric acid acts as a Brønsted-Lowry base by accepting the proton (yielding protonated H₂NO₃⁺, which then decomposes into NO₂⁺ and H₂O)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-24",
+    question: "A sales leaflet claims that 'applications of a solution of ammonium sulfate, which is acidic, improve the growth of acid-loving rhododendron bushes by increasing the availability of nitrogen and also by increasing the pH of the soil'. What is wrong with this statement?",
+    options: [
+      { text: "Aqueous ammonium sulfate is not acidic.", isCorrect: false },
+      { text: "Ammonium sulfate does not dissolve in water.", isCorrect: false },
+      { text: "To be a fertilizer, nitrogen is needed in its oxidized form (nitrate) and not in its reduced form (ammonium).", isCorrect: false },
+      { text: "The pH of the soil will be decreased, not increased.", isCorrect: true }
+    ],
+    explanation: "• Ammonium sulfate, (NH₄)₂SO₄, is a salt of a weak base (NH₃) and a strong acid (H₂SO₄).\n• In water, the ammonium ion (NH₄⁺) undergoes hydrolysis to release H⁺ ions: NH₄⁺ ⇌ NH₃ + H⁺, making the solution acidic.\n• An acidic solution will decrease the pH of the soil, not increase it."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-25",
+    question: "A fruit juice contains a monobasic acid HA and has a hydrogen ion concentration [H⁺] of 2.50 × 10⁻⁴ mol dm⁻³. Calculate the pH of the fruit juice.",
+    options: [
+      { text: "pH = 3.60", isCorrect: true },
+      { text: "pH = 4.00", isCorrect: false },
+      { text: "pH = 3.40", isCorrect: false },
+      { text: "pH = 10.40", isCorrect: false }
+    ],
+    explanation: "• The pH is calculated using the formula: pH = -log₁₀[H⁺].\n• pH = -log₁₀(2.50 × 10⁻⁴) = 3.602 ≈ 3.60.\n• This shows that the fruit juice is moderately acidic."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-26",
+    question: "A 25.0 cm³ sample of fruit juice containing a monobasic acid HA reacts exactly with 26.70 cm³ of 0.0100 mol dm⁻³ sodium hydroxide. What is the concentration of HA in the fruit juice?",
+    options: [
+      { text: "1.07 × 10⁻² mol dm⁻³", isCorrect: true },
+      { text: "9.36 × 10⁻³ mol dm⁻³", isCorrect: false },
+      { text: "2.67 × 10⁻⁴ mol dm⁻³", isCorrect: false },
+      { text: "5.34 × 10⁻² mol dm⁻³", isCorrect: false }
+    ],
+    explanation: "• Step 1 — Calculate moles of NaOH used: moles = volume in dm³ × concentration = 0.02670 dm³ × 0.0100 mol dm⁻³ = 2.67 × 10⁻⁴ mol.\n• Step 2 — Monoprotic acid HA reacts in a 1:1 ratio with NaOH: HA + NaOH → NaA + H₂O. Thus, moles of HA = 2.67 × 10⁻⁴ mol.\n• Step 3 — Calculate concentration of HA: concentration = moles / volume in dm³ = 2.67 × 10⁻⁴ mol / 0.0250 dm³ = 1.068 × 10⁻² mol dm⁻³ ≈ 1.07 × 10⁻² mol dm⁻³."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-27",
+    question: "In a fruit juice sample, the total concentration of the monobasic acid HA is 1.07 × 10⁻² mol dm⁻³, while its hydrogen ion concentration [H⁺] is 2.50 × 10⁻⁴ mol dm⁻³. Which deduction about the acid HA is correct?",
+    options: [
+      { text: "HA is a strong acid because it is fully dissociated.", isCorrect: false },
+      { text: "HA is a weak acid because the [H⁺] is significantly lower than the total concentration of HA, indicating partial dissociation.", isCorrect: true },
+      { text: "HA is a strong acid because it reacts completely with sodium hydroxide.", isCorrect: false },
+      { text: "HA is a weak acid because it has a high concentration of undissociated acid molecules, indicating full dissociation.", isCorrect: false }
+    ],
+    explanation: "• A strong acid dissociates fully, so its [H⁺] would equal its total concentration (1.07 × 10⁻² mol dm⁻³).\n• Here, the [H⁺] is 2.50 × 10⁻⁴ mol dm⁻³, which is much lower than the total acid concentration.\n• This indicates that only a small fraction of the HA molecules have dissociated, proving that HA is a weak acid."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-28",
+    question: "For a monobasic acid HA with Ka = 6.00 × 10⁻⁵ mol dm⁻³ and [H⁺] = 2.50 × 10⁻⁴ mol dm⁻³, what is the concentration of the undissociated acid [HA] at equilibrium?",
+    options: [
+      { text: "1.04 × 10⁻³ mol dm⁻³", isCorrect: true },
+      { text: "4.17 × 10⁻³ mol dm⁻³", isCorrect: false },
+      { text: "2.50 × 10⁻⁴ mol dm⁻³", isCorrect: false },
+      { text: "1.07 × 10⁻² mol dm⁻³", isCorrect: false }
+    ],
+    explanation: "• The acid dissociation constant expression is: Ka = ([H⁺] × [A⁻]) / [HA].\n• Since HA is a weak acid, [H⁺] = [A⁻] = 2.50 × 10⁻⁴ mol dm⁻³.\n• Rearranging the expression for [HA]: [HA] = [H⁺]² / Ka = (2.50 × 10⁻⁴)² / (6.00 × 10⁻⁵).\n• [HA] = (6.25 × 10⁻⁸) / (6.00 × 10⁻⁵) = 1.04 × 10⁻³ mol dm⁻³."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-29",
+    question: "What is the correct definition of a buffer solution?",
+    options: [
+      { text: "A solution that maintains a constant pH regardless of the concentration of added reactants.", isCorrect: false },
+      { text: "A solution that minimizes changes in pH when small amounts of acid or base are added.", isCorrect: true },
+      { text: "A solution that neutralizes all added acids and bases to keep the pH exactly at 7.00.", isCorrect: false },
+      { text: "A solution containing equal concentrations of any strong acid and its conjugate base.", isCorrect: false }
+    ],
+    explanation: "• A buffer solution resists or minimizes changes in pH when small quantities of acid (H⁺) or base (OH⁻) are added.\n• It does not keep the pH completely constant, but prevents large fluctuations.\n• It typically consists of a weak acid and its conjugate base, or a weak base and its conjugate acid."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-30",
+    question: "A buffer solution is prepared by adding sodium hydroxide solution to 1.00 mol dm⁻³ ethanoic acid until exactly half of the ethanoic acid has reacted. What is the pH of the resulting buffer solution? (Ka of ethanoic acid = 1.70 × 10⁻⁵ mol dm⁻³)",
+    options: [
+      { text: "pH = 4.77", isCorrect: true },
+      { text: "pH = 2.38", isCorrect: false },
+      { text: "pH = 7.00", isCorrect: false },
+      { text: "pH = 5.00", isCorrect: false }
+    ],
+    explanation: "• When exactly half of the weak acid has reacted with NaOH, the concentrations of the remaining acid [HA] and the formed conjugate base [A⁻] are equal: [HA] = [A⁻].\n• Under this condition, the Henderson-Hasselbalch equation (pH = pKa + log([A⁻]/[HA])) simplifies to: pH = pKa.\n• pKa = -log₁₀(1.70 × 10⁻⁵) = 4.769 ≈ 4.77.\n• Therefore, pH = 4.77."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-31",
+    question: "The ionic product of water, Kw, is 5.48 × 10⁻¹⁴ mol² dm⁻⁶ at 323 K. Calculate the pH of pure water at this temperature.",
+    options: [
+      { text: "pH = 6.63", isCorrect: true },
+      { text: "pH = 7.00", isCorrect: false },
+      { text: "pH = 6.13", isCorrect: false },
+      { text: "pH = 7.37", isCorrect: false }
+    ],
+    explanation: "• In pure water, [H⁺] = [OH⁻] is always true.\n• Since Kw = [H⁺][OH⁻], we have Kw = [H⁺]².\n• [H⁺] = √(Kw) = √(5.48 × 10⁻¹⁴) = 2.341 × 10⁻⁷ mol dm⁻³.\n• pH = -log₁₀(2.341 × 10⁻⁷) = 6.63."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-32",
+    question: "The ionic product of water, Kw, increases from 1.00 × 10⁻¹⁴ mol² dm⁻⁶ at 298 K to 5.48 × 10⁻¹⁴ mol² dm⁻⁶ at 323 K. What does this indicate about the enthalpy change (ΔH) for the self-dissociation of water?",
+    options: [
+      { text: "ΔH is positive (endothermic), because heating shifts the equilibrium to favor dissociation, increasing Kw.", isCorrect: true },
+      { text: "ΔH is negative (exothermic), because heating shifts the equilibrium to favor dissociation, increasing Kw.", isCorrect: false },
+      { text: "ΔH is positive (endothermic), because heating shifts the equilibrium to favor the reverse reaction, increasing Kw.", isCorrect: false },
+      { text: "ΔH is zero, because Kw is independent of the enthalpy of the reaction.", isCorrect: false }
+    ],
+    explanation: "• The self-dissociation of water is: H₂O(l) ⇌ H⁺(aq) + OH⁻(aq).\n• An increase in temperature causes Kw to increase, which means the equilibrium shifts to favor the forward reaction (dissociation).\n• According to Le Chatelier's Principle, an increase in temperature shifts the equilibrium in the endothermic direction.\n• Therefore, the forward reaction must be endothermic, and ΔH is positive."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-33",
+    question: "Consider the following acid-base equilibria which both lie well to the right-hand side:\n\n1) C₆H₅COO⁻ + HF ⇌ C₆H₅COOH + F⁻\n2) C₆H₅COOH + CN⁻ ⇌ C₆H₅COO⁻ + HCN\n\nWhat is the correct order of decreasing acid strength?",
+    options: [
+      { text: "HF > C₆H₅COOH > HCN", isCorrect: true },
+      { text: "HCN > C₆H₅COOH > HF", isCorrect: false },
+      { text: "C₆H₅COOH > HF > HCN", isCorrect: false },
+      { text: "HF > HCN > C₆H₅COOH", isCorrect: false }
+    ],
+    explanation: "• In equilibrium 1, HF donates a proton to C₆H₅COO⁻ to form C₆H₅COOH. Since the equilibrium lies to the right, HF is a stronger acid (proton donor) than C₆H₅COOH.\n• In equilibrium 2, C₆H₅COOH donates a proton to CN⁻ to form HCN. Since this equilibrium also lies to the right, C₆H₅COOH is a stronger acid than HCN.\n• Combining these, the order of decreasing acid strength is: HF > C₆H₅COOH > HCN."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-34",
+    question: "Liquid ammonia undergoes self-ionisation according to the equation: 2NH₃ ⇌ NH₄⁺ + NH₂⁻. When ammonium chloride (NH₄Cl) and sodium amide (NaNH₂) are dissolved in liquid ammonia, how are they classified?",
+    options: [
+      { text: "NH₄Cl is acidic and NaNH₂ is basic.", isCorrect: true },
+      { text: "NH₄Cl is basic and NaNH₂ is acidic.", isCorrect: false },
+      { text: "Both NH₄Cl and NaNH₂ are neutral.", isCorrect: false },
+      { text: "NH₄Cl is neutral and NaNH₂ is basic.", isCorrect: false }
+    ],
+    explanation: "• The auto-ionisation of ammonia produces the solvent cation (NH₄⁺) and the solvent anion (NH₂⁻).\n• Dissolving NH₄Cl increases the concentration of the solvent cation (NH₄⁺), making the solution acidic.\n• Dissolving NaNH₂ increases the concentration of the solvent anion (NH₂⁻), making the solution basic."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-35",
+    question: "Sulfurous acid, H₂SO₃, has a first dissociation constant Ka₁ = 1.20 × 10⁻² mol dm⁻³ at 298 K. What is the value of pKa₁?",
+    options: [
+      { text: "pKa₁ = 1.92", isCorrect: true },
+      { text: "pKa₁ = 2.00", isCorrect: false },
+      { text: "pKa₁ = 1.20", isCorrect: false },
+      { text: "pKa₁ = 4.80", isCorrect: false }
+    ],
+    explanation: "• pKa₁ is defined as: pKa₁ = -log₁₀(Ka₁).\n• pKa₁ = -log₁₀(1.20 × 10⁻²) = 1.92."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-36",
+    question: "Calculate the approximate pH of a 0.500 mol dm⁻³ aqueous solution of sulfurous acid, H₂SO₃, using the approximation [H⁺] = √(Ka₁ × c) where Ka₁ = 1.20 × 10⁻² mol dm⁻³.",
+    options: [
+      { text: "pH = 1.11", isCorrect: true },
+      { text: "pH = 1.92", isCorrect: false },
+      { text: "pH = 0.30", isCorrect: false },
+      { text: "pH = 2.22", isCorrect: false }
+    ],
+    explanation: "• Using the weak acid approximation: [H⁺] = √(Ka₁ × c).\n• [H⁺] = √(1.20 × 10⁻² × 0.500) = √(6.00 × 10⁻³) = 0.07746 mol dm⁻³.\n• pH = -log₁₀(0.07746) = 1.111 ≈ 1.11."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-37",
+    question: "The measured pH of 0.500 mol dm⁻³ H₂SO₃ is slightly lower than that calculated using the approximation [HA] ≈ c. What is the main reason for this difference?",
+    options: [
+      { text: "H₂SO₃ dissociates to a significant extent because Ka₁ is relatively large, so [HA] at equilibrium is significantly lower than c, making the approximation [HA] ≈ c invalid.", isCorrect: true },
+      { text: "The second dissociation step (Ka₂) also contributes a significant concentration of H⁺ ions.", isCorrect: false },
+      { text: "Water auto-ionisation contributes a significant amount of H⁺ ions.", isCorrect: false },
+      { text: "Sulfurous acid behaves as a strong monoprotic acid.", isCorrect: false }
+    ],
+    explanation: "• The weak acid pH calculation assumes that the equilibrium concentration of the undissociated acid [HA] is approximately equal to its initial concentration c ([HA] ≈ c).\n• Since sulfurous acid has a relatively high Ka₁ (1.20 × 10⁻²), it dissociates to a significant extent (around 15%), meaning the actual [HA] at equilibrium is noticeably lower than 0.500 mol dm⁻³.\n• Since the real [HA] is lower, the actual degree of dissociation is higher than predicted by the simplified formula, leading to a slightly lower measured pH."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-38",
+    question: "Calculate the pH of a 0.500 mol dm⁻³ solution of the strong base potassium hydroxide (KOH) at 298 K.",
+    options: [
+      { text: "pH = 13.70", isCorrect: true },
+      { text: "pH = 0.30", isCorrect: false },
+      { text: "pH = 13.30", isCorrect: false },
+      { text: "pH = 14.30", isCorrect: false }
+    ],
+    explanation: "• KOH is a strong base and dissociates fully: [OH⁻] = [KOH] = 0.500 mol dm⁻³.\n• pOH = -log₁₀[OH⁻] = -log₁₀(0.500) = 0.301 ≈ 0.30.\n• pH = 14.00 - pOH = 14.00 - 0.30 = 13.70."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-39",
+    question: "Dilute hydrochloric acid is titrated with sodium carbonate solution, producing a titration curve with two distinct equivalence points at pH ≈ 8.3 (point A) and pH ≈ 4.0 (point B). Which indicators are most suitable to detect the end-points at A and B?",
+    options: [
+      { text: "Phenolphthalein for A, Methyl Orange for B", isCorrect: true },
+      { text: "Methyl Orange for A, Phenolphthalein for B", isCorrect: false },
+      { text: "Phenolphthalein for both A and B", isCorrect: false },
+      { text: "Methyl Orange for both A and B", isCorrect: false }
+    ],
+    explanation: "• The first equivalence point (point A) occurs in the weakly alkaline region (pH ≈ 8.3) where CO₃²⁻ is converted to HCO₃⁻. Phenolphthalein (transition range 8.3 - 10.0) is ideal here.\n• The second equivalence point (point B) occurs in the acidic region (pH ≈ 4.0) where HCO₃⁻ reacts further to form CO₂ and H₂O. Methyl orange (transition range 3.1 - 4.4) is ideal here."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L4-MEDIUM-20260810-40",
+    question: "During the titration of hydrochloric acid with sodium carbonate, why is the first end-point (at A, pH ≈ 8.3) more difficult to detect experimentally than the second end-point (at B, pH ≈ 4.0)?",
+    options: [
+      { text: "The pH change at A is gradual and the vertical section of the curve is very short, so indicators do not show a sharp color change.", isCorrect: true },
+      { text: "Sodium carbonate is not soluble enough to allow a sharp end-point at A.", isCorrect: false },
+      { text: "The reaction at A is highly endothermic, causing temperature fluctuations that disrupt indicators.", isCorrect: false },
+      { text: "Carbon dioxide gas bubbles block the color changes at point A.", isCorrect: false }
+    ],
+    explanation: "• The vertical region on the titration curve around the first equivalence point (point A, pH ≈ 8.3) is very short and less steep.\n• As a result, the pH changes relatively gradually, meaning the indicator changes color slowly over a range of added acid rather than sharply with a single drop, making detection difficult.\n• In contrast, the second equivalence point (point B, pH ≈ 4.0) has a much steeper and longer vertical section, resulting in a sharp indicator color change."
   }
 ];

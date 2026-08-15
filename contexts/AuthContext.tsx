@@ -95,6 +95,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
             // Fallback: try to clear client-side (won't work for HttpOnly but safe to try)
             document.cookie = 'chemzim=; path=/; max-age=0';
             document.cookie = 'chemzim-session=; path=/; max-age=0';
+            document.cookie = 'chemzim-student=; path=/; max-age=0';
+            document.cookie = 'chemzim-admin=; path=/; max-age=0';
         }
     }, []);
 
