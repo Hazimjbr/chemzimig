@@ -140,10 +140,7 @@ const polarimeterSetupSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 
   </defs>
 </svg>`;
 
-const chiralVsAchiralSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <!-- Vertical separator dividing Chiral and Achiral -->
-  <line x1="500" y1="20" x2="500" y2="340" stroke="#1e293b" stroke-width="2" />
-  
+const chiralCentreSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <!-- Left Side: Chiral Molecules -->
   <g transform="translate(0, 0)">
     <text x="250" y="30" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">CHIRAL CENTRE (Asymmetric Carbon)</text>
@@ -211,9 +208,11 @@ const chiralVsAchiralSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0
     <path d="M 220,310 L 280,310" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2 2" />
     <text x="250" y="325" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="bold">CANNOT BE SUPERIMPOSED</text>
   </g>
-  
+</svg>`;
+
+const achiralMoleculeSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <!-- Right Side: Achiral Molecules -->
-  <g transform="translate(500, 0)">
+  <g transform="translate(0, 0)">
     <text x="250" y="30" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">ACHIRAL MOLECULE</text>
     <text x="250" y="50" text-anchor="middle" fill="#94a3b8" font-size="10">Superimposable mirror images (possesses plane of symmetry)</text>
     
@@ -625,6 +624,400 @@ const propanalDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0
   <text x="318" y="95" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
 </svg>`;
 
+const nucleophilicAdditionStep1Svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" class="w-full max-w-[720px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Left Side: Reactants -->
+  <g transform="translate(15, 10)">
+    <!-- CN- Nucleophile with explicit lone pair on C -->
+    <circle cx="48" cy="120" r="2" fill="#38bdf8" />
+    <circle cx="48" cy="128" r="2" fill="#38bdf8" />
+    <text x="68" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">NC</text>
+    <text x="86" y="112" fill="#38bdf8" font-size="14" font-weight="bold">⁻</text>
+    <text x="68" y="152" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Nucleophile</text>
+    
+    <!-- Curved attack arrow from C lone pair to C=O carbon -->
+    <path d="M 88,120 Q 140,85 182,110" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4,2" marker-end="url(#arrow-yellow)" />
+    <text x="135" y="85" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">Nucleophilic Attack</text>
+
+    <!-- Ethanal Carbonyl Carbon -->
+    <text x="195" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">C</text>
+    <text x="195" y="100" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">δ⁺</text>
+    
+    <!-- H (top left) -->
+    <line x1="186" y1="112" x2="160" y2="78" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="150" y="70" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+    
+    <!-- CH3 (bottom left) -->
+    <line x1="186" y1="134" x2="160" y2="168" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="145" y="185" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- C=O Double Bond -->
+    <line x1="210" y1="118" x2="255" y2="118" stroke="#ef4444" stroke-width="2.5" />
+    <line x1="210" y1="126" x2="255" y2="126" stroke="#ef4444" stroke-width="2.5" />
+    
+    <!-- Oxygen atom of C=O with lone pairs and partial charge -->
+    <text x="272" y="129" fill="#ef4444" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+    <text x="272" y="100" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">δ⁻</text>
+    <!-- Carbonyl Oxygen Lone pairs (two pairs) -->
+    <circle cx="272" cy="142" r="2" fill="#ef4444" />
+    <circle cx="280" cy="142" r="2" fill="#ef4444" />
+    <circle cx="286" cy="120" r="2" fill="#ef4444" />
+    <circle cx="286" cy="128" r="2" fill="#ef4444" />
+    
+    <!-- Curved arrow showing pi-electrons breaking to oxygen -->
+    <path d="M 230,114 Q 250,98 268,110" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)" />
+  </g>
+  
+  <!-- Step 1 Reaction Arrow -->
+  <g transform="translate(325, 10)">
+    <line x1="0" y1="124" x2="65" y2="124" stroke="#94a3b8" stroke-width="2.2" marker-end="url(#arrow-gray)" />
+    <text x="32" y="110" fill="#94a3b8" font-size="13" text-anchor="middle" font-weight="bold">Step 1</text>
+    <text x="32" y="148" fill="#ef4444" font-size="12" text-anchor="middle" font-weight="bold">Slow (r.d.s)</text>
+  </g>
+  
+  <!-- Right Side: Tetrahedral Intermediate -->
+  <g transform="translate(425, 10)">
+    <!-- Central Carbon -->
+    <text x="140" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- NC joined (left) -->
+    <line x1="126" y1="124" x2="82" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="60" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">NC</text>
+    
+    <!-- H (top) -->
+    <line x1="140" y1="112" x2="140" y2="70" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="140" y="60" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+    
+    <!-- CH3 (bottom) -->
+    <line x1="140" y1="135" x2="140" y2="175" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="140" y="195" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- C-O single bond -->
+    <line x1="154" y1="124" x2="198" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    
+    <!-- Intermediate negative Oxygen with 3 lone pairs -->
+    <text x="216" y="129" fill="#ef4444" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+    <text x="232" y="112" fill="#ef4444" font-size="15" font-weight="bold">⁻</text>
+    
+    <!-- Three lone pairs on intermediate O- -->
+    <circle cx="212" cy="108" r="2" fill="#ef4444" />
+    <circle cx="220" cy="108" r="2" fill="#ef4444" />
+    <circle cx="212" cy="140" r="2" fill="#ef4444" />
+    <circle cx="220" cy="140" r="2" fill="#ef4444" />
+    <circle cx="230" cy="120" r="2" fill="#ef4444" />
+    <circle cx="230" cy="128" r="2" fill="#ef4444" />
+    
+    <text x="140" y="225" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle">Tetrahedral Intermediate</text>
+  </g>
+  
+  <!-- Definitions for Arrows -->
+  <defs>
+    <marker id="arrow-yellow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#ef4444" />
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+</svg>`;
+
+const nucleophilicAdditionStep2Svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" class="w-full max-w-[760px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Left Side: Proton Transfer -->
+  <g transform="translate(10, 10)">
+    <!-- Intermediate Carbon -->
+    <text x="120" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- NC -->
+    <line x1="106" y1="124" x2="62" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="40" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">NC</text>
+    
+    <!-- H (top) -->
+    <line x1="120" y1="112" x2="120" y2="70" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="120" y="60" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+    
+    <!-- CH3 (bottom) -->
+    <line x1="120" y1="135" x2="120" y2="175" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="120" y="195" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- C-O -->
+    <line x1="134" y1="124" x2="178" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="195" y="129" fill="#ef4444" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+    <text x="210" y="112" fill="#ef4444" font-size="15" font-weight="bold">⁻</text>
+    
+    <!-- Lone pair on O- attacking H-CN -->
+    <circle cx="210" cy="120" r="2" fill="#ef4444" />
+    <circle cx="210" cy="128" r="2" fill="#ef4444" />
+    
+    <!-- Curved attack arrow from O- lone pair to H of HCN -->
+    <path d="M 212,124 Q 250,95 282,115" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4,2" marker-end="url(#arrow-yellow)" />
+    <text x="250" y="90" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">Proton Transfer</text>
+    
+    <!-- HCN Reactant Molecule with dipoles -->
+    <text x="295" y="129" fill="#f8fafc" font-size="17" font-weight="bold" text-anchor="middle">H</text>
+    <text x="295" y="102" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">δ⁺</text>
+    
+    <line x1="306" y1="124" x2="334" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    
+    <text x="352" y="129" fill="#f8fafc" font-size="17" font-weight="bold" text-anchor="middle">CN</text>
+    <text x="352" y="102" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle">δ⁻</text>
+    
+    <!-- Curved arrow showing H-CN bond breaking to CN -->
+    <path d="M 320,118 Q 332,102 344,115" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)" />
+  </g>
+  
+  <!-- Step 2 Reaction Arrow -->
+  <g transform="translate(410, 10)">
+    <line x1="0" y1="124" x2="60" y2="124" stroke="#94a3b8" stroke-width="2.2" marker-end="url(#arrow-gray)" />
+    <text x="30" y="110" fill="#94a3b8" font-size="13" text-anchor="middle" font-weight="bold">Step 2</text>
+    <text x="30" y="148" fill="#10b981" font-size="12" text-anchor="middle" font-weight="bold">Fast</text>
+  </g>
+  
+  <!-- Right Side: Final Products -->
+  <g transform="translate(500, 10)">
+    <!-- Central C -->
+    <text x="100" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- NC -->
+    <line x1="86" y1="124" x2="48" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="30" y="129" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">NC</text>
+    
+    <!-- H -->
+    <line x1="100" y1="112" x2="100" y2="70" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="100" y="60" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+    
+    <!-- CH3 -->
+    <line x1="100" y1="135" x2="100" y2="175" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="100" y="195" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- C-OH bond -->
+    <line x1="114" y1="124" x2="148" y2="124" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="168" y="129" fill="#10b981" font-size="18" font-weight="bold" text-anchor="middle">OH</text>
+    
+    <!-- Regenerated :CN- Catalyst -->
+    <text x="218" y="129" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">+ :CN⁻</text>
+    <text x="218" y="152" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">(Catalyst regenerated)</text>
+  </g>
+  
+  <!-- Definitions for Arrows -->
+  <defs>
+    <marker id="arrow-yellow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#ef4444" />
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+</svg>`;
+
+const dnphReactionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 200" class="w-full max-w-[780px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Title Badge -->
+  <text x="460" y="22" text-anchor="middle" fill="#38bdf8" font-size="11.5" font-weight="bold">Brady's Test: Condensation Reaction of 2,4-DNPH with Carbonyl Compound</text>
+
+  <!-- 1. Left Reactant: 2,4-Dinitrophenylhydrazine -->
+  <g transform="translate(0, 10)">
+    <!-- O2N at C4 (far left) -->
+    <text x="30" y="104" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="end">O₂N</text>
+    <line x1="34" y1="100" x2="62" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    
+    <!-- Mathematically Regular Benzene Ring (R = 38px, all 6 sides equal) -->
+    <polygon points="95,62 128,81 128,119 95,138 62,119 62,81" fill="none" stroke="#f8fafc" stroke-width="2" />
+    <circle cx="95" cy="100" r="21.5" fill="none" stroke="#f8fafc" stroke-width="1.5" />
+    
+    <!-- NO2 at C2 (top right) -->
+    <line x1="128" y1="81" x2="144" y2="65" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="148" y="61" fill="#f43f5e" font-size="12" font-weight="bold">NO₂</text>
+    
+    <!-- Hydrazine Group (-NH-NH2) at C1 -->
+    <line x1="128" y1="100" x2="152" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="162" y="104" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">N</text>
+    <line x1="162" y1="110" x2="162" y2="124" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="162" y="136" fill="#f8fafc" font-size="11" text-anchor="middle">H</text>
+    
+    <line x1="172" y1="100" x2="192" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="210" y="104" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">NH₂</text>
+  </g>
+
+  <!-- Plus Sign -->
+  <text x="245" y="114" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">+</text>
+
+  <!-- 2. Carbonyl Reactant (Propanal) -->
+  <g transform="translate(265, 10)">
+    <text x="15" y="104" fill="#f43f5e" font-size="14" font-weight="bold">O</text>
+    <line x1="28" y1="96" x2="48" y2="96" stroke="#94a3b8" stroke-width="2" />
+    <line x1="28" y1="102" x2="48" y2="102" stroke="#94a3b8" stroke-width="2" />
+    
+    <text x="56" y="104" fill="#f8fafc" font-size="14" font-weight="bold">C</text>
+    <line x1="56" y1="110" x2="56" y2="125" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="56" y="137" fill="#f8fafc" font-size="11" text-anchor="middle">H</text>
+    
+    <line x1="66" y1="95" x2="85" y2="82" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="115" y="80" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">CH₂CH₃</text>
+  </g>
+
+  <!-- 3. Reaction Arrow -->
+  <g transform="translate(405, 10)">
+    <line x1="0" y1="100" x2="45" y2="100" stroke="#f59e0b" stroke-width="2.2" marker-end="url(#arrow-amber)" />
+    <text x="22" y="90" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">- H₂O</text>
+  </g>
+
+  <!-- 4. Product: 2,4-Dinitrophenylhydrazone Derivative -->
+  <g transform="translate(480, 10)">
+    <!-- O2N at C4 (left) -->
+    <text x="30" y="104" fill="#f43f5e" font-size="12" font-weight="bold" text-anchor="end">O₂N</text>
+    <line x1="34" y1="100" x2="62" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    
+    <!-- Regular Benzene Ring (relative center = 95, 100) -->
+    <polygon points="95,62 128,81 128,119 95,138 62,119 62,81" fill="none" stroke="#f8fafc" stroke-width="2" />
+    <circle cx="95" cy="100" r="21.5" fill="none" stroke="#f8fafc" stroke-width="1.5" />
+    
+    <!-- NO2 at C2 (top right) -->
+    <line x1="128" y1="81" x2="144" y2="65" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="148" y="61" fill="#f43f5e" font-size="12" font-weight="bold">NO₂</text>
+    
+    <!-- N-H link at C1 -->
+    <line x1="128" y1="100" x2="152" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="162" y="104" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">N</text>
+    <line x1="162" y1="110" x2="162" y2="124" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="162" y="136" fill="#f8fafc" font-size="11" text-anchor="middle">H</text>
+    
+    <!-- N=C Double Bond -->
+    <line x1="172" y1="96" x2="194" y2="96" stroke="#38bdf8" stroke-width="1.8" />
+    <line x1="172" y1="104" x2="194" y2="104" stroke="#38bdf8" stroke-width="1.8" />
+    <text x="204" y="104" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">N</text>
+    
+    <line x1="214" y1="100" x2="234" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="244" y="104" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+    
+    <!-- Attachments to C (H down, CH2CH3 up) -->
+    <line x1="244" y1="110" x2="244" y2="125" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="244" y="137" fill="#f8fafc" font-size="11" text-anchor="middle">H</text>
+    
+    <line x1="252" y1="92" x2="270" y2="78" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="300" y="76" fill="#fbbf24" font-size="12" font-weight="bold" text-anchor="middle">CH₂CH₃</text>
+  </g>
+
+  <!-- + H2O Product -->
+  <text x="830" y="114" fill="#f8fafc" font-size="13.5" font-weight="bold" text-anchor="middle">+ H₂O</text>
+
+  <!-- Bottom Result Banner -->
+  <rect x="170" y="168" width="580" height="24" rx="4" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.5" />
+  <text x="460" y="184" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">Bright Yellow / Orange Crystalline Precipitate (2,4-dinitrophenylhydrazone derivative)</text>
+
+  <defs>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+</svg>`;
+
+const stereochemicalAttackSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" class="w-full max-w-[900px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Left Side: Planar Carbonyl & Above/Below Attack -->
+  <g transform="translate(10, 50)">
+    <!-- Carbonyl Group (Trigonal Planar representation) -->
+    <text x="150" y="115" fill="#f8fafc" font-size="18" font-weight="bold" text-anchor="middle">C</text>
+    <text x="150" y="90" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">δ⁺</text>
+    
+    <!-- C=O Double Bond -->
+    <line x1="165" y1="110" x2="210" y2="110" stroke="#94a3b8" stroke-width="2.5" />
+    <line x1="165" y1="118" x2="210" y2="118" stroke="#94a3b8" stroke-width="2.5" />
+    <text x="225" y="119" fill="#ef4444" font-size="18" font-weight="bold" text-anchor="middle">O</text>
+    <text x="225" y="90" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="middle">δ⁻</text>
+    
+    <!-- Planar Carbonyl plane representation (dashed outline) -->
+    <polygon points="90,60 260,60 230,170 60,170" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4,4" />
+    <text x="160" y="162" fill="#475569" font-size="10" font-weight="bold" text-anchor="middle">Trigonal Planar Plane</text>
+    
+    <!-- CH3 (Out of plane - Wedge representation) -->
+    <polygon points="138,122 100,148 105,152" fill="#38bdf8" />
+    <text x="85" y="162" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">CH₃</text>
+    
+    <!-- H (Into plane - Dash representation) -->
+    <line x1="138" y1="108" x2="110" y2="85" stroke="#f8fafc" stroke-width="2" stroke-dasharray="3,3" />
+    <text x="100" y="78" fill="#f8fafc" font-size="14" text-anchor="middle">H</text>
+
+    <!-- Attack 1: From ABOVE the plane -->
+    <path d="M 150,35 Q 130,55 142,90" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="3,2" marker-end="url(#arrow-yellow)" />
+    <!-- Nucleophile CN- (above) -->
+    <text x="142" y="27" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">NC:</text>
+    <text x="156" y="20" fill="#38bdf8" font-size="10" font-weight="bold">⁻</text>
+    <text x="120" y="42" fill="#fbbf24" font-size="10" font-weight="bold">Attack from Above (50%)</text>
+    
+    <!-- Attack 2: From BELOW the plane -->
+    <path d="M 150,195 Q 130,175 142,140" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="3,2" marker-end="url(#arrow-yellow)" />
+    <!-- Nucleophile CN- (below) -->
+    <text x="142" y="212" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">NC:</text>
+    <text x="156" y="205" fill="#38bdf8" font-size="10" font-weight="bold">⁻</text>
+    <text x="120" y="190" fill="#fbbf24" font-size="10" font-weight="bold">Attack from Below (50%)</text>
+  </g>
+  
+  <!-- Right arrows pointing to Enantiomers (diverging y-pathway) -->
+  <g transform="translate(290, 50)">
+    <!-- Pointing up-right to Enantiomer A -->
+    <path d="M 0,90 Q 30,70 60,40" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+    <!-- Pointing down-right to Enantiomer B -->
+    <path d="M 0,130 Q 30,150 60,180" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+  </g>
+  
+  <!-- Right Side: Vertically Stacked Enantiomer Products -->
+  <g transform="translate(400, 15)">
+    <!-- Enantiomer A (Top Product) -->
+    <g transform="translate(30, 0)">
+      <text x="90" y="60" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+      <!-- CN pointing up -->
+      <line x1="90" y1="46" x2="90" y2="24" stroke="#94a3b8" stroke-width="2" />
+      <text x="90" y="18" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">CN</text>
+      <!-- OH pointing down -->
+      <line x1="90" y1="66" x2="90" y2="85" stroke="#94a3b8" stroke-width="2" />
+      <text x="90" y="98" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">OH</text>
+      <!-- Wedge CH3 -->
+      <polygon points="82,62 55,75 58,79" fill="#38bdf8" />
+      <text x="45" y="86" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">CH₃</text>
+      <!-- Dash H -->
+      <line x1="98" y1="58" x2="120" y2="72" stroke="#f8fafc" stroke-width="1.8" stroke-dasharray="3,3" />
+      <text x="126" y="82" fill="#f8fafc" font-size="12" text-anchor="middle">H</text>
+      
+      <text x="155" y="64" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="start">Enantiomer A (50%)</text>
+    </g>
+
+    <!-- Enantiomer B (Bottom Product) -->
+    <g transform="translate(30, 130)">
+      <text x="90" y="60" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+      <!-- CN pointing up -->
+      <line x1="90" y1="46" x2="90" y2="24" stroke="#94a3b8" stroke-width="2" />
+      <text x="90" y="18" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">CN</text>
+      <!-- OH pointing down -->
+      <line x1="90" y1="66" x2="90" y2="85" stroke="#94a3b8" stroke-width="2" />
+      <text x="90" y="98" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">OH</text>
+      <!-- Dash CH3 (swapped for optical isomerism) -->
+      <line x1="82" y1="58" x2="60" y2="72" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="3,3" />
+      <text x="50" y="84" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">CH₃</text>
+      <!-- Wedge H -->
+      <polygon points="98,62 125,75 122,79" fill="#f8fafc" />
+      <text x="135" y="86" fill="#f8fafc" font-size="12" text-anchor="middle">H</text>
+      
+      <text x="155" y="64" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="start">Enantiomer B (50%)</text>
+    </g>
+    
+    <!-- Equimolar Racemic Mixture Label -->
+    <rect x="-10" y="270" width="300" height="26" rx="4" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1" stroke-opacity="0.4" />
+    <text x="140" y="287" fill="#34d399" font-size="11.5" font-weight="bold" text-anchor="middle">50:50 Racemic Mixture (Optically Inactive)</text>
+  </g>
+  
+  <defs>
+    <marker id="arrow-yellow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#fbbf24" />
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+</svg>`;
+
 const propanoneDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 180" class="w-full max-w-[320px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <!-- Left Carbon (C1) -->
   <text x="80" y="95" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
@@ -663,68 +1056,77 @@ const propanoneDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="
   <line x1="240" y1="102" x2="240" y2="130" stroke="#94a3b8" stroke-width="2" />
 </svg>`;
 
-const propanoneSolubilitySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" class="w-full max-w-[420px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const propanoneSolubilitySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" class="w-full max-w-[440px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <!-- Propanone Molecule -->
-  <g transform="translate(30, 20)">
-    <!-- Central C -->
-    <text x="80" y="100" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+  <g transform="translate(40, 20)">
+    <!-- Central Carbon -->
+    <text x="55" y="100" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">C</text>
+    <text x="40" y="100" fill="#38bdf8" font-size="11" text-anchor="middle">δ+</text>
     
-    <!-- CH3 groups -->
-    <text x="30" y="55" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
-    <line x1="45" y1="62" x2="68" y2="88" stroke="#94a3b8" stroke-width="2" />
+    <!-- Methyl Groups -->
+    <text x="55" y="45" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+    <line x1="55" y1="52" x2="55" y2="82" stroke="#94a3b8" stroke-width="1.8" />
     
-    <text x="30" y="145" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
-    <line x1="45" y1="138" x2="68" y2="112" stroke="#94a3b8" stroke-width="2" />
+    <text x="55" y="155" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+    <line x1="55" y1="108" x2="55" y2="138" stroke="#94a3b8" stroke-width="1.8" />
     
-    <!-- C=O Double Bond -->
-    <line x1="92" y1="96" x2="138" y2="96" stroke="#ef4444" stroke-width="2" />
-    <line x1="92" y1="102" x2="138" y2="102" stroke="#ef4444" stroke-width="2" />
+    <!-- C=O bond -->
+    <line x1="68" y1="96" x2="114" y2="96" stroke="#94a3b8" stroke-width="2" />
+    <line x1="68" y1="102" x2="114" y2="102" stroke="#94a3b8" stroke-width="2" />
     
-    <!-- Oxygen -->
-    <text x="150" y="105" fill="#ef4444" font-size="15" font-weight="bold" text-anchor="middle">O</text>
+    <!-- Carbonyl Oxygen -->
+    <text x="128" y="105" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+    <text x="128" y="130" fill="#ef4444" font-size="11" text-anchor="middle">δ-</text>
     
-    <!-- Dipole and Lone Pairs -->
-    <text x="150" y="75" fill="#ef4444" font-size="11" text-anchor="middle">δ⁻</text>
-    <text x="80" y="75" fill="#38bdf8" font-size="11" text-anchor="middle">δ⁺</text>
+    <!-- Lone pair (below O) -->
+    <circle cx="125" cy="115" r="1.5" fill="#f8fafc" />
+    <circle cx="131" cy="115" r="1.5" fill="#f8fafc" />
     
-    <!-- Lone pairs on oxygen -->
-    <circle cx="163" cy="90" r="1.5" fill="#ef4444" />
-    <circle cx="168" cy="93" r="1.5" fill="#ef4444" />
-    
-    <circle cx="163" cy="110" r="1.5" fill="#ef4444" />
-    <circle cx="168" cy="107" r="1.5" fill="#ef4444" />
+    <!-- Lone pair (to the right of O, initiating hydrogen bond) -->
+    <text x="148" y="105" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">:</text>
   </g>
   
-  <!-- Hydrogen Bond -->
-  <line x1="205" y1="125" x2="270" y2="125" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,4" />
-  <text x="238" y="115" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Hydrogen bond</text>
+  <!-- Hydrogen Bond (Straight horizontal dashed line) -->
+  <line x1="202" y1="120" x2="295" y2="120" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3" />
   
-  <!-- Water Molecule -->
-  <g transform="translate(280, 70)">
-    <!-- Hydrogen bonded to oxygen of propanone -->
-    <text x="10" y="55" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">H</text>
-    <text x="10" y="37" fill="#38bdf8" font-size="10" text-anchor="middle">δ⁺</text>
+  <!-- "Hydrogen bond" label and arrow pointing to it -->
+  <text x="245" y="32" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">(Hydrogen bond)</text>
+  <path d="M 245,45 Q 248,72 248,98" fill="none" stroke="#f59e0b" stroke-width="1" />
+  <path d="M 248,100 L 245,94 L 251,94 Z" fill="#f59e0b" />
+  
+  <!-- Water Molecule (collinear H-O aligned with hydrogen bond) -->
+  <g transform="translate(310, 20)">
+    <!-- Hydrogen bonded to oxygen -->
+    <text x="10" y="105" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">H</text>
+    <text x="10" y="122" fill="#38bdf8" font-size="11" text-anchor="middle">δ+</text>
     
-    <!-- O-H covalent bond -->
-    <line x1="20" y1="55" x2="50" y2="70" stroke="#94a3b8" stroke-width="2" />
+    <!-- Covalent O-H bond (aligned horizontally on y=100) -->
+    <line x1="22" y1="100" x2="62" y2="100" stroke="#94a3b8" stroke-width="1.8" />
     
-    <!-- Oxygen of water -->
-    <text x="60" y="80" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">O</text>
-    <text x="73" y="70" fill="#ef4444" font-size="10" text-anchor="middle">δ⁻</text>
+    <!-- Oxygen of Water -->
+    <text x="75" y="100" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">O</text>
+    <text x="96" y="122" fill="#ef4444" font-size="11" text-anchor="middle">δ-</text>
     
-    <!-- O-H covalent bond to the other hydrogen -->
-    <line x1="70" y1="83" x2="100" y2="97" stroke="#94a3b8" stroke-width="2" />
-    <text x="110" y="105" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">H</text>
-    <text x="110" y="87" fill="#38bdf8" font-size="10" text-anchor="middle">δ⁺</text>
+    <!-- Lone pair to the right of Water Oxygen -->
+    <text x="90" y="100" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">:</text>
+    
+    <!-- Lone pair on top of Water Oxygen -->
+    <circle cx="72" cy="82" r="1.5" fill="#f8fafc" />
+    <circle cx="78" cy="82" r="1.5" fill="#f8fafc" />
+    
+    <!-- Second O-H covalent bond (pointing down-left) -->
+    <line x1="72" y1="108" x2="57" y2="140" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="50" y="155" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">H</text>
+    <text x="72" y="155" fill="#38bdf8" font-size="11" text-anchor="middle">δ+</text>
   </g>
 </svg>`;
 
 export const parts: LessonPart[] = [
-    {
-        id: 'chirality-optical-isomerism-u4-l5',
-        title: 'Chirality & Optical Activity',
-        type: 'text',
-        content: `
+  {
+    id: 'chirality-optical-isomerism-u4-l5',
+    title: 'Chirality & Optical Activity',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🗂️ Different Types of Isomerism
 > Isomerism is broadly divided into two main categories:
@@ -752,7 +1154,9 @@ export const parts: LessonPart[] = [
 > > 2. **Identify the chiral carbon:** Clearly mark the asymmetric carbon atom with an asterisk (*).
 > > 3. **Draw the mirror image:** Draw a vertical mirror plane, and construct the second enantiomer as a reflected image of the first.
 > 
-${svgToken(chiralVsAchiralSvg)}
+${svgToken(chiralCentreSvg)}
+
+${svgToken(achiralMoleculeSvg)}
 
 > [!BOX]
 > ### 🔬 Plane-Polarised Light & Polarimetry
@@ -841,8 +1245,8 @@ ${svgToken(polarimeterSetupSvg)}
 > >    * Draw a vertical dashed line to represent the mirror.
 > > 4. **Draw the reflected mirror image:**
 > >    * Reflect the structure on the other side of the mirror plane so that the groups face the mirror (e.g. $-\\\\text{OH}$ wedge points down-left towards the mirror, $-\\\\text{CH}_3$ points down-right away from the mirror).
-
-${svgToken(lacticAcidEnantiomersSvg)}
+> > ${svgToken(lacticAcidEnantiomersSvg)}
+> > 
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Identifying Chiral Centres in Amino Acids
@@ -859,18 +1263,18 @@ ${svgToken(lacticAcidEnantiomersSvg)}
 > >    * Carbon-2 is the chiral centre because it is bonded to four different atoms or groups of atoms.
 > >    * This asymmetric arrangement means the molecule lacks a plane of symmetry, resulting in two non-superimposable mirror images (enantiomers).
 `,
-        keyPoints: [
-            'A polariser converts unpolarised light into plane-polarised light by absorbing oscillations in all but one plane.',
-            'A polarimeter measures the angle of rotation of plane-polarised light.',
-            'An excess of one enantiomer over another results in a net optical rotation corresponding to the dominant isomer.',
-            'Optical activity can be used as a kinetic tool to track reaction rates and determine reaction order by monitoring changes in optical rotation over time using a polarimeter.'
-        ]
-    },
-    {
-        id: 'optical-activity-reaction-mechanisms-u4-l5',
-        title: 'Optical Activity & Reaction Mechanisms',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'A polariser converts unpolarised light into plane-polarised light by absorbing oscillations in all but one plane.',
+      'A polarimeter measures the angle of rotation of plane-polarised light.',
+      'An excess of one enantiomer over another results in a net optical rotation corresponding to the dominant isomer.',
+      'Optical activity can be used as a kinetic tool to track reaction rates and determine reaction order by monitoring changes in optical rotation over time using a polarimeter.'
+    ]
+  },
+  {
+    id: 'optical-activity-reaction-mechanisms-u4-l5',
+    title: 'Optical Activity & Reaction Mechanisms',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### ⚡ Nucleophilic Substitution Mechanisms
 > Nucleophilic substitution reactions of halogenoalkanes can proceed via two primary mechanisms:
@@ -905,7 +1309,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > * **Loss of Activity:** The product is **optically inactive** (racemisation has occurred).
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: SN2 Transition State (Checkpoint Q1)
+> #### 📝 Worked Example 1: SN2 Transition State
 > **Question:** 2-Bromobutane and cyanide ions react together by an $S_N2$ mechanism. Draw the structure of the transition state formed in this reaction.
 > 
 > > [!TIP]
@@ -920,7 +1324,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > >      $$\\left[ \\text{NC} \\cdots \\text{C(H)(CH₃)(CH₂CH₃)} \\cdots \\text{Br} \\right]^-$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: SN1 Mechanism & Optical Inactivity (Checkpoint Q2)
+> #### 📝 Worked Example 2: SN1 Mechanism & Optical Inactivity
 > **Question:** 2-Bromopropane and cyanide ions react together by an $S_N1$ mechanism. Explain why there is no change in optical activity in this reaction.
 > 
 > > [!TIP]
@@ -932,17 +1336,17 @@ ${svgToken(sn1StereochemistrySvg)}
 > > 4. **Explain product chirality:** The product 2-methylpropanenitrile ($\\text{(CH₃)₂CHCN}$) is also achiral and optically inactive.
 > > 5. **Conclusion:** Because both the reactant and the product are achiral, there is no change in optical activity (the mixture remains optically inactive throughout).
 `,
-        keyPoints: [
-            'SN2 reactions of chiral halogenoalkanes result in optical inversion (Walden inversion).',
-            'SN1 reactions of chiral halogenoalkanes result in racemisation due to nucleophilic attack on a planar carbocation intermediate.',
-            'A reaction mechanism can be deduced by observing whether the optical activity of a single enantiomer is inverted or lost.'
-        ]
-    },
-    {
-        id: 'carbonyl-compounds-nomenclature-properties-u4-l5',
-        title: 'Carbonyl Compounds: Nomenclature, Bonding & Physical Properties',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'SN2 reactions of chiral halogenoalkanes result in optical inversion (Walden inversion).',
+      'SN1 reactions of chiral halogenoalkanes result in racemisation due to nucleophilic attack on a planar carbocation intermediate.',
+      'A reaction mechanism can be deduced by observing whether the optical activity of a single enantiomer is inverted or lost.'
+    ]
+  },
+  {
+    id: 'carbonyl-compounds-nomenclature-properties-u4-l5',
+    title: 'Carbonyl Compounds: Nomenclature, Bonding & Physical Properties',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 📝 Nomenclature of Carbonyls
 > Carbonyl compounds contain the carbonyl group $\\text{C}=\\text{O}$ and are divided into:
@@ -1005,15 +1409,15 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * A displayed formula shows all the atoms and all the covalent bonds present in a molecule (every single $\\text{C-H}$, $\\text{C-C}$, and the $\\text{C=O}$ double bond must be explicitly drawn)
 > > 2. **Propanal (CH₃CH₂CHO):**
 > >    * In propanal, the carbonyl carbon is at the end of the chain (Carbon-1) bonded to a hydrogen atom and a double-bonded oxygen atom.
-> >    * [INLINE_SVG:propanal_displayed]
+> > 
+> > ${svgToken(propanalDisplayedSvg)}
+> > 
 > > 3. **Propanone (CH₃COCH₃):**
 > >    * In propanone, the carbonyl carbon is the central carbon (Carbon-2) bonded to two methyl groups ($-\\text{CH}_3$) and a double-bonded oxygen atom.
-> >    * [INLINE_SVG:propanone_displayed]
+> > 
+> > ${svgToken(propanoneDisplayedSvg)}
 > 
-> ${svgToken(propanalDisplayedSvg)}
-> 
-> 
-> ${svgToken(propanoneDisplayedSvg)}
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Solubility Explanation
@@ -1030,116 +1434,161 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * **Lone Pair:** At least one lone pair of electrons clearly shown on the oxygen atom of the propanone molecule ($:\\text{O}$).
 > >    * **Dipoles / Partial Charges:** Correct dipoles shown on both the $\\text{C=O}$ bond ($\\text{C}^{\\delta+}=\\text{O}^{\\delta-}$) and the $\\text{O-H}$ bond of water ($\\text{O}^{\\delta-}-\\text{H}^{\\delta+}$).
 > >    * **Hydrogen Bond Representation:** The hydrogen bond is drawn as a dashed/dotted line ($\\cdots$) starting directly from the lone pair on the carbonyl oxygen to the partially positive hydrogen ($\\text{H}^{\\delta+}$) of the water molecule.
+> > 
+> > ${svgToken(propanoneSolubilitySvg)}
 > 
-> ${svgToken(propanoneSolubilitySvg)}
-`,
-        keyPoints: [
-            'Aldehydes carry terminal carbonyl groups; ketones carry internal carbonyl groups.',
-            'Carbonyl double bonds are highly polar, causing dipole-dipole attractions that raise boiling points above those of alkanes.',
-            'Lower carbonyls are water-soluble due to hydrogen bonding between the carbonyl oxygen and water molecules.'
-        ]
-    },
-    {
-        id: 'carbonyl-compounds-nucleophilic-addition-u4-l5',
-        title: 'Nucleophilic Addition Mechanism with HCN',
-        type: 'text',
-        content: `
-> [!NOTE]
-> ### 🧪 Reactivity of the Polar Carbonyl Group
-> Because the carbonyl bond is polarised ($\\text{C}^{\\delta+} = \\text{O}^{\\delta-}$), nucleophiles attack the electron-deficient carbon. This is the basis of **nucleophilic addition** reactions in carbonyls.
-
-> [!IMPORTANT]
-> ### ⚛️ Nucleophilic Addition Mechanism with HCN
-> Aldehydes and ketones react with hydrogen cyanide ($\\text{HCN}$) to form **hydroxynitriles**.
-> * **Reaction Conditions:** $\\text{HCN}$ is highly toxic, so it is prepared *in situ* using sodium/potassium cyanide ($\\text{NaCN}$/$\\text{KCN}$) and dilute sulfuric acid ($\\text{H₂SO₄}$) at pH 5-8.
-> * **Nucleophile:** Cyanide ion ($\\text{CN}^-$), acting as the nucleophile.
-> * **The Reaction Mechanism:**
->   1. **Step 1:** The nucleophile $\\text{CN}^-$ attacks the electrophilic carbon $\\text{C}^{\\delta+}$ from its lone pair, causing the $\\pi$-bond electrons of the $\\text{C}=\\text{O}$ to migrate onto the oxygen atom.
->   2. A tetrahedral intermediate is formed with a negatively charged oxygen ($\\text{:O}^-$):
->      $$\\text{R-C(CN)(R\')-O}^-$$
->   3. **Step 2:** The oxygen intermediate abstracts a proton ($\\text{H}^+$) from a hydrogen cyanide molecule ($\\text{HCN}$) to form the hydroxyl group ($-\\text{OH}$), reforming the $\\text{CN}^-$ catalyst:
->      $$\\text{R-C(CN)(R\')-O}^- + \\text{HCN} \\rightarrow \\text{R-C(OH)(CN)-R\'} + \\text{CN}^-$$
-> 
-> **Reaction Equations:**
-> * **Addition to propanal:**
->   $$\\text{CH₃CH₂CHO} + \\text{HCN} \\rightarrow \\text{CH₃CH₂CH(OH)CN} \\quad \\text{(2-hydroxybutanenitrile)}$$
-> * **Addition to butanone:**
->   $$\\text{CH₃COCH₂CH₃} + \\text{HCN} \\rightarrow \\text{CH₃C(CN)(OH)CH₂CH₃} \\quad \\text{(2-hydroxy-2-methylbutanenitrile)}$$
-
-> [!WARNING]
-> ### 🪞 Planar Carbonyls & Racemic Mixtures
-> If we start with an unsymmetrical carbonyl compound (such as propanal or phenylethanone), the product hydroxynitrile contains a chiral carbon.
-> * **Planar Geometry:** The carbonyl group $\\\\text{C}=\\\\text{O}$ is **planar** (trigonal planar arrangement with $120^{\\\\circ}$ bond angles around the carbonyl carbon).
-> * **Equal Probability:** The nucleophile $\\text{CN}^-$ can attack the planar carbon atom from **above or below the plane with equal (50:50) probability**.
-> * **Racemic Product:** Because attack from above yields one enantiomer, and attack from below yields the mirror image, equal amounts of both enantiomers are formed.
-> * **Optical Inactivity:** This 50:50 mixture is called a **racemic mixture** (or racemate). It is optically inactive because the clockwise rotation of light by one enantiomer is exactly cancelled out by the anticlockwise rotation of the other.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Hydroxynitriles Products (Checkpoint Q1)
-> **Question:** What are the names of the organic products of these reactions?
-> (a) methanal + hydrogen cyanide $\\rightarrow$
-> (b) propanone + hydrogen cyanide $\\rightarrow$
+> #### 📝 Worked Example 3: Nomenclature & Boiling Temperature Trends
+> **Question:** 
+> 1. Give the IUPAC names for the two carbonyl isomers with the molecular formula $\\\\text{C}_4\\\\text{H}_8\\\\text{O}$.
+> 2. Arrange the following compounds in order of increasing boiling temperature, explaining your reasoning: butane, butanal, butan-1-ol.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) methanal + hydrogen cyanide:**
-> >   1. Methanal is $\\text{HCHO}$. The addition product is $\\text{CH₂(OH)CN}$.
-> >   2. Longest carbon chain containing the nitrile carbon has 2 carbons $\\rightarrow$ **ethanenitrile**.
-> >   3. Carbon-2 has a hydroxyl group.
-> >   4. Product name: **2-hydroxyethanenitrile** (also known as hydroxyacetonitrile).
-> * **(b) propanone + hydrogen cyanide:**
-> >   1. Propanone is $\\text{CH₃COCH₃}$. The addition product is $\\text{(CH₃)₂C(OH)CN}$.
-> >   2. Longest carbon chain is 3 carbons $\\rightarrow$ **propanenitrile**.
-> >   3. Carbon-2 has a methyl and a hydroxyl group.
-> >   4. Product name: **2-hydroxy-2-methylpropanenitrile**
+> > 1. **Identify the isomers of $\\\\text{C}_4\\\\text{H}_8\\\\text{O}$:**
+> >    * The 4-carbon chain aldehyde: **butanal** ($\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_2\\\\text{CHO}$)
+> >    * The 4-carbon chain ketone: **butanone** ($\\\\text{CH}_3\\\\text{COCH}_2\\\\text{CH}_3$)
+> > 2. **Arrange by boiling temperatures (lowest to highest):**
+> >    * **butane < butanal < butan-1-ol**
+> > 3. **Formulate the explanation based on intermolecular forces:**
+> >    * **butane:** An alkane experiencing only weak London dispersion forces, requiring the least energy to overcome.
+> >    * **butanal:** A polar carbonyl compound experiencing permanent dipole-dipole forces in addition to London forces, which are stronger than London forces alone.
+> >    * **butan-1-ol:** An alcohol experiencing strong intermolecular hydrogen bonding (due to the polar $-\\\\text{OH}$ group) in addition to London forces, requiring the most energy to overcome.
+ 
+`,
+    keyPoints: [
+      'Aldehydes carry terminal carbonyl groups; ketones carry internal carbonyl groups.',
+      'Carbonyl double bonds are highly polar, causing dipole-dipole attractions that raise boiling points.',
+      'Lower carbonyls are water-soluble due to hydrogen bonding between the carbonyl oxygen and water molecules.'
+    ]
+  },
+  {
+    id: 'carbonyl-compounds-nucleophilic-addition-u4-l5',
+    title: 'Nucleophilic Addition Mechanism with HCN',
+    type: 'text',
+    content: `
+> [!NOTE]
+> ### 🧪 Reactivity of the Polar Carbonyl Group
+> Because the carbonyl bond is polarised ($\\\\text{C}^{\\\\delta+} = \\\\text{O}^{\\\\delta-}$), nucleophiles attack the electron-deficient carbon. This is the basis of **nucleophilic addition** reactions in carbonyls.
 
-<br>
+> [!IMPORTANT]
+> ### ⚛️ Nucleophilic Addition with Hydrogen Cyanide (HCN)
+> Aldehydes and ketones react with hydrogen cyanide (HCN) to form **hydroxynitriles**.
+> * **Reagents / Conditions:** HCN in the presence of KCN (aqueous alkaline solution).
+> * **Role of KCN Catalyst:** HCN is a weak acid and dissociates poorly. KCN provides a high concentration of cyanide nucleophiles (CN⁻) to act as a catalyst and initiate the attack.
+> * **Product Type:** Hydroxy nitriles (the carbon chain increases by 1 carbon).
+>   * **Ethanal + HCN:** CH₃CHO + HCN → CH₃CH(OH)CN (2-hydroxypropanenitrile)
+>   * **Propanal + HCN:** CH₃CH₂CHO + HCN → CH₃CH₂CH(OH)CN (2-hydroxybutanenitrile)
+>   * **Butanone + HCN:** CH₃COCH₂CH₃ + HCN → CH₃C(CN)(OH)CH₂CH₃ (2-hydroxy-2-methylbutanenitrile)
+> * **Two-Step Reaction Mechanism (e.g. with Ethanal):**
+>   1. **Step 1 (Slow / RDS):** The lone pair on the carbon of CN⁻ attacks the partially positive carbonyl carbon ($\\\\text{C}^{\\\\delta+}=\\\\text{O}^{\\\\delta-}$). The C=O $\pi$-bond breaks, moving electrons to oxygen to form a tetrahedral intermediate (with a negative charge on oxygen).
+> 
+> ${svgToken(nucleophilicAdditionStep1Svg)}
+> 
+>   2. **Step 2 (Fast):** The negative intermediate attacks a hydrogen atom on an HCN molecule, forming the -OH group and regenerating the CN⁻ catalyst.
+> 
+> ${svgToken(nucleophilicAdditionStep2Svg)}
+
+> [!WARNING]
+> ### 🪞 Stereochemical Evidence (Optical Inactivity)
+> If we start with an unsymmetrical carbonyl compound (such as propanal or ethanal), the product hydroxynitrile contains a chiral carbon.
+> * **Planar Geometry:** The carbonyl group C=O has a **trigonal planar** arrangement around the carbonyl carbon atom.
+> * **Equal Probability:** The nucleophile CN⁻ can attack the planar carbon atom from **above or below the plane with equal (50:50) probability**.
+> 
+> > ${svgToken(stereochemicalAttackSvg)}
+> 
+> * **Racemic Product:** Because attack from above yields one enantiomer, and attack from below yields the mirror image, equal amounts of both enantiomers are formed.
+> * **Optical Inactivity:** This 50:50 mixture is called a **racemic mixture** (or racemate). It is optically inactive because the clockwise rotation of light by one enantiomer is exactly cancelled out by the anticlockwise rotation of the other.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Double Precipitate Test Deduction (Checkpoint Q2)
+> #### 📝 Worked Example 1: Hydroxynitriles Products & Naming Rules
+> **Question:** What are the names of the organic products of these reactions?
+> * **(a)** methanal + hydrogen cyanide →
+> * **(b)** propanone + hydrogen cyanide →
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > * **(a) methanal + hydrogen cyanide:**
+> >   1. **Reaction Equation:** HCHO + HCN → HO-CH₂-CN
+> >   2. **Chain Length:** Adding the cyanide group increases the longest continuous carbon chain to 2 carbons, forming a derivative of ethane (**ethanenitrile**). Carbon-1 is always the nitrile carbon (-C≡N).
+> >   3. **Substituent:** Carbon-2 carries the hydroxyl group (-OH), which is named using the prefix *hydroxy-*.
+> >   4. **Name:** **2-hydroxyethanenitrile** (or hydroxyethanenitrile).
+> > * **(b) propanone + hydrogen cyanide:**
+> >   1. **Reaction Equation:** CH₃COCH₃ + HCN → CH₃-C(OH)(CN)-CH₃
+> >   2. **Chain Length:** The longest continuous carbon chain containing the nitrile group consists of 3 carbons (**propanenitrile**). Carbon-1 is the nitrile carbon.
+> >   3. **Substituents:** Carbon-2 carries both a *hydroxy-* group and a *methyl-* group.
+> >   4. **Naming Rule:** Alphabetical order of prefixes puts *hydroxy-* before *methyl-*.
+> >   5. **Name:** **2-hydroxy-2-methylpropanenitrile**
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Double Precipitate Test Deduction
 > **Question:** Compound X reacts with 2,4-dinitrophenylhydrazine and with iodine in aqueous alkali in separate tests. In both cases, a coloured precipitate forms. Explain which of these could be compound X: propanal, propan-1-ol, propan-2-ol, propanone.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> 1. **Analyze 2,4-DNPH test:** Only carbonyl compounds (aldehydes and ketones) form a coloured (orange/yellow) precipitate. This limits candidates to: **propanal** and **propanone** (alcohols like propan-1-ol and propan-2-ol do not react).
-> 2. **Analyze Iodine/alkali (iodoform) test:** Only compounds containing the methyl carbonyl ($\\text{CH₃C=O}$) or methyl alcohol ($\\text{CH₃CH(OH)-}$) groups form a yellow precipitate.
->    * Propanal ($\\text{CH₃CH₂CHO}$) is an aldehyde but does not contain a methyl group directly bonded to the carbonyl carbon (negative test).
->    * Propanone ($\\text{CH₃COCH₃}$) contains the methyl carbonyl group (positive test).
-> 3. **Conclusion:** Therefore, compound X must be **propanone** as it is the only compound that reacts positively with both reagents.
+> > 1. **2,4-Dinitrophenylhydrazine (2,4-DNPH) Test:**
+> >    * Forms a bright orange/yellow precipitate only with carbonyl compounds (aldehydes and ketones containing a C=O group).
+> >    * This eliminates propan-1-ol and propan-2-ol (alcohols do not react with 2,4-DNPH).
+> >    * The remaining candidates are propanal and propanone.
+> > 2. **Iodine in aqueous alkali (Triiodomethane / Iodoform Test):**
+> >    * Forms a pale-yellow precipitate of triiodomethane (CHI₃) only in the presence of a methyl carbonyl group (CH₃C=O) or a CH₃CH(OH)- group.
+> >    * Propanone (CH₃COCH₃) contains the required CH₃C=O group and gives a positive result.
+> >    * Propanal (CH₃CH₂CHO) lacks this group and gives a negative result (no precipitate).
+> > 3. **Conclusion:**
+> >    * Propanone is the only compound from the list that forms a precipitate in both independent tests. Therefore, compound X is **propanone**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Optical Inactivity of Ethanal & HCN Addition Product
+> **Question:** Explain why the reaction of ethanal (CH₃CHO) with HCN (in the presence of KCN) produces an optically inactive mixture.
 > 
-> <br>
-> 
-> > [!EXAMPLE]
-> > #### 📝 Worked Example 3: Optical Inactivity of Ethanal & HCN Addition Product
-> > **Question:** Explain why the reaction of ethanal ($\\\\text{CH}_3\\\\text{CHO}$) with HCN (in the presence of KCN) produces an optically inactive mixture.
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
 > > 
-> > > [!TIP]
-> > > **🔑 Step-by-step Solution:**
-> > > 
-> > > 1. **Identify the geometry of the reactant carbonyl group:**
-> > >    * The carbonyl group ($\\\\text{C}=\\\\text{O}$) in ethanal has a trigonal planar shape around the carbonyl carbon atom.
-> > > 2. **Analyze the nucleophilic attack probability:**
-> > >    * The cyanide ion nucleophile ($:\\\\text{CN}^-$) can attack the planar carbonyl carbon with equal probability from either above or below the plane (50:50 ratio).
-> > > 3. **Explain the stereochemical outcome:**
-> > >    * Because the reactant has different groups attached to the carbonyl carbon ($-\\\\text{H}$ and $-\\\\text{CH}_3$), the addition of $-\\\\text{CN}$ creates a chiral centre.
-> > >    * Attack from above yields one enantiomer, while attack from below yields the mirror-image enantiomer.
-> > > 4. **Conclude on optical activity:**
-> > >    * An equimolar (50:50) mixture of the two enantiomers is formed, which is a racemic mixture.
-> > >    * The racemic mixture is optically inactive because the clockwise rotation of plane-polarised light by one enantiomer is exactly cancelled out by the anticlockwise rotation of the other.
+> > 1. **Identify the geometry of the reactant carbonyl group:**
+> >    * The carbonyl group (C=O) in ethanal has a trigonal planar shape around the carbonyl carbon atom.
+> > 2. **Analyze the nucleophilic attack probability:**
+> >    * The cyanide ion nucleophile (:CN⁻) can attack the planar carbonyl carbon with equal probability from either above or below the plane (50:50 ratio).
+> > 3. **Explain the stereochemical outcome:**
+> >    * Because the reactant has different groups attached to the carbonyl carbon (-H and -CH₃), the addition of -CN creates a chiral centre.
+> >    * Attack from above yields one enantiomer, while attack from below yields the mirror-image enantiomer.
+> > 4. **Conclude on optical activity:**
+> >    * An equimolar (50:50) mixture of the two enantiomers is formed, which is a racemic mixture.
+> >    * The racemic mixture is optically inactive because the clockwise rotation of plane-polarised light by one enantiomer is exactly cancelled out by the anticlockwise rotation of the other.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Role of KCN Catalyst & Reaction Conditions
+> **Question:**
+> * **(a)** Explain why the addition reaction of hydrogen cyanide to a carbonyl compound is extremely slow when pure HCN is used alone.
+> * **(b)** Explain why potassium cyanide (KCN) is added to the reaction mixture, and why a slightly alkaline pH (pH ≈ 8) is maintained.
+> * **(c)** State a safety hazard associated with using HCN gas.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > * **(a) Reason for slow reaction with pure HCN alone:**
+> >   1. **Acid Weakness:** HCN is a very weak acid and dissociates only partially in aqueous solution: HCN ⇌ H⁺ + :CN⁻
+> >   2. **Low Nucleophile Concentration:** Pure HCN produces an extremely low concentration of cyanide ion nucleophiles (:CN⁻), making the initial rate-determining attack (Step 1) exceptionally slow.
+> > * **(b) Role of KCN and pH control:**
+> >   1. **KCN Role:** Potassium cyanide is an ionic salt that fully dissociates in water (KCN → K⁺ + :CN⁻), providing a high initial concentration of :CN⁻ nucleophiles to catalyse the reaction.
+> >   2. **Alkaline pH Control:** Maintaining a slightly alkaline pH (pH ≈ 8) ensures sufficient :CN⁻ ions are present without consuming all un-dissociated HCN molecules needed for the proton transfer in Step 2.
+> > * **(c) Safety Hazard:**
+> >   * **Toxicity:** HCN is an extremely toxic, poisonous gas. Using KCN in aqueous solution avoids handling gaseous HCN directly and minimizes risk.
 `,
-        keyPoints: [
-            'HCN addition mechanism is catalysed by CN⁻, which is regenerated in the second step.',
-            'The reaction adds one carbon to the carbon chain and forms a hydroxynitrile.',
-            'Planar C=O groups lead to equal probability nucleochemical attack from above/below, yielding racemic mixtures.'
-        ]
-    },
-    {
-        id: 'carbonyls-oxidation-reduction-tests-u4-l5',
-        title: 'Redox Reactions & Chemical Tests of Carbonyls',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'HCN addition mechanism is catalysed by CN⁻, which is regenerated in the second step.',
+      'The reaction adds one carbon to the carbon chain and forms a hydroxynitrile.',
+      'Planar C=O groups lead to equal probability nucleochemical attack from above/below, yielding racemic mixtures.'
+    ]
+  },
+  {
+    id: 'carbonyls-oxidation-reduction-tests-u4-l5',
+    title: 'Redox Reactions & Chemical Tests of Carbonyls',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🧮 Redox Trends in Carbonyl Chemistry
 > * **Aldehydes:** Easily oxidised to carboxylic acids and reduced to primary alcohols.
@@ -1147,109 +1596,124 @@ ${svgToken(sn1StereochemistrySvg)}
 
 > [!IMPORTANT]
 > ### 🧪 Reduction Reactions (Carbonyls to Alcohols)
-> Carbonyl compounds are reduced to alcohols using **lithium tetrahydridoaluminate(III)** (lithium aluminium hydride, $\\text{LiAlH₄}$) dissolved in dry ether.
-> * **Reducing Agent Representation:** Represented as $2[\\text{H}]$ in equations.
+> Carbonyl compounds are reduced to alcohols using **lithium tetrahydridoaluminate(III)** (lithium aluminium hydride, $\\\\text{LiAlH}_4$) dissolved in dry ether.
+> * **Reducing Agent Representation:** Represented as $2[\\\\text{H}]$ in equations.
 > * **Reduction of Aldehydes to Primary Alcohols:**
->   $$\\text{CH₃CH₂CHO} + 2[\\text{H}] \\rightarrow \\text{CH₃CH₂CH₂OH} \\quad \\text{(propanal } \\rightarrow \\text{ propan-1-ol)}$$
+>   $$\\\\text{CH}_3\\\\text{CH}_2\\\\text{CHO} + 2[\\\\text{H}] \\\\rightarrow \\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_2\\\\text{OH} \\\\quad \\\\text{(propanal } \\\\rightarrow \\\\text{ propan-1-ol)}$$
 > * **Reduction of Ketones to Secondary Alcohols:**
->   $$\\text{CH₃COCH₂CH₃} + 2[\\text{H}] \\rightarrow \\text{CH₃CH(OH)CH₂CH₃} \\quad \\text{(butanone } \\rightarrow \\text{ butan-2-ol)}$$
+>   $$\\\\text{CH}_3\\\\text{COCH}_3 + 2[\\\\text{H}] \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CH}_3 \\\\quad \\\\text{(propanone } \\\\rightarrow \\\\text{ propan-2-ol)}$$
 
 > [!IMPORTANT]
 > ### 🧪 Oxidation Reactions (Aldehydes to Carboxylic Acids)
-> Four key reagents are used to perform and test these oxidation pathways (represented as $[\\text{O}]$):
+> Four key reagents are used to perform and test these oxidation pathways (represented as $[\\\\text{O}]$):
 > 
 > #### Table A: Oxidation Reagents & Observations
 > | Reagent | Colour Change with Aldehydes | Notes / Chemical Reaction |
 > | :--- | :--- | :--- |
-> | Acidified Potassium Dichromate(VI) | orange solution $\\rightarrow$ green solution | $\\text{Cr}^{6+}$ reduced to $\\text{Cr}^{3+}$. Under reflux: $\\text{RCHO} + [\\text{O}] \\rightarrow \\text{RCOOH}$. |
-> | Fehling\'s Solution | deep blue solution $\\rightarrow$ red-brown precipitate | $\\text{Cu}^{2+}$ complex reduced to copper(I) oxide: $\\text{Cu₂O(s)}$. |
-> | Benedict\'s Solution | deep blue solution $\\rightarrow$ red-brown precipitate | Uses copper(II) citrate instead of tartrate. Same reaction. |
-> | Tollens\' Reagent | colourless solution $\\rightarrow$ silver mirror | Contains ammoniacal silver nitrate $[\\text{Ag(NH₃)₂}]^+$. $\\text{Ag}^+$ reduced to $\\text{Ag(s)}$. |
+> | Acidified Potassium Dichromate(VI) | orange solution → green solution | Cr⁶⁺ reduced to Cr³⁺. Under reflux: RCHO + [O] → RCOOH. |
+> | Fehling's Solution | deep blue solution → red-brown precipitate | Cu²⁺ complex reduced to copper(I) oxide: Cu₂O(s). |
+> | Benedict's Solution | deep blue solution → red-brown precipitate | Uses copper(II) citrate instead of tartrate. Same reaction. |
+> | Tollens' Reagent | colourless solution → silver mirror | Contains ammoniacal silver nitrate [Ag(NH₃)₂]⁺. Ag⁺ reduced to Ag(s). |
 > 
 > * **Ketones Reaction:** None of these reagents react with ketones (no colour changes observed, Tollens' remains colourless).
 
 > [!BOX]
+> ### 🧪 Practical Safety Note: Heating Method
+> * **Water Bath Heating:** Carbonyl compounds are **highly flammable** liquids. Therefore, all reactions must be heated using a water bath (or electric heating mantle), **never over a naked flame**, to prevent ignition of flammable vapours.
+
+> [!BOX]
 > ### 🧪 Triiodomethane (Iodoform) Reaction
-> * **Reagent:** Iodine ($\\text{I₂}$) in aqueous sodium hydroxide ($\\text{NaOH}$).
+> * **Reagent:** Iodine ($\\\\text{I}_2$) in aqueous sodium hydroxide ($\\\\text{NaOH}$).
 > * **Target Group:** Specifically tests for the methyl carbonyl group:
->   $$\\text{CH₃-C=O}$$
-> * **Positive Result:** A **yellow precipitate** of triiodomethane ($\\text{CHI₃}$) forms, accompanied by a distinct antiseptic smell.
-> * **Solute Range:** Ethanal is the only aldehyde that gives a positive result. All methyl ketones (propanone, butanone, pentan-2-one) react positively. Pentan-3-one is negative.
-> * **Alcohol Classification:** Alcohols containing the $\\text{CH₃CH(OH)-}$ group also give a positive test because they are oxidised by the iodine/alkali mixture to methyl carbonyls in situ.
+>   $$\\\\text{CH}_3\\\\text{-C=O}$$
+> * **Positive Result:** A **pale-yellow precipitate** of triiodomethane ($\\\\text{CHI}_3$) forms, accompanied by a distinct antiseptic smell.
+> * **Propanal vs Propanone distinction:**
+>   * **Propanone:** Gives a positive iodoform test (forms a pale-yellow precipitate) because it contains the active methyl carbonyl ($\\\\text{CH}_3\\\\text{C=O}$) group.
+>   * **Propanal:** Gives a negative iodoform test (no precipitate) because it lacks the $\\\\text{CH}_3\\\\text{C=O}$ group.
+>   * **Alcohol Classification:** Alcohols containing the $\\\\text{CH}_3\\\\text{CH(OH)}-$ group also give a positive test because they are oxidised by the iodine/alkali mixture to methyl carbonyls in situ.
 > 
 > #### Table B: Iodoform Test Results for Alcohols
 > | Alcohol | Structure | Oxidation Product | Test Result |
 > | :--- | :--- | :--- | :--- |
-> | ethanol | $\\text{CH₃CH₂OH}$ | $\\text{CH₃CHO}$ | positive |
-> | propan-1-ol | $\\text{CH₃CH₂CH₂OH}$ | $\\text{CH₃CH₂CHO}$ | negative |
-> | propan-2-ol | $\\text{CH₃CH(OH)CH₃}$ | $\\text{CH₃COCH₃}$ | positive |
-> | butan-1-ol | $\\text{CH₃CH₂CH₂CH₂OH}$ | $\\text{CH₃CH₂CH₂CHO}$ | negative |
-> | butan-2-ol | $\\text{CH₃CH(OH)CH₂CH₃}$ | $\\text{CH₃COCH₂CH₃}$ | positive |
-> | 2-methylpropan-1-ol | $\\text{(CH₃)₂CHCH₂OH}$ | $\\text{(CH₃)₂CHCHO}$ | negative |
+> | ethanol | CH₃CH₂OH | CH₃CHO | positive |
+> | propan-1-ol | CH₃CH₂CH₂OH | CH₃CH₂CHO | negative |
+> | propan-2-ol | CH₃CH(OH)CH₃ | CH₃COCH₃ | positive |
+> | butan-1-ol | CH₃CH₂CH₂CH₂OH | CH₃CH₂CH₂CHO | negative |
+> | butan-2-ol | CH₃CH(OH)CH₂CH₃ | CH₃COCH₂CH₃ | positive |
+> | 2-methylpropan-1-ol | (CH₃)₂CHCH₂OH | (CH₃)₂CHCHO | negative |
 
 > [!BOX]
 > ### 🔬 Characterisation using 2,4-DNPH Derivatives
-> The reaction between 2,4-dinitrophenylhydrazine (Brady's reagent) and aldehydes/ketones forms a **2,4-dinitrophenylhydrazone derivative**:
-> $$\\text{Ar-NH-NH₂} + \\text{O=C(R)(R\')} \\rightarrow \\text{Ar-NH-N=C(R)(R\')} + \\text{H₂O}$$
-> * **Derivative Identification:** Individual carbonyl compounds can be identified by matching the experimental melting point of their purified 2,4-DNPH derivative to database values.
+> The reaction between 2,4-dinitrophenylhydrazine (Brady's reagent) and aldehydes/ketones forms a **yellow/orange/red crystalline precipitate** (2,4-dinitrophenylhydrazone derivative):
+> $$\\\\text{Ar-NH-NH}_2 + \\\\text{O=C(R)(R')} \\\\rightarrow \\\\text{Ar-NH-N=C(R)(R')} + \\\\text{H}_2\\\\text{O}$$
+> 
+> ${svgToken(dnphReactionSvg)}
+> 
+> * **Identification Pathway:**
+>   1. Filter the crystalline precipitate.
+>   2. Purify it via **recrystallisation**.
+>   3. Measure its melting temperature.
+>   4. Compare the measured melting point against data tables to identify the specific carbonyl compound.
 > 
 > #### Table C: Boiling Temperatures vs. Derivative Melting Temperatures
-> | Carbonyl Compound | Boiling Temperature ($^{\\\\circ}\\\\text{C}$) | Melting Temperature of 2,4-DNPH Derivative ($^{\\\\circ}\\\\text{C}$) |
+> | Carbonyl Compound | Boiling Temperature (°C) | Melting Temperature of 2,4-DNPH Derivative (°C) |
 > | :--- | :--- | :--- |
 > | pentanal | 102 | 104 |
 > | pentan-2-one | 102 | 144 |
 > | pentan-3-one | 102 | 156 |
 > 
 > * **Significance:** Although pentanal, pentan-2-one, and pentan-3-one all have identical boiling points ($102^{\\\\circ}\\\\text{C}$), they can be easily distinguished and identified by measuring the melting points of their derivatives ($104^{\\\\circ}\\\\text{C}$, $144^{\\\\circ}\\\\text{C}$, and $156^{\\\\circ}\\\\text{C}$ respectively).
+> 
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Redox Products (Checkpoint Q1)
+> #### 📝 Worked Example 1: Redox Products & Equations
 > **Question:** What are the names of the organic products of these reactions?
-> (a) The reduction of $\\text{CH₃CH₂CH₂CHO}$.
-> (b) The oxidation of $\\text{CH₃CH₂CH₂CH₂CHO}$.
+> (a) The reduction of CH₃CH₂CH₂CHO.
+> (b) The oxidation of CH₃CH₂CH₂CH₂CHO.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Reduction of $\\text{CH₃CH₂CH₂CHO}$ (butanal):**
-> >   1. Aldehydes are reduced to primary alcohols.
-> >   2. A 4-carbon chain aldehyde is reduced to a 4-carbon primary alcohol.
-> >   3. Product name: **butan-1-ol**
-> * **(b) Oxidation of $\\text{CH₃CH₂CH₂CH₂CHO}$ (pentanal):**
-> >   1. Aldehydes are oxidised to carboxylic acids.
-> >   2. A 5-carbon chain aldehyde is oxidised to a 5-carbon carboxylic acid.
-> >   3. Product name: **pentanoic acid**
-
-<br>
+> > * **(a) Reduction of CH₃CH₂CH₂CHO (butanal):**
+> >   1. **Reaction Equation:** CH₃CH₂CH₂CHO + 2[H] → CH₃CH₂CH₂CH₂OH
+> >   2. **Reactant Type:** Butanal is a 4-carbon aldehyde. Aldehydes undergo reduction (using LiAlH₄ in dry ether) to form primary alcohols.
+> >   3. **Mechanism:** The carbonyl group (-CHO) is converted into a primary alcohol group (-CH₂OH), producing a 4-carbon primary alcohol.
+> >   4. **Product name:** **butan-1-ol**
+> > * **(b) Oxidation of CH₃CH₂CH₂CH₂CHO (pentanal):**
+> >   1. **Reaction Equation:** CH₃CH₂CH₂CH₂CHO + [O] → CH₃CH₂CH₂CH₂COOH
+> >   2. **Reactant Type:** Pentanal is a 5-carbon aldehyde. Aldehydes are easily oxidised (using acidified potassium dichromate(VI)) to carboxylic acids.
+> >   3. **Mechanism:** The aldehyde group (-CHO) is oxidised to a carboxyl group (-COOH), producing a 5-carbon carboxylic acid.
+> >   4. **Product name:** **pentanoic acid**
+> > 
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Observations in Redox Tests (Checkpoint Q2)
+> #### 📝 Worked Example 2: Observations in Redox Tests
 > **Question:** What colour changes would be observed in these tests?
 > (a) Heating a mixture of propanone and acidified potassium dichromate(VI).
-> (b) Heating a mixture of ethanal and Tollens\' reagent.
+> (b) Heating a mixture of ethanal and Tollens' reagent.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Propanone + Acidified Potassium Dichromate(VI):**
-> >   1. Propanone is a ketone. Ketones resist oxidation under these conditions.
-> >   2. Therefore, no reaction occurs, and the solution **remains orange** (no colour change).
-> * **(b) Ethanal + Tollens\' Reagent:**
-> >   1. Ethanal is an aldehyde and is easily oxidised to ethanoic acid.
-> >   2. Tollens\' reagent containing $[\\text{Ag(NH₃)₂}]^+$ is reduced to metallic silver.
-> >   3. Therefore, the **colourless solution forms a silver mirror** on the inside of the test tube (or a grey precipitate forms).
+> > * **(a) Propanone + Acidified Potassium Dichromate(VI):**
+> >   1. **Reasoning:** Propanone (CH₃COCH₃) is a ketone. Ketones lack a hydrogen atom directly bonded to the carbonyl carbon, making them resistant to oxidation by acidified potassium dichromate(VI) under these conditions.
+> >   2. **Observation:** Since no reaction occurs, the orange dichromate(VI) ions (Cr₂O₇²⁻) are not reduced to green chromium(III) ions (Cr³⁺). The solution **remains orange** (no colour change).
+> > * **(b) Ethanal + Tollens' Reagent:**
+> >   1. **Reasoning:** Ethanal (CH₃CHO) is an aldehyde and readily oxidises to ethanoic acid. In doing so, it reduces the diamminesilver(I) complex ions [Ag(NH₃)₂]⁺ present in Tollens' reagent to metallic silver (Ag):
+> >      $$\\\\text{CH}_3\\\\text{CHO} + 2[\\\\text{Ag(NH}_3\\\\text{)}_2]^+ + 3\\\\text{OH}^- \\\\rightarrow \\\\text{CH}_3\\\\text{COO}^- + 2\\\\text{Ag(s)} + 4\\\\text{NH}_3 + 2\\\\text{H}_2\\\\text{O}$$
+> >   2. **Observation:** The metallic silver deposits on the inner glass wall of the test tube, so the **colourless solution forms a silver mirror** (or a grey/black precipitate).
 `,
-        keyPoints: [
-            'LiAlH₄ reduces aldehydes to primary alcohols and ketones to secondary alcohols.',
-            'Aldehydes give positive colour changes with Tollens\', Fehling\', Benedict\', and dichromate solutions; ketones do not.',
-            'Brady\'s derivatives show distinct melting points, allowing identification of carbonyls with identical boiling points.'
-        ]
-    },
-    {
-        id: 'carboxylic-acids-esters-u4-l5',
-        title: 'Carboxylic Acids & Esters',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'LiAlH₄ reduces aldehydes to primary alcohols and ketones to secondary alcohols.',
+      'Aldehydes give positive colour changes with Tollens\', Fehling\', Benedict\', and dichromate solutions; ketones do not.',
+      'Brady\'s derivatives show distinct melting points, allowing identification of carbonyls with identical boiling points.'
+    ]
+  },
+  {
+    id: 'carboxylic-acids-esters-u4-l5',
+    title: 'Carboxylic Acids & Esters',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 📝 Nomenclature of Carboxylic Acids & Esters
 > * **Carboxylic Acids:** Functional group $-\\text{COOH}$. Suffix **-oic acid**.
@@ -1324,7 +1788,7 @@ ${svgToken(sn1StereochemistrySvg)}
 >   $$\\text{HCOOH} + \\text{CH₃CH₂OH} \\rightleftharpoons \\text{HCOOCH₂CH₃} + \\text{H₂O} \\quad \\text{(forms ethyl methanoate)}$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Displayed Formulas (Checkpoint Q1)
+> #### 📝 Worked Example 1: Displayed Formulas
 > **Question:** Write the displayed formula for: (a) methanoic acid, (b) ethanedioic acid.
 > 
 > > [!TIP]
@@ -1335,10 +1799,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > * **(b) Ethanedioic acid (HOOC-COOH):** Display two carbon atoms bonded together, each carrying a double-bonded oxygen and a hydroxyl group:
 > >   $$\\text{HO-C(=O)-C(=O)-OH}$$
 
-<br>
-
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Hexanoic vs Ethanoic Solubility (Checkpoint Q2)
+> #### 📝 Worked Example 2: Hexanoic vs Ethanoic Solubility
 > **Question:** Explain why hexanoic acid is much less soluble than ethanoic acid in water.
 > 
 > > [!TIP]
@@ -1350,10 +1812,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * Hexanoic acid has a much larger, hydrophobic pentyl ($-\\text{CH₂CH₂CH₂CH₂CH₃}$) tail.
 > > 3. **Explain the solubility difference:** The large non-polar pentyl tail of hexanoic acid disrupts the hydrogen bonding network of water without forming strong interactions, making hexanoic acid much less soluble in water.
 
-<br>
-
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Methylpropanoic Acid Synthesis (Checkpoint Q1)
+> #### 📝 Worked Example 3: Methylpropanoic Acid Synthesis
 > **Question:** Write equations for the preparation of methylpropanoic acid:
 > (a) by the oxidation of an alcohol.
 > (b) by the hydrolysis of a nitrile.
@@ -1370,10 +1830,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > >   2. Using acid hydrolysis:
 > >      $$\\text{(CH₃)₂CHCN} + \\text{H}^+ + 2\\text{H₂O} \\rightarrow \\text{(CH₃)₂CHCOOH} + \\text{NH₄}^+$$
 
-<br>
-
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Methylpropanoic Acid Derivatives (Checkpoint Q2)
+> #### 📝 Worked Example 4: Methylpropanoic Acid Derivatives
 > **Question:** Write an equation for the conversion of methylpropanoic acid:
 > (a) into an acyl chloride.
 > (b) into a methyl ester.
@@ -1388,10 +1846,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > >   1. React with methanol ($\\text{CH₃OH}$) in the presence of concentrated $\\text{H₂SO₄}$ catalyst under reflux:
 > >      $$\\text{(CH₃)₂CHCOOH} + \\text{CH₃OH} \\rightleftharpoons \\text{(CH₃)₂CHCOOCH₃} + \\text{H₂O}$$
 
-<br>
-
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Naming Esters (Checkpoint Q1)
+> #### 📝 Worked Example 5: Naming Esters
 > **Question:** What are the names of these esters?
 > (a) $\\text{CH₃CH₂COOCH₂CH₂CH₃}$
 > (b) $\\text{(CH₃)₂CHCOOCH₃}$
@@ -1408,10 +1864,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > >   2. The carboxylate part joined to C has a methylpropane skeleton ($\\text{(CH₃)₂CHCOO-}$), which is 2-methylpropanoate.
 > >   3. Ester name: **methyl 2-methylpropanoate** (or methyl methylpropanoate).
 
-<br>
-
 > [!EXAMPLE]
-> #### 📝 Worked Example 6: Propyl Butanoate Hydrolysis (Checkpoint Q2)
+> #### 📝 Worked Example 6: Propyl Butanoate Hydrolysis
 > **Question:** Write equations for the hydrolysis of propyl butanoate in:
 > (a) acidic conditions.
 > (b) alkaline conditions.
@@ -1429,19 +1883,19 @@ ${svgToken(sn1StereochemistrySvg)}
 > >      $$\\text{CH₃CH₂CH₂COOCH₂CH₂CH₃} + \\text{NaOH} \\rightarrow \\text{CH₃CH₂CH₂COONa} + \\text{CH₃CH₂CH₂OH}$$
 > >   2. Products are **sodium butanoate** and **propan-1-ol**.
 `,
-        keyPoints: [
-            'Carboxylic acids form stable dimers via double hydrogen bonding, raising boiling points.',
-            'Carboxylate ions exhibit resonance symmetry with two identical carbon-oxygen bonds.',
-            'Solubility decreases with chain length as the hydrophobic tail size increases.',
-            'Esters lack intermolecular hydrogen bonds but can hydrogen-bond with water.',
-            'Acidic hydrolysis of esters is reversible, whereas alkaline hydrolysis (saponification) goes to completion.'
-        ]
-    },
-    {
-        id: 'acyl-chlorides-condensation-polymers-u4-l5',
-        title: 'Acyl Chlorides & Condensation Polymerisation',
-        type: 'text',
-        content: `
+    keyPoints: [
+      'Carboxylic acids form stable dimers via double hydrogen bonding, raising boiling points.',
+      'Carboxylate ions exhibit resonance symmetry with two identical carbon-oxygen bonds.',
+      'Solubility decreases with chain length as the hydrophobic tail size increases.',
+      'Esters lack intermolecular hydrogen bonds but can hydrogen-bond with water.',
+      'Acidic hydrolysis of esters is reversible, whereas alkaline hydrolysis (saponification) goes to completion.'
+    ]
+  },
+  {
+    id: 'acyl-chlorides-condensation-polymers-u4-l5',
+    title: 'Acyl Chlorides & Condensation Polymerisation',
+    type: 'text',
+    content: `
 > [!NOTE]
 > ### 🧪 Preparation and Reactivity of Acyl Chlorides
 > Acyl chlorides contain the functional group $-\\text{COCl}$:
@@ -1492,7 +1946,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > * **Industrial Choice (Dicarboxylic Acid vs Diacyl Chloride):** Dicarboxylic acids are preferred in industry to avoid the release of toxic, corrosive $\\text{HCl}$ gas, which poses high health, safety, and environmental risks.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Propanoyl Chloride Reactions (Checkpoint Q1)
+> #### 📝 Worked Example 1: Propanoyl Chloride Reactions
 > **Question:** Write the names of the organic products formed in the four similar reactions of propanoyl chloride with water, methanol, ammonia, and methylamine.
 > 
 > > [!TIP]
@@ -1503,10 +1957,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > > 3. **Propanoyl chloride + ammonia:** Yields primary amide. Organic product: **propanamide**
 > > 4. **Propanoyl chloride + methylamine:** Yields N-substituted amide. Organic product: **N-methylpropanamide**
 
-<br>
-
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Butanoyl Chloride Reactions (Checkpoint Q2)
+> #### 📝 Worked Example 2: Butanoyl Chloride Reactions
 > **Question:** Write an equation for butanoyl chloride reacting with:
 > (a) propan-1-ol
 > (b) ethylamine
@@ -1520,8 +1972,6 @@ ${svgToken(sn1StereochemistrySvg)}
 > * **(b) Butanoyl chloride + ethylamine:**
 > >   $$\\text{CH₃CH₂CH₂COCl} + \\text{CH₃CH₂NH₂} \\rightarrow \\text{CH₃CH₂CH₂CONHCH₂CH₃} + \\text{HCl}$$
 > >   * Product: **N-ethylbutanamide**
-
-<br>
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Polymerisation Limits 
@@ -1551,13 +2001,13 @@ ${svgToken(sn1StereochemistrySvg)}
 > 3. **Draft the repeat unit:** Link the carbonyls of the acid to the oxygens of the diol:
 >    $$\\\\text{[-CO-CO-O-CH(CH₃)-CH(CH₃)-O-]}_n$$
 `,
-        keyPoints: [
-            'Acyl chlorides undergo nucleophilic addition-elimination reactions, releasing HCl gas.',
-            'Acyl chlorides are preferred over carboxylic acids for ester synthesis in the laboratory because the reaction goes to completion at room temp.',
-            'Condensation polymerisation eliminates a small molecule (like H₂O or HCl) to form ester linkages.',
-            'Primary amines react with acyl chlorides to form N-substituted amides, while secondary amines form N,N-disubstituted amides. Tertiary amines do not react.',
-            'Bifunctional monomers are required for polymerisation. Monofunctional species cause chain termination.',
-            'Industrially, dicarboxylic acids are preferred over diacyl chlorides to avoid releasing toxic and corrosive HCl gas.'
-        ]
-    }
+    keyPoints: [
+      'Acyl chlorides undergo nucleophilic addition-elimination reactions, releasing HCl gas.',
+      'Acyl chlorides are preferred over carboxylic acids for ester synthesis in the laboratory because the reaction goes to completion at room temp.',
+      'Condensation polymerisation eliminates a small molecule (like H₂O or HCl) to form ester linkages.',
+      'Primary amines react with acyl chlorides to form N-substituted amides, while secondary amines form N,N-disubstituted amides. Tertiary amines do not react.',
+      'Bifunctional monomers are required for polymerisation. Monofunctional species cause chain termination.',
+      'Industrially, dicarboxylic acids are preferred over diacyl chlorides to avoid releasing toxic and corrosive HCl gas.'
+    ]
+  }
 ];

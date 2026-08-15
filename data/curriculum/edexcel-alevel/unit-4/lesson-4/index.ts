@@ -604,7 +604,7 @@ ${svgToken(protonTransferSvg)}
 > > * (c) Since HBr fully dissociates, $[\\text{H}^+] = 0.150\\text{ mol dm}^{-3} \\implies \\text{pH} = -\\log_{10}(0.150) = 0.82$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 7: pH of Strong Monoprotic Acids (B) (Checkpoint Q1)
+> #### 📝 Worked Example 7: pH of Strong Monoprotic Acids (B)
 > **Question:** Calculate the pH of:
 > * (a) $0.0100\\\\text{ mol dm}^{-3}$ HI
 > * (b) $0.500\\\\text{ mol dm}^{-3}$ $\\\\text{HNO₃}$
@@ -712,7 +712,7 @@ ${svgToken(protonTransferSvg)}
 > >      $$\\\\text{pH} = 14.00 - \\\\text{pOH} = 14.00 - 2.60 = \\\\mathbf{11.40}$$
  
 > [!EXAMPLE]
-> #### 📝 Worked Example 12: pH of Water at Different Temperatures (Checkpoint Q1)
+> #### 📝 Worked Example 12: pH of Water at Different Temperatures
 > **Question:** Calculate water pH at (i) $298\\\\text{ K}$ and (ii) $293\\\\text{ K}$
 > 
 > > [!TIP]
@@ -724,7 +724,7 @@ ${svgToken(protonTransferSvg)}
 > > * **Endothermic nature:** Heating water from $293\\\\text{ K}$ to $298\\\\text{ K}$ increases $K_w$. According to Le Chatelier's Principle, this shifts the equilibrium to the endothermic direction. Hence, self-ionisation is endothermic.
  
 > [!EXAMPLE]
-> #### 📝 Worked Example 13: pH of Strong Bases (Checkpoint Q2)
+> #### 📝 Worked Example 13: pH of Strong Bases
 > **Question:** Calculate the pH at $298\\\\text{ K}$ of: (a) $0.0100\\\\text{ mol dm}^{-3}\\\\text{ NaOH}$, (b) $0.0500\\\\text{ mol dm}^{-3}\\\\text{ Ca(OH)}_2$, (c) $0.0315\\\\text{ mol dm}^{-3}\\\\text{ KOH}$
 > 
 > > [!TIP]

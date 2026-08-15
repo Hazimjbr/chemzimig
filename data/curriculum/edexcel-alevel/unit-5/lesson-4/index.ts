@@ -54,7 +54,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Hexane Chromatography Behavior (Checkpoint Q1)
+> #### 📝 Worked Example 1: Hexane Chromatography Behavior
 > **Question:** Suggest why, in paper chromatography, the non-polar substance hexane has a high $R_f$ value.
 > 
 > > [!TIP]
@@ -69,7 +69,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Calculating $R_f$ Values (Checkpoint Q2)
+> #### 📝 Worked Example 2: Calculating $R_f$ Values
 > **Question:** Calculate the $R_f$ value of component X in the diagram.
 > The ticks on the diagram baseline measure:
 > * Baseline to spot X = 30 units (10 + 20)
@@ -129,7 +129,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: HPLC-MS Functions (Checkpoint Q1)
+> #### 📝 Worked Example 1: HPLC-MS Functions
 > **Question:** What is the main function of each technique in HPLC-MS?
 > 
 > > [!TIP]
@@ -141,7 +141,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: NANDROLONE Chemical Tests (Checkpoint Q2)
+> #### 📝 Worked Example 2: NANDROLONE Chemical Tests
 > **Question:** Which of the two compounds nandrolone and 19-norandrosterone would you expect to react with: (a) bromine water, (b) 2,4-dinitrophenylhydrazine?
 > 
 > > [!TIP]
@@ -202,7 +202,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Identifying Compounds by HRMS (Checkpoint Q1)
+> #### 📝 Worked Example 1: Identifying Compounds by HRMS
 > **Question:** Two compounds have the structures $\\text{CH₃CH₂CH₂CH₂NH₂}$ and $\\text{HN=CHCOOH}$. In a high resolution mass spectrum, one of these compounds has $M_r = 73.0812$. Explain how you can decide which compound it is. You do not need to show any working.
 > 
 > > [!TIP]
@@ -220,7 +220,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Distinguishing Diaminoethane vs Ethanoic Acid (Checkpoint Q2)
+> #### 📝 Worked Example 2: Distinguishing Diaminoethane vs Ethanoic Acid
 > **Question:** A compound is thought to be either 1,2-diaminoethane or ethanoic acid. Its accurate $M_r$ value is $60.0213$. Which compound is it? Show your working.
 > 
 > > [!TIP]
@@ -285,7 +285,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: NMR Suitability of Nuclei (Checkpoint Q1)
+> #### 📝 Worked Example 1: NMR Suitability of Nuclei
 > **Question:** Some organic compounds contain these atoms: $^{16}\\text{O}$, $^{19}\\text{F}$, $^{32}\\text{S}$. Explain which of these are not suitable for use in NMR spectroscopy, and why.
 > 
 > > [!TIP]
@@ -301,7 +301,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Water vs TMS as Reference (Checkpoint Q2)
+> #### 📝 Worked Example 2: Water vs TMS as Reference
 > **Question:** Suggest why water ($\\text{H₂O}$) is less suitable than TMS as a reference in NMR spectroscopy.
 > 
 > > [!TIP]
@@ -383,7 +383,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Alkanes Environments (Checkpoint Q1)
+> #### 📝 Worked Example 3: Alkanes Environments
 > **Question:** Work out the number of different chemical environments for the carbon atoms in the first six straight-chain alkanes.
 > 
 > > [!TIP]
@@ -399,7 +399,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Aromatic Structure Deduction (Checkpoint Q2)
+> #### 📝 Worked Example 4: Aromatic Structure Deduction
 > **Question:** An aromatic compound has the molecular formula $\\text{C₈H₈O₂}$. The compound contains both a phenol functional group and a ketone functional group. The ¹³C NMR spectrum of the compound shows peaks at $\\delta = 197\\text{ ppm}$, $155\\text{ ppm}$, $137\\text{ ppm}$, $131\\text{ ppm}$, $117\\text{ ppm}$, and $27\\text{ ppm}$. Use the spectrum to deduce the structure of the compound. Explain your reasoning.
 > 
 > > [!TIP]
@@ -487,7 +487,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Isomers of Pentane (Checkpoint Q1)
+> #### 📝 Worked Example 1: Isomers of Pentane
 > **Question:** Predict the number of peaks in the $^1\\text{H}$ NMR spectrum of each of the isomers of $\\text{C₅H₁₂}$.
 > 
 > > [!TIP]
@@ -500,7 +500,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Integration Trace Limits (Checkpoint Q2)
+> #### 📝 Worked Example 2: Integration Trace Limits
 > **Question:** Why does an integration trace not always indicate the actual numbers of hydrogen atoms in a molecule?
 > 
 > > [!TIP]
@@ -513,7 +513,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Ethylamine vs Ethanamide (Checkpoint Q3)
+> #### 📝 Worked Example 3: Ethylamine vs Ethanamide
 > **Question:** How would you easily decide from a $^1\\text{H}$ NMR spectrum whether a compound is ethylamine ($\\text{CH₃CH₂NH₂}$) or ethanamide ($\\text{CH₃CONH₂}$)?
 > 
 > > [!TIP]
@@ -593,7 +593,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Deducing C₄H₈O₂ Structure (Checkpoint Q1)
+> #### 📝 Worked Example 1: Deducing C₄H₈O₂ Structure
 > **Question:** A compound has the molecular formula $\\text{C₄H₈O₂}$ (note: textbook writes $\\text{C₄H₈O}$ by typo). Its $^1\\text{H}$ NMR spectrum contains only three singlets, with chemical shift values of 4.0, 3.4, and 2.1 ppm. The integration trace shows the ratios $2:3:3$. What is its structure?
 > 
 > > [!TIP]
@@ -610,7 +610,7 @@ export const parts: LessonPart[] = [
 <br>
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Deducing C₅H₁₀O₂ Structure (Checkpoint Q2)
+> #### 📝 Worked Example 2: Deducing C₅H₁₀O₂ Structure
 > **Question:** A compound has the molecular formula $\\text{C₅H₁₀O₂}$. Its $^1\\text{H}$ NMR spectrum contains a singlet with a chemical shift of 2.3 ppm, a quartet (septet) with a chemical shift of 5.0 ppm, and a doublet with a chemical shift of 1.2 ppm. The integration trace shows the ratios $3:1:6$. What is its structure?
 > 
 > > [!TIP]

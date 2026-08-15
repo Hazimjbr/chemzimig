@@ -78,6 +78,16 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
      ```
    - Ensure the header title uses a descriptive emoji (e.g. `⚛️`, `🧪`, `⚖️`, `📋`, `🧮`, `⚠️`, `🛑`) instead of numbers, to match the unified project styling.
 
+17. **SVG Tokens inside Callouts / Blockquotes:**
+    - To render SVG visualizer tokens (such as `${svgToken(nameSvg)}`) properly inside callout boxes without closing the container prematurely, **always** prefix the token line with the blockquote character `> `.
+    - Example:
+      ```markdown
+      > [!NOTE]
+      > Some concepts here
+      > 
+      > ${svgToken(myCoolSvg)}
+      ```
+
 7. **List Indentation inside Callouts:**
    - To ensure sub-lists (bullet points) inside ordered lists (`1.`, `2.`, `3.`) render with proper right indentation inside blockquotes/callouts, indent them with exactly **4 spaces** after the `>` character (i.e. `>    *` or `>    -`):
      ```markdown

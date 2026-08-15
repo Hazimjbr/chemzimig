@@ -158,31 +158,36 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
         }
     }
 
-    if (children.includes('[INLINE_SVG:')) {
-        const parts = children.split(/\[INLINE_SVG:(.*?)\]/gs);
+    if (children.includes('STARTINLINESVG')) {
+        const parts = children.split(/STARTINLINESVG([\s\S]*?)ENDINLINESVG/g);
         if (parts.length > 1) {
             return (
                 <React.Fragment>
                     {parts.map((part, i) => {
-                        if (i % 2 === 1) {
-                            try {
-                                const svgHtml = decodeURIComponent(part);
-                                return (
-                                    <div
-                                        key={i}
-                                        className="flex justify-center my-4"
-                                        dangerouslySetInnerHTML={{ __html: svgHtml }}
-                                    />
-                                );
-                            } catch {
-                                return null;
-                            }
-                        }
-                        return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
+                         if (i % 2 === 1) {
+                             try {
+                                 // Decode from Base64 supporting Unicode safely
+                                 const binString = atob(part);
+                                 const bytes = Uint8Array.from(binString, (char) => char.charCodeAt(0));
+                                 const svgHtml = new TextDecoder().decode(bytes);
+                                 return (
+                                     <div
+                                         key={i}
+                                         className="w-full overflow-x-auto flex justify-center my-4"
+                                         dangerouslySetInnerHTML={{ __html: svgHtml }}
+                                     />
+                                 );
+                             } catch {
+                                 return null;
+                             }
+                         }
+                         return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
                     })}
                 </React.Fragment>
             );
         }
+        // Fallback: if children includes the token but split failed for some reason, don't return undefined.
+        return children;
     }
 
     if (children.includes('[NOWRAP:')) {
@@ -454,13 +459,14 @@ const mdComponents: any = {
         const childStr = typeof children === 'string' ? children : (Array.isArray(children) ? children.join('') : '');
 
         // Handle [INLINE_SVG:...] tokens that ReactMarkdown misinterprets as links
-        // ReactMarkdown sees [INLINE_SVG:encoded](...) or [INLINE_SVG:encoded] as a link
-        const inlineSvgMatch = childStr.match(/^INLINE_SVG:([\s\S]+)$/);
+        // Support regex that matches with or without surrounding square brackets
+        const cleanStr = childStr.trim();
+        const inlineSvgMatch = cleanStr.match(/^\[?INLINE_SVG:([\s\S]+?)\]?$/);
         if (inlineSvgMatch) {
             try {
                 const svgHtml = decodeURIComponent(inlineSvgMatch[1]);
                 return (
-                    <div className="flex justify-center my-4" dangerouslySetInnerHTML={{ __html: svgHtml }} />
+                    <div className="flex justify-center my-4 w-full" dangerouslySetInnerHTML={{ __html: svgHtml }} />
                 );
             } catch {
                 return null;
@@ -605,7 +611,7 @@ const renderContentWithTables = (content: string) => {
     // Pre-extract [INLINE_SVG:...] tokens before ReactMarkdown sees the content.
     // ReactMarkdown misinterprets these large tokens (it splits them or treats them as links).
     // We split the full content at SVG boundaries and render each piece independently.
-    const svgSplitPattern = /\[INLINE_SVG:([\s\S]*?)\]/g;
+    const svgSplitPattern = /STARTINLINESVG([\s\S]*?)ENDINLINESVG/g;
     const segments: Array<{ type: 'text' | 'svg'; content: string }> = [];
     let lastIndex = 0;
     let match: RegExpExecArray | null;
