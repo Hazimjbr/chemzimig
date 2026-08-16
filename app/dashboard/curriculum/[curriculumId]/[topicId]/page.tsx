@@ -673,9 +673,15 @@ const renderContentWithTables = (content: string) => {
         <React.Fragment>
             {groupedSegments.map((seg, idx) => {
                 if (seg.type === 'svg-group') {
+                    const decodeSvg = (b64: string) => {
+                        const binString = atob(b64);
+                        const bytes = Uint8Array.from(binString, (char) => char.charCodeAt(0));
+                        return new TextDecoder().decode(bytes);
+                    };
+
                     if (seg.svgs.length === 1) {
                         try {
-                            const svgHtml = decodeURIComponent(seg.svgs[0]);
+                            const svgHtml = decodeSvg(seg.svgs[0]);
                             return (
                                 <div key={idx} className="flex justify-center my-4 w-full overflow-x-auto" dangerouslySetInnerHTML={{ __html: svgHtml }} />
                             );
@@ -688,7 +694,7 @@ const renderContentWithTables = (content: string) => {
                         <div key={idx} className="flex flex-col lg:flex-row gap-6 my-6 w-full justify-center items-stretch">
                             {seg.svgs.map((svgContent, sIdx) => {
                                 try {
-                                    const svgHtml = decodeURIComponent(svgContent);
+                                    const svgHtml = decodeSvg(svgContent);
                                     return (
                                         <div key={sIdx} className="flex-1 min-w-[280px] flex justify-center overflow-x-auto rounded-lg" dangerouslySetInnerHTML={{ __html: svgHtml }} />
                                     );

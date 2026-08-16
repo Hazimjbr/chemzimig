@@ -9,133 +9,287 @@ export const theoryMarkdown = `
 This lesson covers structural isomerism vs stereoisomerism, chirality, optical activity, polarimetry, the stereochemical outcomes of SN1 and SN2 reaction mechanisms, carbonyl compounds (bonding, physical properties, redox, chemical tests, and addition mechanisms), carboxylic acids (bonding, nomenclature, dimerisation, preparations, and reactions), esters (nomenclature, smells, and saponification), acyl chlorides, and polyesters (condensation polymerisation).
 `;
 
-const polarisationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Unpolarized vs. Plane-Polarized Light</text>
+const polarisationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 410" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="sourceGlow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="filterGlass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="slitGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Title Badge -->
+  <rect x="310" y="14" width="380" height="30" rx="15" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+  <text x="500" y="34" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="bold" letter-spacing="0.5">UNPOLARISED VS. PLANE-POLARISED LIGHT</text>
   
-  <!-- Left Side: Unpolarized Light representation -->
-  <g transform="translate(100, 180)">
-    <!-- Light source representation -->
-    <circle cx="-30" cy="0" r="15" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
-    <circle cx="-30" cy="0" r="5" fill="#fff" />
-    <!-- Starburst arrows for unpolarized light -->
-    <path d="M 30,0 L 90,0 M 60,-30 L 60,30 M 39,-21 L 81,21 M 39,21 L 81,-21" stroke="#94a3b8" stroke-width="2" />
-    <path d="M 90,0 L 85,-4 L 85,4 Z M 60,30 L 56,25 L 64,25 Z M 60,-30 L 56,-25 L 64,-25 Z M 81,21 L 76,22 L 80,16 Z M 81,-21 L 76,-22 L 80,-16 Z" fill="#94a3b8" />
-    <text x="60" y="50" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">Oscillates in all planes</text>
-    <text x="60" y="65" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Unpolarized Light</text>
+  <!-- Optical Central Axis Line -->
+  <line x1="50" y1="150" x2="950" y2="150" stroke="#334155" stroke-width="1.8" stroke-dasharray="6 4" />
+  
+  <!-- 1. Light Source (Unpolarised) -->
+  <g transform="translate(85, 150)">
+    <circle cx="0" cy="0" r="30" fill="#f59e0b" fill-opacity="0.1" filter="url(#neonGlow)"/>
+    <circle cx="0" cy="0" r="20" fill="url(#sourceGlow2)" stroke="#fef08a" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff"/>
+    <text x="0" y="44" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">Light Source</text>
+    <text x="0" y="58" fill="#fbbf24" font-size="10" text-anchor="middle">(Unpolarised)</text>
   </g>
-  
-  <!-- Middle: Light waves propagation -->
-  <g transform="translate(250, 180)">
-    <!-- Horizontal wave (blue, unpolarized component) -->
-    <path d="M 0,0 Q 30,50 60,0 T 120,0 T 180,0 T 240,0" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-opacity="0.4" />
-    <!-- Vertical wave (yellow/orange, which will pass) -->
-    <path d="M 0,0 Q 30,-60 60,0 T 120,0 T 180,0 T 240,0" fill="none" stroke="#f59e0b" stroke-width="2.5" />
+
+  <!-- 2. Unpolarised Wave Vector Cross-Section -->
+  <g transform="translate(195, 150)">
+    <circle cx="0" cy="0" r="34" fill="#0f172a" fill-opacity="0.8" stroke="#475569" stroke-width="1.2" stroke-dasharray="3 3"/>
     
-    <text x="120" y="-70" fill="#f59e0b" font-size="11" text-anchor="middle">Vertical Wave Component</text>
-    <text x="120" y="70" fill="#0ea5e9" font-size="11" text-anchor="middle" fill-opacity="0.7">Horizontal Wave Component</text>
-  </g>
-  
-  <!-- The Filter -->
-  <g transform="translate(500, 70)">
-    <!-- 3D grid filter -->
-    <rect x="0" y="0" width="40" height="220" rx="4" fill="#1e293b" stroke="#475569" stroke-width="2" />
-    <!-- Slits -->
-    <line x1="20" y1="10" x2="20" y2="210" stroke="#f8fafc" stroke-width="3" stroke-dasharray="10 6" />
-    <text x="20" y="240" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Polarizing Filter</text>
-    <text x="20" y="255" fill="#94a3b8" font-size="10" text-anchor="middle">(Vertical Slits)</text>
-  </g>
-  
-  <!-- Right Side: Plane polarized light wave -->
-  <g transform="translate(560, 180)">
-    <!-- Only vertical wave continues -->
-    <path d="M 0,0 Q 30,-60 60,0 T 120,0 T 180,0 T 240,0" fill="none" stroke="#f59e0b" stroke-width="2.5" />
-    <!-- Blue wave is blocked -->
-    <path d="M 0,0 L 20,0" fill="none" stroke="#0ea5e9" stroke-width="2.5" stroke-dasharray="2 2" stroke-opacity="0.3" />
+    <!-- Multi-directional vectors -->
+    <line x1="0" y1="-30" x2="0" y2="30" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" filter="url(#neonGlow)"/>
+    <polygon points="0,-33 -3,-26 3,-26" fill="#f59e0b"/>
+    <polygon points="0,33 -3,26 3,26" fill="#f59e0b"/>
     
-    <text x="120" y="-70" fill="#f59e0b" font-size="11" text-anchor="middle">Oscillates in a single plane</text>
-    <text x="120" y="50" fill="#f59e0b" font-size="12" font-weight="bold" text-anchor="middle">Plane-Polarized Light</text>
+    <line x1="-30" y1="0" x2="30" y2="0" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="-33,0 -26,-3 -26,3" fill="#0ea5e9"/>
+    <polygon points="33,0 26,-3 26,3" fill="#0ea5e9"/>
+    
+    <line x1="-21" y1="-21" x2="21" y2="21" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="-21" y1="21" x2="21" y2="-21" stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round"/>
+
+    <text x="0" y="48" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Oscillations</text>
+    <text x="0" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">In all perpendicular planes</text>
   </g>
+  
+  <!-- Wave propagation arrow -->
+  <path d="M 245,150 L 275,150" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
+
+  <!-- 3. Dual Wave Demonstration (Before Filter) -->
+  <g transform="translate(285, 150)">
+    <path d="M 0,0 C 25,24 45,24 70,0 C 95,-24 115,-24 140,0 C 165,24 185,24 210,0" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-opacity="0.85" />
+    <path d="M 0,0 C 25,-44 45,-44 70,0 C 95,44 115,44 140,0 C 165,-44 185,-44 210,0" fill="none" stroke="#f59e0b" stroke-width="3" filter="url(#neonGlow)" />
+    
+    <!-- Wave Labels -->
+    <rect x="40" y="-72" width="140" height="20" rx="4" fill="#0f172a" fill-opacity="0.85" stroke="#f59e0b" stroke-width="1"/>
+    <text x="110" y="-58" fill="#fbbf24" font-size="9.5" font-weight="bold" text-anchor="middle">▲ Vertical Component</text>
+    
+    <rect x="40" y="54" width="140" height="20" rx="4" fill="#0f172a" fill-opacity="0.85" stroke="#0ea5e9" stroke-width="1"/>
+    <text x="110" y="68" fill="#38bdf8" font-size="9.5" font-weight="bold" text-anchor="middle">► Horizontal Component</text>
+  </g>
+  
+  <!-- 4. Polarizing Filter (Polaroid Sheet) -->
+  <g transform="translate(515, 55)">
+    <rect x="0" y="0" width="38" height="190" rx="6" fill="url(#filterGlass)" stroke="#38bdf8" stroke-width="2" />
+    <rect x="3" y="4" width="32" height="182" rx="4" fill="#0284c7" fill-opacity="0.08" />
+    
+    <line x1="12" y1="10" x2="12" y2="180" stroke="url(#slitGlow)" stroke-width="2" stroke-linecap="round"/>
+    <line x1="19" y1="8" x2="19" y2="182" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round" filter="url(#neonGlow)"/>
+    <line x1="26" y1="10" x2="26" y2="180" stroke="url(#slitGlow)" stroke-width="2" stroke-linecap="round"/>
+
+    <text x="19" y="210" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">Polarising Filter</text>
+    <text x="19" y="225" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">(Transmission Axis)</text>
+    <text x="19" y="239" fill="#94a3b8" font-size="9.5" text-anchor="middle">Blocks horizontal wave</text>
+  </g>
+  
+  <!-- 5. Single Plane-Polarised Wave (After Filter) -->
+  <g transform="translate(575, 150)">
+    <path d="M 0,0 C 25,-44 45,-44 70,0 C 95,44 115,44 140,0 C 165,-44 185,-44 210,0" fill="none" stroke="#f59e0b" stroke-width="3" filter="url(#neonGlow)" />
+    <line x1="0" y1="0" x2="25" y2="0" stroke="#ef4444" stroke-width="1.8" stroke-dasharray="3 3" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- 6. Plane-Polarised Vector Cross-Section -->
+  <g transform="translate(860, 150)">
+    <circle cx="0" cy="0" r="34" fill="#0f172a" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <line x1="0" y1="-30" x2="0" y2="30" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" filter="url(#neonGlow)"/>
+    <polygon points="0,-33 -3,-26 3,-26" fill="#f59e0b"/>
+    <polygon points="0,33 -3,26 3,26" fill="#f59e0b"/>
+
+    <text x="0" y="48" fill="#38bdf8" font-size="11.5" font-weight="bold" text-anchor="middle">Plane-Polarised</text>
+    <text x="0" y="62" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="middle">Single Vertical Plane</text>
+    <text x="0" y="76" fill="#94a3b8" font-size="9.5" text-anchor="middle">Electric field oscillates ↕ only</text>
+  </g>
+
+  <!-- Bottom Comparison Card (Separate Box with full breathing room) -->
+  <rect x="40" y="315" width="920" height="78" rx="8" fill="#070f1e" fill-opacity="0.95" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="60" y="338" fill="#38bdf8" font-size="11.5" font-weight="bold">📌 Key Takeaway for Edexcel Chemistry:</text>
+  <text x="60" y="358" fill="#e2e8f0" font-size="11">• <tspan fill="#fbbf24" font-weight="bold">Unpolarised Light:</tspan> Wave vibrations occur in <tspan fill="#38bdf8" font-weight="bold">all perpendicular planes</tspan> to the direction of wave travel.</text>
+  <text x="60" y="376" fill="#e2e8f0" font-size="11">• <tspan fill="#fbbf24" font-weight="bold">Plane-Polarised Light:</tspan> Wave vibrations occur in <tspan fill="#34d399" font-weight="bold">one single plane only</tspan> (vertical, horizontal, or angled).</text>
 </svg>`;
 
-const polarimeterSetupSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Polarimeter Instrumental Setup</text>
+const polarimeterSetupSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="lampGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="tubeLiquid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#059669" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="35%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="unpolarizedBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="polarizedBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="rotatedBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Title Badge -->
+  <rect x="330" y="14" width="340" height="30" rx="15" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+  <text x="500" y="34" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="bold" letter-spacing="0.5">POLARIMETER INSTRUMENTAL SETUP</text>
   
-  <!-- Axis line connecting everything -->
-  <line x1="50" y1="180" x2="900" y2="180" stroke="#475569" stroke-width="1.5" stroke-dasharray="5 5" />
+  <!-- Optical Rail / Base Axis -->
+  <line x1="60" y1="145" x2="930" y2="145" stroke="#334155" stroke-width="2" stroke-dasharray="6 4" />
   
   <!-- 1. Monochromatic Light Source -->
-  <g transform="translate(100, 180)">
-    <circle cx="0" cy="0" r="25" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="2" />
-    <path d="M -8,-8 L 8,8 M -8,8 L 8,-8 M -12,0 L 12,0 M 0,-12 L 0,12" stroke="#f59e0b" stroke-width="2" />
-    <circle cx="0" cy="0" r="6" fill="#fff" />
-    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Light Source</text>
-    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Monochromatic)</text>
+  <g transform="translate(90, 145)">
+    <circle cx="0" cy="0" r="32" fill="#f59e0b" fill-opacity="0.12" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="22" fill="url(#lampGlow)" stroke="#fef08a" stroke-width="1.5"/>
+    <path d="M -9,-9 L 9,9 M -9,9 L 9,-9 M -12,0 L 12,0 M 0,-12 L 0,12" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="0" cy="0" r="5" fill="#ffffff"/>
+    
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2 3"/>
+    
+    <text x="0" y="46" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">1. Light Source</text>
+    <text x="0" y="60" fill="#fbbf24" font-size="10" text-anchor="middle">(Sodium D, λ=589nm)</text>
+    <text x="0" y="74" fill="#94a3b8" font-size="9.5" text-anchor="middle">Oscillates in all planes</text>
   </g>
   
-  <!-- Arrow -->
-  <path d="M 160,180 L 190,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
-  
-  <!-- 2. Polarizer -->
-  <g transform="translate(240, 180)">
-    <circle cx="0" cy="0" r="30" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
-    <!-- vertical lines to indicate polarizer slits -->
-    <line x1="0" y1="-25" x2="0" y2="25" stroke="#f8fafc" stroke-width="2" />
-    <line x1="-10" y1="-20" x2="-10" y2="20" stroke="#475569" stroke-width="1" />
-    <line x1="10" y1="-20" x2="10" y2="20" stroke="#475569" stroke-width="1" />
-    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Polarizer</text>
-    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Produces polarised light)</text>
+  <!-- Beam 1 -->
+  <path d="M 125,140 L 205,140 L 205,150 L 125,150 Z" fill="url(#unpolarizedBeam)"/>
+  <path d="M 145,132 L 185,158 M 145,158 L 185,132 M 165,128 L 165,162" stroke="#f59e0b" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M 195,145 L 210,145" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 2. Polarizing Filter -->
+  <g transform="translate(245, 145)">
+    <circle cx="0" cy="0" r="34" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="28" fill="#1e293b" stroke="#0284c7" stroke-width="1"/>
+    
+    <line x1="0" y1="-26" x2="0" y2="26" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+    <line x1="-10" y1="-22" x2="-10" y2="22" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+    <line x1="10" y1="-22" x2="10" y2="22" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5"/>
+
+    <text x="0" y="46" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">2. Polariser</text>
+    <text x="0" y="60" fill="#38bdf8" font-size="10" text-anchor="middle">(Fixed Vertical Slit)</text>
+    <text x="0" y="74" fill="#94a3b8" font-size="9.5" text-anchor="middle">Produces polarised light</text>
   </g>
-  
-  <!-- Arrow -->
-  <path d="M 300,180 L 330,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
-  
+
+  <!-- Beam 2 -->
+  <path d="M 285,142 L 350,142 L 350,148 L 285,148 Z" fill="url(#polarizedBeam)"/>
+  <g transform="translate(315, 145)">
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="0,-20 -3,-14 3,-14" fill="#38bdf8"/>
+    <polygon points="0,20 -3,14 3,14" fill="#38bdf8"/>
+  </g>
+  <path d="M 335,145 L 352,145" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" />
+
   <!-- 3. Sample Tube -->
-  <g transform="translate(450, 180)">
-    <!-- The cylinder container -->
-    <rect x="-80" y="-20" width="160" height="40" rx="5" fill="#1e293b" fill-opacity="0.6" stroke="#94a3b8" stroke-width="2" />
-    <rect x="-70" y="-15" width="140" height="30" rx="3" fill="#10b981" fill-opacity="0.15" />
-    <!-- Rotating arrow inside indicating optical activity -->
-    <path d="M -30,-5 Q 0,-15 30,-5" fill="none" stroke="#f59e0b" stroke-width="2" marker-end="url(#curve-arrow)" />
-    <text x="0" y="35" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Sample Tube</text>
-    <text x="0" y="48" fill="#10b981" font-size="9" font-weight="bold" text-anchor="middle">Optically Active Solution</text>
-    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Rotates plane of light)</text>
+  <g transform="translate(470, 145)">
+    <rect x="-105" y="-26" width="210" height="52" rx="8" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+    <rect x="-98" y="-20" width="196" height="40" rx="5" fill="url(#tubeLiquid)"/>
+    <rect x="-98" y="-20" width="196" height="40" rx="5" fill="url(#glassReflection)"/>
+    
+    <rect x="-110" y="-30" width="12" height="60" rx="3" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <rect x="98" y="-30" width="12" height="60" rx="3" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    
+    <path d="M -70,0 Q -35,-22 0,0 T 70,0" fill="none" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="3 2"/>
+    <path d="M -20,-7 A 16 16 0 0 1 22,6" fill="none" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#curve-arrow)"/>
+    
+    <text x="0" y="46" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">3. Sample Tube</text>
+    <text x="0" y="60" fill="#34d399" font-size="10" font-weight="bold" text-anchor="middle">Chiral Enantiomer Solution</text>
+    <text x="0" y="74" fill="#94a3b8" font-size="9.5" text-anchor="middle">Rotates plane of light by angle α</text>
   </g>
-  
-  <!-- Arrow -->
-  <path d="M 570,180 L 600,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
-  
-  <!-- 4. Analyzer -->
-  <g transform="translate(680, 180)">
-    <circle cx="0" cy="0" r="30" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
-    <!-- rotated slit by angle alpha (e.g. 30 deg) -->
-    <line x1="-13" y1="-22" x2="13" y2="22" stroke="#f59e0b" stroke-width="2.5" />
-    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Analyzer</text>
-    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Rotated to detect angle &amp; direction)</text>
-    <!-- Angle alpha display -->
-    <path d="M 0,-30 A 30 30 0 0 1 15,-26" fill="none" stroke="#f59e0b" stroke-width="1.5" />
-    <text x="18" y="-35" fill="#f59e0b" font-size="10" font-weight="bold">α</text>
+
+  <!-- Beam 3 -->
+  <path d="M 585,142 L 655,142 L 655,148 L 585,148 Z" fill="url(#rotatedBeam)"/>
+  <g transform="translate(620, 145) rotate(32)">
+    <line x1="0" y1="-18" x2="0" y2="18" stroke="#c084fc" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="0,-20 -3,-14 3,-14" fill="#c084fc"/>
+    <polygon points="0,20 -3,14 3,14" fill="#c084fc"/>
   </g>
-  
-  <!-- Arrow -->
-  <path d="M 740,180 L 770,180" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)" />
-  
-  <!-- 5. Viewer -->
-  <g transform="translate(830, 180)">
-    <!-- Eye shape -->
-    <path d="M -20,0 C -10,-15 10,-15 20,0 C 10,15 -10,15 -20,0 Z" fill="none" stroke="#f8fafc" stroke-width="2" />
-    <circle cx="0" cy="0" r="6" fill="#38bdf8" />
-    <circle cx="0" cy="0" r="2.5" fill="#000" />
-    <text x="0" y="45" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Viewer</text>
-    <text x="0" y="60" fill="#94a3b8" font-size="9" text-anchor="middle">(Sees max brightness at angle α)</text>
+  <path d="M 640,145 L 658,145" stroke="#c084fc" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 4. Rotatable Analyser Filter -->
+  <g transform="translate(710, 145)">
+    <circle cx="0" cy="0" r="36" fill="#0f172a" stroke="#a855f7" stroke-width="2"/>
+    <line x1="0" y1="-36" x2="0" y2="-30" stroke="#e2e8f0" stroke-width="1.5"/>
+    <line x1="0" y1="36" x2="0" y2="30" stroke="#e2e8f0" stroke-width="1.5"/>
+    <line x1="-36" y1="0" x2="-30" y2="0" stroke="#e2e8f0" stroke-width="1.5"/>
+    <line x1="36" y1="0" x2="30" y2="0" stroke="#e2e8f0" stroke-width="1.5"/>
+    
+    <line x1="0" y1="-28" x2="0" y2="28" stroke="#64748b" stroke-width="1.2" stroke-dasharray="3 3"/>
+    
+    <g transform="rotate(32)">
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="3.5" fill="#ffffff"/>
+    </g>
+
+    <path d="M 0,-24 A 24 24 0 0 1 13,-20" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <text x="20" y="-26" fill="#f59e0b" font-size="12" font-weight="bold">+α</text>
+
+    <text x="0" y="46" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">4. Analyser</text>
+    <text x="0" y="60" fill="#c084fc" font-size="10" text-anchor="middle">(Rotated Filter)</text>
+    <text x="0" y="74" fill="#94a3b8" font-size="9.5" text-anchor="middle">Rotated to match new angle α</text>
   </g>
+
+  <!-- Arrow to Viewer -->
+  <path d="M 760,145 L 825,145" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arrow)" />
+
+  <!-- 5. Observer / Detector -->
+  <g transform="translate(880, 145)">
+    <path d="M -24,0 C -12,-16 12,-16 24,0 C 12,16 -12,16 -24,0 Z" fill="#0f172a" stroke="#38bdf8" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="9" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="0" cy="0" r="4" fill="#030712"/>
+    <circle cx="-2.5" cy="-2.5" r="1.8" fill="#ffffff"/>
+
+    <text x="0" y="46" fill="#f8fafc" font-size="11.5" font-weight="bold" text-anchor="middle">5. Observer / Viewer</text>
+    <text x="0" y="60" fill="#38bdf8" font-size="10" text-anchor="middle">(Detector / Eye)</text>
+    <text x="0" y="74" fill="#94a3b8" font-size="9.5" text-anchor="middle">Max light at angle α</text>
+  </g>
+
+  <!-- Bottom Legend Box with large comfortable padding -->
+  <rect x="40" y="270" width="920" height="125" rx="8" fill="#070f1e" fill-opacity="0.95" stroke="#1e293b" stroke-width="1.2"/>
+  <text x="60" y="295" fill="#38bdf8" font-size="12" font-weight="bold">🔑 Key Principles of Polarimetry:</text>
   
-  <!-- Definitions for arrows -->
+  <text x="60" y="320" fill="#e2e8f0" font-size="11">• <tspan fill="#fbbf24" font-weight="bold">Dextrorotatory (+ / d):</tspan> Rotates the plane of polarised light <tspan fill="#34d399" font-weight="bold">clockwise</tspan>.</text>
+  <text x="60" y="342" fill="#e2e8f0" font-size="11">• <tspan fill="#fbbf24" font-weight="bold">Laevorotatory (− / l):</tspan> Rotates the plane of polarised light <tspan fill="#f43f5e" font-weight="bold">anticlockwise</tspan> by an equal angle for pure enantiomers.</text>
+  <text x="60" y="364" fill="#e2e8f0" font-size="11">• <tspan fill="#a855f7" font-weight="bold">Racemic Mixture (50:50):</tspan> Net rotation is <tspan fill="#38bdf8" font-weight="bold">0°</tspan> (optically inactive as opposite rotations cancel).</text>
+  <text x="60" y="386" fill="#e2e8f0" font-size="11">• <tspan fill="#a855f7" font-weight="bold">Specific Rotation:</tspan> $[\alpha] = \frac{\alpha}{c \times l}$ (standardised property of a chiral compound).</text>
+
+  <!-- Markers -->
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 2 L 10 5 L 0 8 z" fill="#94a3b8" />
     </marker>
     <marker id="curve-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 2 L 10 5 L 0 8 z" fill="#f59e0b" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 2 L 10 5 L 0 8 z" fill="#10b981" />
     </marker>
   </defs>
 </svg>`;
@@ -1121,6 +1275,340 @@ const propanoneSolubilitySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox=
   </g>
 </svg>`;
 
+const carboxylateDelocalisationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 260" class="w-full max-w-[860px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="curly-arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto">
+      <path d="M 1 1.5 L 9 5 L 1 8.5 z" fill="#f43f5e" />
+    </marker>
+    <marker id="arrow-hybrid" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 1 2 L 8 5 L 1 8 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <text x="50%" y="26" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">Carboxylate Ion Resonance &amp; Delocalisation (RCOO⁻)</text>
+  
+  <!-- ============ STRUCTURE 1 (Left Form) ============ -->
+  <g transform="translate(35, 52)">
+    <!-- R - C skeleton -->
+    <text x="20" y="82" fill="#f8fafc" font-size="18" font-weight="bold">R</text>
+    <line x1="42" y1="76" x2="72" y2="76" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="82" y="82" fill="#f8fafc" font-size="18" font-weight="bold">C</text>
+    
+    <!-- C=O Double Bond (Top) -->
+    <line x1="96" y1="64" x2="128" y2="34" stroke="#f43f5e" stroke-width="2.2" />
+    <line x1="102" y1="70" x2="134" y2="40" stroke="#f43f5e" stroke-width="2.2" />
+    <text x="140" y="32" fill="#f43f5e" font-size="18" font-weight="bold">O</text>
+    
+    <!-- Lone pairs on Top O: 2 pairs -->
+    <circle cx="140" cy="10" r="1.9" fill="#f43f5e" />
+    <circle cx="148" cy="10" r="1.9" fill="#f43f5e" />
+    <circle cx="160" cy="24" r="1.9" fill="#f43f5e" />
+    <circle cx="160" cy="32" r="1.9" fill="#f43f5e" />
+    
+    <!-- C-O⁻ Single Bond (Bottom) -->
+    <line x1="98" y1="84" x2="130" y2="114" stroke="#38bdf8" stroke-width="2.2" />
+    <text x="140" y="130" fill="#38bdf8" font-size="18" font-weight="bold">O</text>
+    <text x="156" y="112" fill="#38bdf8" font-size="16" font-weight="bold">−</text>
+    
+    <!-- Lone pairs on Bottom O⁻: 3 pairs -->
+    <circle cx="160" cy="122" r="1.9" fill="#38bdf8" />
+    <circle cx="160" cy="130" r="1.9" fill="#38bdf8" />
+    <circle cx="140" cy="144" r="1.9" fill="#38bdf8" />
+    <circle cx="148" cy="144" r="1.9" fill="#38bdf8" />
+    <circle cx="122" cy="134" r="2.2" fill="#f43f5e" />
+    <circle cx="128" cy="140" r="2.2" fill="#f43f5e" />
+    
+    <!-- Curved Arrow 1 -->
+    <path d="M 112,135 Q 92,126 104,96" fill="none" stroke="#f43f5e" stroke-width="2.2" marker-end="url(#curly-arrow-red)" />
+    <!-- Curved Arrow 2 -->
+    <path d="M 112,50 Q 110,24 134,16" fill="none" stroke="#f43f5e" stroke-width="2.2" marker-end="url(#curly-arrow-red)" />
+  </g>
+  
+  <!-- ============ RESONANCE DOUBLE ARROW ============ -->
+  <g transform="translate(230, 128)">
+    <line x1="5" y1="0" x2="50" y2="0" stroke="#f59e0b" stroke-width="2.5" />
+    <path d="M 0,0 L 10,-5.5 L 10,5.5 Z" fill="#f59e0b" />
+    <path d="M 55,0 L 45,-5.5 L 45,5.5 Z" fill="#f59e0b" />
+  </g>
+  
+  <!-- ============ STRUCTURE 2 (Middle Form) ============ -->
+  <g transform="translate(315, 52)">
+    <!-- R - C skeleton -->
+    <text x="20" y="82" fill="#f8fafc" font-size="18" font-weight="bold">R</text>
+    <line x1="42" y1="76" x2="72" y2="76" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="82" y="82" fill="#f8fafc" font-size="18" font-weight="bold">C</text>
+    
+    <!-- C-O⁻ Single Bond (Top) -->
+    <line x1="98" y1="68" x2="130" y2="38" stroke="#38bdf8" stroke-width="2.2" />
+    <text x="140" y="32" fill="#38bdf8" font-size="18" font-weight="bold">O</text>
+    <text x="156" y="14" fill="#38bdf8" font-size="16" font-weight="bold">−</text>
+    
+    <!-- Lone pairs on Top O⁻: 3 pairs -->
+    <circle cx="160" cy="24" r="1.9" fill="#38bdf8" />
+    <circle cx="160" cy="32" r="1.9" fill="#38bdf8" />
+    <circle cx="140" cy="10" r="1.9" fill="#38bdf8" />
+    <circle cx="148" cy="10" r="1.9" fill="#38bdf8" />
+    <circle cx="122" cy="18" r="2.2" fill="#f43f5e" />
+    <circle cx="128" cy="12" r="2.2" fill="#f43f5e" />
+    
+    <!-- C=O Double Bond (Bottom) -->
+    <line x1="96" y1="88" x2="128" y2="118" stroke="#f43f5e" stroke-width="2.2" />
+    <line x1="102" y1="82" x2="134" y2="112" stroke="#f43f5e" stroke-width="2.2" />
+    <text x="140" y="130" fill="#f43f5e" font-size="18" font-weight="bold">O</text>
+    
+    <!-- Lone pairs on Bottom O: 2 pairs -->
+    <circle cx="140" cy="144" r="1.9" fill="#f43f5e" />
+    <circle cx="148" cy="144" r="1.9" fill="#f43f5e" />
+    <circle cx="160" cy="122" r="1.9" fill="#f43f5e" />
+    <circle cx="160" cy="130" r="1.9" fill="#f43f5e" />
+    
+    <!-- Curved Arrow 1 -->
+    <path d="M 112,17 Q 92,26 104,56" fill="none" stroke="#f43f5e" stroke-width="2.2" marker-end="url(#curly-arrow-red)" />
+    <!-- Curved Arrow 2 -->
+    <path d="M 112,102 Q 110,128 134,136" fill="none" stroke="#f43f5e" stroke-width="2.2" marker-end="url(#curly-arrow-red)" />
+  </g>
+  
+  <!-- ============ ARROW TO HYBRID ============ -->
+  <g transform="translate(520, 128)">
+    <line x1="0" y1="0" x2="48" y2="0" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-hybrid)" />
+  </g>
+
+  <!-- ============ RESONANCE HYBRID (Right Form) ============ -->
+  <g transform="translate(600, 52)">
+    <text x="20" y="82" fill="#f8fafc" font-size="18" font-weight="bold">R</text>
+    <line x1="42" y1="76" x2="72" y2="76" stroke="#94a3b8" stroke-width="2.2" />
+    <text x="82" y="82" fill="#f8fafc" font-size="18" font-weight="bold">C</text>
+    <text x="82" y="100" fill="#38bdf8" font-size="11" font-weight="bold">δ⁺</text>
+    
+    <!-- Solid sigma + dashed pi to Top O -->
+    <line x1="98" y1="66" x2="128" y2="36" stroke="#10b981" stroke-width="2" />
+    <line x1="104" y1="60" x2="134" y2="30" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3" />
+    <text x="140" y="32" fill="#10b981" font-size="18" font-weight="bold">O</text>
+    <text x="158" y="16" fill="#10b981" font-size="13" font-weight="bold">δ⁻</text>
+    
+    <!-- Solid sigma + dashed pi to Bottom O -->
+    <line x1="98" y1="86" x2="128" y2="116" stroke="#10b981" stroke-width="2" />
+    <line x1="104" y1="92" x2="134" y2="122" stroke="#10b981" stroke-width="2" stroke-dasharray="3 3" />
+    <text x="140" y="130" fill="#10b981" font-size="18" font-weight="bold">O</text>
+    <text x="158" y="136" fill="#10b981" font-size="13" font-weight="bold">δ⁻</text>
+
+    <!-- Delocalised pi cloud arc -->
+    <path d="M 134,40 Q 110,76 134,112" fill="none" stroke="#10b981" stroke-width="1.8" stroke-dasharray="2.5 2.5" />
+
+    <!-- Central Negative Charge (-) -->
+    <text x="145" y="84" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">−</text>
+  </g>
+  
+  <!-- Footer Badge -->
+  <rect x="180" y="210" width="500" height="32" rx="6" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1" stroke-opacity="0.3" />
+  <text x="50%" y="231" text-anchor="middle" fill="#10b981" font-size="12" font-weight="bold">Equal C−O bond lengths &amp; negative charge split evenly (−½ on each oxygen)</text>
+</svg>`;
+
+const carboxylicAcidDimerSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" class="w-full max-w-[620px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">Hydrogen-Bonded Carboxylic Acid Dimer (Ethanoic Acid Dimer)</text>
+
+  <g transform="translate(40, 45)">
+    <!-- Left Molecule (Ethanoic acid) -->
+    <!-- Methyl CH3 -->
+    <text x="30" y="75" fill="#f8fafc" font-size="15" text-anchor="middle">H</text>
+    <line x1="30" y1="80" x2="30" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="30" y="145" fill="#f8fafc" font-size="15" text-anchor="middle">H</text>
+    <line x1="30" y1="118" x2="30" y2="132" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="0" y="114" fill="#f8fafc" font-size="15" text-anchor="middle">H</text>
+    <line x1="10" y1="110" x2="20" y2="110" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="30" y="115" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    
+    <line x1="42" y1="110" x2="72" y2="110" stroke="#94a3b8" stroke-width="2" />
+    <text x="85" y="115" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+
+    <!-- Top: C=O -->
+    <line x1="82" y1="98" x2="82" y2="70" stroke="#ef4444" stroke-width="2" />
+    <line x1="88" y1="98" x2="88" y2="70" stroke="#ef4444" stroke-width="2" />
+    <text x="85" y="60" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="70" y="55" fill="#ef4444" font-size="11">δ-</text>
+
+    <!-- Bottom: C-O-H -->
+    <line x1="85" y1="122" x2="85" y2="142" stroke="#38bdf8" stroke-width="2" />
+    <text x="85" y="158" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="70" y="165" fill="#ef4444" font-size="11">δ-</text>
+    <line x1="97" y1="154" x2="125" y2="154" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="135" y="158" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">H</text>
+    <text x="135" y="172" fill="#38bdf8" font-size="11" text-anchor="middle">δ+</text>
+
+    <!-- Hydrogen Bonds (Dotted lines) -->
+    <!-- Top H-bond: O(left)...H-O(right) -->
+    <line x1="100" y1="56" x2="190" y2="56" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 4" />
+    <!-- Bottom H-bond: H(left)...O(right) -->
+    <line x1="147" y1="154" x2="235" y2="154" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 4" />
+
+    <!-- Right Molecule (Inverted Ethanoic acid) -->
+    <text x="200" y="60" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">H</text>
+    <text x="200" y="45" fill="#38bdf8" font-size="11" text-anchor="middle">δ+</text>
+    <line x1="210" y1="56" x2="238" y2="56" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="250" y="60" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="265" y="55" fill="#ef4444" font-size="11">δ-</text>
+    <line x1="250" y1="70" x2="250" y2="98" stroke="#38bdf8" stroke-width="2" />
+
+    <text x="250" y="158" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="265" y="165" fill="#ef4444" font-size="11">δ-</text>
+    <line x1="247" y1="145" x2="247" y2="122" stroke="#ef4444" stroke-width="2" />
+    <line x1="253" y1="145" x2="253" y2="122" stroke="#ef4444" stroke-width="2" />
+
+    <text x="250" y="115" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    <line x1="262" y1="110" x2="292" y2="110" stroke="#94a3b8" stroke-width="2" />
+    <text x="305" y="115" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+
+    <!-- Methyl CH3 on right -->
+    <text x="305" y="75" fill="#f8fafc" font-size="15" text-anchor="middle">H</text>
+    <line x1="305" y1="80" x2="305" y2="100" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="305" y="145" fill="#f8fafc" font-size="15" text-anchor="middle">H</text>
+    <line x1="305" y1="118" x2="305" y2="132" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="335" y="114" fill="#f8fafc" font-size="15" text-anchor="middle">H</text>
+    <line x1="315" y1="110" x2="325" y2="110" stroke="#94a3b8" stroke-width="1.8" />
+  </g>
+  <text x="50%" y="195" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="bold">Stable Dimer: Explains High Boiling Point &amp; Mass Spec Peak at m/z = 120</text>
+</svg>`;
+
+const carboxylicAcidWaterHbondsSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 230" class="w-full max-w-[680px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">Carboxylic Acid Hydrogen Bonding with Water</text>
+
+  <g transform="translate(180, 50)">
+    <!-- Ethanoic Acid Molecule -->
+    <text x="40" y="95" fill="#f8fafc" font-size="16" font-weight="bold">CH₃</text>
+    <line x1="75" y1="90" x2="105" y2="90" stroke="#94a3b8" stroke-width="2" />
+    <text x="115" y="95" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+
+    <!-- C=O Top -->
+    <line x1="112" y1="78" x2="112" y2="52" stroke="#ef4444" stroke-width="2" />
+    <line x1="118" y1="78" x2="118" y2="52" stroke="#ef4444" stroke-width="2" />
+    <text x="115" y="42" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="96" y="38" fill="#ef4444" font-size="11">δ-</text>
+
+    <!-- C-O-H Bottom -->
+    <line x1="115" y1="102" x2="115" y2="125" stroke="#38bdf8" stroke-width="2" />
+    <text x="115" y="140" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="96" y="145" fill="#ef4444" font-size="11">δ-</text>
+    <line x1="126" y1="135" x2="152" y2="135" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="162" y="140" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">H</text>
+    <text x="162" y="155" fill="#38bdf8" font-size="11" text-anchor="middle">δ+</text>
+
+    <!-- Water 1: H-O-H hydrogen-bonded to C=O -->
+    <line x1="128" y1="38" x2="200" y2="38" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 4" />
+    <text x="210" y="42" fill="#f8fafc" font-size="15" font-weight="bold">H</text>
+    <text x="210" y="26" fill="#38bdf8" font-size="11">δ+</text>
+    <line x1="222" y1="38" x2="245" y2="38" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="255" y="42" fill="#38bdf8" font-size="15" font-weight="bold">O</text>
+    <line x1="262" y1="44" x2="278" y2="60" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="285" y="70" fill="#f8fafc" font-size="15">H</text>
+
+    <!-- Water 2: H-O-H hydrogen-bonded from Acid O-H -->
+    <line x1="174" y1="135" x2="240" y2="135" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="4 4" />
+    <text x="252" y="140" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <text x="252" y="122" fill="#ef4444" font-size="11" text-anchor="middle">δ-</text>
+    <line x1="260" y1="130" x2="278" y2="115" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="285" y="115" fill="#f8fafc" font-size="15">H</text>
+    <line x1="260" y1="142" x2="278" y2="155" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="285" y="165" fill="#f8fafc" font-size="15">H</text>
+  </g>
+  <text x="50%" y="205" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">Both C=O and O-H groups form hydrogen bonds with water (Fully miscible for C1–C4)</text>
+</svg>`;
+
+const methanoicAcidDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 200" class="w-full max-w-[340px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <g transform="translate(40, 20)">
+    <text x="40" y="105" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">H</text>
+    <line x1="52" y1="100" x2="98" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="110" y="105" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    
+    <line x1="107" y1="88" x2="107" y2="48" stroke="#ef4444" stroke-width="2" />
+    <line x1="113" y1="88" x2="113" y2="48" stroke="#ef4444" stroke-width="2" />
+    <text x="110" y="38" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    
+    <line x1="122" y1="100" x2="162" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="175" y="105" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <line x1="188" y1="100" x2="218" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="230" y="105" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+  </g>
+  <text x="50%" y="175" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="bold">Methanoic Acid (HCOOH)</text>
+</svg>`;
+
+const ethanedioicAcidDisplayedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 210" class="w-full max-w-[420px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <g transform="translate(30, 25)">
+    <text x="20" y="105" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+    <line x1="32" y1="100" x2="62" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="75" y="105" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <line x1="88" y1="100" x2="128" y2="100" stroke="#94a3b8" stroke-width="2" />
+    
+    <text x="140" y="105" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    <line x1="137" y1="88" x2="137" y2="48" stroke="#ef4444" stroke-width="2" />
+    <line x1="143" y1="88" x2="143" y2="48" stroke="#ef4444" stroke-width="2" />
+    <text x="140" y="38" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    
+    <line x1="152" y1="100" x2="208" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="220" y="105" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    
+    <line x1="217" y1="112" x2="217" y2="152" stroke="#ef4444" stroke-width="2" />
+    <line x1="223" y1="112" x2="223" y2="152" stroke="#ef4444" stroke-width="2" />
+    <text x="220" y="170" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    
+    <line x1="232" y1="100" x2="272" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="285" y="105" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+    <line x1="298" y1="100" x2="328" y2="100" stroke="#94a3b8" stroke-width="2" />
+    <text x="340" y="105" fill="#f8fafc" font-size="16" text-anchor="middle">H</text>
+  </g>
+  <text x="50%" y="185" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="bold">Ethanedioic Acid (HOOC-COOH)</text>
+</svg>`;
+
+const polyesterRepeatUnitSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 200" class="w-full max-w-[500px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="26" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="bold">Polymer Repeat Unit: Ethanedioic acid + Butane-2,3-diol</text>
+
+  <g transform="translate(30, 40)">
+    <!-- Left bracket and extending bond -->
+    <text x="10" y="80" fill="#94a3b8" font-size="28" font-weight="bold">[</text>
+    <line x1="20" y1="75" x2="45" y2="75" stroke="#38bdf8" stroke-width="2" />
+
+    <!-- C1=O (from ethanedioic acid) -->
+    <text x="55" y="80" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    <line x1="55" y1="65" x2="55" y2="40" stroke="#ef4444" stroke-width="2" />
+    <line x1="61" y1="65" x2="61" y2="40" stroke="#ef4444" stroke-width="2" />
+    <text x="58" y="32" fill="#ef4444" font-size="15" font-weight="bold" text-anchor="middle">O</text>
+    
+    <line x1="67" y1="75" x2="98" y2="75" stroke="#94a3b8" stroke-width="2" />
+
+    <!-- C2=O (from ethanedioic acid) -->
+    <text x="110" y="80" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+    <line x1="110" y1="65" x2="110" y2="40" stroke="#ef4444" stroke-width="2" />
+    <line x1="116" y1="65" x2="116" y2="40" stroke="#ef4444" stroke-width="2" />
+    <text x="113" y="32" fill="#ef4444" font-size="15" font-weight="bold" text-anchor="middle">O</text>
+
+    <!-- Ester linkage oxygen (O-1) -->
+    <line x1="122" y1="75" x2="152" y2="75" stroke="#38bdf8" stroke-width="2" />
+    <text x="165" y="80" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+
+    <!-- CH(CH3) (C2 of diol) -->
+    <line x1="178" y1="75" x2="208" y2="75" stroke="#94a3b8" stroke-width="2" />
+    <text x="225" y="80" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">CH</text>
+    <line x1="225" y1="62" x2="225" y2="42" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="225" y="34" fill="#10b981" font-size="14" font-weight="bold" text-anchor="middle">CH₃</text>
+
+    <!-- CH(CH3) (C3 of diol) -->
+    <line x1="242" y1="75" x2="278" y2="75" stroke="#94a3b8" stroke-width="2" />
+    <text x="295" y="80" fill="#f8fafc" font-size="16" font-weight="bold" text-anchor="middle">CH</text>
+    <line x1="295" y1="62" x2="295" y2="42" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="295" y="34" fill="#10b981" font-size="14" font-weight="bold" text-anchor="middle">CH₃</text>
+
+    <!-- Ester linkage oxygen (O-2) -->
+    <line x1="312" y1="75" x2="342" y2="75" stroke="#38bdf8" stroke-width="2" />
+    <text x="355" y="80" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+
+    <!-- Extending bond and right bracket -->
+    <line x1="368" y1="75" x2="395" y2="75" stroke="#38bdf8" stroke-width="2" />
+    <text x="400" y="80" fill="#94a3b8" font-size="28" font-weight="bold">]</text>
+    <text x="412" y="92" fill="#38bdf8" font-size="14" font-weight="bold">n</text>
+  </g>
+  
+  <text x="50%" y="175" text-anchor="middle" fill="#10b981" font-size="11.5" font-weight="bold">Repeat Unit: [-C(=O)-C(=O)-O-CH(CH₃)-CH(CH₃)-O-]n</text>
+</svg>`;
+
 export const parts: LessonPart[] = [
   {
     id: 'chirality-optical-isomerism-u4-l5',
@@ -1144,7 +1632,7 @@ export const parts: LessonPart[] = [
 > * **Chiral Centre (Asymmetric Carbon):** A carbon atom bonded to **four different atoms or groups of atoms**. It is denoted with an asterisk (*). The presence of a chiral centre results in a molecule that lacks a plane of symmetry (asymmetric).
 > * **Enantiomers (Optical Isomers):** Optical isomers that are non-superimposable mirror images of each other. They rotate the plane of polarised light by equal angles in opposite directions.
 > * **Properties of Enantiomers:**
->    * *Physical Properties:* Identical (melting point, boiling point, density, etc.) **except** they rotate plane-polarised light in opposite directions (e.g., $+60^{\\\\circ}$ and $-60^{\\\\circ}$).
+>    * *Physical Properties:* Identical (melting point, boiling point, density, etc.) **except** they rotate plane-polarised light in opposite directions (e.g., $+60°$ and $-60°$).
 >    * *Chemical Properties:* Identical **except** when reacting with other chiral molecules (e.g., chiral enzymes or receptors in biological systems).
 > * **Racemic Mixture (Racemate):** An equimolar mixture containing equal amounts (50:50 ratio) of both enantiomers. It is **optically inactive** because the opposite rotations cancel each other out.
 > 
@@ -1154,9 +1642,9 @@ export const parts: LessonPart[] = [
 > > 2. **Identify the chiral carbon:** Clearly mark the asymmetric carbon atom with an asterisk (*).
 > > 3. **Draw the mirror image:** Draw a vertical mirror plane, and construct the second enantiomer as a reflected image of the first.
 > 
-${svgToken(chiralCentreSvg)}
-
-${svgToken(achiralMoleculeSvg)}
+> ${svgToken(chiralCentreSvg)}
+> 
+> ${svgToken(achiralMoleculeSvg)}
 
 > [!BOX]
 > ### 🔬 Plane-Polarised Light & Polarimetry
@@ -1167,10 +1655,9 @@ ${svgToken(achiralMoleculeSvg)}
 >   $$\\\\text{Monochromatic Light Source} \\\\rightarrow \\\\text{Polarizer} \\\\rightarrow \\\\text{Sample Tube} \\\\rightarrow \\\\text{Analyser} \\\\rightarrow \\\\text{Viewer}$$
 >   * *Dextrorotatory ($+$):* Clockwise rotation of the plane of light.
 >   * *Laevorotatory ($-$):* Anticlockwise rotation of the plane of light.
+> ${svgToken(polarisationSvg)}
 > 
-${svgToken(polarisationSvg)}
-
-${svgToken(polarimeterSetupSvg)}
+> ${svgToken(polarimeterSetupSvg)}
 
 > [!TIP]
 > ### ⏱️ Optical Activity as a Kinetic Tool
@@ -1192,12 +1679,12 @@ ${svgToken(polarimeterSetupSvg)}
 > ### 📋 Analyzing Chirality in Organic Structures
 > Let's analyze the following structures to determine if they possess chiral centres:
 > 
-> * **1. $\\\\text{CBr₂ClF}$:** The central carbon atom is bonded to two bromine atoms. Since they are identical, there are only three different groups attached. Thus, there is **no chiral centre**.
-> * **2. $\\\\text{CH₃CHBrCH₂CH₃}$:** Carbon-2 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₃}$, and $-\\\\text{CH₂CH₃}$. Since these four groups are entirely different, Carbon-2 is a **chiral centre**: $\\\\text{CH₃C}^{\\\\ast}\\\\text{HBrCH₂CH₃}$
-> * **3. $\\\\text{CH₃CH₂CHBrCH₂CH₃}$:** Carbon-3 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, and two identical ethyl ($-\\\\text{CH₂CH₃}$) groups. Thus, there is **no chiral centre**.
-> * **4. $\\\\text{CH₃CH₂CHBrCHBrCH₃}$:**
->    * Carbon-3 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₂CH₃}$, and $-\\\\text{CHBrCH₃}$. These four groups are different, so Carbon-3 is a **chiral centre**.
->    * Carbon-4 is bonded to $-\\\\text{H}$, $-\\\\text{Br}$, $-\\\\text{CH₃}$, and $-\\\\text{CH₂CHBrCH₂CH₃}$. These four groups are different, so Carbon-4 is also a **chiral centre**.
+> * **1. CBr₂ClF:** The central carbon atom is bonded to two bromine atoms. Since they are identical, there are only three different groups attached. Thus, there is **no chiral centre**.
+> * **2. CH₃CHBrCH₂CH₃:** Carbon-2 is bonded to -H, -Br, -CH₃, and -CH₂CH₃. Since these four groups are entirely different, Carbon-2 is a **chiral centre**: **CH₃C\*HBrCH₂CH₃**
+> * **3. CH₃CH₂CHBrCH₂CH₃:** Carbon-3 is bonded to -H, -Br, and two identical ethyl (-CH₂CH₃) groups. Thus, there is **no chiral centre**.
+> * **4. CH₃CH₂CHBrCHBrCH₃:**
+>    * Carbon-3 is bonded to -H, -Br, -CH₂CH₃, and -CHBrCH₃. These four groups are different, so Carbon-3 is a **chiral centre**.
+>    * Carbon-4 is bonded to -H, -Br, -CH₃, and -CH₂CHBrCH₂CH₃. These four groups are different, so Carbon-4 is also a **chiral centre**.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Polariser
@@ -1213,19 +1700,22 @@ ${svgToken(polarimeterSetupSvg)}
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Analyzing Enantiomer Mixtures
-> **Question:** A dextrorotatory enantiomer has an optical rotation of $+43^{\\\\circ}$. A mixture of this enantiomer and its laevorotatory enantiomer has a rotation of $-10^{\\\\circ}$. What does this information indicate about the composition of this mixture?
+> **Question:** A dextrorotatory enantiomer has an optical rotation of $+43°$. A mixture of this enantiomer and its laevorotatory enantiomer has a rotation of $-10°$. What does this information indicate about the composition of this mixture?
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Deduce whether the mixture is racemic:** Since the net optical rotation is not $0^{\\\\circ}$, the mixture is **not racemic** (it is not equimolar).
-> > 2. **Deduce which enantiomer is in excess:** Since the net observed rotation is negative ($-10^{\\\\circ}$), the mixture contains an **excess of the laevorotatory ($-$) enantiomer**.
-> > 3. **Optional Quantitative Analysis (Calculating exact percentages):**
+> > 1. **Deduce whether the mixture is racemic:** Since the net optical rotation is not $0°$, the mixture is **not racemic** (it is not an equimolar 50:50 mixture).
+> > 2. **Deduce which enantiomer is in excess:** Since the net observed rotation is negative ($-10°$), the mixture contains an **excess of the laevorotatory ($-$) enantiomer**.
+> > 3. **Quantitative Analysis (Calculating exact percentages):**
 > >    * Let $x$ be the mole fraction of the laevorotatory enantiomer, and $(1-x)$ be the fraction of the dextrorotatory enantiomer.
-> >    * Net rotation: $x(-43) + (1-x)(+43) = -10$
-> >    * $-43x + 43 - 43x = -10 \\\\implies -86x = -53 \\\\implies x \\\\approx 0.616$ (or $61.6\%$)
-> >    * Dextrorotatory fraction = $1 - 0.616 = 0.384$ (or $38.4\%$)
-> >    * Thus, the mixture consists of approximately $61.6\%$ of the laevorotatory enantiomer and $38.4\%$ of the dextrorotatory enantiomer.
+> >    * Net rotation equation:
+> >      $$x(-43) + (1-x)(+43) = -10$$
+> >    * Solving for $x$:
+> >      $$-43x + 43 - 43x = -10 \\\\implies -86x = -53 \\\\implies x \\\\approx 0.616 \\\\text{ (61.6\\%)}$$
+> >    * Dextrorotatory fraction:
+> >      $$1 - 0.616 = 0.384 \\\\text{ (38.4\\%)}$$
+> >    * Thus, the mixture consists of approximately **61.6% of the laevorotatory enantiomer** and **38.4% of the dextrorotatory enantiomer**.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Drawing 3D Enantiomers of Lactic Acid
@@ -1235,33 +1725,74 @@ ${svgToken(polarimeterSetupSvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Identify the chiral carbon and its four groups:**
-> >    * The central carbon (Carbon-2) is bonded to four different groups: $-\\\\text{H}$, $-\\\\text{CH}_3$, $-\\\\text{OH}$, and $-\\\\text{COOH}$
+> >    * The central carbon (Carbon-2) is bonded to four different groups: -H, -CH₃, -OH, and -COOH
 > > 2. **Draw the first enantiomer in 3D:**
 > >    * Place the chiral carbon in the centre.
-> >    * Draw two bonds in the plane of the paper (e.g. $-\\\\text{COOH}$ pointing up, $-\\\\text{CH}_3$ pointing down-left).
-> >    * Draw a wedge for a group pointing towards you (e.g. $-\\\\text{OH}$ pointing down-right).
-> >    * Draw a dashed bond for a group pointing away (e.g. $-\\\\text{H}$ pointing back).
+> >    * Draw two bonds in the plane of the paper (-COOH pointing up, -CH₃ pointing down-left).
+> >    * Draw a wedge for a group pointing towards you (-OH pointing down-right).
+> >    * Draw a dashed bond for a group pointing away (-H pointing back).
 > > 3. **Draw the mirror plane:**
 > >    * Draw a vertical dashed line to represent the mirror.
 > > 4. **Draw the reflected mirror image:**
-> >    * Reflect the structure on the other side of the mirror plane so that the groups face the mirror (e.g. $-\\\\text{OH}$ wedge points down-left towards the mirror, $-\\\\text{CH}_3$ points down-right away from the mirror).
-> > ${svgToken(lacticAcidEnantiomersSvg)}
+> >    * Reflect the structure on the other side of the mirror plane so that the groups face the mirror (-OH wedge points down-left towards the mirror, -CH₃ points down-right away from the mirror).
 > > 
+> > ${svgToken(lacticAcidEnantiomersSvg)}
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Identifying Chiral Centres in Amino Acids
-> **Question:** Alanine is an amino acid with the structural formula $\\\\text{CH}_3\\\\text{CH(NH}_2\\\\text{)COOH}$. Identify the chiral centre in alanine and explain why it is chiral.
+> **Question:** Alanine is an amino acid with the structural formula CH₃CH(NH₂)COOH. Identify the chiral centre in alanine and explain why it is chiral.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Analyze each carbon atom in the molecule:**
-> >    * **Carbon-1 (carboxylic acid carbon):** Part of the $-\\\\text{COOH}$ group. It has a double bond to oxygen, so it is only bonded to three groups. It cannot be chiral.
-> >    * **Carbon-3 (methyl carbon):** Part of the $-\\\\text{CH}_3$ group. It is bonded to three identical hydrogen atoms, so it cannot be chiral.
-> >    * **Carbon-2 (alpha carbon):** Bonded to four distinct groups: $-\\\\text{H}$, $-\\\\text{CH}_3$, $-\\\\text{NH}_2$, and $-\\\\text{COOH}$
+> >    * **Carbon-1 (carboxylic acid carbon):** Part of the -COOH group. It has a double bond to oxygen, so it is only bonded to three groups. It cannot be chiral.
+> >    * **Carbon-3 (methyl carbon):** Part of the -CH₃ group. It is bonded to three identical hydrogen atoms, so it cannot be chiral.
+> >    * **Carbon-2 (alpha carbon):** Bonded to four distinct groups: -H, -CH₃, -NH₂, and -COOH
 > > 2. **Formulate the explanation:**
 > >    * Carbon-2 is the chiral centre because it is bonded to four different atoms or groups of atoms.
 > >    * This asymmetric arrangement means the molecule lacks a plane of symmetry, resulting in two non-superimposable mirror images (enantiomers).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Chirality in Cyclic Molecules (Menthol & Cyclohexanes)
+> **Question:** Consider the molecule 1-chloro-2-methylcyclohexane.
+> 1) Determine the number of chiral centres in this molecule.
+> 2) Explain how to test whether a ring carbon is a chiral centre by tracing paths around the ring.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze Carbon-1 (bonded to -Cl):**
+> >    * Group 1: -H
+> >    * Group 2: -Cl
+> >    * Group 3 (Clockwise pathway around ring): -CH(CH₃)-CH₂-CH₂-CH₂-CH₂-
+> >    * Group 4 (Anticlockwise pathway around ring): -CH₂-CH₂-CH₂-CH₂-CH(CH₃)-
+> >    * Since the clockwise and anticlockwise pathways around the ring encounter substituents at different positions, the two pathways are different. Thus, **Carbon-1 is a chiral centre**.
+> > 2. **Analyze Carbon-2 (bonded to -CH₃):**
+> >    * Group 1: -H
+> >    * Group 2: -CH₃
+> >    * Group 3 (Clockwise path): -CH₂-CH₂-CH₂-CH₂-CH(Cl)-
+> >    * Group 4 (Anticlockwise path): -CH(Cl)-CH₂-CH₂-CH₂-CH₂-
+> >    * Since the two ring pathways are different, **Carbon-2 is also a chiral centre**.
+> > 3. **Analyze Carbons 3, 4, 5, and 6:**
+> >    * Each of these ring carbons is bonded to two identical hydrogen atoms (-CH₂-), so none of them can be chiral centres.
+> > 4. **Conclusion:** 1-chloro-2-methylcyclohexane contains exactly **2 chiral centres** (Carbon-1 and Carbon-2).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Internal Symmetry & Meso Compounds
+> **Question:** A sample of (2R,3S)-tartaric acid has two chiral carbon atoms with the structure HOOC-C*H(OH)-C*H(OH)-COOH, yet it is completely optically inactive and cannot be resolved into separate enantiomers. Explain why this molecule is optically inactive.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the molecular symmetry:**
+> >    * Although the molecule contains two asymmetric chiral carbons (Carbon-2 and Carbon-3), both carbons are bonded to the exact same four groups (-H, -OH, -COOH, and -CH(OH)COOH).
+> >    * The (2R,3S) stereoisomer has an **internal plane of symmetry** (mirror plane) passing directly between Carbon-2 and Carbon-3.
+> > 2. **Explain the optical inactivity (Internal Compensation):**
+> >    * The top half of the molecule is the exact mirror image of the bottom half.
+> >    * The clockwise rotation of plane-polarised light caused by one chiral centre is exactly cancelled by the equal and opposite anticlockwise rotation caused by the other chiral centre within the same molecule (known as internal compensation).
+> > 3. **Identify the isomer type:**
+> >    * Such a stereoisomer is called a **meso compound** (meso-tartaric acid). Meso compounds are achiral overall despite having chiral centres.
 `,
     keyPoints: [
       'A polariser converts unpolarised light into plane-polarised light by absorbing oscillations in all but one plane.',
@@ -1288,53 +1819,89 @@ ${svgToken(sn2StereochemistrySvg)}
 ${svgToken(sn1StereochemistrySvg)}
 
 > [!IMPORTANT]
-> ### ⚛️ The $S_N2$ Mechanism & Stereochemical Inversion
-> The $S_N2$ mechanism operates primarily for primary halogenoalkanes:
-> * **Bimolecular:** The rate-determining step involves both the nucleophile (e.g. $\\text{OH}^-$) and the halogenoalkane.
+> ### ⚛️ The SN2 Mechanism & Stereochemical Inversion
+> The SN2 mechanism operates primarily for primary halogenoalkanes:
+> * **Bimolecular:** The rate-determining step involves both the nucleophile (e.g. $\\\\text{OH}^-$) and the halogenoalkane.
 > * **Backside Attack:** The nucleophile attacks the carbon atom from the opposite side of the leaving group (the halogen atom) to minimize electrostatic repulsion.
 > * **Transition State:** A high-energy intermediate forms where both the incoming nucleophile and leaving halogen are partially bonded to the carbon:
->   $$\\text{[HO} \\cdots \\text{C(R)(H)(R\')} \\cdots \\text{Br]}^-$$
+>   $$\\\\left[ \\\\text{HO} \\\\cdots \\\\text{C(R)(H)(R\\')} \\\\cdots \\\\text{Br} \\\\right]^-$$
 > * **Walden Inversion:** As the carbon-halogen bond breaks and the carbon-nucleophile bond forms, the other three groups attached to the carbon atom are pushed through, inverting the configuration (like an umbrella turning inside out in a gale).
 > * **Optical Activity Outcome:** If the reactant is a single optically active enantiomer, the product will be a **single enantiomer with inverted configuration** (Walden inversion). The optical activity is retained but the direction of rotation may change.
 
 > [!IMPORTANT]
-> ### ⚛️ The $S_N1$ Mechanism & Racemisation
-> The $S_N1$ mechanism operates primarily for tertiary halogenoalkanes:
+> ### ⚛️ The SN1 Mechanism & Racemisation
+> The SN1 mechanism operates primarily for tertiary halogenoalkanes:
 > * **Step 1: Carbocation Formation (Rate-Determining):** The carbon-halogen bond breaks heterolytically, releasing a halide ion and forming a carbocation intermediate:
->   $$\\text{R₃C-Br} \\rightarrow \\text{R₃C}^+ + \\text{Br}^-$$
-> * **Planar Intermediate:** The carbocation intermediate ($\\text{R₃C}^+$) has a **planar** trigonal geometry around the positively charged carbon atom.
-> * **Step 2: Nucleophilic Attack:** The nucleophile can attack the planar carbon atom from either the left or the right side.
+>   $$\\\\text{R}_3\\\\text{C-Br} \\\\rightarrow \\\\text{R}_3\\\\text{C}^+ + \\\\text{Br}^-$$
+> * **Planar Intermediate:** The carbocation intermediate ($\\\\text{R}_3\\\\text{C}^+$) has a **planar** trigonal geometry around the positively charged carbon atom.
 > * **Equal Probability:** Because the carbocation is planar, there is an **equal (50:50) probability** of attack from either side.
 > * **Optical Activity Outcome:** If the starting halogenoalkane is a single optically active enantiomer, nucleophilic attack yields equal quantities of both enantiomers, forming a **racemic mixture**.
 > * **Loss of Activity:** The product is **optically inactive** (racemisation has occurred).
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: SN2 Transition State
-> **Question:** 2-Bromobutane and cyanide ions react together by an $S_N2$ mechanism. Draw the structure of the transition state formed in this reaction.
+> **Question:** 2-Bromobutane and cyanide ions react together by an SN2 mechanism. Draw the structure of the transition state formed in this reaction.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify groups on Carbon-2:** Carbon-2 is bonded to: $-\\text{H}$, $-\\text{CH₃}$, $-\\text{CH₂CH₃}$, and $-\\text{Br}$.
+> > 1. **Identify groups on Carbon-2:** Carbon-2 is bonded to: -H, -CH₃, -CH₂CH₃, and -Br
 > > 2. **Set up the transition state layout:**
 > >    * Place the central carbon in the middle.
-> >    * Use dashed lines to show the partial bond to the incoming nucleophile ($-\\text{CN}$) and the leaving group ($-\\text{Br}$).
-> >    * Arrange the other three groups ($-\\text{H}$, $-\\text{CH₃}$, $-\\text{CH₂CH₃}$) vertically and in a planar arrangement perpendicular to the nucleophile-leaving group axis.
-> >    * Wrap the entire structure in square brackets with a negative charge outside:
-> >      $$\\left[ \\text{NC} \\cdots \\text{C(H)(CH₃)(CH₂CH₃)} \\cdots \\text{Br} \\right]^-$$
+> >    * Use dashed lines to show the partial bond to the incoming nucleophile (-CN) and the leaving group (-Br).
+> >    * Arrange the other three groups (-H, -CH₃, -CH₂CH₃) in a planar arrangement perpendicular to the nucleophile-leaving group axis.
+> >    * Wrap the entire structure in square brackets with a negative charge:
+> >      $$\\\\left[ \\\\text{NC} \\\\cdots \\\\text{C(H)(CH}_3\\\\text{)(CH}_2\\\\text{CH}_3\\\\text{)} \\\\cdots \\\\text{Br} \\\\right]^-$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: SN1 Mechanism & Optical Inactivity
-> **Question:** 2-Bromopropane and cyanide ions react together by an $S_N1$ mechanism. Explain why there is no change in optical activity in this reaction.
+> #### 📝 Worked Example 2: SN1 Mechanism & Achiral Reactant
+> **Question:** 2-Bromopropane and cyanide ions react together by an SN1 mechanism. Explain why there is no change in optical activity in this reaction.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Analyze the starting material:** 2-bromopropane has the structure $\\text{CH₃CHBrCH₃}$.
-> > 2. **Check for chirality:** The central carbon atom is bonded to two identical methyl ($-\\text{CH₃}$) groups. Thus, it does not contain a chiral centre and is **achiral**.
+> > 1. **Analyze the starting material:** 2-bromopropane has the structure CH₃CHBrCH₃.
+> > 2. **Check for chirality:** The central carbon atom is bonded to two identical methyl (-CH₃) groups. Thus, it does not contain a chiral centre and is **achiral**.
 > > 3. **Explain optical activity:** Since the starting material 2-bromopropane is achiral, it has no optical activity.
-> > 4. **Explain product chirality:** The product 2-methylpropanenitrile ($\\text{(CH₃)₂CHCN}$) is also achiral and optically inactive.
+> > 4. **Explain product chirality:** The product 2-methylpropanenitrile ((CH₃)₂CHCN) is also achiral and optically inactive.
 > > 5. **Conclusion:** Because both the reactant and the product are achiral, there is no change in optical activity (the mixture remains optically inactive throughout).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: SN1 Hydrolysis of an Optically Active Tertiary Halogenoalkane
+> **Question:** A single enantiomer of (R)-3-bromo-3-methylhexane is hydrolysed with aqueous sodium hydroxide.
+> 1) Describe the structure of the intermediate formed in the rate-determining step.
+> 2) Explain why the resulting alcohol product mixture shows zero optical activity.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Describe the carbocation intermediate:**
+> >    * In the slow rate-determining step, the C-Br bond breaks heterolytically, releasing a Br⁻ ion.
+> >    * This forms a tertiary carbocation intermediate: **[CH₃C⁺(C₂H₅)C₃H₇]**.
+> >    * The central positively charged carbon has three bonding pairs of electrons and no lone pairs, adopting a **trigonal planar geometry** (bond angles of 120°).
+> > 2. **Explain racemisation and optical inactivity:**
+> >    * The planar carbocation can be attacked by the hydroxide nucleophile (:OH⁻) from either the top face or the bottom face with **equal 50:50 probability**.
+> >    * Attack from one side yields the (R)-alcohol enantiomer, while attack from the opposite side yields the (S)-alcohol enantiomer.
+> >    * Equal amounts of both enantiomers form, producing a **racemic mixture** (racemate).
+> >    * The equal and opposite optical rotations of the two enantiomers cancel each other out, making the mixture completely **optically inactive**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Deducing Reaction Mechanism from Polarimetry Data
+> **Question:** An organic chemist investigates the alkaline hydrolysis of an optically pure chiral halogenoalkane sample that has an initial optical rotation of +32.0°.
+> * **Experiment A (Polar aprotic solvent):** The final product has an optical rotation of -26.5°.
+> * **Experiment B (Polar protic solvent):** The final product has an optical rotation of 0.0°.
+> 
+> Deduce and justify the nucleophilic substitution mechanism operating in each experiment.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze Experiment A (Rotation = -26.5°):**
+> >    * **Deduction:** **SN2 Mechanism**.
+> >    * **Justification:** The product remains optically active with an inverted configuration (**Walden inversion**). Backside attack by the nucleophile in a single concerted step inverts the tetrahedral geometry without forming a planar intermediate, retaining a single enantiomer.
+> > 2. **Analyze Experiment B (Rotation = 0.0°):**
+> >    * **Deduction:** **SN1 Mechanism**.
+> >    * **Justification:** Complete loss of optical activity indicates **racemisation**. The reaction proceeds via a planar carbocation intermediate, allowing equal 50:50 attack from both faces to produce an equimolar racemic mixture.
 `,
     keyPoints: [
       'SN2 reactions of chiral halogenoalkanes result in optical inversion (Walden inversion).',
@@ -1441,22 +2008,48 @@ ${svgToken(sn1StereochemistrySvg)}
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Nomenclature & Boiling Temperature Trends
 > **Question:** 
-> 1. Give the IUPAC names for the two carbonyl isomers with the molecular formula $\\\\text{C}_4\\\\text{H}_8\\\\text{O}$.
+> 1. Give the IUPAC names for the two carbonyl isomers with the molecular formula C₄H₈O.
 > 2. Arrange the following compounds in order of increasing boiling temperature, explaining your reasoning: butane, butanal, butan-1-ol.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify the isomers of $\\\\text{C}_4\\\\text{H}_8\\\\text{O}$:**
-> >    * The 4-carbon chain aldehyde: **butanal** ($\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_2\\\\text{CHO}$)
-> >    * The 4-carbon chain ketone: **butanone** ($\\\\text{CH}_3\\\\text{COCH}_2\\\\text{CH}_3$)
+> > 1. **Identify the isomers of C₄H₈O:**
+> >    * The 4-carbon chain aldehyde: **butanal** (CH₃CH₂CH₂CHO)
+> >    * The 4-carbon chain ketone: **butanone** (CH₃COCH₂CH₃)
 > > 2. **Arrange by boiling temperatures (lowest to highest):**
 > >    * **butane < butanal < butan-1-ol**
 > > 3. **Formulate the explanation based on intermolecular forces:**
 > >    * **butane:** An alkane experiencing only weak London dispersion forces, requiring the least energy to overcome.
 > >    * **butanal:** A polar carbonyl compound experiencing permanent dipole-dipole forces in addition to London forces, which are stronger than London forces alone.
-> >    * **butan-1-ol:** An alcohol experiencing strong intermolecular hydrogen bonding (due to the polar $-\\\\text{OH}$ group) in addition to London forces, requiring the most energy to overcome.
- 
+> >    * **butan-1-ol:** An alcohol experiencing strong intermolecular hydrogen bonding (due to the polar -OH group) in addition to London forces, requiring the most energy to overcome.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Systematic Carbonyl Isomers & Chirality (C₅H₁₀O)
+> **Question:** 
+> 1. Draw the structural formulas and state the IUPAC names for the three isomeric ketones with the molecular formula C₅H₁₀O.
+> 2. There are four isomeric aldehydes with the molecular formula C₅H₁₀O. State their IUPAC names and identify which of these aldehydes contains a chiral centre, clearly justifying your choice.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the three ketone isomers of C₅H₁₀O:**
+> >    * **Pentan-2-one:** CH₃COCH₂CH₂CH₃ (straight chain, C=O on Carbon-2).
+> >    * **Pentan-3-one:** CH₃CH₂COCH₂CH₃ (straight chain, C=O on Carbon-3, symmetrical).
+> >    * **3-Methylbutan-2-one:** CH₃COCH(CH₃)₂ (branched chain ketone).
+> > 2. **Identify the four aldehyde isomers of C₅H₁₀O:**
+> >    * **Pentanal:** CH₃CH₂CH₂CH₂CHO (straight-chain aldehyde).
+> >    * **2-Methylbutanal:** CH₃CH₂CH(CH₃)CHO (methyl branch on Carbon-2).
+> >    * **3-Methylbutanal:** (CH₃)₂CHCH₂CHO (methyl branch on Carbon-3).
+> >    * **2,2-Dimethylpropanal:** (CH₃)₃CCHO (two methyl branches on Carbon-2).
+> > 3. **Identify and justify the chiral aldehyde:**
+> >    * **Chiral Isomer:** **2-methylbutanal** (CH₃CH₂C\*H(CH₃)CHO).
+> >    * **Justification:** Carbon-2 is bonded to **four completely different groups**:
+> >      * Group 1: -H (hydrogen atom)
+> >      * Group 2: -CH₃ (methyl group)
+> >      * Group 3: -CHO (aldehyde functional group)
+> >      * Group 4: -CH₂CH₃ (ethyl group)
+> >    * Because Carbon-2 has four different substituents, it forms an asymmetric chiral centre that exhibits optical isomerism (enantiomerism).
 `,
     keyPoints: [
       'Aldehydes carry terminal carbonyl groups; ketones carry internal carbonyl groups.',
@@ -1684,7 +2277,6 @@ ${svgToken(sn1StereochemistrySvg)}
 > >   2. **Reactant Type:** Pentanal is a 5-carbon aldehyde. Aldehydes are easily oxidised (using acidified potassium dichromate(VI)) to carboxylic acids.
 > >   3. **Mechanism:** The aldehyde group (-CHO) is oxidised to a carboxyl group (-COOH), producing a 5-carbon carboxylic acid.
 > >   4. **Product name:** **pentanoic acid**
-> > 
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Observations in Redox Tests
@@ -1700,8 +2292,44 @@ ${svgToken(sn1StereochemistrySvg)}
 > >   2. **Observation:** Since no reaction occurs, the orange dichromate(VI) ions (Cr₂O₇²⁻) are not reduced to green chromium(III) ions (Cr³⁺). The solution **remains orange** (no colour change).
 > > * **(b) Ethanal + Tollens' Reagent:**
 > >   1. **Reasoning:** Ethanal (CH₃CHO) is an aldehyde and readily oxidises to ethanoic acid. In doing so, it reduces the diamminesilver(I) complex ions [Ag(NH₃)₂]⁺ present in Tollens' reagent to metallic silver (Ag):
-> >      $$\\\\text{CH}_3\\\\text{CHO} + 2[\\\\text{Ag(NH}_3\\\\text{)}_2]^+ + 3\\\\text{OH}^- \\\\rightarrow \\\\text{CH}_3\\\\text{COO}^- + 2\\\\text{Ag(s)} + 4\\\\text{NH}_3 + 2\\\\text{H}_2\\\\text{O}$$
+> >      $$CH_3CHO + 2[Ag(NH_3)_2]^+ + 3OH^- \rightarrow CH_3COO^- + 2Ag(s) + 4NH_3 + 2H_2O$$
 > >   2. **Observation:** The metallic silver deposits on the inner glass wall of the test tube, so the **colourless solution forms a silver mirror** (or a grey/black precipitate).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: The Triiodomethane (Iodoform) Reaction
+> **Question:** Predict whether each of the following compounds gives a positive triiodomethane test when warmed with iodine in aqueous sodium hydroxide: ethanal, pentan-3-one, propan-2-ol.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze each compound for the required structural group:**
+> >    * **Ethanal (CH₃CHO):** Contains the methyl carbonyl group (CH₃C=O). **Positive result**.
+> >    * **Pentan-3-one (CH₃CH₂COCH₂CH₃):** Carbonyl carbon is bonded to two ethyl groups (-CH₂CH₃) with no methyl group adjacent to C=O. **Negative result**.
+> >    * **Propan-2-ol (CH₃CH(OH)CH₃):** Contains the secondary alcohol group CH₃CH(OH)- which is oxidised in situ by the alkaline iodine to propanone (CH₃COCH₃). **Positive result**.
+> > 2. **Reaction equation for ethanal:**
+> >    $$CH_3CHO + 3I_2 + 4NaOH \rightarrow HCOONa + CHI_3(s) + 3NaI + 3H_2O$$
+> > 3. **Observation:** A **pale-yellow precipitate** of triiodomethane (CHI₃) forms with a characteristic antiseptic smell.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Identifying Unknown Carbonyls via 2,4-DNPH Derivatives
+> **Question:** A colorless liquid Y has the molecular formula C₅H₁₀O and a boiling point of 102°C. 
+> * Liquid Y forms an orange crystalline precipitate with 2,4-dinitrophenylhydrazine.
+> * Liquid Y gives a negative result with Tollens' reagent and a positive result with iodine in aqueous alkali.
+> * Outline the laboratory procedure to purify and identify liquid Y using its 2,4-DNPH derivative, and deduce its identity.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce functional group and structure:**
+> >    * **Orange precipitate with 2,4-DNPH:** Confirms Y is an aldehyde or ketone.
+> >    * **Negative Tollens' test:** Proves Y is a **ketone** (not an aldehyde).
+> >    * **Positive Iodoform test:** Proves Y contains a methyl carbonyl group (CH₃C=O).
+> >    * **Molecular formula C₅H₁₀O:** The only 5-carbon methyl ketone is **pentan-2-one** (CH₃COCH₂CH₂CH₃) or 3-methylbutan-2-one. (Its straight-chain boiling point of 102°C corresponds to pentan-2-one).
+> > 2. **Experimental procedure to confirm identity:**
+> >    * **Filtration:** Filter off the solid orange precipitate using suction filtration (Buchner funnel).
+> >    * **Recrystallisation (Purification):** Dissolve the crude solid in a minimum volume of hot solvent, cool the solution slowly to allow crystals to reform, and filter the pure crystals.
+> >    * **Melting Point Determination:** Dry the purified crystals and determine their melting point accurately using a melting point apparatus (capillary tube method).
+> >    * **Data Table Comparison:** Compare the measured melting point of the derivative against published data values to confirm the exact compound.
 `,
     keyPoints: [
       'LiAlH₄ reduces aldehydes to primary alcohols and ketones to secondary alcohols.',
@@ -1715,173 +2343,187 @@ ${svgToken(sn1StereochemistrySvg)}
     type: 'text',
     content: `
 > [!NOTE]
-> ### 📝 Nomenclature of Carboxylic Acids & Esters
-> * **Carboxylic Acids:** Functional group $-\\text{COOH}$. Suffix **-oic acid**.
-> * **Esters:** Functional group $-\\text{COOR\'}$. Naming consists of two words:
->   * *First word:* Alkyl group joined to the oxygen (from the alcohol).
->   * *Second word:* Carboxylate group (from the carboxylic acid).
+> ### ⚛️ Structure, Bonding & Delocalisation in Carboxylic Acids
+> * **Carboxyl Functional Group ($-\\\\text{COOH}$):** Consists of a carbonyl group ($\\\\text{C}=\\\\text{O}$) and a hydroxyl group ($-\\\\text{OH}$) attached to the very same carbon atom.
+> * **Three Polar Bonds:** Contains three polar covalent bonds:
+>   $$\\\\text{C}^{\\\\delta+} = \\\\text{O}^{\\\\delta-}, \\\\quad \\\\text{C}^{\\\\delta+} - \\\\text{O}^{\\\\delta-}, \\\\quad \\\\text{and } \\\\text{O}^{\\\\delta-} - \\\\text{H}^{\\\\delta+}$$
+> * **Carboxylate Ion Resonance ($\\\\text{RCOO}^-$):** When a carboxylic acid donates a proton ($\\\\text{H}^+$) in water, it forms a carboxylate ion:
+>   $$\\\\text{RCOOH} + \\\\text{H}_2\\\\text{O} \\\\rightleftharpoons \\\\text{RCOO}^- + \\\\text{H}_3\\\\text{O}^+$$
+>   * The negative charge and the $\\\\pi$-electron density are **delocalised evenly** across both oxygen atoms and the central carbon atom.
+>   * As a result, both $\\\\text{C-O}$ bond lengths in the carboxylate ion are **completely equal in length and bond strength** (intermediate between single and double bonds, with a net charge of $-\\\\frac{1}{2}$ on each oxygen).
 > 
-> #### Table A: Nomenclature of Esters
-> | Structural Formula | IUPAC Name | Common Name |
-> | :--- | :--- | :--- |
-> | $\\text{HCOOCH₃}$ | methyl methanoate | methyl formate |
-> | $\\text{CH₃COOCH₃}$ | methyl ethanoate | methyl acetate |
-> | $\\text{HCOOCH₂CH₃}$ | ethyl methanoate | ethyl formate |
-> | $\\text{CH₃COOCH₂CH₃}$ | ethyl ethanoate | ethyl acetate |
-> | $\\text{CH₃COOCH₂CH₂CH₃}$ | propyl ethanoate | propyl acetate |
-> 
-> #### Table B: Displayed and Skeletal Formulae of Esters
-> Shows the structural chains flanking the $-\\text{COO}-$ link.
-
-> [!IMPORTANT]
-> ### ⚛️ Bonding & Physical Properties of Esters
-> * **No Intermolecular Hydrogen Bonding:** Esters are colourless, volatile liquids with relatively low melting/boiling points. Because all hydrogen atoms are bonded directly to carbon atoms, hydrogen bonding between ester molecules is impossible.
-> * **Pleasant Smells & Uses:** Many esters have pleasant, sweet smells of fruits and flowers and are used in perfumes, food flavourings, solvents, and biofuels:
->   * **pentyl ethanoate:** smells of pears
->   * **3-methylbutyl ethanoate:** smells of bananas
->   * **methyl butanoate:** smells of apples
->   * **benzyl ethanoate:** smells of apples and pears
+> ${svgToken(carboxylateDelocalisationSvg)}
 
 > [!BOX]
-> ### 💧 Hydrolysis of Esters
-> Esters undergo hydrolysis to break back down into their corresponding acids/alcohols:
-> * **1. Acid Hydrolysis:** Reversible, slow reaction. Heated under reflux with dilute acid (e.g. $\\text{H₂SO₄}$):
->   $$\\text{CH₃COOCH₂CH₃} + \\text{H₂O} \\rightleftharpoons \\text{CH₃COOH} + \\text{CH₃CH₂OH} \\quad \\text{(forms ethanoic acid + ethanol)}$$
-> * **2. Base Hydrolysis (Saponification):** Irreversible, complete reaction. Heated under reflux with aqueous alkali (e.g. $\\text{NaOH}$):
->   $$\\text{CH₃CH₂COOCH₃} + \\text{NaOH} \\rightarrow \\text{CH₃CH₂COO}^- + \\text{Na}^+ + \\text{CH₃OH} \\quad \\text{(sodium propanoate + methanol)}$$
->   * Adding dilute acid converts the salt to propanoic acid: $\\text{CH₃CH₂COO}^- + \\text{H}^+ \\rightarrow \\text{CH₃CH₂COOH}$.
-> * **Saponification of Triglycerides (Soap-making):** Triglycerides (triesters found in vegetable oils/animal fats) react with $\\text{NaOH}$ to yield **glycerol** (propane-1,2,3-triol) and **soaps** (sodium carboxylate salts of long-chain fatty acids like sodium stearate):
->   $$\\\\text{Triglyceride} + 3\\\\text{NaOH} \\\\rightarrow \\\\text{propane-1,2,3-triol (glycerol)} + 3\\\\text{C₁₇H₃₅COO}^-\\\\text{Na}^+ \\\\text{ (sodium stearate)}$$
+> ### 🌡️ Physical Properties & Dimerisation
+> * **Boiling Temperatures:** Carboxylic acids have **significantly higher boiling points** than alkanes, carbonyls, or alcohols of similar molar mass due to extensive intermolecular hydrogen bonding.
+> * **Dimer Formation:** In pure liquid state or in non-polar organic solvents, carboxylic acids form stable **hydrogen-bonded dimers** held together by two hydrogen bonds per pair of molecules.
+> 
+> ${svgToken(carboxylicAcidDimerSvg)}
+> 
+> * **Mass Spectrometry Exam Tip:** In mass spectrometry, ethanoic acid shows a prominent molecular ion peak at $m/z = 120$, corresponding to the dimer ion $[\\\\text{CH}_3\\\\text{COOH}]_2^+$.
 
 > [!BOX]
-> ### 🧪 Preparation of Carboxylic Acids
-> Carboxylic acids can be synthesized in the laboratory via two main pathways:
+> ### 💧 Water Solubility Trends
+> * **Short-Chain Acids ($C_1 - C_4$):** Small-chain carboxylic acids (methanoic, ethanoic, propanoic, and butanoic) are **completely miscible with water** because they form multiple hydrogen bonds with water molecules (both at $\\\\text{C}=\\\\text{O} \\\\cdots \\\\text{H-O}$ and $\\\\text{O-H} \\\\cdots \\\\text{O}$).
 > 
+> ${svgToken(carboxylicAcidWaterHbondsSvg)}
+> 
+> * **Chain Length Effect:** Solubility decreases rapidly as carbon chain length increases. The non-polar hydrophobic hydrocarbon tail becomes larger and disrupts the hydrogen-bonded water network without forming sufficient intermolecular attractions to compensate.
+
+> [!BOX]
+> ### 🧪 Laboratory Preparation of Carboxylic Acids
 > * **1. Oxidation of Primary Alcohols or Aldehydes:**
->    * Heated under reflux with **acidified potassium dichromate(VI)** ($\\text{Cr₂O₇}^{2-}/\\text{H}^+$).
->    * Alcohols first oxidise to aldehydes, which immediately oxidise to carboxylic acids in situ.
->    * *Example (from propan-1-ol):*
->      $$\\text{CH₃CH₂CH₂OH} + 2[\\text{O}] \\rightarrow \\text{CH₃CH₂COOH} + \\text{H₂O}$$
->    * *Example (from propanal):*
->      $$\\text{CH₃CH₂CHO} + [\\text{O}] \\rightarrow \\text{CH₃CH₂COOH}$$
->    * *Purification:* Fractional distillation is used to isolate pure carboxylic acid.
-> * **2. Hydrolysis of Nitriles (RCN):**
->    * Nitriles are heated under reflux with either dilute acid or aqueous alkali:
->    * **Acid Hydrolysis:** Yields a carboxylic acid and an ammonium salt directly:
->      $$\\text{CH₃CH₂CN} + \\text{H}^+ + 2\\text{H₂O} \\rightarrow \\text{CH₃CH₂COOH} + \\text{NH₄}^+$$
->    * **Alkaline Hydrolysis:** Yields a carboxylate salt and ammonia gas:
->      $$\\text{CH₃CH₂CN} + \\text{OH}^- + \\text{H₂O} \\rightarrow \\text{CH₃CH₂COO}^- + \\text{NH₃}$$
->      * Adding dilute acid (like HCl) converts the carboxylate ion to the carboxylic acid:
->        $$\\text{CH₃CH₂COO}^- + \\text{H}^+ \\rightarrow \\text{CH₃CH₂COOH}$$
+>   * Reagents / Conditions: Acidified potassium dichromate(VI) ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7 / \\\\text{H}_2\\\\text{SO}_4$), heated under reflux.
+>   * *Primary Alcohol:* $\\\\text{RCH}_2\\\\text{OH} + 2[\\\\text{O}] \\\\rightarrow \\\\text{RCOOH} + \\\\text{H}_2\\\\text{O}$
+>   * *Aldehyde:* $\\\\text{RCHO} + [\\\\text{O}] \\\\rightarrow \\\\text{RCOOH}$
+> * **2. Hydrolysis of Nitriles ($\\\\text{R-CN}$):**
+>   * *Acidic Hydrolysis:* Heated under reflux with dilute acid (e.g. $\\\\text{HCl(aq)}$):
+>     $$\\\\text{RCN} + \\\\text{H}^+ + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{RCOOH} + \\\\text{NH}_4^+$$
+>   * *Alkaline Hydrolysis:* Heated under reflux with aqueous alkali (e.g. $\\\\text{NaOH(aq)}$), followed by acidification:
+>     $$\\\\text{RCN} + \\\\text{OH}^- + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{RCOO}^- + \\\\text{NH}_3$$
+>     $$\\\\text{RCOO}^- + \\\\text{H}^+ \\\\rightarrow \\\\text{RCOOH}$$
 
 > [!BOX]
-> ### 🧪 Reactions of Carboxylic Acids
-> * **1. Reduction:** Reduced directly to **primary alcohols** using **lithium tetrahydridoaluminate(III)** ($\\text{LiAlH₄}$) in dry ether ($4[\\text{H}]$):
->   $$\\text{CH₃CH₂CH₂COOH} + 4[\\text{H}] \\rightarrow \\text{CH₃CH₂CH₂CH₂OH} + \\text{H₂O} \\quad \\text{(butanoic acid } \\rightarrow \\text{ butan-1-ol)}$$
->   * *Note:* The reaction cannot be stopped at the aldehyde stage because aldehydes are more easily reduced than carboxylic acids.
-> * **2. Neutralisation:** Weak acids that react with bases (like NaOH) to form ionic carboxylate salts:
->   $$\\text{CH₃COOH} + \\text{NaOH} \\rightarrow \\text{CH₃COO}^-\\text{Na}^+ + \\text{H₂O} \\quad \\text{(Sodium ethanoate)}$$
-> * **3. Halogenation (Acyl Chloride Formation):** Reacts vigorously with **phosphorus(V) chloride** ($\\text{PCl₅}$) under anhydrous conditions at room temperature:
->   $$\\text{CH₃CH₂COOH} + \\text{PCl₅} \\rightarrow \\text{CH₃CH₂COCl} + \\text{POCl₃} + \\text{HCl(g)}$$
->   * Misty fumes of HCl gas escape, and fractional distillation is used to separate the acyl chloride product from liquid $\\text{POCl₃}$.
-> * **4. Esterification:** Slow, reversible reaction with alcohols in the presence of concentrated sulfuric acid ($\\text{H₂SO₄}$) catalyst under reflux:
->   $$\\text{HCOOH} + \\text{CH₃CH₂OH} \\rightleftharpoons \\text{HCOOCH₂CH₃} + \\text{H₂O} \\quad \\text{(forms ethyl methanoate)}$$
+> ### 🧪 Chemical Reactions of Carboxylic Acids
+> * **1. Reduction:**
+>   * Reagents / Conditions: Lithium tetrahydridoaluminate(III) ($\\\\text{LiAlH}_4$) in dry ether at room temperature.
+>   * Reduced directly to $1^\\\\circ$ primary alcohols ($4[\\\\text{H}]$):
+>     $$\\\\text{RCOOH} + 4[\\\\text{H}] \\\\rightarrow \\\\text{RCH}_2\\\\text{OH} + \\\\text{H}_2\\\\text{O}$$
+> * **2. Neutralisation / Salt Formation:**
+>   * *With Alkalis:* $\\\\text{CH}_3\\\\text{COOH} + \\\\text{NaOH} \\\\rightarrow \\\\text{CH}_3\\\\text{COONa} + \\\\text{H}_2\\\\text{O}$
+>   * *With Carbonates:* $2\\\\text{RCOOH} + \\\\text{Na}_2\\\\text{CO}_3 \\\\rightarrow 2\\\\text{RCOONa} + \\\\text{CO}_2 + \\\\text{H}_2\\\\text{O}$ (effervescence of $\\\\text{CO}_2$ gas).
+> * **3. Halogenation (Acyl Chloride Synthesis):**
+>   * Reagents / Conditions: Phosphorus(V) chloride ($\\\\text{PCl}_5$) under anhydrous conditions at room temperature (vigorous reaction).
+>   * Equation: $\\\\text{RCOOH} + \\\\text{PCl}_5 \\\\rightarrow \\\\text{RCOCl} + \\\\text{POCl}_3 + \\\\text{HCl}$
+>   * Observations: Misty fumes of hydrogen chloride ($\\\\text{HCl}$) gas.
+> * **4. Esterification:**
+>   * Reagents / Conditions: Alcohol with concentrated sulfuric acid ($\\\\text{conc. H}_2\\\\text{SO}_4$) catalyst, heated under reflux.
+>   * Reversible equilibrium reaction:
+>     $$\\\\text{RCOOH} + \\\\text{R'OH} \\\\rightleftharpoons \\\\text{RCOOR'} + \\\\text{H}_2\\\\text{O}$$
+
+> [!BOX]
+> ### 🧪 Carboxylic Acid Derivatives & Hydrolysis
+> * **Acyl Chlorides ($\\\\text{RCOCl}$):** Highly reactive; react vigorously at room temperature with evolution of steamy/misty fumes of $\\\\text{HCl(g)}$:
+>   * *With Water:* $\\\\text{RCOCl} + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{RCOOH} + \\\\text{HCl}$
+>   * *With Alcohols:* $\\\\text{RCOCl} + \\\\text{R'OH} \\\\rightarrow \\\\text{RCOOR'} + \\\\text{HCl}$ (irreversible, high yield)
+>   * *With Ammonia:* $\\\\text{RCOCl} + 2\\\\text{NH}_3 \\\\rightarrow \\\\text{RCONH}_2 + \\\\text{NH}_4\\\\text{Cl}$ (forms primary amide)
+>   * *With Primary Amines:* $\\\\text{RCOCl} + 2\\\\text{R'NH}_2 \\\\rightarrow \\\\text{RCONHR'} + \\\\text{R'NH}_3^+ \\\\text{Cl}^-$ (forms secondary amide)
+> * **Hydrolysis of Esters ($\\\\text{RCOOR'}$):**
+>   * *Acidic Hydrolysis:* Reversible, heated under reflux with dilute acid ($\\\\text{HCl} / \\\\text{H}_2\\\\text{SO}_4$):
+>     $$\\\\text{RCOOR'} + \\\\text{H}_2\\\\text{O} \\\\rightleftharpoons \\\\text{RCOOH} + \\\\text{R'OH}$$
+>   * *Alkaline Hydrolysis (Saponification):* Non-reversible, heated under reflux with aqueous alkali ($\\\\text{NaOH}$):
+>     $$\\\\text{RCOOR'} + \\\\text{OH}^- \\\\rightarrow \\\\text{RCOO}^- + \\\\text{R'OH}$$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Displayed Formulas
-> **Question:** Write the displayed formula for: (a) methanoic acid, (b) ethanedioic acid.
+> **Question:** Write the displayed formula for:
+> 1) methanoic acid
+> 2) ethanedioic acid
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Methanoic acid (HCOOH):** Display one carbon atom bonded to double-bond oxygen, single-bond hydroxyl group, and single-bond hydrogen:
-> >   $$\\text{H-C(=O)-OH}$$
-> * **(b) Ethanedioic acid (HOOC-COOH):** Display two carbon atoms bonded together, each carrying a double-bonded oxygen and a hydroxyl group:
-> >   $$\\text{HO-C(=O)-C(=O)-OH}$$
+> > 1. **Methanoic Acid (HCOOH):**
+> >    * Consists of a single carbon atom bonded to a hydrogen atom, a double-bonded oxygen atom, and a hydroxyl group (-OH).
+> > 
+> > ${svgToken(methanoicAcidDisplayedSvg)}
+> > 
+> > 2. **Ethanedioic Acid (HOOC-COOH):**
+> >    * A dicarboxylic acid consisting of two directly bonded carbon atoms, each attached to a double-bonded oxygen and a hydroxyl group.
+> > 
+> > ${svgToken(ethanedioicAcidDisplayedSvg)}
+> 
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Hexanoic vs Ethanoic Solubility
+> #### 📝 Worked Example 2: Comparative Solubility Explanation
 > **Question:** Explain why hexanoic acid is much less soluble than ethanoic acid in water.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify the functional groups:** Both acids contain the polar $-\\text{COOH}$ group which can form hydrogen bonds with water.
-> > 2. **Analyze the alkyl tail:**
-> >    * Ethanoic acid has a small methyl ($-\\text{CH₃}$) tail.
-> >    * Hexanoic acid has a much larger, hydrophobic pentyl ($-\\text{CH₂CH₂CH₂CH₂CH₃}$) tail.
-> > 3. **Explain the solubility difference:** The large non-polar pentyl tail of hexanoic acid disrupts the hydrogen bonding network of water without forming strong interactions, making hexanoic acid much less soluble in water.
+> > 1. **Compare non-polar carbon chain lengths:**
+> >    * Hexanoic acid has a much longer non-polar hydrocarbon (alkyl) chain (-C₅H₁₁) than ethanoic acid (-CH₃).
+> > 2. **Analyze interaction with water molecules:**
+> >    * This large hydrophobic chain disrupts the hydrogen bonding network between water molecules without forming sufficient intermolecular attractions to compensate.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Methylpropanoic Acid Synthesis
+> #### 📝 Worked Example 3: Synthesis Equations for Methylpropanoic Acid
 > **Question:** Write equations for the preparation of methylpropanoic acid:
-> (a) by the oxidation of an alcohol.
-> (b) by the hydrolysis of a nitrile.
+> 1) By the oxidation of an alcohol.
+> 2) By the hydrolysis of a nitrile.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Oxidation of an alcohol:**
-> >   1. The starting alcohol must have the same carbon skeleton (methylpropane skeleton) with a primary alcohol group at the end: **2-methylpropan-1-ol** ($\\text{(CH₃)₂CHCH₂OH}$).
-> >   2. React with acidified potassium dichromate(VI) ($2[\\text{O}]$):
-> >      $$\\text{(CH₃)₂CHCH₂OH} + 2[\\text{O}] \\rightarrow \\text{(CH₃)₂CHCOOH} + \\text{H₂O}$$
-> * **(b) Hydrolysis of a nitrile:**
-> >   1. The starting nitrile is **methylpropanenitrile** ($\\text{(CH₃)₂CHCN}$).
-> >   2. Using acid hydrolysis:
-> >      $$\\text{(CH₃)₂CHCN} + \\text{H}^+ + 2\\text{H₂O} \\rightarrow \\text{(CH₃)₂CHCOOH} + \\text{NH₄}^+$$
+> > 1. **Oxidation of an alcohol:**
+> >    * Alcohol used: 2-methylpropan-1-ol, (CH₃)₂CHCH₂OH
+> >    * Equation:
+> >      $$(CH_3)₂CHCH₂OH + 2[O] → (CH_3)₂CHCOOH + H₂O$$
+> 2. **Hydrolysis of a nitrile:**
+>    * Nitrile used: 2-methylpropanenitrile, (CH₃)₂CHCN
+>    * Equation (Acidic Hydrolysis):
+>      $$(CH_3)₂CHCN + H^+ + 2H₂O → (CH_3)₂CHCOOH + NH₄^+$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Methylpropanoic Acid Derivatives
+> #### 📝 Worked Example 4: Conversions of Methylpropanoic Acid
 > **Question:** Write an equation for the conversion of methylpropanoic acid:
-> (a) into an acyl chloride.
-> (b) into a methyl ester.
+> 1) Into an acyl chloride.
+> 2) Into a methyl ester.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Conversion into an acyl chloride (halogenation):**
-> >   1. React with phosphorus(V) chloride ($\\text{PCl₅}$) under anhydrous conditions:
-> >      $$\\text{(CH₃)₂CHCOOH} + \\text{PCl₅} \\rightarrow \\text{(CH₃)₂CHCOCl} + \\text{POCl₃} + \\text{HCl}$$
-> * **(b) Conversion into a methyl ester (esterification):**
-> >   1. React with methanol ($\\text{CH₃OH}$) in the presence of concentrated $\\text{H₂SO₄}$ catalyst under reflux:
-> >      $$\\text{(CH₃)₂CHCOOH} + \\text{CH₃OH} \\rightleftharpoons \\text{(CH₃)₂CHCOOCH₃} + \\text{H₂O}$$
+> > 1. **Into an acyl chloride:**
+> >    * Reagent: Phosphorus(V) chloride (PCl₅) under anhydrous conditions.
+> >    * Product: 2-methylpropanoyl chloride
+> >    * Equation:
+> >      $$(CH_3)₂CHCOOH + PCl₅ → (CH_3)₂CHCOCl + POCl₃ + HCl$$
+> 2. **Into a methyl ester:**
+> >    * Reagent: Methanol (CH₃OH) with concentrated H₂SO₄ catalyst.
+> >    * Product: methyl 2-methylpropanoate
+> >    * Equation:
+> >      $$(CH_3)₂CHCOOH + CH₃OH ⇌ (CH_3)₂CHCOOCH₃ + H₂O$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Naming Esters
-> **Question:** What are the names of these esters?
-> (a) $\\text{CH₃CH₂COOCH₂CH₂CH₃}$
-> (b) $\\text{(CH₃)₂CHCOOCH₃}$
+> #### 📝 Worked Example 5: Chemical Identification Test
+> **Question:** How could you distinguish chemically between separate samples of propanoic acid and propan-1-ol? State the reagent used and the observations for each sample.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) $\\text{CH₃CH₂COOCH₂CH₂CH₃}$:**
-> >   1. The alkyl group joined to O is a propyl group (3 carbons: $-\\text{CH₂CH₂CH₃}$).
-> >   2. The carboxylate part joined to C has 3 carbons ($\\text{CH₃CH₂COO-}$), which is propanoate.
-> >   3. Ester name: **propyl propanoate**
-> * **(b) $\\text{(CH₃)₂CHCOOCH₃}$:**
-> >   1. The alkyl group joined to O is a methyl group ($-\\text{CH₃}$).
-> >   2. The carboxylate part joined to C has a methylpropane skeleton ($\\text{(CH₃)₂CHCOO-}$), which is 2-methylpropanoate.
-> >   3. Ester name: **methyl 2-methylpropanoate** (or methyl methylpropanoate).
+> > 1. **Choose a suitable reagent:**
+> >    * Sodium hydrogencarbonate (NaHCO₃(aq)) or sodium carbonate (Na₂CO₃(aq)).
+> > 2. **State the observation for propanoic acid:**
+> >    * Effervescence/fizzing occurs as carbon dioxide gas is produced:
+> >      $$CH₃CH₂COOH + NaHCO₃ → CH₃CH₂COONa + CO₂ + H₂O$$
+> > 3. **State the observation for propan-1-ol:**
+> >    * No reaction and no visible change (no effervescence).
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 6: Propyl Butanoate Hydrolysis
-> **Question:** Write equations for the hydrolysis of propyl butanoate in:
-> (a) acidic conditions.
-> (b) alkaline conditions.
+> #### 📝 Worked Example 6: Esterification Reaction & Naming
+> **Question:** Write a balanced equation for the reaction of ethanoic acid with propan-2-ol in the presence of a concentrated sulfuric acid catalyst. Give the name of the organic product.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Hydrolysis in acidic conditions:**
-> >   1. Propyl butanoate is $\\text{CH₃CH₂CH₂COOCH₂CH₂CH₃}$.
-> >   2. Reacts reversibly with water in the presence of acid catalyst:
-> >      $$\\text{CH₃CH₂CH₂COOCH₂CH₂CH₃} + \\text{H₂O} \\rightleftharpoons \\text{CH₃CH₂CH₂COOH} + \\text{CH₃CH₂CH₂OH}$$
-> >   3. Products are **butanoic acid** and **propan-1-ol**.
-> * **(b) Hydrolysis in alkaline conditions:**
-> >   1. Reacts completely with sodium hydroxide:
-> >      $$\\text{CH₃CH₂CH₂COOCH₂CH₂CH₃} + \\text{NaOH} \\rightarrow \\text{CH₃CH₂CH₂COONa} + \\text{CH₃CH₂CH₂OH}$$
-> >   2. Products are **sodium butanoate** and **propan-1-ol**.
+> > 1. **Write the equation:**
+> >    $$CH₃COOH + CH₃CH(OH)CH₃ ⇌ CH₃COOCH(CH₃)₂ + H₂O$$
+> 2. **Name the ester product:**
+> >    * The alkyl group from the alcohol is **isopropyl** (or 1-methylethyl).
+> >    * The carboxylate group from the acid is **ethanoate**.
+> >    * Product name: **isopropyl ethanoate** (or propan-2-yl ethanoate)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Mass Spectrometry Peak Explanation
+> **Question:** In the mass spectrum of pure ethanoic acid, a weak molecular ion peak is observed at $m/z = 120$. Explain why this peak occurs.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain dimerisation:** Ethanoic acid molecules form stable dimers in the liquid and gaseous states held together by double hydrogen bonds.
+> > 2. **Calculate the molar mass:** A single ethanoic acid molecule has a molecular formula of C₂H₄O₂ ($M_r = 60$). The dimer [CH₃COOH]₂ has a molecular mass of 120.
+> > 3. **Identify the molecular ion:** The peak at $m/z = 120$ corresponds to the ionized dimer [(CH₃COOH)₂]⁺.
 `,
     keyPoints: [
       'Carboxylic acids form stable dimers via double hydrogen bonding, raising boiling points.',
@@ -1897,116 +2539,198 @@ ${svgToken(sn1StereochemistrySvg)}
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🧪 Preparation and Reactivity of Acyl Chlorides
-> Acyl chlorides contain the functional group $-\\text{COCl}$:
-> * **Preparation:** Synthesised by reacting a carboxylic acid with phosphorus(V) chloride ($\\text{PCl₅}$) at room temperature:
->   $$\\text{RCOOH} + \\text{PCl₅} \\rightarrow \\text{RCOCl} + \\text{POCl₃} + \\text{HCl(g)}$$
->   * White misty fumes of hydrogen chloride ($\\text{HCl}$) gas are evolved.
-> * **Reactivity:** Much more reactive than carboxylic acids because the chloride ion ($-\\text{Cl}$) is a much better leaving group than the hydroxyl group ($-\\text{OH}$).
-> 
-> #### Table A: Displayed and Skeletal Formulae of Acyl Chlorides
-> | Name | Displayed Formula | Skeletal Formula |
-> | :--- | :--- | :--- |
-> | ethanoyl chloride | $\\text{CH₃-C(=O)-Cl}$ | $\\text{CH₃COCl}$ |
-> | propanoyl chloride | $\\text{CH₃CH₂-C(=O)-Cl}$ | $\\text{CH₃CH₂COCl}$ |
-> | butanoyl chloride | $\\text{CH₃CH₂CH₂-C(=O)-Cl}$ | $\\text{CH₃CH₂CH₂COCl}$ |
+> ### 🧪 Reactivity of Acyl Chlorides (RCOCl)
+> Acyl chlorides contain the functional group -COCl:
+> * **Preparation:** Synthesised by reacting a carboxylic acid with phosphorus(V) chloride (PCl₅) at room temperature under anhydrous conditions:
+>   $$RCOOH + PCl_5 \\rightarrow RCOCl + POCl_3 + HCl(g)$$
+>   * Misty fumes of hydrogen chloride (HCl) gas are evolved.
+> * **Reactivity Explanation:** The carbonyl carbon in RCOCl is attached to **two strongly electronegative atoms** (oxygen and chlorine):
+>   $$C^{\\delta+} = O^{\\delta-} \\quad \\text{and } C^{\\delta+} - Cl^{\\delta-}$$
+>   * This creates a highly electron-deficient carbon centre ($C^{\\delta+}$) that is readily attacked by nucleophiles containing oxygen ($:OH_2, :OH^-, R'OH$) or nitrogen ($:NH_3, R'NH_2, R'_2NH$) lone pairs.
+>   * Because Cl⁻ is a very stable leaving group, acyl chlorides undergo rapid nucleophilic addition-elimination reactions at room temperature without requiring heating or acid catalysts.
 
 > [!IMPORTANT]
-> ### ⚡ Nucleophilic Addition-Elimination Reactions
-> Acyl chlorides undergo rapid addition-elimination reactions at room temperature without the need for catalysts due to their highly electron-deficient carbonyl carbon bonded to two highly electronegative atoms (oxygen and chlorine):
+> ### ⚡ Stoichiometry with Nitrogen Nucleophiles
+> When reacting acyl chlorides with nitrogen nucleophiles, two moles of the amine/ammonia are consumed per mole of acyl chloride because the released HCl is an acid and reacts with the basic amine to form an ammonium salt:
 > 
-> * **1. Reaction with Water (Hydrolysis):** Vigorous reaction producing a carboxylic acid and misty fumes of $\\text{HCl}$ gas:
->   $$\\text{CH₃COCl} + \\text{H₂O} \\rightarrow \\text{CH₃COOH} + \\text{HCl(g)}$$
-> * **2. Reaction with Alcohols (Esterification):** Vigorous reaction producing an ester and $\\text{HCl}$ gas:
->   $$\\text{CH₃COCl} + \\text{CH₃CH₂OH} \\rightarrow \\text{CH₃COOCH₂CH₃} + \\text{HCl(g)}$$
-> * **3. Reaction with Ammonia:** Reacts to form a primary amide and $\\text{HCl}$. The basic ammonia immediately reacts with the acidic $\\text{HCl}$ byproduct to form solid ammonium chloride:
->   $$\\text{CH₃COCl} + \\text{NH₃} \\rightarrow \\text{CH₃CONH₂} + \\text{HCl(g)}$$
->   $$\\text{NH₃} + \\text{HCl(g)} \\rightarrow \\text{NH₄Cl(s)}$$
->   * *Combined Equation:*
->     $$\\text{CH₃COCl} + 2\\text{NH₃} \\rightarrow \\text{CH₃CONH₂} + \\text{NH₄Cl(s)}$$
-> * **4. Reaction with Primary Amines:** Reacts to form an N-substituted amide and $\\text{HCl}$ gas:
->   $$\\text{CH₃COCl} + \\text{CH₃NH₂} \\rightarrow \\text{CH₃CONHCH₃} + \\text{HCl(g)} \\quad \\text{(forms N-methylethanamide)}$$
-> * **5. Reaction with Secondary Amines:** Reacts to form an N,N-disubstituted amide:
->   $$\\text{CH₃COCl} + \\text{(CH₃)₂NH} \\rightarrow \\text{CH₃CON(CH₃)₂} + \\text{HCl(g)} \\quad \\text{(forms N,N-dimethylethanamide)}$$
-> * **Tertiary Amines:** Do **not** react with acyl chlorides because they lack a hydrogen atom bonded to the nitrogen, meaning they cannot eliminate $\\text{HCl}$.
+> * **1. With Ammonia (Primary Amide + Ammonium Chloride):**
+>   $$RCOCl + 2NH_3 \\rightarrow RCONH_2 + NH_4^+Cl^-$$
+> * **2. With Primary Amines (N-Substituted Secondary Amide + Alkylammonium Chloride):**
+>   $$RCOCl + 2R'NH_2 \\rightarrow RCONHR' + R'NH_3^+Cl^-$$
+> * **3. With Secondary Amines (N,N-Disubstituted Tertiary Amide + Dialkylammonium Chloride):**
+>   $$RCOCl + 2R'_2NH \\rightarrow RCONR'_2 + R'_2NH_2^+Cl^-$$
+> * **4. Tertiary Amines (R'₃N):** Cannot react because the nitrogen atom has **no hydrogen atom to lose** to eliminate HCl.
+
+> [!BOX]
+> ### 🌺 Esters: Properties & Uses
+> * **Physical Properties:** Esters are volatile, colourless liquids with characteristic pleasant fruity/sweet odors.
+> * **Uses:** Widely used as food flavourings, perfumes, organic solvents (e.g. ethyl ethanoate as nail polish remover), and plasticisers.
+> * **Saponification (Alkaline Hydrolysis of Triglycerides):**
+>   * Vegetable oils and animal fats are triesters of glycerol (propane-1,2,3-triol) and long-chain fatty acids (e.g. stearic acid, C₁₇H₃₅COOH).
+>   * Heating a triester with aqueous sodium hydroxide (NaOH) produces:
+>     1. Propane-1,2,3-triol (glycerol).
+>     2. Sodium carboxylate salts (soaps), e.g. sodium stearate (C₁₇H₃₅COONa).
+>   $$\text{Triester} + 3NaOH \rightarrow \text{Propane-1,2,3-triol} + 3RCOONa$$
 
 > [!IMPORTANT]
-> ### ⛓️ Condensation Polymerisation
-> * **Addition Polymerisation:** Monomers contain $\\text{C=C}$ double bonds. The bonds open up to link monomers together, and no other product molecules are formed.
-> * **Condensation Polymerisation:** Monomers contain reactive functional groups at both ends. When two monomer units link together, a small molecule (usually water or hydrogen chloride) is eliminated. Typically involves two different bifunctional monomers (e.g., dicarboxylic acid + diol).
-
-> [!IMPORTANT]
-> ### ⛓️ Polyester Formation (e.g. Terylene / PET)
-> * **Monomers:**
->   * Diol: **ethane-1,2-diol** ($\\text{HO-CH₂-CH₂-OH}$)
->   * Dicarboxylic acid: **benzene-1,4-dicarboxylic acid** (terephthalic acid, $\\text{HOOC-C₆H₄-COOH}$)
-> * **Reaction:** Carboxyl $-\\text{COOH}$ groups react with hydroxyl $-\\text{OH}$ groups, eliminating $\\text{H₂O}$ molecules to form ester linkages:
->   $$n\\\\text{HOOC-C₆H₄-COOH} + n\\\\text{HO-CH₂CH₂-OH} \\\\rightarrow \\\\text{[-CO-C₆H₄-CO-O-CH₂CH₂-O-]}_n + 2n\\\\text{H₂O}$$
-> * **Alternative Monomer (Diacyl Chloride):** We can also use benzene-1,4-dioyl chloride ($\\text{ClOC-C₆H₄-COCl}$) instead of the dicarboxylic acid. The reaction occurs in the same way, but eliminates **hydrogen chloride ($\\text{HCl}$)** instead of water.
-> * **Industrial Choice (Dicarboxylic Acid vs Diacyl Chloride):** Dicarboxylic acids are preferred in industry to avoid the release of toxic, corrosive $\\text{HCl}$ gas, which poses high health, safety, and environmental risks.
+> ### ⛓️ Polyesters & Condensation Polymerisation
+> * **Condensation Polymerisation Definition:** The formation of a polymer where two different bifunctional monomers react together with the simultaneous elimination of a small molecule (such as H₂O or HCl) at each linkage.
+> * **Monomer Requirements:** Monomers must be **difunctional** (contain two reactive functional groups at opposite ends, e.g. a dicarboxylic acid / diacyl chloride and a diol).
+> * **Terylene (PET):** Formed from benzene-1,4-dicarboxylic acid (terephthalic acid) and ethane-1,2-diol:
+>   $$n(HOOC-C_6H_4-COOH) + n(HO-CH_2CH_2-OH) \rightarrow [-OC-C_6H_4-CO-O-CH_2CH_2-O-]_n + (2n-1)H_2O$$
+> 
+> > [!WARNING]
+> > ### 🏭 Industrial Comparison: Dicarboxylic Acids vs. Diacyl Chlorides
+> > * **Diacyl Chlorides (ClOC-R-COCl):** React much faster at room temperature with high, irreversible yields. However, they produce highly **corrosive and toxic HCl gas** as a byproduct and are significantly more expensive to manufacture.
+> > * **Dicarboxylic Acids (HOOC-R-COOH):** Slower reaction requiring heating with an acid catalyst. However, they produce non-toxic **water (H₂O)** as a byproduct, making them much safer, environmentally friendly, and cheaper for large-scale industrial production.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Propanoyl Chloride Reactions
-> **Question:** Write the names of the organic products formed in the four similar reactions of propanoyl chloride with water, methanol, ammonia, and methylamine.
+> #### 📝 Worked Example 1: Products of Propanoyl Chloride Reactions
+> **Question:** Name the organic products formed in the reactions of propanoyl chloride (CH₃CH₂COCl) with:
+> 1) Water
+> 2) Methanol
+> 3) Ammonia
+> 4) Methylamine
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Propanoyl chloride + water:** Yields propanoic acid. Organic product: **propanoic acid**
-> > 2. **Propanoyl chloride + methanol:** Yields methyl ester. Organic product: **methyl propanoate**
-> > 3. **Propanoyl chloride + ammonia:** Yields primary amide. Organic product: **propanamide**
-> > 4. **Propanoyl chloride + methylamine:** Yields N-substituted amide. Organic product: **N-methylpropanamide**
+> > 1. **With water:** Hydrolysis yields propanoic acid. Organic product: **propanoic acid**
+> > 2. **With methanol:** Esterification yields methyl propanoate. Organic product: **methyl propanoate**
+> > 3. **With ammonia:** Reaction yields primary amide. Organic product: **propanamide**
+> > 4. **With methylamine:** Reaction yields N-substituted secondary amide. Organic product: **N-methylpropanamide**
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Butanoyl Chloride Reactions
-> **Question:** Write an equation for butanoyl chloride reacting with:
-> (a) propan-1-ol
-> (b) ethylamine
+> #### 📝 Worked Example 2: Equations for Reactions of Butanoyl Chloride
+> **Question:** Write balanced equations for the reactions of butanoyl chloride (CH₃CH₂CH₂COCl) with:
+> 1) propan-1-ol
+> 2) ethylamine
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> * **(a) Butanoyl chloride + propan-1-ol:**
-> >   $$\\text{CH₃CH₂CH₂COCl} + \\text{CH₃CH₂CH₂OH} \\rightarrow \\text{CH₃CH₂CH₂COOCH₂CH₂CH₃} + \\text{HCl}$$
-> >   * Product: **propyl butanoate**
-> * **(b) Butanoyl chloride + ethylamine:**
-> >   $$\\text{CH₃CH₂CH₂COCl} + \\text{CH₃CH₂NH₂} \\rightarrow \\text{CH₃CH₂CH₂CONHCH₂CH₃} + \\text{HCl}$$
-> >   * Product: **N-ethylbutanamide**
+> > 1. **With propan-1-ol:**
+> >    $$CH_3CH_2CH_2COCl + CH_3CH_2CH_2OH \rightarrow CH_3CH_2CH_2COOCH_2CH_2CH_3 + HCl$$
+> >    * Organic product name: **propyl butanoate**
+> > 2. **With ethylamine (Note stoichiometry 1:2):**
+> >    $$CH_3CH_2CH_2COCl + 2CH_3CH_2NH_2 \rightarrow CH_3CH_2CH_2CONHCH_2CH_3 + CH_3CH_2NH_3^+Cl^-$$
+> >    * Organic product name: **N-ethylbutanamide**
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Polymerisation Limits 
-> **Question:** Why is it not possible to make a polymer by reacting together molecules of $\\text{HOOCCH₂COOH}$ and $\\text{CH₃OH}$?
+> #### 📝 Worked Example 3: Naming Esters
+> **Question:** Name the following esters:
+> 1) CH₃CH₂COOCH₂CH₂CH₃
+> 2) (CH₃)₂CHCOOCH₃
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Analyze monomer functionality:**
-> >    * $\\text{HOOCCH₂COOH}$ (propanedioic acid) is bifunctional (has two carboxyl groups, one at each end).
-> >    * $\\text{CH₃OH}$ (methanol) is monofunctional (has only one hydroxyl group).
-> 2. **Explain the outcome:** Once methanol reacts with one of the carboxyl groups, the chain terminates because there is no second hydroxyl group on that end to react with another acid molecule. Polymerisation requires both monomers to be bifunctional to allow the chain to grow from both ends.
-
-<br>
+> > 1. **CH₃CH₂COOCH₂CH₂CH₃:**
+> >    * Alkyl group attached to O: propyl (-CH₂CH₂CH₃).
+> >    * Carboxylate group attached to C: propanoate (CH₃CH₂COO-).
+> >    * IUPAC Name: **propyl propanoate**
+> > 2. **(CH₃)₂CHCOOCH₃:**
+> >    * Alkyl group attached to O: methyl (-CH₃).
+> >    * Carboxylate group attached to C: 2-methylpropanoate ((CH₃)₂CHCOO-).
+> >    * IUPAC Name: **methyl 2-methylpropanoate**
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Polymer Repeat Unit Drawing
-> **Question:** Draw the repeat unit of the polymer formed between molecules of $\\text{HOOCCOOH}$ and $\\text{CH₃CH(OH)CH(OH)CH₃}$.
+> #### 📝 Worked Example 4: Hydrolysis Equations of Propyl Butanoate
+> **Question:** Write equations for the hydrolysis of propyl butanoate (CH₃CH₂CH₂COOCH₂CH₂CH₃) under:
+> 1) Acidic conditions
+> 2) Alkaline conditions
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify the monomers:**
-> >    * Dicarboxylic acid: $\\text{HOOCCOOH}$ (ethanedioic acid).
-> >    * Diol: $\\text{CH₃CH(OH)CH(OH)CH₃}$ (butane-2,3-diol).
-> 2. **Determine ester linkage formation:** The $-\\text{OH}$ groups of the diol lose $-\\text{H}$ and the $-\\text{COOH}$ groups of the acid lose $-\\text{OH}$, forming water.
-> 3. **Draft the repeat unit:** Link the carbonyls of the acid to the oxygens of the diol:
->    $$\\\\text{[-CO-CO-O-CH(CH₃)-CH(CH₃)-O-]}_n$$
+> > 1. **Acidic Hydrolysis (Reversible):**
+> >    $$CH_3CH_2CH_2COOCH_2CH_2CH_3 + H_2O \rightleftharpoons CH_3CH_2CH_2COOH + CH_3CH_2CH_2OH$$
+> > 2. **Alkaline Hydrolysis (Irreversible):**
+> >    $$CH_3CH_2CH_2COOCH_2CH_2CH_3 + OH^- \rightarrow CH_3CH_2CH_2COO^- + CH_3CH_2CH_2OH$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Polymerisation Limitations
+> **Question:** Why is it not possible to make a polymer by reacting HOOCCH₂COOH and CH₃OH?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze monomer functionality:** Methanol (CH₃OH) is a monofunctional alcohol containing only one -OH group.
+> > 2. **Explain chain termination:** Once both carboxyl ends of propanedioic acid react with methanol, a simple diester (dimethyl propanedioate) is formed and chain growth stops completely.
+> > 3. **State monomer requirement:** Condensation polymerisation requires bifunctional monomers at both ends to allow continuous propagation.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Polymer Repeat Unit Structure
+> **Question:** Draw the repeat unit of the polymer formed between HOOCCOOH (ethanedioic acid) and CH₃CH(OH)CH(OH)CH₃ (butane-2,3-diol).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify eliminated groups:** Carboxyl -COOH loses -OH and hydroxyl -OH loses -H to release water.
+> > 2. **Link monomer residues:** Combine the dicarbonyl residue (-C(=O)-C(=O)-) with the diol residue (-O-CH(CH₃)-CH(CH₃)-O-).
+> > 3. **Write structural repeat unit:**
+> >    $$[-C(=O)-C(=O)-O-CH(CH_3)-CH(CH_3)-O-]_n$$
+> 
+> ${svgToken(polyesterRepeatUnitSvg)}
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Nucleophilic Addition-Elimination Mechanism
+> **Question:** Outline the key steps in the mechanism for the reaction of ethanoyl chloride (CH₃COCl) with water to form ethanoic acid and hydrogen chloride. Explain why this reaction occurs spontaneously at room temperature.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Step 1: Nucleophilic Attack (Addition):**
+> >    * The carbonyl carbon is strongly electron-deficient ($C^{\delta+}$) due to electron withdrawal by both the oxygen and chlorine atoms.
+> >    * A lone pair of electrons on the oxygen atom of water ($:OH_2$) attacks the carbonyl carbon, breaking the $C=O$ $\pi$ bond and pushing electrons onto the oxygen atom to form a tetrahedral intermediate ($-O^-$).
+> > 2. **Step 2: Elimination & Regeneration of Carbonyl (C=O):**
+> >    * The lone pair on the oxygen atom reforms the $C=O$ double bond, expelling the chloride ion (Cl⁻) as a stable leaving group.
+> > 3. **Step 3: Deprotonation:**
+> >    * Loss of a proton ($H^+$) from the protonated oxygen yields the neutral ethanoic acid molecule (CH₃COOH) and releases HCl(g).
+> > 4. **Reason for spontaneous reaction:**
+> >    * The high electronegativity of both O and Cl makes the carbonyl carbon exceptionally reactive towards nucleophiles, and Cl⁻ is an excellent leaving group, yielding a very low activation energy.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Saponification Equation for a Triglyceride
+> **Question:** Write a balanced equation for the complete alkaline hydrolysis (saponification) of glyceryl tristearate ((C₁₇H₃₅COO)₃C₃H₅) using aqueous sodium hydroxide. Name the organic products formed.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine the stoichiometry:**
+> >    * Glyceryl tristearate is a triester containing three ester bonds; therefore, 1 mole of triester reacts with exactly **3 moles** of NaOH.
+> > 2. **Write the balanced chemical equation:**
+> >    $$(C_{17}H_{35}COO)_3C_3H_5 + 3NaOH \rightarrow C_3H_5(OH)_3 + 3C_{17}H_{35}COONa$$
+> > 3. **Name the organic products:**
+> >    * C₃H₅(OH)₃: **propane-1,2,3-triol** (glycerol).
+> >    * C₁₇H₃₅COONa: **sodium stearate** (soap).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Deducing Monomers from a Polyester Chain
+> **Question:** A sample of a biodegradable polyester has the following repeat unit:
+> $$[-O-CH(CH_3)-CO-]_n$$
+> 1) Deduce whether this polymer is formed from one monomer or two different monomers.
+> 2) Draw the structural formula and give the IUPAC name of the monomer(s) used.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the monomer type:**
+> >    * The repeat unit contains both an alcohol oxygen end (-O-) and an acyl/carbonyl end (-CO-) within the same continuous unit.
+> >    * Therefore, it is formed from **a single monomer** that contains both a hydroxyl group (-OH) and a carboxyl group (-COOH) in the same molecule (a hydroxycarboxylic acid).
+> > 2. **Reconstruct the monomer formula:**
+> >    * Add -H to the oxygen end and -OH to the carbonyl end:
+> >      $$HO-CH(CH_3)-COOH$$
+> > 3. **Give the IUPAC name:**
+> >    * Main chain has 3 carbons with -COOH at Carbon-1 and -OH at Carbon-2.
+> >    * IUPAC Name: **2-hydroxypropanoic acid** (commonly known as lactic acid; the polymer is poly(lactic acid) or PLA).
 `,
     keyPoints: [
       'Acyl chlorides undergo nucleophilic addition-elimination reactions, releasing HCl gas.',
-      'Acyl chlorides are preferred over carboxylic acids for ester synthesis in the laboratory because the reaction goes to completion at room temp.',
-      'Condensation polymerisation eliminates a small molecule (like H₂O or HCl) to form ester linkages.',
-      'Primary amines react with acyl chlorides to form N-substituted amides, while secondary amines form N,N-disubstituted amides. Tertiary amines do not react.',
-      'Bifunctional monomers are required for polymerisation. Monofunctional species cause chain termination.',
+      'Reactions of acyl chlorides with nitrogen nucleophiles consume 2 moles of amine per mole of acyl chloride.',
+      'Saponification converts triglycerides into glycerol and soap (sodium carboxylates).',
+      'Condensation polymerisation eliminates a small molecule (H₂O or HCl) to form polyesters.',
+      'Bifunctional monomers are strictly required for polymerisation; monofunctional monomers cause chain termination.',
       'Industrially, dicarboxylic acids are preferred over diacyl chlorides to avoid releasing toxic and corrosive HCl gas.'
     ]
   }
