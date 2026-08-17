@@ -3303,21 +3303,143 @@ ${svgToken(sn1StereochemistrySvg)}
 > 
 > ${svgToken(nmrPrinciplesSvg)}
 > 
-> * **Carbon-13 ($^{13}\text{C}$) NMR:** The number of peaks represents the number of different carbon environments in the molecule.
-> * **Proton ($^1\text{H}$) NMR:**
->    * **Chemical Shift ($\delta$):** Indicates the chemical environment of the protons (measured in ppm relative to TMS).
->    * **Integration Area:** The area under each peak is directly proportional to the relative number of protons ($^1\text{H}$) in that environment.
->    * **Spin-Spin Splitting ($n+1$ rule):** The number of sub-peaks (singlet, doublet, triplet, quartet) indicates the number of protons ($n$) attached to adjacent carbon atoms.
+> * **Carbon-13 ($^{13}\\\\text{C}$) NMR:** The number of peaks represents the number of different carbon environments in the molecule.
+>    * *Example:* Propan-1-ol ($\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_2\\\\text{OH}$) has 3 unique carbon environments (3 peaks at $\\\\delta \\\\approx 65, 25, 10\\\\text{ ppm}$).
+>    * *Example:* Propan-2-ol ($\\\\text{CH}_3\\\\text{CH(OH)CH}_3$) has only 2 unique carbon environments (2 peaks at $\\\\delta \\\\approx 65, 27\\\\text{ ppm}$) because the two terminal $-\\\\text{CH}_3$ groups are magnetically equivalent.
+> 
+> * **Proton ($^1\\\\text{H}$) NMR:**
+>    * **Chemical Shift ($\\\\delta$):** Indicates the chemical environment of the protons (measured in ppm relative to TMS at $\\\\delta = 0.0\\\\text{ ppm}$).
+>    * **Integration Area / Trace:** The area under each peak is directly proportional to the relative number of protons ($^1\\\\text{H}$) in that environment.
+>    * **Low-Resolution $^1\\\\text{H}$ NMR:** Shows single peaks for each proton environment without fine splitting structure.
+>    * **High-Resolution $^1\\\\text{H}$ NMR & $n+1$ Splitting Rule:** Peaks are split into sub-peaks (multiplets) by $n$ protons attached to adjacent non-equivalent carbon atoms:
+>      * $n=0 \\\\rightarrow$ **Singlet** ($1$ peak, peak area ratio $1$)
+>      * $n=1 \\\\rightarrow$ **Doublet** ($2$ sub-peaks, ratio $1:1$)
+>      * $n=2 \\\\rightarrow$ **Triplet** ($3$ sub-peaks, ratio $1:2:1$)
+>      * $n=3 \\\\rightarrow$ **Quartet** ($4$ sub-peaks, ratio $1:3:3:1$)
+> 
+> * **⚠️ Critical NMR Splitting Rules & Special Cases:**
+>    * **Symmetrical Molecules (No Splitting):** Protons in completely symmetrical environments do not split each other. For example, 1,2-dichloroethane ($\\\\text{CH}_2\\\\text{Cl}-\\\\text{CH}_2\\\\text{Cl}$) contains 4 equivalent protons, producing a single unsplit peak (singlet).
+>    * **Multiple Adjacent Proton Groups (Sextets & Quintets):** When a proton group is adjacent to two different proton groups, $n$ is the total sum of adjacent protons. For example, in 1-chloropropane ($\\\\text{CH}_3-\\\\text{CH}_2-\\\\text{CH}_2-\\\\text{Cl}$), the middle $-\\\\text{CH}_2-$ group is adjacent to 3 H's (from $-\\\\text{CH}_3$) and 2 H's (from $-\\\\text{CH}_2\\\\text{Cl}$). Total $n = 3 + 2 = 5$, producing $5+1 = 6$ sub-peaks (**sextet**).
+> 
 > * **NMR Active vs. Inactive Nuclei:**
->    * **Active Nuclei:** Only nuclei with an **odd number of nucleons** (protons + neutrons) have nuclear spin and are NMR active (e.g. $^1\text{H}$, $^{13}\text{C}$, $^{15}\text{N}$, $^{19}\text{F}$, $^{31}\text{P}$).
->    * **Inactive Nuclei:** Nuclei with **even numbers of protons and neutrons** (e.g. $^{12}\text{C}$, $^{16}\text{O}$, $^{32}\text{S}$) have zero net nuclear spin and are NMR inactive.
+>    * **Active Nuclei:** Only nuclei with an **odd number of nucleons** (protons + neutrons) have nuclear spin and are NMR active (e.g. $^1\\\\text{H}$, $^{13}\\\\text{C}$, $^{15}\\\\text{N}$, $^{19}\\\\text{F}$, $^{31}\text{P}$).
+>    * **Inactive Nuclei:** Nuclei with **even numbers of protons and neutrons** (e.g. $^{12}\\\\text{C}$, $^{16}\\\\text{O}$, $^{32}\\\\text{S}$) have zero net nuclear spin and are NMR inactive.
+> 
 > * **Solvent Requirements:**
->    * Solvents must lack $^1\text{H}$ protons to prevent huge solvent absorption signals from masking sample peaks.
->    * **Standard Deuterated Solvent:** Deuterated trichloromethane ($\text{CDCl}_3$). Deuterium ($^2\text{H}$) absorbs at a completely different frequency than $^1\text{H}$.
-> * **Calibration Standard: Tetramethylsilane (TMS, $\text{Si(CH}_3)_4$):**
->    * Defines the reference zero point: $\delta = 0.0\text{ ppm}$.
+>    * Solvents must lack $^1\\\\text{H}$ protons to prevent huge solvent absorption signals from masking sample peaks.
+>    * **Standard Deuterated Solvent:** Deuterated trichloromethane ($\\\\text{CDCl}_3$). Deuterium ($^2\\\\text{H}$) absorbs at a completely different frequency than $^1\\\\text{H}$.
+> 
+> * **Calibration Standard: Tetramethylsilane (TMS, $\\\\text{Si(CH}_3)_4$):**
+>    * Defines the reference zero point: $\\\\delta = 0.0\\\\text{ ppm}$.
 >    * Contains **12 magnetically equivalent protons** and **4 equivalent carbons**, producing a single, intense, sharp absorption peak.
->    * Protons are strongly shielded by the electropositive silicon atom ($\text{Si}$), ensuring its peak appears upfield of almost all organic compound peaks.
+>    * Protons are strongly shielded by the electropositive silicon atom ($\\\\text{Si}$), ensuring its peak appears upfield of almost all organic compound peaks.
+>    * Chemically **inert**, non-toxic, and highly **volatile** (low b.p. 27°C), allowing easy removal by evaporation after analysis.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 12: Suitability of Nuclei for NMR Spectroscopy ($^{16}\text{O}$, $^{19}\text{F}$, $^{32}\text{S}$)
+> **Question:** Explain which of $^{16}\text{O}$, $^{19}\text{F}$, $^{32}\text{S}$ are not suitable for use in NMR spectroscopy, and why.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify unsuitable nuclei:** $^{16}\text{O}$ and $^{32}\text{S}$ are not suitable for NMR spectroscopy.
+> > 2. **Reason:** Both $^{16}\text{O}$ (8 protons + 8 neutrons = 16 nucleons) and $^{32}\text{S}$ (16 protons + 16 neutrons = 32 nucleons) contain **even numbers of nucleons**. Their nuclear spins cancel out to give a **zero net nuclear spin**, making them NMR inactive. (In contrast, $^{19}\text{F}$ has 19 nucleons—an odd number—and is NMR active).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 13: Water vs. TMS as an NMR Reference Standard
+> **Question:** Suggest why water ($\text{H}_2\text{O}$) is less suitable than TMS ($\text{Si(CH}_3)_4$) as a reference standard in NMR spectroscopy.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Proton Interference:** Water contains $^1\text{H}$ protons which give an intense absorption peak that obscures sample peaks.
+> > 2. **Reactivity & Hydrogen Bonding:** Water is chemically reactive and forms hydrogen bonds with sample molecules, altering their chemical shifts.
+> > 3. **Variable Peak Position:** The chemical shift of water is unstable and varies significantly with temperature, solvent, and pH.
+> > 4. **Volatility & Recovery:** Water has a high boiling point (100°C) making sample recovery by evaporation difficult, whereas TMS is volatile (b.p. 27°C).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 14: Predicting $^{13}\text{C}$ NMR Peak Counts for Alkane Isomers
+> **Question:** Predict the number of peaks in the $^{13}\text{C}$ NMR spectrum for each of the following isomeric alkanes:
+> 1) Butane ($\text{CH}_3\text{CH}_2\text{CH}_2\text{CH}_3$)
+> 2) 2-methylpropane ($(\text{CH}_3)_2\text{CHCH}_3$)
+> 3) 2,2-dimethylpropane ($(\text{CH}_3)_4\text{C}$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Butane ($\text{CH}_3\text{CH}_2\text{CH}_2\text{CH}_3$):** Symmetrical molecule with **2 carbon environments** (the two terminal $-\text{CH}_3$ carbons are identical, and the two internal $-\text{CH}_2-$ carbons are identical). Produces **2 peaks**.
+> > 2. **2-Methylpropane ($(\text{CH}_3)_2\text{CHCH}_3$):** Contains **2 carbon environments** (the three methyl $-\text{CH}_3$ carbons attached to C-2 are equivalent, and the central $-\text{CH}-$ carbon is unique). Produces **2 peaks**.
+> > 3. **2,2-Dimethylpropane ($(\text{CH}_3)_4\text{C}$):** High internal symmetry with **2 carbon environments** (the four methyl $-\text{CH}_3$ carbons are all equivalent, and the central quaternary carbon is unique). Produces **2 peaks**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 15: Distinguishing Isomers Using Low-Resolution $^1\text{H}$ NMR (Butanal vs. Butanone)
+> **Question:** Explain how low-resolution $^1\text{H}$ NMR spectroscopy can easily distinguish between the carbonyl isomers butanal ($\text{CH}_3\text{CH}_2\text{CH}_2\text{CHO}$) and butanone ($\text{CH}_3\text{COCH}_2\text{CH}_3$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare proton environment counts:**
+> >    * Butanal ($\text{CH}_3-\text{CH}_2-\text{CH}_2-\text{CHO}$) has **4 unique proton environments**, producing 4 separate peaks (integration ratio $3:2:2:1$).
+> >    * Butanone ($\text{CH}_3-\text{CO}-\text{CH}_2-\text{CH}_3$) has **3 unique proton environments**, producing 3 separate peaks (integration ratio $3:3:2$).
+> > 2. **Compare characteristic chemical shifts ($\delta$):**
+> >    * Butanal contains an **aldehyde proton** ($-\text{CHO}$), which produces a distinct peak at a very high chemical shift ($\delta = 9.0-10.0\text{ ppm}$).
+> >    * Butanone contains no aldehyde proton; its highest chemical shift peak is due to $-\text{CH}_2-\text{CO}-$ at $\delta \approx 2.1-2.5\text{ ppm}$.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 16: High-Resolution $^1\text{H}$ NMR Spectrum Analysis of Methyl Propanoate
+> **Question:** Predict the chemical shifts, relative integration areas, and $n+1$ splitting patterns for all proton environments in methyl propanoate ($\text{CH}_3\text{CH}_2\text{COOCH}_3$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Ester Methyl Group ($-\text{COOCH}_3$):**
+> >    * *Integration:* $3\text{H}$.
+> >    * *Chemical Shift:* $\delta \approx 3.7-4.1\text{ ppm}$ (attached directly to ester oxygen $-\text{O}-\text{CH}_3$).
+> >    * *Splitting:* **Singlet** ($n=0$ adjacent protons on the oxygen atom).
+> > 2. **Acyl Methylene Group ($\text{CH}_3\text{CH}_2\text{COO}-$):**
+> >    * *Integration:* $2\text{H}$.
+> >    * *Chemical Shift:* $\delta \approx 2.2-2.6\text{ ppm}$ (adjacent to carbonyl group $-\text{C=O}$).
+> >    * *Splitting:* **Quartet** ($n=3$ adjacent protons on the ethyl $-\text{CH}_3$ group; $3+1 = 4$).
+> > 3. **Ethyl Methyl Group ($\text{CH}_3\text{CH}_2\text{COO}-$):**
+> >    * *Integration:* $3\text{H}$.
+> >    * *Chemical Shift:* $\delta \approx 1.0-1.3\text{ ppm}$ (alkane alkyl environment).
+> >    * *Splitting:* **Triplet** ($n=2$ adjacent protons on the $-\text{CH}_2-$ group; $2+1 = 3$).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 17: Deducing Isomer Structures from High-Resolution $^1\text{H}$ NMR ($\text{C}_4\text{H}_8\text{O}_2$)
+> **Question:** Two compounds X and Y both have the molecular formula $\text{C}_4\text{H}_8\text{O}_2$.
+> * **Compound X spectrum:** A quartet at $\delta = 4.1\text{ ppm}$ (2H), a singlet at $\delta = 2.0\text{ ppm}$ (3H), and a triplet at $\delta = 1.3\text{ ppm}$ (3H).
+> * **Compound Y spectrum:** A singlet at $\delta = 11.9\text{ ppm}$ (1H), a multiplet at $\delta = 2.6\text{ ppm}$ (1H), and a doublet at $\delta = 1.2\text{ ppm}$ (6H).
+> Deduce the structural formulas for X and Y.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce structure of Compound X:**
+> >    * Quartet at $\delta = 4.1\text{ ppm}$ (2H) + Triplet at $\delta = 1.3\text{ ppm}$ (3H) indicates an **ethoxy group** ($-\text{O}-\text{CH}_2\text{CH}_3$). The $\delta = 4.1$ shift confirms $-\text{O}-\text{CH}_2-$.
+> >    * Singlet at $\delta = 2.0\text{ ppm}$ (3H) indicates an isolated methyl group adjacent to carbonyl ($\text{CH}_3\text{CO}-$).
+> >    * Combining fragments: $\text{CH}_3-\text{CO}-\text{O}-\text{CH}_2\text{CH}_3$ (**ethyl ethanoate**).
+> > 2. **Deduce structure of Compound Y:**
+> >    * Singlet at $\delta = 11.9\text{ ppm}$ (1H) indicates a **carboxylic acid proton** ($-\text{COOH}$).
+> >    * Doublet at $\delta = 1.2\text{ ppm}$ (6H) indicates **two equivalent methyl groups** attached to a $-\text{CH}-$ group ($(\text{CH}_3)_2\text{CH}-$).
+> >    * Multiplet at $\delta = 2.6\text{ ppm}$ (1H) is the central $-\text{CH}-$ proton split by 6 adjacent methyl protons ($6+1 = 7$, septet).
+> >    * Combining fragments: $(\text{CH}_3)_2\text{CH}-\text{COOH}$ (**2-methylpropanoic acid**).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 18: Evaluating Symmetrical vs. Non-Symmetrical Proton Splitting
+> **Question:** Explain why 1,2-dichloroethane ($\text{CH}_2\text{Cl}-\text{CH}_2\text{Cl}$) exhibits a single unsplit peak in its $^1\text{H}$ NMR spectrum, whereas 1,1-dichloroethane ($\text{CHCl}_2-\text{CH}_3$) exhibits a doublet and a quartet.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze 1,2-dichloroethane ($\text{CH}_2\text{Cl}-\text{CH}_2\text{Cl}$):**
+> >    * The molecule possesses internal plane symmetry; all 4 protons are in identical chemical environments and are **magnetically equivalent**.
+> >    * Equivalent protons do not split each other's resonance frequency. Thus, it produces a single, sharp **singlet** peak.
+> > 2. **Analyze 1,1-dichloroethane ($\text{CHCl}_2-\text{CH}_3$):**
+> >    * Contains 2 non-equivalent proton environments: $-\text{CHCl}_2$ (1H) and $-\text{CH}_3$ (3H).
+> >    * The $-\text{CH}_3$ protons (3H) are split by the 1 adjacent proton into a **doublet** ($1+1=2$).
+> >    * The $-\text{CHCl}_2$ proton (1H) is split by the 3 adjacent methyl protons into a **quartet** ($3+1=4$).
+e electropositive silicon atom ($\text{Si}$), ensuring its peak appears upfield of almost all organic compound peaks.
 >    * Chemically **inert**, non-toxic, and highly **volatile** (low b.p. 27°C), allowing easy removal by evaporation after analysis.
 
 > [!EXAMPLE]
@@ -3353,7 +3475,8 @@ ${svgToken(sn1StereochemistrySvg)}
       'High-Resolution Mass Spectrometry (HRMS) measures m/z to 4 decimal places, allowing determination of exact molecular formulas.',
       'NMR active nuclei have an odd number of nucleons (e.g. 1H, 13C, 19F); nuclei with even numbers of nucleons (12C, 16O, 32S) are NMR inactive.',
       'TMS (Si(CH3)4) is the standard NMR calibration reference (0 ppm) because it has 12 equivalent, highly shielded protons, is inert, and volatile.',
-      'Deuterated solvents like CDCl3 are used in 1H NMR to prevent solvent protons from masking sample peaks.'
+      '13C NMR peak counts indicate unique carbon environments (e.g. propan-1-ol has 3 peaks vs propan-2-ol has 2 peaks).',
+      'High-resolution 1H NMR splitting follows the n+1 rule (singlet, doublet, triplet, quartet); symmetrical protons (e.g. 1,2-dichloroethane) show no splitting.'
     ]
   }
 ];
