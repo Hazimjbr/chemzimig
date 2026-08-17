@@ -3199,24 +3199,27 @@ ${svgToken(sn1StereochemistrySvg)}
 
 
 > [!IMPORTANT]
-> ### ⚙️ Instrumental Chromatography: HPLC & Gas Chromatography (GC)
-> Instrumental chromatography uses automated machinery, detectors, and computers to separate and analyze complex mixtures rapidly with high resolution.
+> ### 🧪 High-Performance Liquid Chromatography (HPLC)
+> High-performance liquid chromatography uses high pressure to pump a liquid mobile phase through a tightly packed column of micro-particles.
 > 
 > ${svgToken(hplcInstrumentationSvg)}
 > 
+> * **Mobile Phase Movement:** The liquid solvent (mobile phase) is forced through a metal column packed with extremely small stationary phase particles under **high pressure** (via a pump), rather than moving slowly by gravity.
+> * **Stationary Phase Particle Size:** Extremely small particle size dramatically increases surface area, providing much sharper separation of components.
+> * **Detection:** The sample is injected into the column; components exiting the column are detected by their absorption of **ultraviolet (UV) radiation**. The process is fully automated with results displayed on a computer screen.
+
+> [!TIP]
+> ### ⚙️ Gas Chromatography (GC) & Retention Time ($R_t$)
+> Gas chromatography separates gaseous mixtures using an inert carrier gas through a coiled capillary column inside a thermostatted oven.
+> 
 > ${svgToken(gcInstrumentationSvg)}
 > 
-> * **High-Performance Liquid Chromatography (HPLC):**
->    * **Mobile Phase Movement:** The liquid solvent (mobile phase) is forced through a metal column packed with extremely small stationary phase particles under **high pressure** (via a pump), rather than moving slowly by gravity.
->    * **Stationary Phase Particle Size:** Extremely small particle size dramatically increases surface area, providing much sharper separation of components.
->    * **Detection:** The sample is injected into the column; components exiting the column are detected by their absorption of **ultraviolet (UV) radiation**. The process is fully automated with results displayed on a computer screen.
-> 
-> * **Gas Chromatography (GC):**
->    * **Mobile Phase:** An inert carrier gas (e.g. $\text{N}_2$ or $\text{He}$).
->    * **Stationary Phase:** A high boiling point liquid or solid coated onto the inside of a long, coiled capillary column located inside a temperature-controlled oven.
->    * **Retention Time ($R_t$):** The time taken from sample injection to detection.
->    * **Variables Affecting $R_t$:** Column length, carrier gas flow rate/pressure, column temperature (oven temperature profile), and the nature/thickness of the stationary and mobile phases.
->    * **Peak Area:** The area under each chromatogram peak is directly proportional to the relative concentration/amount of that component in the mixture.
+> * **Mobile Phase:** An inert carrier gas (e.g. $\text{N}_2$ or $\text{He}$).
+> * **Stationary Phase:** A high boiling point liquid or solid coated onto the inside of a long, coiled capillary column located inside a temperature-controlled oven.
+> * **Retention Time ($R_t$):** The time taken from sample injection to detection.
+> * **Variables Affecting $R_t$:** Column length, carrier gas flow rate/pressure, column temperature (oven temperature profile), and the nature/thickness of the stationary and mobile phases.
+> * **Peak Area:** The area under each chromatogram peak is directly proportional to the relative concentration/amount of that component in the mixture.
+
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: HPLC vs. Traditional Column Mobile Phase Movement
