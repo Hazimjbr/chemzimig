@@ -3093,18 +3093,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > ${svgToken(chromatographySvg)}
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Explaining High $R_f$ Values
-> **Question:** Suggest why, in paper chromatography, the non-polar substance hexane has a high $R_f$ value.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Analyze intermolecular forces with stationary phase:** Hexane is a non-polar hydrocarbon and has very weak intermolecular attractions (only London forces) to the highly polar stationary phase (water trapped in cellulose fibers).
-> > 2. **Analyze affinity for mobile phase:** Hexane has strong solubility and intermolecular attraction towards a non-polar mobile phase solvent.
-> > 3. **Conclude effect on movement:** As a result, hexane spends most of its time dissolved in the mobile phase, traveling much further up the paper and resulting in a high $R_f$ value.
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 2: Calculating $R_f$ Value from Chromatogram Diagram
+> #### 📝 Worked Example 1: Calculating $R_f$ Value from Chromatogram Diagram
 > **Question:** Calculate the $R_f$ value of component X in this diagram:
 > 
 > ${svgToken(chromatogramRfDiagramSvg)}
@@ -3118,6 +3107,18 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    $$\\\\text{Distance to solvent front} = 20 + 40 + 15 = 75\\\\text{ mm}$$
 > > 3. **Calculate $R_f$ value:**
 > >    $$R_f = \\\\frac{20}{75} \\\\approx 0.27$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Explaining High $R_f$ Values
+> **Question:** Suggest why, in paper chromatography, the non-polar substance hexane has a high $R_f$ value.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze intermolecular forces with stationary phase:** Hexane is a non-polar hydrocarbon and has very weak intermolecular attractions (only London forces) to the highly polar stationary phase (water trapped in cellulose fibers).
+> > 2. **Analyze affinity for mobile phase:** Hexane has strong solubility and intermolecular attraction towards a non-polar mobile phase solvent.
+> > 3. **Conclude effect on movement:** As a result, hexane spends most of its time dissolved in the mobile phase, traveling much further up the paper and resulting in a high $R_f$ value.
+
 
 > [!IMPORTANT]
 > ### ⚙️ Instrumental Chromatography: HPLC & Gas Chromatography (GC)
@@ -3439,31 +3440,6 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * Contains 2 non-equivalent proton environments: $-\text{CHCl}_2$ (1H) and $-\text{CH}_3$ (3H).
 > >    * The $-\text{CH}_3$ protons (3H) are split by the 1 adjacent proton into a **doublet** ($1+1=2$).
 > >    * The $-\text{CHCl}_2$ proton (1H) is split by the 3 adjacent methyl protons into a **quartet** ($3+1=4$).
-e electropositive silicon atom ($\text{Si}$), ensuring its peak appears upfield of almost all organic compound peaks.
->    * Chemically **inert**, non-toxic, and highly **volatile** (low b.p. 27°C), allowing easy removal by evaporation after analysis.
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 12: Suitability of Nuclei for NMR Spectroscopy ($^{16}\text{O}$, $^{19}\text{F}$, $^{32}\text{S}$)
-> **Question:** Explain which of $^{16}\text{O}$, $^{19}\text{F}$, $^{32}\text{S}$ are not suitable for use in NMR spectroscopy, and why.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Identify unsuitable nuclei:** $^{16}\text{O}$ and $^{32}\text{S}$ are not suitable for NMR spectroscopy.
-> > 2. **Reason:** Both $^{16}\text{O}$ (8 protons + 8 neutrons = 16 nucleons) and $^{32}\text{S}$ (16 protons + 16 neutrons = 32 nucleons) contain **even numbers of nucleons**. Their nuclear spins cancel out to give a **zero net nuclear spin**, making them NMR inactive. (In contrast, $^{19}\text{F}$ has 19 nucleons—an odd number—and is NMR active).
-
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 13: Water vs. TMS as an NMR Reference Standard
-> **Question:** Suggest why water ($\text{H}_2\text{O}$) is less suitable than TMS ($\text{Si(CH}_3)_4$) as a reference standard in NMR spectroscopy.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Proton Interference:** Water contains $^1\\\\text{H}$ protons which give an intense absorption peak that obscures sample peaks.
-> > 2. **Reactivity & Hydrogen Bonding:** Water is chemically reactive and forms hydrogen bonds with sample molecules, altering their chemical shifts.
-> > 3. **Variable Peak Position:** The chemical shift of water is unstable and varies significantly with temperature, solvent, and pH.
-> > 4. **Volatility & Recovery:** Water has a high boiling point (100°C) making sample recovery by evaporation difficult, whereas TMS is volatile (b.p. 27°C).
 `,
     keyPoints: [
       'Chromatography separates mixtures based on relative affinity for mobile and stationary phases.',
@@ -3474,7 +3450,7 @@ e electropositive silicon atom ($\text{Si}$), ensuring its peak appears upfield 
       'GC-MS and HPLC-MS combine chromatographic separation with mass spectrometry identification via fragmentation databases.',
       'High-Resolution Mass Spectrometry (HRMS) measures m/z to 4 decimal places, allowing determination of exact molecular formulas.',
       'NMR active nuclei have an odd number of nucleons (e.g. 1H, 13C, 19F); nuclei with even numbers of nucleons (12C, 16O, 32S) are NMR inactive.',
-      'TMS (Si(CH3)4) is the standard NMR calibration reference (0 ppm) because it has 12 equivalent, highly shielded protons, is inert, and volatile.',
+      'TMS (Si(CH₃)₄) is the standard NMR calibration reference (0 ppm) because it has 12 equivalent, highly shielded protons, is inert, and volatile.',
       '13C NMR peak counts indicate unique carbon environments (e.g. propan-1-ol has 3 peaks vs propan-2-ol has 2 peaks).',
       'High-resolution 1H NMR splitting follows the n+1 rule (singlet, doublet, triplet, quartet); symmetrical protons (e.g. 1,2-dichloroethane) show no splitting.'
     ]
