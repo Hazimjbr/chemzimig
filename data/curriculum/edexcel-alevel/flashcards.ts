@@ -1460,6 +1460,51 @@ export const edexcelAlevelFlashcards: Flashcard[] = [
         question: 'What type of polymerisation forms Polyesters and Polyamides?',
         answer: 'Condensation Polymerisation, accompanied by the loss of small molecules like $\\text{H}_2\\text{O}$ or $\\text{HCl}$.',
         examinerTip: 'Dicarboxylic acid + Diol forms Polyester (ester link $-\\text{COO}-$).'
+    },
+    {
+        id: 'ed-u4-l5-8',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'Chromatography',
+        question: 'How is the Retention Factor ($R_f$) calculated in TLC and what does it indicate?',
+        answer: '$R_f = \\frac{\\text{Distance travelled by substance}}{\\text{Distance travelled by solvent front}}$. It indicates relative affinity/adsorption to the stationary phase vs. solubility in the mobile phase.',
+        examinerTip: '$R_f$ is always a value between 0 and 1, and has no units.'
+    },
+    {
+        id: 'ed-u4-l5-9',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'GC-MS',
+        question: 'What are the distinct roles of GC and MS in a combined GC-MS system?',
+        answer: 'GC (Gas Chromatography) separates the components in a mixture based on retention times. MS (Mass Spectrometry) identifies each separated component by measuring accurate $m/z$ ratios and comparing fragmentation patterns to databases.',
+        examinerTip: 'Combined GC-MS allows both separation and definitive identification in one continuous process.'
+    },
+    {
+        id: 'ed-u4-l5-10',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'HRMS',
+        question: 'What is the benefit of High-Resolution Mass Spectrometry (HRMS) over low-resolution MS?',
+        answer: 'HRMS measures accurate masses to 4 decimal places, allowing the determination of the exact molecular formula of a compound (e.g., distinguishing between compounds with the same nominal $M_r$ like $\\text{C}_3\\text{H}_8$ and $\\text{CO}_2$).',
+        examinerTip: 'Low-resolution MS only measures nominal masses to the nearest integer.'
+    },
+    {
+        id: 'ed-u4-l5-11',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'NMR Spectroscopy',
+        question: 'Which atomic nuclei are NMR active, and why?',
+        answer: 'Nuclei with an ODD number of nucleons (e.g. $^1\\text{H}$, $^{13}\\text{C}$, $^{19}\\text{F}$) because they possess a non-zero nuclear spin. Nuclei with even nucleons (e.g. $^{12}\\text{C}$, $^{16}\\text{O}$) have zero net spin and are NMR inactive.',
+        examinerTip: 'This is why $^{13}\text{C}$ is used for carbon NMR instead of the highly abundant $^{12}\text{C}$.'
+    },
+    {
+        id: 'ed-u4-l5-12',
+        unitNum: 4,
+        lessonNum: 5,
+        category: 'NMR Reference',
+        question: 'Why is Tetramethylsilane (TMS, $\\text{Si(CH}_3)_4$) used as the calibration standard in NMR spectroscopy?',
+        answer: 'It has 12 equivalent, highly shielded protons (gives a single intense peak at $\\delta = 0\\text{ ppm}$), is chemically inert (won\'t react with samples), and is volatile (b.p. 27°C, easily evaporated for sample recovery).',
+        examinerTip: 'Its protons are strongly shielded by electropositive silicon, making its peak appear far upfield from other organic protons.'
     }
 ];
 

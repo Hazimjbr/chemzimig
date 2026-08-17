@@ -1787,162 +1787,172 @@ const hrmsSpectrumSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75
   </g>
 </svg>`;
 
-const instrumentalChromatographySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 360" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const hplcInstrumentationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 240" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
-    <!-- Arrow Marker -->
-    <marker id="gcFlowArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="hplcFlowArrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
     </marker>
-    <marker id="gcFlowArrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="hplcFlowArrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
+    </marker>
+  </defs>
+
+  <!-- Title Badge -->
+  <rect x="150" y="10" width="450" height="28" rx="14" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1"/>
+  <text x="375" y="29" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="bold">High-Performance Liquid Chromatography (HPLC) Apparatus</text>
+
+  <!-- Main Apparatus Flow Diagram -->
+  <g transform="translate(20, 50)">
+    <!-- Solvent Reservoir Bottle -->
+    <rect x="10" y="25" width="85" height="55" rx="6" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="22" y="42" width="61" height="32" rx="2" fill="#0284c7" fill-opacity="0.5"/>
+    <text x="52" y="53" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">Liquid Mobile</text>
+    <text x="52" y="66" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">Phase Solvent</text>
+
+    <!-- Tube Arrow Reservoir -> Pump -->
+    <path d="M 52,80 L 52,112" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#hplcFlowArrow)" />
+
+    <!-- High Pressure Pump Circle -->
+    <circle cx="52" cy="142" r="26" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+    <text x="52" y="146" text-anchor="middle" fill="#ffffff" font-size="11.5" font-weight="bold">PUMP</text>
+    <text x="52" y="182" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="bold">(High Pressure)</text>
+
+    <!-- Flow Pipe Pump -> Sample Injector -->
+    <path d="M 78,142 L 138,142" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#hplcFlowArrow)" />
+
+    <!-- Sample Injector Port -->
+    <rect x="142" y="125" width="50" height="34" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="167" y="146" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="bold">Sample</text>
+
+    <!-- Flow Pipe Sample -> HPLC Column -->
+    <path d="M 192,142 L 245,142" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#hplcFlowArrow)" />
+
+    <!-- HPLC Column with Micro-particles -->
+    <rect x="250" y="124" width="130" height="36" rx="4" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Micro-particles pattern inside column -->
+    <circle cx="262" cy="133" r="3" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="275" cy="149" r="3" fill="#fbbf24" opacity="0.8"/>
+    <circle cx="290" cy="134" r="3" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="305" cy="150" r="3" fill="#34d399" opacity="0.8"/>
+    <circle cx="320" cy="134" r="3" fill="#fbbf24" opacity="0.8"/>
+    <circle cx="335" cy="149" r="3" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="350" cy="134" r="3" fill="#34d399" opacity="0.8"/>
+    <circle cx="365" cy="150" r="3" fill="#fbbf24" opacity="0.8"/>
+    <text x="315" y="145" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="bold">HPLC Column</text>
+    <text x="315" y="174" text-anchor="middle" fill="#94a3b8" font-size="9.5">(Packed Micro-particles)</text>
+
+    <!-- Flow Pipe Column -> Detector -->
+    <path d="M 380,142 L 438,142" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#hplcFlowArrow)" />
+
+    <!-- UV Detector -->
+    <rect x="442" y="125" width="70" height="34" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.5"/>
+    <text x="477" y="141" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="bold">UV</text>
+    <text x="477" y="153" text-anchor="middle" fill="#ffffff" font-size="9.5" font-weight="bold">Detector</text>
+
+    <!-- Signal Line UV Detector -> Computer Workstation -->
+    <path d="M 477,125 L 477,65 L 360,65" fill="none" stroke="#34d399" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#hplcFlowArrowGreen)" />
+    
+    <!-- Computer Monitor Graphic -->
+    <rect x="220" y="42" width="135" height="48" rx="4" fill="#070f1e" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="226" y="47" width="123" height="38" rx="2" fill="#0f172a"/>
+    <!-- Mini peak plot on computer screen -->
+    <path d="M 232,77 L 255,77 L 268,54 L 280,77 L 300,77 L 312,61 L 325,77 L 340,77" fill="none" stroke="#34d399" stroke-width="1.4"/>
+    <text x="287" y="104" text-anchor="middle" fill="#34d399" font-size="10.5" font-weight="bold">Computer Display</text>
+  </g>
+</svg>`;
+
+const gcInstrumentationSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 310" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="gcFlowArrow2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8" />
+    </marker>
+    <marker id="gcFlowArrowGreen2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399" />
     </marker>
 
     <!-- Peak Area Gradients -->
-    <linearGradient id="peak1Grad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="gcPeak1Grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.4" />
       <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.0" />
     </linearGradient>
-    <linearGradient id="peak2Grad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="gcPeak2Grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.45" />
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.0" />
     </linearGradient>
-    <linearGradient id="peak3Grad" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="gcPeak3Grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.4" />
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0" />
     </linearGradient>
   </defs>
 
   <!-- Title Badge -->
-  <rect x="230" y="10" width="480" height="28" rx="14" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1"/>
-  <text x="470" y="29" text-anchor="middle" fill="#38bdf8" font-size="12.5" font-weight="bold">INSTRUMENTAL CHROMATOGRAPHY: HPLC &amp; GAS CHROMATOGRAPHY (GC)</text>
+  <rect x="150" y="10" width="450" height="28" rx="14" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1"/>
+  <text x="375" y="29" text-anchor="middle" fill="#34d399" font-size="13" font-weight="bold">Gas Chromatography (GC) &amp; Retention Time (Rt)</text>
 
-  <!-- Left: HPLC Instrumentation Diagram -->
-  <g transform="translate(25, 48)">
-    <rect x="0" y="0" width="420" height="295" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
-    <text x="210" y="24" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold">High-Performance Liquid Chromatography (HPLC)</text>
-
-    <!-- Solvent Reservoir Bottle -->
-    <rect x="25" y="45" width="70" height="50" rx="6" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect x="35" y="60" width="50" height="28" rx="2" fill="#0284c7" fill-opacity="0.5"/>
-    <text x="60" y="68" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="bold">Liquid Mobile</text>
-    <text x="60" y="80" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="bold">Phase Solvent</text>
-
-    <!-- Tube Arrow Reservoir -> Pump -->
-    <path d="M 60,95 L 60,122" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow)" />
-
-    <!-- High Pressure Pump Circle -->
-    <circle cx="60" cy="150" r="24" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
-    <text x="60" y="154" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">PUMP</text>
-    <text x="60" y="188" text-anchor="middle" fill="#38bdf8" font-size="9" font-weight="bold">(High Pressure)</text>
-
-    <!-- Flow Pipe Pump -> Sample Injector -->
-    <path d="M 84,150 L 132,150" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow)" />
-
-    <!-- Sample Injector Port -->
-    <rect x="135" y="135" width="44" height="30" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="1.5"/>
-    <text x="157" y="154" text-anchor="middle" fill="#ffffff" font-size="9.5" font-weight="bold">Sample</text>
-
-    <!-- Flow Pipe Sample -> HPLC Column -->
-    <path d="M 179,150 L 217,150" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow)" />
-
-    <!-- HPLC Column with Micro-particles -->
-    <rect x="220" y="135" width="95" height="30" rx="4" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
-    <!-- Micro-particles pattern inside column -->
-    <circle cx="230" cy="143" r="2.5" fill="#38bdf8" opacity="0.8"/>
-    <circle cx="240" cy="155" r="2.5" fill="#fbbf24" opacity="0.8"/>
-    <circle cx="252" cy="144" r="2.5" fill="#38bdf8" opacity="0.8"/>
-    <circle cx="264" cy="156" r="2.5" fill="#34d399" opacity="0.8"/>
-    <circle cx="276" cy="144" r="2.5" fill="#fbbf24" opacity="0.8"/>
-    <circle cx="288" cy="155" r="2.5" fill="#38bdf8" opacity="0.8"/>
-    <circle cx="300" cy="144" r="2.5" fill="#34d399" opacity="0.8"/>
-    <text x="267" y="153" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold">HPLC Column</text>
-    <text x="267" y="180" text-anchor="middle" fill="#94a3b8" font-size="9">(Packed Micro-particles)</text>
-
-    <!-- Flow Pipe Column -> Detector -->
-    <path d="M 315,150 L 337,150" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow)" />
-
-    <!-- UV Detector -->
-    <rect x="340" y="135" width="55" height="30" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.5"/>
-    <text x="367" y="149" text-anchor="middle" fill="#ffffff" font-size="9.5" font-weight="bold">UV</text>
-    <text x="367" y="159" text-anchor="middle" fill="#ffffff" font-size="8.5" font-weight="bold">Detector</text>
-
-    <!-- Signal Line UV Detector -> Computer Workstation -->
-    <path d="M 367,135 L 367,85 L 285,85" fill="none" stroke="#34d399" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#gcFlowArrowGreen)" />
-    
-    <!-- Computer Monitor Graphic -->
-    <rect x="175" y="65" width="105" height="42" rx="4" fill="#070f1e" stroke="#34d399" stroke-width="1.5"/>
-    <rect x="180" y="70" width="95" height="32" rx="2" fill="#0f172a"/>
-    <!-- Mini peak plot on computer screen -->
-    <path d="M 185,96 L 205,96 L 215,76 L 225,96 L 240,96 L 250,82 L 260,96 L 270,96" fill="none" stroke="#34d399" stroke-width="1.2"/>
-    <text x="227" y="118" text-anchor="middle" fill="#34d399" font-size="9.5" font-weight="bold">Computer Display</text>
-  </g>
-
-  <!-- Right: GC Apparatus & Chromatogram -->
-  <g transform="translate(465, 48)">
-    <rect x="0" y="0" width="450" height="295" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
-    <text x="225" y="24" text-anchor="middle" fill="#34d399" font-size="12" font-weight="bold">Gas Chromatography (GC) &amp; Retention Time (Rt)</text>
-
+  <!-- Top Half: GC Flow Apparatus -->
+  <g transform="translate(25, 45)">
     <!-- Carrier Gas Cylinder -->
-    <rect x="18" y="45" width="34" height="85" rx="12" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect x="30" y="38" width="10" height="8" rx="2" fill="#0369a1" stroke="#38bdf8" stroke-width="1"/>
-    <text x="35" y="88" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold" transform="rotate(-90 35 88)">Carrier Gas (N₂/He)</text>
+    <rect x="15" y="10" width="38" height="95" rx="14" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="29" y="3" width="10" height="8" rx="2" fill="#0369a1" stroke="#38bdf8" stroke-width="1"/>
+    <text x="34" y="58" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold" transform="rotate(-90 34 58)">Carrier Gas (N₂/He)</text>
 
-    <!-- Gas Pipe to Oven -->
-    <path d="M 52,85 L 82,85" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow)" />
+    <!-- Pipe to Oven -->
+    <path d="M 53,58 L 95,58" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow2)" />
 
     <!-- Oven Box with Coiled Column -->
-    <rect x="85" y="45" width="145" height="90" rx="6" fill="#831843" fill-opacity="0.35" stroke="#f43f5e" stroke-width="1.5"/>
-    <text x="157" y="60" text-anchor="middle" fill="#f43f5e" font-size="10" font-weight="bold">Thermostatted Oven</text>
-    <text x="157" y="127" text-anchor="middle" fill="#fbbf24" font-size="8.5">(Coiled Capillary Column)</text>
+    <rect x="100" y="10" width="180" height="95" rx="6" fill="#831843" fill-opacity="0.35" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="190" y="27" text-anchor="middle" fill="#f43f5e" font-size="11" font-weight="bold">Thermostatted Oven</text>
+    <text x="190" y="96" text-anchor="middle" fill="#fbbf24" font-size="9">(Coiled Capillary Column)</text>
     
-    <!-- Realistic 4-Loop Spiral Coiled capillary Column Tube inside Oven -->
-    <g transform="translate(100, 70)">
-      <ellipse cx="25" cy="20" rx="14" ry="18" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-      <ellipse cx="45" cy="20" rx="14" ry="18" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-      <ellipse cx="65" cy="20" rx="14" ry="18" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-      <ellipse cx="85" cy="20" rx="14" ry="18" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
+    <!-- 4 Spiral Coiled Loops -->
+    <g transform="translate(120, 36)">
+      <ellipse cx="25" cy="22" rx="16" ry="20" fill="none" stroke="#fbbf24" stroke-width="2"/>
+      <ellipse cx="50" cy="22" rx="16" ry="20" fill="none" stroke="#fbbf24" stroke-width="2"/>
+      <ellipse cx="75" cy="22" rx="16" ry="20" fill="none" stroke="#fbbf24" stroke-width="2"/>
+      <ellipse cx="100" cy="22" rx="16" ry="20" fill="none" stroke="#fbbf24" stroke-width="2"/>
     </g>
 
     <!-- Pipe Oven -> Detector -->
-    <path d="M 230,90 L 252,90" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow)" />
+    <path d="M 280,58 L 325,58" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#gcFlowArrow2)" />
 
-    <!-- Detector & Data Recorder -->
-    <rect x="255" y="75" width="55" height="30" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.5"/>
-    <text x="282" y="93" text-anchor="middle" fill="#ffffff" font-size="9.5" font-weight="bold">Detector</text>
+    <!-- Detector -->
+    <rect x="330" y="41" width="65" height="34" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.5"/>
+    <text x="362" y="62" text-anchor="middle" fill="#ffffff" font-size="10.5" font-weight="bold">Detector</text>
     
-    <path d="M 310,90 L 332,90" fill="none" stroke="#34d399" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#gcFlowArrowGreen)" />
-    <rect x="335" y="75" width="95" height="30" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="382" y="93" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="bold">Data System</text>
+    <!-- Data System -->
+    <path d="M 395,58 L 440,58" fill="none" stroke="#34d399" stroke-width="1.8" stroke-dasharray="3 3" marker-end="url(#gcFlowArrowGreen2)" />
+    <rect x="445" y="41" width="115" height="34" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="502" y="62" text-anchor="middle" fill="#38bdf8" font-size="10.5" font-weight="bold">Data System</text>
+  </g>
 
-    <!-- Chromatogram Peak Plot (Time vs Absorption) - Clean layout with no text overlaps! -->
-    <g transform="translate(20, 150)">
-      <rect x="0" y="0" width="410" height="130" rx="6" fill="#070f1e" stroke="#334155" stroke-width="1"/>
-      <text x="205" y="16" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold">Typical GC Chromatogram Peaks (Peak Area ∝ Concentration)</text>
-      
-      <!-- Axes -->
-      <line x1="35" y1="28" x2="35" y2="105" stroke="#94a3b8" stroke-width="1.2"/>
-      <line x1="35" y1="105" x2="390" y2="105" stroke="#94a3b8" stroke-width="1.2"/>
-      <text x="16" y="66" fill="#94a3b8" font-size="8.5" transform="rotate(-90 16 66)" text-anchor="middle">Detector Signal (Absorption)</text>
-      <text x="212" y="122" fill="#94a3b8" font-size="9" text-anchor="middle">Retention Time (R<tspan font-size="7.5" dy="1.5">t</tspan><tspan dy="-1.5">) / min</tspan></text>
+  <!-- Bottom Half: Chromatogram Plot (Full width & clear legibility!) -->
+  <g transform="translate(25, 160)">
+    <rect x="0" y="0" width="700" height="135" rx="6" fill="#070f1e" stroke="#334155" stroke-width="1"/>
+    <text x="350" y="18" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="bold">Typical GC Chromatogram Peaks (Peak Area ∝ Concentration)</text>
+    
+    <!-- Axes -->
+    <line x1="45" y1="28" x2="45" y2="110" stroke="#94a3b8" stroke-width="1.2"/>
+    <line x1="45" y1="110" x2="675" y2="110" stroke="#94a3b8" stroke-width="1.2"/>
+    <text x="20" y="70" fill="#94a3b8" font-size="9" transform="rotate(-90 20 70)" text-anchor="middle">Detector Signal (Absorption)</text>
+    <text x="360" y="127" fill="#94a3b8" font-size="9.5" text-anchor="middle">Retention Time (R<tspan font-size="8" dy="1.5">t</tspan><tspan dy="-1.5">) / min</tspan></text>
 
-      <!-- Smooth Gaussian Peaks with Filled Translucent Gradients under curves -->
-      <!-- Baseline: y = 105 -->
+    <!-- Smooth Gaussian Peaks with Filled Translucent Gradients -->
+    <!-- Baseline: y = 110 -->
 
-      <!-- Peak 1 Area & Curve (Gold, x ~ 95) -->
-      <path d="M 75,105 C 85,105 90,75 95,75 C 100,75 105,105 115,105 Z" fill="url(#peak1Grad)" />
-      <path d="M 35,105 L 75,105 C 85,105 90,75 95,75 C 100,75 105,105 115,105 L 140,105" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
-      <text x="95" y="66" fill="#fbbf24" font-size="8.5" font-weight="bold" text-anchor="middle">Peak 1</text>
+    <!-- Peak 1 Area & Curve (Gold) -->
+    <path d="M 120,110 C 135,110 145,68 155,68 C 165,68 175,110 190,110 Z" fill="url(#gcPeak1Grad)" />
+    <path d="M 45,110 L 120,110 C 135,110 145,68 155,68 C 165,68 175,110 190,110 L 250,110" fill="none" stroke="#fbbf24" stroke-width="1.8"/>
+    <text x="155" y="58" fill="#fbbf24" font-size="9.5" font-weight="bold" text-anchor="middle">Peak 1</text>
 
-      <!-- Peak 2 Area & Curve (Ethanol, Emerald Green, x ~ 175) -->
-      <path d="M 145,105 C 160,105 170,35 175,35 C 180,35 190,105 205,105 Z" fill="url(#peak2Grad)" />
-      <path d="M 140,105 C 160,105 170,35 175,35 C 180,35 190,105 205,105 L 240,105" fill="none" stroke="#34d399" stroke-width="2"/>
-      <text x="175" y="27" fill="#34d399" font-size="9" font-weight="bold" text-anchor="middle">Peak 2 (Ethanol)</text>
+    <!-- Peak 2 Area & Curve (Ethanol, Emerald Green) -->
+    <path d="M 270,110 C 290,110 305,32 315,32 C 325,32 340,110 360,110 Z" fill="url(#gcPeak2Grad)" />
+    <path d="M 250,110 C 290,110 305,32 315,32 C 325,32 340,110 360,110 L 430,110" fill="none" stroke="#34d399" stroke-width="2.2"/>
+    <text x="315" y="24" fill="#34d399" font-size="10" font-weight="bold" text-anchor="middle">Peak 2 (Ethanol)</text>
 
-      <!-- Peak 3 Area & Curve (Cyan, x ~ 275) -->
-      <path d="M 245,105 C 260,105 270,55 275,55 C 280,55 290,105 305,105 Z" fill="url(#peak3Grad)" />
-      <path d="M 240,105 C 260,105 270,55 275,55 C 280,55 290,105 305,105 L 385,105" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
-      <text x="275" y="47" fill="#38bdf8" font-size="8.5" font-weight="bold" text-anchor="middle">Peak 3</text>
-    </g>
+    <!-- Peak 3 Area & Curve (Cyan) -->
+    <path d="M 440,110 C 460,110 475,50 485,50 C 495,50 510,110 530,110 Z" fill="url(#gcPeak3Grad)" />
+    <path d="M 430,110 C 460,110 475,50 485,50 C 495,50 510,110 530,110 L 670,110" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+    <text x="485" y="42" fill="#38bdf8" font-size="9.5" font-weight="bold" text-anchor="middle">Peak 3</text>
   </g>
 </svg>`;
 
@@ -3192,7 +3202,9 @@ ${svgToken(sn1StereochemistrySvg)}
 > ### ⚙️ Instrumental Chromatography: HPLC & Gas Chromatography (GC)
 > Instrumental chromatography uses automated machinery, detectors, and computers to separate and analyze complex mixtures rapidly with high resolution.
 > 
-> ${svgToken(instrumentalChromatographySvg)}
+> ${svgToken(hplcInstrumentationSvg)}
+> 
+> ${svgToken(gcInstrumentationSvg)}
 > 
 > * **High-Performance Liquid Chromatography (HPLC):**
 >    * **Mobile Phase Movement:** The liquid solvent (mobile phase) is forced through a metal column packed with extremely small stationary phase particles under **high pressure** (via a pump), rather than moving slowly by gravity.
