@@ -16,6 +16,7 @@ import TextToSpeech from '@/components/visual/TextToSpeech';
 import LessonNotes from '@/components/visual/LessonNotes';
 import MarkdownCarousel from '@/components/visual/MarkdownCarousel';
 import SafeHTML from '@/components/ui/SafeHTML';
+import { sanitizeKatex } from '@/lib/katex-sanitizer';
 
 const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { ssr: false });
 const GasLawSimulator = dynamic(() => import('@/components/visual/GasLawSimulator'), {
@@ -217,7 +218,7 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <BlockMath key={i} math={part.replace(/\\_/g, '_').replace(/(?<!\\)%/g, '\\%')} />;
+                        return <BlockMath key={i} math={sanitizeKatex(part)} />;
                     }
                     return <React.Fragment key={i}>{renderTextWithMath(part)}</React.Fragment>;
                 })}
@@ -231,7 +232,7 @@ const renderTextWithMath = (children: React.ReactNode): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <InlineMath key={i} math={part.replace(/\\_/g, '_').replace(/(?<!\\)%/g, '\\%')} />;
+                        return <InlineMath key={i} math={sanitizeKatex(part)} />;
                     }
                     return <React.Fragment key={i}>{part}</React.Fragment>;
                 })}

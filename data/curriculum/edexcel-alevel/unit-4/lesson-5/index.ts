@@ -1609,6 +1609,311 @@ const polyesterRepeatUnitSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox=
   <text x="50%" y="175" text-anchor="middle" fill="#10b981" font-size="11.5" font-weight="bold">Repeat Unit: [-C(=O)-C(=O)-O-CH(CH₃)-CH(CH₃)-O-]n</text>
 </svg>`;
 
+const chromatographySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Title Badge -->
+  <rect x="275" y="14" width="450" height="30" rx="15" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1"/>
+  <text x="500" y="34" text-anchor="middle" fill="#f8fafc" font-size="13" font-weight="bold" letter-spacing="0.5">CHROMATOGRAPHY TECHNIQUES &amp; RETENTION FACTOR (Rf)</text>
+
+  <!-- Left: Paper / TLC Plate -->
+  <g transform="translate(115, 60)">
+    <!-- Plate / Paper Sheet -->
+    <rect x="0" y="0" width="220" height="300" rx="6" fill="#0f172a" stroke="#475569" stroke-width="2" />
+    
+    <!-- Solvent Front Line -->
+    <line x1="15" y1="40" x2="205" y2="40" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3" />
+    <text x="210" y="44" fill="#38bdf8" font-size="10.5" font-weight="bold">Solvent Front</text>
+
+    <!-- Baseline (Pencil line) -->
+    <line x1="15" y1="265" x2="205" y2="265" stroke="#94a3b8" stroke-width="2" stroke-dasharray="2 2" />
+    <text x="-8" y="269" fill="#94a3b8" font-size="10.5" font-weight="bold" text-anchor="end">Baseline (Origin)</text>
+
+    <!-- Spot X -->
+    <ellipse cx="90" cy="205" rx="14" ry="9" fill="#f59e0b" fill-opacity="0.9" stroke="#fbbf24" stroke-width="1.5" />
+    <text x="90" y="209" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">X</text>
+
+    <!-- Spot Y -->
+    <ellipse cx="150" cy="85" rx="14" ry="9" fill="#a855f7" fill-opacity="0.9" stroke="#c084fc" stroke-width="1.5" />
+    <text x="150" y="89" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle">Y</text>
+
+    <!-- Original Spot (Baseline) -->
+    <circle cx="90" cy="265" r="4" fill="#64748b" />
+    <circle cx="150" cy="265" r="4" fill="#64748b" />
+
+    <!-- Measurements & Dimension Brackets -->
+    <!-- Distance to X: 20mm -->
+    <line x1="35" y1="265" x2="35" y2="205" stroke="#f59e0b" stroke-width="1.5" />
+    <polygon points="35,265 32,258 38,258" fill="#f59e0b" />
+    <polygon points="35,205 32,212 38,212" fill="#f59e0b" />
+    <text x="30" y="238" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="end">20 mm</text>
+
+    <!-- Distance baseline to solvent front: 75mm -->
+    <line x1="190" y1="265" x2="190" y2="40" stroke="#38bdf8" stroke-width="1.5" />
+    <polygon points="190,265 187,258 193,258" fill="#38bdf8" />
+    <polygon points="190,40 187,47 193,47" fill="#38bdf8" />
+    <text x="195" y="155" fill="#38bdf8" font-size="10" font-weight="bold">75 mm</text>
+  </g>
+
+  <!-- Right: Card / Formulas and Explanation -->
+  <g transform="translate(415, 65)">
+    <!-- Formula Box -->
+    <rect x="0" y="0" width="530" height="90" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#38bdf8" font-size="12" font-weight="bold">Retention Factor (Rf) Calculation Formula:</text>
+    <text x="265" y="60" text-anchor="middle" fill="#f8fafc" font-size="14" font-weight="bold">
+      R<tspan font-size="10" dy="3">f</tspan><tspan dy="-3"> = </tspan>
+      <tspan fill="#f59e0b">Distance travelled by component</tspan> / <tspan fill="#38bdf8">Distance travelled by solvent front</tspan>
+    </text>
+
+    <!-- Worked Example Box -->
+    <rect x="0" y="105" width="530" height="190" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="20" y="130" fill="#fbbf24" font-size="12" font-weight="bold">📊 Calculation for Component X (From Worked Example):</text>
+    
+    <text x="20" y="156" fill="#e2e8f0" font-size="11.5">• Distance from baseline to spot X = <tspan fill="#f59e0b" font-weight="bold">20 mm</tspan></text>
+    <text x="20" y="178" fill="#e2e8f0" font-size="11.5">• Total distance to solvent front = 20 + 40 + 15 = <tspan fill="#38bdf8" font-weight="bold">75 mm</tspan></text>
+    
+    <rect x="20" y="195" width="490" height="85" rx="6" fill="#070f1e" stroke="#334155" stroke-width="1"/>
+    <text x="35" y="222" fill="#34d399" font-size="13" font-weight="bold">R<tspan font-size="9" dy="2">f</tspan><tspan dy="-2"> (Component X) = 20 / 75 ≈ 0.27</tspan></text>
+    <text x="35" y="244" fill="#94a3b8" font-size="10.5">Note: R<tspan font-size="8" dy="1">f</tspan><tspan dy="-1"> is a dimensionless ratio (no units) and is always ≤ 1.0.</tspan></text>
+    <text x="35" y="262" fill="#94a3b8" font-size="10.5">High R<tspan font-size="8" dy="1">f</tspan><tspan dy="-1"> indicates high solubility in mobile phase and low affinity for stationary phase.</tspan></text>
+  </g>
+</svg>`;
+
+const chromatogramRfDiagramSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 250" class="w-full max-w-[700px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Title Header -->
+  <text x="375" y="24" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">Chromatogram Distance Measurements for Rf Calculation</text>
+
+  <g transform="translate(60, 40)">
+    <!-- Main Outer Chromatogram Paper Box (width: 630, height: 130) -->
+    <rect x="0" y="25" width="630" height="130" fill="#0f172a" stroke="#475569" stroke-width="2" rx="4" />
+
+    <!-- Top Dimension Segments Header Row (10 | 20 | 40 | 15 | 15) -->
+    <!-- Segment 1: 10 (0 to 60) -->
+    <line x1="0" y1="0" x2="0" y2="25" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="60" y1="0" x2="60" y2="25" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="30" y="16" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">10</text>
+
+    <!-- Segment 2: 20 (60 to 180) -->
+    <line x1="180" y1="0" x2="180" y2="25" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="120" y="16" fill="#fbbf24" font-size="12" font-weight="bold" text-anchor="middle">20</text>
+
+    <!-- Segment 3: 40 (180 to 420) -->
+    <line x1="420" y1="0" x2="420" y2="25" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="300" y="16" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">40</text>
+
+    <!-- Segment 4: 15 (420 to 510) -->
+    <line x1="510" y1="0" x2="510" y2="25" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="465" y="16" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">15</text>
+
+    <!-- Segment 5: 15 (510 to 600) -->
+    <line x1="600" y1="0" x2="600" y2="25" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="555" y="16" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">15</text>
+
+    <!-- Horizontal top border line of dimension box -->
+    <line x1="0" y1="0" x2="630" y2="0" stroke="#94a3b8" stroke-width="1.5" />
+
+    <!-- Baseline (Origin line at x=60) -->
+    <line x1="60" y1="25" x2="60" y2="155" stroke="#f8fafc" stroke-width="2" />
+    <circle cx="60" cy="90" r="7" fill="#334155" stroke="#f8fafc" stroke-width="1.5" />
+    <text x="60" y="174" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">baseline</text>
+
+    <!-- Spot X (at x=180, distance 20 from baseline) -->
+    <ellipse cx="180" cy="90" rx="18" ry="11" fill="#f59e0b" fill-opacity="0.85" stroke="#fbbf24" stroke-width="1.5" />
+    <text x="180" y="118" fill="#fbbf24" font-size="12" font-weight="bold" text-anchor="middle">X</text>
+
+    <!-- Spot Y (at x=420, distance 20+40=60 from baseline) -->
+    <ellipse cx="420" cy="90" rx="16" ry="10" fill="#94a3b8" fill-opacity="0.6" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="420" y="118" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Y</text>
+
+    <!-- Solvent Front (line at x=510, distance 20+40+15=75 from baseline) -->
+    <line x1="510" y1="25" x2="510" y2="155" stroke="#38bdf8" stroke-width="2" />
+    <text x="510" y="174" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">solvent front</text>
+  </g>
+</svg>`;
+
+const hrmsSpectrumSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 300" class="w-full max-w-[700px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Title Header -->
+  <text x="375" y="24" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="bold">Fig B: High-Resolution Mass Spectrum (m/z 44.00 - 44.07)</text>
+
+  <g transform="translate(70, 45)">
+    <!-- Y Axis (relative abundance) -->
+    <line x1="0" y1="10" x2="0" y2="190" stroke="#94a3b8" stroke-width="1.8" />
+    <text x="-125" y="-14" fill="#94a3b8" font-size="11" font-weight="bold" transform="rotate(-90)" text-anchor="middle">relative abundance</text>
+
+    <!-- X Axis (m/z) -->
+    <line x1="0" y1="190" x2="620" y2="190" stroke="#94a3b8" stroke-width="1.8" />
+
+    <!-- Noise baseline background -->
+    <path d="M 0,188 L 10,185 L 20,189 L 30,186 L 40,188 L 50,184 L 60,189 L 70,186 L 80,187 L 90,184 L 100,189 L 110,185 L 120,188 L 130,184 L 140,187 L 150,185 L 160,189 L 170,184 L 180,188 L 190,185 L 205,188 L 215,185 L 225,189 L 235,185 L 245,188 L 255,184 L 265,188 L 275,185 L 285,189 L 295,186 L 305,188 L 315,184 L 325,188 L 335,185 L 345,189 L 355,185 L 365,188 L 375,184 L 385,188 L 395,185 L 405,189 L 415,186 L 425,188 L 435,185 L 445,188 L 455,184 L 465,188 L 475,185 L 485,189 L 495,185 L 505,188 L 515,184 L 525,188 L 535,185 L 545,189 L 555,185 L 565,188 L 575,184 L 585,188 L 595,185 L 605,189 L 615,185 L 620,188" fill="none" stroke="#475569" stroke-width="1.2" />
+
+    <!-- Major Peak 1: Q (Ethanal, CH3CHO, m/z = 44.0261) at x = 230 -->
+    <path d="M 220,186 L 230,55 L 240,186" fill="none" stroke="#38bdf8" stroke-width="2.2" />
+    <line x1="230" y1="55" x2="230" y2="190" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="230" y="42" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Q (CH₃CHO)</text>
+    <text x="230" y="27" fill="#38bdf8" font-size="10" text-anchor="middle">m/z 44.0261</text>
+
+    <!-- Major Peak 2: P (Propane, C3H8, m/z = 44.0624) at x = 550 -->
+    <path d="M 540,186 L 550,25 L 560,186" fill="none" stroke="#fbbf24" stroke-width="2.2" />
+    <line x1="550" y1="25" x2="550" y2="190" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="2 2" />
+    <text x="550" y="16" fill="#fbbf24" font-size="11" font-weight="bold" text-anchor="middle">P (C₃H₈)</text>
+    <text x="550" y="2" fill="#fbbf24" font-size="10" text-anchor="middle">m/z 44.0624</text>
+
+    <!-- X Axis Ticks & Labels -->
+    <!-- 44.01 -->
+    <line x1="90" y1="190" x2="90" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="90" y="212" fill="#94a3b8" font-size="10" text-anchor="middle">44.01</text>
+
+    <!-- 44.02 -->
+    <line x1="180" y1="190" x2="180" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="180" y="212" fill="#94a3b8" font-size="10" text-anchor="middle">44.02</text>
+
+    <!-- 44.03 -->
+    <line x1="270" y1="190" x2="270" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="270" y="212" fill="#94a3b8" font-size="10" text-anchor="middle">44.03</text>
+
+    <!-- 44.04 -->
+    <line x1="360" y1="190" x2="360" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="360" y="212" fill="#360" font-size="10" text-anchor="middle">44.04</text>
+
+    <!-- 44.05 -->
+    <line x1="450" y1="190" x2="450" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="450" y="212" fill="#94a3b8" font-size="10" text-anchor="middle">44.05</text>
+
+    <!-- 44.06 -->
+    <line x1="540" y1="190" x2="540" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="540" y="212" fill="#94a3b8" font-size="10" text-anchor="middle">44.06</text>
+
+    <!-- 44.07 -->
+    <line x1="610" y1="190" x2="610" y2="196" stroke="#94a3b8" stroke-width="1.5" />
+    <text x="610" y="212" fill="#94a3b8" font-size="10" text-anchor="middle">44.07</text>
+  </g>
+</svg>`;
+
+const instrumentalChromatographySvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" class="w-full h-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Title Badge -->
+  <rect x="230" y="12" width="460" height="28" rx="14" fill="#1e293b" fill-opacity="0.9" stroke="#334155" stroke-width="1"/>
+  <text x="460" y="31" text-anchor="middle" fill="#38bdf8" font-size="12.5" font-weight="bold">INSTRUMENTAL CHROMATOGRAPHY: HPLC &amp; GAS CHROMATOGRAPHY (GC)</text>
+
+  <!-- Left: HPLC Instrumentation Diagram -->
+  <g transform="translate(30, 50)">
+    <rect x="0" y="0" width="410" height="270" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="205" y="24" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold">High-Performance Liquid Chromatography (HPLC)</text>
+
+    <!-- Solvent Reservoir -->
+    <rect x="30" y="45" width="70" height="45" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="65" y="65" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">Solvent</text>
+    <text x="65" y="78" text-anchor="middle" fill="#38bdf8" font-size="10" font-weight="bold">Reservoir</text>
+
+    <!-- Arrow to Pump -->
+    <line x1="65" y1="90" x2="65" y2="120" stroke="#f8fafc" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Pump -->
+    <circle cx="65" cy="145" r="25" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+    <text x="65" y="149" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">PUMP</text>
+    <text x="65" y="185" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="bold">(High Pressure)</text>
+
+    <!-- Sample Injector -->
+    <line x1="90" y1="145" x2="140" y2="145" stroke="#f8fafc" stroke-width="2" />
+    <rect x="140" y="130" width="40" height="30" rx="4" fill="#d97706" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="160" y="149" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">Sample</text>
+
+    <!-- HPLC Column Tube -->
+    <line x1="180" y1="145" x2="220" y2="145" stroke="#f8fafc" stroke-width="2" />
+    <rect x="220" y="132" width="90" height="26" rx="4" fill="#334155" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="265" y="149" text-anchor="middle" fill="#f8fafc" font-size="10.5" font-weight="bold">HPLC Column</text>
+    <text x="265" y="172" text-anchor="middle" fill="#94a3b8" font-size="9">(Micro-particles)</text>
+
+    <!-- UV Detector -->
+    <line x1="310" y1="145" x2="335" y2="145" stroke="#f8fafc" stroke-width="2" />
+    <rect x="335" y="130" width="55" height="30" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.5"/>
+    <text x="362" y="144" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">UV</text>
+    <text x="362" y="155" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold">Detector</text>
+
+    <!-- Output to Display -->
+    <path d="M 362,130 L 362,80 L 260,80" fill="none" stroke="#34d399" stroke-width="2" stroke-dasharray="3 3"/>
+    <rect x="160" y="65" width="100" height="30" rx="4" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="210" y="84" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">Computer Display</text>
+  </g>
+
+  <!-- Right: GC Apparatus & Chromatogram -->
+  <g transform="translate(465, 50)">
+    <rect x="0" y="0" width="425" height="270" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="212" y="24" text-anchor="middle" fill="#34d399" font-size="12" font-weight="bold">Gas Chromatography (GC) &amp; Retention Time (Rt)</text>
+
+    <!-- Carrier Gas Cylinder -->
+    <rect x="20" y="45" width="30" height="85" rx="12" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="35" y="80" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold" transform="rotate(-90 35 80)">Carrier Gas (N₂/He)</text>
+
+    <!-- Oven Box with Coiled Column -->
+    <rect x="75" y="45" width="130" height="90" rx="6" fill="#831843" fill-opacity="0.4" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="140" y="62" text-anchor="middle" fill="#f43f5e" font-size="10" font-weight="bold">Oven (Coiled Column)</text>
+    
+    <!-- Coiled Line inside Oven -->
+    <path d="M 85,90 C 95,70 115,70 125,90 C 135,110 155,110 165,90 C 175,70 195,70 195,90" fill="none" stroke="#fbbf24" stroke-width="2"/>
+
+    <!-- Detector & Data Recorder -->
+    <rect x="225" y="70" width="55" height="30" rx="4" fill="#059669" stroke="#34d399" stroke-width="1.5"/>
+    <text x="252" y="89" text-anchor="middle" fill="#ffffff" font-size="9.5" font-weight="bold">Detector</text>
+    <line x1="280" y1="85" x2="310" y2="85" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="310" y="70" width="95" height="30" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="357" y="89" text-anchor="middle" fill="#38bdf8" font-size="9.5" font-weight="bold">Data System</text>
+
+    <!-- Chromatogram Peak Plot (Time vs Absorption) -->
+    <g transform="translate(30, 148)">
+      <rect x="0" y="0" width="370" height="110" rx="6" fill="#070f1e" stroke="#334155" stroke-width="1"/>
+      <text x="185" y="16" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="bold">Typical GC Chromatogram Peaks</text>
+      
+      <!-- Axes -->
+      <line x1="30" y1="25" x2="30" y2="90" stroke="#94a3b8" stroke-width="1.2"/>
+      <line x1="30" y1="90" x2="350" y2="90" stroke="#94a3b8" stroke-width="1.2"/>
+      <text x="15" y="60" fill="#94a3b8" font-size="8" transform="rotate(-90 15 60)" text-anchor="middle">Absorption</text>
+      <text x="190" y="104" fill="#94a3b8" font-size="8.5" text-anchor="middle">Retention Time (Rt) / min</text>
+
+      <!-- Baseline and Peaks -->
+      <path d="M 30,90 L 80,90 L 90,65 L 100,90 L 140,90 L 150,30 L 160,90 L 220,90 L 230,45 L 240,90 L 280,90 L 290,75 L 300,90 L 350,90" fill="none" stroke="#38bdf8" stroke-width="1.8"/>
+      
+      <!-- Peak Annotations -->
+      <text x="90" y="58" fill="#fbbf24" font-size="8.5" text-anchor="middle">Peak 1</text>
+      <text x="150" y="24" fill="#34d399" font-size="8.5" text-anchor="middle">Peak 2 (Ethanol)</text>
+      <text x="230" y="38" fill="#fbbf24" font-size="8.5" text-anchor="middle">Peak 3</text>
+    </g>
+  </g>
+</svg>`;
+
+const nmrPrinciplesSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" class="w-full max-w-[800px] h-auto mx-auto rounded-lg flex-shrink-0" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <!-- Title Header -->
+  <text x="425" y="24" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="bold">PRINCIPLES OF NMR SPECTROSCOPY: ACTIVE NUCLEI &amp; TMS REFERENCE</text>
+
+  <!-- Left: NMR Active vs Inactive Nuclei Box -->
+  <g transform="translate(30, 45)">
+    <rect x="0" y="0" width="380" height="170" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="190" y="24" text-anchor="middle" fill="#fbbf24" font-size="11.5" font-weight="bold">NMR Active vs Inactive Nuclei</text>
+    
+    <!-- Active Row -->
+    <rect x="15" y="40" width="350" height="50" rx="6" fill="#065f46" fill-opacity="0.3" stroke="#10b981" stroke-width="1"/>
+    <text x="25" y="60" fill="#34d399" font-size="10.5" font-weight="bold">✅ NMR Active (Odd Nucleon Count):</text>
+    <text x="25" y="78" fill="#f8fafc" font-size="10">Spin ≠ 0 | Examples: ¹H, ¹³C, ¹⁵N, ¹⁹F, ³¹P</text>
+
+    <!-- Inactive Row -->
+    <rect x="15" y="100" width="350" height="50" rx="6" fill="#881337" fill-opacity="0.3" stroke="#f43f5e" stroke-width="1"/>
+    <text x="25" y="120" fill="#fb7185" font-size="10.5" font-weight="bold">❌ NMR Inactive (Even Nucleon Count):</text>
+    <text x="25" y="138" fill="#f8fafc" font-size="10">Net Spin = 0 | Examples: ¹²C, ¹⁶O, ³²S</text>
+  </g>
+
+  <!-- Right: TMS Structure & Properties Box -->
+  <g transform="translate(440, 45)">
+    <rect x="0" y="0" width="380" height="170" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5"/>
+    <text x="190" y="24" text-anchor="middle" fill="#38bdf8" font-size="11.5" font-weight="bold">Tetramethylsilane (TMS): Si(CH₃)₄ Reference (δ = 0.0 ppm)</text>
+
+    <!-- TMS Characteristics Bullet Points -->
+    <text x="20" y="52" fill="#e2e8f0" font-size="10.5">• <tspan font-weight="bold" fill="#fbbf24">12 Equivalent Protons &amp; 4 Carbons:</tspan> Gives 1 sharp singlet peak.</text>
+    <text x="20" y="74" fill="#e2e8f0" font-size="10.5">• <tspan font-weight="bold" fill="#34d399">Highly Shielded (δ = 0 ppm):</tspan> Absorbs upfield of organic peaks.</text>
+    <text x="20" y="96" fill="#e2e8f0" font-size="10.5">• <tspan font-weight="bold" fill="#38bdf8">Chemically Inert &amp; Non-toxic:</tspan> Does not react with samples.</text>
+    <text x="20" y="118" fill="#e2e8f0" font-size="10.5">• <tspan font-weight="bold" fill="#c084fc">Volatile (b.p. 27°C):</tspan> Easily evaporated &amp; recovered post-analysis.</text>
+    
+    <rect x="20" y="132" width="340" height="26" rx="4" fill="#070f1e" stroke="#334155" stroke-width="1"/>
+    <text x="190" y="149" text-anchor="middle" fill="#94a3b8" font-size="10">Deuterated Solvent: CDCl₃ (No ¹H protons to mask peaks)</text>
+  </g>
+</svg>`;
+
 export const parts: LessonPart[] = [
   {
     id: 'chirality-optical-isomerism-u4-l5',
@@ -2292,7 +2597,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > >   2. **Observation:** Since no reaction occurs, the orange dichromate(VI) ions (Cr₂O₇²⁻) are not reduced to green chromium(III) ions (Cr³⁺). The solution **remains orange** (no colour change).
 > > * **(b) Ethanal + Tollens' Reagent:**
 > >   1. **Reasoning:** Ethanal (CH₃CHO) is an aldehyde and readily oxidises to ethanoic acid. In doing so, it reduces the diamminesilver(I) complex ions [Ag(NH₃)₂]⁺ present in Tollens' reagent to metallic silver (Ag):
-> >      $$CH_3CHO + 2[Ag(NH_3)_2]^+ + 3OH^- \rightarrow CH_3COO^- + 2Ag(s) + 4NH_3 + 2H_2O$$
+> >      $$CH₃CHO + 2[Ag(NH₃)₂]⁺ + 3OH⁻ → CH₃COO⁻ + 2Ag(s) + 4NH₃ + 2H₂O$$
 > >   2. **Observation:** The metallic silver deposits on the inner glass wall of the test tube, so the **colourless solution forms a silver mirror** (or a grey/black precipitate).
 
 > [!EXAMPLE]
@@ -2307,7 +2612,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * **Pentan-3-one (CH₃CH₂COCH₂CH₃):** Carbonyl carbon is bonded to two ethyl groups (-CH₂CH₃) with no methyl group adjacent to C=O. **Negative result**.
 > >    * **Propan-2-ol (CH₃CH(OH)CH₃):** Contains the secondary alcohol group CH₃CH(OH)- which is oxidised in situ by the alkaline iodine to propanone (CH₃COCH₃). **Positive result**.
 > > 2. **Reaction equation for ethanal:**
-> >    $$CH_3CHO + 3I_2 + 4NaOH \rightarrow HCOONa + CHI_3(s) + 3NaI + 3H_2O$$
+> >    $$CH₃CHO + 3I₂ + 4NaOH → HCOONa + CHI₃(s) + 3NaI + 3H₂O$$
 > > 3. **Observation:** A **pale-yellow precipitate** of triiodomethane (CHI₃) forms with a characteristic antiseptic smell.
 
 > [!EXAMPLE]
@@ -2542,11 +2847,11 @@ ${svgToken(sn1StereochemistrySvg)}
 > ### 🧪 Reactivity of Acyl Chlorides (RCOCl)
 > Acyl chlorides contain the functional group -COCl:
 > * **Preparation:** Synthesised by reacting a carboxylic acid with phosphorus(V) chloride (PCl₅) at room temperature under anhydrous conditions:
->   $$RCOOH + PCl_5 \\rightarrow RCOCl + POCl_3 + HCl(g)$$
+>   $$RCOOH + PCl₅ → RCOCl + POCl₃ + HCl(g)$$
 >   * Misty fumes of hydrogen chloride (HCl) gas are evolved.
 > * **Reactivity Explanation:** The carbonyl carbon in RCOCl is attached to **two strongly electronegative atoms** (oxygen and chlorine):
->   $$C^{\\delta+} = O^{\\delta-} \\quad \\text{and } C^{\\delta+} - Cl^{\\delta-}$$
->   * This creates a highly electron-deficient carbon centre ($C^{\\delta+}$) that is readily attacked by nucleophiles containing oxygen ($:OH_2, :OH^-, R'OH$) or nitrogen ($:NH_3, R'NH_2, R'_2NH$) lone pairs.
+>   $$C^{\\\\delta+} = O^{\\\\delta-} \\\\quad \\\\text{and } C^{\\\\delta+} - Cl^{\\\\delta-}$$
+>   * This creates a highly electron-deficient carbon centre ($C^{\\\\delta+}$) that is readily attacked by nucleophiles containing oxygen ($:OH₂, :OH⁻, R'OH$) or nitrogen ($:NH₃, R'NH₂, R'₂NH$) lone pairs.
 >   * Because Cl⁻ is a very stable leaving group, acyl chlorides undergo rapid nucleophilic addition-elimination reactions at room temperature without requiring heating or acid catalysts.
 
 > [!IMPORTANT]
@@ -2554,11 +2859,11 @@ ${svgToken(sn1StereochemistrySvg)}
 > When reacting acyl chlorides with nitrogen nucleophiles, two moles of the amine/ammonia are consumed per mole of acyl chloride because the released HCl is an acid and reacts with the basic amine to form an ammonium salt:
 > 
 > * **1. With Ammonia (Primary Amide + Ammonium Chloride):**
->   $$RCOCl + 2NH_3 \\rightarrow RCONH_2 + NH_4^+Cl^-$$
+>   $$RCOCl + 2NH₃ → RCONH₂ + NH₄⁺Cl⁻$$
 > * **2. With Primary Amines (N-Substituted Secondary Amide + Alkylammonium Chloride):**
->   $$RCOCl + 2R'NH_2 \\rightarrow RCONHR' + R'NH_3^+Cl^-$$
+>   $$RCOCl + 2R'NH₂ → RCONHR' + R'NH₃⁺Cl⁻$$
 > * **3. With Secondary Amines (N,N-Disubstituted Tertiary Amide + Dialkylammonium Chloride):**
->   $$RCOCl + 2R'_2NH \\rightarrow RCONR'_2 + R'_2NH_2^+Cl^-$$
+>   $$RCOCl + 2R'₂NH → RCONR'₂ + R'₂NH₂⁺Cl⁻$$
 > * **4. Tertiary Amines (R'₃N):** Cannot react because the nitrogen atom has **no hydrogen atom to lose** to eliminate HCl.
 
 > [!BOX]
@@ -2570,14 +2875,14 @@ ${svgToken(sn1StereochemistrySvg)}
 >   * Heating a triester with aqueous sodium hydroxide (NaOH) produces:
 >     1. Propane-1,2,3-triol (glycerol).
 >     2. Sodium carboxylate salts (soaps), e.g. sodium stearate (C₁₇H₃₅COONa).
->   $$\text{Triester} + 3NaOH \rightarrow \text{Propane-1,2,3-triol} + 3RCOONa$$
+>   $$\\\\text{Triester} + 3\\\\text{NaOH} → \\\\text{Propane-1,2,3-triol} + 3\\\\text{RCOONa}$$
 
 > [!IMPORTANT]
 > ### ⛓️ Polyesters & Condensation Polymerisation
 > * **Condensation Polymerisation Definition:** The formation of a polymer where two different bifunctional monomers react together with the simultaneous elimination of a small molecule (such as H₂O or HCl) at each linkage.
 > * **Monomer Requirements:** Monomers must be **difunctional** (contain two reactive functional groups at opposite ends, e.g. a dicarboxylic acid / diacyl chloride and a diol).
 > * **Terylene (PET):** Formed from benzene-1,4-dicarboxylic acid (terephthalic acid) and ethane-1,2-diol:
->   $$n(HOOC-C_6H_4-COOH) + n(HO-CH_2CH_2-OH) \rightarrow [-OC-C_6H_4-CO-O-CH_2CH_2-O-]_n + (2n-1)H_2O$$
+>   $$n(HOOC-C₆H₄-COOH) + n(HO-CH₂CH₂-OH) → [-OC-C₆H₄-CO-O-CH₂CH₂-O-]_n + (2n-1)H₂O$$
 > 
 > > [!WARNING]
 > > ### 🏭 Industrial Comparison: Dicarboxylic Acids vs. Diacyl Chlorides
@@ -2610,10 +2915,10 @@ ${svgToken(sn1StereochemistrySvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **With propan-1-ol:**
-> >    $$CH_3CH_2CH_2COCl + CH_3CH_2CH_2OH \rightarrow CH_3CH_2CH_2COOCH_2CH_2CH_3 + HCl$$
+> >    $$CH₃CH₂CH₂COCl + CH₃CH₂CH₂OH → CH₃CH₂CH₂COOCH₂CH₂CH₃ + HCl$$
 > >    * Organic product name: **propyl butanoate**
 > > 2. **With ethylamine (Note stoichiometry 1:2):**
-> >    $$CH_3CH_2CH_2COCl + 2CH_3CH_2NH_2 \rightarrow CH_3CH_2CH_2CONHCH_2CH_3 + CH_3CH_2NH_3^+Cl^-$$
+> >    $$CH₃CH₂CH₂COCl + 2CH₃CH₂NH₂ → CH₃CH₂CH₂CONHCH₂CH₃ + CH₃CH₂NH₃⁺Cl⁻$$
 > >    * Organic product name: **N-ethylbutanamide**
 
 > [!EXAMPLE]
@@ -2644,9 +2949,9 @@ ${svgToken(sn1StereochemistrySvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Acidic Hydrolysis (Reversible):**
-> >    $$CH_3CH_2CH_2COOCH_2CH_2CH_3 + H_2O \rightleftharpoons CH_3CH_2CH_2COOH + CH_3CH_2CH_2OH$$
+> >    $$CH₃CH₂CH₂COOCH₂CH₂CH₃ + H₂O ⇌ CH₃CH₂CH₂COOH + CH₃CH₂CH₂OH$$
 > > 2. **Alkaline Hydrolysis (Irreversible):**
-> >    $$CH_3CH_2CH_2COOCH_2CH_2CH_3 + OH^- \rightarrow CH_3CH_2CH_2COO^- + CH_3CH_2CH_2OH$$
+> >    $$CH₃CH₂CH₂COOCH₂CH₂CH₃ + OH⁻ → CH₃CH₂CH₂COO⁻ + CH₃CH₂CH₂OH$$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Polymerisation Limitations
@@ -2669,7 +2974,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > > 1. **Identify eliminated groups:** Carboxyl -COOH loses -OH and hydroxyl -OH loses -H to release water.
 > > 2. **Link monomer residues:** Combine the dicarbonyl residue (-C(=O)-C(=O)-) with the diol residue (-O-CH(CH₃)-CH(CH₃)-O-).
 > > 3. **Write structural repeat unit:**
-> >    $$[-C(=O)-C(=O)-O-CH(CH_3)-CH(CH_3)-O-]_n$$
+> >    $$[-C(=O)-C(=O)-O-CH(CH₃)-CH(CH₃)-O-]_n$$
 > 
 > ${svgToken(polyesterRepeatUnitSvg)}
 
@@ -2681,8 +2986,8 @@ ${svgToken(sn1StereochemistrySvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Step 1: Nucleophilic Attack (Addition):**
-> >    * The carbonyl carbon is strongly electron-deficient ($C^{\delta+}$) due to electron withdrawal by both the oxygen and chlorine atoms.
-> >    * A lone pair of electrons on the oxygen atom of water ($:OH_2$) attacks the carbonyl carbon, breaking the $C=O$ $\pi$ bond and pushing electrons onto the oxygen atom to form a tetrahedral intermediate ($-O^-$).
+> >    * The carbonyl carbon is strongly electron-deficient ($C^{\\\\delta+}$) due to electron withdrawal by both the oxygen and chlorine atoms.
+> >    * A lone pair of electrons on the oxygen atom of water ($:OH₂$) attacks the carbonyl carbon, breaking the $C=O$ $\\\\pi$ bond and pushing electrons onto the oxygen atom to form a tetrahedral intermediate ($-O^-$).
 > > 2. **Step 2: Elimination & Regeneration of Carbonyl (C=O):**
 > >    * The lone pair on the oxygen atom reforms the $C=O$ double bond, expelling the chloride ion (Cl⁻) as a stable leaving group.
 > > 3. **Step 3: Deprotonation:**
@@ -2700,7 +3005,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > > 1. **Determine the stoichiometry:**
 > >    * Glyceryl tristearate is a triester containing three ester bonds; therefore, 1 mole of triester reacts with exactly **3 moles** of NaOH.
 > > 2. **Write the balanced chemical equation:**
-> >    $$(C_{17}H_{35}COO)_3C_3H_5 + 3NaOH \rightarrow C_3H_5(OH)_3 + 3C_{17}H_{35}COONa$$
+> >    $$(C₁₇H₃₅COO)₃C₃H₅ + 3NaOH → C₃H₅(OH)₃ + 3C₁₇H₃₅COONa$$
 > > 3. **Name the organic products:**
 > >    * C₃H₅(OH)₃: **propane-1,2,3-triol** (glycerol).
 > >    * C₁₇H₃₅COONa: **sodium stearate** (soap).
@@ -2708,7 +3013,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > [!EXAMPLE]
 > #### 📝 Worked Example 9: Deducing Monomers from a Polyester Chain
 > **Question:** A sample of a biodegradable polyester has the following repeat unit:
-> $$[-O-CH(CH_3)-CO-]_n$$
+> $$[-O-CH(CH₃)-CO-]_n$$
 > 1) Deduce whether this polymer is formed from one monomer or two different monomers.
 > 2) Draw the structural formula and give the IUPAC name of the monomer(s) used.
 > 
@@ -2720,7 +3025,7 @@ ${svgToken(sn1StereochemistrySvg)}
 > >    * Therefore, it is formed from **a single monomer** that contains both a hydroxyl group (-OH) and a carboxyl group (-COOH) in the same molecule (a hydroxycarboxylic acid).
 > > 2. **Reconstruct the monomer formula:**
 > >    * Add -H to the oxygen end and -OH to the carbonyl end:
-> >      $$HO-CH(CH_3)-COOH$$
+> >      $$HO-CH(CH₃)-COOH$$
 > > 3. **Give the IUPAC name:**
 > >    * Main chain has 3 carbons with -COOH at Carbon-1 and -OH at Carbon-2.
 > >    * IUPAC Name: **2-hydroxypropanoic acid** (commonly known as lactic acid; the polymer is poly(lactic acid) or PLA).
@@ -2732,6 +3037,323 @@ ${svgToken(sn1StereochemistrySvg)}
       'Condensation polymerisation eliminates a small molecule (H₂O or HCl) to form polyesters.',
       'Bifunctional monomers are strictly required for polymerisation; monofunctional monomers cause chain termination.',
       'Industrially, dicarboxylic acids are preferred over diacyl chlorides to avoid releasing toxic and corrosive HCl gas.'
+    ]
+  },
+  {
+    id: 'chromatography-spectroscopy-u4-l5',
+    title: 'Chromatography and Spectroscopy',
+    type: 'text',
+    content: `
+> [!NOTE]
+> ### 🔬 Chromatography Techniques Overview
+> Chromatography is an analytical technique used to separate components of a mixture based on their relative affinities for a **mobile phase** and a **stationary phase**.
+> 
+> * **Paper Chromatography:**
+>    * *Stationary Phase:* Water trapped within the cellulose fibers of the paper.
+>    * *Mobile Phase:* Liquid solvent moving up the paper by capillary action.
+>    * *Separation Principle:* Separates substances based on their solubility in the mobile phase vs attraction to the stationary cellulose phase.
+> * **Thin-Layer Chromatography (TLC):**
+>    * *Stationary Phase:* A thin layer of silica ($\\\\text{SiO}_2$) or alumina ($\\\\text{Al}_2\\\\text{O}_3$) coated on a flat glass or plastic sheet.
+>    * *Advantages over paper:* Faster run times, sharper separation of components, and capability to handle smaller sample quantities.
+> * **High-Performance Liquid Chromatography (HPLC):**
+>    * *Apparatus:* A column chromatography technique using high pressure to force liquid solvents through a column packed with a finely divided stationary phase.
+>    * *Applications:* Used primarily for non-volatile organic compounds, pharmaceuticals, and biological molecules.
+> * **Gas Chromatography (GC):**
+>    * *Apparatus & Mobile Phase:* Separates volatile mixtures using an inert carrier gas (e.g., helium or nitrogen) passing through a capillary column coated with a stationary phase (high-boiling liquid on solid support).
+>    * *Separation Principle:* Components separate based on differences in retention times in the column.
+> * **GC-MS (Gas Chromatography-Mass Spectrometry):**
+>    * *Coupling:* Combining Gas Chromatography with Mass Spectrometry allows definitive identification of individual components as they exit the column based on their molecular mass and fragmentation patterns.
+>    * *Applications:* Widely used in forensics, environmental monitoring, and drug testing in sports.
+
+> [!IMPORTANT]
+> ### 🧪 Simple Chromatography (TLC, Paper & Column)
+> * **Phases in Paper Chromatography:**
+>    * *Stationary Phase:* Water trapped within cellulose fibers of paper.
+>    * *Mobile Phase:* Liquid solvent moving up the paper.
+> * **Thin-Layer Chromatography (TLC):**
+>    * *Stationary Phase:* Silica ($\\\\text{SiO}_2$) or alumina ($\\\\text{Al}_2\\\\text{O}_3$) layer on glass/plastic.
+>    * *Key Advantages over paper:* Faster run times, sharper separation, and ability to handle smaller sample quantities.
+> * **Column Chromatography:**
+>    * *Apparatus:* A vertical glass tube/burette packed with silica or alumina stationary phase.
+>    * *Major Advantage:* Can separate and collect much **larger quantities** of material than paper or TLC.
+> * **Locating Colorless Spots:**
+>    * Visualized under **UV light** (fluorescent indicator in silica plate).
+>    * Sprayed with a chemical **locating agent** (e.g. ninhydrin for amino acids, or exposed to iodine vapor) to develop visible colored spots.
+
+> [!IMPORTANT]
+> ### 🧮 Retention Factor ($R_f$) Value Calculation
+> The retention factor ($R_f$) measures the relative movement of a component compared to the solvent front:
+> 
+> $$R_f = \\\\frac{\\\\text{Distance travelled by component}}{\\\\text{Distance travelled by solvent front (from baseline)}}$$
+> 
+> * **Units:** $R_f$ is a ratio and has **no units**.
+> * **Measurement Point:** Measured from the baseline to the **centre** of the spot.
+> * **Values:** $R_f$ is always less than or equal to 1.0 ($0 \\\\le R_f \\\\le 1.0$).
+> 
+> ${svgToken(chromatographySvg)}
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1: Explaining High $R_f$ Values
+> **Question:** Suggest why, in paper chromatography, the non-polar substance hexane has a high $R_f$ value.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze intermolecular forces with stationary phase:** Hexane is a non-polar hydrocarbon and has very weak intermolecular attractions (only London forces) to the highly polar stationary phase (water trapped in cellulose fibers).
+> > 2. **Analyze affinity for mobile phase:** Hexane has strong solubility and intermolecular attraction towards a non-polar mobile phase solvent.
+> > 3. **Conclude effect on movement:** As a result, hexane spends most of its time dissolved in the mobile phase, traveling much further up the paper and resulting in a high $R_f$ value.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Calculating $R_f$ Value from Chromatogram Diagram
+> **Question:** Calculate the $R_f$ value of component X in this diagram:
+> 
+> ${svgToken(chromatogramRfDiagramSvg)}
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate distance from baseline to component X:**
+> >    $$\\\\text{Distance to X} = 20\\\\text{ mm}$$
+> > 2. **Calculate total distance from baseline to solvent front:**
+> >    $$\\\\text{Distance to solvent front} = 20 + 40 + 15 = 75\\\\text{ mm}$$
+> > 3. **Calculate $R_f$ value:**
+> >    $$R_f = \\\\frac{20}{75} \\\\approx 0.27$$
+
+> [!IMPORTANT]
+> ### ⚙️ Instrumental Chromatography: HPLC & Gas Chromatography (GC)
+> Instrumental chromatography uses automated machinery, detectors, and computers to separate and analyze complex mixtures rapidly with high resolution.
+> 
+> ${svgToken(instrumentalChromatographySvg)}
+> 
+> * **High-Performance Liquid Chromatography (HPLC):**
+>    * **Mobile Phase Movement:** The liquid solvent (mobile phase) is forced through a metal column packed with extremely small stationary phase particles under **high pressure** (via a pump), rather than moving slowly by gravity.
+>    * **Stationary Phase Particle Size:** Extremely small particle size dramatically increases surface area, providing much sharper separation of components.
+>    * **Detection:** The sample is injected into the column; components exiting the column are detected by their absorption of **ultraviolet (UV) radiation**. The process is fully automated with results displayed on a computer screen.
+> 
+> * **Gas Chromatography (GC):**
+>    * **Mobile Phase:** An inert carrier gas (e.g. $\text{N}_2$ or $\text{He}$).
+>    * **Stationary Phase:** A high boiling point liquid or solid coated onto the inside of a long, coiled capillary column located inside a temperature-controlled oven.
+>    * **Retention Time ($R_t$):** The time taken from sample injection to detection.
+>    * **Variables Affecting $R_t$:** Column length, carrier gas flow rate/pressure, column temperature (oven temperature profile), and the nature/thickness of the stationary and mobile phases.
+>    * **Peak Area:** The area under each chromatogram peak is directly proportional to the relative concentration/amount of that component in the mixture.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: HPLC vs. Traditional Column Mobile Phase Movement
+> **Question:** How does the movement of the mobile phase in HPLC differ from that in traditional column chromatography?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Traditional Column Chromatography:** The liquid solvent moves slowly down the column under the force of **gravity**.
+> > 2. **HPLC (High-Performance Liquid Chromatography):** The liquid solvent is forced through the tightly packed column under **high pressure** using a mechanical **pump**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Reasons for Variations in Gas Chromatography Retention Times
+> **Question:** Suggest reasons why retention times ($R_t$) for a given substance may be different when obtained from different gas chromatograms.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Differences in column parameters:** Variations in **column length**, diameter, or the chemical composition/thickness of the **stationary phase**.
+> > 2. **Differences in operating conditions:** Variations in the **column oven temperature**, carrier gas **flow rate**, or gas **pressure**.
+
+> [!IMPORTANT]
+> ### ⚖️ High-Resolution Mass Spectrometry (HRMS)
+> High-Resolution Mass Spectrometry measures the molecular ion peak ($M^+$) to **4 or more decimal places**.
+> * **Distinguishing Molecular Formulae:** Standard mass spectrometers only measure relative molecular mass to whole numbers (nominal mass). HRMS allows determination of the exact molecular formula among compounds sharing identical nominal integer masses (e.g. nominal integer mass of 58):
+>   * $\text{C}_4\text{H}_{10} = (4 \times 12.0000) + (10 \times 1.0078) = 58.0780$
+>   * $\text{C}_3\text{H}_6\text{O} = (3 \times 12.0000) + (6 \times 1.0078) + 15.9949 = 58.0417$
+>   * $\text{C}_2\text{H}_6\text{N}_2 = (2 \times 12.0000) + (6 \times 1.0078) + (2 \times 14.0031) = 58.0530$
+> * **Limitation:** HRMS **cannot distinguish between structural isomers** that share the exact same molecular formula (e.g. propanal and propanone both have the formula $\text{C}_3\text{H}_6\text{O}$ and an accurate mass of $58.0417$).
+> * **Accurate Atomic Masses (Standardised against $^{12}\text{C} = 12.0000$):**
+>   * $\text{H} = 1.0078$
+>   * $\text{C} = 12.0000$
+>   * $\text{N} = 14.0031$
+>   * $\text{O} = 15.9949$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Identifying Compound Structure from HRMS Mass Peak (M_r = 84.0573)
+> **Question:** A compound is found to have an $M_r$ value of $84.0573$. Which of these structures does the compound have?
+> $$\text{CH}_2=\text{CHCH}_2\text{CH}_2\text{CH}_2\text{CH}_3 \quad \text{or} \quad \text{CH}_3\text{CH}=\text{CHCH}_2\text{CHO}$$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate accurate mass for $\text{CH}_2=\text{CHCH}_2\text{CH}_2\text{CH}_2\text{CH}_3$ ($\text{C}_6\text{H}_{12}$):**
+> >    $$\text{Accurate } M_r = (6 \times 12.0000) + (12 \times 1.0078) = 84.0936$$
+> > 2. **Calculate accurate mass for $\text{CH}_3\text{CH}=\text{CHCH}_2\text{CHO}$ ($\text{C}_5\text{H}_8\text{O}$):**
+> >    $$\text{Accurate } M_r = (5 \times 12.0000) + (8 \times 1.0078) + 15.9949 = 84.0573$$
+> > 3. **Conclusion:**
+> >    * The calculated mass for $\text{C}_5\text{H}_8\text{O}$ matches the experimental HRMS mass ($84.0573$) exactly.
+> >    * Therefore, the compound is **$\text{CH}_3\text{CH}=\text{CHCH}_2\text{CHO}$**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Distinguishing Candidates with Close Masses (M_r = 70.0423)
+> **Question:** Three compounds have these structures:
+> * **A:** $\text{CH}_3\text{CH}_2\text{CH}_2\text{CH}=\text{CH}_2$
+> * **B:** $\text{CH}_3\text{CH(NH}_2\text{)CN}$
+> * **C:** $\text{CH}_2=\text{CHCOCH}_3$
+> 
+> In a high-resolution mass spectrometer, compound Y is found to have an $M_r$ value of $70.0423$. What is the identity of Y?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate accurate mass for A ($\text{C}_5\text{H}_{10}$):**
+> >    $$M_r(\text{A}) = (5 \times 12.0000) + (10 \times 1.0078) = 70.0780$$
+> > 2. **Calculate accurate mass for B ($\text{C}_3\text{H}_6\text{N}_2$):**
+> >    $$M_r(\text{B}) = (3 \times 12.0000) + (6 \times 1.0078) + (2 \times 14.0031) = 70.0530$$
+> > 3. **Calculate accurate mass for C ($\text{C}_4\text{H}_6\text{O}$):**
+> >    $$M_r(\text{C}) = (4 \times 12.0000) + (6 \times 1.0078) + 15.9949 = 70.0417$$
+> > 4. **Conclusion:**
+> >    * Comparing the measured value ($70.0423$) to the calculated values, it is much closer to C ($70.0417$) than to A ($70.0780$) or B ($70.0530$).
+> >    * Therefore, compound Y is **C ($\text{CH}_2=\text{CHCOCH}_3$)**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Distinguishing Diaminoethane vs Ethanoic Acid (M_r = 60.0213)
+> **Question:** A compound is either 1,2-diaminoethane ($\text{C}_2\text{H}_8\text{N}_2$) or ethanoic acid ($\text{C}_2\text{H}_4\text{O}_2$). Its accurate $M_r$ value is $60.0213$. Which compound is it?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate accurate mass for 1,2-diaminoethane ($\text{C}_2\text{H}_8\text{N}_2$):**
+> >    $$M_r(\text{C}_2\text{H}_8\text{N}_2) = (2 \times 12.0000) + (8 \times 1.0078) + (2 \times 14.0031) = 60.0686$$
+> > 2. **Calculate accurate mass for ethanoic acid ($\text{C}_2\text{H}_4\text{O}_2$):**
+> >    $$M_r(\text{C}_2\text{H}_4\text{O}_2) = (2 \times 12.0000) + (4 \times 1.0078) + (2 \times 15.9949) = 60.0210$$
+> > 3. **Conclusion:**
+> >    * The calculated accurate mass for ethanoic acid ($60.0210$) matches the measured value ($60.0213$) within experimental limits.
+> >    * Therefore, the compound is **ethanoic acid ($\text{C}_2\text{H}_4\text{O}_2$)**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Identifying HRMS Mass Spectrum Peaks (Fig B Spectrum)
+> **Question:** The high-resolution mass spectrum shown in Fig B has two major peaks:
+> 
+> ${svgToken(hrmsSpectrumSvg)}
+> 
+> Suggest which of these compounds are responsible for the mass spectrum:
+> * **P:** $\text{C}_3\text{H}_8$
+> * **Q:** $\text{CH}_3\text{CHO}$
+> * **R:** $\text{O=C=O}$ ($\text{CO}_2$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate accurate mass for P ($\text{C}_3\text{H}_8$):**
+> >    $$M_r(\text{P}) = (3 \times 12.0000) + (8 \times 1.0078) = 44.0624$$
+> > 2. **Calculate accurate mass for Q ($\text{CH}_3\text{CHO}$, $\text{C}_2\text{H}_4\text{O}$):**
+> >    $$M_r(\text{Q}) = (2 \times 12.0000) + (4 \times 1.0078) + 15.9949 = 44.0261$$
+> > 3. **Calculate accurate mass for R ($\text{CO}_2$):**
+> >    $$M_r(\text{R}) = 12.0000 + (2 \times 15.9949) = 43.9898$$
+> > 4. **Compare with the spectrum peaks:**
+> >    * The two peaks observed in the HRMS spectrum occur at $m/z \approx 44.026$ and $m/z \approx 44.062$.
+> >    * These correspond to **Q** ($44.0261$) and **P** ($44.0624$), while no peak is observed for **R** ($43.9898$).
+> >    * Therefore, **propane (P) and ethanal (Q)** are present, but carbon dioxide (R) is absent.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Qualitative Deduction of High-Resolution Mass Trends
+> **Question:** Two compounds have structures CH₃CH₂CH₂CH₂NH₂ (C₄H₁₁N) and HN=CHCOOH (C₂H₃NO₂). In an HRMS spectrum, one compound has $M_r = 73.0812$. Explain how you decide which compound it is without showing working.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze hydrogen contribution to accurate mass:**
+> >    * C₄H₁₁N contains 11 hydrogen atoms. Since hydrogen has an atomic mass slightly greater than 1 ($1.0078$), a high number of hydrogens pushes the accurate molecular mass above the nominal integer value of 73 ($M_r \approx 73.0889$).
+> > 2. **Analyze oxygen contribution to accurate mass:**
+> >    * C₂H₃NO₂ contains two oxygen atoms. Oxygen has an atomic mass slightly less than 16 ($15.9949$), which pulls the accurate mass below the nominal value ($M_r \approx 73.0163$).
+> > 3. **Conclusion:**
+> >    * Since the measured mass is $73.0812$ (greater than $73.08$), it must be **butylamine (CH₃CH₂CH₂CH₂NH₂)**.
+
+> [!IMPORTANT]
+> ### 🔗 Combined Techniques: GC-MS and HPLC-MS
+> Combining chromatographic separation with mass spectrometry detection provides rapid, definitive identification of organic molecules in complex mixtures.
+> 
+> * **Combined Principle:**
+>    * **Chromatography (GC / HPLC):** Separates the individual components in the mixture as they travel through the column.
+>    * **Mass Spectrometry (MS):** Identifies each separated component as it elutes (exits the column) by producing a characteristic fragmentation pattern and measuring accurate $m/z$ values, which are matched automatically against spectral databases.
+>    * *"MS identifies each compound by matching its unique fragmentation pattern to a database of known chemicals."*
+> * **Key Practical Applications:** Forensic science, forensic toxicology, and anti-doping detection of banned performance-enhancing drugs (e.g. anabolic steroids like nandrolone in urine at nanogram levels).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 10: Roles of HPLC and MS in Combined HPLC-MS
+> **Question:** What is the main function of each technique in HPLC-MS?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **HPLC Function:** Separates the individual chemical components present in the complex mixture.
+> > 2. **MS Function:** Identifies each separated component as it exits the column and determines its accurate molecular mass and chemical structure via fragmentation patterns.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 11: Chemical Reactions of Anabolic Steroids (Nandrolone vs. 19-norandrosterone)
+> **Question:** Which of the two compounds (nandrolone and 19-norandrosterone) would you expect to react with:
+> 1) Bromine water ($\text{Br}_2(\text{aq})$)
+> 2) 2,4-dinitrophenylhydrazine (2,4-DNPH)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **With Bromine water ($\text{Br}_2(\text{aq})$):**
+> >    * **Nandrolone** reacts because it contains a $\text{C=C}$ alkene double bond that undergoes electrophilic addition, decolorizing orange bromine water to colorless. 19-norandrosterone lacks a $\text{C=C}$ bond and does not react.
+> > 2. **With 2,4-dinitrophenylhydrazine (2,4-DNPH):**
+> >    * **Both compounds** react because both contain a $\text{C=O}$ carbonyl group and form an orange/yellow precipitate.
+
+> [!IMPORTANT]
+> ### 🧲 Principles of NMR Spectroscopy
+> Nuclear Magnetic Resonance (NMR) spectroscopy is an analytical technique used to determine the molecular structure of organic compounds by measuring energy absorption of atomic nuclei in a strong magnetic field.
+> 
+> ${svgToken(nmrPrinciplesSvg)}
+> 
+> * **Carbon-13 ($^{13}\text{C}$) NMR:** The number of peaks represents the number of different carbon environments in the molecule.
+> * **Proton ($^1\text{H}$) NMR:**
+>    * **Chemical Shift ($\delta$):** Indicates the chemical environment of the protons (measured in ppm relative to TMS).
+>    * **Integration Area:** The area under each peak is directly proportional to the relative number of protons ($^1\text{H}$) in that environment.
+>    * **Spin-Spin Splitting ($n+1$ rule):** The number of sub-peaks (singlet, doublet, triplet, quartet) indicates the number of protons ($n$) attached to adjacent carbon atoms.
+> * **NMR Active vs. Inactive Nuclei:**
+>    * **Active Nuclei:** Only nuclei with an **odd number of nucleons** (protons + neutrons) have nuclear spin and are NMR active (e.g. $^1\text{H}$, $^{13}\text{C}$, $^{15}\text{N}$, $^{19}\text{F}$, $^{31}\text{P}$).
+>    * **Inactive Nuclei:** Nuclei with **even numbers of protons and neutrons** (e.g. $^{12}\text{C}$, $^{16}\text{O}$, $^{32}\text{S}$) have zero net nuclear spin and are NMR inactive.
+> * **Solvent Requirements:**
+>    * Solvents must lack $^1\text{H}$ protons to prevent huge solvent absorption signals from masking sample peaks.
+>    * **Standard Deuterated Solvent:** Deuterated trichloromethane ($\text{CDCl}_3$). Deuterium ($^2\text{H}$) absorbs at a completely different frequency than $^1\text{H}$.
+> * **Calibration Standard: Tetramethylsilane (TMS, $\text{Si(CH}_3)_4$):**
+>    * Defines the reference zero point: $\delta = 0.0\text{ ppm}$.
+>    * Contains **12 magnetically equivalent protons** and **4 equivalent carbons**, producing a single, intense, sharp absorption peak.
+>    * Protons are strongly shielded by the electropositive silicon atom ($\text{Si}$), ensuring its peak appears upfield of almost all organic compound peaks.
+>    * Chemically **inert**, non-toxic, and highly **volatile** (low b.p. 27°C), allowing easy removal by evaporation after analysis.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 12: Suitability of Nuclei for NMR Spectroscopy ($^{16}\text{O}$, $^{19}\text{F}$, $^{32}\text{S}$)
+> **Question:** Explain which of $^{16}\text{O}$, $^{19}\text{F}$, $^{32}\text{S}$ are not suitable for use in NMR spectroscopy, and why.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify unsuitable nuclei:** $^{16}\text{O}$ and $^{32}\text{S}$ are not suitable for NMR spectroscopy.
+> > 2. **Reason:** Both $^{16}\text{O}$ (8 protons + 8 neutrons = 16 nucleons) and $^{32}\text{S}$ (16 protons + 16 neutrons = 32 nucleons) contain **even numbers of nucleons**. Their nuclear spins cancel out to give a **zero net nuclear spin**, making them NMR inactive. (In contrast, $^{19}\text{F}$ has 19 nucleons—an odd number—and is NMR active).
+
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 13: Water vs. TMS as an NMR Reference Standard
+> **Question:** Suggest why water ($\text{H}_2\text{O}$) is less suitable than TMS ($\text{Si(CH}_3)_4$) as a reference standard in NMR spectroscopy.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Proton Interference:** Water contains $^1\\\\text{H}$ protons which give an intense absorption peak that obscures sample peaks.
+> > 2. **Reactivity & Hydrogen Bonding:** Water is chemically reactive and forms hydrogen bonds with sample molecules, altering their chemical shifts.
+> > 3. **Variable Peak Position:** The chemical shift of water is unstable and varies significantly with temperature, solvent, and pH.
+> > 4. **Volatility & Recovery:** Water has a high boiling point (100°C) making sample recovery by evaporation difficult, whereas TMS is volatile (b.p. 27°C).
+`,
+    keyPoints: [
+      'Chromatography separates mixtures based on relative affinity for mobile and stationary phases.',
+      'Paper chromatography uses water trapped in cellulose as stationary phase; TLC uses silica or alumina.',
+      'HPLC and GC are column techniques; GC-MS enables definitive compound identification.',
+      'Retention factor (Rf) is dimensionless and calculated as spot distance divided by solvent front distance.',
+      'Non-polar substances have higher Rf values when non-polar mobile solvents are used because of weaker adsorption to polar stationary phases.',
+      'GC-MS and HPLC-MS combine chromatographic separation with mass spectrometry identification via fragmentation databases.',
+      'High-Resolution Mass Spectrometry (HRMS) measures m/z to 4 decimal places, allowing determination of exact molecular formulas.',
+      'NMR active nuclei have an odd number of nucleons (e.g. 1H, 13C, 19F); nuclei with even numbers of nucleons (12C, 16O, 32S) are NMR inactive.',
+      'TMS (Si(CH3)4) is the standard NMR calibration reference (0 ppm) because it has 12 equivalent, highly shielded protons, is inert, and volatile.',
+      'Deuterated solvents like CDCl3 are used in 1H NMR to prevent solvent protons from masking sample peaks.'
     ]
   }
 ];

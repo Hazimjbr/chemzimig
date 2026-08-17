@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Flashcard } from '@/data/curriculum/edexcel-alevel/flashcards';
 import { InlineMath, BlockMath } from 'react-katex';
+import { sanitizeKatex } from '@/lib/katex-sanitizer';
 
 interface FlashcardsDeckProps {
     cards: Flashcard[];
@@ -90,7 +91,7 @@ export default function FlashcardsDeck({
         return parts.map((part, idx) => {
             if (part.startsWith('$') && part.endsWith('$')) {
                 const math = part.slice(1, -1);
-                return <InlineMath key={idx} math={math} />;
+                return <InlineMath key={idx} math={sanitizeKatex(math)} />;
             }
             return <span key={idx}>{part}</span>;
         });

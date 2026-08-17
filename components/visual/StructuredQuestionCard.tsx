@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Question } from '@/data/exams/types';
 import { InlineMath, BlockMath } from 'react-katex';
+import { sanitizeKatex } from '@/lib/katex-sanitizer';
 
 interface StructuredQuestionCardProps {
     question: Question;
@@ -60,7 +61,7 @@ export const StructuredQuestionCard: React.FC<StructuredQuestionCardProps> = ({
         return parts.map((part, idx) => {
             if (part.startsWith('$') && part.endsWith('$')) {
                 const math = part.slice(1, -1);
-                return <InlineMath key={idx} math={math} />;
+                return <InlineMath key={idx} math={sanitizeKatex(math)} />;
             }
             return <span key={idx}>{part}</span>;
         });

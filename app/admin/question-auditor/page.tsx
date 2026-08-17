@@ -12,6 +12,7 @@ import { curriculumRegistry } from '@/data/curriculum/registry';
 import { allCurricula } from '@/data/curriculum';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
+import { sanitizeKatex } from '@/lib/katex-sanitizer';
 
 interface AuditedQuestion {
     source: 'quiz' | 'exam';
@@ -37,7 +38,7 @@ const renderTextWithMath = (text: string): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <BlockMath key={i} math={part.replace(/(?<!\\)%/g, '\\%')} />;
+                        return <BlockMath key={i} math={sanitizeKatex(part)} />;
                     }
                     return <span key={i}>{renderTextWithMath(part)}</span>;
                 })}
@@ -51,7 +52,7 @@ const renderTextWithMath = (text: string): React.ReactNode => {
             <React.Fragment>
                 {parts.map((part, i) => {
                     if (i % 2 === 1) {
-                        return <InlineMath key={i} math={part.replace(/(?<!\\)%/g, '\\%')} />;
+                        return <InlineMath key={i} math={sanitizeKatex(part)} />;
                     }
                     return <span key={i}>{part}</span>;
                 })}
