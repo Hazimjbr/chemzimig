@@ -95,11 +95,19 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
      >    * Nested bullet point (indented)
      ```
 
-8. **SVG Asset Design Guidelines:**
-   - For clean scaling and to match the paragraph styling of the website:
-     - Use a compact viewBox (e.g. `1000`x`360`) to prevent excessive vertical spacing.
-     - Set base text `font-size` to `12` (subscripts/superscripts to `8.5`) to match the `text-sm` paragraph size on-screen when scaled.
-     - Use the project's signature dark background gradient: `#070f1e` to `#0b1b35`, with a stroke border of `#1e293b`.
+8. **SVG Asset Design Guidelines & Mobile Responsiveness:**
+   - All SVG diagrams MUST be designed for mobile-first readability across all device viewports (smartphones, tablets, desktops).
+   - **ViewBox & Aspect Ratio Limits:**
+     - Use compact, moderate-width viewBoxes (e.g. `650`x`250` to `700`x`320`).
+     - NEVER squeeze multiple horizontal techniques, graphs, or cards into a single wide monolithic viewBox (e.g. `1000`x`360`), because when scaled down on mobile viewports (~340px), font sizes shrink to unreadable dots.
+   - **Multi-Item & Dashboard Diagrams:**
+     - For multi-topic summaries (e.g. Reaction Orders 0, 1, 2 or dual experimental setups), split them into separate standalone SVG tokens placed directly beneath their respective markdown bullet points, or use a vertically stacked card layout (`650`x`460` max).
+   - **Font Sizes & Label Spacing:**
+     - Set primary text font sizes to `13px` - `15px` (headers `15px`-`18px` bold, subscripts `10px`-`11px`).
+     - Ensure generous padding between axis labels (e.g., `Time`, `[A]`, `Rate`) and neighboring arrows/lines to completely prevent overlapping text on small viewports.
+   - **Styling Tokens:**
+     - Use the project's signature dark background gradient: `linear-gradient(to bottom right, #070f1e, #0b1b35)`, with a stroke border of `#1e293b` and `rounded-lg` styling.
+
 
 9. **Avoiding Confusing End-of-Line Periods:**
    - To prevent student confusion, do not put a period (`.`) at the end of a line if it terminates with a chemical symbol (e.g. `Na`), a number (e.g. `2.3`), or a unit (e.g. `mol/dm3`), as the period could be mistaken for part of the symbol, number, or unit.
@@ -139,6 +147,13 @@ When creating or modifying lesson pages (`app/dashboard/curriculum/[curriculumId
     - Tag all practice/exam questions with their respective `lessonNum` matching the curriculum registry lesson index.
     - The Smart Question Auditor dynamically resolves the lesson titles using `q.lessonNum` and `curriculumRegistry` to enable precise dropdown filtering. Do not hardcode `"Exam Practice Bank"` as the lesson title if a lesson number is available.
 
+18. **Double-Underscore Chemical Formulas in Display Math (`$$...$$`):**
+    - **The Issue:** Chemical formulas that contain **two or more separate KaTeX subscripts** (e.g., `\text{N}_2\text{O}_2`, `\text{H}_2\text{O}_2`) introduce **two `_` underscore characters** into the markdown source. Even inside `$$...$$` display math blocks, `react-markdown` may parse these paired underscores as markdown italic markers **before** passing the content to KaTeX, causing the display math block to break and render as raw LaTeX text.
+    - **Affected Patterns:** Any formula matching `\text{X}_n\text{Y}_m` where both `_n` and `_m` are present — e.g., `N₂O₂`, `H₂O₂`, `C₂H₂`, `N₂O₄`.
+    - **The Fix:** When a chemical formula has two or more separate subscript groups, **replace the entire formula with its Unicode equivalent** instead of using KaTeX. Do NOT attempt to use `\text{N}_2\text{O}_2` inside display math.
+      - *Example (Incorrect):* `$$\text{N}_2\text{O}_2 = \frac{k_1}{k_{-1}} [\text{NO}]^2$$`
+      - *Example (Correct):* `[N₂O₂] = (k₁ / k₋₁) × [NO]²` (plain text with Unicode subscripts)
+    - **Exception:** If the formula appears **inside concentration brackets** `[...]` in the **middle** of a longer equation (not at the start), and the overall equation has no other underscore conflicts, it may render correctly — verify in the browser before keeping it.
 
 
 # Chat Suppression Rules

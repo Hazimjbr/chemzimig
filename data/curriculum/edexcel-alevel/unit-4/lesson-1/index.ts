@@ -9,312 +9,371 @@ export const theoryMarkdown = `
 This lesson covers reaction rates, orders of reaction, rate equations, continuous and initial rate experimental methods, reaction mechanisms, the rate-determining step, and the Arrhenius equation.
 `;
 
-const gasCollectionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Experimental Gas Collection Techniques</text>
-  <g transform="translate(40, 40)">
-    <text x="180" y="20" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">Gas Syringe Method (High Precision)</text>
-    <path d="M 80,240 L 110,140 L 110,115 L 140,115 L 140,140 L 170,240 Z" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <path d="M 85,235 L 165,235 L 155,200 L 95,200 Z" fill="#38bdf8" fill-opacity="0.1" />
-    <circle cx="110" cy="220" r="3" fill="#38bdf8" fill-opacity="0.7" />
-    <circle cx="140" cy="210" r="2" fill="#38bdf8" fill-opacity="0.7" />
-    <circle cx="125" cy="230" r="4" fill="#38bdf8" fill-opacity="0.7" />
-    <text x="125" y="190" fill="#94a3b8" font-size="11" text-anchor="middle">Reaction Mixture</text>
-    <rect x="108" y="108" width="34" height="10" fill="#a16207" rx="2" />
-    <path d="M 125,112 L 125,85 L 220,85 L 220,105 L 240,105" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <rect x="240" y="90" width="120" height="30" rx="3" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <line x1="260" y1="90" x2="260" y2="95" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="280" y1="90" x2="280" y2="95" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="300" y1="90" x2="300" y2="95" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="320" y1="90" x2="320" y2="95" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="340" y1="90" x2="340" y2="95" stroke="#94a3b8" stroke-width="1.5" />
-    <rect x="300" y="95" width="100" height="20" rx="2" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="1.5" />
-    <line x1="400" y1="105" x2="430" y2="105" stroke="#3b82f6" stroke-width="3" />
-    <line x1="430" y1="90" x2="430" y2="120" stroke="#3b82f6" stroke-width="3" />
-    <rect x="241" y="92" width="58" height="26" fill="#10b981" fill-opacity="0.2" />
-    <text x="270" y="108" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">Gas</text>
-    <text x="125" y="270" fill="#f8fafc" font-size="11" text-anchor="middle">Conical Flask</text>
-    <text x="320" y="145" fill="#f8fafc" font-size="11" text-anchor="middle">Gas Syringe</text>
+const gasCollectionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 460" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">Experimental Gas Collection Techniques</text>
+  
+  <!-- Method 1: Gas Syringe -->
+  <g transform="translate(15, 45)">
+    <rect x="0" y="0" width="620" height="190" rx="8" fill="#38bdf8" fill-opacity="0.04" stroke="#38bdf8" stroke-opacity="0.2" />
+    <text x="310" y="24" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">1. Gas Syringe Method (High Precision / All Gases)</text>
+    
+    <!-- Conical Flask -->
+    <path d="M 60,160 L 90,90 L 90,70 L 120,70 L 120,90 L 150,160 Z" fill="none" stroke="#cbd5e1" stroke-width="2" />
+    <path d="M 65,155 L 145,155 L 135,120 L 75,120 Z" fill="#38bdf8" fill-opacity="0.15" />
+    <circle cx="90" cy="140" r="3" fill="#38bdf8" />
+    <circle cx="120" cy="130" r="2" fill="#38bdf8" />
+    <text x="105" y="180" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Conical Flask</text>
+    
+    <!-- Cork & Tube -->
+    <rect x="88" y="62" width="34" height="10" fill="#a16207" rx="2" />
+    <path d="M 105,65 L 105,45 L 220,45 L 220,90 L 240,90" fill="none" stroke="#cbd5e1" stroke-width="2.5" />
+    
+    <!-- Gas Syringe -->
+    <rect x="240" y="75" width="220" height="32" rx="4" fill="none" stroke="#cbd5e1" stroke-width="2" />
+    <line x1="280" y1="75" x2="280" y2="82" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="320" y1="75" x2="320" y2="82" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="360" y1="75" x2="360" y2="82" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="400" y1="75" x2="400" y2="82" stroke="#94a3b8" stroke-width="1.5" />
+    <rect x="340" y="80" width="180" height="22" rx="2" fill="#3b82f6" fill-opacity="0.3" stroke="#3b82f6" stroke-width="1.5" />
+    <line x1="520" y1="91" x2="570" y2="91" stroke="#3b82f6" stroke-width="4" />
+    <line x1="570" y1="75" x2="570" y2="107" stroke="#3b82f6" stroke-width="4" />
+    <rect x="241" y="77" width="98" height="28" fill="#10b981" fill-opacity="0.2" />
+    <text x="290" y="95" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">Collected Gas</text>
+    <text x="350" y="125" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Graduated Gas Syringe (cm³)</text>
   </g>
-  <g transform="translate(520, 40)">
-    <text x="200" y="20" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">Collection Over Water (Low Solubility Gases)</text>
-    <path d="M 60,240 L 90,140 L 90,115 L 120,115 L 120,140 L 150,240 Z" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <path d="M 65,235 L 145,235 L 135,200 L 75,200 Z" fill="#38bdf8" fill-opacity="0.1" />
-    <circle cx="90" cy="220" r="3" fill="#38bdf8" fill-opacity="0.7" />
-    <circle cx="120" cy="210" r="2" fill="#38bdf8" fill-opacity="0.7" />
-    <circle cx="105" cy="230" r="4" fill="#38bdf8" fill-opacity="0.7" />
-    <rect x="88" y="108" width="34" height="10" fill="#a16207" rx="2" />
-    <path d="M 105,112 L 105,85 L 210,85 L 210,245 L 260,245 L 260,210" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <rect x="180" y="200" width="180" height="60" rx="4" fill="none" stroke="#3b82f6" stroke-width="2" />
-    <rect x="181" y="215" width="178" height="44" fill="#3b82f6" fill-opacity="0.2" />
-    <rect x="240" y="90" width="40" height="135" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <ellipse cx="260" cy="90" rx="20" ry="6" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <line x1="240" y1="110" x2="248" y2="110" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="240" y1="130" x2="248" y2="130" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="240" y1="150" x2="248" y2="150" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="240" y1="170" x2="248" y2="170" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="240" y1="190" x2="248" y2="190" stroke="#94a3b8" stroke-width="1.5" />
-    <rect x="241" y="91" width="38" height="49" fill="#10b981" fill-opacity="0.2" />
-    <rect x="241" y="140" width="38" height="75" fill="#3b82f6" fill-opacity="0.3" />
-    <circle cx="260" cy="155" r="3" fill="#f8fafc" fill-opacity="0.8" />
-    <circle cx="258" cy="175" r="4" fill="#f8fafc" fill-opacity="0.8" />
-    <circle cx="262" cy="195" r="2" fill="#f8fafc" fill-opacity="0.8" />
-    <text x="105" y="270" fill="#f8fafc" font-size="11" text-anchor="middle">Conical Flask</text>
-    <text x="320" y="270" fill="#f8fafc" font-size="11" text-anchor="middle">Water Trough</text>
-    <text x="260" y="70" fill="#f8fafc" font-size="11" text-anchor="middle">Inverted Cylinder</text>
+
+  <!-- Method 2: Collection Over Water -->
+  <g transform="translate(15, 250)">
+    <rect x="0" y="0" width="620" height="195" rx="8" fill="#10b981" fill-opacity="0.04" stroke="#10b981" stroke-opacity="0.2" />
+    <text x="310" y="24" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">2. Collection Over Water (Low-Solubility Gases Only)</text>
+    
+    <!-- Conical Flask -->
+    <path d="M 40,165 L 70,95 L 70,75 L 100,75 L 100,95 L 130,165 Z" fill="none" stroke="#cbd5e1" stroke-width="2" />
+    <path d="M 45,160 L 125,160 L 115,125 L 55,125 Z" fill="#38bdf8" fill-opacity="0.15" />
+    <rect x="68" y="67" width="34" height="10" fill="#a16207" rx="2" />
+    
+    <!-- Delivery Tube -->
+    <path d="M 85,70 L 85,48 L 220,48 L 220,165 L 290,165 L 290,145" fill="none" stroke="#cbd5e1" stroke-width="2.5" />
+    
+    <!-- Water Trough -->
+    <rect x="230" y="125" width="220" height="45" rx="4" fill="none" stroke="#3b82f6" stroke-width="2" />
+    <rect x="231" y="135" width="218" height="34" fill="#3b82f6" fill-opacity="0.25" />
+    <text x="340" y="183" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Water Trough</text>
+    
+    <!-- Inverted Cylinder -->
+    <rect x="270" y="45" width="45" height="105" fill="none" stroke="#cbd5e1" stroke-width="2" />
+    <rect x="271" y="46" width="43" height="45" fill="#10b981" fill-opacity="0.25" />
+    <rect x="271" y="91" width="43" height="58" fill="#3b82f6" fill-opacity="0.35" />
+    <circle cx="292" cy="105" r="3" fill="#f8fafc" />
+    <circle cx="288" cy="120" r="4" fill="#f8fafc" />
+    <text x="292" y="36" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Inverted Cylinder</text>
+    
+    <!-- Warning Badge -->
+    <rect x="470" y="55" width="135" height="90" rx="6" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-opacity="0.3" />
+    <text x="537" y="75" fill="#f87171" font-size="11" font-weight="bold" text-anchor="middle">⚠️ Limitation</text>
+    <text x="537" y="93" fill="#cbd5e1" font-size="10" text-anchor="middle">Unsuitable for soluble</text>
+    <text x="537" y="108" fill="#cbd5e1" font-size="10" text-anchor="middle">gases (SO₂, HCl, NH₃)</text>
+    <text x="537" y="125" fill="#cbd5e1" font-size="10" text-anchor="middle">as gas dissolves in H₂O</text>
   </g>
 </svg>`;
 
-const colorimeterSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="35" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Colorimeter Optical Path and Components</text>
-  <line x1="160" y1="140" x2="280" y2="140" stroke="#f1f5f9" stroke-width="4" />
-  <polygon points="340,140 460,110 460,170" fill="url(#rainbow)" opacity="0.4" />
-  <line x1="340" y1="140" x2="480" y2="140" stroke="#10b981" stroke-width="3" />
-  <line x1="480" y1="140" x2="520" y2="140" stroke="#10b981" stroke-width="3" />
-  <line x1="560" y1="140" x2="680" y2="140" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 1" />
+const colorimeterSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 250" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Colorimeter Optical Path & Components</text>
   <defs>
-    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="rainbow-c" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ef4444" />
-      <stop offset="20%" stop-color="#f97316" />
-      <stop offset="40%" stop-color="#eab308" />
-      <stop offset="60%" stop-color="#22c55e" />
-      <stop offset="80%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#a855f7" />
+      <stop offset="25%" stop-color="#f97316" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="75%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#3b82f6" />
     </linearGradient>
   </defs>
-  <g transform="translate(80, 70)">
-    <circle cx="40" cy="70" r="25" fill="#eab308" fill-opacity="0.2" />
-    <path d="M 30,85 C 20,75 20,60 30,50 C 40,40 50,40 60,50 C 70,60 70,75 60,85 L 55,90 L 55,95 L 45,95 L 45,90 Z" fill="none" stroke="#eab308" stroke-width="2.5" />
-    <line x1="45" y1="98" x2="55" y2="98" stroke="#eab308" stroke-width="3" />
-    <circle cx="50" cy="70" r="10" fill="none" stroke="#eab308" stroke-width="1.5" />
-    <text x="50" y="145" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">1 Light Source</text>
-    <text x="50" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Provides white light</text>
+
+  <!-- Light Beam Lines -->
+  <line x1="90" y1="120" x2="180" y2="120" stroke="#f1f5f9" stroke-width="4.5" />
+  <polygon points="220,120 320,95 320,145" fill="url(#rainbow-c)" opacity="0.45" />
+  <line x1="220" y1="120" x2="340" y2="120" stroke="#10b981" stroke-width="4" />
+  <line x1="380" y1="120" x2="490" y2="120" stroke="#10b981" stroke-width="2.5" stroke-dasharray="3 2" />
+  <line x1="530" y1="120" x2="600" y2="120" stroke="#38bdf8" stroke-width="2.5" />
+
+  <!-- Component 1: Light Source -->
+  <g transform="translate(30, 60)">
+    <circle cx="30" cy="60" r="22" fill="#eab308" fill-opacity="0.2" />
+    <path d="M 22,72 C 14,64 14,52 22,44 C 30,36 38,36 46,44 C 54,52 54,64 46,72 L 42,76 L 42,80 L 34,80 L 34,76 Z" fill="none" stroke="#eab308" stroke-width="2.5" />
+    <text x="30" y="115" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">1. Light Source</text>
+    <text x="30" y="132" fill="#cbd5e1" font-size="11" text-anchor="middle">White light</text>
   </g>
-  <g transform="translate(260, 70)">
-    <polygon points="60,45 20,115 100,115" fill="none" stroke="#38bdf8" stroke-width="2.5" />
-    <text x="60" y="145" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">2 Prism</text>
-    <text x="60" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Selects specific wavelength</text>
+
+  <!-- Component 2: Filter / Prism -->
+  <g transform="translate(160, 60)">
+    <polygon points="40,30 10,90 70,90" fill="none" stroke="#38bdf8" stroke-width="2.5" />
+    <text x="40" y="115" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">2. Filter / Prism</text>
+    <text x="40" y="132" fill="#cbd5e1" font-size="11" text-anchor="middle">Selects λ</text>
   </g>
-  <g transform="translate(460, 70)">
-    <rect x="20" y="40" width="40" height="90" rx="3" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <rect x="23" y="55" width="34" height="72" fill="#f97316" fill-opacity="0.25" />
-    <text x="40" y="145" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">3 Cuvette</text>
-    <text x="40" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Iodine sample absorbs light</text>
-    <text x="8" y="115" fill="#10b981" font-size="10" font-weight="bold">I₀</text>
-    <text x="70" y="115" fill="#10b981" font-size="10" font-weight="bold">I</text>
+
+  <!-- Component 3: Cuvette -->
+  <g transform="translate(320, 60)">
+    <rect x="20" y="30" width="40" height="70" rx="3" fill="none" stroke="#cbd5e1" stroke-width="2.5" />
+    <rect x="23" y="42" width="34" height="56" fill="#f97316" fill-opacity="0.3" />
+    <text x="40" y="115" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">3. Cuvette</text>
+    <text x="40" y="132" fill="#cbd5e1" font-size="11" text-anchor="middle">Sample solution</text>
+    <text x="5" y="95" fill="#34d399" font-size="12" font-weight="bold">I₀</text>
+    <text x="68" y="95" fill="#34d399" font-size="12" font-weight="bold">I</text>
   </g>
-  <g transform="translate(640, 70)">
-    <rect x="20" y="45" width="60" height="70" rx="4" fill="#1e293b" stroke="#475569" stroke-width="2" />
-    <circle cx="50" cy="80" r="12" fill="#38bdf8" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5" />
-    <text x="50" y="145" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">4 Detector</text>
-    <text x="50" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Measures transmitted light I</text>
+
+  <!-- Component 4: Detector -->
+  <g transform="translate(470, 60)">
+    <rect x="15" y="32" width="55" height="56" rx="5" fill="#1e293b" stroke="#475569" stroke-width="2.5" />
+    <circle cx="42" cy="60" r="12" fill="#38bdf8" fill-opacity="0.3" stroke="#38bdf8" stroke-width="2" />
+    <text x="42" y="115" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">4. Detector</text>
+    <text x="42" y="132" fill="#cbd5e1" font-size="11" text-anchor="middle">Measures I</text>
   </g>
-  <g transform="translate(800, 70)">
-    <rect x="10" y="50" width="100" height="60" rx="6" fill="#020617" stroke="#334155" stroke-width="2" />
-    <text x="60" y="90" fill="#10b981" font-size="20" font-family="monospace" font-weight="bold" text-anchor="middle">0.65</text>
-    <text x="60" y="145" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">5 Digital Display</text>
-    <text x="60" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Absorbance = log(I₀ / I)</text>
+
+  <!-- Component 5: Display -->
+  <g transform="translate(600, 60)">
+    <rect x="10" y="35" width="95" height="50" rx="6" fill="#020617" stroke="#334155" stroke-width="2.5" />
+    <text x="57" y="68" fill="#34d399" font-size="20" font-family="monospace" font-weight="bold" text-anchor="middle">0.65</text>
+    <text x="57" y="115" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">5. Display</text>
+    <text x="57" y="132" fill="#cbd5e1" font-size="11" text-anchor="middle">Absorbance</text>
   </g>
 </svg>`;
 
-const massLossSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Continuous Mass Loss Measurement</text>
-  <g transform="translate(100, 40)">
-    <rect x="250" y="230" width="300" height="50" rx="6" fill="#1e293b" stroke="#334155" stroke-width="2" />
-    <rect x="330" y="242" width="140" height="26" rx="3" fill="#020617" stroke="#475569" />
-    <text x="400" y="260" fill="#10b981" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold">245.82 g</text>
-    <path d="M 350,230 L 385,120 L 385,90 L 415,90 L 415,120 L 450,230 Z" fill="none" stroke="#94a3b8" stroke-width="2" />
-    <path d="M 355,225 L 445,225 L 435,185 L 365,185 Z" fill="#38bdf8" fill-opacity="0.1" />
-    <circle cx="380" cy="210" r="3" fill="#38bdf8" fill-opacity="0.7" />
-    <circle cx="410" cy="200" r="2" fill="#38bdf8" fill-opacity="0.7" />
-    <circle cx="395" cy="215" r="4" fill="#38bdf8" fill-opacity="0.7" />
-    <text x="400" y="170" fill="#94a3b8" font-size="11" text-anchor="middle">Reaction Mixture</text>
-    <path d="M 378,90 Q 368,80 383,75 Q 400,70 417,75 Q 432,80 422,90 Z" fill="#e2e8f0" fill-opacity="0.85" stroke="#cbd5e1" stroke-width="1" />
-    <path d="M 395,65 Q 385,45 395,25" fill="none" stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="1.5" />
-    <path d="M 405,65 Q 415,45 405,25" fill="none" stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="1.5" />
-    <line x1="370" y1="80" x2="220" y2="80" stroke="#475569" stroke-width="1" />
-    <circle cx="370" cy="80" r="3" fill="#475569" />
-    <text x="210" y="75" fill="#f8fafc" font-size="11" text-anchor="end" font-weight="600">Cotton Wool Plug</text>
-    <text x="210" y="92" fill="#94a3b8" font-size="10" text-anchor="end">Allows gas to escape but prevents</text>
-    <text x="210" y="107" fill="#94a3b8" font-size="10" text-anchor="end">loss of liquid spray/droplets</text>
-    <line x1="530" y1="255" x2="630" y2="255" stroke="#475569" stroke-width="1" />
-    <circle cx="530" cy="255" r="3" fill="#475569" />
-    <text x="640" y="250" fill="#f8fafc" font-size="11" text-anchor="start" font-weight="600">Digital Balance</text>
-    <text x="640" y="267" fill="#94a3b8" font-size="10" text-anchor="start">Records decrease in mass as</text>
-    <text x="640" y="282" fill="#94a3b8" font-size="10" text-anchor="start">gas (such as CO₂) escapes</text>
-    <rect x="520" y="70" width="220" height="90" rx="5" fill="#ef4444" fill-opacity="0.05" stroke="#ef4444" stroke-opacity="0.2" />
-    <text x="535" y="90" fill="#ef4444" font-size="11" font-weight="bold">⚠️ Density Constraints</text>
-    <text x="535" y="110" fill="#94a3b8" font-size="10">Effective for high-density gases</text>
-    <text x="535" y="125" fill="#f8fafc" font-size="10" font-weight="600">like CO₂ (M = 44.0)</text>
-    <text x="535" y="145" fill="#94a3b8" font-size="10">Ineffective for light H₂ gas</text>
+const massLossSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 310" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">Continuous Mass Loss Measurement Setup</text>
+
+  <!-- Left Note: Cotton Wool Plug -->
+  <g transform="translate(20, 60)">
+    <rect x="0" y="0" width="180" height="95" rx="6" fill="#38bdf8" fill-opacity="0.05" stroke="#38bdf8" stroke-opacity="0.25" />
+    <text x="90" y="24" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Cotton Wool Plug</text>
+    <text x="90" y="45" fill="#cbd5e1" font-size="11" text-anchor="middle">Allows gas (CO₂) to</text>
+    <text x="90" y="62" fill="#cbd5e1" font-size="11" text-anchor="middle">escape freely while</text>
+    <text x="90" y="79" fill="#cbd5e1" font-size="11" text-anchor="middle">stopping acid spray</text>
+    <line x1="180" y1="48" x2="265" y2="105" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- Central Setup: Flask + Balance -->
+  <g transform="translate(220, 45)">
+    <!-- Flask -->
+    <path d="M 75,200 L 105,100 L 105,75 L 135,75 L 135,100 L 165,200 Z" fill="none" stroke="#cbd5e1" stroke-width="2.5" />
+    <path d="M 80,195 L 160,195 L 150,155 L 90,155 Z" fill="#38bdf8" fill-opacity="0.15" />
+    <circle cx="105" cy="180" r="3" fill="#38bdf8" />
+    <circle cx="135" cy="170" r="2" fill="#38bdf8" />
+    <text x="120" y="145" fill="#cbd5e1" font-size="11" text-anchor="middle">Reaction Mixture</text>
+
+    <!-- Cotton Plug inside Neck -->
+    <path d="M 100,75 Q 90,65 105,60 Q 120,55 135,60 Q 148,65 138,75 Z" fill="#e2e8f0" fill-opacity="0.9" stroke="#cbd5e1" stroke-width="1" />
+
+    <!-- Gas Escaping -->
+    <path d="M 115,50 Q 105,30 115,12" fill="none" stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="2" />
+    <path d="M 125,50 Q 135,30 125,12" fill="none" stroke="#f59e0b" stroke-dasharray="3 3" stroke-width="2" />
+
+    <!-- Digital Balance -->
+    <rect x="20" y="200" width="200" height="45" rx="6" fill="#1e293b" stroke="#475569" stroke-width="2" />
+    <rect x="60" y="210" width="120" height="25" rx="3" fill="#020617" stroke="#475569" />
+    <text x="120" y="228" fill="#34d399" font-size="16" font-family="monospace" text-anchor="middle" font-weight="bold">245.82 g</text>
+  </g>
+
+  <!-- Right Callout: Gas Density Limit -->
+  <g transform="translate(470, 60)">
+    <rect x="0" y="0" width="190" height="180" rx="8" fill="#ef4444" fill-opacity="0.05" stroke="#ef4444" stroke-opacity="0.3" />
+    <text x="95" y="24" fill="#f87171" font-size="13" font-weight="bold" text-anchor="middle">⚠️ Gas Density Rules</text>
+    <text x="15" y="52" fill="#34d399" font-size="12" font-weight="bold">✓ Suitable For:</text>
+    <text x="15" y="70" fill="#cbd5e1" font-size="11">Heavy gases like CO₂</text>
+    <text x="15" y="87" fill="#cbd5e1" font-size="11">(Mᵣ = 44.0 g mol⁻¹)</text>
+    
+    <text x="15" y="118" fill="#f87171" font-size="12" font-weight="bold">✗ Unsuitable For:</text>
+    <text x="15" y="136" fill="#cbd5e1" font-size="11">Light H₂ gas (Mᵣ = 2.0)</text>
+    <text x="15" y="153" fill="#cbd5e1" font-size="11">Mass change is too small!</text>
   </g>
 </svg>`;
 
-const disappearingCrossSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Disappearing Cross Method (Initial Rate Setup)</text>
-  <g transform="translate(150, 40)">
-    <text x="100" y="20" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">Start of Reaction (t = 0)</text>
-    <rect x="0" y="210" width="200" height="40" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5" />
-    <line x1="85" y1="222" x2="115" y2="238" stroke="#000" stroke-width="4.5" stroke-linecap="round" />
-    <line x1="115" y1="222" x2="85" y2="238" stroke="#000" stroke-width="4.5" stroke-linecap="round" />
-    <path d="M 50,220 L 80,120 L 80,95 L 120,95 L 120,120 L 150,220 Z" fill="none" stroke="#f8fafc" stroke-width="2.5" />
-    <path d="M 55,215 L 145,215 L 135,170 L 65,170 Z" fill="#38bdf8" fill-opacity="0.05" />
-    <path d="M 60,70 Q 75,90 95,94" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 2" />
-    <text x="50" y="65" fill="#38bdf8" font-size="10" font-weight="bold">Add Acid</text>
-    <text x="100" y="275" fill="#f8fafc" font-size="11" text-anchor="middle">Cross is clearly visible</text>
-    <text x="100" y="292" fill="#94a3b8" font-size="10" text-anchor="middle">Solution is transparent</text>
+const disappearingCrossSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 260" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">Disappearing Cross Method (Initial Rate Setup)</text>
+
+  <!-- Setup 1: t = 0 -->
+  <g transform="translate(40, 45)">
+    <rect x="0" y="0" width="280" height="195" rx="8" fill="#38bdf8" fill-opacity="0.04" stroke="#38bdf8" stroke-opacity="0.2" />
+    <text x="140" y="25" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Start of Reaction (t = 0)</text>
+
+    <!-- Cardboard with Cross -->
+    <rect x="40" y="150" width="200" height="30" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5" />
+    <line x1="125" y1="156" x2="155" y2="174" stroke="#000" stroke-width="4.5" stroke-linecap="round" />
+    <line x1="155" y1="156" x2="125" y2="174" stroke="#000" stroke-width="4.5" stroke-linecap="round" />
+
+    <!-- Flask -->
+    <path d="M 90,155 L 115,85 L 115,65 L 165,65 L 165,85 L 190,155 Z" fill="none" stroke="#f8fafc" stroke-width="2.5" />
+    <path d="M 95,150 L 185,150 L 175,115 L 105,115 Z" fill="#38bdf8" fill-opacity="0.08" />
+
+    <text x="140" y="190" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">✓ Cross is clearly visible</text>
   </g>
-  <g transform="translate(550, 40)">
-    <text x="100" y="20" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="600">End of Reaction (Cross Obscured)</text>
-    <rect x="0" y="210" width="200" height="40" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5" />
-    <path d="M 50,220 L 80,120 L 80,95 L 120,95 L 120,120 L 150,220 Z" fill="none" stroke="#f8fafc" stroke-width="2.5" />
-    <path d="M 52,218 L 148,218 L 135,170 L 65,170 Z" fill="#eab308" fill-opacity="0.75" />
-    <circle cx="80" cy="200" r="2" fill="#fef08a" />
-    <circle cx="100" cy="190" r="3" fill="#fef08a" />
-    <circle cx="120" cy="210" r="2.5" fill="#fef08a" />
-    <circle cx="70" cy="180" r="3" fill="#fef08a" />
-    <circle cx="130" cy="185" r="2" fill="#fef08a" />
-    <text x="100" y="275" fill="#ef4444" font-size="11" text-anchor="middle" font-weight="bold">Cross is completely obscured</text>
-    <text x="100" y="292" fill="#94a3b8" font-size="10" text-anchor="middle">Colloidal sulfur precipitate forms</text>
+
+  <!-- Setup 2: t = end -->
+  <g transform="translate(360, 45)">
+    <rect x="0" y="0" width="280" height="195" rx="8" fill="#eab308" fill-opacity="0.04" stroke="#eab308" stroke-opacity="0.2" />
+    <text x="140" y="25" text-anchor="middle" fill="#eab308" font-size="14" font-weight="bold">End of Reaction (t = t_end)</text>
+
+    <!-- Cardboard with Cross -->
+    <rect x="40" y="150" width="200" height="30" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5" />
+
+    <!-- Flask with Precipitate -->
+    <path d="M 90,155 L 115,85 L 115,65 L 165,65 L 165,85 L 190,155 Z" fill="none" stroke="#f8fafc" stroke-width="2.5" />
+    <path d="M 92,153 L 188,153 L 175,115 L 105,115 Z" fill="#eab308" fill-opacity="0.8" />
+    <circle cx="120" cy="140" r="3" fill="#fef08a" />
+    <circle cx="140" cy="130" r="2.5" fill="#fef08a" />
+    <circle cx="160" cy="145" r="3" fill="#fef08a" />
+
+    <text x="140" y="190" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">✗ Cross is completely obscured</text>
   </g>
 </svg>`;
 
-const kineticsDashboardSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const zeroOrderSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#64748b" />
+    <marker id="arrow-z" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
     </marker>
   </defs>
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Kinetics Graph Dashboard: Reaction Orders Summary</text>
-  <g transform="translate(10, 0)">
-    <rect x="30" y="55" width="280" height="28" rx="6" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-opacity="0.2" />
-    <text x="170" y="73" text-anchor="middle" fill="#ef4444" font-size="13" font-weight="bold">Zero Order (Rate = k)</text>
-    <g transform="translate(0, 20)">
-      <line x1="50" y1="230" x2="170" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <line x1="50" y1="230" x2="50" y2="110" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <text x="175" y="234" fill="#94a3b8" font-size="10">Time</text>
-      <text x="45" y="100" fill="#94a3b8" font-size="10" text-anchor="middle">[A]</text>
-      <text x="110" y="250" fill="#38bdf8" font-size="11" text-anchor="middle" font-weight="600">Concentration vs Time</text>
-      <line x1="50" y1="125" x2="155" y2="230" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
-    </g>
-    <g transform="translate(150, 20)">
-      <line x1="40" y1="230" x2="160" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <line x1="40" y1="230" x2="40" y2="110" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <text x="165" y="234" fill="#94a3b8" font-size="10">[A]</text>
-      <text x="35" y="100" fill="#94a3b8" font-size="10" text-anchor="middle">Rate</text>
-      <text x="100" y="250" fill="#38bdf8" font-size="11" text-anchor="middle" font-weight="600">Rate vs Concentration</text>
-      <line x1="40" y1="150" x2="145" y2="150" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
-    </g>
+  <rect x="10" y="10" width="680" height="200" rx="10" fill="#ef4444" fill-opacity="0.05" stroke="#ef4444" stroke-opacity="0.25" />
+  <rect x="230" y="22" width="240" height="32" rx="6" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-opacity="0.4" />
+  <text x="350" y="43" text-anchor="middle" fill="#f87171" font-size="15" font-weight="bold">Zero Order (Rate = k)</text>
+
+  <!-- Graph 1: Concentration vs Time -->
+  <g transform="translate(15, 10)">
+    <text x="160" y="65" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Concentration vs Time</text>
+    <line x1="50" y1="175" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-z)" />
+    <line x1="50" y1="175" x2="50" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-z)" />
+    <text x="282" y="180" fill="#cbd5e1" font-size="13" font-weight="bold">Time</text>
+    <text x="50" y="70" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">[A]</text>
+    <line x1="50" y1="90" x2="250" y2="175" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" />
   </g>
-  <g transform="translate(340, 0)">
-    <rect x="20" y="55" width="280" height="28" rx="6" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-opacity="0.2" />
-    <text x="160" y="73" text-anchor="middle" fill="#10b981" font-size="13" font-weight="bold">First Order (Rate = k[A])</text>
-    <g transform="translate(0, 20)">
-      <line x1="40" y1="230" x2="160" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <line x1="40" y1="230" x2="40" y2="110" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <text x="165" y="234" fill="#94a3b8" font-size="10">Time</text>
-      <text x="35" y="100" fill="#94a3b8" font-size="10" text-anchor="middle">[A]</text>
-      <text x="100" y="250" fill="#38bdf8" font-size="11" text-anchor="middle" font-weight="600">Concentration vs Time</text>
-      <path d="M 40,125 Q 75,225 145,228" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
-    </g>
-    <g transform="translate(150, 20)">
-      <line x1="30" y1="230" x2="150" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <line x1="30" y1="230" x2="30" y2="110" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <text x="155" y="234" fill="#94a3b8" font-size="10">[A]</text>
-      <text x="25" y="100" fill="#94a3b8" font-size="10" text-anchor="middle">Rate</text>
-      <text x="90" y="250" fill="#38bdf8" font-size="11" text-anchor="middle" font-weight="600">Rate vs Concentration</text>
-      <line x1="30" y1="230" x2="135" y2="125" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" />
-    </g>
-  </g>
-  <g transform="translate(670, 0)">
-    <rect x="10" y="55" width="280" height="28" rx="6" fill="#3b82f6" fill-opacity="0.1" stroke="#3b82f6" stroke-opacity="0.2" />
-    <text x="150" y="73" text-anchor="middle" fill="#3b82f6" font-size="13" font-weight="bold">Second Order (Rate = k[A]²)</text>
-    <g transform="translate(0, 20)">
-      <line x1="30" y1="230" x2="150" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <line x1="30" y1="230" x2="30" y2="110" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <text x="155" y="234" fill="#94a3b8" font-size="10">Time</text>
-      <text x="25" y="100" fill="#94a3b8" font-size="10" text-anchor="middle">[A]</text>
-      <text x="90" y="250" fill="#38bdf8" font-size="11" text-anchor="middle" font-weight="600">Concentration vs Time</text>
-      <path d="M 30,125 Q 45,220 135,229" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" />
-    </g>
-    <g transform="translate(140, 20)">
-      <line x1="20" y1="230" x2="140" y2="230" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <line x1="20" y1="230" x2="20" y2="110" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)" />
-      <text x="145" y="234" fill="#94a3b8" font-size="10">[A]</text>
-      <text x="15" y="100" fill="#94a3b8" font-size="10" text-anchor="middle">Rate</text>
-      <text x="80" y="250" fill="#38bdf8" font-size="11" text-anchor="middle" font-weight="600">Rate vs Concentration</text>
-      <path d="M 20,230 Q 60,225 125,125" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" />
-    </g>
+
+  <!-- Graph 2: Rate vs Concentration -->
+  <g transform="translate(365, 10)">
+    <text x="160" y="65" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Rate vs Concentration</text>
+    <line x1="50" y1="175" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-z)" />
+    <line x1="50" y1="175" x2="50" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-z)" />
+    <text x="282" y="180" fill="#cbd5e1" font-size="13" font-weight="bold">[A]</text>
+    <text x="50" y="70" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">Rate</text>
+    <line x1="50" y1="115" x2="250" y2="115" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" />
   </g>
 </svg>`;
 
-const activationEnergyProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const firstOrderSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow-f" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <rect x="10" y="10" width="680" height="200" rx="10" fill="#10b981" fill-opacity="0.05" stroke="#10b981" stroke-opacity="0.25" />
+  <rect x="230" y="22" width="240" height="32" rx="6" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-opacity="0.4" />
+  <text x="350" y="43" text-anchor="middle" fill="#34d399" font-size="15" font-weight="bold">First Order (Rate = k[A])</text>
+
+  <!-- Graph 1: Concentration vs Time -->
+  <g transform="translate(15, 10)">
+    <text x="160" y="65" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Concentration vs Time</text>
+    <line x1="50" y1="175" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-f)" />
+    <line x1="50" y1="175" x2="50" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-f)" />
+    <text x="282" y="180" fill="#cbd5e1" font-size="13" font-weight="bold">Time</text>
+    <text x="50" y="70" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">[A]</text>
+    <path d="M 50,90 Q 110,170 250,173" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Graph 2: Rate vs Concentration -->
+  <g transform="translate(365, 10)">
+    <text x="160" y="65" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Rate vs Concentration</text>
+    <line x1="50" y1="175" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-f)" />
+    <line x1="50" y1="175" x2="50" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-f)" />
+    <text x="282" y="180" fill="#cbd5e1" font-size="13" font-weight="bold">[A]</text>
+    <text x="50" y="70" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">Rate</text>
+    <line x1="50" y1="175" x2="250" y2="90" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+</svg>`;
+
+const secondOrderSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow-s" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <rect x="10" y="10" width="680" height="200" rx="10" fill="#3b82f6" fill-opacity="0.05" stroke="#3b82f6" stroke-opacity="0.25" />
+  <rect x="230" y="22" width="240" height="32" rx="6" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-opacity="0.4" />
+  <text x="350" y="43" text-anchor="middle" fill="#60a5fa" font-size="15" font-weight="bold">Second Order (Rate = k[A]²)</text>
+
+  <!-- Graph 1: Concentration vs Time -->
+  <g transform="translate(15, 10)">
+    <text x="160" y="65" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Concentration vs Time</text>
+    <line x1="50" y1="175" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-s)" />
+    <line x1="50" y1="175" x2="50" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-s)" />
+    <text x="282" y="180" fill="#cbd5e1" font-size="13" font-weight="bold">Time</text>
+    <text x="50" y="70" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">[A]</text>
+    <path d="M 50,90 Q 75,165 250,173" fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Graph 2: Rate vs Concentration -->
+  <g transform="translate(365, 10)">
+    <text x="160" y="65" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">Rate vs Concentration</text>
+    <line x1="50" y1="175" x2="270" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-s)" />
+    <line x1="50" y1="175" x2="50" y2="80" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow-s)" />
+    <text x="282" y="180" fill="#cbd5e1" font-size="13" font-weight="bold">[A]</text>
+    <text x="50" y="70" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">Rate</text>
+    <path d="M 50,175 Q 130,170 250,90" fill="none" stroke="#3b82f6" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+</svg>`;
+
+const activationEnergyProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
     <marker id="profilearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
     </marker>
-    <marker id="doublearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 5 0 L 0 10 L 10 10 z" fill="#ef4444" />
-    </marker>
   </defs>
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Reaction Energy Profile: Activation Energy &amp; Enthalpy Change</text>
+  <text x="50%" y="26" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Reaction Energy Profile: Activation Energy &amp; Enthalpy Change</text>
   
-  <g transform="translate(150, 50)">
+  <g transform="translate(35, 15)">
     <!-- Axes -->
-    <line x1="50" y1="270" x2="50" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#profilearrow)" />
-    <line x1="50" y1="270" x2="750" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#profilearrow)" />
+    <line x1="60" y1="230" x2="60" y2="35" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#profilearrow)" />
+    <line x1="60" y1="230" x2="570" y2="230" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#profilearrow)" />
     
-    <text x="30" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 30 35)" text-anchor="end">Potential energy</text>
-    <text x="740" y="285" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Extent of reaction</text>
+    <text x="60" y="22" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Energy</text>
+    <text x="585" y="234" fill="#cbd5e1" font-size="12" font-weight="bold">Extent of reaction</text>
 
     <!-- Dashed Reference Lines -->
-    <!-- Reactant Level at y = 170 -->
-    <line x1="50" y1="170" x2="480" y2="170" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" />
-    
-    <!-- Product Level at y = 230 -->
-    <line x1="50" y1="230" x2="680" y2="230" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="60" y1="150" x2="400" y2="150" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="60" y1="200" x2="530" y2="200" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 4" />
 
-    <!-- Uncatalyzed Reaction Path Curve (Exothermic) -->
-    <!-- Reactants: (100, 170) -> Transition State Peak: (380, 80) -> Products: (600, 230) -->
-    <path d="M 50,170 L 150,170 C 230,170 300,80 380,80 C 460,80 500,230 600,230 L 700,230" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <!-- Uncatalyzed Path Curve -->
+    <path d="M 60,150 L 120,150 C 180,150 240,60 300,60 C 360,60 410,200 480,200 L 530,200" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
 
-    <!-- Catalyzed Reaction Path Curve (Lower Peak at y = 120) -->
-    <path d="M 50,170 L 150,170 C 230,170 300,120 380,120 C 460,120 500,230 600,230 L 700,230" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="6 4" />
+    <!-- Catalyzed Path Curve -->
+    <path d="M 60,150 L 120,150 C 180,150 240,95 300,95 C 360,95 410,200 480,200 L 530,200" fill="none" stroke="#10b981" stroke-width="3" stroke-dasharray="6 4" stroke-linecap="round" />
 
     <!-- Labels for Reactants and Products -->
-    <text x="100" y="155" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">A + B</text>
-    <text x="650" y="215" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">C + D</text>
-    <text x="380" y="65" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Transition state</text>
-    <circle cx="380" cy="80" r="4" fill="#ef4444" />
-    <circle cx="380" cy="120" r="4" fill="#10b981" />
+    <text x="95" y="136" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Reactants</text>
+    <text x="505" y="186" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Products</text>
+    <text x="300" y="45" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">Transition state</text>
+    <circle cx="300" cy="60" r="4.5" fill="#ef4444" />
+    <circle cx="300" cy="95" r="4.5" fill="#10b981" />
 
-    <!-- Dashed Horizontal Lines for Transition States -->
-    <line x1="250" y1="80" x2="380" y2="80" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.7" />
-    <line x1="300" y1="120" x2="380" y2="120" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.7" />
+    <!-- Ea Uncatalyzed Arrow -->
+    <line x1="210" y1="150" x2="210" y2="65" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
+    <text x="200" y="110" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="end">Ea (uncatalyzed)</text>
 
-    <!-- Uncatalyzed Activation Energy Ea Arrow -->
-    <line x1="250" y1="170" x2="250" y2="85" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
-    <line x1="250" y1="85" x2="250" y2="165" stroke="#ef4444" stroke-width="2" marker-end="url(#profilearrow)" />
-    <text x="240" y="130" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="end">Ea (uncatalyzed)</text>
+    <!-- Ea Catalyzed Arrow -->
+    <line x1="255" y1="150" x2="255" y2="100" stroke="#10b981" stroke-width="2" marker-end="url(#profilearrow)" />
+    <text x="265" y="130" fill="#10b981" font-size="12" font-weight="bold">Ea (cat)</text>
 
-    <!-- Catalyzed Activation Energy Ea Arrow -->
-    <line x1="300" y1="170" x2="300" y2="125" stroke="#10b981" stroke-width="2" marker-end="url(#profilearrow)" />
-    <line x1="300" y1="125" x2="300" y2="165" stroke="#10b981" stroke-width="2" marker-end="url(#profilearrow)" />
-    <text x="310" y="150" fill="#10b981" font-size="11" font-weight="bold">Ea (catalyzed)</text>
-
-    <!-- Enthalpy Change Delta H Arrow (Between Reactants at 170 and Products at 230) -->
-    <line x1="280" y1="175" x2="280" y2="225" stroke="#f59e0b" stroke-width="2" marker-end="url(#profilearrow)" marker-start="url(#profilearrow)" />
-    <text x="295" y="205" fill="#f59e0b" font-size="12" font-weight="bold">ΔH</text>
+    <!-- Delta H Arrow -->
+    <line x1="430" y1="150" x2="430" y2="195" stroke="#f59e0b" stroke-width="2" marker-end="url(#profilearrow)" />
+    <text x="445" y="178" fill="#f59e0b" font-size="13" font-weight="bold">ΔH</text>
 
     <!-- Legend -->
-    <rect x="500" y="45" width="200" height="60" rx="6" fill="#0f172a" fill-opacity="0.75" stroke="#1e293b" stroke-width="1.5" />
-    <line x1="515" y1="65" x2="545" y2="65" stroke="#38bdf8" stroke-width="3" />
-    <text x="555" y="69" fill="#94a3b8" font-size="11" font-weight="500">Uncatalyzed pathway</text>
-    <line x1="515" y1="85" x2="545" y2="85" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 3" />
-    <text x="555" y="89" fill="#94a3b8" font-size="11" font-weight="500">Catalyzed pathway</text>
+    <rect x="375" y="245" width="190" height="24" rx="4" fill="#070f1e" stroke="#1e293b" stroke-width="1" />
+    <line x1="385" y1="257" x2="410" y2="257" stroke="#38bdf8" stroke-width="3" />
+    <text x="415" y="261" fill="#94a3b8" font-size="10" font-weight="bold">Uncatalyzed</text>
+    <line x1="480" y1="257" x2="505" y2="257" stroke="#10b981" stroke-width="2.5" stroke-dasharray="4 3" />
+    <text x="510" y="261" fill="#94a3b8" font-size="10" font-weight="bold">Catalyzed</text>
   </g>
 </svg>`;
 
-const autocatalysisCurveSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const autocatalysisCurveSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
     <marker id="axisarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
@@ -323,193 +382,290 @@ const autocatalysisCurveSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
     </marker>
   </defs>
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Autocatalysis Rate Curve: Reactant Concentration vs. Time</text>
+  <text x="50%" y="26" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Autocatalysis Rate Curve: Reactant Concentration vs. Time</text>
   
-  <g transform="translate(150, 40)">
+  <g transform="translate(35, 15)">
     <!-- Axes -->
-    <line x1="50" y1="270" x2="50" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#axisarrow)" />
-    <line x1="50" y1="270" x2="750" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#axisarrow)" />
+    <line x1="60" y1="210" x2="60" y2="35" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#axisarrow)" />
+    <line x1="60" y1="210" x2="570" y2="210" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#axisarrow)" />
     
-    <text x="30" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 30 35)" text-anchor="end">Reactant Concentration</text>
-    <text x="740" y="285" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Time</text>
+    <text x="60" y="22" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">[Reactant]</text>
+    <text x="585" y="214" fill="#cbd5e1" font-size="12" font-weight="bold">Time</text>
 
     <!-- Curve -->
-    <path d="M 50,70 L 120,70 C 220,70 230,90 280,150 C 330,210 380,260 550,260 L 700,260" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <path d="M 60,55 L 120,55 C 180,55 190,75 230,120 C 270,165 310,200 450,200 L 530,200" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
 
     <!-- Labels & Arrows -->
-    <text x="140" y="45" fill="#94a3b8" font-size="11" font-weight="500">The reaction starts off slowly without Mn2+</text>
-    <path d="M 140,50 L 100,65" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow)" />
+    <rect x="135" y="38" width="195" height="22" rx="4" fill="#0b1b35" stroke="#38bdf8" stroke-width="1" />
+    <text x="232" y="53" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">1. Starts slow (No Mn²⁺ catalyst)</text>
 
-    <text x="440" y="110" fill="#10b981" font-size="11" font-weight="600">The reaction then speeds up as Mn2+ is formed</text>
-    <path d="M 430,115 L 260,130" fill="none" stroke="#10b981" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow)" />
+    <rect x="300" y="90" width="210" height="22" rx="4" fill="#0b1b35" stroke="#10b981" stroke-width="1" />
+    <text x="405" y="105" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">2. Rapid acceleration (Mn²⁺ forms)</text>
 
-    <text x="560" y="210" fill="#94a3b8" font-size="11" font-weight="500">The reaction then slows down as reactants are used up</text>
-    <path d="M 560,215 L 480,240" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="2 2" marker-end="url(#labelarrow)" />
+    <rect x="360" y="165" width="200" height="22" rx="4" fill="#0b1b35" stroke="#f59e0b" stroke-width="1" />
+    <text x="460" y="180" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">3. Slows down (Reactants depleted)</text>
   </g>
 </svg>`;
 
-const halfLifeSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const halfLifeSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
     <marker id="halflifearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#64748b" />
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
     </marker>
   </defs>
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">First-Order Reaction: Constant Half-Life Curve</text>
-  <g transform="translate(100, 40)">
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">First-Order Reaction: Constant Half-Life (t₁/₂)</text>
+
+  <g transform="translate(35, 20)">
     <!-- Axes -->
-    <line x1="80" y1="260" x2="80" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#halflifearrow)" />
-    <line x1="80" y1="260" x2="820" y2="260" stroke="#94a3b8" stroke-width="2" marker-end="url(#halflifearrow)" />
-    <text x="60" y="35" fill="#94a3b8" font-size="11" font-weight="600">[A] / mol dm⁻³</text>
-    <text x="830" y="265" fill="#94a3b8" font-size="11" font-weight="600">Time / s</text>
+    <line x1="80" y1="210" x2="80" y2="30" stroke="#cbd5e1" stroke-width="2" marker-end="url(#halflifearrow)" />
+    <line x1="80" y1="210" x2="550" y2="210" stroke="#cbd5e1" stroke-width="2" marker-end="url(#halflifearrow)" />
+    <text x="80" y="20" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">[A] / mol dm⁻³</text>
+    <text x="565" y="214" fill="#cbd5e1" font-size="13" font-weight="bold">Time / s</text>
 
     <!-- Grid lines -->
-    <line x1="80" y1="60" x2="800" y2="60" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="110" x2="800" y2="110" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="160" x2="800" y2="160" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="210" x2="800" y2="210" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="50" x2="540" y2="50" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="95" x2="540" y2="95" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="140" x2="540" y2="140" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="185" x2="540" y2="185" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
 
     <!-- Y-axis scale -->
-    <text x="70" y="64" fill="#94a3b8" font-size="10" text-anchor="end">120</text>
-    <text x="70" y="114" fill="#94a3b8" font-size="10" text-anchor="end">60</text>
-    <text x="70" y="164" fill="#94a3b8" font-size="10" text-anchor="end">30</text>
-    <text x="70" y="214" fill="#94a3b8" font-size="10" text-anchor="end">15</text>
+    <text x="70" y="54" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">120</text>
+    <text x="70" y="99" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">60</text>
+    <text x="70" y="144" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">30</text>
+    <text x="70" y="189" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">15</text>
 
-    <!-- Curve: Exponential decay y = 60 + 200 * exp(-x/144.3) -->
-    <!-- Start at (80, 60), half-life is 200px (100 seconds) -->
-    <path d="M 80,60 C 180,110 280,160 480,210 C 580,222 680,230 780,235" fill="none" stroke="#10b981" stroke-width="3" />
+    <!-- Curve: Exponential decay passing EXACTLY through (80,50), (230,95), (380,140), (530,185) -->
+    <path d="M 80,50 C 135,65 180,80 230,95 C 280,110 330,125 380,140 C 430,155 480,170 530,185 C 555,192 575,198 595,202" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
 
     <!-- Half-life 1 indicators -->
-    <line x1="280" y1="110" x2="280" y2="260" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
-    <line x1="80" y1="110" x2="280" y2="110" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
-    <text x="280" y="275" fill="#ef4444" font-size="10" text-anchor="middle">100</text>
+    <line x1="230" y1="95" x2="230" y2="210" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="80" y1="95" x2="230" y2="95" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="230" y="228" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">100</text>
 
     <!-- Half-life 2 indicators -->
-    <line x1="480" y1="160" x2="480" y2="260" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
-    <line x1="80" y1="160" x2="480" y2="160" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
-    <text x="480" y="275" fill="#ef4444" font-size="10" text-anchor="middle">200</text>
+    <line x1="380" y1="140" x2="380" y2="210" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="80" y1="140" x2="380" y2="140" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="380" y="228" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">200</text>
 
     <!-- Half-life 3 indicators -->
-    <line x1="680" y1="210" x2="680" y2="260" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
-    <line x1="80" y1="210" x2="680" y2="210" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
-    <text x="680" y="275" fill="#ef4444" font-size="10" text-anchor="middle">300</text>
+    <line x1="530" y1="185" x2="530" y2="210" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="80" y1="185" x2="530" y2="185" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="530" y="228" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">300</text>
 
-    <!-- Horizontal double-ended arrows for constant t1/2 -->
-    <g stroke="#38bdf8" stroke-width="1.5" fill="none">
-      <path d="M 85,110 L 275,110" />
-      <path d="M 285,160 L 475,160" />
-      <path d="M 485,210 L 675,210" />
-    </g>
-    <circle cx="80" cy="60" r="4" fill="#10b981" />
-    <circle cx="280" cy="110" r="4" fill="#ef4444" />
-    <circle cx="480" cy="160" r="4" fill="#ef4444" />
-    <circle cx="680" cy="210" r="4" fill="#ef4444" />
+    <!-- Data points -->
+    <circle cx="80" cy="50" r="5" fill="#10b981" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="230" cy="95" r="5" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="380" cy="140" r="5" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="530" cy="185" r="5" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
 
-    <text x="580" y="200" fill="#38bdf8" font-size="10" font-weight="600" text-anchor="middle">t₁/₂ = 100 s</text>
+    <!-- Constant t1/2 badge -->
+    <rect x="365" y="80" width="165" height="26" rx="5" fill="#0b1b35" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="447" y="97" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Constant t₁/₂ = 100 s</text>
   </g>
 </svg>`;
 
-const reactionEnergyProfilesSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const compoundPDecompositionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 310" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
-    <marker id="energyarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="parrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
     </marker>
-    <marker id="bluearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+  </defs>
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Decomposition Curve of Compound P</text>
+
+  <g transform="translate(35, 20)">
+    <!-- Axes -->
+    <line x1="80" y1="230" x2="80" y2="35" stroke="#cbd5e1" stroke-width="2" marker-end="url(#parrow)" />
+    <line x1="80" y1="230" x2="570" y2="230" stroke="#cbd5e1" stroke-width="2" marker-end="url(#parrow)" />
+    <text x="80" y="22" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">[P] / arbitrary units</text>
+    <text x="585" y="234" fill="#cbd5e1" font-size="13" font-weight="bold">Time / s</text>
+
+    <!-- Horizontal Grid & Y-scale -->
+    <line x1="80" y1="50" x2="550" y2="50" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="120" x2="550" y2="120" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="155" x2="550" y2="155" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="172" x2="550" y2="172" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+
+    <text x="70" y="54" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">5.80</text>
+    <text x="70" y="124" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">2.90</text>
+    <text x="70" y="159" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">1.45</text>
+    <text x="70" y="176" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">0.72</text>
+
+    <!-- Curve: Smooth Exponential Decay -->
+    <path d="M 80,50 C 135,78 180,102 230,120 C 280,138 330,148 380,155 C 430,162 480,168 530,172 C 555,174 575,176 595,177" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Dashed projection lines -->
+    <line x1="230" y1="120" x2="230" y2="230" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="80" y1="120" x2="230" y2="120" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="230" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">350</text>
+
+    <line x1="380" y1="155" x2="380" y2="230" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="80" y1="155" x2="380" y2="155" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="380" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">700</text>
+
+    <line x1="530" y1="172" x2="530" y2="230" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <line x1="80" y1="172" x2="530" y2="172" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4 4" />
+    <text x="530" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">1050</text>
+
+    <!-- Data points -->
+    <circle cx="80" cy="50" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="230" cy="120" r="5" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="380" cy="155" r="5" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="530" cy="172" r="5" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
+
+    <!-- Value Labels near points -->
+    <text x="95" y="45" fill="#f8fafc" font-size="11" font-weight="bold">(0, 5.80)</text>
+    <text x="240" y="112" fill="#f8fafc" font-size="11" font-weight="bold">(350, 2.90)</text>
+    <text x="390" y="148" fill="#f8fafc" font-size="11" font-weight="bold">(700, 1.45)</text>
+    <text x="540" y="166" fill="#f8fafc" font-size="11" font-weight="bold">(1050, 0.72)</text>
+  </g>
+</svg>`;
+
+const lnGraphFirstOrderSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="lnarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <text x="50%" y="26" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Linear Plot: ln[Q] vs. Time (First-Order Kinetics)</text>
+
+  <g transform="translate(35, 15)">
+    <!-- Axes -->
+    <line x1="80" y1="230" x2="80" y2="35" stroke="#cbd5e1" stroke-width="2" marker-end="url(#lnarrow)" />
+    <line x1="80" y1="230" x2="570" y2="230" stroke="#cbd5e1" stroke-width="2" marker-end="url(#lnarrow)" />
+    <text x="80" y="22" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">ln[Q]</text>
+    <text x="585" y="234" fill="#cbd5e1" font-size="13" font-weight="bold">Time / s</text>
+
+    <!-- Horizontal Grid & Y-scale (ln[Q]) -->
+    <line x1="80" y1="40" x2="540" y2="40" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="80" x2="540" y2="80" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="120" x2="540" y2="120" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="160" x2="540" y2="160" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+    <line x1="80" y1="200" x2="540" y2="200" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
+
+    <text x="70" y="44" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">0.00</text>
+    <text x="70" y="84" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-0.50</text>
+    <text x="70" y="124" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-1.00</text>
+    <text x="70" y="164" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-1.50</text>
+    <text x="70" y="204" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-2.00</text>
+
+    <!-- X-axis tick labels -->
+    <text x="80" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">0</text>
+    <text x="180" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">100</text>
+    <text x="280" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">200</text>
+    <text x="380" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">300</text>
+    <text x="480" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">400</text>
+
+    <!-- Gradient Triangle -->
+    <polygon points="80,57.8 480,57.8 480,213.6" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+
+    <!-- Straight Line -->
+    <line x1="80" y1="57.8" x2="510" y2="225" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Data Points -->
+    <circle cx="80" cy="57.8" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="180" cy="97" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="280" cy="136" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="380" cy="175" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="480" cy="213.6" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
+
+    <!-- Point Value Badges -->
+    <text x="95" y="52" fill="#f8fafc" font-size="11" font-weight="bold">(0, -0.223)</text>
+    <text x="495" y="210" fill="#f8fafc" font-size="11" font-weight="bold">(400, -2.170)</text>
+
+    <!-- Gradient Calculation Callout Badge -->
+    <rect x="230" y="70" width="260" height="26" rx="5" fill="#0b1b35" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="360" y="87" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Gradient = -k = -4.87 × 10⁻³ s⁻¹</text>
+  </g>
+</svg>`;
+
+const sn2ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="sn2arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="sn2bluearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#3b82f6" />
     </marker>
   </defs>
-  <text x="50%" y="25" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Reaction Energy Profiles: SN1 vs. SN2 Mechanisms</text>
-  
-  <g transform="translate(15, 35)">
-    <rect x="5" y="5" width="465" height="325" rx="8" fill="#1e293b" fill-opacity="0.2" stroke="#334155" stroke-width="1" />
-    <text x="237" y="25" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">SN2 Mechanism (Primary Halogenoalkane)</text>
-    
-    <line x1="45" y1="290" x2="45" y2="40" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#energyarrow)" />
-    <line x1="45" y1="290" x2="445" y2="290" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#energyarrow)" />
-    <text x="30" y="45" fill="#94a3b8" font-size="9" transform="rotate(-90 30 45)" text-anchor="end">ENERGY</text>
-    <text x="435" y="305" fill="#94a3b8" font-size="9" text-anchor="end">REACTION COORDINATE</text>
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">S_N2 Mechanism: Reaction Energy Profile (Single Transition State)</text>
 
-    <line x1="45" y1="220" x2="200" y2="220" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" />
-    <line x1="45" y1="170" x2="330" y2="170" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" />
+  <g transform="translate(45, 20)">
+    <!-- Axes -->
+    <line x1="60" y1="240" x2="60" y2="40" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn2arrow)" />
+    <line x1="60" y1="240" x2="550" y2="240" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn2arrow)" />
+    <text x="60" y="25" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Energy</text>
+    <text x="565" y="244" fill="#cbd5e1" font-size="12" font-weight="bold">Reaction Coordinate</text>
 
-    <path d="M 45,220 L 100,220 C 140,220 170,80 200,80 C 230,80 260,170 330,170 L 420,170" fill="none" stroke="#38bdf8" stroke-width="3" />
+    <!-- Reference Level Lines -->
+    <line x1="60" y1="180" x2="250" y2="180" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
+    <line x1="60" y1="130" x2="480" y2="130" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
 
-    <path d="M 60,195 L 75,205 L 90,195 L 105,205" fill="none" stroke="#ef4444" stroke-width="2" />
-    <line x1="105" y1="205" x2="120" y2="190" stroke="#10b981" stroke-width="2" />
-    <text x="123" y="188" fill="#10b981" font-size="9" font-weight="bold">Cl</text>
-    <text x="75" y="180" fill="#10b981" font-size="9" font-weight="bold">+ OH-</text>
+    <!-- Reaction Path Curve (Single Peak) -->
+    <path d="M 60,180 L 120,180 C 180,180 220,65 270,65 C 320,65 370,130 450,130 L 520,130" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
 
-    <text x="300" y="50" fill="#3b82f6" font-size="10" font-weight="bold" text-anchor="middle">Transition state</text>
-    <path d="M 180,32 L 174,32 L 174,68 L 180,68" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M 240,32 L 246,32 L 246,68 L 240,68" fill="none" stroke="#94a3b8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-    <text x="250" y="36" fill="#94a3b8" font-size="10" font-weight="bold">-</text>
+    <!-- Reactants Label -->
+    <rect x="80" y="195" width="130" height="24" rx="4" fill="#0b1b35" stroke="#475569" stroke-width="1" />
+    <text x="145" y="211" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">R-Cl + OH⁻ (Reactants)</text>
 
-    <path d="M 185,52 L 198,42 L 210,52" fill="none" stroke="#ef4444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-    <line x1="210" y1="52" x2="225" y2="38" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
-    <text x="228" y="36" fill="#10b981" font-size="9" font-weight="bold">Cl</text>
-    <line x1="210" y1="52" x2="210" y2="68" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
-    <text x="210" y="77" fill="#10b981" font-size="9" font-weight="bold" text-anchor="middle">OH</text>
+    <!-- Transition State Badge at Peak -->
+    <rect x="180" y="38" width="180" height="26" rx="5" fill="#0b1b35" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="270" y="55" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">[HO...R...Cl]⁻ ‡ (TS)</text>
 
-    <path d="M 345,150 L 360,160 L 375,150 L 390,160" fill="none" stroke="#ef4444" stroke-width="2" />
-    <line x1="390" y1="160" x2="400" y2="150" stroke="#10b981" stroke-width="2" />
-    <text x="402" y="148" fill="#10b981" font-size="9" font-weight="bold">OH</text>
-    <text x="415" y="160" fill="#10b981" font-size="9" font-weight="bold">+ Cl-</text>
+    <!-- Products Label -->
+    <rect x="420" y="145" width="130" height="24" rx="4" fill="#0b1b35" stroke="#475569" stroke-width="1" />
+    <text x="485" y="161" fill="#10b981" font-size="12" font-weight="bold" text-anchor="middle">R-OH + Cl⁻ (Products)</text>
 
-    <line x1="200" y1="220" x2="200" y2="85" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#bluearrow)" />
-    <text x="180" y="145" fill="#f8fafc" font-size="11" font-weight="bold">Ea</text>
+    <!-- Activation Energy Arrow -->
+    <line x1="270" y1="180" x2="270" y2="75" stroke="#3b82f6" stroke-width="2" marker-end="url(#sn2bluearrow)" />
+    <text x="282" y="130" fill="#38bdf8" font-size="13" font-weight="bold">Eₐ (Single Step)</text>
   </g>
+</svg>`;
 
-  <g transform="translate(510, 35)">
-    <rect x="5" y="5" width="465" height="325" rx="8" fill="#1e293b" fill-opacity="0.2" stroke="#334155" stroke-width="1" />
-    <text x="237" y="25" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="bold">SN1 Mechanism (Tertiary Halogenoalkane)</text>
-    
-    <line x1="45" y1="290" x2="45" y2="40" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#energyarrow)" />
-    <line x1="45" y1="290" x2="445" y2="290" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#energyarrow)" />
-    <text x="30" y="45" fill="#94a3b8" font-size="9" transform="rotate(-90 30 45)" text-anchor="end">ENERGY</text>
-    <text x="435" y="305" fill="#94a3b8" font-size="9" text-anchor="end">REACTION COORDINATE</text>
+const sn1ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="sn1arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+    <marker id="sn1bluearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#10b981" />
+    </marker>
+  </defs>
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">S_N1 Mechanism: Reaction Energy Profile (Two Peaks & Carbocation Intermediate)</text>
 
-    <line x1="45" y1="210" x2="190" y2="210" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" />
-    <line x1="45" y1="145" x2="290" y2="145" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" />
-    <line x1="45" y1="260" x2="410" y2="260" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" />
+  <g transform="translate(45, 20)">
+    <!-- Axes -->
+    <line x1="60" y1="250" x2="60" y2="40" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn1arrow)" />
+    <line x1="60" y1="250" x2="550" y2="250" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn1arrow)" />
+    <text x="60" y="25" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Energy</text>
+    <text x="565" y="254" fill="#cbd5e1" font-size="12" font-weight="bold">Reaction Coordinate</text>
 
-    <path d="M 45,210 L 90,210 C 120,210 135,65 150,65 C 165,65 200,145 230,145 C 260,145 275,100 290,100 C 305,100 340,260 390,260 L 430,260" fill="none" stroke="#10b981" stroke-width="3" />
+    <!-- Reference Level Lines -->
+    <line x1="60" y1="180" x2="200" y2="180" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
 
-    <path d="M 60,195 L 75,185 L 90,195" fill="none" stroke="#ef4444" stroke-width="1.5" />
-    <line x1="75" y1="185" x2="75" y2="170" stroke="#ef4444" stroke-width="1.5" />
-    <line x1="75" y1="185" x2="90" y2="175" stroke="#10b981" stroke-width="2" />
-    <text x="93" y="173" fill="#10b981" font-size="9" font-weight="bold">Cl</text>
-    <text x="50" y="155" fill="#10b981" font-size="9" font-weight="bold">+ OH-</text>
+    <!-- Two Peaks Curve -->
+    <path d="M 60,180 L 100,180 C 140,180 165,55 195,55 C 225,55 245,130 280,130 C 315,130 335,95 365,95 C 395,95 430,220 480,220 L 530,220" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
 
-    <text x="150" y="36" fill="#3b82f6" font-size="9" font-weight="bold" text-anchor="middle">Transition state 1</text>
-    <path d="M 140,58 L 150,51 L 160,58" fill="none" stroke="#ef4444" stroke-width="1.2" />
-    <line x1="150" y1="51" x2="150" y2="43" stroke="#ef4444" stroke-width="1.2" />
-    <line x1="150" y1="51" x2="162" y2="45" stroke="#10b981" stroke-width="1" stroke-dasharray="2 2" />
-    <text x="165" y="43" fill="#10b981" font-size="8" font-weight="bold">Cl</text>
+    <!-- Reactants Label -->
+    <text x="90" y="202" fill="#f8fafc" font-size="12" font-weight="bold">R₃C-Cl + OH⁻</text>
 
-    <text x="230" y="165" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Intermediate</text>
-    <path d="M 220,132 L 230,125 L 240,132" fill="none" stroke="#ef4444" stroke-width="1.5" />
-    <line x1="230" y1="125" x2="230" y2="115" stroke="#ef4444" stroke-width="1.5" />
-    <text x="235" y="123" fill="#ef4444" font-size="9" font-weight="bold">+</text>
-    <text x="200" y="110" fill="#10b981" font-size="8" font-weight="bold">+ OH- + Cl-</text>
+    <!-- TS1 Badge (RDS Peak 1 - Higher Ea) -->
+    <rect x="130" y="28" width="130" height="24" rx="4" fill="#0b1b35" stroke="#ef4444" stroke-width="1.5" />
+    <text x="195" y="44" fill="#f87171" font-size="11" font-weight="bold" text-anchor="middle">TS1 [R₃C...Cl] ‡ (RDS)</text>
 
-    <text x="290" y="60" fill="#3b82f6" font-size="9" font-weight="bold" text-anchor="middle">Transition state 2</text>
-    <path d="M 280,95 L 290,88 L 300,95" fill="none" stroke="#ef4444" stroke-width="1.2" />
-    <line x1="290" y1="88" x2="290" y2="80" stroke="#ef4444" stroke-width="1.2" />
-    <line x1="290" y1="88" x2="300" y2="82" stroke="#10b981" stroke-width="1" stroke-dasharray="2 2" />
-    <text x="302" y="80" fill="#10b981" font-size="8" font-weight="bold">OH</text>
+    <!-- Intermediate Well Badge -->
+    <rect x="210" y="145" width="140" height="24" rx="4" fill="#0b1b35" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="280" y="161" fill="#fbbf24" font-size="11" font-weight="bold" text-anchor="middle">R₃C⁺ Intermediate</text>
 
-    <path d="M 390,245 L 400,238 L 410,245" fill="none" stroke="#ef4444" stroke-width="2" />
-    <line x1="400" y1="238" x2="400" y2="228" stroke="#ef4444" stroke-width="2" />
-    <line x1="400" y1="238" x2="412" y2="232" stroke="#10b981" stroke-width="2" />
-    <text x="414" y="228" fill="#10b981" font-size="9" font-weight="bold">OH</text>
-    <text x="425" y="250" fill="#10b981" font-size="9" font-weight="bold">+ Cl-</text>
+    <!-- TS2 Badge (Fast Step Peak 2) -->
+    <rect x="310" y="68" width="110" height="24" rx="4" fill="#0b1b35" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="365" y="84" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">TS2 [R₃C...OH] ‡</text>
 
-    <line x1="150" y1="210" x2="150" y2="70" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#bluearrow)" />
-    <text x="155" y="125" fill="#f8fafc" font-size="10" font-weight="bold">Ea1</text>
-    <text x="155" y="138" fill="#f8fafc" font-size="8" font-weight="bold">slow step</text>
+    <!-- Products Label -->
+    <text x="440" y="242" fill="#10b981" font-size="12" font-weight="bold">R₃C-OH + Cl⁻</text>
 
-    <line x1="290" y1="145" x2="290" y2="105" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#bluearrow)" />
-    <text x="305" y="122" fill="#f8fafc" font-size="10" font-weight="bold">Ea2</text>
-    <text x="315" y="133" fill="#f8fafc" font-size="8" font-weight="bold">fast step</text>
+    <!-- Activation Energy Arrow (Ea1 for RDS) -->
+    <line x1="195" y1="180" x2="195" y2="65" stroke="#10b981" stroke-width="2" marker-end="url(#sn1bluearrow)" />
+    <text x="202" y="120" fill="#10b981" font-size="12" font-weight="bold">Eₐ(1) High (RDS)</text>
   </g>
 </svg>`;
 
@@ -575,36 +731,43 @@ const maxwellBoltzmannSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 
   </g>
 </svg>`;
 
-const arrheniusGraphSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <text x="50%" y="30" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">The Arrhenius Plot: ln k vs. 1/T</text>
+const arrheniusGraphSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 280" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrh-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
+    </marker>
+  </defs>
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">The Arrhenius Plot: ln k vs. 1/T</text>
   
-  <g transform="translate(150, 50)">
+  <g transform="translate(35, 15)">
     <!-- Axes -->
-    <line x1="100" y1="240" x2="100" y2="30" stroke="#94a3b8" stroke-width="2" marker-end="url(#bluearrow)" />
-    <line x1="100" y1="240" x2="700" y2="240" stroke="#94a3b8" stroke-width="2" marker-end="url(#bluearrow)" />
+    <line x1="70" y1="210" x2="70" y2="35" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#arrh-arrow)" />
+    <line x1="70" y1="210" x2="570" y2="210" stroke="#cbd5e1" stroke-width="2.5" marker-end="url(#arrh-arrow)" />
     
     <!-- Axis Labels -->
-    <text x="50" y="130" fill="#94a3b8" font-size="12" font-weight="600" transform="rotate(-90 50 130)" text-anchor="middle">ln k</text>
-    <text x="710" y="245" fill="#94a3b8" font-size="12" font-weight="600" text-anchor="start">1/T (K⁻¹)</text>
+    <text x="70" y="22" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">ln k</text>
+    <text x="585" y="214" fill="#cbd5e1" font-size="13" font-weight="bold">1/T (K⁻¹)</text>
     
     <!-- Arrhenius Straight Line -->
-    <line x1="100" y1="70" x2="600" y2="210" stroke="#ef4444" stroke-width="3" />
+    <line x1="70" y1="60" x2="510" y2="185" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" />
     
     <!-- Intercept Indicator -->
-    <circle cx="100" cy="70" r="5" fill="#ef4444" />
-    <line x1="100" y1="70" x2="160" y2="70" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 3" />
-    <text x="170" y="74" fill="#38bdf8" font-size="12" font-weight="bold">Intercept = ln A</text>
+    <circle cx="70" cy="60" r="6" fill="#ef4444" stroke="#070f1e" stroke-width="1.5" />
+    <line x1="70" y1="60" x2="140" y2="60" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
+    <rect x="145" y="47" width="135" height="26" rx="4" fill="#0b1b35" stroke="#38bdf8" stroke-width="1" />
+    <text x="212" y="64" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Intercept = ln A</text>
     
     <!-- Gradient Indicator -->
-    <path d="M 350,140 L 450,140 L 450,168" fill="none" stroke="#eab308" stroke-width="1.5" stroke-dasharray="3 3" />
-    <text x="465" y="160" fill="#eab308" font-size="12" font-weight="bold">Gradient (m) = -Ea / R</text>
+    <path d="M 290,122 L 390,122 L 390,151" fill="none" stroke="#eab308" stroke-width="1.5" stroke-dasharray="4 4" />
+    <rect x="398" y="132" width="175" height="26" rx="4" fill="#0b1b35" stroke="#eab308" stroke-width="1" />
+    <text x="485" y="149" fill="#eab308" font-size="13" font-weight="bold" text-anchor="middle">Gradient (m) = -Ea / R</text>
     
     <!-- Data Points -->
-    <circle cx="200" cy="98" r="4" fill="#f8fafc" />
-    <circle cx="300" cy="126" r="4" fill="#f8fafc" />
-    <circle cx="400" cy="154" r="4" fill="#f8fafc" />
-    <circle cx="500" cy="182" r="4" fill="#f8fafc" />
-    <circle cx="600" cy="210" r="4" fill="#f8fafc" />
+    <circle cx="180" cy="91" r="5" fill="#f8fafc" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="260" cy="114" r="5" fill="#f8fafc" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="340" cy="137" r="5" fill="#f8fafc" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="420" cy="160" r="5" fill="#f8fafc" stroke="#070f1e" stroke-width="1.5" />
+    <circle cx="500" cy="182" r="5" fill="#f8fafc" stroke="#070f1e" stroke-width="1.5" />
   </g>
 </svg>`;
 
@@ -633,8 +796,10 @@ export const parts: LessonPart[] = [
 
 > 
 > > [!WARNING]
-> > ### ⚠️ Gas Collection Limitation
-> > Reactions producing gases that are highly soluble in water, such as sulfur dioxide ($\\\\text{SO}_2$), cannot be followed using gas collection over water because the gas will dissolve. A gas syringe must be used.
+> > ### ⚠️ Gas Collection Limitations & Systematic Error Prevention
+> > * **Solubility Limitation:** Gases that are soluble in water (such as carbon dioxide $\\\\text{CO}_2$) cannot be collected accurately over water because some gas dissolves, underestimating volume. A gas syringe must be used.
+> > * **Exam Hint (Highly Soluble Gases):** Highly soluble gases such as sulfur dioxide ($\\\\text{SO}_2$), hydrogen chloride ($\\\\text{HCl}$), and ammonia ($\\\\text{NH}_3$) cannot be collected over water under any circumstances. A gas syringe must be used.
+> > * **Systematic Error Prevention (Divided Flask Technique):** Pouring acid onto solid reactants and then attaching the stopper causes gas loss before sealing. To prevent this systematic error, keep solid and liquid separated inside a sealed divided flask (or suspended tube), then tilt/shake the apparatus to initiate the reaction without gas loss.
 
 > [!BOX]
 > ### 🎨 Continuous Colorimetry Monitoring
@@ -645,15 +810,23 @@ export const parts: LessonPart[] = [
 >   *Here, iodine is the only colored species, so we track its color intensity decay.*
 > 
 > ${svgToken(colorimeterSvg)}
+> 
+> > [!TIP]
+> > ### 🎯 Key Complementary Color Filter Pairs (For Maximum Absorbance)
+> > To ensure maximum absorbance when using a colorimeter, always select a filter of the complementary color:
+> > * **Orange / Yellow / Brown Solution** (e.g., Iodine $\\\\text{I}_2$, Bromine $\\\\text{Br}_2$): Absorbs **Blue light** $\\\\rightarrow$ Select a **Blue filter**.
+> > * **Purple / Pink Solution** (e.g., Permanganate $\\\\text{MnO}_4^-$): Absorbs **Green light** $\\\\rightarrow$ Select a **Green filter**.
+> > * **Blue Solution** (e.g., Copper(II) ions $\\\\text{Cu}^{2+}$): Absorbs **Orange / Red light** $\\\\rightarrow$ Select an **Orange / Red filter**.
+> > * **Red Solution:** Absorbs **Green / Cyan light** $\\\\rightarrow$ Select a **Green / Cyan filter**.
 
 
 > [!BOX]
 > ### ⚖️ Quenching and Chemical Titration
 > * **Process:** Taking samples (aliquots) of the reaction mixture at regular intervals, stopping or slowing the reaction immediately (**quenching**), and then titrating the sample to determine reactant/product concentration.
-> * **Quenching Techniques:**
->   1. Rapid cooling in an ice-water bath.
->   2. Adding a chemical that neutralizes/reacts with the catalyst or one of the reactants.
-> * **Example (Propanone-Iodine Reaction):** Sodium hydrogen carbonate ($\\\\text{NaHCO}_3$) is added to neutralize the acid catalyst ($\\\\text{H}^+$), effectively quenching the reaction. The remaining iodine is then titrated against standard sodium thiosulfate:
+> * **Selecting the Correct Quenching Method:**
+>   * **Rapid Cooling & Dilution (Ice-Cold Water):** Required when titrating an **acid or alkali product/catalyst** (e.g., ester hydrolysis). Dilution and cooling stop the reaction without consuming any of the acid being titrated.
+>   * **Chemical Neutralization ($\\\\text{NaHCO}_3$):** Used ONLY when titrating a **non-acidic species** (e.g., titrating iodine $\\\\text{I}_2$ with sodium thiosulfate in propanone iodination). Adding $\\\\text{NaHCO}_3$ neutralizes the $\\\\text{H}^+$ catalyst to halt the reaction without reacting with iodine.
+> * **Titration Reaction Example (Iodine Titration):**
 >   $$\\\\text{I}_2\\\\text{(aq)} + 2\\\\text{S}_2\\\\text{O}_3^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{I}^-\\\\text{(aq)} + \\\\text{S}_4\\\\text{O}_6^{2-}\\\\text{(aq)}$$
 
 > [!BOX]
@@ -676,7 +849,10 @@ export const parts: LessonPart[] = [
 > For other reactions, specific physical properties can be monitored continuously:
 > 
 > 1. **Electrical Conductivity:**
->    * **Justification:** Suitable if the concentration or mobility of ions in solution changes during the reaction, causing a drop/increase in conductivity.
+>    * **Justification:** Suitable if the concentration, charge, or mobility of ions changes during the reaction, causing a drop or increase in conductivity.
+>    * **Key Exam Justification Rationale:**
+>      * **Ion Mobility & Size:** Replacement of fast-moving, highly conductive ions (e.g., $\\\\text{OH}^-$) by larger, lower-mobility ions (e.g., $\\\\text{CH}_3\\\\text{COO}^-$).
+>      * **Change in Ion Moles:** Reduction in total ion count/charge (e.g., $3\text{ moles}$ of reactant ions $1\\\\text{S}_2\\\\text{O}_8^{2-} + 2\\\\text{I}^-$ changing to $2\text{ moles}$ of product ions $2\\\\text{SO}_4^{2-}$).
 >    * **Example:**
 >      $$5\\\\text{Br}^-\\\\text{(aq)} + \\\\text{BrO}_3^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
 > 
@@ -686,6 +862,13 @@ export const parts: LessonPart[] = [
 > 
 > 3. **Other Physical Properties (Dilatometry):**
 >    * **Dilatometry:** Monitors minute changes in volume during liquid reactions.
+> 
+> > [!BOX]
+> > ### ⏱️ Clock Reactions & Initial Rates Method
+> > * **Concept:** An alternative to continuous monitoring, where we measure the time ($t$) taken for a small, fixed amount of product to form (indicated by a sharp visual change, such as a color change).
+> > * **Initial Rate Proportionality:** Because the reaction is monitored for only a tiny fraction of its completion ($<10\%$), reactant concentrations remain virtually constant, so:
+> >   $$\\\\text{Initial Rate} \\\\propto \\\\frac{1}{t}$$
+> > * **Iodine Clock Principle:** In the Iodine Clock reaction, a fixed small quantity of sodium thiosulfate ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$) rapidly consumes iodine as it forms. Once thiosulfate is completely exhausted, free iodine accumulates and instantly turns the starch indicator dark blue-black.
 
 
 > [!EXAMPLE]
@@ -706,12 +889,14 @@ export const parts: LessonPart[] = [
 > >    * *Explanation:* $\\\\text{H}_2$ gas is produced. Measuring mass loss is unsuitable because hydrogen gas ($\\\\text{H}_2$) has a very low molar mass ($2.0\\\\text{ g mol}^{-1}$), meaning the decrease in mass as the gas escapes is extremely small and cannot be measured accurately with standard laboratory balances.
 > > 
 > > 2. **Ethyl ethanoate with sodium hydroxide:**
-> >    * *Technique:* Electrical conductivity (or quenching and titrating $\\\\text{OH}^-$).
-> >    * *Explanation:* The highly conductive $\\\\text{OH}^-$ ions are replaced by less conductive $\\\\text{CH}_3\\\\text{COO}^-$ ions, causing a measurable drop in electrical conductivity.
+> >    * This reaction can be followed using either a chemical or a physical method:
+> >      * **a) Chemical method (Titration):** Withdraw samples at regular time intervals. Quench the reaction in each sample by adding it to a known excess of standard acid. Then titrate the remaining unreacted acid with standard alkali.
+> >      * **b) Physical method (Electrical Conductivity):** Monitor the decrease in electrical conductivity over time, as the highly conductive $\\\\text{OH}^-$ ions are replaced by larger and less conductive $\\\\text{CH}_3\\\\text{COO}^-$ ions.
 > > 
 > > 3. **Hydrogen gas with iodine gas:**
-> >    * *Technique:* Colorimetry.
-> >    * *Explanation:* Iodine gas ($\\\\text{I}_2$) is purple, whereas the reactant $\\\\text{H}_2$ and product $\\\\text{HI}$ are colorless. The fading of the purple color can be monitored quantitatively.
+> >    * This reaction can be followed using either a physical or a chemical method:
+> >      * **a) Physical method (Colorimetry):** Measure the decrease in the purple/violet color intensity of iodine gas ($\\\\text{I}_2$) over time using a colorimeter (since $\\\\text{H}_2$ and $\\\\text{HI}$ are colorless).
+> >      * **b) Chemical method (Quenching and Titration):** Quench samples by rapid cooling (causing deposition and then dissolution of solid $\\\\text{I}_2$), and titrate the mixture with standard sodium thiosulfate solution ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$) to determine the remaining iodine concentration.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Evaluating Experimental Design & Systematic Errors
@@ -755,9 +940,10 @@ export const parts: LessonPart[] = [
 > >    * *Verdict:* The suggestion is highly unsuitable.
 > >    * *Reasoning:* Adding a strong alkali like $\\\\text{NaOH}$ would catalyze and cause rapid alkaline hydrolysis (saponification) of the remaining unreacted ester. This would destroy the ester and change the concentration of ethanoic acid, introducing a massive error.
 > > 
-> > 2. **Correct alternative chemical method:**
-> >    * *Method:* Quench by adding sodium hydrogencarbonate ($\\\\text{NaHCO}_3$).
-> >    * *Reasoning:* $\\\\text{NaHCO}_3$ is a weak base. It is strong enough to completely neutralize the acid catalyst ($\\\\text{H}^+$) and stop the reaction, but too weak to cause alkaline hydrolysis of the ester.
+> > 2. **Correct alternative quenching method:**
+> >    * *Method:* Quench by pipetting the aliquot into a large, known volume of ice-cold water (or plunging the sample tube directly into an ice-water bath).
+> >    * *Reasoning:* Rapid cooling significantly drops the kinetic energy/temperature, and dilution dramatically reduces the concentration of reactants and the $\\\\text{H}^+$ catalyst. Together, this effectively stops (or drastically slows down) the reaction, allowing the total acid present (catalyst $\\\\text{H}^+$ + produced ethanoic acid) to be titrated accurately with standard $\\\\text{NaOH}$.
+> >    * *Important Distinction:* Adding a neutralizing agent like $\\\\text{NaHCO}_3$ is correct for reactions where the remaining reactant being titrated is not an acid (such as iodine in the iodination of propanone). In ester hydrolysis, adding $\\\\text{NaHCO}_3$ would neutralize the ethanoic acid itself, ruining the titration.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Comparing Monitoring Techniques
@@ -772,7 +958,7 @@ export const parts: LessonPart[] = [
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Method 1: Electrical Conductivity**
-> >    * *Justification:* There is a change in the total number/charge of ions in solution. The reactants have a total ionic charge of $-4$ ($\\\\text{S}_2\\\\text{O}_8^{2-}$ and $2\\\\text{I}^-$), whereas the products have a total ionic charge of $-2$ ($2\\\\text{SO}_4^{2-}$). This decrease in charge density leads to a measurable drop in conductivity over time.
+> >    * *Justification:* There is a decrease in the total number of ions in solution. The reactants contain $3\text{ moles}$ of ions (one $\\\\text{S}_2\\\\text{O}_8^{2-}$ and two $\\\\text{I}^-$), whereas the products contain only $2\text{ moles}$ of ions (two $\\\\text{SO}_4^{2-}$). This decrease in the number of mobile charge carriers leads to a measurable drop in electrical conductivity over time.
 > > 
 > > 2. **Method 2: Colorimetry**
 > >    * *Justification:* Iodine ($\\\\text{I}_2$) is produced, which has a distinct brown/yellow color in aqueous solution. The reactants are colorless. The increase in color intensity (absorbance) can be monitored continuously.
@@ -801,7 +987,7 @@ export const parts: LessonPart[] = [
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 6: Colorimeter Filter Selection
-> **Question:** A student uses a colorimeter to follow the rate of a reaction that produces bromine gas dissolved in water ($\\\\text{Br}_2\\\\text{(aq)}$), which is orange-brown.
+> **Question:** A student uses a colorimeter to follow the rate of a reaction that produces bromine dissolved in water ($\\\\text{Br}_2\\\\text{(aq)}$), which is orange-brown.
 > 
 > 1. State the color of the filter that should be selected for the colorimeter.
 > 2. Explain your choice of filter.
@@ -810,135 +996,42 @@ export const parts: LessonPart[] = [
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Filter Selection:**
-> >    * *Verdict:* A blue filter (or complementary color filter around $470\text{ nm}$) should be selected.
+> >    * Blue filter.
 > > 
 > > 2. **Explanation:**
-> >    * *Reasoning:* An orange-brown solution appears orange because it transmits orange light and absorbs its complementary color, which is blue. Selecting a blue filter ensures maximum absorbance of light by the bromine molecules, leading to the highest sensitivity and accuracy in the absorbance readings.
-
-> [!IMPORTANT]
-> ### 🧮 Concentration-Time Graphs & Half-Life (t₁/₂)
-> Plotting reactant concentration against time gives a curve from which we can determine the reaction order and half-life:
-> * **Half-Life (t₁/₂):** The time taken for the concentration of a reactant to fall to half of its initial value.
-> * **First-Order Half-Life:** For a first-order reaction, the half-life is constant and is independent of the initial concentration:
->   **t₁/₂ = ln(2) / k**
->   *As shown in the graph below, the time taken for [A] to decrease from 120 to 60 is 100 s, from 60 to 30 is another 100 s, and from 30 to 15 is also 100 s. This constant half-life of 100 s confirms a first-order reaction.*
-> 
-> ${svgToken(halfLifeSvg)}
+> >    * **M1 (Color Absorbed):** The orange-brown solution absorbs blue light (blue is the complementary color of orange).
+> >    * **M2 (Maximum Absorbance):** Selecting a blue filter provides maximum absorbance.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 7: Graph Analysis of Compound P Decomposition
-> **Question:** A compound P decomposes when heated. The graph shows the change in concentration when a sample of P is heated:
-> * At t = 0 s, [P] = 5.8 units
-> * At t = 350 s, [P] = 2.9 units
-> * At t = 700 s, [P] = 1.45 units
-> * At t = 1050 s, [P] = 0.72 units
-> 
-> 1. State what is meant by the term half-life of reaction.
-> 2. Use the data to show that the decomposition of P is a first-order reaction.
-> 3. Explain the effect on the half-life of doubling the initial concentration of P.
-> 4. Calculate the rate constant, k, for this reaction using the expression k = 0.693 / t₁/₂.
-> 5. Write the rate equation for this reaction.
-> 6. Use the data to:
->    a) Determine the concentration of P at 800 s (given as 1.75 units).
->    b) Calculate the rate of reaction at 800 s.
-> 7. Describe how you could determine the reaction rate at 800 s directly from the graph.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Definition of Half-life:**
-> >    The time taken for the concentration of a reactant to decrease to half of its initial value.
-> > 
-> > 2. **Show First-order Reaction:**
-> >    * First half-life (from 5.8 to 2.9 units): t₁/₂ = 350 - 0 = 350 s.
-> >    * Second half-life (from 2.9 to 1.45 units): t₁/₂ = 700 - 350 = 350 s.
-> >    * Third half-life (from 1.45 to 0.72 units): t₁/₂ = 1050 - 700 = 350 s.
-> >    * *Conclusion:* Since successive half-lives are constant (350 s), the reaction is first-order with respect to P.
-> > 
-> > 3. **Effect of Doubling Concentration:**
-> >    The half-life will remain unchanged because the half-life of a first-order reaction is independent of the initial concentration.
-> > 
-> > 4. **Calculate rate constant, k:**
-> >    k = 0.693 / t₁/₂ = 0.693 / 350 s = 1.98 × 10⁻³ s⁻¹
-> > 
-> > 5. **Write rate equation:**
-> >    rate = k[P]
-> > 
-> > 6. **Calculations at 800 s:**
-> >    * **a)** From the graph, concentration of P at 800 s is 1.75 units.
-> >    * **b)** rate = k[P] = (1.98 × 10⁻³ s⁻¹) × (1.75 units) = 3.47 × 10⁻³ units s⁻¹
-> > 
-> > 7. **Determine rate directly from graph:**
-> >    Draw a tangent to the curve at t = 800 s and calculate the gradient (slope) of this tangent: gradient = Δconcentration / Δtime. The magnitude of this gradient represents the rate at that instant.
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 8: Proving First-Order Kinetics from a ln[A] vs Time Graph
-> **Question:** A student monitors the decomposition of compound Q and records the following concentration data:
->
-> | Time / s | [Q] / mol dm⁻³ | ln[Q] |
-> | :---: | :---: | :---: |
-> | 0 | 0.800 | −0.223 |
-> | 100 | 0.491 | −0.712 |
-> | 200 | 0.301 | −1.200 |
-> | 300 | 0.185 | −1.687 |
-> | 400 | 0.114 | −2.170 |
->
-> 1. State what type of graph should be plotted to confirm that the reaction is first order with respect to Q, and describe the expected result.
-> 2. Use the data to confirm that the reaction is first order.
-> 3. Determine the rate constant, k, from the gradient of the ln[Q] vs time graph, and state its units.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> >
-> > 1. **Graph type and expected result:**
-> >    * Plot ln[Q] (y-axis) against time / s (x-axis).
-> >    * For a first-order reaction, this graph should yield a **straight line with a negative gradient**, since the integrated first-order rate law gives: ln[Q] = -kt + ln[Q]₀
-> >
-> > 2. **Confirm first-order kinetics:**
-> >    * The ln[Q] values decrease by a constant amount per unit time interval:
-> >      * 100 s: Δln[Q] = -0.712 - (-0.223) = -0.489
-> >      * 100 s: Δln[Q] = -1.200 - (-0.712) = -0.488
-> >      * 100 s: Δln[Q] = -1.687 - (-1.200) = -0.487
-> >    * The constant decrease in ln[Q] per fixed time interval confirms the plot is linear. Therefore, the reaction is **first order** with respect to Q.
-> >
-> > 3. **Calculate the rate constant k:**
-> >    * The gradient of the ln[Q] vs time graph equals -k:
-> >      Gradient = Δln[Q] / Δtime = (-2.170 - (-0.223)) / (400 - 0) = -1.947 / 400 = -4.87 × 10⁻³ s⁻¹
-> >    * Therefore: k = 4.87 × 10⁻³ s⁻¹
-> >    * **Units:** s⁻¹ (consistent with a first-order rate constant)
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 9: Evaluating Mass Loss vs Gas Syringe for H₂-Producing Reactions
+> #### 📝 Worked Example 7: Evaluating Mass Loss vs Gas Syringe for H₂-Producing Reactions
 > **Question:** Zinc metal reacts with dilute sulfuric acid according to the equation:
 > $$\\\\text{Zn(s)} + \\\\text{H}_2\\\\text{SO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{ZnSO}_4\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
 > A student suggests following the reaction rate by placing the flask on a balance and recording the decrease in mass over time.
 >
 > 1. Explain why measuring mass loss is **not** a suitable technique for this reaction, despite a gas being produced.
 > 2. Suggest a more appropriate experimental technique and justify your choice.
-> 3. State one reason why collecting H₂ gas over water would also be unsuitable in this experiment.
+> 3. State one advantage of using a gas syringe over collecting the $\\\\text{H}_2$ gas over water in a measuring cylinder.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > >
 > > 1. **Why mass loss is unsuitable:**
-> >    * Hydrogen gas (H₂) has a very low molar mass of only 2.0 g mol⁻¹
-> >    * Even when several moles of H₂ are produced, the total mass lost from the flask is extremely small (e.g., producing 0.01 mol H₂ loses only 0.020 g).
-> >    * This mass loss falls within the uncertainty of standard laboratory balances (typically ±0.01 g), making the measurements unreliable and the calculated rates inaccurate.
+> >    * Hydrogen gas ($\\\\text{H}_2$) has a very low molar mass of only $2.0\text{ g mol}^{-1}$.
+> >    * Even when several moles of $\\\\text{H}_2$ are produced, the total mass lost from the flask is extremely small (e.g., producing $0.01\text{ mol } \text{H}_2$ loses only $0.020\text{ g}$).
+> >    * This mass loss falls within the uncertainty of standard laboratory balances (typically $\pm 0.01\text{ g}$), making the measurements unreliable and the calculated rates inaccurate.
 > >
 > > 2. **More appropriate technique:**
-> >    * Use a **gas syringe** connected to the sealed flask to measure the volume of H₂ evolved over time.
-> >    * *Justification:* The gas syringe directly measures volume changes, which are large and easily measurable even for small amounts of H₂ produced, giving an accurate and continuous record of gas evolution.
+> >    * Use a **gas syringe** connected to the sealed flask to measure the volume of $\\\\text{H}_2$ evolved over time.
+> >    * *Justification:* The gas syringe directly measures volume changes, which are large and easily measurable even for small amounts of $\\\\text{H}_2$ produced, giving an accurate and continuous record of gas evolution.
 > >
-> > 3. **Why gas collection over water is also unsuitable:**
-> >    * Although H₂ has low solubility in water (making it theoretically collectible over water), the practical issue is that very light gas bubbles escape rapidly and are difficult to direct into the collection tube, leading to significant gas loss and underestimated volumes.
-> >    * Additionally, water vapour pressure introduces a systematic error in the recorded gas volume at elevated temperatures.
+> > 3. **Advantage of Gas Syringe over Collection over Water:**
+> >    * *Advantage:* A gas syringe measures the dry gas directly and avoids the issue of water vapour mixing with the collected gas. (When gas is collected over water, the recorded volume includes water vapour, introducing a small systematic error in the measured volume of $\\\\text{H}_2$). Additionally, it is generally easier to set up and read continuously without managing water levels.
 `,
     keyPoints: [
       'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
       'Quenching stops reactions by rapid cooling or chemical neutralization; weak bases (like NaHCO3) are used to neutralize acid catalysts without causing side-hydrolysis of esters.',
       'In colorimetry, a filter matching the complementary color of the solution (e.g., a blue filter for an orange-brown bromine solution) must be chosen to ensure maximum light absorbance.',
       'Clock reactions use a small, limiting reagent to delay color change, allowing the calculation of initial rate (1/t) before reactant concentrations change significantly.',
-      'Plotting ln[A] against time gives a straight line for a first-order reaction; the gradient equals −k and has units of s⁻¹.',
       'Mass loss is an unreliable technique for reactions producing low molar mass gases (e.g., H₂, Mr = 2.0) because the mass change is too small to measure accurately; a gas syringe is preferred.'
     ]
   },
@@ -1029,15 +1122,22 @@ export const parts: LessonPart[] = [
 > 1. **Zero Order ($x = 0$):**
 >    * The rate is independent of the reactant concentration.
 >    * Tripling concentration has no effect on rate.
+> 
+> ${svgToken(zeroOrderSvg)}
+> 
 > 2. **First Order ($x = 1$):**
 >    * The rate is directly proportional to the reactant concentration.
 >    * Doubling concentration doubles the rate.
+> 
+> ${svgToken(firstOrderSvg)}
+> 
 > 3. **Second Order ($x = 2$):**
 >    * The rate is proportional to the square of the reactant concentration.
 >    * Doubling concentration increases the rate by a factor of 4 ($2^2 = 4$).
-> 4. **Overall Order:** The sum of all individual orders in the rate equation ($x + y$).
 > 
-> ${svgToken(kineticsDashboardSvg)}
+> ${svgToken(secondOrderSvg)}
+> 
+> 4. **Overall Order:** The sum of all individual orders in the rate equation ($x + y$).
 
 
 > [!BOX]
@@ -1048,223 +1148,221 @@ export const parts: LessonPart[] = [
 > * **Second Order:** $k = \\\\dfrac{\\\\text{Rate}}{[\\\\text{A}][\\\\text{B}]}$, units: $\\\\text{dm}^3\\\\text{ mol}^{-1}\\\\text{ s}^{-1}$
 > * **Third Order:** $k = \\\\dfrac{\\\\text{Rate}}{[\\\\text{A}]^2[\\\\text{B}]}$, units: $\\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$
 
+> [!IMPORTANT]
+> ### 🧮 Concentration-Time Graphs & Half-Life (t₁/₂)
+> Plotting reactant concentration against time gives a curve from which we can determine the reaction order and half-life:
+> * **Half-Life (t₁/₂):** The time taken for the concentration of a reactant to fall to half of its initial value.
+> * **First-Order Half-Life:** For a first-order reaction, the half-life is constant and is independent of the initial concentration:
+>   **t₁/₂ = ln(2) / k**
+>   *As shown in the graph below, the time taken for [A] to decrease from 120 to 60 is 100 s, from 60 to 30 is another 100 s, and from 30 to 15 is also 100 s. This constant half-life of 100 s confirms a first-order reaction.*
+> 
+> ${svgToken(halfLifeSvg)}
+
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Deducing Reaction Orders & Constant Units
-> **Question:** A reaction has the rate equation $\\\\text{Rate} = k[\\\\text{NO}]^2[\\\\text{O}_2]$. Determine the overall order of the reaction and deduce the units of the rate constant $k$
+> #### 📝 Worked Example 3: Graph Analysis of Compound P Decomposition
+> **Question:** A compound P decomposes when heated. The graph shows the change in concentration when a sample of P is heated:
+> 
+> ${svgToken(compoundPDecompositionSvg)}
+> 
+> 1. State what is meant by the term half-life of reaction.
+> 2. Use the data to show that the decomposition of P is a first-order reaction.
+> 3. Explain the effect on the half-life of doubling the initial concentration of P.
+> 4. Calculate the rate constant, k, for this reaction using the expression k = 0.693 / t₁/₂.
+> 5. Write the rate equation for this reaction.
+> 6. Use the data to:
+>    a) Determine the concentration of P at 800 s (given as 1.75 units).
+>    b) Calculate the rate of reaction at 800 s.
+> 7. Describe how you could determine the reaction rate at 800 s directly from the graph.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Determine the overall order:**
-> >    * Order with respect to $\\\\text{NO}$ is 2
-> >    * Order with respect to $\\\\text{O}_2$ is 1
-> >    * Overall order = $2 + 1 = 3$
+> > 1. **Definition of Half-life:**
+> >    The time taken for the concentration of a reactant to decrease to half of its initial value.
 > > 
-> > 2. **Deduce the units of $k$:**
-> >    * Rearrange the rate equation:
-> >      $$k = \\\\frac{\\\\text{Rate}}{[\\\\text{NO}]^2[\\\\text{O}_2]}$$
-> >    * Substitute units:
-> >      $$\\\\text{units} = \\\\frac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})^2(\\\\text{mol dm}^{-3})} = \\\\frac{\\\\text{s}^{-1}}{(\\\\text{mol dm}^{-3})^2}$$
-> >    * Simplify:
-> >      $$\\\\text{units} = \\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$$
+> > 2. **Show First-order Reaction:**
+> >    * First half-life (from 5.8 to 2.9 units): t₁/₂ = 350 - 0 = 350 s.
+> >    * Second half-life (from 2.9 to 1.45 units): t₁/₂ = 700 - 350 = 350 s.
+> >    * Third half-life (from 1.45 to 0.72 units): t₁/₂ = 1050 - 700 = 350 s.
+> >    * *Conclusion:* Since successive half-lives are constant (350 s), the reaction is first-order with respect to P.
+> > 
+> > 3. **Effect of Doubling Concentration:**
+> >    The half-life will remain unchanged because the half-life of a first-order reaction is independent of the initial concentration.
+> > 
+> > 4. **Calculate rate constant, k:**
+> >    k = 0.693 / t₁/₂ = 0.693 / 350 s = 1.98 × 10⁻³ s⁻¹
+> > 
+> > 5. **Write rate equation:**
+> >    rate = k[P]
+> > 
+> > 6. **Calculations at 800 s:**
+> >    * **a)** From the graph, concentration of P at 800 s is 1.75 units.
+> >    * **b)** rate = k[P] = (1.98 × 10⁻³ s⁻¹) × (1.75 units) = 3.47 × 10⁻³ units s⁻¹
+> > 
+> > 7. **Determine rate directly from graph:**
+> >    Draw a tangent to the curve at t = 800 s and calculate the gradient (slope) of this tangent: gradient = Δconcentration / Δtime. The magnitude of this gradient represents the rate at that instant.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Deducing Rate Equation & Constant from Table Data
-> The following initial rates were obtained at a constant temperature:
+> #### 📝 Worked Example 4: Proving First-Order Kinetics from a ln[A] vs Time Graph
+> **Question:** A student monitors the decomposition of compound Q and records the following concentration data:
+>
+> | Time / s | [Q] / mol dm⁻³ | ln[Q] |
+> | :---: | :---: | :---: |
+> | 0 | 0.800 | −0.223 |
+> | 100 | 0.491 | −0.712 |
+> | 200 | 0.301 | −1.200 |
+> | 300 | 0.185 | −1.687 |
+> | 400 | 0.114 | −2.170 |
+>
+> 1. State what type of graph should be plotted to confirm that the reaction is first order with respect to Q, and describe the expected result.
+> 2. Use the data to confirm that the reaction is first order.
+> 3. Determine the rate constant, k, from the gradient of the ln[Q] vs time graph, and state its units.
 > 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> >
+> > 1. **Graph type and expected result:**
+> >    * Plot ln[Q] (y-axis) against time / s (x-axis).
+> >    * For a first-order reaction, this graph should yield a **straight line with a negative gradient**, since the integrated first-order rate law gives: $\\\\text{ln}[Q] = -kt + \\\\text{ln}[Q]_0$
+> > 
+> > > ${svgToken(lnGraphFirstOrderSvg)}
+> > 
+> > 2. **Confirm first-order kinetics:**
+> >    * The ln[Q] values decrease by a constant amount per unit time interval:
+> >      * 100 s: Δln[Q] = -0.712 - (-0.223) = -0.489
+> >      * 100 s: Δln[Q] = -1.200 - (-0.712) = -0.488
+> >      * 100 s: Δln[Q] = -1.687 - (-1.200) = -0.487
+> >    * The constant decrease in ln[Q] per fixed time interval confirms the plot is linear. Therefore, the reaction is **first order** with respect to Q.
+> >
+> > 3. **Calculate the rate constant k:**
+> >    * The gradient of the ln[Q] vs time graph equals -k:
+> >      Gradient = Δln[Q] / Δtime = (-2.170 - (-0.223)) / (400 - 0) = -1.947 / 400 = -4.87 × 10⁻³ s⁻¹
+> >    * Therefore: k = 4.87 × 10⁻³ s⁻¹
+> >    * **Units:** s⁻¹ (consistent with a first-order rate constant)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Deducing Rate Equation & Rate Constant from Table Data
+> **Question:** The initial rate of reaction between bromomethane ($\\\\text{CH}_3\\\\text{Br}$) and hydroxide ions ($\\\\text{OH}^-$) was measured at $298\\\\text{ K}$ for different initial concentrations:
+> $$\\\\text{CH}_3\\\\text{Br(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{OH(aq)} + \\\\text{Br}^-\\\\text{(aq)}$$
+>
+> | Experiment | [CH₃Br] / mol dm⁻³ | [OH⁻] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
+> | :---: | :---: | :---: | :---: |
+> | 1 | 0.10 | 0.10 | 1.50 × 10⁻⁴ |
+> | 2 | 0.20 | 0.10 | 3.00 × 10⁻⁴ |
+> | 3 | 0.10 | 0.30 | 4.50 × 10⁻⁴ |
+> 
+> 1. Deduce the order of reaction with respect to $\\\\text{CH}_3\\\\text{Br}$ and $\\\\text{OH}^-$, showing your reasoning.
+> 2. Write the overall rate equation for the reaction.
+> 3. Calculate the value of the rate constant, $k$, at $298\\\\text{ K}$ and state its units.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce Reaction Orders:**
+> >    * **Order w.r.t $\\\\text{CH}_3\\\\text{Br}$:** Compare Experiments 1 & 2 where [$\\\\text{OH}^-$] is constant ($0.10\\\\text{ mol dm}^{-3}$). Doubling [$\\\\text{CH}_3\\\\text{Br}$] (from $0.10$ to $0.20$) doubles the rate (from $1.50 \\\\times 10^{-4}$ to $3.00 \\\\times 10^{-4}$). Since $2^1 = 2$, the order w.r.t $\\\\text{CH}_3\\\\text{Br}$ is **1** (First Order).
+> >    * **Order w.r.t $\\\\text{OH}^-$:** Compare Experiments 1 & 3 where [$\\\\text{CH}_3\\\\text{Br}$] is constant ($0.10\\\\text{ mol dm}^{-3}$). Tripling [$\\\\text{OH}^-$] (from $0.10$ to $0.30$) triples the rate (from $1.50 \\\\times 10^{-4}$ to $4.50 \\\\times 10^{-4}$). Since $3^1 = 3$, the order w.r.t $\\\\text{OH}^-$ is **1** (First Order).
+> > 
+> > 2. **Overall Rate Equation:**
+> >    $$\\\\text{Rate} = k[\\\\text{CH}_3\\\\text{Br}][\\\\text{OH}^-]$$
+> > 
+> > 3. **Calculate Rate Constant $k$ and Units:**
+> >    * Rearranging: $k = \\\\dfrac{\\\\text{Rate}}{[\\\\text{CH}_3\\\\text{Br}][\\\\text{OH}^-]}$
+> >    * Using Exp 1: $k = \\\\dfrac{1.50 \\\\times 10^{-4}}{(0.10)(0.10)} = 1.50 \\\\times 10^{-2}$
+> >    * **Units:** $\\\\dfrac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})(\\\\text{mol dm}^{-3})} = \\\\text{dm}^3\\\\text{ mol}^{-1}\\\\text{ s}^{-1}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Deducing Rate Equation & Constant for 3-Reactant Bromate Reaction
+> **Question:** The reaction between bromate ions ($\\\\text{BrO}_3^-$), bromide ions ($\\\\text{Br}^-$), and hydrogen ions ($\\\\text{H}^+$) was investigated:
+> $$\\\\text{BrO}_3^-\\\\text{(aq)} + 5\\\\text{Br}^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O(l)}$$
+>
+> | Experiment | [BrO₃⁻] / mol dm⁻³ | [Br⁻] / mol dm⁻³ | [H⁺] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
+> | :---: | :---: | :---: | :---: | :---: |
+> | 1 | 0.10 | 0.10 | 0.10 | 1.20 × 10⁻³ |
+> | 2 | 0.20 | 0.10 | 0.10 | 2.40 × 10⁻³ |
+> | 3 | 0.10 | 0.30 | 0.10 | 3.60 × 10⁻³ |
+> | 4 | 0.10 | 0.10 | 0.20 | 4.80 × 10⁻³ |
+>
+> 1. Deduce the order of reaction with respect to $\\\\text{BrO}_3^-$, $\\\\text{Br}^-$, and $\\\\text{H}^+$.
+> 2. State the overall order of reaction.
+> 3. Calculate the rate constant, $k$, stating its units.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce Reaction Orders:**
+> >    * **W.r.t $\\\\text{BrO}_3^-$:** Compare Exp 1 & 2 ([$\\\\text{Br}^-$] and [$\\\\text{H}^+$] constant). Doubling [$\\\\text{BrO}_3^-$] doubles rate ($2.40/1.20 = 2$). Order = **1**.
+> >    * **W.r.t $\\\\text{Br}^-$:** Compare Exp 1 & 3 ([$\\\\text{BrO}_3^-$] and [$\\\\text{H}^+$] constant). Tripling [$\\\\text{Br}^-$] triples rate ($3.60/1.20 = 3$). Order = **1**.
+> >    * **W.r.t $\\\\text{H}^+$:** Compare Exp 1 & 4 ([$\\\\text{BrO}_3^-$] and [$\\\\text{Br}^-$] constant). Doubling [$\\\\text{H}^+$] quadruples rate ($4.80/1.20 = 4 = 2^2$). Order = **2**.
+> > 
+> > 2. **Overall Order:**
+> >    $$\\\\text{Overall order} = 1 + 1 + 2 = 4 \\\\text{ (Fourth order overall)}$$
+> > 
+> > 3. **Calculate Rate Constant $k$ and Units:**
+> >    * $k = \\\\dfrac{\\\\text{Rate}}{[\\\\text{BrO}_3^-][\\\\text{Br}^-][\\\\text{H}^+]^2} = \\\\dfrac{1.20 \\\\times 10^{-3}}{(0.10)(0.10)(0.10)^2} = 12.0$
+> >    * **Units:** $\\\\dfrac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})^4} = \\\\text{dm}^9\\\\text{ mol}^{-3}\\\\text{ s}^{-1}$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Deducing Orders with Non-Isolated Conditions (Ratio Method)
+> **Question:** Consider the gas-phase reaction: $\\\\text{A(g)} + 2\\\\text{B(g)} \\\\rightarrow \\\\text{C(g)}$. A student collects the following initial rates data:
+>
 > | Experiment | [A] / mol dm⁻³ | [B] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
 > | :---: | :---: | :---: | :---: |
-> | 1 | 0.100 | 0.100 | 2.00 × 10⁻³ |
-> | 2 | 0.200 | 0.100 | 8.00 × 10⁻³ |
-> | 3 | 0.100 | 0.200 | 4.00 × 10⁻³ |
-> 
-> 1. Deduce the order of reaction with respect to $\\\\text{A}$, showing your reasoning.
-> 2. Deduce the order of reaction with respect to $\\\\text{B}$, showing your reasoning.
-> 3. Write the rate equation for this reaction.
-> 4. Calculate the value of the rate constant $k$, and state its units.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Deduce order with respect to $\\\\text{A}$:**
-> >    * *Reasoning:* Compare Experiment 1 and Experiment 2 where $[\\\\text{B}]$ is kept constant at $0.100\\\\text{ mol dm}^{-3}$. As $[\\\\text{A}]$ is doubled (from $0.100$ to $0.200$), the rate increases by a factor of 4 (from $2.00 \\\\times 10^{-3}$ to $8.00 \\\\times 10^{-3}$).
-> >    * *Mathematical relation:* Since $2^{\\\\text{order}} = 4$, the order with respect to $\\\\text{A}$ is 2 (Second Order).
-> > 
-> > 2. **Deduce order with respect to $\\\\text{B}$:**
-> >    * *Reasoning:* Compare Experiment 1 and Experiment 3 where $[\\\\text{A}]$ is kept constant at $0.100\\\\text{ mol dm}^{-3}$. As $[\\\\text{B}]$ is doubled (from $0.100$ to $0.200$), the rate doubles (from $2.00 \\\\times 10^{-3}$ to $4.00 \\\\times 10^{-3}$).
-> >    * *Mathematical relation:* Since $2^{\\\\text{order}} = 2$, the order with respect to $\\\\text{B}$ is 1 (First Order).
-> > 
-> > 3. **Write the rate equation:**
-> >    * *Equation:*
-> >      $$\\\\text{Rate} = k[\\\\text{A}]^2[\\\\text{B}]$$
-> > 
-> > 4. **Calculate rate constant k and units:**
-> >    * *Calculation:* Rearrange the rate equation using data from Experiment 1:
-> >      $$k = \\\\frac{\\\\text{Rate}}{[\\\\text{A}]^2[\\\\text{B}]} = \\\\frac{2.00 \\\\times 10^{-3}}{(0.100)^2 \\\\times (0.100)}$$
-> >      $$k = \\\\frac{2.00 \\\\times 10^{-3}}{0.010 \\\\times 0.100} = \\\\frac{2.00 \\\\times 10^{-3}}{1.00 \\\\times 10^{-3}} = 2.00$$
-> >    * *Units:*
-> >      $$\\\\text{Units} = \\\\frac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})^2 \\\\times (\\\\text{mol dm}^{-3})} = \\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$$
-> >      *Final answer:* $k = 2.00\\\\text{ dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$
-
-&nbsp;
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 5: Deducing Rate Equation & Constant for 3-Reactant Bromate Reaction
-> **Question:** The reaction between bromide ions ($\\\\text{Br}^-$), bromate(V) ions ($\\\\text{BrO}_3^-$), and hydrogen ions ($\\\\text{H}^+$) in aqueous solution was studied:
-> $$5\\\\text{Br}^-\\\\text{(aq)} + \\\\text{BrO}_3^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O(l)}$$
-> The following initial rates were obtained at a constant temperature:
-> 
-> | Experiment | [Br⁻(aq)] / mol dm⁻³ | [BrO₃⁻(aq)] / mol dm⁻³ | [H⁺(aq)] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
-> | :---: | :---: | :---: | :---: | :---: |
-> | 1 | 0.10 | 0.10 | 0.10 | 1.2 × 10⁻³ |
-> | 2 | 0.10 | 0.20 | 0.10 | 2.4 × 10⁻³ |
-> | 3 | 0.30 | 0.10 | 0.10 | 3.6 × 10⁻³ |
-> | 4 | 0.10 | 0.20 | 0.20 | 9.6 × 10⁻³ |
-> 
-> 
-> 1. Deduce the order of reaction with respect to $\\\\text{Br}^-$, showing your reasoning.
-> 2. Deduce the order of reaction with respect to $\\\\text{BrO}_3^-$, showing your reasoning.
-> 3. Deduce the order of reaction with respect to $\\\\text{H}^+$, showing your reasoning.
-> 4. Write the rate equation for this reaction.
-> 5. Calculate the value of the rate constant $k$ using Experiment 1, stating its units.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Deduce order with respect to $\\\\text{Br}^-$:**
-> >    * Compare Experiment 1 and Experiment 3: $[\\\\text{BrO}_3^-]$ and $[\\\\text{H}^+]$ are constant. $[\\\\text{Br}^-]$ triples (from $0.10$ to $0.30$), and initial rate triples (from $1.2 \\\\times 10^{-3}$ to $3.6 \\\\times 10^{-3}$).
-> >    * Since $3^{\\\\text{order}} = 3$, the order with respect to $\\\\text{Br}^-$ is 1 (First Order).
-> > 
-> > 2. **Deduce order with respect to $\\\\text{BrO}_3^-$:**
-> >    * Compare Experiment 1 and Experiment 2: $[\\\\text{Br}^-]$ and $[\\\\text{H}^+]$ are constant. $[\\\\text{BrO}_3^-]$ doubles (from $0.10$ to $0.20$), and initial rate doubles (from $1.2 \\\\times 10^{-3}$ to $2.4 \\\\times 10^{-3}$).
-> >    * Since $2^{\\\\text{order}} = 2$, the order with respect to $\\\\text{BrO}_3^-$ is 1 (First Order).
-> > 
-> > 3. **Deduce order with respect to $\\\\text{H}^+$:**
-> >    * Compare Experiment 2 and Experiment 4: $[\\\\text{Br}^-]$ and $[\\\\text{BrO}_3^-]$ are constant. $[\\\\text{H}^+]$ doubles (from $0.10$ to $0.20$), and initial rate increases by a factor of 4 (from $2.4 \\\\times 10^{-3}$ to $9.6 \\\\times 10^{-3}$).
-> >    * Since $2^{\\\\text{order}} = 4$, the order with respect to $\\\\text{H}^+$ is 2 (Second Order).
-> > 
-> > 4. **Write the rate equation:**
-> >    $$\\\\text{rate} = k[\\\\text{Br}^-][\\\\text{BrO}_3^-][\\\\text{H}^+]^2$$
-> > 
-> > 5. **Calculate rate constant $k$ and units:**
-> >    * Rearrange the rate equation using Experiment 1:
-> >      $$k = \\\\frac{\\\\text{rate}}{[\\\\text{Br}^-][\\\\text{BrO}_3^-][\\\\text{H}^+]^2}$$
-> >      $$k = \\\\frac{1.2 \\\\times 10^{-3}}{(0.10) \\\\times (0.10) \\\\times (0.10)^2}$$
-> >      $$k = \\\\frac{1.2 \\\\times 10^{-3}}{0.010 \\\\times 0.010} = \\\\frac{1.2 \\\\times 10^{-3}}{0.0001} = 12$$
-> >    * **Units:**
-> >      $$\\\\text{Units} = \\\\frac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3}) \\\\times (\\\\text{mol dm}^{-3}) \\\\times (\\\\text{mol dm}^{-3})^2} = \\\\text{dm}^9\\\\text{ mol}^{-3}\\\\text{ s}^{-1}$$
-> >      *Final answer:* $k = 12\\\\text{ dm}^9\\\\text{ mol}^{-3}\\\\text{ s}^{-1}$
-
-&nbsp;
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 6: Predicting Concentration Change Effects on Rate
-> **Question:** A chemical reaction has the rate equation:
-> $$\\\\text{Rate} = k[\\\\text{X}]^2[\\\\text{Y}]^0[\\\\text{Z}]^1$$
-> 
-> Predict the factor by which the rate of reaction changes if:
-> 1. The concentration of $\\\\text{X}$ is doubled, while $[\\\\text{Y}]$ and $[\\\\text{Z}]$ are kept constant.
-> 2. The concentration of $\\\\text{Y}$ is doubled, while $[\\\\text{X}]$ and $[\\\\text{Z}]$ are kept constant.
-> 3. The concentration of $\\\\text{X}$ is doubled, the concentration of $\\\\text{Y}$ is tripled, and the concentration of $\\\\text{Z}$ is halved.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Doubling [X] only:**
-> >    * *Reasoning:* The reaction is second order with respect to $\\\\text{X}$ ($[\\\\text{X}]^2$).
-> >    * *Effect:* The rate changes by $2^2 = 4$. Therefore, the rate increases by a factor of 4.
-> > 
-> > 2. **Doubling [Y] only:**
-> >    * *Reasoning:* The reaction is zero order with respect to $\\\\text{Y}$ ($[\\\\text{Y}]^0$).
-> >    * *Effect:* The rate is independent of $[\\\\text{Y}]$. Therefore, the rate remains unchanged (factor of 1).
-> > 
-> > 3. **Doubling [X], tripling [Y], and halving [Z]:**
-> >    * *Reasoning:* The reaction is second order for $\\\\text{X}$, zero order for $\\\\text{Y}$, and first order for $\\\\text{Z}$.
-> >    * *Calculation:*
-> >      $$\\\\text{Rate factor} = (2)^2 \\\\times (3)^0 \\\\times \\\\left(\\\\frac{1}{2}\\\\right)^1$$
-> >      $$\\\\text{Rate factor} = 4 \\\\times 1 \\\\times \\\\frac{1}{2} = 2$$
-> >      *Final answer:* The overall rate of reaction doubles (increases by a factor of 2).
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 7: Deducing Orders with Non-Isolated Conditions & Calculating Unknown Concentrations
-> **Question:** The initial rate of the reaction between compounds D and E was investigated at a constant temperature:
-> $$\\\\text{D} + \\\\text{E} \\\\rightarrow \\\\text{Products}$$
-> The following table shows the experimental results:
+> | 1 | 0.20 | 0.20 | 4.0 × 10⁻³ |
+> | 2 | 0.40 | 0.20 | 1.6 × 10⁻² |
+> | 3 | 0.60 | 0.40 | 1.44 × 10⁻¹ |
 >
-> | Experiment | [D] / mol dm⁻³ | [E] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
-> | :---: | :---: | :---: | :---: |
-> | 1 | 0.150 | 0.200 | $3.00 \\\\times 10^{-4}$ |
-> | 2 | 0.300 | 0.200 | $1.20 \\\\times 10^{-3}$ |
-> | 3 | 0.450 | 0.400 | $5.40 \\\\times 10^{-3}$ |
-> | 4 | $x$ | 0.600 | $1.62 \\\\times 10^{-2}$ |
->
-> 1. Deduce the order of reaction with respect to D, showing your reasoning from the data.
-> 2. Deduce the order of reaction with respect to E. Note that there are no two experiments where [D] is held constant while [E] varies. Show your step-by-step reasoning.
-> 3. Write the rate equation for the reaction and calculate the rate constant, $k$, stating its units.
-> 4. Calculate the unknown concentration $x$ of reactant D in Experiment 4.
+> 1. Deduce the order of reaction with respect to $\\\\text{A}$.
+> 2. Deduce the order of reaction with respect to $\\\\text{B}$ using the ratio method between Exp 2 and Exp 3, where [$\\\\text{A}$] is not constant.
+> 3. Write the rate equation.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
-> >
-> > 1. **Deduce order with respect to D:**
-> >    * Compare Experiment 1 and Experiment 2: $[\\\\text{E}]$ is constant at $0.200\\\\text{ mol dm}^{-3}$. $[\\\\text{D}]$ is doubled (from $0.150$ to $0.300$).
-> >    * The initial rate increases by: $\\\\frac{1.20 \\\\times 10^{-3}}{3.00 \\\\times 10^{-4}} = 4$
-> >    * Since $2^{\\\\text{order}} = 4$, the order with respect to D is **2** (Second Order).
-> >
-> > 2. **Deduce order with respect to E:**
-> >    * Compare Experiment 2 and Experiment 3: Both tacks change. $[\\\\text{D}]$ increases from $0.300$ to $0.450$ (factor of $1.5$). $[\\\\text{E}]$ doubles from $0.200$ to $0.400$ (factor of $2$).
-> >    * Let the order with respect to E be $y$. We know:
-> >      $$\\\\text{Rate factor} = (1.5)^2 \\\\times (2)^y = \\\\frac{5.40 \\\\times 10^{-3}}{1.20 \\\\times 10^{-3}}$$
-> >      $$2.25 \\\\times 2^y = 4.5$$
-> >      $$2^y = \\\\frac{4.5}{2.25} = 2$$
-> >    * Since $2^y = 2$, the order with respect to E is **1** (First Order).
-> >
-> > 3. **Write rate equation & calculate $k$:**
-> >    * *Rate Equation:* $\\\\text{Rate} = k[\\\\text{D}]^2[\\\\text{E}]$
-> >    * Rearranging for $k$ using Experiment 1:
-> >      $$k = \\\\frac{\\\\text{Rate}}{[\\\\text{D}]^2[\\\\text{E}]} = \\\\frac{3.00 \\\\times 10^{-4}}{(0.150)^2 \\\\times (0.200)}$$
-> >      $$k = \\\\frac{3.00 \\\\times 10^{-4}}{0.0225 \\\\times 0.200} = \\\\frac{3.00 \\\\times 10^{-4}}{4.50 \\\\times 10^{-3}} = 0.0667$$
-> >    * *Units:* $\\\\text{dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$ (for third-order reaction)
-> >    * *Final Answer:* $k = 0.0667\\\\text{ dm}^6\\\\text{ mol}^{-2}\\\\text{ s}^{-1}$
-> >
-> > 4. **Calculate unknown concentration $x$:**
-> >    * Substitute Experiment 4 data into the rate equation:
-> >      $$\\\\text{Rate}_4 = k[\\\\text{D}]_4^2[\\\\text{E}]_4 \\\\implies 1.62 \\\\times 10^{-2} = 0.0667 \\\\times x^2 \\\\times (0.600)$$
-> >      $$1.62 \\\\times 10^{-2} = 0.0400 \\\\times x^2$$
-> >      $$x^2 = \\\\frac{1.62 \\\\times 10^{-2}}{0.0400} = 0.405$$
-> >      $$x = \\\\sqrt{0.405} = 0.636\\\\text{ mol dm}^{-3}$$
+> > 
+> > 1. **Order w.r.t A:**
+> >    * Compare Exp 1 & 2 ([$\\\\text{B}$] constant at $0.20$). Doubling [$\\\\text{A}$] (from $0.20$ to $0.40$) increases rate by a factor of 4 ($1.6 \\\\times 10^{-2} / 4.0 \\\\times 10^{-3} = 4 = 2^2$).
+> >    * Order w.r.t $\\\\text{A}$ = **2** (Second order).
+> > 
+> > 2. **Order w.r.t B using Ratio Method:**
+> >    * Set up the ratio of rate equations for Exp 3 to Exp 2:
+> >      $$\\\\dfrac{\\\\text{Rate}_3}{\\\\text{Rate}_2} = \\\\dfrac{k[\\\\text{A}]_3^2[\\\\text{B}]_3^y}{k[\\\\text{A}]_2^2[\\\\text{B}]_2^y}$$
+> >    * Substitute values:
+> >      $$\\\\dfrac{1.44 \\\\times 10^{-1}}{1.6 \\\\times 10^{-2}} = \\\\left(\\\\dfrac{0.60}{0.40}\\\\right)^2 \\\\times \\\\left(\\\\dfrac{0.40}{0.20}\\\\right)^y$$
+> >      $$9.0 = (1.5)^2 \\\\times (2.0)^y = 2.25 \\\\times 2^y$$
+> >      $$2^y = \\\\dfrac{9.0}{2.25} = 4.0 \\\\implies y = 2 \\\\text{ (Second order w.r.t B)}$$
+> > 
+> > 3. **Rate Equation:**
+> >    $$\\\\text{Rate} = k[\\\\text{A}]^2[\\\\text{B}]^2$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 8: The Isolation Method & Pseudo-First-Order Kinetics
-> **Question:** The hydrolysis of ethyl ethanoate was monitored in the presence of an acid catalyst:
-> $$\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} \\\\xrightarrow{\\\\text{H}^+} \\\\text{CH}_3\\\\text{COOH(aq)} + \\\\text{CH}_3\\\\text{CH}_2\\\\text{OH(aq)}$$
-> The reaction rate is found to follow the rate law: $\\\\text{Rate} = k[\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3][\\\\text{H}_2\\\\text{O}]$.
-> In a laboratory experiment, the initial concentration of ethyl ethanoate is $0.020\\\\text{ mol dm}^{-3}$, while the water concentration is approximately $55.5\\\\text{ mol dm}^{-3}$ (in huge excess).
+> #### 📝 Worked Example 8: Isolation Method & Pseudo-First-Order Kinetics
+> **Question:** The reaction between propanone ($\\\\text{CH}_3\\\\text{COCH}_3$) and iodine ($\\\\text{I}_2$) is acid-catalyzed:
+> $$\\\\text{CH}_3\\\\text{COCH}_3 + \\\\text{I}_2 \\\\xrightarrow{\\\\text{H}^+} \\\\text{CH}_3\\\\text{COCH}_2\\\\text{I} + \\\\text{H}^+ + \\\\text{I}^-$$
+> The true rate equation is: $\\\\text{Rate} = k[\\\\text{CH}_3\\\\text{COCH}_3][\\\\text{H}^+]$ (zero-order with respect to $\\\\text{I}_2$).
+> In an experiment, propanone ($1.0\\\\text{ mol dm}^{-3}$) and acid ($1.0\\\\text{ mol dm}^{-3}$) are present in massive excess compared to iodine ($0.005\\\\text{ mol dm}^{-3}$).
 >
-> 1. Explain why the reaction appears to follow first-order kinetics (pseudo-first-order) with respect to ethyl ethanoate under these conditions.
-> 2. Write the simplified rate equation that represents this pseudo-first-order reaction, defining the relationship between the apparent rate constant ($k_{\\\\text{obs}}$) and the true rate constant ($k$).
-> 3. Suggest one advantage of using the isolation method (large excess of all reactants except one) in kinetic investigations.
+> 1. Explain why the reaction exhibits **pseudo-zero-order kinetics** with respect to concentrations during the reaction.
+> 2. Express the observed rate constant, $k_{\\\\text{obs}}$, in terms of the true rate constant $k$ and the reactant concentrations.
+> 3. If $k = 5.6 \\\\times 10^{-5}\\\\text{ dm}^3\\\\text{ mol}^{-1}\\\\text{ s}^{-1}$, calculate the value of $k_{\\\\text{obs}}$.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
-> >
-> > 1. **Explain Pseudo-First-Order behavior:**
-> >    * Because water ($\\\\text{H}_2\\\\text{O}$) is in massive excess compared to ethyl ethanoate ($55.5\\\\text{ mol dm}^{-3}$ vs $0.020\\\\text{ mol dm}^{-3}$), the concentration of water remains virtually unchanged (constant) throughout the reaction.
-> >    * Since $[\\\\text{H}_2\\\\text{O}]$ is effectively constant, the rate depends only on the changing concentration of ethyl ethanoate.
-> >
-> > 2. **Simplified Rate Equation:**
-> >    * The simplified rate equation is:
-> >      $$\\\\text{Rate} = k_{\\\\text{obs}}[\\\\text{CH}_3\\\\text{COOCH}_2\\\\text{CH}_3]$$
-> >    * Where $k_{\\\\text{obs}} = k[\\\\text{H}_2\\\\text{O}]$. Under these conditions, the product of the true rate constant $k$ and the constant water concentration is grouped into a single observable rate constant.
-> >
-> > 3. **Advantage of Isolation Method:**
-> >    * It simplifies the mathematical analysis. By keeping the concentrations of all reactants except one constant, we can isolate and determine the order with respect to that single reactant directly from concentration-time or rate-concentration graphs.
-`,
+> > 
+> > 1. **Explanation of Pseudo Kinetics:**
+> >    * Since [$\\\\text{CH}_3\\\\text{COCH}_3$] and [$\\\\text{H}^+$] are in massive excess ($1.0\\\\text{ mol dm}^{-3}$) compared to [$\\\\text{I}_2$] ($0.005\\\\text{ mol dm}^{-3}$), their concentrations remain virtually unchanged throughout the entire reaction.
+> >    * Therefore, the product $k[\\\\text{CH}_3\\\\text{COCH}_3][\\\\text{H}^+]$ stays constant, making the rate appear constant (pseudo-zero order).
+> > 
+> > 2. **Expression for $k_{\\\\text{obs}}$:**
+> >    $$k_{\\\\text{obs}} = k[\\\\text{CH}_3\\\\text{COCH}_3][\\\\text{H}^+]$$
+> > 
+> > 3. **Calculation:**
+> >    $$k_{\\\\text{obs}} = (5.6 \\\\times 10^{-5}\\\\text{ dm}^3\\\\text{ mol}^{-1}\\\\text{ s}^{-1}) \\\\times (1.0\\\\text{ mol dm}^{-3}) \\\\times (1.0\\\\text{ mol dm}^{-3}) = 5.6 \\\\times 10^{-5}\\\\text{ s}^{-1}$$`,
     keyPoints: [
+      'Concentration-time graphs allow determining reaction orders and half-life (t₁/₂ = ln(2)/k for a first-order reaction).',
+      'Plotting ln[A] against time gives a straight line for a first-order reaction; the gradient equals −k and has units of s⁻¹.',
       'Reaction orders can only be determined experimentally (e.g. using initial rates table data) and cannot be predicted from the balanced equation stoichiometry.',
       'The rate constant k links reaction rate to concentrations at a specific temperature; its value is constant at a constant temperature but increases as temperature rises.',
       'The units of k vary depending on the overall order of the reaction and are deduced by rearranging the rate equation.',
-      'Average rate of reaction is calculated by dividing the change in reactant/product concentration by the time interval (\\\\Delta[C]/\\\\Delta t).',
+      'Average rate of reaction is calculated by dividing the change in reactant/product concentration by the time interval (\\Delta[C]/\\Delta t).',
       'Predicting the effect of changing concentration on rate involves raising the change factor to the power of the reactant order (e.g., doubling concentration for a second-order reactant increases rate by 2^2 = 4).',
       'In tables where no two experiments keep a reactant constant, use a previously determined order to set up a ratio equation and isolate the unknown order.',
       'Under pseudo-first-order conditions (isolation method), a reactant in massive excess has a virtually constant concentration; its term is absorbed into the observed rate constant (k_obs).'
@@ -1334,8 +1432,9 @@ export const parts: LessonPart[] = [
 >  > ### 🗮️ Rules for Connecting Mechanisms to Rate Equations
 >  > 1. **Reactant Presence:** All reactant species involved either in, or before, the rate-determining step have an effect on the rate and will appear in the rate equation.
 >  > 2. **Reaction Order:** The coefficients of reactants in the RDS (or steps preceding it) match the order of those reactants in the rate equation.
->  > 3. **Species After RDS:** Species participating only in steps AFTER the RDS do not appear in the rate equation (or their concentration effect is negligible because they react in fast steps).
+>  > 3. **Species After RDS (Zero Order):** Any reactant participating ONLY in fast steps *after* the RDS will have a **Zero Order** ($order = 0$) with respect to the rate equation and will not appear in it.
 >  > 4. **Species in Large Excess:** A reactant present in such a large excess that its concentration change is negligible will not have a measurable effect on the rate and won't appear in the rate equation.
+>  > 5. **Catalysts in Rate Equations:** If a catalyst participates in or before the RDS, it **will appear in the rate equation**, even though it cancels out and does **not** appear in the overall balanced chemical equation.
 
 > [!BOX]
 > ### 📊 Reaction Energy Profiles: SN1 vs. SN2 Mechanisms
@@ -1350,15 +1449,17 @@ export const parts: LessonPart[] = [
 >    * **Reaction Profile:** Shows a **single peak** (one transition state) representing the simultaneous nucleophilic attack and leaving group departure. No intermediate is formed.
 >    * **Steric Crowding Effect:** Primary halogenoalkanes have small hydrogen atoms surrounding the central carbon, allowing the nucleophile to attack easily. In tertiary halogenoalkanes, three bulky alkyl groups cause steric hindrance/crowding, making the transition state highly unstable (higher $E_a$). Thus, SN2 rates increase in the order: $3^\\\\circ < 2^\\\\circ < 1^\\\\circ$.
 > 
+> ${svgToken(sn2ProfileSvg)}
+> 
 > 3. **SN1 Hydrolysis (Tertiary Halogenoalkanes):**
 >    * **Rate Equation:** $\\\\text{Rate} = k[\\\\text{RHal}]$ (Unimolecular)
 >    * **Reaction Profile:** Shows **two peaks** (two transition states) separated by a well (the carbocation intermediate minimum).
 >    * **RDS Activation Energy:** The activation energy for the first step (ionization to form the carbocation) is much higher than the second step ($E_a(1) > E_a(2)$), making it the rate-determining step.
 >    * **Inductive Effect:** Alkyl groups donate electrons towards the carbocation carbon, stabilizing the $3^\\\\circ$ carbocation intermediate far more than a $1^\\\\circ$ one. This dramatically lowers $E_a(1)$. Thus, SN1 rates increase in the order: $1^\\\\circ < 2^\\\\circ < 3^\\\\circ$.
 > 
-> *Secondary halogenoalkane hydrolysis proceeds via a mixture of both SN1 and SN2 mechanisms.*
+> ${svgToken(sn1ProfileSvg)}
 > 
-> ${svgToken(reactionEnergyProfilesSvg)}
+> *Secondary halogenoalkane hydrolysis proceeds via a mixture of both SN1 and SN2 mechanisms.*
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Deducing a Mechanism from a Rate Equation
@@ -1383,8 +1484,18 @@ export const parts: LessonPart[] = [
 > >    * Add Step 1 and Step 2:
 > >      $$2\\\\text{NO}_2 + \\\\text{NO}_3 + \\\\text{CO} \\\\rightarrow \\\\text{NO}_3 + \\\\text{NO} + \\\\text{NO}_2 + \\\\text{CO}_2$$
 > >    * Cancel intermediate $\\\\text{NO}_3$ and one $\\\\text{NO}_2$ from both sides:
-> >      $$\\\\text{NO}_2 + \\\\text{CO} \\\\rightarrow \\\\text{NO} + \\\\text{CO}_2$$
 > >    * The mechanism yields the correct overall equation, proving it is consistent.
+
+&nbsp;
+
+> [!TIP]
+> ### ⚖️ Advanced Concept: Fast Pre-Equilibrium Mechanisms
+> When Step 1 is a **fast equilibrium step** and Step 2 is the **slow RDS**:
+> 1. The initial rate equation formulated from the RDS contains an **intermediate** (e.g., $rate = k_2[Z][B]$).
+> 2. Because intermediates **cannot** remain in the final rate equation, we express $[Z]$ in terms of original reactants using the equilibrium expression ($K_c = \frac{[Z]}{[A]^2} \implies [Z] = K_c [A]^2$).
+> 3. Substituting $[Z]$ back into the RDS rate equation gives the overall rate equation: $rate = k[A]^2[B]$ (where $k = k_2 \times K_c$).
+
+&nbsp;
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Mechanism with a Fast Pre-Equilibrium Step
@@ -1482,7 +1593,7 @@ export const parts: LessonPart[] = [
 >   * Step 1: $\\\\text{CH}_3\\\\text{CHO} + \\\\text{CN}^- \\\\rightarrow [\\\\text{CH}_3\\\\text{CHOCN}]^-$
 >   * Step 2: $[\\\\text{CH}_3\\\\text{CHOCN}]^- + \\\\text{H}^+ \\\\rightarrow \\\\text{CH}_3\\\\text{CH(OH)CN}$
 > 
-> The experimentally determined rate equation is $\\\\text{rate} = k[\\\\text{CH}_3\\\\text{CHO}][\\\\text{CN}^-][\\\\text{H}^+]^0$.
+> The experimentally determined rate equation is rate = k[CH₃CHO][CN⁻][H⁺]⁰.
 > 1. Explain which of the two mechanisms is consistent with the rate equation.
 > 2. Identify which step in this mechanism is the rate-determining step (RDS).
 > 
@@ -1491,7 +1602,7 @@ export const parts: LessonPart[] = [
 > > 
 > > 1. **Mechanism Selection:**
 > >    * **Mechanism 2 is consistent.**
-> >    * *Explanation:* The rate equation is $\\\\text{rate} = k[\\\\text{CH}_3\\\\text{CHO}][\\\\text{CN}^-]$ (since $[\\\\text{H}^+]^0 = 1$). This dictates that the rate-determining step must involve exactly one molecule of ethanal ($\\\\text{CH}_3\\\\text{CHO}$) and one cyanide ion ($\\\\text{CN}^-$). Step 1 of Mechanism 2 has $\\\\text{CH}_3\\\\text{CHO}$ and $\\\\text{CN}^-$ as reactants, whereas Step 1 of Mechanism 1 involves $\\\\text{H}^+$ (which is zero-order and cannot participate in the RDS).
+> >    * *Explanation:* The rate equation is rate = k[CH₃CHO][CN⁻] (since [H⁺]⁰ = 1). This dictates that the rate-determining step must involve exactly one molecule of ethanal ($\\\\text{CH}_3\\\\text{CHO}$) and one cyanide ion ($\\\\text{CN}^-$) as reactants. Assuming Step 1 is the RDS for both proposed mechanisms, Step 1 of Mechanism 2 has $\\\\text{CH}_3\\\\text{CHO}$ and $\\\\text{CN}^-$ as reactants (matching the rate equation), whereas Step 1 of Mechanism 1 involves $\\\\text{H}^+$ (which is zero-order and cannot participate in the RDS).
 > > 
 > > 2. **Identify the Rate-Determining Step:**
 > >    * **Step 1** is the rate-determining step because its reactants match the species and stoichiometry found in the rate equation.
@@ -1499,10 +1610,10 @@ export const parts: LessonPart[] = [
 &nbsp;
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 7: Proving Pre-Equilibrium Mechanism Consistency ($2\text{H}_2 + 2\text{NO}$)
+> #### 📝 Worked Example 7: Proving Pre-Equilibrium Mechanism Consistency (2H₂ + 2NO)
 > **Question:** The overall equation for the reaction between hydrogen and nitrogen monoxide is:
 > $$2\\\\text{H}_2\\\\text{(g)} + 2\\\\text{NO(g)} \\\\rightarrow 2\\\\text{H}_2\\\\text{O(g)} + \\\\text{N}_2\\\\text{(g)}$$
-> The experimentally determined rate equation is $\\\\text{rate} = k[\\\\text{H}_2][\\\\text{NO}]^2$.
+> The experimentally determined rate equation is rate = k[H₂][NO]².
 > A proposed mechanism is:
 > * **Step 1 (fast equilibrium):** $2\\\\text{NO(g)} \\\\rightleftharpoons \\\\text{N}_2\\\\text{O}_2\\\\text{(g)}$
 > * **Step 2 (slow):** $\\\\text{N}_2\\\\text{O}_2\\\\text{(g)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow \\\\text{H}_2\\\\text{O(g)} + \\\\text{N}_2\\\\text{O(g)}$
@@ -1517,14 +1628,14 @@ export const parts: LessonPart[] = [
 > >    * Step 2 is the slow step (RDS), so its rate equation is:
 > >      $$\\\\text{rate} = k_2 [\\\\text{N}_2\\\\text{O}_2][\\\\text{H}_2]$$
 > > 
-> > 2. **Express the intermediate $[\\\\text{N}_2\\\\text{O}_2]$ in terms of reactants:**
-> >    * Since $\\\\text{N}_2\\\\text{O}_2$ is an intermediate, it cannot appear in the final rate equation. From the fast pre-equilibrium in Step 1:
-> >      $$\\\\text{Rate}_1\\\\text{(forward)} = \\\\text{Rate}_1\\\\text{(reverse)} \\\\implies k_1 [\\\\text{NO}]^2 = k_{-1} [\\\\text{N}_2\\\\text{O}_2]$$
-> >      $$[\\\\text{N}_2\\\\text{O}_2] = \\\\frac{k_1}{k_{-1}} [\\\\text{NO}]^2$$
+> > 2. **Express the intermediate N₂O₂ in terms of reactants:**
+> >    * Since N₂O₂ is an intermediate, it cannot appear in the final rate equation. From the fast pre-equilibrium in Step 1, the forward and reverse rates are equal:
+> >      rate(fwd) = rate(rev) ⟹ k₁[NO]² = k₋₁ · [N₂O₂]
+> >      [N₂O₂] = (k₁ / k₋₁) × [NO]²
 > > 
-> > 3. **Substitute intermediate into the RDS rate equation:**
-> >    * Substitute $[\\\\text{N}_2\\\\text{O}_2]$ into Step 2:
-> >      $$\\\\text{rate} = k_2 \\\\left(\\\\frac{k_1}{k_{-1}} [\\\\text{NO}]^2\\\\right) [\\\\text{H}_2] = k [\\\\text{H}_2][\\\\text{NO}]^2$$
+> > 3. **Substitute N₂O₂ into the RDS rate equation:**
+> >    * Substituting N₂O₂ into Step 2's rate equation:
+> >      rate = k₂ × (k₁/k₋₁) × [NO]² × [H₂] = k[H₂][NO]²
 > >    * *Conclusion:* Yes, it is fully consistent because the derived rate equation matches the experimental rate equation.
 
 &nbsp;
@@ -1547,7 +1658,7 @@ export const parts: LessonPart[] = [
 > > 
 > > 1. **Chlorine Mechanism Analysis:**
 > >    * **a) Overall Equation:** Sum all steps and cancel intermediates ($\\\\text{Cl}^\\\\bullet$ and $\\\\text{H}^\\\\bullet$):
-> >      $$\\\\text{Cl}_{2\\\\text{(g)}} + \\\\text{H}_{2\\\\text{(g)}} \\\\rightarrow 2\\\\text{HCl}_{\\\\text{(g)}}$$
+> >      $$\\\\text{Cl}_2\\\\text{(g)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{HCl(g)}$$
 > >    * **b) Rate Equation:** Since Step 1 is the slow step (RDS), $\\\\text{rate} = k[\\\\text{Cl}_2]$.
 > >    * **c) Effect of doubling concentrations:**
 > >      * Doubling $[\\\\text{Cl}_2]$ doubles the rate ($\\\\times 2$) because the reaction is first-order w.r.t. $\\\\text{Cl}_2$.
@@ -1584,7 +1695,7 @@ export const parts: LessonPart[] = [
 > >    * Add all 4 steps together:
 > >      $$4\\\\text{HBr} + \\\\text{O}_2 + \\\\text{HBrO}_2 + 2\\\\text{HBrO} \\\\rightarrow \\\\text{HBrO}_2 + 2\\\\text{HBrO} + 2\\\\text{Br}_2 + 2\\\\text{H}_2\\\\text{O}$$
 > >    * Cancel intermediates ($\\\\text{HBrO}_2$ and $2\\\\text{HBrO}$) appearing on both sides:
-> >      $$4\\\\text{HBr}_{\\\\text{(aq)}} + \\\\text{O}_{2\\\\text{(g)}} \\\\rightarrow 2\\\\text{Br}_{2\\\\text{(l)}} + 2\\\\text{H}_2\\\\text{O}_{\\\\text{(l)}}$$
+> >      $$4\\\\text{HBr(aq)} + \\\\text{O}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{Br}_2\\\\text{(l)} + 2\\\\text{H}_2\\\\text{O(l)}$$
 
 `,
     keyPoints: [
@@ -1643,8 +1754,6 @@ export const parts: LessonPart[] = [
 > > | 330 | 0.0201 | -3.91 | 0.00303 |
 > > | 340 | 0.0301 | -3.50 | 0.00294 |
 > 
-> ${svgToken(arrheniusGraphSvg)}
-> 
 > > [!WARNING]
 > > ### ⚠️ Calculations Hint
 > > When calculating $E_a$ from the gradient, your initial answer will be in $\\\\text{J mol}^{-1}$. Always convert it to $\\\\text{kJ mol}^{-1}$ by dividing by 1000 for your final exam answers.
@@ -1658,8 +1767,12 @@ export const parts: LessonPart[] = [
 > > > [!TIP]
 > > > **🔑 Step-by-step Solution:**
 > > > 
-> > > 1. **Determine the gradient ($m$) of the line:**
-> > >    * Choose two coordinate points from the data table:
+> > > 1. **Plot the Arrhenius Graph & Determine the Gradient:**
+> > >    * Plotting $\\ln k$ on the y-axis against $\\frac{1}{T}$ (in $\\text{K}^{-1}$) on the x-axis gives a straight line with a negative gradient:
+> > > 
+> > > ${svgToken(arrheniusGraphSvg)}
+> > > 
+> > >    * Choose two coordinate points from the plotted data line:
 > > >      * $\\\\text{Point 1: } (0.00294, -3.50)$
 > > >      * $\\\\text{Point 2: } (0.00333, -5.27)$
 > > >    * Calculate the gradient:
@@ -1712,60 +1825,63 @@ export const parts: LessonPart[] = [
 > &nbsp;
 > 
 > > [!EXAMPLE]
-> > #### 📝 Worked Example 4: Explaining Temperature Effect via Arrhenius Equation
-> > **Question:** Use the Arrhenius equation to explain why an increase in temperature results in an increase in the rate of reaction.
-> > 
-> > > [!TIP]
-> > > **🔑 Step-by-step Solution:**
-> > > 
-> > > 1. **State the Arrhenius Equation:**
-> > >    * The relationship is given by:
-> > >      $$k = A e^{-\\\\frac{E_a}{RT}}$$
-> > > 
-> > > 2. **Analyze the Exponential Term:**
-> > >    * As temperature ($T$) increases, the fraction term $\\\\frac{E_a}{RT}$ decreases.
-> > >    * Consequently, the negative exponent term $-\\\\frac{E_a}{RT}$ becomes less negative.
-> > >    * This causes the exponential factor $e^{-\\\\frac{E_a}{RT}}$ to increase significantly.
-> > > 
-> > > 3. **Link to Rate of Reaction:**
-> > >    * Since $k$ is directly proportional to $e^{-\\\\frac{E_a}{RT}}$, the rate constant ($k$) increases.
-> > >    * Because the rate of reaction is directly proportional to the rate constant ($\\\\text{rate} = k[\\\\text{reactants}]^n$), a larger $k$ results in an increased rate of reaction.
-> > >    * *(Note: Physically, at higher temperatures, a much larger fraction of molecules possess energy greater than or equal to the activation energy, $E_a$).*
-> 
-> &nbsp;
-> 
-> > [!EXAMPLE]
-> > #### 📝 Worked Example 5: Calculating $E_a$ from two-point Rate Constants
-> > **Question:** The rate constant, $k$, for a reaction increases from $10.0\\\\text{ s}^{-1}$ to $100.0\\\\text{ s}^{-1}$ when the temperature is increased from $300\\\\text{ K}$ to $400\\\\text{ K}$.
-> > Calculate the activation energy, $E_a$, for this reaction in $\\\\text{kJ mol}^{-1}$ ($R = 8.31\\\\text{ J mol}^{-1}\\\\text{ K}^{-1}$).
-> > 
-> > > [!TIP]
-> > > **🔑 Step-by-step Solution:**
-> > > 
-> > > 1. **State the two-point Arrhenius equation:**
-> > >    $$\\\\ln\\\\left(\\\\frac{k_2}{k_1}\\\\right) = \\\\frac{E_a}{R}\\\\left(\\\\frac{T_2 - T_1}{T_1 T_2}\\\\right)$$
-> > > 
-> > > 2. **Identify given data:**
-> > >    * $k_1 = 10.0\\\\text{ s}^{-1}$ at $T_1 = 300\\\\text{ K}$
-> > >    * $k_2 = 100.0\\\\text{ s}^{-1}$ at $T_2 = 400\\\\text{ K}$
-> > >    * $R = 8.31\\\\text{ J mol}^{-1}\\\\text{ K}^{-1}$
-> > > 
-> > > 3. **Substitute values and simplify:**
-> > >    $$\\\\ln\\\\left(\\\\frac{100.0}{10.0}\\\\right) = \\\\frac{E_a}{8.31}\\\\left(\\\\frac{400 - 300}{300 \\\\times 400}\\\\right)$$
-> > >    $$\\\\ln(10) = \\\\frac{E_a}{8.31}\\\\left(\\\\frac{100}{120000}\\\\right)$$
-> > >    $$2.3026 = \\\\frac{E_a}{8.31} \\\\times 0.0008333$$
-> > > 
-> > > 4. **Solve for $E_a$:**
-> > >    $$2.3026 = E_a \\\\times (1.0028 \\\\times 10^{-4})$$
-> > >    $$E_a = \\\\frac{2.3026}{1.0028 \\\\times 10^{-4}} \\\\approx 22962\\\\text{ J mol}^{-1}$$
-> > > 
-> > > 5. **Convert to $\\\\text{kJ mol}^{-1}$:**
-> > >    $$E_a = \\\\frac{22962}{1000} \\\\approx 23.0\\\\text{ kJ mol}^{-1}$$
-> 
-> &nbsp;
-> 
-> > [!EXAMPLE]
 > > #### 📝 Worked Example 3: Calculating the Arrhenius Constant ($A$) and its Units
+> > **Question:** A first-order reaction has a rate constant $k = 3.46 \\times 10^{-5}\text{ s}^{-1}$ at $298\text{ K}$ and an activation energy $E_a = 50.0\text{ kJ mol}^{-1}$.
+> > Calculate the Arrhenius pre-exponential factor, $A$, for this reaction and state its units ($R = 8.31\text{ J K}^{-1}\text{ mol}^{-1}$).
+> > 
+> > > [!TIP]
+> > > **🔑 Step-by-step Solution:**
+> > > 
+> > > 1. **Convert $E_a$ to $\text{J mol}^{-1}$:**
+> > >    * $E_a = 50.0 \\times 1000 = 50000\text{ J mol}^{-1}$
+> > > 
+> > > 2. **Rearrange the Arrhenius equation to solve for $A$:**
+> > >    * Starting from: $k = A e^{-\frac{E_a}{RT}}$
+> > >    * Rearranging gives: $A = \frac{k}{e^{-\frac{E_a}{RT}}} = k e^{\frac{E_a}{RT}}$
+> > > 
+> > > 3. **Calculate the exponent term $\frac{E_a}{RT}$:**
+> > >    $$\frac{E_a}{RT} = \frac{50000}{8.31 \\times 298} = \frac{50000}{2476.38} \approx 20.191$$
+> > > 
+> > > 4. **Calculate $A$:**
+> > >    $$A = 3.46 \\times 10^{-5} \\times e^{20.191}$$
+> > >    $$A = 3.46 \\times 10^{-5} \\times (5.873 \\times 10^{8})$$
+> > >    $$A \approx 20300\text{ or } 2.03 \\times 10^4$$
+> > > 
+> > > 5. **Determine the units of $A$:**
+> > >    * The exponential term $e^{-\frac{E_a}{RT}}$ has no units (dimensionless).
+> > >    * Therefore, the units of $A$ are identical to the units of $k$.
+> > >    * Since $k$ is given in $\text{s}^{-1}$, the unit of $A$ is $\text{s}^{-1}$.
+> > >    * **Final Answer:** $A = 2.03 \\times 10^4\text{ s}^{-1}$
+
+&nbsp;
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Explaining Temperature Effect via Arrhenius Equation
+> **Question:** Use the Arrhenius equation to explain why an increase in temperature results in an increase in the rate of reaction.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **State the Arrhenius Equation:**
+> >    * The relationship is given by:
+> >      $$k = A e^{-\\\\frac{E_a}{RT}}$$
+> > 
+> > 2. **Analyze the Exponential Term:**
+> >    * As temperature ($T$) increases, the fraction term $\\\\frac{E_a}{RT}$ decreases.
+> >    * Consequently, the negative exponent term $-\\\\frac{E_a}{RT}$ becomes less negative.
+> >    * This causes the exponential factor $e^{-\\\\frac{E_a}{RT}}$ to increase significantly.
+> > 
+> > 3. **Link to Rate of Reaction:**
+> >    * Since $k$ is directly proportional to $e^{-\\\\frac{E_a}{RT}}$, the rate constant ($k$) increases.
+> >    * Because the rate of reaction is directly proportional to the rate constant ($\\\\text{rate} = k[\\\\text{reactants}]^n$), a larger $k$ results in an increased rate of reaction.
+> >    * *(Note: Physically, at higher temperatures, a much larger fraction of molecules possess energy greater than or equal to the activation energy, $E_a$).*
+> 
+> &nbsp;
+> 
+> > [!EXAMPLE]
+> > #### 📝 Worked Example 5: Predicting the Temperature Required to Double Reaction Rate
+> > **Question:** A reaction has an activation energy $E_a = 50.0\text{ kJ mol}^{-1}$ and a rate constant $k_1 = 1.20 \times 10^{-3}\text{ s}^{-1}$ at $T_1 = 298\text{ K}$.
+> > Calculate the temperature, $T_2$, in Kelvin required for the rate constant to **double** ($k_2 = 2.40 \times 10^{-3}\text{ s}^{-1}$). ($R = 8.31\text{ J K}^{-1}\text{ mol}^{-1}$).
 > > 
 > > > [!TIP]
 > > > **🔑 Step-by-step Solution:**
@@ -1773,23 +1889,25 @@ export const parts: LessonPart[] = [
 > > > 1. **Convert $E_a$ to $\\\\text{J mol}^{-1}$:**
 > > >    * $E_a = 50.0 \\\\times 1000 = 50000\\\\text{ J mol}^{-1}$
 > > > 
-> > > 2. **Rearrange the Arrhenius equation to solve for $A$:**
-> > >    * Starting from: $k = A e^{-\\\\frac{E_a}{RT}}$
-> > >    * Rearranging gives: $A = \\\\frac{k}{e^{-\\\\frac{E_a}{RT}}} = k e^{\\\\frac{E_a}{RT}}$
+> > > 2. **State the two-point Arrhenius relationship:**
+> > >    $$\\\\ln\\\\left(\\\\frac{k_2}{k_1}\\\\right) = -\\\\frac{E_a}{R}\\\\left(\\\\frac{1}{T_2} - \\\\frac{1}{T_1}\\\\right)$$
 > > > 
-> > > 3. **Calculate the exponent term $\\\\frac{E_a}{RT}$:**
-> > >    $$\\\\frac{E_a}{RT} = \\\\frac{50000}{8.31 \\\\times 298} = \\\\frac{50000}{2476.38} \\\\approx 20.191$$
+> > > 3. **Substitute known values (since $k_2 / k_1 = 2$):**
+> > >    $$\\\\ln(2) = -\\\\frac{50000}{8.31} \\\\left(\\\\frac{1}{T_2} - \\\\frac{1}{298}\\\\right)$$
+> > >    $$0.69315 = -6016.85 \\\\left(\\\\frac{1}{T_2} - 0.0033557\\\\right)$$
 > > > 
-> > > 4. **Calculate $A$:**
-> > >    $$A = 3.46 \\\\times 10^{-5} \\\\times e^{20.191}$$
-> > >    $$A = 3.46 \\\\times 10^{-5} \\\\times (5.873 \\\\times 10^{8})$$
-> > >    $$A \\\\approx 20300\\\\text{ or } 2.03 \\\\times 10^4$$
+> > > 4. **Solve for $\\\\frac{1}{T_2}$:**
+> > >    $$\\\\frac{0.69315}{-6016.85} = \\\\frac{1}{T_2} - 0.0033557$$
+> > >    $$-0.0001152 = \\\\frac{1}{T_2} - 0.0033557$$
+> > >    $$\\\\frac{1}{T_2} = 0.0033557 - 0.0001152 = 0.0032405\\\\text{ K}^{-1}$$
 > > > 
-> > > 5. **Determine the units of $A$:**
-> > >    * The exponential term $e^{-\\\\frac{E_a}{RT}}$ has no units (dimensionless).
-> > >    * Therefore, the units of $A$ are identical to the units of $k$.
-> > >    * Since $k$ is given in $\\\\text{s}^{-1}$, the unit of $A$ is $\\\\text{s}^{-1}$.
-> > >    * **Final Answer:** $A = 2.03 \\\\times 10^4\\\\text{ s}^{-1}$
+> > > 5. **Calculate $T_2$:**
+> > >    $$T_2 = \\\\frac{1}{0.0032405} \\\\approx 308.6\\\\text{ K} \\\\quad (\\\\approx 35.6^\\\\circ\\\\text{C})$$
+> > >    * *Conclusion:* An increase of about $10.6\text{ K}$ doubles the rate of this reaction.
+> 
+> &nbsp;
+> 
+
 `,
     keyPoints: [
       'Always convert temperature to Kelvin (K) when using the Arrhenius equation.',
@@ -1872,8 +1990,8 @@ export const parts: LessonPart[] = [
 >   * **Contact Process:** Solid vanadium(V) oxide (V₂O₅) catalyst.
 >     2SO₂ (g) + O₂ (g) ⇌ 2SO₃ (g)
 >   * **Catalytic Converters:** Platinum (Pt), palladium (Pd), and rhodium (Rh) catalysts used in car exhaust systems to convert pollutant gases into less harmful ones:
->     * **Reduction/Oxidation Reaction:** $$2\\\\text{CO(g)} + 2\\\\text{NO(g)} \\\\rightarrow 2\\\\text{CO}_2\\\\text{(g)} + \\\\text{N}_2\\\\text{(g)}$$
->     * **Hydrocarbon Combustion:** $$\\\\text{C}_8\\\\text{H}_{18}\\\\text{(g)} + 12.5\\\\text{O}_2\\\\text{(g)} \\\\rightarrow 8\\\\text{CO}_2\\\\text{(g)} + 9\\\\text{H}_2\\\\text{O(g)}$$
+>     * **Reduction/Oxidation Reaction:** 2CO(g) + 2NO(g) → 2CO₂(g) + N₂(g)
+>     * **Hydrocarbon Combustion:** C₈H₁₈(g) + 12.5O₂(g) → 8CO₂(g) + 9H₂O(g)
 > * **Promoters and Poisoning:**
 >   * **Promoters:** Additives that increase catalyst efficiency by creating more active sites (e.g., potassium oxide and aluminum oxide in the Haber process).
 >   * **Poisoning:** Impurities (such as sulfur, or lead from leaded petrol in catalytic converters) adsorb irreversibly to active sites, blocking them and making the catalyst permanently ineffective.
