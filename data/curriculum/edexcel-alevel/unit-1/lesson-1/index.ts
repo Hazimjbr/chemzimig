@@ -15,26 +15,42 @@ export const parts: LessonPart[] = [
         type: 'text',
         content: `
 > [!NOTE]
-> ### ⚛️ Fundamental Chemistry Concepts (Elements)
-> An **element** is the simplest substance that contains only one type of atoms, and cannot be chemically broken down.
+> ### ⚛️ Fundamental Terms: Element, Compound, Atom, Molecule & Ion
+> To master stoichiometry, you must accurately distinguish between these core chemical species:
 > 
-> 1. **Nonmetals:**
->    * *Monoatomic elements (Group 0):* $\\text{He}$, $\\text{Ne}$, $\\text{Ar}$
->    * *Diatomic elements:* $\\text{H}_2$, $\\text{N}_2$, $\\text{O}_2$, $\\text{F}_2$, $\\text{Cl}_2$, $\\text{Br}_2$, $\\text{I}_2$
->    * *Polyatomic elements:* $\\text{P}_4$, $\\text{S}_8$
-> 2. **Metals:** $\\text{Li}$, $\\text{Na}$, $\\text{K}$, etc.
-> 3. **Metalloids:** $\\text{B}$, $\\text{Si}$, $\\text{Ge}$, etc.
+> 1. **Element:** A substance that contains atoms of only one type and cannot be chemically broken down into simpler substances.
+>    * *Examples:* Helium ($\\text{He}$), Copper ($\\text{Cu}$), Nitrogen ($\\text{N}_2$), Phosphorus ($\\text{P}_4$)
+> 2. **Compound:** A substance containing atoms of two or more different elements chemically combined together.
+>    * *Examples:* Water ($\\text{H}_2\\text{O}$), Hydrogen bromide ($\\text{HBr}$), Carbon dioxide ($\\text{CO}_2$), Calcium oxide ($\\text{CaO}$)
+> 3. **Atom:** The smallest part of an element that retains its chemical properties.
+>    * *Examples:* $\\text{He}$, $\\text{H}$, $\\text{Na}$
+> 4. **Molecule:** A particle composed of two or more atoms held together by covalent bonds.
+>    * *Molecules of Elements (same element):* $\\text{H}_2$, $\\text{N}_2$, $\\text{O}_2$, $\\text{F}_2$, $\\text{Cl}_2$, $\\text{Br}_2$, $\\text{I}_2$, $\\text{P}_4$, $\\text{S}_8$, $\\text{O}_3$
+>    * *Molecules of Compounds (different elements):* $\\text{H}_2\\text{O}$, $\\text{HBr}$, $\\text{H}_2\\text{O}_2$, $\\text{CH}_4$
+> 5. **Ion:** A species consisting of one or more atoms with a net positive or negative electric charge.
+>    * **Cation (Positive Ion):** Formed when an atom or group loses electrons (e.g., $\\text{Na}^+$, $\\text{Mg}^{2+}$, $\\text{Al}^{3+}$, $\\text{NH}_4^+$)
+>    * **Anion (Negative Ion):** Formed when an atom or group gains electrons (e.g., $\\text{Cl}^-$, $\\text{OH}^-$, $\\text{NO}_3^-$, $\\text{SO}_4^{2-}$, $\\text{CO}_3^{2-}$)
 
 > [!TIP]
-> ### 🧪 Types of Species or Particles
-> 1. **Atom:** The smallest part of an element that has its chemical properties.
->    * *Examples:* $\\text{He}$, $\\text{H}$, $\\text{Na}$
-> 2. **Molecule:** A particle that consists of two or more atoms bonded covalently together.
->    * *Elements (same kind of atoms):* $\\text{H}_2$, $\\text{N}_2$, $\\text{O}_2$, $\\text{F}_2$, $\\text{Cl}_2$, $\\text{Br}_2$, $\\text{I}_2$, $\\text{P}_4$, $\\text{S}_8$
->    * *Compounds (different elements bonded):* $\\text{H}_2\\text{O}$, $\\text{H}_2\\text{SO}_4$, $\\text{CH}_4$
-> 3. **Ion:** A charged chemical species formed by gaining or losing electrons.
->    * *Monoatomic ions:* $\\text{Li}^+$, $\\text{Na}^+$, $\\text{K}^+$, $\\text{Mg}^{2+}$, $\\text{Ca}^{2+}$, $\\text{Ba}^{2+}$, $\\text{Al}^{3+}$, $\\text{I}^-$, $\\text{Br}^-$, $\\text{Cl}^-$
->    * *Polyatomic ions:* $\\text{OH}^-$, $\\text{NH}_4^+$, $\\text{NO}_3^-$, $\\text{ClO}_4^-$, $\\text{SO}_4^{2-}$, $\\text{CO}_3^{2-}$, $\\text{PO}_4^{3-}$
+> ### 🧪 Particle Atomicity: Monatomic, Diatomic & Polyatomic
+> Chemical species (elements, compounds, and ions) are also categorized by the number of constituent atoms:
+> 
+> 1. **Monatomic (Single Atom):** Consists of a single unbonded atom or monoatomic ion.
+>    * *Examples:* $\\text{He}$, $\\text{Ne}$, $\\text{Ar}$ (Group 0 noble gases); $\\text{Na}^+$, $\\text{Cl}^-$ ions
+> 2. **Diatomic (Two Atoms):** Consists of exactly two atoms bonded together.
+>    * *Diatomic Elements:* $\\text{H}_2$, $\\text{N}_2$, $\\text{O}_2$, $\\text{F}_2$, $\\text{Cl}_2$, $\\text{Br}_2$, $\\text{I}_2$
+>    * *Diatomic Compounds:* $\\text{HBr}$, $\\text{CO}$
+>    * *Diatomic Ions:* Hydroxide ($\\text{OH}^-$)
+> 3. **Polyatomic (Three or More Atoms):** Consists of multiple bonded atoms.
+>    * *Polyatomic Elements:* Phosphorus ($\\text{P}_4$), Sulfur ($\\text{S}_8$), Ozone ($\\text{O}_3$)
+>    * *Polyatomic Compounds:* Hydrogen peroxide ($\\text{H}_2\\text{O}_2$), Methane ($\\text{CH}_4$)
+>    * *Polyatomic Ions:* Carbonate ($\\text{CO}_3^{2-}$: 4 atoms), Sulfate ($\\text{SO}_4^{2-}$: 5 atoms), Ammonium ($\\text{NH}_4^+$: 5 atoms)
+
+> [!WARNING]
+> ### ⚠️ Learning Tip: Ambiguity in Chemical Names
+> Always specify the exact symbol or formula alongside the name to prevent confusion:
+> * The name **"hydrogen"** can refer to a hydrogen atom ($\\text{H}$), a hydrogen molecule ($\\text{H}_2$), or a hydrogen ion ($\\text{H}^+$)
+> * *Did You Know?* The symbol $\\text{Cu}$ for copper comes from the Latin word *cuprum* (meaning "metal from Cyprus")
 
 > [!BOX]
 > ### ⚖️ The Mole & Avogadro's Constant
@@ -143,7 +159,30 @@ export const parts: LessonPart[] = [
 > >    * Total molecules = $1 \\times L$ molecules, which is exactly equal to $L$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Systematic Nomenclature of Manganese Compounds
+> #### 📝 Worked Example 4: Classification Checkpoint (Species & Substance Types)
+> **Question:** 
+> 1. Classify each of the following symbols and formulae as an **atom**, **molecule**, or **ion**: $\\text{Ne}$, $\\text{CO}_2$, $\\text{H}^+$, $\\text{S}_8$, $\\text{Al}^{3+}$
+> 2. State whether each formula represents an **element**, **compound**, or **neither**: $\\text{Br}_2$, $\\text{H}_2\\text{O}_2$, $\\text{NO}_3$, $\\text{O}_3$, $\\text{CaO}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Classification by Particle Type:**
+> >    * $\\text{Ne}$: **Atom** (single unbonded atom of neon)
+> >    * $\\text{CO}_2$: **Molecule** (two or more covalently bonded atoms)
+> >    * $\\text{H}^+$: **Ion** (cation with a $+1$ charge)
+> >    * $\\text{S}_8$: **Molecule** (polyatomic molecule of sulfur)
+> >    * $\\text{Al}^{3+}$: **Ion** (monoatomic cation with a $+3$ charge)
+> > 
+> > 2. **Classification by Substance Type:**
+> >    * $\\text{Br}_2$: **Element** (contains atoms of only one element, bromine)
+> >    * $\\text{H}_2\\text{O}_2$: **Compound** (contains atoms of hydrogen and oxygen combined)
+> >    * $\\text{NO}_3$: **Neither** (this is an uncharged radical, not a stable neutral compound; the stable ion is nitrate, $\\text{NO}_3^-$)
+> >    * $\\text{O}_3$: **Element** (ozone contains atoms of only oxygen)
+> >    * $\\text{CaO}$: **Compound** (contains calcium and oxygen combined)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Systematic Nomenclature of Manganese Compounds
 > **Question:** An ionic compound has the formula $\\text{Mg}(\\text{MnO}_4)_2$. Calculate the oxidation state of the transition metal and determine the correct systematic IUPAC name for this compound.
 > 
 > > [!TIP]
@@ -165,7 +204,7 @@ export const parts: LessonPart[] = [
 > >    * Combining with Magnesium cation gives: **Magnesium manganate(VII)**. *(Note: Permanganate is the common/trivial name).*
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Writing Ionic Formulae
+> #### 📝 Worked Example 6: Writing Ionic Formulae
 > **Question:** Determine the correct chemical formula for the compound **ammonium dichromate(VI)** by balancing the charges of its constituent ions.
 > 
 > > [!TIP]
@@ -183,10 +222,66 @@ export const parts: LessonPart[] = [
 > > 3. **Write the final chemical formula:**
 > >    * Place the polyatomic ammonium ion inside parentheses with a subscript of 2.
 > >    * Combine with the dichromate formula: **$(\\text{NH}_4)_2\\text{Cr}_2\\text{O}_7$**
+
+> [!BOX]
+> ### ⚖️ Species Ambiguity & 1g Oxygen Table (Table A)
+> When performing molar calculations, it is vital to specify the exact chemical species (atoms, molecules, or ions) being referred to.
+> 
+> **Table A: Comparing Amounts in 1.00 g of Oxygen Species:**
+> 
+> | Species | 1 g of Oxygen Atoms (O) | 1 g of Oxygen Molecules (O₂) | 1 g of Ozone Molecules (O₃) |
+> | :--- | :---: | :---: | :---: |
+> | Molar Mass (M) | 16.0 g mol⁻¹ | 32.0 g mol⁻¹ | 48.0 g mol⁻¹ |
+> | Amount (n = m/M) | 0.0625 mol | 0.0313 mol | 0.0208 mol |
+> 
+> * **Comparing Moles in 9.40 g of Different Substances:**
+>   * **9.40 g** of **O** atoms = **0.59 mol**
+>   * **9.40 g** of **O₂** molecules = **0.29 mol**
+>   * **9.40 g** of **O₃** molecules = **0.20 mol**
+>   * **9.40 g** of **CO₂** molecules = **0.21 mol**
+>   * **9.40 g** of **SO₄²⁻** ions = **0.098 mol**
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Molar Calculations Checkpoints (Sulfur, $\\\\text{SO}_2$, $\\\\text{SO}_4^{2-}$)
+> **Question:** 
+> 1. Calculate the amount of substance ($n$ in $\\\\text{mol}$) in each of the following:
+>    * (a) $8.00\\\\text{ g}$ of sulfur, $\\\\text{S}$ ($A_r = 32.1$)
+>    * (b) $8.00\\\\text{ g}$ of sulfur dioxide, $\\\\text{SO}_2$ ($M_r = 64.1$)
+>    * (c) $8.00\\\\text{ g}$ of sulfate ions, $\\\\text{SO}_4^{2-}$ ($M_r = 96.1$)
+> 2. How many elementary particles are there in each of the following?
+>    * (a) Atoms in $2.00\\\\text{ g}$ of sulfur, $\\\\text{S}$
+>    * (b) Molecules in $4.00\\\\text{ g}$ of sulfur dioxide, $\\\\text{SO}_2$
+>    * (c) Ions in $8.00\\\\text{ g}$ of sulfate ions, $\\\\text{SO}_4^{2-}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1(a): Moles of Sulfur Atoms ($\\text{S}$):**
+> >    $$n = \\frac{m}{A_r} = \\frac{8.00\\text{ g}}{32.1\\text{ g mol}^{-1}} = 0.249\\text{ mol}$$
+> > 
+> > 2. **Part 1(b): Moles of Sulfur Dioxide Molecules ($\\text{SO}_2$):**
+> >    $$n = \\frac{m}{M_r} = \\frac{8.00\\text{ g}}{64.1\\text{ g mol}^{-1}} = 0.125\\text{ mol}$$
+> > 
+> > 3. **Part 1(c): Moles of Sulfate Ions ($\\text{SO}_4^{2-}$):**
+> >    $$n = \\frac{m}{M_r} = \\frac{8.00\\text{ g}}{96.1\\text{ g mol}^{-1}} = 0.0832\\text{ mol}$$
+> > 
+> > 4. **Part 2(a): Atoms in $2.00\\text{ g}$ of Sulfur ($\\text{S}$):**
+> >    $$n = \\frac{2.00}{32.1} = 0.0623\\text{ mol}$$
+> >    $$\\text{Number of atoms} = 0.0623 \\times (6.02 \\times 10^{23}) = 3.75 \\times 10^{22}\\text{ atoms}$$
+> > 
+> > 5. **Part 2(b): Molecules in $4.00\\text{ g}$ of $\\text{SO}_2$:**
+> >    $$n = \\frac{4.00}{64.1} = 0.0624\\text{ mol}$$
+> >    $$\\text{Number of molecules} = 0.0624 \\times (6.02 \\times 10^{23}) = 3.76 \\times 10^{22}\\text{ molecules}$$
+> > 
+> > 6. **Part 2(c): Ions in $8.00\\text{ g}$ of $\\text{SO}_4^{2-}$:**
+> >    $$n = \\frac{8.00}{96.1} = 0.0832\\text{ mol}$$
 `,
         keyPoints: [
-            'One mole is exactly 6.02 × 10²³ particles.',
-            'Molar mass (Mr) is calculated by adding relative atomic masses (Ar) of all atoms in a formula.'
+            'One mole is exactly 6.02 × 10²³ elementary particles (atoms, molecules, or ions).',
+            'An element contains only one type of atom, whereas a compound contains different elements combined.',
+            'Always specify the exact chemical species (atoms, molecules, ions) when calculating moles.',
+            'Ions are charged species: cations are positive (e.g. Na⁺, NH₄⁺) and anions are negative (e.g. Cl⁻, SO₄²⁻).',
+            'Particle atomicity describes single atoms (monatomic), two atoms (diatomic), or three+ atoms (polyatomic).'
         ],
         avogadroScale: true
     },
@@ -196,45 +291,49 @@ export const parts: LessonPart[] = [
         type: 'text',
         content: `
 > [!BOX]
-> ### ⚖️ Relative Masses & Standards
+> ### ⚖️ Relative Atomic Mass ($A_r$) Definition & Standards
 > * **Relative Isotopic Mass:** The mass of an atom of an isotope of an element compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom. (Each isotope has a specific mass, e.g., $^{35}\\text{Cl} = 35.0$, $^{37}\\text{Cl} = 37.0$).
-> * **Relative Atomic Mass ($Ar$):** The weighted average mass of an atom of an element compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom. (Considers isotopic abundance).
->    * *Examples:* $Ar(\\text{H}) = 1.0$, $Ar(\\text{O}) = 16.0$. (Relative masses have **no physical units**).
+> * **Relative Atomic Mass ($A_r$):** The weighted mean (average) mass of an atom of an element compared with $\\frac{1}{12}$ of the mass of an atom of carbon-12.
+> * **Mathematical Formula for $A_r$:**
+>   $$A_r = \\frac{\\text{weighted mean mass of an atom of an element}}{\\frac{1}{12} \\text{ of the mass of an atom of } {}^{12}\\text{C}}$$
+>   *(Note: Relative masses are ratios and have **no physical units**).*
 > * **Standard:** Carbon-12 ($^{12}\\text{C}$) is used as the international reference standard for relative atomic mass because it has a highly stable abundance and its atomic mass is defined as exactly 12.
+
+> [!BOX]
+> ### 🔗 Relative Molecular Mass ($M_r$), Formula Mass ($M_r$) & Molar Mass ($M$)
+> * **Relative Molecular Mass ($M_r$):** The average mass of a molecule of a covalent substance compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
+>    * *Examples:* $M_r(\\text{H}_2) = 2.0$, $M_r(\\text{CO}_2) = 44.0$, $M_r(\\text{H}_2\\text{SO}_4) = 98.1$
+> * **Relative Formula Mass ($M_r$):** The average mass of a formula unit of giant ionic or giant covalent structures (or hydrates) compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
+>    * *Examples:* Ionic $\\text{Na}_2\\text{O} = 62.0$, Giant covalent $\\text{SiO}_2 = 60.1$, Hydrated $\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O} = 249.6$
+> * **Molar Mass ($M$):** The mass per mole of any substance (molecular or ionic), expressed in grams per mole ($\\text{g mol}^{-1}$).
+>   $$n = \\frac{m}{M} \\quad \\implies \\quad \\text{Amount (mol)} = \\frac{\\text{Mass (g)}}{\\text{Molar Mass (g mol}^{-1}\\text{)}}$$
+
+> [!BOX]
+> ### 📋 Molar Calculations Reference Table (Table B)
+> Standard mole-mass conversions for common substances:
 > 
-> > [!BOX]
-> > ### 🔗 Relative Molecular and Formula Masses
-> > * **Relative Molecular Mass ($Mr$):** The average mass of a molecule of a covalent substance compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
-> >    * *Examples:*
-> >       * $Mr(\\text{H}_2) = 2 \\times 1.0 = 2.0$
-> >       * $Mr(\\text{H}_2\\text{O}) = (2 \\times 1.0) + 16.0 = 18.0$
-> > * **Relative Formula Mass ($Mr$):** The average mass of a formula unit of giant ionic or giant covalent structures compared with $\\frac{1}{12}$ of the mass of a carbon-12 atom.
-> >    * *Examples:*
-> >       * Ionic Compound: $Mr(\\text{Na}_2\\text{O}) = (2 \\times 23.0) + 16.0 = 62.0$
-> >       * Giant Covalent: $Mr(\\text{SiO}_2) = 28.1 + (2 \\times 16.0) = 60.1$
-> 
-> > [!BOX]
-> > ### ⚖️ Molar Mass
-> > * **Molar Mass ($M$):** The mass of one mole of a substance, expressed in grams per mole ($\\text{g mol}^{-1}$).
-> > * **The Molar Mass Equation:**
-> >   $$\\text{Molar Mass } (\\text{g mol}^{-1}) = \\frac{\\text{Mass } (\\text{g})}{\\text{Amount } (\\text{mol})}$$
+> | Substance | $\\text{O}_2$ | $\\text{CH}_4$ | $\\text{H}_2\\text{O}$ | $\\text{NH}_4\\text{NO}_3$ |
+> | :--- | :---: | :---: | :---: | :---: |
+> | Mass in $\\text{g}$ ($m$) | $5.26\\text{ g}$ | $4.00\\text{ g}$ | $100\\text{ g}$ | $14.7\\text{ g}$ |
+> | Molar Mass, $M$ ($\\text{g mol}^{-1}$) | $32.0$ | $16.0$ | $18.0$ | $80.0$ |
+> | Amount in $\\text{mol}$ ($n = m/M$) | $0.164\\text{ mol}$ | $0.250\\text{ mol}$ | $5.56\\text{ mol}$ | $0.184\\text{ mol}$ |
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Handling Water of Crystallization
-> **Question:** Calculate the relative formula mass ($Mr$) of copper(II) sulfate pentahydrate ($\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$)  
+> **Question:** Calculate the relative formula mass ($M_r$) of copper(II) sulfate pentahydrate ($\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$)  
 > *(Relative atomic masses: $\\text{Cu} = 63.5, \\text{S} = 32.1, \\text{O} = 16.0, \\text{H} = 1.0$)*
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Calculate the anhydrous $\\text{CuSO}_4$ part:**
-> >    $$Mr(\\text{CuSO}_4) = 63.5 + 32.1 + (4 \\times 16.0) = 159.6$$
+> >    $$M_r(\\text{CuSO}_4) = 63.5 + 32.1 + (4 \\times 16.0) = 159.6$$
 > > 
 > > 2. **Calculate the water of crystallization part ($5\\text{H}_2\\text{O}$):**
-> >    $$5 \\times Mr(\\text{H}_2\\text{O}) = 5 \\times [(2 \\times 1.0) + 16.0] = 5 \\times 18.0 = 90.0$$
+> >    $$5 \\times M_r(\\text{H}_2\\text{O}) = 5 \\times [(2 \\times 1.0) + 16.0] = 5 \\times 18.0 = 90.0$$
 > > 
 > > 3. **Add the parts together:**
-> >    $$Mr(\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}) = 159.6 + 90.0 = 249.6$$
+> >    $$M_r(\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}) = 159.6 + 90.0 = 249.6$$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Determining Water of Crystallization from Experimental Data
@@ -256,11 +355,11 @@ export const parts: LessonPart[] = [
 > > 2. **Calculate the mass of the water of crystallization lost:**
 > >    $$\\text{Mass of H}_2\\text{O} = 26.71\\text{ g} - 24.12\\text{ g} = 2.59\\text{ g}$$
 > > 
-> > 3. **Calculate the moles of anhydrous $\\text{MgSO}_4$ ($Mr = 120.4\\text{ g mol}^{-1}$):**
-> >    $$n(\\text{MgSO}_4) = \\frac{m}{Mr} = \\frac{2.91\\text{ g}}{120.4\\text{ g mol}^{-1}} \\approx 0.02417\\text{ mol}$$
+> > 3. **Calculate the moles of anhydrous $\\text{MgSO}_4$ ($M_r = 120.4\\text{ g mol}^{-1}$):**
+> >    $$n(\\text{MgSO}_4) = \\frac{m}{M_r} = \\frac{2.91\\text{ g}}{120.4\\text{ g mol}^{-1}} \\approx 0.02417\\text{ mol}$$
 > > 
-> > 4. **Calculate the moles of water lost ($Mr = 18.0\\text{ g mol}^{-1}$):**
-> >    $$n(\\text{H}_2\\text{O}) = \\frac{m}{Mr} = \\frac{2.59\\text{ g}}{18.0\\text{ g mol}^{-1}} \\approx 0.1439\\text{ mol}$$
+> > 4. **Calculate the moles of water lost ($M_r = 18.0\\text{ g mol}^{-1}$):**
+> >    $$n(\\text{H}_2\\text{O}) = \\frac{m}{M_r} = \\frac{2.59\\text{ g}}{18.0\\text{ g mol}^{-1}} \\approx 0.1439\\text{ mol}$$
 > > 
 > > 5. **Find the simplest mole ratio of water to anhydrous salt ($x$):**
 > >    $$x = \\frac{n(\\text{H}_2\\text{O})}{n(\\text{MgSO}_4)} = \\frac{0.1439\\text{ mol}}{0.02417\\text{ mol}} \\approx 5.95$$
@@ -270,64 +369,99 @@ export const parts: LessonPart[] = [
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Calculating Ions in a Given Mass
 > **Question:** How many ions are there in $284\\text{ g}$ of sodium sulfate, $\\text{Na}_2\\text{SO}_4$?  
-> *(Take Avogadro's constant, $L = 6.02 \\times 10^{23}\\text{ mol}^{-1}$, $Ar: \\text{Na}=23.0, \\text{S}=32.1, \\text{O}=16.0$)*
+> *(Take Avogadro's constant, $L = 6.02 \\times 10^{23}\\text{ mol}^{-1}$, $A_r: \\text{Na}=23.0, \\text{S}=32.1, \\text{O}=16.0$)*
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Calculate the molar mass ($Mr$) of $\\text{Na}_2\\text{SO}_4$:**
-> >    $$Mr = (2 \\times 23.0) + 32.1 + (4 \\times 16.0)$$
-> >    $$Mr = 46.0 + 32.1 + 64.0 = 142.1\\text{ g mol}^{-1}$$
+> > 1. **Calculate the molar mass ($M_r$) of $\\text{Na}_2\\text{SO}_4$:**
+> >    $$M_r = (2 \\times 23.0) + 32.1 + (4 \\times 16.0) = 142.1\\text{ g mol}^{-1}$$
 > > 
 > > 2. **Calculate the number of moles ($n$) of $\\text{Na}_2\\text{SO}_4$:**
-> >    $$n = \\frac{\\text{Mass}}{\\text{Molar Mass}}$$
-> >    $$n = \\frac{284\\text{ g}}{142.1\\text{ g mol}^{-1}} \\approx 2.00\\text{ mol}$$
+> >    $$n = \\frac{\\text{Mass}}{\\text{Molar Mass}} = \\frac{284\\text{ g}}{142.1\\text{ g mol}^{-1}} \\approx 2.00\\text{ mol}$$
 > > 
 > > 3. **Determine the dissociation and number of ions:**
-> >    * One formula unit of $\\text{Na}_2\\text{SO}_4$ contains $2\\text{ Na}^+$ ions and $1\\text{ SO}_4^{2-}$ ion.
-> >    * Total ions per formula unit = $2 + 1 = 3$ ions.
+> >    * One formula unit of $\\text{Na}_2\\text{SO}_4$ contains $2\\text{ Na}^+$ ions and $1\\text{ SO}_4^{2-}$ ion. Total = 3 ions.
 > > 
 > > 4. **Calculate the total number of ions:**
-> >    $$\\text{Total ions} = \\text{Moles} \\times L \\times 3$$
 > >    $$\\text{Total ions} = 2.00 \\times (6.02 \\times 10^{23}) \\times 3 = 3.612 \\times 10^{24}\\text{ ions}$$
-> >    * Therefore, the answer is approximately $3.6 \\times 10^{24}\\text{ ions}$.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Reference Standard of Isotopes
-> **Question:** The mass of a single isotope of an element is compared to which fraction of the mass of a carbon-12 atom?
+> #### 📝 Worked Example 4: Molecules in a Small Water Sample
+> **Question:** How many $\\text{H}_2\\text{O}$ molecules are there in a $1.25\\text{ g}$ sample of water?  
+> *(Given $M_r(\\text{H}_2\\text{O}) = 18.0\\text{ g mol}^{-1}$, $L = 6.02 \\times 10^{23}\\text{ mol}^{-1}$)*
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Recall the definition of relative atomic mass:**
-> >    * Relative atomic mass is the average mass of an atom compared to $\\frac{1}{12}$ of the mass of an atom of carbon-12.
+> > 1. **Calculate the amount of water in moles ($n$):**
+> >    $$n = \\frac{m}{M} = \\frac{1.25\\text{ g}}{18.0\\text{ g mol}^{-1}} \\approx 0.0694\\text{ mol}$$
 > > 
-> > 2. **Identify the reference standard:**
-> >    * The carbon-12 standard uses $\\frac{1}{12}$ as its foundational unit fraction.
-> >    * Thus, the mass of any isotope is compared to **$\\frac{1}{12}$** of the mass of a carbon-12 atom.
+> > 2. **Multiply by the Avogadro Constant ($L$) to find the number of molecules:**
+> >    $$\\text{Number of molecules} = n \\times L$$
+> >    $$\\text{Number of molecules} = 0.0694 \\times (6.02 \\times 10^{23}) = 4.18 \\times 10^{22}\\text{ molecules}$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Counting Atoms in Hydrated Compounds
-> **Question:** Calculate the total number of oxygen atoms present in $0.100\\text{ mol}$ of copper(II) sulfate pentahydrate, $\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$.
+> #### 📝 Worked Example 5: Mass of Microscopic Particles (100 Million Gold Atoms)
+> **Question:** What is the total mass in grams of 100 million ($100 \\times 10^6$) atoms of gold ($\\text{Au}$, $A_r = 197.0$)?
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Count the number of oxygen atoms per formula unit of $\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$:**
-> >    * The anhydrous salt ($\\text{CuSO}_4$) contains $4$ oxygen atoms.
-> >    * The water of crystallization ($5\\text{H}_2\\text{O}$) contains $5 \\times 1 = 5$ oxygen atoms.
-> >    * Total oxygen atoms per formula unit = $4 + 5 = 9$ oxygen atoms.
+> > 1. **Calculate the amount of gold in moles ($n$):**
+> >    $$n = \\frac{\\text{Number of atoms}}{L} = \\frac{100 \\times 10^6}{6.02 \\times 10^{23}} \\approx 1.66 \\times 10^{-16}\\text{ mol}$$
 > > 
-> > 2. **Calculate the moles of oxygen atoms in the sample:**
-> >    $$\\text{Moles of O} = 0.100\\text{ mol of compound} \\times 9 = 0.900\\text{ mol of O atoms}$$
+> > 2. **Calculate the mass in grams ($m$):**
+> >    $$m = n \\times A_r = (1.66 \\times 10^{-16}\\text{ mol}) \\times 197.0\\text{ g mol}^{-1} = 3.27 \\times 10^{-14}\\text{ g}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Textbook Checkpoints (Malachite & Sugar Molecules)
+> **Question:** 
+> 1. Malachite is an important copper mineral with the chemical formula **Cu₂CO₃(OH)₂**. Calculate its relative formula mass ($M_r$).  
+>    *(Given $A_r$: $\\\\text{Cu} = 63.5, \\\\text{C} = 12.0, \\\\text{O} = 16.0, \\\\text{H} = 1.0$)*
+> 2. How many sugar molecules (**C₁₂H₂₂O₁₁**) are present in a teaspoon measure of $4.20\\\\text{ g}$?
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
 > > 
-> > 3. **Calculate the total number of oxygen atoms:**
-> >    $$\\text{Number of O atoms} = \\text{Moles of O} \\times L$$
-> >    $$\\text{Number of O atoms} = 0.900 \\times (6.02 \\times 10^{23}) = 5.418 \\times 10^{23}\\text{ atoms}$$
+> > 1. **Part 1 (Malachite Relative Formula Mass):**
+> >    * Sum relative atomic masses for **Cu₂CO₃(OH)₂**:
+> >      $$M_r = (2 \\\\times 63.5) + 12.0 + (3 \\\\times 16.0) + 2 \\\\times (16.0 + 1.0)$$
+> >      $$M_r = 127.0 + 12.0 + 48.0 + 34.0 = 221.0$$
+> > 
+> > 2. **Part 2 (Sugar Molecules Calculation):**
+> >    * Calculate $M_r$ of sucrose (**C₁₂H₂₂O₁₁**):
+> >      $$M_r = (12 \\\\times 12.0) + (22 \\\\times 1.0) + (11 \\\\times 16.0) = 144.0 + 22.0 + 176.0 = 342.0\\\\text{ g mol}^{-1}$$
+> >    * Calculate moles in $4.20\\\\text{ g}$:
+> >      $$n = \\\\frac{m}{M} = \\\\frac{4.20\\\\text{ g}}{342.0\\\\text{ g mol}^{-1}} \\\\approx 0.01228\\\\text{ mol}$$
+> >    * Calculate total sugar molecules:
+> >      $$\\\\text{Molecules} = 0.01228 \\\\times (6.02 \\\\times 10^{23}) = 7.39 \\\\times 10^{21}\\\\text{ molecules}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Determining Empirical Formula from Mass
+> **Question:** A sample of an oxide of nitrogen contains $1.40\\text{ g}$ of nitrogen and $3.20\\text{ g}$ of oxygen. Calculate the empirical formula of this compound.  
+> *(Given $A_r: \\text{N} = 14.0, \\text{O} = 16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate moles of each element:**
+> >    * $n(\\text{N}) = \\frac{1.40\\text{ g}}{14.0\\text{ g mol}^{-1}} = 0.100\\text{ mol}$
+> >    * $n(\\text{O}) = \\frac{3.20\\text{ g}}{16.0\\text{ g mol}^{-1}} = 0.200\\text{ mol}$
+> > 
+> > 2. **Find the simplest molar ratio:**
+> >    * Divide by the smallest amount ($0.100$):
+> >      $\text{N}: 0.100 / 0.100 = 1$
+> >      $\text{O}: 0.200 / 0.100 = 2$
+> > 
+> > 3. **State the empirical formula:**
+> >    * The ratio $\\text{N}:\\text{O}$ is $1:2$, so the empirical formula is **$\\text{NO}_2$**.
 `,
         keyPoints: [
-            'Relative masses are relative and do not have physical units.',
-            'Always add water of crystallization ($X \\cdot n\\text{H}_2\\text{O}$) rather than multiplying.'
+            'Relative atomic mass (Ar) is based on the carbon-12 standard and has no physical units.',
+            'Molar mass (M) is the mass per mole in g mol⁻¹.',
+            'Number of particles = n × L = (m / M) × L.',
+            'Always add water of crystallization (X · nH₂O) rather than multiplying.'
         ],
         equationVisualizer: {
             reactants: [['CuSO₄', '#ef4444'], ['5H₂O', '#3b82f6']],
@@ -344,107 +478,425 @@ export const parts: LessonPart[] = [
 > ### 🧪 Chemical Equations Fundamentals
 > Chemical equations are symbolic representations of chemical reactions where reactants are converted to products.
 > 
-> * **Reaction Arrows:**
->    * **Conventional arrow ($\rightarrow$):** Used for one-way (irreversible) reactions going to completion.
->    * **Reversible arrow ($\rightleftharpoons$):** Used for reversible reactions that can go in both directions and establish dynamic equilibrium.
+> * **Essential Formulae to Remember:**
+>    * Diatomic elements: Oxygen ($\\\\text{O}_2$), Hydrogen ($\\\\text{H}_2$), Nitrogen ($\\\\text{N}_2$)
+>    * Key compounds: Water ($\\\\text{H}_2\\\\text{O}$), Sodium hydroxide ($\\\\text{NaOH}$), Nitric acid ($\\\\text{HNO}_3$)
 > 
+> * **Exam Hint (Periodic Table Trends):** If you know the formula of magnesium sulfate ($\\\\text{MgSO}_4$), you can deduce that strontium sulfate is $\\\\text{SrSO}_4$ because $\\\\text{Mg}$ and $\\\\text{Sr}$ are in the same group (Group 2).
+> 
+> * **Reaction Arrows:**
+>    * **Conventional arrow ($\\\\rightarrow$):** Used for irreversible reactions going to completion. Reaction conditions (temperature, pressure, catalyst) are written above or below the arrow.
+>    * **Reversible arrow ($\\\\rightleftharpoons$):** Used for reversible reactions establishing dynamic equilibrium.
+
+> [!BOX]
+> ### ⚖️ Reacting Mass Ratios & Equations (Ammonia Manufacture)
+> A balanced chemical equation displays both mole ratios and mass ratios of all species involved:
+> 
+> $$\\\\text{N}_2\\\\text{(g)} + 3\\\\text{H}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{NH}_3\\\\text{(g)}$$
+> 
+> * **Molecular ratio:** $1\\\\text{ molecule N}_2 : 3\\\\text{ molecules H}_2 \\\\rightarrow 2\\\\text{ molecules NH}_3$
+> * **Molar ratio:** $1\\\\text{ mol N}_2 : 3\\\\text{ mol H}_2 \\\\rightarrow 2\\\\text{ mol NH}_3$
+> * **Reacting Mass ratio:** $28.0\\\\text{ g N}_2 : 6.0\\\\text{ g H}_2 \\\\rightarrow 34.0\\\\text{ g NH}_3$
+
+> [!BOX]
+> ### 🔍 Deducing Reaction Equations from Experimental Masses
+> Experimental mass data allows chemists to determine unknown chemical formulas and confirm exact reaction pathways:
+> 
+> 1. **Decomposition of Hydrates:** Heating $16.7\\\\text{ g}$ of $\\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 10\\\\text{H}_2\\\\text{O}$ releases $3.15\\\\text{ g}$ of water. Molar ratio of hydrate to lost water is $0.0584 : 0.175 = 1 : 3$, confirming the reaction equation:
+>    $$\\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 10\\\\text{H}_2\\\\text{O(s)} \\\\rightarrow \\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 7\\\\text{H}_2\\\\text{O(s)} + 3\\\\text{H}_2\\\\text{O(g)}$$
+> 
+> 2. **Reduction of Metal Oxides:** Heating copper oxide in hydrogen gas yields $17.6\\\\text{ g}$ of $\\\\text{Cu}$ and $2.56\\\\text{ g}$ of $\\\\text{H}_2\\\\text{O}$. Molar ratio $\\\\text{Cu} : \\\\text{H}_2\\\\text{O} = 0.277 : 0.142 = 2 : 1$, proving the oxide is copper(I) oxide ($\\\\text{Cu}_2\\\\text{O}$):
+>    $$\\\\text{Cu}_2\\\\text{O(s)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{Cu(s)} + \\\\text{H}_2\\\\text{O(l)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Deducing Reaction Equations from Experimental Masses
+> **Question:** 
+> 1. A $16.7\\\\text{ g}$ sample of sodium carbonate decahydrate ($\\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 10\\\\text{H}_2\\\\text{O}$) is heated to constant mass, driving off $3.15\\\\text{ g}$ of water. Deduce the equation for the reaction occurring.  
+>    *(Given $M_r(\\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 10\\\\text{H}_2\\\\text{O}) = 286.1\\\\text{ g mol}^{-1}, M_r(\\\\text{H}_2\\\\text{O}) = 18.0\\\\text{ g mol}^{-1}$)*
+> 2. An oxide of copper is heated in a stream of hydrogen to constant mass, forming $17.6\\\\text{ g}$ of copper metal and $2.56\\\\text{ g}$ of water. Deduce whether the oxide reacted was $\\\\text{CuO}$ or $\\\\text{Cu}_2\\\\text{O}$.  
+>    *(Given $A_r: \\\\text{Cu} = 63.5, \\\\text{H} = 1.0, \\\\text{O} = 16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1 (Hydrate Decomposition Equation):**
+> >    * Calculate moles of starting hydrate:
+> >      $$n(\\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 10\\\\text{H}_2\\\\text{O}) = \\\\frac{16.7\\\\text{ g}}{286.1\\\\text{ g mol}^{-1}} = 0.0584\\\\text{ mol}$$
+> >    * Calculate moles of water lost:
+> >      $$n(\\\\text{H}_2\\\\text{O}) = \\\\frac{3.15\\\\text{ g}}{18.0\\\\text{ g mol}^{-1}} = 0.175\\\\text{ mol}$$
+> >    * Calculate simplest molar ratio:
+> >      $$\\\\text{Ratio} = \\\\frac{0.175}{0.0584} = 3.00$$
+> >    * For every 1 mole of decahydrate, 3 moles of water are released. The equation is:
+> >      $$\\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 10\\\\text{H}_2\\\\text{O(s)} \\\\rightarrow \\\\text{Na}_2\\\\text{CO}_3 \\\\cdot 7\\\\text{H}_2\\\\text{O(s)} + 3\\\\text{H}_2\\\\text{O(g)}$$
+> > 
+> > 2. **Part 2 (Copper Oxide Reduction Equation):**
+> >    * Calculate moles of copper produced:
+> >      $$n(\\\\text{Cu}) = \\\\frac{17.6\\\\text{ g}}{63.5\\\\text{ g mol}^{-1}} = 0.277\\\\text{ mol}$$
+> >    * Calculate moles of water produced:
+> >      $$n(\\\\text{H}_2\\\\text{O}) = \\\\frac{2.56\\\\text{ g}}{18.0\\\\text{ g mol}^{-1}} = 0.142\\\\text{ mol}$$
+> >    * Calculate molar ratio $\\\\text{Cu} : \\\\text{H}_2\\\\text{O}$:
+> >      $$\\\\text{Ratio} = \\\\frac{0.277}{0.142} \\\\approx 2.00$$
+> >    * The reaction produces 2 moles of $\\\\text{Cu}$ for every 1 mole of $\\\\text{H}_2\\\\text{O}$.
+> >    * The balanced equation is:
+> >      $$\\\\text{Cu}_2\\\\text{O(s)} + \\\\text{H}_2\\\\text{(g)} \\\\rightarrow 2\\\\text{Cu(s)} + \\\\text{H}_2\\\\text{O(l)}$$
+> >    * **Conclusion:** The oxide was **copper(I) oxide ($\\\\text{Cu}_2\\\\text{O}$)**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 10: Reacting Mass Checkpoints (Industrial Fertilizer & Iron Oxide)
+> **Question:** 
+> 1. A fertilizer manufacturer produces $20.0\\\\text{ kg}$ of ammonium nitrate ($\\\\text{NH}_4\\\\text{NO}_3$). What mass of ammonia ($\\\\text{NH}_3$) in $\\\\text{kg}$ is required to react with nitric acid?  
+>    *(Given $M_r(\\\\text{NH}_3) = 17.0\\\\text{ g mol}^{-1}, M_r(\\\\text{NH}_4\\\\text{NO}_3) = 80.0\\\\text{ g mol}^{-1}$)*
+> 2. A sample of iron oxide is reduced to iron metal by heating with hydrogen gas. The mass of iron obtained is $4.35\\\\text{ g}$ and the mass of water formed is $1.86\\\\text{ g}$. Deduce the equation for the reaction that occurred.  
+>    *(Given $A_r: \\\\text{Fe} = 55.8, \\\\text{H} = 1.0, \\\\text{O} = 16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1 (Ammonia Mass Calculation):**
+> >    * Write equation: $\\\\text{NH}_3 + \\\\text{HNO}_3 \\\\rightarrow \\\\text{NH}_4\\\\text{NO}_3$ (1:1 mole ratio)
+> >    * Convert $20.0\\\\text{ kg}$ to grams ($20,000\\\\text{ g}$) and find moles of $\\\\text{NH}_4\\\\text{NO}_3$:
+> >      $$n(\\\\text{NH}_4\\\\text{NO}_3) = \\\\frac{20000\\\\text{ g}}{80.0\\\\text{ g mol}^{-1}} = 250\\\\text{ mol}$$
+> >    * Since ratio is $1:1$, $n(\\\\text{NH}_3) = 250\\\\text{ mol}$
+> >    * Calculate mass of $\\\\text{NH}_3$:
+> >      $$m(\\\\text{NH}_3) = 250\\\\text{ mol} \\\\times 17.0\\\\text{ g mol}^{-1} = 4250\\\\text{ g} = 4.25\\\\text{ kg}$$
+> > 
+> > 2. **Part 2 (Iron Oxide Reduction Equation):**
+> >    * Calculate moles of iron ($\\\\text{Fe}$):
+> >      $$n(\\\\text{Fe}) = \\\\frac{4.35\\\\text{ g}}{55.8\\\\text{ g mol}^{-1}} = 0.0780\\\\text{ mol}$$
+> >    * Calculate moles of water ($\\\\text{H}_2\\\\text{O}$):
+> >      $$n(\\\\text{H}_2\\\\text{O}) = \\\\frac{1.86\\\\text{ g}}{18.0\\\\text{ g mol}^{-1}} = 0.1033\\\\text{ mol}$$
+> >    * Calculate simplest whole-number ratio $\\\\text{Fe} : \\\\text{H}_2\\\\text{O}$:
+> >      $$\\\\text{Ratio} = \\\\frac{0.1033}{0.0780} = 1.324 \\\\approx \\\\frac{4}{3}$$
+> >    * Ratio is $3\\\\text{ Fe} : 4\\\\text{ H}_2\\\\text{O}$.
+> >    * The balanced equation for the reaction is:
+> >      $$\\\\text{Fe}_3\\\\text{O}_4\\\\text{(s)} + 4\\\\text{H}_2\\\\text{(g)} \\\\rightarrow 3\\\\text{Fe(s)} + 4\\\\text{H}_2\\\\text{O(l)}$$
+
+> [!BOX]
+> ### 🏷️ State Symbols & Reaction Coefficients
 > * **State Symbols:**
 >    * **(s):** Solid
->    * **(l):** Liquid
+>    * **(l):** Pure liquid
 >    * **(g):** Gas
 >    * **(aq):** Aqueous / Dissolved in water
 > 
-> * **Coefficient:** The number in front of chemical formulas in a balanced equation representing the number of moles of each reacting species.
+> * **Coefficients (Stoichiometric Ratios):** The numbers in front of species representing mole ratios. Most equations use whole-number coefficients, but fractional or decimal coefficients (e.g. $6.5\\\\text{O}_2$ or $\\\\frac{13}{2}\\\\text{O}_2$ in butane combustion) are fully acceptable in organic chemistry:
+> 
+>   $$\\\\text{C₄H₁₀(g)} + 6.5\\\\text{O₂}\\\\text{(g)} \\\\rightarrow 4\\\\text{CO₂}\\\\text{(g)} + 5\\\\text{H₂O(l)}$$
+
+> [!WARNING]
+> ### ⚠️ Common Pitfalls: State Symbols & Water
+> Be careful when assigning physical state symbols:
+> * **Water is NEVER $\\\\text{H}_2\\\\text{O(aq)}$:** Water is a solvent / pure liquid, not something dissolved in water! Depending on temperature, water can be $\\\\text{H}_2\\\\text{O(s)}$ (ice), $\\\\text{H}_2\\\\text{O(l)}$ (liquid), or $\\\\text{H}_2\\\\text{O(g)}$ (steam/gas), but **never** $\\\\text{H}_2\\\\text{O(aq)}$.
 
 > [!BOX]
 > ### 💧 Hydrates & Water of Crystallization
 > * **Hydrate:** A chemical compound containing chemically bound water molecules.
-> * **Water of crystallization:** Water molecules that are chemically bonded into a crystalline structure in definite ratios.
+> * **Water of crystallization:** Water molecules chemically bonded into a crystalline lattice in fixed mole ratios.
 > 
 > #### 🔍 Two Tests for Water (Reversible Hydration Reactions)
 > 1. **Cobalt(II) Chloride test:**
->    $$\\text{CoCl}_2\\text{(s)} + 6\\text{H}_2\\text{O(g)} \\rightleftharpoons \\text{CoCl}_2 \\cdot 6\\text{H}_2\\text{O(s)}$$
+>    $$\\\\text{CoCl}_2\\\\text{(s)} + 6\\\\text{H}_2\\\\text{O(g)} \\\\rightleftharpoons \\\\text{CoCl}_2 \\\\cdot 6\\\\text{H}_2\\\\text{O(s)}$$
 >    * **Anhydrous Cobalt(II) chloride:** Blue
 >    * **Hydrated Cobalt(II) chloride:** Pink
 > 
 > 2. **Copper(II) Sulfate test:**
->    $$\\text{CuSO}_4\\text{(s)} + 5\\text{H}_2\\text{O(g)} \\rightleftharpoons \\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O(s)}$$
+>    $$\\\\text{CuSO}_4\\\\text{(s)} + 5\\\\text{H}_2\\\\text{O(g)} \\\\rightleftharpoons \\\\text{CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O(s)}$$
 >    * **Anhydrous Copper(II) sulfate:** White
 >    * **Hydrated Copper(II) sulfate:** Blue
 
 > [!BOX]
-> ### ⚡ Ionic Equations
-> * **Ionic Equation:** A simplified chemical equation showing only the species (atoms, molecules, or ions) that actively take part in the chemical reaction.
-> * **Spectator ions:** Aqueous ions present on both sides of a chemical reaction that do not participate in the reaction itself and remain unchanged.
+> ### ⚡ Net Ionic Equations & Spectator Ions
+> * **Ionic Equation:** Shows only the species (atoms, molecules, or ions) involved in the chemical change.
+> * **Spectator ions:** Aqueous ions present before and after a reaction that remain unchanged and do not participate in the net chemical change.
 > 
-> #### 📝 Rules to Write a Net Ionic Equation:
-> 1. Write the complete balanced symbol equation.
-> 2. Split only the **soluble aqueous ionic compounds** into their constituent ions. (Leave solids, liquids, gases, and weak electrolytes intact).
-> 3. Identify and delete the **spectator ions** appearing identical on both sides of the equation.
+> #### 📝 3-Step Method to Write Net Ionic Equations:
+> 1. **Step 1:** Write the full balanced symbol equation with correct state symbols.
+> 2. **Step 2:** Replace all **soluble ionic compounds (aq)** with their separated constituent ions. *(Keep solids (s), liquids (l), gases (g), and covalent molecules intact).*
+> 3. **Step 3:** Cross out all **spectator ions** appearing identical on both sides of the equation.
+
+> [!BOX]
+> ### 🧪 The 5 Core Reactions of Acids
+> Acids react with different bases, metals, and carbonates to produce salts:
+> 
+> 1. **Acid + Metal:** $\\\\text{metal} + \\\\text{acid} \\\\rightarrow \\\\text{salt} + \\\\text{hydrogen}$
+>    * *Observation:* Bubbles of $\\\\text{H}_2\\\\text{(g)}$ gas form, temperature rises, and solution forms.
+>    * *Reactivity Rule:* Metal must be sufficiently reactive (e.g. $\\\\text{Mg}$, $\\\\text{Zn}$). Unreactive metals like copper ($\\\\text{Cu}$) **do not react**.
+>    * *Net Ionic Equation:*
+>      $$\\\\text{Mg(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
+> 
+> 2. **Acid + Metal Oxide / Insoluble Hydroxide:** $\\\\text{metal oxide} + \\\\text{acid} \\\\rightarrow \\\\text{salt} + \\\\text{water}$
+>    * *Metal Hydroxide Equation:* $\\\\text{metal hydroxide} + \\\\text{acid} \\\\rightarrow \\\\text{salt} + \\\\text{water}$
+>    * *Observation:* Solid oxide/hydroxide dissolves to form a clear solution.
+>    * *Net Ionic Equations:*
+>      $$\\\\text{CuO(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Cu}^{2+}\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)}$$
+>      $$\\\\text{Zn(OH)}_2\\\\text{(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Zn}^{2+}\\\\text{(aq)} + 2\\\\text{H}_2\\\\text{O(l)}$$
+> 
+> 3. **Acid + Alkali (Soluble Metal Hydroxide):** $\\\\text{alkali} + \\\\text{acid} \\\\rightarrow \\\\text{salt} + \\\\text{water}$
+>    * *Observation:* No visible change (colorless solution), but measurable temperature rise (exothermic).
+>    * *Universal Net Ionic Equation:*
+>      $$\\\\text{H}^+\\\\text{(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{H}_2\\\\text{O(l)}$$
+> 
+> 4. **Acid + Metal Carbonate:** $\\\\text{metal carbonate} + \\\\text{acid} \\\\rightarrow \\\\text{salt} + \\\\text{water} + \\\\text{carbon dioxide}$
+>    * *Observation:* Effervescence / bubbles of $\\\\text{CO}_2\\\\text{(g)}$ gas, solid carbonate dissolves.
+>    * *Net Ionic Equation:*
+>      $$\\\\text{CO}_3^{2-}\\\\text{(aq)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> 
+> 5. **Acid + Hydrogencarbonate (Bicarbonate):** $\\\\text{hydrogencarbonate} + \\\\text{acid} \\\\rightarrow \\\\text{salt} + \\\\text{water} + \\\\text{carbon dioxide}$
+>    * *Net Ionic Equation:*
+>      $$\\\\text{HCO}_3^-\\\\text{(aq)} + \\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+
+> [!WARNING]
+> ### ⚠️ Critical Exam Distinction: Metal vs Acid (Redox vs Neutralisation)
+> * **Acid + Metal is NOT Neutralisation:** When a metal reacts with an acid, $\\\\text{H}^+$ ions gain electrons from metal atoms to form $\\\\text{H}_2\\\\text{(g)}$. Since $\\\\text{H}^+$ is reduced, this is a **Redox Reaction**, not a neutralisation reaction!
+> * **Acid + Metal Oxide / Hydroxide / Carbonate / Alkali IS Neutralisation:** $\\\\text{H}^+$ ions combine with $\\\\text{O}^{2-}$, $\\\\text{OH}^-$, or $\\\\text{CO}_3^{2-}$ without any change in oxidation numbers.
+
+> [!TIP]
+> ### 🍞 Everyday Chemistry: Baking Soda & Polyprotic Neutralisations
+> * **Baking Soda ($\\\\text{NaHCO}_3$):** Used in baking (e.g. cakes). Citric acid in lemon juice or batter reacts with $\\\\text{NaHCO}_3$ to produce $\\\\text{CO}_2$ bubbles that make the cake mixture rise. Gas is confirmed using the **limewater test** ($\\\\text{CO}_2$ turns limewater cloudy).
+> * **Polyprotic Acids (Phosphoric Acid, $\\\\text{H}_3\\\\text{PO}_4$):** Contains 3 replaceable hydrogens, forming 3 possible salts depending on mole ratios:
+>   * $\\\\text{NaOH} + \\\\text{H}_3\\\\text{PO}_4 \\\\rightarrow \\\\text{NaH}_2\\\\text{PO}_4 + \\\\text{H}_2\\\\text{O}$
+>   * $2\\\\text{NaOH} + \\\\text{H}_3\\\\text{PO}_4 \\\\rightarrow \\\\text{Na}_2\\\\text{HPO}_4 + 2\\\\text{H}_2\\\\text{O}$
+>   * $3\\\\text{NaOH} + \\\\text{H}_3\\\\text{PO}_4 \\\\rightarrow \\\\text{Na}_3\\\\text{PO}_4 + 3\\\\text{H}_2\\\\text{O}$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Net Ionic Equation for a Precipitation Reaction
-> **Question:** When aqueous solutions of barium chloride, $\\text{BaCl}_2\\text{(aq)}$, and sodium sulfate, $\\text{Na}_2\\text{SO}_4\\text{(aq)}$, are mixed together, a white precipitate of barium sulfate forms. Write the full balanced chemical equation and deduce the net ionic equation for this precipitation reaction.
+> **Question:** When aqueous solutions of barium chloride, $\\\\text{BaCl}_2\\\\text{(aq)}$, and sodium sulfate, $\\\\text{Na}_2\\\\text{SO}_4\\\\text{(aq)}$, are mixed together, a white precipitate of barium sulfate forms. Write the full balanced chemical equation and deduce the net ionic equation for this precipitation reaction.
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Write the full balanced molecular equation:**
-> >    $$\\text{BaCl}_2\\text{(aq)} + \\text{Na}_2\\text{SO}_4\\text{(aq)} \\rightarrow \\text{BaSO}_4\\text{(s)} + 2\\text{NaCl(aq)}$$
+> >    $$\\\\text{BaCl}_2\\\\text{(aq)} + \\\\text{Na}_2\\\\text{SO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{BaSO}_4\\\\text{(s)} + 2\\\\text{NaCl(aq)}$$
 > > 
 > > 2. **Dissociate all soluble ionic compounds (aq) into their constituent ions:**
-> >    $$\\text{Ba}^{2+}\\text{(aq)} + 2\\text{Cl}^-\\text{(aq)} + 2\\text{Na}^+\\text{(aq)} + \\text{SO}_4^{2-}\\text{(aq)} \\rightarrow \\text{BaSO}_4\\text{(s)} + 2\\text{Na}^+\\text{(aq)} + 2\\text{Cl}^-\\text{(aq)}$$
+> >    $$\\\\text{Ba}^{2+}\\\\text{(aq)} + 2\\\\text{Cl}^-\\\\text{(aq)} + 2\\\\text{Na}^+\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)} \\\\rightarrow \\\\text{BaSO}_4\\\\text{(s)} + 2\\\\text{Na}^+\\\\text{(aq)} + 2\\\\text{Cl}^-\\\\text{(aq)}$$
 > > 
 > > 3. **Identify and cross out spectator ions:**
-> >    * Sodium ions ($2\\text{Na}^+$) and chloride ions ($2\\text{Cl}^-$) are identical on both sides of the equation
+> >    * Sodium ions ($2\\\\text{Na}^+$) and chloride ions ($2\\\\text{Cl}^-$) are identical on both sides of the equation
 > > 
 > > 4. **Write the net ionic equation:**
-> >    $$\\text{Ba}^{2+}\\text{(aq)} + \\text{SO}_4^{2-}\\text{(aq)} \\rightarrow \\text{BaSO}_4\\text{(s)}$$
+> >    $$\\\\text{Ba}^{2+}\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)} \\\\rightarrow \\\\text{BaSO}_4\\\\text{(s)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Spectator Ions in Precipitation
+> **Question:** Write the full equation, net ionic equation, and determine the spectator ions in the reaction between aqueous potassium iodide, $\\\\text{KI(aq)}$, and aqueous silver nitrate, $\\\\text{AgNO}_3\\\\text{(aq)}$
 > 
-> > [!EXAMPLE]
-> > #### 📝 Worked Example 2: Spectator Ions in Precipitation
-> > **Question:** Write the full equation, net ionic equation, and determine the spectator ions in the reaction between aqueous potassium iodide, $\\text{KI(aq)}$, and aqueous silver nitrate, $\\text{AgNO}_3\\text{(aq)}$
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
 > > 
-> > > [!TIP]
-> > > **🔑 Step-by-step Solution:**
-> > > 
-> > > 1. **Write the balanced molecular equation:**
-> > >    $$\\text{KI(aq)} + \\text{AgNO}_3\\text{(aq)} \\rightarrow \\text{KNO}_3\\text{(aq)} + \\text{AgI(s)}$$
-> > > 
-> > > 2. **Dissociate aqueous compounds into ions:**
-> > >    $$\\text{K}^+\\text{(aq)} + \\text{I}^-\\text{(aq)} + \\text{Ag}^+\\text{(aq)} + \\text{NO}_3^-\\text{(aq)} \\rightarrow \\text{K}^+\\text{(aq)} + \\text{NO}_3^-\\text{(aq)} + \\text{AgI(s)}$$
-> > > 
-> > > 3. **Identify spectator ions:**
-> > >    * The ions $\\text{K}^+\\text{(aq)}$ and $\\text{NO}_3^-\\text{(aq)}$ remain in solution unchanged on both sides
-> > >    * Spectator ions are $\\text{K}^+$ and $\\text{NO}_3^-$
-> > > 
-> > > 4. **Write the net ionic equation:**
-> > >    $$\\text{Ag}^+\\text{(aq)} + \\text{I}^-\\text{(aq)} \\rightarrow \\text{AgI(s)}$$
+> > 1. **Write the balanced molecular equation:**
+> >    $$\\\\text{KI(aq)} + \\\\text{AgNO}_3\\\\text{(aq)} \\\\rightarrow \\\\text{KNO}_3\\\\text{(aq)} + \\\\text{AgI(s)}$$
+> > 
+> > 2. **Dissociate aqueous compounds into ions:**
+> >    $$\\\\text{K}^+\\\\text{(aq)} + \\\\text{I}^-\\\\text{(aq)} + \\\\text{Ag}^+\\\\text{(aq)} + \\\\text{NO}_3^-\\\\text{(aq)} \\\\rightarrow \\\\text{K}^+\\\\text{(aq)} + \\\\text{NO}_3^-\\\\text{(aq)} + \\\\text{AgI(s)}$$
+> > 
+> > 3. **Identify spectator ions:**
+> >    * Spectator ions are $\\\\text{K}^+$ and $\\\\text{NO}_3^-$
+> > 
+> > 4. **Write the net ionic equation:**
+> >    $$\\\\text{Ag}^+\\\\text{(aq)} + \\\\text{I}^-\\\\text{(aq)} \\\\rightarrow \\\\text{AgI(s)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 3: Acid-Carbonate Net Ionic Equation
+> **Question:** Write the full equation and deduce the net ionic equation for the reaction of hydroiodic acid, $\\\\text{HI(aq)}$, with solid sodium hydrogencarbonate, $\\\\text{NaHCO}_3\\\\text{(s)}$
 > 
-> > [!EXAMPLE]
-> > #### 📝 Worked Example 3: Acid-Carbonate Net Ionic Equation
-> > **Question:** Write the full equation and deduce the net ionic equation for the reaction of hydroiodic acid, $\\text{HI(aq)}$, with solid sodium hydrogencarbonate, $\\text{NaHCO}_3\\text{(s)}$
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
 > > 
-> > > [!TIP]
-> > > **🔑 Step-by-step Solution:**
-> > > 
-> > > 1. **Write the molecular equation:**
-> > >    $$\\text{HI(aq)} + \\text{NaHCO}_3\\text{(s)} \\rightarrow \\text{NaI(aq)} + \\text{H}_2\\text{O(l)} + \\text{CO}_2\\text{(g)}$$
-> > > 
-> > > 2. **Dissociate aqueous reactants and products:**
-> > >    * Note: $\\text{NaHCO}_3\\text{(s)}$ is solid and $\\text{H}_2\\text{O(l)}$ is liquid, so they are not split
-> > >    $$\\text{H}^+\\text{(aq)} + \\text{I}^-\\text{(aq)} + \\text{NaHCO}_3\\text{(s)} \\rightarrow \\text{Na}^+\\text{(aq)} + \\text{I}^-\\text{(aq)} + \\text{H}_2\\text{O(l)} + \\text{CO}_2\\text{(g)}$$
-> > > 
-> > > 3. **Cross out spectator ions:**
-> > >    * Only iodide ion ($\\text{I}^-$) appears identical on both sides
-> > > 
-> > > 4. **Write the net ionic equation:**
-> > >    $$\\text{H}^+\\text{(aq)} + \\text{NaHCO}_3\\text{(s)} \\rightarrow \\text{Na}^+\\text{(aq)} + \\text{H}_2\\text{O(l)} + \\text{CO}_2\\text{(g)}$$
+> > 1. **Write the molecular equation:**
+> >    $$\\\\text{HI(aq)} + \\\\text{NaHCO}_3\\\\text{(s)} \\\\rightarrow \\\\text{NaI(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> > 
+> > 2. **Dissociate aqueous reactants and products:**
+> >    $$\\\\text{H}^+\\\\text{(aq)} + \\\\text{I}^-\\\\text{(aq)} + \\\\text{NaHCO}_3\\\\text{(s)} \\\\rightarrow \\\\text{Na}^+\\\\text{(aq)} + \\\\text{I}^-\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> > 
+> > 3. **Cross out spectator ions:**
+> >    * Only iodide ion ($\\\\text{I}^-$) appears identical on both sides
+> > 
+> > 4. **Write the net ionic equation:**
+> >    $$\\\\text{H}^+\\\\text{(aq)} + \\\\text{NaHCO}_3\\\\text{(s)} \\\\rightarrow \\\\text{Na}^+\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 4: Reactions of Gases with Solutions (Limewater Test)
+> **Question:** Carbon dioxide gas reacts with calcium hydroxide solution (limewater) to form water and a precipitate of calcium carbonate. Write the full equation and derive its net ionic equation.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write the full molecular equation with state symbols:**
+> >    $$\\\\text{CO}_2\\\\text{(g)} + \\\\text{Ca(OH)}_2\\\\text{(aq)} \\\\rightarrow \\\\text{CaCO}_3\\\\text{(s)} + \\\\text{H}_2\\\\text{O(l)}$$
+> > 
+> > 2. **Separate only soluble ionic species ($\\\\text{aq}$):**
+> >    * Note: $\\\\text{CO}_2\\\\text{(g)}$ and $\\\\text{H}_2\\\\text{O(l)}$ are covalent molecules and do not split into ions.
+> >    $$\\\\text{CO}_2\\\\text{(g)} + \\\\text{Ca}^{2+}\\\\text{(aq)} + 2\\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{CaCO}_3\\\\text{(s)} + \\\\text{H}_2\\\\text{O(l)}$$
+> > 
+> > 3. **Evaluate spectator ions:**
+> >    * No ions appear identically on both sides, so no ions are crossed out.
+> >    * The ionic equation is identical to the expanded equation above.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 5: Textbook Checkpoints (Thiosulfate & Heating Ammonium Sulfate)
+> **Question:** 
+> 1. Sodium thiosulfate ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$) solution reacts with dilute hydrochloric acid to form a precipitate of sulfur, gaseous sulfur dioxide, water, and sodium chloride solution. Write a balanced symbol equation with state symbols.
+> 
+> 2. Solutions of ammonium sulfate and sodium hydroxide are warmed together to form sodium sulfate solution, water, and ammonia gas. Write the simplest ionic equation for this reaction.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1 (Thiosulfate Reaction):**
+> >    * Molecular Equation:
+> >      $$\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3\\\\text{(aq)} + 2\\\\text{HCl(aq)} \\\\rightarrow \\\\text{S(s)} + \\\\text{SO}_2\\\\text{(g)} + \\\\text{H}_2\\\\text{O(l)} + 2\\\\text{NaCl(aq)}$$
+> > 
+> > 2. **Part 2 (Ammonium Sulfate + Sodium Hydroxide Net Ionic):**
+> >    * Molecular Equation:
+> >      $$(\\\\text{NH}_4)_2\\\\text{SO}_4\\\\text{(aq)} + 2\\\\text{NaOH(aq)} \\\\rightarrow \\\\text{Na}_2\\\\text{SO}_4\\\\text{(aq)} + 2\\\\text{H}_2\\\\text{O(l)} + 2\\\\text{NH}_3\\\\text{(g)}$$
+> >    * Split into ions:
+> >      $$2\\\\text{NH}_4^+\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)} + 2\\\\text{Na}^+\\\\text{(aq)} + 2\\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow 2\\\\text{Na}^+\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)} + 2\\\\text{H}_2\\\\text{O(l)} + 2\\\\text{NH}_3\\\\text{(g)}$$
+> >    * Cancel spectator ions ($\\\\text{Na}^+$ and $\\\\text{SO}_4^{2-}$):
+> >      $$2\\\\text{NH}_4^+\\\\text{(aq)} + 2\\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow 2\\\\text{H}_2\\\\text{O(l)} + 2\\\\text{NH}_3\\\\text{(g)}$$
+> >    * Simplify coefficients:
+> >      $$\\\\text{NH}_4^+\\\\text{(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{H}_2\\\\text{O(l)} + \\\\text{NH}_3\\\\text{(g)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Acid Reactions Checkpoints (Full & Net Ionic Equations)
+> **Question:** 
+> 1. Write full balanced equations with state symbols for:
+>    * (a) Reaction between zinc and sulfuric acid
+>    * (b) Reaction between aluminium oxide and hydrochloric acid
+> 2. Write the simplest net ionic equations for:
+>    * (a) Reaction between zinc and hydrochloric acid
+>    * (b) Reaction between magnesium carbonate and nitric acid
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1(a): Zinc + Sulfuric Acid (Full Equation):**
+> >    $$\\\\text{Zn(s)} + \\\\text{H}_2\\\\text{SO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{ZnSO}_4\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
+> > 
+> > 2. **Part 1(b): Aluminium Oxide + Hydrochloric Acid (Full Equation):**
+> >    $$\\\\text{Al}_2\\\\text{O}_3\\\\text{(s)} + 6\\\\text{HCl(aq)} \\\\rightarrow 2\\\\text{AlCl}_3\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O(l)}$$
+> > 
+> > 3. **Part 2(a): Zinc + Hydrochloric Acid (Net Ionic Equation):**
+> >    * **Full equation:**
+> >      $$\\\\text{Zn(s)} + 2\\\\text{HCl(aq)} \\\\rightarrow \\\\text{ZnCl}_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
+> >    * **Dissociate ions:**
+> >      $$\\\\text{Zn(s)} + 2\\\\text{H}^+\\\\text{(aq)} + 2\\\\text{Cl}^-\\\\text{(aq)} \\\\rightarrow \\\\text{Zn}^{2+}\\\\text{(aq)} + 2\\\\text{Cl}^-\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
+> >    * **Net Ionic Equation:**
+> >      $$\\\\text{Zn(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Zn}^{2+}\\\\text{(aq)} + \\\\text{H}_2\\\\text{(g)}$$
+> > 
+> > 4. **Part 2(b): Magnesium Carbonate + Nitric Acid (Net Ionic Equation):**
+> >    * **Full equation:**
+> >      $$\\\\text{MgCO}_3\\\\text{(s)} + 2\\\\text{HNO}_3\\\\text{(aq)} \\\\rightarrow \\\\text{Mg(NO}_3)_2\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> >    * **Dissociate ions:**
+> >      $$\\\\text{MgCO}_3\\\\text{(s)} + 2\\\\text{H}^+\\\\text{(aq)} + 2\\\\text{NO}_3^-\\\\text{(aq)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(aq)} + 2\\\\text{NO}_3^-\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> >    * **Net Ionic Equation:**
+> >      $$\\\\text{MgCO}_3\\\\text{(s)} + 2\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow \\\\text{Mg}^{2+}\\\\text{(aq)} + \\\\text{H}_2\\\\text{O(l)} + \\\\text{CO}_2\\\\text{(g)}$$
+> [!BOX]
+> ### 🔄 Displacement Reactions (Aqueous, Thermite & Halogens)
+> A **displacement reaction** occurs when a more reactive element displaces a less reactive element from its compound. All displacement reactions are **Redox reactions**.
+> 
+> 1. **Metal Displacement in Aqueous Solution:**
+>    * *Example:* Magnesium ribbon in blue copper(II) sulfate solution:
+>      $$\\\\text{Mg(s)} + \\\\text{CuSO}_4\\\\text{(aq)} \\\\rightarrow \\\\text{Cu(s)} + \\\\text{MgSO}_4\\\\text{(aq)}$$
+>    * *Observations:* Blue $\\\\text{CuSO}_4$ solution fades to colorless ($\\\\text{MgSO}_4$). Silvery Mg ribbon turns brown as copper metal deposits on it.
+>    * *Net Ionic Equation:*
+>      $$\\\\text{Mg(s)} + \\\\text{Cu}^{2+}\\\\text{(aq)} \\\\rightarrow \\\\text{Cu(s)} + \\\\text{Mg}^{2+}\\\\text{(aq)}$$
+>    * *Redox:* Mg atoms are oxidised (lose $2e^-$) to $\\\\text{Mg}^{2+}$, while $\\\\text{Cu}^{2+}$ ions are reduced (gain $2e^-$) to $\\\\text{Cu}$.
+> 
+> 2. **Metal Displacement in Solid State (The Thermite Reaction):**
+>    * *Industrial Use:* Joining railway rails together by producing molten iron ($\\\\text{Fe(l)}$):
+>      $$2\\\\text{Al(s)} + \\\\text{Fe}_2\\\\text{O}_3\\\\text{(s)} \\\\rightarrow 2\\\\text{Fe(s)} + \\\\text{Al}_2\\\\text{O}_3\\\\text{(s)}$$
+>    * *Net Ionic Equation (Molten State):*
+>      $$2\\\\text{Al(l)} + 2\\\\text{Fe}^{3+}\\\\text{(l)} \\\\rightarrow 2\\\\text{Fe(l)} + 2\\\\text{Al}^{3+}\\\\text{(l)}$$
+>    * *Key Feature:* Highly exothermic reaction ignited by a magnesium fuse; molten iron flows into gaps between rails to weld them.
+> 
+> 3. **Halogen Displacement Reactions:**
+>    * A more reactive halogen displaces a less reactive halide ion from solution (e.g. Chlorine displaces Bromine from $\\\\text{KBr}$):
+>      $$\\\\text{Cl}_2\\\\text{(aq)} + 2\\\\text{KBr(aq)} \\\\rightarrow \\\\text{Br}_2\\\\text{(aq)} + 2\\\\text{KCl(aq)}$$
+>    * *Net Ionic Equation:*
+>      $$\\\\text{Cl}_2\\\\text{(aq)} + 2\\\\text{Br}^-\\\\text{(aq)} \\\\rightarrow \\\\text{Br}_2\\\\text{(aq)} + 2\\\\text{Cl}^-\\\\text{(aq)}$$
+>    * *Redox:* Bromide ions ($\\\\text{Br}^-$) are oxidised to $\\\\text{Br}_2$, and $\\\\text{Cl}_2$ is reduced to $\\\\text{Cl}^-$.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Displacement Reactions Checkpoints
+> **Question:** 
+> 1. Iron metal reacts with aqueous silver nitrate to form silver metal and iron(II) nitrate solution. Write full, ionic, and net ionic equations with state symbols.
+> 2. A mixture of zinc metal and copper(II) oxide is ignited, causing an exothermic solid-state reaction. Write full, ionic, and net ionic equations (without state symbols).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1 (Iron + Silver Nitrate in Aqueous Solution):**
+> >    * **Full Equation:**
+> >      $$\\\\text{Fe(s)} + 2\\\\text{AgNO}_3\\\\text{(aq)} \\\\rightarrow 2\\\\text{Ag(s)} + \\\\text{Fe(NO}_3)_2\\\\text{(aq)}$$
+> >    * **Full Ionic Equation:**
+> >      $$\\\\text{Fe(s)} + 2\\\\text{Ag}^+\\\\text{(aq)} + 2\\\\text{NO}_3^-\\\\text{(aq)} \\\\rightarrow 2\\\\text{Ag(s)} + \\\\text{Fe}^{2+}\\\\text{(aq)} + 2\\\\text{NO}_3^-\\\\text{(aq)}$$
+> >    * **Net Ionic Equation (cancel $\\\\text{NO}_3^-$ spectator ions):**
+> >      $$\\\\text{Fe(s)} + 2\\\\text{Ag}^+\\\\text{(aq)} \\\\rightarrow 2\\\\text{Ag(s)} + \\\\text{Fe}^{2+}\\\\text{(aq)}$$
+> > 
+> > 2. **Part 2 (Zinc + Copper(II) Oxide Solid State Reaction):**
+> >    * **Full Equation:**
+> >      $$\\\\text{Zn} + \\\\text{CuO} \\\\rightarrow \\\\text{Cu} + \\\\text{ZnO}$$
+> >    * **Full Ionic Equation:**
+> >      $$\\\\text{Zn} + \\\\text{Cu}^{2+} + \\\\text{O}^{2-} \\\\rightarrow \\\\text{Cu} + \\\\text{Zn}^{2+} + \\\\text{O}^{2-}$$
+> >    * **Net Ionic Equation (cancel $\\\\text{O}^{2-}$ spectator ions):**
+> >      $$\\\\text{Zn} + \\\\text{Cu}^{2+} \\\\rightarrow \\\\text{Cu} + \\\\text{Zn}^{2+}$$
+
+> [!BOX]
+> ### 🧪 Precipitation Reactions in Qualitative Analysis & Stoichiometry
+> A **precipitation reaction** occurs when two soluble aqueous solutions react to form an insoluble solid precipitate.
+> 
+> #### 🔍 1. Qualitative Chemical Tests Using Precipitation:
+> * **Carbon Dioxide ($\\\\text{CO}_2$) Test:** Bubbling $\\\\text{CO}_2\\\\text{(g)}$ through limewater ($\\\\text{Ca(OH)}_2\\\\text{(aq)}$) forms a white precipitate of calcium carbonate ($\\\\text{CaCO}_3\\\\text{(s)}$), making limewater milky/cloudy:
+>   $$\\\\text{Ca(OH)}_2\\\\text{(aq)} + \\\\text{CO}_2\\\\text{(g)} \\\\rightarrow \\\\text{CaCO}_3\\\\text{(s)} + \\\\text{H}_2\\\\text{O(l)}$$
+> * **Sulfate Ion ($\\\\text{SO}_4^{2-}$) Test:** Adding aqueous barium ions ($\\\\text{Ba}^{2+}$, e.g. $\\\\text{BaCl}_2$) forms a dense white precipitate of barium sulfate ($\\\\text{BaSO}_4\\\\text{(s)}$):
+>   $$\\\\text{Ba}^{2+}\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)} \\\\rightarrow \\\\text{BaSO}_4\\\\text{(s)}$$
+> * **Halide Ions ($\\\\text{Cl}^-, \\\\text{Br}^-, \\\\text{I}^-$) Test:** Adding aqueous silver ions ($\\\\text{Ag}^+$, e.g. $\\\\text{AgNO}_3$) forms silver halide precipitates (e.g. white $\\\\text{AgCl(s)}$):
+>   $$\\\\text{Ag}^+\\\\text{(aq)} + \\\\text{Cl}^-\\\\text{(aq)} \\\\rightarrow \\\\text{AgCl(s)}$$
+> 
+> #### 📊 2. Working Out Reaction Stoichiometry via Precipitation Experiments:
+> * **Continuous Variation Experiment:** Adding increasing volumes of $1.0\\\\text{ mol dm}^{-3}$ lead(II) nitrate solution ($\\\\text{Pb(NO}_3)_2$) to test tubes containing a fixed $5.0\\\\text{ cm}^3$ volume of $1.0\\\\text{ mol dm}^{-3}$ potassium iodide ($\\\\text{KI}$).
+> * **Finding Complete Reaction (Tube 5):** The depth of yellow lead(II) iodide precipitate ($\\\\text{PbI}_2\\\\text{(s)}$) increases up to Tube 5 ($2.5\\\\text{ cm}^3$ of $\\\\text{Pb(NO}_3)_2$, depth $6.0\\\\text{ cm}$) and stays constant in Tubes 6 and 7.
+> * **Determining Mole Ratio:**
+>   * $n(\\\\text{KI}) = 0.0050\\\\text{ dm}^3 \\\\times 1.0\\\\text{ mol dm}^{-3} = 0.0050\\\\text{ mol}$
+>   * $n(\\\\text{Pb(NO}_3)_2) = 0.0025\\\\text{ dm}^3 \\\\times 1.0\\\\text{ mol dm}^{-3} = 0.0025\\\\text{ mol}$
+>   * Mole ratio $\\\\text{Pb(NO}_3)_2 : \\\\text{KI} = 1 : 2$, deriving the net ionic equation:
+>     $$\\\\text{Pb}^{2+}\\\\text{(aq)} + 2\\\\text{I}^-\\\\text{(aq)} \\\\rightarrow \\\\text{PbI}_2\\\\text{(s)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Precipitation Tests & Continuous Variation Stoichiometry
+> **Question:** 
+> 1. Write the simplest net ionic equations (with state symbols) for:
+>    * (a) The chemical test for sulfate ions using barium chloride
+>    * (b) The chemical test for chloride ions using silver nitrate
+> 2. In the continuous variation precipitation experiment (Fig B), Tube 7 contains $5.0\\\\text{ cm}^3$ of $1.0\\\\text{ mol dm}^{-3}$ $\\\\text{KI}$ and $3.5\\\\text{ cm}^3$ of $1.0\\\\text{ mol dm}^{-3}$ $\\\\text{Pb(NO}_3)_2$. Calculate the moles of each reactant added, the moles of $\\\\text{PbI}_2\\\\text{(s)}$ precipitate formed, and the moles of excess reactant remaining.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1(a): Sulfate Test Net Ionic Equation:**
+> >    $$\\\\text{Ba}^{2+}\\\\text{(aq)} + \\\\text{SO}_4^{2-}\\\\text{(aq)} \\\\rightarrow \\\\text{BaSO}_4\\\\text{(s)}$$
+> > 
+> > 2. **Part 1(b): Chloride Test Net Ionic Equation:**
+> >    $$\\\\text{Ag}^+\\\\text{(aq)} + \\\\text{Cl}^-\\\\text{(aq)} \\\\rightarrow \\\\text{AgCl(s)}$$
+> > 
+> > 3. **Part 2: Tube 7 Quantitative Calculations:**
+> >    * **Moles of reactants added:**
+> >      $$n(\\\\text{KI}) = \\\\frac{5.0}{1000} \\\\times 1.0 = 0.0050\\\\text{ mol}$$
+> >      $$n(\\\\text{Pb(NO}_3)_2) = \\\\frac{3.5}{1000} \\\\times 1.0 = 0.0035\\\\text{ mol}$$
+> >    * **Determine limiting reagent and precipitate formed:**
+> >      * From equation $\\\\text{Pb}^{2+} + 2\\\\text{I}^- \\\\rightarrow \\\\text{PbI}_2$, $0.0050\\\\text{ mol}$ of $\\\\text{I}^-$ requires exactly $0.0025\\\\text{ mol}$ of $\\\\text{Pb}^{2+}$.
+> >      * Therefore, $\\\\text{KI}$ is the limiting reagent and completely reacts.
+> >      * Moles of $\\\\text{PbI}_2\\\\text{(s)}$ formed = $0.0025\\\\text{ mol}$
+> >    * **Moles of excess reactant remaining ($\\\\text{Pb(NO}_3)_2$):**
+> >      $$\\\\text{Excess } n(\\\\text{Pb(NO}_3)_2) = 0.0035\\\\text{ mol} - 0.0025\\\\text{ mol} = 0.0010\\\\text{ mol}$$
 `,
         keyPoints: [
-            'State symbols indicate the physical state of all reactants and products.',
-            'Only split (aq) substances into ions; never split solids (s), liquids (l), or gases (g).',
-            'Spectator ions must be identical in state and charge on both sides to be crossed out.'
+            'State symbols indicate physical state: (s), (l), (g), (aq). Water is pure liquid (l) and NEVER (aq).',
+            'Precipitation tests: Ba²⁺ tests for SO₄²⁻ (white BaSO₄), Ag⁺ tests for halides (white AgCl), limewater for CO₂.',
+            'Continuous variation precipitation experiments determine reacting mole ratios from maximum precipitate height.',
+            'Displacement reactions are Redox processes where a more reactive element displaces a less reactive element.',
+            'Only split soluble (aq) ionic species when writing net ionic equations.'
         ],
         equationVisualizer: {
             reactants: [['CoCl₂ (blue)', '#3b82f6'], ['6H₂O', '#38bdf8']],
@@ -578,32 +1030,76 @@ export const parts: LessonPart[] = [
 > >    $$y = \\frac{180}{30.0} = 6$$
 > > 
 > > 3. **Multiply the empirical formula subscripts by $y$:**
-> >    $$\\text{Molecular Formula} = (\\text{CH}\\_2\\text{O}) \\times 6 = \\text{C}\\_6\\text{H}\\_\\{12\\}\\text{O}\\_6$$
+> >    $$\text{Molecular Formula} = (\text{CH}_2\text{O}) \times 6 = \text{C}_6\text{H}_{12}\text{O}_6$$
+
+> [!BOX]
+> ### 🧪 Copper Oxide Reduction Experiment & Constant Mass
+> A classic experimental method for determining empirical formulas involves reducing copper oxide to pure copper metal in a tube heated under a stream of hydrogen (or natural gas):
+> 
+> $$\text{CuO(s)} + \text{H}_2\text{(g)} \rightarrow \text{Cu(s)} + \text{H}_2\text{O(g)}$$
+> 
+> * **Finding Oxygen Mass:** $m(\text{O}) = m(\text{Copper oxide sample}) - m(\text{Recovered Copper metal})$
+> * **Heating to Constant Mass:** The solid copper product is repeatedly heated, cooled, and re-weighed until two consecutive weighings are identical. This guarantees that the reduction reaction was 100% complete.
+
+> [!BOX]
+> ### 🧮 Empirical Ratios & Fractional Multipliers Table
+> When mole ratios yield decimal values, multiply all numbers in the ratio by the appropriate integer:
+> 
+> | Calculated Ratio | Decimal Fraction | Multiplier | Final Whole-Number Ratio |
+> | :---: | :---: | :---: | :---: |
+> | 1 : 1.25 | ¼ | × 4 | 4 : 5 |
+> | 1 : 1.33 | ⅓ | × 3 | 3 : 4 |
+> | 1 : 1.50 | ½ | × 2 | 2 : 3 |
+> | 1 : 1.66 | ⅔ | × 3 | 3 : 5 |
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Empirical Formula from Combustion Analysis
-> **Question:** An organic compound contains only carbon, hydrogen, and oxygen. Complete combustion of a sample of this compound produces carbon dioxide and water. Analysis shows that the compound contains $40.0\\%$ carbon and $6.7\\%$ hydrogen by mass. What is its empirical formula?
+> #### 📝 Worked Example 5: Organic Combustion Analysis Checkpoint ($\text{C}_2\text{H}_4\text{O}$)
+> **Question:** Complete combustion of a $2.16\text{ g}$ sample of an organic compound containing carbon, hydrogen, and oxygen produced $4.33\text{ g}$ of carbon dioxide ($\text{CO}_2$) and $1.77\text{ g}$ of water ($\text{H}_2\text{O}$). Calculate the empirical formula of the compound.  
+> *(Relative atomic masses: $\text{C}=12.0, \text{H}=1.0, \text{O}=16.0$)*
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Calculate the percentage of Oxygen by mass in the sample:**
-> >    $$\\%\\text{ O} = 100\\% - (\\%\\text{ C} + \\%\\text{ H})$$
-> >    $$\\%\\text{ O} = 100\\% - (40.0\\% + 6.7\\%) = 53.3\\%$$
+> > 1. **Calculate the mass of Carbon ($m_{\text{C}}$) in the sample:**
+> >    $$m(\text{C}) = 4.33\text{ g} \times \left(\frac{12.0}{44.0}\right) = 1.1809\text{ g}$$
 > > 
-> > 2. **Calculate the number of moles ($n$) of each element in a $100\\text{ g}$ sample:**
-> >    * $\\text{Carbon (C): } n = \\frac{40.0}{12.0} = 3.33\\text{ mol}$
-> >    * $\\text{Hydrogen (H): } n = \\frac{6.7}{1.0} = 6.70\\text{ mol}$
-> >    * $\\text{Oxygen (O): } n = \\frac{53.3}{16.0} = 3.33\\text{ mol}$
+> > 2. **Calculate the mass of Hydrogen ($m_{\text{H}}$) in the sample:**
+> >    $$m(\text{H}) = 1.77\text{ g} \times \left(\frac{2.0}{18.0}\right) = 0.1967\text{ g}$$
 > > 
-> > 3. **Divide by the simplest mole value ($3.33$) to find the simplest ratio:**
-> >    * $\\text{Carbon (C): } \\frac{3.33}{3.33} = 1$
-> >    * $\\text{Hydrogen (H): } \\frac{6.70}{3.33} \\approx 2$
-> >    * $\\text{Oxygen (O): } \\frac{3.33}{3.33} = 1$
+> > 3. **Calculate the mass of Oxygen ($m_{\text{O}}$) by subtraction:**
+> >    $$m(\text{O}) = 2.16\text{ g} - (1.1809 + 0.1967)\text{ g} = 0.7824\text{ g}$$
 > > 
-> > 4. **Formulate the empirical formula:**
-> >    * The simplest whole-number ratio is $\\text{CH}_2\\text{O}$
-> >    * Therefore, the empirical formula is **$\\text{CH}_2\\text{O}$**
+> > 4. **Calculate the moles ($n$) of each element:**
+> >    * $n(\text{C}) = \frac{1.1809}{12.0} = 0.09841\text{ mol}$
+> >    * $n(\text{H}) = \frac{0.1967}{1.0} = 0.1967\text{ mol}$
+> >    * $n(\text{O}) = \frac{0.7824}{16.0} = 0.04890\text{ mol}$
+> > 
+> > 5. **Find simplest whole-number ratio (divide by $0.04890$):**
+> >    * $\text{C} = \frac{0.09841}{0.04890} = 2$
+> >    * $\text{H} = \frac{0.1967}{0.04890} = 4$
+> >    * $\text{O} = \frac{0.04890}{0.04890} = 1$
+> > 
+> > 6. **Empirical Formula:** **$\text{C}_2\text{H}_4\text{O}$**
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Calcium Nitrate Composition Checkpoint ($\text{Ca(NO}_3)_2$)
+> **Question:** A hydrated salt sample has the percentage composition by mass: $\text{Ca} = 24.4\%$, $\text{N} = 17.1\%$, and $\text{O} = 58.5\%$. Determine its empirical formula.  
+> *(Relative atomic masses: $\text{Ca}=40.1, \text{N}=14.0, \text{O}=16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate moles of each element in a $100\text{ g}$ sample:**
+> >    * $n(\text{Ca}) = \frac{24.4}{40.1} = 0.6085\text{ mol}$
+> >    * $n(\text{N}) = \frac{17.1}{14.0} = 1.2214\text{ mol}$
+> >    * $n(\text{O}) = \frac{58.5}{16.0} = 3.6563\text{ mol}$
+> > 
+> > 2. **Divide by the smallest mole value ($0.6085$):**
+> >    * $\text{Ca} = \frac{0.6085}{0.6085} = 1$
+> >    * $\text{N} = \frac{1.2214}{0.6085} = 2$
+> >    * $\text{O} = \frac{3.6563}{0.6085} = 6$
+> > 
+> > 3. **Empirical Formula:** **$\text{Ca(NO}_3)_2$** (Calcium nitrate)
 `,
         keyPoints: [
             'Empirical formula is the simplified ratio.',
@@ -1149,6 +1645,92 @@ export const parts: LessonPart[] = [
 > > 
 > > 3. **Calculate the average of the concordant titres:**
 > >    $$\\\\text{Mean Titre} = \\\\frac{23.85 + 23.95 + 23.90}{3} = 23.90\\\\text{ cm}^3$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Molar Concentration Calculation Checkpoint ($\\\\text{NaOH}$)
+> **Question:** $50.0\\\\text{ g}$ of sodium hydroxide ($\\\\text{NaOH}$) is dissolved in distilled water to make $1.50\\\\text{ dm}^3$ of solution. Calculate the molar concentration of the solution in $\\\\text{mol dm}^{-3}$.  
+> *(Given relative atomic masses: $\\\\text{Na}=23.0, \\\\text{O}=16.0, \\\\text{H}=1.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the molar mass ($M_r$) of sodium hydroxide:**
+> >    $$M_r(\\\\text{NaOH}) = 23.0 + 16.0 + 1.0 = 40.0\\\\text{ g mol}^{-1}$$
+> > 
+> > 2. **Calculate the amount of $\\\\text{NaOH}$ in moles ($n$):**
+> >    $$n = \\\\frac{m}{M_r} = \\\\frac{50.0\\\\text{ g}}{40.0\\\\text{ g mol}^{-1}} = 1.25\\\\text{ mol}$$
+> > 
+> > 3. **Calculate the molar concentration ($C$):**
+> >    $$C = \\\\frac{n}{V} = \\\\frac{1.25\\\\text{ mol}}{1.50\\\\text{ dm}^3} = 0.833\\\\text{ mol dm}^{-3}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Precipitate Mass from Solution Concentration ($\\\\text{PbI}_2$)
+> **Question:** $150\\\\text{ cm}^3$ of $0.125\\\\text{ mol dm}^{-3}$ lead(II) nitrate solution ($\\\\text{Pb(NO}_3)_2$) is mixed with an excess of potassium iodide solution ($\\\\text{KI}$). The reaction equation is:
+> $$\\\\text{Pb(NO}_3)_2\\\\text{(aq)} + 2\\\\text{KI(aq)} \\\\rightarrow \\\\text{PbI}_2\\\\text{(s)} + 2\\\\text{KNO}_3\\\\text{(aq)}$$
+> Calculate the mass, in grams, of lead(II) iodide precipitate formed.  
+> *(Given relative atomic masses: $\\\\text{Pb}=207.2, \\\\text{I}=126.9$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the moles of lead(II) nitrate reactant ($n$):**
+> >    $$n(\\\\text{Pb(NO}_3)_2) = C \\\\times V = 0.125\\\\text{ mol dm}^{-3} \\\\times \\\\left(\\\\frac{150}{1000}\\\\right)\\\\text{ dm}^3 = 0.01875\\\\text{ mol}$$
+> > 
+> > 2. **Determine the theoretical moles of $\\\\text{PbI}_2$ precipitate formed (1:1 ratio):**
+> >    $$n(\\\\text{PbI}_2) = 0.01875\\\\text{ mol}$$
+> > 
+> > 3. **Calculate the molar mass ($M_r$) of lead(II) iodide ($\\\\text{PbI}_2$):**
+> >    $$M_r(\\\\text{PbI}_2) = 207.2 + (2 \\\\times 126.9) = 461.0\\\\text{ g mol}^{-1}$$
+> > 
+> > 4. **Calculate the mass of $\\\\text{PbI}_2$ precipitate formed:**
+> >    $$m = n \\\\times M_r = 0.01875\\\\text{ mol} \\\\times 461.0\\\\text{ g mol}^{-1} = 8.644\\\\text{ g} \\\\approx 8.64\\\\text{ g}$$
+
+> [!BOX]
+> ### 🌌 Atmospheric Pollutants & Gas Concentrations in ppmv
+> While parts per million (ppm) for liquid solutions measures mass ratios ($m/m$), atmospheric pollutant gas concentrations are measured by volume (**ppmv**):
+> 
+> * **Formula for Gas Volume Concentration (ppmv):**
+>   $$\\\\text{Concentration (ppmv)} = \\\\frac{\\\\text{Volume of pollutant gas}}{\\\\text{Total volume of air mixture}} \\\\times 10^6$$
+> 
+> * **Environmental Case Studies:**
+>   * **Mauna Loa Observatory (Hawaii):** Tracks atmospheric $\\\\text{CO}_2$ levels, which rose from $316\\\\text{ ppmv}$ in 1960 to over $400\\\\text{ ppmv}$ today.
+>   * **Urban Industrial Traffic (e.g. Dhaka Brick Kilns):** Brick factories and dense vehicle exhausts elevate toxic carbon monoxide ($\\\\text{CO}$) levels to $100\\\\text{ ppmv}$ alongside harmful $\\\\text{SO}_2$ gas and particulate matter.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 10: Solution Concentration in ppm Checkpoint ($\\\\text{K}_2\\\\text{SO}_4$)
+> **Question:** A sample of $0.20\\\\text{ g}$ of potassium sulfate, $\\\\text{K}_2\\\\text{SO}_4$, is dissolved in distilled water to make $800\\\\text{ g}$ of solution. Calculate the concentration of the salt in parts per million (ppm).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Check that mass units are identical:**
+> >    * Solute mass: $0.20\\\\text{ g}$
+> >    * Solution mass: $800\\\\text{ g}$ (both in grams)
+> > 
+> > 2. **Apply the ppm concentration formula:**
+> >    $$\\\\text{Concentration (ppm)} = \\\\frac{\\\\text{Mass of Solute}}{\\\\text{Total Mass of Solution}} \\\\times 10^6$$
+> > 
+> > 3. **Calculate the concentration:**
+> >    $$\\\\text{Concentration} = \\\\frac{0.20\\\\text{ g}}{800\\\\text{ g}} \\\\times 10^6 = 250\\\\text{ ppm}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 11: Atmospheric Chlorine Concentration in ppmv Checkpoint
+> **Question:** A $200\\\\text{ dm}^3$ sample of contaminated air contains $58\\\\text{ cm}^3$ of chlorine gas. Calculate the concentration of chlorine in the air sample in parts per million by volume (ppmv).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Convert gas volumes to identical units ($\\\\text{cm}^3$):**
+> >    * Chlorine volume: $58\\\\text{ cm}^3$
+> >    * Total air volume: $200\\\\text{ dm}^3 = 200 \\\\times 1000 = 200,000\\\\text{ cm}^3$
+> > 
+> > 2. **Apply the ppmv volume concentration formula:**
+> >    $$\\\\text{Concentration (ppmv)} = \\\\frac{\\\\text{Volume of Pollutant Gas}}{\\\\text{Total Volume of Air}} \\\\times 10^6$$
+> > 
+> > 3. **Calculate the concentration in ppmv:**
+> >    $$\\\\text{Concentration} = \\\\frac{58\\\\text{ cm}^3}{200,000\\\\text{ cm}^3} \\\\times 10^6 = 290\\\\text{ ppmv}$$
+
+
 `,
         keyPoints: [
             '1 dm³ is exactly equal to 1000 cm³.',
@@ -1171,15 +1753,15 @@ export const parts: LessonPart[] = [
 > The volume occupied by a gas depends on temperature and pressure, regardless of the chemical identity of the gas.
 > 
 > * **Standard Temperature and Pressure (STP):**
->    * *Conditions:* $0^\circ\\text{C}$ ($273.15\\text{ K}$) and $1\\text{ atm}$ ($101.3\\text{ kPa}$).
->    * *Avogadro's Law:* $1\\text{ mol}$ of any gas occupies **$22.4\\text{ dm}^3$** at STP.
+>    * *Conditions:* 0 °C (273.15 K) and 1 atm (101.3 kPa).
+>    * *Avogadro's Law:* 1 mol of any gas occupies **22.4 dm³** at STP.
 > 
 > * **Room Temperature and Pressure (RTP):**
->    * *Conditions:* $25^\circ\\text{C}$ ($298\\text{ K}$) and $1\\text{ atm}$ ($101.3\\text{ kPa}$).
->    * *Avogadro's Law:* $1\\text{ mol}$ of any gas occupies **$24.0\\text{ dm}^3$** at RTP.
+>    * *Conditions:* 25 °C (298 K) and 1 atm (101.3 kPa).
+>    * *Avogadro's Law:* 1 mol of any gas occupies **24.0 dm³** at RTP.
 > 
 > * **Molar Gas Volume Calculation:**
->   $$\\text{Moles } (n) = \\frac{\\text{Volume at RTP } (\\text{dm}^3)}{24.0\\text{ dm}^3\\text{ mol}^{-1}}$$
+>   $$\text{Moles } (n) = \frac{\text{Volume at RTP } (\text{dm}^3)}{24.0\text{ dm}^3\text{ mol}^{-1}}$$
 
 > [!BOX]
 > ### 🎈 The Ideal Gas Equation
@@ -1363,6 +1945,45 @@ export const parts: LessonPart[] = [
 > >    * The remaining gas mixture consists only of unreacted oxygen and the carbon dioxide produced:
 > >    $$\\\\text{Total gas volume} = V(\\\\text{unreacted O}_2) + V(\\\\text{produced CO}_2)$$
 > >    $$\\\\text{Total gas volume} = 20\\\\text{ cm}^3 + 60\\\\text{ cm}^3 = 80\\\\text{ cm}^3$$
+
+> [!BOX]
+> ### 📐 SI Units Conversion Table for $pV = nRT$
+> Always convert units into standard SI units before substituting into the ideal gas equation:
+> 
+> | Quantity | Symbol | Given Unit | Required SI Unit | Conversion Rule |
+> | :--- | :---: | :---: | :---: | :--- |
+> | Pressure | P | Kilopascals (kPa) | Pascals (Pa) | Multiply by 10³ (1 kPa = 1000 Pa) |
+> | Volume | V | Cubic centimeters (cm³) | Cubic meters (m³) | Multiply by 10⁻⁶ (divide by 10⁶) |
+> | Volume | V | Cubic decimeters (dm³) | Cubic meters (m³) | Multiply by 10⁻³ (divide by 1000) |
+> | Temperature | T | Degrees Celsius (°C) | Kelvin (K) | Add 273 (T = °C + 273) |
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Molecular Formula from Percentage Composition & Gas Vapor Density
+> **Question:** An organic compound contains $40.0\\\\%$ carbon, $6.7\\\\%$ hydrogen, and $53.3\\\\%$ oxygen by mass. A $0.146\\\\text{ g}$ sample of this compound, when vaporized at $63^\\\\circ\\\\text{C}$ and $98\\\\text{ kPa}$, occupies a volume of $69.5\\\\text{ cm}^3$. Determine both the empirical formula and the molecular formula of the compound.  
+> *(Given $R = 8.31\\\\text{ J mol}^{-1}\\\\text{ K}^{-1}$, $A_r: \\\\text{C}=12.0, \\\\text{H}=1.0, \\\\text{O}=16.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Determine the Empirical Formula:**
+> >    * $n(\\\\text{C}) = \\\\frac{40.0}{12.0} = 3.333\\\\text{ mol}$
+> >    * $n(\\\\text{H}) = \\\\frac{6.7}{1.0} = 6.700\\\\text{ mol}$
+> >    * $n(\\\\text{O}) = \\\\frac{53.3}{16.0} = 3.331\\\\text{ mol}$
+> >    * Divide by $3.331$: $\\\\text{C} = 1, \\\\text{H} = 2, \\\\text{O} = 1 \\\\implies$ **Empirical Formula: $\\\\text{CH}_2\\\\text{O}$**
+> >    * Empirical Formula Mass ($M_{\\\\text{emp}}$) $= 12.0 + 2.0 + 16.0 = 30.0\\\\text{ g mol}^{-1}$
+> > 
+> > 2. **Convert Gas Data to Standard SI Units:**
+> >    * $P = 98\\\\text{ kPa} = 98,000\\\\text{ Pa}$
+> >    * $V = 69.5\\\\text{ cm}^3 = 69.5 \\\\times 10^{-6}\\\\text{ m}^3$
+> >    * $T = 63^\\\\circ\\\\text{C} + 273 = 336\\\\text{ K}$
+> > 
+> > 3. **Calculate Moles ($n$) and Molar Mass ($M_r$) using $pV = nRT$:**
+> >    $$n = \\\\frac{PV}{RT} = \\\\frac{98,000\\\\text{ Pa} \\\\times 69.5 \\\\times 10^{-6}\\\\text{ m}^3}{8.31 \\\\times 336} = \\\\frac{6.811}{2792.16} = 0.002439\\\\text{ mol}$$
+> >    $$M_r = \\\\frac{m}{n} = \\\\frac{0.146\\\\text{ g}}{0.002439\\\\text{ mol}} = 59.86 \\\\approx 60.0\\\\text{ g mol}^{-1}$$
+> > 
+> > 4. **Calculate Multiplier Ratio ($y$) and Molecular Formula:**
+> >    $$y = \\\\frac{M_r}{M_{\\\\text{emp}}} = \\\\frac{60.0}{30.0} = 2$$
+> >    $$\\\\text{Molecular Formula} = (\\\\text{CH}_2\\\\text{O}) \\\\times 2 = \\\\text{C}_2\\\\text{H}_4\\\\text{O}_2$$
 `,
         keyPoints: [
             'In pV = nRT, volume MUST be converted to m³.',
@@ -1545,11 +2166,132 @@ export const parts: LessonPart[] = [
 > >    $$n(\\\\text{CO}_2) = 0.0400\\\\text{ mol}$$
 > > 
 > > 5. **Calculate the theoretical mass of carbon dioxide ($Mr = 44.0\\text{ g mol}^{-1}$):**
-> >    $$\\\\text{Theoretical Mass of CO}_2 = 0.0400\\\\text{ mol} \\\\times 44.0\\\\text{ g mol}^{-1} = 1.76\\\\text{ g}$$
-> > 
 > > 6. **Apply the percentage yield to find the actual mass of carbon dioxide obtained:**
 > >    $$\\\\text{Actual Mass} = \\\\text{Theoretical Mass} \\\\times \\\\frac{\\\\%\\\\text{ Yield}}{100}$$
 > >    $$\\\\text{Actual Mass} = 1.76\\\\text{ g} \\\\times \\\\frac{85.0}{100} = 1.50\\\\text{ g}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Industrial Methanol Yield Calculation (Tonnes & Kilograms)
+> **Question:** A chemical plant manufactures methanol from carbon monoxide and hydrogen:
+> $$\\\\text{CO(g)} + 2\\\\text{H}_2\\\\text{(g)} \\\\rightarrow \\\\text{CH}_3\\\\text{OH(l)}$$
+> Starting from $4.32\\\\text{ tonnes}$ of carbon monoxide, the manufacturer obtains $4.07\\\\text{ tonnes}$ of methanol. Calculate the percentage yield of methanol.  
+> *(Given $M_r(\\\\text{CO}) = 28.0\\\\text{ g mol}^{-1}, M_r(\\\\text{CH}_3\\\\text{OH}) = 32.0\\\\text{ g mol}^{-1}$, $1\\\\text{ tonne} = 1 \\\\times 10^6\\\\text{ g}$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the moles of carbon monoxide starting reactant ($n$):**
+> >    $$n(\\\\text{CO}) = \\\\frac{4.32 \\\\times 10^6\\\\text{ g}}{28.0\\\\text{ g mol}^{-1}} = 1.543 \\\\times 10^5\\\\text{ mol}$$
+> > 
+> > 2. **Determine the theoretical moles of methanol produced (1:1 ratio):**
+> >    $$n(\\\\text{CH}_3\\\\text{OH}) = 1.543 \\\\times 10^5\\\\text{ mol}$$
+> > 
+> > 3. **Calculate the theoretical mass of methanol:**
+> >    $$\\\\text{Theoretical Mass} = (1.543 \\\\times 10^5\\\\text{ mol}) \\\\times 32.0\\\\text{ g mol}^{-1} = 4.937 \\\\times 10^6\\\\text{ g} = 4.937\\\\text{ tonnes}$$
+> > 
+> > 4. **Calculate the percentage yield:**
+> >    $$\\\\text{Percentage Yield} = \\\\frac{\\\\text{Actual Yield}}{\\\\text{Theoretical Yield}} \\\\times 100\\\\%$$
+> >    $$\\\\text{Percentage Yield} = \\\\frac{4.07\\\\text{ tonnes}}{4.937\\\\text{ tonnes}} \\\\times 100\\\\% = 82.4\\\\%$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Percentage Yield Checkpoints ($\\\\text{CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O}$ & Ethanoic Acid)
+> **Question:** 
+> 1. A student prepares a sample of copper(II) sulfate crystals, $\\\\text{CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O}$, weighing $7.85\\\\text{ g}$. She started with $4.68\\\\text{ g}$ of copper(II) oxide ($\\\\text{CuO}$). What is the percentage yield?  
+>    *(Given $M_r(\\\\text{CuO}) = 79.5\\\\text{ g mol}^{-1}, M_r(\\\\text{CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O}) = 249.6\\\\text{ g mol}^{-1}$)*
+> 2. An industrial manufacturer makes ethanoic acid using the reaction:
+>    $$\\\\text{CH}_3\\\\text{OH(l)} + \\\\text{CO(g)} \\\\rightarrow \\\\text{CH}_3\\\\text{COOH(l)}$$
+>    Starting with $50.0\\\\text{ kg}$ of methanol, the manufacturer obtains $89.2\\\\text{ kg}$ of ethanoic acid. Calculate the percentage yield.  
+>    *(Given $M_r(\\\\text{CH}_3\\\\text{OH}) = 32.0\\\\text{ g mol}^{-1}, M_r(\\\\text{CH}_3\\\\text{COOH}) = 60.0\\\\text{ g mol}^{-1}$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1 (Copper Sulfate Crystals Yield):**
+> >    * Calculate moles of starting $\\\\text{CuO}$:
+> >      $$n(\\\\text{CuO}) = \\\\frac{4.68\\\\text{ g}}{79.5\\\\text{ g mol}^{-1}} = 0.05887\\\\text{ mol}$$
+> >    * Since mole ratio is $1:1$, theoretical moles of $\\\\text{CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O} = 0.05887\\\\text{ mol}$
+> >    * Calculate theoretical mass:
+> >      $$\\\\text{Theoretical Mass} = 0.05887 \\\\times 249.6\\\\text{ g mol}^{-1} = 14.69\\\\text{ g}$$
+> >    * Calculate percentage yield:
+> >      $$\\\\text{Percentage Yield} = \\\\frac{7.85\\\\text{ g}}{14.69\\\\text{ g}} \\\\times 100\\\\% = 53.4\\\\%$$
+> > 
+> > 2. **Part 2 (Ethanoic Acid Production Yield):**
+> >    * Calculate moles of methanol ($50.0\\\\text{ kg} = 50,000\\\\text{ g}$):
+> >      $$n(\\\\text{CH}_3\\\\text{OH}) = \\\\frac{50000\\\\text{ g}}{32.0\\\\text{ g mol}^{-1}} = 1562.5\\\\text{ mol}$$
+> >    * Since ratio is $1:1$, theoretical moles of $\\\\text{CH}_3\\\\text{COOH} = 1562.5\\\\text{ mol}$
+> >    * Calculate theoretical mass:
+> >      $$\\\\text{Theoretical Mass} = 1562.5 \\\\times 60.0\\\\text{ g mol}^{-1} = 93,750\\\\text{ g} = 93.75\\\\text{ kg}$$
+> >    * Calculate percentage yield:
+> >      $$\\\\text{Percentage Yield} = \\\\frac{89.2\\\\text{ kg}}{93.75\\\\text{ kg}} \\\\times 100\\\\% = 95.1\\\\%$$
+
+> [!BOX]
+> ### ⚛️ Barry Trost & Industrial Factors of Atom Economy
+> Developed by American chemist **Barry Trost**, **atom economy** evaluates chemical reaction efficiency based on how many reactant atoms end up in the desired product.
+> 
+> * **Formula for Percentage Atom Economy:**
+>   $$\\\\text{Atom Economy} = \\\\frac{M_r(\\\\text{desired product}) \\\\times \\\\text{coefficient}}{\\\\sum M_r(\\\\text{all products}) \\\\times \\\\text{coefficients}} \\\\times 100\\\\%$$
+> 
+> * **Industrial Factors Beyond Percentage Yield:**
+>   * Scarcity and availability of non-renewable raw materials.
+>   * Cost of raw materials.
+>   * Quantity of thermal and electrical energy required.
+>   * Cost and environmental impact of disposing of waste byproducts.
+
+> [!BOX]
+> ### ⚖️ Reaction Types & Atom Economy Rules
+> * **Addition Reactions:** Have **$100\\\\%$ Atom Economy** because all reactant atoms combine into a single desired product (e.g. $\\\\text{C}_2\\\\text{H}_4 + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{C}_2\\\\text{H}_5\\\\text{OH}$).
+> * **Elimination & Substitution Reactions:** Have lower atom economies because they form waste byproducts alongside the desired product.
+> * **Multistep Industrial Reactions:** Generally have low overall atom economies due to cumulative byproduct losses.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Solvay Process & Rocket Fuel Hydrazine Atom Economy
+> **Question:** 
+> 1. Sodium carbonate is manufactured by the Solvay process:
+>    $$\\\\text{CaCO}_3 \\\\text{(s)} + 2\\\\text{NaCl(aq)} \\\\rightarrow \\\\text{Na}_2\\\\text{CO}_3\\\\text{(s)} + \\\\text{CaCl}_2\\\\text{(aq)}$$
+>    Starting with $75.0\\\\text{ kg}$ of $\\\\text{CaCO}_3$, a manufacturer obtains $76.5\\\\text{ kg}$ of $\\\\text{Na}_2\\\\text{CO}_3$. Calculate the percentage yield and atom economy.  
+>    *(Given $M_r: \\\\text{CaCO}_3 = 100.1, \\\\text{Na}_2\\\\text{CO}_3 = 106.0, \\\\text{CaCl}_2 = 111.1$)*
+> 2. Hydrazine ($\\\\text{N}_2\\\\text{H}_4$) rocket fuel is manufactured via:
+>    $$2\\\\text{NH}_3 + \\\\text{NaOCl} \\\\rightarrow \\\\text{N}_2\\\\text{H}_4 + \\\\text{NaCl} + \\\\text{H}_2\\\\text{O}$$
+>    Calculate the percentage atom economy for hydrazine production.  
+>    *(Given $M_r: \\\\text{N}_2\\\\text{H}_4 = 32.0, \\\\text{NaCl} = 58.5, \\\\text{H}_2\\\\text{O} = 18.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1(a): Solvay Process Theoretical Yield & Percentage Yield:**
+> >    $$\\\\text{Theoretical Mass} = \\\\frac{75.0\\\\text{ kg} \\\\times 106.0}{100.1} = 79.42\\\\text{ kg}$$
+> >    $$\\\\text{Percentage Yield} = \\\\frac{76.5\\\\text{ kg}}{79.42\\\\text{ kg}} \\\\times 100\\\\% = 96.3\\\\%$$
+> > 
+> > 2. **Part 1(b): Solvay Process Atom Economy:**
+> >    $$\\\\text{Atom Economy} = \\\\frac{106.0}{106.0 + 111.1} \\\\times 100\\\\% = \\\\frac{106.0}{217.1} \\\\times 100\\\\% = 48.8\\\\%$$
+> > 
+> > 3. **Part 2: Hydrazine Rocket Fuel Atom Economy:**
+> >    $$\\\\text{Atom Economy} = \\\\frac{32.0}{32.0 + 58.5 + 18.0} \\\\times 100\\\\% = \\\\frac{32.0}{108.5} \\\\times 100\\\\% = 29.5\\\\%$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 10: Ethene Hydration vs Dehydration Checkpoints
+> **Question:** 
+> 1. Ethanol is manufactured by the hydration of ethene:
+>    $$\\\\text{C}_2\\\\text{H}_4\\\\text{(g)} + \\\\text{H}_2\\\\text{O(g)} \\\\rightarrow \\\\text{C}_2\\\\text{H}_5\\\\text{OH(g)}$$
+>    What is the percentage atom economy of this process?
+> 2. Ethene is manufactured by the dehydration of ethanol:
+>    $$\\\\text{C}_2\\\\text{H}_5\\\\text{OH(g)} \\\\rightarrow \\\\text{C}_2\\\\text{H}_4\\\\text{(g)} + \\\\text{H}_2\\\\text{O(g)}$$
+>    Calculate the percentage atom economy for producing ethene in this reaction.  
+>    *(Given $M_r: \\\\text{C}_2\\\\text{H}_4 = 28.0, \\\\text{H}_2\\\\text{O} = 18.0, \\\\text{C}_2\\\\text{H}_5\\\\text{OH} = 46.0$)*
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Part 1 (Ethene Hydration Atom Economy):**
+> >    * This is an **addition reaction** with a single product ($\\\\text{C}_2\\\\text{H}_5\\\\text{OH}$).
+> >    * All reactant atoms are incorporated into the desired product.
+> >    * **Atom Economy = $100\\\\%$**
+> > 
+> > 2. **Part 2 (Ethanol Dehydration Atom Economy for Ethene):**
+> >    * Desired product: Ethene ($\\\\text{C}_2\\\\text{H}_4, M_r = 28.0$)
+> >    * Waste byproduct: Water ($\\\\text{H}_2\\\\text{O}, M_r = 18.0$)
+> >    * Formula:
+> >      $$\\\\text{Atom Economy} = \\\\frac{28.0}{28.0 + 18.0} \\\\times 100\\\\% = \\\\frac{28.0}{46.0} \\\\times 100\\\\% = 60.9\\\\%$$
 `,
         keyPoints: [
             'High yield does not necessarily mean high atom economy.',
