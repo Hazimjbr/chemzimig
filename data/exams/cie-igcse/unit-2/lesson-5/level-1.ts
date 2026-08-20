@@ -1,21 +1,22 @@
-﻿import { Question } from '../../../types';
+import { Question } from '../../../types';
 
-// Metallic Bonding - Level 1 (Easy)
+// Giant Covalent Structures and Metallic Bonding - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u2_l5_lv1_1-20260106",
-    question: "Sample Easy question about Metallic Bonding - replace with real content.",
+    id: "ex_ci_u2_l5_lv1_1-2026",
+    question: "Which model correctly describes the structure of metallic bonding in copper metal?",
     options: [
-      { text: "Option A" },
-      { text: "Option B" },
-      { text: "Option C" },
-      { text: "Option D" }
+      { text: "A regular lattice of positive copper metal ions surrounded by a 'sea' of mobile delocalised electrons" },
+      { text: "Negative copper ions held tightly by shared pairs of covalent electrons" },
+      { text: "Alternating positive and negative ions held by strong ionic bonds" },
+      { text: "Individual copper molecules held together by weak intermolecular forces" }
     ],
-    correctAnswer: 1,
-    explanation: "Explanation for the correct answer.",
+    correctAnswer: 0,
+    explanation: "* Metallic bonding is defined as the electrostatic attraction between a regular lattice of positive metal cations and a surrounding 'sea' of mobile delocalised electrons.\n* The outer shell electrons are free to move throughout the entire metallic structure.",
     level: 1,
     topic: "atoms-elements",
     curriculum: "igcse",
-    createdAt: "2026-06-17T06:52:43Z"
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Specimen Paper 2 Q9",
+    createdAt: "2026-05-19T10:00:00Z"
   }
 ];

@@ -702,7 +702,7 @@ export default function QuizzesPage() {
 
         let finalScore = 0;
         const finalUserAnswers: Array<{ questionId: string; selectedAnswer: number; isCorrect: boolean }> = [];
-        const finalAttempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean }> = [];
+        const finalAttempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean; unitId?: string }> = [];
 
         questions.forEach((q, idx) => {
             const selectedOpt = answers[idx];

@@ -1,21 +1,59 @@
-﻿import { Question } from '../../../types';
+import { Question } from '../../../types';
 
-// Reacting Masses - Level 3 (Hard)
+// Concentrations, Yield & Purity - Level 3 (Hard)
 export const level3Questions: Question[] = [
   {
-    id: "ex_ci_u3_l5_lv3_1-20260106",
-    question: "Sample Hard question about Reacting Masses - replace with real content.",
+    id: "ex_ci_u3_l5_lv3_1-2026",
+    question: "In a titration, 25.0 cm³ of 0.10 mol/dm³ sodium hydroxide (NaOH) is neutralised by 20.0 cm³ of dilute sulfuric acid (H₂SO₄):\n2NaOH + H₂SO₄ → Na₂SO₄ + 2H₂O\nWhat is the concentration of the sulfuric acid in mol/dm³?",
     options: [
-      { text: "Option A" },
-      { text: "Option B" },
-      { text: "Option C" },
-      { text: "Option D" }
+      { text: "0.0625 mol/dm³", isCorrect: true },
+      { text: "0.125 mol/dm³" },
+      { text: "0.050 mol/dm³" },
+      { text: "0.250 mol/dm³" }
     ],
-    correctAnswer: 1,
-    explanation: "Explanation for the correct answer.",
+    correctAnswer: 0,
+    explanation: "* Calculate moles of NaOH used: $\\text{Moles} = \\text{Volume in dm}^3 \\times \\text{Concentration} = 0.0250 \\times 0.10 = 0.0025\\text{ mol}$.\n* From the balanced equation, the molar ratio of NaOH to H₂SO₄ is 2:1.\n* Moles of H₂SO₄ required $= 0.0025 / 2 = 0.00125\\text{ mol}$.\n* Calculate concentration of H₂SO₄: $\\text{Concentration} = \\text{Moles} / \\text{Volume in dm}^3 = 0.00125 / 0.0200 = 0.0625\\text{ mol/dm}^3$.",
     level: 3,
     topic: "stoichiometry",
     curriculum: "igcse",
-    createdAt: "2026-06-17T06:52:43Z"
+    paperType: "mcq",
+    source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q54",
+    createdAt: "2026-08-20T13:35:00Z"
+  },
+  {
+    id: "ex_ci_u3_l5_lv3_2-2026",
+    question: "What volume of 0.50 mol/dm³ sodium carbonate solution, Na₂CO₃, reacts completely with 25 cm³ of 2.0 mol/dm³ nitric acid, HNO₃?\nNa₂CO₃ + 2HNO₃ → 2NaNO₃ + H₂O + CO₂",
+    options: [
+      { text: "50 cm³", isCorrect: true },
+      { text: "25 cm³" },
+      { text: "12.5 cm³" },
+      { text: "100 cm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of HNO₃ $= 0.025 \\times 2.0 = 0.050\\text{ mol}$.\n* From the balanced equation, 1 mole of Na₂CO₃ reacts with 2 moles of HNO₃.\n* Moles of Na₂CO₃ required $= 0.050 / 2 = 0.025\\text{ mol}$.\n* Volume of Na₂CO₃ solution $= \\text{Moles} / \\text{Concentration} = 0.025 / 0.50 = 0.050\\text{ dm}^3 = 50\\text{ cm}^3$.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q55",
+    createdAt: "2026-08-20T13:40:00Z"
+  },
+  {
+    id: "ex_ci_u3_l5_lv3_3-2026",
+    question: "When excess zinc is added to 50 cm³ of 1.0 mol/dm³ hydrochloric acid, hydrogen gas is produced:\nZn + 2HCl → ZnCl₂ + H₂\nWhat is the volume of hydrogen gas produced at r.t.p. if the percentage yield of the reaction is 80%?\n(Given: Molar volume of gas $= 24\\text{ dm}^3\\text{/mol}$ at r.t.p.)",
+    options: [
+      { text: "0.48 dm³", isCorrect: true },
+      { text: "0.60 dm³" },
+      { text: "0.96 dm³" },
+      { text: "1.20 dm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of HCl used $= 0.050 \\times 1.0 = 0.050\\text{ mol}$.\n* Molar ratio of HCl to H₂ is 2:1.\n* Theoretical moles of H₂ gas produced $= 0.050 / 2 = 0.025\\text{ mol}$.\n* Theoretical volume of H₂ gas produced $= 0.025 \\times 24 = 0.60\\text{ dm}^3$.\n* Actual volume of H₂ gas produced (80% yield) $= 0.60 \\times 0.80 = 0.48\\text{ dm}^3$.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q56",
+    createdAt: "2026-08-20T13:45:00Z"
   }
 ];

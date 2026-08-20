@@ -1,21 +1,59 @@
-﻿import { Question } from '../../../types';
+import { Question } from '../../../types';
 
 // Extraction of Metals - Level 1 (Easy)
 export const level1Questions: Question[] = [
   {
-    id: "ex_ci_u9_l3_lv1_1-20260106",
-    question: "Sample Easy question about Extraction of Metals - replace with real content.",
+    id: "ex_ci_u9_l3_lv1_1-2026",
+    question: "Why is aluminium extracted from its molten ore by electrolysis rather than by heating with carbon in a blast furnace?",
     options: [
-      { text: "Option A" },
-      { text: "Option B" },
-      { text: "Option C" },
-      { text: "Option D" }
+      { text: "Aluminium is more reactive than carbon, so carbon cannot reduce aluminium oxide", isCorrect: true },
+      { text: "Aluminium has a lower melting point than carbon" },
+      { text: "Carbon reacts with aluminium to form an explosive gas" },
+      { text: "Electrolysis is much cheaper than heating with coke" }
     ],
-    correctAnswer: 1,
-    explanation: "Explanation for the correct answer.",
+    correctAnswer: 0,
+    explanation: "* Metals above carbon in the reactivity series (K, Na, Ca, Mg, Al) form very stable oxides and must be extracted using electrolysis of their molten compounds.\n* Metals below carbon (Zn, Fe, Cu) can be extracted by chemical reduction using carbon or carbon monoxide.",
     level: 1,
     topic: "metals",
     curriculum: "igcse",
-    createdAt: "2026-06-17T06:52:43Z"
+    paperType: "mcq",
+    source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q317",
+    createdAt: "2026-08-21T15:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l3_lv1_2-2026",
+    question: "Which of the following lists the four raw materials added into the top of the Blast Furnace for the extraction of iron?",
+    options: [
+      { text: "Iron ore (hematite, Fe₂O₃), coke (carbon), limestone (calcium carbonate), and hot air", isCorrect: true },
+      { text: "Bauxite, cryolite, graphite, and oxygen" },
+      { text: "Iron ore, sand, carbon dioxide, and water" },
+      { text: "Magnetite, calcium chloride, slag, and nitrogen" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The Blast Furnace requires:\n  1. Hematite (Fe₂O₃) as source of iron.\n  2. Coke (C) as fuel and reducing agent.\n  3. Limestone (CaCO₃) to remove acidic silica impurities as slag.\n  4. Hot air to burn coke.",
+    level: 1,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q318",
+    createdAt: "2026-08-21T15:05:00Z"
+  },
+  {
+    id: "ex_ci_u9_l3_lv1_3-2026",
+    question: "What is the main commercial ore from which aluminium is extracted?",
+    options: [
+      { text: "Bauxite (hydrated aluminium oxide)", isCorrect: true },
+      { text: "Hematite" },
+      { text: "Galena" },
+      { text: "Chalcopyrite" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Aluminium is primarily extracted from bauxite, which is purified into alumina (Al₂O₃) before electrolysis.",
+    level: 1,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q319",
+    createdAt: "2026-08-21T15:10:00Z"
   }
 ];
