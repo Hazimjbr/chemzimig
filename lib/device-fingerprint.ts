@@ -185,13 +185,19 @@ function getWebGLFingerprint(): string {
 // Get audio fingerprint
 function getAudioFingerprint(): Promise<string> {
     return new Promise((resolve) => {
-        if (typeof window === 'undefined' || !window.AudioContext) {
-            resolve('');
-            return;
-        }
-
         try {
-            const audioContext = new AudioContext();
+            if (typeof window === 'undefined') {
+                resolve('');
+                return;
+            }
+
+            const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+            if (!AudioContextClass) {
+                resolve('');
+                return;
+            }
+
+            const audioContext = new AudioContextClass();
             const oscillator = audioContext.createOscillator();
             const analyser = audioContext.createAnalyser();
             const gain = audioContext.createGain();

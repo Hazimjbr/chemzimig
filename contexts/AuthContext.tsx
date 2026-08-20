@@ -319,7 +319,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setIsLoading(true);
 
         try {
-            const device = deviceInfo || await getDeviceFingerprint();
+            let device;
+            try {
+                device = deviceInfo || await getDeviceFingerprint();
+            } catch (fpErr) {
+                console.warn('[Auth] Device fingerprint generation fallback:', fpErr);
+                device = {
+                    fingerprint: 'fallback-' + Date.now(),
+                    name: 'Mobile Device',
+                    type: 'mobile' as const,
+                    browser: 'Browser',
+                    os: 'OS',
+                    screenResolution: '0x0',
+                    language: 'en',
+                    timezone: 'UTC',
+                };
+            }
 
             const response = await fetch('/api/auth/login', {
                 method: 'POST',
@@ -337,7 +352,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                 }),
             });
 
-            const result = await response.json();
+            let result;
+            try {
+                result = await response.json();
+            } catch (jsonErr) {
+                console.error('[Auth] Failed to parse JSON response:', jsonErr, response.status);
+                setIsLoading(false);
+                return {
+                    success: false,
+                    error: `Server response error (${response.status}). Please try again or contact support.`,
+                };
+            }
 
             if (result.success && result.user) {
                 const authUser: AuthUser = {
