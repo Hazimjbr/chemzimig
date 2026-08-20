@@ -94,7 +94,7 @@ interface GamificationContextType {
     updateMistakeAfterReview: (questionId: string, wasCorrect: boolean) => void;
     removeMistake: (questionId: string) => void;
     solvedQuestions: Record<string, SolvedQuestionStatus>;
-    saveQuestionAttempts: (attempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean }>) => void;
+    saveQuestionAttempts: (attempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean; unitId?: string; tags?: string[] }>) => void;
 }
 
 const defaultStreak: StreakData = {
@@ -571,10 +571,13 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
         });
     }, [saveState]);
 
-    const saveQuestionAttempts = useCallback((attempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean }>) => {
+    const saveQuestionAttempts = useCallback((attempts: Array<{ questionId: string; difficulty: number; isCorrect: boolean; unitId?: string; tags?: string[] }>) => {
+        const today = new Date().toISOString().split('T')[0];
+        const todayISO = new Date().toISOString();
+
+        // 1. Update solvedQuestions
         setSolvedQuestions(prev => {
             const updated = { ...prev };
-            const today = new Date().toISOString();
 
             attempts.forEach(att => {
                 const existing = updated[att.questionId];
@@ -584,7 +587,7 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                         difficulty: att.difficulty,
                         isCorrect: att.isCorrect,
                         attemptsCount: existing.attemptsCount + 1,
-                        lastAttemptAt: today
+                        lastAttemptAt: todayISO
                     };
                 } else {
                     updated[att.questionId] = {
@@ -592,12 +595,68 @@ export function GamificationProvider({ children }: { children: React.ReactNode }
                         difficulty: att.difficulty,
                         isCorrect: att.isCorrect,
                         attemptsCount: 1,
-                        lastAttemptAt: today
+                        lastAttemptAt: todayISO
                     };
                 }
             });
 
             saveState('solvedQuestions', updated);
+            return updated;
+        });
+
+        // 2. Synchronously update Leitner Spaced Repetition mistake inbox
+        setMistakeInbox(prev => {
+            const updated = [...prev];
+
+            attempts.forEach(att => {
+                const existingIndex = updated.findIndex(m => m.questionId === att.questionId);
+
+                if (!att.isCorrect) {
+                    // Reset or add to Box 1 (Review immediately / tomorrow)
+                    if (existingIndex >= 0) {
+                        updated[existingIndex] = {
+                            ...updated[existingIndex],
+                            wrongCount: updated[existingIndex].wrongCount + 1,
+                            interval: 1,
+                            nextReviewDate: today,
+                            lastReviewedAt: today,
+                        };
+                    } else {
+                        updated.push({
+                            questionId: att.questionId,
+                            unitId: att.unitId || 'general',
+                            level: att.difficulty,
+                            tags: att.tags || [],
+                            wrongCount: 1,
+                            interval: 1,
+                            nextReviewDate: today,
+                            lastReviewedAt: today,
+                        });
+                    }
+                } else {
+                    // Correct answer: advance Leitner box if it was in the mistake inbox
+                    if (existingIndex >= 0) {
+                        const m = updated[existingIndex];
+                        const nextIntervals = [1, 3, 7, 14, 30];
+                        const currentIdx = nextIntervals.indexOf(m.interval);
+                        const newInterval = currentIdx >= 0 && currentIdx < nextIntervals.length - 1
+                            ? nextIntervals[currentIdx + 1]
+                            : 30;
+
+                        const nextDate = new Date();
+                        nextDate.setDate(nextDate.getDate() + newInterval);
+
+                        updated[existingIndex] = {
+                            ...m,
+                            interval: newInterval,
+                            nextReviewDate: nextDate.toISOString().split('T')[0],
+                            lastReviewedAt: today,
+                        };
+                    }
+                }
+            });
+
+            saveState('mistakeInbox', updated);
             return updated;
         });
     }, [saveState]);

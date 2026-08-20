@@ -20,11 +20,17 @@ import { allCurricula } from '@/data/curriculum';
 
 export default function DashboardPage() {
     const { user } = useAuth();
-    const { xp, level, streak, dailyChallenges, completedLessons } = useGamification();
+    const { xp, level, streak, dailyChallenges, completedLessons, mistakeInbox } = useGamification();
     const [greeting, setGreeting] = useState('Welcome');
     const [previewLeaderboard, setPreviewLeaderboard] = useState<any[]>([]);
     const [announcements, setAnnouncements] = useState<any[]>([]);
     const [dismissedAnns, setDismissedAnns] = useState<string[]>([]);
+
+    const todayStr = React.useMemo(() => new Date().toISOString().split('T')[0], []);
+    const dueMistakesCount = React.useMemo(() => {
+        return (mistakeInbox || []).filter(m => m.nextReviewDate <= todayStr).length;
+    }, [mistakeInbox, todayStr]);
+    const totalMistakesCount = (mistakeInbox || []).length;
 
     // Resolve track and curriculum dynamically
     const studentTrackId = React.useMemo(() => {
@@ -238,6 +244,46 @@ export default function DashboardPage() {
                 {/* Decorative background vectors */}
                 <div className="absolute -top-12 -right-12 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none" />
+            </div>
+
+            {/* Spaced Repetition & Mistake Bank Action Card */}
+            <div className="glass-card bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/20 p-6 rounded-[2rem] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl shadow-amber-500/5">
+                <div className="flex items-center gap-4">
+                    <div className="p-3.5 rounded-2xl bg-amber-500/15 text-amber-400 border border-amber-500/30">
+                        <Zap className="w-6.5 h-6.5 animate-pulse" />
+                    </div>
+                    <div>
+                        <div className="flex items-center gap-2">
+                            <span className="text-[10px] text-amber-400 font-black uppercase tracking-widest bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
+                                Leitner Memory Engine
+                            </span>
+                            {dueMistakesCount > 0 && (
+                                <span className="text-[10px] text-rose-400 font-bold bg-rose-500/10 px-2 py-0.5 rounded-full border border-rose-500/20 animate-pulse">
+                                    {dueMistakesCount} Due Today
+                                </span>
+                            )}
+                        </div>
+                        <span className="text-white font-extrabold text-base sm:text-lg block mt-1">
+                            {dueMistakesCount > 0
+                                ? `${dueMistakesCount} Question${dueMistakesCount > 1 ? 's' : ''} Scheduled for Spaced Review`
+                                : totalMistakesCount > 0
+                                ? `${totalMistakesCount} Mistake Bank Question${totalMistakesCount > 1 ? 's' : ''} Ready to Master`
+                                : 'Daily Memory Mastery & Spaced Review'}
+                        </span>
+                        <p className="text-xs text-slate-400 mt-0.5 max-w-xl">
+                            {dueMistakesCount > 0
+                                ? 'Reinforce your long-term memory retention before forgetting curves set in.'
+                                : 'Practice targeted recall on tricky concepts with our 5-box Leitner smart repetition schedule.'}
+                        </p>
+                    </div>
+                </div>
+                <Link
+                    href="/dashboard/quizzes"
+                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 px-6 py-3.5 rounded-xl font-extrabold transition-all active:scale-95 text-sm cursor-pointer shadow-lg shadow-amber-500/20 flex-shrink-0"
+                >
+                    Launch Smart Review
+                    <ChevronRight className="w-4 h-4" />
+                </Link>
             </div>
 
             {/* Resume Learning Quick Action */}

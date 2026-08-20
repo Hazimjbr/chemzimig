@@ -241,14 +241,14 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
 
 export default function QuizzesPage() {
     const { user } = useAuth();
-    const { addXP, solvedQuestions, saveQuestionAttempts } = useGamification();
+    const { addXP, solvedQuestions, saveQuestionAttempts, mistakeInbox } = useGamification();
 
     const [allQuestions, setAllQuestions] = useState<LocalQuestion[]>([]);
     
     // Multi-step states
     const [step, setStep] = useState<'mode-select' | 'config' | 'playing' | 'result'>('mode-select');
-    const [selectedMode, setSelectedMode] = useState<'comprehensive' | 'unit' | 'lesson' | 'custom'>('comprehensive');
-    const [selectedFilter, setSelectedFilter] = useState<'all' | 'new' | 'incorrect' | 'correct'>('new');
+    const [selectedMode, setSelectedMode] = useState<'comprehensive' | 'unit' | 'lesson' | 'custom' | 'spaced'>('comprehensive');
+    const [selectedFilter, setSelectedFilter] = useState<'all' | 'new' | 'incorrect' | 'correct' | 'due'>('new');
     
     // Configuration states
     const [selectedSource, setSelectedSource] = useState<'all' | 'exam' | 'quiz'>('all');
@@ -527,15 +527,30 @@ export default function QuizzesPage() {
         )).filter(title => title !== 'Exam Practice Bank');
     }, [allQuestions, studentTrackId, selectedUnit, selectedSource]);
 
+    const todayStr = useMemo(() => new Date().toISOString().split('T')[0], []);
+    const dueMistakeMap = useMemo(() => {
+        const map = new Map<string, number>();
+        (mistakeInbox || []).forEach(m => {
+            if (m.nextReviewDate <= todayStr) {
+                map.set(m.questionId, m.interval || 1);
+            }
+        });
+        return map;
+    }, [mistakeInbox, todayStr]);
+
     // 4. Reset config when mode changes
-    const handleModeSelect = (mode: 'comprehensive' | 'unit' | 'lesson' | 'custom') => {
+    const handleModeSelect = (mode: 'comprehensive' | 'unit' | 'lesson' | 'custom' | 'spaced') => {
         setSelectedMode(mode);
         setSelectedSource('all');
         setSelectedUnit('all');
         setSelectedLesson('all');
         setSelectedLevel('all');
         setSelectedCustomUnits([]);
-        setSelectedFilter('new');
+        if (mode === 'spaced') {
+            setSelectedFilter('due');
+        } else {
+            setSelectedFilter('new');
+        }
         setStep('config');
     };
 
@@ -579,11 +594,18 @@ export default function QuizzesPage() {
         const newCount = filteredPool.filter(q => !solvedQuestions[q.id]).length;
         const incorrect = filteredPool.filter(q => solvedQuestions[q.id] && !solvedQuestions[q.id].isCorrect).length;
         const correct = filteredPool.filter(q => solvedQuestions[q.id] && solvedQuestions[q.id].isCorrect).length;
+        const due = filteredPool.filter(q => dueMistakeMap.has(q.id)).length;
 
-        return { all, new: newCount, incorrect, correct };
-    }, [filteredPool, solvedQuestions]);
+        return { all, new: newCount, incorrect, correct, due };
+    }, [filteredPool, solvedQuestions, dueMistakeMap]);
 
     const activeFilteredQuestions = useMemo(() => {
+        if (selectedFilter === 'due') {
+            const dueList = filteredPool.filter(q => dueMistakeMap.has(q.id));
+            // If no specific due questions, fallback to all incorrect mistakes
+            if (dueList.length > 0) return dueList;
+            return filteredPool.filter(q => solvedQuestions[q.id] && !solvedQuestions[q.id].isCorrect);
+        }
         if (selectedFilter === 'new') {
             return filteredPool.filter(q => !solvedQuestions[q.id]);
         }
@@ -594,7 +616,7 @@ export default function QuizzesPage() {
             return filteredPool.filter(q => solvedQuestions[q.id] && solvedQuestions[q.id].isCorrect);
         }
         return filteredPool;
-    }, [filteredPool, selectedFilter, solvedQuestions]);
+    }, [filteredPool, selectedFilter, solvedQuestions, dueMistakeMap]);
 
     // 5. Generate and start the exam
     const handleStartExam = () => {
@@ -695,7 +717,8 @@ export default function QuizzesPage() {
             finalAttempts.push({
                 questionId: q.id,
                 difficulty: q.rawLevel || 1,
-                isCorrect
+                isCorrect,
+                unitId: q.rawUnitId
             });
         });
 
@@ -779,7 +802,23 @@ export default function QuizzesPage() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <button 
+                            onClick={() => handleModeSelect('spaced')}
+                            className="bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent hover:from-amber-500/15 hover:via-orange-500/10 border border-amber-500/30 hover:border-amber-400/50 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56 shadow-lg shadow-amber-500/5 md:col-span-2 lg:col-span-1 relative overflow-hidden"
+                        >
+                            <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-300 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-amber-500/30 tracking-wider">
+                                Adaptive AI
+                            </div>
+                            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20 group-hover:scale-110 transition-transform">
+                                <RefreshCw className="w-6 h-6 text-amber-400 group-hover:rotate-180 transition-transform duration-500" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold mb-1 text-amber-200">⚡ Spaced Review</h3>
+                                <p className="text-slate-400 text-sm">Leitner memory schedule: Automatically pulls due questions from your Mistake Bank.</p>
+                            </div>
+                        </button>
+
                         <button 
                             onClick={() => handleModeSelect('comprehensive')}
                             className="bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-indigo-500/30 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56"
@@ -810,8 +849,8 @@ export default function QuizzesPage() {
                             onClick={() => handleModeSelect('lesson')}
                             className="bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-indigo-500/30 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56"
                         >
-                            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center border border-amber-500/20 group-hover:scale-110 transition-transform">
-                                <Trophy className="w-6 h-6 text-amber-400" />
+                            <div className="w-12 h-12 rounded-2xl bg-sky-500/10 flex items-center justify-center border border-sky-500/20 group-hover:scale-110 transition-transform">
+                                <Trophy className="w-6 h-6 text-sky-400" />
                             </div>
                             <div>
                                 <h3 className="text-xl font-bold mb-1">Lesson Exam</h3>
@@ -821,7 +860,7 @@ export default function QuizzesPage() {
 
                         <button 
                             onClick={() => handleModeSelect('custom')}
-                            className="bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-indigo-500/30 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56"
+                            className="bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-indigo-500/30 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56 md:col-span-2 lg:col-span-2"
                         >
                             <div className="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 group-hover:scale-110 transition-transform">
                                 <Sliders className="w-6 h-6 text-purple-400" />
@@ -913,13 +952,17 @@ export default function QuizzesPage() {
 
                                 {/* Smart Filtering */}
                                 <div className="flex flex-col gap-2 sm:col-span-2">
-                                    <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Question Filtering</label>
-                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-[#050515]/80 p-1 border border-white/5 rounded-2xl">
+                                    <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest flex items-center justify-between">
+                                        <span>Question Filtering</span>
+                                        <span className="text-amber-400 font-bold">Leitner Smart Schedule</span>
+                                    </label>
+                                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 bg-[#050515]/80 p-1 border border-white/5 rounded-2xl">
                                         {[
-                                            { id: 'new', label: 'Unanswered', count: filterCounts.new },
-                                            { id: 'incorrect', label: 'Answered Incorrectly', count: filterCounts.incorrect },
-                                            { id: 'correct', label: 'Answered Correctly', count: filterCounts.correct },
-                                            { id: 'all', label: 'All Questions', count: filterCounts.all }
+                                            { id: 'due', label: '⚡ Due Review', count: filterCounts.due, highlight: true },
+                                            { id: 'incorrect', label: '❌ Mistakes', count: filterCounts.incorrect },
+                                            { id: 'new', label: '🆕 Unseen', count: filterCounts.new },
+                                            { id: 'correct', label: '✅ Mastered', count: filterCounts.correct },
+                                            { id: 'all', label: '🌐 All', count: filterCounts.all }
                                         ].map(tab => {
                                             const isActive = selectedFilter === tab.id;
                                             return (
@@ -929,12 +972,14 @@ export default function QuizzesPage() {
                                                     onClick={() => setSelectedFilter(tab.id as any)}
                                                     className={`py-3 px-2 rounded-xl text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 ${
                                                         isActive
-                                                            ? 'bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 shadow-lg'
+                                                            ? tab.highlight 
+                                                                ? 'bg-amber-500/20 border border-amber-500/40 text-amber-300 shadow-lg shadow-amber-500/10'
+                                                                : 'bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 shadow-lg'
                                                             : 'text-slate-500 hover:text-slate-300 hover:bg-white/[0.02] border border-transparent'
                                                     }`}
                                                 >
                                                     <span>{tab.label}</span>
-                                                    <span className={`text-[10px] font-medium opacity-80 ${isActive ? 'text-indigo-400' : 'text-slate-600'}`}>
+                                                    <span className={`text-[10px] font-medium opacity-80 ${isActive ? (tab.highlight ? 'text-amber-300' : 'text-indigo-400') : 'text-slate-600'}`}>
                                                         ({tab.count})
                                                     </span>
                                                 </button>

@@ -52,13 +52,17 @@ ChemZim is built for speed, security, and scientific precision.
 - **Client-Side Hook Pre-rendering Isolation:** Configured Suspense boundary wrappers around the Admin sovereign dashboard components (`AdminPage` and `AdminLayout`) to isolate query search parameter hooks (`useSearchParams`) and guarantee clean static generation during Vercel Turbopack builds.
 - **LaTeX Markdown Conflict Prevention:** Escaped chiral asterisks (`*`) in chemistry formulas using `\\ast`, resolved double-underscore bold conflicts (`__n` to `_n`), and replaced subscript braces with unicode subscripts (`C₁₇H₃₅`) to prevent markdown parsers from breaking KaTeX equations.
 
-### 📝 Smart Exam Engine
-- **Unified Lesson Quizzes:** Standardized all interactive lesson quizzes for Pearson Edexcel Unit 4 (Topics 11 to 15) to contain comprehensive questions per topic, fully covering all syllabus sub-topics with high-order past-paper style scenarios. **Added 9 new questions (total 29) to Unit 4 Topic 11 (Kinetics)** covering:
-  - Autocatalysis (definition & sigmoidal curve shape)
-  - Experimental techniques (colorimetry, mass loss, quenching)
-  - Second-order kinetics (half-life trends)
-  - Catalyst poisoning & promoters
-  - Arrhenius pre-exponential factor (A)
+### 📝 Smart Exam Engine & Adaptive Spaced Repetition (Leitner System)
+- **Leitner Spaced Repetition System (⚡ Adaptive Review):** Built-in adaptive memory engine that tracks every question attempt across 5 progressive Leitner review boxes (1, 3, 7, 14, and 30-day review intervals). Mistakes are automatically routed to Box 1 for next-day review, while correct recall advances intervals towards permanent long-term mastery.
+- **Smart Mistake Bank & 5-Way Question Filtering:** Exam Designer (`app/dashboard/quizzes/page.tsx`) features dynamic multi-state question filtering:
+  - `⚡ Due Review`: Questions currently due for memory reinforcement today.
+  - `❌ Mistakes`: Dedicated Mistake Bank for retrying all previously missed questions.
+  - `🆕 Unseen`: Fresh questions never before attempted by the student.
+  - `✅ Mastered`: Questions successfully solved and locked in long-term retention.
+  - `🌐 All Questions`: Unfiltered comprehensive pool.
+- **5 Multi-Style Exam Modes:** Step 1 in Exam Designer provides 5 customizable modes: **⚡ Spaced Review (Adaptive AI)**, **Comprehensive Exam**, **Unit Exam**, **Lesson Exam**, and **Custom Exam**.
+- **Student Dashboard Memory Hub Widget:** Features a live Leitner Memory Engine banner on the main dashboard (`app/dashboard/page.tsx`) showing real-time counters of questions due today with a 1-click **"Launch Smart Review"** CTA.
+- **Unified Lesson Quizzes:** Standardized all interactive lesson quizzes for Pearson Edexcel Unit 4 (Topics 11 to 15) to contain comprehensive questions per topic, fully covering all syllabus sub-topics with high-order past-paper style scenarios.
 - **Consistent Explanation Formatting:** Removed bullet points from quiz explanations for consistency (Rule 15 still applies to explanation clarity).
 - **Sovereign Rule on Explanations:** Establishes a project-wide formatting standard (Rule 15) ensuring all exam/quiz explanations are consistently written as bullet points on separate lines for maximal student clarity.
 - **Graphical Exam Questions:** Integrated a detailed, dark-themed concentration-time SVG decay curve for the decomposition of N₂O₅ utilizing the base64 `[INLINE_SVG:]` token engine. Created 4 linked exam questions evaluating successive half-lives, order of reaction, first-order rate constant calculations, and initial rate of reaction calculations at a specific concentration.
