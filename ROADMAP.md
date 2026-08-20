@@ -363,3 +363,27 @@
 
 5. **إصلاح Build Error في الـ Leaderboard API:**
    - إعادة كتابة [`route.ts`](file:///c:/Users/admin/Projects/chemzim/app/api/leaderboard/route.ts) بالكامل من الصفر لحل خطأ Turbopack الناتج عن نسخة Cache تالفة.
+
+&nbsp;
+
+**إنجازات جلسة اليوم (2026-08-20) — إعادة هيكلة الوحدة الخامسة بالكامل (Topics 16–20) وإثراء بنك الامتحانات بـ 240 سؤالاً:**
+
+1. **إعادة هيكلة منهاج Edexcel A-Level Unit 5 بالكامل ومطابقته 100% لمواصفات Pearson IAL الرسمية:**
+   - **Lesson 1 (Topic 16):** Redox Equilibria.
+   - **Lesson 2 (Topic 17):** Transition Metals and their Chemistry.
+   - **Lesson 3 (Topic 18):** Organic Chemistry – Arenes (شروحات كاملة ومفصلة لتركيب البنزين واستقرار طاقة الرنين وتفاعلات الاستبدال الإليكتروفيلي والفينول).
+   - **Lesson 4 (Topic 19):** Organic Nitrogen Compounds: Amines, Amides, Amino Acids & Proteins (قاعدية الأمينات، تحضير مركبات النيتروجين، أملاح الديازونيوم وأصبغة الآزو، بوليمرات النايلون، والأحماض الأمينية والزويتريون).
+   - **Lesson 5 (Topic 20):** Organic Synthesis & Modern Spectroscopy (كواشف Grignard، تمديد السلسلة الكاربونية، التخليق التراجعي Retrosynthesis، تقنيات التنقية المعملية للمركبات العضوية، ومطيافية التحليل الحديثة NMR, MS, HRMS, TLC, HPLC, GLC).
+   - **Unit 6 Lesson 1:** Practical Skills and Techniques in Chemistry II.
+
+2. **توزيع وفصل بنك الأسئلة والامتحانات لـ Unit 5 (240 سؤالاً بدقة متناهية):**
+   - **Topic 16 (Redox):** 40 سؤالاً مصنفاً (Level 1: 16, Level 2: 12, Level 3: 12).
+   - **Topic 17 (Transition Metals):** 40 سؤالاً مصنفاً (Level 1: 16, Level 2: 12, Level 3: 12).
+   - **Topic 18 (Arenes):** 40 سؤالاً نقياً مخصصاً للبنزين ومشتقاته والفينول وقواعد التوجيه (Level 1: 16, Level 2: 12, Level 3: 12).
+   - **Topic 19 (Nitrogen Compounds):** 40 سؤالاً جديداً شاملاً للأمينات، الأميدات، الأحماض الأمينية، الهجرة الكهربائية والبروتينات (Level 1: 16, Level 2: 12, Level 3: 12).
+   - **Topic 20 (Organic Synthesis & Spectroscopy):** 80 سؤالاً تشمل التخليق العضوي وحسابات وتحليلات الرنين والمطيافية والكروماتوغرافيا (Level 1: 32, Level 2: 24, Level 3: 24).
+
+3. **تحديث السجلات والتحقق عبر متصفح الـ Admin:**
+   - تحديث [registry.ts](file:///c:/Users/admin/Projects/chemzim/data/curriculum/registry.ts) للمناهج ليشمل الدروس 1 إلى 5 للوحدة الخامسة.
+   - تحديث [registry.ts](file:///c:/Users/admin/Projects/chemzim/data/exams/registry.ts) للامتحانات وتفعيل الاستيراد الكامل لكافة المستويات.
+   - فحص وتأكيد سلامة العرض عبر أداة **Admin Smart Question Auditor** والتأكد من مطابقة تصنيفات القوائم المنسدلة وعرض الرموز الكيميائية والـ LaTeX وشروحات النقاط بدون أي أخطاء.

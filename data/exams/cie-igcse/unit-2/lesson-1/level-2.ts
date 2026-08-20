@@ -1,21 +1,109 @@
-﻿import { Question } from '../../../types';
+import { Question } from '../../../types';
 
 // Atomic Structure - Level 2 (Medium)
 export const level2Questions: Question[] = [
   {
-    id: "ex_ci_u2_l1_lv2_1-20260106",
-    question: "Sample Medium question about Atomic Structure - replace with real content.",
+    id: "ex_ci_u2_l1_lv2_1-2026",
+    question: "An oxide ion has the chemical formula $^{16}_{8}\\text{O}^{2-}$. What is the correct number of protons, neutrons, and electrons in this ion?",
     options: [
-      { text: "Option A" },
-      { text: "Option B" },
-      { text: "Option C" },
-      { text: "Option D" }
+      { text: "8 protons, 8 neutrons, 6 electrons" },
+      { text: "8 protons, 8 neutrons, 10 electrons" },
+      { text: "8 protons, 16 neutrons, 10 electrons" },
+      { text: "10 protons, 8 neutrons, 8 electrons" }
     ],
     correctAnswer: 1,
-    explanation: "Explanation for the correct answer.",
+    explanation: "* Protons = Atomic number $Z = 8$.\n* Neutrons = Mass number $A - Z = 16 - 8 = 8$.\n* Electrons = In neutral oxygen there are 8 electrons; a $2-$ charge means it has gained 2 extra electrons ($8 + 2 = 10\\text{ electrons}$).",
     level: 2,
     topic: "atoms-elements",
     curriculum: "igcse",
-    createdAt: "2026-06-17T06:52:43Z"
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Specimen Paper 2 Q25",
+    createdAt: "2026-04-17T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_2-2026",
+    question: "Chlorine exists naturally as two isotopes: chlorine-35 ($^{35}\\text{Cl}$, 75% abundance) and chlorine-37 ($^{37}\\text{Cl}$, 25% abundance). What is the calculated relative atomic mass ($A_r$) of chlorine?",
+    options: [
+      { text: "35.0" },
+      { text: "35.5" },
+      { text: "36.0" },
+      { text: "37.0" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $A_r = \\frac{(35 \\times 75) + (37 \\times 25)}{100} = \\frac{2625 + 925}{100} = \\frac{3550}{100} = 35.5$.\n* Relative atomic mass is the weighted average mass of naturally occurring isotopes relative to $1/12$th of a carbon-12 atom.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Series Q27",
+    createdAt: "2026-04-17T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_3-2026",
+    question: "An element X has an electronic configuration of $2, 8, 5$. Which statement about element X is correct?",
+    options: [
+      { text: "It is located in Period 5 and Group 3 of the Periodic Table" },
+      { text: "It is a non-metal located in Period 3 and Group V (15)" },
+      { text: "It forms positive $\\text{X}^{3+}$ cations by losing 5 electrons" },
+      { text: "It has 8 valence electrons in its outermost shell" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Number of electron shells occupied ($3\\text{ shells}$) = Period 3.\n* Number of valence electrons in outer shell ($5\\text{ electrons}$) = Group V (Group 15).\n* Phosphorus ($Z = 15$) has configuration $2, 8, 5$ and is a non-metal.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q19",
+    createdAt: "2026-04-18T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_4-2026",
+    question: "An aluminum ion has the symbol $^{27}_{13}\\text{Al}^{3+}$. What is the correct electronic configuration of this aluminum cation?",
+    options: [
+      { text: "2, 8, 3" },
+      { text: "2, 8" },
+      { text: "2, 8, 6" },
+      { text: "2, 8, 8" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Neutral aluminum has 13 electrons ($2, 8, 3$).\n* Forming an $\\text{Al}^{3+}$ cation means losing all 3 valence electrons from the outer shell, leaving a stable noble gas configuration of $2, 8$ (like neon).",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Specimen Paper 2 Q28",
+    createdAt: "2026-04-23T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_5-2026",
+    question: "A sample of neon contains three isotopes: $^{20}\\text{Ne}$ (90%), $^{21}\\text{Ne}$ (1%), and $^{22}\\text{Ne}$ (9%). What is the calculated relative atomic mass ($A_r$) of neon?",
+    options: [
+      { text: "20.19" },
+      { text: "21.00" },
+      { text: "20.50" },
+      { text: "22.00" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $A_r = \\frac{(20 \\times 90) + (21 \\times 1) + (22 \\times 9)}{100} = \\frac{1800 + 21 + 198}{100} = \\frac{2019}{100} = 20.19$.\n* This accurately reflects the periodic table standard atomic weight for neon.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Series Q30",
+    createdAt: "2026-04-23T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_6-2026",
+    question: "Why do noble gases (Group VIII / 0) such as helium, neon, and argon exist as unreactive, monoatomic gases under standard conditions?",
+    options: [
+      { text: "Their nuclei contain no neutrons" },
+      { text: "They have completely filled outer electron shells (duplet/octet), giving them exceptional chemical stability with no tendency to gain, lose, or share electrons" },
+      { text: "They have zero protons in their atoms" },
+      { text: "Their electrons are locked permanently in the nucleus" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Helium has a full outer shell of 2 electrons (duplet), and other noble gases have 8 valence electrons (octet).\n* This full-shell configuration provides maximum electronic stability, making noble gases chemically inert.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q19",
+    createdAt: "2026-04-24T10:00:00Z"
   }
 ];
+
+

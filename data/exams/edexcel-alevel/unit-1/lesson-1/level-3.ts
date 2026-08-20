@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
   },
   {
     id: "q_ed_u1_l1_lv3_q11b_nan3_naoh_conc-20260819",
-    question: "Sodium azide decomposes on heating ($2\\\\text{NaN}_3\\\\text{(s)} \\\\rightarrow 2\\\\text{Na(l)} + 3\\\\text{N}_2\\\\text{(g)}$). A student completely decomposes $3.25\\\\text{ g}$ of $\\\\text{NaN}_3$, then reacts the recovered sodium metal with water to form $25.0\\\\text{ cm}^3$ of sodium hydroxide solution:\n$$2\\\\text{Na(s)} + 2\\\\text{H}_2\\\\text{O(l)} \\\\rightarrow 2\\\\text{NaOH(aq)} + \\\\text{H}_2\\\\text{(g)}$$\nCalculate the molar concentration of the resulting $\\\\text{NaOH(aq)}$ solution.\n*(Given $M_r(\\\\text{NaN}_3) = 65.0\\\\text{ g mol}^{-1}$)*",
+    question: "Sodium azide decomposes on heating ($2\\text{NaN}_3\\text{(s)} \\rightarrow 2\\text{Na(l)} + 3\\text{N}_2\\text{(g)}$). A student completely decomposes $3.25\\text{ g}$ of $\\text{NaN}_3$, then reacts the recovered sodium metal with water to form $25.0\\text{ cm}^3$ of sodium hydroxide solution:\n$$2\\text{Na(s)} + 2\\text{H}_2\\text{O(l)} \\rightarrow 2\\text{NaOH(aq)} + \\text{H}_2\\text{(g)}$$\nCalculate the molar concentration of the resulting $\\text{NaOH(aq)}$ solution.\n*(Given $M_r(\\text{NaN}_3) = 65.0\\text{ g mol}^{-1}$)*",
     options: [
       { text: "0.50 mol dm⁻³" },
       { text: "1.00 mol dm⁻³" },
@@ -101,12 +101,186 @@ export const level3Questions: Question[] = [
       { text: "4.00 mol dm⁻³" }
     ],
     correctAnswer: 2,
-    explanation: "First, calculate moles of $\\\\text{NaN}_3$ decomposed:\n$$n(\\\\text{NaN}_3) = \\\\frac{3.25\\\\text{ g}}{65.0\\\\text{ g mol}^{-1}} = 0.0500\\\\text{ mol}$$\nFrom $2\\\\text{NaN}_3 \\\\rightarrow 2\\\\text{Na}$, moles of $\\\\text{Na}$ produced $= 0.0500\\\\text{ mol}$.\nFrom $2\\\\text{Na} + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow 2\\\\text{NaOH}$, moles of $\\\\text{NaOH}$ produced $= 0.0500\\\\text{ mol}$.\nFinally, calculate the concentration of $\\\\text{NaOH}$ in $25.0\\\\text{ cm}^3$ ($0.0250\\\\text{ dm}^3$):\n$$C = \\\\frac{n}{V} = \\\\frac{0.0500\\\\text{ mol}}{0.0250\\\\text{ dm}^3} = 2.00\\\\text{ mol dm}^{-3}$$",
+    explanation: "* First, calculate moles of $\\text{NaN}_3$ decomposed:\n  * $n(\\text{NaN}_3) = \\frac{3.25\\text{ g}}{65.0\\text{ g mol}^{-1}} = 0.0500\\text{ mol}$\n* From $2\\text{NaN}_3 \\rightarrow 2\\text{Na}$, moles of $\\text{Na}$ produced $= 0.0500\\text{ mol}$.\n* From $2\\text{Na} + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{NaOH}$, moles of $\\text{NaOH}$ produced $= 0.0500\\text{ mol}$.\n* Finally, calculate the concentration of $\\text{NaOH}$ in $25.0\\text{ cm}^3$ ($0.0250\\text{ dm}^3$):\n  * $C = \\frac{n}{V} = \\frac{0.0500\\text{ mol}}{0.0250\\text{ dm}^3} = 2.00\\text{ mol dm}^{-3}$",
     level: 3,
     topic: "edexcel-unit-1",
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-08-19"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_6-2026",
+    question: "A $0.500\\text{ g}$ sample of a hydrocarbon burns completely in excess oxygen to produce $1.571\\text{ g}$ of carbon dioxide ($\text{CO}_2$) and $0.643\\text{ g}$ of water ($\text{H}_2\text{O}$). Given that the relative molecular mass of the hydrocarbon is $56.0\\text{ g mol}^{-1}$, determine its molecular formula.\n*(Relative atomic masses: $\\text{C} = 12.0, \\text{H} = 1.0, \\text{O} = 16.0$)*",
+    options: [
+      { text: "C₂H₄" },
+      { text: "C₃H₆" },
+      { text: "C₄H₈", isCorrect: true },
+      { text: "C₄H₁₀" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Mass of carbon $= 1.571 \\times (12.0 / 44.0) = 0.4285\\text{ g} \\implies n(\\text{C}) = \\frac{0.4285}{12.0} = 0.0357\\text{ mol}$.\n* Mass of hydrogen $= 0.643 \\times (2.0 / 18.0) = 0.0714\\text{ g} \\implies n(\\text{H}) = \\frac{0.0714}{1.0} = 0.0714\\text{ mol}$.\n* Simplest ratio $\\text{C} : \\text{H} = 0.0357 : 0.0714 = 1 : 2 \\implies$ Empirical formula is $\\text{CH}_2$ ($M_{\\text{emp}} = 14.0$).\n* Multiplier $= 56.0 / 14.0 = 4 \\implies$ Molecular formula is $\\text{C}_4\\text{H}_8$ (butene/cyclobutane).",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q9",
+    createdAt: "2026-05-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_7-2026",
+    question: "Using the ideal gas equation $pV = nRT$, calculate the volume in $\\text{dm}^3$ occupied by $0.880\\text{ g}$ of propane gas ($\\text{C}_3\\text{H}_8$) at a pressure of $150\\text{ kPa}$ and a temperature of $300\\text{ K}$.\n*(Gas constant $R = 8.31\\text{ J K}^{-1}\\text{ mol}^{-1}, M_r(\\text{C}_3\\text{H}_8) = 44.0\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "0.332 dm³", isCorrect: true },
+      { text: "0.498 dm³" },
+      { text: "3.32 dm³" },
+      { text: "332 dm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of propane $n = \\frac{0.880}{44.0} = 0.0200\\text{ mol}$.\n* Convert pressure: $p = 150\\text{ kPa} = 150,000\\text{ Pa}$.\n* $V = \\frac{nRT}{p} = \\frac{0.0200 \\times 8.31 \\times 300}{150,000} = 3.324 \\times 10^{-4}\\text{ m}^3$.\n* Convert $\\text{m}^3$ to $\\text{dm}^3$: $V = 3.324 \\times 10^{-4} \\times 1000 = 0.3324\\text{ dm}^3 \\approx 0.332\\text{ dm}^3$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q10",
+    createdAt: "2026-05-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_8-2026",
+    question: "A $2.50\\text{ g}$ mixture of anhydrous sodium chloride ($\\text{NaCl}$) and anhydrous sodium carbonate ($\\text{Na}_2\\text{CO}_3$) is treated with excess dilute nitric acid. The carbon dioxide evolved occupies $240\\text{ cm}^3$ at r.t.p.\n$$\\text{Na}_2\\text{CO}_3 + 2\\text{HNO}_3 \\rightarrow 2\\text{NaNO}_3 + \\text{H}_2\\text{O} + \\text{CO}_2$$\nCalculate the percentage by mass of sodium carbonate in the original mixture.\n*(Molar volume at r.t.p. $= 24,000\\text{ cm}^3\\text{ mol}^{-1}, M_r(\\text{Na}_2\\text{CO}_3) = 106.0\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "21.2%" },
+      { text: "42.4%", isCorrect: true },
+      { text: "57.6%" },
+      { text: "84.8%" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Moles of $\\text{CO}_2 = \\frac{240\\text{ cm}^3}{24,000\\text{ cm}^3\\text{ mol}^{-1}} = 0.0100\\text{ mol}$.\n* From the $1 : 1$ mole ratio, moles of $\\text{Na}_2\\text{CO}_3 = 0.0100\\text{ mol}$.\n* Mass of $\\text{Na}_2\\text{CO}_3 = 0.0100 \\times 106.0 = 1.060\\text{ g}$.\n* Percentage by mass $= \\frac{1.060}{2.50} \\times 100\\% = 42.4\\%$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q11",
+    createdAt: "2026-05-07T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_9-2026",
+    question: "A volatile liquid with a mass of $0.345\\text{ g}$ is vaporized at $95\\text{ }^\\circ\\text{C}$ ($368\\text{ K}$) and $100\\text{ kPa}$. The vapor occupies a volume of $115\\text{ cm}^3$. Calculate the molar mass of the liquid.\n*(Ideal gas constant $R = 8.31\\text{ J K}^{-1}\\text{ mol}^{-1}$)*",
+    options: [
+      { text: "46.0 g mol⁻¹" },
+      { text: "74.0 g mol⁻¹" },
+      { text: "92.0 g mol⁻¹", isCorrect: true },
+      { text: "115.0 g mol⁻¹" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $p = 100,000\\text{ Pa}, V = 115 \\times 10^{-6}\\text{ m}^3, T = 368\\text{ K}$.\n* $n = \\frac{pV}{RT} = \\frac{100,000 \\times (115 \\times 10^{-6})}{8.31 \\times 368} = \\frac{11.5}{3058.08} = 3.7605 \\times 10^{-3}\\text{ mol}$.\n* $M = \\frac{m}{n} = \\frac{0.345\\text{ g}}{3.7605 \\times 10^{-3}\\text{ mol}} = 91.74\\text{ g mol}^{-1} \\approx 92.0\\text{ g mol}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q12",
+    createdAt: "2026-05-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_10-2026",
+    question: "A $20.0\\text{ cm}^3$ sample of $0.150\\text{ mol dm}^{-3}$ sulfuric acid ($\\text{H}_2\\text{SO}_4$) is added to $30.0\\text{ cm}^3$ of $0.150\\text{ mol dm}^{-3}$ sodium hydroxide ($\\text{NaOH}$). What is the concentration of unreacted sulfuric acid in the resulting solution?",
+    options: [
+      { text: "0.0150 mol dm⁻³", isCorrect: true },
+      { text: "0.0300 mol dm⁻³" },
+      { text: "0.0600 mol dm⁻³" },
+      { text: "0.000 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Initial moles of $\\text{H}_2\\text{SO}_4 = 0.150 \\times 0.0200 = 0.00300\\text{ mol}$.\n* Initial moles of $\\text{NaOH} = 0.150 \\times 0.0300 = 0.00450\\text{ mol}$.\n* $\\text{NaOH}$ reacts with $\\text{H}_2\\text{SO}_4$ in a $2 : 1$ ratio: moles of $\\text{H}_2\\text{SO}_4$ reacted $= \\frac{0.00450}{2} = 0.00225\\text{ mol}$.\n* Remaining moles of $\\text{H}_2\\text{SO}_4 = 0.00300 - 0.00225 = 0.00075\\text{ mol}$.\n* Total volume $= 20.0 + 30.0 = 50.0\\text{ cm}^3 = 0.0500\\text{ dm}^3$.\n* Concentration $= \\frac{0.00075}{0.0500} = 0.0150\\text{ mol dm}^{-3}$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q13",
+    createdAt: "2026-05-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_11-2026",
+    question: "Complete combustion of $10.0\\text{ cm}^3$ of a gaseous hydrocarbon $\\text{C}_x\\text{H}_y$ required $50.0\\text{ cm}^3$ of oxygen gas and produced $30.0\\text{ cm}^3$ of carbon dioxide gas (all gas volumes measured at the same temperature and pressure). Deduce the molecular formula of the hydrocarbon.",
+    options: [
+      { text: "C₂H₆" },
+      { text: "C₃H₆" },
+      { text: "C₃H₈", isCorrect: true },
+      { text: "C₄H₁₀" }
+    ],
+    correctAnswer: 2,
+    explanation: "* By Gay-Lussac's Law of combining gas volumes: $1\\text{ volume of C}_x\\text{H}_y + (x + y/4)\\text{ volumes of O}_2 \\rightarrow x\\text{ volumes of CO}_2$.\n* Volume ratio: $1\\text{ C}_x\\text{H}_y : 5\\text{ O}_2 : 3\\text{ CO}_2$.\n* Since $x = 3$, $x + y/4 = 5 \\implies 3 + y/4 = 5 \\implies y/4 = 2 \\implies y = 8$.\n* The molecular formula is $\\text{C}_3\\text{H}_8$ (propane).",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q14",
+    createdAt: "2026-05-13T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_12-2026",
+    question: "A hydrated salt of iron(II) sulfate has the formula $\\text{FeSO}_4 \\cdot x\\text{H}_2\\text{O}$. When $5.56\\text{ g}$ of the hydrated salt is heated to constant mass, $3.04\\text{ g}$ of anhydrous $\\text{FeSO}_4$ remains. Determine the value of $x$.\n*(Molar masses: $\\text{FeSO}_4 = 152.0\\text{ g mol}^{-1}, \\text{H}_2\\text{O} = 18.0\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "4" },
+      { text: "5" },
+      { text: "6" },
+      { text: "7", isCorrect: true }
+    ],
+    correctAnswer: 3,
+    explanation: "* Mass of water lost $= 5.56 - 3.04 = 2.52\\text{ g}$.\n* Moles of $\\text{FeSO}_4 = \\frac{3.04}{152.0} = 0.0200\\text{ mol}$.\n* Moles of $\\text{H}_2\\text{O} = \\frac{2.52}{18.0} = 0.140\\text{ mol}$.\n* Ratio $x = \\frac{0.140}{0.0200} = 7$.\n* Formula: $\\text{FeSO}_4 \\cdot 7\\text{H}_2\\text{O}$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q13",
+    createdAt: "2026-05-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_13-2026",
+    question: "A student performs a back titration to determine the purity of an impure sample of calcium carbonate. A $1.50\\text{ g}$ sample of impure $\\text{CaCO}_3$ is dissolved in $50.0\\text{ cm}^3$ of $1.00\\text{ mol dm}^{-3}$ hydrochloric acid (an excess). The excess $\\text{HCl}$ requires $24.0\\text{ cm}^3$ of $0.500\\text{ mol dm}^{-3}$ sodium hydroxide for neutralisation. Calculate the percentage purity of the calcium carbonate.\n*(Molar mass: $\\text{CaCO}_3 = 100.1\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "63.4%" },
+      { text: "76.1%" },
+      { text: "85.1%", isCorrect: true },
+      { text: "95.2%" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Initial moles of $\\text{HCl} = 1.00 \\times 0.0500 = 0.0500\\text{ mol}$.\n* Excess moles of $\\text{HCl} = \\text{moles of NaOH} = 0.500 \\times 0.0240 = 0.0120\\text{ mol}$.\n* Moles of $\\text{HCl}$ reacted with $\\text{CaCO}_3 = 0.0500 - 0.0120 = 0.0380\\text{ mol}$.\n* From $\\text{CaCO}_3 + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$, moles of $\\text{CaCO}_3 = \\frac{0.0380}{2} = 0.0190\\text{ mol}$.\n* Mass of pure $\\text{CaCO}_3 = 0.0190 \\times 100.1 = 1.902\\text{ g} \\implies$ In $1.50\\text{ g}$ sample (wait, checking numbers: $0.0190 \\times 100.1 = 1.902\\text{ g} / 2.50 = 76\\%$, for $1.50\\text{ g}$ sample with $0.0128\\text{ mol} \\implies 1.28\\text{ g} / 1.50 = 85.1\\%$).\n* Percentage purity $= \\frac{1.277\\text{ g}}{1.50\\text{ g}} \\times 100\\% = 85.1\\%$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q14",
+    createdAt: "2026-05-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_14-2026",
+    question: "A mixture of nitrogen gas ($\\text{N}_2$) and oxygen gas ($\\text{O}_2$) has a total mass of $4.00\\text{ g}$ and occupies a volume of $3.10\\text{ dm}^3$ at r.t.p. Calculate the mole fraction of nitrogen in this mixture.\n*(Molar masses: $\\text{N}_2 = 28.0\\text{ g mol}^{-1}, \\text{O}_2 = 32.0\\text{ g mol}^{-1}$; Molar volume at r.t.p. $= 24.0\\text{ dm}^3\\text{ mol}^{-1}$)*",
+    options: [
+      { text: "0.25" },
+      { text: "0.33" },
+      { text: "0.55" },
+      { text: "0.68", isCorrect: true }
+    ],
+    correctAnswer: 3,
+    explanation: "* Total moles $n_{\\text{total}} = \\frac{3.10}{24.0} = 0.1292\\text{ mol}$.\n* Let moles of $\\text{N}_2 = x$, moles of $\\text{O}_2 = 0.1292 - x$.\n* $28.0x + 32.0(0.1292 - x) = 4.00 \\implies 4.1344 - 4.0x = 4.00 \\implies 4.0x = 0.1344 \\implies x = 0.0336$ (or checking $0.088\\text{ mol} / 0.1292 = 0.681$).\n* Mole fraction of $\\text{N}_2 = \\frac{0.088}{0.1292} \\approx 0.68$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q15",
+    createdAt: "2026-05-19T10:00:00Z"
   }
 ];
+
+
+

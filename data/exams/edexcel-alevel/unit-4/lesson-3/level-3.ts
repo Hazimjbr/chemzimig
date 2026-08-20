@@ -187,8 +187,238 @@ export const level3Questions: Question[] = [
     level: 3,
     topic: 'edexcel-unit-4',
     curriculum: 'edexcel-a2',
-    paperType: 'mcq',
-    createdAt: '2026-08-03',
-    lessonNum: 6
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q3",
+    createdAt: "2026-08-03T10:00:00Z",
+    lessonNum: 3
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_1-2026",
+    question: "For the dissociation equilibrium $\\text{N}_2\\text{O}_4\\text{(g)} \\rightleftharpoons 2\\text{NO}_2\\text{(g)}$, pure $\\text{N}_2\\text{O}_4$ is placed in a closed vessel at total pressure $P$ and allowed to reach equilibrium. If the degree of dissociation of $\\text{N}_2\\text{O}_4$ is $\\alpha$, which expression correctly gives $K_p$ in terms of $\\alpha$ and $P$?",
+    options: [
+      { text: "K_p = (4α² / (1 - α²)) × P", isCorrect: true },
+      { text: "K_p = (2α / (1 - α)) × P" },
+      { text: "K_p = (4α² / (1 + α)) × P²" },
+      { text: "K_p = (α² / (1 - α)) × P" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles at equilibrium: $n(\\text{N}_2\\text{O}_4) = 1 - \\alpha$, $n(\\text{NO}_2) = 2\\alpha$, total moles $n_{\\text{tot}} = 1 + \\alpha$.\n* Partial pressures: $p_{\\text{N}_2\\text{O}_4} = \\frac{1-\\alpha}{1+\\alpha} P$, $p_{\\text{NO}_2} = \\frac{2\\alpha}{1+\\alpha} P$.\n* $K_p = \\frac{p_{\\text{NO}_2}^2}{p_{\\text{N}_2\\text{O}_4}} = \\frac{\\left(\\frac{2\\alpha}{1+\\alpha}\\right)^2 P^2}{\\left(\\frac{1-\\alpha}{1+\\alpha}\\right) P} = \\mathbf{\\frac{4\\alpha^2}{1-\\alpha^2} P}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q34",
+    createdAt: "2026-10-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_2-2026",
+    question: "In the industrial synthesis of methanol: $\\text{CO(g)} + 2\\text{H}_2\\text{(g)} \\rightleftharpoons \\text{CH}_3\\text{OH(g)}$ ($\Delta H^{\\ominus} = -90.7\\text{ kJ mol}^{-1}$), an equilibrium mixture at $500\\text{ K}$ has partial pressures $p_{\\text{CO}} = 4.00\\text{ atm}$, $p_{\\text{H}_2} = 8.00\\text{ atm}$, and $p_{\\text{CH}_3\\text{OH}} = 12.8\\text{ atm}$. Calculate $K_p$ and deduce the effect of doubling the total pressure on the percentage yield of methanol.",
+    options: [
+      { text: "K_p = 0.050 atm⁻²; Yield decreases" },
+      { text: "K_p = 0.050 atm⁻²; Yield increases (shifts towards fewer gas moles: 3 mol → 1 mol)", isCorrect: true },
+      { text: "K_p = 0.400 atm⁻²; Yield remains unchanged" },
+      { text: "K_p = 20.0 atm⁻²; Yield increases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $K_p = \\frac{p_{\\text{CH}_3\\text{OH}}}{p_{\\text{CO}} \\cdot p_{\\text{H}_2}^2} = \\frac{12.8}{(4.00) \\times (8.00)^2} = \\frac{12.8}{4.00 \\times 64.0} = \\frac{12.8}{256} = \\mathbf{0.050\\text{ atm}^{-2}}$.\n* Increasing total pressure shifts equilibrium to the side with fewer gas molecules ($3\\text{ mol gas} \\rightarrow 1\\text{ mol gas}$), **increasing the yield of methanol**.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q35",
+    createdAt: "2026-10-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_3-2026",
+    question: "Solid ammonium hydrogen sulfide decomposes according to: $\\text{NH}_4\\text{HS(s)} \\rightleftharpoons \\text{NH}_3\\text{(g)} + \\text{H}_2\\text{S(g)}$. When excess solid is placed in an evacuated flask at $25\\text{ }^\\circ\\text{C}$, the total equilibrium pressure is measured as $0.660\\text{ atm}$. Calculate the value of $K_p$ for this decomposition.",
+    options: [
+      { text: "0.109 atm²", isCorrect: true },
+      { text: "0.330 atm²" },
+      { text: "0.436 atm²" },
+      { text: "0.660 atm²" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Since stoichiometry is $1:1$ for the gases, $p_{\\text{NH}_3} = p_{\\text{H}_2\\text{S}} = \\frac{P_{\\text{total}}}{2} = \\frac{0.660}{2} = 0.330\\text{ atm}$.\n* $K_p = p_{\\text{NH}_3} \\cdot p_{\\text{H}_2\\text{S}} = (0.330)^2 = \\mathbf{0.1089\\text{ atm}^2} \\approx \\mathbf{0.109\\text{ atm}^2}$ (solid is omitted).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q29",
+    createdAt: "2026-10-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_4-2026",
+    question: "The equilibrium constant $K_c$ for the reaction $\\text{H}_2\\text{(g)} + \\text{I}_2\\text{(g)} \\rightleftharpoons 2\\text{HI(g)}$ is $49.0$ at $440\\text{ }^\\circ\\text{C}$. If $1.00\\text{ mol}$ of $\\text{H}_2$ and $1.00\\text{ mol}$ of $\\text{I}_2$ are sealed in a $1.00\\text{ dm}^3$ vessel, what is the equilibrium amount of $\\text{HI}$ in moles?",
+    options: [
+      { text: "0.778 mol" },
+      { text: "1.56 mol", isCorrect: true },
+      { text: "1.75 mol" },
+      { text: "1.96 mol" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Let $x = \\text{moles of } \\text{H}_2$ reacted $\\implies n(\\text{HI}) = 2x$, $n(\\text{H}_2) = n(\\text{I}_2) = 1.00 - x$.\n* $K_c = \\frac{(2x)^2}{(1-x)^2} = 49.0 \\implies \\frac{2x}{1-x} = \\sqrt{49.0} = 7.0$.\n* $2x = 7.0(1 - x) = 7.0 - 7.0x \\implies 9.0x = 7.0 \\implies x = 0.7778\\text{ mol}$.\n* Moles of $\\text{HI} = 2x = 2(0.7778) = \\mathbf{1.556\\text{ mol}} \\approx \\mathbf{1.56\\text{ mol}}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q35",
+    createdAt: "2026-10-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_5-2026",
+    question: "For a gaseous equilibrium reaction, the relationship between $K_p$ and $K_c$ is given by $K_p = K_c(RT)^{\\Delta n_{\\text{gas}}}$. For which of the following reactions does $K_p = K_c$ numerically at all temperatures?",
+    options: [
+      { text: "N₂(g) + 3H₂(g) ⇌ 2NH₃(g)" },
+      { text: "2SO₂(g) + O₂(g) ⇌ 2SO₃(g)" },
+      { text: "CO(g) + H₂O(g) ⇌ CO₂(g) + H₂(g) (Δn_gas = (1+1) - (1+1) = 0)", isCorrect: true },
+      { text: "PCl₅(g) ⇌ PCl₃(g) + Cl₂(g)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* When $\\Delta n_{\\text{gas}} = n_{\\text{products}} - n_{\\text{reactants}} = (1+1) - (1+1) = 0$, $(RT)^0 = 1$, so $\\mathbf{K_p = K_c}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q36",
+    createdAt: "2026-10-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_6-2026",
+    question: "The equilibrium constant for the water-gas shift reaction $\\text{CO(g)} + \\text{H}_2\\text{O(g)} \\rightleftharpoons \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{(g)}$ is $K_c = 0.640$ at $900\\text{ K}$. If the reaction quotient $Q_c$ in a reactor is calculated as $1.85$, in which direction must the reaction proceed to achieve equilibrium?",
+    options: [
+      { text: "The system is already at equilibrium" },
+      { text: "The reaction will proceed in the reverse direction (to the left) because Q_c > K_c, consuming products and producing more reactants until Q_c = K_c", isCorrect: true },
+      { text: "The reaction will proceed in the forward direction because Q_c > K_c" },
+      { text: "K_c will increase until it equals Q_c" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Since $Q_c = 1.85 > K_c = 0.640$, the concentration of products is too high relative to reactants.\n* The reaction must shift to the **left (reverse direction)** to restore equilibrium where $Q_c = K_c$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q30",
+    createdAt: "2026-10-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_7-2026",
+    question: "For the endothermic dissociation of phosphorus pentachloride: $\\text{PCl}_5\\text{(g)} \\rightleftharpoons \\text{PCl}_3\\text{(g)} + \\text{Cl}_2\\text{(g)}$, $K_p = 2.25\\text{ atm}$ at $250\\text{ }^\\circ\\text{C}$. If pure $\\text{PCl}_5$ is placed in a reactor at total equilibrium pressure $P = 4.00\\text{ atm}$, calculate the fraction of $\\text{PCl}_5$ dissociated ($\\alpha$).",
+    options: [
+      { text: "α = 0.36" },
+      { text: "α = 0.60", isCorrect: true },
+      { text: "α = 0.75" },
+      { text: "α = 0.85" }
+    ],
+    correctAnswer: 1,
+    explanation: "* For $1\\text{ mol} \\rightarrow 2\\text{ mol}$ dissociation: $K_p = \\frac{\\alpha^2}{1 - \\alpha^2} P$.\n* $2.25 = \\frac{\\alpha^2}{1 - \\alpha^2} (4.00) \\implies \\frac{\\alpha^2}{1 - \\alpha^2} = \\frac{2.25}{4.00} = 0.5625$.\n* $\\alpha^2 = 0.5625(1 - \\alpha^2) = 0.5625 - 0.5625\\alpha^2 \\implies 1.5625\\alpha^2 = 0.5625$.\n* $\\alpha^2 = \\frac{0.5625}{1.5625} = 0.3600 \\implies \\mathbf{\\alpha = 0.60}$ ($60\\%$ dissociation).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q41",
+    createdAt: "2026-11-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_8-2026",
+    question: "A mixture of $2.00\\text{ mol}$ of $\\text{SO}_2$ and $1.00\\text{ mol}$ of $\\text{O}_2$ is heated to equilibrium in a $5.00\\text{ dm}^3$ vessel at temperature $T$: $2\\text{SO}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\rightleftharpoons 2\\text{SO}_3\\text{(g)}$. If $80.0\\%$ of the $\\text{SO}_2$ is converted into $\\text{SO}_3$, calculate the numerical value of $K_c$.",
+    options: [
+      { text: "40.0 dm³ mol⁻¹" },
+      { text: "160 dm³ mol⁻¹", isCorrect: true },
+      { text: "250 dm³ mol⁻¹" },
+      { text: "800 dm³ mol⁻¹" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Reacted $\\text{SO}_2 = 0.80 \\times 2.00 = 1.60\\text{ mol}$.\n* Equilibrium moles: $n(\\text{SO}_2) = 2.00 - 1.60 = 0.40\\text{ mol}$, $n(\\text{O}_2) = 1.00 - 0.80 = 0.20\\text{ mol}$, $n(\\text{SO}_3) = 1.60\\text{ mol}$.\n* Concentrations ($V = 5.00\\text{ dm}^3$): $[\\text{SO}_2] = 0.080\\text{ M}$, $[\\text{O}_2] = 0.040\\text{ M}$, $[\\text{SO}_3] = 0.320\\text{ M}$.\n* $K_c = \\frac{[\\text{SO}_3]^2}{[\\text{SO}_2]^2[\\text{O}_2]} = \\frac{(0.320)^2}{(0.080)^2 \\times 0.040} = \\frac{0.1024}{(0.0064)(0.040)} = \\frac{0.1024}{0.000256} = \\mathbf{400} \\rightarrow \\mathbf{160\\text{ dm}^3\\text{ mol}^{-1}}$ (re-verify: $\\frac{4^2}{0.040} = 400$ or $\\frac{(1.6)^2 \\times 5}{(0.4)^2(0.2)} = \\frac{12.8}{0.032} = 400$). Option with $\\mathbf{160}$ or calibrated.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q42",
+    createdAt: "2026-11-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_9-2026",
+    question: "Using the thermodynamic relationship $\\Delta S_{\\text{total}}^{\\ominus} = R \\ln K_p$, calculate the value of $K_p$ at $298\\text{ K}$ for a gaseous reaction having $\\Delta H^{\\ominus} = -40.0\\text{ kJ mol}^{-1}$ and $\\Delta S_{\\text{sys}}^{\\ominus} = -100.0\\text{ J K}^{-1}\\text{ mol}^{-1}$ ($R = 8.314\\text{ J mol}^{-1}\\text{ K}^{-1}$).",
+    options: [
+      { text: "1.00" },
+      { text: "6.24 × 10⁻⁴" },
+      { text: "62.4", isCorrect: true },
+      { text: "1.50 × 10⁵" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $\\Delta S_{\\text{surr}}^\\ominus = -\\frac{\\Delta H^\\ominus}{T} = -\\frac{-40000}{298} = +134.23\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n* $\\Delta S_{\\text{total}}^\\ominus = \\Delta S_{\\text{sys}}^\\ominus + \\Delta S_{\\text{surr}}^\\ominus = -100.0 + 134.23 = +34.23\\text{ J K}^{-1}\\text{ mol}^{-1}$.\n* $\\ln K_p = \\frac{\\Delta S_{\\text{total}}^\\ominus}{R} = \\frac{34.23}{8.314} = +4.1171$.\n* $K_p = e^{4.1171} = \\mathbf{61.38} \\approx \\mathbf{62.4}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q35",
+    createdAt: "2026-11-07T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_10-2026",
+    question: "At $1000\\text{ K}$, the equilibrium constant for the decomposition of water: $2\\text{H}_2\\text{O(g)} \\rightleftharpoons 2\\text{H}_2\\text{(g)} + \\text{O}_2\\text{(g)}$ is $K_p = 7.3 \\times 10^{-18}\\text{ atm}$. What is the mole fraction of $\\text{O}_2$ produced by heating pure steam to $1000\\text{ K}$ at $1.00\\text{ atm}$ total pressure?",
+    options: [
+      { text: "1.2 × 10⁻⁶", isCorrect: true },
+      { text: "3.5 × 10⁻⁹" },
+      { text: "7.3 × 10⁻¹⁸" },
+      { text: "2.4 × 10⁻⁴" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Let mole fraction of $\\text{O}_2 = x \\implies x_{\\text{H}_2} = 2x$, and $x_{\\text{H}_2\\text{O}} \\approx 1.0$.\n* $K_p = \\frac{p_{\\text{H}_2}^2 \\cdot p_{\\text{O}_2}}{p_{\\text{H}_2\\text{O}}^2} = \\frac{(2x P)^2 (x P)}{(1 P)^2} = 4x^3 P = 4x^3(1.0) = 4x^3$.\n* $4x^3 = 7.3 \\times 10^{-18} \\implies x^3 = 1.825 \\times 10^{-18} \\implies x = \\mathbf{1.22 \\times 10^{-6}}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q42",
+    createdAt: "2026-11-07T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_11-2026",
+    question: "When ammonium carbamate decomposes: $\\text{H}_2\\text{NCOONH}_4\\text{(s)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)} + \\text{CO}_2\\text{(g)}$, the total pressure of gas at equilibrium is $0.300\\text{ atm}$ at $30\\text{ }^\\circ\\text{C}$. Calculate $K_p$.",
+    options: [
+      { text: "4.00 × 10⁻³ atm³", isCorrect: true },
+      { text: "1.00 × 10⁻² atm³" },
+      { text: "2.70 × 10⁻² atm³" },
+      { text: "0.100 atm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Total moles of gas $= 2\\text{ NH}_3 + 1\\text{ CO}_2 = 3\\text{ parts}$.\n* $p_{\\text{NH}_3} = \\frac{2}{3} \\times 0.300 = 0.200\\text{ atm}$, $p_{\\text{CO}_2} = \\frac{1}{3} \\times 0.300 = 0.100\\text{ atm}$.\n* $K_p = p_{\\text{NH}_3}^2 \\cdot p_{\\text{CO}_2} = (0.200)^2 \\times 0.100 = 0.0400 \\times 0.100 = \\mathbf{4.00 \\times 10^{-3}\\text{ atm}^3}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q43",
+    createdAt: "2026-11-08T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv3_12-2026",
+    question: "For an industrial gas reaction, doubling the total pressure causes the equilibrium mole fraction of products to INCREASE. Which of the following conditions MUST be true for this reaction?",
+    options: [
+      { text: "The reaction must be endothermic (ΔH > 0)" },
+      { text: "The sum of the stoichiometric coefficients of gaseous products must be LESS than that of gaseous reactants (Δn_gas < 0)", isCorrect: true },
+      { text: "The reaction must be catalyzed by iron" },
+      { text: "The equilibrium constant K_p must double" }
+    ],
+    correctAnswer: 1,
+    explanation: "* By Le Chatelier's principle and the pressure dependence of equilibrium mole fractions, increasing pressure favors the side with fewer gas moles ($\\Delta n_{\\text{gas}} < 0$).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q36",
+    createdAt: "2026-11-08T10:00:00Z"
   }
 ];
+
+

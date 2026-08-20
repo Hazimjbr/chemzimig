@@ -75,7 +75,7 @@ export const level2Questions: Question[] = [
   },
   {
     id: "q_ed_u1_l1_lv2_q9d_pcl_empirical-20260819",
-    question: "A chloride of phosphorus contains $30.39\\\\%$ phosphorus and $69.61\\\\%$ chlorine by mass. Deduce its molecular formula and systematic name if its relative formula mass is $207.8\\\\text{ g mol}^{-1}$.\n*(Relative atomic masses: $\\\\text{P} = 31.0, \\\\text{Cl} = 35.5$)*",
+    question: "A chloride of phosphorus contains $30.39\\%$ phosphorus and $69.61\\%$ chlorine by mass. Deduce its molecular formula and systematic name if its relative formula mass is $207.8\\text{ g mol}^{-1}$.\n*(Relative atomic masses: $\\text{P} = 31.0, \\text{Cl} = 35.5$)*",
     options: [
       { text: "Phosphorus trichloride (PCl₃)" },
       { text: "Phosphorus pentachloride (PCl₅)" },
@@ -83,12 +83,186 @@ export const level2Questions: Question[] = [
       { text: "Phosphorus monochloride (PCl)" }
     ],
     correctAnswer: 2,
-    explanation: "First, calculate moles of each element:\n$n(\\\\text{P}) = \\\\frac{30.39}{31.0} = 0.9803\\\\text{ mol}$\n$n(\\\\text{Cl}) = \\\\frac{69.61}{35.5} = 1.9608\\\\text{ mol}$\nSimplest mole ratio $\\\\text{P} : \\\\text{Cl} = 1 : 2 \\\\implies$ Empirical formula is $\\\\text{PCl}_2$ ($M_{\\\\text{emp}} = 31.0 + 71.0 = 102.0$).\nMultiplier $y = \\\\frac{207.8}{102.0} = 2.04 \\\\approx 2$.\nMolecular formula $= (\\\\text{PCl}_2) \\\\times 2 = \\\\text{P}_2\\\\text{Cl}_4$ (Diphosphorus tetrachloride).",
+    explanation: "* First, calculate moles of each element:\n  * $n(\\text{P}) = \\frac{30.39}{31.0} = 0.9803\\text{ mol}$\n  * $n(\\text{Cl}) = \\frac{69.61}{35.5} = 1.9608\\text{ mol}$\n* Simplest mole ratio $\\text{P} : \\text{Cl} = 1 : 2 \\implies$ Empirical formula is $\\text{PCl}_2$ ($M_{\\text{emp}} = 31.0 + 71.0 = 102.0$).\n* Multiplier $y = \\frac{207.8}{102.0} = 2.04 \\approx 2$.\n* Molecular formula $= (\\text{PCl}_2) \\times 2 = \\text{P}_2\\text{Cl}_4$ (Diphosphorus tetrachloride).",
     level: 2,
     topic: "edexcel-unit-1",
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
     createdAt: "2026-08-19"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_6-2026",
+    question: "A hydrated salt $\\text{MgSO}_4 \\cdot x\\text{H}_2\\text{O}$ has a molar mass of $246.4\\text{ g mol}^{-1}$. Given that the anhydrous mass of $\\text{MgSO}_4$ is $120.4\\text{ g mol}^{-1}$, what is the value of the integer $x$?",
+    options: [
+      { text: "5" },
+      { text: "6" },
+      { text: "7", isCorrect: true },
+      { text: "8" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Mass of water of crystallisation $= 246.4 - 120.4 = 126.0\\text{ g mol}^{-1}$.\n* Number of moles of $\\text{H}_2\\text{O}$ ($x$) $= \\frac{126.0}{18.0} = 7$.\n* The formula is $\\text{MgSO}_4 \\cdot 7\\text{H}_2\\text{O}$ (Epsom salt).",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q6",
+    createdAt: "2026-05-04T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_7-2026",
+    question: "Calculate the total number of ions present in $0.250\\text{ mol}$ of solid calcium phosphate, $\\text{Ca}_3(\\text{PO}_4)_2$.\n*(Avogadro constant $L = 6.02 \\times 10^{23}\\text{ mol}^{-1}$)*",
+    options: [
+      { text: "1.51 × 10²³" },
+      { text: "3.01 × 10²³" },
+      { text: "7.53 × 10²³", isCorrect: true },
+      { text: "1.20 × 10²⁴" }
+    ],
+    correctAnswer: 2,
+    explanation: "* One formula unit of $\\text{Ca}_3(\\text{PO}_4)_2$ dissociates into $3\\text{ Ca}^{2+}$ and $2\\text{ PO}_4^{3-}$ ions (total of 5 ions per formula unit).\n* Total moles of ions $= 0.250\\text{ mol} \\times 5 = 1.250\\text{ mol of ions}$.\n* Total number of ions $= 1.250 \\times (6.02 \\times 10^{23}) = 7.525 \\times 10^{23} \\approx 7.53 \\times 10^{23}$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q7",
+    createdAt: "2026-05-04T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_8-2026",
+    question: "In a titration, $25.0\\text{ cm}^3$ of $0.120\\text{ mol dm}^{-3}$ sodium hydroxide solution neutralises $15.0\\text{ cm}^3$ of sulfuric acid solution:\n$$2\\text{NaOH(aq)} + \\text{H}_2\\text{SO}_4\\text{(aq)} \\rightarrow \\text{Na}_2\\text{SO}_4\\text{(aq)} + 2\\text{H}_2\\text{O(l)}$$\nWhat is the concentration of the sulfuric acid?",
+    options: [
+      { text: "0.100 mol dm⁻³", isCorrect: true },
+      { text: "0.200 mol dm⁻³" },
+      { text: "0.050 mol dm⁻³" },
+      { text: "0.150 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of $\\text{NaOH} = C \\times V = 0.120 \\times 0.0250 = 0.00300\\text{ mol}$.\n* From the $2 : 1$ mole ratio, moles of $\\text{H}_2\\text{SO}_4 = \\frac{0.00300}{2} = 0.00150\\text{ mol}$.\n* Concentration of $\\text{H}_2\\text{SO}_4 = \\frac{n}{V} = \\frac{0.00150}{0.0150} = 0.100\\text{ mol dm}^{-3}$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q8",
+    createdAt: "2026-05-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_9-2026",
+    question: "A solution of hydrochloric acid has a concentration of $0.500\\text{ mol dm}^{-3}$. What volume of this acid, in $\\text{cm}^3$, contains exactly $0.0250\\text{ mol}$ of $\\text{HCl}$?",
+    options: [
+      { text: "12.5 cm³" },
+      { text: "25.0 cm³" },
+      { text: "50.0 cm³", isCorrect: true },
+      { text: "100 cm³" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $V = \\frac{n}{C} = \\frac{0.0250\\text{ mol}}{0.500\\text{ mol dm}^{-3}} = 0.0500\\text{ dm}^3$.\n* Converting to $\\text{cm}^3$: $0.0500 \\times 1000 = 50.0\\text{ cm}^3$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q7",
+    createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_10-2026",
+    question: "Calculate the mass of potassium hydroxide, $\\text{KOH}$, required to prepare $250\\text{ cm}^3$ of a $0.200\\text{ mol dm}^{-3}$ solution.\n*(Relative formula mass of $\\text{KOH} = 56.1\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "2.81 g", isCorrect: true },
+      { text: "5.61 g" },
+      { text: "11.2 g" },
+      { text: "28.1 g" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $n = C \\times V = 0.200\\text{ mol dm}^{-3} \\times 0.250\\text{ dm}^3 = 0.0500\\text{ mol}$.\n* $\\text{Mass} = n \\times M = 0.0500\\text{ mol} \\times 56.1\\text{ g mol}^{-1} = 2.805\\text{ g} \\approx 2.81\\text{ g}$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q8",
+    createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_11-2026",
+    question: "Calcium carbonate decomposes on heating according to the equation:\n$$\\text{CaCO}_3\\text{(s)} \\rightarrow \\text{CaO(s)} + \\text{CO}_2\\text{(g)}$$\nWhat mass of calcium oxide is formed when $20.0\\text{ g}$ of calcium carbonate is completely decomposed?\n*(Molar masses: $\\text{CaCO}_3 = 100.1\\text{ g mol}^{-1}, \\text{CaO} = 56.1\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "8.80 g" },
+      { text: "11.2 g", isCorrect: true },
+      { text: "15.0 g" },
+      { text: "20.0 g" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $n(\\text{CaCO}_3) = \\frac{20.0\\text{ g}}{100.1\\text{ g mol}^{-1}} = 0.1998\\text{ mol}$.\n* From the $1 : 1$ mole ratio, $n(\\text{CaO}) = 0.1998\\text{ mol}$.\n* $\\text{Mass of CaO} = 0.1998 \\times 56.1\\text{ g mol}^{-1} = 11.21\\text{ g} \\approx 11.2\\text{ g}$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q9",
+    createdAt: "2026-05-11T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_12-2026",
+    question: "A solution of copper(II) sulfate is diluted by taking $50.0\\text{ cm}^3$ of a $2.00\\text{ mol dm}^{-3}$ stock solution and adding distilled water to make a total volume of $500.0\\text{ cm}^3$. What is the concentration of the diluted solution?",
+    options: [
+      { text: "0.100 mol dm⁻³" },
+      { text: "0.200 mol dm⁻³", isCorrect: true },
+      { text: "0.400 mol dm⁻³" },
+      { text: "1.00 mol dm⁻³" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Using the dilution formula $C_1 V_1 = C_2 V_2$:\n* $C_2 = \\frac{C_1 V_1}{V_2} = \\frac{2.00 \\times 50.0}{500.0} = 0.200\\text{ mol dm}^{-3}$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q8",
+    createdAt: "2026-05-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_13-2026",
+    question: "What mass of sodium chloride, $\\text{NaCl}$, is required to prepare $100\\text{ cm}^3$ of an aqueous solution containing a chloride ion concentration of $0.400\\text{ mol dm}^{-3}$?\n*(Molar mass: $\\text{NaCl} = 58.5\\text{ g mol}^{-1}$)*",
+    options: [
+      { text: "1.17 g" },
+      { text: "2.34 g", isCorrect: true },
+      { text: "4.68 g" },
+      { text: "5.85 g" }
+    ],
+    correctAnswer: 1,
+    explanation: "* 1 mole of $\\text{NaCl}$ yields 1 mole of $\\text{Cl}^-$, so $[\text{NaCl}] = 0.400\\text{ mol dm}^{-3}$.\n* Moles of $\\text{NaCl} = C \\times V = 0.400\\text{ mol dm}^{-3} \\times 0.100\\text{ dm}^3 = 0.0400\\text{ mol}$.\n* $\\text{Mass} = 0.0400\\text{ mol} \\times 58.5\\text{ g mol}^{-1} = 2.34\\text{ g}$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q9",
+    createdAt: "2026-05-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv2_14-2026",
+    question: "Which of the following contains the same number of molecules as $4.40\\text{ g}$ of carbon dioxide, $\\text{CO}_2$ ($M_r = 44.0$)?",
+    options: [
+      { text: "2.80 g of N₂ (Mr = 28.0)", isCorrect: true },
+      { text: "3.20 g of SO₂ (Mr = 64.0)" },
+      { text: "1.60 g of CH₄ (Mr = 16.0)" },
+      { text: "4.40 g of N₂O (Mr = 44.0)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of $\\text{CO}_2 = \\frac{4.40}{44.0} = 0.100\\text{ mol}$.\n* For $\\text{N}_2$: $n = \\frac{2.80}{28.0} = 0.100\\text{ mol}$.\n* Since both have $0.100\\text{ mol}$, they contain the exact same number of molecules ($0.100 \\times L$).",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q10",
+    createdAt: "2026-05-17T10:00:00Z"
   }
 ];
+
+
+

@@ -2,40 +2,44 @@ import { Question } from "./types";
 import { svgToken } from "../curriculum/svgToken";
 
 export const questionBank: Question[] = [
-  // States of Matter
+  // States of Matter (Unit 1: Lesson 1 & 2)
   {
-    id: "q_som_1-20260106",
+    id: "q_som_1-2026",
     question: "Which of the following describes the changes in arrangement and movement of particles when a liquid becomes a gas?",
     options: [
-      { text: "Particles become closer together and move more slowly." },
-      { text: "Particles become further apart and move more slowly." },
-      { text: "Particles become closer together and move more freely." },
-      { text: "Particles become further apart and move more freely." }
+      { text: "Particles become closer together and move more slowly" },
+      { text: "Particles become further apart and move more slowly" },
+      { text: "Particles become closer together and move more freely" },
+      { text: "Particles become further apart and move more freely" }
     ],
     correctAnswer: 3,
-    explanation: "When a liquid turns into a gas (boiling/evaporation), the particles gain kinetic energy, overcome intermolecular forces, move further apart, and move more freely.",
+    explanation: "* When a liquid boils or evaporates into a gas, particles gain kinetic energy and overcome intermolecular attractions.\n* The particles move much further apart from each other and are able to move freely and rapidly in all directions.",
     level: 1,
     topic: "states-of-matter",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: "2026-01-06"
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Specimen Paper 2 Q1",
+    lessonNum: 1,
+    createdAt: "2026-01-15"
   },
   {
-    id: "q_som_2-20260106",
-    question: "In which state of matter are the particles arranged in a regular, repeating pattern?",
+    id: "q_som_2-2026",
+    question: "In which state of matter are the particles arranged in a regular, repeating lattice pattern?",
     options: [
       { text: "Solid" },
       { text: "Liquid" },
       { text: "Gas" },
-      { text: "Plasma" }
+      { text: "Aqueous solution" }
     ],
     correctAnswer: 0,
-    explanation: "In a solid, particles are closely packed in a regular lattice arrangement and vibrate about fixed positions.",
+    explanation: "* In crystalline solids, particles are tightly packed in a regular, repeating 3D lattice framework.\n* They vibrate only around fixed positions and cannot flow.",
     level: 1,
     topic: "states-of-matter",
     curriculum: "igcse",
     paperType: "mcq",
-    createdAt: "2026-01-06"
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q1",
+    lessonNum: 1,
+    createdAt: "2026-01-15"
   },
 
   // Atoms, Elements, and Compounds

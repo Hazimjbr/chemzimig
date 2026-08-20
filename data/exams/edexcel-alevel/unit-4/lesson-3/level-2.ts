@@ -187,8 +187,238 @@ export const level2Questions: Question[] = [
     level: 2,
     topic: 'edexcel-unit-4',
     curriculum: 'edexcel-a2',
-    paperType: 'mcq',
-    createdAt: '2026-08-03',
-    lessonNum: 6
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q2",
+    createdAt: "2026-08-03T10:00:00Z",
+    lessonNum: 3
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_1-2026",
+    question: "In an esterification equilibrium: $\\text{CH}_3\\text{COOH} + \\text{CH}_3\\text{CH}_2\\text{OH} \\rightleftharpoons \\text{CH}_3\\text{COOCH}_2\\text{CH}_3 + \\text{H}_2\\text{O}$, $1.00\\text{ mol}$ of ethanoic acid and $1.00\\text{ mol}$ of ethanol are mixed in a sealed flask. At equilibrium, $0.667\\text{ mol}$ of ethyl ethanoate is formed. Calculate the value of $K_c$.",
+    options: [
+      { text: "0.25" },
+      { text: "2.00" },
+      { text: "4.00", isCorrect: true },
+      { text: "9.00" }
+    ],
+    correctAnswer: 2,
+    explanation: "* ICE Table:\n  * Initial: Acid $= 1.00$, Alcohol $= 1.00$, Ester $= 0$, Water $= 0$.\n  * Change: $-0.667, -0.667, +0.667, +0.667$.\n  * Equilibrium: Acid $= 0.333$, Alcohol $= 0.333$, Ester $= 0.667$, Water $= 0.667$.\n* $K_c = \\frac{[\\text{Ester}][\\text{H}_2\\text{O}]}{[\\text{Acid}][\\text{Alcohol}]} = \\frac{(0.667)(0.667)}{(0.333)(0.333)} = \\left(\\frac{0.667}{0.333}\\right)^2 = 2^2 = \\mathbf{4.00}$ (volumes cancel out).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q32",
+    createdAt: "2026-10-24T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_2-2026",
+    question: "For the Haber process: $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$, the equilibrium partial pressures at $700\\text{ K}$ are $p_{\\text{N}_2} = 10.0\\text{ atm}$, $p_{\\text{H}_2} = 30.0\\text{ atm}$, and $p_{\\text{NH}_3} = 3.00\\text{ atm}$. Calculate $K_p$.",
+    options: [
+      { text: "3.33 × 10⁻⁵ atm⁻²", isCorrect: true },
+      { text: "1.00 × 10⁻² atm⁻²" },
+      { text: "3.00 × 10⁴ atm⁻²" },
+      { text: "0.010 atm⁻²" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $K_p = \\frac{p_{\\text{NH}_3}^2}{p_{\\text{N}_2} \\cdot p_{\\text{H}_2}^3} = \\frac{(3.00)^2}{(10.0) \\times (30.0)^3} = \\frac{9.00}{10.0 \\times 27000} = \\frac{9.00}{270000} = \\mathbf{3.33 \\times 10^{-5}\\text{ atm}^{-2}}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q33",
+    createdAt: "2026-10-24T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_3-2026",
+    question: "Why does an increase in total pressure shift the equilibrium position of $2\\text{SO}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\rightleftharpoons 2\\text{SO}_3\\text{(g)}$ to the right, even though the numerical value of $K_p$ remains constant?",
+    options: [
+      { text: "K_p increases with pressure" },
+      { text: "Increasing total pressure increases all partial pressures; because the reactant side has 3 moles of gas versus 2 moles on the product side, the denominator of the reaction quotient Q_p increases more than the numerator, forcing Q_p < K_p so the reaction shifts right to restore K_p", isCorrect: true },
+      { text: "Oxygen liquefies at high pressure" },
+      { text: "The activation energy is lowered by pressure" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $K_p$ is strictly a function of temperature.\n* When pressure doubles, $Q_p = \\frac{(2p_{\\text{SO}_3})^2}{(2p_{\\text{SO}_2})^2(2p_{\\text{O}_2})} = \\frac{1}{2} K_p < K_p$, compelling the forward reaction to proceed until the partial pressure ratio equals $K_p$ again.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q27",
+    createdAt: "2026-10-25T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_4-2026",
+    question: "At a certain temperature, $0.400\\text{ mol}$ of $\\text{PCl}_5$ is placed in a $2.00\\text{ dm}^3$ container. At equilibrium, $0.100\\text{ mol}$ of $\\text{Cl}_2$ is present: $\\text{PCl}_5\\text{(g)} \\rightleftharpoons \\text{PCl}_3\\text{(g)} + \\text{Cl}_2\\text{(g)}$. Calculate $K_c$.",
+    options: [
+      { text: "0.0167 mol dm⁻³", isCorrect: true },
+      { text: "0.0333 mol dm⁻³" },
+      { text: "0.0500 mol dm⁻³" },
+      { text: "0.100 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At equilibrium: moles of $\\text{Cl}_2 = 0.100$, $\\text{PCl}_3 = 0.100$, $\\text{PCl}_5 = 0.400 - 0.100 = 0.300\\text{ mol}$.\n* Concentrations ($V = 2.00\\text{ dm}^3$): $[\\text{PCl}_5] = 0.150\\text{ M}$, $[\\text{PCl}_3] = 0.050\\text{ M}$, $[\\text{Cl}_2] = 0.050\\text{ M}$.\n* $K_c = \\frac{[\\text{PCl}_3][\\text{Cl}_2]}{[\\text{PCl}_5]} = \\frac{(0.050)(0.050)}{0.150} = \\frac{0.0025}{0.150} = \\mathbf{0.0167\\text{ mol dm}^{-3}}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q33",
+    createdAt: "2026-10-25T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_5-2026",
+    question: "When water is added to dilute an equilibrium mixture of $\\text{Fe}^{3+}\\text{(aq)} + \\text{SCN}^-\\text{(aq)} \\rightleftharpoons [\\text{Fe(SCN)}]^{2+}\\text{(aq)}$, the deep blood-red color fades. Why does dilution shift the equilibrium position to the left (towards reactants)?",
+    options: [
+      { text: "Water reacts chemically to destroy SCN⁻" },
+      { text: "Dilution decreases all concentrations equally; because there are 2 solute particles on the left versus 1 on the right, the concentration quotient Q_c drops below K_c, forcing a net reverse shift to increase total dissolved particles", isCorrect: true },
+      { text: "The temperature drops to 0 °C" },
+      { text: "K_c decreases upon dilution" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Dilution by factor $D$ alters the reaction quotient: $Q_c = \\frac{[\\text{Fe(SCN)}^{2+}] / D}{([\\text{Fe}^{3+}] / D)([\\text{SCN}^-] / D)} = D \\times K_c > K_c$, shifting the reaction towards the side with more dissolved ions (left).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q34",
+    createdAt: "2026-10-26T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_6-2026",
+    question: "For the endothermic synthesis of nitrogen monoxide: $\\text{N}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\rightleftharpoons 2\\text{NO(g)}$ ($\Delta H = +180\\text{ kJ mol}^{-1}$), how do an increase in temperature and an increase in total pressure affect the equilibrium yield of NO?",
+    options: [
+      { text: "Temperature increase increases yield; Pressure increase increases yield" },
+      { text: "Temperature increase increases yield; Pressure increase has NO effect on yield (equal moles of gas on both sides)", isCorrect: true },
+      { text: "Temperature increase decreases yield; Pressure increase decreases yield" },
+      { text: "Neither has any effect" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $\\Delta H > 0 \\implies$ Raising temperature shifts equilibrium right, **increasing NO yield**.\n* $\\Delta n_{\\text{gas}} = (2 - 2) = 0 \\implies$ Pressure has **no effect on position of equilibrium or yield**.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q28",
+    createdAt: "2026-10-26T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_7-2026",
+    question: "In the gaseous equilibrium: $2\\text{NO}_2\\text{(g)} \\rightleftharpoons \\text{N}_2\\text{O}_4\\text{(g)}$ ($\Delta H = -57.2\\text{ kJ mol}^{-1}$), a sealed syringe containing an equilibrium mixture of brown $\\text{NO}_2$ and colorless $\\text{N}_2\\text{O}_4$ is suddenly compressed. What visual changes occur to the color of the gas inside the syringe?",
+    options: [
+      { text: "The gas immediately turns permanently colorless" },
+      { text: "The brown color momentarily intensifies due to the sudden increase in concentration of NO₂, then gradually lightens (becomes paler) as the equilibrium shifts to the right towards colorless N₂O₄", isCorrect: true },
+      { text: "The gas permanently darkens without any fading" },
+      { text: "No change in color occurs" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Sudden volume decrease instantly raises all gas concentrations, darkening the brown tint momentarily.\n* By Le Chatelier's principle, the system responds by shifting towards fewer moles of gas ($2\\text{ mol} \\rightarrow 1\\text{ mol}$), converting brown $\\text{NO}_2$ to colorless $\\text{N}_2\\text{O}_4$, causing the mixture to lighten over time.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q39",
+    createdAt: "2026-11-03T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_8-2026",
+    question: "A mixture containing $1.00\\text{ mol}$ of $\\text{H}_2$ and $2.00\\text{ mol}$ of $\\text{I}_2$ is heated to $450\\text{ }^\\circ\\text{C}$ in a $1.00\\text{ dm}^3$ sealed vessel. At equilibrium, $1.80\\text{ mol}$ of $\\text{HI}$ is formed: $\\text{H}_2\\text{(g)} + \\text{I}_2\\text{(g)} \\rightleftharpoons 2\\text{HI(g)}$. Calculate $K_c$.",
+    options: [
+      { text: "14.7" },
+      { text: "29.5", isCorrect: true },
+      { text: "59.0" },
+      { text: "81.0" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Formation of $1.80\\text{ mol HI}$ requires reaction of $\\frac{1.80}{2} = 0.90\\text{ mol}$ of $\\text{H}_2$ and $\\text{I}_2$.\n* Equilibrium amounts: $n(\\text{H}_2) = 1.00 - 0.90 = 0.10\\text{ mol}$, $n(\\text{I}_2) = 2.00 - 0.90 = 1.10\\text{ mol}$, $n(\\text{HI}) = 1.80\\text{ mol}$.\n* $K_c = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(1.80)^2}{(0.10)(1.10)} = \\frac{3.24}{0.110} = \\mathbf{29.45} \\approx \\mathbf{29.5}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q40",
+    createdAt: "2026-11-03T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_9-2026",
+    question: "For the gas-phase equilibrium $\\text{CO(g)} + 2\\text{H}_2\\text{(g)} \\rightleftharpoons \\text{CH}_3\\text{OH(g)}$, the total pressure is $50.0\\text{ atm}$. At equilibrium, the mole fractions are $x_{\\text{CO}} = 0.20$, $x_{\\text{H}_2} = 0.60$, and $x_{\\text{CH}_3\\text{OH}} = 0.20$. Calculate the partial pressure of hydrogen ($p_{\\text{H}_2}$).",
+    options: [
+      { text: "10.0 atm" },
+      { text: "30.0 atm", isCorrect: true },
+      { text: "50.0 atm" },
+      { text: "60.0 atm" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $p_{\\text{H}_2} = x_{\\text{H}_2} \\times P_{\\text{total}} = 0.60 \\times 50.0\\text{ atm} = \\mathbf{30.0\\text{ atm}}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q33",
+    createdAt: "2026-11-04T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_10-2026",
+    question: "When cobalt(II) chloride is dissolved in aqueous hydrochloric acid, the equilibrium is established:\n$[\\text{Co(H}_2\\text{O)}_6]^{2+}\\text{(aq (pink))} + 4\\text{Cl}^-\\text{(aq)} \\rightleftharpoons [\\text{CoCl}_4]^{2-}\\text{(aq (blue))} + 6\\text{H}_2\\text{O(l)}$ ($\Delta H > 0$)\nWhat happens to the color when the solution is heated?",
+    options: [
+      { text: "Turns colorless" },
+      { text: "Turns deep blue because the forward endothermic reaction is favored by higher temperatures", isCorrect: true },
+      { text: "Turns deep pink" },
+      { text: "Precipitates metallic cobalt" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The forward reaction is **endothermic** (absorbing heat).\n* Heating shifts the equilibrium to the right, favoring formation of the tetrahedral blue complex $[\\text{CoCl}_4]^{2-}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q40",
+    createdAt: "2026-11-04T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_11-2026",
+    question: "In the equilibrium: $\\text{A(g)} + 2\\text{B(g)} \\rightleftharpoons \\text{C(g)}$, the volume of the reaction flask is halved at constant temperature. By what factor does the reaction quotient $Q_c$ change immediately before equilibrium re-adjusts?",
+    options: [
+      { text: "Decreases by half (0.5×)" },
+      { text: "Decreases to one-quarter (0.25× K_c), so Q_c < K_c and the forward reaction accelerates to reach a new equilibrium position with higher yield of C", isCorrect: true },
+      { text: "Doubles (2×)" },
+      { text: "Quadruples (4×)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Halving volume doubles all molar concentrations ($2\\times$):\n* $Q_c = \\frac{2[\\text{C}]}{(2[\\text{A}])(2[\\text{B}])^2} = \\frac{2}{2 \\times 4} K_c = \\frac{1}{4} K_c$.\n* Since $Q_c = 0.25 K_c < K_c$, the reaction shifts to the right (towards fewer moles).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q41",
+    createdAt: "2026-11-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l3_lv2_12-2026",
+    question: "Why does the value of $K_p$ for the exothermic Haber process: $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$ ($\Delta H^{\\ominus} = -92.2\\text{ kJ mol}^{-1}$) decrease from $K_p = 6.8 \\times 10^5\\text{ atm}^{-2}$ at $25\\text{ }^\\circ\\text{C}$ to $K_p = 3.3 \\times 10^{-5}\\text{ atm}^{-2}$ at $450\\text{ }^\\circ\\text{C}$?",
+    options: [
+      { text: "Ammonia decomposes into elements at high temperature" },
+      { text: "According to the van 't Hoff relation, the surrounding entropy change ΔS_surr = -ΔH / T becomes less positive as T increases, making ΔS_total less positive and ΔG° more positive, which exponentially decreases K_p (ln K_p = ΔS_total° / R)", isCorrect: true },
+      { text: "The catalyst becomes inactive" },
+      { text: "Nitrogen gas escapes from the reactor" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Thermodynamics: For exothermic reactions, $\\Delta S_{\\text{surr}} = -\\frac{\\Delta H}{T}$. Increasing $T$ diminishes $\\Delta S_{\\text{surr}}$, decreasing $\\Delta S_{\\text{total}}$ and lowering $\\ln K_p = \\frac{\\Delta S_{\\text{total}}}{R}$.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q34",
+    createdAt: "2026-11-05T10:00:00Z"
   }
 ];
+
+

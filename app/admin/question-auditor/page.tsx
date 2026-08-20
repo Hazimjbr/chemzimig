@@ -264,6 +264,28 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     return unitId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 };
 
+const getSyllabusTopicLabel = (curriculumId: string, unitNumber: number, lessonNumber: number, defaultTitle: string): string => {
+    const cleanCurriculum = curriculumId.toLowerCase().trim();
+    if (cleanCurriculum.includes('edexcel')) {
+        if (unitNumber === 1) {
+            return `Topic ${lessonNumber}: ${defaultTitle}`;
+        } else if (unitNumber === 2) {
+            return `Topic ${lessonNumber + 5}: ${defaultTitle}`;
+        } else if (unitNumber === 3) {
+            return `Unit 3 Practical: ${defaultTitle}`;
+        } else if (unitNumber === 4) {
+            return `Topic ${lessonNumber + 10}: ${defaultTitle}`;
+        } else if (unitNumber === 5) {
+            return `Topic ${lessonNumber + 15}: ${defaultTitle}`;
+        } else if (unitNumber === 6) {
+            return `Unit 6 Practical: ${defaultTitle}`;
+        }
+    }
+    
+    // Fallback for Cambridge or other tracks: keep simple numbering
+    return `${lessonNumber}. ${defaultTitle}`;
+};
+
 export default function QuestionAuditorPage() {
     const { user, isLoading } = useAuth();
     const router = useRouter();
@@ -296,7 +318,7 @@ export default function QuestionAuditorPage() {
                     const registryKey = `${q.curriculum}-unit-${unitNumber}`;
                     const curriculumLesson = curriculumRegistry[registryKey]?.[q.lessonNum];
                     lessonTitle = curriculumLesson 
-                        ? `${q.lessonNum}. ${curriculumLesson.title}` 
+                        ? getSyllabusTopicLabel(q.curriculum, unitNumber, q.lessonNum, curriculumLesson.title)
                         : `Lesson ${q.lessonNum}`;
                 }
             }
@@ -335,7 +357,7 @@ export default function QuestionAuditorPage() {
                     const registryKey = `${curriculumId}-unit-${unitNumber}`;
                     const curriculumLesson = curriculumRegistry[registryKey]?.[lessonNumber];
                     const lessonTitle = curriculumLesson 
-                        ? `${lessonNumber}. ${curriculumLesson.title}` 
+                        ? getSyllabusTopicLabel(curriculumId, unitNumber, lessonNumber, curriculumLesson.title)
                         : `Lesson ${lessonNumber}`;
                         
                     questions.forEach(q => {
@@ -400,7 +422,7 @@ export default function QuestionAuditorPage() {
                         level,
                         track,
                         unitTitle,
-                        lessonTitle: `${lessonNumber}. ${lessonItem.title}`,
+                        lessonTitle: getSyllabusTopicLabel(curriculumId, unitNumber, lessonNumber, lessonItem.title),
                         createdAt: q.id && q.id.match(/\d{8}/) ? `${q.id.match(/\d{8}/)![0].replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3')}` : undefined
                     });
                 });
