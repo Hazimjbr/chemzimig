@@ -222,12 +222,22 @@ export const parts: LessonPart[] = [
 > 1. **Work on a Smaller Scale:** Use a smaller mass, volume, or lower concentration of hazardous reagents.
 > 2. **Alternative Reagents:** Use alternative methods involving less hazardous substances where possible.
 > 3. **Specific Precautionary Measures:**
->    * *Flammable Liquids (e.g., Ethanol):* Heat using an electric water bath instead of a Bunsen burner, and keep all bottles closed and away from naked flames.
+>    * *Flammable Liquids (e.g., Ethanol):* Heat using an electric water bath or heating mantle instead of a Bunsen burner, and keep all bottles closed and away from naked flames.
 >    * *Toxic/Volatile Vapors:* Carry out reactions that produce toxic gases or volatile vapors inside a **fume cupboard**.
 >    * *Hot Objects:* Hold hot equipment (beakers, crucibles) using tongs to avoid skin burns.
 >    * *Corrosive Substances (Acids & Bases):* Wear gloves to protect skin, and safety goggles to avoid splashes.
 >    * *Storage & Storage Bottles:* Keep chemical bottles closed when not in use. Strong oxidizing agents (like concentrated nitric acid, conc. HNO₃) must be stored away from flammable materials (organic solvents) to prevent spontaneous combustion or explosions. Volatile or light-sensitive chemicals (like HNO₃) should be stored in dark brown glass bottles to prevent decomposition.
 >    * *Neutralization of Acidic Gases:* Use basic scrubbers (such as CaCO₃, NaOH), activated carbon, or dissolve them in water to remove toxic acidic gases.
+
+> [!BOX]
+> ### 📋 Concentration-Dependent Hazards & Apparatus Risks
+> * **Concentration Effect:** The hazard of a substance changes significantly with concentration. For example:
+>   * *Titration HCl (approx. 0.1 mol/dm³):* Very low hazard (irritant).
+>   * *Reagent HCl (1 to 2 mol/dm³):* Moderate hazard.
+>   * *Concentrated HCl (above 10 mol/dm³):* Extremely hazardous (corrosive, fumes heavily in air).
+> * **Thermometer Hazards:** Mercury thermometers contain highly toxic liquid mercury. Use **spirit thermometers** or **digital thermometers** to reduce the risk of toxic exposure if broken.
+> * **Heating Hazards:** Open flames from Bunsen burners pose high ignition risks for flammable organic compounds. Use **electrical heating mantles** or **water baths** to heat safely.
+> * **Apparatus Assembly Risks:** Fitting glass tubes through corks or rubber bungs requires force, posing high glass breakage and hand puncture risks. Use modern glass apparatus connected by **ground glass joints** to eliminate the risk of bungs assembly.
 
 > [!BOX]
 > ### 📋 Chemical Hazard Pictograms

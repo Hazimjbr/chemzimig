@@ -685,5 +685,115 @@ export const lessonQuiz = [
       { text: "$\\text{CH}_3-\\text{CH}_3 \\rightarrow \\text{C}_2\\text{H}_4 + \\text{H}_2$" }
     ],
     explanation: "Homolytic fission is the breaking of a covalent bond where each atom gets one of the shared bonding electrons. This produces neutral, highly reactive free radicals with unpaired electrons (represented by dots). For ethane, homolytic fission of the C-C bond yields two methyl free radicals: $\\text{CH}_3-\\text{CH}_3 \\rightarrow 2\\text{CH}_3^\\bullet$."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q61-MEDIUM-2026",
+    question: "Using dilute sulfuric acid as an example, which statement correctly explains the difference between a hazard and a risk?",
+    options: [
+      { text: "The hazard is that the acid is an irritant (an inherent, fixed chemical property), whereas the risk is the likelihood of it splashing into the eyes during use (which can be reduced by using safety goggles)", isCorrect: true },
+      { text: "The hazard is the probability of the acid causing tissue damage, while the risk is the concentration of the acid" },
+      { text: "The hazard is a property that can be changed by using a fume cupboard, whereas the risk is a fixed property of the acid" },
+      { text: "The hazard is the type of container the acid is stored in, whereas the risk is the temperature of the acid during reaction" }
+    ],
+    explanation: "A hazard is an inherent, fixed property of a substance that has the potential to cause harm (dilute sulfuric acid is inherently an irritant/corrosive). A risk is the probability of that hazard actually causing harm under specific experimental conditions (e.g., the chance of splashing it into your eyes). Wearing eye protection decreases the risk but has no effect on the hazard of the acid itself."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q62-MEDIUM-2026",
+    question: "A liquid to be heated in an organic synthesis experiment is labeled 'highly flammable'. Which pair of control measures would most effectively reduce the risk of fire?",
+    options: [
+      { text: "Heat using an electrical heating mantle instead of a Bunsen burner, and keep the reagent bottle closed when not in use", isCorrect: true },
+      { text: "Wear a lab coat and carry out the heating near an open window" },
+      { text: "Use a mercury thermometer to monitor temperature and heat with a Bunsen burner using a tripod and gauze" },
+      { text: "Dilute the organic compound with water and heat with a Bunsen burner" }
+    ],
+    explanation: "To reduce the risk of fire when heating a flammable liquid:\n1. Eliminate the ignition source by using an electrical heating mantle or water bath instead of a naked Bunsen burner flame.\n2. Keep the container capped to prevent flammable volatile vapors from escaping into the room."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q63-MEDIUM-2026",
+    question: "Why are spirit thermometers or digital thermometers preferred over mercury thermometers in modern school organic chemistry laboratories?",
+    options: [
+      { text: "Mercury is highly toxic, so using spirit or digital thermometers reduces the health risk of toxic exposure if the thermometer breaks", isCorrect: true },
+      { text: "Spirit thermometers have a much higher boiling point than mercury, allowing them to measure combustion temperatures" },
+      { text: "Mercury reacts violently with alkanes and alkenes to release toxic fumes" },
+      { text: "Digital thermometers do not have any hazards associated with their manufacturing" }
+    ],
+    explanation: "Mercury is a highly toxic heavy metal. If a mercury thermometer breaks in the laboratory, it releases toxic mercury liquid and vapors which are hazardous to breathe and difficult to clean up. Spirit (usually containing colored ethanol) or digital thermometers have significantly lower hazards."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q64-MEDIUM-2026",
+    question: "Why is glass apparatus connected by ground glass joints preferred over glass tubes fitted through corks or rubber bungs when assembling distillation setups?",
+    options: [
+      { text: "Pushing glass tubing through rubber bungs requires force and has a high risk of breaking the glass and puncturing the hand, which is avoided by ground glass joints", isCorrect: true },
+      { text: "Ground glass joints are completely flexible, preventing the glass from breaking under thermal expansion" },
+      { text: "Rubber bungs react with volatile organic solvents and dissolve immediately, contaminating the products" },
+      { text: "Ground glass joints act as catalysts for the oxidation of organic vapours" }
+    ],
+    explanation: "Fitting glass tubing through rubber bungs or corks is a common source of laboratory accidents due to the force required, which can cause the thin glass tubing to snap and cause severe hand lacerations. Modern ground glass joints slide together easily without requiring force, eliminating this risk."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q65-EASY-2026",
+    question: "Which statement is true regarding any single fraction collected from the fractional distillation of crude oil?",
+    options: [
+      { text: "It is still a mixture of different hydrocarbon compounds with a defined range of boiling points", isCorrect: true },
+      { text: "It consists of a single pure hydrocarbon compound" },
+      { text: "It contains only unsaturated alkenes with identical chain lengths" },
+      { text: "It contains only compounds that have been chemically cracked during heating" }
+    ],
+    explanation: "Fractional distillation is a physical separation process that separates crude oil into fractions. Each fraction is not a pure compound, but rather a mixture of a smaller number of hydrocarbons that have boiling points within a specific temperature range."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q66-MEDIUM-2026",
+    question: "One molecule of the alkane $\\text{C}_{12}\\text{H}_{26}$ is cracked to form exactly two molecules of ethene and one molecule of another alkane. What is the molecular formula of the other alkane formed?",
+    options: [
+      { text: "$\\text{C}_8\\text{H}_{18}$", isCorrect: true },
+      { text: "$\\text{C}_8\\text{H}_{16}$" },
+      { text: "$\\text{C}_{10}\\text{H}_{22}$" },
+      { text: "$\\text{C}_6\\text{H}_{14}$" }
+    ],
+    explanation: "The equation for the cracking reaction is:\n$$\\text{C}_{12}\\text{H}_{26} \\rightarrow 2\\text{C}_2\\text{H}_4 + \\text{C}_x\\text{H}_y$$\n* Balance carbon: $12 - (2 \\times 2) = 8$ carbons.\n* Balance hydrogen: $26 - (2 \\times 4) = 18$ hydrogens.\nTherefore, the molecular formula of the other alkane is $\\text{C}_8\\text{H}_{18}$ (octane)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q67-MEDIUM-2026",
+    question: "The cracking of one molecule of a long-chain alkane produces exactly two molecules of ethene and one molecule of pentane. What is the molecular formula of the original alkane?",
+    options: [
+      { text: "$\\text{C}_9\\text{H}_{20}$", isCorrect: true },
+      { text: "$\\text{C}_7\\text{H}_{16}$" },
+      { text: "$\\text{C}_9\\text{H}_{18}$" },
+      { text: "$\\text{C}_8\\text{H}_{18}$" }
+    ],
+    explanation: "We can assemble the cracking equation from the products:\n$$\\text{Original Alkane} \\rightarrow 2\\text{C}_2\\text{H}_4 + \\text{C}_5\\text{H}_{12}$$\n* Total carbon atoms: $(2 \\times 2) + 5 = 9$ carbons.\n* Total hydrogen atoms: $(2 \\times 4) + 12 = 20$ hydrogens.\nTherefore, the original alkane is nonane, which has the molecular formula $\\text{C}_9\\text{H}_{20}$."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q68-MEDIUM-2026",
+    question: "Which equation correctly represents the incomplete combustion of propane ($\\text{C}_3\\text{H}_8$) where one of the products is solid carbon (soot)?",
+    options: [
+      { text: "$\\text{C}_3\\text{H}_8 + 4\\text{O}_2 \\rightarrow \\text{C} + 2\\text{CO}_2 + 4\\text{H}_2\\text{O}$", isCorrect: true },
+      { text: "$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$" },
+      { text: "$\\text{C}_3\\text{H}_8 + 3\\text{O}_2 \\rightarrow 3\\text{C} + 4\\text{H}_2\\text{O}$" },
+      { text: "$\\text{C}_3\\text{H}_8 + 2\\text{O}_2 \\rightarrow 3\\text{CO} + 4\\text{H}_2$" }
+    ],
+    explanation: "During incomplete combustion of propane under very limited oxygen, some carbon atoms do not oxidize fully. The equation:\n$$\\text{C}_3\\text{H}_8 + 4\\text{O}_2 \\rightarrow \\text{C} + 2\\text{CO}_2 + 4\\text{H}_2\\text{O}$$\nshows two carbon atoms forming carbon dioxide and one carbon atom forming solid soot ($\\text{C}$), with all hydrogen atoms oxidized to water."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q69-MEDIUM-2026",
+    question: "Which equation correctly represents the incomplete combustion of propane ($\\text{C}_3\\text{H}_8$) to form a mixture of carbon monoxide (CO), carbon dioxide ($\\text{CO}_2$), and water?",
+    options: [
+      { text: "$\\text{C}_3\\text{H}_8 + 4\\text{O}_2 \\rightarrow 2\\text{CO} + \\text{CO}_2 + 4\\text{H}_2\\text{O}$", isCorrect: true },
+      { text: "$\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 2\\text{CO} + \\text{CO}_2 + 4\\text{H}_2\\text{O}$" },
+      { text: "$\\text{C}_3\\text{H}_8 + 3\\text{O}_2 \\rightarrow 3\\text{CO} + 4\\text{H}_2\\text{O}$" },
+      { text: "$\\text{C}_3\\text{H}_8 + 2\\text{O}_2 \\rightarrow \\text{CO} + 2\\text{C} + 4\\text{H}_2\\text{O}$" }
+    ],
+    explanation: "The balanced equation for incomplete combustion forming a mixture of CO and $\\text{CO}_2$ is:\n$$\\text{C}_3\\text{H}_8 + 4\\text{O}_2 \\rightarrow 2\\text{CO} + \\text{CO}_2 + 4\\text{H}_2\\text{O}$$\n* Carbon balance: 3 on left, $2 + 1 = 3$ on right.\n* Hydrogen balance: 8 on left, $4 \\times 2 = 8$ on right.\n* Oxygen balance: $4 \\times 2 = 8$ on left, $2 + (1 \\times 2) + 4 = 8$ on right."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q70-HARD-2026",
+    question: "In the atmosphere, sulfur dioxide ($\\text{SO}_2$) can be further oxidized and react with water to form sulfuric acid ($\\text{H}_2\\text{SO}_4$). Which sequence of equations correctly represents this process?",
+    options: [
+      { text: "$2\\text{SO}_2 + \\text{O}_2 \\rightarrow 2\\text{SO}_3$ followed by $\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4$", isCorrect: true },
+      { text: "\\text{SO}_2 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_3$ followed by $\\text{H}_2\\text{SO}_3 + \\text{O}_2 \\rightarrow \\text{H}_2\\text{SO}_4$", isCorrect: false },
+      { text: "\\text{SO}_2 + \\text{O}_3 \\rightarrow \\text{SO}_3 + \\text{O}_2$ followed by $\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_3$", isCorrect: false },
+      { text: "$2\\text{SO}_2 + \\text{O}_2 \\rightarrow 2\\text{SO}_3$ followed by $2\\text{SO}_3 + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2\\text{SO}_3 + \\text{O}_2$", isCorrect: false }
+    ],
+    explanation: "Sulfur dioxide is oxidized by oxygen in the atmosphere to sulfur trioxide ($2\\text{SO}_2 + \\text{O}_2 \\rightarrow 2\\text{SO}_3$). The sulfur trioxide then dissolves in atmospheric water droplets to produce sulfuric acid ($\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4$), which is a major component of strong acid rain."
   }
 ];

@@ -747,11 +747,14 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
   </g>
 </svg>`)}
 
+> [!NOTE]
+> ### 🔋 Aufbau Energy Sequence & Electronic Structure Evidence
 > * **Energy Sequence:** Electrons fill orbitals in order of increasing energy:
 >   $$1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^{10} 4p^6 5s^2 4d^{10} 5p^6 6s^2 4f^{14} 5d^{10} 6p^6 7s^2 5f^{14} 6d^{10} 7p^6 8s^2$$
 > * **Model Development:** The electronic structure model has been developed from:
 >    * Successive ionization energies of an element, which provide evidence for the existence of quantum shells and the group to which the element belongs
 >    * First ionization energy of successive elements, which provides evidence for electron sub-shells
+
 
 > [!TIP]
 > ### 🧪 Rules for Filling Orbitals
