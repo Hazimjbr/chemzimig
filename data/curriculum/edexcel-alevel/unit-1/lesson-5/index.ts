@@ -663,7 +663,6 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 > ### 🧪 Reactivity & Reactions of Alkenes
 > Alkenes are **more reactive than alkanes** because they contain a carbon-carbon double bond ($\\\\text{C}=\\\\text{C}$). The double bond consists of a strong $\\\\sigma$ (sigma) bond and a **weak $\\\\pi$ (pi) bond**. This $\\\\pi$ bond has high electron density and is relatively weak, making it easy to break during chemical reactions.
 > 
-> ---
 > 
 > ### 🔥 1) Combustion of Alkenes
 > Alkenes undergo combustion reactions when burned in oxygen. Like alkanes, the products depend on the availability of oxygen:

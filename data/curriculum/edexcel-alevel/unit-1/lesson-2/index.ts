@@ -813,7 +813,6 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 >   * e.g. $\\text{Na}^+$, $\\text{F}^-$, $\\text{Mg}^{2+}$, $\\text{O}^{2-}$
 >   * For these ions, radius decreases as nuclear charge (proton number) increases: $\\text{O}^{2-} > \\text{F}^- > \\text{Na}^+ > \\text{Mg}^{2+}$
 > 
-> ---
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Electronic Configuration of Chromium
