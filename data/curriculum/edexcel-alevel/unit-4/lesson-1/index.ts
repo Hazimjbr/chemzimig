@@ -520,8 +520,7 @@ const compoundPDecompositionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewB
   </g>
 </svg>`;
 
-
-const sn2ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const sn2ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" class="w-full max-w-3xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
     <marker id="sn2arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
@@ -530,41 +529,118 @@ const sn2ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#3b82f6" />
     </marker>
   </defs>
-  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">S_N2 Mechanism: Reaction Energy Profile (Single Transition State)</text>
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">SN2 Mechanism: Reaction Energy Profile (Single Transition State)</text>
 
-  <g transform="translate(45, 20)">
+  <g transform="translate(60, 40)">
     <!-- Axes -->
-    <line x1="60" y1="240" x2="60" y2="40" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn2arrow)" />
-    <line x1="60" y1="240" x2="550" y2="240" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn2arrow)" />
-    <text x="60" y="25" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Energy</text>
-    <text x="565" y="244" fill="#cbd5e1" font-size="12" font-weight="bold">Reaction Coordinate</text>
+    <line x1="20" y1="380" x2="20" y2="40" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn2arrow)" />
+    <line x1="20" y1="380" x2="820" y2="380" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn2arrow)" />
+    <text x="20" y="25" fill="#cbd5e1" font-size="14" font-weight="bold" text-anchor="middle">Energy</text>
+    <text x="810" y="405" fill="#cbd5e1" font-size="14" font-weight="bold" text-anchor="end">Reaction Coordinate</text>
 
     <!-- Reference Level Lines -->
-    <line x1="60" y1="180" x2="250" y2="180" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
-    <line x1="60" y1="130" x2="480" y2="130" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
+    <line x1="20" y1="310" x2="320" y2="310" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
 
     <!-- Reaction Path Curve (Single Peak) -->
-    <path d="M 60,180 L 120,180 C 180,180 220,65 270,65 C 320,65 370,130 450,130 L 520,130" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 40,310 L 100,310 C 180,310 240,110 320,110 C 400,110 460,230 540,230 L 600,230" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" />
 
-    <!-- Reactants Label -->
-    <rect x="80" y="195" width="130" height="24" rx="4" fill="#0b1b35" stroke="#475569" stroke-width="1" />
-    <text x="145" y="211" fill="#f8fafc" font-size="12" font-weight="bold" text-anchor="middle">R-Cl + OH⁻ (Reactants)</text>
+    <!-- Reactants Structure (at x=15, y=230) -->
+    <g transform="translate(15, 230)">
+      <!-- Central Carbon -->
+      <text x="70" y="30" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- Methyl Groups -->
+      <line x1="62" y1="32" x2="48" y2="42" stroke="#fb7185" stroke-width="1.5" />
+      <text x="44" y="50" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="70" y1="18" x2="70" y2="6" stroke="#fb7185" stroke-width="1.5" />
+      <text x="70" y="2" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="76,32 88,42 85,45" fill="#fb7185" />
+      <text x="92" y="51" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="start">CH₃</text>
+      
+      <!-- C-Cl Bond -->
+      <line x1="78" y1="26" x2="94" y2="18" stroke="#34d399" stroke-width="1.5" />
+      <text x="98" y="16" fill="#34d399" font-size="14" font-weight="bold" text-anchor="start">Cl</text>
 
-    <!-- Transition State Badge at Peak -->
-    <rect x="180" y="38" width="180" height="26" rx="5" fill="#0b1b35" stroke="#3b82f6" stroke-width="1.5" />
-    <text x="270" y="55" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">[HO...R...Cl]⁻ ‡ (TS)</text>
+      <!-- Nucleophile above Cl -->
+      <text x="95" y="-5" fill="#38bdf8" font-size="14" font-weight="bold">+ OH⁻</text>
+      
+      <!-- Reactants Label (below green line) -->
+      <text x="70" y="98" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">Reactants</text>
+    </g>
 
-    <!-- Products Label -->
-    <rect x="420" y="145" width="130" height="24" rx="4" fill="#0b1b35" stroke="#475569" stroke-width="1" />
-    <text x="485" y="161" fill="#10b981" font-size="12" font-weight="bold" text-anchor="middle">R-OH + Cl⁻ (Products)</text>
+    <!-- Transition State structure (at Peak x=320, y=110) -->
+    <g transform="translate(240, 10)">
+      <!-- Brackets -->
+      <path d="M 25,25 L 20,25 L 20,85 L 25,85" stroke="#cbd5e1" stroke-width="1.2" fill="none" />
+      <path d="M 135,25 L 140,25 L 140,85 L 135,85" stroke="#cbd5e1" stroke-width="1.2" fill="none" />
+      <text x="144" y="30" fill="#cbd5e1" font-size="14" font-weight="bold">‡</text>
+      
+      <!-- Transition State Text Label -->
+      <text x="80" y="12" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Transition State</text>
+
+      <!-- Central Carbon -->
+      <text x="80" y="55" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- delta+ on top-right of C -->
+      <text x="88" y="46" fill="#f87171" font-size="10">δ+</text>
+
+      <!-- Planar Methyls -->
+      <line x1="72" y1="58" x2="62" y2="67" stroke="#fb7185" stroke-width="1.5" />
+      <text x="58" y="75" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="80" y1="43" x2="80" y2="34" stroke="#fb7185" stroke-width="1.5" />
+      <text x="80" y="30" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="86,57 96,65 94,68" fill="#fb7185" />
+      <text x="100" y="74" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="start">CH₃</text>
+
+      <!-- Forming C...OH bond (left) -->
+      <line x1="70" y1="52" x2="48" y2="52" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="2,2" />
+      <text x="44" y="56" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="end">HO</text>
+      <!-- delta- above HO -->
+      <text x="36" y="44" fill="#38bdf8" font-size="10">δ-</text>
+
+      <!-- Breaking C...Cl bond (right) -->
+      <line x1="90" y1="52" x2="112" y2="52" stroke="#34d399" stroke-width="1.5" stroke-dasharray="2,2" />
+      <text x="116" y="56" fill="#34d399" font-size="14" font-weight="bold" text-anchor="start">Cl</text>
+      <!-- delta- above Cl -->
+      <text x="116" y="44" fill="#34d399" font-size="10">δ-</text>
+    </g>
+
+    <!-- Products Structure (at x=500, y=230) -->
+    <g transform="translate(500, 150)">
+      <!-- Central Carbon -->
+      <text x="70" y="40" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- Methyl Groups -->
+      <line x1="62" y1="42" x2="48" y2="52" stroke="#fb7185" stroke-width="1.5" />
+      <text x="44" y="60" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="70" y1="28" x2="70" y2="16" stroke="#fb7185" stroke-width="1.5" />
+      <text x="70" y="12" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="76,42 88,52 85,55" fill="#fb7185" />
+      <text x="92" y="61" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="start">CH₃</text>
+      
+      <!-- C-OH Bond -->
+      <line x1="78" y1="36" x2="94" y2="28" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="98" y="26" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="start">OH</text>
+
+      <!-- Leaving Group -->
+      <text x="120" y="40" fill="#cbd5e1" font-size="13" font-weight="bold">
+        + <tspan fill="#34d399">Cl⁻</tspan>
+      </text>
+      
+      <!-- Products Label (below green line) -->
+      <text x="70" y="98" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">Products</text>
+    </g>
 
     <!-- Activation Energy Arrow -->
-    <line x1="270" y1="180" x2="270" y2="75" stroke="#3b82f6" stroke-width="2" marker-end="url(#sn2bluearrow)" />
-    <text x="282" y="130" fill="#38bdf8" font-size="13" font-weight="bold">Eₐ (Single Step)</text>
+    <line x1="320" y1="310" x2="320" y2="120" stroke="#3b82f6" stroke-width="2" marker-end="url(#sn2bluearrow)" />
+    <text x="328" y="210" fill="#38bdf8" font-size="14" font-weight="bold">Eₐ (Single Step)</text>
   </g>
 </svg>`;
 
-const sn1ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 330" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+const sn1ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" class="w-full max-w-3xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
     <marker id="sn1arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
@@ -572,45 +648,180 @@ const sn1ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 
     <marker id="sn1bluearrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#10b981" />
     </marker>
+    <marker id="sn1redarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#38bdf8" />
+    </marker>
   </defs>
-  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">S_N1 Mechanism: Reaction Energy Profile (Two Peaks & Carbocation Intermediate)</text>
+  <text x="50%" y="28" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="bold">SN1 Mechanism: Reaction Energy Profile (Two Peaks &amp; Carbocation Intermediate)</text>
 
-  <g transform="translate(45, 20)">
+  <g transform="translate(60, 40)">
     <!-- Axes -->
-    <line x1="60" y1="250" x2="60" y2="40" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn1arrow)" />
-    <line x1="60" y1="250" x2="550" y2="250" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn1arrow)" />
-    <text x="60" y="25" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">Energy</text>
-    <text x="565" y="254" fill="#cbd5e1" font-size="12" font-weight="bold">Reaction Coordinate</text>
+    <line x1="20" y1="380" x2="20" y2="40" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn1arrow)" />
+    <line x1="20" y1="380" x2="820" y2="380" stroke="#cbd5e1" stroke-width="2" marker-end="url(#sn1arrow)" />
+    <text x="20" y="25" fill="#cbd5e1" font-size="14" font-weight="bold" text-anchor="middle">Energy</text>
+    <text x="810" y="405" fill="#cbd5e1" font-size="14" font-weight="bold" text-anchor="end">Reaction Coordinate</text>
 
     <!-- Reference Level Lines -->
-    <line x1="60" y1="180" x2="200" y2="180" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
+    <line x1="20" y1="310" x2="240" y2="310" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
+    <line x1="420" y1="230" x2="560" y2="230" stroke="#334155" stroke-width="1" stroke-dasharray="3 3" />
 
     <!-- Two Peaks Curve -->
-    <path d="M 60,180 L 100,180 C 140,180 165,55 195,55 C 225,55 245,130 280,130 C 315,130 335,95 365,95 C 395,95 430,220 480,220 L 530,220" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
+    <path d="M 40,310 L 100,310 C 160,310 190,110 240,110 C 290,110 340,230 420,230 C 490,230 520,160 560,160 C 600,160 640,350 700,350 L 760,350" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
 
-    <!-- Reactants Label -->
-    <text x="90" y="202" fill="#f8fafc" font-size="12" font-weight="bold">R₃C-Cl + OH⁻</text>
+    <!-- Reactants Structure (at x=15, y=230) -->
+    <g transform="translate(15, 230)">
+      <!-- Central Carbon -->
+      <text x="70" y="30" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- Methyl Groups -->
+      <line x1="62" y1="32" x2="48" y2="42" stroke="#fb7185" stroke-width="1.5" />
+      <text x="44" y="50" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="70" y1="18" x2="70" y2="6" stroke="#fb7185" stroke-width="1.5" />
+      <text x="70" y="2" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="76,32 88,42 85,45" fill="#fb7185" />
+      <text x="92" y="51" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="start">CH₃</text>
+      
+      <!-- C-Cl Bond -->
+      <line x1="78" y1="26" x2="94" y2="18" stroke="#34d399" stroke-width="1.5" />
+      <text x="98" y="16" fill="#34d399" font-size="14" font-weight="bold" text-anchor="start">Cl</text>
 
-    <!-- TS1 Badge (RDS Peak 1 - Higher Ea) -->
-    <rect x="130" y="28" width="130" height="24" rx="4" fill="#0b1b35" stroke="#ef4444" stroke-width="1.5" />
-    <text x="195" y="44" fill="#f87171" font-size="11" font-weight="bold" text-anchor="middle">TS1 [R₃C...Cl] ‡ (RDS)</text>
+      <!-- Nucleophile above Cl -->
+      <text x="95" y="-5" fill="#38bdf8" font-size="14" font-weight="bold">+ OH⁻</text>
+      
+      <!-- Reactants Label (below green line) -->
+      <text x="70" y="98" fill="#cbd5e1" font-size="13" font-weight="bold" text-anchor="middle">Reactants</text>
+    </g>
 
-    <!-- Intermediate Well Badge -->
-    <rect x="210" y="145" width="140" height="24" rx="4" fill="#0b1b35" stroke="#f59e0b" stroke-width="1.5" />
-    <text x="280" y="161" fill="#fbbf24" font-size="11" font-weight="bold" text-anchor="middle">R₃C⁺ Intermediate</text>
+    <!-- Transition State 1 (at Peak x=240, y=110) -->
+    <g transform="translate(160, 10)">
+      <!-- Brackets -->
+      <path d="M 25,25 L 20,25 L 20,85 L 25,85" stroke="#cbd5e1" stroke-width="1.2" fill="none" />
+      <path d="M 135,25 L 140,25 L 140,85 L 135,85" stroke="#cbd5e1" stroke-width="1.2" fill="none" />
+      <text x="144" y="30" fill="#cbd5e1" font-size="14" font-weight="bold">‡</text>
+      
+      <!-- Transition State Text Label -->
+      <text x="80" y="12" fill="#ef4444" font-size="13" font-weight="bold" text-anchor="middle">Transition State 1</text>
 
-    <!-- TS2 Badge (Fast Step Peak 2) -->
-    <rect x="310" y="68" width="110" height="24" rx="4" fill="#0b1b35" stroke="#38bdf8" stroke-width="1.5" />
-    <text x="365" y="84" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">TS2 [R₃C...OH] ‡</text>
+      <!-- Central Carbon -->
+      <text x="80" y="55" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- delta+ left of C -->
+      <text x="65" y="58" fill="#f87171" font-size="10">δ+</text>
 
-    <!-- Products Label -->
-    <text x="440" y="242" fill="#10b981" font-size="12" font-weight="bold">R₃C-OH + Cl⁻</text>
+      <!-- Planar Methyls -->
+      <line x1="72" y1="58" x2="62" y2="67" stroke="#fb7185" stroke-width="1.5" />
+      <text x="58" y="75" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="80" y1="43" x2="80" y2="34" stroke="#fb7185" stroke-width="1.5" />
+      <text x="80" y="30" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="86,57 96,65 94,68" fill="#fb7185" />
+      <text x="100" y="74" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="start">CH₃</text>
 
-    <!-- Activation Energy Arrow (Ea1 for RDS) -->
-    <line x1="195" y1="180" x2="195" y2="65" stroke="#10b981" stroke-width="2" marker-end="url(#sn1bluearrow)" />
-    <text x="202" y="120" fill="#10b981" font-size="12" font-weight="bold">Eₐ(1) High (RDS)</text>
+      <!-- Breaking C...Cl bond (right) -->
+      <line x1="90" y1="52" x2="112" y2="52" stroke="#34d399" stroke-width="1.5" stroke-dasharray="2,2" />
+      <text x="116" y="56" fill="#34d399" font-size="14" font-weight="bold" text-anchor="start">Cl</text>
+      <!-- delta- above Cl -->
+      <text x="116" y="44" fill="#34d399" font-size="10">δ-</text>
+    </g>
+
+    <!-- Intermediate Carbocation (at well x=420, y=230) -->
+    <g transform="translate(340, 130)">
+      <!-- Central Carbon -->
+      <text x="80" y="45" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- + on top-left of C -->
+      <text x="68" y="36" fill="#f59e0b" font-size="12" font-weight="bold">+</text>
+      
+      <!-- Planar carbocation methyls -->
+      <line x1="72" y1="48" x2="60" y2="52" stroke="#fb7185" stroke-width="1.5" />
+      <text x="56" y="57" fill="#fb7185" font-size="11" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="86" y1="40" x2="93" y2="34" stroke="#fb7185" stroke-width="1.5" />
+      <text x="98" y="30" fill="#fb7185" font-size="11" font-weight="bold" text-anchor="start">CH₃</text>
+      
+      <line x1="86" y1="50" x2="93" y2="56" stroke="#fb7185" stroke-width="1.5" />
+      <text x="98" y="62" fill="#fb7185" font-size="11" font-weight="bold" text-anchor="start">CH₃</text>
+
+      <!-- Colored leaving groups + nucleophile -->
+      <text x="120" y="45" fill="#cbd5e1" font-size="13" font-weight="bold">
+        + <tspan fill="#38bdf8">OH⁻</tspan> + <tspan fill="#34d399">Cl⁻</tspan>
+      </text>
+      <text x="80" y="75" fill="#f59e0b" font-size="13" font-weight="bold" text-anchor="middle">Intermediate</text>
+    </g>
+
+    <!-- Transition State 2 (at Peak x=560, y=160) -->
+    <g transform="translate(480, 50)">
+      <!-- Brackets -->
+      <path d="M 25,25 L 20,25 L 20,85 L 25,85" stroke="#cbd5e1" stroke-width="1.2" fill="none" />
+      <path d="M 135,25 L 140,25 L 140,85 L 135,85" stroke="#cbd5e1" stroke-width="1.2" fill="none" />
+      <text x="144" y="30" fill="#cbd5e1" font-size="14" font-weight="bold">‡</text>
+      
+      <!-- Transition State Text Label -->
+      <text x="80" y="12" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Transition State 2</text>
+
+      <!-- Central Carbon -->
+      <text x="80" y="55" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- delta+ on top-right of C -->
+      <text x="88" y="46" fill="#f87171" font-size="10">δ+</text>
+
+      <!-- Planar Methyls -->
+      <line x1="72" y1="58" x2="62" y2="67" stroke="#fb7185" stroke-width="1.5" />
+      <text x="58" y="75" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="80" y1="43" x2="80" y2="34" stroke="#fb7185" stroke-width="1.5" />
+      <text x="80" y="30" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="86,57 96,65 94,68" fill="#fb7185" />
+      <text x="100" y="74" fill="#fb7185" font-size="12" font-weight="bold" text-anchor="start">CH₃</text>
+
+      <!-- Forming C...OH bond (left) -->
+      <line x1="70" y1="52" x2="48" y2="52" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="2,2" />
+      <text x="44" y="56" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="end">HO</text>
+      <!-- delta- above HO -->
+      <text x="36" y="44" fill="#38bdf8" font-size="10">δ-</text>
+    </g>
+
+    <!-- Products Structure (at x=720, y=350) -->
+    <g transform="translate(660, 270)">
+      <!-- Central Carbon -->
+      <text x="70" y="40" fill="#f87171" font-size="15" font-weight="bold" text-anchor="middle">C</text>
+      <!-- Methyl Groups -->
+      <line x1="62" y1="42" x2="48" y2="52" stroke="#fb7185" stroke-width="1.5" />
+      <text x="44" y="60" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="end">H₃C</text>
+      
+      <line x1="70" y1="28" x2="70" y2="16" stroke="#fb7185" stroke-width="1.5" />
+      <text x="70" y="12" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="middle">CH₃</text>
+      
+      <polygon points="76,42 88,52 85,55" fill="#fb7185" />
+      <text x="92" y="61" fill="#fb7185" font-size="13" font-weight="bold" text-anchor="start">CH₃</text>
+      
+      <!-- C-OH Bond -->
+      <line x1="78" y1="36" x2="94" y2="28" stroke="#38bdf8" stroke-width="1.5" />
+      <text x="98" y="26" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="start">OH</text>
+
+      <!-- Leaving Group -->
+      <text x="120" y="40" fill="#cbd5e1" font-size="13" font-weight="bold">
+        + <tspan fill="#34d399">Cl⁻</tspan>
+      </text>
+      
+      <!-- Products Label (below green line) -->
+      <text x="70" y="98" fill="#10b981" font-size="13" font-weight="bold" text-anchor="middle">Products</text>
+    </g>
+
+    <!-- Activation Energy Arrow 1 (RDS) -->
+    <line x1="240" y1="310" x2="240" y2="120" stroke="#10b981" stroke-width="2" marker-end="url(#sn1bluearrow)" />
+    <text x="246" y="210" fill="#10b981" font-size="14" font-weight="bold">Eₐ1</text>
+    
+    <!-- Activation Energy Arrow 2 (Fast Step) -->
+    <line x1="560" y1="230" x2="560" y2="170" stroke="#38bdf8" stroke-width="2" marker-end="url(#sn1redarrow)" />
+    <text x="566" y="200" fill="#38bdf8" font-size="14" font-weight="bold">Eₐ2</text>
+
+    <!-- Slow / Fast steps aligned below their respective activation energy arrows -->
+    <text x="240" y="330" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">slow step</text>
+    <text x="560" y="250" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">fast step</text>
   </g>
 </svg>`;
+
 
 const maxwellBoltzmannSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
