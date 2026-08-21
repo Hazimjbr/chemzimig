@@ -2097,35 +2097,6 @@ questionBank.push(
     createdAt: "2026-07-26"
   },
   {
-    id: "q_kin_ed_exam_13-20260726",
-    question: "A student plots the graph shown below during the kinetic investigation of the reaction: $\\text{2A} \\rightarrow \\text{Products}$.\n\nWhat is the overall order of the reaction with respect to A, and what does the gradient of the line represent?",
-    options: [
-      { text: "First order; the gradient represents $-k$" },
-      { text: "Second order; the gradient represents $+k$" },
-      { text: "Second order; the gradient represents $-k$" },
-      { text: "Zero order; the gradient represents $+k$" }
-    ],
-    correctAnswer: 1,
-    explanation: "1. For a second-order reaction (Rate = k[A]²), the integrated rate equation is: 1/[A] = kt + 1/[A]₀.\n2. A plot of 1/[A] against time (t) yields a straight line with a positive gradient.\n3. The positive gradient of this line is equal to the rate constant, +k.\n4. Plots of ln[A] vs time (which are linear for first-order reactions) have a negative gradient (-k).",
-    level: 3,
-    topic: "edexcel-unit-4",
-    lessonNum: 1,
-    curriculum: "edexcel-alevel",
-    paperType: "mcq",
-    createdAt: "2026-07-26",
-    imageHtml: `<svg viewBox="0 0 500 380" class="w-full max-w-[400px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
-  <line x1="60" y1="320" x2="60" y2="40" stroke="#94a3b8" stroke-width="2" />
-  <line x1="60" y1="320" x2="460" y2="320" stroke="#94a3b8" stroke-width="2" />
-  <text x="35" y="35" fill="#94a3b8" font-size="11" font-weight="600" transform="rotate(-90 35 35)" text-anchor="end">1 / [A] / dm³ mol⁻¹</text>
-  <text x="450" y="350" fill="#94a3b8" font-size="11" font-weight="600" text-anchor="end">Time / s</text>
-  <line x1="60" y1="280" x2="420" y2="80" stroke="#38bdf8" stroke-width="3" />
-  <text x="50" y="284" fill="#94a3b8" font-size="10" text-anchor="end">10</text>
-  <text x="50" y="84" fill="#94a3b8" font-size="10" text-anchor="end">90</text>
-  <text x="60" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">0</text>
-  <text x="420" y="335" fill="#94a3b8" font-size="10" text-anchor="middle">90</text>
-</svg>`
-  },
-  {
     id: "q_kin_ed_exam_14-20260726",
     question: "Reaction X has an activation energy ($E_a$) of $+40\\text{ kJ mol}^{-1}$, while Reaction Y has an activation energy of $+120\\text{ kJ mol}^{-1}$. If the temperature of both reactions is increased from $300\\text{ K}$ to $310\\text{ K}$ at constant concentration, which reaction experiences the greater proportional increase in rate, and why?",
     options: [

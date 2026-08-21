@@ -192,25 +192,6 @@ export const level3Questions: Question[] = [
     createdAt: "2026-09-28T10:00:00Z"
   },
   {
-    id: "ex_ed_u4_l1_lv3_11-2026",
-    question: "The thermal decomposition of dinitrogen pentoxide ($2\\text{N}_2\\text{O}_5 \\rightarrow 4\\text{NO}_2 + \\text{O}_2$) is first order with rate constant $k = 4.80 \\times 10^{-4}\\text{ s}^{-1}$ at $45\\text{ }^\\circ\\text{C}$. What percentage of the initial $\\text{N}_2\\text{O}_5$ sample remains unreacted after $1800\\text{ s}$ ($30\\text{ minutes}$)?",
-    options: [
-      { text: "12.5%" },
-      { text: "42.1%", isCorrect: true },
-      { text: "57.9%" },
-      { text: "86.4%" }
-    ],
-    correctAnswer: 1,
-    explanation: "* Using the first-order integrated rate law: $\\ln\\left(\\frac{[\\text{A}]_t}{[\\text{A}]_0}\\right) = -kt = -(4.80 \\times 10^{-4}\\text{ s}^{-1}) \\times (1800\\text{ s}) = -0.864$.\n* $\\frac{[\\text{A}]_t}{[\\text{A}]_0} = e^{-0.864} = 0.42147 = \\mathbf{42.1\\%}$ remaining unreacted.",
-    level: 3,
-    topic: "edexcel-unit-4",
-    lessonNum: 1,
-    curriculum: "edexcel-alevel",
-    paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q15",
-    createdAt: "2026-09-29T10:00:00Z"
-  },
-  {
     id: "ex_ed_u4_l1_lv3_12-2026",
     question: "In the base-catalyzed hydrolysis of an optically active haloalkane $(R)\\text{-2-bromooctane}$ with $\\text{OH}^-$, the reaction follows second-order kinetics: $\\text{Rate} = k[\\text{R-Br}][\\text{OH}^-]$. What is the observed stereochemical outcome and transition state geometry?",
     options: [

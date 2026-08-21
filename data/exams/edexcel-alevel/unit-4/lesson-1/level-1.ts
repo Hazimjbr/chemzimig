@@ -285,25 +285,6 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q10",
     createdAt: "2026-09-23T10:00:00Z"
-  },
-  {
-    id: "ex_ed_u4_l1_lv1_16-2026",
-    question: "When plotting $\\ln[\\text{A}]$ versus time for a reaction, a straight line with a constant negative gradient is obtained. What is the order of reaction with respect to reactant A?",
-    options: [
-      { text: "Zero order" },
-      { text: "First order (gradient = -k)", isCorrect: true },
-      { text: "Second order" },
-      { text: "Third order" }
-    ],
-    correctAnswer: 1,
-    explanation: "* The integrated first-order rate law is $\\ln[\\text{A}] = -kt + \\ln[\\text{A}]_0$.\n* A plot of $\\ln[\\text{A}]$ vs $t$ is a straight line with slope equal to $-k$.",
-    level: 1,
-    topic: "edexcel-unit-4",
-    lessonNum: 1,
-    curriculum: "edexcel-alevel",
-    paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q11",
-    createdAt: "2026-09-23T10:00:00Z"
   }
 ];
 

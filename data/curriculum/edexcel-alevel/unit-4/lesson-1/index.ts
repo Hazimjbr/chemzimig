@@ -520,63 +520,6 @@ const compoundPDecompositionSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewB
   </g>
 </svg>`;
 
-const lnGraphFirstOrderSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 290" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
-  <defs>
-    <marker id="lnarrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 10 5 L 0 8.5 z" fill="#94a3b8" />
-    </marker>
-  </defs>
-  <text x="50%" y="26" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Linear Plot: ln[Q] vs. Time (First-Order Kinetics)</text>
-
-  <g transform="translate(35, 15)">
-    <!-- Axes -->
-    <line x1="80" y1="230" x2="80" y2="35" stroke="#cbd5e1" stroke-width="2" marker-end="url(#lnarrow)" />
-    <line x1="80" y1="230" x2="570" y2="230" stroke="#cbd5e1" stroke-width="2" marker-end="url(#lnarrow)" />
-    <text x="80" y="22" fill="#cbd5e1" font-size="12" font-weight="bold" text-anchor="middle">ln[Q]</text>
-    <text x="585" y="234" fill="#cbd5e1" font-size="13" font-weight="bold">Time / s</text>
-
-    <!-- Horizontal Grid & Y-scale (ln[Q]) -->
-    <line x1="80" y1="40" x2="540" y2="40" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="80" x2="540" y2="80" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="120" x2="540" y2="120" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="160" x2="540" y2="160" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-    <line x1="80" y1="200" x2="540" y2="200" stroke="#1e293b" stroke-width="1" stroke-dasharray="2 2" />
-
-    <text x="70" y="44" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">0.00</text>
-    <text x="70" y="84" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-0.50</text>
-    <text x="70" y="124" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-1.00</text>
-    <text x="70" y="164" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-1.50</text>
-    <text x="70" y="204" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="end">-2.00</text>
-
-    <!-- X-axis tick labels -->
-    <text x="80" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">0</text>
-    <text x="180" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">100</text>
-    <text x="280" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">200</text>
-    <text x="380" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">300</text>
-    <text x="480" y="248" fill="#f87171" font-size="12" font-weight="bold" text-anchor="middle">400</text>
-
-    <!-- Gradient Triangle -->
-    <polygon points="80,57.8 480,57.8 480,213.6" fill="#38bdf8" fill-opacity="0.08" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 4" />
-
-    <!-- Straight Line -->
-    <line x1="80" y1="57.8" x2="510" y2="225" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" />
-
-    <!-- Data Points -->
-    <circle cx="80" cy="57.8" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
-    <circle cx="180" cy="97" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
-    <circle cx="280" cy="136" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
-    <circle cx="380" cy="175" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
-    <circle cx="480" cy="213.6" r="5" fill="#38bdf8" stroke="#070f1e" stroke-width="1.5" />
-
-    <!-- Point Value Badges -->
-    <text x="95" y="52" fill="#f8fafc" font-size="11" font-weight="bold">(0, -0.223)</text>
-    <text x="495" y="210" fill="#f8fafc" font-size="11" font-weight="bold">(400, -2.170)</text>
-
-    <!-- Gradient Calculation Callout Badge -->
-    <rect x="230" y="70" width="260" height="26" rx="5" fill="#0b1b35" stroke="#38bdf8" stroke-width="1.5" />
-    <text x="360" y="87" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">Gradient = -k = -4.87 × 10⁻³ s⁻¹</text>
-  </g>
-</svg>`;
 
 const sn2ProfileSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
   <defs>
@@ -1203,45 +1146,7 @@ export const parts: LessonPart[] = [
 > >    Draw a tangent to the curve at t = 800 s and calculate the gradient (slope) of this tangent: gradient = Δconcentration / Δtime. The magnitude of this gradient represents the rate at that instant.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Proving First-Order Kinetics from a ln[A] vs Time Graph
-> **Question:** A student monitors the decomposition of compound Q and records the following concentration data:
->
-> | Time / s | [Q] / mol dm⁻³ | ln[Q] |
-> | :---: | :---: | :---: |
-> | 0 | 0.800 | −0.223 |
-> | 100 | 0.491 | −0.712 |
-> | 200 | 0.301 | −1.200 |
-> | 300 | 0.185 | −1.687 |
-> | 400 | 0.114 | −2.170 |
->
-> 1. State what type of graph should be plotted to confirm that the reaction is first order with respect to Q, and describe the expected result.
-> 2. Use the data to confirm that the reaction is first order.
-> 3. Determine the rate constant, k, from the gradient of the ln[Q] vs time graph, and state its units.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> >
-> > 1. **Graph type and expected result:**
-> >    * Plot ln[Q] (y-axis) against time / s (x-axis).
-> >    * For a first-order reaction, this graph should yield a **straight line with a negative gradient**, since the integrated first-order rate law gives: $\\\\text{ln}[Q] = -kt + \\\\text{ln}[Q]_0$
-> > 
-> > > ${svgToken(lnGraphFirstOrderSvg)}
-> > 
-> > 2. **Confirm first-order kinetics:**
-> >    * The ln[Q] values decrease by a constant amount per unit time interval:
-> >      * 100 s: Δln[Q] = -0.712 - (-0.223) = -0.489
-> >      * 100 s: Δln[Q] = -1.200 - (-0.712) = -0.488
-> >      * 100 s: Δln[Q] = -1.687 - (-1.200) = -0.487
-> >    * The constant decrease in ln[Q] per fixed time interval confirms the plot is linear. Therefore, the reaction is **first order** with respect to Q.
-> >
-> > 3. **Calculate the rate constant k:**
-> >    * The gradient of the ln[Q] vs time graph equals -k:
-> >      Gradient = Δln[Q] / Δtime = (-2.170 - (-0.223)) / (400 - 0) = -1.947 / 400 = -4.87 × 10⁻³ s⁻¹
-> >    * Therefore: k = 4.87 × 10⁻³ s⁻¹
-> >    * **Units:** s⁻¹ (consistent with a first-order rate constant)
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 5: Deducing Rate Equation & Rate Constant from Table Data
+> #### 📝 Worked Example 4: Deducing Rate Equation & Rate Constant from Table Data
 > **Question:** The initial rate of reaction between bromomethane ($\\\\text{CH}_3\\\\text{Br}$) and hydroxide ions ($\\\\text{OH}^-$) was measured at $298\\\\text{ K}$ for different initial concentrations:
 > $$\\\\text{CH}_3\\\\text{Br(aq)} + \\\\text{OH}^-\\\\text{(aq)} \\\\rightarrow \\\\text{CH}_3\\\\text{OH(aq)} + \\\\text{Br}^-\\\\text{(aq)}$$
 >
@@ -1271,7 +1176,7 @@ export const parts: LessonPart[] = [
 > >    * **Units:** $\\\\dfrac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})(\\\\text{mol dm}^{-3})} = \\\\text{dm}^3\\\\text{ mol}^{-1}\\\\text{ s}^{-1}$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 6: Deducing Rate Equation & Constant for 3-Reactant Bromate Reaction
+> #### 📝 Worked Example 5: Deducing Rate Equation & Constant for 3-Reactant Bromate Reaction
 > **Question:** The reaction between bromate ions ($\\\\text{BrO}_3^-$), bromide ions ($\\\\text{Br}^-$), and hydrogen ions ($\\\\text{H}^+$) was investigated:
 > $$\\\\text{BrO}_3^-\\\\text{(aq)} + 5\\\\text{Br}^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O(l)}$$
 >
@@ -1302,7 +1207,7 @@ export const parts: LessonPart[] = [
 > >    * **Units:** $\\\\dfrac{\\\\text{mol dm}^{-3}\\\\text{ s}^{-1}}{(\\\\text{mol dm}^{-3})^4} = \\\\text{dm}^9\\\\text{ mol}^{-3}\\\\text{ s}^{-1}$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 7: Deducing Orders with Non-Isolated Conditions (Ratio Method)
+> #### 📝 Worked Example 6: Deducing Orders with Non-Isolated Conditions (Ratio Method)
 > **Question:** Consider the gas-phase reaction: $\\\\text{A(g)} + 2\\\\text{B(g)} \\\\rightarrow \\\\text{C(g)}$. A student collects the following initial rates data:
 >
 > | Experiment | [A] / mol dm⁻³ | [B] / mol dm⁻³ | Initial Rate / mol dm⁻³ s⁻¹ |
@@ -1334,7 +1239,7 @@ export const parts: LessonPart[] = [
 > >    $$\\\\text{Rate} = k[\\\\text{A}]^2[\\\\text{B}]^2$$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 8: Isolation Method & Pseudo-First-Order Kinetics
+> #### 📝 Worked Example 7: Isolation Method & Pseudo-First-Order Kinetics
 > **Question:** The reaction between propanone ($\\\\text{CH}_3\\\\text{COCH}_3$) and iodine ($\\\\text{I}_2$) is acid-catalyzed:
 > $$\\\\text{CH}_3\\\\text{COCH}_3 + \\\\text{I}_2 \\\\xrightarrow{\\\\text{H}^+} \\\\text{CH}_3\\\\text{COCH}_2\\\\text{I} + \\\\text{H}^+ + \\\\text{I}^-$$
 > The true rate equation is: $\\\\text{Rate} = k[\\\\text{CH}_3\\\\text{COCH}_3][\\\\text{H}^+]$ (zero-order with respect to $\\\\text{I}_2$).
@@ -1358,7 +1263,6 @@ export const parts: LessonPart[] = [
 > >    $$k_{\\\\text{obs}} = (5.6 \\\\times 10^{-5}\\\\text{ dm}^3\\\\text{ mol}^{-1}\\\\text{ s}^{-1}) \\\\times (1.0\\\\text{ mol dm}^{-3}) \\\\times (1.0\\\\text{ mol dm}^{-3}) = 5.6 \\\\times 10^{-5}\\\\text{ s}^{-1}$$`,
     keyPoints: [
       'Concentration-time graphs allow determining reaction orders and half-life (t₁/₂ = ln(2)/k for a first-order reaction).',
-      'Plotting ln[A] against time gives a straight line for a first-order reaction; the gradient equals −k and has units of s⁻¹.',
       'Reaction orders can only be determined experimentally (e.g. using initial rates table data) and cannot be predicted from the balanced equation stoichiometry.',
       'The rate constant k links reaction rate to concentrations at a specific temperature; its value is constant at a constant temperature but increases as temperature rises.',
       'The units of k vary depending on the overall order of the reaction and are deduced by rearranging the rate equation.',
