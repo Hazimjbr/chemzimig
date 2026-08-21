@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Exothermic and Endothermic Reactions";
+export const lessonTitle = "Exothermic and Endothermic Reactions";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 5: Chemical Energetics** - Lesson 1
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Exothermic and Endothermic Reactions" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

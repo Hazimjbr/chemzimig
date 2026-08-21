@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Alloys";
+export const lessonTitle = "Alloys";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 9: Metals** - Lesson 5
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Alloys" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

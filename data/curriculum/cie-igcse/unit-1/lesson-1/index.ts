@@ -496,9 +496,6 @@ In a crystalline solid, particles are arranged in a highly organized three-dimen
 > A **lattice** is a regular, repeating three-dimensional arrangement of atoms, ions, or molecules in a crystalline solid.
 
 Because of this rigid framework, solids maintain a fixed structure and do not flow or change shape under normal conditions.
-
----
-
 ### 🌊 Fluid Particle Behavior
 
 Liquids and gases are collectively called **fluids** because their particles are free to move and flow. 
@@ -639,9 +636,6 @@ Liquids and gases are collectively called **fluids** because their particles are
 ### 🧪 Experimental Evidence for Particles
 
 We can observe evidence that matter is made of moving particles through experiments in the laboratory and observations in daily life.
-
----
-
 ### 🥼 Inside the Laboratory
 
 > [!TIP]
@@ -657,9 +651,6 @@ We can observe evidence that matter is made of moving particles through experime
 > * **Explanation:** Even though bromine vapor is heavier than air, the constant random collision of air and bromine particles spreads the red-brown color upwards.
 > 
 > ${svgToken(bromineDiffusionSvg)}
-
----
-
 ### 🏡 Outside the Laboratory (Daily Life)
 
 * **Spreading Smells:** Gas particles from food, perfume, or waste evaporate and diffuse through the air to reach your nose.

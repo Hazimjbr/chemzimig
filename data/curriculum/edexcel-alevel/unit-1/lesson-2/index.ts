@@ -1031,9 +1031,6 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 > * **Definition:** The relative ability of an atom in a covalent bond to attract the shared pair of electrons towards itself
 > * **Periodic Trends:** Electronegativity increases across a period (due to increasing nuclear charge and decreasing atomic size) and increases going up a group (due to less shielding and smaller atomic size)
 > * **Highest Electronegativity Order:** $\text{F} > \text{O} > \text{Cl} > \text{N} > \text{Br} > \text{I}$
-
----
-
 > [!NOTE]
 > ### 📈 Periodic Trends in First Ionization Energy
 > 1. **Down a Group (Decreases):**
@@ -1061,9 +1058,6 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 >    * **Debunking the "Half-Full Stability" and "Distance" Myths:** 
 >      * There is **no special stability** associated with a half-full $2p$ subshell; the oxygen ion ($\text{O}^+$) is still energetically **less stable** than the neutral oxygen atom.
 >      * Do not suggest that the outer electron in Oxygen is further from the nucleus than in Nitrogen. In fact, Oxygen has a higher nuclear charge and a **smaller atomic radius** than Nitrogen, so the electron is actually closer; it is purely spin-pair repulsion that lowers its ionization energy.
-
----
-
 > [!IMPORTANT]
 > ### 🧱 Physical Structure of Elements and Compounds
 > The structure of elements and compounds determines their physical properties:
@@ -1090,9 +1084,6 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 >    * The total number of electrons in the molecules increases, which increases the strength of temporary dipoles and thus the strength of London forces between molecules
 > 3. **Down Metallic Groups (Decreases):**
 >    * The atomic radius increases, placing the delocalized valence electrons further away from the positive metal nuclei, which weakens the metallic bond
-
----
-
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Interpreting Successive Ionization Energies
 > **Question:** The successive ionization energies (in $\\\\text{kJ mol}^{-1}$) of a Period 3 element $\\\\text{Y}$ are: $I_1 = 789$, $I_2 = 1577$, $I_3 = 3232$, $I_4 = 4356$, $I_5 = 16091$, $I_6 = 19785$

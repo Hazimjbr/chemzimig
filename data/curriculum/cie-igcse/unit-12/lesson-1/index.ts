@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Measurement";
+export const lessonTitle = "Measurement";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 12: Experimental Techniques and Chemical Analysis** - Lesson 1
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Measurement" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

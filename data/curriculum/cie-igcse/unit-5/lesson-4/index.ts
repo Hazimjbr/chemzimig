@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Fuel and Hydrogen";
+export const lessonTitle = "Fuel and Hydrogen";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 5: Chemical Energetics** - Lesson 4
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Fuel and Hydrogen" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

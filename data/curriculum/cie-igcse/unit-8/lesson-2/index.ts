@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Group I - Alkali Metals";
+export const lessonTitle = "Group I - Alkali Metals";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 8: The Periodic Table** - Lesson 2
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Group I - Alkali Metals" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

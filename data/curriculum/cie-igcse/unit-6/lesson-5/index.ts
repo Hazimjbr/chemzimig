@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Redox Reactions";
+export const lessonTitle = "Redox Reactions";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 6: Chemical Reactions** - Lesson 5
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Redox Reactions" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

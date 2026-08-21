@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Electrolytic Cells";
+export const lessonTitle = "Electrolytic Cells";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 4: Electrochemistry** - Lesson 2
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Electrolytic Cells" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

@@ -229,9 +229,6 @@ A change of state occurs when a substance gains or loses thermal (heat) energy, 
 1. **Physical Change:** State changes are physical processes. No new chemical substances are formed.
 2. **Reversible:** They can be easily reversed by reversing the temperature change (e.g. melting ice can be frozen back).
 3. **Conservation of Mass:** The mass of the substance stays exactly the same before and after the change of state.
-
----
-
 ### 🌡️ The Basic State Changes
 
 * **Melting:** Solid to Liquid by heating (opposite of Freezing). Occurs at a specific melting point for pure substances.
@@ -331,9 +328,6 @@ Although both **boiling** and **evaporation** convert a liquid into a gas, they 
   $$CO_2\\text{(s)} \\rightarrow CO_2\\text{(g)}$$
 * **Ammonium Chloride (NH₄Cl)**
 * **Naphthalene (Mothballs)**
-
----
-
 ### 🧪 Volatile Liquids
 
 > [!IMPORTANT]
@@ -405,9 +399,6 @@ Although both **boiling** and **evaporation** convert a liquid into a gas, they 
 ### 📈 Heating and Cooling Graphs
 
 When a pure substance is heated or cooled, its temperature changes in a characteristic stepped pattern. During a change of state, the temperature remains constant even though thermal energy is still being added or removed.
-
----
-
 ### 🌡️ 1. The Heating Curve (Endothermic Process)
 
 When heating a solid:
@@ -416,9 +407,6 @@ When heating a solid:
 3. Once fully melted, the liquid temperature rises until the **Boiling Point** (second plateau) is reached, where temperature remains constant again to break all remaining attraction forces and turn the liquid into a gas.
 
 ${svgToken(heatingCurveSvg)}
-
----
-
 ### ❄️ 2. The Cooling Curve (Exothermic Process)
 
 When cooling a gas:
@@ -427,9 +415,6 @@ When cooling a gas:
 3. Once fully condensed, the liquid temperature falls until the **Freezing Point** (second plateau) is reached, where the liquid particles align into a fixed solid lattice.
 
 ${svgToken(coolingCurveSvg)}
-
----
-
 ### 🧪 Pure vs. Impure Substances
 
 We can use melting and boiling points to determine if a substance is pure:

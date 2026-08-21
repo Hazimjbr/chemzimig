@@ -977,6 +977,66 @@ export const parts: LessonPart[] = [
 > > 4. **Classify the isomerism:**
 > >    * Since they contain different functional groups but the same molecular formula, they represent **functional group isomerism**.
 
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Systematic Identification of Combined Isomers (C₄H₉Br)
+> **Question:** Deduce the total number of structural isomers for the molecular formula C₄H₉Br, draw their structural formulas, and state their systematic IUPAC names.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Start with a straight carbon chain (butane backbone - 4 carbons):**
+> >    * Place the bromine atom on carbon-1: CH₃CH₂CH₂CH₂Br (**1-bromobutane**).
+> >    * Place the bromine atom on carbon-2: CH₃CH₂CH(Br)CH₃ (**2-bromobutane**).
+> 2. **Next, branch the carbon skeleton (propane backbone with a methyl group - 3 carbons):**
+>    * Backbone structure: CH₃CH(CH₃)CH₂–
+>    * Place the bromine atom on carbon-1: CH₃CH(CH₃)CH₂Br (**1-bromo-2-methylpropane**).
+>    * Place the bromine atom on the central carbon-2: CH₃C(Br)(CH₃)CH₃ (**2-bromo-2-methylpropane**).
+> 3. **Conclusion:**
+>    * There are a total of **4** structural isomers.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Drawing All Isomers for a Dihaloalkane ($C_4H_8Cl_2$)
+> **Question:** Draw the structural formulas and state the systematic IUPAC names for all structural isomers with the molecular formula $C_4H_8Cl_2$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze straight-chain butane backbone ($C-C-C-C$):**
+> >    * Both Cl on C1: $\text{CHCl}_2\text{CH}_2\text{CH}_2\text{CH}_3$ (**1,1-dichlorobutane**)
+> >    * Both Cl on C2: $\text{CH}_3\text{CCl}_2\text{CH}_2\text{CH}_3$ (**2,2-dichlorobutane**)
+> >    * Cl on C1 and C2: $\text{CH}_2\text{(Cl)CH(Cl)CH}_2\text{CH}_3$ (**1,2-dichlorobutane**)
+> >    * Cl on C1 and C3: $\text{CH}_2\text{(Cl)CH}_2\text{CH(Cl)CH}_3$ (**1,3-dichlorobutane**)
+> >    * Cl on C1 and C4: $\text{CH}_2\text{(Cl)CH}_2\text{CH}_2\text{CH}_2\text{(Cl)}$ (**1,4-dichlorobutane**)
+> >    * Cl on C2 and C3: $\text{CH}_3\text{CH(Cl)CH(Cl)CH}_3$ (**2,3-dichlorobutane**)
+> > 
+> > 2. **Analyze branched methylpropane backbone ($\text{CH}_3\text{CH(CH}_3)\text{CH}_3$):**
+> >    * Both Cl on C1: $\text{CHCl}_2\text{CH(CH}_3)\text{CH}_3$ (**1,1-dichloro-2-methylpropane**)
+> >    * Cl on C1 and C2: $\text{CH}_2\text{(Cl)C(Cl)(CH}_3)\text{CH}_3$ (**1,2-dichloro-2-methylpropane**)
+> >    * Cl on C1 and C3: $\text{CH}_2\text{(Cl)CH(CH}_3)\text{CH}_2\text{(Cl)}$ (**1,3-dichloro-2-methylpropane**)
+> > 
+> > 3. **Conclusion:**
+> >    * There are a total of **9** structural isomers.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Drawing Cycloalkane Isomers ($C_5H_{10}$)
+> **Question:** Cycloalkanes are functional group isomers of alkenes. Draw the structural formulas and state the systematic IUPAC names for all cycloalkane isomers with the molecular formula $C_5H_{10}$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **5-membered ring (cyclopentane skeleton):**
+> >    * A simple 5-membered carbon ring: **cyclopentane**
+> > 
+> > 2. **4-membered ring with 1 branch (cyclobutane skeleton):**
+> >    * A 4-membered ring with a methyl branch: **methylcyclobutane**
+> > 
+> > 3. **3-membered ring with 2 branches (cyclopropane skeleton):**
+> >    * Both methyls on the same carbon: **1,1-dimethylcyclopropane**
+> >    * Methyls on adjacent carbon atoms: **1,2-dimethylcyclopropane**
+> >    * One ethyl branch on the ring: **ethylcyclopropane**
+> > 
+> > 4. **Conclusion:**
+> >    * There are exactly **5** cycloalkane isomers for the molecular formula $C_5H_{10}$.
 
 `,
     keyPoints: [

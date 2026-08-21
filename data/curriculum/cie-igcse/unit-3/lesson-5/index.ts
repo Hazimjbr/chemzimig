@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Reacting Masses";
+export const lessonTitle = "Reacting Masses";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 3: Stoichiometry** - Lesson 5
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Reacting Masses" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

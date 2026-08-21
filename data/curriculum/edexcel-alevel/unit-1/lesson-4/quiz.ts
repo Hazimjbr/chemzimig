@@ -619,5 +619,71 @@ export const lessonQuiz = [
       { text: "Because it is an isomer of pentane and isomers do not require locants" }
     ],
     explanation: "In propane (3 carbons), the only carbon that can support two branches without extending the longest carbon chain (which would make it butane or pentane) is carbon-2. Therefore, both methyl groups must be attached to carbon-2. Because this is the only possible arrangement for dimethylpropane, writing '2,2-dimethylpropane' is unnecessary, and the locants are omitted."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q55-HARD-2026",
+    question: "What is the total number of structural isomers with the molecular formula $\\text{C}_4\\text{H}_8\\text{Cl}_2$?",
+    options: [
+      { text: "9", isCorrect: true },
+      { text: "6" },
+      { text: "8" },
+      { text: "4" }
+    ],
+    explanation: "There are 9 structural isomers of $\\text{C}_4\\text{H}_8\\text{Cl}_2$:\n1. 6 isomers with a straight butane chain: 1,1-dichlorobutane, 2,2-dichlorobutane, 1,2-dichlorobutane, 1,3-dichlorobutane, 1,4-dichlorobutane, and 2,3-dichlorobutane.\n2. 3 isomers with a branched methylpropane chain: 1,1-dichloro-2-methylpropane, 1,2-dichloro-2-methylpropane, and 1,3-dichloro-2-methylpropane."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q56-HARD-2026",
+    question: "Which of the following is NOT a possible cycloalkane isomer with the molecular formula $\\text{C}_5\\text{H}_{10}$?",
+    options: [
+      { text: "1,3-dimethylcyclobutane", isCorrect: true },
+      { text: "methylcyclobutane" },
+      { text: "1,2-dimethylcyclopropane" },
+      { text: "ethylcyclopropane" }
+    ],
+    explanation: "Let's count the carbons for 1,3-dimethylcyclobutane:\n* Cyclobutane ring = 4 carbons\n* Two methyl groups = 2 carbons\nTotal carbons = 6 carbons ($\\text{C}_6\\text{H}_{12}$). Therefore, it is an isomer of $\\text{C}_6\\text{H}_{12}$, not $\\text{C}_5\\text{H}_{10}$. The valid cycloalkane isomers of $\\text{C}_5\\text{H}_{10}$ are cyclopentane, methylcyclobutane, 1,1-dimethylcyclopropane, 1,2-dimethylcyclopropane, and ethylcyclopropane."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q57-MEDIUM-2026",
+    question: "Consider the following reaction:\n$$\\text{CH}_3\\text{CHO} + \\text{HCN} \\rightarrow \\text{CH}_3\\text{CH(OH)CN}$$\nClassify the type of organic reaction occurring in this process.",
+    options: [
+      { text: "Addition", isCorrect: true },
+      { text: "Substitution" },
+      { text: "Oxidation" },
+      { text: "Reduction" }
+    ],
+    explanation: "In this reaction, two reactant molecules (ethanal and hydrogen cyanide) combine to form a single product molecule (2-hydroxypropanenitrile). Since multiple reactants combine to form a single product species, this is classified as an addition reaction."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q58-MEDIUM-2026",
+    question: "When writing organic equations, why is the symbol $\\text{[O]}$ used to represent the oxidising agent instead of molecular oxygen ($\\text{O}_2$)?",
+    options: [
+      { text: "Using $\\text{O}_2$ implies that the reaction occurs using gaseous oxygen from the air, whereas $\\text{[O]}$ represents oxygen delivered from a chemical oxidising agent (like acidified dichromate)", isCorrect: true },
+      { text: "Because $\\text{[O]}$ represents a spectator ion that does not participate in electron transfer" },
+      { text: "Because molecular oxygen is a reducing agent in organic chemistry" },
+      { text: "Because square brackets indicate that the reaction must occur under high pressure" }
+    ],
+    explanation: "The symbol $\\text{[O]}$ represents oxygen supplied by an oxidising agent (such as acidified potassium dichromate(VI)). Writing $\\text{O}_2$ would be incorrect because it indicates that combustion or reaction with atmospheric molecular oxygen is taking place, which involves completely different conditions and mechanisms."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q59-MEDIUM-2026",
+    question: "Which statement correctly defines an electrophile and describes its behavior in organic reactions?",
+    options: [
+      { text: "An electron-deficient species (electron-pair acceptor) that is attracted to and attacks regions of high electron density", isCorrect: true },
+      { text: "An electron-rich species (electron-pair donor) that attacks positive or electron-deficient carbon atoms" },
+      { text: "A neutral species containing an unpaired valence electron that attacks sigma bonds" },
+      { text: "An ion that only reacts via homolytic fission" }
+    ],
+    explanation: "An electrophile ('electron-lover') is an electron-deficient species (such as a positive ion or a polar positive atom) that accepts an electron pair. It is attracted to and attacks areas of high electron density (such as a C=C double bond or a region carrying a partial negative charge)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q60-HARD-2026",
+    question: "Which of the following equations represents the homolytic fission of a covalent bond in ethane?",
+    options: [
+      { text: "$\\text{CH}_3-\\text{CH}_3 \\rightarrow 2\\text{CH}_3^\\bullet$", isCorrect: true },
+      { text: "$\\text{CH}_3-\\text{CH}_3 \\rightarrow \\text{CH}_3^+ + \\text{CH}_3^-$" },
+      { text: "$\\text{CH}_3-\\text{CH}_3 + \\text{Cl}_2 \\rightarrow \\text{CH}_3-\\text{CH}_2\\text{Cl} + \\text{HCl}$" },
+      { text: "$\\text{CH}_3-\\text{CH}_3 \\rightarrow \\text{C}_2\\text{H}_4 + \\text{H}_2$" }
+    ],
+    explanation: "Homolytic fission is the breaking of a covalent bond where each atom gets one of the shared bonding electrons. This produces neutral, highly reactive free radicals with unpaired electrons (represented by dots). For ethane, homolytic fission of the C-C bond yields two methyl free radicals: $\\text{CH}_3-\\text{CH}_3 \\rightarrow 2\\text{CH}_3^\\bullet$."
   }
 ];

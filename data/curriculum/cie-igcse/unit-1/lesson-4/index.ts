@@ -17,27 +17,18 @@ export const lessonParts: LessonPart[] = [
 ### 🔬 Explaining States of Matter and Phase Changes
 
 Kinetic particle theory explains the physical behavior of matter by describing the energy, arrangement, and forces of particles.
-
----
-
 ### 🌡️ 1. Solid to Liquid (Melting)
 
 1. In the **solid state**, particles are arranged in a regular lattice structure and vibrate in closely packed positions.
 2. **When heated**, particles absorb thermal energy, gaining kinetic energy and vibrating faster.
 3. As the temperature rises, the vibrations become energetic enough to **overcome the intermolecular forces** holding the lattice together.
 4. The lattice structure breaks down, causing the solid to expand. Particles leave their fixed positions and slide over one another, turning into a **liquid**.
-
----
-
 ### 🌡️ 2. Liquid to Gas (Boiling / Evaporation)
 
 1. In the **liquid state**, particles are close together but randomly arranged, in constant motion.
 2. **When heated**, particles gain more kinetic energy and move faster.
 3. High-energy particles near the surface (or throughout during boiling) gain enough energy to **break completely free of the intermolecular forces** keeping them in the liquid state.
 4. Particles bounce far apart, becoming a **gas** where they are widely spaced and free to move randomly.
-
----
-
 ### ❄️ 3. Condensation and Freezing
 
 1. **When cooled**, particles lose kinetic energy and move slower.
@@ -179,9 +170,6 @@ Kinetic particle theory explains the physical behavior of matter by describing t
 ### 🎈 What Causes Gas Pressure?
 
 **Gas pressure** is caused by the constant bombardment of moving gas particles hitting the inner walls of their container. Each collision exerts a tiny force, creating overall pressure.
-
----
-
 ### ⚡ Factors Affecting Gas Pressure
 
 The frequency and force of these collisions determine the gas pressure:

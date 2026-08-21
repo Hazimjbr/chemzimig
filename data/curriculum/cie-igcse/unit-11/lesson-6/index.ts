@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Esters";
+export const lessonTitle = "Esters";
 export const lessonNumber = 6;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 11: Organic Chemistry** - Lesson 6
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Esters" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

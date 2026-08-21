@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Transition Elements";
+export const lessonTitle = "Transition Elements";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 8: The Periodic Table** - Lesson 5
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Transition Elements" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

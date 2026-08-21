@@ -96,9 +96,6 @@ Every atom is composed of a central core called the **nucleus**, surrounded by o
 > | **Proton** | p | Inside the Nucleus (Nucleon) | 1 | +1 |
 > | **Neutron** | n | Inside the Nucleus (Nucleon) | 1 | Neutral (0) |
 > | **Electron** | e¯ | Orbiting in shells around nucleus | 1/1840 | -1 |
-
----
-
 ### 🔍 Key Structural Principles
 1. **The Nucleus:** Located at the center of the atom, it contains the nucleons (protons and neutrons) clustered tightly together. This is where almost all the mass of the atom is concentrated.
 2. **Neutral Charge:** Every neutral atom has an overall charge of **zero**. This is because the number of positive protons in the nucleus is exactly equal to the number of negative electrons orbiting it ($p = e$).
@@ -251,9 +248,6 @@ ${svgToken(atomDiagramSvg)}
 > The total number of protons and neutrons in the nucleus of an atom.
 > $$\\text{Nucleon Number (A)} = \\text{Protons (Z)} + \\text{Neutrons}$$
 > $$\\text{Number of Neutrons} = A - Z$$
-
----
-
 ### 🧬 Isotopes
 
 > [!IMPORTANT]
@@ -262,9 +256,6 @@ ${svgToken(atomDiagramSvg)}
 
 * **Chemical Properties:** Isotopes have **identical chemical properties** because they are isoelectronic (they have the same number of electrons and the exact same electronic configuration).
 * **Physical Properties:** Isotopes have **different physical properties** (like density, melting point, and diffusion rate) because their masses are different due to the varying number of neutrons.
-
----
-
 ### 🧮 Relative Atomic Mass (Ar)
 
 The relative atomic mass ($A_r$) is the average mass of an element's isotopes compared with a carbon-12 atom.
@@ -409,9 +400,6 @@ Electrons orbit the nucleus in energy levels or **shells**.
 > * **3rd Shell**: Holds up to **8 electrons** (for the first 20 elements)
 
 For example, Sodium (Atomic Number 11) has 11 electrons. The arrangement is: **2, 8, 1**.
-
----
-
 ### 📅 Connections to the Periodic Table
 
 The electron configuration of an element determines its exact location in the Periodic Table:
@@ -425,18 +413,12 @@ The electron configuration of an element determines its exact location in the Pe
 > ### 🧮 2. Group Number (Outer Electrons)
 > The group (vertical column) number is equal to the **number of electrons in the outer shell** (valence electrons).
 > * *Example:* Sodium (2, 8, 1) has 1 outer electron, so it is in **Group I**.
-
----
-
 ### 🛡️ Group VIII: The Stable Noble Gases
 
 Group VIII elements (Helium, Neon, Argon, etc.) are called **Noble Gases** or **Inert Gases**.
 * They have a **very stable, full outer shell** (Helium has 2, others have 8).
 * Because of this full valence shell (octet rule), they are extremely **unreactive (inert)**.
 * **Valency:** The number of electrons an atom loses, gains, or shares to achieve a stable, full outer shell. Group VIII elements have a valency of **0**.
-
----
-
 ### 📐 Valency of Main Groups
 * **Group I:** 1 (loses 1e¯ to become +1 cation)
 * **Group II:** 2 (loses 2e¯ to become +2 cation)

@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Hydrogen-Oxygen Fuel Cells";
+export const lessonTitle = "Hydrogen-Oxygen Fuel Cells";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 4: Electrochemistry** - Lesson 4
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Hydrogen-Oxygen Fuel Cells" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Uses of Metals";
+export const lessonTitle = "Uses of Metals";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 9: Metals** - Lesson 4
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Uses of Metals" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

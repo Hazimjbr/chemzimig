@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Group VIII/0 - Noble Gases";
+export const lessonTitle = "Group VIII/0 - Noble Gases";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 8: The Periodic Table** - Lesson 4
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Group VIII/0 - Noble Gases" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

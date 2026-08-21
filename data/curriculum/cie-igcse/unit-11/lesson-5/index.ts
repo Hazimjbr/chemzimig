@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Polymers";
+export const lessonTitle = "Polymers";
 export const lessonNumber = 5;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 11: Organic Chemistry** - Lesson 5
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Polymers" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Purification and Separation";
+export const lessonTitle = "Purification and Separation";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 12: Experimental Techniques and Chemical Analysis** - Lesson 2
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Purification and Separation" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

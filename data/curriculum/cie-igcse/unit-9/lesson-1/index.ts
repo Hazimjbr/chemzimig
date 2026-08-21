@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Properties of Metals";
+export const lessonTitle = "Properties of Metals";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 9: Metals** - Lesson 1
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Properties of Metals" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

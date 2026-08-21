@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "pH Scale and Indicators";
+export const lessonTitle = "pH Scale and Indicators";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 7: Acids, Bases and Salts** - Lesson 2
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "pH Scale and Indicators" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

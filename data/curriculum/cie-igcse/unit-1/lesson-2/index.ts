@@ -86,9 +86,6 @@ export const lessonParts: LessonPart[] = [
 
 * Diffusion only occurs in **fluids** (liquids and gases).
 * It is driven by the continuous random motion of particles colliding and bouncing in all directions.
-
----
-
 ### 🌊 Dissolving and Diffusing in Liquids
 
 When crystals are dissolved in water, we observe diffusion clearly:
@@ -239,9 +236,6 @@ $$NH_3\\text{(g)} + HCl\\text{(g)} \\rightarrow NH_4Cl\\text{(s)}$$
 ${svgToken(diffusionDemoSvg)}
 
 When these gases meet, they react to form **ammonium chloride (NH₄Cl)**, which appears as a white cloud or ring inside the tube.
-
----
-
 ### 🔬 Observations and Explanations
 
 1. **Position of the White Ring:** The white cloud forms **closer to the hydrochloric acid end** of the tube.
@@ -249,9 +243,6 @@ When these gases meet, they react to form **ammonium chloride (NH₄Cl)**, which
 2. **The Reaction Process:** Evaporation → Diffusion → Collision → Reaction.
 3. **Time Lag:** The white ring does **not** form instantly; it takes a few minutes.
    * **Why?** The diffusing gas particles constantly collide with air particles inside the tube, forcing them into a slow zigzag path.
-
----
-
 ### ⚡ Variables Influencing Diffusion Speed
 
 The rate at which particles diffuse depends on several key physical properties:

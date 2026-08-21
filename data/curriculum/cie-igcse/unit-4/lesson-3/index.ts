@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Electroplating";
+export const lessonTitle = "Electroplating";
 export const lessonNumber = 3;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 4: Electrochemistry** - Lesson 3
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Electroplating" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

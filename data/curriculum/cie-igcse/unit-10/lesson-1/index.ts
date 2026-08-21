@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Water Treatment";
+export const lessonTitle = "Water Treatment";
 export const lessonNumber = 1;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 10: Chemistry of the Environment** - Lesson 1
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Water Treatment" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

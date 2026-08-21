@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Bond Energies";
+export const lessonTitle = "Bond Energies";
 export const lessonNumber = 3;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 5: Chemical Energetics** - Lesson 3
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Bond Energies" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

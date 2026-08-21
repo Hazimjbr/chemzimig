@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Reactivity Series";
+export const lessonTitle = "Reactivity Series";
 export const lessonNumber = 2;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 9: Metals** - Lesson 2
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Reactivity Series" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Alcohols";
+export const lessonTitle = "Alcohols";
 export const lessonNumber = 3;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 11: Organic Chemistry** - Lesson 3
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Alcohols" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

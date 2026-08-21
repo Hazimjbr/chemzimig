@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Chemical Equations";
+export const lessonTitle = "Chemical Equations";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 3: Stoichiometry** - Lesson 4
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Chemical Equations" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

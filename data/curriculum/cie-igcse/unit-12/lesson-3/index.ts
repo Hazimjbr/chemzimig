@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Identification of Ions and Gases";
+export const lessonTitle = "Identification of Ions and Gases";
 export const lessonNumber = 3;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 12: Experimental Techniques and Chemical Analysis** - Lesson 3
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Identification of Ions and Gases" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2

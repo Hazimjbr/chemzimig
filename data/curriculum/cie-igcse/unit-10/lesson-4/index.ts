@@ -1,4 +1,4 @@
-﻿export const lessonTitle = "Carbon Cycle";
+export const lessonTitle = "Carbon Cycle";
 export const lessonNumber = 4;
 
 export const theoryMarkdown = `
@@ -7,13 +7,7 @@ export const theoryMarkdown = `
 > **Unit 10: Chemistry of the Environment** - Lesson 4
 >
 > Cambridge IGCSE Chemistry (0620)
-
----
-
 *Theory content for "Carbon Cycle" will be added here.*
-
----
-
 ### Key Points
 - Point 1
 - Point 2
