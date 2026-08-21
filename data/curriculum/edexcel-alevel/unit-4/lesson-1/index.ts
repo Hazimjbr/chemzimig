@@ -1736,19 +1736,18 @@ export const parts: LessonPart[] = [
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify the RDS & Formulate initial rate equation:**
-> >    * Step 2 is the slow step (RDS), so its rate equation is:
-> >      $$\\\\text{rate} = k_2 [\\\\text{N}_2\\\\text{O}_2][\\\\text{H}_2]$$
+> > **Answer:** Yes, it is consistent.
 > > 
-> > 2. **Express the intermediate N₂O₂ in terms of reactants:**
-> >    * Since N₂O₂ is an intermediate, it cannot appear in the final rate equation. From the fast pre-equilibrium in Step 1, the forward and reverse rates are equal:
-> >      rate(fwd) = rate(rev) ⟹ k₁[NO]² = k₋₁ · [N₂O₂]
-> >      [N₂O₂] = (k₁ / k₋₁) × [NO]²
+> > **Explanation:**
 > > 
-> > 3. **Substitute N₂O₂ into the RDS rate equation:**
-> >    * Substituting N₂O₂ into Step 2's rate equation:
-> >      rate = k₂ × (k₁/k₋₁) × [NO]² × [H₂] = k[H₂][NO]²
-> >    * *Conclusion:* Yes, it is fully consistent because the derived rate equation matches the experimental rate equation.
+> > 1. **Identify the rate-determining step and its reactants:**
+> >    * Step 2 is the rate-determining step (slow step), which involves one $\\\\text{N}_2\\\\text{O}_2$ molecule and one $\\\\text{H}_2$ molecule.
+> > 
+> > 2. **Trace the intermediate back to the fast step reactants:**
+> >    * $\\\\text{N}_2\\\\text{O}_2$ is an intermediate produced in the preceding fast step (Step 1) from two $\\\\text{NO}$ molecules.
+> > 
+> > 3. **Determine the overall rate dependence:**
+> >    * Therefore, the overall rate depends on two $\\\\text{NO}$ molecules and one $\\\\text{H}_2$ molecule, which perfectly matches the given rate equation: $\\\\text{Rate} = k[\\\\text{H}_2][\\\\text{NO}]^2$.
 
 &nbsp;
 
