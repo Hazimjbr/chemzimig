@@ -263,7 +263,7 @@ export const level3Questions: Question[] = [
   },
   {
     id: "ex_ed_u1_l1_lv3_14-2026",
-    question: "A mixture of nitrogen gas ($\\text{N}_2$) and oxygen gas ($\\text{O}_2$) has a total mass of $4.00\\text{ g}$ and occupies a volume of $3.10\\text{ dm}^3$ at r.t.p. Calculate the mole fraction of nitrogen in this mixture.\n*(Molar masses: $\\text{N}_2 = 28.0\\text{ g mol}^{-1}, \\text{O}_2 = 32.0\\text{ g mol}^{-1}$; Molar volume at r.t.p. $= 24.0\\text{ dm}^3\\text{ mol}^{-1}$)*",
+    question: "A mixture of nitrogen gas ($\text{N}_2$) and oxygen gas ($\text{O}_2$) has a total mass of $4.00\text{ g}$ and occupies a volume of $3.10\text{ dm}^3$ at r.t.p. Calculate the mole fraction of nitrogen in this mixture.\n*(Molar masses: $\text{N}_2 = 28.0\text{ g mol}^{-1}, \text{O}_2 = 32.0\text{ g mol}^{-1}$; Molar volume at r.t.p. $= 24.0\text{ dm}^3\text{ mol}^{-1}$)*",
     options: [
       { text: "0.25" },
       { text: "0.33" },
@@ -271,7 +271,7 @@ export const level3Questions: Question[] = [
       { text: "0.68", isCorrect: true }
     ],
     correctAnswer: 3,
-    explanation: "* Total moles $n_{\\text{total}} = \\frac{3.10}{24.0} = 0.1292\\text{ mol}$.\n* Let moles of $\\text{N}_2 = x$, moles of $\\text{O}_2 = 0.1292 - x$.\n* $28.0x + 32.0(0.1292 - x) = 4.00 \\implies 4.1344 - 4.0x = 4.00 \\implies 4.0x = 0.1344 \\implies x = 0.0336$ (or checking $0.088\\text{ mol} / 0.1292 = 0.681$).\n* Mole fraction of $\\text{N}_2 = \\frac{0.088}{0.1292} \\approx 0.68$.",
+    explanation: "* Total moles $n_{\text{total}} = \frac{3.10}{24.0} = 0.1292\text{ mol}$.\n* Let moles of $\text{N}_2 = x$, moles of $\text{O}_2 = 0.1292 - x$.\n* $28.0x + 32.0(0.1292 - x) = 4.00 \implies 4.1344 - 4.0x = 4.00 \implies 4.0x = 0.1344 \implies x = 0.0336$ (or checking $0.088\text{ mol} / 0.1292 = 0.681$).\n* Mole fraction of $\text{N}_2 = \frac{0.088}{0.1292} \approx 0.68$.",
     level: 3,
     topic: "edexcel-unit-1",
     lessonNum: 1,
@@ -279,6 +279,25 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q15",
     createdAt: "2026-05-19T10:00:00Z"
+  },
+  {
+    id: "q_ed_u1_l1_lv3_q10b_error_ram-20260821",
+    question: "A student reacts a Group 2 metal with dilute hydrochloric acid to find its relative atomic mass ($A_r$) by measuring the volume of hydrogen gas collected. The student removes the bung of the flask, adds the acid to the metal, and then quickly replaces the bung. What is the effect of this procedural error on the calculated relative atomic mass ($A_r$) of the metal?",
+    options: [
+      { text: "Some hydrogen gas escapes before the bung is replaced, resulting in a lower measured gas volume, fewer calculated moles of metal, and a higher calculated relative atomic mass", isCorrect: true },
+      { text: "Some hydrogen gas escapes, resulting in a lower measured gas volume, fewer calculated moles of metal, and a lower calculated relative atomic mass" },
+      { text: "The acid in the flask evaporates, resulting in a higher measured gas volume, more calculated moles of metal, and a lower calculated relative atomic mass" },
+      { text: "The air inside the flask is displaced, resulting in a higher measured gas volume, more calculated moles of metal, and a higher calculated relative atomic mass" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Removing the bung to add acid allows produced hydrogen gas to escape to the surroundings before the bung is replaced.\n* This makes the measured volume of collected gas lower than the true volume.\n* Since calculated moles of metal $n \\\\propto V_{\\\\text{gas}}$ (via the $1:1$ reaction ratio), the calculated moles of metal will be lower than the true value.\n* Since relative atomic mass $A_r = \\\\frac{m}{n}$ where $m$ is the constant measured mass of the metal, dividing by a smaller value of $n$ results in a calculated $A_r$ that is higher than the true value.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q17",
+    createdAt: "2026-08-21T10:20:00Z"
   }
 ];
 

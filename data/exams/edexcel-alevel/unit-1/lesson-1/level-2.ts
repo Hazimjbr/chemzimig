@@ -261,6 +261,82 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q10",
     createdAt: "2026-05-17T10:00:00Z"
+  },
+  {
+    id: "q_ed_u1_l1_lv2_q8a_titr_vol-20260821",
+    question: "What is the minimum volume, in $\\\\text{cm}^3$, of $0.500\\\\text{ mol dm}^{-3}$ nitric acid ($\\\\text{HNO}_3$) required to react completely with $25.0\\\\text{ cm}^3$ of $2.00\\\\text{ mol dm}^{-3}$ aqueous ammonia ($\\\\text{NH}_3$)?",
+    options: [
+      { text: "10.0 cm³" },
+      { text: "50.0 cm³" },
+      { text: "100 cm³", isCorrect: true },
+      { text: "250 cm³" }
+    ],
+    correctAnswer: 2,
+    explanation: "* The balanced equation is: $\\\\text{NH}_3\\\\text{(aq)} + \\\\text{HNO}_3\\\\text{(aq)} \\\\rightarrow \\\\text{NH}_4\\\\text{NO}_3\\\\text{(aq)}$.\n* Moles of $\\\\text{NH}_3 = C \\\\times V = 2.00\\\\text{ mol dm}^{-3} \\\\times 0.0250\\\\text{ dm}^3 = 0.0500\\\\text{ mol}$.\n* From the $1:1$ ratio, moles of $\\\\text{HNO}_3$ required $= 0.0500\\\\text{ mol}$.\n* $\\\\text{Volume of } \\\\text{HNO}_3 = \\\\frac{n}{C} = \\\\frac{0.0500\\\\text{ mol}}{0.500\\\\text{ mol dm}^{-3}} = 0.100\\\\text{ dm}^3 = 100\\\\text{ cm}^3$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q11",
+    createdAt: "2026-08-21T10:00:00Z"
+  },
+  {
+    id: "q_ed_u1_l1_lv2_q8b_solid_prep-20260821",
+    question: "Which experimental procedure is most appropriate to obtain a pure, dry sample of solid ammonium nitrate ($\\\\text{NH}_4\\\\text{NO}_3$) from the aqueous reaction mixture after neutralisation?",
+    options: [
+      { text: "Evaporate the solution until it is saturated, allow it to cool and crystallise, filter the crystals, and dry them between filter papers", isCorrect: true },
+      { text: "Heat the solution to complete dryness in an evaporating basin over a roaring Bunsen flame" },
+      { text: "Add concentrated hydrochloric acid to precipitate the solid, filter, and dry in an oven" },
+      { text: "Perform fractional distillation to separate the ammonium nitrate vapor from water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Heating to absolute dryness can cause thermal decomposition or violent explosions of ammonium nitrate.\n* Gently heating to saturation (crystallisation point) and allowing crystals to form slowly ensures high purity, followed by filtration and drying under mild conditions.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q12",
+    createdAt: "2026-08-21T10:05:00Z"
+  },
+  {
+    id: "q_ed_u1_l1_lv2_q9c_coeff_sum-20260821",
+    question: "Solid phosphorus pentachloride ($\\\\text{PCl}_5$) reacts vigorously with water to form phosphoric acid ($\\\\text{H}_3\\\\text{PO}_4$) and hydrochloric acid ($\\\\text{HCl}$).\nWhat is the sum of all stoichiometric coefficients when this equation is balanced using the simplest whole numbers?",
+    options: [
+      { text: "8" },
+      { text: "10" },
+      { text: "11", isCorrect: true },
+      { text: "12" }
+    ],
+    correctAnswer: 2,
+    explanation: "* The balanced equation is: $\\\\text{PCl}_5\\\\text{(s)} + 4\\\\text{H}_2\\\\text{O(l)} \\\\rightarrow \\\\text{H}_3\\\\text{PO}_4\\\\text{(aq)} + 5\\\\text{HCl(aq)}$.\n* The coefficients are: $1$ (for $\\\\text{PCl}_5$) $+ 4$ (for $\\\\text{H}_2\\\\text{O}$) $+ 1$ (for $\\\\text{H}_3\\\\text{PO}_4$) $+ 5$ (for $\\\\text{HCl}$).\n* $\\\\text{Sum} = 1 + 4 + 1 + 5 = 11$.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q15",
+    createdAt: "2026-08-21T10:10:00Z"
+  },
+  {
+    id: "q_ed_u1_l1_lv2_q10b_gas_syringe_mod-20260821",
+    question: "Which modification to the gas collection apparatus shown in the diagram would best prevent gas loss when starting the reaction between a metal and acid?",
+    options: [
+      { text: "Adding the acid through a sealed syringe fitted through the bung without opening it to the air", isCorrect: true },
+      { text: "Using a larger conical flask with a wider neck to allow the bung to be replaced faster" },
+      { text: "Using a lower concentration of acid so that the initial reaction is slower" },
+      { text: "Replacing the water in the trough with aqueous sodium hydroxide solution" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Opening the flask to add acid allows gas to escape immediately.\n* Using a sealed dropping funnel or a syringe through the bung keeps the system completely airtight at all times, preventing any gas loss when the reaction starts.",
+    level: 2,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q16",
+    createdAt: "2026-08-21T10:15:00Z"
   }
 ];
 

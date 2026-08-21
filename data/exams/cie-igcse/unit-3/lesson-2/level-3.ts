@@ -47,7 +47,6 @@ export const level3Questions: Question[] = [
       { text: "9.8 g of sulfuric acid, H₂SO₄" },
       { text: "10.0 g of calcium carbonate, CaCO₃" }
     ],
-    optionsExplanations: [],
     correctAnswer: 0,
     explanation: "* Calculate the number of moles of atoms for each sample:\n  * 2.0 g of H₂ $= 2.0 / 2 = 1.0\\text{ mol of H}_2\\text{ molecules} = 2.0\\text{ moles of atoms}$.\n  * 5.6 g of Fe $= 5.6 / 56 = 0.1\\text{ moles of Fe atoms}$.\n  * 9.8 g of H₂SO₄ $= 9.8 / 98 = 0.1\\text{ mol of H}_2\\text{SO}_4\\text{ molecules} \\times 7 = 0.7\\text{ moles of atoms}$.\n  * 10.0 g of CaCO₃ $= 10.0 / 100 = 0.1\\text{ mol of CaCO}_3\\text{ formula units} \\times 5 = 0.5\\text{ moles of atoms}$.\n* Therefore, 2.0 g of hydrogen gas contains the greatest number of atoms ($2.0 \\times L$ atoms).",
     level: 3,
