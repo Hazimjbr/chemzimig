@@ -624,8 +624,9 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 > > 
 > > 1. **Deduce the relationship between flight time ($t$) and isotopic mass ($m$):**
 > >    * Kinetic energy is constant for all accelerated ions: $KE = \frac{1}{2}mv^2$
-> >    * Since velocity is distance over time ($v = \frac{d}{t}$), we can substitute: $KE = \frac{1}{2}m\left(\frac{d}{t}\right)^2 \implies t = d\sqrt{\frac{m}{2KE}}$
-> >    * Since the drift tube length ($d$) and kinetic energy ($KE$) are constant, flight time is directly proportional to the square root of the mass ($t \propto \sqrt{m}$):
+> >    * Since velocity is distance over time ($v = \frac{d}{t}$), we can substitute and rearrange:
+> >      $$KE = \frac{1}{2}m\left(\frac{d}{t}\right)^2 \implies t = d\sqrt{\frac{m}{2KE}}$$
+> >    * Since drift tube length ($d$) and kinetic energy ($KE$) are constant, flight time is directly proportional to the square root of mass. Therefore the ratio of flight times equals the square root of the ratio of masses:
 > >      $$\frac{t_1}{t_2} = \sqrt{\frac{m_1}{m_2}}$$
 > > 
 > > 2. **Rearrange the formula to solve for the flight time of the heavier $^{81}\text{Br}^+$ ion ($t_2$):**

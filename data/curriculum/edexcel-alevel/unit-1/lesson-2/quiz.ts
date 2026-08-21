@@ -548,5 +548,16 @@ export const lessonQuiz = [
             { text: "$\\\\text{He}^+$" }
         ],
         explanation: "Let's calculate for hydroxide ion ($\\\\text{OH}^-$):\n* Protons: $8$ (from O) + $1$ (from H) = $9$ protons.\n* Neutrons: $8$ (from ${}^{16}\\\\text{O}$) + $0$ (from ${}^1\\\\text{H}$) = $8$ neutrons. (Protons > Neutrons: $9 > 8$).\n* Electrons: $9 + 1$ (due to $-1$ charge) = $10$ electrons. (Electrons > Protons: $10 > 9$).\nThus, $\\\\text{OH}^-$ satisfies both conditions."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q51-MEDIUM-2026",
+        question: "The species $\\\\text{Ar}$, $\\\\text{K}^+$, and $\\\\text{Ca}^{2+}$ are isoelectronic. In what order do their radii increase (smallest to largest)?",
+        options: [
+            { text: "$\\\\text{Ca}^{2+} < \\\\text{K}^+ < \\\\text{Ar}$", isCorrect: true },
+            { text: "$\\\\text{Ar} < \\\\text{K}^+ < \\\\text{Ca}^{2+}$" },
+            { text: "$\\\\text{Ar} < \\\\text{Ca}^{2+} < \\\\text{K}^+$" },
+            { text: "$\\\\text{Ca}^{2+} < \\\\text{Ar} < \\\\text{K}^+$" }
+        ],
+        explanation: "These three species are isoelectronic, each containing exactly 18 electrons ($1s^2 2s^2 2p^6 3s^2 3p^6$). As the nuclear charge increases ($\\\\text{Ar}$ = 18 protons, $\\\\text{K}^+$ = 19 protons, $\\\\text{Ca}^{2+}$ = 20 protons), the nucleus exerts a stronger electrostatic attraction on the same 18 electrons, drawing them closer. Therefore, the radius decreases as protons increase: $\\\\text{Ca}^{2+} < \\\\text{K}^+ < \\\\text{Ar}$."
     }
 ];

@@ -21,6 +21,7 @@ export function sanitizeKatex(math: string): string {
     res = res.replace(/\x08(eta|ullet|ar|egin)/g, (_, p1) => '\\b' + p1);
     res = res.replace(/\v(ec|ert)/g, (_, p1) => '\\v' + p1);
 
+
     // 2. Repair raw "text" prefixes without braces or slashes (e.g. \textZn, textZn, \textFeSO_4, textFeSO_4, textNa(l))
     // Replace \textXYZ or textXYZ with \text{XYZ}
     res = res.replace(/(?:\\text|text)\s*\{([^}]+)\}/g, '\\text{$1}');
@@ -51,8 +52,9 @@ export function sanitizeKatex(math: string): string {
     res = res.replace(/(^|[^\w\\])(?:\\)?approx\b/g, '$1\\approx ');
     res = res.replace(/(^|[^\w\\])(?:\\)?times\b/g, '$1\\times ');
     res = res.replace(/(^|[^\w\\])(?:\\)?pm\b/g, '$1\\pm ');
-    res = res.replace(/(^|[^\w\\])(?:\\)?left\b/g, '$1\\left');
-    res = res.replace(/(^|[^\w\\])(?:\\)?right\b/g, '$1\\right');
+    res = res.replace(/(?<!\\)left(?=[\(\[\{\|\.])/g, '\\left');
+    res = res.replace(/(?<!\\)right(?=[\)\]\}\|\.])/g, '\\right');
+    res = res.replace(/(?<!\\)sqrt(?=[\{\(|])/g, '\\sqrt');
     res = res.replace(/(^|[^\w\\])(?:\\)?implies\b/g, '$1\\implies');
     res = res.replace(/(^|[^\w\\])(?:\\)?mol\b/g, '$1\\text{ mol}');
     res = res.replace(/(^|[^\w\\])(?:\\)?dm\b/g, '$1\\text{ dm}');

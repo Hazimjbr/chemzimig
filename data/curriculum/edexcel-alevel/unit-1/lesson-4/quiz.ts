@@ -465,5 +465,159 @@ export const lessonQuiz = [
       { text: "Converting non-biodegradable polymers into biodegradable ones using bacteria." }
     ],
     explanation: "Feedstock recycling involves thermal or chemical depolymerization of waste plastics to recover their constituent monomers or raw chemical feedstocks, which can then be used to manufacture new polymers or other chemicals."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q41-EASY-2026",
+    question: "In 1828, Friedrich Wöhler disproved the theory of 'vitalism' by heating an inorganic compound to produce urea. What was this starting inorganic compound?",
+    options: [
+      { text: "Ammonium cyanate", isCorrect: true },
+      { text: "Ammonium carbonate" },
+      { text: "Urea nitrate" },
+      { text: "Sodium cyanide" }
+    ],
+    explanation: "Friedrich Wöhler heated ammonium cyanate ($\\text{NH}_4\\text{CNO}$), which is an inorganic salt, and converted it into urea ($\\text{CO(NH}_2)_2$), an organic compound. This demonstrated that organic compounds do not require a living 'vital force' to be synthesized."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q42-EASY-2026",
+    question: "Which extremely strong, heat-resistant organic polymer was invented by organic chemist Stephanie Kwolek in the 1960s?",
+    options: [
+      { text: "Kevlar®", isCorrect: true },
+      { text: "Nylon-6,6" },
+      { text: "Teflon®" },
+      { text: "Poly(ethene)" }
+    ],
+    explanation: "Stephanie Kwolek invented Kevlar® in 1965. It is a polyamide polymer with exceptional strength-to-weight ratio, widely used in body armour, safety gloves, and sports equipment."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q43-MEDIUM-2026",
+    question: "What are the molecular formulae of the two possible saturated hydrocarbons that contain exactly five carbon atoms?",
+    options: [
+      { text: "$\\text{C}_5\\text{H}_{12}$ and $\\text{C}_5\\text{H}_{10}$", isCorrect: true },
+      { text: "$\\text{C}_5\\text{H}_{12}$ and $\\text{C}_5\\text{H}_8$" },
+      { text: "$\\text{C}_5\\text{H}_{10}$ and $\\text{C}_5\\text{H}_8$" },
+      { text: "$\\text{C}_5\\text{H}_{12}$ only" }
+    ],
+    explanation: "A saturated hydrocarbon containing only single bonds can either be an alkane chain ($\\text{C}_n\\text{H}_{2n+2}$) or a cyclic cycloalkane ($\\text{C}_n\\text{H}_{2n}$). For five carbons, these correspond to pentane ($\\text{C}_5\\text{H}_{12}$) and cyclopentane ($\\text{C}_5\\text{H}_{10}$)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q44-MEDIUM-2026",
+    question: "Explain why the actual 3D C-C-C bond angle in cyclobutane is much closer to 109.5° than the 90° angle seen in its 2D drawing.",
+    options: [
+      { text: "The carbon atoms are $sp^3$ hybridized, and the ring puckers in 3D to minimize eclipse strain and approach the tetrahedral angle", isCorrect: true },
+      { text: "The carbon atoms are $sp^2$ hybridized, pushing the bonds to a planar arrangement" },
+      { text: "The hydrogen atoms repel each other, widening the angle to exactly 120°" },
+      { text: "Cyclobutane is planar, but the C-C bonds are bent due to coordinate bonding" }
+    ],
+    explanation: "Carbon atoms in cyclobutane are $sp^3$ hybridized, which ideally prefers a tetrahedral angle of 109.5°. To minimize ring strain and eclipse strain of C-H bonds, cyclobutane does not stay flat at 90°; it puckers slightly in 3D, keeping its internal angles close to tetrahedral (around 88°)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q45-MEDIUM-2026",
+    question: "Why is sucrose ($\\text{C}_{12}\\text{H}_{22}\\text{O}_{11}$) classified as a carbohydrate and not a hydrocarbon?",
+    options: [
+      { text: "It contains oxygen atoms in addition to carbon and hydrogen", isCorrect: true },
+      { text: "It does not contain any carbon-hydrogen bonds" },
+      { text: "It is an organic sugar compound" },
+      { text: "It is a polymer of ethene monomers" }
+    ],
+    explanation: "A hydrocarbon is defined as a compound containing carbon and hydrogen atoms ONLY. Because sucrose contains oxygen atoms in its structure, it is classified as a carbohydrate (the suffix '-ate' indicates oxygen presence) and not a hydrocarbon."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q46-MEDIUM-2026",
+    question: "For which of the following compounds are the molecular formula and empirical formula identical?",
+    options: [
+      { text: "Chloroethane ($\\text{C}_2\\text{H}_5\\text{Cl}$)", isCorrect: true },
+      { text: "Butane ($\\text{C}_4\\text{H}_{10}$)" },
+      { text: "Ethene ($\\text{C}_2\\text{H}_4$)" },
+      { text: "Ethanoic acid ($\\text{C}_2\\text{H}_4\\text{O}_2$)" }
+    ],
+    explanation: "An empirical formula is the simplest whole-number ratio of atoms. In chloroethane ($\\text{C}_2\\text{H}_5\\text{Cl}$), the ratio of C:H:Cl is 2:5:1, which cannot be simplified further. Therefore, its empirical and molecular formulae are identical."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q47-HARD-2026",
+    question: "An organic compound has the molecular formula $\\text{C}_3\\text{H}_7\\text{Cl}$. How many structural isomers can this formula represent?",
+    options: [
+      { text: "2", isCorrect: true },
+      { text: "3" },
+      { text: "4" },
+      { text: "1" }
+    ],
+    explanation: "The molecular formula $\\text{C}_3\\text{H}_7\\text{Cl}$ represents exactly two positional isomers: 1-chloropropane ($\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{Cl}$) and 2-chloropropane ($\\text{CH}_3\\text{CHClCH}_3$)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q48-MEDIUM-2026",
+    question: "A student writes down a formula as $\\text{CH}_3\\text{CH}_2\\text{Cl}$. What type of chemical formula is this?",
+    options: [
+      { text: "Structural formula", isCorrect: true },
+      { text: "Displayed formula" },
+      { text: "Skeletal formula" },
+      { text: "Empirical formula" }
+    ],
+    explanation: "A structural formula shows the arrangement of atoms carbon-by-carbon without showing all the individual bonds explicitly. Thus, $\\text{CH}_3\\text{CH}_2\\text{Cl}$ is the structural formula of chloroethane."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q49-MEDIUM-2026",
+    question: "Which type of chemical formula represents butane as a simple zig-zag line showing only carbon-carbon bonds?",
+    options: [
+      { text: "Skeletal formula", isCorrect: true },
+      { text: "Structural formula" },
+      { text: "Displayed formula" },
+      { text: "Molecular formula" }
+    ],
+    explanation: "A skeletal formula simplifies organic representations by showing only the carbon-carbon bonds as a zig-zag line, omitting the carbon and hydrogen atoms themselves (which are assumed at vertices and ends)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q50-HARD-2026",
+    question: "Which statement is an essential requirement when drawing a displayed formula in an exam?",
+    options: [
+      { text: "Every single atom and every single bond (including C-H and O-H bonds) must be drawn explicitly with bond lines", isCorrect: true },
+      { text: "Carbon-hydrogen bonds can be grouped together as $\\text{-CH}_3$ to save space" },
+      { text: "Only double bonds must be shown with lines, while single bonds can be omitted" },
+      { text: "The skeleton of the molecule must be represented as a zig-zag line" }
+    ],
+    explanation: "A displayed formula must show every atom and every single bond separately. Failing to draw the bond lines (e.g. grouping as $\\text{-CH}_3$ or writing $\\text{-OH}$ without the $\\text{-O-H}$ bond line) will result in loss of marks in Edexcel examinations."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q51-MEDIUM-2026",
+    question: "Why is the compound with structural formula $\\text{CH}_3\\text{CH(CH}_3)\\text{CH}_3$ systematically named methylpropane rather than 2-methylpropane?",
+    options: [
+      { text: "Because there is only one carbon position (carbon 2) where a methyl group can be attached to the propane chain without changing the parent chain length, making the locant '2-' redundant", isCorrect: true },
+      { text: "Because IUPAC rules forbid the use of numbers for chains shorter than four carbons" },
+      { text: "Because the compound has a circular structure where all carbons are equivalent" },
+      { text: "Because the prefix methyl has priority and automatically assigns itself to carbon 1" }
+    ],
+    explanation: "In propane (3 carbons), a methyl group can only be attached to carbon-2. If it were attached to carbon-1 or carbon-3, it would extend the longest continuous carbon chain to 4 carbons, making the compound butane. Since carbon-2 is the only possible position for a branched methyl group in propane, the locant '2-' is omitted as it is redundant."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q52-HARD-2026",
+    question: "What is the correct systematic IUPAC name for the compound with structural formula $\\text{CH}_3\\text{CH}_2\\text{CH(CH}_2\\text{CH}_3)\\text{CH(CH}_3)\\text{CH}_3$?",
+    options: [
+      { text: "3-ethyl-2-methylpentane", isCorrect: true },
+      { text: "3-ethyl-4-methylpentane" },
+      { text: "3-methyl-4-ethylpentane" },
+      { text: "2-methyl-3-ethylpentane" }
+    ],
+    explanation: "Let's follow IUPAC rules:\n1. Longest continuous carbon chain containing the branches has 5 carbons (parent: pentane).\n2. Number from the end that gives the lowest locant set: numbering from right to left gives branches at positions 2 (methyl) and 3 (ethyl) -> locants **2, 3**. (Left-to-right numbering would give 3, 4, which is higher).\n3. Alphabetical ordering: 'ethyl' comes before 'methyl' (e before m).\n4. Combine: **3-ethyl-2-methylpentane**."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q53-HARD-2026",
+    question: "What is the correct systematic IUPAC name for the compound represented by the structural formula $\\text{CH}_2\\text{(Br)CH(OH)CH}_3$?",
+    options: [
+      { text: "1-bromopropan-2-ol", isCorrect: true },
+      { text: "3-bromopropan-2-ol" },
+      { text: "1-bromopropanol" },
+      { text: "3-bromopropanol" }
+    ],
+    explanation: "In this compound, the principal functional group is the alcohol ($-\\text{OH}$), which determines the suffix '-ol' and has priority for numbering over the bromine substituent. The chain is numbered from right to left to give the $-\\text{OH}$ group the lowest possible number (carbon-2). The bromine atom is at carbon-1. Therefore, the name is **1-bromopropan-2-ol**."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q54-MEDIUM-2026",
+    question: "Why are no locants used in the systematic name of dimethylpropane, $\\text{CH}_3\\text{C(CH}_3)_2\\text{CH}_3$?",
+    options: [
+      { text: "Because both methyl groups must be attached to carbon 2 of the propane chain; attaching them elsewhere would extend the main chain, making locants redundant", isCorrect: true },
+      { text: "Because dimethylpropane contains only carbon atoms with identical environments" },
+      { text: "Because the prefix 'di-' indicates that the methyl groups are automatically placed at the ends of the chain" },
+      { text: "Because it is an isomer of pentane and isomers do not require locants" }
+    ],
+    explanation: "In propane (3 carbons), the only carbon that can support two branches without extending the longest carbon chain (which would make it butane or pentane) is carbon-2. Therefore, both methyl groups must be attached to carbon-2. Because this is the only possible arrangement for dimethylpropane, writing '2,2-dimethylpropane' is unnecessary, and the locants are omitted."
   }
 ];

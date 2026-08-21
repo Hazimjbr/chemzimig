@@ -344,30 +344,28 @@ export const parts: LessonPart[] = [
     content: `
 > [!NOTE]
 > ### 🧪 What are Organic Compounds?
-> Organic compounds are compounds that contain the **C–H bond** (with rare exceptions such as CCl₄). They are classified by the elements they contain:
->
-> 1. **Hydrocarbons:** contain only C and H atoms.
->    * *Examples:* Alkanes, Alkenes, Alkynes.
-> 2. **Hydrocarbon Derivatives:** contain atoms other than C and H, such as O, N, or halogens.
->    * *Examples:* Haloalkanes, Alcohols, Aldehydes, Ketones, Carboxylic Acids, Esters.
-
-> [!IMPORTANT]
-> ### ⚛️ Bond Types in Organic Compounds
-> Organic compounds differ according to their bond types:
->
-> 1. **Saturated compounds:** contain only **sigma (σ) bonds** (C–C single bonds).
->    * Formed by *axial (end-to-end / head-to-head) overlap* of orbitals.
-> 2. **Unsaturated compounds:** contain one or more **pi (π) bonds** — such as C=C, C≡C, or C=O
->    * Pi bonds are formed by *sideways overlap* of p-orbitals.
->
-> **Valence Rules (Bonding pairs around each atom):**
->
-> | Atom | Bonding Pairs | Example |
-> | :---: | :---: | :--- |
-> | C | 4 | CH₄ (4 bonds) |
-> | N | 3 | NH₃ (3 bonds) |
-> | O | 2 | H₂O (2 bonds) |
-> | H | 1 | HCl (1 bond) |
+> Organic compounds are compounds that contain carbon (specifically C-H bonds, with rare exceptions like CCl₄). 
+> * **Vitalism History:** In the early 1800s, scientists believed in *vitalism* — the theory that organic compounds possessed a 'vital force' and could only be synthesized by living organisms (plants or animals), such as urea in human urine. 
+> * **The Breakthrough (1828):** German chemist **Friedrich Wöhler** heated the inorganic compound **ammonium cyanate** ($\text{NH}_4\text{CNO}$) and successfully synthesized **urea** ($\text{CO(NH}_2)_2$), disproving vitalism.
+> * **Kevlar® Discovery (1960s):** The organic chemist **Stephanie Kwolek** invented **Kevlar®**, an extremely strong, heat-resistant organic polymer now used in body armour, safety gloves, and smartphones.
+> * **Classification:**
+>   1. **Hydrocarbons:** contain only carbon and hydrogen atoms.
+>   2. **Hydrocarbon Derivatives:** contain other elements like O, N, or halogens (e.g. sucrose is a carbohydrate, not a hydrocarbon, as the *-ate* ending shows it contains oxygen).
+> 
+> > [!IMPORTANT]
+> > ### ⚛️ Bond Types & Valence in Organic Compounds
+> > Organic compounds differ according to their bond types and molecular saturation:
+> >
+> > 1. **Saturated compounds:** contain only **sigma (σ) bonds** (C–C single bonds) allowing maximum hydrogen atoms.
+> > 2. **Unsaturated compounds:** contain one or more **pi (π) bonds** (e.g., C=C double bonds or C≡C triple bonds), containing fewer hydrogen atoms than the maximum possible.
+> > 
+> > **Valence Rules (Bonding pairs around each atom):**
+> > * Carbon: 4 bonds
+> > * Nitrogen: 3 bonds
+> > * Oxygen: 2 bonds
+> > * Hydrogen / Halogens: 1 bond
+> > 
+> > **Cyclobutane 3D Bond Angle Hint:** In a 2D drawing of cyclobutane (or cyclopropane), the bond angles look like 90° (or 60°). However, because the carbon atoms are $sp^3$ hybridized, the actual 3D bond angles are puckered and closer to the tetrahedral angle of **109.5°** to minimize eclipse strain.
 
 > [!TIP]
 > ### 🌡️ Boiling Points of Hydrocarbons
@@ -553,6 +551,24 @@ export const parts: LessonPart[] = [
 > >    * Draw a zig-zag chain of 5 carbon atoms (be careful to include the carbon of the -COOH group as carbon-1 of the chain).
 > >    * At carbon-1, add a double bond to an oxygen atom (=O) and a single bond to a hydroxyl group (-OH) to represent the carboxylic acid.
 > >    * At carbon-4, add a single bond to an oxygen atom of a hydroxyl group (-OH).
+
+> [!EXAMPLE]
+> #### 📝 Example 8: Identifying Homologous Series and Simpler Members
+> **Question:** A compound has the structural formula $\text{CH}_3\text{CH}_2\text{CHO}$.
+> 1. Identify the homologous series to which this compound belongs.
+> 2. Write the structural formulae of the two simpler members in this same homologous series.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the homologous series:**
+> >    * The compound contains the $-\text{CHO}$ functional group (carbonyl group at the end of the chain). This defines the **aldehyde** homologous series.
+> > 
+> > 2. **Deduce the simpler members:**
+> >    * The given compound has 3 carbons (propanal). The simpler members must have 1 and 2 carbon atoms respectively.
+> >    * The 1-carbon aldehyde (methanal) has the formula: **$\text{HCHO}$**
+> >    * The 2-carbon aldehyde (ethanal) has the formula: **$\text{CH}_3\text{CHO}$**
+
 `,
     keyPoints: [
       'Saturated hydrocarbons contain only single sigma (σ) bonds, whereas unsaturated hydrocarbons contain one or more pi (π) bonds.',
@@ -764,6 +780,48 @@ export const parts: LessonPart[] = [
 > >    * Draw a 4-carbon zig-zag chain.
 > >    * Add a single bond pointing to an –OH group on carbon-1.
 > >    * Draw a single line representing a methyl branch pointing outward from carbon-3.
+
+> [!EXAMPLE]
+> #### 📝 Example 8: Deducing IUPAC Names from Structural Formulae
+> **Question:** Deduce the systematic IUPAC names for the following compounds:
+> 1. $\text{CH}_2(\text{Br})-\text{CH}(\text{Br})-\text{CH}_3$
+> 2. $\text{CH}_2(\text{Br})-\text{CH}(\text{OH})-\text{CH}_3$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Deduce name of compound 1:**
+> >    * Longest carbon chain is 3 carbon atoms (root: propane).
+> >    * Number the chain from the end closest to the substituents (left-to-right) to give the lowest locant set: carbon-1 and carbon-2.
+> >    * There are two bromine atoms, so use multiplying prefix 'di-'.
+> >    * Systematic name: **1,2-dibromopropane**
+> > 
+> > 2. **Deduce name of compound 2:**
+> >    * Longest carbon chain is 3 carbon atoms containing the principal functional group (alcohol). The suffix is **-ol**.
+> >    * Alcohol has priority over halogen substituents for numbering. Therefore, the chain is numbered to give the -OH group the lowest number (carbon-2).
+> >    * The bromine atom is at carbon-1.
+> >    * Systematic name: **1-bromopropan-2-ol** (not 3-bromopropan-2-ol).
+
+> [!EXAMPLE]
+> #### 📝 Example 9: Writing Structural Formulae from IUPAC Names
+> **Question:** Write the structural formulae for the following compounds:
+> 1. **2,2-dimethylpentane**
+> 2. **2,3-dimethylbutan-2-ol**
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Write formula of 2,2-dimethylpentane:**
+> >    * The root 'pentane' indicates 5 carbon atoms in the main chain.
+> >    * Carbon-2 has two methyl groups ($-\text{CH}_3$) attached to it.
+> >    * Structural formula: **$\text{CH}_3\text{C(CH}_3)_2\text{CH}_2\text{CH}_2\text{CH}_3$**
+> > 
+> > 2. **Write formula of 2,3-dimethylbutan-2-ol:**
+> >    * The root 'butane' indicates 4 carbon atoms in the main chain.
+> >    * The suffix '-2-ol' indicates an $-\text{OH}$ group on carbon-2.
+> >    * There are methyl groups on carbon-2 and carbon-3.
+> >    * Structural formula: **$\text{CH}_3\text{C(OH)(CH}_3)\text{CH(CH}_3)\text{CH}_3$**
+
 `,
     keyPoints: [
       'Systematic names are derived by finding the longest carbon chain containing the functional group and numbering it to give the lowest locants.',
@@ -919,22 +977,7 @@ export const parts: LessonPart[] = [
 > > 4. **Classify the isomerism:**
 > >    * Since they contain different functional groups but the same molecular formula, they represent **functional group isomerism**.
 
-> [!EXAMPLE]
-> #### 📝 Worked Example 7: Systematic Identification of Combined Isomers (C₄H₉Br)
-> **Question:** Deduce the total number of structural isomers for the molecular formula C₄H₉Br, draw their structural formulas, and state their systematic IUPAC names.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Start with a straight carbon chain (butane backbone - 4 carbons):**
-> >    * Place the bromine atom on carbon-1: CH₃CH₂CH₂CH₂Br (**1-bromobutane**).
-> >    * Place the bromine atom on carbon-2: CH₃CH₂CH(Br)CH₃ (**2-bromobutane**).
-> > 2. **Next, branch the carbon skeleton (propane backbone with a methyl group - 3 carbons):**
-> >    * Backbone structure: CH₃CH(CH₃)CH₂–
-> >    * Place the bromine atom on carbon-1: CH₃CH(CH₃)CH₂Br (**1-bromo-2-methylpropane**).
-> >    * Place the bromine atom on the central carbon-2: CH₃C(Br)(CH₃)CH₃ (**2-bromo-2-methylpropane**).
-> > 3. **Conclusion:**
-> >    * There are a total of **4** structural isomers.
+
 `,
     keyPoints: [
       'Structural isomers share the same molecular formula but have different structural formulas.',

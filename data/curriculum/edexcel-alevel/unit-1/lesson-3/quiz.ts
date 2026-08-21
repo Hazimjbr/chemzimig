@@ -471,5 +471,137 @@ export const lessonQuiz = [
             { text: "Boron nitride is an electrical conductor, allowing the layers to slide via electromagnetic repulsion." }
         ],
         explanation: "Graphite is completely non-polar and relies on adsorbed gas molecules (like water vapour) to act as a lubricant. In a vacuum, these desorb and the layers bind. Hexagonal boron nitride ($\\\\text{BN}$) has polar $\\\\text{B-N}$ bonds, creating polar sheets that can slide over one another easily due to electrostatic shearing, even in a vacuum."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q44-MEDIUM-2026",
+        question: "Which statement correctly explains why atomic radius decreases across Period 3 from sodium to chlorine?",
+        options: [
+            { text: "Nuclear charge increases (more protons) while shielding remains relatively constant, pulling the outer electrons closer", isCorrect: true },
+            { text: "The number of filled principal quantum shells decreases across the period" },
+            { text: "The number of delocalised valence electrons increases, contracting the atom" },
+            { text: "The electronegativity difference between adjacent atoms increases" }
+        ],
+        explanation: "Across Period 3, the number of protons in the nucleus increases by one for each subsequent element, increasing the nuclear charge. The additional electrons are added to the same principal quantum shell (n=3), so shielding remains relatively constant. This results in a stronger net attraction pulling the outer shell closer, decreasing the atomic radius."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q45-HARD-2026",
+        question: "Silicon ($\\\\text{Si}$) has a melting temperature of 1410°C, while phosphorus ($\\\\text{P}_4$) melts at only 44°C. Explain this difference in terms of structure and bonding.",
+        options: [
+            { text: "Silicon is a giant covalent lattice requiring the breaking of strong covalent bonds, while phosphorus is simple molecular and only requires overcoming weak London dispersion forces.", isCorrect: true },
+            { text: "Silicon forms a giant metallic structure with strong electrostatic attractions, while phosphorus forms a giant ionic lattice." },
+            { text: "Silicon atoms form strong triple bonds, whereas phosphorus molecules are held by weak dative covalent bonds." },
+            { text: "Silicon has more electrons than phosphorus, generating much stronger temporary dipole-induced dipole forces." }
+        ],
+        explanation: "Silicon exists as a giant covalent lattice (similar to diamond) where atoms are held together by a 3D network of strong covalent bonds. Melting silicon requires breaking these strong covalent bonds, which requires a very large amount of energy. Phosphorus exists as discrete $\\\\text{P}_4$ molecules held together by weak intermolecular London forces. Melting phosphorus only requires overcoming these weak London forces, requiring very little energy."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q46-HARD-2026",
+        question: "The first ionization energy of magnesium ($738\\\\text{ kJ mol}^{-1}$) is higher than that of aluminium ($578\\\\text{ kJ mol}^{-1}$). Explain this anomaly.",
+        options: [
+            { text: "Aluminium's outer electron is in a $3p$ orbital which is higher in energy and experiences more shielding than magnesium's outer electron in a $3s$ orbital", isCorrect: true },
+            { text: "Magnesium has a higher nuclear charge than aluminium, holding its outer electrons more tightly" },
+            { text: "Aluminium is a larger atom, so its outer electrons are much further from the nucleus" },
+            { text: "Magnesium forms a more stable positive ion because it has a full $3s^2$ subshell" }
+        ],
+        explanation: "Magnesium's outermost configuration is $3s^2$, so its outer electron is removed from the $3s$ orbital. Aluminium's outermost configuration is $3s^2 3p^1$, so its outer electron is removed from the $3p$ orbital. The $3p$ orbital is higher in energy than the $3s$ orbital and is shielded by the inner shells plus the $3s^2$ electrons, making it easier to remove and resulting in a lower first ionization energy for aluminium."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q47-HARD-2026",
+        question: "The first ionization energy of sodium is $496\\\\text{ kJ mol}^{-1}$ and that of magnesium is $738\\\\text{ kJ mol}^{-1}$, but the second ionization energy of sodium is $4563\\\\text{ kJ mol}^{-1}$ while that of magnesium is $1451\\\\text{ kJ mol}^{-1}$. Explain why the second ionization energy of sodium is much higher than that of magnesium.",
+        options: [
+            { text: "Sodium's second electron is removed from a shell closer to the nucleus ($n=2$), whereas magnesium's second electron is removed from the same outer shell ($n=3$)", isCorrect: true },
+            { text: "Magnesium's outer electrons experience more shielding than sodium's outer electrons" },
+            { text: "Sodium has a higher nuclear charge than magnesium, drawing its outer shell closer" },
+            { text: "Magnesium forms a stable $+2$ ion because it achieves a full octet in its third shell" }
+        ],
+        explanation: "Sodium is in Group 1 ($1s^2 2s^2 2p^6 3s^1$), so its second electron must be removed from the stable $2p$ subshell in the inner $n=2$ quantum shell, which is closer to the nucleus and experiences much less shielding. Magnesium is in Group 2 ($1s^2 2s^2 2p^6 3s^2$), so its second electron is removed from the same outer $3s$ orbital in the $n=3$ shell, which requires far less energy."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q48-MEDIUM-2026",
+        question: "Naturally occurring lithium consists of two isotopes, ${}^6\\\\text{Li}$ and ${}^7\\\\text{Li}$. Which statement is correct regarding the chemical properties of these two isotopes?",
+        options: [
+            { text: "They have identical chemical properties because they have the same electronic configuration ($1s^2 2s^1$)", isCorrect: true },
+            { text: "They have different chemical properties because ${}^7\\\\text{Li}$ has more neutrons in its nucleus" },
+            { text: "They have different chemical properties because they belong to different groups in the Periodic Table" },
+            { text: "They have identical chemical properties because they have the same relative isotopic mass" }
+        ],
+        explanation: "Chemical properties are determined solely by the number and arrangement of electrons in an atom (electronic configuration). Since isotopes of the same element have the same number of protons and electrons ($1s^2 2s^1$ for neutral lithium), they exhibit identical chemical properties."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q49-MEDIUM-2026",
+        question: "Which of the following ions contains the fewest number of electrons?",
+        options: [
+            { text: "$\\\\text{NH}_4^+$", isCorrect: true },
+            { text: "$\\\\text{P}^{3-}$" },
+            { text: "$\\\\text{S}^{2-}$" },
+            { text: "$\\\\text{Cl}^-$" }
+        ],
+        explanation: "Let's count the total electrons in each ion:\n* $\\\\text{NH}_4^+$: Nitrogen has 7 electrons, 4 Hydrogens have 4, and subtracting 1 for the $+1$ charge gives $7+4-1=10$ electrons.\n* $\\\\text{P}^{3-}$: Phosphorus has 15, adding 3 gives 18 electrons.\n* $\\\\text{S}^{2-}$: Sulfur has 16, adding 2 gives 18 electrons.\n* $\\\\text{Cl}^-$: Chlorine has 17, adding 1 gives 18 electrons.\nTherefore, the ammonium ion contains the fewest electrons (10)."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q50-HARD-2026",
+        question: "An element forms a stable simple ion with a charge of $-3$ and has the ground-state configuration $1s^2 2s^2 2p^6 3s^2 3p^3$. Suggest which block of the Periodic Table this element belongs to, with justification.",
+        options: [
+            { text: "p-block, because the highest-energy occupied subshell is a p-orbital ($3p$)", isCorrect: true },
+            { text: "s-block, because the valence shell contains a filled $3s$ subshell" },
+            { text: "d-block, because it can expand its octet using empty d-orbitals" },
+            { text: "p-block, because it accepts 3 electrons to form an anion" }
+        ],
+        explanation: "An element is classified into a block ($s, p, d, f$) based on which type of subshell its highest-energy occupied electron resides in. For the configuration $1s^2 2s^2 2p^6 3s^2 3p^3$ (Phosphorus), the highest-energy electrons are in the $3p$ orbital, classifying it as a p-block element."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q51-MEDIUM-2026",
+        question: "Which of the following statements about the properties associated with ionic and covalent compounds is correct?",
+        options: [
+            { text: "Ionic compounds differ from metals because they do not conduct electricity in the solid state", isCorrect: true },
+            { text: "An ionic compound cannot undergo electrolysis" },
+            { text: "The only covalently bonded substances with high melting temperatures are those in which hydrogen bonds are present" },
+            { text: "A compound cannot contain both ionic bonding and covalent bonding" }
+        ],
+        explanation: "Ionic compounds differ from metals in solid conductivity. In metals, delocalised valence electrons are free to move through the crystal in the solid state. In ionic compounds, the ions are fixed in rigid lattice positions and cannot move. Thus, solid ionic compounds are electrical insulators, whereas solid metals are conductors."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q52-MEDIUM-2026",
+        question: "Which of the following molecules contains exactly six bonding electrons?",
+        options: [
+            { text: "$\\\\text{NCl}_3$", isCorrect: true },
+            { text: "$\\\\text{C}_2\\\\text{H}_4$" },
+            { text: "$\\\\text{CO}_2$" },
+            { text: "$\\\\text{H}_2\\\\text{S}$" }
+        ],
+        explanation: "Bonding electrons are those shared in covalent bonds. A single covalent bond contains 2 bonding electrons. $\\\\text{NCl}_3$ has three single $\\\\text{N-Cl}$ bonds, which equals $3 \\\\times 2 = 6$ bonding electrons. ($\\\\text{H}_2\\\\text{S}$ has 4, $\\\\text{CO}_2$ has 8, and $\\\\text{C}_2\\\\text{H}_4$ has 12 bonding electrons)."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q53-MEDIUM-2026",
+        question: "A solid substance melts just above 100°C. It does not conduct electricity as a solid or when molten. Which of the following structures is the substance most likely to have?",
+        options: [
+            { text: "Simple molecular", isCorrect: true },
+            { text: "Giant ionic" },
+            { text: "Giant covalent" },
+            { text: "Giant metallic" }
+        ],
+        explanation: "A low melting temperature (just above 100°C) indicates a simple molecular structure where only weak intermolecular forces are broken during melting. Additionally, simple molecular substances do not contain mobile ions or delocalised electrons, meaning they do not conduct electricity in either the solid or liquid (molten) state."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q54-MEDIUM-2026",
+        question: "Which of the following molecules does not have a permanent dipole?",
+        options: [
+            { text: "$\\\\text{CF}_4$", isCorrect: true },
+            { text: "$\\\\text{CHF}_3$" },
+            { text: "$\\\\text{CH}_2\\\\text{F}_2$" },
+            { text: "$\\\\text{CH}_3\\\\text{F}$" }
+        ],
+        explanation: "$\\\\text{CF}_4$ possesses a highly symmetrical tetrahedral geometry. Because all four outer atoms are identical fluorine atoms, the individual polar $\\\\text{C-F}$ bond dipoles point in opposite directions and cancel each other out completely, leaving the molecule with a net dipole moment of zero (non-polar)."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q55-HARD-2026",
+        question: "Suggest why nitrogen gas ($\\\\text{N}_2$) is extremely unreactive compared to carbon monoxide ($\\\\text{CO}$), despite both molecules being diatomic and isoelectronic.",
+        options: [
+            { text: "Nitrogen contains a non-polar triple covalent bond ($\\\\text{N}\\\\equiv\\\\text{N}$) with a very high bond dissociation energy that is difficult to break", isCorrect: true },
+            { text: "Nitrogen is a smaller molecule than carbon monoxide, making its electron cloud less polarizable" },
+            { text: "Carbon monoxide has a lower bond multiplicity than nitrogen, making its bond much weaker" },
+            { text: "Nitrogen molecules are held together by weak intermolecular London forces which prevent collisions" }
+        ],
+        explanation: "Both nitrogen and carbon monoxide are held together by triple bonds. However, the $\\\\text{N}\\\\equiv\\\\text{N}$ bond in nitrogen is completely non-polar, making it highly stable and resistant to nucleophilic or electrophilic attack. Combined with its very high bond dissociation energy ($944\\\\text{ kJ mol}^{-1}$), nitrogen is exceptionally unreactive under standard conditions."
     }
 ];
