@@ -328,5 +328,225 @@ export const lessonQuiz = [
             { text: "$\\text{Mg} < \\text{Al} < \\text{S} < \\text{P}$" }
         ],
         explanation: "Generally, first ionisation energy increases across a period due to increasing nuclear charge and decreasing atomic size. However, there are two exceptions: 1. $\\text{Al}$ ($3s^2 3p^1$) is lower than $\\text{Mg}$ ($3s^2$) because the outer electron is in a higher energy $3p$ subshell. 2. $\\text{S}$ ($3p^4$) is lower than $\\text{P}$ ($3p^3$) due to spin-pair repulsion in sulfur's orbital. This gives the order: $\\text{Al} < \\text{Mg} < \\text{S} < \\text{P}$"
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q31-MEDIUM-2026",
+        question: "In 1919, which scientist invented the mass spectrometer and used it to provide the first experimental evidence of the existence of isotopes?",
+        options: [
+            { text: "Francis Aston", isCorrect: true },
+            { text: "J.J. Thomson" },
+            { text: "Ernest Rutherford" },
+            { text: "James Chadwick" }
+        ],
+        explanation: "Francis Aston invented the mass spectrometer in 1919 and demonstrated that atoms of the same element could have different masses (isotopes), for which he received the Nobel Prize."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q32-HARD-2026",
+        question: "How many protons, neutrons, and electrons are present in one deuterated ammonium ion (${}^{14}_7\\text{N}^2_1\\text{H}_4^+$)?",
+        options: [
+            { text: "11 protons, 11 neutrons, 10 electrons", isCorrect: true },
+            { text: "11 protons, 7 neutrons, 10 electrons" },
+            { text: "11 protons, 11 neutrons, 11 electrons" },
+            { text: "10 protons, 7 neutrons, 10 electrons" }
+        ],
+        explanation: "Let's calculate each value:\n* Protons = 7 (from nitrogen) + 4 × 1 (from hydrogen) = 11\n* Neutrons = (14 − 7) in nitrogen + 4 × (2 − 1) in hydrogen-2 (deuterium) = 7 + 4 = 11\n* Electrons = 11 protons − 1 (due to the +1 positive charge) = 10 electrons."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q33-HARD-2026",
+        question: "Based on the subatomic particle table below, which statement is correct?\n\n| Particle | Protons | Neutrons | Electrons |\n| :---: | :---: | :---: | :---: |\n| A | 12 | 13 | 12 |\n| B | 17 | 18 | 18 |\n| C | 11 | 14 | 10 |\n| D | 12 | 12 | 12 |",
+        options: [
+            { text: "Particles A and C have the same mass number.", isCorrect: true },
+            { text: "Particles A and D are positive ions." },
+            { text: "Particle B is a positive ion, and C is a negative ion." },
+            { text: "Particles B and D are isotopes of the same element." }
+        ],
+        explanation: "Let's verify:\n* Mass number of A = 12 protons + 13 neutrons = 25. Mass number of C = 11 protons + 14 neutrons = 25. Thus, both have the same mass number (25).\n* Particles A and D are neutral atoms, not positive ions.\n* B is a negative ion (17 protons, 18 electrons) and C is a positive ion (11 protons, 10 electrons).\n* A and D are isotopes (both have 12 protons)."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q34-HARD-2026",
+        question: "For a sample of bromine gas ($\\\\text{Br}_2$) containing isotopes $^{79}\\\\text{Br}$ and $^{81}\\\\text{Br}$ in a $1:1$ abundance ratio, which particle is responsible for the peak at $m/z = 160$ in its mass spectrum?",
+        options: [
+            { text: "$[^{79}\\\\text{Br}^{81}\\\\text{Br}]^+$", isCorrect: true },
+            { text: "$[^{79}\\\\text{Br}^{79}\\\\text{Br}]^+$" },
+            { text: "$[^{81}\\\\text{Br}^{81}\\\\text{Br}]^+$" },
+            { text: "$[^{79}\\\\text{Br}^{81}\\\\text{Br}]^{2+}$" }
+        ],
+        explanation: "The molecular ion peak at $m/z = 160$ corresponds to the singly charged diatomic bromine molecular ion containing one $^{79}\\\\text{Br}$ isotope and one $^{81}\\\\text{Br}$ isotope: $[^{79}\\\\text{Br}^{81}\\\\text{Br}]^+$."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q35-HARD-2026",
+        question: "Which of the following explains why the relative molecular ion peaks for $\\\\text{Cl}_2$ gas at $m/z = 70, 72, 74$ appear in an approximate ratio of $9:6:1$ in the mass spectrum?",
+        options: [
+            { text: "The probability of choosing combinations of $^{35}\\\\text{Cl}$ ($75\\\\%$ abundance) and $^{37}\\\\text{Cl}$ ($25\\\\%$ abundance) results in $(\\\\frac{3}{4})^2 : 2(\\\\frac{3}{4} \\\\times \\\\frac{1}{4}) : (\\\\frac{1}{4})^2$", isCorrect: true },
+            { text: "Chlorine-35 is nine times more abundant than chlorine-37" },
+            { text: "The magnetic field deflects the heavier $^{37}\\\\text{Cl}$ isotopes nine times more easily" },
+            { text: "The ionisation chamber produces 2+ ions that triple the heights of the peaks" }
+        ],
+        explanation: "Chlorine isotopes have fractional abundances of $0.75$ ($\\\\frac{3}{4}$) and $0.25$ ($\\\\frac{1}{4}$). The probability of having:\n* $^{70}\\\\text{Cl}_2^+ = \\\\frac{3}{4} \\\\times \\\\frac{3}{4} = \\\\frac{9}{16}$\n* $^{72}\\\\text{Cl}_2^+ = 2 \\\\times \\\\frac{3}{4} \\\\times \\\\frac{1}{4} = \\\\frac{6}{16}$\n* $^{74}\\\\text{Cl}_2^+ = \\\\frac{1}{4} \\\\times \\\\frac{1}{4} = \\\\frac{1}{16}$\nThis gives the characteristic $9:6:1$ peak height ratio."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q36-HARD-2026",
+        question: "For elements from scandium ($Z = 21$) to zinc ($Z = 30$), why are two electrons filled in the higher-energy $4s$ orbital even though the $3d$ orbitals are lower in energy?",
+        options: [
+            { text: "The $3d$ orbitals are more compact, so electrons entering them experience greater mutual repulsion than they do in the $4s$ orbital", isCorrect: true },
+            { text: "The $4s$ orbital completely shields the $3d$ orbitals from the positive nuclear charge" },
+            { text: "The Pauli Exclusion Principle forbids the filling of $3d$ orbitals before the $4s$ orbital is completely filled" },
+            { text: "The $3d$ subshell has a lower maximum capacity of electrons than the $4s$ subshell" }
+        ],
+        explanation: "For transition metals after calcium, the $3d$ orbitals are lower in energy than $4s$ but are much more compact. Placing electrons in the compact $3d$ orbitals results in higher electron-electron repulsion, so they occupy the larger $4s$ orbital first to minimize repulsion."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q37-MEDIUM-2026",
+        question: "In the context of the quantum theory presented by Max Planck in 1900, which of the following is correct regarding electrons in quantum shells?",
+        options: [
+            { text: "All electrons in the same quantum shell have similar, but not identical, energies", isCorrect: true },
+            { text: "All electrons in the same quantum shell have exactly identical energies" },
+            { text: "An electron can occupy any position between two quantum shells at stable energy states" },
+            { text: "The energy of electrons in the first quantum shell is the highest of all shells in the atom" }
+        ],
+        explanation: "Within any principal quantum shell (except the first), the subshells ($s, p, d, f$) represent slightly different sublevel energy states, meaning the electrons in the same quantum shell have similar, but not identical, energies."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q38-MEDIUM-2026",
+        question: "What is the physical significance of the letters $x, y, z$ in the box notation of the $2p$ subshell?",
+        options: [
+            { text: "They represent the perpendicular spatial orientations of the three degenerate $p$ orbitals along the 3D Cartesian axes", isCorrect: true },
+            { text: "They represent the different spin states of the electrons inside the orbitals" },
+            { text: "They represent the increasing energy levels of the three degenerate $p$ sub-shells" },
+            { text: "They represent the relative mass ratio of the subatomic particles in the sub-shells" }
+        ],
+        explanation: "The letters $x, y, z$ correspond to the three Cartesian coordinates, showing that the three degenerate $p$ orbitals ($p_x, p_y, p_z$) are oriented perpendicular to each other in 3D space."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q39-HARD-2026",
+        question: "Which of the following elements has a first ionization energy that is an anomaly down its group, being HIGHER than the element directly above it?",
+        options: [
+            { text: "Lead (Pb) in Group 14", isCorrect: true },
+            { text: "Cesium (Cs) in Group 1" },
+            { text: "Barium (Ba) in Group 2" },
+            { text: "Fluorine (F) in Group 17" }
+        ],
+        explanation: "Down Group 14, lead (Pb) has a first ionization energy that is higher than tin (Sn) directly above it, which is an anomaly in group trends due to relativistic contraction and poor shielding by the inner $4f$ electrons."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q40-MEDIUM-2026",
+        question: "Which of the following correctly describes what represents an 'infinite distance' in the definition of ionization energy?",
+        options: [
+            { text: "The distance at which the removed electron no longer experiences any attractive electrostatic force from the nucleus", isCorrect: true },
+            { text: "The boundary representing the 90% probability of finding the electron inside its orbital" },
+            { text: "The distance equal to the bond length in a diatomic molecule" },
+            { text: "The average radius of the outermost principal quantum shell of a noble gas" }
+        ],
+        explanation: "In the definition of ionization energy, removing an electron to an infinite distance means pulling it far enough that the electrostatic attraction between the positive nucleus and the electron becomes zero."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q41-HARD-2026",
+        question: "Consider five elements A, B, C, D, and E. Their first and second ionization energies (in $\\\\text{kJ mol}^{-1}$) are:\n* A: 496, 4563\n* B: 738, 1451\n* C: 578, 1817\n* D: 900, 1757\n* E: 631, 1235\nWhich of these elements requires the LEAST energy to form a gaseous $2+$ ion from a neutral gaseous atom?",
+        options: [
+            { text: "Element E", isCorrect: true },
+            { text: "Element A" },
+            { text: "Element B" },
+            { text: "Element D" }
+        ],
+        explanation: "The energy required to form a $2+$ ion from a neutral atom is the sum of the first and second ionization energies ($I_1 + I_2$). Let's calculate the sums:\n* A: $496 + 4563 = 5059\\\\text{ kJ mol}^{-1}$\n* B: $738 + 1451 = 2189\\\\text{ kJ mol}^{-1}$\n* C: $578 + 1817 = 2395\\\\text{ kJ mol}^{-1}$\n* D: $900 + 1757 = 2657\\\\text{ kJ mol}^{-1}$\n* E: $631 + 1235 = 1866\\\\text{ kJ mol}^{-1}$\nTherefore, Element E requires the least energy (1866)."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q42-HARD-2026",
+        question: "Why is it not a like-for-like comparison to compare the covalent radii of elements across Period 2 directly with the atomic radius of Neon?",
+        options: [
+            { text: "Neon only has a measurable van der Waals radius since it does not form covalent bonds, and the van der Waals radius is always larger than the covalent radius", isCorrect: true },
+            { text: "Neon is a monoatomic gas and does not possess a measurable nucleus or electron cloud" },
+            { text: "The shielding effect in Neon is completely different because the 2p subshell is empty" },
+            { text: "Covalent radius measures the distance between adjacent metallic ions in a giant lattice" }
+        ],
+        explanation: "Neon and Argon do not form chemical bonds, so they do not have covalent radii. Only their van der Waals radius can be measured, which is always larger than the covalent radius because bonded atoms are drawn closer together."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q43-HARD-2026",
+        question: "Which of the following is correct regarding the stability of the boron ion (B$^+$) compared to the neutral boron atom?",
+        options: [
+            { text: "The boron ion (B$^+$) is energetically less stable than the neutral boron atom because removing an electron is always an endothermic process", isCorrect: true },
+            { text: "The boron ion (B$^+$) is energetically more stable because it achieves a full $2s^2$ subshell" },
+            { text: "The boron ion (B$^+$) has the exact same energy and stability because the electron is lost from the $2p$ subshell" },
+            { text: "The boron atom becomes more stable after losing an electron due to the loss of shielding from inner shells" }
+        ],
+        explanation: "Losing an electron is an endothermic process (energy must be supplied). Therefore, any positive ion formed is energetically less stable (at a higher energy state) than its corresponding neutral atom. The lower first ionization energy of boron is simply due to the higher energy of the $2p$ subshell and increased shielding, not because the ion is 'more stable'."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q44-HARD-2026",
+        question: "Predict whether the first ionization energy of gallium (Ga, $Z=31$) is higher or lower than that of calcium (Ca, $Z=20$) and explain why.",
+        options: [
+            { text: "Lower, because the outermost electron of Gallium is in a $4p$ orbital which is higher in energy than the $4s$ orbital of Calcium and experiences additional shielding from the $4s^2$ electrons", isCorrect: true },
+            { text: "Higher, because Gallium has a much larger nuclear charge (+31) than Calcium (+20)" },
+            { text: "Higher, because Gallium's outermost electron is in a $3d$ orbital which experiences zero shielding" },
+            { text: "Lower, because Gallium's atomic radius is larger than Calcium's, making the outer shell much further from the nucleus" }
+        ],
+        explanation: "Gallium's outermost electron is in the $4p$ subshell ($4s^2 4p^1$). Since the $4p$ subshell is higher in energy than the $4s$ subshell of Calcium ($4s^2$) and is shielded by the filled $4s^2$ subshell, the electron in Gallium requires less energy to be removed, making its first ionization energy lower than Calcium's."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q45-MEDIUM-2026",
+        question: "The relative atomic mass of boron is 10.8. A sample of boron contains the isotopes ${}^{10}_5\\\\text{B}$ and ${}^{11}_5\\\\text{B}$. What is the percentage of ${}^{11}_5\\\\text{B}$ atoms in the isotopic mixture of this sample?",
+        options: [
+            { text: "80%", isCorrect: true },
+            { text: "20%" },
+            { text: "8.0%" },
+            { text: "0.8%" }
+        ],
+        explanation: "Let the fractional abundance of ${}^{11}\\\\text{B}$ be $x$. The abundance of ${}^{10}\\\\text{B}$ is $1-x$. The relative atomic mass is: $11x + 10(1-x) = 10.8 \\\\implies x + 10 = 10.8 \\\\implies x = 0.8$. Thus, ${}^{11}\\\\text{B}$ makes up 80% of the sample."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q46-MEDIUM-2026",
+        question: "Which of the following elements has no paired p electrons in a single uncombined ground-state atom?",
+        options: [
+            { text: "Carbon", isCorrect: true },
+            { text: "Oxygen" },
+            { text: "Fluorine" },
+            { text: "Neon" }
+        ],
+        explanation: "Carbon's configuration is $1s^2 2s^2 2p^2$. By Hund's rule, the two $2p$ electrons occupy separate degenerate $p$ orbitals (e.g. $2p_x^1 2p_y^1$) with parallel spins, so they are unpaired. In Oxygen ($2p^4$), Fluorine ($2p^5$), and Neon ($2p^6$), there are paired electrons in the $2p$ subshell."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q47-MEDIUM-2026",
+        question: "Which of the following electronic configurations represents an atom of an element which forms a simple ion with a charge of $-3$?",
+        options: [
+            { text: "$1s^2 2s^2 2p^6 3s^2 3p^3$", isCorrect: true },
+            { text: "$1s^2 2s^2 2p^6 3s^2 3p^1$" },
+            { text: "$1s^2 2s^2 2p^6 3s^2 3p^6 3d^1 4s^2$" },
+            { text: "$1s^2 2s^2 2p^6 3s^2 3p^6 3d^3 4s^2$" }
+        ],
+        explanation: "An element forming an ion with a $-3$ charge must belong to Group 15, meaning its outer shell has 5 valence electrons ($ns^2 np^3$). The configuration $1s^2 2s^2 2p^6 3s^2 3p^3$ corresponds to Phosphorus, which has 5 valence electrons and accepts 3 electrons to form a stable $\\\\text{P}^{3-}$ ion."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q48-MEDIUM-2026",
+        question: "A sample of chlorine containing isotopes with mass numbers 35 and 37 is analysed in a mass spectrometer. How many peaks corresponding to molecular ions ($\\\\text{Cl}_2^+$) are recorded?",
+        options: [
+            { text: "3", isCorrect: true },
+            { text: "4" },
+            { text: "2" },
+            { text: "1" }
+        ],
+        explanation: "The chlorine molecules can be made of different combinations of the two isotopes: $[{}^{35}\\\\text{Cl}-{}^{35}\\\\text{Cl}]^+$ (mass 70), $[{}^{35}\\\\text{Cl}-{}^{37}\\\\text{Cl}]^+$ (mass 72), and $[{}^{37}\\\\text{Cl}-{}^{37}\\\\text{Cl}]^+$ (mass 74). This yields exactly 3 separate peaks in the mass spectrum."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q49-MEDIUM-2026",
+        question: "What is the atomic number of an element that contains atoms which have exactly four unpaired electrons in their ground state?",
+        options: [
+            { text: "26", isCorrect: true },
+            { text: "16" },
+            { text: "22" },
+            { text: "6" }
+        ],
+        explanation: "The element with atomic number 26 is Iron (Fe). Its configuration is $[A_r] 3d^6 4s^2$. The $3d$ subshell has five degenerate orbitals. Hund's rule dictates that electrons occupy degenerate orbitals singly before pairing: 4 orbitals contain 1 unpaired electron each, and 1 orbital contains 1 pair of electrons. This results in exactly 4 unpaired electrons."
+    },
+    {
+        id: "EDEXCEL-U1-L2-Q50-HARD-2026",
+        question: "Which of the following ions has more electrons than protons, and also has more protons than neutrons?\n(Isotope data: ${}^1_1\\\\text{H}$, ${}^2_1\\\\text{D}$, ${}^4_2\\\\text{He}$, ${}^{16}_8\\\\text{O}$)",
+        options: [
+            { text: "$\\\\text{OH}^-$", isCorrect: true },
+            { text: "$\\\\text{OD}^-$" },
+            { text: "$\\\\text{D}_3\\\\text{O}^+$" },
+            { text: "$\\\\text{He}^+$" }
+        ],
+        explanation: "Let's calculate for hydroxide ion ($\\\\text{OH}^-$):\n* Protons: $8$ (from O) + $1$ (from H) = $9$ protons.\n* Neutrons: $8$ (from ${}^{16}\\\\text{O}$) + $0$ (from ${}^1\\\\text{H}$) = $8$ neutrons. (Protons > Neutrons: $9 > 8$).\n* Electrons: $9 + 1$ (due to $-1$ charge) = $10$ electrons. (Electrons > Protons: $10 > 9$).\nThus, $\\\\text{OH}^-$ satisfies both conditions."
     }
 ];

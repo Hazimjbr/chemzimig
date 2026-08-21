@@ -39,7 +39,7 @@ export const level2Questions: Question[] = [
     createdAt: "2026-08-21T19:25:00Z"
   },
   {
-    id: "ex_ci_u9_l2_lv2_3-2026",
+    id: "ex_ci_u10_l2_lv2_3-2026",
     question: "Why should farmers NEVER add slaked lime (calcium hydroxide, Ca(OH)₂) and ammonium fertilisers (e.g. ammonium nitrate) to agricultural soil at the same time?",
     options: [
       { text: "The alkaline lime reacts with ammonium ions to release ammonia gas into the atmosphere, causing loss of vital nitrogen from the soil", isCorrect: true },

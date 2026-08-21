@@ -111,7 +111,7 @@ export const level3Questions: Question[] = [
   },
   {
     id: "ex_ed_u1_l1_lv3_6-2026",
-    question: "A $0.500\\text{ g}$ sample of a hydrocarbon burns completely in excess oxygen to produce $1.571\\text{ g}$ of carbon dioxide ($\text{CO}_2$) and $0.643\\text{ g}$ of water ($\text{H}_2\text{O}$). Given that the relative molecular mass of the hydrocarbon is $56.0\\text{ g mol}^{-1}$, determine its molecular formula.\n*(Relative atomic masses: $\\text{C} = 12.0, \\text{H} = 1.0, \\text{O} = 16.0$)*",
+    question: "A $0.500\\text{ g}$ sample of a hydrocarbon burns completely in excess oxygen to produce $1.571\\text{ g}$ of carbon dioxide (CO₂) and $0.643\\text{ g}$ of water (H₂O). Given that the relative molecular mass of the hydrocarbon is $56.0\\text{ g mol}^{-1}$, determine its molecular formula.\n*(Relative atomic masses: $\\text{C} = 12.0, \\text{H} = 1.0, \\text{O} = 16.0$)*",
     options: [
       { text: "C₂H₄" },
       { text: "C₃H₆" },
@@ -263,7 +263,7 @@ export const level3Questions: Question[] = [
   },
   {
     id: "ex_ed_u1_l1_lv3_14-2026",
-    question: "A mixture of nitrogen gas ($\text{N}_2$) and oxygen gas ($\text{O}_2$) has a total mass of $4.00\text{ g}$ and occupies a volume of $3.10\text{ dm}^3$ at r.t.p. Calculate the mole fraction of nitrogen in this mixture.\n*(Molar masses: $\text{N}_2 = 28.0\text{ g mol}^{-1}, \text{O}_2 = 32.0\text{ g mol}^{-1}$; Molar volume at r.t.p. $= 24.0\text{ dm}^3\text{ mol}^{-1}$)*",
+    question: "A mixture of nitrogen gas (N₂) and oxygen gas (O₂) has a total mass of $4.00\\text{ g}$ and occupies a volume of $3.10\\text{ dm}^3$ at r.t.p. Calculate the mole fraction of nitrogen in this mixture.\n*(Molar masses: N₂ $= 28.0\\text{ g mol}^{-1}$, O₂ $= 32.0\\text{ g mol}^{-1}$; Molar volume at r.t.p. $= 24.0\\text{ dm}^3\\text{ mol}^{-1}$)*",
     options: [
       { text: "0.25" },
       { text: "0.33" },
@@ -271,7 +271,7 @@ export const level3Questions: Question[] = [
       { text: "0.68", isCorrect: true }
     ],
     correctAnswer: 3,
-    explanation: "* Total moles $n_{\text{total}} = \frac{3.10}{24.0} = 0.1292\text{ mol}$.\n* Let moles of $\text{N}_2 = x$, moles of $\text{O}_2 = 0.1292 - x$.\n* $28.0x + 32.0(0.1292 - x) = 4.00 \implies 4.1344 - 4.0x = 4.00 \implies 4.0x = 0.1344 \implies x = 0.0336$ (or checking $0.088\text{ mol} / 0.1292 = 0.681$).\n* Mole fraction of $\text{N}_2 = \frac{0.088}{0.1292} \approx 0.68$.",
+    explanation: "* Total moles $n_{\\text{total}} = \\frac{3.10}{24.0} = 0.1292\\text{ mol}$.\n* Let moles of N₂ $= x$, moles of O₂ $= 0.1292 - x$.\n* $28.0x + 32.0(0.1292 - x) = 4.00 \\implies 4.1344 - 4.0x = 4.00 \\implies 4.0x = 0.1344 \\implies x = 0.0336$ (or checking $0.088\\text{ mol} / 0.1292 = 0.681$).\n* Mole fraction of N₂ $= \\frac{0.088}{0.1292} \\approx 0.68$.",
     level: 3,
     topic: "edexcel-unit-1",
     lessonNum: 1,

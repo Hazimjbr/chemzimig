@@ -51,6 +51,9 @@ export function sanitizeKatex(math: string): string {
     res = res.replace(/(^|[^\w\\])(?:\\)?approx\b/g, '$1\\approx ');
     res = res.replace(/(^|[^\w\\])(?:\\)?times\b/g, '$1\\times ');
     res = res.replace(/(^|[^\w\\])(?:\\)?pm\b/g, '$1\\pm ');
+    res = res.replace(/(^|[^\w\\])(?:\\)?left\b/g, '$1\\left');
+    res = res.replace(/(^|[^\w\\])(?:\\)?right\b/g, '$1\\right');
+    res = res.replace(/(^|[^\w\\])(?:\\)?implies\b/g, '$1\\implies');
     res = res.replace(/(^|[^\w\\])(?:\\)?mol\b/g, '$1\\text{ mol}');
     res = res.replace(/(^|[^\w\\])(?:\\)?dm\b/g, '$1\\text{ dm}');
     res = res.replace(/(^|[^\w\\])(?:\\)?cm\b/g, '$1\\text{ cm}');

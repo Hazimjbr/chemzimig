@@ -19,32 +19,50 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
+> ### ⚛️ Who Discovered Electrons, Protons and Neutrons?
+> Our current understanding of the structure of atoms is influenced by theories put forward by:
+> * **J.J. Thomson (1897):** Discovered the electron.
+> * **Ernest Rutherford (1917):** Discovered the proton, and suggested the atom has a very small, dense nucleus containing the bulk of its mass
+> * **James Chadwick (1932):** Discovered the neutron.
+
+> [!NOTE]
 > ### ⚛️ Fundamental Subatomic Particles
-> All atoms (except $^1_1\\text{H}$) consist of three sub-particles. The mass of these particles is measured in atomic mass units because they are very light
+> Although scientists have discovered many other subatomic particles, chemistry is only concerned with protons, neutrons, and electrons:
 > 
-> | Particle | Symbol | Site | Relative Mass | Charge |
-> | :--- | :---: | :--- | :---: | :---: |
-> | Proton | $p$ | Center of atom (nucleus) | $1$ unit | $+1$ |
-> | Neutron | $n$ | Center of atom (nucleus) | $1$ unit | none |
-> | Electron | $e$ | Around the nucleus | $\\frac{1}{1840}$ | $-1$ |
+> | Particle | Symbol | Relative Mass | Relative Charge | Position in the Atom |
+> | :--- | :---: | :--- | :---: | :--- |
+> | proton | p | 1 | +1 | nucleus |
+> | neutron | n | 1 | 0 | nucleus |
+> | electron | e⁻ | $\frac{1}{1840}$ | -1 | quantum shells surrounding the nucleus |
+
+> [!TIP]
+> ### 💡 Learning Tip: Electron Mass & Scale
+> * **Never state that the mass of an electron is zero.** It has a real mass (relative mass $\frac{1}{1840}$)
+> * You do not need to know the exact masses of subatomic particles in grams, or the exact charges in coulombs. You only need to know the relative values.
 
 > [!IMPORTANT]
 > ### 🧮 Atomic and Mass Numbers
-> * **Atomic number (proton number $Z$):** Number of protons in the nucleus of an atom. It uniquely identifies any atom ($p = e$ in a neutral atom)
-> * **Charge Neutrality:** Any atom has zero net charge because it has the same number of protons and electrons
+> * **Atomic number (proton number $Z$):** Number of protons in the nucleus of an atom. It uniquely identifies any element ($p = e$ in a neutral atom)
+> * **Charge Neutrality:** Any atom has zero net charge because it has the same number of positive protons and negative electrons
 > * **Nucleon number (mass number $A$):** The total number of protons and neutrons in the nucleus of an atom
-> * **Whole Numbers:** The mass number of an isotope is always a whole number because it is the sum of protons and neutrons in the nucleus of one atom of the isotopes
+> * **Whole Numbers:** The mass number of an isotope is always a whole number because it is the sum of protons and neutrons in the nucleus of one atom of the isotope
 
 > [!TIP]
 > ### 🧪 Isotopes and Chemical Reactivity
 > * **Isotopes:** Atoms of the same element (same proton number), with different numbers of neutrons
-> * **Chemical Properties:** Isotopes have the same chemical properties because they have the same electronic configuration (structure) or number of electrons in the outer shell electrons (valence $e^-$)
+> * **Chemical Properties:** Isotopes have identical chemical properties because they have identical electronic configurations (the same number of valence electrons and outer shell arrangements)
 > * **Physical Properties:** Isotopes have slightly different physical properties (e.g. density, rate of diffusion) due to their difference in mass
-> * **Relative Atomic Mass ($A_r$):** Weighted mean mass of an atom of an element compared to $\\frac{1}{12}$ the mass of carbon-12
+> * **Relative Atomic Mass ($A_r$):** Weighted mean mass of an atom of an element compared to $\frac{1}{12}$ the mass of carbon-12
+
+> [!BOX]
+> ### 📋 Subject Vocabulary
+> * **atomic number (Z):** the number of protons in the nucleus of an atom
+> * **mass number (A):** the sum of the number of protons and the number of neutrons in the nucleus of an atom
+> * **isotopes:** atoms of the same element that have the same atomic number but different mass numbers
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Particles in a Neutral Atom
-> **Question:** Determine the number of protons, neutrons, and electrons in a neutral atom of Calcium-40 ($^{40}_{20}\\text{Ca}$)
+> **Question:** Determine the number of protons, neutrons, and electrons in a neutral atom of Calcium-40 ($^{40}_{20}\text{Ca}$)
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -59,7 +77,7 @@ export const parts: LessonPart[] = [
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Particles in an Ion
-> **Question:** Determine the number of protons, neutrons, and electrons in a Calcium ion ($^{40}_{20}\\text{Ca}^{2+}$)
+> **Question:** Determine the number of protons, neutrons, and electrons in a Calcium ion ($^{40}_{20}\text{Ca}^{2+}$)
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -73,7 +91,7 @@ export const parts: LessonPart[] = [
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Particles in a Negative Isotopic Ion
-> **Question:** Determine the number of protons, neutrons, and electrons in a Chloride ion formed from the Chlorine-37 isotope ($^{37}_{17}\\text{Cl}^-$)
+> **Question:** Determine the number of protons, neutrons, and electrons in a Chloride ion formed from the Chlorine-37 isotope ($^{37}_{17}\text{Cl}^-$)
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -89,42 +107,99 @@ export const parts: LessonPart[] = [
 > >    * Electrons = Protons $+$ Charge magnitude = $17 + 1 = 18$
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Deducing Chemical Symbol from Subatomic Particles
-> **Question:** An ion has a mass number of $56$, a charge of $+3$, and contains $23$ electrons. Deduce the complete chemical symbol for this ion, including the atomic number, mass number, and charge
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Calculate the atomic number (proton number, $Z$):**
-> >    * For a positive ion (cation): $\\\\text{Charge} = \\\\text{Protons} - \\\\text{Electrons}$
-> >    * $+3 = \\\\text{Protons} - 23 \\\\implies \\\\text{Protons} = 23 + 3 = 26$
-> >    * The atomic number ($Z$) is **26**
-> > 
-> > 2. **Identify the element using the Periodic Table:**
-> >    * The element with atomic number $26$ is Iron (Fe)
-> > 
-> > 3. **Determine the number of neutrons:**
-> >    * $\\\\text{Neutrons} = A - Z = 56 - 26 = 30$
-> > 
-> > 4. **Write the complete chemical symbol:**
-> >    * Write the mass number ($56$) as a superscript and the atomic number ($26$) as a subscript on the left of the chemical symbol
-> >    * Include the charge ($3+$) as a superscript on the right: **$^{56}_{26}\\\\text{Fe}^{3+}$**
-
-> [!EXAMPLE]
 > #### 📝 Worked Example 5: Explaining Physical Differences between Isotopes
-> **Question:** State and explain why a sample of gas containing the Chlorine-37 isotope, $^{37}\\\\text{Cl}_2$, diffuses more slowly than a sample containing the Chlorine-35 isotope, $^{35}\\\\text{Cl}_2$, at the same temperature
+> **Question:** State and explain why a sample of gas containing the Chlorine-37 isotope, $^{37}\text{Cl}_2$, diffuses more slowly than a sample containing the Chlorine-35 isotope, $^{35}\text{Cl}_2$, at the same temperature
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Calculate the relative molecular masses of both gas molecules:**
-> >    * $Mr(^{35}\\\\text{Cl}_2) = 2 \\\\times 35.0 = 70.0$
-> >    * $Mr(^{37}\\\\text{Cl}_2) = 2 \\\\times 37.0 = 74.0$
+> >    * $Mr(^{35}\text{Cl}_2) = 2 \times 35.0 = 70.0$
+> >    * $Mr(^{37}\text{Cl}_2) = 2 \times 37.0 = 74.0$
 > > 
 > > 2. **Relate molecular mass to rate of physical diffusion:**
-> >    * At any given temperature, all gas molecules share the same average kinetic energy ($KE = \\\\frac{1}{2}mv^2$)
+> >    * At any given temperature, all gas molecules share the same average kinetic energy ($KE = \frac{1}{2}mv^2$)
 > >    * Consequently, molecules with a larger mass ($m$) must travel at a lower average velocity ($v$)
-> >    * Since $^{37}\\\\text{Cl}_2$ molecules are heavier ($Mr = 74.0$) than $^{35}\\\\text{Cl}_2$ molecules ($Mr = 70.0$), they move slower at the same temperature and therefore diffuse at a lower rate
+> >    * Since $^{37}\text{Cl}_2$ molecules are heavier ($Mr = 74.0$) than $^{35}\text{Cl}_2$ molecules ($Mr = 70.0$), they move slower at the same temperature and therefore diffuse at a lower rate
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Identifying Species from Subatomic Particle Tables
+> **Question:** Use the table below to identify:
+> (a) Which two particles are isotopes of the same element?
+> (b) Which two particles are positive ions?
+> (c) Which two particles are negative ions?
+> (d) Which two particles have the same mass number?
+> 
+> | Particle | Number of Protons | Number of Neutrons | Number of Electrons |
+> | :---: | :---: | :---: | :---: |
+> | **A** | 12 | 13 | 12 |
+> | **B** | 17 | 18 | 18 |
+> | **C** | 11 | 14 | 10 |
+> | **D** | 12 | 12 | 12 |
+> | **E** | 35 | 44 | 36 |
+> | **F** | 19 | 21 | 18 |
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify isotopes of the same element (a):**
+> >    * Isotopes must have the same number of protons (atomic number).
+> >    * Particles **A** and **D** both have 12 protons, so they are isotopes of magnesium (Mg)
+> > 
+> > 2. **Identify positive ions (b):**
+> >    * Positive ions (cations) have more protons than electrons.
+> >    * **C** (11 protons, 10 electrons) and **F** (19 protons, 18 electrons) are positive ions
+> > 
+> > 3. **Identify negative ions (c):**
+> >    * Negative ions (anions) have more electrons than protons.
+> >    * **B** (17 protons, 18 electrons) and **E** (35 protons, 36 electrons) are negative ions
+> > 
+> > 4. **Calculate and compare mass numbers (d):**
+> >    * Mass number ($A$) = Protons + Neutrons.
+> >    * $A(\text{A}) = 12 + 13 = 25$
+> >    * $A(\text{B}) = 17 + 18 = 35$
+> >    * $A(\text{C}) = 11 + 14 = 25$
+> >    * $A(\text{D}) = 12 + 12 = 24$
+> >    * $A(\text{E}) = 35 + 44 = 79$
+> >    * $A(\text{F}) = 19 + 21 = 40$
+> >    * Therefore, particles **A** and **C** have the same mass number (25)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Calculating Particles in Isotopes, Molecules, and Ions
+> **Question:** Determine the number of protons, neutrons, and electrons in each of the following chemical species:
+> (a) Tritium ($^3_1\text{H}$)
+> (b) Oxygen-18 ion ($^{18}_8\text{O}^{2-}$)
+> (c) Magnesium-24 ion ($^{24}_{12}\text{Mg}^{2+}$)
+> (d) Ammonia molecule ($^{14}_7\text{N}^1_1\text{H}_3$)
+> (e) Deuterated ammonium ion ($^{14}_7\text{N}^2_1\text{H}_4^+$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **For Tritium ($^3_1\text{H}$):**
+> >    * Protons = atomic number = 1
+> >    * Neutrons = mass number $-$ atomic number = $3 - 1 = 2$
+> >    * Electrons = protons (neutral atom) = 1
+> > 
+> > 2. **For Oxygen-18 ion ($^{18}_8\text{O}^{2-}$):**
+> >    * Protons = atomic number = 8
+> >    * Neutrons = mass number $-$ atomic number = $18 - 8 = 10$
+> >    * Electrons = protons + magnitude of negative charge = $8 + 2 = 10$
+> > 
+> > 3. **For Magnesium-24 ion ($^{24}_{12}\text{Mg}^{2+}$):**
+> >    * Protons = atomic number = 12
+> >    * Neutrons = mass number $-$ atomic number = $24 - 12 = 12$
+> >    * Electrons = protons $-$ positive charge = $12 - 2 = 10$
+> > 
+> > 4. **For Ammonia ($^{14}_7\text{N}^1_1\text{H}_3$):**
+> >    * Protons = protons in N + 3 $\times$ protons in H = $7 + 3(1) = 10$
+> >    * Neutrons = neutrons in N + 3 $\times$ neutrons in H = $(14 - 7) + 3(1 - 1) = 7 + 0 = 7$
+> >    * Electrons = protons (neutral molecule) = 10
+> > 
+> > 5. **For Deuterated Ammonium ($^{14}_7\text{N}^2_1\text{H}_4^+$):**
+> >    * Protons = protons in N + 4 $\times$ protons in H = $7 + 4(1) = 11$
+> >    * Neutrons = neutrons in N + 4 $\times$ neutrons in H-2 (deuterium) = $(14 - 7) + 4(2 - 1) = 7 + 4 = 11$
+> >    * Electrons = protons $-$ positive charge = $11 - 1 = 10$
 `,
     keyPoints: [
       'Protons and neutrons occupy the dense central nucleus.',
@@ -140,7 +215,9 @@ export const parts: LessonPart[] = [
     content: `
 > [!NOTE]
 > ### ⚙️ Principles of Mass Spectrometry
-> A **Mass Spectrometer** is a highly sensitive analytical instrument. The operation of a mass spectrometer follows five key steps:
+> * **Francis Aston (1919):** Invented the mass spectrometer and discovered that not all the atoms of an element have the same mass, confirming the existence of isotopes.
+> 
+> The operation of a mass spectrometer follows five key steps:
 > 
 > 1. **Vaporisation:** The sample must be in a gaseous state so that the particles can move freely and fast
 > 2. **Ionisation:** Vaporised particles are bombarded with high-energy electrons from an electron gun. This knocks off one or more electrons from the gaseous particles to form positive ions
@@ -286,9 +363,20 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 
 > [!BOX]
 > ### 🧪 Isotopic Patterns & Chlorine Spectrum
-> * **Chlorine Isotopic Abundance:** In nature, Chlorine exists as $^{35}\\text{Cl}$ (approximately $75\\%$ abundance) and $^{37}\\text{Cl}$ (approximately $25\\%$ abundance), showing a ratio of $3:1$
-> * **Diatomic Chlorine ($\\text{Cl}_2$) Pattern:** In the mass spectrum of chlorine gas ($\\text{Cl}_2$), three molecular ion peaks appear at $m/z = 70$ ($^{35}\\text{Cl}_2^+$), $72$ ($^{35}\\text{Cl}^{37}\\text{Cl}^+$), and $74$ ($^{37}\\text{Cl}_2^+$)
-> * **Peak Height Ratios:** The relative heights of these molecular ion peaks ($\\text{Cl}_2$) are approximately in a **$9:6:1$ ratio** (calculated from the probability $(3:1) \\times (3:1)$), though in reality it deviates slightly due to exact isotopic percentages
+> * **Relative Atomic Mass Standard:** In 1961, carbon-12 ($^{12}\text{C}$) was universally adopted as the international standard for relative atomic masses, where 1 unit is exactly $\frac{1}{12}$ of the mass of a carbon-12 atom
+> * **Chlorine Isotopic Abundance:** In nature, Chlorine exists as $^{35}\text{Cl}$ (approximately $75\%$ abundance) and $^{37}\text{Cl}$ (approximately $25\%$ abundance), showing a ratio of $3:1$ (or probabilities of $\frac{3}{4}$ and $\frac{1}{4}$ respectively)
+> * **Diatomic Chlorine ($\text{Cl}_2$) Pattern:** In the mass spectrum of chlorine gas ($\text{Cl}_2$), three molecular ion peaks appear at $m/z = 70$ ($^{35}\text{Cl}_2^+$), $72$ ($^{35}\text{Cl}^{37}\text{Cl}^+$), and $74$ ($^{37}\text{Cl}_2^+$)
+> * **Mathematical Peak Ratios:** The relative heights of these molecular ion peaks ($\text{Cl}_2$) are approximately in a **$9:6:1$ ratio**:
+>   1. Probability of selecting $^{35}\text{Cl}$ is $\frac{3}{4}$. The probability of two $^{35}\text{Cl}$ atoms joining ($^{35}\text{Cl}_2^+$ at $m/z=70$) is: $\frac{3}{4} \times \frac{3}{4} = \frac{9}{16}$
+>   2. The probability of $^{35}\text{Cl}$ and $^{37}\text{Cl}$ joining ($^{35}\text{Cl}^{37}\text{Cl}^+$ at $m/z=72$ in either order) is: $2 \times \left(\frac{3}{4} \times \frac{1}{4}\right) = \frac{6}{16}$
+>   3. The probability of two $^{37}\text{Cl}$ atoms joining ($^{37}\text{Cl}_2^+$ at $m/z=74$) is: $\frac{1}{4} \times \frac{1}{4} = \frac{1}{16}$
+>   * *Learning Tip:* The peak heights will not be *exactly* $9:6:1$ because the relative isotopic masses are not exact whole numbers, and abundances vary slightly.
+
+> [!TIP]
+> ### 💡 Exam Hints & Tips
+> * **Exam Hint:** The calculated relative atomic mass ($A_r$) will always be a number between the relative isotopic masses. If your calculated value falls outside this range, you have made a mistake
+> * **Learning Tip:** The atomic number ($Z$) is not the same as the relative isotopic mass; the mass number is always a whole number (sum of protons and neutrons), whereas the relative isotopic mass is relative to carbon-12 and is not likely to be an exact whole number.
+> * **Learning Tip:** Always use the relative atomic masses given in the question (e.g. magnesium given as 24.3, or occasionally a more precise value like 24.305).
 
 ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style="background:linear-gradient(135deg,#070f1e 0%,#0b1b35 100%);border-radius:16px;border:1px solid #1e293b;font-family:Inter,sans-serif">
   <defs>
@@ -327,18 +415,56 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Relative Atomic Mass (Ar)
-> **Question:** A sample of neon consists of three isotopes: $^{20}\\text{Ne}$ (abundance $90.9\\%$), $^{21}\\text{Ne}$ (abundance $0.3\\%$), and $^{22}\\text{Ne}$ (abundance $8.8\\%$). Calculate the relative atomic mass (Ar) of this neon sample to 2 decimal places
+> **Question:** A sample of neon consists of three isotopes: $^{20}\text{Ne}$ (abundance $90.9\%$), $^{21}\text{Ne}$ (abundance $0.3\%$), and $^{22}\text{Ne}$ (abundance $8.8\%$). Calculate the relative atomic mass (Ar) of this neon sample to 2 decimal places
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Apply the weighted average formula:**
-> >    $$A_r = \\frac{\\sum (\\text{Isotopic Mass} \\times \\text{Percentage Abundance})}{100}$$
+> >    $$A_r = \frac{\sum (\text{Isotopic Mass} \times \text{Percentage Abundance})}{100}$$
 > > 2. **Substitute values:**
-> >    $$A_r = \\frac{(20 \\times 90.9) + (21 \\times 0.3) + (22 \\times 8.8)}{100}$$
-> >    $$A_r = \\frac{1818.0 + 6.3 + 193.6}{100} = \\frac{2017.9}{100} = 20.179$$
+> >    $$A_r = \frac{(20 \times 90.9) + (21 \times 0.3) + (22 \times 8.8)}{100}$$
+> >    $$A_r = \frac{1818.0 + 6.3 + 193.6}{100} = \frac{2017.9}{100} = 20.179$$
 > > 3. **Round to 2 decimal places:**
-> >    $$A_r = 20.18\\text{ (no units)}$$
+> >    $$A_r = 20.18\text{ (no units)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1a: Calculating Relative Atomic Mass of Magnesium
+> **Question:** A sample of magnesium has the following isotopic composition:
+> * magnesium-24: 78.6%
+> * magnesium-25: 10.1%
+> * magnesium-26: 11.3%
+> Calculate the relative atomic mass of this magnesium sample. Give your answer to 3 significant figures
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Apply the weighted average formula:**
+> >    $$A_r = \frac{\sum (\text{Isotopic Mass} \times \text{Percentage Abundance})}{100}$$
+> > 2. **Substitute values:**
+> >    $$A_r = \frac{(24 \times 78.6) + (25 \times 10.1) + (26 \times 11.3)}{100}$$
+> >    $$A_r = \frac{1886.4 + 252.5 + 293.8}{100} = \frac{2432.7}{100} = 24.327$$
+> > 3. **Round to 3 significant figures:**
+> >    $$A_r = 24.3\text{ (no units)}$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1b: Calculating Isotopic Abundance from Relative Atomic Mass (Reverse Calculation)
+> **Question:** A sample of copper contains two isotopes of relative isotopic mass 63.0 and 65.0. If the relative atomic mass of copper is 63.5, calculate the relative abundance of each isotope
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Set up the variables:**
+> >    * Let the percentage abundance of $^{63.0}\text{Cu}$ be $x\%$
+> >    * Therefore, the percentage abundance of $^{65.0}\text{Cu}$ must be $(100 - x)\%$
+> > 2. **Set up the equation using the $A_r$ formula:**
+> >    $$63.5 = \frac{63.0(x) + 65.0(100 - x)}{100}$$
+> > 3. **Solve for $x$:**
+> >    $$6350 = 63.0x + 6500 - 65.0x$$
+> >    $$-150 = -2.0x \implies x = 75.0$$
+> > 4. **Deduce both abundances:**
+> >    * Abundance of $^{63.0}\text{Cu} = 75.0\%$
+> >    * Abundance of $^{65.0}\text{Cu} = 100 - 75.0 = 25.0\%$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Properties of Isotopes & Spectrometry Deflection
@@ -523,16 +649,16 @@ ${svgToken(`<svg viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg" style=
     content: `
 > [!NOTE]
 > ### ⚛️ Principal Quantum Shells and Sublevels
-> * **Quantum Shells (Main Energy Levels):** Represented by the principal quantum number $n$ ($n = 1, 2, 3, 4$). Each shell can hold a maximum of $2n^2$ electrons
-> * **Sublevels:** Each main quantum shell is made up of sublevels of different energies. These are designated as $s$, $p$, $d$, and $f$ subshells
-> * **Sublevels and Orbitals:** Each sublevel is made up of one or more orbitals of the same energy (degenerate orbitals)
-> * **Valence Electrons:** The electrons in the outermost shell. Valence electrons determine the chemical properties of an element since each atom likes to achieve an electronic configuration similar to the closest noble gas by losing, gaining, or sharing electrons
-
-> [!IMPORTANT]
-> ### 🧮 Orbitals and Filling Sequence
-> * **Orbital:** A region within an atom where there is a high probability (usually $>95\%$) of finding an electron. Each orbital can hold up to $2$ electrons with opposite spins
-> * **s orbital:** One spherical orbital per shell, present in all shells
-> * **p orbitals:** Three dumbbell-shaped orbitals ($p_x, p_y, p_z$) orientated along perpendicular axes, present from $n \\\\ge 2$
+> * **Quantum Theory & Shells:** Max Planck first presented the quantum theory in 1900. According to this theory, electrons can only exist in certain well-defined energy levels called **quantum shells** (represented by the principal quantum number $n = 1, 2, 3, 4$).
+> * **Quantum Shell capacity:** Each main shell can hold a maximum of $2n^2$ electrons. All electrons in a quantum shell have similar, but not identical, energies.
+> * **Sublevels:** Each main quantum shell (except the first) is further divided into sublevels of slightly different energies (designated as $s, p, d, f$ subshells).
+> * **Valence Electrons:** The outermost electrons that determine the chemical properties of an element.
+> 
+> > [!IMPORTANT]
+> > ### 🧮 Orbitals and Filling Sequence
+> > * **Orbital:** A region within an atom where there is a **90% probability** of finding an electron. Each orbital can hold up to 2 electrons with opposite spins.
+> > * **s orbital:** One spherical orbital per shell, present in all shells (1s, 2s, etc. representing regions of 90% probability).
+> > * **p orbitals:** Three dumbbell-shaped orbitals ($p_x, p_y, p_z$) orientated along perpendicular axes, present from $n \ge 2$.
 
 ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="100%">
   <defs>
@@ -633,12 +759,16 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 > * **Hund's Rule:** For degenerate orbitals (orbitals of the same energy, like the three $2p$ orbitals), electrons will fill them singly with parallel spins before pairing up to minimize electron-electron repulsion
 
 > [!WARNING]
-> ### ⚠️ Anomalous Electronic Configurations
-> Transition metals fill orbitals starting from lower to higher energy. However, Chromium ($Z = 24$) and Copper ($Z = 29$) have anomalous configurations because half-filled or completely filled $d$-subshells are exceptionally stable:
-> * **Chromium ($^{52}\\_{ 24}\\text{Cr}$):** Expected [Ar] $4s^2 3d^4$ → actual configuration is [Ar] $4s^1 3d^5$
-> * **Copper ($^{63}\\_{ 29}\\text{Cu}$):** Expected [Ar] $4s^2 3d^9$ → actual configuration is [Ar] $4s^1 3d^{10}$
-> 
-> *Note:* When transition metals form ions, they always lose the $4s$ electrons before the $3d$ electrons.
+> ### ⚠️ Energies of 3d and 4s Orbitals (Scandium to Zinc)
+> * **Krypton Limit:** You must be able to predict electronic configurations for atoms and ions of elements from hydrogen up to krypton ($Z = 36$) inclusive
+> * **The $3d$ and $4s$ Energy Crossover:** 
+>   * For potassium and calcium, the $4s$ subshell is lower in energy than the $3d$ subshell. Thus, K is $[Ar] 4s^1$ and Ca is $[Ar] 4s^2$
+>   * **For all elements after calcium (Scandium to Zinc):** The energy of the $3d$ orbitals is actually **less** than that of the $4s$ orbitals. 
+>   * **The Compactness Repulsion (Eric Scerri Theory):** If $3d$ is lower in energy, why does Scandium have the configuration $[Ar] 3d^1 4s^2$ instead of $[Ar] 3d^3$? Because $3d$ orbitals are much more compact than $4s$ orbitals. Any electrons entering $3d$ experience greater mutual electrostatic repulsion than they would in the larger $4s$ orbital. Pushing them to the outer $4s$ orbital reduces overall repulsion
+>   * **Transition Metal Ionisation:** When transition metals ionise, they always lose the $4s$ electrons first. This is because, once the $3d$ sublevel is occupied, the $4s$ electrons are at a higher energy level (and are physically further out), making them the easiest to remove
+> * **Anomalous Atoms (Chromium and Copper):**
+>   * **Chromium ($Z = 24$):** expected $[Ar] 4s^2 3d^4$ → actual configuration is $[Ar] 4s^1 3d^5$ (six unpaired electrons, minimizing repulsion)
+>   * **Copper ($Z = 29$):** expected $[Ar] 4s^2 3d^9$ → actual configuration is $[Ar] 4s^1 3d^{10}$ (stable fully filled $3d$ sublevel)
 
 > [!BOX]
 > ### 📋 Periodic Table Blocks and Structure
@@ -660,11 +790,12 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 
 > [!IMPORTANT]
 > ### ⚖️ Definitions and Radius Trends
-> * **Bond Length:** The average distance between the nuclei of two covalently bonded atoms
-> * **Atomic Radius:** Half the distance between two nuclei of two similar atoms in a diatomic molecule
-> * **Attraction Strength:** As the atomic radius decreases, the attraction forces between the nucleus and electrons increase
-> * **Periodic Trend (Across a Period):** Atomic radius decreases across a period because the nuclear charge increases (more protons) while electron shielding remains constant
-> * **Group Trend (Down a Group):** Atomic radius increases down a group because the number of quantum shells increases
+> * **Covalent Radius:** Half the distance between the nuclei of two covalently bonded atoms in a diatomic molecule.
+> * **Van der Waals Radius:** Half the distance between the nuclei of two non-bonded touching atoms (in a solid lattice). The van der Waals radius is **always larger** than the covalent radius for the same element because bonded atoms are pulled much closer together.
+> * **Metallic Radius:** Half the distance between the nuclei of two adjacent metal atoms in a giant metallic lattice.
+> * **Noble Gas Exclusions:** Neon and Argon do not form covalent bonds under standard conditions, so only their van der Waals radius can be measured. Comparing noble gas radii directly to covalent radii of other elements is not a like-for-like comparison.
+> * **Periodic Trend (Across a Period):** Atomic (covalent) radius decreases across a period because the nuclear charge increases (more protons) while electron shielding remains constant.
+> * **Group Trend (Down a Group):** Atomic radius increases down a group because the number of quantum shells increases.
 
 > [!BOX]
 > ### 📋 Ionic Radius Trends
@@ -801,27 +932,50 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
  
 > [!EXAMPLE]
 > #### 📝 Worked Example 7: Deducing Electronic Configuration from Period and Group
-> **Question:** An element is located in Period 4 and Group 15 of the Periodic Table. Identify the block of this element and write its condensed (noble gas) electronic configuration
+> **Question:** An element is located in Period 4 and Group 15 of the Periodic Table (Arsenic, As). Write its full electronic configuration, and deduce its outer (valence) electronic configuration, explaining how it relates to Carbon's outer configuration ($2s^2 2p^2$).
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Identify the block of the element:**
-> >    * Elements in Groups 13–18 have their outermost valence electrons in the $p$ sublevel
-> >    * Therefore, this element belongs to the **p-block**
+> > 1. **Identify the group and period information:**
+> >    * Arsenic (As, $Z = 33$) is in Period 4, which means its valence electrons occupy the $n = 4$ principal quantum shell.
+> >    * It is in Group 15 (Group 5), meaning it has $5$ outer valence electrons.
 > > 
-> > 2. **Identify the element and the nearest preceding noble gas:**
-> >    * The element in Period 4, Group 15 is Arsenic (As, Atomic number $Z = 33$)
-> >    * The nearest preceding noble gas is Argon ([Ar] with 18 electrons)
+> > 2. **Write the full configuration:**
+> >    * As = $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^{10} 4p^3$
 > > 
-> > 3. **Distribute the remaining electrons:**
-> >    * The remaining $15$ electrons ($33 - 18 = 15$) are filled into the $4s$, $3d$, and $4p$ subshells:
-> >      * $4s$ is filled first: $4s^2$ (2 electrons)
-> >      * $3d$ is filled next: $3d^{10}$ (10 electrons)
-> >      * The remaining electrons fill the $4p$ subshell: $4p^3$ (3 electrons)
+> > 3. **Identify the outer (valence) configuration:**
+> >    * The outermost shell is $n=4$. The $3d^{10}$ subshell is filled and belongs to the inner third quantum shell, so it does not count as part of the outermost valence configuration.
+> >    * Therefore, the outer configuration is **$4s^2 4p^3$**.
 > > 
-> > 4. **Write the condensed configuration:**
-> >    * As = **[Ar] $4s^2 3d^{10} 4p^3$** (or **[Ar] $3d^{10} 4s^2 4p^3$**)
+> > 4. **Compare to Carbon's outer configuration ($2s^2 2p^2$):**
+> >    * Carbon is in Period 2, Group 14 (Group 4) with $4$ valence electrons: $2s^2 2p^2$.
+> >    * Arsenic is in Period 4 (so principal quantum number is $4$ instead of $2$) and Group 15 (Group 5, so it has one additional $p$ electron). Thus, its outer configuration is $4s^2 4p^3$.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Explaining Hund's Rule and Pauli Exclusion in Box Notation
+> **Question:** Refer to the box notation diagram representing a ground-state Carbon atom ($1s^2 2s^2 2p_x^1 2p_y^1$):
+> (a) State the physical meaning of the arrows ↑ and ↓ inside a box
+> (b) Explain the significance of the letters $x, y, z$ in the $2p$ subshell boxes
+> (c) Explain why the two $2p$ electrons in Carbon occupy separate orbitals rather than pairing up in the $2p_x$ orbital
+> (d) Deduce the electronic configurations (using box/subshell notation) for Ground State Phosphorus ($Z=15$) and Chromium ($Z=24$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain the arrow notation (a):**
+> >    * The arrows represent electrons, and their opposite directions (↑ and ↓) represent opposite electron spins, as required by the Pauli Exclusion Principle to minimize magnetic repulsion
+> > 
+> > 2. **Explain the letters (b):**
+> >    * The letters $x, y, z$ represent 3D Cartesian coordinates. They indicate that the three degenerate $2p$ orbitals are oriented at mutual right angles (perpendicularly in space)
+> > 
+> > 3. **Explain Hund's Rule application (c):**
+> >    * Degenerate orbitals (like $2p$) are filled singly before pairing begins (Hund's Rule). 
+> >    * By occupying separate orbitals ($2p_x$ and $2p_y$), the electrons are in different regions of space, which minimizes electron-electron repulsion and results in a lower, more stable ground state energy
+> > 
+> > 4. **Deduce configurations (d):**
+> >    * **Phosphorus ($Z=15$):** $1s^2 2s^2 2p^6 3s^2 3p_x^1 3p_y^1 3p_z^1$ (or condensed $[Ne] 3s^2 3p^3$)
+> >    * **Chromium ($Z=24$):** $[Ar] 3d^5 4s^1$ (or $1s^2 2s^2 2p^6 3s^2 3p^6 3d^5 4s^1$) with all six valence electrons in half-filled subshells to reduce mutual repulsion
 `,
     keyPoints: [
       'An orbital is a probability density map holding at most two paired electrons.',
@@ -843,33 +997,39 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 
 > [!IMPORTANT]
 > ### 🧮 What is Ionization Energy?
-> **Ionization Energy ($I.E.$):** The amount of energy required (an endothermic process, $\\\\Delta H > 0$) to completely remove the most loosely bound (outermost) electron from each gaseous atom/ion in one mole to form one mole of positive gaseous ions.
+> * **Ionization Energy ($I.E.$):** The amount of energy required (an endothermic process, $\Delta H > 0$) to completely remove an electron from each gaseous atom or ion in one mole to an **infinite distance** from the nucleus (so that it experiences zero attractive force).
+> * **Energy Equation:** $I.E. = \text{energy of electron when removed} - \text{energy of electron in its orbital}$
+> * **Shielding (or Screening):** The electrostatic repulsion that inner-shell electrons exert on outer-shell electrons, reducing the effective nuclear charge felt by those outer electrons.
 > 
-> * **First Ionization Energy ($I_1$):** Energy required to remove one electron from each atom in one mole of gaseous atoms to form one mole of gaseous $1+$ ions:
->   $$\\\\text{Cl(g)} \\\\rightarrow \\\\text{Cl}^+\\\\text{(g)} + e^-$$
-> * **Second Ionization Energy ($I_2$):** Energy required to remove one electron from each $1+$ ion in one mole of gaseous ions to form one mole of gaseous $2+$ ions:
->   $$\\\\text{Br}^+\\\\text{(g)} \\\\rightarrow \\\\text{Br}^{2+}\\\\text{(g)} + e^-$$
-> * **Third Ionization Energy ($I_3$):** Energy required to remove one electron from each $2+$ ion in one mole of gaseous ions to form one mole of gaseous $3+$ ions:
->   $$\\\\text{K}^{2+}\\\\text{(g)} \\\\rightarrow \\\\text{K}^{3+}\\\\text{(g)} + e^-$$
+> * **First Ionization Energy ($I_1$):**
+>   $$\text{A(g)} \rightarrow \text{A}^+\text{(g)} + e^-$$
+> * **Second Ionization Energy ($I_2$):**
+>   $$\text{A}^+\text{(g)} \rightarrow \text{A}^{2+}\text{(g)} + e^-$$
+> * **Third Ionization Energy ($I_3$):**
+>   $$\text{A}^{2+}\text{(g)} \rightarrow \text{A}^{3+}\text{(g)} + e^-$$
 
 > [!TIP]
-> ### 🧪 Rules for Ionizing Atoms
-> When writing configurations or determining which electron is lost:
+> ### 🧪 Factors Determining Electron Energy
+> Three key factors determine the magnitude of the ionization energy:
 > 
-> 1. **Representative Elements ($s$ and $p$ blocks):** Start removing electrons from the last occupied orbital (the highest energy level)
-> 2. **Transition Metals ($d$ block):** **Always** remove electrons from the outer $4s$ orbital first, and only then from the $3d$ orbitals
+> 1. **The orbital in which the electron exists:** Electrons in higher energy shells (e.g. $2s$ vs $1s$) are further from the nucleus, requiring less energy to be removed.
+> 2. **The nuclear charge (proton number):** A greater positive charge in the nucleus exerts a stronger attractive force, pulling electrons closer and raising the ionization energy.
+> 3. **The repulsion (shielding/screening) experienced by the electron:** More shielding shells reduce the effective nuclear charge, making the outermost electron easier to remove.
 
 > [!NOTE]
 > ### 📈 Successive Ionization Energy Patterns
-> * **Gradual/Steady Rise:** Successive ionization energies of an element always increase gradually because the remaining electrons are pulled closer by a constant nuclear charge (more protons than electrons, resulting in a smaller ionic radius and increased electrostatic attraction)
-> * **Quantum Shell Jumps:** A massive, sharp jump in ionization energy occurs when an electron is removed from a lower principal quantum shell ($n-1$), which is much closer to the nucleus and experiences far less shielding
-> * **Logarithmic Scale:** Because successive ionization energies span an extremely large range of values, they are managed and plotted using a logarithmic scale (e.g. $\\\\log_{10} I.E.$)
+> * **Gradual/Steady Rise:** Successive ionization energies of an element always increase gradually because as each electron is removed, the remaining electrons experience less electron-electron repulsion and are pulled closer by the constant nuclear charge.
+> * **Quantum Shell Jumps:** A massive, sharp jump in ionization energy occurs when an electron is removed from a lower principal quantum shell ($n-1$), which is closer to the nucleus and experiences far less shielding.
+> * **Logarithmic Scale:** Because successive ionization energies span an extremely large range of values, they are managed and plotted using a logarithmic scale (e.g. $\log_{10} I.E.$ against the order of electron removed).
+> * **Group 3 and 4 Anomalies Down Groups:**
+>   * **Group 4 anomaly:** Lead (Pb) has a first ionization energy that is **higher** than that of Tin (Sn) directly above it, due to poor shielding by $d$ and $f$ electrons.
+>   * **Group 3 anomaly:** There is **no general trend** in first ionization energy in Group 3 (from Boron to Thallium) due to varying orbital configurations and core structures.
 
 > [!BOX]
 > ### 📋 Electronegativity
 > * **Definition:** The relative ability of an atom in a covalent bond to attract the shared pair of electrons towards itself
 > * **Periodic Trends:** Electronegativity increases across a period (due to increasing nuclear charge and decreasing atomic size) and increases going up a group (due to less shielding and smaller atomic size)
-> * **Highest Electronegativity Order:** $\\\\text{F} > \\\\text{O} > \\\\text{Cl} > \\\\text{N} > \\\\text{Br} > \\\\text{I}$
+> * **Highest Electronegativity Order:** $\text{F} > \text{O} > \text{Cl} > \text{N} > \text{Br} > \text{I}$
 
 ---
 
@@ -890,13 +1050,16 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 > While first ionization energy generally increases across a period, there are two distinct dips (anomalies) that provide evidence for sub-shells and orbital filling:
 > 
 > 1. **Group 2 vs Group 3 Dip (e.g. Be vs B, and Mg vs Al):**
->    * **Boron ($1s^2 2s^2 2p^1$)** has a lower first ionization energy than **Beryllium ($1s^2 2s^2$)**
->    * **Reason:** The outer electron of Boron is in a $2p$ sub-shell, which is higher in energy and experiences additional shielding from the filled $2s^2$ sub-shell, making it easier to remove than Beryllium's $2s$ electron
->    * This also applies to **Magnesium** ($3s^2$) and **Aluminium** ($3s^2 3p^1$) in Period 3
+>    * **Boron ($1s^2 2s^2 2p^1$)** has a lower first ionization energy than **Beryllium ($1s^2 2s^2$)**.
+>    * **Reason:** The outer electron of Boron is in a $2p$ sub-shell, which is higher in energy and experiences additional shielding from the filled $2s^2$ sub-shell, making it easier to remove than Beryllium's $2s$ electron.
+>    * **Debunking the "Full-Subshell Stability" Myth:** Do not suggest that Boron has a lower ionization energy because losing an electron gives it a "stable full $2s$ orbital". Removing an electron is always endothermic, so the resulting boron ion ($\text{B}^+$) is energetically **less stable** than the neutral boron atom.
+> 
 > 2. **Group 5 vs Group 6 Dip (e.g. N vs O, and P vs S):**
->    * **Oxygen ($1s^2 2s^2 2p^4$)** has a lower first ionization energy than **Nitrogen ($1s^2 2s^2 2p^3$)**
->    * **Reason:** Nitrogen has a stable half-filled $2p$ sub-shell with singly occupied orbitals ($2p_x^1 2p_y^1 2p_z^1$). In Oxygen, two electrons must pair up in a single $2p$ orbital ($2p_x^2 2p_y^1 2p_z^1$), generating **spin-pair repulsion** which makes the outer electron easier to remove
->    * This also applies to **Phosphorus** ($3p^3$) and **Sulfur** ($3p^4$) in Period 3
+>    * **Oxygen ($1s^2 2s^2 2p^4$)** has a lower first ionization energy than **Nitrogen ($1s^2 2s^2 2p^3$)**.
+>    * **Reason:** In Oxygen, two electrons are paired in the same $2p_x$ orbital. This generates **spin-pair repulsion**, making it easier to remove one of the paired electrons.
+>    * **Debunking the "Half-Full Stability" and "Distance" Myths:** 
+>      * There is **no special stability** associated with a half-full $2p$ subshell; the oxygen ion ($\text{O}^+$) is still energetically **less stable** than the neutral oxygen atom.
+>      * Do not suggest that the outer electron in Oxygen is further from the nucleus than in Nitrogen. In fact, Oxygen has a higher nuclear charge and a **smaller atomic radius** than Nitrogen, so the electron is actually closer; it is purely spin-pair repulsion that lowers its ionization energy.
 
 ---
 
@@ -964,6 +1127,89 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 > > 3. **Analyze electron-electron interaction:**
 > >    * The paired electrons in the same $2p$ orbital in Oxygen experience spin-pair repulsion
 > >    * This repulsion makes it easier to remove one of these paired electrons from Oxygen than an unpaired electron from Nitrogen
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2a: Determining Group and Ionization Sums from Data Tables
+> **Question:** Refer to the first four ionization energies (in $\text{kJ mol}^{-1}$) of five elements A, B, C, D, and E:
+> 
+> | Element | 1st I.E. | 2nd I.E. | 3rd I.E. | 4th I.E. |
+> | :---: | :---: | :---: | :---: | :---: |
+> | **A** | 496 | 4563 | 6913 | 9544 |
+> | **B** | 738 | 1451 | 7733 | 10541 |
+> | **C** | 578 | 1817 | 2745 | 11578 |
+> | **D** | 900 | 1757 | 14849 | 21007 |
+> | **E** | 631 | 1235 | 2389 | 7089 |
+> 
+> (a) Identify which two elements are in the same group. Explain your answer.
+> (b) In which group of the Periodic Table is element C likely to occur? Explain your answer.
+> (c) Which element requires the least amount of energy to form a $2+$ ion from a neutral gaseous atom? Explain your answer.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify elements in the same group (a):**
+> >    * Elements in the same group show a similar pattern of jumps in ionization energy.
+> >    * **Element A:** Huge jump between $I_1$ and $I_2$ ($496 \rightarrow 4563$), indicating $1$ valence electron (Group 1).
+> >    * **Element B:** Huge jump between $I_2$ and $I_3$ ($1451 \rightarrow 7733$), indicating $2$ valence electrons (Group 2).
+> >    * **Element C:** Huge jump between $I_3$ and $I_4$ ($2745 \rightarrow 11578$), indicating $3$ valence electrons (Group 13).
+> >    * **Element D:** Huge jump between $I_2$ and $I_3$ ($1757 \rightarrow 14849$), indicating $2$ valence electrons (Group 2).
+> >    * **Element E:** Huge jump between $I_3$ and $I_4$ ($2389 \rightarrow 7089$), indicating $3$ valence electrons (Group 13).
+> >    * Thus, **B and D** are in Group 2, and **C and E** are in Group 13.
+> > 
+> > 2. **Deduce Group for C (b):**
+> >    * Element C shows a relatively steady increase for the first three ionization energies ($578, 1817, 2745$) followed by a very large jump to the fourth ($11578$). 
+> >    * This indicates that the fourth electron is removed from a shell closer to the nucleus (inner core shell). Thus, C has $3$ valence electrons and belongs to **Group 13** (Group 3).
+> > 
+> > 3. **Find the least energy to form a $2+$ ion (c):**
+> >    * The energy required to form a $2+$ ion from a neutral gaseous atom is the sum of the first and second ionization energies ($I_1 + I_2$):
+> >      * **A:** $496 + 4563 = 5059\text{ kJ mol}^{-1}$
+> >      * **B:** $738 + 1451 = 2189\text{ kJ mol}^{-1}$
+> >      * **C:** $578 + 1817 = 2395\text{ kJ mol}^{-1}$
+> >      * **D:** $900 + 1757 = 2657\text{ kJ mol}^{-1}$
+> >      * **E:** $631 + 1235 = 1866\text{ kJ mol}^{-1}$
+> >    * Therefore, **Element E** requires the least energy ($1866\text{ kJ mol}^{-1}$) to form a $2+$ ion.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2b: Comparing Ionization Energies of H, He, and Li
+> **Question:** Explain the following observations:
+> (a) Helium ($2370\text{ kJ mol}^{-1}$) has a higher first ionization energy than Hydrogen ($1310\text{ kJ mol}^{-1}$).
+> (b) Lithium ($519\text{ kJ mol}^{-1}$) has a lower first ionization energy than Helium ($2370\text{ kJ mol}^{-1}$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Explain H vs He (a):**
+> >    * Both Hydrogen ($1s^1$) and Helium ($1s^2$) have their outer electrons in the same $1s$ orbital, experiencing similar shielding.
+> >    * However, Helium has a nuclear charge of $+2$ (two protons) compared to Hydrogen's $+1$ (one proton).
+> >    * The effect of the doubled nuclear charge outweighs the mutual electron-electron repulsion (shielding) within the same orbital, drawing the electrons closer and making them harder to remove.
+> > 
+> > 2. **Explain He vs Li (b):**
+> >    * Lithium ($1s^2 2s^1$) has a nuclear charge of $+3$ (three protons) which is larger than Helium's $+2$.
+> >    * However, Lithium's outer electron is in the second quantum shell ($2s$ orbital), which is at a higher energy level and further from the nucleus.
+> >    * Furthermore, the $2s$ electron experiences shielding from the two inner-shell $1s^2$ electrons.
+> >    * These two factors (increased distance and shielding) outweigh the increase in nuclear charge, resulting in a much weaker attraction and a lower ionization energy for Lithium.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2c: Writing Ionization Energy Equations
+> **Question:** Write chemical equations, including state symbols, to represent:
+> (a) The first ionization energy of Sodium.
+> (b) The second ionization energy of Calcium.
+> (c) The third ionization energy of Carbon.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **First Ionization of Sodium (a):**
+> >    * Sodium starts as a gaseous neutral atom and loses one electron:
+> >      $$\text{Na(g)} \rightarrow \text{Na}^+\text{(g)} + e^-$$
+> > 
+> > 2. **Second Ionization of Calcium (b):**
+> >    * Calcium starts as a gaseous $1+$ cation and loses a second electron:
+> >      $$\text{Ca}^+\text{(g)} \rightarrow \text{Ca}^{2+}\text{(g)} + e^-$$
+> > 
+> > 3. **Third Ionization of Carbon (c):**
+> >    * Carbon starts as a gaseous $2+$ cation and loses a third electron:
+> >      $$\text{C}^{2+}\text{(g)} \rightarrow \text{C}^{3+}\text{(g)} + e^-$$
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Melting Point Trends of Period 3 Elements

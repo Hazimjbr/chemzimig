@@ -234,7 +234,7 @@ export const level2Questions: Question[] = [
       { text: "5.85 g" }
     ],
     correctAnswer: 1,
-    explanation: "* 1 mole of $\\text{NaCl}$ yields 1 mole of $\\text{Cl}^-$, so $[\text{NaCl}] = 0.400\\text{ mol dm}^{-3}$.\n* Moles of $\\text{NaCl} = C \\times V = 0.400\\text{ mol dm}^{-3} \\times 0.100\\text{ dm}^3 = 0.0400\\text{ mol}$.\n* $\\text{Mass} = 0.0400\\text{ mol} \\times 58.5\\text{ g mol}^{-1} = 2.34\\text{ g}$.",
+    explanation: "* 1 mole of $\\text{NaCl}$ yields 1 mole of $\\text{Cl}^-$, so $[\\text{NaCl}] = 0.400\\text{ mol dm}^{-3}$.\n* Moles of $\\text{NaCl} = C \\times V = 0.400\\text{ mol dm}^{-3} \\times 0.100\\text{ dm}^3 = 0.0400\\text{ mol}$.\n* $\\text{Mass} = 0.0400\\text{ mol} \\times 58.5\\text{ g mol}^{-1} = 2.34\\text{ g}$.",
     level: 2,
     topic: "edexcel-unit-1",
     lessonNum: 1,

@@ -1,4 +1,5 @@
 import { LessonPart } from '../../../registry';
+import { svgToken } from '../../../svgToken';
 
 export const lessonTitle = "Bonding & Structure";
 export const lessonNumber = 3;
@@ -259,56 +260,184 @@ export const parts: LessonPart[] = [
 > [!NOTE]
 > ### ⚛️ Nature of Ionic Bonding & Crystals
 > * **Ion Formation:**
->    * **Cation (positive ion):** Formed when an atom loses one or more valence electrons (typically metals)
->    * **Anion (negative ion):** Formed when an atom gains one or more valence electrons (typically non-metals)
-> * **Ionic bonding:** The strong electrostatic attraction between oppositely charged ions in a giant ionic lattice
-> * **Lattice Structure:** Ionic compounds form a giant ionic lattice (crystal structure) where positive and negative ions alternate in a regular 3D grid
-> * **Forces involved:**
->    1. Attractive forces between oppositely charged ions
->    2. Repulsive forces between ions with like charges
-> * **Isoelectronic Ions:** Ions that contain the exact same number of electrons and the same electronic configuration. Examples include:
->   $$\\text{N}^{3-}, \\text{O}^{2-}, \\text{F}^-, \\text{Na}^+, \\text{Mg}^{2+}, \\text{Al}^{3+}$$
->   (All of these species have exactly 10 electrons: $1s^2 2s^2 2p^6$)
+>    * **Cation (positive ion):** Formed when an atom loses one or more valence electrons (typically metals).
+>    * **Anion (negative ion):** Formed when an atom gains one or more valence electrons (typically non-metals).
+> * **Ionic bonding:** The strong net electrostatic attraction between oppositely charged ions in a giant ionic lattice.
+> * **Lattice Structure:** Ionic compounds form a regular 3D giant ionic lattice where positive and negative ions alternate in a regular array.
+> * **Dot-and-Cross Diagrams:** Standard representations showing outer-shell electrons. Use dots ($\bullet$) for electrons of one atom and crosses ($\times$) for the other.
+> * **Isoelectronic Ions:** Species with the same number of electrons and electronic configuration (e.g. $\text{N}^{3-}, \text{O}^{2-}, \text{F}^-, \text{Na}^+, \text{Mg}^{2+}, \text{Al}^{3+}$ all have $10$ electrons: $1s^2 2s^2 2p^6$).
+> 
+> > [!TIP]
+> > ### 🧪 Learning Tip: Avoid saying "an ionic bond"
+> > Avoid saying that there is an "ionic bond" between two specific ions. In an ionic solid, each ion interacts with many other ions of both the same and opposite charge throughout the lattice. The energy binding the lattice is the **lattice energy**, arising from net electrostatic attractions of all ions, not single isolated bonds.
 
 > [!IMPORTANT]
 > ### ⚡ Factors Affecting Ionic Bond Strength
-> The strength of the ionic bond determines how tightly the lattice is held together, which is reflected in its melting point. It is affected by:
+> The strength of ionic bonding is measured by the **lattice energy** (the energy required to separate one mole of ionic solid into gaseous ions at an infinite distance). It is affected by:
 > 
-> 1. **Ionic Radius:** Smaller ions can get closer to each other, strengthening the electrostatic attraction.
->    * **Examples:** $\\text{KF} > \\text{KBr}$ and $\\text{NaF} > \\text{KF}$
-> 2. **Ionic Charge:** Ions with higher charges experience much stronger electrostatic attraction forces.
->    * **Examples:** $\\text{MgO} > \\text{MgF}_2$ and $\\text{MgF}_2 > \\text{NaF}$
+> 1. **Ionic Radius:** Smaller ions get closer to each other, strengthening the electrostatic attraction forces.
+> 2. **Ionic Charge:** Ions with higher charges experience much stronger electrostatic attraction.
+>    * *Charge vs Radius comparison:* The ionic radius of $\text{Mg}^{2+}$ ($0.072\text{ nm}$) is almost identical to that of $\text{Li}^+$ ($0.074\text{ nm}$). However, the doubled charge on $\text{Mg}^{2+}$ results in a massive increase in lattice energy ($\text{MgF}_2$ is $2957\text{ kJ mol}^{-1}$ compared to $\text{LiF}$ which is $1031\text{ kJ mol}^{-1}$).
+> 
+> #### 📊 Table A: Energy to separate ions to infinity (Lattice Energy) / $\text{kJ mol}^{-1}$
+> 
+> | Cation | $\text{F}^-$ | $\text{Cl}^-$ | $\text{Br}^-$ | $\text{I}^-$ |
+> | :---: | :---: | :---: | :---: | :---: |
+> | **$\text{Li}^+$** | 1031 | 848 | 803 | 759 |
+> | **$\text{Na}^+$** | 918 | 780 | 742 | 705 |
+> | **$\text{K}^+$** | 817 | 711 | 679 | 651 |
+> | **$\text{Rb}^+$** | 783 | 685 | 656 | 628 |
 
 > [!WARNING]
 > ### 🧲 Polarization & Covalent Character
-> * **Polarization Power:** The ability of a cation to attract and distort the electron density of a neighbouring anion
-> * **Polarization:** The distortion of the electron density of an anion from its ideal spherical shape
-> * **Factors increasing polarization:**
->    1. **High Charge Density of Cation:** Small ionic radius and high positive charge.
->       * **Examples:** $\\text{Mg}^{2+} > \\text{Na}^+$ and $\\text{Na}^+ > \\text{K}^+$
->    2. **High Charge and Large Size of Anion:** The outer electron cloud of a large anion is further from the nucleus, more shielded, and easily distorted.
->       * **Examples:** $\\text{O}^{2-} > \\text{F}^-$ and $\\text{Cl}^- > \\text{F}^-$
-> * **Covalent Character:** More polarization leads to significant sharing of electron density, giving the compound covalent character.
->   * **Example:** $\\text{AlI}_3 > \\text{AlF}_3$ (Aluminium iodide shows significant covalent character, whereas aluminium fluoride is predominantly ionic)
+> * **Polarization Power:** The ability of a cation to attract and distort the electron density of a neighbouring anion.
+> * **Polarization:** The distortion of the spherical electron cloud of an anion by the electrostatic pull of a cation.
+> * **Cation Polarizing Power Formula:** An approximation of the charge density of a spherical cation is given by:
+>   $$\text{Charge Density} \approx \frac{\text{charge}}{r^2}$$
+>   *(where $r$ is the ionic radius).*
+> * **Fajan's Rules for Increasing Polarization:**
+>    1. **High Charge Density of Cation:** High positive charge and small ionic radius.
+>       * **Group 1 Radii:** $\text{Li}^+$ ($0.076\text{ nm}$), $\text{Na}^+$ ($0.102\text{ nm}$), $\text{K}^+$ ($0.138\text{ nm}$), $\text{Rb}^+$ ($0.152\text{ nm}$). $\text{Li}^+$ has the highest polarizing power in Group 1.
+>       * **Isoelectronic Cations (10 electrons):** $\text{Na}^+$ ($0.102\text{ nm}$, charge $+1$), $\text{Mg}^{2+}$ ($0.072\text{ nm}$, charge $+2$), $\text{Al}^{3+}$ ($0.054\text{ nm}$, charge $+3$). Polarizing power increases dramatically from $\text{Na}^+$ to $\text{Al}^{3+}$ because nuclear charge increases, pulling electrons closer and shrinking the radius while increasing positive charge.
+>    2. **High Charge and Large Size of Anion:** The outer electron cloud of a large anion is easily distorted because it is far from its own nucleus and highly shielded.
+>       * **Group 7 Radii:** $\text{F}^-$ ($0.133\text{ nm}$), $\text{Cl}^-$ ($0.181\text{ nm}$), $\text{Br}^-$ ($0.196\text{ nm}$), $\text{I}^-$ ($0.220\text{ nm}$). $\text{I}^-$ is the most polarizable.
+>       * **Isoelectronic Anions (10 electrons):** $\text{N}^{3-}$ ($0.146\text{ nm}$), $\text{O}^{2-}$ ($0.140\text{ nm}$), $\text{F}^-$ ($0.133\text{ nm}$). $\text{N}^{3-}$ is the most polarizable due to its larger size and high $-3$ negative charge.
+> * **Covalent Character:** High polarization leads to a sharing of electron density between the two nuclei, introducing covalent character into the predominantly ionic bonding (e.g., $\text{AlI}_3$ is significantly covalent, whereas $\text{AlF}_3$ is ionic).
 
 > [!BOX]
 > ### 📋 Physical Properties of Ionic Compounds
-> 1. **High Melting & Boiling Points:** Due to the strong electrostatic attraction forces between oppositely charged ions in the lattice, which require a large amount of thermal energy to overcome
-> 2. **Electrical Conductivity:** Insulators in the solid state because ions are fixed in position. Good electrical conductors when molten or in aqueous solution because the lattice breaks down, allowing the ions to move freely as charge carriers
-> 3. **Solubility in Water:** Usually soluble in polar water because the electrostatic attractions between the ions and the polar water molecules (hydration of ions by water) release enough energy to overcome the ionic lattice forces
-> 4. **Brittleness:** Ionic crystals are brittle. When a mechanical stress is applied, the layers of ions slide over each other. This brings ions of the same charge next to each other, causing strong electrostatic repulsion that splits the crystal apart
+> 1. **High Melting & Boiling Points:** Due to the strong electrostatic attraction forces between oppositely charged ions in the lattice, which require a large amount of thermal energy to overcome.
+> 2. **Electrical Conductivity:** 
+>    * Insulators in the solid state because ions are fixed in position and cannot move.
+>    * Good electrical conductors when molten or in aqueous solution because the lattice breaks down, allowing the ions to move freely as charge carriers.
+>    * **The Lithium Nitride ($\text{Li}_3\text{N}$) Solid Conductivity Exception:** Uniquely, solid lithium nitride conducts electricity due to highly mobile lithium ions migrating through defects in its crystal lattice. Because of this solid conductivity, $\text{Li}_3\text{N}$ is used in solid-state batteries.
+> 3. **Solubility in Water (Hydration):** 
+>    * Usually soluble in polar water because the electrostatic attractions between the ions and the polar water molecules (hydration) release enough energy to overcome the ionic lattice forces.
+>    * **Exothermic Nature:** Hydration of ions is always an **exothermic process** (energy is released as water molecules attract the ions).
+>    * **Dipole Alignment:** The negatively polarized oxygen ends ($\delta^-$) of water molecules are attracted to positive cations ($\text{Na}^+$). The positively polarized hydrogen ends ($\delta^+$) are attracted to negative anions ($\text{Cl}^-$).
+> 4. **Brittleness:** Ionic crystals are brittle. When stress is applied, the layers of ions slide over each other. This shifts ions of the same charge next to each other, causing strong electrostatic repulsion that splits the crystal apart.
+> 
+> ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+    <radialGradient id="cationGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </radialGradient>
+    <radialGradient id="anionGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </radialGradient>
+    <radialGradient id="oxygenGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </radialGradient>
+    <radialGradient id="hydrogenGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </radialGradient>
+  </defs>
+
+  <rect width="650" height="300" rx="8" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <g transform="translate(170, 150)">
+    <circle r="30" fill="url(#cationGrad)" stroke="#fca5a5" stroke-width="1.5" />
+    <text y="5" fill="#ffffff" font-size="14" font-family="system-ui, sans-serif" font-weight="700" text-anchor="middle">Na+</text>
+    <text y="48" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif" text-anchor="middle">Cation (Positive)</text>
+
+    <g transform="translate(0, -75)">
+      <circle r="14" fill="url(#oxygenGrad)" />
+      <text y="4" fill="#ffffff" font-size="9" font-family="system-ui, sans-serif" text-anchor="middle">&#948;-</text>
+      <circle cx="-13" cy="-10" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="13" cy="-10" r="8" fill="url(#hydrogenGrad)" />
+    </g>
+
+    <g transform="translate(0, 75)">
+      <circle r="14" fill="url(#oxygenGrad)" />
+      <text y="4" fill="#ffffff" font-size="9" font-family="system-ui, sans-serif" text-anchor="middle">&#948;-</text>
+      <circle cx="-13" cy="10" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="13" cy="10" r="8" fill="url(#hydrogenGrad)" />
+    </g>
+
+    <g transform="translate(-75, 0)">
+      <circle r="14" fill="url(#oxygenGrad)" />
+      <text y="4" fill="#ffffff" font-size="9" font-family="system-ui, sans-serif" text-anchor="middle">&#948;-</text>
+      <circle cx="-10" cy="-13" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="-10" cy="13" r="8" fill="url(#hydrogenGrad)" />
+    </g>
+
+    <g transform="translate(75, 0)">
+      <circle r="14" fill="url(#oxygenGrad)" />
+      <text y="4" fill="#ffffff" font-size="9" font-family="system-ui, sans-serif" text-anchor="middle">&#948;-</text>
+      <circle cx="10" cy="-13" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="10" cy="13" r="8" fill="url(#hydrogenGrad)" />
+    </g>
+
+    <line x1="0" y1="-30" x2="0" y2="-61" stroke="#f87171" stroke-dasharray="3 3" stroke-width="1.5" />
+    <line x1="0" y1="30" x2="0" y2="61" stroke="#f87171" stroke-dasharray="3 3" stroke-width="1.5" />
+    <line x1="-30" y1="0" x2="-61" y2="0" stroke="#f87171" stroke-dasharray="3 3" stroke-width="1.5" />
+    <line x1="30" y1="0" x2="61" y2="0" stroke="#f87171" stroke-dasharray="3 3" stroke-width="1.5" />
+  </g>
+
+  <g transform="translate(480, 150)">
+    <circle r="36" fill="url(#anionGrad)" stroke="#a7f3d0" stroke-width="1.5" />
+    <text y="5" fill="#ffffff" font-size="14" font-family="system-ui, sans-serif" font-weight="700" text-anchor="middle">Cl-</text>
+    <text y="53" fill="#cbd5e1" font-size="12" font-family="system-ui, sans-serif" text-anchor="middle">Anion (Negative)</text>
+
+    <g transform="translate(0, -78)">
+      <circle cy="-12" r="14" fill="url(#oxygenGrad)" />
+      <circle cx="-11" cy="5" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="11" cy="5" r="8" fill="url(#hydrogenGrad)" />
+      <text x="-11" y="8" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+      <text x="11" y="8" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+    </g>
+
+    <g transform="translate(0, 78)">
+      <circle cy="12" r="14" fill="url(#oxygenGrad)" />
+      <circle cx="-11" cy="-5" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="11" cy="-5" r="8" fill="url(#hydrogenGrad)" />
+      <text x="-11" y="-2" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+      <text x="11" y="-2" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+    </g>
+
+    <g transform="translate(-78, 0)">
+      <circle cx="-12" r="14" fill="url(#oxygenGrad)" />
+      <circle cx="5" cy="-11" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="5" cy="11" r="8" fill="url(#hydrogenGrad)" />
+      <text x="5" y="-8" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+      <text x="5" y="14" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+    </g>
+
+    <g transform="translate(78, 0)">
+      <circle cx="12" r="14" fill="url(#oxygenGrad)" />
+      <circle cx="-5" cy="-11" r="8" fill="url(#hydrogenGrad)" />
+      <circle cx="-5" cy="11" r="8" fill="url(#hydrogenGrad)" />
+      <text x="-5" y="-8" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+      <text x="-5" y="14" fill="#1e293b" font-size="7" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">&#948;+</text>
+    </g>
+
+    <line x1="0" y1="-36" x2="0" y2="-70" stroke="#a7f3d0" stroke-dasharray="3 3" stroke-width="1.5" />
+    <line x1="0" y1="36" x2="0" y2="70" stroke="#a7f3d0" stroke-dasharray="3 3" stroke-width="1.5" />
+    <line x1="-36" y1="0" x2="-70" y2="0" stroke="#a7f3d0" stroke-dasharray="3 3" stroke-width="1.5" />
+    <line x1="36" y1="0" x2="70" y2="0" stroke="#a7f3d0" stroke-dasharray="3 3" stroke-width="1.5" />
+  </g>
+
+  <text x="325" y="30" fill="#cbd5e1" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Hydration of Ions in Aqueous Solution (Exothermic)</text>
+</svg>`)}
 
 > [!TIP]
 > ### 🧪 Experimental Evidence for the Existence of Ions
-> 1. **Electrical Conductivity:** Solid ionic compounds do not conduct electricity, while molten or solution states do, showing that mobile ions act as charge carriers
-> 2. **Lattice Energy Comparisons:** The comparison between theoretical lattice energy (calculated assuming a purely ionic model) and experimental lattice energy (obtained from Born-Haber cycles):
->    * A **good agreement** (e.g. in $\\text{NaCl}$) confirms a highly ionic structure
->    * A **significant difference** indicates polarization and the presence of covalent bonding character (e.g. in $\\text{AgI}$)
-> 3. **Migration of Ions (Electrolysis):**
->    * **U-Tube Experiment:** Electrolysis of a green copper(II) chromate(VI) solution ($\\text{CuCrO}_4$). The green solution splits, showing a blue band ($\\text{Cu}^{2+}$) moving towards the cathode, and a yellow band ($\\text{CrO}_4^{2-}$) moving towards the anode
->    * **Microscope Slide Experiment:** Placing a crystal of purple potassium manganate(VII) ($\\text{KMnO}_4$) on a wet slide and applying a voltage. A purple band of $\\text{MnO}_4^-$ ions is seen migrating towards the positive anode
-> 4. **Electron Density Maps:** 3D probability plots of electron location around nuclei obtained from X-ray diffraction:
->    * For ionic compounds like $\\text{NaCl}$, the map shows separate, distinct circular contours around each nucleus, confirming that the ions are separate spherical entities with no shared electron density between them
+> 1. **Migration of Ions (Electrolysis):**
+>    * **Copper(II) chromate(VI) Experiment:** Electrolysis of a green copper(II) chromate(VI) solution ($\text{CuCrO}_4\text{(aq)}$). The solution turns green because it contains blue $\text{Cu}^{2+}\text{(aq)}$ ions and yellow $\text{CrO}_4^{2-}\text{(aq)}$ ions. Under electric current, the blue $\text{Cu}^{2+}$ ions migrate towards the negative electrode (cathode), and the yellow $\text{CrO}_4^{2-}$ ions migrate towards the positive electrode (anode), creating visible blue and yellow bands.
+>    * **Potassium Manganate(VII) Experiment:** Placed on wet filter paper; the purple $\text{MnO}_4^-$ ions migrate towards the positive anode.
+> 2. **Electron Density Maps:** Obtainable via X-ray diffraction. In ionic structures like $\text{NaCl}$:
+>    * The contour lines of electron density are completely separate and do not merge, confirming that the ions are separate spherical entities with no shared electron density.
+>    * We can identify the ions because the sodium ion ($\text{Na}^+$) is smaller (fewer and tighter contour circles) than the chloride ion ($\text{Cl}^-$) which has larger and more expansive contour circles.
+> 3. **Lattice Energy Comparisons:** Good agreement between experimental and theoretical (purely ionic model) lattice energies confirms a purely ionic structure. A large difference indicates significant polarization (covalent character).
+> 4. **Electrical Conductivity:** Conducting in molten/solution states but not solid state proves the presence of mobile charged particles (ions).
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Polarization Trends
@@ -351,16 +480,16 @@ export const parts: LessonPart[] = [
 > > 
 > > 1. **Determine factors increasing polarization:**
 > >    * Polarization is maximized by a cation with high polarizing power (small size, high charge) and an anion with high polarizability (large size, high charge)
-> > 2. **Compare cations ($\\text{Na}^+$ vs $\\text{K}^+$):**
-> >    * $\\text{Na}^+$ is smaller than $\\text{K}^+$ with the same $+1$ charge, so $\\text{Na}^+$ has a higher polarizing power
-> > 3. **Compare anions ($\\text{F}^-$ vs $\\text{Cl}^-$):**
-> >    * $\\text{Cl}^-$ is larger than $\\text{F}^-$, so the outer electron cloud of $\\text{Cl}^-$ is more polarizable (more easily distorted)
+> > 2. **Compare cations ($\text{Na}^+$ vs $\text{K}^+$):**
+> >    * $\text{Na}^+$ is smaller than $\text{K}^+$ with the same $+1$ charge, so $\text{Na}^+$ has a higher polarizing power
+> > 3. **Compare anions ($\text{F}^-$ vs $\text{Cl}^-$):**
+> >    * $\text{Cl}^-$ is larger than $\text{F}^-$, so the outer electron cloud of $\text{Cl}^-$ is more polarizable (more easily distorted)
 > > 4. **Conclude:**
-> >    * The combination of the more polarizing cation ($\\text{Na}^+$) and the more polarizable anion ($\\text{Cl}^-$) makes **$\\text{NaCl}$** the compound with the greatest polarization
+> >    * The combination of the more polarizing cation ($\text{Na}^+$) and the more polarizable anion ($\text{Cl}^-$) makes **$\text{NaCl}$** the compound with the greatest polarization
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Covalent Character in Period 3
-> **Question:** Which of the following compounds has the greatest covalent character: $\\text{MgF}_2$, $\\text{NaF}$, $\\text{NaBr}$, or $\\text{MgBr}_2$?
+> **Question:** Which of the following compounds has the greatest covalent character: $\text{MgF}_2$, $\text{NaF}$, $\text{NaBr}$, or $\text{MgBr}_2$?
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
@@ -368,93 +497,228 @@ export const parts: LessonPart[] = [
 > > 1. **Relate covalent character to polarization:**
 > >    * The greatest covalent character is caused by the greatest polarization of the anion by the cation
 > > 2. **Select the most polarizing cation:**
-> >    * $\\text{Mg}^{2+}$ has a higher charge ($+2$) and a smaller size than $\\text{Na}^+$ ($+1$), giving $\\text{Mg}^{2+}$ significantly higher polarizing power
+> >    * $\text{Mg}^{2+}$ has a higher charge ($+2$) and a smaller size than $\text{Na}^+$ ($+1$), giving $\text{Mg}^{2+}$ significantly higher polarizing power
 > > 3. **Select the most polarizable anion:**
-> >    * $\\text{Br}^-$ has a larger ionic radius than $\\text{F}^-$, making it much more polarizable
+> >    * $\text{Br}^-$ has a larger ionic radius than $\text{F}^-$, making it much more polarizable
 > > 4. **Conclude:**
-> >    * The compound **$\\text{MgBr}_2$** combines the highly polarizing $\\text{Mg}^{2+}$ and the highly polarizable $\\text{Br}^-$, resulting in the greatest polarization and the highest covalent character
+> >    * The compound **$\text{MgBr}_2$** combines the highly polarizing $\text{Mg}^{2+}$ and the highly polarizable $\text{Br}^-$, resulting in the greatest polarization and the highest covalent character
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Identifying Least Polarized Lattices
-> **Question:** Which of the following compounds exhibits the least polarization: $\\text{NaCl}$, $\\text{LiCl}$, $\\text{KF}$, or $\\text{NaBr}$?
+> **Question:** Which of the following compounds exhibits the least polarization: $\text{NaCl}$, $\text{LiCl}$, $\text{KF}$, or $\text{NaBr}$?
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Determine factors for least polarization:**
 > >    * Least polarization occurs with a cation of lowest polarizing power (large size, low charge) and an anion of lowest polarizability (small size, low charge)
-> > 2. **Compare cations ($\\text{Li}^+$, $\\text{Na}^+$, $\\text{K}^+$):**
-> >    * $\\text{K}^+$ is the largest Group 1 cation listed, so it has the lowest polarizing density
-> > 3. **Compare anions ($\\text{F}^-$, $\\text{Cl}^-$, $\\text{Br}^-$):**
-> >    * $\\text{F}^-$ is the smallest halide anion listed, making it the least polarizable (most resistant to distortion)
+> > 2. **Compare cations ($\text{Li}^+$, $\text{Na}^+$, $\text{K}^+$):**
+> >    * $\text{K}^+$ is the largest Group 1 cation listed, so it has the lowest polarizing density
+> > 3. **Compare anions ($\text{F}^-$, $\text{Cl}^-$, $\text{Br}^-$):**
+> >    * $\text{F}^-$ is the smallest halide anion listed, making it the least polarizable (most resistant to distortion)
 > > 4. **Conclude:**
-> >    * **$\\text{KF}$** combines the least polarizing cation ($\\text{K}^+$) and the least polarizable anion ($\\text{F}^-$), resulting in the least polarization (most purely ionic bonding model)
-    `,
-    keyPoints: [
-      'Ionic bonding is the electrostatic attraction between oppositely charged ions in a lattice.',
-      'Cation polarizing power is increased by small size and high charge; anion polarizability by large size and high charge.',
-      'Ionic crystals are brittle because sliding layers bring like charges together, causing repulsion.',
-      'X-ray electron density maps and ion migration experiments provide physical proof for the existence of separate ions.'
-    ]
-  },
-  {
-    id: 'covalent-bonding-20260106',
-    title: 'Covalent & Dative Bonding',
-    type: 'text',
-    content: `
+> >    * **$\text{KF}$** combines the least polarizing cation ($\text{K}^+$) and the least polarizable anion ($\text{F}^-$), resulting in the least polarization (most purely ionic bonding model)
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Drawing Dot-and-Cross Diagrams for Calcium Fluoride
+> **Question:** Calcium reacts with fluorine to form the ionic compound calcium fluoride ($\text{CaF}_2$). Draw a dot-and-cross diagram to show the electronic changes and the ions formed in this reaction (show outer-shell electrons only).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the electronic configurations of the neutral atoms:**
+> >    * Calcium (Ca, $Z=20$) has the configuration $2, 8, 8, 2$. It has $2$ valence electrons.
+> >    * Fluorine (F, $Z=9$) has the configuration $2, 7$. It has $7$ valence electrons, needing $1$ more to complete its octet.
+> > 
+> > 2. **Describe the electron transfer:**
+> >    * One Calcium atom loses its $2$ valence electrons, forming a $\text{Ca}^{2+}$ cation with a stable octet ($2, 8, 8$ outer configuration).
+> >    * Since each Fluorine atom can only accept $1$ electron, two Fluorine atoms are required to accept the $2$ electrons from the Calcium atom. This forms two $\text{F}^-$ fluoride anions.
+> > 
+> > 3. **Draw the ions using dot-and-cross notation:**
+> >    * **Calcium cation ($\text{Ca}^{2+}$):** Draw a sphere with no valence electrons (or show the full inner shell with crosses), with square brackets and a $2+$ charge.
+> >    * **Fluoride anions ($2 \times [\text{F}]^-$):** Draw two fluoride spheres. Each has $7$ dots ($\bullet$) representing fluorine's original valence electrons, and $1$ cross ($\times$) representing the electron transferred from Calcium, inside square brackets with a $1-$ charge.
+> >    * Net representation:
+> >      $$[\text{Ca}]^{2+} \quad 2 \times [ \text{F} ]^-$$
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 10: Explaining Lattice Energy Ratios
+> **Question:** Suggest why the strength of ionic bonding in calcium oxide ($\text{Ca}^{2+}\text{O}^{2-}$) is approximately four times larger than that in potassium fluoride ($\text{K}^+\text{F}^-$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **State the relationship between electrostatic force and ionic charge:**
+> >    * The electrostatic force of attraction ($F$) in an ionic lattice is directly proportional to the product of the ionic charges ($q_+ \times q_-$):
+> >      $$F \propto \frac{q_+ \times q_-}{d^2}$$
+> > 
+> > 2. **Compare the charges of both compounds:**
+> >    * For Potassium Fluoride ($\text{K}^+\text{F}^-$): Cation charge = $+1$, Anion charge = $-1$. Product of charges = $1 \times 1 = 1$.
+> >    * For Calcium Oxide ($\text{Ca}^{2+}\text{O}^{2-}$): Cation charge = $+2$, Anion charge = $-2$. Product of charges = $2 \times 2 = 4$.
+> > 
+> > 3. **Compare the ionic radii (interionic distance, $d$):**
+> >    * The sizes of the ions are comparable: the interionic distances in both crystal lattices are very similar.
+> > 
+> > 4. **Conclude:**
+> >    * Because the product of the charges in $\text{CaO}$ ($4$) is four times larger than in $\text{KF}$ ($1$), and their interionic distances are similar, the electrostatic attraction throughout the lattice is approximately four times stronger. This results in a lattice energy that is about four times greater.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 11: Calculating Cation Polarizing Power (Charge Densities)
+> **Question:** Arrange the following cations in order of increasing polarizing power (lowest to highest), calculating their approximate charge densities using the formula $\text{charge density} \approx \text{charge} / r^2$:
+> * $\text{Li}^+$ (radius $0.076\text{ nm}$)
+> * $\text{Na}^+$ (radius $0.102\text{ nm}$)
+> * $\text{Mg}^{2+}$ (radius $0.072\text{ nm}$)
+> * $\text{Al}^{3+}$ (radius $0.054\text{ nm}$)
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Calculate the approximate charge density for each cation:**
+> >    * For $\text{Li}^+$:
+> >      $$\text{Charge density} \approx \frac{1}{(0.076)^2} = \frac{1}{0.005776} \approx 173.1\text{ charge nm}^{-2}$$
+> >    * For $\text{Na}^+$:
+> >      $$\text{Charge density} \approx \frac{1}{(0.102)^2} = \frac{1}{0.010404} \approx 96.1\text{ charge nm}^{-2}$$
+> >    * For $\text{Mg}^{2+}$:
+> >      $$\text{Charge density} \approx \frac{2}{(0.072)^2} = \frac{2}{0.005184} \approx 385.8\text{ charge nm}^{-2}$$
+> >    * For $\text{Al}^{3+}$:
+> >      $$\text{Charge density} \approx \frac{3}{(0.054)^2} = \frac{3}{0.002916} \approx 1028.8\text{ charge nm}^{-2}$$
+> > 
+> > 2. **Analyze and explain the order:**
+> >    * Comparing Group 1 cations, $\text{Na}^+$ is larger than $\text{Li}^+$, so it has a lower polarizing density.
+> >    * Comparing cations with higher charges ($\text{Mg}^{2+}$ and $\text{Al}^{3+}$), they are significantly smaller and have higher charges, which dramatically increases their polarizing power.
 > [!NOTE]
 > ### 🤝 Covalent Bonding & Orbital Overlap
-> * **Definition:** A covalent bond is the strong electrostatic attraction forces between the shared pair of electrons (in the two overlapping orbitals) and the nuclei of the bonded atoms
-> * **Orbital Overlap:** The covalent bond happens between half-filled orbitals only when they overlap, producing a high electron density between the two nuclei
-> * **Diatomic Molecules:** Molecules containing exactly two atoms:
->    1. **Elements:** Hydrogen $\\text{H}_2$, Nitrogen $\\text{N}_2$, Oxygen $\\text{O}_2$, and all halogens $\\text{F}_2$, $\\text{Cl}_2$, $\\text{Br}_2$, $\\text{I}_2$
->    2. **Compounds:** Halide acids $\\text{HCl}$, $\\text{HBr}$, Carbon monoxide $\\text{CO}$, Nitrogen monoxide $\\text{NO}$
-> * **Evidence of Covalent Bond:**
->    1. Physical properties of giant atomic structures (e.g. high melting points)
->    2. Electron density maps for simple molecules
-> * **Sigma ($\\sigma$) vs Pi ($\\pi$) Bonds:**
->    * **Sigma ($\\sigma$) Bond (Stronger):** Formed when orbitals overlap **head-to-head** (one area of orbital overlap along the axis). This creates a single pair of electrons shared directly between the two atoms, resulting in a high electron density between the two nuclei and a large force of attraction
->    * **Pi ($\\pi$) Bond (Weaker):** Formed when p-orbitals overlap **side-by-side** (parallel, sideways), creating two areas of orbital overlap (above and below the axis). Because the electron density is further from the nuclei, the force of attraction is weaker
-> * **Covalent Bond Types (by electron pairs):**
->    1. **Single Bond:** One pairing electron from each atom, composed of a single $\\sigma$ bond
->    2. **Double Bond:** Two pairing electrons, composed of $1\\sigma$ and $1\\pi$ bond
->    3. **Triple Bond:** Three pairing electrons, composed of $1\\sigma$ and $2\\pi$ bonds
->    4. **Dative Covalent (Coordinate) Bond:** A bond where one atom contributes both sharing electrons
+> * **Definition:** A covalent bond is the strong electrostatic attraction between the shared pair of electrons (in the overlapping region of atomic orbitals) and the nuclei of the two bonded atoms.
+> * **Orbital Overlap Types:**
+>    1. **s-s Orbital Overlap:** Spherical s-orbitals overlap head-to-head along the internuclear axis to form a sigma ($\sigma$) bond (e.g. in $\text{H}_2$).
+>    2. **p-p End-on Overlap:** Dumbbell-shaped p-orbitals overlap head-to-head along the internuclear axis to form a sigma ($\sigma$) bond (e.g. in $\text{Cl}_2$).
+>    3. **s-p End-on Overlap (Polar Covalent Exception):** An s-orbital from one atom overlaps head-to-head with a p-orbital from a different element. This almost always leads to an unequal sharing of electrons, forming a **polar covalent bond**.
+>    4. **p-p Sideways Overlap:** p-orbitals overlap sideways (parallel) to form a pi ($\pi$) bond, with electron density concentrated in two regions above and below the internuclear axis.
+> * **Sigma ($\sigma$) vs Pi ($\pi$) Bond Strength:**
+>    * **$\sigma$ Bonds are stronger:** Overlap is along the internuclear axis (end-on), yielding maximum orbital overlap and placing the shared electron density directly between the two positive nuclei.
+>    * **$\pi$ Bonds are weaker:** Overlap is sideways (parallel), placing the shared electron density further from the positive nuclei. Additionally, a $\pi$ bond cannot form unless a $\sigma$ bond has already been established.
+> * **Bond Types:**
+>    * **Single Bond:** composed of $1\sigma$ bond.
+>    * **Double Bond:** composed of $1\sigma$ and $1\pi$ bond (e.g., in ethene $\text{C}_2\text{H}_4$, which makes alkenes highly reactive compared to alkanes because the weaker $\pi$ bond breaks easily to undergo addition reactions).
+>    * **Triple Bond:** composed of $1\sigma$ and $2\pi$ bonds (e.g., in nitrogen $\text{N}_2$, which is extremely unreactive due to the massive strength of its triple bond).
+> 
+> ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+    <radialGradient id="sOrbGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8" />
+    </radialGradient>
+    <linearGradient id="pLobeA" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ea580c" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="pLobeB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#db2777" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="650" height="380" rx="8" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <g transform="translate(150, 90)">
+    <circle cx="-25" cy="0" r="30" fill="url(#sOrbGrad)" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="25" cy="0" r="30" fill="url(#sOrbGrad)" stroke="#38bdf8" stroke-width="1" />
+    <path d="M 0,-16.5 A 30 30 0 0 1 0,16.5 A 30 30 0 0 1 0,-16.5" fill="#fef08a" opacity="0.5" />
+    <circle cx="-25" cy="0" r="2.5" fill="#ffffff" />
+    <circle cx="25" cy="0" r="2.5" fill="#ffffff" />
+    <text y="52" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">s-s orbital overlap (sigma bond)</text>
+    <text y="-40" fill="#38bdf8" font-size="12" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">1. Head-to-Head (s-s)</text>
+  </g>
+
+  <g transform="translate(480, 90)">
+    <g transform="translate(-40, 0)">
+      <path d="M 0,0 C -25,-18 -35,-18 -35,0 C -35,18 -25,18 0,0 Z" fill="url(#pLobeA)" stroke="#ea580c" stroke-width="0.8" />
+      <path d="M 0,0 C 25,-18 35,-18 35,0 C 35,18 25,18 0,0 Z" fill="url(#pLobeB)" stroke="#db2777" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
+    </g>
+    <g transform="translate(40, 0)">
+      <path d="M 0,0 C -25,-18 -35,-18 -35,0 C -35,18 -25,18 0,0 Z" fill="url(#pLobeB)" stroke="#db2777" stroke-width="0.8" />
+      <path d="M 0,0 C 25,-18 35,-18 35,0 C 35,18 25,18 0,0 Z" fill="url(#pLobeA)" stroke="#ea580c" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
+    </g>
+    <ellipse cx="0" cy="0" rx="7" ry="10" fill="#fef08a" opacity="0.5" />
+    <text y="52" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">p-p end-on overlap (sigma bond)</text>
+    <text y="-40" fill="#38bdf8" font-size="12" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">2. Head-to-Head (p-p)</text>
+  </g>
+
+  <g transform="translate(150, 260)">
+    <circle cx="-35" cy="0" r="30" fill="url(#sOrbGrad)" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="-35" cy="0" r="2.5" fill="#ffffff" />
+    <g transform="translate(25, 0)">
+      <path d="M 0,0 C -25,-18 -35,-18 -35,0 C -35,18 -25,18 0,0 Z" fill="url(#pLobeB)" stroke="#db2777" stroke-width="0.8" />
+      <path d="M 0,0 C 25,-18 35,-18 35,0 C 35,18 25,18 0,0 Z" fill="url(#pLobeA)" stroke="#ea580c" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
+    </g>
+    <path d="M -7.5,-12 A 30 30 0 0 1 -7.5,12 A 12 12 0 0 1 -7.5,-12" fill="#fef08a" opacity="0.5" />
+    <text y="52" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">s-p end-on overlap (polar sigma bond)</text>
+    <text y="-40" fill="#38bdf8" font-size="12" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">3. Head-to-Head (s-p)</text>
+  </g>
+
+  <g transform="translate(480, 260)">
+    <g transform="translate(-30, 0)">
+      <path d="M 0,0 C -18,-25 -18,-35 0,-35 C 18,-35 18,-25 0,0 Z" fill="url(#pLobeA)" stroke="#ea580c" stroke-width="0.8" />
+      <path d="M 0,0 C -18,25 -18,35 0,35 C 18,35 18,25 0,0 Z" fill="url(#pLobeB)" stroke="#db2777" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
+    </g>
+    <g transform="translate(30, 0)">
+      <path d="M 0,0 C -18,-25 -18,-35 0,-35 C 18,-35 18,-25 0,0 Z" fill="url(#pLobeA)" stroke="#ea580c" stroke-width="0.8" />
+      <path d="M 0,0 C -18,25 -18,35 0,35 C 18,35 18,25 0,0 Z" fill="url(#pLobeB)" stroke="#db2777" stroke-width="0.8" />
+      <circle cx="0" cy="0" r="2.5" fill="#ffffff" />
+    </g>
+    <path d="M -30,-22 Q 0,-35 30,-22 Q 0,-15 -30,-22 Z" fill="#fef08a" opacity="0.4" />
+    <path d="M -30,22 Q 0,15 30,22 Q 0,35 -30,22 Z" fill="#fef08a" opacity="0.4" />
+    <text y="52" fill="#cbd5e1" font-size="11" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">p-p sideways overlap (pi bond)</text>
+    <text y="-40" fill="#38bdf8" font-size="12" font-family="system-ui, sans-serif" font-weight="bold" text-anchor="middle">4. Side-by-Side (p-p)</text>
+  </g>
+</svg>`)}
 
 > [!IMPORTANT]
 > ### 🔗 Factors Affecting Covalent Bond Strength
-> 1. **Bond Length:** The average distance between the nuclei of two atoms that are covalently bonded together. The shorter the bond, the greater its strength, as the shared electrons are closer to both positive nuclei, resulting in stronger electrostatic attraction forces
+> 1. **Bond Length:** The average distance between the nuclei of two atoms that are covalently bonded together. The shorter the bond, the greater its strength, as the shared electrons are closer to both positive nuclei, resulting in stronger electrostatic attraction forces.
 > 2. **Bond Multiplicity:** Triple bonds are shorter and stronger than double bonds, which in turn are shorter and stronger than single bonds of the same kind:
->    $$\\text{C}\\equiv\\text{C} > \\text{C}=\\text{C} > \\text{C-C}$$
-> 3. **Type of Overlap:** $\\sigma$ bonds are stronger than $\\pi$ bonds because $\\sigma$ overlap is along the axis, yielding maximum electron density between the nuclei. $\\pi$ overlap is sideways, placing electron density further from the nuclei
-> * **Special Cases:**
->    * **Fluorine ($\\text{F}_2$):** The non-bonding (lone) pairs of electrons are very close to one another. Consequently, they repel quite strongly, which reduces the overall bond strength
->    * **Nitrogen ($\\text{N}_2$):** Nitrogen gas is highly unreactive because the $\\text{N}\\equiv\\text{N}$ triple bond is extremely strong (difficult to break) and the $\\text{N}_2$ molecule is non-polar
-
-> [!WARNING]
 > ### ⚠️ Exceptions to the Octet Rule
 > Some atoms do not follow the octet rule when forming covalent bonds:
-> 1. **Less than 8 outer electrons (Incomplete Octet):** $\\text{H}$ (max 2), $\\text{He}$, $\\text{Be}$ (in $\\text{BeCl}_2$, 4 electrons), and $\\text{B}$ (in $\\text{BF}_3$, 6 electrons)
-> 2. **More than 8 outer electrons (Expanded Octet):** Elements in Period 3 and below (with -ate suffix like $\\text{S}$ in sulfate $\\text{SO}_4^{2-}$ and $\\text{P}$ in phosphate $\\text{PO}_4^{3-}$) can expand their octet due to the presence of empty, low-lying d-orbitals
+> 1. **Less than 8 outer electrons (Incomplete Octet):** $\text{H}$ (max 2), $\text{He}$, $\text{Be}$ (in $\text{BeCl}_2$, 4 electrons), and $\text{B}$ (in $\text{BF}_3$, 6 electrons)
+> 2. **More than 8 outer electrons (Expanded Octet):** Elements in Period 3 and below (with -ate suffix like $\text{S}$ in sulfate $\text{SO}_4^{2-}$ and $\text{P}$ in phosphate $\text{PO}_4^{3-}$) can expand their octet due to the presence of empty, low-lying d-orbitals
 
 > [!IMPORTANT]
 > ### 🏹 Dative Covalent (Coordinate) Bonding
-> * **Definition:** A dative covalent bond is the attraction between two atoms where one donates a lone pair of electrons to overlap with an empty orbital of another
+> * **Definition:** A dative covalent bond forms when one atom provides both electrons of the shared pair to overlap with an empty orbital of another atom (acceptor).
+> * **Arrow Notation:** In displayed structural formulae, a dative covalent bond is represented by an arrow ($\rightarrow$) pointing from the donor atom to the acceptor atom.
+> * **Important Formations & Mechanics:**
+>    1. **Ammonium Ion ($\text{NH}_4^+$):** The empty $1s$ orbital of an $\text{H}^+$ ion overlaps with the lone pair of the nitrogen atom in a neutral ammonia ($\text{NH}_3$) molecule. Once formed, all four $\text{N-H}$ bonds are identical in length and strength.
+>    2. **Hydroxonium Ion ($\text{H}_3\text{O}^+$):** The empty $1s$ orbital of an $\text{H}^+$ ion overlaps with one of the lone pairs on the oxygen atom of a water ($\text{H}_2\text{O}$) molecule.
+>    3. **Aluminium Chloride Dimer ($\text{Al}_2\text{Cl}_6$):** At low temperatures or in the gas phase, monomeric $\text{AlCl}_3$ molecules (where Aluminium is electron-deficient with only 6 outer electrons) combine. A lone pair from a chlorine atom on one $\text{AlCl}_3$ molecule is donated to the empty orbital of the aluminium atom on the neighboring $\text{AlCl}_3$ molecule, and vice-versa, forming two chlorine bridges.
+> 
+> > [!TIP]
+> > ### 🧪 Learning & Exam Tips:
+> > * **Lone Pairs in Displayed vs. Dot-and-Cross:** While it is essential to show all non-bonding (lone) pairs of electrons in a dot-and-cross diagram, it is **not necessary** to show them in a displayed formula (where bonds are shown as lines).
+> > * **Halogen Non-Bonding Electrons:** When drawing dot-and-cross diagrams for molecules like chloromethane ($\text{CH}_3\text{Cl}$), do not forget to show all three non-bonding lone pairs ($6$ electrons) on the chlorine atom.
+> > * **What is NOT a Molecule:** Remember that simple/discrete molecules are electrically neutral groups of atoms. Giant ionic lattices ($\text{NaCl}$), giant covalent networks (diamond, graphite, graphene), and metals are **not** composed of molecules.
+> 
 > * **Common Dative Structures:**
 > 
-> | Species Name | Cation / Anion / Molecule | Dative Source |
-> | :--- | :--- | :--- |
-> | Ammonium ion | $\\text{NH}_4^+$ | Nitrogen donates lone pair to $\\text{H}^+$ |
-> | Hydronium ion | $\\text{H}_3\\text{O}^+$ | Oxygen donates lone pair to $\\text{H}^+$ |
-> | Nitrate ion | $\\text{NO}_3^-$ | Nitrogen donates lone pair to one oxygen |
-> | Ozone | $\\text{O}_3$ | Central oxygen donates lone pair to terminal oxygen |
-> | Sulfur dioxide | $\\text{SO}_2$ | Sulfur donates lone pair to oxygen |
-> | Carbon monoxide | $\\text{CO}$ | Oxygen donates lone pair to carbon |
-> | Nitrous oxide | $\\text{N}_2\\text{O}$ | Central nitrogen donates lone pair to oxygen |
-> | Chlorine dioxide | $\\text{ClO}_2$ | Chlorine donates lone pair to oxygen |
-> | Ammonia borane | $\\text{NH}_3\\text{BF}_3$ | Nitrogen in $\\text{NH}_3$ donates lone pair to Boron |
-> | Beryllium chloride dimer | $\\text{Be}_2\\text{Cl}_4$ | Chlorine donates lone pair to Beryllium |
-> | Aluminium chloride dimer | $\\text{Al}_2\\text{Cl}_6$ | Chlorine donates lone pair to Aluminium |
+> | Species Name | Formula | Cation / Anion / Molecule | Dative Source |
+> | :--- | :---: | :--- | :--- |
+> | Ammonium ion | $\text{NH}_4^+$ | Cation | Nitrogen donates lone pair to $\text{H}^+$ |
+> | Hydronium ion | $\text{H}_3\text{O}^+$ | Cation | Oxygen donates lone pair to $\text{H}^+$ |
+> | Nitrate ion | $\text{NO}_3^-$ | Anion | Nitrogen donates lone pair to one oxygen |
+> | Ozone | $\text{O}_3$ | Molecule | Central oxygen donates lone pair to terminal oxygen |
+> | Sulfur dioxide | $\text{SO}_2$ | Molecule | Sulfur donates lone pair to oxygen |
+> | Carbon monoxide | $\text{CO}$ | Molecule | Oxygen donates lone pair to carbon |
+> | Nitrous oxide | $\text{N}_2\text{O}$ | Molecule | Central nitrogen donates lone pair to oxygen |
+> | Chlorine dioxide | $\text{ClO}_2$ | Molecule | Chlorine donates lone pair to oxygen |
+> | Ammonia borane | $\text{NH}_3\text{BF}_3$ | Adduct Molecule | Nitrogen in $\text{NH}_3$ donates lone pair to Boron |
+> | Beryllium chloride dimer | $\text{Be}_2\text{Cl}_4$ | Dimer Molecule | Chlorine donates lone pair to Beryllium |
+> | Aluminium chloride dimer | $\text{Al}_2\text{Cl}_6$ | Dimer Molecule | Chlorine donates lone pair to Aluminium |
 
 \`\`\`carousel
 ![Ammonium Ion NH₄⁺](/images/lessons/ammonium.svg)
@@ -475,33 +739,91 @@ export const parts: LessonPart[] = [
 \`\`\`
 
 > [!NOTE]
-> ### 🧪 Chemical Properties of $\\text{AlCl}_3$
-> * **Aluminium Trichloride ($\\text{AlCl}_3$) Properties:**
->    1. Exists as an ionic lattice in the solid state but vaporises as a covalent dimer molecule $\\text{Al}_2\\text{Cl}_6$ in the gas phase (held together by two dative bonds)
+> ### 🧪 Chemical Properties of $\text{AlCl}_3$
+> * **Aluminium Trichloride ($\text{AlCl}_3$) Properties:**
+>    1. Exists as an ionic lattice in the solid state but vaporises as a covalent dimer molecule $\text{Al}_2\text{Cl}_6$ in the gas phase (held together by two dative bonds)
 >    2. Has very low melting and boiling points for a metal chloride
 >    3. Reacts vigorously with water to release acidic hydrogen chloride gas:
 >
->       $\\text{AlCl}_3\\text{(s)} + 3\\text{H}_2\\text{O}\\text{(l)} \\rightarrow \\text{Al(OH)}_3\\text{(s)} + 3\\text{HCl}\\text{(g)}$
-> * **Why Boron Trichloride ($\\text{BCl}_3$) Cannot Form a Dimer ($\\text{B}_2\\text{Cl}_6$):**
+>       $\text{AlCl}_3\text{(s)} + 3\text{H}_2\text{O}\text{(l)} \rightarrow \text{Al(OH)}_3\text{(s)} + 3\text{HCl}\text{(g)}$
+> * **Why Boron Trichloride ($\text{BCl}_3$) Cannot Form a Dimer ($\text{B}_2\text{Cl}_6$):**
 >    * Due to the small size of the central boron atom, it is geometrically impossible to pack four large chlorine atoms around it into a stable tetrahedral arrangement
 >    * The resulting steric repulsion between the chlorine atoms destabilizes any potential dimer structure
 
 > [!WARNING]
 > ### 🧲 Electronegativity, Bond Polarity & Maps
-> * **Electronegativity:** The ability of an atom to attract the bonding pair electrons in a covalent bond. It increases across a period and decreases down a group ($\\text{F} > \\text{O} > \\text{Cl} > \\text{N} > \\text{Br} > \\text{I}$)
-> * **Bond Polarity:** Unequal distribution of shared electrons in a covalent bond
-> * **Dipole:** The drift of bonded electrons towards the more electronegative element in a covalent bond, resulting in a charge separation (polar bond)
-> * **Predicting Bond Type by Electronegativity Difference ($\\Delta\\text{EN}$):**
->    1. **$\\Delta\\text{EN} < 0.5$:** Non-polar covalent bond (equal sharing between same or very similar electronegativity atoms like $\\text{H}_2$, $\\text{Cl}_2$)
->    2. **$\\Delta\\text{EN} = 0.5 - 2.0$:** Polar covalent bond (unequal sharing between different non-metal atoms like $\\text{HCl}$)
->    3. **$\\Delta\\text{EN} > 2.0$:** Ionic bond (metal with non-metal, large charge separation)
-> * **Electron Density Maps:** A 3D plot showing the probability of an electron being present at a specific location. It clearly shows the character of the bond:
->    1. **Covalent Character:** Indicated by continuous, shared contour lines wrapping around more than one nucleus:
->       * **Symmetrical overlap:** Contour lines are symmetrically shared (e.g. $\\\\text{Cl}_2$)
->       * **Asymmetrical overlap:** Contour lines are pulled/distorted towards the more electronegative nucleus (e.g. $\\\\text{HCl}$)
->    2. **Ionic Character:** Indicated by separate, non-overlapping circular contour lines around each nucleus:
->       * **Lithium Iodide ($\\\\text{LiI}$):** Shows separate contours but with severe distortion of the iodide cloud, indicating **high polarization** (covalent character)
->       * **Sodium Chloride ($\\\\text{NaCl}$):** Shows neat, undistorted separate circular contours, indicating **low polarization** (pure ionic model)
+> * **Electronegativity:** The ability of an atom to attract the bonding pair of electrons in a covalent bond.
+> * **Periodic Trends:** Increases across a period (nuclear charge increases while shielding remains similar) and decreases down a group (increased shells and shielding increase distance to nucleus).
+>   * *Fluorine vs Chlorine:* Fluorine is the most electronegative element (4.0). Even though Chlorine has more protons, Fluorine is smaller ($n=2$ vs $n=3$), meaning the bonding pair is closer to the nucleus and attracted much more strongly.
+> 
+> #### 📊 Table B: Pauling Electronegativity Values
+> 
+> | Element | H | Li | Be | B | C | N | O | F | Na | Mg | Al | Si | P | S | Cl | K | Ca | Br | I |
+> | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+> | **EN Value** | 2.1 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 | 3.5 | 4.0 | 0.9 | 1.2 | 1.5 | 1.8 | 2.1 | 2.5 | 3.0 | 0.8 | 1.0 | 2.8 | 2.5 |
+> 
+> * **Bond Polarity & Dipoles:** 
+>   * **Pure Covalent Bond:** Non-polar covalent bonds (sometimes called 'normal' or 'pure' covalent bonds) form between atoms with identical or very similar electronegativities (equal sharing).
+>   * **Polar Covalent Bond:** Formed when there is an electronegativity difference between two atoms, causing the bonding pair of electrons to be pulled closer to the more electronegative atom (represented by $H^{\delta+} - Cl^{\delta-}$ or $H \rightarrow Cl$).
+> * **The Bonding Continuum:** Covalent and ionic bonding are not completely separate categories but rather two extremes of a continuous spectrum of bonding types.
+> 
+> #### 📊 Table C: Electronegativity Difference ($\Delta\text{EN}$) vs. % Ionic Character
+> 
+> | $\Delta\text{EN}$ | 0 | 0.2 | 0.4 | 0.6 | 0.8 | 1.0 | 1.2 | 1.4 | 1.6 | 1.7 | 1.8 | 2.0 | 2.2 | 2.4 | 2.6 | 2.8 | 3.0 | 3.2 |
+> | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+> | **% Ionic Character** | 0% | 1% | 4% | 9% | 15% | 22% | 30% | 39% | 47% | **51%** | 55% | 63% | 70% | 76% | 82% | 86% | 89% | 91% |
+> 
+>   * *Predominant Bonding Type:* A difference of **1.7** represents exactly **51%** ionic character. This is the boundary where a compound transitions from being predominantly covalent to being predominantly ionic.
+> * **Electron Density Maps:** Obtainable via X-ray diffraction, showing contour lines representing electron probability densities.
+>   1. **Symmetrical Distribution:** Symmetrical contours centered around both nuclei, indicating equal electron sharing (e.g. in homonuclear diatomic molecules like $\text{Cl}_2$ or $\text{H}_2$).
+>   2. **Asymmetrical Distribution:** Contour lines are distorted and spaced closer together around the more electronegative atom, indicating a polar covalent bond (e.g. in $\text{HCl}$ where density shifts to Chlorine).
+> 
+> ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+  </defs>
+
+  <rect width="650" height="240" rx="8" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <g transform="translate(170, 110)">
+    <path d="M -50,-10 C -50,-25 -25,-25 0,-15 C 25,-25 50,-25 50,-10 C 50,10 25,15 0,15 C -25,15 -50,10 -50,-10 Z" fill="none" stroke="#38bdf8" stroke-width="1" />
+    <path d="M -45,-8 C -45,-20 -25,-20 0,-11 C 25,-20 45,-20 45,-8 C 45,8 25,11 0,11 C -25,11 -45,8 -45,-8 Z" fill="none" stroke="#38bdf8" stroke-width="1.2" />
+    <circle cx="-30" cy="-2" r="16" fill="none" stroke="#38bdf8" stroke-width="1.4" />
+    <circle cx="30" cy="-2" r="16" fill="none" stroke="#38bdf8" stroke-width="1.4" />
+    <circle cx="-30" cy="-2" r="8" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="30" cy="-2" r="8" fill="none" stroke="#38bdf8" stroke-width="1.5" />
+    
+    <circle cx="-30" cy="-2" r="2.5" fill="#ffffff" />
+    <circle cx="30" cy="-2" r="2.5" fill="#ffffff" />
+    <text x="-30" y="22" fill="#cbd5e1" font-size="10" font-family="system-ui" text-anchor="middle">Cl (3.0)</text>
+    <text x="30" y="22" fill="#cbd5e1" font-size="10" font-family="system-ui" text-anchor="middle">Cl (3.0)</text>
+    
+    <text x="0" y="65" fill="#38bdf8" font-size="12" font-family="system-ui" font-weight="bold" text-anchor="middle">Symmetrical (Non-polar Cl₂)</text>
+  </g>
+
+  <g transform="translate(480, 110)">
+    <path d="M -50,-10 C -50,-20 -25,-22 5,-15 C 28,-28 55,-28 55,-10 C 55,10 28,15 5,15 C -25,15 -50,10 -50,-10 Z" fill="none" stroke="#fb923c" stroke-width="1" />
+    <path d="M -42,-8 C -42,-16 -20,-18 5,-12 C 25,-24 50,-24 50,-8 C 50,8 25,12 5,12 C -20,12 -42,8 -42,-8 Z" fill="none" stroke="#fb923c" stroke-width="1.2" />
+    <circle cx="-25" cy="-2" r="12" fill="none" stroke="#fb923c" stroke-width="1.4" />
+    <circle cx="25" cy="-2" r="22" fill="none" stroke="#fb923c" stroke-width="1.4" />
+    <circle cx="25" cy="-2" r="14" fill="none" stroke="#fb923c" stroke-width="1.5" />
+    <circle cx="25" cy="-2" r="7" fill="none" stroke="#fb923c" stroke-width="1.6" />
+    
+    <circle cx="-25" cy="-2" r="2" fill="#ffffff" />
+    <circle cx="25" cy="-2" r="2.5" fill="#ffffff" />
+    <text x="-25" y="22" fill="#cbd5e1" font-size="10" font-family="system-ui" text-anchor="middle">H (2.1)</text>
+    <text x="25" y="30" fill="#cbd5e1" font-size="10" font-family="system-ui" text-anchor="middle">Cl (3.0)</text>
+    <text x="-25" y="-18" fill="#fb923c" font-size="11" font-weight="bold" font-family="system-ui" text-anchor="middle">&#948;+</text>
+    <text x="25" y="-28" fill="#fb923c" font-size="11" font-weight="bold" font-family="system-ui" text-anchor="middle">&#948;-</text>
+    
+    <text x="0" y="65" fill="#fb923c" font-size="12" font-family="system-ui" font-weight="bold" text-anchor="middle">Asymmetrical (Polar HCl)</text>
+  </g>
+
+  <text x="325" y="30" fill="#cbd5e1" font-size="14" font-weight="bold" font-family="system-ui" text-anchor="middle">X-ray Electron Density Map Comparison</text>
+</svg>`)}
 
 \`\`\`carousel
 ![Symmetrical Covalent Overlap](/images/lessons/density_symmetrical.svg)
@@ -521,19 +843,26 @@ export const parts: LessonPart[] = [
 > 
 > | Feature | Diamond | Graphite | Graphene |
 > | :--- | :--- | :--- | :--- |
-> | Structure | Rigid 3D tetrahedral arrangement (bond angles $109.5^\\circ$) | Flat 2D layers of hexagonal rings (bond angles $120^\\circ$) | A single, flat 2D sheet of carbon atoms (one layer of graphite, $120^\\circ$) |
-> | Bonding | Each carbon atom forms 4 strong $\\sigma$ bonds to 4 other carbon atoms | Each carbon atom forms 3 $\\sigma$ bonds. The 4th electron is in a p-orbital and delocalises between the layers | Each carbon atom forms 3 $\\sigma$ bonds. The 4th electron is in a p-orbital and delocalises across the single layer |
+> | Structure | Rigid 3D tetrahedral arrangement (bond angles $109.5^\circ$) | Flat 2D layers of hexagonal rings (bond angles $120^\circ$) | A single, flat 2D sheet of carbon atoms (one layer of graphite, $120^\circ$) |
+> | Bonding | Each carbon atom forms 4 strong $\sigma$ bonds to 4 other carbon atoms | Each carbon atom forms 3 $\sigma$ bonds. The 4th electron is in a p-orbital and delocalises between the layers | Each carbon atom forms 3 $\sigma$ bonds. The 4th electron is in a p-orbital and delocalises across the single layer |
 > | Appearance | Colourless, transparent, highly lustrous crystal | Dark grey, opaque, lustrous solid | Ultra-thin, nearly transparent sheet |
 > | Hardness | Hardest natural substance known (used in cutting tools and drill bits) | Very soft and slippery (layers slide over each other easily; used in lubricants and pencils) | Extremely strong (about 200 times stronger than steel by weight; used in composites) |
 > | Conductivity | Non-conductor (all valence electrons are localized in covalent bonds) | Good conductor parallel to its layers (delocalised electrons move freely between layers) | Excellent electrical conductor (free electrons move rapidly across the layer) |
 > 
 > * **High Melting Points:** Giant covalent structures have extremely high melting points because a huge amount of energy is required to break the strong covalent bonds holding the lattice together
-> * **Graphite as a Lubricant (Gas Requirement):** Graphite can function as an effective lubricant only when gas molecules (like water vapour) are present to be trapped between the layers, reducing friction. In a vacuum, graphite loses its lubricating properties because the layers cannot slide as easily without these trapped gas particles
-> * **Allotrope Geometry vs Cyclohexane:** Graphite and graphene consist of flat, planar hexagonal carbon rings with $120^\\circ$ bond angles due to $sp^2$ hybridisation. In contrast, cyclohexane (C₆H₁₂) is a simple molecular compound that has a puckered 6-membered ring structure (chair or boat conformation) to maintain tetrahedral $109.5^\\circ$ bond angles (all $sp^3$ carbons)
+> * **Graphite Conductivity Limitation:** Delocalised electrons in graphite are restricted within the hexagonal planes. As a result, graphite conducts electricity **only parallel to its layers** and is an insulator perpendicular to the layers.
+> * **Graphite as a Lubricant (Gas Requirement):** Graphite can function as an effective lubricant only when gas molecules (like water vapour or oxygen) are present to be adsorbed and trapped between the layers, reducing friction. In a vacuum (e.g. in space), graphite loses its lubricating properties because the layers cannot slide as easily without these trapped gas particles; space-based lubricants use molybdenum disulfide ($\text{MoS}_2$) or hexagonal boron nitride ($\text{BN}$).
+> * **Diamond Thermal Properties:** Despite being an electrical insulator, diamond has a very high thermal conductivity (even higher than metals like copper) because its rigid, strong 3D tetrahedral covalent network transfers lattice vibrations (phonons) exceptionally fast. Real diamonds are verified using a thermal conductivity probe (heats up quickly, but feels cool to the touch like ice).
+> * **Graphene Properties:** Graphene is the thinnest material on Earth (one atom thick), 200 times stronger than steel, and is an excellent thermal conductor. It has a unique **self-repair mechanism** where holes in the sheet are automatically filled when exposed to carbon-containing gases (hydrocarbons), as carbon atoms perfectly align into the hexagonal pattern. A sheet of graphene can be rolled to produce carbon nanotubes or spherical buckminsterfullerenes ($\text{C}_{60}$).
+> * **Allotrope Geometry vs Cyclohexane:** Graphite and graphene consist of flat, planar hexagonal carbon rings with $120^\circ$ bond angles due to $sp^2$ hybridisation. In contrast, cyclohexane (C₆H₁₂) is a simple molecular compound that has a puckered 6-membered ring structure (chair or boat conformation) to maintain tetrahedral $109.5^\circ$ bond angles (all $sp^3$ carbons)
 > * **Silica Lattice (SiO₂):** Silicon(IV) oxide possesses a giant covalent tetrahedral structure very similar to diamond:
 >    * Each silicon atom is covalently bonded to 4 oxygen atoms
 >    * Each oxygen atom is covalently bonded to 2 silicon atoms
 >    * It has a high melting point and does not conduct electricity
+> 
+> #### 📦 Molecular Lattices & Solids
+> * **Iodine ($\text{I}_2$):** Exists as diatomic molecules arranged in a regular face-centred cubic lattice. The molecules are held together in the solid structure by weak London dispersion forces.
+> * **Other Molecular Solids:** Examples include sulfur ($\text{S}_8$ ring molecules), white phosphorus ($\text{P}_4$ tetrahedra), dry ice (solid $\text{CO}_2$), buckminsterfullerene ($\text{C}_{60}$), sucrose ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$), and solid alkanes (such as paraffin wax). All have low melting points because melting only breaks weak intermolecular attractions.
 
 > [!IMPORTANT]
 > ### 🧪 Intermolecular Forces in Simple Molecules
@@ -1064,6 +1393,47 @@ export const parts: LessonPart[] = [
 > > 4. **Conclude shape and angle:**
 > >    * The remaining 4 bonding pairs lie in a single flat plane.
 > >    * Therefore, the actual shape of the molecule is **Square Planar** with bond angles of exactly **90°**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Shapes & Bonding in Solid Phosphorus Pentachloride
+> **Question:** In the solid state, phosphorus pentachloride exists as an ionic compound with the formula [PCl₄]⁺[PCl₆]⁻. Predict the shapes and bond angles of the [PCl₄]⁺ cation and the [PCl₆]⁻ anion.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze the [PCl₄]⁺ cation:**
+> >    * Central Phosphorus atom is in Group 15 (5 valence electrons).
+> >    * 4 chlorine atoms each share 1 electron (adding 4 electrons, total = 9).
+> >    * Subtract 1 electron for the +1 charge, leaving 8 valence electrons (4 pairs).
+> >    * All 4 pairs are bonding pairs (forming P-Cl bonds) with 0 lone pairs.
+> >    * *Repulsion & Geometry:* These 4 bonding pairs repel each other to get as far apart as possible to minimize repulsion. With 4 bonding pairs and 0 lone pairs, the shape is **Tetrahedral** and the bond angle is **109.5°**.
+> > 
+> > 2. **Analyze the [PCl₆]⁻ anion:**
+> >    * Central Phosphorus atom provides 5 valence electrons.
+> >    * 6 chlorine atoms each share 1 electron (adding 6 electrons, total = 11).
+> >    * Add 1 electron for the -1 charge, leaving 12 valence electrons (6 pairs).
+> >    * All 6 pairs are bonding pairs (forming P-Cl bonds) with 0 lone pairs.
+> >    * *Repulsion & Geometry:* These 6 bonding pairs repel to achieve maximum separation. With 6 bonding pairs and 0 lone pairs, the shape is **Octahedral** and the bond angles are **90°** (between adjacent bonds) and **180°** (between opposite bonds).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 9: Polarity of Dichloroethene Stereoisomers
+> **Question:** Dichloroethene (C₂H₂Cl₂) exists as two stereoisomers: *cis*-dichloroethene and *trans*-dichloroethene. Explain why the *cis* isomer is a polar molecule with a net dipole moment, while the *trans* isomer is non-polar.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Examine the dipoles in both isomers:**
+> >    * In both isomers, there are polar C-Cl bonds because chlorine is much more electronegative than carbon (3.0 vs 2.5). There are also minor C-H dipoles.
+> > 
+> > 2. **Analyze the geometry of *cis*-dichloroethene:**
+> >    * In the *cis* isomer, both chlorine atoms are located on the same side of the C=C double bond.
+> >    * The two polar C-Cl dipoles point in the same general direction and reinforce each other instead of cancelling out.
+> >    * Therefore, the molecule has an asymmetrical distribution of charge, resulting in a net dipole moment (polar molecule).
+> > 
+> > 3. **Analyze the geometry of *trans*-dichloroethene:**
+> >    * In the *trans* isomer, the two chlorine atoms are located on opposite sides of the C=C double bond (180° apart).
+> >    * The two polar C-Cl dipoles point in equal and opposite directions.
+> >    * Therefore, the dipoles cancel each other out completely due to symmetry, resulting in a net dipole moment of zero (non-polar molecule).
      `,
     keyPoints: [
       'EPR/VSEPR theory states that electron pairs repel to get as far apart as possible to minimize repulsion.',
@@ -1194,6 +1564,46 @@ export const parts: LessonPart[] = [
 > > 2. **Analyze the cyclohexane stream:**
 > >    * Cyclohexane is a highly symmetrical, non-polar hydrocarbon with no net dipole moment.
 > >    * Being non-polar, it is unaffected by the electrostatic charge, showing no deflection.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Hexagonal Boron Nitride vs Graphite Lubrication in a Vacuum
+> **Question:** Hexagonal boron nitride (BN) has a layered structure similar to graphite. Explain why hexagonal boron nitride can act as an effective solid lubricant in a vacuum (such as in outer space), whereas graphite cannot.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Examine the bonding polarity:**
+> >    * In graphite, all bonds are C-C bonds between identical carbon atoms, meaning the covalent sheets are completely non-polar.
+> >    * In hexagonal boron nitride (BN), the sheets consist of alternating boron and nitrogen atoms. Since nitrogen is more electronegative than boron (3.0 vs 2.0), the B-N bonds are polar, giving the sheets polar character.
+> > 2. **Explain the Earth vs vacuum lubricant mechanism:**
+> >    * Non-polar graphite layers rely on adsorbed gas molecules (like water vapour) to reduce friction and allow the layers to slide over one another easily. In a vacuum, these desorb, causing the layers to bind tightly together.
+> >    * Hexagonal boron nitride layers, due to their polar B-N bonds, are held together by electrostatic interlayer forces that can slide (shear) easily even in the complete absence of adsorbed gases.
+> > 3. **Conclude:**
+> >    * Therefore, boron nitride maintains its lubricating properties in a vacuum, making it suitable for space applications, whereas graphite does not.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Identifying Unknown Substances from Physical Properties
+> **Question:** Identify three unknown substances, P, Q, and R, based on the following experimental observations:
+> * **Substance P:** Melting point 813°C; conducts electricity in both the solid and liquid states; reacts with water to form ammonia gas (NH₃) and an alkaline solution.
+> * **Substance Q:** Melting point 1414°C; semi-conductor of electricity when solid; insoluble in water.
+> * **Substance R:** Melting point 98°C; good conductor of electricity when solid; reacts vigorously with water to form hydrogen gas and an alkaline solution.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify Substance P:**
+> >    * A melting point of 813°C and reaction with water to release ammonia gas indicates a metal nitride.
+> >    * Lithium nitride (Li₃N) reacts with water: Li₃N + 3H₂O -> 3LiOH + NH₃.
+> >    * It has a melting point of 813°C and exhibits solid-state ionic conductivity due to mobile lithium ions in defect pathways.
+> >    * **Identity:** Lithium Nitride (Li₃N) [Giant Ionic Structure].
+> > 
+> > 2. **Identify Substance Q:**
+> >    * A melting point of 1414°C and semi-conducting solid properties are characteristic of a giant covalent group 14 element.
+> >    * **Identity:** Silicon (Si) [Giant Covalent Structure].
+> > 
+> > 3. **Identify Substance R:**
+> >    * A low melting point (98°C), good metallic conductivity, and a vigorous reaction with water to produce hydrogen and an alkaline solution are key indicators of sodium.
+> >    * **Identity:** Sodium (Na) [Giant Metallic Structure].
     `,
     keyPoints: [
       'Giant structures (ionic, covalent, metallic) have high melting points; simple molecular structures have low melting points.',

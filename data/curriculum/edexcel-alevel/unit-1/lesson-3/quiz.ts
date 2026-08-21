@@ -328,5 +328,148 @@ export const lessonQuiz = [
             { text: "Weak intermolecular forces between the ionic layers break." }
         ],
         explanation: "When stress is applied to an ionic crystal, layers of ions slide over each other. This shifts ions of the same charge (positive next to positive, negative next to negative) directly next to each other, creating a strong electrostatic repulsion that splits the crystal."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q31-HARD-2026",
+        question: "Why is it incorrect to state that 'an ionic bond' exists between two specific adjacent ions in a solid lattice of NaCl?",
+        options: [
+            { text: "In a giant ionic lattice, each ion is attracted to all surrounding oppositely charged ions and repelled by similarly charged ones, so bonding is a collective net electrostatic effect throughout the lattice, not localized pairs", isCorrect: true },
+            { text: "Molten sodium chloride does not contain ions, so the term is only valid in the aqueous state" },
+            { text: "Sodium and chloride form covalent bonds in the solid state, which are not considered ionic" },
+            { text: "Electrolysis separates sodium and chlorine into neutral molecules, proving that ionic bonds do not exist in the solid state" }
+        ],
+        explanation: "In an ionic solid, each ion interacts electrostatically with many surrounding ions of both the same and opposite charge. The bonding is a net electrostatic attraction extending throughout the giant lattice, which is measured by lattice energy, rather than individual localized 'ionic bonds' between specific pairs."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q32-HARD-2026",
+        question: "A green solution of copper(II) chromate(VI) is electrolyzed in a U-tube. Which of the following observations correctly identifies the migration of ions and their colors?",
+        options: [
+            { text: "Blue $\\\\text{Cu}^{2+}$ ions migrate towards the negative cathode, and yellow $\\\\text{CrO}_4^{2-}$ ions migrate towards the positive anode", isCorrect: true },
+            { text: "Yellow $\\\\text{Cu}^{2+}$ ions migrate towards the positive anode, and blue $\\\\text{CrO}_4^{2-}$ ions migrate towards the negative cathode" },
+            { text: "Both ions migrate towards the positive anode because they are negatively charged" },
+            { text: "No visible movement is observed because copper chromate molecules are neutral in solution" }
+        ],
+        explanation: "Copper(II) chromate(VI) contains blue $\\\\text{Cu}^{2+}$ cations and yellow $\\\\text{CrO}_4^{2-}$ anions. During electrolysis, the positive $\\\\text{Cu}^{2+}$ cations migrate towards the negative cathode, and the negative $\\\\text{CrO}_4^{2-}$ anions migrate towards the positive anode, showing separate blue and yellow bands."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q33-HARD-2026",
+        question: "Suggest why the strength of ionic bonding in calcium oxide ($\\\\text{Ca}^{2+}\\\\text{O}^{2-}$) is approximately four times larger than that in potassium fluoride ($\\\\text{K}^+\\\\text{F}^-$).",
+        options: [
+            { text: "The product of the charges in $\\\\text{CaO}$ ($2 \\\\times 2 = 4$) is four times larger than the product of the charges in $\\\\text{KF}$ ($1 \\\\times 1 = 1$), and the interionic distances are very similar", isCorrect: true },
+            { text: "Calcium is four times smaller than potassium, which increases the attraction force by four times" },
+            { text: "Oxygen is four times more electronegative than fluorine, generating four times the covalent character" },
+            { text: "Calcium oxide forms a giant covalent lattice while potassium fluoride forms a simple molecular structure" }
+        ],
+        explanation: "The electrostatic attraction force in a lattice is proportional to $(q_+ \\\\times q_-)/d^2$. Since the ionic charges in $\\\\text{CaO}$ are $+2$ and $-2$, the charge product is $4$. In $\\\\text{KF}$, the charges are $+1$ and $-1$, so the product is $1$. With similar interionic distances ($d$), the attraction in $\\\\text{CaO}$ is approximately four times stronger."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q34-HARD-2026",
+        question: "Given the following ionic radii: $\\\\text{Li}^+$ (0.076 nm), $\\\\text{Na}^+$ (0.102 nm), $\\\\text{Mg}^{2+}$ (0.072 nm), and $\\\\text{Al}^{3+}$ (0.054 nm), which of the following lists the cations in order of INCREASING polarizing power (lowest to highest), based on their approximate charge densities ($\\\\text{charge}/r^2$)?",
+        options: [
+            { text: "$\\\\text{Na}^+ < \\\\text{Li}^+ < \\\\text{Mg}^{2+} < \\\\text{Al}^{3+}$", isCorrect: true },
+            { text: "$\\\\text{Li}^+ < \\\\text{Na}^+ < \\\\text{Mg}^{2+} < \\\\text{Al}^{3+}$" },
+            { text: "$\\\\text{Al}^{3+} < \\\\text{Mg}^{2+} < \\\\text{Li}^+ < \\\\text{Na}^+$" },
+            { text: "$\\\\text{Na}^+ < \\\\text{Li}^+ < \\\\text{Al}^{3+} < \\\\text{Mg}^{2+}$" }
+        ],
+        explanation: "Calculating $\\\\text{charge}/r^2$ for each cation gives:\n* $\\\\text{Na}^+ = 1 / (0.102)^2 \\\\approx 96$\n* $\\\\text{Li}^+ = 1 / (0.076)^2 \\\\approx 173$\n* $\\\\text{Mg}^{2+} = 2 / (0.072)^2 \\\\approx 386$\n* $\\\\text{Al}^{3+} = 3 / (0.054)^2 \\\\approx 1029$\nThus, the order of increasing polarizing power is: $\\\\text{Na}^+ < \\\\text{Li}^+ < \\\\text{Mg}^{2+} < \\\\text{Al}^{3+}$."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q35-HARD-2026",
+        question: "Which of the following is correct regarding the trend in ionic radii for the set of isoelectronic ions $\\\\text{N}^{3-}$, $\\\\text{O}^{2-}$, and $\\\\text{F}^-$?",
+        options: [
+            { text: "The ionic radius decreases from $\\\\text{N}^{3-}$ to $\\\\text{F}^-$ because nuclear charge increases (more protons) while shielding remains constant, pulling the same number of electrons closer", isCorrect: true },
+            { text: "The ionic radius increases from $\\\\text{N}^{3-}$ to $\\\\text{F}^-$ because the number of electron shells increases" },
+            { text: "The ionic radius remains constant because the ions are isoelectronic" },
+            { text: "The ionic radius decreases from $\\\\text{N}^{3-}$ to $\\\\text{F}^-$ because Fluorine has a lower electronegativity than Nitrogen" }
+        ],
+        explanation: "These three anions are isoelectronic, each having 10 electrons ($1s^2 2s^2 2p^6$). As you go from $\\\\text{N}^{3-}$ (7 protons) to $\\\\text{O}^{2-}$ (8 protons) to $\\\\text{F}^-$ (9 protons), the nuclear charge increases. The stronger positive attraction pulls the 10 electrons closer, causing a decrease in ionic radius."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q36-HARD-2026",
+        question: "Fluorine has an electronegativity of 4.0 and Chlorine has an electronegativity of 3.0. Suggest why the electronegativity of fluorine is greater than that of chlorine, despite the fact that a chlorine nucleus contains more protons.",
+        options: [
+            { text: "Fluorine is smaller than chlorine, so its shared electrons are closer to the positive nucleus and experience less shielding, resulting in a stronger attraction force", isCorrect: true },
+            { text: "Chlorine has more electron-electron repulsion in its outer shell, which pushes the bonding pair away" },
+            { text: "Fluorine has a higher atomic number than chlorine, increasing its relative nuclear charge" },
+            { text: "Chlorine's outer shell is completely full, so it cannot attract bonding pairs" }
+        ],
+        explanation: "Electronegativity is determined by atomic size and shielding as well as nuclear charge. Fluorine is a smaller atom (valence electrons in shell $n=2$ vs chlorine's $n=3$), so its shared electrons are much closer to the positive nucleus, experiencing less shielding. This results in a stronger electrostatic attraction, giving fluorine a higher electronegativity."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q37-HARD-2026",
+        question: "A polar covalent bond can be thought of as intermediate between pure covalent and pure ionic bonding. According to Pauling electronegativity differences, at which difference ($\\\\Delta\\\\text{EN}$) does a bond exhibit approximately 51% ionic character, representing the transition to a predominantly ionic bonding type?",
+        options: [
+            { text: "1.7", isCorrect: true },
+            { text: "0.5" },
+            { text: "2.1" },
+            { text: "3.0" }
+        ],
+        explanation: "An electronegativity difference ($\\\\Delta\\\\text{EN}$) of $1.7$ corresponds to approximately $51\\\\%$ ionic character. This represents the boundary where the bonding character becomes predominantly ionic rather than covalent, illustrating the bonding continuum."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q38-MEDIUM-2026",
+        question: "Which of the following substances is composed of discrete (simple) molecules?",
+        options: [
+            { text: "Carbon dioxide ($\\\\text{CO}_2$)", isCorrect: true },
+            { text: "Diamond (C)" },
+            { text: "Sodium chloride ($\\\\text{NaCl}$)" },
+            { text: "Copper (Cu)" }
+        ],
+        explanation: "Carbon dioxide ($\\\\text{CO}_2$) has a simple molecular structure and is composed of discrete molecules. Diamond is a giant covalent structure, sodium chloride is a giant ionic lattice, and copper is a giant metallic structure, none of which consist of discrete molecules."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q39-HARD-2026",
+        question: "When aluminium chloride dimerizes in the gas phase to form $\\\\text{Al}_2\\\\text{Cl}_6$, what type of bonding connects the two monomeric $\\\\text{AlCl}_3$ units?",
+        options: [
+            { text: "Two dative covalent bonds, where a lone pair from a chlorine atom on one monomer is donated to the empty orbital of the aluminium atom on the other monomer", isCorrect: true },
+            { text: "A single covalent bond formed by s-p orbital overlap between the two aluminium atoms" },
+            { text: "Electrostatic attractions between $\\\\text{Al}^{3+}$ and $\\\\text{Cl}^-$ ions forming an ionic bridge" },
+            { text: "Weak London dispersion forces that hold the two molecules together" }
+        ],
+        explanation: "Aluminium in $\\\\text{AlCl}_3$ has an incomplete octet (only 6 valence electrons) and an empty orbital. To achieve stability, two monomers combine where a lone pair from a chlorine atom on one molecule is donated to the empty orbital of the aluminium atom on the other, forming two coordinate/dative covalent bonds that act as bridges."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q40-MEDIUM-2026",
+        question: "Which statement correctly explains why graphite can be used as a lubricant on Earth but is not suitable for lubrication in space vacuum applications?",
+        options: [
+            { text: "Graphite requires adsorbed gas molecules (like water vapour) between its layers to allow them to slide easily, which are absent in space.", isCorrect: true },
+            { text: "In a vacuum, the covalent bonds between carbon layers become much stronger, preventing sliding." },
+            { text: "Graphite evaporates immediately in a vacuum due to sublimation." },
+            { text: "The lack of gravity in space prevents the layers of graphite from pressing together." }
+        ],
+        explanation: "Graphite's lubricating property is not purely structural but depends on adsorbed gases (like oxygen or water vapour) on its surface. In a vacuum (such as space), these gases desorb, causing layers to bind tightly together rather than slide. Space lubricants use molybdenum disulfide ($\\\\text{MoS}_2$) or hexagonal boron nitride ($\\\\text{BN}$) instead."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q41-HARD-2026",
+        question: "Suggest why there is no regular trend in the melting temperatures of Group 2 metals down the group from beryllium to barium, unlike Group 1 metals.",
+        options: [
+            { text: "The positive metal ions in Group 2 metals have different crystal packing arrangements in their metallic lattices.", isCorrect: true },
+            { text: "The number of delocalised electrons per cation varies down Group 2." },
+            { text: "The charge density of Group 2 cations increases down the group." },
+            { text: "Group 2 metals form simple molecular structures instead of giant metallic lattices." }
+        ],
+        explanation: "While the charge-to-radius ratio generally decreases down Group 2 (tending to weaken metallic bonding), the melting temperature does not show a regular trend. This is because the crystal packing structure (the way the ions are arranged in the lattice) changes as you go down the group, which alters the electrostatic forces and lattice efficiency."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q42-HARD-2026",
+        question: "Substance X has a melting point of 813°C, conducts electricity in both solid and molten states, and reacts with water to release ammonia gas and form an alkaline solution. What is the identity and bonding of Substance X?",
+        options: [
+            { text: "Lithium nitride ($\\\\text{Li}_3\\\\text{N}$), which is a giant ionic structure with mobile lithium ions in solid defect pathways", isCorrect: true },
+            { text: "Silicon (Si), which is a giant covalent structure with delocalised bonding electrons" },
+            { text: "Sodium (Na), which is a giant metallic structure with a delocalised sea of electrons" },
+            { text: "Ammonium chloride ($\\\\text{NH}_4\\\\text{Cl}$), which is a simple molecular structure with weak intermolecular forces" }
+        ],
+        explanation: "Substance X is lithium nitride ($\\\\text{Li}_3\\\\text{N}$). It reacts with water to release ammonia gas: $\\\\text{Li}_3\\\\text{N} + 3\\\\text{H}_2\\\\text{O} \\\\rightarrow 3\\\\text{LiOH} + \\\\text{NH}_3$. Unlike typical ionic solids, it can conduct electricity in the solid state due to mobile lithium ions moving through defect pathways in its crystal structure."
+    },
+    {
+        id: "EDEXCEL-U1-L3-Q43-HARD-2026",
+        question: "Hexagonal boron nitride ($\\\\text{BN}$) and graphite have very similar layered structures. Suggest why hexagonal boron nitride can act as a lubricant in a vacuum (such as in outer space), whereas graphite cannot.",
+        options: [
+            { text: "The polar $\\\\text{B-N}$ bonds in boron nitride create electrostatic interlayer attractions that slide easily without gas molecules, while non-polar graphite layers desorb gases and bind tightly.", isCorrect: true },
+            { text: "Boron nitride layers are held together by strong covalent bonds that slide under shear force." },
+            { text: "In a vacuum, graphite sublimation occurs immediately, making it evaporate." },
+            { text: "Boron nitride is an electrical conductor, allowing the layers to slide via electromagnetic repulsion." }
+        ],
+        explanation: "Graphite is completely non-polar and relies on adsorbed gas molecules (like water vapour) to act as a lubricant. In a vacuum, these desorb and the layers bind. Hexagonal boron nitride ($\\\\text{BN}$) has polar $\\\\text{B-N}$ bonds, creating polar sheets that can slide over one another easily due to electrostatic shearing, even in a vacuum."
     }
 ];
