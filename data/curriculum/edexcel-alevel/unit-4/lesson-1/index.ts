@@ -1622,17 +1622,14 @@ export const parts: LessonPart[] = [
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Write the rate equation for the slow step (RDS):**
-> >    * Step 2 is the RDS, so $\\\\text{Rate} = k_2[\\\\text{N}_2\\\\text{O}_2][\\\\text{O}_2]$.
+> > 1. **Identify the rate-determining step and its reactants:**
+> >    * Step 2 is the rate-determining step (slow step), which involves one $\\\\text{N}_2\\\\text{O}_2$ molecule and one $\\\\text{O}_2$ molecule.
 > > 
-> > 2. **Substitute the unstable intermediate $[\\\\text{N}_2\\\\text{O}_2]$:**
-> >    * Intermediates cannot appear in final rate equations. From the fast pre-equilibrium in Step 1:
-> >      $$K_c = \\\\frac{[\\\\text{N}_2\\\\text{O}_2]}{[\\\\text{NO}]^2} \\\\implies [\\\\text{N}_2\\\\text{O}_2] = K_c [\\\\text{NO}]^2$$
+> > 2. **Trace the intermediate back to the fast step reactants:**
+> >    * $\\\\text{N}_2\\\\text{O}_2$ is an intermediate formed in the preceding fast step (Step 1) from two $\\\\text{NO}$ molecules.
 > > 
-> > 3. **Combine constants to derive the final rate equation:**
-> >    * Substitute $[\\\\text{N}_2\\\\text{O}_2]$ into the RDS rate equation:
-> >      $$\\\\text{Rate} = k_2 (K_c [\\\\text{NO}]^2) [\\\\text{O}_2] = k [\\\\text{NO}]^2 [\\\\text{O}_2]$$
-> >    * Where overall rate constant $k = k_2 \\\\times K_c$. This matches the experimental rate equation.
+> > 3. **Determine the overall rate dependence:**
+> >    * Therefore, the overall rate depends on two $\\\\text{NO}$ molecules and one $\\\\text{O}_2$ molecule, which matches the given rate equation: $\\\\text{Rate} = k[\\\\text{NO}]^2[\\\\text{O}_2]$.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Identifying Catalysts vs. Intermediates from Mechanisms
