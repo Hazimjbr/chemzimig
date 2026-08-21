@@ -150,118 +150,102 @@ export const parts: LessonPart[] = [
 > 
 > * **Geometric Isomerism:** A type of stereoisomerism that occurs in alkenes due to the **restricted rotation** around the carbon-carbon double bond.
 
-${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="100%" height="auto">
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 420" width="100%" height="auto">
   <defs>
     <linearGradient id="bg-ez" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070f1e"/>
       <stop offset="100%" stop-color="#0b1b35"/>
     </linearGradient>
   </defs>
-  <rect width="1000" height="360" rx="16" fill="url(#bg-ez)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="650" height="420" rx="14" fill="url(#bg-ez)" stroke="#1e293b" stroke-width="1.5"/>
 
   <!-- Title -->
-  <text x="500" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">cis / trans Geometric Isomers of But-2-ene (CH₃-CH=CH-CH₃)</text>
-  <line x1="80" y1="48" x2="920" y2="48" stroke="#1e293b" stroke-width="1"/>
+  <text x="325" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">cis / trans Geometric Isomers of But-2-ene</text>
+  <line x1="40" y1="46" x2="610" y2="46" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- ===== CIS PANEL ===== -->
-  <rect x="40" y="68" width="420" height="262" rx="12" fill="#0f2040" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="250" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">cis-but-2-ene</text>
-  <text x="250" y="116" text-anchor="middle" font-size="10.5" fill="#94a3b8" font-family="Inter,sans-serif">Methyl groups on the SAME side</text>
-
-  <!-- C=C double bond -->
-  <line x1="200" y1="195" x2="300" y2="195" stroke="#60a5fa" stroke-width="3"/>
-  <line x1="200" y1="202" x2="300" y2="202" stroke="#60a5fa" stroke-width="3"/>
-
-  <!-- Left carbon -->
-  <circle cx="200" cy="198" r="14" fill="#1d4ed8" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="200" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
-
-  <!-- Right carbon -->
-  <circle cx="300" cy="198" r="14" fill="#1d4ed8" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="300" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
-
-  <!-- CIS: Both CH3 ABOVE -->
-  <!-- Left CH3 (top-left diagonal) -->
-  <line x1="200" y1="184" x2="148" y2="145" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="134" cy="137" r="22" fill="#0f2040" stroke="#475569" stroke-width="1.5"/>
-  <text x="134" y="141" text-anchor="middle" font-size="10" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
-
-  <!-- Right CH3 (top-right diagonal) -->
-  <line x1="300" y1="184" x2="352" y2="145" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="366" cy="137" r="22" fill="#0f2040" stroke="#475569" stroke-width="1.5"/>
-  <text x="366" y="141" text-anchor="middle" font-size="10" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
-
-  <!-- CIS: H BELOW left -->
-  <line x1="200" y1="212" x2="148" y2="251" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="140" cy="262" r="16" fill="#0f2040" stroke="#475569" stroke-width="1.5"/>
-  <text x="140" y="267" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- CIS: H BELOW right -->
-  <line x1="300" y1="212" x2="352" y2="251" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="360" cy="262" r="16" fill="#0f2040" stroke="#475569" stroke-width="1.5"/>
-  <text x="360" y="267" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Same side arrow bracket -->
-  <path d="M120 118 Q105 95 150 82 Q200 72 250 78 Q300 72 350 82 Q395 95 380 118" stroke="#34d399" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
-  <text x="250" y="64" text-anchor="middle" font-size="9.5" fill="#34d399" font-family="Inter,sans-serif">↑ Same side ↑</text>
-
-  <!-- cis label at bottom -->
-  <rect x="195" y="306" width="110" height="14" rx="7" fill="#1d4ed8"/>
-  <text x="250" y="317" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">cis = same side (Latin)</text>
-
-  <!-- ===== TRANS PANEL ===== -->
-  <rect x="540" y="68" width="420" height="262" rx="12" fill="#1a0f20" stroke="#9333ea" stroke-width="1.5"/>
-  <text x="750" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">trans-but-2-ene</text>
-  <text x="750" y="116" text-anchor="middle" font-size="10.5" fill="#94a3b8" font-family="Inter,sans-serif">Methyl groups on OPPOSITE sides</text>
+  <!-- ===== CIS PANEL (LEFT) ===== -->
+  <rect x="20" y="58" width="295" height="340" rx="12" fill="#0f2040" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="35" y="70" width="130" height="24" rx="6" fill="#1d4ed8"/>
+  <text x="100" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">cis-but-2-ene</text>
+  <text x="167" y="112" text-anchor="middle" font-size="12" fill="#93c5fd" font-family="Inter,sans-serif">CH₃ groups on SAME side</text>
 
   <!-- C=C double bond -->
-  <line x1="700" y1="195" x2="800" y2="195" stroke="#c084fc" stroke-width="3"/>
-  <line x1="700" y1="202" x2="800" y2="202" stroke="#c084fc" stroke-width="3"/>
+  <line x1="125" y1="230" x2="210" y2="230" stroke="#60a5fa" stroke-width="4"/>
+  <line x1="125" y1="240" x2="210" y2="240" stroke="#60a5fa" stroke-width="4"/>
 
   <!-- Left carbon -->
-  <circle cx="700" cy="198" r="14" fill="#7e22ce" stroke="#e9d5ff" stroke-width="1.5"/>
-  <text x="700" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <circle cx="125" cy="235" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+  <text x="125" y="241" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
 
   <!-- Right carbon -->
-  <circle cx="800" cy="198" r="14" fill="#7e22ce" stroke="#e9d5ff" stroke-width="1.5"/>
-  <text x="800" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <circle cx="210" cy="235" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+  <text x="210" y="241" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
 
-  <!-- TRANS: Left CH3 ABOVE -->
-  <line x1="700" y1="184" x2="648" y2="145" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="634" cy="137" r="22" fill="#1a0f20" stroke="#475569" stroke-width="1.5"/>
-  <text x="634" y="141" text-anchor="middle" font-size="10" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+  <!-- CIS: Left CH3 (top-left) -->
+  <line x1="125" y1="217" x2="75" y2="165" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="60" cy="155" r="26" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+  <text x="60" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃</text>
 
-  <!-- TRANS: Right CH3 BELOW -->
-  <line x1="800" y1="212" x2="852" y2="251" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="866" cy="262" r="22" fill="#1a0f20" stroke="#475569" stroke-width="1.5"/>
-  <text x="866" y="267" text-anchor="middle" font-size="10" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+  <!-- CIS: Right CH3 (top-right) -->
+  <line x1="210" y1="217" x2="260" y2="165" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="275" cy="155" r="26" fill="#1e3a5f" stroke="#60a5fa" stroke-width="2"/>
+  <text x="275" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃</text>
 
-  <!-- TRANS: Left H BELOW -->
-  <line x1="700" y1="212" x2="648" y2="251" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="640" cy="262" r="16" fill="#1a0f20" stroke="#475569" stroke-width="1.5"/>
-  <text x="640" y="267" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- CIS: Left H (bottom-left) -->
+  <line x1="125" y1="253" x2="75" y2="310" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="65" cy="320" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="65" y="326" text-anchor="middle" font-size="14" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- TRANS: Right H ABOVE -->
-  <line x1="800" y1="184" x2="852" y2="145" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="860" cy="137" r="16" fill="#1a0f20" stroke="#475569" stroke-width="1.5"/>
-  <text x="860" y="141" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- CIS: Right H (bottom-right) -->
+  <line x1="210" y1="253" x2="260" y2="310" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="270" cy="320" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="270" y="326" text-anchor="middle" font-size="14" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Opposite side diagonal arrow -->
-  <line x1="620" y1="137" x2="880" y2="262" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="680" y="285" text-anchor="middle" font-size="9.5" fill="#f97316" font-family="Inter,sans-serif">↙ Opposite sides ↗</text>
+  <!-- Same side indicator -->
+  <rect x="55" y="362" width="225" height="24" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="167" y="378" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">✓ Polar (dipoles reinforce)</text>
 
-  <!-- trans label at bottom -->
-  <rect x="695" y="306" width="110" height="14" rx="7" fill="#7e22ce"/>
-  <text x="750" y="317" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">trans = across (Latin)</text>
+  <!-- ===== TRANS PANEL (RIGHT) ===== -->
+  <rect x="335" y="58" width="295" height="340" rx="12" fill="#1a0f20" stroke="#9333ea" stroke-width="1.5"/>
+  <rect x="350" y="70" width="145" height="24" rx="6" fill="#7e22ce"/>
+  <text x="422" y="86" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">trans-but-2-ene</text>
+  <text x="482" y="112" text-anchor="middle" font-size="12" fill="#d8b4fe" font-family="Inter,sans-serif">CH₃ groups on OPPOSITE sides</text>
 
-  <!-- VS divider -->
-  <circle cx="500" cy="200" r="22" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <text x="500" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">vs</text>
-  <line x1="500" y1="68" x2="500" y2="178" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="500" y1="222" x2="500" y2="330" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- C=C double bond -->
+  <line x1="440" y1="230" x2="525" y2="230" stroke="#c084fc" stroke-width="4"/>
+  <line x1="440" y1="240" x2="525" y2="240" stroke="#c084fc" stroke-width="4"/>
 
-  <!-- Footer note -->
-  <text x="500" y="350" text-anchor="middle" font-size="9" fill="#475569" font-family="Inter,sans-serif">Both isomers share the same molecular formula C₄H₈ and structural formula, but differ in 3D spatial arrangement</text>
+  <!-- Left carbon -->
+  <circle cx="440" cy="235" r="18" fill="#7e22ce" stroke="#e9d5ff" stroke-width="2"/>
+  <text x="440" y="241" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+
+  <!-- Right carbon -->
+  <circle cx="525" cy="235" r="18" fill="#7e22ce" stroke="#e9d5ff" stroke-width="2"/>
+  <text x="525" y="241" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+
+  <!-- TRANS: Left CH3 (top-left) -->
+  <line x1="440" y1="217" x2="390" y2="165" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="375" cy="155" r="26" fill="#2e1065" stroke="#c084fc" stroke-width="2"/>
+  <text x="375" y="160" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃</text>
+
+  <!-- TRANS: Right CH3 (bottom-right) -->
+  <line x1="525" y1="253" x2="575" y2="310" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="590" cy="320" r="26" fill="#2e1065" stroke="#c084fc" stroke-width="2"/>
+  <text x="590" y="325" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃</text>
+
+  <!-- TRANS: Left H (bottom-left) -->
+  <line x1="440" y1="253" x2="390" y2="310" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="380" cy="320" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="380" y="326" text-anchor="middle" font-size="14" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- TRANS: Right H (top-right) -->
+  <line x1="525" y1="217" x2="575" y2="165" stroke="#94a3b8" stroke-width="2.5"/>
+  <circle cx="585" cy="155" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="585" y="161" text-anchor="middle" font-size="14" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Opposite side indicator -->
+  <rect x="370" y="362" width="225" height="24" rx="6" fill="#451a03" stroke="#f97316" stroke-width="1.2"/>
+  <text x="482" y="378" text-anchor="middle" font-size="12" font-weight="700" fill="#fdba74" font-family="Inter,sans-serif">✓ Non-polar (dipoles cancel)</text>
 </svg>`)}
 
 > [!BOX]
@@ -272,85 +256,84 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width
 > 2. **Different Groups Attached:** Each carbon atom of the C=C double bond must be attached to two different atoms or groups.
 >    * *Critical Rule:* If either carbon atom in the C=C bond is attached to two identical groups (e.g. two hydrogen atoms or two methyl groups), the molecule **cannot** form geometric isomers, regardless of what is attached to the other carbon.
 
-${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" width="100%" height="auto">
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 380" width="100%" height="auto">
   <defs>
     <linearGradient id="bg2-ez" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070f1e"/>
       <stop offset="100%" stop-color="#0b1b35"/>
     </linearGradient>
   </defs>
-  <rect width="1000" height="260" rx="16" fill="url(#bg2-ez)" stroke="#1e293b" stroke-width="1.5"/>
-  <text x="500" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Condition for Geometric Isomerism: Each C must have TWO DIFFERENT groups</text>
-  <line x1="80" y1="44" x2="920" y2="44" stroke="#1e293b" stroke-width="1"/>
+  <rect width="650" height="380" rx="14" fill="url(#bg2-ez)" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="325" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Condition: Each C must have TWO DIFFERENT groups</text>
+  <line x1="40" y1="44" x2="610" y2="44" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- CASE 1: CAN form isomers -->
-  <rect x="40" y="56" width="420" height="188" rx="12" fill="#052e16" stroke="#16a34a" stroke-width="1.5"/>
-  <text x="250" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">✓ CAN form geometric isomers</text>
+  <!-- CASE 1: CAN form isomers (LEFT) -->
+  <rect x="20" y="56" width="295" height="305" rx="12" fill="#052e16" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="35" y="68" width="265" height="24" rx="6" fill="#15803d"/>
+  <text x="167" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">✓ CAN form geometric isomers</text>
 
   <!-- Molecule: CHCl=CHBr -->
-  <!-- C=C -->
-  <line x1="200" y1="148" x2="300" y2="148" stroke="#4ade80" stroke-width="3"/>
-  <line x1="200" y1="155" x2="300" y2="155" stroke="#4ade80" stroke-width="3"/>
-  <circle cx="200" cy="151" r="13" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="200" y="156" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <circle cx="300" cy="151" r="13" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="300" y="156" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <!-- Groups on left C: H and Cl -->
-  <line x1="200" y1="138" x2="155" y2="105" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="145" cy="97" r="18" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
-  <text x="145" y="102" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">Cl</text>
-  <line x1="200" y1="164" x2="155" y2="197" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="145" cy="205" r="18" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-  <text x="145" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- Groups on right C: Br and H -->
-  <line x1="300" y1="138" x2="345" y2="105" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="355" cy="97" r="18" fill="#0f172a" stroke="#f97316" stroke-width="1.5"/>
-  <text x="355" y="102" text-anchor="middle" font-size="10.5" font-weight="700" fill="#f97316" font-family="Inter,sans-serif">Br</text>
-  <line x1="300" y1="164" x2="345" y2="197" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="355" cy="205" r="18" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-  <text x="355" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- Labels -->
-  <text x="145" y="233" text-anchor="middle" font-size="9" fill="#4ade80" font-family="Inter,sans-serif">2 different groups</text>
-  <text x="355" y="233" text-anchor="middle" font-size="9" fill="#4ade80" font-family="Inter,sans-serif">2 different groups</text>
-  <text x="250" y="233" text-anchor="middle" font-size="9.5" fill="#64748b" font-family="Inter,sans-serif">Example: CHCl=CHBr</text>
+  <line x1="120" y1="200" x2="200" y2="200" stroke="#4ade80" stroke-width="3.5"/>
+  <line x1="120" y1="208" x2="200" y2="208" stroke="#4ade80" stroke-width="3.5"/>
+  <circle cx="120" cy="204" r="16" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="120" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
+  <circle cx="200" cy="204" r="16" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="200" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
 
-  <!-- CASE 2: CANNOT form isomers -->
-  <rect x="540" y="56" width="420" height="188" rx="12" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
-  <text x="750" y="80" text-anchor="middle" font-size="12" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">✗ CANNOT form geometric isomers</text>
+  <!-- Left: Cl (top) and H (bottom) -->
+  <line x1="120" y1="188" x2="70" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="58" cy="130" r="22" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+  <text x="58" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">Cl</text>
 
-  <!-- Molecule: CH2=CHCl - left C has H,H (same) -->
-  <!-- C=C -->
-  <line x1="700" y1="148" x2="800" y2="148" stroke="#f87171" stroke-width="3"/>
-  <line x1="700" y1="155" x2="800" y2="155" stroke="#f87171" stroke-width="3"/>
-  <circle cx="700" cy="151" r="13" fill="#7f1d1d" stroke="#f87171" stroke-width="1.5"/>
-  <text x="700" y="156" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <circle cx="800" cy="151" r="13" fill="#7f1d1d" stroke="#f87171" stroke-width="1.5"/>
-  <text x="800" y="156" text-anchor="middle" font-size="10" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <!-- Left C has H and H (SAME) -->
-  <line x1="700" y1="138" x2="655" y2="105" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="645" cy="97" r="18" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-  <text x="645" y="102" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="700" y1="164" x2="655" y2="197" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="645" cy="205" r="18" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-  <text x="645" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- Right C: Cl and H -->
-  <line x1="800" y1="138" x2="845" y2="105" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="855" cy="97" r="18" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
-  <text x="855" y="102" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">Cl</text>
-  <line x1="800" y1="164" x2="845" y2="197" stroke="#94a3b8" stroke-width="1.8"/>
-  <circle cx="855" cy="205" r="18" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
-  <text x="855" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- Labels -->
-  <rect x="600" y="219" width="100" height="15" rx="5" fill="#7f1d1d"/>
-  <text x="650" y="230" text-anchor="middle" font-size="8.5" font-weight="700" fill="#fca5a5" font-family="Inter,sans-serif">⚠ IDENTICAL groups!</text>
-  <text x="855" y="233" text-anchor="middle" font-size="9" fill="#4ade80" font-family="Inter,sans-serif">2 different</text>
-  <text x="750" y="233" text-anchor="middle" font-size="9.5" fill="#64748b" font-family="Inter,sans-serif">Example: CH₂=CHCl</text>
+  <line x1="120" y1="220" x2="70" y2="270" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="58" cy="280" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="58" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- VS divider -->
-  <circle cx="500" cy="150" r="22" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <text x="500" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">vs</text>
-  <line x1="500" y1="56" x2="500" y2="125" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="500" y1="175" x2="500" y2="244" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Right: Br (top) and H (bottom) -->
+  <line x1="200" y1="188" x2="250" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="262" cy="130" r="22" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
+  <text x="262" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <line x1="200" y1="220" x2="250" y2="270" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="262" cy="280" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="262" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <rect x="40" y="325" width="255" height="24" rx="6" fill="#14532d"/>
+  <text x="167" y="341" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">CHCl=CHBr (2 different groups on each C)</text>
+
+  <!-- CASE 2: CANNOT form isomers (RIGHT) -->
+  <rect x="335" y="56" width="295" height="305" rx="12" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+  <rect x="350" y="68" width="265" height="24" rx="6" fill="#b91c1c"/>
+  <text x="482" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">✗ CANNOT form geometric isomers</text>
+
+  <!-- Molecule: CH2=CHCl -->
+  <line x1="435" y1="200" x2="515" y2="200" stroke="#f87171" stroke-width="3.5"/>
+  <line x1="435" y1="208" x2="515" y2="208" stroke="#f87171" stroke-width="3.5"/>
+  <circle cx="435" cy="204" r="16" fill="#7f1d1d" stroke="#f87171" stroke-width="2"/>
+  <text x="435" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
+  <circle cx="515" cy="204" r="16" fill="#7f1d1d" stroke="#f87171" stroke-width="2"/>
+  <text x="515" y="210" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
+
+  <!-- Left: H and H (SAME) -->
+  <line x1="435" y1="188" x2="385" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="373" cy="130" r="19" fill="#0f172a" stroke="#f87171" stroke-width="2"/>
+  <text x="373" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5" font-family="Inter,sans-serif">H</text>
+
+  <line x1="435" y1="220" x2="385" y2="270" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="373" cy="280" r="19" fill="#0f172a" stroke="#f87171" stroke-width="2"/>
+  <text x="373" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#fca5a5" font-family="Inter,sans-serif">H</text>
+
+  <!-- Right: Cl and H -->
+  <line x1="515" y1="188" x2="565" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="577" cy="130" r="22" fill="#0f172a" stroke="#ef4444" stroke-width="2"/>
+  <text x="577" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">Cl</text>
+
+  <line x1="515" y1="220" x2="565" y2="270" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="577" cy="280" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="577" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <rect x="355" y="325" width="255" height="24" rx="6" fill="#7f1d1d"/>
+  <text x="482" y="341" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fca5a5" font-family="Inter,sans-serif">⚠ Identical H atoms on left C (No isomers)</text>
 </svg>`)}
 
 > [!TIP]
@@ -367,142 +350,110 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 260" width
 > * **Z-Isomer (Zusammen - "together"):** Both groups with the **highest priority** (highest atomic number) are on the **same side** of the C=C double bond.
 > * **E-Isomer (Entgegen - "opposite"):** The groups with the **highest priority** are on **opposite sides** of the C=C double bond.
 
-${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="auto">
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 520" width="100%" height="auto">
   <defs>
     <linearGradient id="bg3-ez" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070f1e"/>
       <stop offset="100%" stop-color="#0b1b35"/>
     </linearGradient>
   </defs>
-  <rect width="1000" height="450" rx="16" fill="url(#bg3-ez)" stroke="#1e293b" stroke-width="1.5"/>
-  <text x="500" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">E/Z Nomenclature — Assigning CIP Priorities (Example: 1-bromo-1-chloropropene)</text>
-  <line x1="80" y1="46" x2="920" y2="46" stroke="#1e293b" stroke-width="1"/>
+  <rect width="650" height="520" rx="14" fill="url(#bg3-ez)" stroke="#1e293b" stroke-width="1.5"/>
+  <text x="325" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">E/Z Nomenclature — Assigning CIP Priorities</text>
+  <line x1="40" y1="44" x2="610" y2="44" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- Step labels on the left -->
-  <text x="60" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">STEP 1</text>
-  <text x="60" y="113" text-anchor="middle" font-size="9" fill="#64748b" font-family="Inter,sans-serif">Assign</text>
-  <text x="60" y="124" text-anchor="middle" font-size="9" fill="#64748b" font-family="Inter,sans-serif">priorities</text>
+  <!-- STEP 1: PRIORITIES (TOP) -->
+  <rect x="20" y="54" width="295" height="175" rx="10" fill="#0d1f3a" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="167" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">Left Carbon (Cl vs Br)</text>
+  
+  <rect x="35" y="85" width="265" height="58" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="50" y="106" font-size="13" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">★ Priority 1 (HIGH): Br</text>
+  <text x="50" y="126" font-size="11.5" fill="#bbf7d0" font-family="Inter,sans-serif">Atomic No. = 35 (Higher atomic number)</text>
 
-  <!-- LEFT CARBON box -->
-  <rect x="100" y="62" width="320" height="140" rx="10" fill="#0d1f3a" stroke="#3b82f6" stroke-width="1.2"/>
-  <text x="260" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">Left Carbon — groups: Cl &amp; Br</text>
+  <rect x="35" y="152" width="265" height="58" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.2"/>
+  <text x="50" y="173" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">Priority 2 (Low): Cl</text>
+  <text x="50" y="193" font-size="11.5" fill="#64748b" font-family="Inter,sans-serif">Atomic No. = 17</text>
 
-  <!-- Cl entry -->
-  <rect x="118" y="92" width="130" height="42" rx="7" fill="#1e3a5f" stroke="#ef4444" stroke-width="1.2"/>
-  <text x="183" y="111" text-anchor="middle" font-size="10.5" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">— Cl (Chlorine)</text>
-  <text x="183" y="127" text-anchor="middle" font-size="9.5" fill="#94a3b8" font-family="Inter,sans-serif">Atomic No. = 17</text>
-  <rect x="260" y="92" width="145" height="42" rx="7" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="332" y="110" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">Priority 1 ★ HIGH</text>
-  <text x="332" y="127" text-anchor="middle" font-size="9" fill="#a3e635" font-family="Inter,sans-serif">17 &gt; 35? No… compare Br:</text>
+  <rect x="335" y="54" width="295" height="175" rx="10" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="482" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">Right Carbon (CH₃ vs H)</text>
 
-  <!-- Br entry -->
-  <rect x="118" y="142" width="130" height="42" rx="7" fill="#1e3a5f" stroke="#f97316" stroke-width="1.2"/>
-  <text x="183" y="161" text-anchor="middle" font-size="10.5" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">— Br (Bromine)</text>
-  <text x="183" y="177" text-anchor="middle" font-size="9.5" fill="#94a3b8" font-family="Inter,sans-serif">Atomic No. = 35</text>
-  <rect x="260" y="142" width="145" height="42" rx="7" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="332" y="161" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">Priority 1 ★ HIGH</text>
-  <text x="332" y="177" text-anchor="middle" font-size="9" fill="#a3e635" font-family="Inter,sans-serif">35 &gt; 17 → Br wins!</text>
+  <rect x="350" y="85" width="265" height="58" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="365" y="106" font-size="13" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">★ Priority 1 (HIGH): CH₃</text>
+  <text x="365" y="126" font-size="11.5" fill="#bbf7d0" font-family="Inter,sans-serif">Carbon Atomic No. = 6 (6 &gt; 1)</text>
 
-  <!-- RIGHT CARBON box -->
-  <rect x="580" y="62" width="330" height="140" rx="10" fill="#0d1f3a" stroke="#8b5cf6" stroke-width="1.2"/>
-  <text x="745" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">Right Carbon — groups: CH₃ &amp; H</text>
+  <rect x="350" y="152" width="265" height="58" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1.2"/>
+  <text x="365" y="173" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">Priority 2 (Low): H</text>
+  <text x="365" y="193" font-size="11.5" fill="#64748b" font-family="Inter,sans-serif">Hydrogen Atomic No. = 1</text>
 
-  <!-- CH3 entry -->
-  <rect x="598" y="92" width="130" height="42" rx="7" fill="#2d1b69" stroke="#a78bfa" stroke-width="1.2"/>
-  <text x="663" y="111" text-anchor="middle" font-size="10.5" font-weight="700" fill="#c4b5fd" font-family="Inter,sans-serif">— CH₃ (methyl)</text>
-  <text x="663" y="127" text-anchor="middle" font-size="9.5" fill="#94a3b8" font-family="Inter,sans-serif">C: Atomic No. = 6</text>
-  <rect x="740" y="92" width="152" height="42" rx="7" fill="#14532d" stroke="#4ade80" stroke-width="1.5"/>
-  <text x="816" y="110" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">Priority 1 ★ HIGH</text>
-  <text x="816" y="127" text-anchor="middle" font-size="9" fill="#a3e635" font-family="Inter,sans-serif">6 &gt; 1 → CH₃ wins!</text>
+  <!-- STEP 2: ISOMERS (BOTTOM) -->
+  <line x1="40" y1="240" x2="610" y2="240" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- H entry -->
-  <rect x="598" y="142" width="130" height="42" rx="7" fill="#1a1a2e" stroke="#475569" stroke-width="1.2"/>
-  <text x="663" y="161" text-anchor="middle" font-size="10.5" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">— H (Hydrogen)</text>
-  <text x="663" y="177" text-anchor="middle" font-size="9.5" fill="#94a3b8" font-family="Inter,sans-serif">Atomic No. = 1</text>
-  <rect x="740" y="142" width="152" height="42" rx="7" fill="#292929" stroke="#475569" stroke-width="1.2"/>
-  <text x="816" y="161" text-anchor="middle" font-size="10.5" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">Priority 2 (lower)</text>
-  <text x="816" y="177" text-anchor="middle" font-size="9" fill="#475569" font-family="Inter,sans-serif">Lowest atomic no.</text>
+  <!-- Z ISOMER (BOTTOM LEFT) -->
+  <rect x="20" y="250" width="295" height="255" rx="12" fill="#0f2040" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="35" y="260" width="265" height="24" rx="6" fill="#1d4ed8"/>
+  <text x="167" y="276" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">Z-isomer (Zusammen = together)</text>
 
-  <!-- ======= STRUCTURE DIAGRAM BELOW ======= -->
-  <line x1="80" y1="220" x2="920" y2="220" stroke="#1e293b" stroke-width="1"/>
-  <text x="60" y="310" text-anchor="middle" font-size="10" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">STEP 2</text>
-  <text x="60" y="323" text-anchor="middle" font-size="9" fill="#64748b" font-family="Inter,sans-serif">Determine</text>
-  <text x="60" y="334" text-anchor="middle" font-size="9" fill="#64748b" font-family="Inter,sans-serif">E or Z</text>
-
-  <!-- === Z ISOMER === -->
-  <rect x="100" y="230" width="360" height="200" rx="10" fill="#0f2040" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="280" y="255" text-anchor="middle" font-size="12" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">Z-isomer (Zusammen = "together")</text>
   <!-- C=C -->
-  <line x1="240" y1="327" x2="320" y2="327" stroke="#60a5fa" stroke-width="3"/>
-  <line x1="240" y1="334" x2="320" y2="334" stroke="#60a5fa" stroke-width="3"/>
-  <circle cx="240" cy="330" r="13" fill="#1d4ed8" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="240" y="335" text-anchor="middle" font-size="9" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <circle cx="320" cy="330" r="13" fill="#1d4ed8" stroke="#93c5fd" stroke-width="1.5"/>
-  <text x="320" y="335" text-anchor="middle" font-size="9" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <!-- Z: High priority SAME side (ABOVE) -->
-  <!-- Left: Br above -->
-  <line x1="240" y1="317" x2="195" y2="289" stroke="#f97316" stroke-width="2"/>
-  <circle cx="182" cy="282" r="18" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
-  <text x="182" y="287" text-anchor="middle" font-size="10" font-weight="700" fill="#f97316" font-family="Inter,sans-serif">Br</text>
-  <text x="156" y="285" text-anchor="end" font-size="8.5" fill="#fbbf24" font-family="Inter,sans-serif">★ HIGH</text>
-  <!-- Left: Cl below -->
-  <line x1="240" y1="343" x2="195" y2="371" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="182" cy="378" r="18" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
-  <text x="182" y="383" text-anchor="middle" font-size="10" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">Cl</text>
-  <!-- Right: CH3 above -->
-  <line x1="320" y1="317" x2="365" y2="289" stroke="#a78bfa" stroke-width="2"/>
-  <circle cx="375" cy="282" r="20" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
-  <text x="375" y="287" text-anchor="middle" font-size="9.5" font-weight="700" fill="#c4b5fd" font-family="Inter,sans-serif">CH₃</text>
-  <text x="402" y="285" text-anchor="start" font-size="8.5" fill="#fbbf24" font-family="Inter,sans-serif">★ HIGH</text>
-  <!-- Right: H below -->
-  <line x1="320" y1="343" x2="365" y2="371" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="375" cy="378" r="14" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
-  <text x="375" y="383" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- Z bracket: same side arrow -->
-  <path d="M182 272 Q280 252 375 272" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
-  <text x="280" y="242" text-anchor="middle" font-size="8.5" fill="#fbbf24" font-family="Inter,sans-serif">★ Both HIGH priority = same side → Z</text>
+  <line x1="125" y1="365" x2="210" y2="365" stroke="#60a5fa" stroke-width="3.5"/>
+  <line x1="125" y1="373" x2="210" y2="373" stroke="#60a5fa" stroke-width="3.5"/>
+  <circle cx="125" cy="369" r="16" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+  <text x="125" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
+  <circle cx="210" cy="369" r="16" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+  <text x="210" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
 
-  <!-- === E ISOMER === -->
-  <rect x="540" y="230" width="360" height="200" rx="10" fill="#1a0f20" stroke="#9333ea" stroke-width="1.5"/>
-  <text x="720" y="255" text-anchor="middle" font-size="12" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">E-isomer (Entgegen = "opposite")</text>
+  <!-- Left: Br (top) and Cl (bottom) -->
+  <line x1="125" y1="353" x2="75" y2="305" stroke="#f97316" stroke-width="2.5"/>
+  <circle cx="60" cy="295" r="22" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
+  <text x="60" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+
+  <line x1="125" y1="385" x2="75" y2="435" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="65" cy="445" r="19" fill="#0f172a" stroke="#ef4444" stroke-width="1.8"/>
+  <text x="65" y="450" text-anchor="middle" font-size="12" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">Cl</text>
+
+  <!-- Right: CH3 (top) and H (bottom) -->
+  <line x1="210" y1="353" x2="260" y2="305" stroke="#a78bfa" stroke-width="2.5"/>
+  <circle cx="275" cy="295" r="24" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="275" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#c4b5fd" font-family="Inter,sans-serif">CH₃</text>
+
+  <line x1="210" y1="385" x2="260" y2="435" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="270" cy="445" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="270" y="450" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <rect x="40" y="475" width="255" height="22" rx="5" fill="#14532d"/>
+  <text x="167" y="490" text-anchor="middle" font-size="11" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">★ Both HIGH priority on SAME side</text>
+
+  <!-- E ISOMER (BOTTOM RIGHT) -->
+  <rect x="335" y="250" width="295" height="255" rx="12" fill="#1a0f20" stroke="#9333ea" stroke-width="1.5"/>
+  <rect x="350" y="260" width="265" height="24" rx="6" fill="#7e22ce"/>
+  <text x="482" y="276" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">E-isomer (Entgegen = opposite)</text>
+
   <!-- C=C -->
-  <line x1="680" y1="327" x2="760" y2="327" stroke="#c084fc" stroke-width="3"/>
-  <line x1="680" y1="334" x2="760" y2="334" stroke="#c084fc" stroke-width="3"/>
-  <circle cx="680" cy="330" r="13" fill="#7e22ce" stroke="#e9d5ff" stroke-width="1.5"/>
-  <text x="680" y="335" text-anchor="middle" font-size="9" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <circle cx="760" cy="330" r="13" fill="#7e22ce" stroke="#e9d5ff" stroke-width="1.5"/>
-  <text x="760" y="335" text-anchor="middle" font-size="9" fill="#fff" font-family="Inter,sans-serif">C</text>
-  <!-- E: High priority OPPOSITE sides -->
-  <!-- Left: Br above -->
-  <line x1="680" y1="317" x2="635" y2="289" stroke="#f97316" stroke-width="2"/>
-  <circle cx="622" cy="282" r="18" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
-  <text x="622" y="287" text-anchor="middle" font-size="10" font-weight="700" fill="#f97316" font-family="Inter,sans-serif">Br</text>
-  <text x="596" y="285" text-anchor="end" font-size="8.5" fill="#fbbf24" font-family="Inter,sans-serif">★ HIGH</text>
-  <!-- Left: Cl below -->
-  <line x1="680" y1="343" x2="635" y2="371" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="622" cy="378" r="18" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
-  <text x="622" y="383" text-anchor="middle" font-size="10" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">Cl</text>
-  <!-- Right: CH3 below (opposite to Br) -->
-  <line x1="760" y1="343" x2="805" y2="371" stroke="#a78bfa" stroke-width="2"/>
-  <circle cx="818" cy="378" r="20" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
-  <text x="818" y="383" text-anchor="middle" font-size="9.5" font-weight="700" fill="#c4b5fd" font-family="Inter,sans-serif">CH₃</text>
-  <text x="844" y="381" text-anchor="start" font-size="8.5" fill="#fbbf24" font-family="Inter,sans-serif">★ HIGH</text>
-  <!-- Right: H above -->
-  <line x1="760" y1="317" x2="805" y2="289" stroke="#94a3b8" stroke-width="2"/>
-  <circle cx="818" cy="282" r="14" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
-  <text x="818" y="287" text-anchor="middle" font-size="10" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- E diagonal arrow -->
-  <line x1="622" y1="282" x2="818" y2="378" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="720" y="242" text-anchor="middle" font-size="8.5" fill="#fbbf24" font-family="Inter,sans-serif">★ HIGH priorities on opposite sides → E</text>
+  <line x1="440" y1="365" x2="525" y2="365" stroke="#c084fc" stroke-width="3.5"/>
+  <line x1="440" y1="373" x2="525" y2="373" stroke="#c084fc" stroke-width="3.5"/>
+  <circle cx="440" cy="369" r="16" fill="#7e22ce" stroke="#e9d5ff" stroke-width="2"/>
+  <text x="440" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
+  <circle cx="525" cy="369" r="16" fill="#7e22ce" stroke="#e9d5ff" stroke-width="2"/>
+  <text x="525" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="Inter,sans-serif">C</text>
 
-  <!-- VS circle -->
-  <circle cx="500" cy="330" r="22" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
-  <text x="500" y="335" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">vs</text>
-  <line x1="500" y1="230" x2="500" y2="305" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="500" y1="355" x2="500" y2="430" stroke="#1e293b" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Left: Br (top) and Cl (bottom) -->
+  <line x1="440" y1="353" x2="390" y2="305" stroke="#f97316" stroke-width="2.5"/>
+  <circle cx="375" cy="295" r="22" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
+  <text x="375" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
 
-  <!-- Arrow from step 1 to step 2 -->
-  <text x="500" y="215" text-anchor="middle" font-size="10" fill="#475569" font-family="Inter,sans-serif">▼ Now use priorities to decide E or Z ▼</text>
+  <line x1="440" y1="385" x2="390" y2="435" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="380" cy="445" r="19" fill="#0f172a" stroke="#ef4444" stroke-width="1.8"/>
+  <text x="380" y="450" text-anchor="middle" font-size="12" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">Cl</text>
+
+  <!-- Right: H (top) and CH3 (bottom) -->
+  <line x1="525" y1="353" x2="575" y2="305" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="585" cy="295" r="19" fill="#0f172a" stroke="#64748b" stroke-width="1.8"/>
+  <text x="585" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <line x1="525" y1="385" x2="575" y2="435" stroke="#a78bfa" stroke-width="2.5"/>
+  <circle cx="590" cy="445" r="24" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+  <text x="590" y="450" text-anchor="middle" font-size="13" font-weight="700" fill="#c4b5fd" font-family="Inter,sans-serif">CH₃</text>
+
+  <rect x="355" y="475" width="255" height="22" rx="5" fill="#451a03"/>
+  <text x="482" y="490" text-anchor="middle" font-size="11" font-weight="700" fill="#fdba74" font-family="Inter,sans-serif">★ HIGH priorities on OPPOSITE sides</text>
 </svg>`)}
 
 > [!BOX]
@@ -834,256 +785,302 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width
 >    * A curly arrow starts from a lone pair on the bromide ion ($\\\\text{Br}^-$) and points to the positively charged carbon atom of the carbocation.
 >    * This forms the final C-Br bond, producing 2-bromopropane.
 
-${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="100%" height="auto">
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 520" width="100%" height="auto">
   <defs>
     <linearGradient id="bg-addition" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070f1e"/>
       <stop offset="100%" stop-color="#0b1b35"/>
     </linearGradient>
-    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    <marker id="arrow-add" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3b82f6"/>
     </marker>
   </defs>
-  <rect width="1000" height="380" rx="16" fill="url(#bg-addition)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="650" height="520" rx="14" fill="url(#bg-addition)" stroke="#1e293b" stroke-width="1.5"/>
 
   <!-- Title -->
-  <text x="500" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition Mechanism of HBr to Propene</text>
-  <line x1="80" y1="44" x2="920" y2="44" stroke="#1e293b" stroke-width="1"/>
+  <text x="325" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition: HBr + Propene → 2-Bromopropane</text>
+  <line x1="40" y1="40" x2="610" y2="40" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- ==================== Reactants (Step 1) ==================== -->
-  <!-- Propene -->
-  <text x="110" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="180" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="128" y1="177" x2="172" y2="177" stroke="#38bdf8" stroke-width="2.5"/>
-  <line x1="128" y1="183" x2="172" y2="183" stroke="#38bdf8" stroke-width="2.5"/>
+  <!-- STEP 1 (TOP HALF) -->
+  <rect x="20" y="48" width="610" height="210" rx="10" fill="#0f172a" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="35" y="58" width="160" height="22" rx="5" fill="#1d4ed8"/>
+  <text x="115" y="73" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">STEP 1: Electrophilic Attack</text>
 
-  <!-- Hydrogens on C1 -->
-  <line x1="102" y1="178" x2="82" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="68" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="102" y1="188" x2="82" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="68" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- Propene (Left of Step 1) -->
+  <text x="100" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="180" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <!-- C=C Double Bond -->
+  <line x1="120" y1="142" x2="170" y2="142" stroke="#38bdf8" stroke-width="3.5"/>
+  <line x1="120" y1="150" x2="170" y2="150" stroke="#38bdf8" stroke-width="3.5"/>
 
-  <!-- Methyl on C2 -->
-  <line x1="190" y1="168" x2="190" y2="145" stroke="#e2e8f0" stroke-width="2"/>
-  <text x="180" y="138" font-size="14" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+  <!-- H's on C1 -->
+  <line x1="95" y1="138" x2="65" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="112" font-size="15" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="95" y1="155" x2="65" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="198" font-size="15" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Hydrogen on C2 -->
-  <line x1="190" y1="192" x2="190" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="185" y="232" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- CH3 on C2 -->
+  <line x1="190" y1="132" x2="190" y2="105" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="175" y="96" font-size="16" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">CH₃</text>
+  <!-- H on C2 -->
+  <line x1="190" y1="158" x2="190" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="183" y="202" font-size="15" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- H-Br -->
-  <text x="142" y="260" font-size="15" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="156" y1="256" x2="180" y2="256" stroke="#fb923c" stroke-width="2"/>
-  <text x="186" y="260" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <!-- H-Br Polar Molecule -->
+  <rect x="235" y="120" width="105" height="50" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1.2"/>
+  <text x="250" y="152" font-size="18" font-weight="700" fill="#38bdf8" font-family="Inter,sans-serif">H</text>
+  <text x="250" y="134" font-size="11" font-weight="700" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
+  <line x1="268" y1="146" x2="295" y2="146" stroke="#fb923c" stroke-width="2.5"/>
+  <text x="302" y="152" font-size="18" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="305" y="134" font-size="11" font-weight="700" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
 
-  <!-- Dipoles -->
-  <text x="142" y="244" font-size="10" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
-  <text x="190" y="244" font-size="10" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
+  <!-- Curly Arrow 1: C=C to H+ -->
+  <path d="M145 135 Q180 95 242 135" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-add)"/>
+  <!-- Curly Arrow 2: H-Br bond to Br -->
+  <path d="M280 146 Q285 125 298 135" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-add)"/>
 
-  <!-- Curly Arrow 1: C=C Double Bond to H(delta+) -->
-  <path d="M150 190 Q120 220 134 256" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Curly Arrow 2: H-Br Bond to Br -->
-  <path d="M168 256 Q178 244 188 250" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 1 Transition Arrow -->
+  <path d="M355 145 L405 145" fill="none" stroke="#60a5fa" stroke-width="2.5" marker-end="url(#arrow-add)"/>
 
-  <!-- ==================== Arrow 1 -> 2 ==================== -->
-  <path d="M260 180 L320 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="290" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
+  <!-- Carbocation Result (Right of Step 1) -->
+  <text x="440" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="520" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="460" y1="145" x2="510" y2="145" stroke="#94a3b8" stroke-width="2.5"/>
 
-  <!-- ==================== Intermediate (Step 2) ==================== -->
-  <!-- Carbocation intermediate -->
-  <text x="370" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="440" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="388" y1="180" x2="432" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- C1 now CH3 (with newly bonded H) -->
+  <line x1="435" y1="138" x2="415" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="112" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="435" y1="155" x2="415" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="198" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="450" y1="132" x2="450" y2="105" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="443" y="98" font-size="16" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">H</text>
 
-  <!-- Hydrogens on C1 (now CH3) -->
-  <line x1="362" y1="178" x2="342" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="328" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="362" y1="188" x2="342" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="328" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="378" y1="168" x2="378" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="373" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- C2 (+) secondary carbocation -->
+  <circle cx="550" cy="132" r="10" fill="#ef4444"/>
+  <text x="550" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+  <line x1="530" y1="132" x2="530" y2="105" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="515" y="96" font-size="16" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">CH₃</text>
+  <line x1="530" y1="158" x2="530" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="523" y="202" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Methyl on C2 -->
-  <line x1="448" y1="168" x2="448" y2="145" stroke="#e2e8f0" stroke-width="2"/>
-  <text x="438" y="138" font-size="14" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+  <!-- Br- formed -->
+  <circle cx="595" cy="180" r="18" fill="#1e293b" stroke="#f97316" stroke-width="1.8"/>
+  <text x="590" y="186" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="604" y="174" font-size="12" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">⁻</text>
 
-  <!-- Hydrogen on C2 -->
-  <line x1="448" y1="192" x2="448" y2="215" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="443" y="232" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- STEP 2 (BOTTOM HALF) -->
+  <rect x="20" y="270" width="610" height="235" rx="10" fill="#0f172a" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="35" y="280" width="160" height="22" rx="5" fill="#15803d"/>
+  <text x="115" y="295" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">STEP 2: Nucleophilic Attack</text>
 
-  <!-- Positive charge on C2 -->
-  <circle cx="465" cy="180" r="8" fill="#f43f5e"/>
-  <text x="465" y="183" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+  <!-- Carbocation receiving attack (Left of Step 2) -->
+  <text x="100" y="385" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="180" y="385" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="120" y1="380" x2="170" y2="380" stroke="#94a3b8" stroke-width="2.5"/>
 
-  <!-- Bromide Ion (Br-) -->
-  <circle cx="403" cy="261" r="1.5" fill="#fb923c"/>
-  <circle cx="409" cy="261" r="1.5" fill="#fb923c"/>
-  <text x="405" y="278" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <circle cx="428" cy="274" r="7.5" fill="#10b981"/>
-  <text x="428" y="278" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
+  <!-- H's on C1 -->
+  <line x1="95" y1="373" x2="65" y2="350" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="347" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="95" y1="390" x2="65" y2="420" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="433" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="110" y1="367" x2="110" y2="340" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="103" y="333" font-size="16" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">H</text>
 
+  <!-- C2 (+) and groups -->
+  <circle cx="210" cy="367" r="10" fill="#ef4444"/>
+  <text x="210" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+  <line x1="190" y1="367" x2="190" y2="340" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="175" y="331" font-size="16" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">CH₃</text>
+  <line x1="190" y1="393" x2="190" y2="420" stroke="#94a3b8" stroke-width="2"/>
+  <text x="183" y="437" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+
+  <!-- Br- ion attacking -->
+  <circle cx="245" cy="445" r="18" fill="#1e293b" stroke="#f97316" stroke-width="1.8"/>
+  <text x="240" y="451" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="254" y="439" font-size="12" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">⁻</text>
   <!-- Curly Arrow 3: Br- lone pair to C2(+) -->
-  <path d="M406 256 Q390 220 436 186" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M235 430 Q215 410 200 385" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-add)"/>
 
-  <!-- ==================== Arrow 2 -> 3 ==================== -->
-  <path d="M525 180 L585 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="555" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
+  <!-- Step 2 Transition Arrow -->
+  <path d="M305 380 L355 380" fill="none" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrow-add)"/>
 
-  <!-- ==================== Product (2-bromopropane) ==================== -->
-  <text x="660" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="730" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="678" y1="180" x2="722" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- Final Product (2-bromopropane) -->
+  <rect x="380" y="300" width="235" height="185" rx="10" fill="#064e3b" stroke="#059669" stroke-width="1.5"/>
+  <text x="497" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399" font-family="Inter,sans-serif">2-bromopropane (Major)</text>
 
-  <!-- Hydrogens on C1 -->
-  <line x1="652" y1="178" x2="632" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="618" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="652" y1="188" x2="632" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="618" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="668" y1="168" x2="668" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="663" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <text x="440" y="405" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="520" y="405" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="460" y1="400" x2="510" y2="400" stroke="#94a3b8" stroke-width="2.5"/>
 
-  <!-- Methyl on C2 -->
-  <line x1="738" y1="168" x2="738" y2="145" stroke="#e2e8f0" stroke-width="2"/>
-  <text x="728" y="138" font-size="14" fill="#e2e8f0" font-family="Inter,sans-serif">CH₃</text>
+  <!-- H's on C1 -->
+  <line x1="435" y1="393" x2="415" y2="370" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="367" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="435" y1="410" x2="415" y2="440" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="453" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="450" y1="387" x2="450" y2="360" stroke="#94a3b8" stroke-width="2"/>
+  <text x="443" y="353" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Hydrogen on C2 -->
-  <line x1="740" y1="178" x2="760" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="764" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Bromine on C2 -->
-  <line x1="738" y1="192" x2="738" y2="225" stroke="#fb923c" stroke-width="2"/>
-  <text x="730" y="242" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <!-- Groups on C2 -->
+  <line x1="530" y1="387" x2="530" y2="360" stroke="#94a3b8" stroke-width="2.5"/>
+  <text x="515" y="351" font-size="16" font-weight="700" fill="#c084fc" font-family="Inter,sans-serif">CH₃</text>
+  <line x1="540" y1="400" x2="565" y2="380" stroke="#94a3b8" stroke-width="2"/>
+  <text x="572" y="378" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- Br bonded to C2 -->
+  <line x1="530" y1="413" x2="530" y2="445" stroke="#f97316" stroke-width="3"/>
+  <text x="520" y="468" font-size="18" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
 </svg>`)}
 
 > [!BOX]
 > ### 🧪 Electrophilic Addition Mechanism in Non-Polar Molecules
-> Halogenation (e.g., with non-polar $\\\\text{Br}_2$ or other non-polar molecules) starts through an induced dipole:
+> Halogenation (e.g., with non-polar $\text{Br}_2$ or other non-polar molecules) starts through an induced dipole:
 > 
-> * **Polarisation:** The double bond (electron rich) in the alkene repels the bonding electrons in the non-polar bond or molecule (such as $\\\\text{H}_2$ or $\\\\text{Br}_2$), producing a dipole moment ($\\\\text{Br}^{\\\\delta+} - \\\\text{Br}^{\\\\delta-}$) which starts the reaction.
-> * **Attack:** The double bond attacks the electrophilic $\\\\text{Br}^{\\\\delta+}$ atom, forming a cyclic bromonium ion (or a standard carbocation intermediate) and a halide ion ($\\\\text{Br}^-$).
+> * **Polarisation:** The double bond (electron rich) in the alkene repels the bonding electrons in the non-polar bond or molecule (such as $\text{H}_2$ or $\text{Br}_2$), producing a dipole moment ($\text{Br}^{\delta+} - \text{Br}^{\delta-}$) which starts the reaction.
+> * **Attack:** The double bond attacks the electrophilic $\text{Br}^{\delta+}$ atom, forming a cyclic bromonium ion (or a standard carbocation intermediate) and a halide ion ($\text{Br}^-$).
 > * **Curly Arrow Rules:** Remember, all curly arrows in these mechanisms MUST start from either a bond (representing bond fission) or from a lone pair of electrons.
-> * **Final Attack:** A curly arrow starts from a lone pair on the bromide ion ($\\\\text{Br}^-$) and points to one of the carbons to form the 1,2-dihalogenoalkane.
+> * **Final Attack:** A curly arrow starts from a lone pair on the bromide ion ($\text{Br}^-$) and points to one of the carbons to form the 1,2-dihalogenoalkane.
 
-${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="100%" height="auto">
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 520" width="100%" height="auto">
   <defs>
     <linearGradient id="bg-halo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070f1e"/>
       <stop offset="100%" stop-color="#0b1b35"/>
     </linearGradient>
-    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    <marker id="arrow-halo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3b82f6"/>
     </marker>
   </defs>
-  <rect width="1000" height="380" rx="16" fill="url(#bg-halo)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect width="650" height="520" rx="14" fill="url(#bg-halo)" stroke="#1e293b" stroke-width="1.5"/>
 
   <!-- Title -->
-  <text x="500" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition Mechanism of Br₂ to Ethene (Halogenation)</text>
-  <line x1="80" y1="44" x2="920" y2="44" stroke="#1e293b" stroke-width="1"/>
+  <text x="325" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition: Br₂ + Ethene (Induced Dipole)</text>
+  <line x1="40" y1="40" x2="610" y2="40" stroke="#1e293b" stroke-width="1"/>
 
-  <!-- ==================== Reactants (Step 1) ==================== -->
+  <!-- STEP 1 (TOP HALF) -->
+  <rect x="20" y="48" width="610" height="210" rx="10" fill="#0f172a" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="35" y="58" width="160" height="22" rx="5" fill="#1d4ed8"/>
+  <text x="115" y="73" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">STEP 1: Induced Dipole</text>
+
   <!-- Ethene -->
-  <text x="110" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="180" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="128" y1="177" x2="172" y2="177" stroke="#38bdf8" stroke-width="2.5"/>
-  <line x1="128" y1="183" x2="172" y2="183" stroke="#38bdf8" stroke-width="2.5"/>
+  <text x="100" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="175" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="120" y1="142" x2="165" y2="142" stroke="#38bdf8" stroke-width="3.5"/>
+  <line x1="120" y1="150" x2="165" y2="150" stroke="#38bdf8" stroke-width="3.5"/>
 
-  <!-- Hydrogens on C1 -->
-  <line x1="102" y1="178" x2="82" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="68" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="102" y1="188" x2="82" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="68" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- H's on C1 -->
+  <line x1="95" y1="138" x2="65" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="112" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="95" y1="155" x2="65" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="198" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Hydrogens on C2 -->
-  <line x1="190" y1="178" x2="210" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="214" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="190" y1="188" x2="210" y2="204" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="214" y="216" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- H's on C2 -->
+  <line x1="190" y1="138" x2="220" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <text x="225" y="112" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="190" y1="155" x2="220" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="225" y="198" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Bromine (Br-Br) -->
-  <text x="142" y="260" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <line x1="150" y1="268" x2="150" y2="294" stroke="#fb923c" stroke-width="2"/>
-  <text x="142" y="315" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <!-- Br-Br Induced Dipole -->
+  <rect x="250" y="105" width="80" height="95" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1.2"/>
+  <text x="280" y="138" text-anchor="middle" font-size="17" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="312" y="132" font-size="11" font-weight="700" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
+  <line x1="280" y1="145" x2="280" y2="168" stroke="#fb923c" stroke-width="2.5"/>
+  <text x="280" y="188" text-anchor="middle" font-size="17" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="312" y="184" font-size="11" font-weight="700" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
 
-  <!-- Induced Dipoles -->
-  <text x="165" y="258" font-size="10" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
-  <text x="165" y="313" font-size="10" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
+  <!-- Curly Arrow 1: C=C to Br+ -->
+  <path d="M142 135 Q190 90 265 125" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-halo)"/>
+  <!-- Curly Arrow 2: Br-Br to Br- -->
+  <path d="M280 156 Q260 165 270 176" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-halo)"/>
 
-  <!-- Curly Arrow 1: C=C Double Bond to Br(delta+) -->
-  <path d="M150 190 Q120 225 138 248" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Curly Arrow 2: Br-Br Bond to Br(delta-) -->
-  <path d="M150 280 Q130 285 138 298" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 1 Transition Arrow -->
+  <path d="M345 145 L395 145" fill="none" stroke="#60a5fa" stroke-width="2.5" marker-end="url(#arrow-halo)"/>
 
-  <!-- ==================== Arrow 1 -> 2 ==================== -->
-  <path d="M260 180 L320 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="290" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
+  <!-- Carbocation Result (Right of Step 1) -->
+  <text x="440" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="515" y="150" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="460" y1="145" x2="505" y2="145" stroke="#94a3b8" stroke-width="2.5"/>
 
-  <!-- ==================== Intermediate (Step 2) ==================== -->
-  <!-- Carbocation intermediate -->
-  <text x="370" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="440" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="388" y1="180" x2="432" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- C1 with bonded Br -->
+  <line x1="435" y1="138" x2="415" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="112" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="435" y1="155" x2="415" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="400" y="198" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="450" y1="158" x2="450" y2="195" stroke="#f97316" stroke-width="2.5"/>
+  <text x="440" y="215" font-size="16" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
 
-  <!-- Bromine on C1 -->
-  <line x1="378" y1="192" x2="378" y2="225" stroke="#fb923c" stroke-width="2"/>
-  <text x="370" y="242" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <!-- C2 (+) Carbocation -->
+  <circle cx="545" cy="132" r="10" fill="#ef4444"/>
+  <text x="545" y="137" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+  <line x1="525" y1="138" x2="550" y2="115" stroke="#94a3b8" stroke-width="2"/>
+  <text x="555" y="112" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="525" y1="155" x2="550" y2="185" stroke="#94a3b8" stroke-width="2"/>
+  <text x="555" y="198" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- Hydrogens on C1 -->
-  <line x1="362" y1="178" x2="342" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="328" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="378" y1="168" x2="378" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="373" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- Br- formed -->
+  <circle cx="595" cy="180" r="18" fill="#1e293b" stroke="#f97316" stroke-width="1.8"/>
+  <text x="590" y="186" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="604" y="174" font-size="12" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">⁻</text>
 
-  <!-- Hydrogens on C2 -->
-  <line x1="450" y1="178" x2="470" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="474" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="448" y1="168" x2="448" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="443" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- STEP 2 (BOTTOM HALF) -->
+  <rect x="20" y="270" width="610" height="235" rx="10" fill="#0f172a" stroke="#1e3a5f" stroke-width="1.2"/>
+  <rect x="35" y="280" width="160" height="22" rx="5" fill="#15803d"/>
+  <text x="115" y="295" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">STEP 2: Bromide Attack</text>
 
-  <!-- Positive charge on C2 -->
-  <circle cx="453" cy="192" r="8" fill="#f43f5e"/>
-  <text x="453" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+  <!-- Carbocation receiving attack (Left of Step 2) -->
+  <text x="100" y="385" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="175" y="385" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="120" y1="380" x2="165" y2="380" stroke="#94a3b8" stroke-width="2.5"/>
 
-  <!-- Bromide Ion (Br-) -->
-  <circle cx="428" cy="275" r="1.5" fill="#fb923c"/>
-  <circle cx="434" cy="275" r="1.5" fill="#fb923c"/>
-  <text x="430" y="292" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <circle cx="453" cy="288" r="7.5" fill="#10b981"/>
-  <text x="453" y="292" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
+  <!-- H's on C1 -->
+  <line x1="95" y1="373" x2="65" y2="350" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="347" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="95" y1="390" x2="65" y2="420" stroke="#94a3b8" stroke-width="2"/>
+  <text x="50" y="433" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="110" y1="393" x2="110" y2="430" stroke="#f97316" stroke-width="2.5"/>
+  <text x="100" y="450" font-size="16" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
 
-  <!-- Curly Arrow 3: Br- lone pair to C2(+) -->
-  <path d="M431 270 Q410 240 436 196" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- C2 (+) and groups -->
+  <circle cx="205" cy="367" r="10" fill="#ef4444"/>
+  <text x="205" y="372" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
+  <line x1="185" y1="373" x2="210" y2="350" stroke="#94a3b8" stroke-width="2"/>
+  <text x="215" y="347" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="185" y1="390" x2="210" y2="420" stroke="#94a3b8" stroke-width="2"/>
+  <text x="215" y="433" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
 
-  <!-- ==================== Arrow 2 -> 3 ==================== -->
-  <path d="M525 180 L585 180" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="555" y="172" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
+  <!-- Br- ion attacking -->
+  <circle cx="260" cy="445" r="18" fill="#1e293b" stroke="#f97316" stroke-width="1.8"/>
+  <text x="255" y="451" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="269" y="439" font-size="12" font-weight="700" fill="#ef4444" font-family="Inter,sans-serif">⁻</text>
+  <!-- Curly Arrow 3: Br- to C2(+) -->
+  <path d="M250 430 Q225 405 205 385" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-halo)"/>
 
-  <!-- ==================== Product (1,2-dibromoethane) ==================== -->
-  <text x="660" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="730" y="184" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="678" y1="180" x2="722" y2="180" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- Step 2 Transition Arrow -->
+  <path d="M305 380 L355 380" fill="none" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrow-halo)"/>
 
-  <!-- Bromine on C1 -->
-  <line x1="668" y1="192" x2="668" y2="225" stroke="#fb923c" stroke-width="2"/>
-  <text x="660" y="242" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <!-- Final Product (1,2-dibromoethane) -->
+  <rect x="380" y="300" width="235" height="185" rx="10" fill="#064e3b" stroke="#059669" stroke-width="1.5"/>
+  <text x="497" y="325" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399" font-family="Inter,sans-serif">1,2-dibromoethane (Colourless)</text>
 
-  <!-- Bromine on C2 -->
-  <line x1="738" y1="168" x2="738" y2="135" stroke="#fb923c" stroke-width="2"/>
-  <text x="730" y="125" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
+  <text x="450" y="405" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <text x="525" y="405" font-size="18" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">C</text>
+  <line x1="470" y1="400" x2="515" y2="400" stroke="#94a3b8" stroke-width="2.5"/>
 
-  <!-- Hydrogens on C1 -->
-  <line x1="652" y1="178" x2="632" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="618" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="668" y1="168" x2="668" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="663" y="138" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- H's on C1 -->
+  <line x1="445" y1="393" x2="425" y2="370" stroke="#94a3b8" stroke-width="2"/>
+  <text x="410" y="367" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="445" y1="410" x2="425" y2="440" stroke="#94a3b8" stroke-width="2"/>
+  <text x="410" y="453" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="460" y1="413" x2="460" y2="445" stroke="#f97316" stroke-width="2.5"/>
+  <text x="450" y="468" font-size="16" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
 
-  <!-- Hydrogens on C2 -->
-  <line x1="740" y1="178" x2="760" y2="162" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="764" y="158" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="738" y1="192" x2="738" y2="225" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="733" y="242" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <!-- Groups on C2 -->
+  <line x1="535" y1="393" x2="560" y2="370" stroke="#94a3b8" stroke-width="2"/>
+  <text x="565" y="367" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="535" y1="410" x2="560" y2="440" stroke="#94a3b8" stroke-width="2"/>
+  <text x="565" y="453" font-size="15" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
+  <line x1="535" y1="387" x2="535" y2="355" stroke="#f97316" stroke-width="2.5"/>
+  <text x="525" y="347" font-size="16" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
 </svg>`)}
-> 
-> > [!WARNING]
+
 > > ### ⚠️ Curly Arrow Conventions
 > > Always ensure that curly arrows start directly from a **bond** or a **lone pair of electrons**. Starting an arrow from an atom label or empty space is a common exam pitfall.
 
@@ -1259,262 +1256,83 @@ ${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width
 > * **Major Product:** Formed via the **more stable** carbocation intermediate.
 > * **Minor Product:** Formed via the **less stable** carbocation intermediate.
 
-${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="auto">
+${svgToken(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 580" width="100%" height="auto">
   <defs>
     <linearGradient id="bg-mech" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#070f1e"/>
       <stop offset="100%" stop-color="#0b1b35"/>
     </linearGradient>
-  </defs>
-  <rect width="1000" height="480" rx="16" fill="url(#bg-mech)" stroke="#1e293b" stroke-width="1.5"/>
-
-  <!-- Title -->
-  <text x="500" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Electrophilic Addition Mechanism of HBr to Propene (Markovnikov's Rule)</text>
-  <line x1="80" y1="44" x2="920" y2="44" stroke="#1e293b" stroke-width="1"/>
-
-  <!-- ==================== LEFT: REACTANTS ==================== -->
-  <!-- Propene -->
-  <!-- C1 (left) -->
-  <text x="60" y="244" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <!-- C2 (middle) -->
-  <text x="130" y="244" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <!-- C3 (methyl carbon, top right) -->
-  <text x="195" y="194" font-size="16" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-
-  <!-- Bonds in Propene -->
-  <!-- C=C Double Bond -->
-  <line x1="78" y1="237" x2="122" y2="237" stroke="#38bdf8" stroke-width="2.5"/>
-  <line x1="78" y1="243" x2="122" y2="243" stroke="#38bdf8" stroke-width="2.5"/>
-  <!-- C2-C3 Single Bond -->
-  <line x1="148" y1="234" x2="190" y2="198" stroke="#e2e8f0" stroke-width="2"/>
-
-  <!-- Hydrogens on C1 -->
-  <line x1="52" y1="238" x2="32" y2="222" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="18" y="218" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="52" y1="248" x2="32" y2="264" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="18" y="276" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Hydrogen on C2 -->
-  <line x1="140" y1="252" x2="152" y2="278" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="150" y="294" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Hydrogens on C3 (Methyl) -->
-  <line x1="210" y1="184" x2="235" y2="169" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="240" y="167" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="195" y1="184" x2="175" y2="164" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="162" y="162" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="212" y1="198" x2="238" y2="214" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="242" y="226" font-size="14" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Electrophile: H-Br -->
-  <text x="195" y="275" font-size="15" font-weight="700" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="212" y1="270" x2="242" y2="270" stroke="#fb923c" stroke-width="2"/>
-  <text x="248" y="275" font-size="15" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-
-  <!-- Dipoles -->
-  <text x="195" y="256" font-size="10" fill="#38bdf8" font-family="Inter,sans-serif">δ+</text>
-  <text x="250" y="256" font-size="10" fill="#f43f5e" font-family="Inter,sans-serif">δ-</text>
-
-  <!-- Br Lone Pairs -->
-  <circle cx="270" cy="265" r="1.5" fill="#fb923c"/>
-  <circle cx="274" cy="265" r="1.5" fill="#fb923c"/>
-  <circle cx="270" cy="275" r="1.5" fill="#fb923c"/>
-  <circle cx="274" cy="275" r="1.5" fill="#fb923c"/>
-
-  <!-- Curly Arrow 1: C=C Double Bond to H(delta+) -->
-  <path d="M100 230 Q120 180 185 245" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Curly Arrow 2: H-Br Bond to Br -->
-  <path d="M225 270 Q235 250 250 262" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
-
-
-  <!-- ==================== PATHWAY ARROWS (STEP 1) ==================== -->
-  <!-- Upper Pathway -->
-  <path d="M290 195 Q310 165 335 155" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="325" y="135" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 1</text>
-  <text x="325" y="147" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Major path</text>
-
-  <!-- Lower Pathway -->
-  <path d="M290 285 Q310 315 335 325" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arrow)"/>
-  <text x="325" y="345" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">step 1</text>
-  <text x="325" y="357" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Minor path</text>
-
-  <text x="320" y="246" text-anchor="middle" font-size="12" font-weight="700" fill="#64748b" font-family="Inter,sans-serif">OR</text>
-
-
-  <!-- ==================== MIDDLE: INTERMEDIATES ==================== -->
-  <!-- ===== UPPER INTERMEDIATE: Secondary Carbocation ===== -->
-  <!-- Backbone -->
-  <text x="410" y="144" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="475" y="144" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="540" y="94" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="428" y1="140" x2="468" y2="140" stroke="#e2e8f0" stroke-width="2"/>
-  <line x1="492" y1="134" x2="535" y2="98" stroke="#e2e8f0" stroke-width="2"/>
-
-  <!-- Left H's (now CH3) -->
-  <line x1="402" y1="138" x2="382" y2="122" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="370" y="118" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="402" y1="148" x2="382" y2="164" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="370" y="176" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <!-- New added H on C1 -->
-  <line x1="418" y1="152" x2="418" y2="178" stroke="#34d399" stroke-width="1.8"/>
-  <text x="413" y="192" font-size="13" font-weight="700" fill="#34d399" font-family="Inter,sans-serif">H</text>
-
-  <!-- Carbocation on C2 (Middle C has +) -->
-  <circle cx="488" cy="120" r="8.5" fill="#f43f5e"/>
-  <text x="488" y="123" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
-  <line x1="485" y1="152" x2="497" y2="178" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="495" y="192" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Methyl H's -->
-  <line x1="555" y1="84" x2="580" y2="69" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="585" y="67" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="540" y1="84" x2="520" y2="64" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="508" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="557" y1="98" x2="583" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="587" y="126" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <text x="485" y="52" text-anchor="middle" font-size="10.5" fill="#60a5fa" font-weight="700" font-family="Inter,sans-serif">Secondary Carbocation (2°)</text>
-  <text x="485" y="64" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">More stable (2 alkyl groups)</text>
-
-  <!-- Bromide Ion (Br-) -->
-  <circle cx="528" cy="162" r="1.5" fill="#fb923c"/>
-  <circle cx="528" cy="168" r="1.5" fill="#fb923c"/>
-  <text x="535" y="169" font-size="14" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <circle cx="558" cy="165" r="7.5" fill="#10b981"/>
-  <text x="558" y="169" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
-  <!-- Curly Arrow 3: Br- lone pair to C2(+) -->
-  <path d="M528 165 Q488 165 486 138" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
-
-
-  <!-- ===== LOWER INTERMEDIATE: Primary Carbocation ===== -->
-  <!-- Backbone -->
-  <text x="410" y="344" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="475" y="344" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="540" y="294" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="428" y1="340" x2="468" y2="340" stroke="#e2e8f0" stroke-width="2"/>
-  <line x1="492" y1="334" x2="535" y2="298" stroke="#e2e8f0" stroke-width="2"/>
-
-  <!-- Left C1 has Carbocation (+) -->
-  <circle cx="423" cy="320" r="8.5" fill="#f43f5e"/>
-  <text x="423" y="323" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">+</text>
-  <line x1="402" y1="338" x2="382" y2="322" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="370" y="318" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="402" y1="348" x2="382" y2="364" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="370" y="376" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Middle C2 has added H -->
-  <line x1="485" y1="352" x2="497" y2="378" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="495" y="392" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="478" y1="332" x2="478" y2="306" stroke="#34d399" stroke-width="1.8"/>
-  <text x="473" y="296" font-size="13" font-weight="700" fill="#34d399" font-family="Inter,sans-serif">H</text>
-
-  <!-- Methyl H's -->
-  <line x1="555" y1="284" x2="580" y2="269" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="585" y="267" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="540" y1="284" x2="520" y2="264" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="508" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="557" y1="298" x2="583" y2="314" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="587" y="326" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <text x="485" y="420" text-anchor="middle" font-size="10.5" fill="#a78bfa" font-weight="700" font-family="Inter,sans-serif">Primary Carbocation (1°)</text>
-  <text x="485" y="432" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Inter,sans-serif">Less stable (1 alkyl group)</text>
-
-  <!-- Bromide Ion (Br-) -->
-  <circle cx="380" cy="393" r="1.5" fill="#fb923c"/>
-  <circle cx="386" cy="393" r="1.5" fill="#fb923c"/>
-  <text x="375" y="405" font-size="14" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <circle cx="398" cy="401" r="7.5" fill="#10b981"/>
-  <text x="398" y="405" text-anchor="middle" font-size="11" font-weight="700" fill="#fff" font-family="Inter,sans-serif">-</text>
-  <!-- Curly Arrow 4: Br- lone pair to C1(+) -->
-  <path d="M383 393 Q423 393 414 346" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow)"/>
-
-
-  <!-- ==================== STEP 2 ARROWS ==================== -->
-  <path d="M625 140 L670 140" fill="none" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="648" y="132" text-anchor="middle" font-size="11" font-weight="700" fill="#60a5fa" font-family="Inter,sans-serif">step 2</text>
-
-  <path d="M625 340 L670 340" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="648" y="332" text-anchor="middle" font-size="11" font-weight="700" fill="#a78bfa" font-family="Inter,sans-serif">step 2</text>
-
-
-  <!-- ==================== RIGHT: PRODUCTS ==================== -->
-  <!-- ===== UPPER PRODUCT: 2-bromopropane (Major) ===== -->
-  <!-- Backbone -->
-  <text x="730" y="144" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="795" y="144" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="860" y="94" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="748" y1="140" x2="788" y2="140" stroke="#e2e8f0" stroke-width="2"/>
-  <line x1="812" y1="134" x2="855" y2="98" stroke="#e2e8f0" stroke-width="2"/>
-
-  <!-- Left H's -->
-  <line x1="722" y1="138" x2="702" y2="122" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="690" y="118" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="722" y1="148" x2="702" y2="164" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="690" y="176" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="738" y1="152" x2="738" y2="178" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="733" y="192" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Middle C2 has added Br (from bottom) -->
-  <line x1="805" y1="152" x2="805" y2="178" stroke="#fb923c" stroke-width="2"/>
-  <text x="798" y="194" font-size="14" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <!-- Middle H -->
-  <line x1="805" y1="130" x2="805" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="800" y="108" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Methyl H's -->
-  <line x1="875" y1="84" x2="900" y2="69" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="905" y="67" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="860" y1="84" x2="840" y2="64" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="828" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="877" y1="98" x2="903" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="907" y="126" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Product Labels -->
-  <rect x="740" y="200" width="130" height="20" rx="5" fill="#052e16" stroke="#16a34a" stroke-width="1"/>
-  <text x="805" y="214" text-anchor="middle" font-size="11" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">MAJOR PRODUCT</text>
-
-
-  <!-- ===== LOWER PRODUCT: 1-bromopropane (Minor) ===== -->
-  <!-- Backbone -->
-  <text x="730" y="344" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="795" y="344" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <text x="860" y="294" font-size="15" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">C</text>
-  <line x1="748" y1="340" x2="788" y2="340" stroke="#e2e8f0" stroke-width="2"/>
-  <line x1="812" y1="334" x2="855" y2="298" stroke="#e2e8f0" stroke-width="2"/>
-
-  <!-- Left C1 has added Br (from left) -->
-  <line x1="722" y1="340" x2="702" y2="340" stroke="#fb923c" stroke-width="2"/>
-  <text x="682" y="345" font-size="14" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">Br</text>
-  <!-- Other C1 hydrogens -->
-  <line x1="738" y1="332" x2="738" y2="306" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="733" y="296" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="738" y1="352" x2="738" y2="378" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="733" y="392" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Middle C2 hydrogens -->
-  <line x1="805" y1="352" x2="805" y2="378" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="800" y="392" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="805" y1="330" x2="805" y2="306" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="800" y="296" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Methyl H's -->
-  <line x1="875" y1="284" x2="900" y2="269" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="905" y="267" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="860" y1="284" x2="840" y2="264" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="828" y="262" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-  <line x1="877" y1="98" x2="903" y2="114" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="907" y="126" font-size="13" fill="#94a3b8" font-family="Inter,sans-serif">H</text>
-
-  <!-- Product Labels -->
-  <rect x="740" y="400" width="130" height="20" rx="5" fill="#450a0a" stroke="#dc2626" stroke-width="1"/>
-  <text x="805" y="414" text-anchor="middle" font-size="11" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">MINOR PRODUCT</text>
-
-  <!-- Curly Arrow Definitions -->
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#2563eb"/>
+    <marker id="arrow-mech" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3b82f6"/>
     </marker>
   </defs>
+  <rect width="650" height="580" rx="14" fill="url(#bg-mech)" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="325" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#e2e8f0" font-family="Inter,sans-serif">Markovnikov's Rule: Propene + HBr (Pathway Comparison)</text>
+  <line x1="40" y1="40" x2="610" y2="40" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ===== UPPER PATHWAY: MAJOR (2° Carbocation) ===== -->
+  <rect x="20" y="50" width="610" height="245" rx="12" fill="#052e16" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="35" y="60" width="220" height="24" rx="6" fill="#15803d"/>
+  <text x="145" y="77" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">★ MAJOR PATHWAY (via 2° C⁺)</text>
+
+  <!-- Reactant Propene + H+ -->
+  <text x="50" y="160" font-size="16" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃-CH=CH₂</text>
+  <text x="175" y="148" font-size="14" font-weight="700" fill="#38bdf8" font-family="Inter,sans-serif">+ H⁺</text>
+
+  <!-- Arrow to 2° Carbocation -->
+  <path d="M210 155 L255 155" fill="none" stroke="#4ade80" stroke-width="2.5" marker-end="url(#arrow-mech)"/>
+
+  <!-- 2° Carbocation Intermediate -->
+  <rect x="265" y="95" width="165" height="120" rx="8" fill="#0f172a" stroke="#22c55e" stroke-width="1.2"/>
+  <text x="347" y="118" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">2° Carbocation (Stable)</text>
+  <text x="280" y="160" font-size="15" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃-</text>
+  <text x="315" y="160" font-size="17" font-weight="700" fill="#f43f5e" font-family="Inter,sans-serif">C⁺H</text>
+  <text x="355" y="160" font-size="15" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">-CH₃</text>
+  <text x="347" y="195" text-anchor="middle" font-size="10.5" fill="#93c5fd" font-family="Inter,sans-serif">2 alkyl groups release e⁻</text>
+
+  <!-- Arrow to Product -->
+  <path d="M435 155 L475 155" fill="none" stroke="#4ade80" stroke-width="2.5" marker-end="url(#arrow-mech)"/>
+  <text x="455" y="145" text-anchor="middle" font-size="11" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">+ Br⁻</text>
+
+  <!-- Major Product Box -->
+  <rect x="485" y="95" width="135" height="120" rx="8" fill="#14532d" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="552" y="118" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80" font-family="Inter,sans-serif">2-bromopropane</text>
+  <text x="500" y="162" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃CH(Br)CH₃</text>
+  <rect x="502" y="180" width="100" height="22" rx="5" fill="#15803d"/>
+  <text x="552" y="195" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">MAJOR (&gt;90%)</text>
+
+
+  <!-- ===== LOWER PATHWAY: MINOR (1° Carbocation) ===== -->
+  <rect x="20" y="310" width="610" height="245" rx="12" fill="#450a0a" stroke="#dc2626" stroke-width="1.5"/>
+  <rect x="35" y="320" width="220" height="24" rx="6" fill="#b91c1c"/>
+  <text x="145" y="337" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">✗ MINOR PATHWAY (via 1° C⁺)</text>
+
+  <!-- Reactant Propene + H+ -->
+  <text x="50" y="420" font-size="16" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃-CH=CH₂</text>
+  <text x="175" y="408" font-size="14" font-weight="700" fill="#38bdf8" font-family="Inter,sans-serif">+ H⁺</text>
+
+  <!-- Arrow to 1° Carbocation -->
+  <path d="M210 415 L255 415" fill="none" stroke="#f87171" stroke-width="2.5" marker-end="url(#arrow-mech)"/>
+
+  <!-- 1° Carbocation Intermediate -->
+  <rect x="265" y="355" width="165" height="120" rx="8" fill="#0f172a" stroke="#ef4444" stroke-width="1.2"/>
+  <text x="347" y="378" text-anchor="middle" font-size="11.5" font-weight="700" fill="#f87171" font-family="Inter,sans-serif">1° Carbocation (Unstable)</text>
+  <text x="278" y="420" font-size="15" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃-CH₂-</text>
+  <text x="365" y="420" font-size="17" font-weight="700" fill="#f43f5e" font-family="Inter,sans-serif">C⁺H₂</text>
+  <text x="347" y="455" text-anchor="middle" font-size="10.5" fill="#fca5a5" font-family="Inter,sans-serif">Only 1 alkyl group</text>
+
+  <!-- Arrow to Product -->
+  <path d="M435 415 L475 415" fill="none" stroke="#f87171" stroke-width="2.5" marker-end="url(#arrow-mech)"/>
+  <text x="455" y="405" text-anchor="middle" font-size="11" font-weight="700" fill="#fb923c" font-family="Inter,sans-serif">+ Br⁻</text>
+
+  <!-- Minor Product Box -->
+  <rect x="485" y="355" width="135" height="120" rx="8" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="552" y="378" text-anchor="middle" font-size="12" font-weight="700" fill="#fca5a5" font-family="Inter,sans-serif">1-bromopropane</text>
+  <text x="495" y="422" font-size="14" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">CH₃CH₂CH₂Br</text>
+  <rect x="502" y="440" width="100" height="22" rx="5" fill="#991b1b"/>
+  <text x="552" y="455" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff" font-family="Inter,sans-serif">MINOR (&lt;10%)</text>
 </svg>`)}
 
 > [!EXAMPLE]

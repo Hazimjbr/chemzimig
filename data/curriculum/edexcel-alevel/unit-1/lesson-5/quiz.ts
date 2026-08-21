@@ -460,6 +460,248 @@ export const lessonQuiz = [
       { text: "Primary carbocations require a base catalyst to form." },
       { text: "Tertiary carbocations form via homolytic bond fission." }
     ],
-    explanation: "Tertiary carbocations are stabilized by the electron-donating inductive effect of three alkyl groups. This stabilization lowers the energy of the intermediate and the transition state leading to it, reducing the activation energy and increasing the rate of reaction."
+    explanation: "Tertiary carbocations are stabilized by the electron-donating inductive effect of three alkyl groups. This stabilization lowers the energy of the intermediate and the transition state leading to it, reducing the activation energy and increasing the rate of reaction.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q41-EASY-2026",
+    question: "Why must the qualitative bromine water test for a C=C double bond be carried out in the absence of direct sunlight?",
+    options: [
+      { text: "Alkanes also react with bromine water by free-radical substitution in UV light, which would decolourise bromine water and cause a false positive", isCorrect: true },
+      { text: "Sunlight destroys the C=C double bond before it can react with bromine" },
+      { text: "UV light converts bromine water into solid white elemental bromine" },
+      { text: "The reaction between alkenes and bromine requires complete darkness to proceed" }
+    ],
+    explanation: "Alkanes react with bromine water via free-radical substitution when exposed to UV/sunlight, causing decolourisation. To avoid this false positive and ensure decolourisation is solely due to electrophilic addition across a C=C double bond, the test must be performed away from sunlight.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q42-EASY-2026",
+    question: "What is the primary industrial application of the catalytic hydrogenation of unsaturated vegetable oils?",
+    options: [
+      { text: "Converting liquid vegetable oils into solid margarine by reducing C=C bonds", isCorrect: true },
+      { text: "Producing bio-diesel fuel for transportation" },
+      { text: "Manufacturing addition polymers such as poly(ethene)" },
+      { text: "Synthesising glycerol for the cosmetic industry" }
+    ],
+    explanation: "Naturally occurring vegetable oils contain unsaturated fatty acids with multiple C=C double bonds (liquid). Hydrogenation with H₂ and a Ni catalyst at elevated temperature hardens the oil into semi-solid fats, commonly used to manufacture margarine.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q43-MEDIUM-2026",
+    question: "A saturated hydrocarbon has the molecular formula C₄H₈. Which is a possible IUPAC name for this compound?",
+    options: [
+      { text: "Cyclobutane", isCorrect: true },
+      { text: "Butane" },
+      { text: "But-1-ene" },
+      { text: "Methylpropane" }
+    ],
+    explanation: "The formula $\\text{C}_4\\text{H}_8$ fits the general formula $\\text{C}_n\\text{H}_{2n}$. Non-cyclic alkenes (like but-1-ene) have this formula but are unsaturated. Cycloalkanes also have the formula $\\text{C}_n\\text{H}_{2n}$ and are saturated (containing only C-C single bonds). Hence, cyclobutane is the correct saturated hydrocarbon.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q44-MEDIUM-2026",
+    question: "What is the systematic IUPAC name for the alkene (CH₃)₂C=CHCH₂CH₃?",
+    options: [
+      { text: "2-methylpent-2-ene", isCorrect: true },
+      { text: "4-methylpent-3-ene" },
+      { text: "2-methyl-3-ethylprop-2-ene" },
+      { text: "2,2-dimethylbut-2-ene" }
+    ],
+    explanation: "1. The longest continuous carbon chain containing the C=C bond has 5 carbons → pentene.\n2. Numbering from the left gives the double bond the lowest locant (starts at C-2) → pent-2-ene.\n3. There is a methyl group at C-2.\n4. IUPAC name: 2-methylpent-2-ene.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q45-MEDIUM-2026",
+    question: "How many different structural isomers (including cyclic compounds) share the molecular formula C₃H₆?",
+    options: [
+      { text: "2 (propene and cyclopropane)", isCorrect: true },
+      { text: "1 (propene only)" },
+      { text: "3" },
+      { text: "4" }
+    ],
+    explanation: "$\\text{C}_3\\text{H}_6$ has one degree of unsaturation (DoU = 1). The two possible structural isomers are:\n1. Propene ($\\text{CH}_3\\text{CH=CH}_2$)\n2. Cyclopropane (a 3-membered saturated carbon ring).",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q46-MEDIUM-2026",
+    question: "The repeat unit of an addition polymer is [-C(CH₃)₂-CHCl-]ₙ. What is the IUPAC name of the monomer used to make this polymer?",
+    options: [
+      { text: "1-chloro-2-methylpropene", isCorrect: true },
+      { text: "1-chloro-1,2-dimethylethene" },
+      { text: "2-chlorobut-2-ene" },
+      { text: "2,2-dimethylchloroethene" }
+    ],
+    explanation: "To deduce the monomer from the repeat unit $\\text{[-C(CH}_3)_2\\text{-CHCl-]}_n$:\n* Replace the backbone C-C single bond with a C=C double bond: $(\\text{CH}_3)_2\\text{C}=\\text{CHCl}$.\n* The longest chain containing C=C is 3 carbons (prop-1-ene).\n* Chlorine is at C-1 and a methyl group is at C-2.\n* IUPAC Name: 1-chloro-2-methylpropene.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q47-MEDIUM-2026",
+    question: "Which equation correctly represents the thermal cracking of dodecane (C₁₂H₂₆) to produce two moles of but-1-ene and one mole of an alkane?",
+    options: [
+      { text: "$\\text{C}_{12}\\text{H}_{26} \\rightarrow 2\\text{C}_4\\text{H}_8 + \\text{C}_4\\text{H}_{10}$", isCorrect: true },
+      { text: "$\\text{C}_{12}\\text{H}_{26} \\rightarrow 2\\text{C}_4\\text{H}_8 + \\text{C}_4\\text{H}_8 + \\text{H}_2$" },
+      { text: "$\\text{C}_{12}\\text{H}_{26} \\rightarrow 3\\text{C}_4\\text{H}_8 + \\text{H}_2$" },
+      { text: "$\\text{C}_{12}\\text{H}_{26} \\rightarrow 2\\text{C}_4\\text{H}_8 + 2\\text{C}_2\\text{H}_5$" }
+    ],
+    explanation: "Balancing carbon and hydrogen atoms:\n* Reactant: 12 C, 26 H.\n* Two molecules of but-1-ene: $2 \\times \\text{C}_4\\text{H}_8 = 8\\text{ C}, 16\\text{ H}$.\n* Remaining for the saturated alkane: $12 - 8 = 4\\text{ C}$ and $26 - 16 = 10\\text{ H} \\rightarrow \\text{C}_4\\text{H}_{10}$ (butane).\n* Balanced equation: $\\text{C}_{12}\\text{H}_{26} \\rightarrow 2\\text{C}_4\\text{H}_8 + \\text{C}_4\\text{H}_{10}$.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q48-MEDIUM-2026",
+    question: "When but-1-ene is converted into butane-1,2-diol (CH₂(OH)CH(OH)CH₂CH₃), which reagents and observation are correct?",
+    options: [
+      { text: "Acidified potassium manganate(VII) solution (KMnO₄/H₂SO₄); purple to colourless", isCorrect: true },
+      { text: "Aqueous bromine water; orange-brown to colourless" },
+      { text: "Steam with concentrated phosphoric acid catalyst; no colour change" },
+      { text: "Potassium dichromate(VI) in dilute sulfuric acid; orange to green" }
+    ],
+    explanation: "Alkenes are oxidised to diols using cold, dilute, acidified potassium manganate(VII) ($\\text{KMnO}_4$). The manganate(VII) ion (purple) is reduced to $\\text{Mn}^{2+}$ (colourless), giving a clear purple-to-colourless colour change.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q49-MEDIUM-2026",
+    question: "What is the IUPAC name of the organic product formed when but-1-ene reacts with bromine in an addition reaction?",
+    options: [
+      { text: "1,2-dibromobutane", isCorrect: true },
+      { text: "1,1-dibromobutane" },
+      { text: "2,3-dibromobutane" },
+      { text: "1,4-dibromobutane" }
+    ],
+    explanation: "Bromine adds across the C=C double bond of but-1-ene ($\\text{CH}_2=\\text{CH-CH}_2\\text{CH}_3$). One Br atom attaches to C-1 and the other to C-2, producing 1,2-dibromobutane.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q50-HARD-2026",
+    question: "What is the name of the major organic product formed when but-1-ene reacts with hydrogen bromide (HBr)?",
+    options: [
+      { text: "2-bromobutane", isCorrect: true },
+      { text: "1-bromobutane" },
+      { text: "1,2-dibromobutane" },
+      { text: "2,3-dibromobutane" }
+    ],
+    explanation: "Electrophilic addition of HBr to but-1-ene involves protonation of C-1 to form a secondary carbocation ($\\text{CH}_3\\text{-}^+\\text{CH-CH}_2\\text{CH}_3$), which is more stable than the alternative primary carbocation at C-1. Nucleophilic attack by $\\text{Br}^-$ on the secondary carbocation gives 2-bromobutane as the major product.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q51-HARD-2026",
+    question: "Ethane-1,2-diol can be prepared via two industrial routes:\nReaction 1: C₂H₄ + [O] + H₂O → C₂H₆O₂\nReaction 2: C₂H₄Cl₂ + 2NaOH → C₂H₆O₂ + 2NaCl\nCalculate the percentage atom economy for Reaction 2 (Mᵣ: C₂H₄Cl₂ = 99, NaOH = 40, C₂H₆O₂ = 62, NaCl = 58.5).",
+    options: [
+      { text: "34.6%", isCorrect: true },
+      { text: "62.0%" },
+      { text: "52.5%" },
+      { text: "100.0%" }
+    ],
+    explanation: "Atom economy = $\\frac{\\text{Molar mass of desired product}}{\\text{Total molar mass of all reactants}} \\times 100$\n* Desired product: $\\text{C}_2\\text{H}_6\\text{O}_2 = 62\\text{ g/mol}$\n* Total reactants: $99 + 2(40) = 179\\text{ g/mol}$\n* Atom economy = $\\frac{62}{179} \\times 100 = 34.63\\% \\approx 34.6\\%$.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q52-HARD-2026",
+    question: "Why is the direct oxidation route (C₂H₄ + [O] + H₂O → C₂H₆O₂) more sustainable and favoured in Green Chemistry compared to the haloalkane hydrolysis route (C₂H₄Cl₂ + 2NaOH → C₂H₆O₂ + 2NaCl)?",
+    options: [
+      { text: "Reaction 1 has ~100% atom economy and produces no hazardous by-products such as large volumes of NaCl waste", isCorrect: true },
+      { text: "Reaction 2 is too endothermic to operate on a continuous basis" },
+      { text: "Reaction 1 produces gaseous ethane-1,2-diol which is easier to condense" },
+      { text: "Reaction 2 requires radioactive catalysts" }
+    ],
+    explanation: "Reaction 1 is an addition/oxidation reaction incorporating all reactant atoms into the single desired product (atom economy ≈ 100%), generating no waste stream. Reaction 2 has a low atom economy (34.6%) and generates stoichiometric amounts of $\\text{NaCl}$ waste requiring separation and disposal.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q53-MEDIUM-2026",
+    question: "Which of the following describes the configuration of (Z)-1-bromo-1-chloroprop-1-ene?",
+    options: [
+      { text: "The higher priority Br atom (on C-1) and methyl group (on C-2) are on the same side of the double bond", isCorrect: true },
+      { text: "The higher priority Br atom (on C-1) and methyl group (on C-2) are on opposite sides of the double bond" },
+      { text: "The higher priority Cl atom (on C-1) and H atom (on C-2) are on the same side of the double bond" },
+      { text: "Both halogens are attached to opposite carbons of the double bond" }
+    ],
+    explanation: "Using CIP priority rules:\n* C-1: Br (atomic number 35) > Cl (17) → Br has higher priority.\n* C-2: $-\\text{CH}_3$ (C, atomic number 6) > -H (1) → $-\\text{CH}_3$ has higher priority.\n* Z-isomer (Zusammen = together): higher priority groups (Br and $-\\text{CH}_3$) are on the SAME side.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q54-HARD-2026",
+    question: "A student drew an organic mechanism for the reaction between but-2-ene and HBr. Which of the following represents a fundamental mistake in drawing curly arrows for electrophilic addition?",
+    options: [
+      { text: "Drawing the curly arrow starting from the δ+ H atom and pointing to the C=C π-bond", isCorrect: true },
+      { text: "Drawing a curly arrow starting from the C=C π-bond and pointing to the δ+ H atom" },
+      { text: "Drawing a curly arrow from the H-Br bond to the Br atom" },
+      { text: "Drawing a curly arrow from the lone pair on the Br⁻ ion to the positively charged carbon of the carbocation" }
+    ],
+    explanation: "Curly arrows always represent the movement of an electron pair and MUST start from an electron-dense region (a bond or a lone pair) and point toward the electron-deficient atom. Starting a curly arrow at a positive atom (such as $\\text{H}^{\\delta+}$) is a critical error.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q55-MEDIUM-2026",
+    question: "What is the monomer of the polymer poly(methyl methacrylate), commonly known as Perspex?",
+    options: [
+      { text: "CH₂=C(CH₃)COOCH₃", isCorrect: true },
+      { text: "CH₂=CHCOOCH₃" },
+      { text: "CH₃CH=CHCOOCH₃" },
+      { text: "CH₂=C(CH₃)COOH" }
+    ],
+    explanation: "The repeat unit of Perspex is $\\text{[-CH}_2\\text{-C(CH}_3)(\\text{COOCH}_3)-]_n$. Introducing a C=C double bond between the two backbone carbons gives the monomer: $\\text{CH}_2=\\text{C(CH}_3)\\text{COOCH}_3$ (methyl methacrylate).",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q56-EASY-2026",
+    question: "When drawing the repeat unit of an addition polymer, what bond angle is conventionally used around the backbone carbon atoms?",
+    options: [
+      { text: "90° (displayed in a rectangular flat projection)", isCorrect: true },
+      { text: "120° (trigonal planar)" },
+      { text: "180° (linear)" },
+      { text: "109.5° (tetrahedral)" }
+    ],
+    explanation: "While the monomer alkene uses $120^\\circ$ bond angles (trigonal planar around C=C), the repeat unit of an addition polymer is conventionally drawn using $90^\\circ$ right angles to clearly display the backbone chain extending through brackets.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q57-MEDIUM-2026",
+    question: "Which of the following is an environmental drawback specifically associated with biodegradable biopolymers made from plant starch?",
+    options: [
+      { text: "Large areas of agricultural land and crop resources are required, competing with food production", isCorrect: true },
+      { text: "They release highly toxic hydrogen chloride (HCl) gas when decomposed" },
+      { text: "They cannot be used in medical applications such as dissolving sutures" },
+      { text: "They contain heavy metals that leach into groundwater" }
+    ],
+    explanation: "Biodegradable polymers derived from crops (corn, sugarcane starch) require extensive arable land, water, and fertilizers, which can compete directly with food production and contribute to deforestation and fertilizer runoff.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q58-HARD-2026",
+    question: "What is the displayed name of the organic product formed when 1-bromo-2-chloroethene reacts with chlorine gas in an addition reaction?",
+    options: [
+      { text: "1-bromo-1,2,2-trichloroethane", isCorrect: true },
+      { text: "1-bromo-2-chloroethane" },
+      { text: "1,2-dibromo-1,2-dichloroethane" },
+      { text: "1-bromo-2,2-dichloroethane" }
+    ],
+    explanation: "Reactant: 1-bromo-2-chloroethene ($\\text{CHBr=CHCl}$). Addition of $\\text{Cl}_2$ across the double bond adds one Cl to C-1 and one Cl to C-2. The product has C-1 with H, Br, Cl (giving 1-bromo-1-chloro...) and C-2 with H, Cl, Cl (giving ...-2,2-dichloroethane). Full IUPAC name: 1-bromo-1,2,2-trichloroethane.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q59-MEDIUM-2026",
+    question: "When a copolymer is made from an equimolar mixture of ethene and but-1-ene, which of the following represents a valid repeat unit formed by one molecule of each monomer?",
+    options: [
+      { text: "-[-CH₂-CH₂-CH₂-CH(CH₂CH₃)-]-", isCorrect: true },
+      { text: "-[-CH₂-CH₂-CH(CH₃)-CH(CH₃)-]-" },
+      { text: "-[-CH₂-CH=CH-CH(CH₂CH₃)-]-" },
+      { text: "-[-CH(CH₃)-CH(CH₃)-]-" }
+    ],
+    explanation: "Ethene provides a $-\\text{CH}_2\\text{-CH}_2-$ unit and but-1-ene provides a $-\\text{CH}_2\\text{-CH(CH}_2\\text{CH}_3)-$ unit. Joining one unit of each gives the copolymer repeat unit: $-\\text{[-CH}_2\\text{-CH}_2\\text{-CH}_2\\text{-CH(CH}_2\\text{CH}_3)-]-$.",
+    lessonNum: 5
+  },
+  {
+    id: "EDEXCEL-U1-L5-Q60-HARD-2026",
+    question: "In the electrophilic addition of chlorine to an alkene, what causes the non-polar Cl₂ molecule to undergo heterolytic fission?",
+    options: [
+      { text: "The electron density of the alkene π-bond induces a temporary dipole (Clᵟ⁺-Clᵟ⁻) as the halogen approaches", isCorrect: true },
+      { text: "Water molecules in the solution perform nucleophilic attack on chlorine" },
+      { text: "Thermal energy breaks the Cl-Cl bond homolytically first" },
+      { text: "Chlorine naturally exists as an ionic compound in solution" }
+    ],
+    explanation: "As the non-polar $\\text{Cl}_2$ molecule approaches the high electron density of the C=C $\\pi$ bond, electron repulsion pushes electrons in the Cl-Cl bond toward the further chlorine atom, creating an induced dipole ($\\text{Cl}^{\\delta+} - \\text{Cl}^{\\delta-}$). The $\\delta+$ chlorine is then attacked by the $\\pi$ electrons.",
+    lessonNum: 5
   }
 ];
+

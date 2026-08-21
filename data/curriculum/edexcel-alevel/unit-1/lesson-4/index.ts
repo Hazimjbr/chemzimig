@@ -1,4 +1,4 @@
-import { LessonPart } from '../../../registry';
+﻿import { LessonPart } from '../../../registry';
 import { svgToken } from '../../../svgToken';
 
 export const lessonTitle = "Introductory Organic Chemistry & Alkanes";
@@ -152,7 +152,7 @@ const heterolyticSvg = `<svg viewBox="0 0 600 200" style="max-width: 450px; widt
   <circle cx="422" cy="96" r="3" fill="#38bdf8" />
   <circle cx="422" cy="104" r="3" fill="#10b981" />
   <text x="30" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
-    <tspan fill="#f59e0b" font-weight="bold">Full-headed arrow (⤳):</tspan> Represents the transfer of an electron pair.
+    <tspan fill="#f59e0b" font-weight="bold">Full-headed arrow (â¤³):</tspan> Represents the transfer of an electron pair.
   </text>
 </svg>`;
 
@@ -186,7 +186,7 @@ const homolyticSvg = `<svg viewBox="0 0 600 200" style="max-width: 450px; width:
   <circle cx="398" cy="100" r="3.5" fill="#f43f5e" />
   <text x="420" y="110" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">Cl</text>
   <text x="30" y="175" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">
-    <tspan fill="#ec4899" font-weight="bold">Half-headed (fishhook) arrow (⇀):</tspan> Represents the transfer of a single electron.
+    <tspan fill="#ec4899" font-weight="bold">Half-headed (fishhook) arrow (â‡€):</tspan> Represents the transfer of a single electron.
   </text>
 </svg>`;
 
@@ -202,7 +202,7 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
-> ### ⚠️ Hazard vs. Risk
+> ### âš ï¸ Hazard vs. Risk
 > In scientific experiments, it is crucial to distinguish between a hazard and a risk:
 > 
 > * **Hazard:** Anything (substance, equipment, or procedure) that has the potential to cause harm. This is a fixed characteristic of the substance or procedure.
@@ -216,7 +216,7 @@ export const parts: LessonPart[] = [
 > * **Risk Assessment:** Evaluating the potential risks involved when carrying out a specific procedure and describing how to reduce those risks.
 
 > [!TIP]
-> ### 🛡️ Safety Precautions & Risk Reduction
+> ### ðŸ›¡ï¸ Safety Precautions & Risk Reduction
 > Risks in the laboratory can be minimized using the following strategies:
 > 
 > 1. **Work on a Smaller Scale:** Use a smaller mass, volume, or lower concentration of hazardous reagents.
@@ -226,21 +226,21 @@ export const parts: LessonPart[] = [
 >    * *Toxic/Volatile Vapors:* Carry out reactions that produce toxic gases or volatile vapors inside a **fume cupboard**.
 >    * *Hot Objects:* Hold hot equipment (beakers, crucibles) using tongs to avoid skin burns.
 >    * *Corrosive Substances (Acids & Bases):* Wear gloves to protect skin, and safety goggles to avoid splashes.
->    * *Storage & Storage Bottles:* Keep chemical bottles closed when not in use. Strong oxidizing agents (like concentrated nitric acid, conc. HNO₃) must be stored away from flammable materials (organic solvents) to prevent spontaneous combustion or explosions. Volatile or light-sensitive chemicals (like HNO₃) should be stored in dark brown glass bottles to prevent decomposition.
->    * *Neutralization of Acidic Gases:* Use basic scrubbers (such as CaCO₃, NaOH), activated carbon, or dissolve them in water to remove toxic acidic gases.
+>    * *Storage & Storage Bottles:* Keep chemical bottles closed when not in use. Strong oxidizing agents (like concentrated nitric acid, conc. HNOâ‚ƒ) must be stored away from flammable materials (organic solvents) to prevent spontaneous combustion or explosions. Volatile or light-sensitive chemicals (like HNOâ‚ƒ) should be stored in dark brown glass bottles to prevent decomposition.
+>    * *Neutralization of Acidic Gases:* Use basic scrubbers (such as CaCOâ‚ƒ, NaOH), activated carbon, or dissolve them in water to remove toxic acidic gases.
 
 > [!BOX]
-> ### 📋 Concentration-Dependent Hazards & Apparatus Risks
+> ### ðŸ“‹ Concentration-Dependent Hazards & Apparatus Risks
 > * **Concentration Effect:** The hazard of a substance changes significantly with concentration. For example:
->   * *Titration HCl (approx. 0.1 mol/dm³):* Very low hazard (irritant).
->   * *Reagent HCl (1 to 2 mol/dm³):* Moderate hazard.
->   * *Concentrated HCl (above 10 mol/dm³):* Extremely hazardous (corrosive, fumes heavily in air).
+>   * *Titration HCl (approx. 0.1 mol/dmÂ³):* Very low hazard (irritant).
+>   * *Reagent HCl (1 to 2 mol/dmÂ³):* Moderate hazard.
+>   * *Concentrated HCl (above 10 mol/dmÂ³):* Extremely hazardous (corrosive, fumes heavily in air).
 > * **Thermometer Hazards:** Mercury thermometers contain highly toxic liquid mercury. Use **spirit thermometers** or **digital thermometers** to reduce the risk of toxic exposure if broken.
 > * **Heating Hazards:** Open flames from Bunsen burners pose high ignition risks for flammable organic compounds. Use **electrical heating mantles** or **water baths** to heat safely.
 > * **Apparatus Assembly Risks:** Fitting glass tubes through corks or rubber bungs requires force, posing high glass breakage and hand puncture risks. Use modern glass apparatus connected by **ground glass joints** to eliminate the risk of bungs assembly.
 
 > [!BOX]
-> ### 📋 Chemical Hazard Pictograms
+> ### ðŸ“‹ Chemical Hazard Pictograms
 > Standard hazard pictograms are used globally on chemical containers to warn users of specific hazards:
 >
 > | Name | Symbol | Hazard Effect | Example |
@@ -251,18 +251,18 @@ export const parts: LessonPart[] = [
 > | Environmental Hazard | ${ghsEnvHazard} | Dangerous to biomes, aquatic life, or ecosystems. | Copper(II) sulfate, Cyclohexane, Chlorine |
 > | Irritant | ${ghsIrritant} | Causes reversible inflammation of the skin, eyes, or respiratory tract. | Diluted acids and bases, Ammonia |
 > | Explosive | ${ghsExplosive} | Highly unstable; prone to severe thermal or mechanical explosions. | Peroxides |
-> | Flammable | ${ghsFlammable} | Catches fire easily if heated or exposed to a flame. | Alkanes (C₁–C₉), Acetone, Alcohols, Benzene |
-> | Oxidizing | ${ghsOxidizing} | Releases oxygen, intensifying fires and enabling materials to burn fiercely. | Chlorates, Chromates, Potassium manganate(VII), conc. HNO₃ |
+> | Flammable | ${ghsFlammable} | Catches fire easily if heated or exposed to a flame. | Alkanes (Câ‚â€“Câ‚‰), Acetone, Alcohols, Benzene |
+> | Oxidizing | ${ghsOxidizing} | Releases oxygen, intensifying fires and enabling materials to burn fiercely. | Chlorates, Chromates, Potassium manganate(VII), conc. HNOâ‚ƒ |
 >
 > * **Volatile:** A substance that evaporates easily at room temperature (a liquid with a low boiling point).
 > * **PPE:** Personal Protective Equipment (such as safety goggles, gloves, and lab coats).
 
 > [!EXAMPLE]
-> #### 📝 Example 1: Differentiating Hazard and Risk
+> #### ðŸ“ Example 1: Differentiating Hazard and Risk
 > **Question:** Concentrated sulfuric acid is corrosive. Explain how the hazard of using concentrated sulfuric acid differs from the risk, and describe how the risk can be reduced.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Define the hazard:**
 > >    * The hazard is a fixed property of concentrated sulfuric acid (it is corrosive and causes tissue damage). This property cannot be changed.
@@ -272,11 +272,11 @@ export const parts: LessonPart[] = [
 > >    * The risk can be minimized by wearing safety goggles (to protect eyes), wearing gloves (to protect hands), and working with smaller volumes or lower concentrations of the acid.
 
 > [!EXAMPLE]
-> #### 📝 Example 2: Safe Heating of Volatile Organic Solvents
+> #### ðŸ“ Example 2: Safe Heating of Volatile Organic Solvents
 > **Question:** Ethanol is highly flammable and volatile. Describe the safety measures that must be taken when heating ethanol in a laboratory experiment, explaining the chemical reasoning behind these choices.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the heating method:**
 > >    * Ethanol must be heated using an electric water bath or heating mantle rather than an open Bunsen burner flame.
@@ -284,13 +284,13 @@ export const parts: LessonPart[] = [
 > >    * Since ethanol is volatile, it evaporates easily to produce flammable vapors. Heating it with an open flame would create a high risk of ignition and fire. An electric water bath eliminates the presence of a naked flame, drastically reducing the risk of fire.
 
 > [!EXAMPLE]
-> #### 📝 Example 3: Storage of Concentrated Nitric Acid
-> **Question:** Concentrated nitric acid (HNO₃) is a strong oxidizing agent and decomposes slowly in light.
+> #### ðŸ“ Example 3: Storage of Concentrated Nitric Acid
+> **Question:** Concentrated nitric acid (HNOâ‚ƒ) is a strong oxidizing agent and decomposes slowly in light.
 > 1. State how concentrated nitric acid should be stored to prevent decomposition.
 > 2. Explain why it is dangerous to store concentrated nitric acid close to flammable organic solvents like ethanol.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Storage to prevent decomposition:**
 > >    * Concentrated nitric acid must be stored in dark brown (amber) glass bottles, which block light from triggering decomposition.
@@ -299,24 +299,24 @@ export const parts: LessonPart[] = [
 > >    * If stored near flammable materials, it can drastically accelerate combustion, cause spontaneous ignition, or trigger severe fire and explosion hazards.
 
 > [!EXAMPLE]
-> #### 📝 Example 4: Identifying Pictograms for Strong Acids
-> **Question:** Identify the pictogram that would most likely be found on a bottle of concentrated nitric acid (HNO₃), and justify your answer.
+> #### ðŸ“ Example 4: Identifying Pictograms for Strong Acids
+> **Question:** Identify the pictogram that would most likely be found on a bottle of concentrated nitric acid (HNOâ‚ƒ), and justify your answer.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the pictogram:**
-> >    * Concentrated nitric acid (HNO₃) must carry the **Corrosive** pictogram.
+> >    * Concentrated nitric acid (HNOâ‚ƒ) must carry the **Corrosive** pictogram.
 > > 2. **Justify the choice:**
 > >    * This is because concentrated nitric acid is highly reactive and causes immediate, severe chemical burns to human skin/eyes and destroys materials upon contact.
 > >    * *Note:* It is also a strong oxidizing agent, so it may additionally carry the **Oxidizing** pictogram.
 
 > [!EXAMPLE]
-> #### 📝 Example 5: Handling Toxic Acidic Gaseous Products
+> #### ðŸ“ Example 5: Handling Toxic Acidic Gaseous Products
 > **Question:** During the chlorination of an organic compound, toxic and acidic hydrogen chloride gas ($\text{HCl}$) is evolved. Describe a suitable method to safely dispose of this gas without releasing it into the laboratory atmosphere, and justify your choice.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the primary safe disposal method:**
 > >    * The reaction must be carried out inside a working **fume cupboard** to prevent toxic fumes from entering the laboratory atmosphere.
@@ -328,11 +328,11 @@ export const parts: LessonPart[] = [
 > >    * The inverted funnel prevents the solution from sucking back into the reaction flask if temperature drops.
 
 > [!EXAMPLE]
-> #### 📝 Example 6: Deducing Hazards and Safety Measures from Reagent Data
-> **Question:** An organic reaction requires the use of cyclohexane (boiling point 81 °C, highly flammable, toxic to aquatic life) and concentrated nitric acid (boiling point 83 °C, corrosive, strong oxidizing agent). Compare the specific safety measures required for handling these two reagents.
+> #### ðŸ“ Example 6: Deducing Hazards and Safety Measures from Reagent Data
+> **Question:** An organic reaction requires the use of cyclohexane (boiling point 81 Â°C, highly flammable, toxic to aquatic life) and concentrated nitric acid (boiling point 83 Â°C, corrosive, strong oxidizing agent). Compare the specific safety measures required for handling these two reagents.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze precautions for cyclohexane:**
 > >    * Cyclohexane is highly flammable; therefore, heat it using an electric water bath or heating mantle rather than an open Bunsen burner flame.
@@ -353,21 +353,21 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🧪 What are Organic Compounds?
-> Organic compounds are compounds that contain carbon (specifically C-H bonds, with rare exceptions like CCl₄). 
-> * **Vitalism History:** In the early 1800s, scientists believed in *vitalism* — the theory that organic compounds possessed a 'vital force' and could only be synthesized by living organisms (plants or animals), such as urea in human urine. 
-> * **The Breakthrough (1828):** German chemist **Friedrich Wöhler** heated the inorganic compound **ammonium cyanate** ($\text{NH}_4\text{CNO}$) and successfully synthesized **urea** ($\text{CO(NH}_2)_2$), disproving vitalism.
-> * **Kevlar® Discovery (1960s):** The organic chemist **Stephanie Kwolek** invented **Kevlar®**, an extremely strong, heat-resistant organic polymer now used in body armour, safety gloves, and smartphones.
+> ### ðŸ§ª What are Organic Compounds?
+> Organic compounds are compounds that contain carbon (specifically C-H bonds, with rare exceptions like CClâ‚„). 
+> * **Vitalism History:** In the early 1800s, scientists believed in *vitalism* â€” the theory that organic compounds possessed a 'vital force' and could only be synthesized by living organisms (plants or animals), such as urea in human urine. 
+> * **The Breakthrough (1828):** German chemist **Friedrich WÃ¶hler** heated the inorganic compound **ammonium cyanate** ($\text{NH}_4\text{CNO}$) and successfully synthesized **urea** ($\text{CO(NH}_2)_2$), disproving vitalism.
+> * **KevlarÂ® Discovery (1960s):** The organic chemist **Stephanie Kwolek** invented **KevlarÂ®**, an extremely strong, heat-resistant organic polymer now used in body armour, safety gloves, and smartphones.
 > * **Classification:**
 >   1. **Hydrocarbons:** contain only carbon and hydrogen atoms.
 >   2. **Hydrocarbon Derivatives:** contain other elements like O, N, or halogens (e.g. sucrose is a carbohydrate, not a hydrocarbon, as the *-ate* ending shows it contains oxygen).
 > 
 > > [!IMPORTANT]
-> > ### ⚛️ Bond Types & Valence in Organic Compounds
+> > ### âš›ï¸ Bond Types & Valence in Organic Compounds
 > > Organic compounds differ according to their bond types and molecular saturation:
 > >
-> > 1. **Saturated compounds:** contain only **sigma (σ) bonds** (C–C single bonds) allowing maximum hydrogen atoms.
-> > 2. **Unsaturated compounds:** contain one or more **pi (π) bonds** (e.g., C=C double bonds or C≡C triple bonds), containing fewer hydrogen atoms than the maximum possible.
+> > 1. **Saturated compounds:** contain only **sigma (Ïƒ) bonds** (Câ€“C single bonds) allowing maximum hydrogen atoms.
+> > 2. **Unsaturated compounds:** contain one or more **pi (Ï€) bonds** (e.g., C=C double bonds or Câ‰¡C triple bonds), containing fewer hydrogen atoms than the maximum possible.
 > > 
 > > **Valence Rules (Bonding pairs around each atom):**
 > > * Carbon: 4 bonds
@@ -375,10 +375,10 @@ export const parts: LessonPart[] = [
 > > * Oxygen: 2 bonds
 > > * Hydrogen / Halogens: 1 bond
 > > 
-> > **Cyclobutane 3D Bond Angle Hint:** In a 2D drawing of cyclobutane (or cyclopropane), the bond angles look like 90° (or 60°). However, because the carbon atoms are $sp^3$ hybridized, the actual 3D bond angles are puckered and closer to the tetrahedral angle of **109.5°** to minimize eclipse strain.
+> > **Cyclobutane 3D Bond Angle Hint:** In a 2D drawing of cyclobutane (or cyclopropane), the bond angles look like 90Â° (or 60Â°). However, because the carbon atoms are $sp^3$ hybridized, the actual 3D bond angles are puckered and closer to the tetrahedral angle of **109.5Â°** to minimize eclipse strain.
 
 > [!TIP]
-> ### 🌡️ Boiling Points of Hydrocarbons
+> ### ðŸŒ¡ï¸ Boiling Points of Hydrocarbons
 > Boiling points of hydrocarbons **increase** by:
 >
 > 1. **Increasing chain length (higher $M_r$):** longer chains have greater Van der Waals (London dispersion) forces between molecules, requiring more energy to separate.
@@ -386,28 +386,28 @@ export const parts: LessonPart[] = [
 >
 > | Number of Carbons | Physical State |
 > | :---: | :--- |
-> | 1 – 4 | Gas |
-> | 5 – 17 | Liquid |
+> | 1 â€“ 4 | Gas |
+> | 5 â€“ 17 | Liquid |
 > | 18 or more | Solid |
 >
 > 2. **Decreasing chain branching:** straight-chain molecules have a **larger surface area** and pack more compactly together, making them harder to separate. Branched molecules are more spherical, reducing contact surface area and lowering the boiling point.
->    * *Example:* Boiling point of butane (CH₃CH₂CH₂CH₃) > 2-methylpropane ((CH₃)₃CH)
+>    * *Example:* Boiling point of butane (CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚ƒ) > 2-methylpropane ((CHâ‚ƒ)â‚ƒCH)
 
 > [!BOX]
-> ### 📋 Types of Chemical Formulae
+> ### ðŸ“‹ Types of Chemical Formulae
 > Organic molecules can be represented in several different ways:
 >
 > 1. **General Formula:** The simplest algebraic formula describing any member of a homologous series, where *n* is a whole number.
->    * Alkanes: CₙH₂ₙ₊₂
->    * Alkenes and cycloalkanes: CₙH₂ₙ
+>    * Alkanes: Câ‚™Hâ‚‚â‚™â‚Šâ‚‚
+>    * Alkenes and cycloalkanes: Câ‚™Hâ‚‚â‚™
 >
 > 2. **Empirical Formula:** The simplest whole-number ratio of atoms of each element in a molecule.
 >
 > 3. **Molecular Formula:** The actual number of atoms of each element in a molecule.
->    * *Example (methylpropane):* Molecular formula = **C₄H₁₀**, Empirical formula = **C₂H₅**
+>    * *Example (methylpropane):* Molecular formula = **Câ‚„Hâ‚â‚€**, Empirical formula = **Câ‚‚Hâ‚…**
 >
 > 4. **Structural Formula:** Shows how the atoms are bonded to each carbon atom, written carbon-by-carbon.
->    * *Butane:* CH₃CH₂CH₂CH₃
+>    * *Butane:* CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚ƒ
 >
 > 5. **Displayed Formula:** Shows **every atom and every bond** in the compound.
 >
@@ -417,112 +417,112 @@ export const parts: LessonPart[] = [
 >    * *Example (propane):* /\\
 
 > [!IMPORTANT]
-> ### 📂 Homologous Series & Functional Groups
+> ### ðŸ“‚ Homologous Series & Functional Groups
 > * **Homologous Series:** A family of organic compounds that:
 >    1. Have similar chemical properties due to the presence of the same **functional group**.
->    2. Each successive member differs by a **–CH₂–** unit.
+>    2. Each successive member differs by a **â€“CHâ‚‚â€“** unit.
 >    3. Have the same **general formula**.
 >    4. Display a **trend in physical properties** (e.g., boiling point increases with chain length).
 > * **Functional Group:** An atom or group of atoms responsible for the characteristic chemical properties and reactivity of the molecule.
 >
 > | Name | Functional Group | General Formula | Suffix / Prefix |
 > | :--- | :---: | :--- | :---: |
-> | Alkane | C–C | CₙH₂ₙ₊₂ | -ane |
-> | Alkene | C=C | CₙH₂ₙ | -ene |
-> | Halogenoalkane | R–X | CₙH₂ₙ₊₁X | halo- |
-> | Alcohol | R–OH | CₙH₂ₙ₊₁OH | -ol |
-> | Aldehyde | R–CHO | CₙH₂ₙ₊₁CHO | -al |
-> | Ketone | R–CO–R' | CₙH₂ₙ₊₁COCₙ'H₂ₙ'₊₁ | -one |
-> | Carboxylic Acid | R–COOH | CₙH₂ₙ₊₁COOH | -oic acid |
-> | Ester | R–COO–R' | CₙH₂ₙ₊₁COOCₙ'H₂ₙ'₊₁ | -oate |
-> | Amine | R–NH₂ | CₙH₂ₙ₊₁NH₂ | -amine |
-> | Nitrile | R–CN | CₙH₂ₙ₊₁CN | -nitrile |
+> | Alkane | Câ€“C | Câ‚™Hâ‚‚â‚™â‚Šâ‚‚ | -ane |
+> | Alkene | C=C | Câ‚™Hâ‚‚â‚™ | -ene |
+> | Halogenoalkane | Râ€“X | Câ‚™Hâ‚‚â‚™â‚Šâ‚X | halo- |
+> | Alcohol | Râ€“OH | Câ‚™Hâ‚‚â‚™â‚Šâ‚OH | -ol |
+> | Aldehyde | Râ€“CHO | Câ‚™Hâ‚‚â‚™â‚Šâ‚CHO | -al |
+> | Ketone | Râ€“COâ€“R' | Câ‚™Hâ‚‚â‚™â‚Šâ‚COCâ‚™'Hâ‚‚â‚™'â‚Šâ‚ | -one |
+> | Carboxylic Acid | Râ€“COOH | Câ‚™Hâ‚‚â‚™â‚Šâ‚COOH | -oic acid |
+> | Ester | Râ€“COOâ€“R' | Câ‚™Hâ‚‚â‚™â‚Šâ‚COOCâ‚™'Hâ‚‚â‚™'â‚Šâ‚ | -oate |
+> | Amine | Râ€“NHâ‚‚ | Câ‚™Hâ‚‚â‚™â‚Šâ‚NHâ‚‚ | -amine |
+> | Nitrile | Râ€“CN | Câ‚™Hâ‚‚â‚™â‚Šâ‚CN | -nitrile |
 
 > [!EXAMPLE]
-> #### 📝 Example 1: Deducing Formulae
-> **Question:** Methylpropane has the molecular formula C₄H₁₀. Write down:
+> #### ðŸ“ Example 1: Deducing Formulae
+> **Question:** Methylpropane has the molecular formula Câ‚„Hâ‚â‚€. Write down:
 > 1. Its empirical formula
 > 2. Its structural formula
 > 3. Its skeletal formula
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Empirical Formula:**
-> >    * The molecular formula is C₄H₁₀. The ratio of C:H is 4:10, which simplifies by a factor of 2.
-> >    * Empirical Formula: **C₂H₅**
+> >    * The molecular formula is Câ‚„Hâ‚â‚€. The ratio of C:H is 4:10, which simplifies by a factor of 2.
+> >    * Empirical Formula: **Câ‚‚Hâ‚…**
 > >
 > > 2. **Structural Formula:**
-> >    * The central carbon is bonded to three CH₃ groups:
-> >    * Structural Formula: **(CH₃)₃CH** or CH₃CH(CH₃)CH₃
+> >    * The central carbon is bonded to three CHâ‚ƒ groups:
+> >    * Structural Formula: **(CHâ‚ƒ)â‚ƒCH** or CHâ‚ƒCH(CHâ‚ƒ)CHâ‚ƒ
 > >
 > > 3. **Skeletal Formula:**
 > >    * Draw three branches meeting at a central vertex:
 > >    * Skeletal Formula: /\\ (with a branch pointing downward from the central vertex)
 
 > [!EXAMPLE]
-> #### 📝 Example 2: Sigma and Pi Bonds in a Cyclic Hydrocarbon
+> #### ðŸ“ Example 2: Sigma and Pi Bonds in a Cyclic Hydrocarbon
 > **Question:** A cyclic hydrocarbon has the structure shown below:
 >
 > ![Benzene Structure](/images/lessons/benzene_structure.svg)
 >
-> Deduce the number of sigma (σ) and pi (π) bonds present in this molecule.
+> Deduce the number of sigma (Ïƒ) and pi (Ï€) bonds present in this molecule.
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Identify the molecular formula and atoms:**
-> >    * The structure shown is benzene, which has the formula C₆H₆.
+> >    * The structure shown is benzene, which has the formula Câ‚†Hâ‚†.
 > >    * There are 6 carbon atoms arranged in a hexagonal ring, and each carbon is bonded to 1 hydrogen atom.
 > >
-> > 2. **Count the single bonds (Sigma σ bonds):**
-> >    * Each carbon-hydrogen (C-H) bond is a single σ bond: **6 σ bonds**.
-> >    * The carbon ring consists of 6 C-C connections (three single and three double bonds). Each connection contains exactly one σ bond: **6 σ bonds**.
-> >    * Total σ bonds = 6 + 6 = **12**.
+> > 2. **Count the single bonds (Sigma Ïƒ bonds):**
+> >    * Each carbon-hydrogen (C-H) bond is a single Ïƒ bond: **6 Ïƒ bonds**.
+> >    * The carbon ring consists of 6 C-C connections (three single and three double bonds). Each connection contains exactly one Ïƒ bond: **6 Ïƒ bonds**.
+> >    * Total Ïƒ bonds = 6 + 6 = **12**.
 > >
-> > 3. **Count the double bonds (Pi π bonds):**
-> >    * The ring contains three double bonds. Each double bond consists of one σ bond and one π bond.
-> >    * Total π bonds = **3**.
+> > 3. **Count the double bonds (Pi Ï€ bonds):**
+> >    * The ring contains three double bonds. Each double bond consists of one Ïƒ bond and one Ï€ bond.
+> >    * Total Ï€ bonds = **3**.
 > >
-> > * Final Answer: **12 σ bonds and 3 π bonds**
+> > * Final Answer: **12 Ïƒ bonds and 3 Ï€ bonds**
 
 > [!EXAMPLE]
-> #### 📝 Example 3: Deducing Empirical Formula
-> **Question:** A compound has the molecular formula C₆H₁₂. Deduce its empirical formula.
+> #### ðŸ“ Example 3: Deducing Empirical Formula
+> **Question:** A compound has the molecular formula Câ‚†Hâ‚â‚‚. Deduce its empirical formula.
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Understand the definition of Empirical Formula:**
 > >    * An empirical formula represents the simplest whole-number ratio of atoms of each element in a molecule.
 > >
 > > 2. **Simplify the molecular ratio:**
-> >    * The molecular formula is C₆H₁₂. The ratio of carbon to hydrogen is 6:12.
+> >    * The molecular formula is Câ‚†Hâ‚â‚‚. The ratio of carbon to hydrogen is 6:12.
 > >    * Divide both numbers by their greatest common divisor (6) to find the simplest ratio: 1:2.
 > >
-> > * Final Answer: **CH₂**
+> > * Final Answer: **CHâ‚‚**
 
 > [!EXAMPLE]
-> #### 📝 Example 4: Homologous Series Characteristics
+> #### ðŸ“ Example 4: Homologous Series Characteristics
 > **Question:** State which of the following properties is **not** identical for members of a homologous series: chemical properties, general formula, physical properties, or the difference between successive members.
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Analyze the characteristics of a homologous series:**
 > >    * **Chemical properties:** Similar (due to having the same functional group).
 > >    * **General formula:** Identical (all members share the same algebraic formula).
-> >    * **Difference between successive members:** Identical (always differs by a CH₂ unit).
+> >    * **Difference between successive members:** Identical (always differs by a CHâ‚‚ unit).
 > >    * **Physical properties:** Not identical. Physical properties (like boiling point and density) show a trend or gradual change as the carbon chain length increases.
 > >
 > > * Final Answer: **Physical properties**
 
 > [!EXAMPLE]
-> #### 📝 Example 5: Identifying Functional Groups
+> #### ðŸ“ Example 5: Identifying Functional Groups
 > **Question:** Identify the functional group that is characterized by a carbon-carbon double bond (C=C).
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Analyze C=C double bonds in functional groups:**
 > >    * Organic compounds with a carbon-carbon double bond (C=C) belong to the **alkene** homologous series.
@@ -531,11 +531,11 @@ export const parts: LessonPart[] = [
 > > * Final Answer: **Alkene**
 
 > [!EXAMPLE]
-> #### 📝 Example 6: Comparing and Explaining Boiling Points of Isomers (Branching)
-> **Question:** Pentane (CH₃CH₂CH₂CH₂CH₃) and 2,2-dimethylpropane ((CH₃)₄C) are isomers with the molecular formula C₅H₁₂. Explain, in terms of structure and intermolecular forces, why pentane has a higher boiling point than 2,2-dimethylpropane.
+> #### ðŸ“ Example 6: Comparing and Explaining Boiling Points of Isomers (Branching)
+> **Question:** Pentane (CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚‚CHâ‚ƒ) and 2,2-dimethylpropane ((CHâ‚ƒ)â‚„C) are isomers with the molecular formula Câ‚…Hâ‚â‚‚. Explain, in terms of structure and intermolecular forces, why pentane has a higher boiling point than 2,2-dimethylpropane.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Compare structure:**
 > >    * Pentane is a straight-chain molecule, whereas 2,2-dimethylpropane is highly branched and more spherical.
@@ -545,14 +545,14 @@ export const parts: LessonPart[] = [
 > >    * Therefore, pentane has stronger London (dispersion) forces between its molecules, requiring more thermal energy to overcome than the weaker London forces in 2,2-dimethylpropane.
 
 > [!EXAMPLE]
-> #### 📝 Example 7: Translating a Condensed Formula containing Functional Groups into a Skeletal Formula
+> #### ðŸ“ Example 7: Translating a Condensed Formula containing Functional Groups into a Skeletal Formula
 > **Question:** A student is given the following condensed structural formula:
-> CH₃CH(OH)CH₂CH₂COOH
+> CHâ‚ƒCH(OH)CHâ‚‚CHâ‚‚COOH
 > 1. Identify all functional groups present.
 > 2. Describe how to draw the skeletal formula for this compound.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the Functional Groups:**
 > >    * Alcohol (-OH hydroxyl group) on carbon-4.
@@ -563,13 +563,13 @@ export const parts: LessonPart[] = [
 > >    * At carbon-4, add a single bond to an oxygen atom of a hydroxyl group (-OH).
 
 > [!EXAMPLE]
-> #### 📝 Example 8: Identifying Homologous Series and Simpler Members
+> #### ðŸ“ Example 8: Identifying Homologous Series and Simpler Members
 > **Question:** A compound has the structural formula $\text{CH}_3\text{CH}_2\text{CHO}$.
 > 1. Identify the homologous series to which this compound belongs.
 > 2. Write the structural formulae of the two simpler members in this same homologous series.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the homologous series:**
 > >    * The compound contains the $-\text{CHO}$ functional group (carbonyl group at the end of the chain). This defines the **aldehyde** homologous series.
@@ -581,9 +581,9 @@ export const parts: LessonPart[] = [
 
 `,
     keyPoints: [
-      'Saturated hydrocarbons contain only single sigma (σ) bonds, whereas unsaturated hydrocarbons contain one or more pi (π) bonds.',
+      'Saturated hydrocarbons contain only single sigma (Ïƒ) bonds, whereas unsaturated hydrocarbons contain one or more pi (Ï€) bonds.',
       'Boiling points of hydrocarbons increase with longer carbon chains (due to stronger London dispersion forces) and decrease with increased branching (due to reduced surface contact area).',
-      'A homologous series is a family of compounds with the same general formula and functional group, whose successive members differ by a -CH₂- unit.'
+      'A homologous series is a family of compounds with the same general formula and functional group, whose successive members differ by a -CHâ‚‚- unit.'
     ]
   },
   {
@@ -592,7 +592,7 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🏷️ IUPAC Systematic Nomenclature
+> ### ðŸ·ï¸ IUPAC Systematic Nomenclature
 > **Nomenclature** is a standardized set of rules that outlines how different organic compounds should be named and how their chemical formulas are represented.
 > 
 > * **Prefix (substituents):** Placed before the root chain name to show the presence of halogen atoms or alkyl side-chains (e.g., *chloro-*, *methyl-*, *ethyl-*).
@@ -601,7 +601,7 @@ export const parts: LessonPart[] = [
 > * **Suffix:** A set of letters written at the end of the name to identify the primary functional group.
 
 > [!IMPORTANT]
-> ### 📝 IUPAC Rules for Nomenclature
+> ### ðŸ“ IUPAC Rules for Nomenclature
 > Follow these steps in order to name any organic compound systematically:
 >
 > 1. **Find the longest continuous carbon chain containing the functional group:** This determines the **Root** (stem) name.
@@ -619,21 +619,21 @@ export const parts: LessonPart[] = [
 >    $$\\\\text{[Locant] + [Prefix] + [Root] + [Locant] + [Suffix]}$$
 
 > [!EXAMPLE]
-> #### 📝 Example 1: Naming a Branched Alkane
+> #### ðŸ“ Example 1: Naming a Branched Alkane
 > **Question:** Give the systematic IUPAC name for the following compound:
-> CH₃-C(CH₃)₂-CH₂-CH₃
+> CHâ‚ƒ-C(CHâ‚ƒ)â‚‚-CHâ‚‚-CHâ‚ƒ
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Find the longest carbon chain:**
 > >    * The longest continuous carbon chain has 4 carbon atoms. The root is **but-** and since it is an alkane, the name ends in **-ane** (butane).
 > >
 > > 2. **Identify side chains:**
-> >    * There are two methyl (-CH₃) side chains attached to the same carbon atom.
+> >    * There are two methyl (-CHâ‚ƒ) side chains attached to the same carbon atom.
 > >
 > > 3. **Number the chain:**
-> >    * Numbering from the left gives the side chains position 2: **C1(H₃)-C2(CH₃)₂-C3(H₂)-C4(H₃)**.
+> >    * Numbering from the left gives the side chains position 2: **C1(Hâ‚ƒ)-C2(CHâ‚ƒ)â‚‚-C3(Hâ‚‚)-C4(Hâ‚ƒ)**.
 > >    * Numbering from the right would give position 3.
 > >    * Therefore, we choose position 2.
 > >
@@ -645,19 +645,19 @@ export const parts: LessonPart[] = [
 > * Final Answer: **2,2-dimethylbutane**
 
 > [!EXAMPLE]
-> #### 📝 Example 2: Naming a Multi-substituted Branched Alkane
+> #### ðŸ“ Example 2: Naming a Multi-substituted Branched Alkane
 > **Question:** Deduce the IUPAC name of the compound shown in the skeletal formula below:
 >
 > ![Skeletal Octane](/images/lessons/skeletal_octane.svg)
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Find the longest continuous carbon chain:**
 > >    * Tracing from the ethyl group at the bottom-left to the ethyl group at the bottom-right gives the longest continuous chain of **8 carbon atoms** (root: **octane**).
 > >
 > > 2. **Identify the side chains:**
-> >    * There are three methyl (–CH₃) groups acting as branches on the main chain.
+> >    * There are three methyl (â€“CHâ‚ƒ) groups acting as branches on the main chain.
 > >
 > > 3. **Number the chain to give the lowest possible locants:**
 > >    * Numbering from the left (bottom-left ethyl as C1, C2) gives methyl positions at: **3, 5, 6**
@@ -672,22 +672,22 @@ export const parts: LessonPart[] = [
 > * Final Answer: **3,4,6-trimethyloctane**
 
 > [!EXAMPLE]
-> #### 📝 Example 3: IUPAC Name from Condensed Structural Formula
+> #### ðŸ“ Example 3: IUPAC Name from Condensed Structural Formula
 > **Question:** Deduce the correct IUPAC name for the compound with the following condensed formula:
-> $$(CH₃)₂CHCH(Cl)CH(CH₂CH₃)₂$$
+> $$(CHâ‚ƒ)â‚‚CHCH(Cl)CH(CHâ‚‚CHâ‚ƒ)â‚‚$$
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Expand the condensed formula to find the longest chain:**
-> >    * The right end has a CH group bonded to two ethyl groups: –CH(CH₂CH₃)₂.
-> >    * The left end has a CH group bonded to two methyl groups: (CH₃)₂CH–.
+> >    * The right end has a CH group bonded to two ethyl groups: â€“CH(CHâ‚‚CHâ‚ƒ)â‚‚.
+> >    * The left end has a CH group bonded to two methyl groups: (CHâ‚ƒ)â‚‚CHâ€“.
 > >    * Tracing the longest chain from one of the ethyl groups on the right through the CH and CH(Cl) groups to one of the methyl groups on the left gives a chain of **6 carbon atoms** (root: **hexane**).
 > >
 > > 2. **Identify the substituents on the chain:**
-> >    * A methyl group (–CH₃)
-> >    * A chlorine atom (–Cl)
-> >    * An ethyl group (–CH₂CH₃)
+> >    * A methyl group (â€“CHâ‚ƒ)
+> >    * A chlorine atom (â€“Cl)
+> >    * An ethyl group (â€“CHâ‚‚CHâ‚ƒ)
 > >
 > > 3. **Number the chain to obtain the lowest locants:**
 > >    * Numbering from the left (starting near the isopropyl group):
@@ -709,13 +709,13 @@ export const parts: LessonPart[] = [
 > * Final Answer: **3-chloro-4-ethyl-2-methylhexane**
 
 > [!EXAMPLE]
-> #### 📝 Example 4: Naming Halogenoalkanes with Alphabetical Priority
+> #### ðŸ“ Example 4: Naming Halogenoalkanes with Alphabetical Priority
 > **Question:** Deduce the correct IUPAC name for the following halogenoalkane:
 >
 > ![Halogenoalkane Structure](/images/lessons/halogenoalkane_structure.svg)
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Find the longest carbon chain:**
 > >    * The main chain contains **5 carbon atoms** (root: **pentane**).
@@ -735,15 +735,15 @@ export const parts: LessonPart[] = [
 > * Final Answer: **2-bromo-4-chloropentane**
 
 > [!EXAMPLE]
-> #### 📝 Example 5: IUPAC Name of Neopentane
+> #### ðŸ“ Example 5: IUPAC Name of Neopentane
 > **Question:** Deduce the correct IUPAC name for the compound with the formula:
-> $$(CH₃)₄C$$
+> $$(CHâ‚ƒ)â‚„C$$
 >
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > >
 > > 1. **Draw or visualize the molecular structure:**
-> >    * The central carbon atom is bonded to 4 methyl (–CH₃) groups.
+> >    * The central carbon atom is bonded to 4 methyl (â€“CHâ‚ƒ) groups.
 > > 2. **Find the longest carbon chain:**
 > >    * Tracing through the central carbon connecting any two methyl groups yields a chain of **3 carbon atoms** (root: **propane**).
 > > 3. **Identify the substituents and their positions:**
@@ -755,12 +755,12 @@ export const parts: LessonPart[] = [
 > * Final Answer: **2,2-dimethylpropane**
 
 > [!EXAMPLE]
-> #### 📝 Example 6: Naming Compounds with Multiple Feature Priorities (Alkene with Branching)
+> #### ðŸ“ Example 6: Naming Compounds with Multiple Feature Priorities (Alkene with Branching)
 > **Question:** Give the systematic IUPAC name for the following compound:
-> CH₃CH(CH₃)CH=CHCH₃
+> CHâ‚ƒCH(CHâ‚ƒ)CH=CHCHâ‚ƒ
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the longest carbon chain containing the functional group:**
 > >    * The longest continuous chain containing the C=C double bond has 5 carbon atoms. The root is **pent-** and the suffix is **-ene**.
@@ -770,35 +770,35 @@ export const parts: LessonPart[] = [
 > >    * Numbering from right to left: the C=C double bond starts at carbon-2.
 > >    * We choose right-to-left numbering to give the double bond the lower number. The parent alkene is **pent-2-ene**.
 > > 3. **Identify and locate the branch:**
-> >    * With right-to-left numbering, the methyl (–CH₃) branch is attached to carbon-4.
+> >    * With right-to-left numbering, the methyl (â€“CHâ‚ƒ) branch is attached to carbon-4.
 > > 4. **Assemble the name:**
 > >    * Combine the locant, branch name, root, and suffix: **4-methylpent-2-ene** (not 2-methylpent-3-ene).
 
 > [!EXAMPLE]
-> #### 📝 Example 7: Drawing Skeletal Structure from an IUPAC Name
+> #### ðŸ“ Example 7: Drawing Skeletal Structure from an IUPAC Name
 > **Question:** Draw the skeletal formula for the compound **3-methylbutan-1-ol**.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Decode the root and primary functional group suffix:**
 > >    * The root **butan-** indicates a main chain of 4 carbon atoms.
-> >    * The suffix **-1-ol** indicates an alcohol group (–OH) attached to carbon-1.
+> >    * The suffix **-1-ol** indicates an alcohol group (â€“OH) attached to carbon-1.
 > > 2. **Decode the prefix branches:**
-> >    * **3-methyl** indicates a methyl group (–CH₃) attached to carbon-3.
+> >    * **3-methyl** indicates a methyl group (â€“CHâ‚ƒ) attached to carbon-3.
 > > 3. **Describe the skeletal drawing steps:**
 > >    * Draw a 4-carbon zig-zag chain.
-> >    * Add a single bond pointing to an –OH group on carbon-1.
+> >    * Add a single bond pointing to an â€“OH group on carbon-1.
 > >    * Draw a single line representing a methyl branch pointing outward from carbon-3.
 
 > [!EXAMPLE]
-> #### 📝 Example 8: Deducing IUPAC Names from Structural Formulae
+> #### ðŸ“ Example 8: Deducing IUPAC Names from Structural Formulae
 > **Question:** Deduce the systematic IUPAC names for the following compounds:
 > 1. $\text{CH}_2(\text{Br})-\text{CH}(\text{Br})-\text{CH}_3$
 > 2. $\text{CH}_2(\text{Br})-\text{CH}(\text{OH})-\text{CH}_3$
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Deduce name of compound 1:**
 > >    * Longest carbon chain is 3 carbon atoms (root: propane).
@@ -813,13 +813,13 @@ export const parts: LessonPart[] = [
 > >    * Systematic name: **1-bromopropan-2-ol** (not 3-bromopropan-2-ol).
 
 > [!EXAMPLE]
-> #### 📝 Example 9: Writing Structural Formulae from IUPAC Names
+> #### ðŸ“ Example 9: Writing Structural Formulae from IUPAC Names
 > **Question:** Write the structural formulae for the following compounds:
 > 1. **2,2-dimethylpentane**
 > 2. **2,3-dimethylbutan-2-ol**
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Write formula of 2,2-dimethylpentane:**
 > >    * The root 'pentane' indicates 5 carbon atoms in the main chain.
@@ -845,93 +845,93 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🪞 What is Isomerism?
+> ### ðŸªž What is Isomerism?
 > **Isomers** are compounds with the same molecular formula but different structural arrangements of atoms.
 > 
 > * **Structural Isomers:** Compounds with the same molecular formula but different structural formulas.
 
 > [!BOX]
-> ### 📋 Types of Structural Isomerism
+> ### ðŸ“‹ Types of Structural Isomerism
 > Structural isomerism can be divided into three categories:
 > 
 > 1. **Chain Isomerism:** The carbon skeleton is arranged differently (e.g., straight-chain vs. branched).
->    * *Example:* Butane (CH₃CH₂CH₂CH₃) and Methylpropane (CH₃CH(CH₃)CH₃) both have the formula C₄H₁₀
+>    * *Example:* Butane (CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚ƒ) and Methylpropane (CHâ‚ƒCH(CHâ‚ƒ)CHâ‚ƒ) both have the formula Câ‚„Hâ‚â‚€
 > 2. **Position Isomerism:** The functional group is attached to different carbon atoms along the same chain.
->    * *Example:* 1-chloropropane (CH₃CH₂CH₂Cl) and 2-chloropropane (CH₃CH(Cl)CH₃)
+>    * *Example:* 1-chloropropane (CHâ‚ƒCHâ‚‚CHâ‚‚Cl) and 2-chloropropane (CHâ‚ƒCH(Cl)CHâ‚ƒ)
 > 3. **Functional Group Isomerism:** The atoms are rearranged to form completely different functional groups.
->    * *Example:* Alkenes and Cycloalkanes (e.g., Propene C₃H₆ and Cyclopropane C₃H₆)
->    * *Example:* Alcohols and Ethers (e.g., Ethanol CH₃CH₂OH and Dimethyl ether CH₃OCH₃)
+>    * *Example:* Alkenes and Cycloalkanes (e.g., Propene Câ‚ƒHâ‚† and Cyclopropane Câ‚ƒHâ‚†)
+>    * *Example:* Alcohols and Ethers (e.g., Ethanol CHâ‚ƒCHâ‚‚OH and Dimethyl ether CHâ‚ƒOCHâ‚ƒ)
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 1: Identifying Isomers
-> **Question:** Draw and name the two structural isomers of C₄H₉Cl that contain a straight carbon chain.
+> #### ðŸ“ Worked Example 1: Identifying Isomers
+> **Question:** Draw and name the two structural isomers of Câ‚„Hâ‚‰Cl that contain a straight carbon chain.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze the request:**
 > >    * The carbon chain must be straight (4 carbons in a row: butane).
 > >    * The halogen (-Cl) can be placed at different positions (position isomerism).
 > > 
 > > 2. **Isomer 1:**
-> >    * Place -Cl on the first carbon atom: CH₃CH₂CH₂CH₂Cl
+> >    * Place -Cl on the first carbon atom: CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚‚Cl
 > >    * Name: **1-chlorobutane**
 > > 
 > > 3. **Isomer 2:**
-> >    * Place -Cl on the second carbon atom: CH₃CH₂CH(Cl)CH₃
+> >    * Place -Cl on the second carbon atom: CHâ‚ƒCHâ‚‚CH(Cl)CHâ‚ƒ
 > >    * Name: **2-chlorobutane**
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Functional Group Isomers of Alkenes and Cycloalkanes
-> **Question:** An organic compound has the molecular formula C₄H₈. Identify and draw one alkene isomer and one cycloalkane isomer, and explain what type of structural isomerism they exhibit.
+> #### ðŸ“ Worked Example 2: Functional Group Isomers of Alkenes and Cycloalkanes
+> **Question:** An organic compound has the molecular formula Câ‚„Hâ‚ˆ. Identify and draw one alkene isomer and one cycloalkane isomer, and explain what type of structural isomerism they exhibit.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the molecular formula type:**
-> >    * The formula C₄H₈ fits the general formula CₙH₂ₙ.
+> >    * The formula Câ‚„Hâ‚ˆ fits the general formula Câ‚™Hâ‚‚â‚™.
 > >    * This general formula is characteristic of both alkenes (open-chain with one double bond) and cycloalkanes (saturated cyclic structures).
 > > 
 > > 2. **Draw and name the alkene isomer:**
-> >    * A straight-chain of 4 carbons with a C=C double bond at the start: CH₂=CHCH₂CH₃
+> >    * A straight-chain of 4 carbons with a C=C double bond at the start: CHâ‚‚=CHCHâ‚‚CHâ‚ƒ
 > >    * Systematic name: **but-1-ene**
 > > 
 > > 3. **Draw and name the cycloalkane isomer:**
-> >    * A 4-membered carbon ring (arranged as a square): a cyclic structure of four CH₂ groups.
+> >    * A 4-membered carbon ring (arranged as a square): a cyclic structure of four CHâ‚‚ groups.
 > >    * Systematic name: **cyclobutane**
 > > 
 > > 4. **Classify the type of structural isomerism:**
-> >    * Both compounds have the same molecular formula (C₄H₈) but belong to different homologous series and contain different functional groups (alkene double bond vs. cycloalkane ring).
+> >    * Both compounds have the same molecular formula (Câ‚„Hâ‚ˆ) but belong to different homologous series and contain different functional groups (alkene double bond vs. cycloalkane ring).
 > >    * Therefore, they exhibit **functional group isomerism**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 3: Chain Isomers of C₅H₁₂
-> **Question:** Pentane (C₅H₁₂) has three structural isomers. Draw the structural formulas and state the systematic IUPAC names for the two branched isomers of pentane.
+> #### ðŸ“ Worked Example 3: Chain Isomers of Câ‚…Hâ‚â‚‚
+> **Question:** Pentane (Câ‚…Hâ‚â‚‚) has three structural isomers. Draw the structural formulas and state the systematic IUPAC names for the two branched isomers of pentane.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Understand Pentane's isomers:**
-> >    * Pentane (C₅H₁₂) is a saturated alkane.
-> >    * The straight-chain isomer is pentane (CH₃CH₂CH₂CH₂CH₃). The remaining two isomers must contain carbon branching.
+> >    * Pentane (Câ‚…Hâ‚â‚‚) is a saturated alkane.
+> >    * The straight-chain isomer is pentane (CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚‚CHâ‚ƒ). The remaining two isomers must contain carbon branching.
 > > 
 > > 2. **Deduce Isomer 1 (Single branch):**
-> >    * Take a methyl group branch and attach it to the second carbon of a 4-carbon chain: CH₃CH(CH₃)CH₂CH₃
+> >    * Take a methyl group branch and attach it to the second carbon of a 4-carbon chain: CHâ‚ƒCH(CHâ‚ƒ)CHâ‚‚CHâ‚ƒ
 > >    * Systematic IUPAC name: **2-methylbutane**
 > > 
 > > 3. **Deduce Isomer 2 (Double branch):**
-> >    * Attach two methyl branches to the central carbon of a 3-carbon chain: CH₃C(CH₃)₂CH₃
+> >    * Attach two methyl branches to the central carbon of a 3-carbon chain: CHâ‚ƒC(CHâ‚ƒ)â‚‚CHâ‚ƒ
 > >    * Systematic IUPAC name: **2,2-dimethylpropane**
 > > 
 > > 4. **Identify the type of isomerism:**
 > >    * Since these isomers differ only in the arrangement of the carbon skeleton (chain structure), they represent **chain isomerism**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Position Isomers of Alcohols
-> **Question:** An alcohol has the molecular formula C₄H₁₀O. State the IUPAC names and draw the structural formulas of two position isomers with a straight carbon chain.
+> #### ðŸ“ Worked Example 4: Position Isomers of Alcohols
+> **Question:** An alcohol has the molecular formula Câ‚„Hâ‚â‚€O. State the IUPAC names and draw the structural formulas of two position isomers with a straight carbon chain.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze the structural requirements:**
 > >    * The carbon chain must be straight (4 carbons in a row).
@@ -939,77 +939,77 @@ export const parts: LessonPart[] = [
 > >    * The isomers must differ only in the position of this functional group along the chain.
 > > 
 > > 2. **Isomer 1 (Hydroxyl at Carbon-1):**
-> >    * Place the -OH group at the end of the chain: CH₃CH₂CH₂CH₂OH
+> >    * Place the -OH group at the end of the chain: CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚‚OH
 > >    * Systematic IUPAC name: **butan-1-ol**
 > > 
 > > 3. **Isomer 2 (Hydroxyl at Carbon-2):**
-> >    * Place the -OH group on the second carbon atom: CH₃CH(OH)CH₂CH₃
+> >    * Place the -OH group on the second carbon atom: CHâ‚ƒCH(OH)CHâ‚‚CHâ‚ƒ
 > >    * Systematic IUPAC name: **butan-2-ol**
 > > 
 > > 4. **Verify classification:**
 > >    * Both share the same carbon backbone and functional group, differing only in the position index of the -OH group, which defines **position isomerism**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Aldehydes and Ketones as Isomers of C₃H₆O
-> **Question:** The molecular formula C₃H₆O represents two structural isomers that belong to different homologous series (aldehydes and ketones). Write down the structural formulas and systematic IUPAC names for both isomers.
+> #### ðŸ“ Worked Example 5: Aldehydes and Ketones as Isomers of Câ‚ƒHâ‚†O
+> **Question:** The molecular formula Câ‚ƒHâ‚†O represents two structural isomers that belong to different homologous series (aldehydes and ketones). Write down the structural formulas and systematic IUPAC names for both isomers.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Deduce the aldehyde isomer:**
 > >    * Aldehydes contain the carbonyl functional group (-CHO) at the end of the chain.
-> >    * For 3 carbon atoms, the structure is: CH₃CH₂CHO
+> >    * For 3 carbon atoms, the structure is: CHâ‚ƒCHâ‚‚CHO
 > >    * Systematic IUPAC name: **propanal**
 > > 
 > > 2. **Deduce the ketone isomer:**
 > >    * Ketones contain the carbonyl group (C=O) positioned between two carbon atoms (not at the terminal position).
-> >    * For 3 carbon atoms, the structure is: CH₃COCH₃
+> >    * For 3 carbon atoms, the structure is: CHâ‚ƒCOCHâ‚ƒ
 > >    * Systematic IUPAC name: **propanone**
 > > 
 > > 3. **Confirm the relationship:**
-> >    * With the same molecular formula (C₃H₆O) but completely different functional groups, these compounds represent **functional group isomerism**.
+> >    * With the same molecular formula (Câ‚ƒHâ‚†O) but completely different functional groups, these compounds represent **functional group isomerism**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 6: Functional Group Isomers of Carboxylic Acids and Esters
-> **Question:** An organic compound has the molecular formula C₃H₆O₂. Draw the structural formulas and state the systematic IUPAC names for two functional group isomers representing different homologous series.
+> #### ðŸ“ Worked Example 6: Functional Group Isomers of Carboxylic Acids and Esters
+> **Question:** An organic compound has the molecular formula Câ‚ƒHâ‚†Oâ‚‚. Draw the structural formulas and state the systematic IUPAC names for two functional group isomers representing different homologous series.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze the molecular formula:**
-> >    * The formula fits CₙH₂ₙO₂, which represents either a carboxylic acid or an ester.
+> >    * The formula fits Câ‚™Hâ‚‚â‚™Oâ‚‚, which represents either a carboxylic acid or an ester.
 > > 2. **Deduce the carboxylic acid isomer:**
-> >    * A 3-carbon chain containing the –COOH group: CH₃CH₂COOH
+> >    * A 3-carbon chain containing the â€“COOH group: CHâ‚ƒCHâ‚‚COOH
 > >    * Systematic IUPAC name: **propanoic acid**
 > > 3. **Deduce the ester isomer:**
-> >    * Re-arrange the atoms to form an ester group (–COO–). For example: CH₃COOCH₃
-> >    * Systematic IUPAC name: **methyl ethanoate** (another option is ethyl methanoate, HCOOCH₂CH₃)
+> >    * Re-arrange the atoms to form an ester group (â€“COOâ€“). For example: CHâ‚ƒCOOCHâ‚ƒ
+> >    * Systematic IUPAC name: **methyl ethanoate** (another option is ethyl methanoate, HCOOCHâ‚‚CHâ‚ƒ)
 > > 4. **Classify the isomerism:**
 > >    * Since they contain different functional groups but the same molecular formula, they represent **functional group isomerism**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 7: Systematic Identification of Combined Isomers (C₄H₉Br)
-> **Question:** Deduce the total number of structural isomers for the molecular formula C₄H₉Br, draw their structural formulas, and state their systematic IUPAC names.
+> #### ðŸ“ Worked Example 7: Systematic Identification of Combined Isomers (Câ‚„Hâ‚‰Br)
+> **Question:** Deduce the total number of structural isomers for the molecular formula Câ‚„Hâ‚‰Br, draw their structural formulas, and state their systematic IUPAC names.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Start with a straight carbon chain (butane backbone - 4 carbons):**
-> >    * Place the bromine atom on carbon-1: CH₃CH₂CH₂CH₂Br (**1-bromobutane**).
-> >    * Place the bromine atom on carbon-2: CH₃CH₂CH(Br)CH₃ (**2-bromobutane**).
+> >    * Place the bromine atom on carbon-1: CHâ‚ƒCHâ‚‚CHâ‚‚CHâ‚‚Br (**1-bromobutane**).
+> >    * Place the bromine atom on carbon-2: CHâ‚ƒCHâ‚‚CH(Br)CHâ‚ƒ (**2-bromobutane**).
 > 2. **Next, branch the carbon skeleton (propane backbone with a methyl group - 3 carbons):**
->    * Backbone structure: CH₃CH(CH₃)CH₂–
->    * Place the bromine atom on carbon-1: CH₃CH(CH₃)CH₂Br (**1-bromo-2-methylpropane**).
->    * Place the bromine atom on the central carbon-2: CH₃C(Br)(CH₃)CH₃ (**2-bromo-2-methylpropane**).
+>    * Backbone structure: CHâ‚ƒCH(CHâ‚ƒ)CHâ‚‚â€“
+>    * Place the bromine atom on carbon-1: CHâ‚ƒCH(CHâ‚ƒ)CHâ‚‚Br (**1-bromo-2-methylpropane**).
+>    * Place the bromine atom on the central carbon-2: CHâ‚ƒC(Br)(CHâ‚ƒ)CHâ‚ƒ (**2-bromo-2-methylpropane**).
 > 3. **Conclusion:**
 >    * There are a total of **4** structural isomers.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 8: Drawing All Isomers for a Dihaloalkane ($C_4H_8Cl_2$)
+> #### ðŸ“ Worked Example 8: Drawing All Isomers for a Dihaloalkane ($C_4H_8Cl_2$)
 > **Question:** Draw the structural formulas and state the systematic IUPAC names for all structural isomers with the molecular formula $C_4H_8Cl_2$.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze straight-chain butane backbone ($C-C-C-C$):**
 > >    * Both Cl on C1: $\text{CHCl}_2\text{CH}_2\text{CH}_2\text{CH}_3$ (**1,1-dichlorobutane**)
@@ -1028,11 +1028,11 @@ export const parts: LessonPart[] = [
 > >    * There are a total of **9** structural isomers.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 9: Drawing Cycloalkane Isomers ($C_5H_{10}$)
+> #### ðŸ“ Worked Example 9: Drawing Cycloalkane Isomers ($C_5H_{10}$)
 > **Question:** Cycloalkanes are functional group isomers of alkenes. Draw the structural formulas and state the systematic IUPAC names for all cycloalkane isomers with the molecular formula $C_5H_{10}$.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **5-membered ring (cyclopentane skeleton):**
 > >    * A simple 5-membered carbon ring: **cyclopentane**
@@ -1060,7 +1060,7 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
-> ### ⚡ Covalent Bond Fission & Reaction Arrows
+> ### âš¡ Covalent Bond Fission & Reaction Arrows
 > Covalent bond breaking (fission) can occur in one of two ways depending on how the shared pair of electrons is distributed:
 > 
 > 1. **Heterolytic Fission:**
@@ -1074,13 +1074,13 @@ export const parts: LessonPart[] = [
 >    * The breaking of a covalent bond where **each atom gets one electron** (the electron pair splits evenly).
 >    * **Reaction Arrow:** Represented by two **half-headed (fishhook) curved arrows** ($\\\\rightharpoonup$), each showing the movement of a single electron.
 >    * **Conditions:** Requires U.V. light or sunlight to provide the energy to break the bond.
->    * **Occurrence:** Usually happens when two atoms with identical or very similar electronegativity are bonded together (e.g. diatomic halogens like Cl₂&nbsp;→&nbsp;2Cl•).
+>    * **Occurrence:** Usually happens when two atoms with identical or very similar electronegativity are bonded together (e.g. diatomic halogens like Clâ‚‚&nbsp;â†’&nbsp;2Clâ€¢).
 >    * This produces highly reactive neutral species called **free radicals**.
 >
 >    ${svgToken(homolyticSvg)}
 
 > [!BOX]
-> ### 🧲 Types of Reactive Species
+> ### ðŸ§² Types of Reactive Species
 > 1. **Free Radical:**
 >    * A highly reactive species that contains an **unpaired valence electron** (represented by a single dot, e.g. $\\\\text{Cl}\\\\bullet$).
 >    * Formed via homolytic fission.
@@ -1090,33 +1090,33 @@ export const parts: LessonPart[] = [
 >    * An electron-rich species (electron-pair donor) that attacks **electron-deficient** atoms, such as a polar positive carbon atom (e.g. $\\\\text{OH}^-$).
 
 > [!TIP]
-> ### 🔄 Classification of Organic Reactions
+> ### ðŸ”„ Classification of Organic Reactions
 > Organic chemical reactions can be categorized into several fundamental types:
 > 
 > 1. **Addition:** A reaction in which two or more substances combine to form one single new compound.
->    * *Example:* C₂H₄ + Br₂ → C₂H₄Br₂ (electrophilic addition / halogenation of an alkene containing a π bond).
+>    * *Example:* Câ‚‚Hâ‚„ + Brâ‚‚ â†’ Câ‚‚Hâ‚„Brâ‚‚ (electrophilic addition / halogenation of an alkene containing a Ï€ bond).
 > 2. **Substitution:** A reaction in which an atom or group of atoms is replaced by another atom or group.
->    * *Example:* C₂H₆ + Br₂ → C₂H₅Br + HBr (free-radical substitution / halogenation of a saturated alkane with no π bonds).
+>    * *Example:* Câ‚‚Hâ‚† + Brâ‚‚ â†’ Câ‚‚Hâ‚…Br + HBr (free-radical substitution / halogenation of a saturated alkane with no Ï€ bonds).
 > 3. **Oxidation:** A reaction where a species gains oxygen, or loses hydrogen or electrons.
 >    * *Examples:* 
->      * CH₄ + 2O₂ → CO₂ + 2H₂O (combustion of alkanes/alkenes)
->      * C₂H₅OH + [O] → CH₃CHO + H₂O (oxidation of alcohol to aldehyde)
+>      * CHâ‚„ + 2Oâ‚‚ â†’ COâ‚‚ + 2Hâ‚‚O (combustion of alkanes/alkenes)
+>      * Câ‚‚Hâ‚…OH + [O] â†’ CHâ‚ƒCHO + Hâ‚‚O (oxidation of alcohol to aldehyde)
 > 4. **Reduction:** A reaction where a species loses oxygen, or gains hydrogen or electrons.
->    * *Example:* C₂H₄ + H₂ → C₂H₆ (hydrogenation of alkene / addition reaction).
+>    * *Example:* Câ‚‚Hâ‚„ + Hâ‚‚ â†’ Câ‚‚Hâ‚† (hydrogenation of alkene / addition reaction).
 > 5. **Addition Polymerization:** A reaction where a large number of small unsaturated monomer molecules react together to form one very large polymer molecule.
->    * *Example:* nC₂H₄ → —[C₂H₄]ₙ— (polymerization of ethene to poly(ethene)).
+>    * *Example:* nCâ‚‚Hâ‚„ â†’ â€”[Câ‚‚Hâ‚„]â‚™â€” (polymerization of ethene to poly(ethene)).
 
 > [!BOX]
-> ### ⚙️ Industrial Reaction Types: Reforming & Cracking
+> ### âš™ï¸ Industrial Reaction Types: Reforming & Cracking
 > Alkanes undergo key industrial reactions to improve fuel efficiency and supply:
 > 
 > * **Reforming:** Conversion of straight-chain alkanes (during petroleum refining) by a catalytic reaction (using a platinum catalyst) to produce smoothly burning fuels (raising octane rating, preventing pre-ignition and engine knocking):
 >    * Produces **branched-chain alkanes**.
->    * Produces **cycloalkanes + H₂** or **cycloalkenes + H₂** (dehydrogenation) such as benzene and methylbenzene.
+>    * Produces **cycloalkanes + Hâ‚‚** or **cycloalkenes + Hâ‚‚** (dehydrogenation) such as benzene and methylbenzene.
 > 
 > * **Cracking:** The breaking down of longer-chain, less useful alkanes into shorter, more valuable hydrocarbons.
->    * **Thermal Cracking:** Conducted at high temperatures (400°C to 900°C) and high pressure (up to 7000 kPa). It mainly produces shorter-chain alkanes and alkenes.
->    * **Catalytic Cracking:** Conducted at high temperatures (450°C) and low pressure in the presence of a zeolite catalyst (containing Al, Si, and O). It mainly produces shorter-chain products, including branched alkanes, cycloalkanes, and aromatic compounds.
+>    * **Thermal Cracking:** Conducted at high temperatures (400Â°C to 900Â°C) and high pressure (up to 7000 kPa). It mainly produces shorter-chain alkanes and alkenes.
+>    * **Catalytic Cracking:** Conducted at high temperatures (450Â°C) and low pressure in the presence of a zeolite catalyst (containing Al, Si, and O). It mainly produces shorter-chain products, including branched alkanes, cycloalkanes, and aromatic compounds.
 >    * *Safety Note:* Oxygen must be strictly excluded during steam/thermal cracking to prevent combustion.
 > 
 > **Economic Importance of Cracking & Reforming:**
@@ -1127,83 +1127,83 @@ export const parts: LessonPart[] = [
 
 
 > [!EXAMPLE]
-> #### 📝 Example 1: Classifying Bond Fission
+> #### ðŸ“ Example 1: Classifying Bond Fission
 > **Question:** Identify the type of fission that occurs in the following reaction and explain your answer:
-> H₃C-Cl → H₃C⁺ + Cl⁻
+> Hâ‚ƒC-Cl â†’ Hâ‚ƒCâº + Clâ»
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Observe the products:**
-> >    * The products are ions: a methyl carbocation (H₃C⁺) and a chloride anion (Cl⁻).
+> >    * The products are ions: a methyl carbocation (Hâ‚ƒCâº) and a chloride anion (Clâ»).
 > > 2. **Analyze the electron transfer:**
 > >    * The chlorine atom is more electronegative than carbon, so it takes both bonding electrons, leaving carbon electron-deficient.
 > > 3. **Classify:**
 > >    * Unequal splitting of a bond forming ions is **heterolytic fission**.
 
 > [!EXAMPLE]
-> #### 📝 Example 2: Reaction Classification and Species Identification
+> #### ðŸ“ Example 2: Reaction Classification and Species Identification
 > **Question:** Bromoethane reacts with hot aqueous potassium hydroxide to produce ethanol and potassium bromide:
-> CH₃CH₂Br + KOH → CH₃CH₂OH + KBr
+> CHâ‚ƒCHâ‚‚Br + KOH â†’ CHâ‚ƒCHâ‚‚OH + KBr
 > 1. Classify this organic reaction type.
 > 2. Identify the active species attacking bromoethane, and classify it as an electrophile or a nucleophile.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Classify the reaction type:**
 > >    * The bromine atom in bromoethane is replaced by the hydroxyl (-OH) group.
 > >    * A reaction where one atom or group is replaced by another is a **substitution** reaction.
 > > 2. **Identify and classify the attacking species:**
-> >    * KOH dissociates in water to produce hydroxide ions (OH⁻).
-> >    * The OH⁻ ion has lone pairs of electrons and a negative charge. It attacks the electron-deficient carbon (Cδ+) bonded to the electronegative bromine.
+> >    * KOH dissociates in water to produce hydroxide ions (OHâ»).
+> >    * The OHâ» ion has lone pairs of electrons and a negative charge. It attacks the electron-deficient carbon (CÎ´+) bonded to the electronegative bromine.
 > >    * Since it donates an electron pair, it acts as a **nucleophile**.
 
 > [!EXAMPLE]
-> #### 📝 Example 3: Bond Fission in Methane Chlorination
+> #### ðŸ“ Example 3: Bond Fission in Methane Chlorination
 > **Question:** During the photochemical chlorination of methane, chlorine molecules undergo homolytic fission. Explain, in terms of electrons and electronegativity, why homolytic fission occurs rather than heterolytic fission.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze bond electronegativity:**
-> >    * The covalent bond is between two chlorine atoms (Cl–Cl).
+> >    * The covalent bond is between two chlorine atoms (Clâ€“Cl).
 > >    * Both atoms have identical electronegativity, so the shared pair of electrons is distributed equally between them.
 > > 2. **Analyze electron redistribution:**
 > >    * When UV light provides the required activation energy, the bond breaks symmetrically.
 > >    * Each chlorine atom takes exactly one electron from the shared bonding pair.
-> >    * Consequently, homolytic fission occurs, producing two neutral chlorine free radicals (2Cl•) instead of charged ions.
+> >    * Consequently, homolytic fission occurs, producing two neutral chlorine free radicals (2Clâ€¢) instead of charged ions.
 
 > [!EXAMPLE]
-> #### 📝 Example 4: Classifying Reactive Species
+> #### ðŸ“ Example 4: Classifying Reactive Species
 > **Question:** Classify the following chemical species as either electrophiles or nucleophiles:
-> 1. AlCl₃
-> 2. NH₃
-> 3. H₃O⁺
-> 4. CN⁻
+> 1. AlClâ‚ƒ
+> 2. NHâ‚ƒ
+> 3. Hâ‚ƒOâº
+> 4. CNâ»
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
-> > 1. **Analyze AlCl₃:**
+> > 1. **Analyze AlClâ‚ƒ:**
 > >    * The aluminium atom is bonded to three chlorine atoms and has only 6 valence electrons (incomplete octet).
 > >    * It can accept an electron pair, making it an **electrophile**.
-> > 2. **Analyze NH₃:**
+> > 2. **Analyze NHâ‚ƒ:**
 > >    * The nitrogen atom has a lone pair of electrons that it can readily donate.
 > >    * It acts as an electron pair donor, making it a **nucleophile**.
-> > 3. **Analyze H₃O⁺:**
-> >    * It carries a positive charge and can readily release a proton (H⁺), which accepts a pair of electrons.
+> > 3. **Analyze Hâ‚ƒOâº:**
+> >    * It carries a positive charge and can readily release a proton (Hâº), which accepts a pair of electrons.
 > >    * It acts as an electron pair acceptor, making it an **electrophile**.
-> > 4. **Analyze CN⁻:**
+> > 4. **Analyze CNâ»:**
 > >    * The cyanide ion carries a negative charge and has lone pairs of electrons on both carbon and nitrogen.
 > >    * It acts as an electron pair donor, making it a **nucleophile**.
 
 > [!EXAMPLE]
-> #### 📝 Example 5: Fission Mechanism Representation
+> #### ðŸ“ Example 5: Fission Mechanism Representation
 > **Question:** State the representation and products for both homolytic and heterolytic fission using curved arrows.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Heterolytic Fission:**
 > >    * Represented by a single **full-headed curved arrow** ($\\\\curvearrowright$), which shows the movement of a pair of electrons.
@@ -1213,45 +1213,45 @@ export const parts: LessonPart[] = [
 > >    * The products are neutral, highly reactive species containing an unpaired valence electron, called **free radicals**.
 
 > [!EXAMPLE]
-> #### 📝 Example 6: Catalytic Reforming of Alkanes
+> #### ðŸ“ Example 6: Catalytic Reforming of Alkanes
 > **Question:** During the catalytic reforming of hexane to produce benzene, a dehydrogenation reaction occurs.
 > 1. Write a balanced chemical equation for this reaction.
 > 2. Explain the primary purpose of reforming straight-chain alkanes in the petroleum industry.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Write the balanced chemical equation:**
-> >    * Hexane (C₆H₁₄) is converted to benzene (C₆H₆) and hydrogen gas (H₂).
-> >    * Equation: C₆H₁₄ → C₆H₆ + 4H₂
+> >    * Hexane (Câ‚†Hâ‚â‚„) is converted to benzene (Câ‚†Hâ‚†) and hydrogen gas (Hâ‚‚).
+> >    * Equation: Câ‚†Hâ‚â‚„ â†’ Câ‚†Hâ‚† + 4Hâ‚‚
 > > 2. **Explain the purpose of reforming:**
 > >    * Straight-chain alkanes are converted into branched-chain alkanes and cyclic or aromatic hydrocarbons.
 > >    * Branched and cyclic hydrocarbons burn much more smoothly in car engines, which increases the octane rating of the fuel and prevents pre-ignition ("engine knocking").
 
 > [!EXAMPLE]
-> #### 📝 Example 7: Thermal vs. Catalytic Cracking
+> #### ðŸ“ Example 7: Thermal vs. Catalytic Cracking
 > **Question:** Contrast the reaction conditions (temperature, pressure, and catalyst) and the main products obtained from thermal cracking versus catalytic cracking of long-chain alkanes.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Compare operating conditions:**
-> >    * **Thermal Cracking:** Requires high temperatures (400°C to 900°C) and high pressure (up to 7000 kPa) without a catalyst.
-> >    * **Catalytic Cracking:** Conducted at high temperatures (around 450°C), low/slight pressure, and requires a zeolite catalyst (containing Al, Si, and O).
+> >    * **Thermal Cracking:** Requires high temperatures (400Â°C to 900Â°C) and high pressure (up to 7000 kPa) without a catalyst.
+> >    * **Catalytic Cracking:** Conducted at high temperatures (around 450Â°C), low/slight pressure, and requires a zeolite catalyst (containing Al, Si, and O).
 > > 2. **Compare main products:**
 > >    * **Thermal Cracking:** Mainly produces shorter-chain alkanes and a high proportion of alkenes (valuable for polymers).
 > >    * **Catalytic Cracking:** Mainly produces shorter-chain products with a high proportion of branched alkanes, cycloalkanes, and aromatic compounds (valuable for high-efficiency fuels).
 
 > [!EXAMPLE]
-> #### 📝 Example 8: Classifying Organic Reactions
+> #### ðŸ“ Example 8: Classifying Organic Reactions
 > **Question:** Classify each of the following reactions as addition, substitution, oxidation, or reduction:
-> 1. CH₃CH₂OH + [O] → CH₃CHO + H₂O
-> 2. C₂H₄ + H₂ → C₂H₆
-> 3. C₂H₆ + Br₂ → C₂H₅Br + HBr
-> 4. C₂H₄ + Br₂ → C₂H₄Br₂
+> 1. CHâ‚ƒCHâ‚‚OH + [O] â†’ CHâ‚ƒCHO + Hâ‚‚O
+> 2. Câ‚‚Hâ‚„ + Hâ‚‚ â†’ Câ‚‚Hâ‚†
+> 3. Câ‚‚Hâ‚† + Brâ‚‚ â†’ Câ‚‚Hâ‚…Br + HBr
+> 4. Câ‚‚Hâ‚„ + Brâ‚‚ â†’ Câ‚‚Hâ‚„Brâ‚‚
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze Reaction 1:**
 > >    * Ethanol loses hydrogen atoms when reacted with an oxidizing agent [O] to form ethanal. This is **oxidation**.
@@ -1263,94 +1263,94 @@ export const parts: LessonPart[] = [
 > >    * Bromine atoms add across the C=C double bond of ethene to form a single product. This is **addition** (electrophilic addition).
 
 > [!EXAMPLE]
-> #### 📝 Example 9: Addition Polymerization and Economic Importance of Cracking
-> **Question:** Ethene (C₂H₄) is obtained by cracking long-chain alkanes and is used to manufacture poly(ethene).
+> #### ðŸ“ Example 9: Addition Polymerization and Economic Importance of Cracking
+> **Question:** Ethene (Câ‚‚Hâ‚„) is obtained by cracking long-chain alkanes and is used to manufacture poly(ethene).
 > 1. Write the equation for the addition polymerization of ethene.
 > 2. Discuss three reasons why cracking is of great economic importance in the petrochemical industry.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Write the polymerization equation:**
 > >    * n molecules of ethene react under pressure and catalyst to form a long chain polymer:
-> >    * Equation: nC₂H₄ → —[C₂H₄]ₙ—
+> >    * Equation: nCâ‚‚Hâ‚„ â†’ â€”[Câ‚‚Hâ‚„]â‚™â€”
 > > 2. **Discuss the economic importance of cracking:**
 > >    * **Matching Supply and Demand:** It matches the high supply of long-chain fractions from crude oil distillation with their low market demand, converting them to high-demand short-chain fractions.
 > >    * **Fuel Value:** Shorter-chain alkanes obtained from cracking are more volatile and burn more easily, making them highly valuable as motor fuels.
 > >    * **Polymer Feedstocks:** It produces alkenes (like ethene and propene), which are essential raw materials for manufacturing plastics and polymers.
 
 > [!EXAMPLE]
-> #### 📝 Example 10: Dipoles and Curved Arrows in Heterolytic Fission
+> #### ðŸ“ Example 10: Dipoles and Curved Arrows in Heterolytic Fission
 > **Question:** In the reaction of chloromethane with a hydroxide ion, the C-Cl bond undergoes heterolytic fission.
 > 1. Show the dipoles (partial charges) on the C-Cl bond of chloromethane.
 > 2. Describe where the curved arrow representing the bond breaking should start and finish, and what it represents.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the dipoles:**
 > >    * Chlorine is more electronegative than carbon, so it pulls the shared electron pair closer to itself.
-> >    * Carbon gets a partial positive charge (Cδ+) and chlorine gets a partial negative charge (Clδ-).
+> >    * Carbon gets a partial positive charge (CÎ´+) and chlorine gets a partial negative charge (ClÎ´-).
 > > 2. **Describe the curved arrow:**
 > >    * The curved arrow must start exactly from the center of the C-Cl covalent bond (representing the shared electron pair).
 > >    * The curved arrow must point and finish directly on the chlorine atom (Cl).
 > >    * The curved arrow represents the transfer of both bonding electrons to the chlorine atom.
 
 > [!EXAMPLE]
-> #### 📝 Example 11: Economic and Environmental Advantages of Catalytic Cracking
+> #### ðŸ“ Example 11: Economic and Environmental Advantages of Catalytic Cracking
 > **Question:** Explain why catalytic cracking is preferred over thermal cracking in the petroleum industry, in terms of operating conditions and economics.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze operating conditions:**
-> >    * Thermal cracking requires extremely high temperatures (up to 900°C) and high pressures (up to 7000 kPa).
-> >    * Catalytic cracking operates at much lower temperatures (around 450°C) and atmospheric pressure because it uses a zeolite catalyst.
+> >    * Thermal cracking requires extremely high temperatures (up to 900Â°C) and high pressures (up to 7000 kPa).
+> >    * Catalytic cracking operates at much lower temperatures (around 450Â°C) and atmospheric pressure because it uses a zeolite catalyst.
 > > 2. **State the economic advantages:**
 > >    * Lower temperatures and pressures require significantly less energy, reducing fuel consumption and operating costs.
 > >    * It saves money by making the process faster and more cost-effective (energy-efficient).
 > >    * Zeolite catalysts can be recycled, which further reduces long-term industrial expenses.
 
 > [!IMPORTANT]
-> ### ⚛️ Free-Radical Substitution of Alkanes
+> ### âš›ï¸ Free-Radical Substitution of Alkanes
 > Alkanes react with halogens (chlorine or bromine) in the presence of **ultraviolet (UV) light** via a substitution reaction. The reaction mechanism has three main stages:
 > 
 > 1. **Initiation:**
 >    * UV light provides the energy to break the halogen bond homolytically, forming free radicals.
->    * *Equation:* Cl-Cl → 2Cl$\\\\bullet$
+>    * *Equation:* Cl-Cl â†’ 2Cl$\\\\bullet$
 > 2. **Propagation (Chain Reaction):**
 >    * Step 1: A chlorine radical abstract a hydrogen atom from the alkane, forming a methyl radical and hydrogen chloride.
->      * *Equation:* CH₄ + Cl$\\\\bullet$ → $\\\\bullet$CH₃ + HCl
+>      * *Equation:* CHâ‚„ + Cl$\\\\bullet$ â†’ $\\\\bullet$CHâ‚ƒ + HCl
 >    * Step 2: The methyl radical reacts with a chlorine molecule to form chloromethane and regenerates the chlorine radical.
->      * *Equation:* $\\\\bullet$CH₃ + Cl₂ → CH₃Cl + Cl$\\\\bullet$
+>      * *Equation:* $\\\\bullet$CHâ‚ƒ + Clâ‚‚ â†’ CHâ‚ƒCl + Cl$\\\\bullet$
 > 3. **Termination:**
 >    * Two free radicals collide and combine to form a stable molecule, ending the chain reaction.
 >    * *Examples:*
->      * Cl$\\\\bullet$ + Cl$\\\\bullet$ → Cl₂
->      * $\\\\bullet$CH₃ + Cl$\\\\bullet$ → CH₃Cl
->      * $\\\\bullet$CH₃ + $\\\\bullet$CH₃ → C₂H₆ (ethane)
+>      * Cl$\\\\bullet$ + Cl$\\\\bullet$ â†’ Clâ‚‚
+>      * $\\\\bullet$CHâ‚ƒ + Cl$\\\\bullet$ â†’ CHâ‚ƒCl
+>      * $\\\\bullet$CHâ‚ƒ + $\\\\bullet$CHâ‚ƒ â†’ Câ‚‚Hâ‚† (ethane)
 > 
 > > [!WARNING]
-> > ### ⚠️ Limitations of Free-Radical Substitution
+> > ### âš ï¸ Limitations of Free-Radical Substitution
 > > Free-radical substitution is not a clean synthetic route due to several side-reactions:
 > > 
-> > 1. **Further Substitution:** Chlorine radicals can continue to substitute hydrogens on chloromethane, forming dichloromethane (CH₂Cl₂), trichloromethane (CHCl₃), and textrachloromethane (CCl₄).
+> > 1. **Further Substitution:** Chlorine radicals can continue to substitute hydrogens on chloromethane, forming dichloromethane (CHâ‚‚Clâ‚‚), trichloromethane (CHClâ‚ƒ), and textrachloromethane (CClâ‚„).
 > > 2. **Isomer Mixtures:** For longer-chain alkanes (e.g., propane), substitution can occur on different carbon atoms, producing a mixture of positional isomers (e.g., 1-chloropropane and 2-chloropropane).
 > 
 
 > [!EXAMPLE]
-> #### 📝 Example 12: Identifying Termination Products
-> **Question:** In the free-radical substitution of ethane (C₂H₆) with bromine, a trace of butane (C₄H₁₀) is formed. Write a termination step to explain its formation.
+> #### ðŸ“ Example 12: Identifying Termination Products
+> **Question:** In the free-radical substitution of ethane (Câ‚‚Hâ‚†) with bromine, a trace of butane (Câ‚„Hâ‚â‚€) is formed. Write a termination step to explain its formation.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the radical intermediate:**
-> >    * During propagation, bromine radicals abstract H from ethane, forming ethyl radicals ($\\\\bullet$C₂H₅).
+> >    * During propagation, bromine radicals abstract H from ethane, forming ethyl radicals ($\\\\bullet$Câ‚‚Hâ‚…).
 > > 2. **Determine the collision leading to butane:**
-> >    * Butane (C₄H₁₀) is formed when two ethyl radicals collide and combine.
+> >    * Butane (Câ‚„Hâ‚â‚€) is formed when two ethyl radicals collide and combine.
 > > 3. **Write the equation:**
-> >    * $\\\\bullet$C₂H₅ + $\\\\bullet$C₂H₅ → C₄H₁₀
+> >    * $\\\\bullet$Câ‚‚Hâ‚… + $\\\\bullet$Câ‚‚Hâ‚… â†’ Câ‚„Hâ‚â‚€
 
 `,
     keyPoints: [
@@ -1372,14 +1372,14 @@ export const parts: LessonPart[] = [
         ['2NO', '#f59e0b']
       ],
       products: [
-        ['2CO₂', '#10b981'],
-        ['N₂', '#a78bfa']
+        ['2COâ‚‚', '#10b981'],
+        ['Nâ‚‚', '#a78bfa']
       ],
-      description: "Conversion of toxic Carbon Monoxide (CO) and Nitrogen Monoxide (NO) into harmless Nitrogen (N₂) and Carbon Dioxide (CO₂) inside the catalytic converter."
+      description: "Conversion of toxic Carbon Monoxide (CO) and Nitrogen Monoxide (NO) into harmless Nitrogen (Nâ‚‚) and Carbon Dioxide (COâ‚‚) inside the catalytic converter."
     },
     content: `
 > [!NOTE]
-> ### ⛽ Alkanes as Fuel & Crude Oil Distillation
+> ### â›½ Alkanes as Fuel & Crude Oil Distillation
 > A **fuel** is any substance that is burned to release energy. Alkanes obtained from crude oil are widely used as fuels.
 > 
 > **Fractional Distillation:**
@@ -1397,77 +1397,82 @@ export const parts: LessonPart[] = [
 > 2. The higher the boiling temperature, the lower the level at which it condenses.
 
 > [!IMPORTANT]
-> ### 🧪 Industrial Processing of Alkanes
+> ### ðŸ§ª Industrial Processing of Alkanes
 > To meet the demand for fuels and chemical feedstocks, crude oil fractions are processed further:
 > 
 > * **Cracking:** The breaking down of long-chain alkanes into shorter, more useful alkanes and alkenes.
->    * *Thermal Cracking:* High temperature (700–1200 K) and high pressure. Produces a high percentage of alkenes.
+>    * *Thermal Cracking:* High temperature (700â€“1200 K) and high pressure. Produces a high percentage of alkenes.
 >    * *Catalytic Cracking:* Lower temperature (around 720 K), slight pressure, and a zeolite catalyst. Produces branched alkanes and cycloalkanes.
 > * **Reforming:** The conversion of straight-chain alkanes into branched-chain alkanes or cyclic hydrocarbons/aromatics (to ensure smoother burning/higher octane rating) using a platinum catalyst.
 
 > [!WARNING]
-> ### ⚠️ Combustion of Alkanes: Complete vs. Incomplete
+> ### âš ï¸ Combustion of Alkanes: Complete vs. Incomplete
 > Alkanes react with oxygen in combustion reactions. Depending on oxygen availability, the products differ:
 > 
 > 1. **Complete Combustion (Excess Oxygen):**
 >    * Burns cleanly to produce **carbon dioxide** (a greenhouse gas that causes a rise in Earth's temperature), **water vapor**, and releases maximum energy.
->    * *Equation:* CH₄ + 2O₂ → CO₂ + 2H₂O
+>    * *Equation:* CHâ‚„ + 2Oâ‚‚ â†’ COâ‚‚ + 2Hâ‚‚O
 > 2. **Incomplete Combustion (Lack of Oxygen):**
 >    * Produces less energy and releases dangerous pollutants:
 >      * **Carbon monoxide** (CO): A highly toxic, colorless, and odorless gas.
->        * *Equation:* 2CH₄ + 3O₂ → 2CO + 4H₂O
+>        * *Equation:* 2CHâ‚„ + 3Oâ‚‚ â†’ 2CO + 4Hâ‚‚O
 >      * **Carbon particulates** (black smoke or soot): Irritate the respiratory system.
 >      * **Unburnt hydrocarbons** and **water vapor**.
 
 > [!CAUTION]
-> ### 🛑 Environmental Hazards of Alkane Pollutants
+> ### ðŸ›‘ Environmental Hazards of Alkane Pollutants
 > The combustion of alkane fuels (especially in internal combustion engines) releases severe pollutants:
 > 
-> * **Carbon Dioxide (CO₂):** A greenhouse gas that contributes to global warming and rises the Earth's temperature.
+> * **Carbon Dioxide (COâ‚‚):** A greenhouse gas that contributes to global warming and rises the Earth's temperature.
 > * **Carbon Monoxide (CO):** A toxic gas produced by incomplete combustion that binds irreversibly to hemoglobin.
 > * **Carbon Particulates (Black Smoke/Soot):** Solid carbon particles from incomplete combustion that irritate the respiratory system and cause global dimming.
-> * **Oxides of Nitrogen (NO₂ / NOₓ):** Formed because the high temperature and pressure inside car engines cause nitrogen and oxygen from the air to react together.
-> * **Sulfur Oxides (SO₂):** Formed due to the combustion of sulfur impurities present within the crude fuel reacting with oxygen.
+> * **Oxides of Nitrogen (NOâ‚‚ / NOâ‚“):** Formed because the high temperature and pressure inside car engines cause nitrogen and oxygen from the air to react together.
+> * **Sulfur Oxides (SOâ‚‚):** Formed due to the combustion of sulfur impurities present within the crude fuel reacting with oxygen.
 > * **Unburned Hydrocarbons:** Volatile organic compounds that contribute to photochemical smog.
 > * **Water Vapor:** A natural product of both complete and incomplete combustion.
-
 > [!IMPORTANT]
-> ### 🚗 Catalytic Converters
-> Modern cars use catalytic converters (containing platinum, palladium, and rhodium catalysts) to remove harmful pollutants from exhaust gases:
-> 
-> * **Reaction of CO and NO:**
->   * 2CO + 2NO → 2CO₂ + N₂
-> * **Reaction of unburned hydrocarbons:**
->   * Hydrocarbons are oxidized to carbon dioxide and water.
-
-> [!EXAMPLE]
-> #### 📝 Example 1: Combustion Equations
-> **Question:** Write a balanced equation for the incomplete combustion of octane (C₈H₁₈) to produce carbon monoxide and water.
+> ### ðŸš— Catalytic Converters & Nitrogen Oxides Acid Rain
+> Modern vehicles use a **three-way catalytic converter** containing precious transition metals (such as **platinum**, **palladium**, and **rhodium** which belong to the **d-block** of the Periodic Table).
+> * **Surface Area:** The catalytic metals are spread thinly over a **honeycomb mesh** to maximize surface area and minimize cost.
+> * **Nitrogen Oxides Acid Rain:** Nitrogen dioxide ($\text{NO}_2$) dissolved in water droplets forms nitrous and nitric acid, contributing to acid rain:
+>   $$2\text{NO}_2 + \text{H}_2\text{O} \rightarrow \text{HNO}_2 + \text{HNO}_3$$
+> * **Catalytic Reactions:**
+>   * *CO and NO removal:* $2\text{CO} + 2\text{NO} \rightarrow \text{N}_2 + 2\text{CO}_2$
+>   * *Unburned hydrocarbon removal:* $\text{C}_8\text{H}_{18} + 12.5\text{O}_2 \rightarrow 8\text{CO}_2 + 9\text{H}_2\text{O}$
+> * **Sulfur Limitation:** Catalytic converters are **ineffective at removing sulfur compounds**. Therefore, sulfur impurities must be removed from the fuel prior to combustion, producing **low-sulfur or ultra-low-sulfur fuel**.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > ### ðŸ’¡ Combustion Hydrogen Rule
+> > Even in incomplete combustion reactions of hydrocarbons (where carbon forms CO or soot C), **all of the hydrogen atoms are always completely oxidized to water ($\text{H}_2\text{O}$)**.
+> 
+> > [!EXAMPLE]
+> #### ðŸ“ Example 1: Combustion Equations
+> **Question:** Write a balanced equation for the incomplete combustion of octane (Câ‚ˆHâ‚â‚ˆ) to produce carbon monoxide and water.
+> 
+> > [!TIP]
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Write down the reactants and products:**
-> >    * Reactants: C₈H₁₈ and O₂
-> >    * Products: CO and H₂O
+> >    * Reactants: Câ‚ˆHâ‚â‚ˆ and Oâ‚‚
+> >    * Products: CO and Hâ‚‚O
 > > 
 > > 2. **Balance Carbon atoms:**
-> >    * 8 Carbon atoms in C₈H₁₈ require 8 CO molecules: C₈H₁₈ + O₂ → 8CO + H₂O
+> >    * 8 Carbon atoms in Câ‚ˆHâ‚â‚ˆ require 8 CO molecules: Câ‚ˆHâ‚â‚ˆ + Oâ‚‚ â†’ 8CO + Hâ‚‚O
 > > 
 > > 3. **Balance Hydrogen atoms:**
-> >    * 18 Hydrogen atoms in C₈H₁₈ require 9 H₂O molecules: C₈H₁₈ + O₂ → 8CO + 9H₂O
+> >    * 18 Hydrogen atoms in Câ‚ˆHâ‚â‚ˆ require 9 Hâ‚‚O molecules: Câ‚ˆHâ‚â‚ˆ + Oâ‚‚ â†’ 8CO + 9Hâ‚‚O
 > > 
 > > 4. **Balance Oxygen atoms:**
-> >    * Right side contains: 8 (from 8CO) + 9 (from 9H₂O) = 17 Oxygen atoms.
-> >    * Left side requires 8.5 O₂ molecules: C₈H₁₈ + 8.5O₂ → 8CO + 9H₂O
-> >    * Multiply by 2 for whole number coefficients: 2C₈H₁₈ + 17O₂ → 16CO + 18H₂O
+> >    * Right side contains: 8 (from 8CO) + 9 (from 9Hâ‚‚O) = 17 Oxygen atoms.
+> >    * Left side requires 8.5 Oâ‚‚ molecules: Câ‚ˆHâ‚â‚ˆ + 8.5Oâ‚‚ â†’ 8CO + 9Hâ‚‚O
+> >    * Multiply by 2 for whole number coefficients: 2Câ‚ˆHâ‚â‚ˆ + 17Oâ‚‚ â†’ 16CO + 18Hâ‚‚O
 
 > [!EXAMPLE]
-> #### 📝 Example 2: Principles of Fractional Distillation
+> #### ðŸ“ Example 2: Principles of Fractional Distillation
 > **Question:** Explain the physical principles that allow hydrocarbons in crude oil to be separated by fractional distillation. Refer to the temperature gradient in the column and molecular boiling points.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Explain the temperature gradient:**
 > >    * The fractionating column is heated at the bottom and is cooler at the top, creating a continuous temperature gradient.
@@ -1478,65 +1483,65 @@ export const parts: LessonPart[] = [
 > >    * These larger molecules have high boiling points and condense at the lower, hotter levels of the column. Smaller molecules with lower boiling points rise to the cooler top before condensing.
 
 > [!EXAMPLE]
-> #### 📝 Example 3: Formation of Nitrogen Oxides in Engines
+> #### ðŸ“ Example 3: Formation of Nitrogen Oxides in Engines
 > **Question:** Nitrogen monoxide (NO) is a pollutant produced inside car engines.
 > 1. Write an equation showing how nitrogen monoxide is formed in an engine.
 > 2. Explain why nitrogen monoxide forms in car engines but does not form when petrol is burned in an open school laboratory.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Write the balanced chemical equation:**
 > >    * Nitrogen gas and oxygen gas react at high temperatures:
-> >    * Equation: N₂ + O₂ → 2NO
+> >    * Equation: Nâ‚‚ + Oâ‚‚ â†’ 2NO
 > > 2. **Explain the role of temperature and pressure:**
 > >    * Nitrogen molecules have a very strong triple covalent bond ($N \equiv N$) which requires a large amount of activation energy to break.
 > >    * The extremely high temperature and pressure inside a car engine's combustion chamber provide the necessary energy to break this bond and initiate the reaction. An open laboratory flame does not reach temperatures high enough to overcome this activation energy barrier.
 
 > [!EXAMPLE]
-> #### 📝 Example 4: Function of Catalytic Converters
+> #### ðŸ“ Example 4: Function of Catalytic Converters
 > **Question:** Catalytic converters are fitted to the exhaust systems of modern cars.
 > 1. Identify the metals used as catalysts in a catalytic converter.
 > 2. Write a balanced chemical equation for the reaction between carbon monoxide and nitrogen monoxide in a catalytic converter.
 > 3. Explain how the converter reduces environmental damage.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the catalytic metals:**
 > >    * Platinum (Pt), palladium (Pd), and rhodium (Rh) are typically used.
 > > 2. **Write the balanced equation:**
 > >    * Carbon monoxide reacts with nitrogen monoxide to form carbon dioxide and nitrogen:
-> >    * Equation: 2CO + 2NO → 2CO₂ + N₂
+> >    * Equation: 2CO + 2NO â†’ 2COâ‚‚ + Nâ‚‚
 > > 3. **Explain environmental benefits:**
-> >    * The converter converts highly toxic carbon monoxide (CO) and nitrogen monoxide (NO) (which causes acid rain and photochemical smog) into less harmful carbon dioxide (CO₂) and non-toxic, natural nitrogen gas (N₂).
+> >    * The converter converts highly toxic carbon monoxide (CO) and nitrogen monoxide (NO) (which causes acid rain and photochemical smog) into less harmful carbon dioxide (COâ‚‚) and non-toxic, natural nitrogen gas (Nâ‚‚).
 
 > [!EXAMPLE]
-> #### 📝 Example 5: Formation and Prevention of Acid Rain
+> #### ðŸ“ Example 5: Formation and Prevention of Acid Rain
 > **Question:** Fossil fuels often contain sulfur impurities.
 > 1. Write chemical equations to show how sulfur impurities burn to form sulfur dioxide, and how this sulfur dioxide reacts with water in the atmosphere to form acid rain.
 > 2. State two environmental consequences of acid rain.
 > 3. Explain how sulfur dioxide is removed from flue gases in power stations, and write the chemical equation for this reaction.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Write the chemical equations:**
-> >    * Sulfur burns to form sulfur dioxide: S + O₂ → SO₂
-> >    * Sulfur dioxide reacts with water to form sulfurous acid (acid rain): SO₂ + H₂O → H₂SO₃ (or it can react with water and oxygen to form sulfuric acid: 2SO₂ + O₂ + 2H₂O → 2H₂SO₄).
+> >    * Sulfur burns to form sulfur dioxide: S + Oâ‚‚ â†’ SOâ‚‚
+> >    * Sulfur dioxide reacts with water to form sulfurous acid (acid rain): SOâ‚‚ + Hâ‚‚O â†’ Hâ‚‚SOâ‚ƒ (or it can react with water and oxygen to form sulfuric acid: 2SOâ‚‚ + Oâ‚‚ + 2Hâ‚‚O â†’ 2Hâ‚‚SOâ‚„).
 > > 2. **State environmental effects of acid rain:**
 > >    * Acidification of lakes and rivers, which kills aquatic life (fish).
 > >    * Damage to leaf tissues of trees and plants, leading to deforestation.
 > >    * Reacts with and corrodes limestone buildings and statues (calcium carbonate).
 > > 3. **Explain flue gas desulfurization:**
-> >    * Flue gases are passed through a scrubber containing calcium oxide (CaO) or calcium carbonate (CaCO₃).
-> >    * Calcium oxide is a basic oxide that neutralizes acidic sulfur dioxide to form calcium sulfite (CaSO₃), preventing it from escaping into the atmosphere.
-> >    * Equation: CaO + SO₂ → CaSO₃ (or CaCO₃ + SO₂ → CaSO₃ + CO₂).
+> >    * Flue gases are passed through a scrubber containing calcium oxide (CaO) or calcium carbonate (CaCOâ‚ƒ).
+> >    * Calcium oxide is a basic oxide that neutralizes acidic sulfur dioxide to form calcium sulfite (CaSOâ‚ƒ), preventing it from escaping into the atmosphere.
+> >    * Equation: CaO + SOâ‚‚ â†’ CaSOâ‚ƒ (or CaCOâ‚ƒ + SOâ‚‚ â†’ CaSOâ‚ƒ + COâ‚‚).
 `,
     keyPoints: [
       'Cracking breaks long alkanes into shorter alkanes and alkenes; reforming converts straight alkanes into branched/cyclic ones to improve engine efficiency.',
       'Incomplete combustion occurs in limited oxygen, producing toxic carbon monoxide (CO) or carbon soot (C).',
-      'Catalytic converters use platinum, palladium, and rhodium to convert toxic CO and nitrogen monoxide (NO) into CO₂ and N₂.'
+      'Catalytic converters use platinum, palladium, and rhodium to convert toxic CO and nitrogen monoxide (NO) into COâ‚‚ and Nâ‚‚.'
     ]
   },
   {
@@ -1545,52 +1550,57 @@ export const parts: LessonPart[] = [
     type: 'text',
     content: `
 > [!NOTE]
-> ### 🌍 Greenhouse Gases & The Greenhouse Effect
+> ### ðŸŒ Greenhouse Gases & The Greenhouse Effect
 > The Earth's surface absorbs solar energy (UV/visible light) and re-emits/re-radiates it as longer-wavelength Infrared (IR) radiation.
 > 
 > **Greenhouse gases** absorb this infrared radiation and trap the heat in the atmosphere, preventing it from escaping into space. This creates the greenhouse effect, resulting in global warming and climate change.
 > 
 > **Key Greenhouse Gases:**
-> 1. **Water vapor (H₂O):** Present at the highest concentration in the air.
-> 2. **Carbon dioxide (CO₂):** Has the highest overall impact on human-induced global warming.
-> 3. **Dinitrogen oxide (N₂O)**
-> 4. **Methane (CH₄):** Sourced from natural gas, agriculture, and decomposition.
-> 5. **Sulfur hexafluoride (SF₆), Nitrogen trifluoride (NF₃), Hydrofluorocarbons (HFCs):** Produced solely from anthropogenic (human) activities.
+> 1. **Water vapor (Hâ‚‚O):** Present at the highest concentration in the air.
+> 2. **Carbon dioxide (COâ‚‚):** Has the highest overall impact on human-induced global warming.
+> 3. **Dinitrogen oxide (Nâ‚‚O)**
+> 4. **Methane (CHâ‚„):** Sourced from natural gas, agriculture, and decomposition.
+> 5. **Sulfur hexafluoride (SFâ‚†), Nitrogen trifluoride (NFâ‚ƒ), Hydrofluorocarbons (HFCs):** Produced solely from anthropogenic (human) activities.
 > 
 > **Factors Determining Greenhouse Effect Strength:**
 > The warming effect of any given greenhouse gas depends on two core factors:
 > 1. Its **atmospheric concentration**.
 > 2. Its **ability to absorb infrared radiation** (its global warming potential).
 > 
-> *Note:* Gases like NO₂, NO, and SO₂ do not trap heat in the same way, but instead react with water in the atmosphere to cause **acid rain**.
+> *Note:* Gases like NOâ‚‚, NO, and SOâ‚‚ do not trap heat in the same way, but instead react with water in the atmosphere to cause **acid rain**.
 
 > [!IMPORTANT]
-> ### ⛽ Fossil Fuels vs. Renewable Alternatives
+> ### â›½ Fossil Fuels vs. Renewable Alternatives
 > **Fossil Fuels:**
-> Non-renewable (finite, will run out) fuels formed from the remains of plants and animals that lived millions of years ago. They release CO₂ on combustion, contributing to global warming.
-> * *Petroleum (crude oil):* A complex mixture of hydrocarbons.
-> * *Natural gas:* Mainly methane (CH₄). It is cleaner because it produces less CO₂ per kilowatt-hour (kWh) of power generated compared to coal or oil.
-> * *Coal:* Highly carbon-dense fuel.
+> Non-renewable (finite) resources formed over millions of years. Burning them releases carbon dioxide ($\text{CO}_2$), increasing the net atmospheric concentration.
+> * *Petroleum:* A complex mixture of hydrocarbons.
+> * *Natural gas:* Mainly methane ($\text{CH}_4$). Burns cleaner with less $\text{CO}_2$ per kWh than coal or oil.
 > 
 > **Renewable Alternative Fuels:**
-> 1. **Biofuels:**
->    * Biofuels (e.g., bioethanol from sugarcane fermentation; biodiesel from vegetable oils/animal fats) are theoretically **carbon neutral**. The CO₂ released during combustion equals the CO₂ absorbed by the crops during photosynthesis.
->    * *Disadvantages:* Biofuels reduce food supply, reduce biodiversity by converting wild land into monoculture fields, increase deforestation, and require massive volumes of irrigation water.
->    * *Reality Check:* Biofuels are not 100% carbon neutral. Fossil fuels are still burned during harvesting, processing (fermentation/distillation), transport, and fertilizer manufacturing.
-> 2. **Hydrogen Gas (H₂):**
->    * *Equation:* 2H₂ + O₂ → 2H₂O
->    * *Advantages:* The only combustion waste product is water, eliminating greenhouse gas and acid rain emissions. It is renewable.
->      * Can be prepared in the laboratory from aluminum reactions with acids/bases (since Al can be recycled).
->      * Can be produced industrially via water electrolysis (2H₂O → 2H₂ + O₂) using electricity from renewable sources (solar or wind) to remain sustainable.
->    * *Disadvantages:* Low energy density by volume. It requires extremely high-pressure storage tanks or cryogenic temperatures to liquefy, posing explosion risks.
-
-> [!WARNING]
-> ### ♻️ Sustainability & Material Recovery
+> 1. **Biofuels (e.g. Bioethanol & Biodiesel):**
+>    * Theoretically **carbon neutral** because the $\text{CO}_2$ released during combustion matches the $\text{CO}_2$ absorbed during growth.
+>    * *Yeast Fermentation Constraint:* Fermentation has an upper limit because ethanol concentrations above **14%** are toxic to yeast, killing them.
+>    * *Distillation Energy:* Separating bioethanol from water requires highly energy-intensive distillation, which often relies on fossil fuels, reducing carbon neutrality.
+>    * *Petrol Blends:* Bioethanol is commonly sold as blends like **E10** (10% bioethanol, 90% petrol) or **E85** (85% bioethanol, 15% petrol).
+>    * *Disadvantages:* Biofuels require massive land use (potentially displacing food crops), cause deforestation, and reduce biodiversity.
+> 2. **Hydrogen Gas ($\text{H}_2$):**
+>    * *Advantages:* Combustion produces only water vapor ($2\text{H}_2 + \text{O}_2 \rightarrow 2\text{H}_2\text{O}$), which is non-polluting.
+>    * *Disadvantages:* Highly explosive and has a very low energy density by volume. It requires extremely high-pressure cylinders or cryogenic liquid storage at **$-253^\circ\text{C}$** in heavily insulated tanks.
+> 
+> > [!BOX]
+> > ### ðŸ“‹ Biofuels vs. Natural Gas Comparison
+> > * **Land Use:** Biofuels require vast land areas to grow crops (competing with food fields). Natural gas is sourced underground, requiring no surface agricultural land.
+> > * **Yield:** Biofuels have relatively low yields that are gradually increasing. Natural gas has extremely high yields.
+> > * **Manufacture & Transport:** Biofuels involve high costs to grow, process, ferment, and distill. Natural gas has high initial exploration/drilling costs, but low pipeline transport costs.
+> > * **Carbon Neutrality:** Biofuels are much closer to carbon neutral. Natural gas is definitely not carbon neutral.
+> 
+> > [!WARNING]
+> ### â™»ï¸ Sustainability & Material Recovery
 > Preserving resources and protecting the environment for future generations requires shifting to sustainable technologies:
 > 
 > **Reasons for Alternative Technologies (e.g., Electric Cars):**
 > 1. **Sustainability:** Reduces reliance on finite fossil fuel reserves.
-> 2. **Emissions Reduction:** Cuts tailpipe emissions of CO₂ and pollutants causing acid rain.
+> 2. **Emissions Reduction:** Cuts tailpipe emissions of COâ‚‚ and pollutants causing acid rain.
 > 3. **Noise Pollution:** Electric motors are much quieter than internal combustion engines.
 > 
 > **Sustainable Material Use:**
@@ -1599,19 +1609,19 @@ export const parts: LessonPart[] = [
 > 3. Recycling.
 
 > [!CAUTION]
-> ### 🛑 Polymers: Environmental Problems & Chemists' Solutions
+> ### ðŸ›‘ Polymers: Environmental Problems & Chemists' Solutions
 > Saturated addition polymers present major waste management issues:
 > 
 > **Problems Caused by Polymers:**
-> 1. **Non-Biodegradable:** Saturated polymers consist of strong, non-polar C–C single bonds in their backbone. This makes them chemically inert and resistant to attack by microorganisms or enzymes.
-> 2. **Landfill Accumulation:** Saturated plastics accumulate in dump sites. Landfill decomposition (anaerobic respiration/putrefaction) produces greenhouse gases (CH₄, CO₂) and toxic sulfur compounds.
+> 1. **Non-Biodegradable:** Saturated polymers consist of strong, non-polar Câ€“C single bonds in their backbone. This makes them chemically inert and resistant to attack by microorganisms or enzymes.
+> 2. **Landfill Accumulation:** Saturated plastics accumulate in dump sites. Landfill decomposition (anaerobic respiration/putrefaction) produces greenhouse gases (CHâ‚„, COâ‚‚) and toxic sulfur compounds.
 > 3. **Incineration Hazards:** Burning polymers releases toxic, acidic gases:
->    * CO₂, SO₂, and nitrogen oxides.
+>    * COâ‚‚, SOâ‚‚, and nitrogen oxides.
 >    * Hydrogen chloride gas (HCl), which is highly toxic and acidic, produced from chlorine-containing polymers like PVC (poly(chloroethene)).
 > 
 > **Chemists' Solutions to Polymer Waste:**
 > 1. **Biodegradable Polymers:** Developing polymers that can be broken down naturally by bacteria.
-> 2. **Acidic Gas Scrubbing:** Removing toxic acidic gases (like HCl from PVC combustion) by reacting them with fine powders of alkaline substances like calcium hydroxide (Ca(OH)₂) to neutralize them (fine powder increases surface area and reaction speed).
+> 2. **Acidic Gas Scrubbing:** Removing toxic acidic gases (like HCl from PVC combustion) by reacting them with fine powders of alkaline substances like calcium hydroxide (Ca(OH)â‚‚) to neutralize them (fine powder increases surface area and reaction speed).
 > 3. **Feedstock Recycling:** Breaking polymers down back into their chemical monomers using heat and catalysts to be reused as raw materials for new plastics.
 > 
 > **Recycling vs. Incineration Advantages:**
@@ -1620,41 +1630,41 @@ export const parts: LessonPart[] = [
 > * **Polymers vs. Metals:** Polymers are chemically and biologically stable (do not corrode) and have a much lower density than metals.
 
 > [!EXAMPLE]
-> #### 📝 Example 1: Evaluating Carbon Neutrality of Biofuels
-> **Question:** Bioethanol is promoted as a 100% carbon-neutral alternative to fossil fuels because the CO₂ released during its combustion is equal to the CO₂ absorbed during photosynthesis. Evaluate this statement, explaining why bioethanol is not entirely carbon-neutral in practice.
+> #### ðŸ“ Example 1: Evaluating Carbon Neutrality of Biofuels
+> **Question:** Bioethanol is promoted as a 100% carbon-neutral alternative to fossil fuels because the COâ‚‚ released during its combustion is equal to the COâ‚‚ absorbed during photosynthesis. Evaluate this statement, explaining why bioethanol is not entirely carbon-neutral in practice.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Explain the theoretical concept (Photosynthesis & Combustion):**
 > >    * During growth, crops absorb carbon dioxide via photosynthesis:
-> >      6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂
-> >    * When the bioethanol fuel is burned, it releases the same amount of CO₂ back into the atmosphere.
+> >      6COâ‚‚ + 6Hâ‚‚O â†’ Câ‚†Hâ‚â‚‚Oâ‚† + 6Oâ‚‚
+> >    * When the bioethanol fuel is burned, it releases the same amount of COâ‚‚ back into the atmosphere.
 > > 2. **Analyze the practical energy inputs:**
 > >    * In practice, energy and fossil fuels are still required for agricultural machinery/tractors, harvesting, transporting the crops and final fuel, and the energy-intensive distillation and processing of ethanol.
 > > 3. **Identify other greenhouse gas sources:**
 > >    * The manufacturing of chemical fertilizers used for the crops also releases greenhouse gases. Therefore, the net carbon footprint of biofuels is greater than zero, making them not 100% carbon-neutral in reality.
 
 > [!EXAMPLE]
-> #### 📝 Example 2: Water Vapor vs. Carbon Dioxide Contradiction
-> **Question:** Water vapor (H₂O) has a much higher concentration in the atmosphere and absorbs more infrared radiation overall than carbon dioxide (CO₂). However, scientists are significantly more concerned about anthropogenic emissions of CO₂. Explain this apparent contradiction.
+> #### ðŸ“ Example 2: Water Vapor vs. Carbon Dioxide Contradiction
+> **Question:** Water vapor (Hâ‚‚O) has a much higher concentration in the atmosphere and absorbs more infrared radiation overall than carbon dioxide (COâ‚‚). However, scientists are significantly more concerned about anthropogenic emissions of COâ‚‚. Explain this apparent contradiction.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the factors determining greenhouse impact:**
 > >    * The greenhouse impact of any gas depends on two key factors: its abundance/concentration in the atmosphere, and its ability to absorb infrared (IR) radiation (along with its atmospheric residence time).
 > > 2. **Analyze Water Vapor control mechanisms:**
 > >    * Water vapor levels in the atmosphere are controlled by a natural, self-regulating equilibrium (evaporation and condensation) and remain relatively constant overall.
 > > 3. **Analyze Carbon Dioxide trends:**
-> >    * CO₂ levels are steadily increasing specifically due to human activities (such as burning fossil fuels and deforestation), which disrupts the natural carbon cycle and leads to long-term warming.
+> >    * COâ‚‚ levels are steadily increasing specifically due to human activities (such as burning fossil fuels and deforestation), which disrupts the natural carbon cycle and leads to long-term warming.
 
 > [!EXAMPLE]
-> #### 📝 Example 3: Recycling vs. Incineration of Polymers
+> #### ðŸ“ Example 3: Recycling vs. Incineration of Polymers
 > **Question:** Explain one significant energy-related advantage of recycling polymers rather than disposing of them via incineration.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Analyze the energy requirements of recycling:**
 > >    * Recycling involves sorting, melting, and remolding existing polymers. This process requires significantly less energy than refining crude oil, cracking, and polymerizing new monomers from scratch.
@@ -1662,27 +1672,27 @@ export const parts: LessonPart[] = [
 > >    * While incineration releases heat energy, it completely destroys the polymer material. Replacing the destroyed polymer requires refining new crude oil, which is a highly energy-intensive and non-sustainable process.
 
 > [!EXAMPLE]
-> #### 📝 Example 4: Neutralizing Toxic Acidic Gases
+> #### ðŸ“ Example 4: Neutralizing Toxic Acidic Gases
 > **Question:** PVC (poly(chloroethene)) releases a highly toxic acidic gas upon incineration.
 > 1. Identify this gas.
 > 2. Explain how chemists neutralize this gas in incinerators, writing a balanced chemical equation for the neutralization reaction.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the toxic gas:**
 > >    * PVC contains chlorine atoms. Burning it releases **hydrogen chloride** (HCl) gas.
 > > 2. **Explain the neutralization process:**
-> >    * The acidic HCl gas is neutralized by spraying it with a fine powder of an alkaline substance, such as **calcium hydroxide** (Ca(OH)₂).
+> >    * The acidic HCl gas is neutralized by spraying it with a fine powder of an alkaline substance, such as **calcium hydroxide** (Ca(OH)â‚‚).
 > >    * A fine powder is used to maximize the surface area, speeding up the neutralization rate.
-> >    * Equation: Ca(OH)₂ + 2HCl → CaCl₂ + 2H₂O
+> >    * Equation: Ca(OH)â‚‚ + 2HCl â†’ CaClâ‚‚ + 2Hâ‚‚O
 
 > [!EXAMPLE]
-> #### 📝 Example 5: Explaining Non-Biodegradability of Addition Polymers
+> #### ðŸ“ Example 5: Explaining Non-Biodegradability of Addition Polymers
 > **Question:** Saturated addition polymers, such as poly(chloroethene) (PVC), are highly resistant to biodegradation and accumulate in landfills. Explain why these polymers are non-biodegradable.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **Identify the bonds in the polymer backbone:**
 > >    * Saturated addition polymers have a backbone made entirely of C-C single bonds.
@@ -1692,23 +1702,24 @@ export const parts: LessonPart[] = [
 > >    * Because they are non-polar and strong, they are chemically inert and cannot be hydrolyzed (broken down) by water, nucleophiles, or enzymes/microorganisms.
 
 > [!EXAMPLE]
-> #### 📝 Example 6: Evaluating Hydrogen as a Fuel
+> #### ðŸ“ Example 6: Evaluating Hydrogen as a Fuel
 > **Question:** Hydrogen gas is considered a clean, renewable alternative to fossil fuels. State two advantages and two disadvantages of using hydrogen as a fuel for vehicles compared to petrol.
 > 
 > > [!TIP]
-> > **🔑 Step-by-step Solution:**
+> > **ðŸ”‘ Step-by-step Solution:**
 > > 
 > > 1. **State the advantages:**
-> >    * **No carbon emissions:** Combustion produces only water vapor (2H₂ + O₂ → 2H₂O), which is non-polluting and does not contribute to global warming or acid rain.
+> >    * **No carbon emissions:** Combustion produces only water vapor (2Hâ‚‚ + Oâ‚‚ â†’ 2Hâ‚‚O), which is non-polluting and does not contribute to global warming or acid rain.
 > >    * **Renewable:** Can be obtained from the electrolysis of water using electricity from renewable energy sources (wind/solar).
 > > 2. **State the disadvantages:**
 > >    * **Storage and transport difficulties:** Hydrogen has a very low energy density by volume, requiring heavy, high-pressure tanks or cryogenic cooling to store it as a liquid.
 > >    * **Safety hazards:** It is highly flammable and forms explosive mixtures with air easily, posing a significant fire risk in accidents.
 `,
     keyPoints: [
-      'Greenhouse gases (like H₂O, CO₂, CH₄) absorb emitted IR radiation, trapping heat; their warming effect depends on atmospheric concentration and IR absorption capacity.',
+      'Greenhouse gases (like Hâ‚‚O, COâ‚‚, CHâ‚„) absorb emitted IR radiation, trapping heat; their warming effect depends on atmospheric concentration and IR absorption capacity.',
       'Alternative fuels include carbon-neutral biofuels (made by plant fermentation/fats) and hydrogen (burns to produce only water), each presenting unique engineering trade-offs.',
       'Polymer disposal problems include non-biodegradability (inert C-C backbone) and toxic gases on combustion (e.g. HCl), mitigated by alkaline neutralization, feedstock recycling, or developing biodegradable alternatives.'
     ]
   }
 ];
+

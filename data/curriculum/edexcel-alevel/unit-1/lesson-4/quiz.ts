@@ -468,25 +468,25 @@ export const lessonQuiz = [
   },
   {
     id: "EDEXCEL-U1-L4-Q41-EASY-2026",
-    question: "In 1828, Friedrich Wöhler disproved the theory of 'vitalism' by heating an inorganic compound to produce urea. What was this starting inorganic compound?",
+    question: "In 1828, Friedrich WÃ¶hler disproved the theory of 'vitalism' by heating an inorganic compound to produce urea. What was this starting inorganic compound?",
     options: [
       { text: "Ammonium cyanate", isCorrect: true },
       { text: "Ammonium carbonate" },
       { text: "Urea nitrate" },
       { text: "Sodium cyanide" }
     ],
-    explanation: "Friedrich Wöhler heated ammonium cyanate ($\\text{NH}_4\\text{CNO}$), which is an inorganic salt, and converted it into urea ($\\text{CO(NH}_2)_2$), an organic compound. This demonstrated that organic compounds do not require a living 'vital force' to be synthesized."
+    explanation: "Friedrich WÃ¶hler heated ammonium cyanate ($\\text{NH}_4\\text{CNO}$), which is an inorganic salt, and converted it into urea ($\\text{CO(NH}_2)_2$), an organic compound. This demonstrated that organic compounds do not require a living 'vital force' to be synthesized."
   },
   {
     id: "EDEXCEL-U1-L4-Q42-EASY-2026",
     question: "Which extremely strong, heat-resistant organic polymer was invented by organic chemist Stephanie Kwolek in the 1960s?",
     options: [
-      { text: "Kevlar®", isCorrect: true },
+      { text: "KevlarÂ®", isCorrect: true },
       { text: "Nylon-6,6" },
-      { text: "Teflon®" },
+      { text: "TeflonÂ®" },
       { text: "Poly(ethene)" }
     ],
-    explanation: "Stephanie Kwolek invented Kevlar® in 1965. It is a polyamide polymer with exceptional strength-to-weight ratio, widely used in body armour, safety gloves, and sports equipment."
+    explanation: "Stephanie Kwolek invented KevlarÂ® in 1965. It is a polyamide polymer with exceptional strength-to-weight ratio, widely used in body armour, safety gloves, and sports equipment."
   },
   {
     id: "EDEXCEL-U1-L4-Q43-MEDIUM-2026",
@@ -501,14 +501,14 @@ export const lessonQuiz = [
   },
   {
     id: "EDEXCEL-U1-L4-Q44-MEDIUM-2026",
-    question: "Explain why the actual 3D C-C-C bond angle in cyclobutane is much closer to 109.5° than the 90° angle seen in its 2D drawing.",
+    question: "Explain why the actual 3D C-C-C bond angle in cyclobutane is much closer to 109.5Â° than the 90Â° angle seen in its 2D drawing.",
     options: [
       { text: "The carbon atoms are $sp^3$ hybridized, and the ring puckers in 3D to minimize eclipse strain and approach the tetrahedral angle", isCorrect: true },
       { text: "The carbon atoms are $sp^2$ hybridized, pushing the bonds to a planar arrangement" },
-      { text: "The hydrogen atoms repel each other, widening the angle to exactly 120°" },
+      { text: "The hydrogen atoms repel each other, widening the angle to exactly 120Â°" },
       { text: "Cyclobutane is planar, but the C-C bonds are bent due to coordinate bonding" }
     ],
-    explanation: "Carbon atoms in cyclobutane are $sp^3$ hybridized, which ideally prefers a tetrahedral angle of 109.5°. To minimize ring strain and eclipse strain of C-H bonds, cyclobutane does not stay flat at 90°; it puckers slightly in 3D, keeping its internal angles close to tetrahedral (around 88°)."
+    explanation: "Carbon atoms in cyclobutane are $sp^3$ hybridized, which ideally prefers a tetrahedral angle of 109.5Â°. To minimize ring strain and eclipse strain of C-H bonds, cyclobutane does not stay flat at 90Â°; it puckers slightly in 3D, keeping its internal angles close to tetrahedral (around 88Â°)."
   },
   {
     id: "EDEXCEL-U1-L4-Q45-MEDIUM-2026",
@@ -795,5 +795,171 @@ export const lessonQuiz = [
       { text: "$2\\text{SO}_2 + \\text{O}_2 \\rightarrow 2\\text{SO}_3$ followed by $2\\text{SO}_3 + 2\\text{H}_2\\text{O} \\rightarrow 2\\text{H}_2\\text{SO}_3 + \\text{O}_2$", isCorrect: false }
     ],
     explanation: "Sulfur dioxide is oxidized by oxygen in the atmosphere to sulfur trioxide ($2\\text{SO}_2 + \\text{O}_2 \\rightarrow 2\\text{SO}_3$). The sulfur trioxide then dissolves in atmospheric water droplets to produce sulfuric acid ($\\text{SO}_3 + \\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4$), which is a major component of strong acid rain."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q71-MEDIUM-2026",
+    question: "No carbon dioxide is formed when hydrogen burns ($2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$). Why is hydrogen still NOT considered a 100% carbon-neutral fuel in practice?",
+    options: [
+      { text: "Because the electricity used to produce hydrogen via water electrolysis or compress it for storage often comes from power stations burning fossil fuels", isCorrect: true },
+      { text: "Because hydrogen atoms release carbon dioxide when reacting with oxygen in fuel cells" },
+      { text: "Because hydrogen is naturally mixed with carbon compounds in water molecules" },
+      { text: "Because hydrogen has a very high global warming potential as a greenhouse gas" }
+    ],
+    explanation: "While the combustion of hydrogen gas does not produce any carbon dioxide, the production of hydrogen (via electrolysis of water) and its compression or liquefaction for storage require significant amounts of energy. If this energy is generated by burning fossil fuels, the overall lifecycle of hydrogen fuel still releases $\\text{CO}_2$, making it not carbon neutral."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q72-HARD-2026",
+    question: "What is the primary factor that sets an upper limit to the concentration of ethanol that can be obtained directly from yeast fermentation of sugars?",
+    options: [
+      { text: "Ethanol becomes toxic to yeast, killing the yeast cells when the concentration reaches about 14%", isCorrect: true },
+      { text: "Water starts evaporating faster than ethanol, keeping the concentration constant" },
+      { text: "Enzymes in yeast begin to convert ethanol back into glucose at higher concentrations" },
+      { text: "The carbon dioxide gas produced inhibits the further absorption of sugar by yeast" }
+    ],
+    explanation: "During the fermentation of sugars, yeast enzymes convert glucose into ethanol. However, ethanol is toxic to yeast. When the concentration of ethanol in the solution reaches about 14%, it kills the yeast cells, halting the fermentation process. Further concentration requires energy-intensive distillation."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q73-EASY-2026",
+    question: "In vehicle fuels, what do the designations E10 and E85 represent?",
+    options: [
+      { text: "E10 is 10% bioethanol and 90% petrol; E85 is 85% bioethanol and 15% petrol", isCorrect: true },
+      { text: "E10 is 10% petrol and 90% bioethanol; E85 is 85% petrol and 15% bioethanol" },
+      { text: "E10 is an octane rating of 10; E85 is an octane rating of 85" },
+      { text: "E10 contains 10% methane; E85 contains 85% methane" }
+    ],
+    explanation: "Petrol-ethanol blends are designated by their 'E-number', which indicates the percentage of bioethanol by volume. Therefore, E10 contains 10% bioethanol and 90% petrol, whereas E85 contains 85% bioethanol and 15% petrol."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q74-MEDIUM-2026",
+    question: "Which statement correctly compares biofuels with natural gas as vehicle fuels?",
+    options: [
+      { text: "Biofuels require vast land areas to grow crops which competes with food production, whereas natural gas is extracted from underground with no surface agricultural land use", isCorrect: true },
+      { text: "Natural gas requires high land use to build pipelines, while biofuels require no agricultural land" },
+      { text: "Biofuels have a much higher energy yield and lower transport costs than natural gas" },
+      { text: "Natural gas is closer to being carbon neutral than biofuels" }
+    ],
+    explanation: "A major disadvantage of biofuels is land use; vast fields are needed to grow the crops (like sugarcane or corn) used to produce them, which can compete with agricultural land needed to feed populations. In contrast, natural gas is extracted from underground reservoirs and does not compete with food production land."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q75-HARD-2026",
+    question: "To store hydrogen as a liquid, it must be cooled in heavily insulated containers. At what temperature does hydrogen liquefy under standard pressure?",
+    options: [
+      { text: "$-253^\\circ\\text{C}$", isCorrect: true },
+      { text: "$-196^\\circ\\text{C}$" },
+      { text: "$-78^\\circ\\text{C}$" },
+      { text: "$0^\\circ\\text{C}$" }
+    ],
+    explanation: "Hydrogen has a extremely low boiling point of $-253^\\circ\\text{C}$ (20 K). Therefore, storing it as a liquid requires cryogenic containers cooled to and maintained at $-253^\\circ\\text{C}$."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q76-MEDIUM-2026",
+    question: "Since catalytic converters are not very effective at removing sulfur-based compounds from exhaust gases, what is the best way to prevent sulfur dioxide pollution from vehicle emissions?",
+    options: [
+      { text: "Remove sulfur compounds from the fuel before it is burned, producing low-sulfur or ultra-low-sulfur fuel", isCorrect: true },
+      { text: "Spray calcium oxide powder directly into the vehicle's exhaust pipe during driving" },
+      { text: "React the exhaust gases with hydrogen gas to form non-toxic sulfur hexahydride" },
+      { text: "Dilute the fuel with ethanol, which neutralizes the sulfur impurities" }
+    ],
+    explanation: "Because catalytic converters cannot remove sulfur-based compounds from exhaust gases effectively, the best industrial solution to prevent sulfur dioxide ($\\text{SO}_2$) pollution is flue gas desulfurization in power stations, or removing sulfur impurities directly from crude fractions at oil refineries to produce low-sulfur or ultra-low-sulfur fuel."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q77-EASY-2026",
+    question: "What type of chemical formula is shown for the compound $\\text{CH}_3-\\text{C(CH}_3)_2-\\text{CH}_3$?",
+    options: [
+      { text: "Structural formula", isCorrect: true },
+      { text: "Displayed formula" },
+      { text: "Skeletal formula" },
+      { text: "Molecular formula" }
+    ],
+    explanation: "The formula $\\text{CH}_3-\\text{C(CH}_3)_2-\\text{CH}_3$ shows the arrangement of atoms and the bonds connecting the carbon atoms, but groups the hydrogen atoms together as $\\text{-CH}_3$. Therefore, it is a structural formula (condensed/extended structural formula)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q78-MEDIUM-2026",
+    question: "Which equation represents a termination step in the reaction between chlorine ($\\text{Cl}_2$) and chloromethane ($\\text{CH}_3\\text{Cl}$) under UV light?",
+    options: [
+      { text: "${}^\\bullet\\text{CH}_2\\text{Cl} + \\text{Cl}^\\bullet \\rightarrow \\text{CH}_2\\text{Cl}_2$", isCorrect: true },
+      { text: "${}^\\bullet\\text{CH}_3 + \\text{Cl}_2 \\rightarrow \\text{CH}_3\\text{Cl} + \\text{Cl}^\\bullet$" },
+      { text: "\\text{CH}_3\\text{Cl} + \\text{Cl}_2 \\rightarrow \\text{CH}_2\\text{Cl}_2 + \\text{HCl}$" },
+      { text: "$\\text{H}^\\bullet + \\text{Cl}^\\bullet \\rightarrow \\text{HCl}$" }
+    ],
+    explanation: "A termination step involves the collision and combination of any two free radicals to form a stable molecule. When chlorine reacts with chloromethane, the propagation step produces chloromethyl radicals (${}^\\bullet\\text{CH}_2\\text{Cl}$). Collision of this radical with a chlorine radical ($\\text{Cl}^\\bullet$) forms dichloromethane ($\\text{CH}_2\\text{Cl}_2$) and terminates the chain. (Note: $\\text{H}^\\bullet$ radicals are not formed in this mechanism)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q79-MEDIUM-2026",
+    question: "Using the following boiling points for alkanes: heptane = 372 K, octane = 399 K, decane = 447 K. Predict a reasonable value for the boiling temperature of nonane ($\\text{C}_9\\text{H}_{20}$).",
+    options: [
+      { text: "423 K", isCorrect: true },
+      { text: "385 K" },
+      { text: "458 K" },
+      { text: "410 K" }
+    ],
+    explanation: "The boiling points of alkanes show a smooth gradation with chain length. Nonane ($\\text{C}_9\\text{H}_{20}$) lies exactly between octane ($399\\text{ K}$) and decane ($447\\text{ K}$). A value of **423 K** fits this trend perfectly (lying in the expected range of 415 to 430 K)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q80-HARD-2026",
+    question: "Industrially, ethene is converted into ethanol by direct hydration with steam. What are the correct catalyst and reaction conditions used for this process?",
+    options: [
+      { text: "Phosphoric acid ($\\text{H}_3\\text{PO}_4$) catalyst, $300^\\circ\\text{C}$, $60-70\\text{ atm}$ pressure", isCorrect: true },
+      { text: "Nickel catalyst, $150^\\circ\\text{C}$, $1\\text{ atm}$ pressure" },
+      { text: "Zeolite catalyst, $450^\\circ\\text{C}$, $70\\text{ atm}$ pressure" },
+      { text: "Platinum catalyst, $900^\\circ\\text{C}$, $60-70\\text{ atm}$ pressure" }
+    ],
+    explanation: "The industrial hydration of ethene to manufacture ethanol is carried out by reacting ethene with steam at a temperature of approximately $300^\\circ\\text{C}$ (570 K) and a high pressure of $60 - 70\\text{ atm}$ in the presence of a phosphoric acid catalyst ($\\text{H}_3\\text{PO}_4$) adsorbed on silica."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q81-MEDIUM-2026",
+    question: "Which equation correctly represents the catalytic reforming of heptane ($\\text{C}_7\\text{H}_{16}$) into methylcyclohexane?",
+    options: [
+      { text: "$\\text{C}_7\\text{H}_{16} \\rightarrow \\text{C}_6\\text{H}_{11}\\text{CH}_3 + \\text{H}_2$", isCorrect: true },
+      { text: "$\\text{C}_7\\text{H}_{16} \\rightarrow \\text{C}_6\\text{H}_{11}\\text{CH}_3 + 2\\text{H}_2$" },
+      { text: "$\\text{C}_7\\text{H}_{16} \\rightarrow \\text{C}_7\\text{H}_{14} + 2\\text{H}_2$" },
+      { text: "$\\text{C}_7\\text{H}_{16} \\rightarrow \\text{C}_5\\text{H}_9\\text{CH}_3 + \\text{H}_2$" }
+    ],
+    explanation: "Reforming heptane ($\\text{C}_7\\text{H}_{16}$) into methylcyclohexane ($\\text{C}_7\\text{H}_{14}$) is a dehydrogenation and cyclization reaction. Since the reactant has 16 hydrogens and the product has 14 hydrogens, one molecule of hydrogen gas ($\\text{H}_2$) is formed as a byproduct: $\\text{C}_7\\text{H}_{16} \\rightarrow \\text{C}_6\\text{H}_{11}\\text{CH}_3 + \\text{H}_2$."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q82-MEDIUM-2026",
+    question: "Hydrocarbon Y contains 85.7% carbon by mass and has a molar mass of $56\\text{ g/mol}$. How many structural isomers (excluding stereoisomers) can be drawn for this molecular formula?",
+    options: [
+      { text: "5", isCorrect: true },
+      { text: "4" },
+      { text: "6" },
+      { text: "3" }
+    ],
+    explanation: "First, deduce the formula of Y: empirical formula is $\\text{CH}_2$ ($85.7/12 = 7.14$ C, $14.3/1 = 14.3$ H), and since $M_r = 56$, the molecular formula is $\\text{C}_4\\text{H}_8$. There are 5 structural isomers of $\\text{C}_4\\text{H}_8$:\n1. Alkenes: but-1-ene, but-2-ene, and methylpropene (3 structural isomers).\n2. Cycloalkanes: cyclobutane and methylcyclopropane (2 structural isomers).\n(Note: if cis/trans stereoisomers of but-2-ene are included, the total count rises to 6, but there are exactly 5 structural isomers)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q83-EASY-2026",
+    question: "Two structural formulas represent the same compound if they show the same connectivity of atoms, even if drawn bent on paper. Which two of the following representations depict the exact same molecule?\n* A: $\\text{CH}_3-\\text{CH}_2$ going down to $\\text{CH}_2-\\text{CH}_3$\n* B: $\\text{CH}_3-\\text{CH}_2$ going down to $\\text{CH}_2-\\text{CH}_2-\\text{CH}_3$\n* C: $\\text{CH}_3-\\text{CH}_2-\\text{CH}_2$ going down to $\\text{CH}_2-\\text{CH}_2-\\text{CH}_3$\n* D: $\\text{CH}_3-\\text{CH}_2$ going down to $\\text{CH}_2-\\text{CH}_2-\\text{CH}_2-\\text{CH}_3$",
+    options: [
+      { text: "C and D", isCorrect: true },
+      { text: "A and B" },
+      { text: "B and C" },
+      { text: "A and D" }
+    ],
+    explanation: "Both C and D have a continuous, unbranched chain of 6 carbon atoms (hexane, $\\text{C}_6\\text{H}_{14}$). Drawing the carbon chain bent on paper does not change the connectivity or the identity of the molecule, so both represent the same compound."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q84-MEDIUM-2026",
+    question: "What are the systematic IUPAC names for the two branched isomers of pentane ($\\text{C}_5\\text{H}_{12}$)?",
+    options: [
+      { text: "2-methylbutane and dimethylpropane", isCorrect: true },
+      { text: "2-methylbutane and 2,2-dimethylbutane" },
+      { text: "methylbutane and 2-methylpropane" },
+      { text: "pentane and 2-methylbutane" }
+    ],
+    explanation: "Pentane ($\\text{C}_5\\text{H}_{12}$) has three structural isomers: one straight-chain (pentane) and two branched isomers. The branched isomers are 2-methylbutane ($\\text{CH}_3\\text{CH(CH}_3)\\text{CH}_2\\text{CH}_3$) and dimethylpropane ($\\text{CH}_3\\text{C(CH}_3)_2\\text{CH}_3$)."
+  },
+  {
+    id: "EDEXCEL-U1-L4-Q85-MEDIUM-2026",
+    question: "Which equation correctly represents the isomerization of decane into 2,3-dimethyloctane during petroleum reforming?",
+    options: [
+      { text: "$\\text{C}_{10}\\text{H}_{22} \\rightarrow \\text{C}_{10}\\text{H}_{22}$", isCorrect: true },
+      { text: "$\\text{C}_{10}\\text{H}_{22} \\rightarrow \\text{C}_{10}\\text{H}_{20} + \\text{H}_2$" },
+      { text: "$\\text{C}_{10}\\text{H}_{22} \\rightarrow \\text{C}_8\\text{H}_{18} + \\text{C}_2\\text{H}_4$" },
+      { text: "$\\text{C}_{10}\\text{H}_{22} \\rightarrow \\text{C}_9\\text{H}_{20} + \\text{CH}_4$" }
+    ],
+    explanation: "Converting decane into 2,3-dimethyloctane is a structural isomerization reaction. Since both compounds are saturated alkanes with 10 carbon atoms, they share the identical molecular formula ($\\text{C}_{10}\\text{H}_{22}$). No other products (like hydrogen or small alkanes) are formed, so the equation is simply: $\\text{C}_{10}\\text{H}_{22} \\rightarrow \\text{C}_{10}\\text{H}_{22}$."
   }
 ];
+
