@@ -534,6 +534,8 @@ import * as ed_u2_l4_theory from './edexcel-alevel/unit-2/lesson-4/index';
 import * as ed_u2_l4_quiz from './edexcel-alevel/unit-2/lesson-4/quiz';
 import * as ed_u2_l5_theory from './edexcel-alevel/unit-2/lesson-5/index';
 import * as ed_u2_l5_quiz from './edexcel-alevel/unit-2/lesson-5/quiz';
+import * as ed_u2_l6_theory from './edexcel-alevel/unit-2/lesson-6/index';
+import * as ed_u2_l6_quiz from './edexcel-alevel/unit-2/lesson-6/quiz';
 import * as ed_u3_l1_theory from './edexcel-alevel/unit-3/lesson-1/index';
 import * as ed_u3_l1_quiz from './edexcel-alevel/unit-3/lesson-1/quiz';
 import * as ed_u4_l1_theory from './edexcel-alevel/unit-4/lesson-1/index';
@@ -568,11 +570,12 @@ export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>>
         5: { title: ed_u1_l5_theory.lessonTitle, number: ed_u1_l5_theory.lessonNumber, theory: ed_u1_l5_theory.theoryMarkdown, quiz: ed_u1_l5_quiz.lessonQuiz, parts: ed_u1_l5_theory.parts },
     },
     'edexcel-alevel-unit-2': {
-        1: { title: ed_u2_l1_theory.lessonTitle, number: ed_u2_l1_theory.lessonNumber, theory: ed_u2_l1_theory.theoryMarkdown, quiz: ed_u2_l1_quiz.lessonQuiz },
-        2: { title: ed_u2_l2_theory.lessonTitle, number: ed_u2_l2_theory.lessonNumber, theory: ed_u2_l2_theory.theoryMarkdown, quiz: ed_u2_l2_quiz.lessonQuiz },
-        3: { title: ed_u2_l3_theory.lessonTitle, number: ed_u2_l3_theory.lessonNumber, theory: ed_u2_l3_theory.theoryMarkdown, quiz: ed_u2_l3_quiz.lessonQuiz },
-        4: { title: ed_u2_l4_theory.lessonTitle, number: ed_u2_l4_theory.lessonNumber, theory: ed_u2_l4_theory.theoryMarkdown, quiz: ed_u2_l4_quiz.lessonQuiz },
-        5: { title: ed_u2_l5_theory.lessonTitle, number: ed_u2_l5_theory.lessonNumber, theory: ed_u2_l5_theory.theoryMarkdown, quiz: ed_u2_l5_quiz.lessonQuiz },
+        1: { title: ed_u2_l1_theory.lessonTitle, number: ed_u2_l1_theory.lessonNumber, theory: ed_u2_l1_theory.theoryMarkdown, quiz: ed_u2_l1_quiz.lessonQuiz, parts: ed_u2_l1_theory.parts },
+        2: { title: ed_u2_l2_theory.lessonTitle, number: ed_u2_l2_theory.lessonNumber, theory: ed_u2_l2_theory.theoryMarkdown, quiz: ed_u2_l2_quiz.lessonQuiz, parts: ed_u2_l2_theory.parts },
+        3: { title: ed_u2_l3_theory.lessonTitle, number: ed_u2_l3_theory.lessonNumber, theory: ed_u2_l3_theory.theoryMarkdown, quiz: ed_u2_l3_quiz.lessonQuiz, parts: ed_u2_l3_theory.parts },
+        4: { title: ed_u2_l4_theory.lessonTitle, number: ed_u2_l4_theory.lessonNumber, theory: ed_u2_l4_theory.theoryMarkdown, quiz: ed_u2_l4_quiz.lessonQuiz, parts: ed_u2_l4_theory.parts },
+        5: { title: ed_u2_l5_theory.lessonTitle, number: ed_u2_l5_theory.lessonNumber, theory: ed_u2_l5_theory.theoryMarkdown, quiz: ed_u2_l5_quiz.lessonQuiz, parts: ed_u2_l5_theory.parts },
+        6: { title: ed_u2_l6_theory.lessonTitle, number: ed_u2_l6_theory.lessonNumber, theory: ed_u2_l6_theory.theoryMarkdown, quiz: ed_u2_l6_quiz.lessonQuiz, parts: ed_u2_l6_theory.parts },
     },
     'edexcel-alevel-unit-3': {
         1: { title: ed_u3_l1_theory.lessonTitle, number: ed_u3_l1_theory.lessonNumber, theory: ed_u3_l1_theory.theoryMarkdown, quiz: ed_u3_l1_quiz.lessonQuiz },
