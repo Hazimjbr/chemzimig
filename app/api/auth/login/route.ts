@@ -59,6 +59,10 @@ export async function POST(request: NextRequest) {
                     ? 'edexcel-as'
                     : (gradeVal.toLowerCase().includes('igcse') ? 'cie-igcse' : 'cie-alevel'));
 
+            const enrolledTracks = result.student.enrolledTracks && result.student.enrolledTracks.length > 0
+                ? result.student.enrolledTracks
+                : [track];
+
             const safeStudent = {
                 id: result.student.id,
                 username: result.student.username,
@@ -66,6 +70,7 @@ export async function POST(request: NextRequest) {
                 email: result.student.email,
                 image: result.student.image,
                 grade: result.student.grade,
+                enrolledTracks,
                 isAdmin: result.student.isAdmin || false,
                 role: result.student.role || 'student',
                 track,
@@ -87,6 +92,7 @@ export async function POST(request: NextRequest) {
                 name: safeStudent.name,
                 grade: safeStudent.grade,
                 track,
+                enrolledTracks,
             });
 
             const cookieOptions = getStudentCookieOptions();

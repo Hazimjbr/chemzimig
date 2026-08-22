@@ -21,9 +21,13 @@ export default async function CurriculumPage() {
 
     const resolvedTrack = track || (session.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (session.grade === 'AS Level' ? 'cie-as' : (session.grade === 'A2 Level' || session.grade === 'IB' || session.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
 
+    const studentTracks = (session.enrolledTracks && session.enrolledTracks.length > 0)
+        ? session.enrolledTracks
+        : [resolvedTrack];
+
     const filteredCurricula = allCurricula.filter(c => {
-        if (isSystemAdmin) return true; // Admin can see both
-        return c.id === resolvedTrack || c.id === `${resolvedTrack}-20260106` || c.id.startsWith(resolvedTrack + '-');
+        if (isSystemAdmin) return true; // Admin can see all
+        return studentTracks.some(t => c.id === t || c.id === `${t}-20260106` || c.id.startsWith(t + '-'));
     });
 
     return (

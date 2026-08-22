@@ -21,6 +21,7 @@ export interface AuthUser {
     role: 'admin' | 'moderator' | 'student';
     authMethod: 'google' | 'credentials';
     track?: string;
+    enrolledTracks?: string[];
     xp?: number;
     level?: number;
     lastStudiedLesson?: {

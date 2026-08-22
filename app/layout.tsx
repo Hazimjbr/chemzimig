@@ -6,6 +6,8 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { GamificationProvider } from "@/contexts/GamificationContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import FloatingAssistant from "@/components/assistant/FloatingAssistant";
+import ServiceWorkerRegistration from "@/components/pwa/ServiceWorkerRegistration";
+import InstallPrompt from "@/components/pwa/InstallPrompt";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,6 +28,7 @@ export const metadata: Metadata = {
   },
   description:
     "The ultimate chemistry learning platform for IGCSE and A-Level students. Practice with past paper questions, track your progress, and level up your chemistry skills.",
+  manifest: "/manifest.json",
   keywords: [
     "IGCSE Chemistry",
     "A-Level Chemistry",
@@ -90,6 +93,8 @@ export default function RootLayout({
             <GamificationProvider>
               {children}
               <FloatingAssistant />
+              <ServiceWorkerRegistration />
+              <InstallPrompt />
             </GamificationProvider>
           </AuthProvider>
         </ThemeProvider>

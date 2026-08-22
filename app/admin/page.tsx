@@ -47,6 +47,7 @@ function AdminContent() {
         username: '',
         password: '',
         grade: 'cie-igcse',
+        enrolledTracks: ['cie-igcse'] as string[],
         email: '',
         phone: '',
         notes: '',
@@ -65,6 +66,7 @@ function AdminContent() {
         let email = '';
         let phone = '';
         let grade = formData.grade;
+        let detectedTracks: string[] = [];
 
         // 1. Email extraction
         const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
@@ -83,18 +85,24 @@ function AdminContent() {
         if (lowerText.includes('edexcel')) {
             if (lowerText.includes('as-level') || lowerText.includes('as level') || lowerText.includes(' as ')) {
                 grade = 'edexcel-as';
+                detectedTracks.push('edexcel-as');
             } else if (lowerText.includes('a2-level') || lowerText.includes('a2 level') || lowerText.includes(' a2 ') || lowerText.includes(' a-level ') || lowerText.includes(' a level ')) {
                 grade = 'edexcel-a2';
+                detectedTracks.push('edexcel-a2');
             } else {
                 grade = 'edexcel-igcse';
+                detectedTracks.push('edexcel-igcse');
             }
-        } else {
+        }
+        if (lowerText.includes('cie') || lowerText.includes('cambridge') || (!lowerText.includes('edexcel') && (lowerText.includes('as-level') || lowerText.includes('igcse') || lowerText.includes('a-level')))) {
             if (lowerText.includes('as-level') || lowerText.includes('as level') || lowerText.includes(' as ')) {
-                grade = 'cie-as';
+                if (!grade || grade === 'cie-igcse') grade = 'cie-as';
+                detectedTracks.push('cie-as');
             } else if (lowerText.includes('a-level') || lowerText.includes('a level') || lowerText.includes(' alevel ')) {
-                grade = 'cie-alevel';
+                if (!grade || grade === 'cie-igcse') grade = 'cie-alevel';
+                detectedTracks.push('cie-alevel');
             } else if (lowerText.includes('igcse') || lowerText.includes('cie') || lowerText.includes('cambridge')) {
-                grade = 'cie-igcse';
+                detectedTracks.push('cie-igcse');
             }
         }
 
@@ -129,12 +137,15 @@ function AdminContent() {
             username = name.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15);
         }
 
+        const finalEnrolled = detectedTracks.length > 0 ? Array.from(new Set(detectedTracks)) : (grade ? [grade] : formData.enrolledTracks);
+
         setFormData(prev => ({
             ...prev,
             name: name || prev.name,
             email: email || prev.email,
             phone: phone || prev.phone,
             grade: grade || prev.grade,
+            enrolledTracks: finalEnrolled,
             username: username || prev.username,
             notes: text.trim() ? `Imported from pasted text:\n"${text.trim()}"` : prev.notes
         }));
@@ -145,6 +156,11 @@ function AdminContent() {
     const [newStudentPassword, setNewStudentPassword] = useState('');
     const [isResettingPassword, setIsResettingPassword] = useState(false);
     const [resetCredentialsResult, setResetCredentialsResult] = useState<{ username: string; password?: string } | null>(null);
+
+    // --- Edit Student Tracks Modal State ---
+    const [editTracksStudent, setEditTracksStudent] = useState<any | null>(null);
+    const [editingTracks, setEditingTracks] = useState<string[]>([]);
+    const [isUpdatingTracks, setIsUpdatingTracks] = useState(false);
 
     const handleResetPasswordSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -184,6 +200,8 @@ function AdminContent() {
         setStatus({ type: null, msg: '' });
         setCreatedCredentials(null);
 
+        const primaryGrade = formData.enrolledTracks.length > 0 ? formData.enrolledTracks[0] : formData.grade;
+
         try {
             const res = await fetch('/api/auth/join', {
                 method: 'POST',
@@ -192,7 +210,8 @@ function AdminContent() {
                     name: formData.name,
                     username: formData.username || undefined,
                     password: formData.password || undefined,
-                    grade: formData.grade,
+                    grade: primaryGrade,
+                    enrolledTracks: formData.enrolledTracks.length > 0 ? formData.enrolledTracks : [primaryGrade],
                     email: formData.email,
                     phone: formData.phone,
                     notes: formData.notes,
@@ -209,11 +228,13 @@ function AdminContent() {
                     username: '',
                     password: '',
                     grade: 'cie-igcse',
+                    enrolledTracks: ['cie-igcse'],
                     email: '',
                     phone: '',
                     notes: '',
                     role: 'student'
                 });
+                fetchStudents();
             } else {
                 setStatus({ type: 'error', msg: data.error || 'Failed to create student' });
             }
@@ -624,21 +645,69 @@ function AdminContent() {
                                                      />
                                                  </div>
 
-                                                 <div className="flex flex-col gap-1.5">
-                                                     <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Curriculum / Track *</label>
-                                                     <select 
-                                                         value={formData.grade}
-                                                         onChange={e => setFormData({...formData, grade: e.target.value})}
-                                                         className="bg-[#0b0b1a] text-slate-300 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-indigo-500 transition-all text-sm cursor-pointer"
-                                                     >
-                                                         <option value="cie-igcse" className="bg-[#0b0b1a] text-slate-300">Cambridge IGCSE</option>
-                                                         <option value="cie-as" className="bg-[#0b0b1a] text-slate-300">Cambridge AS-Level</option>
-                                                         <option value="cie-alevel" className="bg-[#0b0b1a] text-slate-300">Cambridge A-Level</option>
-                                                         <option value="edexcel-igcse" className="bg-[#0b0b1a] text-slate-300">Edexcel IGCSE</option>
-                                                         <option value="edexcel-as" className="bg-[#0b0b1a] text-slate-300">Edexcel AS-Level</option>
-                                                         <option value="edexcel-a2" className="bg-[#0b0b1a] text-slate-300">Edexcel A2-Level</option>
-                                                         <option value="dentistry" className="bg-[#0b0b1a] text-slate-300">Dental Board 🦷</option>
-                                                     </select>
+                                                 <div className="flex flex-col gap-2 md:col-span-2 bg-black/30 border border-white/10 p-4 rounded-2xl">
+                                                     <div className="flex items-center justify-between">
+                                                         <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest flex items-center gap-1.5">
+                                                             <span>📚</span> Enrolled Curricula / Tracks (Multi-Select) *
+                                                         </label>
+                                                         <button
+                                                             type="button"
+                                                             onClick={() => {
+                                                                 const allTrackKeys = ['cie-igcse', 'cie-as', 'cie-alevel', 'edexcel-igcse', 'edexcel-as', 'edexcel-a2'];
+                                                                 const isAll = formData.enrolledTracks.length === allTrackKeys.length;
+                                                                 const nextTracks = isAll ? ['cie-igcse'] : allTrackKeys;
+                                                                 setFormData({
+                                                                     ...formData,
+                                                                     grade: nextTracks[0],
+                                                                     enrolledTracks: nextTracks
+                                                                 });
+                                                             }}
+                                                             className="text-[10px] font-bold text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer"
+                                                         >
+                                                             {formData.enrolledTracks.length === 6 ? 'Deselect All (Keep IGCSE)' : '⚡ Select All Curricula'}
+                                                         </button>
+                                                     </div>
+                                                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1">
+                                                         {[
+                                                             { id: 'cie-igcse', name: 'Cambridge IGCSE', color: 'border-emerald-500/30 bg-emerald-500/5 text-emerald-400' },
+                                                             { id: 'cie-as', name: 'Cambridge AS-Level', color: 'border-blue-500/30 bg-blue-500/5 text-blue-400' },
+                                                             { id: 'cie-alevel', name: 'Cambridge A-Level', color: 'border-indigo-500/30 bg-indigo-500/5 text-indigo-400' },
+                                                             { id: 'edexcel-igcse', name: 'Edexcel IGCSE', color: 'border-cyan-500/30 bg-cyan-500/5 text-cyan-400' },
+                                                             { id: 'edexcel-as', name: 'Edexcel AS-Level', color: 'border-purple-500/30 bg-purple-500/5 text-purple-400' },
+                                                             { id: 'edexcel-a2', name: 'Edexcel A2-Level', color: 'border-pink-500/30 bg-pink-500/5 text-pink-400' }
+                                                         ].map((track) => {
+                                                             const isSelected = formData.enrolledTracks.includes(track.id);
+                                                             return (
+                                                                 <button
+                                                                     key={track.id}
+                                                                     type="button"
+                                                                     onClick={() => {
+                                                                         const next = isSelected 
+                                                                             ? formData.enrolledTracks.filter(t => t !== track.id)
+                                                                             : [...formData.enrolledTracks, track.id];
+                                                                         const finalTracks = next.length > 0 ? next : [track.id];
+                                                                         setFormData({
+                                                                             ...formData,
+                                                                             grade: finalTracks[0],
+                                                                             enrolledTracks: finalTracks
+                                                                         });
+                                                                     }}
+                                                                     className={`flex items-center gap-2 p-2.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer text-left ${
+                                                                         isSelected 
+                                                                             ? `${track.color} border-current ring-1 ring-current/20 shadow-sm` 
+                                                                             : 'border-white/5 bg-white/[0.02] text-slate-400 hover:border-white/20 hover:text-slate-200'
+                                                                     }`}
+                                                                 >
+                                                                     <div className={`w-3.5 h-3.5 rounded flex items-center justify-center border transition-all ${
+                                                                         isSelected ? 'bg-indigo-500 border-indigo-500 text-white' : 'border-white/20 bg-black/40'
+                                                                     }`}>
+                                                                         {isSelected && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                                                                     </div>
+                                                                     <span className="truncate">{track.name}</span>
+                                                                 </button>
+                                                             );
+                                                         })}
+                                                     </div>
                                                  </div>
 
                                                  <div className="flex flex-col gap-1.5">
@@ -820,37 +889,52 @@ function AdminContent() {
                                                                              {student.username}
                                                                          </td>
                                                                          <td className="py-4">
-                                                                             <select
-                                                                                 value={student.grade || ''}
-                                                                                 onChange={async (e) => {
-                                                                                     const newGrade = e.target.value;
-                                                                                     try {
-                                                                                         const res = await fetch('/api/admin/students', {
-                                                                                             method: 'POST',
-                                                                                             headers: { 'Content-Type': 'application/json' },
-                                                                                             body: JSON.stringify({ action: 'update-grade', studentId: student.id, grade: newGrade })
-                                                                                         });
-                                                                                         const data = await res.json();
-                                                                                         if (data.success) {
-                                                                                             fetchStudents();
-                                                                                         } else {
-                                                                                             alert(data.error || 'Failed to update curriculum');
-                                                                                         }
-                                                                                     } catch (err) {
-                                                                                         console.error(err);
-                                                                                         alert('Connection error');
-                                                                                     }
-                                                                                 }}
-                                                                                 className="bg-[#0b0b1a] text-slate-300 border border-white/10 rounded-lg px-2.5 py-1 outline-none text-xs font-bold cursor-pointer"
-                                                                             >
-                                                                                 <option value="cie-igcse">Cambridge IGCSE</option>
-                                                                                 <option value="cie-as">Cambridge AS-Level</option>
-                                                                                 <option value="cie-alevel">Cambridge A-Level</option>
-                                                                                 <option value="edexcel-igcse">Edexcel IGCSE</option>
-                                                                                 <option value="edexcel-as">Edexcel AS-Level</option>
-                                                                                 <option value="edexcel-a2">Edexcel A2-Level</option>
-                                                                                 <option value="dentistry">Dental Board 🦷</option>
-                                                                             </select>
+                                                                             <div className="flex flex-wrap items-center gap-1.5 max-w-xs">
+                                                                                 {(student.enrolledTracks && student.enrolledTracks.length > 0 
+                                                                                     ? student.enrolledTracks 
+                                                                                     : [student.grade || 'cie-igcse']
+                                                                                 ).map((trackKey: string) => {
+                                                                                     const trackNames: Record<string, string> = {
+                                                                                         'cie-igcse': 'CIE IGCSE',
+                                                                                         'cie-as': 'CIE AS',
+                                                                                         'cie-alevel': 'CIE A-Level',
+                                                                                         'edexcel-igcse': 'Edexcel IGCSE',
+                                                                                         'edexcel-as': 'Edexcel AS',
+                                                                                         'edexcel-a2': 'Edexcel A2',
+                                                                                         'dentistry': 'Dental 🦷'
+                                                                                     };
+                                                                                     const trackColors: Record<string, string> = {
+                                                                                         'cie-igcse': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+                                                                                         'cie-as': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+                                                                                         'cie-alevel': 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
+                                                                                         'edexcel-igcse': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+                                                                                         'edexcel-as': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+                                                                                         'edexcel-a2': 'bg-pink-500/10 text-pink-400 border-pink-500/20',
+                                                                                         'dentistry': 'bg-amber-500/10 text-amber-400 border-amber-500/20'
+                                                                                     };
+                                                                                     return (
+                                                                                         <span 
+                                                                                             key={trackKey} 
+                                                                                             className={`inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold border ${trackColors[trackKey] || 'bg-slate-500/10 text-slate-300 border-slate-500/20'}`}
+                                                                                         >
+                                                                                             {trackNames[trackKey] || trackKey}
+                                                                                         </span>
+                                                                                     );
+                                                                                 })}
+                                                                                 <button
+                                                                                     type="button"
+                                                                                     onClick={() => {
+                                                                                         const currentTracks = student.enrolledTracks && student.enrolledTracks.length > 0
+                                                                                             ? student.enrolledTracks
+                                                                                             : [student.grade || 'cie-igcse'];
+                                                                                         setEditTracksStudent(student);
+                                                                                         setEditingTracks(currentTracks);
+                                                                                     }}
+                                                                                     className="text-[10px] text-indigo-400 hover:text-indigo-300 hover:underline font-bold px-1 py-0.5 cursor-pointer ml-1"
+                                                                                 >
+                                                                                     ✏️ Edit
+                                                                                 </button>
+                                                                             </div>
                                                                          </td>
                                                                          <td className="py-4 text-xs font-semibold text-slate-400">
                                                                              {student.devices?.length || 0} device(s)
@@ -1622,6 +1706,142 @@ function AdminContent() {
                                 </button>
                             </div>
                         )}
+                    </div>
+                </div>
+            )}
+
+            {/* Edit Student Tracks Modal */}
+            {editTracksStudent && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-[#0c0c1e] border border-white/10 p-6 rounded-3xl max-w-lg w-full shadow-2xl relative animate-in zoom-in-95 duration-200">
+                        <div className="flex items-center justify-between mb-4">
+                            <h4 className="text-base font-bold flex items-center gap-2 text-white">
+                                <span className="text-lg">📚</span>
+                                Edit Student Curricula / Tracks
+                            </h4>
+                            <button
+                                type="button"
+                                onClick={() => setEditTracksStudent(null)}
+                                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all cursor-pointer"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        <div className="mb-4 p-3 bg-white/[0.02] border border-white/5 rounded-2xl flex items-center gap-3">
+                            <div className="w-9 h-9 rounded-full bg-indigo-500/10 border border-indigo-500/20 overflow-hidden flex items-center justify-center flex-shrink-0">
+                                <img 
+                                    src={editTracksStudent.image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${editTracksStudent.username}`} 
+                                    alt={editTracksStudent.name}
+                                    className="w-full h-full object-cover" 
+                                />
+                            </div>
+                            <div>
+                                <p className="font-bold text-white text-sm">{editTracksStudent.name}</p>
+                                <p className="text-xs text-slate-400 font-mono">@{editTracksStudent.username}</p>
+                            </div>
+                        </div>
+
+                        <div className="space-y-3 mb-6">
+                            <div className="flex items-center justify-between">
+                                <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                                    Enrolled Curricula (Select all that apply)
+                                </label>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        const allTrackKeys = ['cie-igcse', 'cie-as', 'cie-alevel', 'edexcel-igcse', 'edexcel-as', 'edexcel-a2'];
+                                        const isAll = editingTracks.length === allTrackKeys.length;
+                                        setEditingTracks(isAll ? ['cie-igcse'] : allTrackKeys);
+                                    }}
+                                    className="text-[10px] font-bold text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer"
+                                >
+                                    {editingTracks.length === 6 ? 'Deselect All' : '⚡ Select All'}
+                                </button>
+                            </div>
+
+                            <div className="grid grid-cols-2 gap-2">
+                                {[
+                                    { id: 'cie-igcse', name: 'Cambridge IGCSE', color: 'border-emerald-500/30 bg-emerald-500/5 text-emerald-400' },
+                                    { id: 'cie-as', name: 'Cambridge AS-Level', color: 'border-blue-500/30 bg-blue-500/5 text-blue-400' },
+                                    { id: 'cie-alevel', name: 'Cambridge A-Level', color: 'border-indigo-500/30 bg-indigo-500/5 text-indigo-400' },
+                                    { id: 'edexcel-igcse', name: 'Edexcel IGCSE', color: 'border-cyan-500/30 bg-cyan-500/5 text-cyan-400' },
+                                    { id: 'edexcel-as', name: 'Edexcel AS-Level', color: 'border-purple-500/30 bg-purple-500/5 text-purple-400' },
+                                    { id: 'edexcel-a2', name: 'Edexcel A2-Level', color: 'border-pink-500/30 bg-pink-500/5 text-pink-400' }
+                                ].map((track) => {
+                                    const isSelected = editingTracks.includes(track.id);
+                                    return (
+                                        <button
+                                            key={track.id}
+                                            type="button"
+                                            onClick={() => {
+                                                const next = isSelected 
+                                                    ? editingTracks.filter(t => t !== track.id)
+                                                    : [...editingTracks, track.id];
+                                                setEditingTracks(next.length > 0 ? next : [track.id]);
+                                            }}
+                                            className={`flex items-center gap-2 p-2.5 rounded-xl border text-xs font-semibold transition-all cursor-pointer text-left ${
+                                                isSelected 
+                                                    ? `${track.color} border-current ring-1 ring-current/20 shadow-sm`
+                                                    : 'border-white/5 bg-white/[0.02] text-slate-400 hover:border-white/20 hover:text-slate-200'
+                                            }`}
+                                        >
+                                            <div className={`w-3.5 h-3.5 rounded flex items-center justify-center border transition-all ${
+                                                isSelected ? 'bg-indigo-500 border-indigo-500 text-white' : 'border-white/20 bg-black/40'
+                                            }`}>
+                                                {isSelected && <Check className="w-2.5 h-2.5 stroke-[3]" />}
+                                            </div>
+                                            <span className="truncate">{track.name}</span>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <button
+                                type="button"
+                                disabled={isUpdatingTracks || editingTracks.length === 0}
+                                onClick={async () => {
+                                    if (!editTracksStudent || editingTracks.length === 0) return;
+                                    setIsUpdatingTracks(true);
+                                    try {
+                                        const res = await fetch('/api/admin/students', {
+                                            method: 'POST',
+                                            headers: { 'Content-Type': 'application/json' },
+                                            body: JSON.stringify({
+                                                action: 'update-tracks',
+                                                studentId: editTracksStudent.id,
+                                                enrolledTracks: editingTracks,
+                                                grade: editingTracks[0]
+                                            })
+                                        });
+                                        const data = await res.json();
+                                        if (data.success) {
+                                            setEditTracksStudent(null);
+                                            fetchStudents();
+                                        } else {
+                                            alert(data.error || 'Failed to update student tracks');
+                                        }
+                                    } catch (err) {
+                                        console.error(err);
+                                        alert('Connection error');
+                                    } finally {
+                                        setIsUpdatingTracks(false);
+                                    }
+                                }}
+                                className="flex-1 bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 text-white py-3 rounded-xl text-xs font-bold transition-all shadow-lg shadow-indigo-500/20 active:scale-95 cursor-pointer"
+                            >
+                                {isUpdatingTracks ? 'Saving Changes...' : 'Save Curricula Access'}
+                            </button>
+                            <button
+                                type="button"
+                                onClick={() => setEditTracksStudent(null)}
+                                className="px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-xl text-xs font-bold transition-all active:scale-95 cursor-pointer"
+                            >
+                                Cancel
+                            </button>
+                        </div>
                     </div>
                 </div>
             )}

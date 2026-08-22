@@ -82,12 +82,20 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ success: true, isActive: !current });
         }
 
-        if (action === 'update-grade') {
-            const { grade } = body;
-            if (!grade) {
-                return NextResponse.json({ success: false, error: 'Grade is required' }, { status: 400 });
+        if (action === 'update-grade' || action === 'update-tracks') {
+            const { grade, enrolledTracks } = body;
+            const updatePayload: Record<string, any> = {};
+            if (grade) updatePayload.grade = grade;
+            if (enrolledTracks && Array.isArray(enrolledTracks)) {
+                updatePayload.enrolledTracks = enrolledTracks;
+                if (!grade && enrolledTracks.length > 0) {
+                    updatePayload.grade = enrolledTracks[0];
+                }
             }
-            await studentRef.update({ grade });
+            if (Object.keys(updatePayload).length === 0) {
+                return NextResponse.json({ success: false, error: 'Curriculum or tracks required' }, { status: 400 });
+            }
+            await studentRef.update(updatePayload);
             return NextResponse.json({ success: true });
         }
 

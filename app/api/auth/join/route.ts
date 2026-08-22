@@ -17,11 +17,11 @@ export async function POST(request: NextRequest) {
         }
 
         const body = await request.json();
-        const { name, username, password, grade, email, phone, notes, role } = body;
+        const { name, username, password, grade, enrolledTracks, email, phone, notes, role } = body;
 
-        if (!name || !grade) {
+        if (!name || (!grade && (!enrolledTracks || enrolledTracks.length === 0))) {
             return NextResponse.json(
-                { success: false, error: 'Name and grade are required' },
+                { success: false, error: 'Name and curriculum selection are required' },
                 { status: 400 }
             );
         }
@@ -40,6 +40,8 @@ export async function POST(request: NextRequest) {
             );
         }
 
+        const effectiveGrade = grade || (enrolledTracks && enrolledTracks[0]) || 'cie-igcse';
+
         const result = await createStudent({
             username: username || undefined,
             passwordHash: password || undefined,
@@ -47,7 +49,8 @@ export async function POST(request: NextRequest) {
             email: email || '',
             phone: phone || '',
             notes: notes || '',
-            grade,
+            grade: effectiveGrade,
+            enrolledTracks: enrolledTracks || [effectiveGrade],
             role: role || 'student',
         });
 

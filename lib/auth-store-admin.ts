@@ -29,6 +29,7 @@ export interface Student {
     phone?: string;
     notes?: string;
     grade?: string; // International grade (e.g., Year 10, IB DP1)
+    enrolledTracks?: string[]; // Multiple tracks/curricula access e.g. ['cie-igcse', 'edexcel-as', 'cie-as']
     image?: string;
     devices: Device[];
     isActive: boolean;
@@ -130,6 +131,8 @@ export interface UserSession {
     isAdmin: boolean;
     role: 'admin' | 'moderator' | 'student';
     grade?: string;
+    track?: string;
+    enrolledTracks?: string[];
     image?: string;
 }
 
@@ -173,6 +176,8 @@ export async function verifySession(sessionCookie?: string): Promise<UserSession
             isAdmin,
             role,
             grade: payload.grade,
+            track: payload.track,
+            enrolledTracks: payload.enrolledTracks,
         };
     } catch {
         return null;
@@ -343,6 +348,7 @@ export async function createStudent(data: {
     phone?: string;
     notes?: string;
     grade: string;
+    enrolledTracks?: string[];
     role?: 'admin' | 'moderator' | 'student';
 }) {
     const db = getDB();
@@ -363,6 +369,11 @@ export async function createStudent(data: {
     const id = `std_${Date.now()}`;
     // Hash the password before storing
     const hashedPassword = await bcrypt.hash(rawPassword, 12);
+    
+    const enrolledTracks = data.enrolledTracks && data.enrolledTracks.length > 0 
+        ? data.enrolledTracks 
+        : (data.grade ? [data.grade] : ['cie-igcse']);
+
     const newStudent: Student = {
         id,
         username,
@@ -372,6 +383,7 @@ export async function createStudent(data: {
         phone: data.phone || '',
         notes: data.notes || '',
         grade: data.grade,
+        enrolledTracks,
         image: `https://api.dicebear.com/7.x/avataaars/svg?seed=${username}`,
         devices: [],
         isActive: true,
