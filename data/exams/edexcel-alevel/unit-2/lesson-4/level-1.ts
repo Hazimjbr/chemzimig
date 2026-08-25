@@ -152,6 +152,139 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q25",
     createdAt: "2026-08-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_9-2026",
+    question: "Why does increasing the concentration of a solution increase the rate of a chemical reaction?",
+    options: [
+      { text: "It decreases the activation energy" },
+      { text: "It increases the number of reacting particles per unit volume, which increases the frequency of collisions between particles", isCorrect: true },
+      { text: "It increases the average kinetic energy of the particles" },
+      { text: "It shifts the position of equilibrium to the left" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Increasing concentration means there are more reactant particles packed in the same space.\n* This increases the probability and frequency of collisions per unit time, resulting in a higher rate of successful collisions.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q33",
+    createdAt: "2026-08-20T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_10-2026",
+    question: "Which of the following describes a heterogeneous equilibrium?",
+    options: [
+      { text: "All reactants and products are in the same physical state" },
+      { text: "The reactants and products are in more than one physical state", isCorrect: true },
+      { text: "The rate of the forward reaction is different from the reverse reaction" },
+      { text: "The reaction goes to completion without establishing equilibrium" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A heterogeneous equilibrium is one in which the species involved are in different phases or states of matter (e.g., solid reactants and gaseous products).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q26",
+    createdAt: "2026-08-20T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_11-2026",
+    question: "How does grinding a solid reactant into a fine powder affect the rate of reaction?",
+    options: [
+      { text: "It lowers the activation energy" },
+      { text: "It increases the surface area, allowing more collisions to occur per unit time between reactants", isCorrect: true },
+      { text: "It increases the temperature of the system" },
+      { text: "It decreases the rate of reaction by packing particles too tightly" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Grinding increases the exposed surface area of the solid, meaning more reactant particles are accessible to collide with other reactants at any given instant.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q25",
+    createdAt: "2026-08-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_12-2026",
+    question: "Which of the following is a necessary condition for a dynamic equilibrium to be established and maintained?",
+    options: [
+      { text: "The reaction must occur in an open container" },
+      { text: "The reaction must occur in a closed system", isCorrect: true },
+      { text: "The reactants must be completely converted to products" },
+      { text: "The temperature must be constantly changing" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A closed system prevents reactants or products from escaping, ensuring that both the forward and reverse reactions can continue indefinitely.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q34",
+    createdAt: "2026-08-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_13-2026",
+    question: "According to Le Chatelier's principle, what is the effect of continuously removing a product as it forms in a reversible reaction?",
+    options: [
+      { text: "The reaction stops completely" },
+      { text: "The position of equilibrium shifts to the right to produce more of that product", isCorrect: true },
+      { text: "The position of equilibrium shifts to the left" },
+      { text: "The value of Kc decreases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Removing product decreases its concentration.\n* The system opposes this change by shifting to the right (products side) to replace the lost product, which helps drive the reaction to high yields.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q27",
+    createdAt: "2026-08-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_14-2026",
+    question: "On a reaction profile diagram, what represents the activation energy of the forward reaction?",
+    options: [
+      { text: "The energy level of the products" },
+      { text: "The difference in energy between the reactants and the transition state (peak of the curve)", isCorrect: true },
+      { text: "The difference in energy between reactants and products (ΔH)" },
+      { text: "The energy level of the catalyst" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Activation energy ($E_a$) is the energy barrier that must be overcome.\n* It is represented by the height from the reactant energy level up to the highest point of the energy profile curve.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q26",
+    createdAt: "2026-08-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv1_15-2026",
+    question: "How does increasing the temperature affect the reactant particles in terms of collision theory?",
+    options: [
+      { text: "It decreases their average speed" },
+      { text: "It increases both the frequency of collisions and the proportion of colliding particles that have energy greater than or equal to the activation energy", isCorrect: true },
+      { text: "It only increases the collision frequency, leaving particle energies unchanged" },
+      { text: "It decreases the activation energy" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Raising temperature makes particles move faster (increasing collision frequency).\n* More importantly, it shifts the Maxwell-Boltzmann distribution so a much higher percentage of particles have sufficient energy ($E \\ge E_a$) to react successfully.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q35",
+    createdAt: "2026-08-23T10:00:00Z"
   }
 ];
 

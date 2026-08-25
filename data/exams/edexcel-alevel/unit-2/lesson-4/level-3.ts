@@ -114,6 +114,120 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q24",
     createdAt: "2026-08-11T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv3_7-2026",
+    question: "In a reversible reaction: $\\text{A(g)} + 2\\text{B(g)} \\rightleftharpoons 3\\text{C(g)} + \\text{D(g)}$, the reaction is initiated with $1.00\\text{ mol dm}^{-3}$ of A and $1.50\\text{ mol dm}^{-3}$ of B. At equilibrium, the concentration of C is found to be $0.90\\text{ mol dm}^{-3}$. Calculate the value of the equilibrium constant $K_c$ at this temperature.",
+    options: [
+      { text: "0.386", isCorrect: true },
+      { text: "0.772" },
+      { text: "1.16" },
+      { text: "0.193" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Build ICE table (all values in $\\text{mol dm}^{-3}$):\n  * Initial: $[\\text{A}] = 1.00$, $[\\text{B}] = 1.50$, $[\\text{C}] = 0$, $[\\text{D}] = 0$.\n  * Change: $[\\text{C}]$ increases by $+3x = +0.90 \\implies x = 0.30$.\n  * Equilibrium: $[\\text{A}] = 1.00 - 0.30 = 0.70$, $[\\text{B}] = 1.50 - 2(0.30) = 0.90$, $[\\text{C}] = 0.90$, $[\\text{D}] = 0.30$.\n* $K_c = \\frac{[\\text{C}]^3[\\text{D}]}{[\\text{A}][\\text{B}]^2} = \\frac{(0.90)^3(0.30)}{(0.70)(0.90)^2} = \\frac{0.90 \\times 0.30}{0.70} = \\frac{0.270}{0.700} = \\mathbf{0.386\\text{ mol dm}^{-3}}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q39",
+    createdAt: "2026-08-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv3_8-2026",
+    question: "For a gaseous endothermic reaction, which statement describes how the equilibrium yield of products and the value of $K_c$ vary when temperature is increased?",
+    options: [
+      { text: "Yield increases, Kc remains constant" },
+      { text: "Yield increases, Kc increases", isCorrect: true },
+      { text: "Yield decreases, Kc decreases" },
+      { text: "Yield remains constant, Kc increases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* For an endothermic reaction ($\\Delta H > 0$), raising temperature shifts the equilibrium position to the right (products side), increasing product yield.\n* Because temperature is the ONLY factor that changes the value of $K_c$, and it shifts the reaction forward, $K_c$ must increase.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q30",
+    createdAt: "2026-08-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv3_9-2026",
+    question: "When the temperature of a gas sample is increased, the Maxwell-Boltzmann distribution curve changes. How does the area under the curve representing molecules with energy $E \\ge E_a$ change relative to the peak height?",
+    options: [
+      { text: "The area increases while the peak height increases" },
+      { text: "The area increases while the peak height decreases", isCorrect: true },
+      { text: "The area decreases while the peak height decreases" },
+      { text: "The area remains constant while the peak height decreases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Increasing temperature shifts the curve to the right and flattens it (peak height decreases).\n* This increases the area under the curve to the right of $E_a$ (more molecules have $E \\ge E_a$), while the total area remains constant.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q29",
+    createdAt: "2026-08-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv3_10-2026",
+    question: "In the Haber process: $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$, adding excess hydrogen gas increases the equilibrium yield of ammonia. Which statement correctly describes the effect of this addition on the equilibrium constant $K_c$?",
+    options: [
+      { text: "Kc increases because more products are formed" },
+      { text: "Kc remains constant because temperature is unchanged", isCorrect: true },
+      { text: "Kc decreases because reactant concentration is higher" },
+      { text: "Kc doubles because the stoichiometry of hydrogen is 3" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The equilibrium constant $K_c$ is dependent solely on temperature.\n* Adding reactants shifts the position of equilibrium to the right to consume the excess, but the ratio of concentrations defined by $K_c$ remains constant at that temperature.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q40",
+    createdAt: "2026-08-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv3_11-2026",
+    question: "During industrial ammonia synthesis (Haber process), sulfur impurities in the hydrogen feed gas lead to catalyst poisoning. What describes this process at the molecular level?",
+    options: [
+      { text: "Sulfur reacts with nitrogen gas to form toxic compounds" },
+      { text: "Sulfur molecules adsorb strongly and irreversibly onto the active sites of the iron catalyst, preventing nitrogen and hydrogen adsorption", isCorrect: true },
+      { text: "Sulfur dissolves the iron catalyst completely" },
+      { text: "Sulfur increases the activation energy of the gas phase" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Catalyst poisoning in heterogeneous catalysis involves chemical adsorption (chemisorption) of poison molecules onto the catalyst active sites.\n* Because sulfur binds strongly and irreversibly, it blocks the reactants ($\\text{N}_2$ and $\\text{H}_2$) from accessing the active sites, decreasing catalytic efficiency.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q31",
+    createdAt: "2026-08-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv3_12-2026",
+    question: "For the equilibrium reaction: $\\text{A(g)} + \\text{B(g)} \\rightleftharpoons 2\\text{C(g)}$, the reaction is started with $1.00\\text{ mol}$ of A and $1.00\\text{ mol}$ of B in a $1.00\\text{ dm}^3$ vessel. If $K_c = 16.0$, calculate the equilibrium concentration of C.",
+    options: [
+      { text: "1.33 mol dm⁻³", isCorrect: true },
+      { text: "0.67 mol dm⁻³" },
+      { text: "0.80 mol dm⁻³" },
+      { text: "1.60 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Build ICE table (in $\\text{mol dm}^{-3}$):\n  * Initial: $[\\text{A}] = 1.00$, $[\\text{B}] = 1.00$, $[\\text{C}] = 0$.\n  * Change: $-x$, $-x$, $+2x$.\n  * Equilibrium: $1.00 - x$, $1.00 - x$, $2x$.\n* $K_c = \\frac{[\\text{C}]^2}{[\\text{A}][\\text{B}]} = \\frac{(2x)^2}{(1.00 - x)^2} = 16.0$.\n* Take square root of both sides: $\\frac{2x}{1.00 - x} = 4.0 \\implies 2x = 4.0(1.00 - x) \\implies 2x = 4.0 - 4.0x \\implies 6.0x = 4.0 \\implies x = 0.667$.\n* Equilibrium concentration of $\\text{C} = 2x = 2(0.667) = \\mathbf{1.33\\text{ mol dm}^{-3}}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q30",
+    createdAt: "2026-08-29T10:00:00Z"
   }
 ];
 

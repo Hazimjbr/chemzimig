@@ -114,6 +114,139 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q22",
     createdAt: "2026-08-08T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_7-2026",
+    question: "Why does the Maxwell-Boltzmann distribution curve always start at the origin (0,0)?",
+    options: [
+      { text: "No particles can ever react at 0 K" },
+      { text: "No gas molecules can have zero kinetic energy at any temperature above absolute zero", isCorrect: true },
+      { text: "The total energy of the system is zero" },
+      { text: "The activation energy starts at zero" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Kinetic energy is associated with motion.\n* In any gas sample at temperatures above absolute zero, all molecules are in constant motion, so no particles have exactly zero kinetic energy.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q36",
+    createdAt: "2026-08-23T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_8-2026",
+    question: "Determine the units of the equilibrium constant $K_c$ for the reaction: $\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$.",
+    options: [
+      { text: "mol dm⁻³" },
+      { text: "mol⁻¹ dm³" },
+      { text: "mol⁻² dm⁶", isCorrect: true },
+      { text: "no units" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $K_c = \\frac{[\\text{NH}_3]^2}{[\\text{N}_2][\\text{H}_2]^3}$.\n* Units $= \\frac{(\\text{mol dm}^{-3})^2}{(\\text{mol dm}^{-3})(\\text{mol dm}^{-3})^3} = \\frac{1}{(\\text{mol dm}^{-3})^2} = \\mathbf{\\text{mol}^{-2}\\text{ dm}^6}$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q28",
+    createdAt: "2026-08-24T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_9-2026",
+    question: "For a gaseous system in equilibrium, what is the effect of adding an inert gas (like helium) at constant volume?",
+    options: [
+      { text: "The equilibrium shifts to the side with fewer gas moles" },
+      { text: "The equilibrium shifts to the side with more gas moles" },
+      { text: "There is no shift in the position of equilibrium because the concentrations and partial pressures of the reacting gases remain unchanged", isCorrect: true },
+      { text: "The value of Kc increases" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Adding an inert gas at constant volume increases the total pressure, but it does not change the concentrations or partial pressures of the individual reacting species.\n* Therefore, it has no effect on the position of equilibrium.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q27",
+    createdAt: "2026-08-24T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_10-2026",
+    question: "How does a homogeneous catalyst differ from a heterogeneous catalyst in its mode of action?",
+    options: [
+      { text: "Homogeneous catalysts do not affect the activation energy" },
+      { text: "A homogeneous catalyst reacts to form an intermediate compound which then decomposes to regenerate the catalyst, whereas a heterogeneous catalyst provides an active surface for adsorption", isCorrect: true },
+      { text: "Heterogeneous catalysts dissolve in the reacting mixture" },
+      { text: "Homogeneous catalysts are consumed completely" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Homogeneous catalysts operate in the same phase, forming temporary coordinate species that decompose.\n* Heterogeneous catalysts provide a solid surface onto which reactant molecules are adsorbed, weakening bonds to facilitate reaction.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q37",
+    createdAt: "2026-08-25T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_11-2026",
+    question: "Which of the following reaction profiles represents an endothermic reaction?",
+    options: [
+      { text: "A profile where products are at a lower energy level than reactants" },
+      { text: "A profile where products are at a higher energy level than reactants, resulting in a positive ΔH", isCorrect: true },
+      { text: "A profile with no activation energy barrier" },
+      { text: "A profile where the catalyst is at the highest energy point" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In an endothermic reaction, heat energy is absorbed from the surroundings, meaning the chemical potential energy of the products is higher than that of the starting reactants ($\\Delta H > 0$).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q29",
+    createdAt: "2026-08-25T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_12-2026",
+    question: "For the gas-phase equilibrium: $\\text{H}_2\\text{(g)} + \\text{I}_2\\text{(g)} \\rightleftharpoons 2\\text{HI(g)}$, what is the effect of increasing the pressure of the system?",
+    options: [
+      { text: "Equilibrium shifts to the right" },
+      { text: "Equilibrium shifts to the left" },
+      { text: "There is no shift in the position of equilibrium, but the rate of reaching equilibrium increases", isCorrect: true },
+      { text: "Kc decreases" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Both sides of the equation contain exactly 2 moles of gas ($1+1=2$ vs $2$).\n* Changing the pressure does not shift the equilibrium position because neither side is favored.\n* However, the higher density of gas particles increases the collision frequency, which increases the rate at which equilibrium is reached.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q28",
+    createdAt: "2026-08-26T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l4_lv2_13-2026",
+    question: "What is the equilibrium constant ($K_c$) expression for the thermal decomposition of solid calcium carbonate: $\\text{CaCO}_3\\text{(s)} \\rightleftharpoons \\text{CaO(s)} + \\text{CO}_2\\text{(g)}$?",
+    options: [
+      { text: "Kc = [CaO][CO₂] / [CaCO₃]" },
+      { text: "Kc = [CO₂]", isCorrect: true },
+      { text: "Kc = [CaCO₃] / [CaO][CO₂]" },
+      { text: "Kc = 1 / [CO₂]" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The concentration of pure solids (like $\\text{CaCO}_3$ and $\\text{CaO}$) is constant and is incorporated into the equilibrium constant.\n* Therefore, they are omitted from the $K_c$ expression, leaving only gaseous species: $K_c = [\\text{CO}_2]$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 4,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q38",
+    createdAt: "2026-08-26T10:00:00Z"
   }
 ];
 
