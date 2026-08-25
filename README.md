@@ -40,7 +40,13 @@ ChemZim is built for speed, security, and scientific precision.
     - **Lesson 6 (Mathematical Skills in Chemistry - NEW):** Fully implemented new maths skills curriculum across 4 parts covering standard form (Avogadro scale conversions), ratio simplifications, fraction operators, percentage multipliers/change, algebraic rearrangement, significant figures rules, and a **custom visual SVG concept map for mole formulas**. Includes worked examples (moles stoichiometry of potassium in water, potassium iodide dosing, and copper(II) chloride hydrated crystal yield using the "NAUTE" no-approximation rule) with a **16-question math quiz**.
   - **Edexcel Unit 6 (WCH16):** Lesson 1 covering A2 Practical Skills and Laboratory Techniques.
 
-  - **Exam Practice Banks:** Fully integrated (**64 new MCQs**) with topic tagging, lesson-number filtering, and unicode-safe KaTeX rendering:
+  - **Exam Practice Banks:** Fully integrated (**184 new MCQs**) with topic tagging, lesson-number filtering, and unicode-safe KaTeX rendering:
+    - Added **80 new exam questions for Edexcel Unit 2** distributed as:
+      - **20 new intermolecular forces questions** (Topic 7) covering dipole moments, hydrogen bonding, hydride boiling point trends, and solubility factors.
+      - **20 new redox & groups questions** (Topic 8) covering flame tests, halogen electronegativities, nitrate thermal decompositions, and iron titrations.
+      - **20 new kinetics & equilibria questions** (Topic 9) covering Maxwell-Boltzmann distribution, Kc units, inactive gas effect, and ICE calculations.
+      - **20 new halogenoalkane & spectroscopy questions** (Topic 10) covering nucleophile definition, KCN substitution, sodium metal tests, IR/MS peaks, and isomeric dehydrations.
+    - Added **40 new exam questions for Edexcel Unit 3** (Practical Skills) covering qualitative flame tests, halide/sulfate precipitability, uncertainty percentage calculations, standard solution quantitative transfers, calorimetry systematic errors, and melting range purity checks.
     - Added **20 new entropy exam questions** (Topic 12) covering entropy predictions, system/surroundings calculations, Gibbs feasibility, Born-Haber cycle math, polarization/covalent character, and solubility trends.
     - Added **3 new acid-base exam questions** (Topic 14, raising total to 20) covering conjugate acid-base pairs, buffer solution pH calculations, and titration curve buffer regions.
     - Added **3 kinetics exam questions** (Topic 11) covering clock reaction approximation validity, thermodynamic feasibility (Gibbs free energy) vs. kinetic stability (Ea), acid-catalyzed mechanism rate laws, and Arrhenius pre-exponential factor units.
