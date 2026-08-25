@@ -152,6 +152,139 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q11",
     createdAt: "2026-07-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_9-2026",
+    question: "Which of the following bonds is the most polar, based on electronegativity differences?",
+    options: [
+      { text: "C–H" },
+      { text: "C–N" },
+      { text: "C–O" },
+      { text: "C–F", isCorrect: true }
+    ],
+    correctAnswer: 3,
+    explanation: "* Polar covalent bonds arise due to differences in electronegativity between the bonded atoms.\n* Fluorine is the most electronegative element in the periodic table, so the $\\text{C}-\\text{F}$ bond has the largest electronegativity difference and is the most polar.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q17",
+    createdAt: "2026-07-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_10-2026",
+    question: "Which of the following molecules contains polar bonds but is non-polar overall due to its symmetrical molecular geometry?",
+    options: [
+      { text: "BF₃", isCorrect: true },
+      { text: "NF₃" },
+      { text: "H₂O" },
+      { text: "NH₃" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $\\text{BF}_3$ is trigonal planar. Its three polar $\\text{B}-\\text{F}$ bonds point symmetrically in opposite directions, canceling out the dipoles and leaving the molecule with no net dipole moment.\n* $\\text{NF}_3$, $\\text{H}_2\\text{O}$, and $\\text{NH}_3$ are asymmetrical and therefore polar.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q15",
+    createdAt: "2026-07-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_11-2026",
+    question: "What is the primary type of intermolecular force holding carbon dioxide molecules together in dry ice (solid CO₂)?",
+    options: [
+      { text: "London dispersion forces", isCorrect: true },
+      { text: "Permanent dipole-dipole forces" },
+      { text: "Hydrogen bonding" },
+      { text: "Covalent bonds" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $\\text{CO}_2$ is a linear, symmetrical, non-polar molecule.\n* Therefore, the only intermolecular forces acting between $\\text{CO}_2$ molecules in the solid state are weak London dispersion forces.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q13",
+    createdAt: "2026-07-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_12-2026",
+    question: "Propanone (CH₃COCH₃) cannot form hydrogen bonds with other propanone molecules. However, it is highly soluble in water because:",
+    options: [
+      { text: "It forms permanent covalent bonds with water" },
+      { text: "The carbonyl oxygen (C=O) in propanone acts as a hydrogen bond acceptor for water's δ+ hydrogen atoms", isCorrect: true },
+      { text: "It has a higher boiling point than water" },
+      { text: "It reacts with water to form propane gas" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Propanone lacks a highly electronegative atom bonded to hydrogen, so it cannot act as a hydrogen bond donor.\n* However, its electronegative carbonyl oxygen has lone pairs that can accept hydrogen bonds from water molecules, facilitating solubility.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q18",
+    createdAt: "2026-07-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_13-2026",
+    question: "Which of the following noble gases is expected to have the highest boiling point?",
+    options: [
+      { text: "Helium" },
+      { text: "Neon" },
+      { text: "Argon" },
+      { text: "Krypton", isCorrect: true }
+    ],
+    correctAnswer: 3,
+    explanation: "* Boiling points of noble gases increase down the group.\n* Krypton has the largest atomic size and the highest number of electrons among the options, resulting in more polarizable electron clouds and stronger London forces.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q16",
+    createdAt: "2026-07-30T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_14-2026",
+    question: "Instantaneous dipole-induced dipole interactions are also known as:",
+    options: [
+      { text: "London dispersion forces", isCorrect: true },
+      { text: "Permanent dipole-dipole forces" },
+      { text: "Hydrogen bonds" },
+      { text: "Electrostatic ionic forces" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Instantaneous dipole-induced dipole interactions are officially referred to as London dispersion forces, which exist between all atoms and molecules.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q14",
+    createdAt: "2026-07-30T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv1_15-2026",
+    question: "Why does liquid water have an exceptionally high surface tension compared to non-polar organic liquids?",
+    options: [
+      { text: "The covalent O–H bonds are very strong" },
+      { text: "Extensive intermolecular hydrogen bonds exert a strong net inward attractive force on molecules at the surface", isCorrect: true },
+      { text: "Water molecules are linear and highly symmetrical" },
+      { text: "Hexane has stronger London forces than water" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Molecules at the liquid surface experience cohesive hydrogen bonds only from below and sideways, causing a net inward pull that minimizes the surface area and creates high surface tension.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q19",
+    createdAt: "2026-07-31T10:00:00Z"
   }
 ];
 

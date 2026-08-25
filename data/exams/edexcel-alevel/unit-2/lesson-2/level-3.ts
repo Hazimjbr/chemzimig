@@ -114,6 +114,120 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q12",
     createdAt: "2026-07-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv3_7-2026",
+    question: "Fluorine is significantly more electronegative than oxygen (4.0 vs 3.4), making individual H–F hydrogen bonds stronger than H–O hydrogen bonds. Yet, water has a much higher boiling point (100 °C) than hydrogen fluoride (19.5 °C). Explain this apparent thermodynamic anomaly.",
+    options: [
+      { text: "HF is a symmetrical, non-polar molecule" },
+      { text: "Water establishes a stoichiometric balance of 2 hydrogen bond donors (H) and 2 acceptors (lone pairs) per molecule, generating 4 hydrogen bonds in a robust 3D matrix; HF is donor-deficient with only 1 hydrogen atom, limiting its structure to an average of 2 hydrogen bonds per molecule in linear chains", isCorrect: true },
+      { text: "Oxygen contains d-orbitals which participate in bonding" },
+      { text: "HF dissociates completely at room temperature" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Electrostatic bond strength is only one variable.\n* Water forms a cohesive 3D network with double the density of hydrogen bonds (4 per molecule in ice, ~3.4 in liquid) compared to HF (2 per molecule), requiring more thermal energy to fully vaporize.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q23",
+    createdAt: "2026-08-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv3_8-2026",
+    question: "Under identical temperatures, the vapor pressures of three liquids are measured: diethyl ether (58.9 kPa), ethanol (5.8 kPa), and water (2.3 kPa). What is the correct analysis of their relative intermolecular force strengths?",
+    options: [
+      { text: "Diethyl ether > Ethanol > Water" },
+      { text: "Water > Ethanol > Diethyl ether", isCorrect: true },
+      { text: "Ethanol > Water > Diethyl ether" },
+      { text: "Diethyl ether > Water > Ethanol" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Vapor pressure is inversely proportional to intermolecular force strength.\n* Stronger intermolecular forces hold molecules in the liquid state more effectively, resulting in fewer molecules escaping to the gas phase and a lower vapor pressure (Water has the lowest vapor pressure, indicating the strongest hydrogen bonds).",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q18",
+    createdAt: "2026-08-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv3_9-2026",
+    question: "The cis-isomer of butenedioic acid (maleic acid) has a lower melting point and is much more soluble in water than the trans-isomer (fumaric acid). Why does this difference occur?",
+    options: [
+      { text: "Maleic acid has a lower molecular mass" },
+      { text: "In maleic acid, the close proximity of the carboxyl groups favors intramolecular hydrogen bonding, reducing the availability of carboxyl groups to form intermolecular hydrogen bonds with neighboring molecules in the crystal lattice", isCorrect: true },
+      { text: "Fumaric acid contains ionic bonds" },
+      { text: "Maleic acid undergoes automatic esterification" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The cis arrangement in maleic acid allows the two adjacent carboxylic acid groups to hydrogen-bond with each other (intramolecularly).\n* The trans-isomer (fumaric acid) cannot form intramolecular bonds and instead forms extensive intermolecular hydrogen bonds, creating a rigid lattice with a high melting point.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q17",
+    createdAt: "2026-08-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv3_10-2026",
+    question: "The standard enthalpy change of vaporization ($\\Delta H_{\\text{vap}}^\\circ$) of water is $+40.7\\text{ kJ mol}^{-1}$, while that of methane ($\\text{CH}_4$) is only $+8.2\\text{ kJ mol}^{-1}$, despite both having similar relative molecular masses ($18$ vs $16$). What does this suggest about the energy barrier to vaporization?",
+    options: [
+      { text: "Breaking covalent bonds in water requires more energy" },
+      { text: "Vaporization of water requires breaking strong intermolecular hydrogen bonds, whereas vaporizing methane only requires overcoming weak London dispersion forces", isCorrect: true },
+      { text: "Methane molecules are held by strong ionic forces" },
+      { text: "Water reacts chemically during boiling" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Vaporization does not break intramolecular covalent bonds (the molecules remain as $H_2O$ and $CH_4$ molecules in the gas phase).\n* Instead, it requires overcoming the attractive intermolecular forces. The high $\\Delta H_{\\text{vap}}^\\circ$ of water reflects the strength of its hydrogen bonding network compared to methane's weak London dispersion forces.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q24",
+    createdAt: "2026-08-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv3_11-2026",
+    question: "Why does Nylon-6,6 exhibit exceptionally high tensile strength and a high melting point compared to simple polyesters like PET?",
+    options: [
+      { text: "Nylon-6,6 contains coordinate metallic bonds" },
+      { text: "The amide groups (–CO–NH–) in adjacent Nylon chains align to form regular, repeating intermolecular hydrogen bonds, locking the polymer chains in place", isCorrect: true },
+      { text: "Nylon contains covalent cross-links between all carbon atoms" },
+      { text: "Nylon is completely non-polar and relies on London forces" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The oxygen atom of the carbonyl group ($\\text{C}=\\text{O}$) and the hydrogen atom of the amine group ($\\text{N}-\\text{H}$) in adjacent Nylon chains align to form strong intermolecular hydrogen bonds, giving Nylon its high crystallinity and strength.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q19",
+    createdAt: "2026-08-07T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l2_lv3_12-2026",
+    question: "How does the presence of branching in hydrocarbon chains affect the magnitude of London dispersion forces, and why?",
+    options: [
+      { text: "Branching increases London forces because it packs more atoms into a smaller volume" },
+      { text: "Branching decreases London forces because it prevents close packing of molecules and reduces the molecular surface area, leading to less contact between adjacent electron clouds", isCorrect: true },
+      { text: "Branching has no effect on London forces" },
+      { text: "Branching induces permanent dipoles in the molecule" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Highly branched molecules have a more spherical shape, which reduces the surface area available for contact with neighboring molecules.\n* This makes it harder for the electron clouds to polarize each other, leading to weaker instantaneous-induced dipoles.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q18",
+    createdAt: "2026-08-07T10:00:00Z"
   }
 ];
 
