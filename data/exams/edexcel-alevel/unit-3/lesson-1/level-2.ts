@@ -228,6 +228,139 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q10",
     createdAt: "2026-09-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_13-2026",
+    question: "A volumetric pipette has an uncertainty of $\\pm 0.06\\text{ cm}^3$. What is the percentage uncertainty when measuring exactly $25.0\\text{ cm}^3$ of solution using this pipette?",
+    options: [
+      { text: "0.24%", isCorrect: true },
+      { text: "0.12%" },
+      { text: "0.48%" },
+      { text: "0.06%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Percentage uncertainty $= \\frac{\\text{uncertainty}}{\\text{measured value}} \\times 100$.\n* Percentage uncertainty $= \\frac{0.06}{25.0} \\times 100 = \\mathbf{0.24\\%}$.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q14",
+    createdAt: "2026-09-14T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_14-2026",
+    question: "When preparing $250\\text{ cm}^3$ of standard solution, why must the solute be dissolved in a beaker of distilled water first, rather than added directly to the volumetric flask?",
+    options: [
+      { text: "To prevent the flask from breaking due to heat of solution" },
+      { text: "To ensure complete dissolution of the solid, as mixing in a narrow-necked volumetric flask is difficult and undissolved solid will lead to an inaccurate concentration", isCorrect: true },
+      { text: "To filter out insoluble impurities" },
+      { text: "To make sure the solution is alkaline" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Solid particles are hard to dissolve directly in the volumetric flask due to the narrow neck restricting efficient stirring.\n* Dissolving in a beaker first ensures a homogeneous solution before transferring.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q13",
+    createdAt: "2026-09-14T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_15-2026",
+    question: "Which of the following methods is most suitable for collecting a sample of hydrogen gas ($H_2$) in the laboratory?",
+    options: [
+      { text: "Downward delivery (upward displacement of air) because hydrogen is denser than air" },
+      { text: "Upward delivery (downward displacement of air) or over water, because hydrogen is significantly less dense than air and virtually insoluble in water", isCorrect: true },
+      { text: "In an open beaker left on the bench" },
+      { text: "By condensing it into a cold trap at 0 °C" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Hydrogen gas has a very low density ($M_r = 2$) and escapes upwards.\n* Therefore, it is collected by upward delivery (where the tube points up into an inverted test tube) or over water since it doesn't dissolve in it.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q11",
+    createdAt: "2026-09-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_16-2026",
+    question: "How do Group 1 hydrogencarbonates (e.g., $NaHCO_3$) differ from Group 1 carbonates (excluding $Li_2CO_3$) upon heating?",
+    options: [
+      { text: "Carbonates decompose to form oxides, while hydrogencarbonates do not decompose" },
+      { text: "Hydrogencarbonates readily decompose to release carbon dioxide and water vapor, whereas carbonates are thermally stable and do not decompose under Bunsen burner temperatures", isCorrect: true },
+      { text: "Both decompose to release oxygen gas" },
+      { text: "Hydrogencarbonates turn into solid sodium metal" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Hydrogencarbonates undergo thermal decomposition at relatively low temperatures:\n* $2\\text{NaHCO}_3\\text{(s)} \\rightarrow \\text{Na}_2\\text{CO}_3\\text{(s)} + \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{O(g)}$.\n* Group 1 carbonates (like $\\text{Na}_2\\text{CO}_3$) are very stable and require extremely high temperatures to decompose.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q15",
+    createdAt: "2026-09-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_17-2026",
+    question: "When separating a mixture of trichloromethane (density $= 1.49\\text{ g cm}^{-3}$) and water (density $= 1.00\\text{ g cm}^{-3}$) in a separating funnel, which layer is the organic layer and where is it located?",
+    options: [
+      { text: "The organic layer is at the top because it contains organic compounds" },
+      { text: "The organic layer is at the bottom because trichloromethane has a higher density than water", isCorrect: true },
+      { text: "They form a single miscible phase and cannot be separated" },
+      { text: "The organic layer turns into a gas and escapes" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Trichloromethane is immiscible with water and has a significantly higher density.\n* Consequently, it forms the lower layer in the separating funnel, which can be run off first.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q14",
+    createdAt: "2026-09-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_18-2026",
+    question: "During a simple distillation experiment, why must the thermometer bulb be positioned level with the side-arm of the distillation head rather than dipped into the boiling liquid?",
+    options: [
+      { text: "To prevent the thermometer from cracking in hot liquid" },
+      { text: "To measure the exact temperature of the vapor entering the condenser, which corresponds to the boiling point of the distillate being collected", isCorrect: true },
+      { text: "To ensure the thermometer is kept wet" },
+      { text: "To measure the rate of boiling" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The purpose of the thermometer is to record the temperature of the vapor that is about to condense.\n* Dipping it into the liquid would measure the temperature of the boiling mixture (which may be higher due to impurities or superheating).",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q12",
+    createdAt: "2026-09-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_19-2026",
+    question: "A student prepares a standard solution by transferring a dissolved solid from a beaker to a volumetric flask. Why is it essential to wash the beaker with distilled water and transfer the washings to the flask?",
+    options: [
+      { text: "To clean the beaker for the next student" },
+      { text: "To ensure that all of the solute is transferred to the volumetric flask, preventing a lower-than-expected concentration", isCorrect: true },
+      { text: "To dilute the solution before mixing" },
+      { text: "To lower the pH of the solution" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Any droplets of solution left on the walls of the beaker contain dissolved solute.\n* Rinsing the beaker multiple times and adding the washings to the volumetric flask guarantees quantitative transfer.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q16",
+    createdAt: "2026-09-17T10:00:00Z"
   }
 ];
 

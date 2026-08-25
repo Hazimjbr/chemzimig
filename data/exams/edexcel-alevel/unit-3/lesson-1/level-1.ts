@@ -304,6 +304,139 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q11",
     createdAt: "2026-09-03T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_17-2026",
+    question: "What color is observed in a flame test for copper(II) ions ($Cu^{2+}$)?",
+    options: [
+      { text: "Lilac" },
+      { text: "Crimson red" },
+      { text: "Blue-green", isCorrect: true },
+      { text: "Apple-green" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Copper(II) ions ($Cu^{2+}$) produce a characteristic blue-green flame, which is distinct from Group 1 and 2 cations.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q8",
+    createdAt: "2026-09-10T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_18-2026",
+    question: "What reagent is used to confirm the presence of sulfate ions ($SO_4^{2-}$) in an aqueous solution, and what observation is made?",
+    options: [
+      { text: "Aqueous silver nitrate; white precipitate" },
+      { text: "Acidified barium chloride solution; white precipitate of barium sulfate ($BaSO_4$)", isCorrect: true },
+      { text: "Dilute hydrochloric acid; effervescence" },
+      { text: "Aqueous sodium hydroxide; red precipitate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Sulfate ions react with barium ions to form insoluble barium sulfate: $\\text{Ba}^{2+}\\text{(aq)} + \\text{SO}_4^{2-}\\text{(aq)} \\rightarrow \\text{BaSO}_4\\text{(s)}$.\n* Acidification with hydrochloric acid is necessary to prevent precipitation of barium carbonate or barium sulfite.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q9",
+    createdAt: "2026-09-10T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_19-2026",
+    question: "Which silver halide precipitate dissolves readily in dilute aqueous ammonia?",
+    options: [
+      { text: "Silver chloride ($AgCl$)", isCorrect: true },
+      { text: "Silver bromide ($AgBr$)" },
+      { text: "Silver iodide ($AgI$)" },
+      { text: "Silver fluoride ($AgF$)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Silver chloride is soluble in dilute ammonia.\n* Silver bromide requires concentrated ammonia to dissolve, and silver iodide is insoluble in both dilute and concentrated ammonia.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q8",
+    createdAt: "2026-09-11T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_20-2026",
+    question: "A colorless gas is evolved when an unknown solid is heated with sodium hydroxide. The gas turns damp red litmus paper blue. Identify the gas.",
+    options: [
+      { text: "Carbon dioxide" },
+      { text: "Ammonia", isCorrect: true },
+      { text: "Chlorine" },
+      { text: "Hydrogen" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Ammonia gas ($\text{NH}_3$) is basic (alkaline) and reacts with water on damp red litmus paper to release hydroxide ions, turning the paper blue.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q9",
+    createdAt: "2026-09-11T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_21-2026",
+    question: "Which of the following anhydrous salts is commonly used as a drying agent for organic liquids in the laboratory?",
+    options: [
+      { text: "Sodium chloride" },
+      { text: "Sodium sulfate ($Na_2SO_4$)", isCorrect: true },
+      { text: "Copper(II) sulfate" },
+      { text: "Barium chloride" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Anhydrous sodium sulfate ($\text{Na}_2\text{SO}_4$) or magnesium sulfate ($\text{MgSO}_4$) binds water as water of crystallization, removing trace moisture from organic liquids.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q10",
+    createdAt: "2026-09-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_22-2026",
+    question: "Which piece of glassware must be used to prepare exactly $250.0\\text{ cm}^3$ of a standard solution?",
+    options: [
+      { text: "Measuring cylinder" },
+      { text: "Volumetric flask", isCorrect: true },
+      { text: "Beaker" },
+      { text: "Conical flask" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A volumetric flask is calibrated with high precision to contain a specific volume of liquid at a given temperature, marked by a graduation line on its neck.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q9",
+    createdAt: "2026-09-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_23-2026",
+    question: "Why is a platinum or nichrome wire cleaned in concentrated hydrochloric acid before performing a flame test?",
+    options: [
+      { text: "To make the wire a better thermal conductor" },
+      { text: "To remove any contaminating metal ions that would impart their own color to the flame", isCorrect: true },
+      { text: "To catalyze the excitation of electrons" },
+      { text: "To decrease the melting point of the metal wire" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Concentrated $\\text{HCl}$ converts metal impurities into volatile metal chlorides which evaporate quickly in the Bunsen flame, cleaning the wire until it gives no color.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q11",
+    createdAt: "2026-09-13T10:00:00Z"
   }
 ];
 

@@ -228,6 +228,120 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q12",
     createdAt: "2026-09-09T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_13-2026",
+    question: "In a calorimetry experiment to determine the enthalpy of displacement: $\\text{Zn(s)} + \\text{Cu}^{2+}\\text{(aq)} \\rightarrow \\text{Zn}^{2+}\\text{(aq)} + \\text{Cu(s)}$, a student uses a copper cup instead of a polystyrene cup. What is the effect of this change on the calculated enthalpy value, and why?",
+    options: [
+      { text: "The calculated enthalpy is more exothermic because copper conducts heat better" },
+      { text: "The calculated enthalpy is less exothermic (closer to zero) because copper has a higher thermal conductivity, resulting in significant heat loss to the surroundings", isCorrect: true },
+      { text: "There is no effect because the mass of solution is the same" },
+      { text: "The calculated enthalpy value is exactly doubled" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Polystyrene is a good thermal insulator, minimizing heat loss to the surroundings.\n* Copper is a good conductor and allows heat energy to escape rapidly, causing a smaller temperature rise ($\\Delta T$) to be recorded, which leads to a less exothermic calculated $\\Delta H$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q17",
+    createdAt: "2026-09-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_14-2026",
+    question: "When choosing a solvent for the recrystallization of an impure organic solid, what characteristics are most desirable?",
+    options: [
+      { text: "The organic solid is highly soluble in the solvent at all temperatures" },
+      { text: "The organic solid is highly soluble in hot solvent, but virtually insoluble in cold solvent, allowing maximum crystallization upon cooling", isCorrect: true },
+      { text: "The impurities are insoluble in hot solvent" },
+      { text: "The solvent has a boiling point above 200 °C" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The ideal recrystallization solvent dissolves the product readily when heated, but very poorly when cooled.\n* This allows the pure crystals to crash out of solution upon cooling, while impurities remain dissolved in the cold mother liquor.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q14",
+    createdAt: "2026-09-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_15-2026",
+    question: "A $2.46\\text{ g}$ sample of hydrated magnesium sulfate, $\\text{MgSO}_4 \\cdot x\\text{H}_2\\text{O}$, is heated to constant mass in a crucible. The mass of the anhydrous residue is $1.20\\text{ g}$. Calculate the value of $x$. ($M_r[\\text{MgSO}_4] = 120.4$, $M_r[\\text{H}_2\\text{O}] = 18.0$)",
+    options: [
+      { text: "5" },
+      { text: "7", isCorrect: true },
+      { text: "2" },
+      { text: "10" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Mass of water lost $= 2.46 - 1.20 = 1.26\\text{ g}$.\n* Moles of anhydrous $\\text{MgSO}_4 = \\frac{1.20}{120.4} = 0.010\\text{ mol}$.\n* Moles of $\\text{H}_2\\text{O} = \\frac{1.26}{18.0} = 0.070\\text{ mol}$.\n* Ratio of moles $n(\\text{H}_2\\text{O}) / n(\\text{MgSO}_4) = \\frac{0.070}{0.010} = \\mathbf{7}$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q13",
+    createdAt: "2026-09-19T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_16-2026",
+    question: "A student dehydrates $10.0\\text{ g}$ of cyclohexanol ($M_r = 100.0$) using concentrated phosphoric acid to produce cyclohexene ($M_r = 82.0$). After purification, $5.74\\text{ g}$ of pure cyclohexene is obtained. Calculate the percentage yield of the reaction.",
+    options: [
+      { text: "57.4%" },
+      { text: "70.0%", isCorrect: true },
+      { text: "82.0%" },
+      { text: "43.0%" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Moles of cyclohexanol starting $= \\frac{10.0}{100.0} = 0.100\\text{ mol}$.\n* Theoretical moles of cyclohexene $= 0.100\\text{ mol}$.\n* Theoretical mass of cyclohexene $= 0.100 \\times 82.0 = 8.20\\text{ g}$.\n* Percentage yield $= \\frac{\\text{actual mass}}{\\text{theoretical mass}} \\times 100 = \\frac{5.74}{8.20} \\times 100 = \\mathbf{70.0\\%}$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q18",
+    createdAt: "2026-09-19T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_17-2026",
+    question: "During a titration, a student leaves the funnel in the top of the burette. Explain how this systematic error could affect the calculated concentration of the analyte.",
+    options: [
+      { text: "It has no effect on the titration" },
+      { text: "Drops of titrant may drip from the funnel into the burette during titration, making the recorded titre volume smaller than actual, leading to an underestimation of the analyte concentration", isCorrect: true },
+      { text: "It causes the endpoint indicator to change color early" },
+      { text: "It doubles the recorded volume of the analyte" }
+    ],
+    correctAnswer: 1,
+    explanation: "* If additional drops of solution drip down from the funnel after the initial volume reading is taken, the final level will appear higher (representing a smaller difference/titre volume than what was actually delivered).\n* A smaller titre volume leads to an underestimation of the moles of analyte, causing an inaccurately low calculated concentration.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q15",
+    createdAt: "2026-09-20T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_18-2026",
+    question: "How does the presence of an impurity affect the melting temperature and melting range of an organic solid compared to the pure compound?",
+    options: [
+      { text: "It increases the melting temperature and narrows the range" },
+      { text: "It lowers the melting temperature and broadens the melting range", isCorrect: true },
+      { text: "It has no effect on either" },
+      { text: "It causes the solid to sublime without melting" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Impurities disrupt the regular crystalline lattice structure of an organic solid, making it easier to break (lowering the melting point).\n* It also causes different regions of the solid to melt at different temperatures, broadening the melting temperature range (pure compounds melt sharply over a range of $\\le 1-2\\text{ }^\\circ\\text{C}$).",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q14",
+    createdAt: "2026-09-20T10:00:00Z"
   }
 ];
 
