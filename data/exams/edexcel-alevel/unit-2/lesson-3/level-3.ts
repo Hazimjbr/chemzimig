@@ -114,6 +114,120 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q18",
     createdAt: "2026-08-01T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_7-2026",
+    question: "A sample of $1.50\\text{ g}$ of an iron ore was dissolved in acid and all the iron converted to $\\text{Fe}^{2+}\\text{(aq)}$. The solution was titrated against $0.0250\\text{ mol dm}^{-3}$ potassium dichromate(VI) solution, and $32.40\\text{ cm}^3$ was required to reach the end-point. Calculate the percentage by mass of iron in the ore. ($A_r[\\text{Fe}] = 55.8$)",
+    options: [
+      { text: "18.1%", isCorrect: true },
+      { text: "3.01%" },
+      { text: "9.05%" },
+      { text: "10.8%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Balanced equation: $6\\text{Fe}^{2+} + \\text{Cr}_2\\text{O}_7^{2-} + 14\\text{H}^+ \\rightarrow 6\\text{Fe}^{3+} + 2\\text{Cr}^{3+} + 7\\text{H}_2\\text{O}$.\n* Moles of $\\text{Cr}_2\\text{O}_7^{2-} = 0.0250 \\times 0.03240 = 8.10 \\times 10^{-4}\\text{ mol}$.\n* Moles of $\\text{Fe}^{2+} = 6 \\times 8.10 \\times 10^{-4} = 4.86 \\times 10^{-3}\\text{ mol}$.\n* Mass of Fe $= 4.86 \\times 10^{-3} \\times 55.8 = 0.2712\\text{ g}$.\n* Percentage of Fe $= \\frac{0.2712}{1.50} \\times 100 = \\mathbf{18.08\\%} \\approx \\mathbf{18.1\\%}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q24",
+    createdAt: "2026-08-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_8-2026",
+    question: "Which of the following describes the mechanism by which magnesium ions decompose carbonates at lower temperatures than barium ions?",
+    options: [
+      { text: "Magnesium ions are larger and have lower lattice energy" },
+      { text: "The smaller Mg²⁺ ion has a higher charge density and polarizes the large carbonate ion more strongly, weakening the carbon-oxygen covalent bonds", isCorrect: true },
+      { text: "Barium ions are more electronegative and attract electrons away from carbonate" },
+      { text: "Magnesium carbonate decomposes into magnesium metal and oxygen gas" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Cation charge density is inversely proportional to radius.\n* $\\text{Mg}^{2+}$ ($0.072\\text{ nm}$) is much smaller than $\\text{Ba}^{2+}$ ($0.135\\text{ nm}$).\n* The high charge density of $\\text{Mg}^{2+}$ polarizes the electron cloud of the carbonate ion, making it easier for the $\\text{CO}_3^{2-}$ to break apart into $\\text{CO}_2$ and oxide.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q23",
+    createdAt: "2026-08-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_9-2026",
+    question: "The bond enthalpy of the fluorine-fluorine bond (F–F) is anomalously low ($158\\text{ kJ mol}^{-1}$) compared to the chlorine-chlorine bond ($242\\text{ kJ mol}^{-1}$). What is the reason for this exception in Group 7?",
+    options: [
+      { text: "Fluorine atoms are too large to overlap effectively" },
+      { text: "The F atom is so small that the lone pairs on the two bonded fluorine atoms are close together, resulting in significant electron-electron repulsion that weakens the single covalent bond", isCorrect: true },
+      { text: "Fluorine contains d-orbitals which participate in anti-bonding" },
+      { text: "Chlorine has higher electronegativity than fluorine" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The very small atomic size of fluorine brings the lone pairs on adjacent atoms into close proximity.\n* The resulting repulsion between these non-bonding electron pairs weakens the $\\text{F}-\\text{F}$ covalent bond relative to $\\text{Cl}-\\text{Cl}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q31",
+    createdAt: "2026-08-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_10-2026",
+    question: "Identify the oxidation state of the transition metal in the complex ion $[\\text{Fe(H}_2\\text{O)}_5(\\text{SCN})]^{2+}$.",
+    options: [
+      { text: "+1" },
+      { text: "+2" },
+      { text: "+3", isCorrect: true },
+      { text: "+4" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Water ($\\text{H}_2\\text{O}$) is a neutral ligand (charge $= 0$).\n* Thiocyanate ($\\text{SCN}^-$) carries a charge of $-1$.\n* Let $x$ be the oxidation state of Fe:\n* $x + 5(0) + (-1) = +2 \\implies x - 1 = +2 \\implies x = \\mathbf{+3}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q25",
+    createdAt: "2026-08-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_11-2026",
+    question: "Explain why reacting chlorine with hot, concentrated aqueous sodium hydroxide results in disproportionation to a higher oxidation state of chlorine (+5) compared to cold, dilute aqueous sodium hydroxide (+1).",
+    options: [
+      { text: "Hot water contains more dissolved oxygen gas" },
+      { text: "The chlorate(I) ion (ClO⁻) formed in cold conditions is thermodynamically unstable and disproportionates at higher temperatures into chlorate(V) (ClO₃⁻) and chloride (Cl⁻) ions", isCorrect: true },
+      { text: "Hot NaOH acts as a strong reducing agent" },
+      { text: "Chlorine undergoes complete ionization into protons and electrons at high temperature" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In cold conditions, the reaction forms $\\text{ClO}^-$.\n* However, $\\text{ClO}^-$ is unstable and undergoes self-disproportionation when heated:\n* $3\\text{ClO}^-\\text{(aq)} \\rightarrow \\text{ClO}_3^-\\text{(aq)} + 2\\text{Cl}^-\\text{(aq)}$.\n* Thus, hot conditions yield the more stable $+5$ oxidation state in $\\text{ClO}_3^-$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q24",
+    createdAt: "2026-08-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_12-2026",
+    question: "A $20.00\\text{ cm}^3$ solution of iodine (I₂) is titrated against $0.100\\text{ mol dm}^{-3}$ sodium thiosulfate (Na₂S₂O₃) using starch indicator. The volume of thiosulfate required is $24.80\\text{ cm}^3$. Calculate the concentration of the iodine solution.",
+    options: [
+      { text: "0.0620 mol dm⁻³", isCorrect: true },
+      { text: "0.1240 mol dm⁻³" },
+      { text: "0.2480 mol dm⁻³" },
+      { text: "0.0310 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Balanced equation: $\\text{I}_2 + 2\\text{S}_2\\text{O}_3^{2-} \\rightarrow 2\\text{I}^- + \\text{S}_4\\text{O}_6^{2-}$.\n* Moles of $\\text{S}_2\\text{O}_3^{2-} = 0.100 \\times 0.02480 = 2.480 \\times 10^{-3}\\text{ mol}$.\n* Moles of $\\text{I}_2 = \\frac{1}{2} \\times 2.480 \\times 10^{-3} = 1.240 \\times 10^{-3}\\text{ mol}$.\n* Concentration of $\\text{I}_2 = \\frac{1.240 \\times 10^{-3}}{0.02000} = \\mathbf{0.0620\\text{ mol dm}^{-3}}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q32",
+    createdAt: "2026-08-18T10:00:00Z"
   }
 ];
 

@@ -114,6 +114,139 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q16",
     createdAt: "2026-07-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_7-2026",
+    question: "When concentrated sulfuric acid is added to solid sodium chloride, misty fumes are observed but NO oxidation of chloride occurs. Why?",
+    options: [
+      { text: "Chloride ions are too strong as reducing agents" },
+      { text: "Sulfuric acid is not a strong enough oxidizing agent to oxidize chloride ions (which are very weak reducing agents)", isCorrect: true },
+      { text: "Chlorine is more electronegative than oxygen" },
+      { text: "The reaction is highly endothermic" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The reaction is purely an acid-base reaction: $\\text{NaCl(s)} + \\text{H}_2\\text{SO}_4\\text{(l)} \\rightarrow \\text{NaHSO}_4\\text{(s)} + \\text{HCl(g)}$.\n* Unlike bromide and iodide, chloride ions are weak reducing agents and cannot reduce $\\text{H}_2\\text{SO}_4$, so no redox reaction occurs.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q28",
+    createdAt: "2026-08-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_8-2026",
+    question: "A student adds dilute hydrochloric acid to an unknown solid. Effervescence is observed, and the gas produced turns limewater cloudy. What is the identity of the anion in the solid?",
+    options: [
+      { text: "Sulfate" },
+      { text: "Carbonate or hydrogencarbonate", isCorrect: true },
+      { text: "Chloride" },
+      { text: "Nitrate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Carbonate ($\\text{CO}_3^{2-}$) and hydrogencarbonate ($\\text{HCO}_3^-$) ions react with acids to release carbon dioxide gas:\n* $\\text{CO}_3^{2-} + 2\\text{H}^+ \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$.\n* $\\text{CO}_2$ reacts with limewater (calcium hydroxide) to form a white precipitate of calcium carbonate, turning it cloudy.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q22",
+    createdAt: "2026-08-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_9-2026",
+    question: "Why do the boiling points of the halogens increase down Group 7 ($F_2 < Cl_2 < Br_2 < I_2$)?",
+    options: [
+      { text: "Electronegativity increases down the group" },
+      { text: "The number of electrons per molecule increases, resulting in more polarizable electron clouds and stronger London dispersion forces", isCorrect: true },
+      { text: "Covalent bond strength increases down the group" },
+      { text: "Permanent dipole-dipole interactions become stronger" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Halogens are non-polar diatomic molecules.\n* Down the group, the molecules have more electrons, making the electron clouds easier to deform (more polarizable), which strengthens the London dispersion forces between molecules.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q21",
+    createdAt: "2026-08-13T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_10-2026",
+    question: "When chlorine is added to drinking water, it undergoes a disproportionation reaction. What are the names of the two acids formed during this reaction?",
+    options: [
+      { text: "Hydrochloric acid and chloric(I) acid (hypochlorous acid)", isCorrect: true },
+      { text: "Hydrochloric acid and chloric(V) acid" },
+      { text: "Perchloric acid and hydrochloric acid" },
+      { text: "Chloric(I) acid and chloric(III) acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The reaction is: $\\text{Cl}_2\\text{(aq)} + \\text{H}_2\\text{O(l)} \\rightleftharpoons \\text{HCl(aq)} + \\text{HClO(aq)}$.\n* $\\text{HCl}$ is hydrochloric acid (oxidation state of Cl is $-1$).\n* $\\text{HClO}$ is chloric(I) acid (hypochlorous acid, oxidation state of Cl is $+1$).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q29",
+    createdAt: "2026-08-13T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_11-2026",
+    question: "How does the thermal decomposition of Group 1 nitrates (excluding lithium) differ from the thermal decomposition of Group 2 nitrates?",
+    options: [
+      { text: "Group 1 nitrates do not decompose at all" },
+      { text: "Group 1 nitrates decompose to form metal nitrites and oxygen, whereas Group 2 nitrates decompose to form metal oxides, nitrogen dioxide, and oxygen", isCorrect: true },
+      { text: "Group 1 nitrates decompose to form metal oxides and nitrogen gas" },
+      { text: "Group 2 nitrates only release nitrogen gas" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Group 1 nitrates (except Li) undergo minor decomposition: $2\\text{MNO}_3\\text{(s)} \\rightarrow 2\\text{MNO}_2\\text{(s)} + \\text{O}_2\\text{(g)}$.\n* Group 2 nitrates undergo greater polarization and decompose fully: $2\\text{M(NO}_3)_2\\text{(s)} \\rightarrow 2\\text{MO(s)} + 4\\text{NO}_2\\text{(g)} + \\text{O}_2\\text{(g)}$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q23",
+    createdAt: "2026-08-14T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_12-2026",
+    question: "What is the oxidation number of chromium in the dichromate ion, $\\text{Cr}_2\\text{O}_7^{2-}$?",
+    options: [
+      { text: "+3" },
+      { text: "+6", isCorrect: true },
+      { text: "+7" },
+      { text: "+12" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Let the oxidation state of Cr be $x$.\n* Seven oxygen atoms contribute $7 \\times (-2) = -14$.\n* Total charge is $-2 \\implies 2x - 14 = -2 \\implies 2x = 12 \\implies x = \\mathbf{+6}$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q22",
+    createdAt: "2026-08-14T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_13-2026",
+    question: "Which of the following describes the trend in reactivity of Group 2 elements with water descending the group?",
+    options: [
+      { text: "Reactivity increases (Mg reacts slowly with cold water but rapidly with steam; Ba reacts vigorously with cold water)", isCorrect: true },
+      { text: "Reactivity decreases down the group" },
+      { text: "Reactivity remains constant" },
+      { text: "Group 2 elements do not react with water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Reactivity with water increases down the group as atoms get larger, outer electrons are further from the nucleus, shielded, and more easily lost to form $M^{2+}$ ions.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q30",
+    createdAt: "2026-08-15T10:00:00Z"
   }
 ];
 
