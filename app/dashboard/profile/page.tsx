@@ -9,14 +9,27 @@ import {
 } from 'lucide-react';
 
 const PRESET_AVATARS = [
-    { emoji: '🧪', name: 'Flask', color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' },
-    { emoji: '⚛️', name: 'Atom', color: 'bg-blue-500/10 text-blue-400 border-blue-500/20' },
-    { emoji: '🧑‍🔬', name: 'Chemist', color: 'bg-amber-500/10 text-amber-400 border-amber-500/20' },
-    { emoji: '🧬', name: 'DNA', color: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20' },
-    { emoji: '🔥', name: 'Flame', color: 'bg-orange-500/10 text-orange-400 border-orange-500/20' },
-    { emoji: '💎', name: 'Crystal', color: 'bg-sky-500/10 text-sky-400 border-sky-500/20' },
-    { emoji: '⚖️', name: 'Balance', color: 'bg-rose-500/10 text-rose-400 border-rose-500/20' },
-    { emoji: '🌡️', name: 'Thermo', color: 'bg-red-500/10 text-red-400 border-red-500/20' },
+    { value: '/images/avatars/assassin.jpg', name: 'Assassin', color: 'bg-indigo-500/10 border-indigo-500/20', isImage: true },
+    { value: '/images/avatars/netrunner.jpg', name: 'Netrunner', color: 'bg-pink-500/10 border-pink-500/20', isImage: true },
+    { value: '/images/avatars/valkyrie.jpg', name: 'Valkyrie', color: 'bg-blue-500/10 border-blue-500/20', isImage: true },
+    { value: '/images/avatars/chibi.jpg', name: 'Chibi', color: 'bg-amber-500/10 border-amber-500/20', isImage: true },
+    { value: '/images/avatars/dj.jpg', name: 'Neon DJ', color: 'bg-purple-500/10 border-purple-500/20', isImage: true },
+    { value: '/images/avatars/flamelord.jpg', name: 'Flame Lord', color: 'bg-orange-500/10 border-orange-500/20', isImage: true },
+    { value: '/images/avatars/icemage.jpg', name: 'Ice Mage', color: 'bg-sky-500/10 border-sky-500/20', isImage: true },
+    { value: '/images/avatars/esports.jpg', name: 'Esports Pro', color: 'bg-rose-500/10 border-rose-500/20', isImage: true },
+    { value: '/images/avatars/athlete.jpg', name: 'Athlete', color: 'bg-cyan-500/10 border-cyan-500/20', isImage: true },
+    { value: '/images/avatars/fox.jpg', name: 'Cyber Fox', color: 'bg-amber-500/10 border-amber-500/20', isImage: true },
+    { value: '/images/avatars/dragon.jpg', name: 'Dragon Knight', color: 'bg-violet-500/10 border-violet-500/20', isImage: true },
+    { value: '/images/avatars/plague.jpg', name: 'Poison Alchemist', color: 'bg-emerald-500/10 border-emerald-500/20', isImage: true },
+    { value: '/images/avatars/royal.jpg', name: 'Royal Mage', color: 'bg-indigo-500/10 border-indigo-500/20', isImage: true },
+    { value: '🧪', name: 'Flask', color: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20', isImage: false },
+    { value: '⚛️', name: 'Atom', color: 'bg-blue-500/10 text-blue-400 border-blue-500/20', isImage: false },
+    { value: '🧑‍🔬', name: 'Chemist', color: 'bg-amber-500/10 text-amber-400 border-amber-500/20', isImage: false },
+    { value: '🧬', name: 'DNA', color: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20', isImage: false },
+    { value: '🔥', name: 'Flame', color: 'bg-orange-500/10 text-orange-400 border-orange-500/20', isImage: false },
+    { value: '💎', name: 'Crystal', color: 'bg-sky-500/10 text-sky-400 border-sky-500/20', isImage: false },
+    { value: '⚖️', name: 'Balance', color: 'bg-rose-500/10 text-rose-400 border-rose-500/20', isImage: false },
+    { value: '🌡️', name: 'Thermo', color: 'bg-red-500/10 text-red-400 border-red-500/20', isImage: false },
 ];
 
 const isUrl = (str: string) => str.startsWith('http') || str.startsWith('/') || str.startsWith('data:');
@@ -112,7 +125,7 @@ export default function ProfilePage() {
             {/* Avatar Selector Modal */}
             {isModalOpen && (
                 <div className="fixed inset-0 bg-navy-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-                    <div className="glass-card max-w-md w-full p-6 space-y-6 relative border border-white/10 shadow-2xl">
+                    <div className="glass-card max-w-md w-full p-6 space-y-6 relative border border-white/10 shadow-2xl max-h-[85vh] overflow-y-auto">
                         <button 
                             onClick={() => setIsModalOpen(false)}
                             className="absolute top-4 right-4 p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer"
@@ -128,13 +141,19 @@ export default function ProfilePage() {
                             {PRESET_AVATARS.map((av) => (
                                 <button
                                     key={av.name}
-                                    onClick={() => handleSelectAvatar(av.emoji)}
+                                    onClick={() => handleSelectAvatar(av.value)}
                                     disabled={isUpdating}
                                     className={`aspect-square rounded-2xl border text-3xl flex flex-col items-center justify-center p-2 transition-all hover:scale-105 hover:bg-white/5 cursor-pointer ${av.color} ${
-                                        user?.image === av.emoji ? 'ring-2 ring-indigo-500 border-transparent' : 'border-white/5'
+                                        user?.image === av.value ? 'ring-2 ring-indigo-500 border-transparent' : 'border-white/5'
                                     }`}
                                 >
-                                    <span>{av.emoji}</span>
+                                    {av.isImage ? (
+                                        <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center bg-navy-950">
+                                            <img src={av.value} alt={av.name} className="w-full h-full object-cover" />
+                                        </div>
+                                    ) : (
+                                        <span>{av.value}</span>
+                                    )}
                                     <span className="text-[10px] text-slate-500 font-semibold mt-1">{av.name}</span>
                                 </button>
                             ))}
