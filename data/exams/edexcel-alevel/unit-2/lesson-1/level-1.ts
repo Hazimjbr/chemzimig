@@ -152,6 +152,140 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q4",
     createdAt: "2026-07-06T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_9-2026",
+    question: "In an enthalpy profile diagram for an endothermic reaction, how are the activation energy ($E_a$) and enthalpy change ($\\Delta H$) represented?",
+    options: [
+      { text: "Both $E_a$ and $\\Delta H$ point downwards from the reactants level" },
+      { text: "Both $E_a$ and $\\Delta H$ point upwards from the reactants level", isCorrect: true },
+      { text: "$E_a$ points upwards to the transition state, while $\\Delta H$ points downwards to the products" },
+      { text: "$E_a$ points downwards, while $\\Delta H$ points upwards" }
+    ],
+    correctAnswer: 1,
+    explanation: "* For an endothermic reaction, products are at a higher energy level than reactants, so the enthalpy change ($\\Delta H$) points upwards.\n* The activation energy ($E_a$) is the minimum energy required to start the reaction, pointing from the reactants up to the peak (transition state).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q9",
+    createdAt: "2026-07-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_10-2026",
+    question: "Which of the following defines the term 'mean bond enthalpy'?",
+    options: [
+      { text: "The energy required to break one mole of a specific covalent bond in a solid compound under standard conditions" },
+      { text: "The average energy required to break one mole of a specific covalent bond in a range of gaseous molecules", isCorrect: true },
+      { text: "The energy released when one mole of gaseous atoms form a covalent bond at $298\\text{ K}$" },
+      { text: "The mean enthalpy change when one mole of a substance is formed from its gaseous elements" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Mean bond enthalpy is specifically defined as the average enthalpy change when one mole of a particular type of covalent bond is broken in gaseous molecules under standard conditions.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q9",
+    createdAt: "2026-07-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_11-2026",
+    question: "Which equation represents the standard enthalpy change of neutralization ($\\Delta H_{\\text{neut}}^\\circ$)?",
+    options: [
+      { text: "$\\text{H}^+\\text{(aq)} + \\text{OH}^-\\text{(aq)} \\rightarrow \\text{H}_2\\text{O(l)}$", isCorrect: true },
+      { text: "$\\text{HCl(aq)} + \\text{NaOH(aq)} \\rightarrow \\text{NaCl(aq)} + \\text{H}_2\\text{O(g)}$" },
+      { text: "$\\text{H}_2\\text{(g)} + \\frac{1}{2}\\text{O}_2\\text{(g)} \\rightarrow \\text{H}_2\\text{O(l)}$" },
+      { text: "$\\text{H}^+\\text{(aq)} + \\text{OH}^-\\text{(aq)} \\rightarrow \\text{H}_2\\text{O(aq)}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The standard enthalpy of neutralization is the enthalpy change when solutions of an acid and alkali react to form ONE mole of liquid water under standard conditions: $\\text{H}^+\\text{(aq)} + \\text{OH}^-\\text{(aq)} \\rightarrow \\text{H}_2\\text{O(l)}$.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q7",
+    createdAt: "2026-07-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_12-2026",
+    question: "Which of the following elements is NOT in its standard physical state under standard thermodynamic conditions ($298\\text{ K}$, $100\\text{ kPa}$)?",
+    options: [
+      { text: "$\\text{Br}_2\\text{(l)}$" },
+      { text: "$\\text{I}_2\\text{(g)}$", isCorrect: true },
+      { text: "$\\text{C(graphite)}$" },
+      { text: "$\\text{N}_2\\text{(g)}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Iodine is a solid ($\\text{I}_2\\text{(s)}$) under standard thermodynamic conditions of $298\\text{ K}$ and $100\\text{ kPa}$, not a gas.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q10",
+    createdAt: "2026-07-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_13-2026",
+    question: "What is the sign of the enthalpy change ($\\Delta H$) for bond breaking and bond making processes?",
+    options: [
+      { text: "Bond breaking is exothermic ($\\Delta H < 0$) and bond making is endothermic ($\\Delta H > 0$)" },
+      { text: "Bond breaking is endothermic ($\\Delta H > 0$) and bond making is exothermic ($\\Delta H < 0$)", isCorrect: true },
+      { text: "Both processes are always endothermic ($\\Delta H > 0$)" },
+      { text: "Both processes are always exothermic ($\\Delta H < 0$)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Breaking bonds is an endothermic process (requires energy input, $\\Delta H > 0$).\n* Forming new bonds is an exothermic process (releases energy, $\\Delta H < 0$).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q10",
+    createdAt: "2026-07-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_14-2026",
+    question: "In a calorimetry calculation, how is the temperature change ($\\Delta T$) defined?",
+    options: [
+      { text: "$\\Delta T = T_{\\text{final}} - T_{\\text{initial}}$", isCorrect: true },
+      { text: "$\\Delta T = T_{\\text{initial}} - T_{\\text{final}}$" },
+      { text: "$\\Delta T = T_{\\text{final}} + T_{\\text{initial}}$" },
+      { text: "$\\Delta T = T_{\\text{final}} \\times T_{\\text{initial}}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The temperature change is always defined as the final temperature minus the initial temperature ($\\Delta T = T_{\\text{final}} - T_{\\text{initial}}$).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q8",
+    createdAt: "2026-07-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l1_lv1_15-2026",
+    question: "Which of the following standard enthalpy changes is always negative (exothermic)?",
+    options: [
+      { text: "Enthalpy change of formation" },
+      { text: "Enthalpy change of combustion", isCorrect: true },
+      { text: "Enthalpy change of reaction" },
+      { text: "Enthalpy change of atomisation" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Enthalpy change of combustion is always exothermic (negative) because burning a fuel in oxygen always releases heat energy.\n* Enthalpies of formation and reaction can be positive or negative, and atomisation is always endothermic (positive).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q11",
+    createdAt: "2026-07-18T10:00:00Z"
   }
 ];
+
 
