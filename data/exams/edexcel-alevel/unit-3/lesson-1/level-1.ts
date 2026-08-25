@@ -437,6 +437,139 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q11",
     createdAt: "2026-09-13T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_24-2026",
+    question: "What reagent is used to confirm the presence of a carboxylic acid functional group, and what is the positive observation?",
+    options: [
+      { text: "Aqueous sodium hydrogencarbonate ($NaHCO_3$); rapid effervescence as carbon dioxide gas is released", isCorrect: true },
+      { text: "Acidified potassium dichromate(VI); color change from green to orange" },
+      { text: "Phosphorus(V) chloride; no reaction" },
+      { text: "Bromine water; white precipitate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Carboxylic acids are strong enough acids to react with carbonates or hydrogencarbonates to form a salt, water, and $\\text{CO}_2$ gas: $\\text{RCOOH} + \\text{NaHCO}_3 \\rightarrow \\text{RCOONa} + \\text{H}_2\\text{O} + \\text{CO}_2\\text{(g)}$.\n* Alcohols and phenols do not react with $\\text{NaHCO}_3$.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q16",
+    createdAt: "2026-09-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_25-2026",
+    question: "When chlorine water is shaken with an aqueous solution containing iodide ions, and cyclohexane is added, what color is observed in the upper cyclohexane layer?",
+    options: [
+      { text: "Pale green" },
+      { text: "Orange" },
+      { text: "Purple / Violet", isCorrect: true },
+      { text: "Colorless" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Chlorine displaces iodine from iodide ions: $\\text{Cl}_2 + 2\\text{I}^- \\rightarrow 2\\text{Cl}^- + \\text{I}_2$.\n* Iodine dissolves preferentially in the non-polar organic solvent cyclohexane, producing a highly characteristic purple/violet upper layer.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q19",
+    createdAt: "2026-09-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_26-2026",
+    question: "In an acid-base titration where sodium hydroxide is added to hydrochloric acid, what is the color change of phenolphthalein indicator at the endpoint?",
+    options: [
+      { text: "Colorless to a permanent pale pink", isCorrect: true },
+      { text: "Pink to colorless" },
+      { text: "Yellow to red" },
+      { text: "Blue to yellow" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Phenolphthalein is colorless in acidic solution ($\text{HCl}$).\n* At the endpoint, the first excess drop of alkali ($\text{NaOH}$) turns the solution permanently pale pink ($\text{pH} \\approx 8.2-10$).",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q15",
+    createdAt: "2026-09-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_27-2026",
+    question: "What is the standard test for carbonate ions ($CO_3^{2-}$) in an unknown solid?",
+    options: [
+      { text: "Add dilute hydrochloric acid; bubble the evolved gas through limewater and observe if it turns cloudy", isCorrect: true },
+      { text: "Add barium chloride to get a blue solution" },
+      { text: "Perform a flame test and check for a lilac color" },
+      { text: "Add silver nitrate to get a yellow precipitate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Carbonate ions react with acids to produce carbon dioxide: $\\text{CO}_3^{2-} + 2\\text{H}^+ \\rightarrow \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{O}$.\n* $\\text{CO}_2$ gas reacts with limewater (calcium hydroxide) to precipitate insoluble calcium carbonate: $\\text{CO}_2 + \\text{Ca(OH)}_2 \\rightarrow \\text{CaCO}_3\\text{(s)} + \\text{H}_2\\text{O}$, turning it cloudy.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q17",
+    createdAt: "2026-09-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_28-2026",
+    question: "When performing a titration adding hydrochloric acid to sodium carbonate solution, what is the color change of methyl orange indicator at the endpoint?",
+    options: [
+      { text: "Yellow to red-orange / peach", isCorrect: true },
+      { text: "Red to yellow" },
+      { text: "Colorless to blue" },
+      { text: "Orange to green" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Methyl orange is yellow in alkaline/neutral solution (sodium carbonate).\n* As acid is added and the endpoint is reached, the indicator changes to an intermediate orange/peach color before turning red in excess acid.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q20",
+    createdAt: "2026-09-23T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_29-2026",
+    question: "What reagent is used to test for unsaturation (C=C double bonds) in alkenes, and what is the positive observation?",
+    options: [
+      { text: "Bromine water; orange solution turns colorless (decolorized)", isCorrect: true },
+      { text: "Acidified potassium dichromate; turns from orange to green" },
+      { text: "Sodium metal; fizzing" },
+      { text: "Silver nitrate; white precipitate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Alkenes undergo rapid electrophilic addition with bromine at room temperature: $\\text{CH}_2=\\text{CH}_2 + \\text{Br}_2 \\rightarrow \\text{CH}_2\\text{Br}-\\text{CH}_2\\text{Br}$.\n* The orange-brown bromine water is decolorized.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q16",
+    createdAt: "2026-09-23T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_30-2026",
+    question: "If a corrosive chemical splashes into a student's eye during an experiment, what is the immediate first-aid action required?",
+    options: [
+      { text: "Neutralize it with a weak acid or base" },
+      { text: "Flush the eye thoroughly with cold running water at an eyewash station for at least 10–15 minutes, while informing the teacher", isCorrect: true },
+      { text: "Apply a dry bandage and go home" },
+      { text: "Rub the eye vigorously with a paper towel" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Corrosive chemicals must be diluted and washed away immediately with a continuous stream of water to minimize ocular tissue damage. Neutralizing agents must never be used as the heat of reaction can cause secondary burns.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q21",
+    createdAt: "2026-09-24T10:00:00Z"
   }
 ];
 

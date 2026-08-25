@@ -342,6 +342,120 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q14",
     createdAt: "2026-09-20T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_19-2026",
+    question: "When concentrated sulfuric acid is reacted separately with solid sodium chloride and solid sodium bromide, different products are formed. What chemical explanation accounts for this difference?",
+    options: [
+      { text: "Chloride ions are stronger reducing agents than bromide ions" },
+      { text: "Bromide ions are stronger reducing agents than chloride ions; bromide is oxidized to bromine (Br₂), reducing sulfuric acid to sulfur dioxide (SO₂), while chloride cannot reduce sulfuric acid and only undergoes an acid-base displacement to produce hydrogen chloride (HCl)", isCorrect: true },
+      { text: "Sulfuric acid is oxidized by bromide" },
+      { text: "Sodium bromide has a lower boiling point" }
+    ],
+    correctAnswer: 1,
+    explanation: "* As you descend Group 7, ionic radius increases and electrons are lost more easily.\n* Bromide ($\text{Br}^-$) is a strong enough reducing agent to reduce sulfuric acid (S from $+6$ to $+4$ as $\\text{SO}_2$) while being oxidized to $\\text{Br}_2$ (red-brown vapor).\n* Chloride ($\text{Cl}^-$) is a poor reducing agent and only undergoes a non-redox acid-base reaction: $\\text{NaCl(s)} + \\text{H}_2\\text{SO}_4\\text{(l)} \\rightarrow \\text{NaHSO}_4\\text{(s)} + \\text{HCl(g)}$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q25",
+    createdAt: "2026-09-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_20-2026",
+    question: "In a calorimetry experiment, how does a student graphically correct for heat loss to the surroundings after mixing reactants?",
+    options: [
+      { text: "By subtracting 2.0 °C from all measurements" },
+      { text: "By plotting temperature against time, drawing a line of best fit through the cooling points after mixing, and extrapolating this line back to the exact time of mixing to find the theoretical maximum temperature rise", isCorrect: true },
+      { text: "By taking the average of the initial and final temperatures" },
+      { text: "By heating the cup beforehand" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Plotting a cooling curve (temperature vs time) allows extrapolation back to the time of mixing ($t = 4\\text{ min}$ typical), correcting for heat that escaped before the maximum temperature could be registered.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q20",
+    createdAt: "2026-09-28T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_21-2026",
+    question: "A $1.52\\text{ g}$ sample of impure iron(II) sulfate ($FeSO_4$, $M_r = 152.0$) is dissolved in dilute sulfuric acid. The solution requires exactly $20.0\\text{ cm}^3$ of $0.0200\\text{ mol dm}^{-3}$ potassium manganate(VII) ($KMnO_4$) for complete oxidation. Calculate the percentage purity of the iron(II) sulfate sample. (The reaction mole ratio is $5\\text{ Fe}^{2+} : 1\\text{ MnO}_4^-$)",
+    options: [
+      { text: "10.0%" },
+      { text: "15.2%" },
+      { text: "50.0%" },
+      { text: "20.0%", isCorrect: true }
+    ],
+    correctAnswer: 3,
+    explanation: "* Calculation details:\n  1. Moles of $\\text{MnO}_4^- = 0.0200\\text{ mol dm}^{-3} \\times 0.0200\\text{ dm}^3 = 0.0004\\text{ mol}$.\n  2. Moles of $\\text{Fe}^{2+} = 5 \\times 0.0004 = 0.002\\text{ mol}$.\n  3. Mass of pure $\\text{FeSO}_4 = 0.002\\text{ mol} \\times 152.0\\text{ g mol}^{-1} = 0.304\\text{ g}$.\n  4. $\\%\\text{ purity} = \\frac{0.304}{1.52} \\times 100 = \\mathbf{20.0\\%}$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q19",
+    createdAt: "2026-09-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_22-2026",
+    question: "When is a back titration method preferred over a direct titration in volumetric analysis?",
+    options: [
+      { text: "When the indicator color change is too bright" },
+      { text: "When the analyte is an insoluble, volatile, or slow-reacting solid (such as calcium carbonate), allowing it to react fully with an excess of standard reagent, which is then titrated", isCorrect: true },
+      { text: "When the reaction is too fast" },
+      { text: "When the analyte is a gas that does not dissolve in water" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Direct titrations fail if the reaction is slow or the sample is insoluble.\n* Adding a known excess of reactant, letting it react fully, and titrating the unreacted residue (back titration) bypasses these issues.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q26",
+    createdAt: "2026-09-29T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_23-2026",
+    question: "A student performs thin-layer chromatography (TLC). A compound spot travels $4.5\\text{ cm}$ from the baseline, while the solvent front travels $9.0\\text{ cm}$. Calculate the retardation factor ($R_f$) of this compound, and state what factors affect its value under constant conditions.",
+    options: [
+      { text: "Rf = 2.0; affected by the length of the plate" },
+      { text: "Rf = 0.50; affected by the polarity of the compound, the stationary phase, and the mobile phase solvent", isCorrect: true },
+      { text: "Rf = 0.50; affected only by the mass of the compound" },
+      { text: "Rf = 1.35; affected by room temperature" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $R_f = \\frac{\\text{distance moved by compound}}{\\text{distance moved by solvent front}} = \\frac{4.5}{9.0} = \\mathbf{0.50}$.\n* The value depends on relative partition (adsorption vs solubility) between the polar silica stationary phase and the mobile solvent phase.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q21",
+    createdAt: "2026-09-30T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_24-2026",
+    question: "When titrating a mixture of sodium carbonate ($Na_2CO_3$) and sodium hydrogencarbonate ($NaHCO_3$) with hydrochloric acid, why are two different indicators (phenolphthalein and methyl orange) used sequentially?",
+    options: [
+      { text: "To make the solution double-colored" },
+      { text: "Phenolphthalein detects the neutralization of sodium carbonate to sodium hydrogencarbonate (endpoint 1), while methyl orange subsequently detects the complete neutralization of all hydrogencarbonate to carbon dioxide and water (endpoint 2)", isCorrect: true },
+      { text: "Because one indicator decomposes the other" },
+      { text: "To increase the rate of reaction" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Phenolphthalein changes color at $\\text{pH} \\sim 8.3$, marking the conversion: $\\text{CO}_3^{2-} + \\text{H}^+ \\rightarrow \\text{HCO}_3^-$.\n* Methyl orange changes at $\\text{pH} \\sim 3.7$, indicating: $\\text{HCO}_3^- + \\text{H}^+ \\rightarrow \\text{CO}_2 + \\text{H}_2\\text{O}$ (titrating both original and newly formed hydrogencarbonates).",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q20",
+    createdAt: "2026-09-30T10:00:00Z"
   }
 ];
 

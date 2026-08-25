@@ -361,6 +361,139 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q16",
     createdAt: "2026-09-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_20-2026",
+    question: "When concentrated sulfuric acid (H₂SO₄) is added to solid potassium iodide (KI), purple vapors of iodine and a gas smelling of rotten eggs are evolved. What is the identity of this gas, and what does this reaction show about iodide ions?",
+    options: [
+      { text: "Sulfur dioxide (SO₂); shows iodide is a weak reducing agent" },
+      { text: "Hydrogen sulfide (H₂S); shows iodide is a powerful reducing agent capable of reducing sulfur from +6 to -2", isCorrect: true },
+      { text: "Hydrogen iodide (HI); shows iodide is stable" },
+      { text: "Oxygen (O₂); shows iodide is an oxidizing agent" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Iodide is a strong reducing agent and reduces concentrated sulfuric acid ($\text{H}_2\text{SO}_4$, S at $+6$) all the way down to hydrogen sulfide ($\text{H}_2\text{S}$, S at $-2$), which has a distinct rotten egg odor. Purple iodine fumes ($I_2$) are also produced.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q22",
+    createdAt: "2026-09-24T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_21-2026",
+    question: "In the 'disappearing cross' experiment to measure the rate of reaction between sodium thiosulfate ($Na_2S_2O_3$) and hydrochloric acid, what substance forms the precipitate that obscures the cross?",
+    options: [
+      { text: "Sodium chloride precipitate" },
+      { text: "Insoluble colloidal sulfur", isCorrect: true },
+      { text: "Sulfur dioxide gas bubbles" },
+      { text: "Calcium sulfate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The reaction: $\\text{Na}_2\\text{S}_2\\text{O}_3\\text{(aq)} + 2\\text{HCl(aq)} \\rightarrow 2\\text{NaCl(aq)} + \\text{SO}_2\\text{(g)} + \\text{S(s)} + \\text{H}_2\\text{O(l)}$.\n* The slow formation of insoluble yellow/white **colloidal sulfur** precipitate turns the solution opaque, hiding the black cross marked underneath.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q18",
+    createdAt: "2026-09-25T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_22-2026",
+    question: "Why is the experimental value for the enthalpy of combustion of an alcohol, obtained using a simple spirit burner and copper calorimeter, always less exothermic than the data book value?",
+    options: [
+      { text: "Because the reaction is endothermic in practice" },
+      { text: "Due to heat loss to the surroundings, incomplete combustion of the alcohol, and evaporation of the alcohol from the wick", isCorrect: true },
+      { text: "Because water has a low heat capacity" },
+      { text: "Because the copper cup absorbs all of the heat permanently" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Heat energy escapes to the air rather than transferring to the water, the burner wick loses mass by evaporation without burning, and incomplete combustion produces carbon soot instead of maximum heat release.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q17",
+    createdAt: "2026-09-25T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_23-2026",
+    question: "During a redox titration of iron(II) ions ($Fe^{2+}$) with potassium manganate(VII) ($KMnO_4$), why is no indicator added?",
+    options: [
+      { text: "Because the reaction does not have an endpoint" },
+      { text: "Because potassium manganate(VII) acts as a self-indicator, changing from a deep purple reactant to a colorless product, with the first excess drop imparting a permanent pale pink color", isCorrect: true },
+      { text: "Because starch indicator is already built into the Fe²⁺ solution" },
+      { text: "Because indicators decompose in acid" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Manganate(VII) ions ($MnO_4^-$) are intensely purple. When reduced by $Fe^{2+}$ under acidic conditions, they form colorless $Mn^{2+}$ ions.\n* The endpoint is reached when all $Fe^{2+}$ has reacted, and one drop of excess $MnO_4^-$ gives the flask a permanent pale pink tint.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q23",
+    createdAt: "2026-09-26T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_24-2026",
+    question: "A student fills a volumetric flask with water to prepare a standard solution. Which of the following describes the correct position of the water level relative to the graduation mark on the neck of the flask?",
+    options: [
+      { text: "The top of the meniscus should touch the graduation mark" },
+      { text: "The bottom of the curved meniscus must sit exactly on the graduation line when viewed at eye level", isCorrect: true },
+      { text: "The meniscus should be 2 mm above the graduation mark" },
+      { text: "The graduation mark should be in the middle of the liquid column" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Volumetric glassware is calibrated to contain or deliver a volume when the bottom of the meniscus is aligned with the graduation line at eye level.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q19",
+    createdAt: "2026-09-26T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_25-2026",
+    question: "What are the solubility trends for Group 2 sulfates and Group 2 hydroxides as you descend the group from magnesium to barium?",
+    options: [
+      { text: "Sulfate solubility increases, hydroxide solubility decreases" },
+      { text: "Sulfate solubility decreases (BaSO₄ is highly insoluble), while hydroxide solubility increases (Ba(OH)₂ is soluble)", isCorrect: true },
+      { text: "Both solubilities increase" },
+      { text: "Both solubilities decrease" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Descending Group 2, the lattice enthalpy of sulfates decreases slower than hydration enthalpy, making sulfates less soluble.\n* Conversely, Group 2 hydroxides become increasingly soluble down the group.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q18",
+    createdAt: "2026-09-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_26-2026",
+    question: "Why should conical flasks and beakers never be used to measure accurate volumes of liquids in quantitative analysis?",
+    options: [
+      { text: "Because they cannot hold hot liquids" },
+      { text: "Because they are wide vessels, so a small change in height corresponds to a large change in volume, leading to very high percentage uncertainties", isCorrect: true },
+      { text: "Because they react with acid" },
+      { text: "Because they are not made of Pyrex" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Conical flasks and beakers are designed for mixing and holding liquids, not measuring.\n* The graduation marks on them are only rough approximations ($\pm 5\%$ or worse) due to their wide surface areas.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q24",
+    createdAt: "2026-09-27T10:00:00Z"
   }
 ];
 
