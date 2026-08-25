@@ -152,6 +152,139 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q32",
     createdAt: "2026-08-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_9-2026",
+    question: "Which of the following best defines a nucleophile in organic chemistry?",
+    options: [
+      { text: "An electron-deficient species that accepts a lone pair of electrons" },
+      { text: "An electron-rich species containing a lone pair of electrons that it can donate to an electron-deficient carbon atom", isCorrect: true },
+      { text: "A species with an unpaired electron" },
+      { text: "A positively charged proton donor" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Nucleophiles (meaning 'nucleus-loving') are electron-rich species, such as $:\\text{OH}^-$, $:\\text{NH}_3$, or $:\\text{CN}^-$, that donate a lone pair to form a new covalent bond with a carbon atom carrying a partial or full positive charge.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q41",
+    createdAt: "2026-08-30T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_10-2026",
+    question: "When 1-bromopropane is heated under reflux with ethanolic potassium cyanide (KCN), what is the IUPAC name of the organic product formed?",
+    options: [
+      { text: "Propanenitrile" },
+      { text: "Butanenitrile", isCorrect: true },
+      { text: "Propylamine" },
+      { text: "Butylamine" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The nucleophile cyanide ($:\\text{CN}^-$) adds a carbon atom to the chain:\n* $\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{Br} + \\text{CN}^- \\rightarrow \\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CN} + \\text{Br}^-$.\n* The product has a 4-carbon chain, making it **butanenitrile**.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q32",
+    createdAt: "2026-08-30T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_11-2026",
+    question: "What observation is made when a small piece of sodium metal is added to ethanol?",
+    options: [
+      { text: "A violent explosion with a lilac flame" },
+      { text: "Steady effervescence (fizzing) as hydrogen gas is evolved, and the sodium dissolves to form a colorless solution", isCorrect: true },
+      { text: "A white precipitate forms immediately" },
+      { text: "The solution turns deep orange" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Alcohols react with sodium metal to produce sodium alkoxides and hydrogen gas: $2\\text{C}_2\\text{H}_5\\text{OH} + 2\\text{Na} \\rightarrow 2\\text{C}_2\\text{H}_5\\text{ONa} + \\text{H}_2\\text{(g)}$.\n* The reaction is less vigorous than that of sodium with water, producing steady fizzing.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q31",
+    createdAt: "2026-08-31T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_12-2026",
+    question: "Which of the following is classified as a secondary (2°) alcohol?",
+    options: [
+      { text: "Propan-1-ol" },
+      { text: "Propan-2-ol", isCorrect: true },
+      { text: "2-methylpropan-2-ol" },
+      { text: "Methanol" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In propan-2-ol ($\\text{CH}_3\\text{CH(OH)CH}_3$), the carbon atom attached to the $-\\text{OH}$ group is bonded directly to two other carbon atoms.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q42",
+    createdAt: "2026-08-31T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_13-2026",
+    question: "In Infrared (IR) spectroscopy, a sharp, strong absorption band at 1700 cm⁻¹ is diagnostic of which functional group?",
+    options: [
+      { text: "Hydroxyl group (O–H)" },
+      { text: "Carbonyl group (C=O)", isCorrect: true },
+      { text: "C–H stretching in alkanes" },
+      { text: "Carbon-carbon double bond (C=C)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The carbonyl group ($\\text{C}=\\text{O}$) stretch produces a highly characteristic sharp, very strong peak in the range **$1680-1750\\text{ cm}^{-1}$**, present in aldehydes, ketones, and carboxylic acids.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q33",
+    createdAt: "2026-09-01T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_14-2026",
+    question: "What is the definition of the base peak in a mass spectrum?",
+    options: [
+      { text: "The peak corresponding to the heaviest fragment" },
+      { text: "The peak with the highest relative abundance (100% intensity), representing the most stable fragment ion", isCorrect: true },
+      { text: "The peak furthest to the right" },
+      { text: "The peak representing the molecular ion" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The base peak is assigned a relative abundance of $100\\%$ and represents the most stable cation fragment formed during ionization, against which all other peak heights are scaled.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q32",
+    createdAt: "2026-09-01T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv1_15-2026",
+    question: "Which of the following halogenoalkanes is classified as tertiary (3°)?",
+    options: [
+      { text: "1-chlorobutane" },
+      { text: "2-chlorobutane" },
+      { text: "2-chloro-2-methylpropane", isCorrect: true },
+      { text: "1-chloro-2-methylpropane" }
+    ],
+    correctAnswer: 2,
+    explanation: "* In 2-chloro-2-methylpropane ($\\text{(CH}_3)_3\\text{CCl}$), the carbon bonded to the chlorine is attached to three other carbon atoms (methyl groups).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q43",
+    createdAt: "2026-09-02T10:00:00Z"
   }
 ];
 

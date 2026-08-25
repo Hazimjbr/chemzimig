@@ -114,6 +114,139 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q28",
     createdAt: "2026-08-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_7-2026",
+    question: "Alcohols can be converted to halogenoalkanes using hydrogen halides. How is hydrogen bromide (HBr) prepared in situ for this reaction?",
+    options: [
+      { text: "By adding phosphorus pentabromide directly at high temperature" },
+      { text: "By reacting potassium bromide (KBr) with 50% concentrated sulfuric acid (H₂SO₄)", isCorrect: true },
+      { text: "By bubbling bromine gas through ethanol" },
+      { text: "By heating sodium bromide with sodium hydroxide" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $\\text{HBr}$ is prepared in situ (in the reaction flask) by reacting $\\text{KBr}$ or $\\text{NaBr}$ with $50\\%$ concentrated $\\text{H}_2\\text{SO}_4$: $\\text{KBr} + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{KHSO}_4 + \\text{HBr}$.\n* Concentrated $100\\%$ sulfuric acid cannot be used because it would oxidize the $\\text{HBr}$ to $\\text{Br}_2$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q44",
+    createdAt: "2026-09-03T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_8-2026",
+    question: "Which of the following qualitative tests can be used to distinguish between an aldehyde (such as propanal) and a ketone (such as propanone)?",
+    options: [
+      { text: "Reaction with 2,4-DNPH" },
+      { text: "Heating with Fehling's solution (which gives a brick-red precipitate with aldehydes but no reaction with ketones)", isCorrect: true },
+      { text: "Reaction with phosphorus(V) chloride" },
+      { text: "Reaction with acidified potassium dichromate(VI) under cold conditions" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Fehling's solution contains copper(II) ions which oxidize aldehydes to carboxylic acids, being reduced to red copper(I) oxide ($\\text{Cu}_2\\text{O}$). Ketones cannot be easily oxidized, so they do not react.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q34",
+    createdAt: "2026-09-03T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_9-2026",
+    question: "What is the significance of the fingerprint region (typically below 1500 cm⁻¹) in an Infrared spectrum?",
+    options: [
+      { text: "It only identifies carbonyl and hydroxyl groups" },
+      { text: "It contains a unique, complex pattern of peaks for each individual organic compound, allowing positive identification by direct comparison with database standards", isCorrect: true },
+      { text: "It represents carbon-carbon triple bonds only" },
+      { text: "It is identical for all isomers" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The fingerprint region (usually $1500-400\\text{ cm}^{-1}$) is caused by complex vibrational modes of the whole molecule.\n* Since the exact pattern is unique for every compound, it acts as a molecular fingerprint for identification.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q33",
+    createdAt: "2026-09-04T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_10-2026",
+    question: "Why does the hydrolysis of 1-bromobutane proceed much faster with aqueous sodium hydroxide (NaOH) than with pure water at the same temperature?",
+    options: [
+      { text: "Water is ionic" },
+      { text: "The hydroxide ion (OH⁻) has a full negative charge, making it a much stronger nucleophile than the neutral water molecule with only partial charges", isCorrect: true },
+      { text: "Water dissolves bromoethane completely" },
+      { text: "Sodium acts as a homogeneous catalyst" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Hydroxide is a stronger nucleophile because its negative charge yields a greater electrostatic attraction to the electron-deficient carbon center ($^{\\delta+}\\text{C}$), lowering the activation energy for nucleophilic attack.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q45",
+    createdAt: "2026-09-04T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_11-2026",
+    question: "During the purification of a liquid halogenoalkane in a separating funnel, the organic layer is shaken with aqueous sodium hydrogencarbonate (NaHCO₃). What is the purpose of this wash?",
+    options: [
+      { text: "To act as a drying agent" },
+      { text: "To neutralize and remove residual acid impurities, releasing carbon dioxide gas", isCorrect: true },
+      { text: "To dissolve the organic product" },
+      { text: "To reduce the boiling point of the mixture" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Shaking with aqueous $\\text{NaHCO}_3$ neutralizes any remaining acid catalyst or reactant (like $\\text{HCl}$ or $\\text{H}_2\\text{SO}_4$) by converting it to soluble salts, water, and $\\text{CO}_2$ gas (which must be vented from the separating funnel).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q35",
+    createdAt: "2026-09-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_12-2026",
+    question: "An organic compound has a relative molecular mass of 46. Its Infrared spectrum shows a broad absorption peak centered at 3350 cm⁻¹ and no absorption at 1700 cm⁻¹. Identify the compound.",
+    options: [
+      { text: "Ethanol (CH₃CH₂OH)", isCorrect: true },
+      { text: "Methoxymethane (CH₃OCH₃)" },
+      { text: "Ethanal (CH₃CHO)" },
+      { text: "Ethanoic acid (CH₃COOH)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Molecular mass $M_r = 46$ is consistent with both ethanol and methoxymethane.\n* The broad IR peak at $3350\\text{ cm}^{-1}$ indicates an $-\\text{OH}$ group, which matches ethanol.\n* Methoxymethane is an ether and has no $-\\text{OH}$ group.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q34",
+    createdAt: "2026-09-05T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l5_lv2_13-2026",
+    question: "What organic product is formed when ethanol is heated with concentrated phosphoric acid (H₃PO₄)?",
+    options: [
+      { text: "Ethane" },
+      { text: "Ethene", isCorrect: true },
+      { text: "Diethyl ether" },
+      { text: "Ethyl phosphate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Heating alcohols with concentrated $\\text{H}_3\\text{PO}_4$ (or $\\text{H}_2\\text{SO}_4$) is an **elimination / dehydration** reaction that removes water to form an alkene (ethene from ethanol):\n* $\\text{CH}_3\\text{CH}_2\\text{OH} \\xrightarrow{\\text{H}_3\\text{PO}_4, \\Delta} \\text{CH}_2=\\text{CH}_2 + \\text{H}_2\\text{O}$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 5,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q46",
+    createdAt: "2026-09-06T10:00:00Z"
   }
 ];
 
