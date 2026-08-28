@@ -89,6 +89,12 @@ ChemZim is built for speed, security, and scientific precision.
 - **Centralized Virtual Chemistry Lab Hub (`components/visual/`):** Reusable interactive laboratory simulation components decoupled from curriculum registries:
   - `TitrationSimulator.tsx`: Real-time acid-base titration canvas simulation with dynamic pH curve calculation, burette liquid fill levels, indicator color transition mechanics (Phenolphthalein colorless to pink), and equivalence point alerts.
   - `GasLawSimulator.tsx`, `MassSpecSimulator.tsx`, `AvogadroScale.tsx`, `EquationAnimator.tsx`.
+  - **Kinetics & Rate Simulators:**
+    - `KineticsRatePlotter.tsx`: Concentration-time plotting simulator with custom reaction orders (Zero, First, Second) to visualize reaction rates.
+    - `MaxwellBoltzmannSimulator.tsx`: Interactive energy distribution curves showing the effect of activation energy ($E_a$) and temperature adjustments.
+    - `ArrheniusSimulator.tsx`: Graphical and exponential Arrhenius solver simulating rate constant ($k$), pre-exponential factor ($A$), and activation energy ($E_a$).
+    - `RateMechanismBuilder.tsx`: Multi-step reaction mechanism designer with intermediate/catalyst cancellation and RDS rate law generation.
+    - `DisappearingCrossSimulator.tsx`: Virtual lab simulation of the disappearing cross experiment (sodium thiosulfate and hydrochloric acid reaction).
 - **Examiner Eye & Interactive Marking Schemes (`StructuredQuestionCard.tsx`):** Paper 4 / Structured Theory questions with interactive self-grading checkboxes, key phrase highlighting (`[+1 mark]`), and official Cambridge/Edexcel examiner warning panels (`Examiner Eye 👁️`).
 - **3D Active Recall Flashcards Deck (`FlashcardsDeck.tsx`):** Interactive 3D flip card engine integrated as a warm-up phase in quiz slides, featuring dynamic topic header titles (`Topic X Active Recall Warm-Up 🃏`) and a comprehensive 103-card dataset covering all 5 topics of Edexcel AS Chemistry Unit 1 (Formulae & Stoichiometry, Atomic Structure, Bonding & Structure, Organic Chemistry & Alkanes, Alkenes) and A2 Chemistry Unit 4 (Kinetics, Entropy & Energetics, Chemical Equilibria, Acid-Base, Carbonyls & Chirality) alongside IGCSE datasets.
   - *Responsive Layout:* Container height is locked to `h-[260px] md:h-[280px]` with flex-shrink constraints and scrollable dot indicators to prevent horizontal overflow and card clipping on medium/small tablet containers.

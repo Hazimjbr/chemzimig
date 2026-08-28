@@ -18,6 +18,19 @@ export interface LessonPart {
     massSpecSimulator?: boolean;
     titrationSimulator?: boolean;
     molecularShapeSimulator?: boolean;
+    kineticsRatePlotter?: {
+        initialOrder?: 'zero' | 'first' | 'second';
+    };
+    maxwellBoltzmannSimulator?: {
+        initialTemp?: number;
+        initialEa?: number;
+    };
+    arrheniusSimulator?: {
+        initialEa?: number;
+        initialA?: number;
+    };
+    rateMechanismBuilder?: boolean;
+    disappearingCrossSimulator?: boolean;
 }
 
 

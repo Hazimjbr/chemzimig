@@ -43,6 +43,26 @@ const FlashcardsDeck = dynamic(() => import('@/components/visual/FlashcardsDeck'
     ssr: false,
     loading: () => <div className="h-[300px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
 });
+const KineticsRatePlotter = dynamic(() => import('@/components/visual/KineticsRatePlotter'), {
+    ssr: false,
+    loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const MaxwellBoltzmannSimulator = dynamic(() => import('@/components/visual/MaxwellBoltzmannSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const ArrheniusSimulator = dynamic(() => import('@/components/visual/ArrheniusSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const RateMechanismBuilder = dynamic(() => import('@/components/visual/RateMechanismBuilder'), {
+    ssr: false,
+    loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const DisappearingCrossSimulator = dynamic(() => import('@/components/visual/DisappearingCrossSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
 
 import { edexcelAlevelFlashcards } from '@/data/curriculum/edexcel-alevel/flashcards';
 import { cieIgcseFlashcards } from '@/data/curriculum/cie-igcse/flashcards';
@@ -1166,6 +1186,39 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 {/* Dynamic Molecular Shape (VSEPR) Explorer rendered when defined on the active lesson part */}
                                 {currentPart.molecularShapeSimulator && (
                                     <MolecularShapeSimulator />
+                                )}
+
+                                {/* Dynamic Kinetics Rate Plotter simulator rendered when defined on the active lesson part */}
+                                {currentPart.kineticsRatePlotter && (
+                                    <KineticsRatePlotter
+                                        initialOrder={currentPart.kineticsRatePlotter.initialOrder}
+                                    />
+                                )}
+
+                                {/* Dynamic Maxwell-Boltzmann Energy Distribution simulator rendered when defined on the active lesson part */}
+                                {currentPart.maxwellBoltzmannSimulator && (
+                                    <MaxwellBoltzmannSimulator
+                                        initialTemp={currentPart.maxwellBoltzmannSimulator.initialTemp}
+                                        initialEa={currentPart.maxwellBoltzmannSimulator.initialEa}
+                                    />
+                                )}
+
+                                {/* Dynamic Arrhenius Equation simulator rendered when defined on the active lesson part */}
+                                {currentPart.arrheniusSimulator && (
+                                    <ArrheniusSimulator
+                                        initialEa={currentPart.arrheniusSimulator.initialEa}
+                                        initialA={currentPart.arrheniusSimulator.initialA}
+                                    />
+                                )}
+
+                                {/* Dynamic Rate Mechanism Builder rendered when defined on the active lesson part */}
+                                {currentPart.rateMechanismBuilder && (
+                                    <RateMechanismBuilder />
+                                )}
+
+                                {/* Dynamic Disappearing Cross Simulator rendered when defined on the active lesson part */}
+                                {currentPart.disappearingCrossSimulator && (
+                                    <DisappearingCrossSimulator />
                                 )}
 
                                 {/* Slide Main Content */}

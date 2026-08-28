@@ -930,6 +930,7 @@ export const parts: LessonPart[] = [
     id: 'experimental-rates-u4-l1',
     title: 'Experimental Determination of Rates',
     type: 'text',
+    disappearingCrossSimulator: true,
     content: `
 > [!NOTE]
 > ### 📋 Selecting and Justifying Experimental Techniques
@@ -1193,6 +1194,9 @@ export const parts: LessonPart[] = [
     id: 'rate-equations-orders-u4-l1',
     title: 'Rate Equations & Reaction Orders',
     type: 'text',
+    kineticsRatePlotter: {
+      initialOrder: 'first'
+    },
     content: `
 > [!NOTE]
 > ### ⏱️ Rate of Reaction and Concentrations
@@ -1492,6 +1496,7 @@ export const parts: LessonPart[] = [
     id: 'reaction-mechanisms-rds-u4-l1',
     title: 'Reaction Mechanisms & Rate-Determining Step',
     type: 'text',
+    rateMechanismBuilder: true,
     content: `
 > [!NOTE]
 > ### ⛓️ Multi-Step Reactions & Mechanisms
@@ -1821,6 +1826,14 @@ export const parts: LessonPart[] = [
     id: 'arrhenius-equation-u4-l1',
     title: 'Arrhenius Equation & Activation Energy',
     type: 'text',
+    maxwellBoltzmannSimulator: {
+      initialTemp: 300,
+      initialEa: 50
+    },
+    arrheniusSimulator: {
+      initialEa: 50,
+      initialA: 1000000
+    },
     content: `
 > [!NOTE]
 > ### 🌡️ Effect of Temperature on Rate Constants
