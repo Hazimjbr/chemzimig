@@ -1214,10 +1214,10 @@ export const parts: LessonPart[] = [
 `,
     keyPoints: [
       'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
-      'Quenching stops reactions by rapid cooling or chemical neutralization; weak bases (like NaHCO3) are used to neutralize acid catalysts without causing side-hydrolysis of esters.',
+      'Quenching stops reactions by rapid cooling or chemical neutralization; weak bases (like $\\\\text{NaHCO}_3$) are used to neutralize acid catalysts without causing side-hydrolysis of esters.',
       'In colorimetry, a filter matching the complementary color of the solution (e.g., a blue filter for an orange-brown bromine solution) must be chosen to ensure maximum light absorbance.',
       'Clock reactions use a small, limiting reagent to delay color change, allowing the calculation of initial rate (1/t) before reactant concentrations change significantly.',
-      'Mass loss is an unreliable technique for reactions producing low molar mass gases (e.g., H₂, Mr = 2.0) because the mass change is too small to measure accurately; a gas syringe is preferred.'
+      'Mass loss is an unreliable technique for reactions producing low molar mass gases (e.g., $\\\\text{H}_2$, $M_r = 2.0$) because the mass change is too small to measure accurately; a gas syringe is preferred.'
     ]
   },
   {
