@@ -390,5 +390,38 @@ export const lessonQuiz = [
       { text: "1.25 × 10⁻⁴ s⁻¹", isCorrect: false }
     ],
     explanation: "• Rearranging the Arrhenius equation $k = A e^{-\\frac{E_a}{RT}}$ gives: $A = k e^{\\frac{E_a}{RT}}$.\n• First, convert $E_a$ to $\\text{J mol}^{-1}$: $E_a = 85.0 \\text{ kJ mol}^{-1} = 85000 \\text{ J mol}^{-1}$.\n• Calculate the exponent term: $\\frac{E_a}{RT} = \\frac{85000}{8.31 \\times 300} = \\frac{85000}{2493} \\approx 34.095$.\n• Calculate the exponential factor: $e^{34.095} \\approx 6.417 \\times 10^{14}$.\n• Calculate $A$: $A = (1.25 \\times 10^{-4} \\text{ s}^{-1}) \\times (6.417 \\times 10^{14}) = 8.02 \\times 10^{10} \\text{ s}^{-1}$ (matching the units of $k$ for a first-order reaction)."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260828-35",
+    question: "Bromine oxidizes methanoic acid to carbon dioxide according to the equation:\nHCOOH(aq) + Br₂(aq) → 2H⁺(aq) + 2Br⁻(aq) + CO₂(g)\nWhich of the following methods would NOT be suitable for measuring the progress of this reaction?",
+    options: [
+      { text: "Colorimetry (monitoring the decolourisation of the orange-brown Br₂)", isCorrect: false },
+      { text: "Measuring electrical conductivity", isCorrect: false },
+      { text: "Quenching aliquots and titrating with acid", isCorrect: true },
+      { text: "Measuring the volume of gas evolved using a gas syringe", isCorrect: false }
+    ],
+    explanation: "• Colorimetry is suitable: Br₂ is orange-brown and its disappearance can be tracked directly.\n• Electrical conductivity is suitable: the number and charge of ions changes (Br₂ is neutral; products H⁺ and Br⁻ are ions), so conductivity increases.\n• Measuring gas volume is suitable: CO₂ is a gaseous product that can be collected in a gas syringe.\n• Quenching and titrating with acid is NOT suitable: H⁺ ions are a product of the reaction, so adding acid to quench would interfere with any acid titration, making the measurement meaningless."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-MEDIUM-20260828-36",
+    question: "Which of the following reactions could have its progress continuously monitored by measuring the change in pressure?",
+    options: [
+      { text: "H₂(g) + Br₂(g) → 2HBr(g)", isCorrect: false },
+      { text: "2NO(g) + O₂(g) → 2NO₂(g)", isCorrect: true },
+      { text: "CH₃Br(aq) + NaOH(aq) → CH₃OH(aq) + NaBr(aq)", isCorrect: false },
+      { text: "H₂O₂(aq) + 2H⁺(aq) + 2I⁻(aq) → 2H₂O(l) + I₂(aq)", isCorrect: false }
+    ],
+    explanation: "• Pressure monitoring is only useful when the total number of moles of gas changes during the reaction, causing a measurable pressure change.\n• H₂(g) + Br₂(g) → 2HBr(g): 2 moles of gas → 2 moles of gas. No net change in moles of gas, so no pressure change. Not suitable.\n• 2NO(g) + O₂(g) → 2NO₂(g): 3 moles of gas → 2 moles of gas. The total pressure decreases as the reaction proceeds. Suitable ✓\n• CH₃Br(aq) + NaOH(aq) → products: All species are aqueous, no gas involved. Pressure monitoring is not applicable.\n• H₂O₂(aq) + H⁺(aq) + I⁻(aq) → products: All species are aqueous. Not applicable."
+  },
+  {
+    id: "EDEXCEL-AL-U4-L1-HARD-20260828-37",
+    question: "In aqueous solution, iodine reacts with propanone in the presence of a dilute hydrochloric acid catalyst:\nCH₃COCH₃(aq) + I₂(aq) → CH₃COCH₂I(aq) + HI(aq)\nWhich of the following methods would be suitable for investigating the rate of this reaction?",
+    options: [
+      { text: "Measuring the increase in pH with a pH meter.", isCorrect: false },
+      { text: "Measuring the change in rotation of plane-polarised light with a polarimeter.", isCorrect: false },
+      { text: "Quenching with ice-cold water, followed by titration with acid.", isCorrect: false },
+      { text: "Quenching with sodium hydrogencarbonate solution, followed by titration with sodium thiosulfate solution.", isCorrect: true }
+    ],
+    explanation: "• Measuring pH increase: HI is produced, so the solution becomes more acidic — pH would DECREASE, not increase. Additionally, HCl catalyst is already present, so pH changes are complex and unreliable. Not suitable.\n• Polarimetry: None of the species involved (propanone, iodine, iodopropanone) are chiral molecules with distinct optical rotations. Not suitable.\n• Quenching with ice-cold water + titration with acid: The HCl acid catalyst is already present in the mixture. Titrating against another acid would be meaningless (you cannot titrate an acidic mixture with acid to find the acid produced). Not suitable.\n• Quenching with NaHCO₃ + titration with sodium thiosulfate: NaHCO₃ neutralises and removes the H⁺ catalyst, effectively quenching the reaction. The remaining I₂ in the aliquot can then be accurately titrated against standard sodium thiosulfate solution. This is the correct method ✓"
   }
 ];

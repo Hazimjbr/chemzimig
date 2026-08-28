@@ -983,6 +983,13 @@ export const parts: LessonPart[] = [
 >   * **Chemical Neutralization ($\\\\text{NaHCO}_3$):** Used ONLY when titrating a **non-acidic species** (e.g., titrating iodine $\\\\text{I}_2$ with sodium thiosulfate in propanone iodination). Adding $\\\\text{NaHCO}_3$ neutralizes the $\\\\text{H}^+$ catalyst to halt the reaction without reacting with iodine.
 > * **Titration Reaction Example (Iodine Titration):**
 >   $$\\\\text{I}_2\\\\text{(aq)} + 2\\\\text{S}_2\\\\text{O}_3^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{I}^-\\\\text{(aq)} + \\\\text{S}_4\\\\text{O}_6^{2-}\\\\text{(aq)}$$
+> 
+> > [!WARNING]
+> > ### ⚠️ Exam Trap: Choosing the Correct Quenching Agent
+> > When the aliquot is quenched and then **titrated against a base** (e.g., $\\\\text{NaOH}$ or $\\\\text{NaHCO}_3$), the quenching agent must **not react with any species being titrated**.
+> > * **Ester hydrolysis (acid-catalysed):** Do NOT add $\\\\text{NaHCO}_3$ — it will neutralize the ethanoic acid product, ruining the titration. Use **rapid cooling in ice-cold water** instead.
+> > * **Propanone iodination:** $\\\\text{NaHCO}_3$ IS correct — it only neutralizes the $\\\\text{H}^+$ catalyst without affecting the iodine being titrated with thiosulfate.
+> > * **General rule:** If the reaction involves an acid or alkali, only quench with a reagent that removes the catalyst/reactant **without** consuming the analyte species.
 
 > [!BOX]
 > ### ⚖️ Measuring Mass Change
@@ -1012,18 +1019,41 @@ export const parts: LessonPart[] = [
 >      $$5\\\\text{Br}^-\\\\text{(aq)} + \\\\text{BrO}_3^-\\\\text{(aq)} + 6\\\\text{H}^+\\\\text{(aq)} \\\\rightarrow 3\\\\text{Br}_2\\\\text{(aq)} + 3\\\\text{H}_2\\\\text{O}\\\\text{(l)}$$
 > 
 > 2. **pH Measurement:**
->    * **Justification:** Suitable for reactions where the concentration of hydrogen ions ($\\\\text{H}^+$) changes significantly.
->    * **Apparatus:** A digital pH probe or meter.
+>    * **Justification:** Suitable for reactions where the concentration of hydrogen ions ($\\\\text{H}^+$) changes significantly as the reaction proceeds.
+>    * **Apparatus:** A digital pH probe or meter records continuous pH readings.
 > 
-> 3. **Other Physical Properties (Dilatometry):**
->    * **Dilatometry:** Monitors minute changes in volume during liquid reactions.
+> 3. **Dilatometry (Volume Change):**
+>    * **Justification:** Used for liquid-phase reactions where the density of the reactants and products differ, causing a measurable change in the total volume of the reaction mixture.
+>    * **How it works:** The reaction mixture is sealed in a flask fitted with a narrow capillary tube. As the reaction proceeds, the volume change (expansion or contraction) causes the liquid level in the capillary to rise or fall — this tiny change can be read precisely against a calibrated scale.
+>    * **Limitation:** Only applicable to liquid-phase reactions; not useful if a gas is produced.
 > 
-> > [!BOX]
-> > ### ⏱️ Clock Reactions & Initial Rates Method
-> > * **Concept:** An alternative to continuous monitoring, where we measure the time ($t$) taken for a small, fixed amount of product to form (indicated by a sharp visual change, such as a color change).
-> > * **Initial Rate Proportionality:** Because the reaction is monitored for only a tiny fraction of its completion ($<10\%$), reactant concentrations remain virtually constant, so:
-> >   $$\\\\text{Initial Rate} \\\\propto \\\\frac{1}{t}$$
-> > * **Iodine Clock Principle:** In the Iodine Clock reaction, a fixed small quantity of sodium thiosulfate ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$) rapidly consumes iodine as it forms. Once thiosulfate is completely exhausted, free iodine accumulates and instantly turns the starch indicator dark blue-black.
+> 4. **Refractive Index:**
+>    * **Justification:** Used for liquid-phase reactions where the refractive index of the solution changes as reactants are converted to products (because different compounds bend light differently).
+>    * **How it works:** A refractometer continuously measures how much the solution bends a beam of light. As the composition of the mixture changes, the refractive index changes at a rate proportional to the rate of reaction.
+>    * **Limitation:** Only suitable when there is a significant difference in refractive index between reactants and products, and when no gas is evolved.
+> 
+> 5. **Optical Activity (Polarimetry):**
+>    * **Justification:** Used for reactions involving **chiral (optically active) molecules** — i.e., molecules that rotate the plane of polarised light. As one enantiomer is converted to another (or to an optically inactive product), the angle of rotation changes measurably.
+>    * **How it works:** Plane-polarised light is passed through the reaction mixture inside a polarimeter tube. A detector continuously measures the angle of rotation ($\alpha$). As the concentration of the optically active species changes, so does $\alpha$ — allowing rate monitoring.
+>    * **Example:** Mutarotation of glucose (interconversion of $\alpha$- and $\beta$-glucose), or the SN1 hydrolysis of a chiral halogenoalkane leading to racemisation.
+>    * **Limitation:** Only applicable to reactions involving chiral species with different optical rotations.
+> 
+
+> [!BOX]
+> ### ⏱️ Clock Reactions & Initial Rates Method
+> * **Definition:** A chemical reaction that goes through a clear, observable transitional stage (such as a sudden color change or appearance of a precipitate) after a specific time period ($t$).
+> * **Purpose:** Provides a practical and mathematically valid alternative to continuous monitoring for determining initial reaction rates.
+> * **Core Assumption:** Instead of measuring concentrations moment by moment, we measure the time ($t$) required for a fixed, small amount of product to form (monitored for $<10\%$ of completion). Because the amount of product formed is fixed in every trial, reactant concentrations remain virtually constant, so:
+>   $$\\\\text{Initial Rate} \\\\propto \\\\frac{1}{t}$$
+> * **The Iodine Clock Reaction Equations:**
+>   $$\\\\text{Reaction 1 (Slow / Main): } \\\\text{S}_2\\\\text{O}_8^{2-}\\\\text{(aq)} + 2\\\\text{I}^-\\\\text{(aq)} \\\\rightarrow 2\\\\text{SO}_4^{2-}\\\\text{(aq)} + \\\\text{I}_2\\\\text{(aq)}$$
+>   $$\\\\text{Reaction 2 (Fast / Scavenger): } \\\\text{I}_2\\\\text{(aq)} + 2\\\\text{S}_2\\\\text{O}_3^{2-}\\\\text{(aq)} \\\\rightarrow 2\\\\text{I}^-\\\\text{(aq)} + \\\\text{S}_4\\\\text{O}_6^{2-}\\\\text{(aq)}$$
+> * **Detailed Mechanics & Delay Explanation:**
+>   1. Mixing clear solutions initiates the slow Reaction 1, producing iodine ($\\\\text{I}_2$).
+>   2. A small, known limiting quantity of sodium thiosulfate ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$) is added at the start. It rapidly consumes any $\\\\text{I}_2$ as soon as it forms, converting it back to colorless $\\\\text{I}^-$ via Reaction 2.
+>   3. As long as thiosulfate ions ($\\\\text{S}_2\\\\text{O}_3^{2-}$) remain, no free iodine can accumulate, so the solution stays completely clear.
+>   4. The moment all thiosulfate is fully consumed, free $\\\\text{I}_2$ begins to accumulate and immediately reacts with starch indicator to form a sharp, dark blue-black complex.
+>   5. A shorter time ($t$) until the blue-black color appears means a faster initial reaction rate.
 
 
 > [!EXAMPLE]
