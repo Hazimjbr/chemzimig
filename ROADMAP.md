@@ -82,7 +82,9 @@
 ### (5) 🎯 نظام الاختبارات المخصص والتكيفي (Dynamic Quiz & Exam Customization)
 - ✅ **Customizable Exams System:**
    - **لوحة إعداد متطورة:** تتيح للطالب التحكم الكامل قبل بدء الاختبار (اختيار مصدر الأسئلة: بنك الاختبارات، الكويزات، أو مختلط، واختيار الصعوبة، وعدد الأسئلة، وفلترة الأسئلة الذكية: غير المجابة Unanswered، والمجابة بشكل خاطئ Answered Incorrectly، والمجابة بشكل صحيح Answered Correctly).
-  - **أنماط امتحانات ذكية:** (Lesson Mode، Unit Mode، Comprehensive Mode، Custom Mode).
+  - **أنماط امتحانات ذكية ديناميكية:** (Topic Exam لطلاب Edexcel / Lesson Exam لطلاب Cambridge، بالإضافة إلى Spaced Review، Unit Exam، Comprehensive Exam، و Custom Exam) مع توزيع شبكي متناسق ومتناظر (Symmetric 5-Card Grid).
+  - **معالجة معرفات المناهج المؤرخة (Versioned Curriculum ID Resolver):** دعم مطابقة معرفات المناهج ذات الطابع الزمني (`.startsWith('edexcel-a2')`) لضمان مطابقة عنوان الوحدة بدقة ومنع ظهور 0 أسئلة.
+  - **تحسين تجربة القائمة الجانبية للشاشات المحمولة:** إزالة تعتيم الخلفية، تفعيل الإغلاق التلقائي للقائمة عند النقر على الخيارات، وضبط الشريط العلوي لمنع تداخل النصوص.
   - **ربط ذكي بنظام التلعيب والـ XP:** يمنح الطالب نقاط خبرة بناءً على الدقة وعدد الأسئلة الصحيحة.
 
 ### (6) 🔒 نظام تسويق قفل المناهج (Premium Locked Curricula & Marketing Upsell Modals)

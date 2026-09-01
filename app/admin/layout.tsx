@@ -179,7 +179,7 @@ function AdminLayoutContent({
             {mobileMenuOpen && (
                 <div 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-30 lg:hidden"
+                    className="fixed inset-0 bg-transparent z-30 lg:hidden"
                 />
             )}
 

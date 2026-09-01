@@ -205,12 +205,12 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     if (cleanTrackId === 'igcse') cleanTrackId = 'cie-igcse';
     if (cleanTrackId === 'cie-alevel' || cleanTrackId === 'cie-a2') cleanTrackId = 'cie-alevel';
     
-    let curriculum = allCurricula.find(c => c.id.toLowerCase() === cleanTrackId);
+    let curriculum = allCurricula.find(c => c.id.toLowerCase() === cleanTrackId || c.id.toLowerCase().startsWith(cleanTrackId));
     if (!curriculum && (cleanTrackId === 'edexcel-alevel' || cleanTrackId === 'edexcel-as' || cleanTrackId === 'edexcel-a2')) {
         if (cleanUnitId.includes('unit-4') || cleanUnitId.includes('unit-5') || cleanUnitId.includes('unit-6') || cleanUnitId.includes('u4') || cleanUnitId.includes('u5') || cleanUnitId.includes('u6')) {
-            curriculum = allCurricula.find(c => c.id === 'edexcel-a2');
+            curriculum = allCurricula.find(c => c.id.startsWith('edexcel-a2'));
         } else {
-            curriculum = allCurricula.find(c => c.id === 'edexcel-as');
+            curriculum = allCurricula.find(c => c.id.startsWith('edexcel-as'));
         }
     }
     
@@ -506,6 +506,9 @@ export default function QuizzesPage() {
     const activeCurriculum = useMemo(() => {
         return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
     }, [studentTrackId]);
+
+    const isEdexcelTrack = useMemo(() => studentTrackId.startsWith('edexcel'), [studentTrackId]);
+    const subItemTerm = isEdexcelTrack ? 'Topic' : 'Lesson';
 
     // 3. Dynamic Lists and selections matching active curriculum ONLY
     const unitsList = useMemo(() => {
@@ -805,7 +808,7 @@ export default function QuizzesPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         <button 
                             onClick={() => handleModeSelect('spaced')}
-                            className="bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent hover:from-amber-500/15 hover:via-orange-500/10 border border-amber-500/30 hover:border-amber-400/50 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56 shadow-lg shadow-amber-500/5 md:col-span-2 lg:col-span-1 relative overflow-hidden"
+                            className="bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-transparent hover:from-amber-500/15 hover:via-orange-500/10 border border-amber-500/30 hover:border-amber-400/50 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56 shadow-lg shadow-amber-500/5 col-span-1 relative overflow-hidden"
                         >
                             <div className="absolute top-4 right-4 bg-amber-500/20 text-amber-300 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-amber-500/30 tracking-wider">
                                 Adaptive AI
@@ -853,8 +856,8 @@ export default function QuizzesPage() {
                                 <Trophy className="w-6 h-6 text-sky-400" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold mb-1">Lesson Exam</h3>
-                                <p className="text-slate-400 text-sm">Focus strictly on a single lesson's quiz and exam questions.</p>
+                                <h3 className="text-xl font-bold mb-1">{subItemTerm} Exam</h3>
+                                <p className="text-slate-400 text-sm">Focus strictly on a single {subItemTerm.toLowerCase()}'s quiz and exam questions.</p>
                             </div>
                         </button>
 
@@ -1112,7 +1115,9 @@ export default function QuizzesPage() {
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-slate-400">Mode:</span>
-                                    <span className="text-indigo-400 font-bold capitalize">{selectedMode} Exam</span>
+                                    <span className="text-indigo-400 font-bold capitalize">
+                                        {selectedMode === 'lesson' ? `${subItemTerm} Exam` : `${selectedMode} Exam`}
+                                    </span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-slate-400">Source:</span>

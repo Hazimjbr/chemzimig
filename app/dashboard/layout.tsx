@@ -104,7 +104,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* Mobile Sidebar Overlay */}
             {isSidebarOpen && (
                 <div 
-                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+                    className="fixed inset-0 bg-transparent z-40 lg:hidden"
                     onClick={() => setIsSidebarOpen(false)}
                 />
             )}
@@ -117,7 +117,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             `}>
                 <div className="flex flex-col h-full p-6">
                     <div className="flex items-center justify-between mb-10">
-                        <Link href="/" className="flex items-center gap-3 group">
+                        <Link href="/" onClick={() => setIsSidebarOpen(false)} className="flex items-center gap-3 group">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-emerald-500 flex items-center justify-center text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform">
                                 {isDentalUser ? '🦷' : '⚗️'}
                             </div>
@@ -137,6 +137,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                                 <Link
                                     key={item.href}
                                     href={item.href}
+                                    onClick={() => setIsSidebarOpen(false)}
                                     className={`
                                         flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200
                                         ${isActive 
@@ -154,6 +155,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                             <div className="pt-4 mt-4 border-t border-border">
                                 <Link
                                     href="/admin"
+                                    onClick={() => setIsSidebarOpen(false)}
                                     className="flex items-center gap-3 px-4 py-3 rounded-xl text-emerald-500 dark:text-emerald-400 hover:bg-emerald-500/10 transition-all border border-transparent hover:border-emerald-500/20"
                                 >
                                     <ShieldCheck className="w-5 h-5" />
@@ -209,10 +211,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
 
                 {/* Header */}
-                <header className="h-20 border-b border-border bg-background/40 backdrop-blur-md flex items-center justify-between px-6 lg:px-10 shrink-0 z-10">
+                <header className="h-20 border-b border-border bg-background/80 backdrop-blur-md flex items-center justify-between px-6 lg:px-10 shrink-0 z-10">
                     <button 
                         onClick={() => setIsSidebarOpen(true)}
-                        className="lg:hidden p-2 -ml-2 text-slate-400 hover:text-foreground transition-colors"
+                        className="lg:hidden p-2 -ml-2 text-slate-400 hover:text-foreground transition-colors cursor-pointer"
+                        aria-label="Open sidebar"
                     >
                         <Menu className="w-6 h-6" />
                     </button>

@@ -48,7 +48,7 @@ export default function DashboardPage() {
     }, [user]);
 
     const activeCurriculum = React.useMemo(() => {
-        return allCurricula.find(c => c.id === studentTrackId) || allCurricula[0];
+        return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
     }, [studentTrackId]);
 
     const totalLessonsInCurriculum = React.useMemo(() => {
