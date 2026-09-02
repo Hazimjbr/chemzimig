@@ -84,7 +84,7 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                 }
                 if (i >= 2 && parsed.substring(i - 2, i + 1) === 'Ans') {
                     i -= 3;
-                } else if (i >= 0 && (parsed[i] === 'e' || parsed[i] === 'π')) {
+                } else if (i >= 0 && (parsed[i] === 'e' || parsed[i] === 'π' || parsed[i] === 'p')) {
                     i--;
                 }
                 const start = i + 1;
@@ -102,43 +102,48 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
             // 1. Process Factorials first
             let target = parseFactorials(expr);
 
-            // 2. Implicit multiplication conversion
-            target = target.replace(/(\d+)\(/g, '$1*('); // e.g., 2(3) -> 2*(3)
-            target = target.replace(/\)(\d+|\()/g, ')*$1'); // e.g., (2)(3) -> (2)*(3), (2)3 -> (2)*3
-            target = target.replace(/(\d+)(π|e|sin|cos|tan|log|ln|sqrt|cbrt|asin|acos|atan|Ans)/g, '$1*$2');
-            target = target.replace(/(π|e)(sin|cos|tan|log|ln|sqrt|cbrt|asin|acos|atan|Ans)/g, '$1*$2');
-            target = target.replace(/(π)(e)/g, '$1*$2');
-            target = target.replace(/(e)(π)/g, '$1*$2');
-            target = target.replace(/\)(π|e)/g, ')*$1');
+            // 2. Transform nPr / nCr (e.g. 5nPr2 -> nPr(5,2), 5nCr2 -> nCr(5,2))
+            target = target.replace(/(\d+(\.\d+)?)\s*nPr\s*(\d+(\.\d+)?)/gi, 'nPr($1,$3)');
+            target = target.replace(/(\d+(\.\d+)?)\s*nCr\s*(\d+(\.\d+)?)/gi, 'nCr($1,$3)');
 
-            // 3. Replace display operators with JS operators
+            // 3. Implicit multiplication conversion
+            target = target.replace(/(\d+)\(/g, '$1*(');
+            target = target.replace(/\)(\d+|\()/g, ')*$1');
+            target = target.replace(/(\d+)(pi|π|e|sin|cos|tan|log|ln|sqrt|cbrt|asin|acos|atan|abs|Ans)/gi, '$1*$2');
+            target = target.replace(/\)(pi|π|e|sin|cos|tan|log|ln|sqrt|cbrt|asin|acos|atan|abs|Ans)/gi, ')*$1');
+
+            // 4. Replace display operators with JS operators
             target = target
                 .replace(/×/g, '*')
                 .replace(/÷/g, '/')
                 .replace(/−/g, '-')
-                .replace(/π/g, `(${Math.PI})`)
-                .replace(/e/g, `(${Math.E})`)
                 .replace(/Ans/g, result || '0')
                 .replace(/\^/g, '**');
 
-            // 4. Map Trigonometry
-            const trigMod = isDeg ? `(${Math.PI}/180)*` : '';
-            target = target
-                .replace(/sin\(/g, `Math.sin(${trigMod}`)
-                .replace(/cos\(/g, `Math.cos(${trigMod}`)
-                .replace(/tan\(/g, `Math.tan(${trigMod}`)
-                .replace(/asin\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.asin(`)
-                .replace(/acos\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.acos(`)
-                .replace(/atan\(/g, `${isDeg ? '180/Math.PI*' : ''}Math.atan(`);
+            // 5. Unary minus before exponentiation e.g. -2**2 -> (-2)**2
+            target = target.replace(/(^|[\+\-\*\/\(])\-(\d+(\.\d+)?)\*\*(\d+(\.\d+)?)/g, '$1(-$2)**$4');
 
-            // 5. Map logs and roots
-            target = target
-                .replace(/log\(/g, 'Math.log10(')
-                .replace(/ln\(/g, 'Math.log(')
-                .replace(/sqrt\(/g, 'Math.sqrt(')
-                .replace(/cbrt\(/g, 'Math.cbrt(');
+            const scope = {
+                ...Math,
+                fact,
+                nPr,
+                nCr,
+                log: Math.log10,
+                ln: Math.log,
+                sqrt: Math.sqrt,
+                cbrt: Math.cbrt,
+                abs: Math.abs,
+                sin: (x: number) => isDeg ? Math.sin(x * Math.PI / 180) : Math.sin(x),
+                cos: (x: number) => isDeg ? Math.cos(x * Math.PI / 180) : Math.cos(x),
+                tan: (x: number) => isDeg ? Math.tan(x * Math.PI / 180) : Math.tan(x),
+                asin: (x: number) => isDeg ? Math.asin(x) * 180 / Math.PI : Math.asin(x),
+                acos: (x: number) => isDeg ? Math.acos(x) * 180 / Math.PI : Math.acos(x),
+                atan: (x: number) => isDeg ? Math.atan(x) * 180 / Math.PI : Math.atan(x),
+                pi: Math.PI,
+                π: Math.PI,
+                e: Math.E,
+            };
 
-            const scope = { fact, nPr, nCr, ...Math };
             const func = new Function('math', 'with(math) { return ' + target + ' }');
             const res = func(scope);
             if (isNaN(res) || !isFinite(res)) return 'Error';
@@ -157,16 +162,17 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
             .replace(/\+/g, ' + ')
             .replace(/pi/g, '\\pi ')
             .replace(/Ans/g, '\\text{Ans}')
-            .replace(/sin\(/g, '\\sin(')
-            .replace(/cos\(/g, '\\cos(')
-            .replace(/tan\(/g, '\\tan(')
             .replace(/asin\(/g, '\\sin^{-1}(')
             .replace(/acos\(/g, '\\cos^{-1}(')
             .replace(/atan\(/g, '\\tan^{-1}(')
+            .replace(/sin\(/g, '\\sin(')
+            .replace(/cos\(/g, '\\cos(')
+            .replace(/tan\(/g, '\\tan(')
             .replace(/log\(/g, '\\log(')
             .replace(/ln\(/g, '\\ln(')
             .replace(/sqrt\(/g, '\\sqrt{')
             .replace(/cbrt\(/g, '\\sqrt[3]{')
+            .replace(/abs\(/g, '\\text{abs}(')
             .replace(/\^2/g, '^2')
             .replace(/\^3/g, '^3')
             .replace(/\^/g, '^');
@@ -202,7 +208,7 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
             }
         }
         else if (activeKey === 'DEL') {
-            const funcsToClear = ['asin(', 'acos(', 'atan(', 'sin(', 'cos(', 'tan(', 'log(', 'ln(', 'sqrt(', 'cbrt(', 'Ans'];
+            const funcsToClear = ['asin(', 'acos(', 'atan(', 'sin(', 'cos(', 'tan(', 'log(', 'ln(', 'sqrt(', 'cbrt(', 'abs(', 'Ans', '10^', 'e^'];
             let cleared = false;
             for (const f of funcsToClear) {
                 if (input.endsWith(f)) {
@@ -212,7 +218,7 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                 }
             }
             if (!cleared) {
-                setInput(prev => prev.length > 1 ? prev.slice(0, -1) : '');
+                setInput(prev => prev.length > 0 ? prev.slice(0, -1) : '');
             }
         }
         else if (activeKey === 'S<=>D') {
@@ -220,17 +226,35 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                 setIsFractionMode(prev => !prev);
             }
         }
-        else if (activeKey === '=') {
+        else if (activeKey === '=' || activeKey === 'CALC' || activeKey === 'SOLVE') {
             setResult(evaluateExpression(input));
+        }
+        else if (activeKey === 'CLR') {
+            setInput('');
+            setResult(null);
+        }
+        else if (activeKey === 'DRG' || activeKey === 'MODE') {
+            setIsDeg(prev => !prev);
         }
         else {
             let toAdd = activeKey;
             if (toAdd === 'sin⁻¹') toAdd = 'asin(';
-            if (toAdd === 'cos⁻¹') toAdd = 'acos(';
-            if (toAdd === 'tan⁻¹') toAdd = 'atan(';
-            if (toAdd === 'x!') toAdd = '!';
-            if (toAdd === '10^') toAdd = '10^';
-            if (toAdd === 'e^') toAdd = 'e^';
+            else if (toAdd === 'cos⁻¹') toAdd = 'acos(';
+            else if (toAdd === 'tan⁻¹') toAdd = 'atan(';
+            else if (toAdd === 'Abs' || toAdd === 'hyp') toAdd = 'abs(';
+            else if (toAdd === 'x!') toAdd = '!';
+            else if (toAdd === '10^') toAdd = '10^';
+            else if (toAdd === 'e^') toAdd = 'e^';
+            else if (toAdd === 'pi') toAdd = 'π';
+            
+            // Ignore non-expression structural keys that have no function
+            const ignoredKeys = ['∫dx', 'd/dx', ':', '←', 'RCL', 'STO', 'ENG', 'M+', 'M-', 'STAT', 'CMPLX', 'BASE', 'MATRIX', 'VECTOR', 'CONST', 'CONV'];
+            if (ignoredKeys.includes(toAdd)) {
+                setIsShift(false);
+                setIsAlpha(false);
+                return;
+            }
+
             setInput(prev => (prev === '0' ? toAdd : prev + toAdd));
         }
         setIsShift(false);
@@ -253,11 +277,11 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
     };
 
     // --- Components with Micro-Adjusted UI ---
-    const SilverControl = ({ label, subLabel, subColor = "text-amber-500", onClick }: { label: string, subLabel: string, subColor?: string, onClick: () => void }) => (
+    const SilverControl = ({ label, subLabel, subColor = "text-amber-500", active = false, onClick }: { label: string, subLabel: string, subColor?: string, active?: boolean, onClick: () => void }) => (
         <div className="flex flex-col items-center">
             <span className={`text-[6.5px] font-black uppercase mb-0.5 pointer-events-none ${subColor}`}>{subLabel}</span>
-            <button onClick={onClick} className="w-8 h-5.5 rounded-full bg-gradient-to-b from-[#f8fafc] via-[#cbd5e1] to-[#64748b] border border-[#475569] shadow-[0_2px_3px_rgba(0,0,0,0.5)] active:translate-y-px transition-all flex items-center justify-center">
-                <span className="text-[5.5px] text-slate-900 font-black uppercase">{label}</span>
+            <button onClick={onClick} className={`w-8 h-5.5 rounded-full ${active ? 'bg-amber-400 ring-2 ring-amber-400/80 shadow-[0_0_8px_rgba(251,191,36,0.6)]' : 'bg-gradient-to-b from-[#f8fafc] via-[#cbd5e1] to-[#64748b]'} border border-[#475569] shadow-[0_2px_3px_rgba(0,0,0,0.5)] active:translate-y-px transition-all flex items-center justify-center`}>
+                <span className={`text-[5.5px] ${active ? 'text-black' : 'text-slate-900'} font-black uppercase`}>{label}</span>
             </button>
         </div>
     );
@@ -265,10 +289,10 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
     const SciButton = ({ label, shiftLabel, alphaLabel, onClick }: { label: React.ReactNode, shiftLabel?: string, alphaLabel?: string, onClick: () => void }) => (
         <div className={`flex flex-col items-center relative ${isLandscape ? 'h-7' : 'h-9'}`}>
             <div className="flex gap-1.5 absolute -top-2.5">
-                {shiftLabel && <span className="text-[5.5px] font-black text-amber-500 uppercase tracking-tighter">{shiftLabel}</span>}
-                {alphaLabel && <span className="text-[5.5px] font-black text-rose-500 uppercase tracking-tighter">{alphaLabel}</span>}
+                {shiftLabel && <span className={`text-[5.5px] font-black uppercase tracking-tighter transition-all ${isShift ? 'text-amber-300 font-extrabold animate-pulse' : 'text-amber-500'}`}>{shiftLabel}</span>}
+                {alphaLabel && <span className={`text-[5.5px] font-black uppercase tracking-tighter transition-all ${isAlpha ? 'text-rose-300 font-extrabold animate-pulse' : 'text-rose-500'}`}>{alphaLabel}</span>}
             </div>
-            <button onClick={onClick} className={`${isLandscape ? 'w-[38px] h-[20px] text-[8px]' : 'w-[43px] h-[25px] text-[9px]'} bg-[#1a1c20] hover:bg-[#26282e] text-white rounded-md font-bold border-t border-slate-700 shadow-[0_2px_3px_rgba(0,0,0,0.6)] active:translate-y-[1px] active:shadow-none transition-all`}>
+            <button onClick={onClick} className={`${isLandscape ? 'w-[38px] h-[20px] text-[8px]' : 'w-[43px] h-[25px] text-[9px]'} bg-[#1a1c20] hover:bg-[#26282e] text-white rounded-md font-bold border-t border-slate-700 shadow-[0_2px_3px_rgba(0,0,0,0.6)] active:translate-y-[1px] active:shadow-none transition-all ${isShift && shiftLabel ? 'border-amber-500/60 shadow-[0_0_5px_rgba(245,158,11,0.3)]' : ''} ${isAlpha && alphaLabel ? 'border-rose-500/60 shadow-[0_0_5px_rgba(244,63,94,0.3)]' : ''}`}>
                 <span className="opacity-95">{label}</span>
             </button>
         </div>
@@ -277,10 +301,10 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
     const MainButton = ({ label, shiftLabel, alphaLabel, onClick, color = "bg-[#e2e8f0] hover:bg-[#cbd5e1]", textColor = "text-slate-800", fontSize = "text-base" }: { label: string, shiftLabel?: string, alphaLabel?: string, onClick: () => void, color?: string, textColor?: string, fontSize?: string }) => (
         <div className={`flex flex-col items-center relative ${isLandscape ? 'h-8' : 'h-11'}`}>
             <div className="flex gap-2 absolute -top-2.5">
-                {shiftLabel && <span className="text-[5.5px] font-black text-amber-600 uppercase tracking-tighter">{shiftLabel}</span>}
-                {alphaLabel && <span className="text-[5.5px] font-black text-rose-600 uppercase tracking-tighter">{alphaLabel}</span>}
+                {shiftLabel && <span className={`text-[5.5px] font-black uppercase tracking-tighter transition-all ${isShift ? 'text-amber-600 font-extrabold animate-pulse' : 'text-amber-600'}`}>{shiftLabel}</span>}
+                {alphaLabel && <span className={`text-[5.5px] font-black uppercase tracking-tighter transition-all ${isAlpha ? 'text-rose-600 font-extrabold animate-pulse' : 'text-rose-600'}`}>{alphaLabel}</span>}
             </div>
-            <button onClick={onClick} className={`${color} ${textColor} ${isLandscape ? 'w-[42px] h-[24px] text-[11px]' : 'w-[48px] h-[32px] text-base'} rounded-lg font-black shadow-[0_3px_0_rgba(0,0,0,0.35)] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center`}>
+            <button onClick={onClick} className={`${color} ${textColor} ${isLandscape ? 'w-[42px] h-[24px] text-[11px]' : 'w-[48px] h-[32px] text-base'} rounded-lg font-black shadow-[0_3px_0_rgba(0,0,0,0.35)] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center ${isShift && shiftLabel ? 'ring-1 ring-amber-500' : ''} ${isAlpha && alphaLabel ? 'ring-1 ring-rose-500' : ''}`}>
                 <span className="drop-shadow-sm">{label}</span>
             </button>
         </div>
@@ -331,7 +355,7 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                                             <span className={isAlpha ? "text-slate-950 font-black opacity-100" : "opacity-10"}>A</span>
                                         </div>
                                         <div className="flex items-center gap-2">
-                                            <span className="border border-slate-950/30 px-0.5 leading-none">R</span>
+                                            <span className="border border-slate-950/30 px-0.5 leading-none">{isDeg ? 'D' : 'R'}</span>
                                             <span>Math ▲</span>
                                         </div>
                                     </div>
@@ -352,19 +376,19 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                                 {/* Replay and Primary Function Row */}
                                 <div className="w-full px-1 flex justify-between items-center h-16 shrink-0">
                                     <div className="flex flex-col gap-1.5">
-                                        <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" onClick={() => setIsShift(!isShift)} />
-                                        <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" onClick={() => setIsAlpha(!isAlpha)} />
+                                        <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" active={isShift} onClick={() => setIsShift(!isShift)} />
+                                        <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" active={isAlpha} onClick={() => setIsAlpha(!isAlpha)} />
                                     </div>
                                     <div className="relative w-14 h-14 rounded-full bg-gradient-to-b from-slate-400 via-slate-200 to-slate-400 border-[2px] border-[#4e5663] shadow-[0_3px_6px_rgba(0,0,0,0.65)] flex items-center justify-center scale-85">
                                         <div className="absolute inset-[4px] rounded-full bg-[#0c0d10] border border-[#31363e] flex items-center justify-center overflow-hidden">
-                                            <button className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronUp size={8} /></button>
-                                            <button className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronDown size={8} /></button>
-                                            <button className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronLeft size={8} /></button>
-                                            <button className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronRight size={8} /></button>
+                                            <button onClick={() => { if (result && result !== 'Error') setInput(result); }} title="Recall Result" className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronUp size={8} /></button>
+                                            <button onClick={() => { setInput(''); setResult(null); }} title="Clear Input" className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronDown size={8} /></button>
+                                            <button onClick={() => handleKey('DEL')} title="Delete Character" className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronLeft size={8} /></button>
+                                            <button onClick={() => handleKey(')')} title="Add Parenthesis" className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronRight size={8} /></button>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-1.5">
-                                        <SilverControl label="Mode" subLabel="Setup" subColor="text-slate-400" onClick={() => { }} />
+                                        <SilverControl label="Mode" subLabel="Setup" subColor="text-slate-400" onClick={() => setIsDeg(!isDeg)} />
                                         <SilverControl label="On" subLabel="On" subColor="text-slate-400" onClick={() => { setInput(''); setResult(null); }} />
                                     </div>
                                 </div>
@@ -466,7 +490,7 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                                         <span className={isAlpha ? "text-slate-950 font-black opacity-100" : "opacity-10"}>A</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <span className="border border-slate-950/30 px-0.5 leading-none">R</span>
+                                        <span className="border border-slate-950/30 px-0.5 leading-none">{isDeg ? 'D' : 'R'}</span>
                                         <span>Math ▲</span>
                                     </div>
                                 </div>
@@ -487,20 +511,20 @@ export default function ScientificCalculator({ isOpen, onClose }: ScientificCalc
                             {/* Replay and Primary Function Row */}
                             <div className="w-full px-1 mb-5 flex justify-between items-center h-16 shrink-0">
                                 <div className="flex flex-col gap-2">
-                                    <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" onClick={() => setIsShift(!isShift)} />
-                                    <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" onClick={() => setIsAlpha(!isAlpha)} />
+                                    <SilverControl label="Shift" subLabel="Shift" subColor="text-amber-500" active={isShift} onClick={() => setIsShift(!isShift)} />
+                                    <SilverControl label="Alpha" subLabel="Alpha" subColor="text-rose-500" active={isAlpha} onClick={() => setIsAlpha(!isAlpha)} />
                                 </div>
                                 <div className="relative w-18 h-18 rounded-full bg-gradient-to-b from-slate-400 via-slate-200 to-slate-400 border-[3px] border-[#4e5663] shadow-[0_4px_10px_rgba(0,0,0,0.65)] flex items-center justify-center scale-90">
                                     <div className="absolute inset-[6px] rounded-full bg-[#0c0d10] border-2 border-[#31363e] flex items-center justify-center overflow-hidden">
                                         <span className="text-[4px] text-slate-700 font-black uppercase tracking-[0.3em] mt-1.5 opacity-30">REPLAY</span>
-                                        <button className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronUp size={10} /></button>
-                                        <button className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronDown size={10} /></button>
-                                        <button className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronLeft size={10} /></button>
-                                        <button className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-500"><ChevronRight size={10} /></button>
+                                        <button onClick={() => { if (result && result !== 'Error') setInput(result); }} title="Recall Result" className="absolute top-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronUp size={10} /></button>
+                                        <button onClick={() => { setInput(''); setResult(null); }} title="Clear Input" className="absolute bottom-0 w-full h-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronDown size={10} /></button>
+                                        <button onClick={() => handleKey('DEL')} title="Delete Character" className="absolute left-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronLeft size={10} /></button>
+                                        <button onClick={() => handleKey(')')} title="Add Parenthesis" className="absolute right-0 h-full w-[30%] hover:bg-white/5 active:bg-white/10 flex justify-center items-center text-slate-400 hover:text-white"><ChevronRight size={10} /></button>
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <SilverControl label="Mode" subLabel="Mode Setup" subColor="text-slate-400" onClick={() => { }} />
+                                    <SilverControl label="Mode" subLabel="Mode Setup" subColor="text-slate-400" onClick={() => setIsDeg(!isDeg)} />
                                     <SilverControl label="On" subLabel="On" subColor="text-slate-400" onClick={() => { setInput(''); setResult(null); }} />
                                 </div>
                             </div>
