@@ -1211,6 +1211,27 @@ export const parts: LessonPart[] = [
 > >
 > > 3. **Advantage of Gas Syringe over Collection over Water:**
 > >    * *Advantage:* A gas syringe measures the dry gas directly and avoids the issue of water vapour mixing with the collected gas. (When gas is collected over water, the recorded volume includes water vapour, introducing a small systematic error in the measured volume of $\\\\text{H}_2$). Additionally, it is generally easier to set up and read continuously without managing water levels.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 8: Evaluating Unsuitable Techniques for Bromine & Methanoic Acid Reaction
+> **Question:** Bromine oxidizes methanoic acid to carbon dioxide according to the equation:
+> $$\\\\text{HCOOH(aq)} + \\\\text{Br}_2\\\\text{(aq)} \\\\rightarrow 2\\\\text{H}^+\\\\text{(aq)} + 2\\\\text{Br}^-\\\\text{(aq)} + \\\\text{CO}_2\\\\text{(g)}$$
+> Which of the following experimental methods would **not** be suitable for measuring the progress of this reaction?
+> * **A)** Colorimetry
+> * **B)** Measuring electrical conductivity
+> * **C)** Quenching and titrating with acid
+> * **D)** Measuring the volume of gas
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > **Correct Answer:** **C (Quenching and titrating with acid)**
+> > 
+> > **Reasoning:**
+> > * **Option A is suitable:** Bromine ($\\\\text{Br}_2$) is orange-brown while all other species are colorless, so colorimetry can continuously track $[\\\\text{Br}_2]$.
+> > * **Option B is suitable:** The reaction produces ionic charge carriers ($2\\\\text{H}^+$ and $2\\\\text{Br}^-$) from neutral/weak species, so electrical conductivity increases measurably over time.
+> > * **Option D is suitable:** Carbon dioxide gas ($\\\\text{CO}_2$) is evolved, so gas volume can be measured using a gas syringe.
+> > * **Option C is UNSUITABLE:** Methanoic acid ($\\\\text{HCOOH}$) is a weak acid reactant and $\\\\text{H}^+$ is an acid product. Titrating aliquots with an acid would not differentiate or measure the progress accurately without reacting with/destroying the species present.
 `,
     keyPoints: [
       'Continuous monitoring yields concentration-time graphs, from which tangent gradients at t = 0 give initial rates.',
@@ -1291,6 +1312,10 @@ export const parts: LessonPart[] = [
 > >    * *Calculation:*
 > >      $$\\\\text{Average Rate} = -\\\\frac{1.40 - 2.00}{120 - 0} = -\\\\frac{-0.60}{120}$$
 > >      $$\\\\text{Average Rate} = 0.0050\\\\text{ mol dm}^{-3}\\\\text{ s}^{-1} \\\\text{ (or } 5.0 \\\\times 10^{-3}\\\\text{ mol dm}^{-3}\\\\text{ s}^{-1}\\\\text{)}$$
+> > 
+> > > [!WARNING]
+> > > **💡 Top-Tier Exam Note (Overall Rate vs. Rate of Consumption):**
+> > > If the question specifically asked for the **overall Rate of Reaction**, you would divide this answer by its stoichiometric coefficient $2$ to get $0.0025\text{ mol dm}^{-3}\text{ s}^{-1}$. Knowing this distinction will save top-tier students from falling for one of the most frustrating trick questions in the syllabus!
 
 > [!IMPORTANT]
 > ### 🧮 The Rate Equation and Reaction Orders
@@ -1690,8 +1715,8 @@ export const parts: LessonPart[] = [
 > >      * *Justification:* $\\\\text{ClO}$ is produced in Step 1 as a product and subsequently consumed in Step 2 as a reactant. It does not appear in the overall equation.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 4: Distinguishing SN1 vs. SN2 Kinetic Data & Steric Hindrance
-> **Question:** Hydrolysis of primary 1-chlorobutane follows the rate equation $\\\\text{Rate} = k[\\\\text{C}_4\\\\text{H}_9\\\\text{Cl}][\\\\text{OH}^-]$, whereas tertiary 2-chloro-2-methylpropane follows $\\\\text{Rate} = k[\\\\text{C}_4\\\\text{H}_9\\\\text{Cl}]$.
+> #### 📝 Worked Example 4: Distinguishing SN1 vs. SN2 Kinetic Data & Bromoalkane Selection
+> **Question 1:** Hydrolysis of primary 1-chlorobutane follows the rate equation $\\\\text{Rate} = k[\\\\text{C}_4\\\\text{H}_9\\\\text{Cl}][\\\\text{OH}^-]$, whereas tertiary 2-chloro-2-methylpropane follows $\\\\text{Rate} = k[\\\\text{C}_4\\\\text{H}_9\\\\text{Cl}]$.
 > 
 > 1. State the mechanism type ($S_N1$ or $S_N2$) for each compound.
 > 2. Explain why tertiary halogenoalkanes undergo $S_N1$ hydrolysis rather than $S_N2$.
@@ -1706,6 +1731,23 @@ export const parts: LessonPart[] = [
 > > 2. **Explanation of Mechanism Preference:**
 > >    * **Steric Hindrance:** Tertiary halogenoalkanes have three bulky methyl groups surrounding the central carbon, preventing the $\\\\text{OH}^-$ nucleophile from approaching for an $S_N2$ direct attack.
 > >    * **Carbocation Stability:** The $3^\\\\circ$ carbocation formed in $S_N1$ is strongly stabilized by the electron-donating inductive effect of three alkyl groups, lowering $E_a(1)$.
+> 
+> **Question 2:** A bromoalkane was hydrolyzed by an aqueous alkaline solution. The reaction was found to be first order with respect to the bromoalkane and zero order with respect to hydroxide ions.
+> Which bromoalkane is consistent with this information?
+> * **A)** $\\\\text{CH}_3\\\\text{Br}$
+> * **B)** $\\\\text{CH}_3\\\\text{CH}_2\\\\text{Br}$
+> * **C)** $\\\\text{CH}_3\\\\text{CH}_2\\\\text{CH}_2\\\\text{Br}$
+> * **D)** $(\\\\text{CH}_3)_3\\\\text{CBr}$
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > **Correct Answer:** **D ($(\\\\text{CH}_3)_3\\\\text{CBr}$)**
+> > 
+> > **Reasoning:**
+> > * First order w.r.t bromoalkane and zero order w.r.t $\\\\text{OH}^-$ dictates an **$S_N1$ mechanism**.
+> > * $S_N1$ mechanisms proceed via a unimolecular rate-determining step to form a stable $3^{\\circ}$ carbocation intermediate.
+> > * Options A, B, and C are all primary ($1^{\\circ}$) bromoalkanes which undergo $S_N2$ hydrolysis. Option D is 2-bromo-2-methylpropane, a tertiary ($3^{\\circ}$) bromoalkane, which undergoes $S_N1$ hydrolysis.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Proposing a Multi-step Mechanism from Initial Rates Data
@@ -2104,8 +2146,10 @@ export const parts: LessonPart[] = [
 >      * **Step 1:** S₂O₈²⁻(aq) + 2Fe²⁺(aq) → 2SO₄²⁻(aq) + 2Fe³⁺(aq)
 >      * **Step 2:** 2Fe³⁺(aq) + 2I⁻(aq) → 2Fe²⁺(aq) + I₂(aq)
 >      * *The overall reaction is slow because it requires collision between two negatively charged reactants (S₂O₈²⁻ and I⁻) which repel each other. The iron catalyst provides steps with collisions between oppositely charged species, greatly lowering the activation energy.*
->   4. **Cobalt(II) Salts:** Co²⁺ acts as a homogeneous catalyst in the reaction between potassium sodium tartrate and hydrogen peroxide (H₂O₂). The cobalt ions change color from pink to green (temporary oxidation state change) and back to pink.
->   5. **The Enzyme Urease:** A highly specific biological homogeneous catalyst that speeds up the hydrolysis of urea into ammonia (NH₃) and carbon dioxide (CO₂)). Structurally related molecules like thiourea can act as competitive inhibitors.
+>   4. **Cobalt(II) Salts:** $\text{Co}^{2+}$ ions act as a homogeneous catalyst in the reaction between potassium sodium tartrate and hydrogen peroxide ($\text{H}_2\text{O}_2$). The transition metal ions temporarily change oxidation state from $\text{Co}^{2+}$ (pink) to $\text{Co}^{3+}$ (green) as an intermediate complex forms, and then return back to $\text{Co}^{2+}$ (pink), providing an alternative reaction pathway with a lower activation energy ($E_a$).
+>   5. **The Enzyme Urease:** A highly specific biological homogeneous catalyst that rapidly speeds up the hydrolysis of urea into ammonia ($\text{NH}_3$) and carbon dioxide ($\text{CO}_2$):
+>      $$(\text{NH}_2)_2\text{CO(aq)} + \text{H}_2\text{O(l)} \Rightarrow 2\text{NH}_{3(\text{aq})} + \text{CO}_{2(\text{g})}$$
+>      *Structurally related molecules like thiourea can interact with the enzyme active site (often acting as competitive inhibitors) to demonstrate enzyme specificity and kinetic inhibition.*
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Explaining Homogeneous Catalysis

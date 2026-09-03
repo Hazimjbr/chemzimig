@@ -95,6 +95,135 @@ const reactionEnergyProfilesSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewB
   </g>
 </svg>`;
 
+const bornHaberNaclSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 320" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="bh-arrow-up" viewBox="0 0 10 10" refX="5" refY="0" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 10 L 5 0 L 10 10 z" fill="#38bdf8" />
+    </marker>
+    <marker id="bh-arrow-down" viewBox="0 0 10 10" refX="5" refY="10" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 5 10 L 10 0 z" fill="#ef4444" />
+    </marker>
+  </defs>
+
+  <text x="325" y="25" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Born-Haber Cycle for Sodium Chloride (NaCl)</text>
+
+  <!-- Energy Axis -->
+  <line x1="40" y1="285" x2="40" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#bh-arrow-up)" />
+  <text x="25" y="165" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle" transform="rotate(-90 25 165)">Energy (kJ mol⁻¹)</text>
+
+  <!-- Level 1: Standard Elements Na(s) + 1/2 Cl2(g) -->
+  <line x1="80" y1="220" x2="260" y2="220" stroke="#cbd5e1" stroke-width="3" />
+  <text x="90" y="212" fill="#f8fafc" font-size="13" font-weight="bold">Na(s) + ½Cl₂(g)</text>
+
+  <!-- Level 2: Atomization of Na -> Na(g) + 1/2 Cl2(g) -->
+  <line x1="80" y1="180" x2="260" y2="180" stroke="#cbd5e1" stroke-width="2" />
+  <text x="90" y="172" fill="#38bdf8" font-size="12">Na(g) + ½Cl₂(g)</text>
+  <line x1="250" y1="220" x2="250" y2="180" stroke="#38bdf8" stroke-width="2" marker-end="url(#bh-arrow-up)" />
+  <text x="256" y="204" fill="#38bdf8" font-size="10">+107 (ΔHat Na)</text>
+
+  <!-- Level 3: Atomization of Cl -> Na(g) + Cl(g) -->
+  <line x1="80" y1="140" x2="260" y2="140" stroke="#cbd5e1" stroke-width="2" />
+  <text x="90" y="132" fill="#38bdf8" font-size="12">Na(g) + Cl(g)</text>
+  <line x1="250" y1="180" x2="250" y2="140" stroke="#38bdf8" stroke-width="2" marker-end="url(#bh-arrow-up)" />
+  <text x="256" y="164" fill="#38bdf8" font-size="10">+122 (ΔHat Cl)</text>
+
+  <!-- Level 4: Ionization of Na -> Na+(g) + Cl(g) + e- -->
+  <line x1="80" y1="70" x2="260" y2="70" stroke="#cbd5e1" stroke-width="3" />
+  <text x="90" y="62" fill="#38bdf8" font-size="13" font-weight="bold">Na⁺(g) + Cl(g) + e⁻</text>
+  <line x1="250" y1="140" x2="250" y2="70" stroke="#38bdf8" stroke-width="2" marker-end="url(#bh-arrow-up)" />
+  <text x="256" y="110" fill="#38bdf8" font-size="10">+496 (IE₁ Na)</text>
+
+  <!-- Level 5: Electron Affinity of Cl -> Na+(g) + Cl-(g) -->
+  <line x1="320" y1="110" x2="500" y2="110" stroke="#cbd5e1" stroke-width="3" />
+  <text x="330" y="102" fill="#a7f3d0" font-size="13" font-weight="bold">Na⁺(g) + Cl⁻(g)</text>
+  <line x1="310" y1="70" x2="310" y2="110" stroke="#10b981" stroke-width="2" marker-end="url(#bh-arrow-down)" />
+  <text x="200" y="95" fill="#10b981" font-size="10" text-anchor="end">-349 (EA₁ Cl)</text>
+
+  <!-- Level 6: Solid Ionic Lattice NaCl(s) -->
+  <line x1="80" y1="280" x2="500" y2="280" stroke="#cbd5e1" stroke-width="3" />
+  <text x="330" y="298" fill="#f8fafc" font-size="13" font-weight="bold">NaCl(s)</text>
+
+  <!-- Enthalpy of Formation: Na(s) + 1/2Cl2(g) -> NaCl(s) -->
+  <line x1="70" y1="220" x2="70" y2="280" stroke="#ef4444" stroke-width="2" marker-end="url(#bh-arrow-down)" />
+  <text x="65" y="254" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="end">ΔHf = -411</text>
+
+  <!-- Lattice Energy: Na+(g) + Cl-(g) -> NaCl(s) -->
+  <line x1="490" y1="110" x2="490" y2="280" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#bh-arrow-down)" />
+  <text x="500" y="200" fill="#f59e0b" font-size="12" font-weight="bold">ΔLEH = -787 kJ mol⁻¹</text>
+</svg>`;
+
+const polarisationAnionsSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 250" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="325" y="25" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Polarization of Anion by Cation (Fajan's Polarization)</text>
+
+  <!-- Left: Undistorted Spherical Ions -->
+  <g transform="translate(100, 50)">
+    <text x="80" y="20" text-anchor="middle" fill="#94a3b8" font-size="12" font-weight="bold">1. Purely Ionic (No Distortion)</text>
+    
+    <!-- Cation -->
+    <circle cx="30" cy="90" r="22" fill="#0284c7" opacity="0.8" stroke="#38bdf8" stroke-width="2" />
+    <text x="30" y="94" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">M⁺</text>
+    
+    <!-- Anion (Spherical) -->
+    <circle cx="130" cy="90" r="38" fill="#059669" opacity="0.6" stroke="#10b981" stroke-width="2" />
+    <text x="130" y="94" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">X⁻</text>
+    
+    <text x="80" y="160" text-anchor="middle" fill="#cbd5e1" font-size="11">Spherical, undistorted electron cloud</text>
+  </g>
+
+  <!-- Right: Polarized & Distorted Anion Cloud -->
+  <g transform="translate(400, 50)">
+    <text x="80" y="20" text-anchor="middle" fill="#f59e0b" font-size="12" font-weight="bold">2. Polarized (Covalent Character)</text>
+    
+    <!-- Cation -->
+    <circle cx="20" cy="90" r="22" fill="#0284c7" opacity="0.9" stroke="#38bdf8" stroke-width="2" />
+    <text x="20" y="94" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">M⁺</text>
+    
+    <!-- Distorted Anion (Teardrop shape towards cation) -->
+    <path d="M 50,90 C 50,60 100,52 140,52 C 175,52 175,128 140,128 C 100,128 50,120 50,90 Z" fill="#f59e0b" opacity="0.5" stroke="#fbbf24" stroke-width="2" />
+    <text x="125" y="94" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">X⁻</text>
+    
+    <!-- Electron density overlap highlight -->
+    <ellipse cx="58" cy="90" rx="10" ry="16" fill="#ef4444" opacity="0.7" />
+    
+    <text x="80" y="160" text-anchor="middle" fill="#fbbf24" font-size="11">Electron density pulled towards cation</text>
+  </g>
+</svg>`;
+
+const dissolutionCycleNaclSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 260" class="w-full h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="sol-arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+
+  <text x="325" y="25" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Enthalpy Cycle for Dissolving NaCl in Water</text>
+
+  <!-- Top Box: Gaseous Ions -->
+  <rect x="220" y="45" width="210" height="40" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+  <text x="325" y="70" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="middle">Na⁺(g) + Cl⁻(g)</text>
+
+  <!-- Bottom Left Box: Solid Lattice -->
+  <rect x="60" y="180" width="180" height="40" rx="6" fill="#1e293b" stroke="#cbd5e1" stroke-width="2" />
+  <text x="150" y="205" fill="#f8fafc" font-size="14" font-weight="bold" text-anchor="middle">NaCl(s)</text>
+
+  <!-- Bottom Right Box: Hydrated Ions -->
+  <rect x="410" y="180" width="180" height="40" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+  <text x="500" y="205" fill="#a7f3d0" font-size="14" font-weight="bold" text-anchor="middle">Na⁺(aq) + Cl⁻(aq)</text>
+
+  <!-- Arrow 1: Lattice Dissociation (Solid to Gaseous Ions) -->
+  <path d="M 130,180 L 240,85" stroke="#f59e0b" stroke-width="2" marker-end="url(#sol-arrow)" />
+  <text x="145" y="125" fill="#f59e0b" font-size="11" font-weight="bold">ΔHlatt(dissociation) = +788 kJ</text>
+
+  <!-- Arrow 2: Hydration (Gaseous Ions to Hydrated Ions) -->
+  <path d="M 410,85 L 510,180" stroke="#10b981" stroke-width="2" marker-end="url(#sol-arrow)" />
+  <text x="500" y="125" fill="#10b981" font-size="11" font-weight="bold">ΔHhyd(Na⁺) + ΔHhyd(Cl⁻)</text>
+  <text x="490" y="142" fill="#10b981" font-size="10">(-406 - 363 = -769 kJ)</text>
+
+  <!-- Arrow 3: Solution (Solid to Hydrated Ions) -->
+  <line x1="240" y1="200" x2="410" y2="200" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#sol-arrow)" />
+  <text x="325" y="222" fill="#38bdf8" font-size="12" font-weight="bold" text-anchor="middle">ΔHsol = +19 kJ mol⁻¹</text>
+</svg>`;
+
 export const parts: LessonPart[] = [
   {
     id: 'energetics-enthalpy-review-u4-l2',
@@ -845,7 +974,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > ### 📊 Born-Haber Cycle Diagram for NaCl
 > Below is the energy level diagram representing the Born-Haber cycle for sodium chloride. Endothermic steps go upwards, and exothermic steps go downwards:
 > 
-> ![Born-Haber Cycle for NaCl](/images/lessons/born_haber_nacl.svg)
+> ${svgToken(bornHaberNaclSvg)}
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Calculating Lattice Enthalpy for NaCl
@@ -1069,7 +1198,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > ### 🌌 Polarization of Anions (Fajan's Rules)
 > Covalent character arises when the positive charge of the cation attracts the outer electrons of the anion, pulling them towards itself and distorting the anion's electron cloud.
 > 
-> ![Polarisation of Anions](/images/lessons/polarisation_anions.svg)
+> ${svgToken(polarisationAnionsSvg)}
 > 
 > **Polarization increases when:**
 > 1. **Cation has high Polarizing Power:** High charge and small radius (**High Charge Density**).
@@ -1192,7 +1321,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > > ### ⚠️ Edexcel Exam Note — Lattice Energy Direction
 > > Edexcel exam questions often provide the **lattice energy of formation** (which is exothermic/negative). However, the dissolving cycle requires breaking the lattice (the **lattice dissociation enthalpy**), which is the endothermic reverse ($-\\\\Delta_{\\\\text{LE}}H^\\\\theta\\\\text{(formation)}$). Always verify the sign of the lattice energy term before performing calculations!
 > 
-> ![Dissolution Enthalpy Cycle of NaCl](/images/lessons/dissolution_cycle_nacl.svg)
+${svgToken(dissolutionCycleNaclSvg)}
 
 
 > [!EXAMPLE]
