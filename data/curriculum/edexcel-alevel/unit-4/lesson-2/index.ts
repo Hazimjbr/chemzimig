@@ -822,7 +822,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Decomposition of Calcium Carbonate
 > **Question:** For the decomposition of calcium carbonate at $298\\\\text{ K}$:
-> $$\\\\text{CaCO}_{3(s)} \\\\rightarrow \\\\text{CaO}_{(s)} + \\\\text{CO}_{2(g)}$$
+> $$\text{CaCO}_3\text{(s)} \rightarrow \text{CaO(s)} + \text{CO}_{2\text{(g)}}$$
 > Given the following standard data:
 > * $\\\\Delta H^\\\\theta = +178\\\\text{ kJ mol}^{-1}$
 > * $\\\\Delta S_{\\\\text{system}}^\\\\theta = +160.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$
