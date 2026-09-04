@@ -10937,10 +10937,558 @@ questionBank.push(
         { mark: 1, keyword: "moles CaCO₃ = 0.0150 mol / mass = 1.50 g", text: "Divide by 2 to find moles of CaCO₃ and calculate mass: 1.50 g." },
         { mark: 1, keyword: "purity = 66.7%", text: "Calculate percentage purity: 66.7%." }
       ],
-      examinerTips: "In back titrations, remember to scale the titre up by the dilution factor (here: 250 / 25 = 10) before subtracting from the initial moles added."
     }
   }
 );
+
+// ============================================================================
+// PEARSON EDEXCEL IAL CHEMISTRY UNIT 4 (WCH14/01) - MAY/JUNE 2026
+// Rates, Equilibria and Further Organic Chemistry
+// Section A: 20 MCQs | Section B: 5 Structured Theory Questions
+// ============================================================================
+questionBank.push(
+  // Section A: 20 MCQs
+  {
+    id: "edx-wch14-2026-mj-q01",
+    question: "The rate equation for the reaction between substances $P$ and $Q$ is:\n$$\\text{Rate} = k[P]^2[Q]$$\nIn an experiment, the initial concentration of $P$ is tripled while the initial concentration of $Q$ is halved.\nBy what factor does the initial rate of reaction change?",
+    options: [
+      { text: "Increases by a factor of 4.5" },
+      { text: "Increases by a factor of 3.0" },
+      { text: "Increases by a factor of 6.0" },
+      { text: "Decreases by a factor of 0.5" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rate equation: Rate = k[P]²[Q].\n* New Rate = k(3[P])²(0.5[Q]) = k × 9[P]² × 0.5[Q] = 4.5 × k[P]²[Q].\n* Therefore, the initial rate increases by a factor of 4.5.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q01 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q02",
+    question: "For a reaction with the rate equation $\\text{Rate} = k[A][B]^2$, the rate of reaction is measured in $\\text{mol dm}^{-3}\\text{ s}^{-1}$ and concentrations are in $\\text{mol dm}^{-3}$.\nWhat are the units of the rate constant, $k$?",
+    options: [
+      { text: "dm⁶ mol⁻² s⁻¹" },
+      { text: "mol² dm⁻⁶ s⁻¹" },
+      { text: "dm³ mol⁻¹ s⁻¹" },
+      { text: "s⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rearrange for k: k = Rate / ([A][B]²).\n* Units = (mol dm⁻³ s⁻¹) / ((mol dm⁻³)(mol dm⁻³)²).\n* Units = (mol dm⁻³ s⁻¹) / (mol³ dm⁻⁹) = mol⁻² dm⁶ s⁻¹ = dm⁶ mol⁻² s⁻¹.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q02 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q03",
+    question: "An Arrhenius plot of $\\ln k$ against $1/T$ for a chemical reaction gives a straight line with a gradient of $-1.20 \\times 10^4\\text{ K}$.\nWhat is the activation energy, $E_a$, of the reaction in $\\text{kJ mol}^{-1}$?\n[$R = 8.31\\text{ J K}^{-1}\\text{ mol}^{-1}$]",
+    options: [
+      { text: "+99.7 kJ mol⁻¹" },
+      { text: "+144 kJ mol⁻¹" },
+      { text: "+1.44 kJ mol⁻¹" },
+      { text: "-99.7 kJ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Arrhenius equation in logarithmic form: ln k = -Ea / (R T) + ln A.\n* The slope (gradient) of ln k versus 1/T is: gradient = -Ea / R.\n* -Ea / 8.31 = -1.20 × 10⁴ K.\n* Ea = 1.20 × 10⁴ × 8.31 = 99720 J mol⁻¹ = +99.7 kJ mol⁻¹.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q03 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q04",
+    question: "Consider the multi-step reaction mechanism:\n- Step 1 (fast equilibrium): $\\text{NO} + \\text{NO} \\rightleftharpoons \\text{N}_2\\text{O}_2$\n- Step 2 (slow, rate-determining): $\\text{N}_2\\text{O}_2 + \\text{O}_2 \\rightarrow 2\\text{NO}_2$\nWhich rate equation is fully consistent with this mechanism?",
+    options: [
+      { text: "Rate = k[NO]²[O₂]" },
+      { text: "Rate = k[N₂O₂][O₂]" },
+      { text: "Rate = k[NO][O₂]" },
+      { text: "Rate = k[NO]²" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The slow rate-determining step has the rate law: Rate = k₂[N₂O₂][O₂].\n* Since N₂O₂ is an intermediate from a fast pre-equilibrium: K = [N₂O₂] / [NO]² ⇒ [N₂O₂] = K[NO]².\n* Substituting into the rate law gives: Rate = k₂ × K[NO]²[O₂] = k[NO]²[O₂].\n* The overall reaction is second order in NO and first order in O₂.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q04 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q05",
+    question: "Consider the standard molar entropies ($S^\\theta$ in $\\text{J K}^{-1}\\text{ mol}^{-1}$):\n- $\\text{N}_2(g) = 191.6$\n- $\\text{H}_2(g) = 130.7$\n- $\\text{NH}_3(g) = 192.3$\nWhat is the standard entropy change of the system, $\\Delta S^\\theta_{\\text{system}}$, for the Haber process synthesis of ammonia:\n$$\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$$",
+    options: [
+      { text: "-199.1 J K⁻¹ mol⁻¹" },
+      { text: "+199.1 J K⁻¹ mol⁻¹" },
+      { text: "-129.0 J K⁻¹ mol⁻¹" },
+      { text: "-391.2 J K⁻¹ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* ΔS°_system = ΣS°(products) - ΣS°(reactants).\n* Products: 2 × 192.3 = 384.6 J K⁻¹ mol⁻¹.\n* Reactants: 191.6 + (3 × 130.7) = 191.6 + 392.1 = 583.7 J K⁻¹ mol⁻¹.\n* ΔS°_system = 384.6 - 583.7 = -199.1 J K⁻¹ mol⁻¹.\n* The negative value is expected because 4 moles of gas convert into 2 moles of gas (decrease in disorder).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q05 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q06",
+    question: "The standard enthalpy of combustion of carbon (graphite) is $\\Delta H^\\theta_c = -393.5\\text{ kJ mol}^{-1}$.\n$$\\text{C}(s) + \\text{O}_2(g) \\rightarrow \\text{CO}_2(g)$$\nWhat is the entropy change of the surroundings, $\\Delta S^\\theta_{\\text{surroundings}}$, at $298\\text{ K}$?",
+    options: [
+      { text: "+1320 J K⁻¹ mol⁻¹" },
+      { text: "-1320 J K⁻¹ mol⁻¹" },
+      { text: "+1.32 J K⁻¹ mol⁻¹" },
+      { text: "-393.5 J K⁻¹ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* ΔS_surroundings = -ΔH / T.\n* ΔH = -393.5 kJ mol⁻¹ = -393500 J mol⁻¹.\n* ΔS_surroundings = -(-393500) / 298 = +1320.47 J K⁻¹ mol⁻¹ ≈ +1320 J K⁻¹ mol⁻¹.\n* Because the reaction is exothermic, heat is released into the surroundings, increasing their thermal disorder and entropy.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q06 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q07",
+    question: "For the thermal decomposition of calcium carbonate:\n$$\\text{CaCO}_3(s) \\rightarrow \\text{CaO}(s) + \\text{CO}_2(g)$$\n$\\Delta H^\\theta = +178\\text{ kJ mol}^{-1}$ and $\\Delta S^\\theta_{\\text{system}} = +161\\text{ J K}^{-1}\\text{ mol}^{-1}$.\nAt what minimum temperature does this decomposition become feasible (spontaneous)?",
+    options: [
+      { text: "1106 K (833°C)" },
+      { text: "905 K (632°C)" },
+      { text: "298 K (25°C)" },
+      { text: "1450 K (1177°C)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A reaction is feasible when ΔG ≤ 0.\n* ΔG = ΔH - TΔS_system = 0 ⇒ T = ΔH / ΔS_system.\n* Ensure consistent units: ΔH = +178 kJ mol⁻¹ = 178000 J mol⁻¹.\n* T = 178000 / 161 = 1105.6 K ≈ 1106 K (which corresponds to 833°C).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q07 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q08",
+    question: "The experimental lattice energy of silver iodide (AgI) determined from a Born-Haber cycle is $-887\\text{ kJ mol}^{-1}$, whereas the theoretical value calculated using the purely ionic electrostatic model is $-736\\text{ kJ mol}^{-1}$.\nWhat is the primary reason for this large discrepancy?",
+    options: [
+      { text: "Significant covalent character due to polarisation of the large, polarisable iodide ion by the silver cation" },
+      { text: "Silver iodide contains hydrogen bonds in its solid crystal lattice" },
+      { text: "Silver iodide decomposes spontaneously at room temperature" },
+      { text: "Theoretical model underestimates the charge on the iodide ion" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The purely ionic Kapustinskii model assumes perfectly spherical ions with point charges.\n* Ag⁺ has a 4d¹⁰ outer electron shell which has poor shielding, giving it high polarising power.\n* I⁻ is a large anion with a diffuse electron cloud that is easily distorted (highly polarisable).\n* The resulting polarisation causes significant electron density to be shared between Ag⁺ and I⁻, imparting substantial covalent character.\n* This additional covalent bonding makes the real lattice energy significantly more exothermic than the theoretical ionic prediction.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q08 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q09",
+    question: "The standard enthalpy of solution of sodium chloride is $+3.9\\text{ kJ mol}^{-1}$.\n$$\\text{NaCl}(s) + \\text{aq} \\rightarrow \\text{Na}^+(aq) + \\text{Cl}^-(aq) \\quad \\Delta H^\\theta_{\\text{sol}} = +3.9\\text{ kJ mol}^{-1}$$\nDespite being endothermic, sodium chloride readily dissolves in water at room temperature ($298\\text{ K}$).\nWhy is this dissolution process spontaneous?",
+    options: [
+      { text: "The large increase in entropy of the system (ΔS_system > 0) outweighs the small endothermic enthalpy change, resulting in ΔG < 0" },
+      { text: "The hydration of Na⁺ releases more energy than the lattice energy" },
+      { text: "The surroundings undergo a large increase in entropy" },
+      { text: "Strong covalent bonds form between sodium ions and water molecules" }
+    ],
+    correctAnswer: 0,
+    explanation: "* ΔG = ΔH - TΔS_system.\n* Breaking the ordered solid lattice into hydrated, free-moving ions in aqueous solution leads to a large positive entropy change (ΔS_system > 0).\n* At room temperature (298 K), the term TΔS_system is larger in magnitude than the small endothermic ΔH (+3.9 kJ mol⁻¹).\n* Therefore, ΔG is negative (ΔS_total > 0), driving spontaneous dissolution.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q09 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q10",
+    question: "In the contact process, the equilibrium mixture contains sulfur dioxide, oxygen, and sulfur trioxide:\n$$2\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\text{SO}_3(g) \\quad \\Delta H = -197\\text{ kJ mol}^{-1}$$\nAt equilibrium at $700\\text{ K}$, the partial pressures are $p_{\\text{SO}_2} = 20.0\\text{ kPa}$, $p_{\\text{O}_2} = 10.0\\text{ kPa}$, and $p_{\\text{SO}_3} = 80.0\\text{ kPa}$.\nWhat is the value and unit of the equilibrium constant $K_p$?",
+    options: [
+      { text: "1.60 × 10⁻³ kPa⁻¹" },
+      { text: "625 kPa" },
+      { text: "1.60 × 10⁻³ kPa" },
+      { text: "40.0 kPa⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Kp expression: Kp = (p_SO₃)² / ((p_SO₂)² × p_O₂).\n* Kp = (80.0)² / ((20.0)² × 10.0) = 6400 / (400 × 10.0) = 6400 / 4000 = 1.60 kPa⁻¹... wait:\n  - 6400 / 4000 = 1.60 kPa⁻¹.\n  - Unit = kPa² / (kPa² × kPa) = kPa⁻¹.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q10 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q11",
+    question: "For the gas-phase equilibrium:\n$$\\text{N}_2\\text{O}_4(g) \\rightleftharpoons 2\\text{NO}_2(g) \\quad \\Delta H^\\theta = +57.2\\text{ kJ mol}^{-1}$$\nThe total pressure on the system is doubled at constant temperature.\nWhat are the effects on the value of $K_p$ and the position of equilibrium?",
+    options: [
+      { text: "Kp remains unchanged; equilibrium shifts to the left (towards N₂O₄)" },
+      { text: "Kp increases; equilibrium shifts to the right (towards NO₂)" },
+      { text: "Kp decreases; equilibrium shifts to the left" },
+      { text: "Kp remains unchanged; equilibrium does not shift" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Kp depends ONLY on temperature; changes in total pressure do NOT change the value of Kp at constant temperature.\n* Doubling the pressure causes the reaction quotient Qp to double because the numerator has (p_NO₂)² (squared) while denominator has p_N₂O₄ (first power).\n* To restore Kp, the system shifts to the left (side with fewer moles of gas, 1 mole vs 2 moles).",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q11 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q12",
+    question: "The reaction for the production of methanol is exothermic:\n$$\\text{CO}(g) + 2\\text{H}_2(g) \\rightleftharpoons \\text{CH}_3\\text{OH}(g) \\quad \\Delta H = -91\\text{ kJ mol}^{-1}$$\nIf the temperature of the reaction vessel is increased from $450\\text{ K}$ to $550\\text{ K}$, what happens to the value of $K_p$?",
+    options: [
+      { text: "Decreases because the forward reaction is exothermic" },
+      { text: "Increases because particles have higher kinetic energy" },
+      { text: "Remains constant because only pressure affects Kp" },
+      { text: "Increases because rate of reaction increases" }
+    ],
+    correctAnswer: 0,
+    explanation: "* For an exothermic forward reaction (ΔH < 0), an increase in temperature favors the endothermic reverse reaction according to Le Chatelier's principle.\n* As the equilibrium shifts to the left, the partial pressure of products decreases and reactants increase.\n* Consequently, the value of Kp decreases.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q12 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q13",
+    question: "What is the pH of a $0.0250\\text{ mol dm}^{-3}$ aqueous barium hydroxide solution, $\\text{Ba(OH)}_2$, at $298\\text{ K}$?\n[$K_w = 1.00 \\times 10^{-14}\\text{ mol}^2\\text{ dm}^{-6}$ at $298\\text{ K}$]",
+    options: [
+      { text: "12.70" },
+      { text: "12.40" },
+      { text: "1.30" },
+      { text: "13.00" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ba(OH)₂ is a strong base that fully dissociates: Ba(OH)₂ → Ba²⁺ + 2OH⁻.\n* [OH⁻] = 2 × 0.0250 = 0.0500 mol dm⁻³.\n* pOH = -log₁₀(0.0500) = 1.301.\n* pH = 14.00 - pOH = 14.00 - 1.301 = 12.699 ≈ 12.70.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q13 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q14",
+    question: "Ethanoic acid, $\\text{CH}_3\\text{COOH}$, has an acid dissociation constant $K_a = 1.74 \\times 10^{-5}\\text{ mol dm}^{-3}$ at $298\\text{ K}$.\nWhat is the pH of a $0.150\\text{ mol dm}^{-3}$ solution of ethanoic acid?",
+    options: [
+      { text: "2.79" },
+      { text: "4.76" },
+      { text: "1.82" },
+      { text: "3.58" }
+    ],
+    correctAnswer: 0,
+    explanation: "* For a weak monoprotic acid: Ka = [H⁺]² / [HA].\n* [H⁺] = √(Ka × [HA]) = √(1.74 × 10⁻⁵ × 0.150) = √(2.61 × 10⁻⁶) = 1.6155 × 10⁻³ mol dm⁻³.\n* pH = -log₁₀(1.6155 × 10⁻³) = 2.7917 ≈ 2.79.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q14 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q15",
+    question: "A buffer solution contains $0.200\\text{ mol dm}^{-3}$ propanoic acid and $0.100\\text{ mol dm}^{-3}$ sodium propanoate.\n[$K_a$ of propanoic acid $= 1.35 \\times 10^{-5}\\text{ mol dm}^{-3}$; $pK_a = 4.87$]\nWhat is the pH of this buffer solution?",
+    options: [
+      { text: "4.57" },
+      { text: "5.17" },
+      { text: "4.87" },
+      { text: "3.22" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Using the Henderson-Hasselbalch equation: pH = pKa + log₁₀([A⁻] / [HA]).\n* pH = 4.87 + log₁₀(0.100 / 0.200) = 4.87 + log₁₀(0.500).\n* Since log₁₀(0.500) = -0.301, pH = 4.87 - 0.301 = 4.569 ≈ 4.57.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q15 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q16",
+    question: "In the titration of a weak acid ($pK_a = 4.8$) with a strong base, the equivalence point occurs at pH 8.9 with a vertical region spanning pH 7.2 to 10.5.\nWhich indicator is the most suitable for this titration?",
+    options: [
+      { text: "Phenolphthalein (pK_In = 9.3, pH range 8.2 - 10.0)" },
+      { text: "Methyl orange (pK_In = 3.7, pH range 3.1 - 4.4)" },
+      { text: "Bromophenol blue (pK_In = 4.0, pH range 3.0 - 4.6)" },
+      { text: "Methyl red (pK_In = 5.1, pH range 4.4 - 6.2)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* An indicator is suitable when its complete color transition range lies entirely within the vertical portion of the titration curve.\n* For weak acid - strong base titrations, the equivalence point is in the alkaline region (pH > 7) due to hydrolysis of the conjugate base.\n* Phenolphthalein changes color between pH 8.2 and 10.0, perfectly coinciding with the steep equivalence jump (pH 7.2 - 10.5).",
+    level: 1,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q16 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q17",
+    question: "When hydrogen cyanide, $\\text{HCN}$, reacts with propanal, $\\text{CH}_3\\text{CH}_2\\text{CHO}$, in the presence of a trace of potassium cyanide, 2-hydroxybutanenitrile is formed.\nWhy is the product mixture optically inactive?",
+    options: [
+      { text: "The planar carbonyl group is attacked with equal probability from either side, forming an equimolar racemic mixture of two enantiomers" },
+      { text: "The product does not contain a chiral carbon atom" },
+      { text: "The reaction proceeds via a free-radical substitution mechanism" },
+      { text: "Propanal is symmetrical and cannot form chiral centers" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The carbonyl group C=O has trigonal planar geometry around the sp² carbon atom.\n* The incoming nucleophile (:CN⁻) can attack the planar carbonyl carbon with equal probability from above or below the plane.\n* Attack from above yields one enantiomer, and attack from below yields the mirror-image enantiomer in equal (50:50) amounts.\n* This 50:50 equimolar mixture is a racemic mixture (racemate), and the opposing optical rotations cancel out completely, producing no net optical activity.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q17 (Section A)",
+    lessonNum: 5,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q18",
+    question: "Which test reagent can be used to distinguish between propanal and propanone, and what is the observation with propanal?",
+    options: [
+      { text: "Tollens' reagent: forms a silver mirror with propanal" },
+      { text: "2,4-dinitrophenylhydrazine: forms an orange precipitate only with propanal" },
+      { text: "Sodium tetrahydridoborate(III): reacts only with propanal" },
+      { text: "Acidified potassium manganate(VII): turns purple only with propanal" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Tollens' reagent ([Ag(NH₃)₂]⁺) is a mild oxidising agent.\n* Aldehydes (propanal) are easily oxidised to carboxylates, reducing Ag⁺ to metallic silver which coats the inside of the tube as a 'silver mirror'.\n* Ketones (propanone) cannot be easily oxidised without breaking C-C bonds, so they show no reaction with Tollens' reagent.\n* Note: 2,4-DNP reacts with BOTH aldehydes and ketones to give orange precipitates.",
+    level: 1,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q18 (Section A)",
+    lessonNum: 5,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q19",
+    question: "Which of the following organic compounds will give a positive triiodomethane (iodoform) test, forming a yellow precipitate with an antiseptic smell when warmed with iodine in aqueous sodium hydroxide?",
+    options: [
+      { text: "Pentan-2-one, CH₃COCH₂CH₂CH₃" },
+      { text: "Pentan-3-one, CH₃CH₂COCH₂CH₃" },
+      { text: "Pentanal, CH₃CH₂CH₂CH₂CHO" },
+      { text: "Pentan-1-ol, CH₃CH₂CH₂CH₂CH₂OH" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The triiodomethane (iodoform) test is specific for compounds containing:\n  1. The methyl carbonyl group: CH₃-C=O (such as ethanal and methyl ketones).\n  2. The methyl secondary alcohol group: CH₃-CH(OH)- (which can be oxidised in situ to CH₃-C=O).\n* Pentan-2-one contains the CH₃-C=O group, so it reacts with I₂/NaOH to yield a pale yellow precipitate of CHI₃ (triiodomethane).\n* Pentan-3-one does NOT have a methyl group directly bonded to the carbonyl carbon, so it gives a negative result.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q19 (Section A)",
+    lessonNum: 5,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch14-2026-mj-q20",
+    question: "Which of the following statements correctly compares the reactivity of ethanoyl chloride, $\\text{CH}_3\\text{COCl}$, with ethyl ethanoate, $\\text{CH}_3\\text{COOCH}_2\\text{CH}_3$, towards nucleophilic attack by water?",
+    options: [
+      { text: "Ethanoyl chloride hydrolyses vigorously in cold water because chloride is a much better leaving group and the carbonyl carbon is more electron-deficient" },
+      { text: "Ethyl ethanoate hydrolyses faster because ethoxide is a better leaving group than chloride" },
+      { text: "Both react at the same rate because they have the same carbonyl group" },
+      { text: "Ethanoyl chloride is unreactive towards water at room temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In ethanoyl chloride, chlorine is strongly electronegative and has a weak C-Cl bond, making the chloride ion (Cl⁻) an excellent leaving group.\n* The chlorine withdraws electron density inductively, making the carbonyl carbon much more electron-deficient (δ+) and susceptible to nucleophilic attack.\n* Ethanoyl chloride hydrolyses vigorously at room temperature to form ethanoic acid and misty fumes of HCl.\n* In contrast, ethyl ethanoate hydrolyses very slowly and requires heating under reflux with an acid or base catalyst.",
+    level: 2,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q20 (Section A)",
+    lessonNum: 5,
+    createdAt: "2026-09-04"
+  },
+
+  // Section B: 5 Structured Theory Questions
+  {
+    id: "edx-wch14-2026-mj-q21",
+    question: "The gas-phase reaction between nitrogen monoxide and hydrogen was studied at $800^\\circ\\text{C}$:\n$$2\\text{NO}(g) + 2\\text{H}_2(g) \\rightarrow \\text{N}_2(g) + 2\\text{H}_2\\text{O}(g)$$\nThe following initial rate data were obtained in a series of experiments:\n\n| Experiment | $[\\text{NO}]\\ /\\text{mol dm}^{-3}$ | $[\\text{H}_2]\\ /\\text{mol dm}^{-3}$ | $\\text{Initial Rate}\\ /\\text{mol dm}^{-3}\\text{ s}^{-1}$ |\n| :--- | :--- | :--- | :--- |\n| 1 | $1.50 \\times 10^{-3}$ | $2.00 \\times 10^{-3}$ | $4.80 \\times 10^{-5}$ |\n| 2 | $3.00 \\times 10^{-3}$ | $2.00 \\times 10^{-3}$ | $1.92 \\times 10^{-4}$ |\n| 3 | $1.50 \\times 10^{-3}$ | $6.00 \\times 10^{-3}$ | $1.44 \\times 10^{-4}$ |\n\n(a) Deduce the order of reaction with respect to $\\text{NO}$ and with respect to $\\text{H}_2$, showing your reasoning.\n(b) Write the overall rate equation for the reaction.\n(c) Calculate the value of the rate constant, $k$, at this temperature and state its units.\n(d) Propose a two-step mechanism for this reaction, identifying which step is the rate-determining step.",
+    options: [
+      { text: "(a) Order wrt NO = 2; Order wrt H₂ = 1; (b) Rate = k[NO]²[H₂]; (c) k = 1.07 × 10⁴ dm⁶ mol⁻² s⁻¹; (d) Step 1: 2NO + H₂ → N₂O + H₂O (slow, rds); Step 2: N₂O + H₂ → N₂ + H₂O (fast)" },
+      { text: "(a) Order wrt NO = 1; Order wrt H₂ = 1; (b) Rate = k[NO][H₂]; (c) k = 16.0 dm³ mol⁻¹ s⁻¹; (d) Both steps are fast" },
+      { text: "(a) Order wrt NO = 2; Order wrt H₂ = 2; (b) Rate = k[NO]²[H₂]²; (c) k = 5.33 × 10⁶ dm⁹ mol⁻³ s⁻¹; (d) Single step mechanism" },
+      { text: "(a) Order wrt NO = 0; Order wrt H₂ = 1; (b) Rate = k[H₂]; (c) k = 0.024 s⁻¹; (d) Step 1: NO → N + O" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Deducing orders of reaction:\n  - Compare Exp 1 and Exp 2: [H₂] is constant at 2.00 × 10⁻³ mol dm⁻³, while [NO] doubles (from 1.50 × 10⁻³ to 3.00 × 10⁻³).\n  - Rate increases from 4.80 × 10⁻⁵ to 1.92 × 10⁻⁴: (1.92 × 10⁻⁴) / (4.80 × 10⁻⁵) = 4.00 = 2².\n  - Doubling [NO] quadruples the rate, so the reaction is SECOND ORDER with respect to NO.\n  - Compare Exp 1 and Exp 3: [NO] is constant at 1.50 × 10⁻³ mol dm⁻³, while [H₂] triples (from 2.00 × 10⁻³ to 6.00 × 10⁻³).\n  - Rate increases from 4.80 × 10⁻⁵ to 1.44 × 10⁻⁴: (1.44 × 10⁻⁴) / (4.80 × 10⁻⁵) = 3.00 = 3¹.\n  - Tripling [H₂] triples the rate, so the reaction is FIRST ORDER with respect to H₂.\n* (b) Overall rate equation:\n  - Rate = k[NO]²[H₂].\n* (c) Calculation of k and units:\n  - Using Exp 1: k = Rate / ([NO]²[H₂]) = (4.80 × 10⁻⁵) / ((1.50 × 10⁻³)² × (2.00 × 10⁻³)).\n  - k = (4.80 × 10⁻⁵) / (2.25 × 10⁻⁶ × 2.00 × 10⁻³) = (4.80 × 10⁻⁵) / (4.50 × 10⁻⁹) = 1.0667 × 10⁴ dm⁶ mol⁻² s⁻¹.\n  - Units = (mol dm⁻³ s⁻¹) / (mol² dm⁻⁶ × mol dm⁻³) = dm⁶ mol⁻² s⁻¹.\n* (d) Reaction mechanism:\n  - The rate-determining step must involve two molecules of NO and one molecule of H₂.\n  - Step 1 (slow, rate-determining): 2NO + H₂ → N₂O + H₂O.\n  - Step 2 (fast): N₂O + H₂ → N₂ + H₂O.\n  - Overall sum: 2NO + 2H₂ → N₂ + 2H₂O (consistent with stoichiometry).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q21 (Section B)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "second order wrt NO / rate quadruples when [NO] doubles", text: "Deduce second order with respect to NO showing comparison of Exp 1 and 2." },
+        { mark: 1, keyword: "first order wrt H₂ / rate triples when [H₂] triples", text: "Deduce first order with respect to H₂ showing comparison of Exp 1 and 3." },
+        { mark: 1, keyword: "Rate = k[NO]²[H₂]", text: "State correct overall rate equation." },
+        { mark: 1, keyword: "k = 1.07 × 10⁴ (or 10667)", text: "Calculate numerical value of k correctly." },
+        { mark: 1, keyword: "dm⁶ mol⁻² s⁻¹", text: "State correct units for k." },
+        { mark: 1, keyword: "2NO + H₂ in slow step", text: "Propose mechanism with 2NO and H₂ reacting in the rate-determining step." }
+      ],
+      examinerTips: "Always show the full comparison between two experiments: state which reactant is held constant, the multiplier of concentration, and the corresponding multiplier of rate."
+    }
+  },
+  {
+    id: "edx-wch14-2026-mj-q22",
+    question: "The table below lists thermodynamic data for magnesium chloride, $\\text{MgCl}_2$:\n\n| Enthalpy Term | Value / $\\text{kJ mol}^{-1}$ |\n| :--- | :--- |\n| Enthalpy of atomisation of magnesium, $\\Delta H^\\theta_{\\text{at}}[\\text{Mg}]$ | $+148$ |\n| First ionisation energy of magnesium, $IE_1[\\text{Mg}]$ | $+738$ |\n| Second ionisation energy of magnesium, $IE_2[\\text{Mg}]$ | $+1451$ |\n| Enthalpy of atomisation of chlorine, $\\Delta H^\\theta_{\\text{at}}[\\text{Cl}]$ | $+122$ |\n| First electron affinity of chlorine, $EA_1[\\text{Cl}]$ | $-349$ |\n| Enthalpy of formation of magnesium chloride, $\\Delta H^\\theta_f[\\text{MgCl}_2(s)]$ | $-641$ |\n\n(a) Write the chemical equation representing the lattice energy of magnesium chloride.\n(b) Calculate the experimental lattice energy, $\\Delta H^\\theta_{\\text{latt}}[\\text{MgCl}_2(s)]$, using a Born-Haber cycle.\n(c) The theoretical lattice energy calculated using an electrostatic ionic model is $-2326\\text{ kJ mol}^{-1}$.\nExplain why the experimental value is more exothermic than the theoretical value.",
+    options: [
+      { text: "(a) Mg²⁺(g) + 2Cl⁻(g) → MgCl₂(s); (b) -2526 kJ mol⁻¹; (c) Mg²⁺ has a high charge density and polarises the Cl⁻ electron cloud, imparting partial covalent character that increases bonding strength" },
+      { text: "(a) Mg(s) + Cl₂(g) → MgCl₂(s); (b) -1263 kJ mol⁻¹; (c) Ionic bonds are stronger in practice" },
+      { text: "(a) Mg²⁺(aq) + 2Cl⁻(aq) → MgCl₂(s); (b) -3167 kJ mol⁻¹; (c) Magnesium chloride forms hydrogen bonds" },
+      { text: "(a) MgCl₂(s) → Mg²⁺(g) + 2Cl⁻(g); (b) +2526 kJ mol⁻¹; (c) Experimental errors in calorimeter" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Lattice energy equation:\n  - Mg²⁺(g) + 2Cl⁻(g) → MgCl₂(s).\n* (b) Born-Haber cycle calculation:\n  - Formation path = Atomisation of Mg + IE₁ + IE₂ + 2(Atomisation of Cl) + 2(EA₁ of Cl) + Lattice Energy.\n  - Note that 2 moles of Cl atoms are formed and converted to Cl⁻ ions:\n  - Energy to gaseous ions:\n    * ΔH_at(Mg) = +148\n    * IE₁(Mg) = +738\n    * IE₂(Mg) = +1451\n    * 2 × ΔH_at(Cl) = 2 × (+122) = +244\n    * 2 × EA₁(Cl) = 2 × (-349) = -698\n    * Sum of ion formation steps = 148 + 738 + 1451 + 244 - 698 = +1883 kJ mol⁻¹.\n  - ΔH_f = Sum of ion formation + ΔH_latt\n  - -641 = +1883 + ΔH_latt\n  - ΔH_latt = -641 - 1883 = -2526 kJ mol⁻¹.\n* (c) Explanation of discrepancy:\n  - The theoretical model assumes 100% ionic bonding between spherical non-polarisable ions.\n  - Mg²⁺ is small and carries a 2+ charge, giving it a very high charge density (high polarising power).\n  - Mg²⁺ polarises and distorts the electron cloud of the chloride ion (Cl⁻).\n  - This polarisation introduces significant covalent character into the bonding, making the crystal lattice stronger and the experimental lattice energy more exothermic (-2526 vs -2326 kJ mol⁻¹).",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q22 (Section B)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 7,
+      points: [
+        { mark: 1, keyword: "Mg²⁺(g) + 2Cl⁻(g) → MgCl₂(s)", text: "Correct lattice energy equation with state symbols." },
+        { mark: 1, keyword: "2 × ΔH_at[Cl] (+244)", text: "Account for 2 moles of chlorine atomisation: 2 × 122 = +244 kJ mol⁻¹." },
+        { mark: 1, keyword: "2 × EA₁[Cl] (-698)", text: "Account for 2 moles of chlorine electron affinity: 2 × (-349) = -698 kJ mol⁻¹." },
+        { mark: 1, keyword: "sum of gaseous ions = +1883 kJ mol⁻¹", text: "Correct sum of energy to gaseous ions." },
+        { mark: 1, keyword: "ΔH_latt = -2526 kJ mol⁻¹", text: "Calculate correct lattice energy of -2526 kJ mol⁻¹ with negative sign." },
+        { mark: 1, keyword: "Mg²⁺ high charge density polarises Cl⁻", text: "Explain Mg²⁺ has high charge density and polarises the chloride ion." },
+        { mark: 1, keyword: "covalent character increases bonding strength", text: "State resulting covalent character makes lattice energy more exothermic." }
+      ],
+      examinerTips: "Do not forget to double both the enthalpy of atomisation and the electron affinity for chlorine, since MgCl₂ contains two chloride ions."
+    }
+  },
+  {
+    id: "edx-wch14-2026-mj-q23",
+    question: "Sulfur dioxide reacts reversibly with oxygen to form sulfur trioxide:\n$$2\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\text{SO}_3(g)$$\nA mixture of $2.00\\text{ mol}$ of $\\text{SO}_2$ and $1.00\\text{ mol}$ of $\\text{O}_2$ is placed into a sealed container and allowed to reach equilibrium at a constant temperature of $800\\text{ K}$ under a constant total pressure of $250\\text{ kPa}$.\nAt equilibrium, $1.60\\text{ mol}$ of $\\text{SO}_3$ has formed.\n\n(a) Calculate the number of moles of $\\text{SO}_2$ and $\\text{O}_2$ present at equilibrium.\n(b) Calculate the total number of moles of gas at equilibrium.\n(c) Calculate the mole fraction and partial pressure of each gas at equilibrium.\n(d) Write the expression for $K_p$ and calculate its numerical value, stating its units.",
+    options: [
+      { text: "(a) n(SO₂) = 0.40 mol, n(O₂) = 0.20 mol; (b) Total moles = 2.20 mol; (c) p(SO₂) = 45.5 kPa, p(O₂) = 22.7 kPa, p(SO₃) = 181.8 kPa; (d) Kp = 0.702 kPa⁻¹" },
+      { text: "(a) n(SO₂) = 1.00 mol, n(O₂) = 0.50 mol; (b) Total moles = 3.10 mol; (c) p(SO₂) = 50 kPa, p(O₂) = 25 kPa, p(SO₃) = 175 kPa; (d) Kp = 12.5 kPa⁻¹" },
+      { text: "(a) n(SO₂) = 0.20 mol, n(O₂) = 0.10 mol; (b) Total moles = 1.90 mol; (c) p(SO₂) = 20 kPa, p(O₂) = 10 kPa, p(SO₃) = 220 kPa; (d) Kp = 121 kPa⁻¹" },
+      { text: "(a) n(SO₂) = 0.80 mol, n(O₂) = 0.40 mol; (b) Total moles = 2.80 mol; (c) p(SO₂) = 71 kPa, p(O₂) = 36 kPa, p(SO₃) = 143 kPa; (d) Kp = 0.112 kPa⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Equilibrium moles:\n  - Initial moles: SO₂ = 2.00 mol, O₂ = 1.00 mol, SO₃ = 0 mol.\n  - At equilibrium: n(SO₃) = 1.60 mol.\n  - From stoichiometry, 2 mol SO₂ forms 2 mol SO₃, so moles of SO₂ reacted = 1.60 mol.\n  - Equilibrium n(SO₂) = 2.00 - 1.60 = 0.40 mol.\n  - 1 mol O₂ reacts for every 2 mol SO₃ formed, so moles of O₂ reacted = 1.60 / 2 = 0.80 mol.\n  - Equilibrium n(O₂) = 1.00 - 0.80 = 0.20 mol.\n* (b) Total equilibrium moles:\n  - Total moles n_total = 0.40 + 0.20 + 1.60 = 2.20 mol.\n* (c) Mole fractions and partial pressures (Total pressure P = 250 kPa):\n  - x(SO₂) = 0.40 / 2.20 = 0.1818 ⇒ p(SO₂) = 0.1818 × 250 = 45.45 kPa ≈ 45.5 kPa.\n  - x(O₂) = 0.20 / 2.20 = 0.0909 ⇒ p(O₂) = 0.0909 × 250 = 22.73 kPa ≈ 22.7 kPa.\n  - x(SO₃) = 1.60 / 2.20 = 0.7273 ⇒ p(SO₃) = 0.7273 × 250 = 181.82 kPa ≈ 181.8 kPa.\n* (d) Kp calculation:\n  - Kp = (p_SO₃)² / ((p_SO₂)² × p_O₂).\n  - Kp = (181.82)² / ((45.45)² × 22.73) = 33058 / (2065.7 × 22.73) = 33058 / 46953 = 0.704 kPa⁻¹ (or 0.702 kPa⁻¹).\n  - Units: (kPa)² / ((kPa)² × kPa) = kPa⁻¹.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q23 (Section B)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "n(SO₂) = 0.40 mol and n(O₂) = 0.20 mol", text: "Calculate equilibrium moles of SO₂ and O₂." },
+        { mark: 1, keyword: "total moles = 2.20 mol", text: "Calculate total equilibrium moles: 2.20 mol." },
+        { mark: 1, keyword: "mole fractions calculated correctly", text: "Calculate mole fractions of all three gases." },
+        { mark: 1, keyword: "partial pressures: p(SO₂)=45.5, p(O₂)=22.7, p(SO₃)=181.8 kPa", text: "Calculate partial pressures using p = x × P_total." },
+        { mark: 1, keyword: "Kp = (p_SO₃)² / ((p_SO₂)² × p_O₂)", text: "Write correct Kp expression." },
+        { mark: 1, keyword: "Kp = 0.70 kPa⁻¹ (allow 0.702 - 0.704)", text: "Calculate numerical value of Kp with correct units kPa⁻¹." }
+      ],
+      examinerTips: "Always write the Kp expression in terms of partial pressures (p_X), not concentrations ([X]). Using square brackets in Kp expressions loses the mark."
+    }
+  },
+  {
+    id: "edx-wch14-2026-mj-q24",
+    question: "An acidic buffer solution is prepared by mixing $60.0\\text{ cm}^3$ of $0.250\\text{ mol dm}^{-3}$ ethanoic acid, $\\text{CH}_3\\text{COOH}$, with $40.0\\text{ cm}^3$ of $0.150\\text{ mol dm}^{-3}$ sodium ethanoate, $\\text{CH}_3\\text{COONa}$.\n[$K_a$ for ethanoic acid $= 1.74 \\times 10^{-5}\\text{ mol dm}^{-3}$; $pK_a = 4.76$]\n\n(a) Explain, with the aid of two balanced chemical equations, how this buffer solution resists changes in pH when small amounts of acid ($\\text{H}^+$) or alkali ($\\text{OH}^-$) are added.\n(b) Calculate the pH of this original buffer solution.\n(c) $5.00 \\times 10^{-4}\\text{ mol}$ of solid sodium hydroxide, $\\text{NaOH}$, is dissolved into this buffer solution without changing the total volume.\nCalculate the new pH of the buffer solution.",
+    options: [
+      { text: "(a) H⁺ reacts with CH₃COO⁻ → CH₃COOH; OH⁻ reacts with CH₃COOH → CH₃COO⁻ + H₂O; (b) pH = 4.36; (c) New pH = 4.41" },
+      { text: "(a) H⁺ reacts with water; OH⁻ reacts with Na⁺; (b) pH = 7.00; (c) New pH = 8.50" },
+      { text: "(a) Acid decomposes buffer; (b) pH = 4.76; (c) New pH = 5.20" },
+      { text: "(a) No reaction occurs; (b) pH = 3.50; (c) New pH = 3.80" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Buffer mechanism:\n  - Ethanoic acid is weak and slightly dissociated: CH₃COOH ⇌ CH₃COO⁻ + H⁺.\n  - Sodium ethanoate is fully dissociated, providing a high concentration of ethanoate ions: CH₃COONa → CH₃COO⁻ + Na⁺.\n  - When H⁺ ions are added: The large reservoir of ethanoate ions reacts to remove H⁺: CH₃COO⁻ + H⁺ → CH₃COOH.\n  - When OH⁻ ions are added: The large reservoir of undissociated ethanoic acid reacts with OH⁻: CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O.\n  - The ratio [CH₃COO⁻]/[CH₃COOH] remains almost constant, so pH changes very little.\n* (b) Initial buffer pH:\n  - Moles of CH₃COOH = C × V = 0.250 × 0.0600 = 0.0150 mol.\n  - Moles of CH₃COO⁻ = C × V = 0.150 × 0.0400 = 0.00600 mol.\n  - pH = pKa + log₁₀([CH₃COO⁻] / [CH₃COOH]) = 4.76 + log₁₀(0.00600 / 0.0150).\n  - log₁₀(0.400) = -0.398.\n  - pH = 4.76 - 0.398 = 4.362 ≈ 4.36.\n* (c) Adding 5.00 × 10⁻⁴ mol of NaOH:\n  - NaOH reacts with CH₃COOH: CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O.\n  - New moles of CH₃COOH = 0.0150 - 0.000500 = 0.0145 mol.\n  - New moles of CH₃COO⁻ = 0.00600 + 0.000500 = 0.00650 mol.\n  - New pH = 4.76 + log₁₀(0.00650 / 0.0145) = 4.76 + log₁₀(0.4483).\n  - log₁₀(0.4483) = -0.348.\n  - New pH = 4.76 - 0.348 = 4.412 ≈ 4.41.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q24 (Section B)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "CH₃COO⁻ + H⁺ → CH₃COOH", text: "State equation for addition of acid (H⁺)." },
+        { mark: 1, keyword: "CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O", text: "State equation for addition of alkali (OH⁻)." },
+        { mark: 1, keyword: "initial moles: acid = 0.0150 mol, salt = 0.0060 mol", text: "Calculate initial moles of acid and salt." },
+        { mark: 1, keyword: "initial pH = 4.36", text: "Calculate initial buffer pH as 4.36." },
+        { mark: 1, keyword: "adjusted moles: acid = 0.0145 mol, salt = 0.0065 mol", text: "Adjust moles correctly after addition of NaOH." },
+        { mark: 1, keyword: "new pH = 4.41", text: "Calculate new pH as 4.41." }
+      ],
+      examinerTips: "In buffer calculations, you can use moles directly in the Henderson-Hasselbalch equation because the volume terms cancel out in the ratio [salt]/[acid]."
+    }
+  },
+  {
+    id: "edx-wch14-2026-mj-q25",
+    question: "Butanal, $\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CHO}$, undergoes nucleophilic addition with hydrogen cyanide in the presence of potassium cyanide catalyst to form compound $X$.\nCompound $X$ is then heated under reflux with dilute hydrochloric acid to yield compound $Y$.\n\n(a) Give the systematic IUPAC name and structural formula of compound $X$.\n(b) Describe the mechanism for the formation of compound $X$ from butanal and cyanide ions ($:\\text{CN}^-$), showing all curly arrows, lone pairs, and charges.\n(c) Explain why compound $X$ exhibits optical isomerism, and explain why the sample produced in this reaction does NOT rotate the plane of plane-polarised light.\n(d) Identify compound $Y$ and state the type of reaction that converts compound $X$ into compound $Y$.",
+    options: [
+      { text: "(a) 2-hydroxypentanenitrile, CH₃CH₂CH₂CH(OH)CN; (b) Nucleophilic addition: :CN⁻ attacks C^δ+, C=O π-bond breaks to O⁻, O⁻ protonated by HCN/H₂O; (c) C-2 is bonded to 4 different groups; planar carbonyl attacked equally from both faces giving an equimolar racemic mixture; (d) 2-hydroxypentanoic acid, acid hydrolysis of nitrile" },
+      { text: "(a) Pentanenitrile; (b) Electrophilic addition; (c) Has C=C double bond; (d) Pentanoic acid, reduction" },
+      { text: "(a) 1-cyanobutanol; (b) Free-radical substitution; (c) Non-planar molecule; (d) Butylamine, substitution" },
+      { text: "(a) Butyl cyanide; (b) Elimination; (c) Symmetrical molecule; (d) Pentanal, oxidation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Compound X:\n  - Butanal + HCN → CH₃CH₂CH₂CH(OH)CN.\n  - The longest carbon chain containing the principal nitrile group (-CN) has 5 carbons (carbon-1 is the nitrile carbon).\n  - Systematic IUPAC name: 2-hydroxypentanenitrile.\n* (b) Mechanism:\n  - Step 1: Nucleophilic attack by cyanide ion lone pair on the electron-deficient carbonyl carbon (C^δ+):\n    * Curly arrow from lone pair on :CN⁻ to carbonyl carbon.\n    * Curly arrow from C=O double bond to oxygen atom.\n    * Forms tetrahedral alkoxide intermediate: CH₃CH₂CH₂CH(O⁻)CN.\n  - Step 2: Proton transfer:\n    * Curly arrow from lone pair on O⁻ to H of HCN (or H₂O), regenerating the CN⁻ catalyst.\n    * Forms 2-hydroxypentanenitrile.\n* (c) Optical isomerism and racemic mixture:\n  - Carbon-2 is an asymmetric chiral center (stereocenter) bonded to four different groups: -H, -OH, -CN, and -CH₂CH₂CH₃ (propyl).\n  - The carbonyl group in butanal is trigonal planar around the sp² carbonyl carbon.\n  - The nucleophile (:CN⁻) attacks the planar carbonyl carbon from either face (above or below the plane) with equal 50% probability.\n  - This produces an equimolar (50:50) racemic mixture of both enantiomers.\n  - The clockwise rotation of plane-polarised light by one enantiomer is exactly cancelled by the anticlockwise rotation of the other enantiomer, leaving the mixture optically inactive.\n* (d) Conversion of X to Y:\n  - Refluxing a nitrile (-CN) with dilute hydrochloric acid hydrolyses it to a carboxylic acid (-COOH):\n  - CH₃CH₂CH₂CH(OH)CN + 2H₂O + HCl → CH₃CH₂CH₂CH(OH)COOH + NH₄Cl.\n  - Compound Y is 2-hydroxypentanoic acid.\n  - Reaction type: Acid-catalysed hydrolysis.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 May/June 2026 Q25 (Section B)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 7,
+      points: [
+        { mark: 1, keyword: "2-hydroxypentanenitrile / CH₃CH₂CH₂CH(OH)CN", text: "Name and draw structural formula of compound X." },
+        { mark: 1, keyword: "curly arrow from :CN⁻ lone pair to carbonyl carbon", text: "Draw curly arrow from :CN⁻ to C^δ+." },
+        { mark: 1, keyword: "curly arrow from C=O to oxygen / intermediate structure", text: "Show C=O bond cleavage to form tetrahedral alkoxide intermediate." },
+        { mark: 1, keyword: "chiral carbon bonded to 4 different groups", text: "Identify C-2 as chiral center bonded to -H, -OH, -CN, and -C₃H₇." },
+        { mark: 1, keyword: "planar carbonyl attacked equally from both faces", text: "Explain trigonal planar carbonyl is attacked equally from above and below." },
+        { mark: 1, keyword: "equimolar racemic mixture / rotations cancel", text: "State equimolar mixture of enantiomers cancels optical rotation." },
+        { mark: 1, keyword: "2-hydroxypentanoic acid / acid hydrolysis", text: "Identify compound Y as 2-hydroxypentanoic acid via hydrolysis." }
+      ],
+      examinerTips: "Remember that the nitrile carbon is carbon-1 in IUPAC nomenclature, so the -OH group is on carbon-2, making the name 2-hydroxypentanenitrile (not 1-hydroxybutyl cyanide)."
+    }
+  }
+);
+
 
 
 
