@@ -753,12 +753,29 @@ function QuizzesContent() {
         return studentTrackId.startsWith('edexcel');
     }, [studentTrackId]);
 
+    const isEdexcelIalTrack = useMemo(() => {
+        return studentTrackId === 'edexcel-alevel' || studentTrackId === 'edexcel-as' || studentTrackId === 'edexcel-a2';
+    }, [studentTrackId]);
+
+    const isEdexcelAs = useMemo(() => studentTrackId === 'edexcel-as', [studentTrackId]);
+    const isEdexcelA2 = useMemo(() => studentTrackId === 'edexcel-a2', [studentTrackId]);
+
+    const visibleEdexcelUnits = useMemo(() => {
+        if (isEdexcelAs) {
+            return EDEXCEL_UNITS.filter(u => u.number <= 3);
+        }
+        if (isEdexcelA2) {
+            return EDEXCEL_UNITS.filter(u => u.number >= 4);
+        }
+        return EDEXCEL_UNITS;
+    }, [isEdexcelAs, isEdexcelA2]);
+
     const subItemTerm = isEdexcelTrack ? 'Topic' : 'Lesson';
 
     // 3. Dynamic Lists and selections matching active curriculum ONLY
     const unitsList = useMemo(() => {
-        if (isEdexcelTrack) {
-            return EDEXCEL_UNITS.map(u => u.title);
+        if (isEdexcelIalTrack) {
+            return visibleEdexcelUnits.map(u => u.title);
         }
         return activeCurriculum.topics.map(t => {
             if (/^unit\s+\d+:/i.test(t.title)) {
@@ -766,11 +783,11 @@ function QuizzesContent() {
             }
             return `Unit ${t.number}: ${t.title}`;
         });
-    }, [activeCurriculum, isEdexcelTrack]);
+    }, [activeCurriculum, isEdexcelIalTrack, visibleEdexcelUnits]);
 
     const lessonsList = useMemo(() => {
         let matchingUnitTitle = selectedUnit;
-        if (isEdexcelTrack && selectedEdexcelUnit !== 'all') {
+        if (isEdexcelIalTrack && selectedEdexcelUnit !== 'all') {
             const edx = EDEXCEL_UNITS.find(u => u.number === selectedEdexcelUnit);
             if (edx) matchingUnitTitle = edx.title;
         }
@@ -778,14 +795,23 @@ function QuizzesContent() {
         return Array.from(new Set(
             allQuestions
                 .filter(q => {
-                    const matchBoard = isEdexcelTrack ? q.board === 'edexcel' : q.trackId === studentTrackId;
+                    let matchBoard = false;
+                    if (isEdexcelAs) {
+                        matchBoard = q.board === 'edexcel' && ((q.unitNumber !== undefined && q.unitNumber <= 3) || q.trackId === 'edexcel-as');
+                    } else if (isEdexcelA2) {
+                        matchBoard = q.board === 'edexcel' && ((q.unitNumber !== undefined && q.unitNumber >= 4) || q.trackId === 'edexcel-a2');
+                    } else if (isEdexcelIalTrack) {
+                        matchBoard = q.board === 'edexcel' && q.trackId !== 'edexcel-igcse';
+                    } else {
+                        matchBoard = q.trackId === studentTrackId;
+                    }
                     const matchSource = selectedSource === 'all' || q.source === selectedSource;
                     const matchUnit = matchingUnitTitle === 'all' || q.unitTitle === matchingUnitTitle;
                     return matchBoard && matchSource && matchUnit;
                 })
                 .map(q => q.lessonTitle)
         )).filter(title => title !== 'Exam Practice Bank');
-    }, [allQuestions, studentTrackId, isEdexcelTrack, selectedUnit, selectedEdexcelUnit, selectedSource]);
+    }, [allQuestions, studentTrackId, isEdexcelIalTrack, isEdexcelAs, isEdexcelA2, selectedUnit, selectedEdexcelUnit, selectedSource]);
 
     const todayStr = useMemo(() => new Date().toISOString().split('T')[0], []);
     const dueMistakeMap = useMemo(() => {
@@ -819,7 +845,15 @@ function QuizzesContent() {
     // 4a. Base pool for real-time button counts
     const baseBoardPool = useMemo(() => {
         let pool = allQuestions.filter(q => {
-            if (isEdexcelTrack) return q.board === 'edexcel';
+            if (isEdexcelAs) {
+                return q.board === 'edexcel' && ((q.unitNumber !== undefined && q.unitNumber <= 3) || q.trackId === 'edexcel-as');
+            }
+            if (isEdexcelA2) {
+                return q.board === 'edexcel' && ((q.unitNumber !== undefined && q.unitNumber >= 4) || q.trackId === 'edexcel-a2');
+            }
+            if (isEdexcelIalTrack) {
+                return q.board === 'edexcel' && q.trackId !== 'edexcel-igcse';
+            }
             return q.trackId === studentTrackId;
         });
         if (selectedSource !== 'all') {
@@ -829,7 +863,7 @@ function QuizzesContent() {
             pool = pool.filter(q => q.level.toLowerCase() === selectedLevel.toLowerCase());
         }
         return pool;
-    }, [allQuestions, studentTrackId, isEdexcelTrack, selectedSource, selectedLevel]);
+    }, [allQuestions, studentTrackId, isEdexcelIalTrack, isEdexcelAs, isEdexcelA2, selectedSource, selectedLevel]);
 
     const paperCounts = useMemo(() => {
         if (!isCambridgeTrack) return { all: 0, p2: 0, p4: 0, p6: 0 };
@@ -842,18 +876,26 @@ function QuizzesContent() {
     }, [isCambridgeTrack, baseBoardPool]);
 
     const edexcelUnitCounts = useMemo(() => {
-        if (!isEdexcelTrack) return {} as Record<number, number>;
+        if (!isEdexcelIalTrack) return {} as Record<number, number>;
         const counts: Record<number, number> = {};
         for (let u = 1; u <= 6; u++) {
             counts[u] = baseBoardPool.filter(q => q.unitNumber === u).length;
         }
         return counts;
-    }, [isEdexcelTrack, baseBoardPool]);
+    }, [isEdexcelIalTrack, baseBoardPool]);
 
     // 4b. Filter memos for smart filters and exam generation
     const filteredPool = useMemo(() => {
         let pool = allQuestions.filter(q => {
-            if (isEdexcelTrack) return q.board === 'edexcel';
+            if (isEdexcelAs) {
+                return q.board === 'edexcel' && ((q.unitNumber !== undefined && q.unitNumber <= 3) || q.trackId === 'edexcel-as');
+            }
+            if (isEdexcelA2) {
+                return q.board === 'edexcel' && ((q.unitNumber !== undefined && q.unitNumber >= 4) || q.trackId === 'edexcel-a2');
+            }
+            if (isEdexcelIalTrack) {
+                return q.board === 'edexcel' && q.trackId !== 'edexcel-igcse';
+            }
             return q.trackId === studentTrackId;
         });
 
@@ -867,7 +909,7 @@ function QuizzesContent() {
         }
 
         // B. Edexcel Unit Filter (1 to 6)
-        if (isEdexcelTrack && selectedEdexcelUnit !== 'all') {
+        if (isEdexcelIalTrack && selectedEdexcelUnit !== 'all') {
             pool = pool.filter(q => q.unitNumber === selectedEdexcelUnit);
         }
 
@@ -900,7 +942,7 @@ function QuizzesContent() {
         }
 
         return pool;
-    }, [allQuestions, studentTrackId, isEdexcelTrack, isCambridgeTrack, selectedPaper, selectedEdexcelUnit, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
+    }, [allQuestions, studentTrackId, isEdexcelTrack, isEdexcelAs, isEdexcelA2, isCambridgeTrack, selectedPaper, selectedEdexcelUnit, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
 
     const filterCounts = useMemo(() => {
         const all = filteredPool.length;
@@ -1289,7 +1331,7 @@ function QuizzesContent() {
                                         <div className="flex items-center justify-between">
                                             <label className="text-xs text-indigo-300 font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <FileText className="w-4 h-4 text-indigo-400" />
-                                                <span>Cambridge Paper Type (نوع ورقة كامبريدج)</span>
+                                                <span>Cambridge Paper Type</span>
                                                 <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30 font-mono">
                                                     0620 / 9701
                                                 </span>
@@ -1349,75 +1391,97 @@ function QuizzesContent() {
                                     </div>
                                 )}
 
-                                {/* 2. Edexcel Unit Selector (1 to 6) */}
-                                {isEdexcelTrack && (
+                                {/* 2. Edexcel Unit Selector (Dynamic: AS 1-3, A2 4-6, or IAL 1-6) */}
+                                {isEdexcelIalTrack && (
                                     <div className="flex flex-col gap-3 sm:col-span-2 bg-[#050515]/90 p-4 md:p-5 border border-indigo-500/20 rounded-2xl shadow-lg shadow-indigo-950/20">
                                         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                                             <label className="text-xs text-indigo-300 font-bold uppercase tracking-wider flex items-center gap-2">
                                                 <FlaskConical className="w-4 h-4 text-indigo-400" />
-                                                <span>Edexcel Unit Selection (تحديد الوحدة 1–6)</span>
+                                                <span>
+                                                    {isEdexcelAs 
+                                                        ? 'Edexcel AS Unit Selection (Units 1–3)' 
+                                                        : isEdexcelA2 
+                                                        ? 'Edexcel A2 Unit Selection (Units 4–6)' 
+                                                        : 'Edexcel Unit Selection (Units 1–6)'}
+                                                </span>
                                                 <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30 font-mono">
-                                                    IAL Units 1–6
+                                                    {isEdexcelAs ? 'AS Units 1–3' : isEdexcelA2 ? 'A2 Units 4–6' : 'IAL Units 1–6'}
                                                 </span>
                                             </label>
 
-                                            {/* Quick Level Group Tabs */}
-                                            <div className="flex items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/5 self-start sm:self-auto">
-                                                <button
-                                                    type="button"
-                                                    onClick={() => {
-                                                        setSelectedEdexcelUnit('all');
-                                                        setSelectedUnit('all');
-                                                        setSelectedLesson('all');
-                                                    }}
-                                                    className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
-                                                        selectedEdexcelUnit === 'all'
-                                                            ? 'bg-indigo-500 text-white shadow'
-                                                            : 'text-slate-400 hover:text-white'
-                                                    }`}
-                                                >
-                                                    All Units (1–6)
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => {
-                                                        if (selectedEdexcelUnit !== 1 && selectedEdexcelUnit !== 2 && selectedEdexcelUnit !== 3) {
-                                                            setSelectedEdexcelUnit(1);
-                                                            setSelectedUnit(EDEXCEL_UNITS[0].title);
+                                            {/* Quick Level Group Tabs (shown only for full IAL track) */}
+                                            {studentTrackId === 'edexcel-alevel' ? (
+                                                <div className="flex items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/5 self-start sm:self-auto">
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setSelectedEdexcelUnit('all');
+                                                            setSelectedUnit('all');
                                                             setSelectedLesson('all');
-                                                        }
-                                                    }}
-                                                    className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
-                                                        typeof selectedEdexcelUnit === 'number' && selectedEdexcelUnit <= 3
-                                                            ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40'
-                                                            : 'text-slate-400 hover:text-white'
-                                                    }`}
-                                                >
-                                                    AS (Units 1–3)
-                                                </button>
-                                                <button
-                                                    type="button"
-                                                    onClick={() => {
-                                                        if (selectedEdexcelUnit !== 4 && selectedEdexcelUnit !== 5 && selectedEdexcelUnit !== 6) {
-                                                            setSelectedEdexcelUnit(4);
-                                                            setSelectedUnit(EDEXCEL_UNITS[3].title);
+                                                        }}
+                                                        className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
+                                                            selectedEdexcelUnit === 'all'
+                                                                ? 'bg-indigo-500 text-white shadow'
+                                                                : 'text-slate-400 hover:text-white'
+                                                        }`}
+                                                    >
+                                                        All Units (1–6)
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => {
+                                                            if (selectedEdexcelUnit !== 1 && selectedEdexcelUnit !== 2 && selectedEdexcelUnit !== 3) {
+                                                                setSelectedEdexcelUnit(1);
+                                                                setSelectedUnit(EDEXCEL_UNITS[0].title);
+                                                                setSelectedLesson('all');
+                                                            }
+                                                        }}
+                                                        className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
+                                                            typeof selectedEdexcelUnit === 'number' && selectedEdexcelUnit <= 3
+                                                                ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40'
+                                                                : 'text-slate-400 hover:text-white'
+                                                        }`}
+                                                    >
+                                                        AS (Units 1–3)
+                                                    </button>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => {
+                                                            if (selectedEdexcelUnit !== 4 && selectedEdexcelUnit !== 5 && selectedEdexcelUnit !== 6) {
+                                                                setSelectedEdexcelUnit(4);
+                                                                setSelectedUnit(EDEXCEL_UNITS[3].title);
+                                                                setSelectedLesson('all');
+                                                            }
+                                                        }}
+                                                        className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
+                                                            typeof selectedEdexcelUnit === 'number' && selectedEdexcelUnit >= 4
+                                                                ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40'
+                                                                : 'text-slate-400 hover:text-white'
+                                                        }`}
+                                                    >
+                                                        A2 (Units 4–6)
+                                                    </button>
+                                                </div>
+                                            ) : (
+                                                selectedEdexcelUnit !== 'all' && (
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setSelectedEdexcelUnit('all');
+                                                            setSelectedUnit('all');
                                                             setSelectedLesson('all');
-                                                        }
-                                                    }}
-                                                    className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
-                                                        typeof selectedEdexcelUnit === 'number' && selectedEdexcelUnit >= 4
-                                                            ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40'
-                                                            : 'text-slate-400 hover:text-white'
-                                                    }`}
-                                                >
-                                                    A2 (Units 4–6)
-                                                </button>
-                                            </div>
+                                                        }}
+                                                        className="text-[11px] text-slate-400 hover:text-white transition-colors self-start sm:self-auto"
+                                                    >
+                                                        Reset to All {isEdexcelAs ? 'AS Units' : isEdexcelA2 ? 'A2 Units' : 'Units'}
+                                                    </button>
+                                                )
+                                            )}
                                         </div>
 
-                                        {/* 6 Unit Interactive Cards */}
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
-                                            {EDEXCEL_UNITS.map(u => {
+                                        {/* Unit Interactive Cards (filtered dynamically to AS 1-3, A2 4-6, or IAL 1-6) */}
+                                        <div className={`grid grid-cols-1 sm:grid-cols-2 ${visibleEdexcelUnits.length <= 3 ? 'md:grid-cols-3' : 'md:grid-cols-3'} gap-2.5`}>
+                                            {visibleEdexcelUnits.map(u => {
                                                 const isActive = selectedEdexcelUnit === u.number;
                                                 const count = edexcelUnitCounts[u.number] || 0;
                                                 return (
@@ -1587,10 +1651,10 @@ function QuizzesContent() {
                                 )}
 
                                 {/* C. Unit selection if applicable */}
-                                {(selectedMode === 'unit' || selectedMode === 'lesson' || (!isCambridgeTrack && !isEdexcelTrack)) && (
+                                {(selectedMode === 'unit' || selectedMode === 'lesson' || (!isCambridgeTrack && !isEdexcelIalTrack)) && (
                                     <div className="flex flex-col gap-1.5 sm:col-span-2">
                                         <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                                            {isEdexcelTrack ? 'Select Target Unit (الوحدة)' : 'Select Target Unit (الوحدة / الموضوع)'}
+                                            {isEdexcelIalTrack ? 'Select Target Unit' : 'Select Target Unit / Topic'}
                                         </label>
                                         <select 
                                             value={selectedUnit}
@@ -1598,7 +1662,7 @@ function QuizzesContent() {
                                                 const val = e.target.value;
                                                 setSelectedUnit(val);
                                                 setSelectedLesson('all');
-                                                if (isEdexcelTrack) {
+                                                if (isEdexcelIalTrack) {
                                                     const matchNum = val.match(/unit\s+(\d+)/i);
                                                     if (matchNum) {
                                                         setSelectedEdexcelUnit(parseInt(matchNum[1], 10));
@@ -1621,7 +1685,7 @@ function QuizzesContent() {
                                 {selectedMode === 'lesson' && (
                                     <div className="flex flex-col gap-1.5 sm:col-span-2">
                                         <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                                            Select {subItemTerm} (الدرس / الموضوع الفرعي)
+                                            Select {subItemTerm}
                                         </label>
                                         <select 
                                             value={selectedLesson}
@@ -1736,11 +1800,16 @@ function QuizzesContent() {
                                 )}
 
                                 {/* Edexcel Unit in Overview */}
-                                {isEdexcelTrack && (
+                                {isEdexcelIalTrack && (
                                     <div className="flex justify-between items-center">
                                         <span className="text-slate-400">Target Unit:</span>
-                                        <span className="text-indigo-400 font-bold text-right text-xs truncate max-w-[170px]" title={typeof selectedEdexcelUnit === 'number' ? `Unit ${selectedEdexcelUnit}` : 'All Units (1–6)'}>
-                                            {typeof selectedEdexcelUnit === 'number' ? `Unit ${selectedEdexcelUnit}` : 'All Units (1–6)'}
+                                        <span 
+                                            className="text-indigo-400 font-bold text-right text-xs truncate max-w-[170px]" 
+                                            title={typeof selectedEdexcelUnit === 'number' ? `Unit ${selectedEdexcelUnit}` : (isEdexcelAs ? 'All AS Units (1–3)' : isEdexcelA2 ? 'All A2 Units (4–6)' : 'All Units (1–6)')}
+                                        >
+                                            {typeof selectedEdexcelUnit === 'number' 
+                                                ? `Unit ${selectedEdexcelUnit}` 
+                                                : (isEdexcelAs ? 'All AS Units (1–3)' : isEdexcelA2 ? 'All A2 Units (4–6)' : 'All Units (1–6)')}
                                         </span>
                                     </div>
                                 )}
