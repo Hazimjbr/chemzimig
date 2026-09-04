@@ -16,12 +16,12 @@ import { sanitizeKatex } from '@/lib/katex-sanitizer';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import { allCurricula } from '@/data/curriculum';
-import { examsRegistry, questionBank } from '@/data/exams';
-import { Question } from '@/data/exams/types';
+import { examsRegistry, questionBank, Question } from '@/data/exams';
 import { EXAM_PROFILES, ExamPaperProfile, calculateGrade } from '@/data/exams/grade-boundaries';
 import { PeriodicTableModal } from '@/components/exam-simulator/PeriodicTableModal';
 import { ProctorWarningModal } from '@/components/exam-simulator/ProctorWarningModal';
 import { ExamReportCard } from '@/components/exam-simulator/ExamReportCard';
+import { evaluateWrittenAnswer, MarkingEvaluationResult } from '@/lib/keyword-evaluator';
 
 type ExamPhase = 'SELECT' | 'CONFIRM_RULES' | 'EXAM' | 'REPORT' | 'REVIEW';
 
@@ -37,10 +37,12 @@ export default function MockExamPage() {
   // Exam phase
   const [phase, setPhase] = useState<ExamPhase>('SELECT');
 
-  // Exam Questions & Responses
+  // Exam Questions & Responses (both MCQ and Written)
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [writtenAnswers, setWrittenAnswers] = useState<Record<number, string>>({});
+  const [writtenEvaluations, setWrittenEvaluations] = useState<Record<number, MarkingEvaluationResult>>({});
   const [flaggedIndices, setFlaggedIndices] = useState<Set<number>>(new Set());
 
   // Timer state
@@ -126,7 +128,18 @@ export default function MockExamPage() {
       const cieQuestions = questionBank.filter(q => 
         q.curriculum === 'igcse' || q.curriculum === 'cie-igcse' || (q.source && q.source.toLowerCase().includes('cambridge'))
       );
-      pool = cieQuestions;
+
+      if (profile.paperType === 'structured') {
+        const structuredPool = cieQuestions.filter(q => q.paperType === 'structured' || (q.source && (q.source.includes('Paper 4') || q.source.includes('Paper 3') || q.source.includes('0620/4') || q.source.includes('0620/3'))));
+        pool = structuredPool.length >= 5 ? structuredPool : cieQuestions;
+      } else if (profile.paperType === 'practical') {
+        const practicalPool = cieQuestions.filter(q => q.paperType === 'practical' || (q.source && (q.source.includes('Paper 6') || q.source.includes('0620/6'))));
+        pool = practicalPool.length >= 5 ? practicalPool : cieQuestions;
+      } else {
+        // MCQ (Paper 1 / Paper 2)
+        const mcqPool = cieQuestions.filter(q => !q.paperType || q.paperType === 'mcq' || (q.source && (q.source.includes('Paper 2') || q.source.includes('Paper 1') || q.source.includes('0620/2') || q.source.includes('0620/1'))));
+        pool = mcqPool.length >= profile.defaultQuestionCount ? mcqPool : cieQuestions;
+      }
     } else {
       // Edexcel
       const isA2 = profile.id === 'edexcel-ial-a2';
@@ -284,12 +297,32 @@ export default function MockExamPage() {
     const elapsed = Math.floor((Date.now() - examStartTimestamp.current) / 1000);
     setTimeSpentSeconds(elapsed);
 
+    // Evaluate all structured/practical written questions against official marking scheme
+    const evaluations: Record<number, MarkingEvaluationResult> = {};
+    questions.forEach((q, idx) => {
+      const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+      if (isWritten && q.markingScheme) {
+        const studentText = writtenAnswers[idx] || '';
+        evaluations[idx] = evaluateWrittenAnswer(studentText, q.markingScheme);
+      }
+    });
+    setWrittenEvaluations(evaluations);
+
     // Save questions attempts to Gamification
     let earnedXP = 0;
     const finalAttempts = questions.map((q, idx) => {
-      const selected = answers[idx];
-      const isCorrect = selected !== undefined && selected === q.correctAnswer;
-      if (isCorrect) earnedXP += 20;
+      const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+      let isCorrect = false;
+
+      if (isWritten && evaluations[idx]) {
+        isCorrect = evaluations[idx].awardedMarks > 0;
+        earnedXP += evaluations[idx].awardedMarks * 10;
+      } else {
+        const selected = answers[idx];
+        isCorrect = selected !== undefined && selected === q.correctAnswer;
+        if (isCorrect) earnedXP += 20;
+      }
+
       return {
         questionId: q.id,
         difficulty: q.level || 2,
@@ -310,23 +343,40 @@ export default function MockExamPage() {
     handleFinishExam(false);
   };
 
-  // Score computation
+  // Score computation: handles both MCQ marks and evaluated written marks
   const totalScore = useMemo(() => {
     return questions.reduce((acc, q, idx) => {
+      const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+      if (isWritten) {
+        return acc + (writtenEvaluations[idx]?.awardedMarks || 0);
+      }
       return answers[idx] === q.correctAnswer ? acc + 1 : acc;
     }, 0);
-  }, [questions, answers]);
+  }, [questions, answers, writtenEvaluations]);
+
+  // Maximum possible marks on the paper
+  const totalPossibleMarks = useMemo(() => {
+    return questions.reduce((acc, q) => {
+      if (q.markingScheme?.marks) return acc + q.markingScheme.marks;
+      return acc + 1;
+    }, 0);
+  }, [questions]);
 
   // Syllabus topic performance calculation
   const topicBreakdown = useMemo(() => {
     const stats: Record<string, { correct: number; total: number }> = {};
     questions.forEach((q, idx) => {
-      const topicName = (q.topic || 'General Chemistry').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      const topicName = (q.topic || 'General Chemistry').replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
       if (!stats[topicName]) {
         stats[topicName] = { correct: 0, total: 0 };
       }
-      stats[topicName].total += 1;
-      if (answers[idx] === q.correctAnswer) {
+      const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+      const qMax = q.markingScheme?.marks || 1;
+      stats[topicName].total += qMax;
+
+      if (isWritten) {
+        stats[topicName].correct += writtenEvaluations[idx]?.awardedMarks || 0;
+      } else if (answers[idx] === q.correctAnswer) {
         stats[topicName].correct += 1;
       }
     });
@@ -335,13 +385,22 @@ export default function MockExamPage() {
       topic,
       correct: data.correct,
       total: data.total,
-      percentage: Math.round((data.correct / data.total) * 100)
+      percentage: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0
     }));
-  }, [questions, answers]);
+  }, [questions, answers, writtenEvaluations]);
 
   // Current question data
   const currentQ = questions[currentIndex];
-  const answeredCount = Object.keys(answers).length;
+  const isCurrentQWritten = currentQ ? (currentQ.paperType === 'structured' || currentQ.paperType === 'practical' || !!currentQ.markingScheme) : false;
+  const answeredCount = useMemo(() => {
+    return questions.reduce((count, q, idx) => {
+      const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+      if (isWritten) {
+        return (writtenAnswers[idx] && writtenAnswers[idx].trim().length > 0) ? count + 1 : count;
+      }
+      return answers[idx] !== undefined ? count + 1 : count;
+    }, 0);
+  }, [questions, answers, writtenAnswers]);
   const unansweredCount = questions.length - answeredCount;
 
   // Pacing clock formatting
@@ -422,9 +481,22 @@ export default function MockExamPage() {
                       </div>
                     </div>
 
-                    <span className="text-[10px] font-black uppercase px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
-                      {profile.gradeScale === 'numbers' ? '9–1 Scale' : 'A*–U Scale'}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      {profile.paperType && (
+                        <span className={`text-[10px] font-black uppercase px-2.5 py-1 rounded-full border ${
+                          profile.paperType === 'structured' 
+                            ? 'bg-amber-500/10 border-amber-500/30 text-amber-400' 
+                            : profile.paperType === 'practical'
+                            ? 'bg-purple-500/10 border-purple-500/30 text-purple-400'
+                            : 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                        }`}>
+                          {profile.paperType === 'structured' ? '📝 Theory / Written' : profile.paperType === 'practical' ? '🧪 Practical Skills' : '🔘 MCQ'}
+                        </span>
+                      )}
+                      <span className="text-[10px] font-black uppercase px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300">
+                        {profile.gradeScale === 'numbers' ? '9–1 Scale' : 'A*–U Scale'}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Middle: Details */}
