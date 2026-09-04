@@ -10481,6 +10481,468 @@ questionBank.push(
   }
 );
 
+// ============================================================================
+// PEARSON EDEXCEL IAL CHEMISTRY UNIT 3 (WCH13/01) - MAY/JUNE 2026
+// Practical Skills in Chemistry I (Core Practicals 1 to 8)
+// 15 Comprehensive Authentic Practical Exam Questions with Official Mark Schemes
+// ============================================================================
+questionBank.push(
+  {
+    id: "edx-wch13-2026-mj-q01",
+    question: "A student carries out an experiment to determine the molar volume of hydrogen gas under room conditions (Core Practical 1).\nA known mass of magnesium ribbon ($0.036\\text{ g}$) is added to excess dilute hydrochloric acid in a conical flask connected to a $100\\text{ cm}^3$ gas syringe.\nThe volume of hydrogen gas collected is $36.0\\text{ cm}^3$ at room temperature and pressure ($20^\\circ\\text{C}$ and $101\\text{ kPa}$).\n\n(a) Write the balanced chemical equation, including state symbols, for the reaction between magnesium and hydrochloric acid.\n(b) Calculate the molar volume of hydrogen gas under these laboratory conditions in $\\text{dm}^3\\text{ mol}^{-1}$. [$A_r$: Mg = 24.3]\n(c) Suggest two procedural reasons why the measured volume of gas might be lower than the expected theoretical value.",
+    options: [
+      { text: "(a) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g); (b) 24.3 dm³ mol⁻¹; (c) Some hydrogen gas escaped before the bung was replaced, and friction in the gas syringe barrel prevented full movement" },
+      { text: "(a) Mg + HCl → MgCl + H; (b) 12.0 dm³ mol⁻¹; (c) Temperature was too high, and excess acid reacted with glass" },
+      { text: "(a) 2Mg + 2HCl → 2MgCl + H₂; (b) 48.6 dm³ mol⁻¹; (c) Magnesium was wet, and gas syringe was not level" },
+      { text: "(a) Mg(s) + HCl(aq) → MgCl(s) + H(g); (b) 22.4 dm³ mol⁻¹; (c) Acid was limiting, and hydrogen dissolved completely in water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Equation: Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g).\n* (b) Molar volume calculation:\n  - Moles of Mg = 0.036 / 24.3 = 1.481 × 10⁻³ mol.\n  - Stoichiometry is 1:1, so moles of H₂ formed = 1.481 × 10⁻³ mol.\n  - Volume of H₂ = 36.0 cm³ = 0.0360 dm³.\n  - Molar volume Vₘ = V / n = 0.0360 / (1.481 × 10⁻³) = 24.3 dm³ mol⁻¹.\n* (c) Procedural errors leading to lower gas volume:\n  - Gas escaped between adding the magnesium and firmly inserting the rubber bung.\n  - Friction between the gas syringe plunger and barrel resists expansion, leading to a smaller volume reading.\n  - An oxide layer (MgO) on the magnesium ribbon reduces the effective mass of pure Mg.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q01",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g)", text: "Correct balanced equation with state symbols." },
+        { mark: 1, keyword: "moles of Mg = 1.48 × 10⁻³ mol", text: "Calculate moles of Mg correctly." },
+        { mark: 1, keyword: "molar volume = 24.3 dm³ mol⁻¹", text: "Calculate molar volume as 24.3 dm³ mol⁻¹ (allow 24.0-24.5)." },
+        { mark: 1, keyword: "gas escaped before bung replaced / syringe friction", text: "State valid experimental error: gas escaping before bung insertion or friction in plunger." }
+      ],
+      examinerTips: "To eliminate the gas-loss error on inserting the bung, suspend the magnesium on a cotton thread or place acid in a small test tube inside the conical flask and tip to mix."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q02",
+    question: "A student is asked to prepare $250.0\\text{ cm}^3$ of a standard solution of sodium carbonate, $\\text{Na}_2\\text{CO}_3$, with a concentration of approximately $0.0500\\text{ mol dm}^{-3}$ (Core Practical 2).\n[$M_r$: $\\text{Na}_2\\text{CO}_3 = 106.0$]\n\n(a) Calculate the mass of anhydrous sodium carbonate required.\n(b) Describe the precise practical procedure the student should follow to prepare this standard solution from the weighed solid, including all steps needed to ensure maximum accuracy.",
+    options: [
+      { text: "(a) 1.325 g; (b) Weigh by difference into a beaker, dissolve in ~100 cm³ distilled water with glass rod, transfer quantitatively via funnel with washings into 250 cm³ volumetric flask, make up to mark with dropping pipette so meniscus sits on calibration line, invert flask 10 times to mix" },
+      { text: "(a) 5.300 g; (b) Add solid directly to volumetric flask, fill to top with tap water, and shake once" },
+      { text: "(a) 0.106 g; (b) Dissolve in boiling water in measuring cylinder, stir with spatula, and leave to evaporate" },
+      { text: "(a) 2.650 g; (b) Dissolve in conical flask, heat to dryness, and re-dissolve in ethanol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Mass calculation:\n  - Moles required = C × V = 0.0500 × 0.2500 = 0.0125 mol.\n  - Mass = moles × Mr = 0.0125 × 106.0 = 1.325 g.\n* (b) Standard solution preparation procedure:\n  - Weigh the solid accurately in a weighing boat, record mass, transfer into a beaker, and re-weigh the boat (weighing by difference).\n  - Dissolve the solid in roughly 100 cm³ of deionised/distilled water using a clean glass rod to stir.\n  - Transfer the solution into a 250.0 cm³ volumetric flask using a filter funnel.\n  - Rinse the beaker, glass rod, and funnel with distilled water and add all washings to the volumetric flask.\n  - Add distilled water until near the mark, then use a dropping pipette to add water dropwise until the bottom of the meniscus touches the graduation line at eye level.\n  - Stopper the flask and invert it repeatedly (at least 10 times) to ensure a completely homogeneous solution.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q02",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "mass = 1.325 g / 1.33 g", text: "Correct calculation of mass: 1.325 g." },
+        { mark: 1, keyword: "weighing by difference", text: "State weighing solid by difference using a weighing boat." },
+        { mark: 1, keyword: "dissolve in beaker with washings", text: "Dissolve in beaker with stirring rod and transfer with washings of beaker and funnel." },
+        { mark: 1, keyword: "bottom of meniscus on graduation line at eye level", text: "Fill with dropping pipette until bottom of meniscus aligns with mark at eye level." },
+        { mark: 1, keyword: "invert flask repeatedly to mix homogeneously", text: "Stopper and invert flask several times to achieve uniform concentration." }
+      ],
+      examinerTips: "Never dissolve solid directly in a volumetric flask. Always dissolve in a beaker first, then transfer with thorough washings."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q03",
+    question: "A student titrates $25.0\\text{ cm}^3$ portions of the standard $0.0500\\text{ mol dm}^{-3}\\ \\text{Na}_2\\text{CO}_3$ solution against hydrochloric acid of unknown concentration using methyl orange indicator (Core Practical 2).\n\n(a) State why the burette must be rinsed with the hydrochloric acid solution before filling, rather than with distilled water.\n(b) State the color change of methyl orange at the end-point of this titration.\n(c) The titration results are shown below:\n- Rough titre: $24.80\\text{ cm}^3$\n- Titre 1: $24.25\\text{ cm}^3$\n- Titre 2: $24.15\\text{ cm}^3$\n- Titre 3: $24.20\\text{ cm}^3$\nCalculate the mean titre and determine the concentration of the hydrochloric acid in $\\text{mol dm}^{-3}$.\n(d) Calculate the percentage uncertainty in Titre 1 if the burette has an uncertainty of $\\pm 0.05\\text{ cm}^3$ for each reading.",
+    options: [
+      { text: "(a) Rinsing with water would dilute the acid, requiring a larger titre; (b) Yellow to orange/peach; (c) Mean titre = 24.20 cm³, [HCl] = 0.1033 mol dm⁻³; (d) ±0.41%" },
+      { text: "(a) Water reacts violently with acid; (b) Red to yellow; (c) Mean titre = 24.35 cm³, [HCl] = 0.0500 mol dm⁻³; (d) ±0.21%" },
+      { text: "(a) Acid lubricates the stopcock; (b) Colorless to pink; (c) Mean titre = 24.80 cm³, [HCl] = 0.2000 mol dm⁻³; (d) ±0.82%" },
+      { text: "(a) To remove air bubbles; (b) Blue to red; (c) Mean titre = 24.00 cm³, [HCl] = 0.1500 mol dm⁻³; (d) ±0.10%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Burette rinsing:\n  - If rinsed with distilled water, residual droplets dilute the acid, decreasing its concentration and artificially increasing the volume required (titre).\n  - Rinsing with the acid ensures the concentration in the burette is exactly known.\n* (b) Methyl orange color change:\n  - In alkaline Na₂CO₃: Yellow.\n  - At the end-point: Orange (or peach / first permanent pink-orange tint).\n  - In excess acid: Red.\n* (c) Mean titre and concentration calculation:\n  - Titres 1, 2, and 3 are concordant (within 0.10 cm³ of each other: 24.25, 24.15, 24.20).\n  - Reject rough titre (24.80 cm³).\n  - Mean titre = (24.25 + 24.15 + 24.20) / 3 = 24.20 cm³ = 0.02420 dm³.\n  - Reaction: Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂.\n  - Moles of Na₂CO₃ = C × V = 0.0500 × 0.02500 = 1.25 × 10⁻³ mol.\n  - Moles of HCl = 2 × (1.25 × 10⁻³) = 2.50 × 10⁻³ mol.\n  - [HCl] = moles / volume = (2.50 × 10⁻³) / 0.02420 = 0.1033 mol dm⁻³ (4 s.f.).\n* (d) Percentage uncertainty in Titre 1 (24.25 cm³):\n  - A titre requires two readings (initial and final), so total uncertainty = 2 × (±0.05) = ±0.10 cm³.\n  - % uncertainty = (0.10 / 24.25) × 100 = 0.412% ≈ ±0.41%.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q03",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "dilute acid / increase titre volume", text: "Explain that water would dilute the acid and cause a larger titre." },
+        { mark: 1, keyword: "yellow to orange / peach", text: "State methyl orange color change from yellow to orange." },
+        { mark: 1, keyword: "mean titre = 24.20 cm³", text: "Calculate mean titre using concordant titres only: 24.20 cm³." },
+        { mark: 1, keyword: "moles of HCl = 2.50 × 10⁻³ mol", text: "Calculate moles of HCl using 2:1 stoichiometry." },
+        { mark: 1, keyword: "[HCl] = 0.103 mol dm⁻³", text: "Calculate concentration of HCl as 0.103 or 0.1033 mol dm⁻³." },
+        { mark: 1, keyword: "percentage uncertainty = 0.41%", text: "Calculate burette percentage uncertainty: (0.10 / 24.25) × 100 = 0.41%." }
+      ],
+      examinerTips: "Remember that each titre involves TWO readings (initial and final), so the burette reading uncertainty must be multiplied by 2: 2 × 0.05 = ±0.10 cm³."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q04",
+    question: "A student determines the enthalpy change of neutralisation between hydrochloric acid and sodium hydroxide using a simple polystyrene cup calorimeter (Core Practical 3).\n$50.0\\text{ cm}^3$ of $1.00\\text{ mol dm}^{-3}\\ \\text{HCl}$ is placed in the polystyrene cup. The temperature is recorded every minute for 3 minutes.\nAt minute 4, $50.0\\text{ cm}^3$ of $1.05\\text{ mol dm}^{-3}\\ \\text{NaOH}$ (both solutions initially at $21.0^\\circ\\text{C}$) is added rapidly, and the mixture is stirred continuously.\nThe temperature is recorded every 30 seconds from minute 5 to minute 10.\n\n(a) Explain why the temperature is monitored for 3 minutes before mixing, and why the temperature is extrapolated back to minute 4.\n(b) By extrapolating the cooling curve back to minute 4, the theoretical maximum temperature reached is $27.8^\\circ\\text{C}$.\nCalculate the heat energy released, $q$, in $\\text{J}$. [Specific heat capacity $c = 4.18\\text{ J g}^{-1\\ \\circ}\\text{C}^{-1}$, density $= 1.00\\text{ g cm}^{-3}$]\n(c) Calculate the molar enthalpy change of neutralisation, $\\Delta H_{\\text{neut}}$, in $\\text{kJ mol}^{-1}$ of water formed.",
+    options: [
+      { text: "(a) To establish a steady baseline temperature; extrapolation corrects for heat lost to the surroundings during mixing; (b) q = 2842 J; (c) ΔH_neut = -56.8 kJ mol⁻¹" },
+      { text: "(a) To allow the acid to react with air; extrapolation speeds up the reaction; (b) q = 1421 J; (c) ΔH_neut = -28.4 kJ mol⁻¹" },
+      { text: "(a) To cool the cup; extrapolation accounts for evaporation; (b) q = 5684 J; (c) ΔH_neut = -113.6 kJ mol⁻¹" },
+      { text: "(a) To calibrate the thermometer; (b) q = 284.2 J; (c) ΔH_neut = +56.8 kJ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Cooling curve rationale:\n  - Monitoring for 3 minutes confirms the initial temperature of the solution is constant and in thermal equilibrium with the laboratory.\n  - Mixing is not instantaneous, and heat is lost to the surroundings as soon as the temperature rises above ambient.\n  - Extrapolating the cooling curve back to minute 4 estimates the maximum temperature that would have been attained had mixing been instantaneous with zero heat loss.\n* (b) Heat energy calculation:\n  - Total volume of mixture = 50.0 + 50.0 = 100.0 cm³.\n  - Mass of solution m = 100.0 g (since density = 1.00 g cm⁻³).\n  - Temperature rise ΔT = 27.8 - 21.0 = 6.8°C.\n  - q = m × c × ΔT = 100.0 × 4.18 × 6.8 = 2842.4 J ≈ 2842 J (or 2.842 kJ).\n* (c) Molar enthalpy of neutralisation:\n  - Moles of HCl = 1.00 × 0.0500 = 0.0500 mol (limiting reactant).\n  - Moles of NaOH = 1.05 × 0.0500 = 0.0525 mol (excess).\n  - Moles of H₂O formed = 0.0500 mol.\n  - ΔH_neut = -q / n = -2.8424 kJ / 0.0500 mol = -56.8 kJ mol⁻¹.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q04",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "steady baseline temperature", text: "State monitoring establishes a steady initial baseline temperature." },
+        { mark: 1, keyword: "corrects for heat loss during mixing", text: "Explain extrapolation corrects for cooling/heat loss occurring during reaction." },
+        { mark: 1, keyword: "mass = 100 g and ΔT = 6.8°C", text: "Identify total mass of mixture as 100 g and ΔT = 6.8°C." },
+        { mark: 1, keyword: "q = 2842 J / 2.84 kJ", text: "Calculate q = 2842 J using q = mcΔT." },
+        { mark: 1, keyword: "limiting reactant = 0.0500 mol HCl", text: "Identify moles of water formed = 0.0500 mol." },
+        { mark: 1, keyword: "ΔH = -56.8 kJ mol⁻¹", text: "Calculate ΔH_neut = -56.8 kJ mol⁻¹ with negative sign and correct units." }
+      ],
+      examinerTips: "Do not forget the negative sign on exothermic enthalpy changes! A positive sign or omitted sign forfeits the final mark."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q05",
+    question: "A student uses a spirit burner containing ethanol, $\\text{CH}_3\\text{CH}_2\\text{OH}$, to heat $150\\text{ g}$ of water in a copper calorimeter (Core Practical 3).\nThe experimental value for the enthalpy of combustion obtained is $-920\\text{ kJ mol}^{-1}$, whereas the Data Booklet value is $-1367\\text{ kJ mol}^{-1}$.\n\n(a) State two significant experimental errors in this procedure that cause the experimental value to be significantly less exothermic than the theoretical data value.\n(b) Suggest two modifications to the apparatus to reduce heat loss to the surroundings.\n(c) State why ethanol continues to lose mass from the spirit burner even after the flame is extinguished, and state how this error can be minimized.",
+    options: [
+      { text: "(a) Heat loss to the surroundings and incomplete combustion producing soot/CO; (b) Use a draught shield and place an insulating lid on the calorimeter; (c) Evaporation of ethanol from the wick; replace the cap on the burner immediately after extinguishing" },
+      { text: "(a) The water boiled away and the burner was too close; (b) Use a glass beaker and remove the draught shield; (c) Ethanol absorbs water from air; weigh the burner tomorrow" },
+      { text: "(a) Copper absorbed all the heat and ethanol was wet; (b) Heat with a Bunsen burner; (c) Oxidation of wick; use a metal wick" },
+      { text: "(a) Thermometer absorbed heat; (b) Remove the water; (c) Fuel freezes; heat before weighing" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Errors causing lower experimental combustion enthalpy:\n  - Substantial heat loss to the surroundings (convection to surrounding air, conduction into copper can/tripod/gauze).\n  - Incomplete combustion of ethanol forming carbon monoxide (CO) and soot (C), which releases significantly less heat than complete combustion to CO₂.\n* (b) Improvements to minimize heat loss:\n  - Add an insulating lid to the calorimeter to reduce evaporative and convective heat loss from the water surface.\n  - Place a draught shield around the spirit burner and calorimeter to shield the flame from air currents.\n  - Minimize the distance between the flame and the bottom of the calorimeter.\n* (c) Evaporation of fuel:\n  - Volatile ethanol evaporates readily from the hot porous wick even after extinguishing the flame, leading to an overestimation of the mass of fuel combusted.\n  - Overestimated fuel mass leads to a smaller calculated ΔH_c value.\n  - Minimised by replacing the tight-fitting burner cap immediately upon extinguishing the flame before re-weighing.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q05",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "heat loss to surroundings", text: "State heat lost to surrounding air / calorimeter / tripod." },
+        { mark: 1, keyword: "incomplete combustion / soot formation", text: "State incomplete combustion producing CO or carbon/soot." },
+        { mark: 1, keyword: "draught shield", text: "Suggest adding a draught shield around the flame." },
+        { mark: 1, keyword: "insulating lid", text: "Suggest putting an insulating lid on the calorimeter." },
+        { mark: 1, keyword: "evaporation from wick / replace cap immediately", text: "State fuel evaporates from wick; remedy by replacing cap immediately." }
+      ],
+      examinerTips: "Do not say 'measurement error' or 'human error'. Specify the physical mechanism: heat loss to surrounding air or incomplete combustion forming soot."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q06",
+    question: "A student investigates the relative rates of hydrolysis of three primary halogenoalkanes: 1-chlorobutane, 1-bromobutane, and 1-iodobutane (Core Practical 4).\nEqual amounts ($1.0\\text{ cm}^3$) of each halogenoalkane are added to separate test tubes containing ethanol. The tubes are placed in a water bath at $50^\\circ\\text{C}$ with a tube of aqueous silver nitrate, $\\text{AgNO}_3(aq)$. After 5 minutes, $1.0\\text{ cm}^3$ of $\\text{AgNO}_3(aq)$ is added to each tube, and a stopwatch is started.\n\n(a) State the role of ethanol in this reaction mixture.\n(b) State why the test tubes are heated in a water bath rather than directly over a Bunsen burner flame.\n(c) Describe the observations and order of precipitate formation for the three halogenoalkanes.\n(d) Explain the trend in the rate of hydrolysis in terms of bond enthalpy versus bond polarity.",
+    options: [
+      { text: "(a) Acts as a mutual solvent; (b) Halogenoalkanes and ethanol are highly flammable; (c) 1-iodobutane forms yellow precipitate fastest, 1-bromobutane forms cream precipitate, 1-chlorobutane forms white precipitate slowest; (d) C-I bond has the lowest bond enthalpy and breaks most easily, which outweighs bond polarity" },
+      { text: "(a) Acts as a catalyst; (b) Water bath is colder; (c) 1-chlorobutane forms yellow precipitate fastest; (d) C-Cl is most polar so it reacts fastest" },
+      { text: "(a) Oxidising agent; (b) Bunsen burner breaks test tubes; (c) All form white precipitates at the same time; (d) Bond enthalpies are identical" },
+      { text: "(a) Dehydrating agent; (b) Halogenoalkanes explode in air; (c) 1-bromobutane reacts fastest; (d) Electronegativity dictates rate completely" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Role of ethanol:\n  - Halogenoalkanes are non-polar / weakly polar and insoluble in water; aqueous silver nitrate is ionic and water-soluble.\n  - Ethanol acts as a common (mutual) solvent, allowing the halogenoalkane and water/Ag⁺ ions to mix into a single homogeneous phase.\n* (b) Safety consideration:\n  - Halogenoalkanes and ethanol are volatile and highly flammable liquids; heating in a water bath eliminates the naked flame hazard.\n* (c) Observations:\n  - 1-iodobutane: Yellow precipitate (AgI) forms first (within seconds).\n  - 1-bromobutane: Cream precipitate (AgBr) forms next (after 1-2 minutes).\n  - 1-chlorobutane: White precipitate (AgCl) forms slowest (after several minutes or very faintly).\n* (d) Explanation of trend:\n  - Bond enthalpy decreases down Group 7: C-Cl (467 kJ mol⁻¹) > C-Br (340 kJ mol⁻¹) > C-I (280 kJ mol⁻¹).\n  - The weaker the C-X bond, the lower the activation energy for the carbon-halogen bond cleavage in the rate-determining step.\n  - Bond enthalpy is the overriding factor; bond polarity (which would favour C-Cl) is less important.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q06",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "mutual solvent / miscibility", text: "State ethanol acts as a mutual solvent to dissolve both halogenoalkane and aqueous reagents." },
+        { mark: 1, keyword: "flammable organic liquids / no naked flame", text: "State ethanol and halogenoalkanes are flammable, so a water bath prevents fire hazard." },
+        { mark: 1, keyword: "AgI yellow fastest, AgBr cream, AgCl white slowest", text: "State correct colors and arrival order: yellow fastest, cream intermediate, white slowest." },
+        { mark: 1, keyword: "C-I bond enthalpy lowest / C-X bond strength decreases", text: "Explain C-I bond enthalpy is lowest, so C-I bond breaks most readily." },
+        { mark: 1, keyword: "bond enthalpy is the dominant factor over bond polarity", text: "State that bond enthalpy is the dominant factor governing the rate, not bond polarity." }
+      ],
+      examinerTips: "Students often incorrectly argue that C-Cl reacts fastest because chlorine is the most electronegative. Always emphasize: BOND ENTHALPY determines the rate, NOT bond polarity!"
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q07",
+    question: "A student compares the rate of hydrolysis of three structural isomers of $\\text{C}_4\\text{H}_9\\text{Br}$ (Core Practical 4):\n- Isomer 1: 1-bromobutane (primary)\n- Isomer 2: 2-bromobutane (secondary)\n- Isomer 3: 2-bromo-2-methylpropane (tertiary)\nEach isomer is treated with aqueous ethanolic silver nitrate at room temperature ($20^\\circ\\text{C}$).\n\n(a) State which isomer produces a precipitate of silver bromide most rapidly, and explain this in terms of the reaction mechanism.\n(b) Write the ionic equation for the formation of the precipitate.",
+    options: [
+      { text: "(a) 2-bromo-2-methylpropane reacts almost instantaneously via an SN1 mechanism involving a very stable tertiary carbocation intermediate; (b) Ag⁺(aq) + Br⁻(aq) → AgBr(s)" },
+      { text: "(a) 1-bromobutane reacts fastest because primary carbon has no steric hindrance; (b) Ag + Br → AgBr" },
+      { text: "(a) 2-bromobutane reacts fastest because secondary is always optimal; (b) Ag²⁺ + 2Br⁻ → AgBr₂" },
+      { text: "(a) All three isomers react at identical rates; (b) AgNO₃ + HBr → AgBr + HNO₃" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Relative rates of isomers:\n  - 2-bromo-2-methylpropane (tertiary halogenoalkane) reacts most rapidly (forming a dense cream precipitate almost immediately).\n  - Tertiary halogenoalkanes hydrolyse predominantly via the SN1 mechanism.\n  - The rate-determining step involves heterolytic fission of the C-Br bond to form a tertiary carbocation, (CH₃)₃C⁺.\n  - The tertiary carbocation is strongly stabilized by the positive inductive effect (+I) of three electron-releasing methyl groups, giving a low activation energy.\n  - In contrast, primary halogenoalkanes (1-bromobutane) react via the slower SN2 mechanism involving a crowded transition state.\n* (b) Ionic equation:\n  - Ag⁺(aq) + Br⁻(aq) → AgBr(s) (cream precipitate).",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q07",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "2-bromo-2-methylpropane (tertiary) reacts fastest", text: "Identify tertiary isomer as fastest." },
+        { mark: 1, keyword: "SN1 mechanism via tertiary carbocation", text: "State reaction proceeds via SN1 mechanism involving carbocation formation." },
+        { mark: 1, keyword: "tertiary carbocation stabilized by electron-releasing methyl groups", text: "Explain stability of tertiary carbocation due to inductive effect of 3 alkyl groups." },
+        { mark: 1, keyword: "Ag⁺(aq) + Br⁻(aq) → AgBr(s)", text: "Correct ionic equation with state symbols." }
+      ],
+      examinerTips: "For haloalkane classification hydrolysis rates: Tertiary (SN1, fastest) > Secondary > Primary (SN2, slowest)."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q08",
+    question: "A student prepares ethanal by the partial oxidation of ethanol using acidified sodium dichromate(VI) (Core Practical 5).\nThe student assembles the apparatus for simple distillation.\n\n(a) Identify three essential practical features of the distillation apparatus required to ensure ethanal is obtained successfully and safely.\n(b) State the temperature reading on the thermometer at which ethanal should be collected. [Boiling points: ethanal $= 21^\\circ\\text{C}$, ethanol $= 78^\\circ\\text{C}$, ethanoic acid $= 118^\\circ\\text{C}$]\n(c) Explain why the collection vessel (receiver tube) must be immersed in an ice-water bath.",
+    options: [
+      { text: "(a) Thermometer bulb positioned opposite condenser side-arm, water enters condenser at the lowest point, and anti-bumping granules added; (b) Collect around 21°C; (c) Ethanal has a low boiling point (21°C) and would evaporate as gas into the lab if not chilled" },
+      { text: "(a) Condenser placed vertically, thermometer immersed in liquid, and flask stoppered completely; (b) Collect at 100°C; (c) Ice prevents ethanol from freezing" },
+      { text: "(a) Open flame heating, water enters at top of condenser, and no thermometer needed; (b) Collect at 78°C; (c) Ice makes ethanal heavier" },
+      { text: "(a) Funnel attached to side arm, condenser cooled with liquid nitrogen; (b) Collect at 0°C; (c) Ice neutralizes the acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Key features of the distillation apparatus:\n  - Thermometer bulb must be positioned level with or just below the entrance to the condenser side-arm to measure the true vapor temperature of the distillate.\n  - Water must enter the condenser jacket at the bottom (lowest inlet) and exit at the top, ensuring the jacket fills completely without air pockets for maximum cooling efficiency.\n  - Anti-bumping granules must be added to the distillation flask to ensure smooth, uniform boiling and prevent bumping.\n* (b) Collection temperature:\n  - Collect the fraction boiling between 20°C and 25°C (ethanal boils at 21°C).\n* (c) Ice-water bath necessity:\n  - Ethanal is extremely volatile (boiling point 21°C, close to room temperature).\n  - Cooling the receiver in an ice bath condenses the vapors into a liquid and prevents loss of yield via evaporation into the laboratory atmosphere.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q08",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "thermometer bulb level with side-arm", text: "State thermometer bulb must be level with the entrance to the condenser." },
+        { mark: 1, keyword: "water in at bottom, out at top", text: "State water enters at bottom of condenser jacket and exits at top." },
+        { mark: 1, keyword: "anti-bumping granules", text: "Mention addition of anti-bumping granules for smooth boiling." },
+        { mark: 1, keyword: "collect fraction at ~21°C (20-25°C)", text: "State collection temperature corresponding to boiling point of ethanal (~21°C)." },
+        { mark: 1, keyword: "ice bath prevents evaporation / volatile ethanal bp 21°C", text: "Explain ice bath chills distillate to prevent volatile ethanal from vaporising." }
+      ],
+      examinerTips: "In distillation diagrams, examiners look strictly for: (1) Thermometer bulb at the side-arm junction, (2) Water in at bottom, (3) System open at receiver (no airtight seal)."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q09",
+    question: "In an alternative experiment, a student oxidises ethanol completely to ethanoic acid by heating under reflux with an excess of acidified sodium dichromate(VI) (Core Practical 5).\n\n(a) State the purpose of heating under reflux.\n(b) Explain why anti-bumping granules are added to the reaction flask before heating.\n(c) Explain why the top of the reflux condenser must NOT be stoppered.\n(d) State the color change observed in the reaction mixture as the oxidation proceeds.",
+    options: [
+      { text: "(a) To allow prolonged heating without loss of volatile organic reactants and products; (b) To provide nucleation sites for small bubbles and prevent violent boiling over; (c) To avoid dangerous pressure build-up which could cause the apparatus to explode; (d) Orange to green" },
+      { text: "(a) To distill off ethanoic acid immediately; (b) To catalyze the redox reaction; (c) To let oxygen enter; (d) Purple to colorless" },
+      { text: "(a) To keep the mixture cold; (b) To absorb water; (c) To allow thermometer insertion; (d) Yellow to blue" },
+      { text: "(a) To neutralize sulfuric acid; (b) To filter precipitates; (c) To prevent evaporation; (d) Green to orange" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Purpose of reflux:\n  - Reflux allows continuous boiling and heating of a reaction mixture over an extended period.\n  - Volatile vapors (ethanol and ethanal) rise, condense on the cold inner walls of the vertical condenser, and drip back into the reaction flask.\n  - This ensures complete oxidation to ethanoic acid without losing reactants or products.\n* (b) Anti-bumping granules:\n  - Provide small rough surfaces / nucleation sites that promote the formation of tiny, uniform bubbles.\n  - Prevents superheating of the liquid and violent eruption ('bumping') of liquid into the condenser.\n* (c) Open top of condenser:\n  - If the top is sealed with a stopper, heating would cause thermal expansion of trapped air and gases, resulting in high pressure build-up and explosive shattering of the glassware.\n* (d) Color change:\n  - Orange dichromate(VI) ions (Cr₂O₇²⁻) are reduced to green chromium(III) ions (Cr³⁺).",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q09",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "continuous heating without loss of volatile vapors", text: "Explain reflux allows heating while condensing vapors back into flask." },
+        { mark: 1, keyword: "nucleation sites / prevent violent bumping / smooth boiling", text: "Explain anti-bumping granules promote smooth boiling by providing bubble sites." },
+        { mark: 1, keyword: "prevent pressure build-up / explosion hazard", text: "Explain open condenser prevents hazardous pressure build-up and explosion." },
+        { mark: 1, keyword: "orange (Cr₂O₇²⁻) to green (Cr³⁺)", text: "State color change from orange to green." },
+        { mark: 1, keyword: "excess oxidising agent ensures complete oxidation", text: "Mention excess dichromate ensures full oxidation to ethanoic acid." }
+      ],
+      examinerTips: "Never put a stopper in the top of a reflux condenser! This is a major laboratory safety hazard and will be penalized in exam design questions."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q10",
+    question: "A student prepares 2-chloro-2-methylpropane from 2-methylpropan-2-ol and concentrated hydrochloric acid (Core Practical 6):\n$$\\text{(CH}_3)_3\\text{COH} + \\text{HCl} \\rightarrow \\text{(CH}_3)_3\\text{CCl} + \\text{H}_2\\text{O}$$\nThe reaction mixture is shaken in a separating funnel and two liquid layers form.\n[Densities: 2-chloro-2-methylpropane $= 0.84\\text{ g cm}^{-3}$, aqueous acid layer $\\approx 1.18\\text{ g cm}^{-3}$; boiling point of 2-chloro-2-methylpropane $= 51^\\circ\\text{C}$]\n\n(a) State which layer is the organic layer (upper or lower).\n(b) Explain why the separating funnel must be inverted and the tap opened periodically during shaking.\n(c) The organic layer is washed with aqueous sodium hydrogencarbonate, $\\text{NaHCO}_3(aq)$. State the purpose of this washing and write an equation for the reaction that occurs.\n(d) Name a suitable anhydrous drying agent, and state how the student knows when the organic liquid is completely dry.\n(e) State the temperature range to collect the pure product during final distillation.",
+    options: [
+      { text: "(a) Upper layer (lower density); (b) To release pressure from carbon dioxide and solvent vapor; (c) To neutralize excess unreacted HCl: NaHCO₃ + HCl → NaCl + H₂O + CO₂; (d) Anhydrous sodium sulfate (or magnesium sulfate); liquid changes from cloudy to completely clear; (e) 50°C to 52°C" },
+      { text: "(a) Lower layer; (b) To let air in; (c) To dissolve the organic product; (d) Anhydrous copper sulfate; turns blue; (e) 100°C" },
+      { text: "(a) Both layers mix together; (b) To cool the flask; (c) To oxidize alcohol; (d) Concentrated sulfuric acid; (e) 21°C" },
+      { text: "(a) Upper layer; (b) To prevent boiling; (c) To acidify the solution; (d) Solid sodium hydroxide; (e) 78°C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Organic layer position:\n  - 2-chloro-2-methylpropane has a density of 0.84 g cm⁻³, which is significantly less than the aqueous layer (1.18 g cm⁻³).\n  - The organic layer is the UPPER layer.\n* (b) Inverting and venting separating funnel:\n  - Volatile organic solvent vaporises inside the funnel, and washing with NaHCO₃ produces CO₂ gas.\n  - Opening the tap while inverted periodically releases excess gas pressure, preventing the stopper from blowing out violently.\n* (c) NaHCO₃ washing:\n  - Neutralizes residual concentrated HCl remaining in the organic product.\n  - Reaction: NaHCO₃ + HCl → NaCl + H₂O + CO₂.\n* (d) Drying agent:\n  - Anhydrous sodium sulfate (Na₂SO₄) or anhydrous magnesium sulfate (MgSO₄) or anhydrous calcium chloride (CaCl₂).\n  - When added, it absorbs trace water; the liquid is dry when it changes from turbid/cloudy to completely clear, and the drying agent granules swirl freely rather than clumping.\n* (e) Distillation collection range:\n  - Collect the distillate boiling between 50°C and 52°C (pure 2-chloro-2-methylpropane boils at 51°C).",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q10",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "upper layer (lower density 0.84 g cm⁻³)", text: "Identify organic layer as upper layer due to lower density." },
+        { mark: 1, keyword: "release pressure / release CO₂ gas", text: "Explain inversion and venting releases pressure from CO₂ gas / vapors." },
+        { mark: 1, keyword: "neutralize excess HCl: NaHCO₃ + HCl → NaCl + H₂O + CO₂", text: "State purpose is to neutralize acid and provide correct equation." },
+        { mark: 1, keyword: "anhydrous Na₂SO₄ / MgSO₄ / CaCl₂", text: "Name appropriate anhydrous drying agent." },
+        { mark: 1, keyword: "liquid turns clear / no longer cloudy / free-flowing granules", text: "State clarity of liquid indicates complete dryness." },
+        { mark: 1, keyword: "distillation range 50-52°C", text: "State distillation temperature range centered around 51°C." }
+      ],
+      examinerTips: "Remember: CaCl₂ is a good drying agent for haloalkanes, but NEVER use CaCl₂ to dry alcohols or amines because it forms coordinate complexes with them."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q11",
+    question: "A student carries out qualitative analysis on an unknown solid inorganic salt $X$ (Core Practical 7):\n- Test 1: A clean nichrome wire is dipped into concentrated hydrochloric acid, touched onto solid $X$, and held in the edge of a non-luminous Bunsen flame. A brick-red flame is observed.\n- Test 2: Solid $X$ is dissolved in dilute nitric acid; no effervescence is seen. Aqueous barium chloride, $\\text{BaCl}_2(aq)$, is then added, producing a thick white precipitate.\n\n(a) Identify the cation and anion present in salt $X$.\n(b) State the formula of salt $X$.\n(c) Explain why the nichrome wire must be cleaned with concentrated hydrochloric acid before carrying out the flame test.\n(d) Explain why dilute nitric acid (or dilute hydrochloric acid) is added before the barium chloride solution in Test 2.",
+    options: [
+      { text: "(a) Cation: Ca²⁺, Anion: SO₄²⁻; (b) CaSO₄; (c) Concentrated HCl forms volatile metal chlorides and cleans off sodium contamination; (d) Acid decomposes any carbonate or sulfite ions that would also give a white precipitate" },
+      { text: "(a) Cation: Na⁺, Anion: Cl⁻; (b) NaCl; (c) To cool the wire; (d) Acid makes the precipitate yellow" },
+      { text: "(a) Cation: Cu²⁺, Anion: NO₃⁻; (b) Cu(NO₃)₂; (c) To remove soot; (d) Nitric acid oxidises barium" },
+      { text: "(a) Cation: Ba²⁺, Anion: CO₃²⁻; (b) BaCO₃; (c) To dissolve nichrome; (d) Acid acts as a catalyst" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Ion identification:\n  - Brick-red flame test confirms the calcium ion, Ca²⁺.\n  - Thick white precipitate with BaCl₂(aq) that does not effervesce with acid confirms the sulfate ion, SO₄²⁻ (forming insoluble BaSO₄).\n* (b) Formula: CaSO₄ (calcium sulfate).\n* (c) Wire cleaning procedure:\n  - Concentrated HCl converts metal impurities into volatile metal chloride salts that vaporise easily off the wire in the flame.\n  - Ensures persistent sodium contamination (which gives an intense yellow flame that easily masks other colors) is completely removed until no color is seen.\n* (d) Role of dilute acid in sulfate test:\n  - Barium carbonate (BaCO₃) and barium sulfite (BaSO₃) are also white insoluble precipitates.\n  - Adding acid first reacts with and removes any CO₃²⁻ (giving CO₂ gas) or SO₃²⁻, preventing false-positive white precipitates.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q11",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "Ca²⁺ / calcium ion", text: "Identify cation as Ca²⁺ from brick-red flame." },
+        { mark: 1, keyword: "SO₄²⁻ / sulfate ion", text: "Identify anion as SO₄²⁻ from BaCl₂ white precipitate." },
+        { mark: 1, keyword: "CaSO₄", text: "State correct formula CaSO₄." },
+        { mark: 1, keyword: "volatile chlorides / remove sodium contamination", text: "Explain HCl converts salts to volatile chlorides and eliminates sodium contamination." },
+        { mark: 1, keyword: "remove carbonate / prevent false positive BaCO₃", text: "Explain acid destroys carbonate/sulfite ions to prevent false positive precipitates." }
+      ],
+      examinerTips: "Remember flame colors: Li⁺ = carmine/crimson red, Na⁺ = persistent yellow, K⁺ = lilac, Ca²⁺ = brick-red, Sr²⁺ = red/crimson, Ba²⁺ = apple-green, Cu²⁺ = blue-green."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q12",
+    question: "Three unlabelled bottles contain solid potassium chloride ($\\text{KCl}$), potassium bromide ($\\text{KBr}$), and potassium iodide ($\\text{KI}$) (Core Practical 7).\n\n(a) Describe a sequence of chemical tests using aqueous silver nitrate, $\\text{AgNO}_3(aq)$, and aqueous ammonia, $\\text{NH}_3(aq)$, that would uniquely distinguish and identify each halide salt.\n(b) Write ionic equations, including state symbols, for the formation of the precipitates with silver nitrate.\n(c) State what is observed when concentrated sulfuric acid is added to solid potassium iodide.",
+    options: [
+      { text: "(a) Dissolve in water, add dilute HNO₃ then AgNO₃: KCl gives white ppt soluble in dilute NH₃; KBr gives cream ppt insoluble in dilute but soluble in conc NH₃; KI gives yellow ppt insoluble in both dilute and conc NH₃; (b) Ag⁺(aq) + X⁻(aq) → AgX(s); (c) Purple iodine vapor, black solid, choking SO₂ gas, and rotten-egg smell of H₂S" },
+      { text: "(a) Add NaOH then AgNO₃: all give brown precipitates; (b) Ag + X → AgX; (c) Only white fumes of HI" },
+      { text: "(a) Add BaCl₂: KCl dissolves, KBr forms gas; (b) Ag²⁺ + 2X⁻ → AgX₂; (c) Green chlorine gas evolves" },
+      { text: "(a) Add litmus paper: KCl turns red, KI turns blue; (b) AgX → Ag + X; (c) No reaction occurs" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Halide identification sequence:\n  - Dissolve each salt in distilled water and acidify with dilute nitric acid (HNO₃) to eliminate any carbonate/hydroxide ions.\n  - Add aqueous silver nitrate (AgNO₃):\n    * KCl: White precipitate (AgCl).\n    * KBr: Cream precipitate (AgBr).\n    * KI: Yellow precipitate (AgI).\n  - Add dilute aqueous ammonia (NH₃(aq)):\n    * AgCl dissolves completely to form a colourless solution of [Ag(NH₃)₂]⁺.\n    * AgBr and AgI remain undissolved.\n  - Add concentrated aqueous ammonia (conc NH₃(aq)) to the remaining precipitates:\n    * AgBr dissolves completely.\n    * AgI remains insoluble.\n* (b) Precipitation ionic equations:\n  - Ag⁺(aq) + Cl⁻(aq) → AgCl(s) (white)\n  - Ag⁺(aq) + Br⁻(aq) → AgBr(s) (cream)\n  - Ag⁺(aq) + I⁻(aq) → AgI(s) (yellow)\n* (c) Reaction of KI with concentrated H₂SO₄:\n  - Iodide is a powerful reducing agent, reducing H₂SO₄ to SO₂, S, and H₂S.\n  - Observations: Steamy fumes of HI, purple vapor of I₂, black/grey solid iodine, yellow solid sulfur, and bad-egg odor of H₂S gas.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q12",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "acidify with dilute HNO₃ then add AgNO₃", text: "State addition of dilute HNO₃ followed by AgNO₃." },
+        { mark: 1, keyword: "AgCl white, AgBr cream, AgI yellow", text: "State correct precipitate colors for each halide." },
+        { mark: 1, keyword: "AgCl soluble in dilute NH₃", text: "State AgCl dissolves in dilute aqueous ammonia." },
+        { mark: 1, keyword: "AgBr soluble in concentrated NH₃ / AgI insoluble in both", text: "State AgBr dissolves in concentrated NH₃ while AgI remains insoluble." },
+        { mark: 1, keyword: "Ag⁺(aq) + X⁻(aq) → AgX(s)", text: "Correct ionic precipitation equations with state symbols." },
+        { mark: 1, keyword: "purple vapor (I₂) / rotten-egg gas (H₂S)", text: "State observation of purple I₂ vapors and/or H₂S rotten-egg gas with conc H₂SO₄." }
+      ],
+      examinerTips: "Always acidify with dilute NITRIC acid, NEVER hydrochloric acid (which introduces Cl⁻) or sulfuric acid (which introduces SO₄²⁻ that might precipitate Ba²⁺ or Ag⁺)."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q13",
+    question: "A student is provided with an unknown solid fertilizer sample $Y$ suspected of containing ammonium carbonate, $(\\text{NH}_4)_2\\text{CO}_3$ (Core Practical 7).\n\n(a) Describe a chemical test to confirm the presence of the ammonium ion, $\\text{NH}_4^+$, and state the expected observation.\n(b) Write the ionic equation for the reaction that occurs in the ammonium test.\n(c) Describe a chemical test to confirm the presence of the carbonate ion, $\\text{CO}_3^{2-}$, including the test on the gas produced.",
+    options: [
+      { text: "(a) Warm with aqueous sodium hydroxide; pungent gas turns damp red litmus paper blue; (b) NH₄⁺ + OH⁻ → NH₃ + H₂O; (c) Add dilute hydrochloric acid; effervescence produced turns limewater cloudy/milky" },
+      { text: "(a) Add silver nitrate; white precipitate; (b) NH₄⁺ + Cl⁻ → NH₄Cl; (c) Add barium chloride; turns purple" },
+      { text: "(a) Flame test gives green color; (b) NH₄⁺ → N₂ + 4H⁺; (c) Add bromine water; decolourises" },
+      { text: "(a) Add acidified potassium dichromate; turns green; (b) NH₄⁺ + Cr₂O₇²⁻ → N₂; (c) Heat to 500°C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Ammonium ion test:\n  - Add aqueous sodium hydroxide (NaOH) to solid or solution of Y and warm gently.\n  - Ammonia gas (NH₃) is liberated.\n  - Pungent/choking odor; turns damp red litmus paper blue (or damp universal indicator paper blue/purple).\n* (b) Ionic equation:\n  - NH₄⁺(aq) + OH⁻(aq) → NH₃(g) + H₂O(l).\n* (c) Carbonate ion test:\n  - Add dilute hydrochloric acid (or dilute nitric acid) to solid Y.\n  - Vigorous effervescence / fizzing occurs as carbon dioxide gas is released.\n  - Bubble the gas through calcium hydroxide solution (limewater): turns milky/cloudy due to the precipitation of calcium carbonate:\n  - Ca(OH)₂(aq) + CO₂(g) → CaCO₃(s) + H₂O(l).",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q13",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "warm with NaOH(aq)", text: "State reagent: add aqueous NaOH and heat gently." },
+        { mark: 1, keyword: "damp red litmus paper turns blue", text: "State observation: gas turns damp red litmus paper blue." },
+        { mark: 1, keyword: "NH₄⁺ + OH⁻ → NH₃ + H₂O", text: "Correct ionic equation for ammonia release." },
+        { mark: 1, keyword: "dilute acid produces effervescence, turns limewater milky", text: "Describe carbonate test: acid effervescence and limewater turning cloudy/milky." }
+      ],
+      examinerTips: "Remember litmus paper must be DAMP because ammonia gas must dissolve in moisture on the paper to produce OH⁻ ions that trigger the color change."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q14",
+    question: "A technician finds four unlabelled bottles containing colourless liquids: hex-1-ene, propan-1-ol, propanoic acid, and 1-chlorobutane (Core Practical 8).\n\n(a) Identify the chemical reagent and observation used to uniquely identify hex-1-ene.\n(b) Identify the chemical reagent and observation used to uniquely identify propanoic acid.\n(c) Describe two distinct chemical tests that confirm the presence of propan-1-ol.\n(d) Describe a chemical test to confirm 1-chlorobutane.",
+    options: [
+      { text: "(a) Bromine water: decolourises from orange/brown to colourless; (b) Sodium hydrogencarbonate (NaHCO₃): effervescence of CO₂ gas turning limewater milky; (c) PCl₅ produces steamy fumes of HCl, and acidified potassium dichromate(VI) turns orange to green; (d) Warm with aqueous ethanolic silver nitrate: slow formation of white precipitate of AgCl" },
+      { text: "(a) Litmus paper turns red; (b) Bromine water; (c) Sodium metal melts; (d) Burns with smoky flame" },
+      { text: "(a) Fehling's solution; (b) Tollens' reagent; (c) Add water; (d) Add conc sulfuric acid" },
+      { text: "(a) Sodium hydroxide; (b) Acidified permanganate; (c) Iodine in alkali; (d) Add potassium iodide" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Hex-1-ene test:\n  - Reagent: Bromine water (Br₂(aq)).\n  - Observation: Rapid decolourisation from orange/brown to colourless (electrophilic addition across C=C double bond forming 1,2-dibromohexane / bromoalcohol).\n* (b) Propanoic acid test:\n  - Reagent: Aqueous sodium hydrogencarbonate (NaHCO₃) or sodium carbonate (Na₂CO₃).\n  - Observation: Effervescence / fizzing; colorless gas (CO₂) turns limewater cloudy.\n* (c) Propan-1-ol tests:\n  - Test 1: Add solid phosphorus(V) chloride (PCl₅) at room temperature: vigorous reaction with steamy/misty acidic fumes of HCl (turns damp blue litmus red; forms dense white smoke of NH₄Cl with glass rod dipped in concentrated NH₃).\n  - Test 2: Warm with acidified potassium dichromate(VI) (K₂Cr₂O₇ / H₂SO₄): color changes from orange to green as primary alcohol oxidises.\n* (d) 1-Chlorobutane test:\n  - Add aqueous silver nitrate in ethanol and warm in a water bath at 50-60°C.\n  - Observation: Slow formation of a white precipitate (AgCl).",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q14",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "bromine water decolourises / orange to colourless", text: "Identify alkene using bromine water decolourisation." },
+        { mark: 1, keyword: "NaHCO₃ effervescence / CO₂ gas", text: "Identify carboxylic acid using NaHCO₃ effervescence." },
+        { mark: 1, keyword: "PCl₅ misty fumes of HCl", text: "Identify -OH group using PCl₅ producing steamy acidic fumes." },
+        { mark: 1, keyword: "acidified dichromate orange to green", text: "Confirm primary alcohol oxidation from orange to green." },
+        { mark: 1, keyword: "ethanolic AgNO₃ white ppt", text: "Identify haloalkane by warming with ethanolic AgNO₃ forming white AgCl precipitate." },
+        { mark: 1, keyword: "limewater test for CO₂", text: "State limewater turns cloudy to confirm CO₂." }
+      ],
+      examinerTips: "Do not say 'clear' when meaning 'colourless'. Bromine water turns from orange to colourless, NOT clear."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q15",
+    question: "A student determines the percentage purity of an impure sample of calcium carbonate, $\\text{CaCO}_3$, using a back titration method (Core Practical 2 & 8).\n$2.25\\text{ g}$ of the impure calcium carbonate is reacted with $50.0\\text{ cm}^3$ of $1.00\\text{ mol dm}^{-3}\\ \\text{HCl}$ (an excess):\n$$\\text{CaCO}_3 + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$$\nWhen effervescence ceases, the entire mixture is transferred quantitatively with washings into a $250.0\\text{ cm}^3$ volumetric flask and made up to the graduation mark with deionised water.\n$25.0\\text{ cm}^3$ portions of this diluted solution are titrated against standard $0.100\\text{ mol dm}^{-3}\\ \\text{NaOH}$ using phenolphthalein indicator.\nThe mean titre of $\\text{NaOH}$ required to neutralise the unreacted acid is $20.00\\text{ cm}^3$.\n[$M_r$: $\\text{CaCO}_3 = 100.1$]\n\n(a) Calculate the total initial moles of $\\text{HCl}$ added to the solid.\n(b) Calculate the moles of unreacted $\\text{HCl}$ in the $250.0\\text{ cm}^3$ volumetric flask.\n(c) Calculate the moles of $\\text{HCl}$ that reacted with $\\text{CaCO}_3$.\n(d) Calculate the percentage purity of the calcium carbonate sample by mass.",
+    options: [
+      { text: "(a) Initial moles HCl = 0.0500 mol; (b) Unreacted moles HCl = 0.0200 mol; (c) Reacting moles HCl = 0.0300 mol; (d) Percentage purity = 66.7%" },
+      { text: "(a) Initial moles HCl = 0.0250 mol; (b) Unreacted moles HCl = 0.0100 mol; (c) Reacting moles HCl = 0.0150 mol; (d) Percentage purity = 33.3%" },
+      { text: "(a) Initial moles HCl = 0.1000 mol; (b) Unreacted moles HCl = 0.0500 mol; (c) Reacting moles HCl = 0.0500 mol; (d) Percentage purity = 85.0%" },
+      { text: "(a) Initial moles HCl = 0.0500 mol; (b) Unreacted moles HCl = 0.0020 mol; (c) Reacting moles HCl = 0.0480 mol; (d) Percentage purity = 98.2%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Initial moles of HCl added:\n  - n(HCl initial) = C × V = 1.00 × 0.0500 = 0.0500 mol.\n* (b) Unreacted HCl in volumetric flask:\n  - In 25.0 cm³ aliquot: n(NaOH) = C × V = 0.100 × 0.02000 = 2.00 × 10⁻³ mol.\n  - Reaction is 1:1 (NaOH + HCl → NaCl + H₂O), so n(HCl in 25.0 cm³) = 2.00 × 10⁻³ mol.\n  - Scaling factor for total 250.0 cm³ volumetric flask = 250.0 / 25.0 = 10.\n  - n(HCl unreacted total) = 10 × (2.00 × 10⁻³) = 0.0200 mol.\n* (c) Moles of HCl reacting with CaCO₃:\n  - n(HCl reacted) = n(HCl initial) - n(HCl unreacted) = 0.0500 - 0.0200 = 0.0300 mol.\n* (d) Percentage purity of CaCO₃:\n  - Stoichiometry: CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂ (1:2 ratio).\n  - Moles of pure CaCO₃ = n(HCl reacted) / 2 = 0.0300 / 2 = 0.0150 mol.\n  - Mass of pure CaCO₃ = moles × Mr = 0.0150 × 100.1 = 1.5015 g.\n  - Percentage purity = (mass of pure CaCO₃ / mass of sample) × 100\n  - Percentage purity = (1.5015 / 2.25) × 100 = 66.73% ≈ 66.7%.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q15",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "initial moles HCl = 0.0500 mol", text: "Calculate initial moles of HCl: 0.0500 mol." },
+        { mark: 1, keyword: "moles of HCl in aliquot = 2.00 × 10⁻³ mol", text: "Calculate moles of NaOH and HCl in 25 cm³ titre." },
+        { mark: 1, keyword: "total unreacted HCl = 0.0200 mol", text: "Multiply by 10 to find total unreacted moles in 250 cm³." },
+        { mark: 1, keyword: "reacting HCl = 0.0300 mol", text: "Subtract to find moles of HCl that reacted with CaCO₃: 0.0300 mol." },
+        { mark: 1, keyword: "moles CaCO₃ = 0.0150 mol / mass = 1.50 g", text: "Divide by 2 to find moles of CaCO₃ and calculate mass: 1.50 g." },
+        { mark: 1, keyword: "purity = 66.7%", text: "Calculate percentage purity: 66.7%." }
+      ],
+      examinerTips: "In back titrations, remember to scale the titre up by the dilution factor (here: 250 / 25 = 10) before subtracting from the initial moles added."
+    }
+  }
+);
+
+
 
 
 

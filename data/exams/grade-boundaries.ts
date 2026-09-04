@@ -174,7 +174,36 @@ export const EXAM_PROFILES: Record<string, ExamPaperProfile> = {
     ]
   },
 
-  // 4. Pearson Edexcel IAL Chemistry Unit 4 & 5 (A2)
+  // 4. Pearson Edexcel IAL Chemistry Unit 3 - Practical Skills in Chemistry I
+  'edexcel-ial-u3': {
+    id: 'edexcel-ial-u3',
+    title: 'Pearson Edexcel IAL Chemistry (AS Practical)',
+    board: 'edexcel',
+    curriculumTrack: 'edexcel-as',
+    paperCode: 'WCH13/01',
+    paperName: 'Unit 3: Practical Skills in Chemistry I',
+    paperType: 'practical',
+    defaultQuestionCount: 15,
+    durationMinutes: 80,
+    totalMarks: 50,
+    instructions: [
+      'Written practical examination assessing Core Practicals 1 to 8.',
+      'Answer all questions. Show working in all mathematical calculations with units.',
+      'Responses are evaluated against official Pearson Edexcel practical mark scheme keywords and procedures.',
+      'Refer to the Periodic Table and Data Formulae provided.'
+    ],
+    gradeScale: 'letters',
+    thresholds: [
+      { grade: 'A',  minPercent: 70, label: 'Grade A', color: '#10b981', badgeBg: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', description: 'Outstanding laboratory technique, precise observations, and accurate error analysis.' },
+      { grade: 'B',  minPercent: 60, label: 'Grade B', color: '#06b6d4', badgeBg: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30', description: 'Strong experimental reasoning and correct apparatus identification.' },
+      { grade: 'C',  minPercent: 52, label: 'Grade C', color: '#3b82f6', badgeBg: 'bg-blue-500/20 text-blue-400 border-blue-500/30', description: 'Sound understanding of standard laboratory procedures.' },
+      { grade: 'D',  minPercent: 44, label: 'Grade D', color: '#f59e0b', badgeBg: 'bg-amber-500/20 text-amber-400 border-amber-500/30', description: 'Basic threshold pass for AS Practical Skills.' },
+      { grade: 'E',  minPercent: 36, label: 'Grade E', color: '#f97316', badgeBg: 'bg-orange-500/20 text-orange-400 border-orange-500/30', description: 'Minimum passing mark.' },
+      { grade: 'U',  minPercent: 0,  label: 'Grade U', color: '#ef4444', badgeBg: 'bg-rose-500/20 text-rose-400 border-rose-500/30', description: 'Ungraded.' },
+    ]
+  },
+
+  // 5. Pearson Edexcel IAL Chemistry Unit 4 & 5 (A2)
   'edexcel-ial-a2': {
     id: 'edexcel-ial-a2',
     title: 'Pearson Edexcel IAL Chemistry (A2 Level)',
