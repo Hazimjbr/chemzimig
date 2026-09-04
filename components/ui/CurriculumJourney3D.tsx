@@ -2,16 +2,23 @@
 
 import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { ChevronRight, Sparkles, BookOpen, Layers, CheckCircle2 } from 'lucide-react';
+import { ChevronRight, Sparkles, BookOpen, Lock } from 'lucide-react';
 import { Topic } from '@/data/curriculum';
 import Link from 'next/link';
 
 interface CurriculumJourney3DProps {
     topics: Topic[];
     curriculumId: string;
+    isLocked?: boolean;
+    onLockedClick?: () => void;
 }
 
-export const CurriculumJourney3D: React.FC<CurriculumJourney3DProps> = ({ topics, curriculumId }) => {
+export const CurriculumJourney3D: React.FC<CurriculumJourney3DProps> = ({ 
+    topics, 
+    curriculumId,
+    isLocked = false,
+    onLockedClick
+}) => {
     return (
         <div className="w-full relative py-6">
             {/* Connecting Neon Path Background Line */}
@@ -19,7 +26,14 @@ export const CurriculumJourney3D: React.FC<CurriculumJourney3DProps> = ({ topics
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {topics.map((topic, index) => (
-                    <TiltCard key={topic.id} topic={topic} index={index} curriculumId={curriculumId} />
+                    <TiltCard 
+                        key={topic.id} 
+                        topic={topic} 
+                        index={index} 
+                        curriculumId={curriculumId} 
+                        isLocked={isLocked}
+                        onLockedClick={onLockedClick}
+                    />
                 ))}
             </div>
         </div>
@@ -30,9 +44,17 @@ interface TiltCardProps {
     topic: Topic;
     index: number;
     curriculumId: string;
+    isLocked?: boolean;
+    onLockedClick?: () => void;
 }
 
-const TiltCard: React.FC<TiltCardProps> = ({ topic, index, curriculumId }) => {
+const TiltCard: React.FC<TiltCardProps> = ({ 
+    topic, 
+    index, 
+    curriculumId,
+    isLocked = false,
+    onLockedClick
+}) => {
     const cardRef = useRef<HTMLDivElement>(null);
     const [isHovered, setIsHovered] = useState(false);
 
@@ -104,43 +126,77 @@ const TiltCard: React.FC<TiltCardProps> = ({ topic, index, curriculumId }) => {
                 {/* Card Top: Unit Badge & Number */}
                 <div style={{ transform: "translateZ(30px)" }} className="relative z-10 flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-500/20 to-emerald-500/20 border border-indigo-500/30 flex items-center justify-center font-black text-xl text-white shadow-inner shadow-indigo-500/30 group-hover:scale-110 transition-transform">
-                            {topic.number}
+                        <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center font-black text-xl text-white shadow-inner group-hover:scale-110 transition-transform ${
+                            isLocked 
+                                ? 'bg-amber-500/20 border-amber-500/40 text-amber-300 shadow-amber-500/20' 
+                                : 'bg-gradient-to-tr from-indigo-500/20 to-emerald-500/20 border-indigo-500/30 shadow-indigo-500/30'
+                        }`}>
+                            {isLocked ? <Lock className="w-5 h-5 text-amber-400" /> : topic.number}
                         </div>
                         <div>
-                            <span className="text-[10px] font-extrabold uppercase tracking-widest bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 px-2.5 py-0.5 rounded-full">
+                            <span className={`text-[10px] font-extrabold uppercase tracking-widest border px-2.5 py-0.5 rounded-full ${
+                                isLocked
+                                    ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
+                                    : 'bg-indigo-500/20 text-indigo-400 border-indigo-500/30'
+                            }`}>
                                 Unit {topic.number}
                             </span>
                             <div className="text-xs text-slate-400 mt-0.5">{subtopicsCount} Interactive Lessons</div>
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-1 text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
-                        <Sparkles className="w-3.5 h-3.5" />
-                        <span>{completionPercent}%</span>
-                    </div>
+                    {isLocked ? (
+                        <div className="flex items-center gap-1.5 text-xs font-bold text-amber-300 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full shadow-sm">
+                            <Lock className="w-3.5 h-3.5" />
+                            <span>Locked</span>
+                        </div>
+                    ) : (
+                        <div className="flex items-center gap-1 text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                            <Sparkles className="w-3.5 h-3.5" />
+                            <span>{completionPercent}%</span>
+                        </div>
+                    )}
                 </div>
 
                 {/* Card Title & Description */}
                 <div style={{ transform: "translateZ(25px)" }} className="relative z-10 my-2">
-                    <Link href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=1`}>
-                        <h3 className="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors cursor-pointer line-clamp-2">
-                            {topic.title}
-                        </h3>
-                    </Link>
+                    {isLocked ? (
+                        <div onClick={onLockedClick} className="cursor-pointer">
+                            <h3 className="text-xl font-extrabold text-white group-hover:text-amber-300 transition-colors line-clamp-2">
+                                {topic.title}
+                            </h3>
+                        </div>
+                    ) : (
+                        <Link href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=1`}>
+                            <h3 className="text-xl font-extrabold text-white group-hover:text-indigo-300 transition-colors cursor-pointer line-clamp-2">
+                                {topic.title}
+                            </h3>
+                        </Link>
+                    )}
                 </div>
 
                 {/* Subtopics List */}
                 <div style={{ transform: "translateZ(20px)" }} className="relative z-10 space-y-2 mt-3 mb-6 max-h-[220px] overflow-y-auto pr-1 custom-scrollbar">
                     {topic.subtopics?.map((sub, i) => (
-                        <Link 
-                            key={i} 
-                            href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=${i + 1}`}
-                            className="flex items-center justify-between text-xs text-slate-300 hover:text-emerald-400 p-2 rounded-xl bg-slate-950/40 border border-slate-800/80 hover:border-emerald-500/30 transition-all"
-                        >
-                            <span className="truncate pr-2">• {sub}</span>
-                            <ChevronRight className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
-                        </Link>
+                        isLocked ? (
+                            <div 
+                                key={i}
+                                onClick={onLockedClick}
+                                className="flex items-center justify-between text-xs text-slate-400 hover:text-amber-300 p-2 rounded-xl bg-slate-950/40 border border-slate-800/80 hover:border-amber-500/30 transition-all cursor-pointer"
+                            >
+                                <span className="truncate pr-2">• {sub}</span>
+                                <Lock className="w-3.5 h-3.5 text-amber-400/70 flex-shrink-0" />
+                            </div>
+                        ) : (
+                            <Link 
+                                key={i} 
+                                href={`/dashboard/curriculum/${curriculumId}/${topic.id}?lesson=${i + 1}`}
+                                className="flex items-center justify-between text-xs text-slate-300 hover:text-emerald-400 p-2 rounded-xl bg-slate-950/40 border border-slate-800/80 hover:border-emerald-500/30 transition-all"
+                            >
+                                <span className="truncate pr-2">• {sub}</span>
+                                <ChevronRight className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
+                            </Link>
+                        )
                     ))}
                 </div>
 
@@ -151,13 +207,24 @@ const TiltCard: React.FC<TiltCardProps> = ({ topic, index, curriculumId }) => {
                         <span>Full Syllabus</span>
                     </div>
 
-                    <Link 
-                        href={`/dashboard/curriculum/${curriculumId}/${topic.id}`}
-                        className="inline-flex items-center gap-1.5 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-bold text-xs px-4 py-2 rounded-xl transition-all shadow-md shadow-indigo-500/20 group-hover:shadow-indigo-500/40"
-                    >
-                        <span>Explore 3D Unit</span>
-                        <ChevronRight className="w-4 h-4" />
-                    </Link>
+                    {isLocked ? (
+                        <button
+                            type="button"
+                            onClick={onLockedClick}
+                            className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-xs px-4 py-2 rounded-xl transition-all shadow-md shadow-amber-500/20 group-hover:shadow-amber-500/40"
+                        >
+                            <Lock className="w-3.5 h-3.5" />
+                            <span>Unlock Unit</span>
+                        </button>
+                    ) : (
+                        <Link 
+                            href={`/dashboard/curriculum/${curriculumId}/${topic.id}`}
+                            className="inline-flex items-center gap-1.5 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-bold text-xs px-4 py-2 rounded-xl transition-all shadow-md shadow-indigo-500/20 group-hover:shadow-indigo-500/40"
+                        >
+                            <span>Explore 3D Unit</span>
+                            <ChevronRight className="w-4 h-4" />
+                        </Link>
+                    )}
                 </div>
             </motion.div>
         </motion.div>

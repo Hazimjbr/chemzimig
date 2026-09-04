@@ -13,7 +13,9 @@ import {
     X,
     ShieldCheck,
     Crown,
-    Stethoscope
+    Stethoscope,
+    FileCheck,
+    Printer
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
@@ -27,6 +29,8 @@ const chemistryNavItems = [
     { name: 'Study Hub', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
+    { name: 'Mock Simulator', href: '/dashboard/mock-exam', icon: FileCheck },
+    { name: 'Worksheets', href: '/dashboard/worksheet', icon: Printer },
     { name: 'Leaderboard', href: '/dashboard/leaderboard', icon: Crown },
     { name: 'Profile', href: '/dashboard/profile', icon: User },
 ];
@@ -48,14 +52,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     // lastMode tracks which section the user last actively visited.
     // Rules:
     //  - /dashboard/dental/*   → last_mode = 'dental'
-    //  - /dashboard, /dashboard/curriculum/*, /dashboard/quizzes/* → last_mode = 'chemistry'
-    //  - /dashboard/leaderboard, /dashboard/profile (shared) → read last_mode, don't update it
-    //
-    // HYDRATION NOTE: We start with 'chemistry' as a safe SSR default, then
-    // immediately sync from localStorage in useEffect after client mount.
-    // The sidebar is hidden (opacity-0) until mounted to avoid the flash.
-    // ──────────────────────────────────────────────────────────────────────────
-
+    //  - /dashboard/curriculum/*, /dashboard, /dashboard/quizzes, /dashboard/mock-exam, /dashboard/worksheet → last_mode = 'chemistry'
+    //  - shared pages (/leaderboard, /profile) → do NOT change last_mode, use stored value.
     const [lastMode, setLastMode] = useState<'dental' | 'chemistry'>('chemistry');
 
     // Single effect: runs on mount and on every pathname change.
@@ -69,7 +67,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         } else if (
             pathname === '/dashboard' ||
             pathname?.startsWith('/dashboard/curriculum') ||
-            pathname?.startsWith('/dashboard/quizzes')
+            pathname?.startsWith('/dashboard/quizzes') ||
+            pathname?.startsWith('/dashboard/mock-exam') ||
+            pathname?.startsWith('/dashboard/worksheet')
         ) {
             localStorage.setItem('last_mode', 'chemistry');
             setLastMode('chemistry');
@@ -85,14 +85,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
 
     const isLessonPlayer = pathname?.startsWith('/dashboard/curriculum/') && pathname.split('/').length > 4;
+    const isMockExamSimulator = pathname === '/dashboard/mock-exam';
 
-    if (isLessonPlayer) {
+    if (isLessonPlayer || isMockExamSimulator) {
         return (
-            <div className="h-screen bg-background text-foreground font-sans overflow-hidden flex flex-col transition-colors duration-200">
-                <main className="w-full h-full relative z-0 p-2 pb-0 lg:p-3 lg:pb-0 flex flex-col overflow-hidden">
-                    {/* Visual Background Orbs */}
-                    <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
-                    <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
+            <div className="min-h-screen bg-background text-foreground font-sans overflow-x-hidden flex flex-col transition-colors duration-200">
+                <main className="w-full flex-1 relative z-0 p-0 flex flex-col">
                     {children}
                 </main>
             </div>

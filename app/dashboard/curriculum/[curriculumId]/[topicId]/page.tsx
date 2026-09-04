@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { allCurricula } from '@/data/curriculum';
 
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, BrainCircuit, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
+import { ArrowLeft, BookOpen, BrainCircuit, ChevronLeft, ChevronRight, CheckCircle, Lock } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
@@ -17,6 +17,7 @@ import LessonNotes from '@/components/visual/LessonNotes';
 import MarkdownCarousel from '@/components/visual/MarkdownCarousel';
 import SafeHTML from '@/components/ui/SafeHTML';
 import { sanitizeKatex } from '@/lib/katex-sanitizer';
+import { CurriculumUpsellModal } from '@/components/ui/CurriculumUpsellModal';
 
 const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { ssr: false });
 const GasLawSimulator = dynamic(() => import('@/components/visual/GasLawSimulator'), {
@@ -62,6 +63,14 @@ const RateMechanismBuilder = dynamic(() => import('@/components/visual/RateMecha
 const DisappearingCrossSimulator = dynamic(() => import('@/components/visual/DisappearingCrossSimulator'), {
     ssr: false,
     loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const ElectrolysisSimulator = dynamic(() => import('@/components/visual/ElectrolysisSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[380px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
+});
+const BondingSimulator = dynamic(() => import('@/components/visual/BondingSimulator'), {
+    ssr: false,
+    loading: () => <div className="h-[380px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />
 });
 
 import { edexcelAlevelFlashcards } from '@/data/curriculum/edexcel-alevel/flashcards';
@@ -804,7 +813,8 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
 
     // Gamification & Auth hooks
     const { completeLesson, addXP } = useGamification();
-    const { updateUser } = useAuth();
+    const { user, updateUser } = useAuth();
+    const [showUpsell, setShowUpsell] = useState(false);
 
     // Determine next / prev lessons and topics
     const { prevLink, nextLink } = useMemo(() => {
@@ -910,6 +920,63 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                 <Link href="/dashboard/curriculum" className="text-indigo-400 hover:text-indigo-300">
                     Return to Syllabus
                 </Link>
+            </div>
+        );
+    }
+
+    // Check if the current curriculum track is locked for the user
+    const isSystemAdmin = user?.isAdmin === true || user?.role === 'admin' || user?.role === 'moderator';
+    const userTracks = user?.enrolledTracks && user.enrolledTracks.length > 0
+        ? user.enrolledTracks
+        : (user?.track ? [user.track] : []);
+
+    const isLocked = !isSystemAdmin && userTracks.length > 0 && !userTracks.some(
+        t => curriculumId === t || curriculumId === `${t}-20260106` || curriculumId.startsWith(t + '-')
+    );
+
+    if (isLocked) {
+        return (
+            <div className="w-full min-h-[calc(100vh-140px)] flex items-center justify-center p-4">
+                <CurriculumUpsellModal 
+                    isOpen={showUpsell}
+                    onClose={() => setShowUpsell(false)}
+                    curriculum={curriculum}
+                />
+
+                <div className="max-w-lg w-full rounded-3xl bg-gradient-to-b from-slate-900/90 via-[#0c162c]/95 to-slate-950/95 border border-amber-500/30 p-8 shadow-2xl backdrop-blur-2xl text-center relative overflow-hidden">
+                    <div className="absolute -top-20 -right-20 w-44 h-44 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+                    <div className="absolute -bottom-20 -left-20 w-44 h-44 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
+
+                    <div className="w-16 h-16 rounded-2xl bg-amber-500/15 border border-amber-500/30 mx-auto flex items-center justify-center text-amber-400 mb-6 shadow-inner shadow-amber-500/20">
+                        <Lock className="w-8 h-8" />
+                    </div>
+
+                    <span className="text-xs font-extrabold uppercase tracking-widest text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full">
+                        Track Access Required
+                    </span>
+
+                    <h2 className="text-2xl font-black text-white mt-4 mb-2">
+                        {curriculum.title}
+                    </h2>
+                    <p className="text-sm text-slate-300 mb-6">
+                        This unit is part of a premium curriculum not currently unlocked on your account.
+                    </p>
+
+                    <div className="flex flex-col gap-3">
+                        <button
+                            onClick={() => setShowUpsell(true)}
+                            className="w-full py-3 px-5 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-bold text-sm shadow-lg shadow-amber-500/20 transition-all hover:scale-[1.02] cursor-pointer"
+                        >
+                            View Curriculum Features & Unlock
+                        </button>
+                        <Link
+                            href="/dashboard/curriculum"
+                            className="w-full py-3 px-5 rounded-2xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white font-semibold text-xs transition-colors border border-white/10"
+                        >
+                            Return to Available Syllabuses
+                        </Link>
+                    </div>
+                </div>
             </div>
         );
     }
@@ -1219,6 +1286,16 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                 {/* Dynamic Disappearing Cross Simulator rendered when defined on the active lesson part */}
                                 {currentPart.disappearingCrossSimulator && (
                                     <DisappearingCrossSimulator />
+                                )}
+
+                                {/* Dynamic Electrolysis Simulator rendered when defined on the active lesson part */}
+                                {currentPart.electrolysisSimulator && (
+                                    <ElectrolysisSimulator />
+                                )}
+
+                                {/* Dynamic Bonding Simulator rendered when defined on the active lesson part */}
+                                {currentPart.bondingSimulator && (
+                                    <BondingSimulator />
                                 )}
 
                                 {/* Slide Main Content */}

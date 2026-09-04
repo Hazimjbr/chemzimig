@@ -335,7 +335,7 @@ $$A_r = \\frac{(\\text{Abundance}_A \\% \\times \\text{Mass}_A) + (\\text{Abunda
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 4: Relative Atomic Mass Calculation
-> **Question:** Chlorine consists of two isotopes: $^{35}\\text{Cl}$ (abundance 75%) and $^{37}\\text{Cl}$ (abundance 25%). Calculate the relative atomic mass ($A_r$) of chlorine.
+> **Question:** Chlorine consists of two isotopes: $^{35}\text{Cl}$ (abundance 75%) and $^{37}\text{Cl}$ (abundance 25%). Calculate the relative atomic mass ($A_r$) of chlorine.
 > 
 > **A** 35.0
 > 
@@ -349,16 +349,16 @@ $$A_r = \\frac{(\\text{Abundance}_A \\% \\times \\text{Mass}_A) + (\\text{Abunda
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Apply the Weighted Average Formula:**
-> >    * $A_r = \\frac{(\\text{Abundance}_1 \\times \\text{Mass}_1) + (\\text{Abundance}_2 \\times \\text{Mass}_2)}{100}$
+> >    * $A_r = \frac{(\text{Abundance}_1 \times \text{Mass}_1) + (\text{Abundance}_2 \times \text{Mass}_2)}{100}$
 > > 2. **Substitute values:**
-> >    * $A_r = \\frac{(75 \\times 35) + (25 \\times 37)}{100}$
-> >    * $A_r = \\frac{2625 + 925}{100} = \\frac{3550}{100} = 35.5$
+> >    * $A_r = \frac{(75 \times 35) + (25 \times 37)}{100}$
+> >    * $A_r = \frac{2625 + 925}{100} = \frac{3550}{100} = 35.5$
 > > 3. **Conclusion:**
 > >    * The relative atomic mass is 35.5. The correct option is **B**.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 5: Finding Ar from Fractional Abundance
-> **Question:** A sample of element X contains 80% of $^{10}\\text{X}$ and 20% of $^{11}\\text{X}$. What is the average relative atomic mass ($A_r$) of this sample?
+> **Question:** A sample of element X contains 80% of $^{10}\text{X}$ and 20% of $^{11}\text{X}$. What is the average relative atomic mass ($A_r$) of this sample?
 > 
 > **A** 10.0
 > 
@@ -377,6 +377,31 @@ $$A_r = \\frac{(\\text{Abundance}_A \\% \\times \\text{Mass}_A) + (\\text{Abunda
 > >    * $A_r = \\frac{800 + 220}{100} = \\frac{1020}{100} = 10.2$
 > > 3. **Conclusion:**
 > >    * The $A_r$ of element X is 10.2. The correct option is **B**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Cambridge Silicon Isotopic Abundance
+> **Question:** The table shows the percentage composition by mass of a sample of silicon:
+> 
+> | Isotope | $^{28}\\text{Si}$ | $^{29}\\text{Si}$ | $^{30}\\text{Si}$ |
+> | :---: | :---: | :---: | :---: |
+> | **Percentage (%)** | $92.2$ | $4.70$ | $3.10$ |
+> 
+> Calculate the relative atomic mass ($A_r$) of this sample of silicon. Give your answer to **one decimal place**.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Apply the Relative Atomic Mass Formula:**
+> >    * $A_r = \\frac{(92.2 \\times 28) + (4.70 \\times 29) + (3.10 \\times 30)}{100}$
+> > 2. **Compute Each Product:**
+> >    * $92.2 \\times 28 = 2581.6$
+> >    * $4.70 \\times 29 = 136.3$
+> >    * $3.10 \\times 30 = 93.0$
+> > 3. **Sum and Divide by 100:**
+> >    * $\\text{Sum} = 2581.6 + 136.3 + 93.0 = 2810.9$
+> >    * $A_r = \\frac{2810.9}{100} = 28.109$
+> > 4. **Round to 1 Decimal Place (Cambridge Standard):**
+> >    * $A_r = 28.1$
         `,
         keyPoints: [
             "Atomic number (Z) is the proton count; nucleon number (A) is the total protons + neutrons.",

@@ -1,4 +1,5 @@
 import { LessonPart } from '../../../registry';
+import { svgToken } from '../../../svgToken';
 
 export const lessonTitle = "Kinetic Particle Theory";
 export const lessonNumber = 4;
@@ -6,6 +7,69 @@ export const lessonNumber = 4;
 export const theoryMarkdown = `
 ## Kinetic Particle Theory
 This lesson covers the fundamentals of Kinetic Particle Theory as part of the States of Matter unit in IGCSE Chemistry.
+`;
+
+const gasPressureSvg = `
+<svg viewBox="0 0 680 260" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+    <marker id="impactArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f43f5e" />
+    </marker>
+  </defs>
+
+  <rect width="680" height="260" fill="url(#gpBg)" stroke="#1e293b" stroke-width="2" rx="16" />
+
+  <!-- Title -->
+  <text x="340" y="28" fill="#f8fafc" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Gas Pressure: Collisions with the Container Walls</text>
+
+  <!-- Container Box -->
+  <rect x="70" y="45" width="220" height="180" fill="#0b1329" stroke="#38bdf8" stroke-width="3" rx="10" />
+
+  <!-- Particles and Collision Vectors -->
+  <!-- Colliding with Right Wall -->
+  <circle cx="270" cy="90" r="7" fill="#f43f5e" />
+  <path d="M 235 90 L 265 90" stroke="#f43f5e" stroke-width="2" marker-end="url(#impactArrow)" fill="none" />
+  <line x1="288" y1="80" x2="288" y2="100" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Colliding with Top Wall -->
+  <circle cx="160" cy="55" r="7" fill="#f43f5e" />
+  <path d="M 160 85 L 160 58" stroke="#f43f5e" stroke-width="2" marker-end="url(#impactArrow)" fill="none" />
+  <line x1="150" y1="47" x2="170" y2="47" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Colliding with Left Wall -->
+  <circle cx="90" cy="170" r="7" fill="#f43f5e" />
+  <path d="M 120 170 L 93 170" stroke="#f43f5e" stroke-width="2" marker-end="url(#impactArrow)" fill="none" />
+  <line x1="72" y1="160" x2="72" y2="180" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Colliding with Bottom Wall -->
+  <circle cx="230" cy="210" r="7" fill="#f43f5e" />
+  <path d="M 230 180 L 230 207" stroke="#f43f5e" stroke-width="2" marker-end="url(#impactArrow)" fill="none" />
+  <line x1="220" y1="223" x2="240" y2="223" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Non-colliding particles -->
+  <circle cx="120" cy="115" r="6" fill="#38bdf8" />
+  <circle cx="190" cy="140" r="6" fill="#38bdf8" />
+  <circle cx="150" cy="180" r="6" fill="#38bdf8" />
+
+  <!-- Side Explanatory Cards -->
+  <g transform="translate(320, 48)">
+    <rect width="320" height="75" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+    <text x="15" y="24" fill="#38bdf8" font-size="12" font-weight="bold" font-family="system-ui, sans-serif">🔥 Temperature Effect (Direct)</text>
+    <text x="15" y="44" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Higher T → Particles have more kinetic energy</text>
+    <text x="15" y="62" fill="#cbd5e1" font-size="11" font-weight="semibold" font-family="system-ui, sans-serif">Hit walls more frequently &amp; with greater force</text>
+  </g>
+
+  <g transform="translate(320, 140)">
+    <rect width="320" height="75" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1.5" />
+    <text x="15" y="24" fill="#c084fc" font-size="12" font-weight="bold" font-family="system-ui, sans-serif">📦 Volume Effect (Inverse)</text>
+    <text x="15" y="44" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif">Smaller space → More particles per unit volume</text>
+    <text x="15" y="62" fill="#cbd5e1" font-size="11" font-weight="semibold" font-family="system-ui, sans-serif">Hit walls more frequently → Pressure increases</text>
+  </g>
+</svg>
 `;
 
 export const lessonParts: LessonPart[] = [
@@ -17,18 +81,38 @@ export const lessonParts: LessonPart[] = [
 ### 🔬 Explaining States of Matter and Phase Changes
 
 Kinetic particle theory explains the physical behavior of matter by describing the energy, arrangement, and forces of particles.
+
+### 🏃 Movement and Particle Speed
+
+The rate of movement of particles depends fundamentally on:
+1. **Mass of Particles (Inverse Proportion):** Lighter particles move faster and diffuse more quickly than heavier particles at the same temperature.
+2. **Kinetic Energy of Particles (Direct Proportion):** Particles with higher kinetic energy (higher temperature) move at greater average speeds.
+
+### 💨 Factors Affecting the Rate of Evaporation
+
+Evaporation is the escape of energetic particles from the surface of a liquid. The rate of evaporation depends on three key factors:
+
+> [!NOTE]
+> ### 📋 Key Factors Affecting Evaporation
+> 
+> * **1. Temperature (Direct Proportion):** As temperature increases, a greater fraction of particles possess sufficient kinetic energy to overcome intermolecular attractions and escape the surface.
+> * **2. Surface Area (Direct Proportion):** A larger surface area provides more surface sites from which energetic liquid particles can escape into the gas phase.
+> * **3. Intermolecular Forces (Inverse Proportion):** Liquids with weaker intermolecular forces have higher **volatility** (they evaporate much more rapidly at room temperature, e.g. ethanol vs water).
+
 ### 🌡️ 1. Solid to Liquid (Melting)
 
 1. In the **solid state**, particles are arranged in a regular lattice structure and vibrate in closely packed positions.
 2. **When heated**, particles absorb thermal energy, gaining kinetic energy and vibrating faster.
 3. As the temperature rises, the vibrations become energetic enough to **overcome the intermolecular forces** holding the lattice together.
 4. The lattice structure breaks down, causing the solid to expand. Particles leave their fixed positions and slide over one another, turning into a **liquid**.
+
 ### 🌡️ 2. Liquid to Gas (Boiling / Evaporation)
 
 1. In the **liquid state**, particles are close together but randomly arranged, in constant motion.
 2. **When heated**, particles gain more kinetic energy and move faster.
 3. High-energy particles near the surface (or throughout during boiling) gain enough energy to **break completely free of the intermolecular forces** keeping them in the liquid state.
 4. Particles bounce far apart, becoming a **gas** where they are widely spaced and free to move randomly.
+
 ### ❄️ 3. Condensation and Freezing
 
 1. **When cooled**, particles lose kinetic energy and move slower.
@@ -132,34 +216,31 @@ Kinetic particle theory explains the physical behavior of matter by describing t
 > >    * Solid to gas direct transition. The correct option is **A**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 5: Density differences between states
-> **Question:** Why is a solid substance much denser than the same substance in the gaseous state?
+> #### 📝 Worked Example 5: Heating a Liquid to Vapor
+> **Question:** Heating a liquid causes it to become a vapor. What happens to the molecules of the liquid during this process?
 > 
-> **A** Gas particles are lighter than solid particles.
-> 
-> **B** Solid particles are closely packed with minimal empty space, whereas gas particles are widely spaced with large empty gaps.
-> 
-> **C** Gas particles constantly expand in size.
-> 
-> **D** Solid particles have no intermolecular forces.
+> | | The molecules become bigger | The molecules move further apart |
+> | :--- | :--- | :--- |
+> | A | ✗ | ✗ |
+> | B | ✓ | ✗ |
+> | C | ✗ | ✓ |
+> | D | ✓ | ✓ |
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Define Density:**
-> >    * Density is mass per unit volume ($Density = Mass / Volume$). It depends on how many particles are packed into a given space.
-> > 2. **Compare Particle Packing:**
-> >    * In solids, particles are tightly packed together in a regular lattice with almost no empty space between them.
-> >    * In gases, particles are separated by massive empty spaces.
-> > 3. **Evaluate Options:**
-> >    * The mass of individual particles remains the same (rules out A). Particles do not expand in size (rules out C).
-> > 4. **Conclusion:**
-> >    * The close packing of solids vs. wide spacing of gases accounts for the density difference. The correct option is **B**.
+> > 1. **Evaluate Molecule Size:**
+> >    * Physical phase changes do NOT change the size or structure of individual molecules. The molecules do not become bigger (✗).
+> > 2. **Evaluate Molecule Separation:**
+> >    * Turning liquid into gas overcomes intermolecular forces and separates the particles widely from touching to very large distances. The molecules move further apart (✓).
+> > 3. **Conclusion:**
+> >    * Row **C** is correct.
         `,
         keyPoints: [
             "Melting occurs when solid particles gain enough energy to break out of their fixed lattice positions.",
             "Boiling/evaporation occurs when liquid particles overcome forces to separate completely.",
-            "Cooling causes particles to lose energy, slow down, and form stronger bonds (condensation/freezing)."
+            "Cooling causes particles to lose energy, slow down, and form stronger bonds (condensation/freezing).",
+            "Rate of evaporation increases with higher temperature, larger surface area, and weaker intermolecular forces."
         ]
     },
     {
@@ -170,13 +251,19 @@ Kinetic particle theory explains the physical behavior of matter by describing t
 ### 🎈 What Causes Gas Pressure?
 
 **Gas pressure** is caused by the constant bombardment of moving gas particles hitting the inner walls of their container. Each collision exerts a tiny force, creating overall pressure.
+
+> [!NOTE]
+> ### ⚛️ Gas Pressure Mechanism
+> 
+> ${svgToken(gasPressureSvg)}
+
 ### ⚡ Factors Affecting Gas Pressure
 
 The frequency and force of these collisions determine the gas pressure:
 
 > [!IMPORTANT]
 > ### 🧮 1. Temperature (Direct Proportion)
-> Raising the temperature increases the kinetic energy of the particles. 
+> Raising the temperature increases the average kinetic energy of the particles. 
 > * They move faster, hitting the container walls **more frequently** and with **greater force**, which increases the pressure.
 
 > [!IMPORTANT]
@@ -209,57 +296,34 @@ The frequency and force of these collisions determine the gas pressure:
 > >    * Pressure is due to continuous collisions with the walls. The correct option is **B**.
 
 > [!EXAMPLE]
-> #### 📝 Worked Example 2: Temperature and Gas Pressure
-> **Question:** A sealed metal canister containing a fixed mass of gas is heated. What happens to the gas particles and the pressure inside the canister?
+> #### 📝 Worked Example 2: Conditions for Maximum Collision Frequency
+> **Question:** Which row represents the conditions under which the particles of a gas collide most frequently with the walls?
 > 
-> **A** Particles move faster and the pressure increases because they collide with the walls more frequently and with greater force.
-> 
-> **B** Particles expand in size, causing the pressure to increase.
-> 
-> **C** Particles slow down, reducing the number of collisions and decreasing pressure.
-> 
-> **D** Particles move faster but the pressure remains constant because the metal canister is rigid.
-> 
-> > [!TIP]
-> > **🔑 Step-by-step Solution:**
-> > 
-> > 1. **Analyze Temperature Effect:**
-> >    * Heating increases the temperature, which increases the average kinetic energy of the gas particles. This makes them move faster (rules out C).
-> > 2. **Analyze Volume Constraint:**
-> >    * The metal canister is rigid, so its volume is fixed. The gas cannot expand.
-> > 3. **Relate Speed to Collisions:**
-> >    * Because the particles are moving faster in the same space, they will hit the walls of the canister **more frequently** and **with greater force** per collision. This causes the pressure to rise (rules out D). Particles do not change size (rules out B).
-> > 4. **Conclusion:**
-> >    * Particles move faster and collisions become more frequent and forceful, increasing pressure. The correct option is **A**.
-
-> [!EXAMPLE]
-> #### 📝 Worked Example 3: Volume and Gas Pressure
-> **Question:** If the volume of a sealed gas syringe is decreased at constant temperature, what happens to the gas pressure and why?
-> 
-> **A** The pressure decreases because particles are closer together and attract each other.
-> 
-> **B** The pressure increases because the particles move faster in a smaller space.
-> 
-> **C** The pressure remains constant because temperature is constant.
-> 
-> **D** The pressure increases because the same number of particles are in a smaller space, causing more frequent collisions with the walls.
+> | | Pressure | Temperature |
+> | :--- | :--- | :--- |
+> | A | High | High |
+> | B | High | Low |
+> | C | Low | High |
+> | D | Low | Low |
 > 
 > > [!TIP]
 > > **🔑 Step-by-step Solution:**
 > > 
-> > 1. **Analyze Temperature and Speed:**
-> >    * The temperature is constant, which means the average kinetic energy and average speed of the gas particles remains unchanged (rules out B).
-> > 2. **Analyze Spatial Changes:**
-> >    * Decreasing the volume means the same number of particles are now confined to a smaller space.
-> > 3. **Relate Spacing to Collision Frequency:**
-> >    * Because the space is smaller, the particles do not have to travel as far before hitting a wall. Thus, they collide with the syringe walls **more frequently**. This higher rate of collisions increases the pressure.
+> > 1. **Analyze Temperature Effect on Collision Frequency:**
+> >    * At **High Temperature**, particles have higher average kinetic energy and move at higher velocities, meaning they travel between wall boundaries faster and hit walls more times per second.
+> > 2. **Analyze Pressure Effect on Collision Frequency:**
+> >    * At **High Pressure**, either the gas is compressed into a smaller volume or more particles are packed per unit volume.
+> >    * More particles packed together means vastly more impacts occur on the container surfaces per unit time.
+> > 3. **Combine Both Conditions:**
+> >    * Both High Pressure and High Temperature maximize the rate and frequency of particle collisions.
 > > 4. **Conclusion:**
-> >    * Pressure increases due to more frequent collisions in a smaller volume. The correct option is **D**.
+> >    * Row **A** represents the conditions for highest collision frequency.
         `,
         keyPoints: [
             "Gas pressure results from gas particles colliding with the walls of their container.",
             "Higher temperatures increase gas pressure because particles move faster and hit walls harder and more often.",
-            "Smaller container volumes increase collision frequency, raising gas pressure."
+            "Smaller container volumes increase collision frequency, raising gas pressure.",
+            "High pressure and high temperature maximize the frequency of particle collisions."
         ]
     }
 ];

@@ -215,6 +215,85 @@ const heatingCurveComparisonSvg = `
 </svg>
 `;
 
+const statesOfMatterCycleSvg = `
+<svg viewBox="0 0 680 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cycleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070f1e" />
+      <stop offset="100%" stop-color="#0b1b35" />
+    </linearGradient>
+    <marker id="cycleArrowRed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f43f5e" />
+    </marker>
+    <marker id="cycleArrowBlue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8" />
+    </marker>
+  </defs>
+
+  <rect width="680" height="320" fill="url(#cycleBg)" stroke="#1e293b" stroke-width="2" rx="16" />
+
+  <!-- Title -->
+  <text x="340" y="30" fill="#f8fafc" font-size="14" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Interconversions of the Three States of Matter</text>
+
+  <!-- Top Banner: Endothermic (Energy Given In) -->
+  <rect x="140" y="48" width="400" height="28" rx="8" fill="#f43f5e" fill-opacity="0.15" stroke="#f43f5e" stroke-opacity="0.3" stroke-width="1.5" />
+  <text x="340" y="66" fill="#f43f5e" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">⚡ Energy is taken in / absorbed (Endothermic)</text>
+
+  <!-- State Boxes -->
+  <!-- Solid Box -->
+  <g transform="translate(60, 120)">
+    <rect width="120" height="80" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2" />
+    <text x="60" y="38" fill="#38bdf8" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Solid</text>
+    <text x="60" y="58" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Fixed lattice</text>
+  </g>
+
+  <!-- Liquid Box -->
+  <g transform="translate(280, 120)">
+    <rect width="120" height="80" rx="12" fill="#0f172a" stroke="#34d399" stroke-width="2" />
+    <text x="60" y="38" fill="#34d399" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Liquid</text>
+    <text x="60" y="58" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Touching &amp; sliding</text>
+  </g>
+
+  <!-- Gas Box -->
+  <g transform="translate(500, 120)">
+    <rect width="120" height="80" rx="12" fill="#0f172a" stroke="#c084fc" stroke-width="2" />
+    <text x="60" y="38" fill="#c084fc" font-size="16" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Gas</text>
+    <text x="60" y="58" fill="#94a3b8" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Far apart &amp; free</text>
+  </g>
+
+  <!-- Arrows: Solid <-> Liquid -->
+  <!-- Melting (Right, Red) -->
+  <path d="M 185 145 L 275 145" stroke="#f43f5e" stroke-width="2" marker-end="url(#cycleArrowRed)" fill="none" />
+  <text x="230" y="138" fill="#f43f5e" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Melting</text>
+
+  <!-- Freezing (Left, Blue) -->
+  <path d="M 275 175 L 185 175" stroke="#38bdf8" stroke-width="2" marker-end="url(#cycleArrowBlue)" fill="none" />
+  <text x="230" y="192" fill="#38bdf8" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Freezing</text>
+
+  <!-- Arrows: Liquid <-> Gas -->
+  <!-- Boiling / Evaporating (Right, Red) -->
+  <path d="M 405 145 L 495 145" stroke="#f43f5e" stroke-width="2" marker-end="url(#cycleArrowRed)" fill="none" />
+  <text x="450" y="138" fill="#f43f5e" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Evaporating / Boiling</text>
+
+  <!-- Condensation (Left, Blue) -->
+  <path d="M 495 175 L 405 175" stroke="#38bdf8" stroke-width="2" marker-end="url(#cycleArrowBlue)" fill="none" />
+  <text x="450" y="192" fill="#38bdf8" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Condensation</text>
+
+  <!-- Direct Transitions: Sublimation and Deposition -->
+  <!-- Sublimation (Top curve: Solid -> Gas) -->
+  <path d="M 120 115 C 120 90, 560 90, 560 115" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#cycleArrowRed)" fill="none" />
+  <text x="340" y="98" fill="#f43f5e" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Sublimation (Solid → Gas)</text>
+
+  <!-- Deposition (Bottom curve: Gas -> Solid) -->
+  <path d="M 560 205 C 560 232, 120 232, 120 205" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#cycleArrowBlue)" fill="none" />
+  <text x="340" y="226" fill="#38bdf8" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Deposition / Desublimation (Gas → Solid)</text>
+
+  <!-- Bottom Banner: Exothermic (Energy Given Out) -->
+  <rect x="140" y="246" width="400" height="28" rx="8" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+  <text x="340" y="264" fill="#38bdf8" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">❄️ Energy is given out / released (Exothermic)</text>
+</svg>
+`;
+
 export const lessonParts: LessonPart[] = [
     {
         id: "phase-transitions",
@@ -226,18 +305,69 @@ export const lessonParts: LessonPart[] = [
 A change of state occurs when a substance gains or loses thermal (heat) energy, transitioning between solid, liquid, and gas.
 
 #### 📋 Rules of State Changes:
-1. **Physical Change:** State changes are physical processes. No new chemical substances are formed.
-2. **Reversible:** They can be easily reversed by reversing the temperature change (e.g. melting ice can be frozen back).
-3. **Conservation of Mass:** The mass of the substance stays exactly the same before and after the change of state.
-### 🌡️ The Basic State Changes
+1. **Reversible Change:** They can be reversed by reversing the temperature change (e.g. melted ice can be frozen back into ice).
+2. **Physical Change:** No new chemical substances are formed during state changes; particles remain chemically identical.
+3. **Conservation of Mass:** State changes do NOT change the mass of a substance. $100\\text{ g}$ of ice produces exactly $100\\text{ g}$ of water.
 
-* **Melting:** Solid to Liquid by heating (opposite of Freezing). Occurs at a specific melting point for pure substances.
-* **Freezing:** Liquid to Solid by cooling (opposite of Melting).
-* **Condensation:** Gas to Liquid by cooling (opposite of Boiling).
+> [!NOTE]
+> ### 🔄 Interconversions and Energy Direction
+> 
+> * **Endothermic (Energy Taken In / Absorbed):** Particles gain kinetic energy, overcome intermolecular forces, and move further apart.
+>   * **Melting:** Solid $\\rightarrow$ Liquid
+>   * **Evaporating / Boiling:** Liquid $\\rightarrow$ Gas
+>   * **Sublimation:** Solid $\\rightarrow$ Gas (direct)
+> 
+> * **Exothermic (Energy Given Out / Released):** Particles lose kinetic energy, move slower, and attractive forces pull them closer together.
+>   * **Freezing:** Liquid $\\rightarrow$ Solid
+>   * **Condensation:** Gas $\\rightarrow$ Liquid
+>   * **Deposition (Desublimation):** Gas $\\rightarrow$ Solid (direct)
+> 
+> ${svgToken(statesOfMatterCycleSvg)}
+
+### 🌡️ The Core State Changes
+
+* **Melting:** Solid to liquid by heating (opposite of Freezing). Occurs at a sharp, specific melting point for pure substances.
+* **Freezing:** Liquid to solid by cooling (opposite of Melting). Occurs at the exact same temperature as the melting point for a pure substance.
+* **Boiling:** Liquid to gas throughout the liquid with visible bubbles (opposite of Condensation). Occurs at a specific boiling point.
+* **Evaporating:** Liquid to gas happening only at the surface at a range of temperatures below the boiling point.
+* **Condensation:** Gas to liquid upon cooling (opposite of Boiling).
+* **Sublimation:** Direct change from solid to gas without passing through liquid (opposite of Deposition).
+
+> [!EXAMPLE]
+> #### 📝 Worked Example: Physical Changes and Particle Movement
+> **Question:** Four physical changes are listed:
+> 1. Condensation
+> 2. Evaporation
+> 3. Freezing
+> 4. Sublimation
+> 
+> In which changes do the particles move further apart?
+> 
+> **A** 1 and 3
+> 
+> **B** 2 and 3
+> 
+> **C** 1 and 4
+> 
+> **D** 2 and 4
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Analyze Each Process:**
+> >    * **1. Condensation (Gas $\\rightarrow$ Liquid):** Gas particles are far apart; in a liquid they touch and are close together. Particles move **closer together**.
+> >    * **2. Evaporation (Liquid $\\rightarrow$ Gas):** Liquid particles are touching; in a gas they separate widely with huge gaps. Particles move **further apart**.
+> >    * **3. Freezing (Liquid $\\rightarrow$ Solid):** Particles are locked into a compact, regular lattice. Particles move **closer together** or maintain close packing.
+> >    * **4. Sublimation (Solid $\\rightarrow$ Gas):** Solid particles in a lattice separate into widely spaced gas particles. Particles move **further apart**.
+> > 2. **Identify Matches:**
+> >    * In changes 2 (Evaporation) and 4 (Sublimation), particles move further apart.
+> > 3. **Conclusion:**
+> >    * The correct option is **D**.
         `,
         keyPoints: [
             "State changes are physical, reversible processes that conserve mass.",
-            "Melting is the opposite of freezing; condensation is the opposite of boiling."
+            "Endothermic changes (melting, boiling, sublimation) absorb energy to separate particles.",
+            "Exothermic changes (freezing, condensation, deposition) release energy as particles come closer."
         ]
     },
     {
@@ -403,8 +533,13 @@ When a pure substance is heated or cooled, its temperature changes in a characte
 
 When heating a solid:
 1. **Temperature rises** as the solid particles gain kinetic energy and vibrate faster.
-2. At the **Melting Point** (first plateau), the temperature remains constant. The absorbed heat energy is used as potential energy to **overcome intermolecular forces** holding the solid lattice together, rather than increasing kinetic energy.
-3. Once fully melted, the liquid temperature rises until the **Boiling Point** (second plateau) is reached, where temperature remains constant again to break all remaining attraction forces and turn the liquid into a gas.
+2. At the **Melting Point** (first horizontal plateau), the temperature remains constant even though heating continues.
+   * **Cambridge Examiner Rationale:** The absorbed thermal energy is consumed entirely in **overcoming the intermolecular forces** holding the solid lattice together, rather than increasing particle kinetic energy.
+   * The temperature stays at a fixed degree until **all of the substance has completely melted**.
+3. Once fully melted, the liquid temperature rises until the **Boiling Point** (second plateau) is reached.
+4. **Why the Boiling Plateau is Longer than the Melting Plateau:**
+   * It takes significantly longer and requires much more thermal energy to boil a liquid than to melt the same mass of solid.
+   * **Explanation:** In melting (heat of fusion $\approx 6.01\\text{ kJ/mol}$ for ice), forces are only partially weakened to allow particles to slide. In boiling (heat of vaporization $\approx 40.65\\text{ kJ/mol}$ for water), all remaining intermolecular forces of attraction must be **completely overcome** to separate particles widely into the gas phase.
 
 ${svgToken(heatingCurveSvg)}
 ### ❄️ 2. The Cooling Curve (Exothermic Process)
@@ -558,6 +693,61 @@ ${svgToken(heatingCurveComparisonSvg)}
 > >    * During freezing, the liquid is gradually turning into a solid, meaning both liquid and solid are present together until the freezing is complete.
 > > 3. **Conclusion:**
 > >    * Both liquid and solid states are present during the second plateau. The correct option is **C**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 6: Determining Physical States from Temperature
+> **Question:** A compound X has a melting point of $71\\text{ }^\\circ\\text{C}$ and a boiling point of $375\\text{ }^\\circ\\text{C}$.
+> 
+> Which statement about X is correct?
+> 
+> **A** It is a liquid at $52\\text{ }^\\circ\\text{C}$ and a gas at $175\\text{ }^\\circ\\text{C}$.
+> 
+> **B** It is a liquid at $80\\text{ }^\\circ\\text{C}$ and a gas at $400\\text{ }^\\circ\\text{C}$.
+> 
+> **C** It is a liquid at $75\\text{ }^\\circ\\text{C}$ and a gas at $350\\text{ }^\\circ\\text{C}$.
+> 
+> **D** It is a liquid at $69\\text{ }^\\circ\\text{C}$ and a gas at $380\\text{ }^\\circ\\text{C}$.
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Establish the Temperature Ranges:**
+> >    * Below melting point ($< 71\\text{ }^\\circ\\text{C}$): Substance is a **Solid**.
+> >    * Between melting and boiling ($71\\text{ }^\\circ\\text{C} \\text{ to } 375\\text{ }^\\circ\\text{C}$): Substance is a **Liquid**.
+> >    * Above boiling point ($> 375\\text{ }^\\circ\\text{C}$): Substance is a **Gas**.
+> > 2. **Evaluate the Options:**
+> >    * **Option A:** At $52\\text{ }^\\circ\\text{C}$, it is below $71\\text{ }^\\circ\\text{C}$ (solid, not liquid). Incorrect.
+> >    * **Option B:** At $80\\text{ }^\\circ\\text{C}$, it is between $71\\text{ }^\\circ\\text{C}$ and $375\\text{ }^\\circ\\text{C}$ (liquid). At $400\\text{ }^\\circ\\text{C}$, it is above $375\\text{ }^\\circ\\text{C}$ (gas). Both statements are completely correct!
+> >    * **Option C:** At $350\\text{ }^\\circ\\text{C}$, it is still a liquid, not a gas. Incorrect.
+> >    * **Option D:** At $69\\text{ }^\\circ\\text{C}$, it is a solid, not liquid. Incorrect.
+> > 3. **Conclusion:**
+> >    * The correct option is **B**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 7: Room Temperature Physical States of Related Acids
+> **Question:** The melting points of three related organic acids are given below:
+> * Capric acid: $32\\text{ }^\\circ\\text{C}$
+> * Formic acid: $8\\text{ }^\\circ\\text{C}$
+> * Palmitic acid: $63\\text{ }^\\circ\\text{C}$
+> 
+> The boiling point of all these compounds is well above $100\\text{ }^\\circ\\text{C}$. Room temperature is $20\\text{ }^\\circ\\text{C}$.
+> 
+> Deduce the physical state of each acid at room temperature ($20\\text{ }^\\circ\\text{C}$).
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Compare Room Temperature ($20\\text{ }^\\circ\\text{C}$) with Melting Points:**
+> >    * If $\\text{Room Temp} < \\text{Melting Point}$, the substance has not yet melted and is a **solid**.
+> >    * If $\\text{Melting Point} < \\text{Room Temp} < \\text{Boiling Point}$, the substance has melted but not boiled and is a **liquid**.
+> > 2. **Evaluate Each Acid:**
+> >    * **Capric acid:** Melting point is $32\\text{ }^\\circ\\text{C}$. Since $20\\text{ }^\\circ\\text{C} < 32\\text{ }^\\circ\\text{C}$, it is a **Solid**.
+> >    * **Formic acid:** Melting point is $8\\text{ }^\\circ\\text{C}$. Since $8\\text{ }^\\circ\\text{C} < 20\\text{ }^\\circ\\text{C} < 100\\text{ }^\\circ\\text{C}$, it has already melted and is a **Liquid**.
+> >    * **Palmitic acid:** Melting point is $63\\text{ }^\\circ\\text{C}$. Since $20\\text{ }^\\circ\\text{C} < 63\\text{ }^\\circ\\text{C}$, it is a **Solid**.
+> > 3. **Final Answer:**
+> >    * Capric acid: **Solid**
+> >    * Formic acid: **Liquid**
+> >    * Palmitic acid: **Solid**
         `,
         keyPoints: [
             "Temperature remains constant during a state change because heat energy is used to break/form bonds rather than change kinetic energy.",

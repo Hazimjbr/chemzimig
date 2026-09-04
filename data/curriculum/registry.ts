@@ -31,6 +31,10 @@ export interface LessonPart {
     };
     rateMechanismBuilder?: boolean;
     disappearingCrossSimulator?: boolean;
+    electrolysisSimulator?: boolean;
+    bondingSimulator?: {
+        initialMode?: 'ionic' | 'covalent';
+    };
 }
 
 
@@ -199,6 +203,7 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u2_l2_theory.lessonNumber,
             theory: ci_u2_l2_theory.theoryMarkdown,
             quiz: ci_u2_l2_quiz.lessonQuiz,
+            parts: ci_u2_l2_theory.lessonParts,
         },
         3: {
             title: ci_u2_l3_theory.lessonTitle,
@@ -228,30 +233,35 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u3_l1_theory.lessonNumber,
             theory: ci_u3_l1_theory.theoryMarkdown,
             quiz: ci_u3_l1_quiz.lessonQuiz,
+            parts: (ci_u3_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u3_l2_theory.lessonTitle,
             number: ci_u3_l2_theory.lessonNumber,
             theory: ci_u3_l2_theory.theoryMarkdown,
             quiz: ci_u3_l2_quiz.lessonQuiz,
+            parts: (ci_u3_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u3_l3_theory.lessonTitle,
             number: ci_u3_l3_theory.lessonNumber,
             theory: ci_u3_l3_theory.theoryMarkdown,
             quiz: ci_u3_l3_quiz.lessonQuiz,
+            parts: (ci_u3_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u3_l4_theory.lessonTitle,
             number: ci_u3_l4_theory.lessonNumber,
             theory: ci_u3_l4_theory.theoryMarkdown,
             quiz: ci_u3_l4_quiz.lessonQuiz,
+            parts: (ci_u3_l4_theory as any).lessonParts,
         },
         5: {
             title: ci_u3_l5_theory.lessonTitle,
             number: ci_u3_l5_theory.lessonNumber,
             theory: ci_u3_l5_theory.theoryMarkdown,
             quiz: ci_u3_l5_quiz.lessonQuiz,
+            parts: (ci_u3_l5_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-4': {
@@ -260,24 +270,28 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u4_l1_theory.lessonNumber,
             theory: ci_u4_l1_theory.theoryMarkdown,
             quiz: ci_u4_l1_quiz.lessonQuiz,
+            parts: (ci_u4_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u4_l2_theory.lessonTitle,
             number: ci_u4_l2_theory.lessonNumber,
             theory: ci_u4_l2_theory.theoryMarkdown,
             quiz: ci_u4_l2_quiz.lessonQuiz,
+            parts: (ci_u4_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u4_l3_theory.lessonTitle,
             number: ci_u4_l3_theory.lessonNumber,
             theory: ci_u4_l3_theory.theoryMarkdown,
             quiz: ci_u4_l3_quiz.lessonQuiz,
+            parts: (ci_u4_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u4_l4_theory.lessonTitle,
             number: ci_u4_l4_theory.lessonNumber,
             theory: ci_u4_l4_theory.theoryMarkdown,
             quiz: ci_u4_l4_quiz.lessonQuiz,
+            parts: (ci_u4_l4_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-5': {
@@ -286,24 +300,28 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u5_l1_theory.lessonNumber,
             theory: ci_u5_l1_theory.theoryMarkdown,
             quiz: ci_u5_l1_quiz.lessonQuiz,
+            parts: (ci_u5_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u5_l2_theory.lessonTitle,
             number: ci_u5_l2_theory.lessonNumber,
             theory: ci_u5_l2_theory.theoryMarkdown,
             quiz: ci_u5_l2_quiz.lessonQuiz,
+            parts: (ci_u5_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u5_l3_theory.lessonTitle,
             number: ci_u5_l3_theory.lessonNumber,
             theory: ci_u5_l3_theory.theoryMarkdown,
             quiz: ci_u5_l3_quiz.lessonQuiz,
+            parts: (ci_u5_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u5_l4_theory.lessonTitle,
             number: ci_u5_l4_theory.lessonNumber,
             theory: ci_u5_l4_theory.theoryMarkdown,
             quiz: ci_u5_l4_quiz.lessonQuiz,
+            parts: (ci_u5_l4_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-6': {
@@ -312,30 +330,35 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u6_l1_theory.lessonNumber,
             theory: ci_u6_l1_theory.theoryMarkdown,
             quiz: ci_u6_l1_quiz.lessonQuiz,
+            parts: (ci_u6_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u6_l2_theory.lessonTitle,
             number: ci_u6_l2_theory.lessonNumber,
             theory: ci_u6_l2_theory.theoryMarkdown,
             quiz: ci_u6_l2_quiz.lessonQuiz,
+            parts: (ci_u6_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u6_l3_theory.lessonTitle,
             number: ci_u6_l3_theory.lessonNumber,
             theory: ci_u6_l3_theory.theoryMarkdown,
             quiz: ci_u6_l3_quiz.lessonQuiz,
+            parts: (ci_u6_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u6_l4_theory.lessonTitle,
             number: ci_u6_l4_theory.lessonNumber,
             theory: ci_u6_l4_theory.theoryMarkdown,
             quiz: ci_u6_l4_quiz.lessonQuiz,
+            parts: (ci_u6_l4_theory as any).lessonParts,
         },
         5: {
             title: ci_u6_l5_theory.lessonTitle,
             number: ci_u6_l5_theory.lessonNumber,
             theory: ci_u6_l5_theory.theoryMarkdown,
             quiz: ci_u6_l5_quiz.lessonQuiz,
+            parts: (ci_u6_l5_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-7': {
@@ -344,30 +367,35 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u7_l1_theory.lessonNumber,
             theory: ci_u7_l1_theory.theoryMarkdown,
             quiz: ci_u7_l1_quiz.lessonQuiz,
+            parts: (ci_u7_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u7_l2_theory.lessonTitle,
             number: ci_u7_l2_theory.lessonNumber,
             theory: ci_u7_l2_theory.theoryMarkdown,
             quiz: ci_u7_l2_quiz.lessonQuiz,
+            parts: (ci_u7_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u7_l3_theory.lessonTitle,
             number: ci_u7_l3_theory.lessonNumber,
             theory: ci_u7_l3_theory.theoryMarkdown,
             quiz: ci_u7_l3_quiz.lessonQuiz,
+            parts: (ci_u7_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u7_l4_theory.lessonTitle,
             number: ci_u7_l4_theory.lessonNumber,
             theory: ci_u7_l4_theory.theoryMarkdown,
             quiz: ci_u7_l4_quiz.lessonQuiz,
+            parts: (ci_u7_l4_theory as any).lessonParts,
         },
         5: {
             title: ci_u7_l5_theory.lessonTitle,
             number: ci_u7_l5_theory.lessonNumber,
             theory: ci_u7_l5_theory.theoryMarkdown,
             quiz: ci_u7_l5_quiz.lessonQuiz,
+            parts: (ci_u7_l5_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-8': {
@@ -376,30 +404,35 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u8_l1_theory.lessonNumber,
             theory: ci_u8_l1_theory.theoryMarkdown,
             quiz: ci_u8_l1_quiz.lessonQuiz,
+            parts: (ci_u8_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u8_l2_theory.lessonTitle,
             number: ci_u8_l2_theory.lessonNumber,
             theory: ci_u8_l2_theory.theoryMarkdown,
             quiz: ci_u8_l2_quiz.lessonQuiz,
+            parts: (ci_u8_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u8_l3_theory.lessonTitle,
             number: ci_u8_l3_theory.lessonNumber,
             theory: ci_u8_l3_theory.theoryMarkdown,
             quiz: ci_u8_l3_quiz.lessonQuiz,
+            parts: (ci_u8_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u8_l4_theory.lessonTitle,
             number: ci_u8_l4_theory.lessonNumber,
             theory: ci_u8_l4_theory.theoryMarkdown,
             quiz: ci_u8_l4_quiz.lessonQuiz,
+            parts: (ci_u8_l4_theory as any).lessonParts,
         },
         5: {
             title: ci_u8_l5_theory.lessonTitle,
             number: ci_u8_l5_theory.lessonNumber,
             theory: ci_u8_l5_theory.theoryMarkdown,
             quiz: ci_u8_l5_quiz.lessonQuiz,
+            parts: (ci_u8_l5_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-9': {
@@ -408,30 +441,35 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u9_l1_theory.lessonNumber,
             theory: ci_u9_l1_theory.theoryMarkdown,
             quiz: ci_u9_l1_quiz.lessonQuiz,
+            parts: (ci_u9_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u9_l2_theory.lessonTitle,
             number: ci_u9_l2_theory.lessonNumber,
             theory: ci_u9_l2_theory.theoryMarkdown,
             quiz: ci_u9_l2_quiz.lessonQuiz,
+            parts: (ci_u9_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u9_l3_theory.lessonTitle,
             number: ci_u9_l3_theory.lessonNumber,
             theory: ci_u9_l3_theory.theoryMarkdown,
             quiz: ci_u9_l3_quiz.lessonQuiz,
+            parts: (ci_u9_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u9_l4_theory.lessonTitle,
             number: ci_u9_l4_theory.lessonNumber,
             theory: ci_u9_l4_theory.theoryMarkdown,
             quiz: ci_u9_l4_quiz.lessonQuiz,
+            parts: (ci_u9_l4_theory as any).lessonParts,
         },
         5: {
             title: ci_u9_l5_theory.lessonTitle,
             number: ci_u9_l5_theory.lessonNumber,
             theory: ci_u9_l5_theory.theoryMarkdown,
             quiz: ci_u9_l5_quiz.lessonQuiz,
+            parts: (ci_u9_l5_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-10': {
@@ -440,24 +478,28 @@ export const curriculumRegistry: Record<string, Record<number, LessonRegistryIte
             number: ci_u10_l1_theory.lessonNumber,
             theory: ci_u10_l1_theory.theoryMarkdown,
             quiz: ci_u10_l1_quiz.lessonQuiz,
+            parts: (ci_u10_l1_theory as any).lessonParts,
         },
         2: {
             title: ci_u10_l2_theory.lessonTitle,
             number: ci_u10_l2_theory.lessonNumber,
             theory: ci_u10_l2_theory.theoryMarkdown,
             quiz: ci_u10_l2_quiz.lessonQuiz,
+            parts: (ci_u10_l2_theory as any).lessonParts,
         },
         3: {
             title: ci_u10_l3_theory.lessonTitle,
             number: ci_u10_l3_theory.lessonNumber,
             theory: ci_u10_l3_theory.theoryMarkdown,
             quiz: ci_u10_l3_quiz.lessonQuiz,
+            parts: (ci_u10_l3_theory as any).lessonParts,
         },
         4: {
             title: ci_u10_l4_theory.lessonTitle,
             number: ci_u10_l4_theory.lessonNumber,
             theory: ci_u10_l4_theory.theoryMarkdown,
             quiz: ci_u10_l4_quiz.lessonQuiz,
+            parts: (ci_u10_l4_theory as any).lessonParts,
         },
     },
     'cie-igcse-unit-11': {

@@ -240,27 +240,30 @@ When these gases meet, they react to form **ammonium chloride (NH₄Cl)**, which
 
 1. **Position of the White Ring:** The white cloud forms **closer to the hydrochloric acid end** of the tube.
    * **Why?** Ammonia molecules (NH₃, $Mr = 17$) are lighter than hydrogen chloride molecules (HCl, $Mr = 36.5$) and diffuse faster.
-2. **The Reaction Process:** Evaporation → Diffusion → Collision → Reaction.
-3. **Time Lag:** The white ring does **not** form instantly; it takes a few minutes.
-   * **Why?** The diffusing gas particles constantly collide with air particles inside the tube, forcing them into a slow zigzag path.
-### ⚡ Variables Influencing Diffusion Speed
-
-The rate at which particles diffuse depends on several key physical properties:
+2. **The Reaction Process Sequence:**
+   $$\\text{Evaporation (from cotton wool)} \\rightarrow \\text{Diffusion (along tube)} \\rightarrow \\text{Collision (between molecules)} \\rightarrow \\text{Chemical Reaction (forming solid)}$$
+3. **Time Lag (Why the ring takes time to form and is not instantaneous):**
+   * **Mark Scheme Point 1:** The tube is not empty; it is filled with air molecules. The diffusing gas particles constantly collide with these air particles.
+   * **Mark Scheme Point 2:** Gas particles move randomly in all directions (zigzag motion), not in a single straight path towards each other.
+### ⚡ The 4 Core Variables Controlling Diffusion Rate
 
 > [!IMPORTANT]
-> ### 🧮 1. Molecular Mass (Inverse Proportion)
-> Lighter particles (smaller molecular mass $Mr$) move and diffuse faster than heavier particles at the same temperature.
-> $$\\text{Rate of Diffusion} \\propto \\frac{1}{\\sqrt{Mr}}$$
+> ### 🧮 1. Atomic or Molecular Mass ($A_r$ or $M_r$ - Inverse Proportion)
+> Lighter particles (smaller $A_r$ or $M_r$) move and diffuse faster than heavier particles at the same temperature.
+> * Ammonia ($M_r = 17$) diffuses faster than Hydrogen Chloride ($M_r = 36.5$).
 
 > [!IMPORTANT]
 > ### 🧮 2. Temperature (Direct Proportion)
-> Increasing the temperature gives particles more kinetic energy, making them move faster and speed up diffusion.
-> * *Note:* In the $NH_3 + HCl$ tube experiment, raising the temperature forms the white ring faster, but does **not** change its position.
+> Increasing the temperature gives particles more kinetic energy, making them move faster.
+> * *Cambridge Exam Note:* Heating the tube causes the white ring to **form in less time (faster)**, but **does not change its position** (it still forms closer to the HCl end).
 
 > [!IMPORTANT]
-> ### 🧮 3. Medium & Intermolecular Spaces
-> * Gases diffuse much faster than liquids because gas particles have massive intermolecular spaces and minimal obstacles.
-> * Diffusion is fastest in a **vacuum** due to the complete absence of air particles to collide with.
+> ### 🧮 3. Intermolecular Spaces (Phase of Matter)
+> Gases diffuse much faster than liquids because gases have huge intermolecular spaces and negligible attractions, whereas liquid particles are touching and continuously colliding.
+
+> [!IMPORTANT]
+> ### 🧮 4. Presence of Other Substances (Vacuum Effect)
+> Diffusion occurs fastest in a **vacuum** where there are zero opposing particles to collide with.
 
 > [!EXAMPLE]
 > #### 📝 Worked Example 1: Location of White Ring

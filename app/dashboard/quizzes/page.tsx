@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import { allCurricula } from '@/data/curriculum';
@@ -485,8 +486,39 @@ export default function QuizzesPage() {
         setAllQuestions([...filteredStatic, ...modularExamQuestions, ...quizQuestions]);
     }, []);
 
+    // State to allow Admin/Teachers or multi-enrolled students to switch curriculum on the fly
+    const [adminSelectedTrackId, setAdminSelectedTrackId] = useState<string | null>(null);
+
+    // Available tracks for this user:
+    // - Admin: all curricula
+    // - Multi-track student: user.enrolledTracks
+    // - Single-track student: single curriculum
+    const availableTracks = useMemo(() => {
+        if (user?.isAdmin) {
+            return allCurricula.map(c => ({
+                id: c.id.startsWith('edexcel-a2') ? 'edexcel-a2' : c.id.startsWith('edexcel-as') ? 'edexcel-as' : c.id.startsWith('edexcel-igcse') ? 'edexcel-igcse' : c.id.startsWith('cie-as') ? 'cie-as' : c.id.startsWith('cie-alevel') ? 'cie-alevel' : 'cie-igcse',
+                title: c.title
+            }));
+        }
+
+        if (user?.enrolledTracks && user.enrolledTracks.length > 1) {
+            return user.enrolledTracks.map(t => {
+                const clean = t.toLowerCase().trim();
+                const matched = allCurricula.find(c => c.id.startsWith(clean));
+                return {
+                    id: clean,
+                    title: matched ? matched.title : t
+                };
+            });
+        }
+
+        return [];
+    }, [user]);
+
     // 2. Identify student track ID and active curriculum object
     const studentTrackId = useMemo(() => {
+        if (adminSelectedTrackId) return adminSelectedTrackId;
+
         const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         
         let normalized = track.toLowerCase().trim();
@@ -501,7 +533,7 @@ export default function QuizzesPage() {
         }
         
         return normalized;
-    }, [user]);
+    }, [user, adminSelectedTrackId]);
 
     const activeCurriculum = useMemo(() => {
         return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
@@ -800,9 +832,41 @@ export default function QuizzesPage() {
                     <div className="text-center max-w-2xl mx-auto space-y-3">
                         <Compass className="w-12 h-12 text-indigo-400 mx-auto animate-pulse" />
                         <h2 className="text-2xl md:text-3xl font-extrabold">Choose Your Exam Mode</h2>
-                        <p className="text-slate-400 text-sm leading-relaxed">
-                            Currently building exams for your registered curriculum: <strong className="text-indigo-400">{activeCurriculum.title}</strong>
-                        </p>
+                        
+                        {/* Curriculum Display & Admin Switcher */}
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-1">
+                            <p className="text-slate-400 text-sm">
+                                Currently building exams for:
+                            </p>
+                            
+                            {availableTracks.length > 1 ? (
+                                <div className="inline-flex items-center gap-2 bg-indigo-500/15 border border-indigo-500/30 px-3 py-1.5 rounded-2xl shadow-inner">
+                                    <span className="text-[10px] font-black uppercase text-indigo-400 tracking-wider bg-indigo-500/20 px-2 py-0.5 rounded-md">
+                                        {user?.isAdmin ? 'Admin Switcher' : 'My Curricula'}
+                                    </span>
+                                    <select
+                                        value={studentTrackId}
+                                        onChange={e => {
+                                            setAdminSelectedTrackId(e.target.value);
+                                            setSelectedUnit('all');
+                                            setSelectedLesson('all');
+                                            setSelectedCustomUnits([]);
+                                        }}
+                                        className="bg-transparent text-indigo-200 text-sm font-bold outline-none cursor-pointer pr-2"
+                                    >
+                                        {availableTracks.map(track => (
+                                            <option key={track.id} value={track.id} className="bg-[#0b0f1d] text-white">
+                                                {track.title}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                            ) : (
+                                <span className="text-indigo-400 font-bold text-sm bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full">
+                                    {activeCurriculum.title}
+                                </span>
+                            )}
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -1109,9 +1173,26 @@ export default function QuizzesPage() {
                         <div className="space-y-4">
                             <h3 className="text-lg font-bold">Exam Overview</h3>
                             <div className="space-y-3 text-sm">
-                                <div className="flex justify-between">
+                                <div className="flex justify-between items-center">
                                     <span className="text-slate-400">Curriculum:</span>
-                                    <span className="text-white font-semibold">{activeCurriculum.title}</span>
+                                    {availableTracks.length > 1 ? (
+                                        <select
+                                            value={studentTrackId}
+                                            onChange={e => {
+                                                setAdminSelectedTrackId(e.target.value);
+                                                setSelectedUnit('all');
+                                                setSelectedLesson('all');
+                                                setSelectedCustomUnits([]);
+                                            }}
+                                            className="bg-[#0b0f1d] border border-white/10 rounded-lg text-white font-semibold text-xs px-2 py-1 outline-none max-w-[170px]"
+                                        >
+                                            {availableTracks.map(t => (
+                                                <option key={t.id} value={t.id}>{t.title}</option>
+                                            ))}
+                                        </select>
+                                    ) : (
+                                        <span className="text-white font-semibold">{activeCurriculum.title}</span>
+                                    )}
                                 </div>
                                 <div className="flex justify-between">
                                     <span className="text-slate-400">Mode:</span>
@@ -1145,6 +1226,13 @@ export default function QuizzesPage() {
                                 <Play className="w-5 h-5" />
                                 Start Exam
                             </button>
+
+                            <Link
+                                href="/dashboard/worksheet"
+                                className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 py-3 rounded-2xl font-bold text-xs transition-all"
+                            >
+                                <span>Export Paper as Printable PDF</span>
+                            </Link>
 
                             <button
                                 onClick={() => setStep('mode-select')}

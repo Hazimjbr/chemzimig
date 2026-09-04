@@ -168,18 +168,65 @@ The presence of the giant lattice and the sea of mobile, delocalised electrons d
 > 1. **High Melting & Boiling Points:**
 >    * The electrostatic attractions in the metallic bond are strong.
 >    * A large amount of thermal energy is required to overcome these bonds.
-> 2. **Electrical Conductivity:**
+>    * *Exceptions:* Mercury ($Hg$) is liquid at r.t.p.; Group I alkali metals (Sodium, Potassium) have relatively low melting points and can be cut with a knife.
+> 2. **Electrical Conductivity (Solid and Molten):**
 >    * Excellent conductors of electricity in both solid and liquid states.
->    * The mobile, delocalised valence electrons are free to flow and carry electrical charge under a potential difference.
-> 3. **Malleability and Ductility:**
->    * **Malleable:** Can be hammered into thin sheets without breaking.
->    * **Ductile:** Can be drawn/stretched into thin wires.
->    * *Explanation:* When a force is applied, the layers of positive ions slide over each other. The mobile delocalised sea of electrons shifts with them, maintaining the metallic bond and preventing the structure from breaking.
+>    * The mobile, delocalised valence electrons are free to move and carry electrical charge throughout the entire lattice.
+> 3. **Thermal Conductivity (Heat Transfer):**
+>    * Excellent conductors of heat because the free delocalised electrons quickly transfer kinetic energy through the lattice.
+>    * **Silver ($Ag$)** is the best conductor of heat and electricity of all metals, followed closely by **Copper ($Cu$)**.
+> 4. **Malleability and Ductility:**
+>    * **Malleable:** Can be hammered or bent and pressed into different shapes without breaking.
+>    * **Ductile:** Can be stretched into thin wires.
+>    * *Explanation:* When a mechanical force is applied, regular layers of positive metal ions **slide over each other**. The mobile delocalised sea of electrons shifts with them, preventing repulsion and maintaining the metallic bond.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 1: Explaining Electrical Conductivity in Metals
+> **Question:** Why does copper conduct electricity in both the solid and molten states?
+> 
+> **A** Copper ions are free to move throughout the lattice
+> 
+> **B** Delocalised electrons are free to move throughout the structure
+> 
+> **C** Copper atoms form covalent bonds that share electrons
+> 
+> **D** Copper has a low melting point
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Identify the Charge Carrier:**
+> >    * In metals, positive cations are held in lattice positions and do not move to conduct electricity.
+> >    * Electrical current is carried entirely by the sea of free-moving, delocalised valence electrons.
+> > 2. **Conclusion:**
+> >    * The correct option is **B**.
+
+> [!EXAMPLE]
+> #### 📝 Worked Example 2: Explaining Malleability
+> **Question:** Why can a piece of iron be hammered into shape without shattering?
+> 
+> **A** Iron has weak covalent bonds between its atoms
+> 
+> **B** Layers of positive ions can slide over each other without breaking the metallic bond
+> 
+> **C** Iron atoms easily lose neutrons when struck
+> 
+> **D** The delocalised electrons repel each other and expand the metal
+> 
+> > [!TIP]
+> > **🔑 Step-by-step Solution:**
+> > 
+> > 1. **Recall Metallic Structure under Stress:**
+> >    * In metals, atoms/cations are arranged in regular layers.
+> >    * Applying stress causes the layers of positive ions to slide past each other.
+> >    * Because the sea of delocalised electrons is flexible and mobile, it maintains electrostatic attraction with the ions in their new positions, preventing the crystal from cracking or shattering.
+> > 2. **Conclusion:**
+> >    * The correct option is **B**.
         `,
         keyPoints: [
-            "Delocalised electrons carry electrical charge, making metals conductive.",
-            "Sliding layers of cations shielded by mobile electrons make metals malleable and ductile.",
-            "Strong metallic attractions result in high melting points."
+            "Delocalised electrons carry electrical charge and heat throughout the lattice.",
+            "Silver (Ag) is the best electrical and thermal conductor, followed by Copper (Cu).",
+            "Layers of cations slide over each other under force, giving metals malleability and ductility."
         ]
     }
 ];

@@ -45,8 +45,12 @@ export default async function CurriculumPage() {
                 </p>
             </div>
 
-            {/* Curriculum Viewer */}
-            <CurriculumView curricula={filteredCurricula} />
+            {/* Curriculum Viewer with Locked & Enrolled Tracks */}
+            <CurriculumView 
+                curricula={allCurricula} 
+                enrolledTracks={studentTracks}
+                isSystemAdmin={isSystemAdmin}
+            />
         </div>
     );
 }

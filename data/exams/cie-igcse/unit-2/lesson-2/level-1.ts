@@ -12,11 +12,12 @@ export const level1Questions: Question[] = [
       { text: "Element: Has varying composition; Compound: Physically mixed; Mixture: Contains only non-metals" }
     ],
     correctAnswer: 0,
-    explanation: "* An element consists of only one type of atom (e.g. $O_2$, $Fe$) and cannot be broken down into simpler substances by chemical means.\n* A compound contains two or more elements chemically bonded in a fixed ratio (e.g. $H_2O$, $NaCl$).\n* A mixture contains two or more substances that are not chemically joined and can be separated by physical methods (e.g. air, salt water).",
+    explanation: "* An element consists of only one type of atom (e.g. O₂, Fe) and cannot be broken down into simpler substances by chemical means.\n* A compound contains two or more elements chemically bonded in a fixed ratio (e.g. H₂O, NaCl).\n* A mixture contains two or more substances that are not chemically joined and can be separated by physical methods (e.g. air, salt water).",
     level: 1,
     topic: "atoms-elements",
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Specimen Paper 2 Q4",
+    lessonNum: 2,
     createdAt: "2026-05-10T10:00:00Z"
   },
   {
@@ -34,6 +35,80 @@ export const level1Questions: Question[] = [
     topic: "atoms-elements",
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q4",
+    lessonNum: 2,
+    createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_3-compound-desc",
+    question: "Which statement describes a chemical compound?",
+    options: [
+      { text: "It contains two or more elements forming an alloy" },
+      { text: "It contains two or more elements chemically combined in a fixed ratio" },
+      { text: "It contains two or more elements physically combined in variable amounts" },
+      { text: "It contains two or more elements that can be easily separated by filtration" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A compound is formed when two or more different elements chemically combine in a fixed, definite proportion.\n* The resulting compound possesses completely new chemical properties from the elements it was made from.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q3",
+    lessonNum: 2,
+    createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_4-element-formula",
+    question: "Which of the following is the chemical formula of an element?",
+    options: [
+      { text: "H₂O₂" },
+      { text: "H" },
+      { text: "CH₄O" },
+      { text: "H₂" }
+    ],
+    correctAnswer: 3,
+    explanation: "* An element is a pure substance containing only one type of atom (same atomic number).\n* In nature, hydrogen gas is found as stable diatomic molecules with the formula H₂.\n* Isolated H atoms do not exist stably at room conditions, while H₂O₂ and CH₄O are compounds.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q3",
+    lessonNum: 2,
+    createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_5-identify-pure-substance",
+    question: "What is always true for any pure chemical substance?",
+    options: [
+      { text: "It is a solid at room temperature" },
+      { text: "It always boils at 100 °C" },
+      { text: "It has a sharp, precise melting point" },
+      { text: "It contains only one type of atom" }
+    ],
+    correctAnswer: 2,
+    explanation: "* The defining criterion of purity for a chemical substance is that it melts and boils sharply at a single definite temperature.\n* Impure substances melt and boil over a wide range of temperatures.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 23 Q2",
+    lessonNum: 2,
+    createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_6-pure-intended-use",
+    question: "Which substance must be completely pure for its intended use?",
+    options: [
+      { text: "Water for washing a vehicle" },
+      { text: "Limestone for extracting iron in a blast furnace" },
+      { text: "A pharmaceutical drug for curing disease" },
+      { text: "Petroleum for fractional distillation" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Pharmaceutical drugs and medical products must be strictly pure because harmful impurities can cause fatal toxic reactions or dangerous side-effects.\n* Industrial washing or blast furnace limestone do not require high chemical purity.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q2",
+    lessonNum: 2,
     createdAt: "2026-05-10T10:00:00Z"
   }
 ];
+

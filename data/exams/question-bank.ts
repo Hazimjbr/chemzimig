@@ -41,6 +41,392 @@ export const questionBank: Question[] = [
     lessonNum: 1,
     createdAt: "2026-01-15"
   },
+  {
+    id: "q_som_tea_cup-2026",
+    question: "The diagram shows a cup of hot tea. Which row describes the water particles in the air above the cup compared with the water particles in the cup?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Moving faster</th><th class="p-2 border">Closer together</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">✗</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Moving faster (✓), Closer together (✗)" },
+      { text: "Row B: Moving faster (✗), Closer together (✓)" },
+      { text: "Row C: Moving faster (✗), Closer together (✗)" },
+      { text: "Row D: Moving faster (✓), Closer together (✓)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Water particles escaping into the air above the cup are in the gas state (steam/vapor).\n* Gas particles have higher kinetic energy and move faster than liquid particles.\n* Gas particles are much further apart (not closer together), so Closer together is ✗.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_gas_furthest-2026",
+    question: "In which of the following substances are the particles furthest apart at room temperature?",
+    options: [
+      { text: "Salt (NaCl)" },
+      { text: "Methane (CH₄)" },
+      { text: "Ethanol (C₂H₅OH)" },
+      { text: "Sugar (C₁₂H₂₂O₁₁)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* At room temperature (20 °C), salt and sugar are solids, ethanol is a liquid, and methane is a gas.\n* In a gas, particles are separated by vast empty distances, making them furthest apart.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_chem_furthest-2026",
+    question: "In which of the following substances are the particles furthest apart at room temperature?",
+    options: [
+      { text: "Mg" },
+      { text: "Na₂O" },
+      { text: "H₂O" },
+      { text: "H₂" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Mg and Na₂O are giant lattice solids at room temperature.\n* H₂O is a liquid.\n* H₂ (hydrogen) is a gas at room temperature, so its particles are furthest apart.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_methane_volume_particles-2026",
+    question: "In which state does 1 dm³ of methane contain the greatest number of particles?",
+    options: [
+      { text: "Solid" },
+      { text: "Gas at room temperature" },
+      { text: "Liquid" },
+      { text: "Gas at 100 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the solid state, particles are tightly packed with negligible empty space between them.\n* A given volume (1 dm³) of a solid therefore contains the highest density and greatest number of particles compared to liquid and gaseous states.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_kettle_steam_droplets-2026",
+    question: "The steam from a boiling kettle cools as it meets the surrounding air, turning into tiny droplets of liquid water. What is the name of this change of state?",
+    options: [
+      { text: "Condensation" },
+      { text: "Evaporation" },
+      { text: "Sublimation" },
+      { text: "Boiling" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The transition of water vapor (gas) into liquid droplets upon cooling is condensation.\n* The particles lose kinetic energy, slow down, and attractive intermolecular forces pull them together.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_heating_three_substances-2026",
+    question: "Consider these three state changes: 1) When solid iodine is heated, it turns directly into gas. 2) When liquid ammonia is cooled, it turns into solid. 3) When ice is heated, it turns into liquid water. Which row correctly names these three changes?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">When iodine is heated</th><th class="p-2 border">When liquid ammonia is cooled</th><th class="p-2 border">When ice is heated</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Boiling</td><td class="p-2 border">Freezing</td><td class="p-2 border">Melting</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Sublimation</td><td class="p-2 border">Freezing</td><td class="p-2 border">Melting</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Sublimation</td><td class="p-2 border">Condensing</td><td class="p-2 border">Freezing</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Freezing</td><td class="p-2 border">Sublimation</td><td class="p-2 border">Boiling</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Boiling | Freezing | Melting" },
+      { text: "Row B: Sublimation | Freezing | Melting" },
+      { text: "Row C: Sublimation | Condensing | Freezing" },
+      { text: "Row D: Freezing | Sublimation | Boiling" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Solid to gas directly is sublimation.\n* Liquid to solid upon cooling is freezing.\n* Solid to liquid upon heating is melting.\n* Row B correctly identifies all three.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_greatest_increase_distance-2026",
+    question: "Which process causes the greatest increase in the distance between particles?",
+    options: [
+      { text: "Sublimation" },
+      { text: "Condensation" },
+      { text: "Freezing" },
+      { text: "Melting" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In a solid, particles are in contact and tightly packed in a lattice.\n* In sublimation, solid transitions directly into gas, where particles become widely separated with huge distances.\n* This represents the greatest expansion and increase in inter-particle distance.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_substance_L_boiling_point-2026",
+    question: "Substance L melts at -7 °C and is a brown liquid at room temperature (20 °C). Which temperature could be its boiling point?",
+    options: [
+      { text: "-77 °C" },
+      { text: "-7 °C to +7 °C" },
+      { text: "59 °C" },
+      { text: "107 °C to 117 °C" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Since substance L is a pure liquid at room temperature (20 °C), room temperature must be below its boiling point (Boiling Point > 20 °C).\n* Pure substances have sharp boiling points (not a range like 107 °C to 117 °C, which indicates an impure mixture).\n* 59 °C is a sharp temperature above 20 °C (this substance is pure bromine, Br₂).",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_purple_crystal_dissolve_processes-2026",
+    question: "A purple crystal of potassium manganate(VII) is dropped into a beaker of water. After five hours, the entire beaker contains an evenly colored purple solution with no crystal left. Which processes take place in this experiment?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Chemical reaction</th><th class="p-2 border">Diffusing</th><th class="p-2 border">Dissolving</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Chemical reaction (✗), Diffusing (✓), Dissolving (✓)" },
+      { text: "Row B: Chemical reaction (✓), Diffusing (✗), Dissolving (✓)" },
+      { text: "Row C: Chemical reaction (✓), Diffusing (✓), Dissolving (✗)" },
+      { text: "Row D: Chemical reaction (✓), Diffusing (✓), Dissolving (✓)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Dissolving of potassium manganate(VII) in water is a physical change, not a chemical reaction (no new chemical substance is formed; Chemical reaction is ✗).\n* The solid crystal breaks down and dissolves into the water (Dissolving is ✓).\n* The dissolved ions then spread out through continuous random particle motion (Diffusing is ✓).\n* Therefore, Row A is the correct mark scheme answer.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_bromine_random_motion-2026",
+    question: "A gas jar of red-brown bromine vapor is placed beneath an inverted gas jar of colorless air, separated by a glass slide. When the glass slide is removed, the red-brown color spreads upwards until a uniform mixture is formed throughout both jars after one hour. Which statement explains why the bromine vapor and air mix together?",
+    options: [
+      { text: "Bromine is denser than air." },
+      { text: "Bromine is lighter than air." },
+      { text: "Bromine molecules moved upwards, and molecules of air moved downwards." },
+      { text: "Molecules of bromine and air moved randomly in all directions." }
+    ],
+    correctAnswer: 3,
+    explanation: "* According to Cambridge kinetic particle theory mark schemes, diffusion occurs because particles of both gases move randomly in all directions.\n* While bromine molecules do move upwards and air downwards, the underlying scientific reason is their continuous random motion and frequent collisions in all directions, not a directional attraction.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_exhaust_gases_diffuse-2026",
+    question: "Exhaust gases from a car diffuse into the air. Which statement describes what happens to these molecules next?",
+    options: [
+      { text: "The molecules spread further into the air." },
+      { text: "The molecules go back together as they cool." },
+      { text: "The molecules stay where they are." },
+      { text: "The molecules fall to the ground because they are heavier than air molecules." }
+    ],
+    correctAnswer: 0,
+    explanation: "* Gas particles possess high kinetic energy and are in constant random motion.\n* Even if they are heavy or cool down, collisions with surrounding air molecules cause them to continuously spread further and further throughout the atmosphere (net movement from high concentration to low concentration).",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_kmno4_hot_vs_cold_water-2026",
+    question: "A crystal of purple potassium manganate(VII) was added to each of two beakers. One beaker contained hot water and the other contained cold water. In both beakers the purple color spreads out. Which result and explanation are correct?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Result</th><th class="p-2 border">Explanation</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Color spreads faster in cold water</td><td class="p-2 border">Particles move faster at higher temperature</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Color spreads faster in cold water</td><td class="p-2 border">Particles move slower at higher temperature</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Color spreads faster in hot water</td><td class="p-2 border">Particles move slower at higher temperature</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Color spreads faster in hot water</td><td class="p-2 border">Particles move faster at higher temperature</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Color spreads faster in cold water | Particles move faster at higher temperature" },
+      { text: "Row B: Color spreads faster in cold water | Particles move slower at higher temperature" },
+      { text: "Row C: Color spreads faster in hot water | Particles move slower at higher temperature" },
+      { text: "Row D: Color spreads faster in hot water | Particles move faster at higher temperature" }
+    ],
+    correctAnswer: 3,
+    explanation: "* At higher temperatures, water molecules have greater average kinetic energy and move faster.\n* Faster moving particles collide more frequently with the crystal and the dissolved ions, causing diffusion and color spread to occur much faster in hot water.\n* Row D provides both the correct observation and the correct kinetic theory explanation.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_tube_diffusion_line_abcd-2026",
+    question: "In an experiment on diffusion in a glass tube, cotton wool soaked in concentrated aqueous ammonia is placed at one end (near A) and cotton wool soaked in concentrated hydrochloric acid is placed at the other end (near D). When the gases meet, a white solid of ammonium chloride is formed. Which position along the tube (A, B, C or D) shows where the white solid forms?",
+    options: [
+      { text: "Line A" },
+      { text: "Line B" },
+      { text: "Line C" },
+      { text: "Line D" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Ammonia gas (NH₃) has a lower relative molecular mass ($M_r = 17$) than hydrogen chloride gas (HCl, $M_r = 36.5$).\n* Lighter molecules travel faster and diffuse further in a given time.\n* Therefore, NH₃ diffuses past the midpoint (A, B, C) and meets the slower HCl close to the hydrochloric acid end (Position D).",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_very_slow_diffusion_definition-2026",
+    question: "Particles are observed moving very slowly from an area of high concentration to an area of low concentration. Which process is being described?",
+    options: [
+      { text: "A liquid being frozen" },
+      { text: "A substance diffusing through a liquid" },
+      { text: "A substance diffusing through the air" },
+      { text: "A solid melting" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration.\n* In liquids, particles are touching and continuously colliding, with small intermolecular spaces, so diffusion occurs very slowly compared to diffusion in air (gases).",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_som_tea_sugar_two_processes-2026",
+    question: "A sugar lump is placed in a cup of tea. Which two processes must happen in order to spread the sugar particles evenly throughout the tea?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">First process</th><th class="p-2 border">Second process</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Diffusion</td><td class="p-2 border">Dissolving</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Dissolving</td><td class="p-2 border">Melting</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Dissolving</td><td class="p-2 border">Diffusion</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Melting</td><td class="p-2 border">Diffusion</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Diffusion → Dissolving" },
+      { text: "Row B: Dissolving → Melting" },
+      { text: "Row C: Dissolving → Diffusion" },
+      { text: "Row D: Melting → Diffusion" }
+    ],
+    correctAnswer: 2,
+    explanation: "* The solid sugar lump must first dissolve into the hot water (tea) as water molecules collide with it.\n* Once dissolved, the individual sugar molecules diffuse throughout the liquid due to random particle motion until an even concentration is reached.\n* Row C (Dissolving followed by Diffusion) is the correct sequence.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  // Unit 3: Stoichiometry
+  {
+    id: "q_stoich_ammonia_react_o2_mgo-2026",
+    question: "Two atoms of magnesium, Mg, react with one molecule of oxygen, O₂. What is the formula of the product?",
+    options: [
+      { text: "MgO₂" },
+      { text: "Mg₂O" },
+      { text: "MgO" },
+      { text: "Mg₂O₂" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Magnesium is in Group II and forms $\text{Mg}^{2+}$. Oxygen is in Group VI and forms $\text{O}^{2-}$.\n* The ions combine in a 1:1 ratio to form neutral magnesium oxide: $\text{MgO}$.\n* Balanced equation: $2\text{Mg} + \text{O}_2 \rightarrow 2\text{MgO}$.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_stoich_mr_caco3-2026",
+    question: "What is the relative formula mass, Mr, of calcium carbonate, CaCO₃? (Ar: Ca = 40, C = 12, O = 16)",
+    options: [
+      { text: "50" },
+      { text: "68" },
+      { text: "100" },
+      { text: "204" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Relative formula mass $M_r = A_r(\text{Ca}) + A_r(\text{C}) + 3 \times A_r(\text{O})$.\n* $M_r = 40 + 12 + (3 \times 16) = 40 + 12 + 48 = 100$.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_stoich_water_fixed_ratio_combine-2026",
+    question: "Water is formed when 48 g of oxygen combine with 6 g of hydrogen. What mass of oxygen combines with 2 g of hydrogen?",
+    options: [
+      { text: "12 g" },
+      { text: "96 g" },
+      { text: "16 g" },
+      { text: "144 g" }
+    ],
+    correctAnswer: 2,
+    explanation: "* According to the Law of Constant Composition, hydrogen and oxygen always combine in a fixed mass ratio: $\frac{48\text{ g O}}{6\text{ g H}} = 8\text{ g O per 1 g H}$.\n* For $2\text{ g}$ of hydrogen, the mass of oxygen required is: $2\text{ g} \times 8 = 16\text{ g}$.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_stoich_calcium_carbide_ethyne_vol-2026",
+    question: "Calcium carbide, CaC₂, reacts with water to form ethyne, C₂H₂, and calcium hydroxide according to the equation:\n$$\text{CaC}_2\text{(s)} + 2\text{H}_2\text{O(l)} \rightarrow \text{C}_2\text{H}_2\text{(g)} + \text{Ca(OH)}_2\text{(s)}$$\nWhich volume of ethyne gas at r.t.p. is produced when 6 g of water reacts completely with excess calcium carbide? (Ar: H = 1, O = 16; molar gas volume at r.t.p. = 24 dm³/mol)",
+    options: [
+      { text: "4.3 dm³" },
+      { text: "8 dm³" },
+      { text: "4 dm³" },
+      { text: "72 dm³" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $M_r(\text{H}_2\text{O}) = (2 \times 1) + 16 = 18\text{ g/mol}$.\n* $\text{Moles of } \text{H}_2\text{O} = \frac{6\text{ g}}{18\text{ g/mol}} = \frac{1}{3}\text{ mol} \approx 0.333\text{ mol}$.\n* From the stoichiometric equation, $2\text{ moles of } \text{H}_2\text{O}$ produce $1\text{ mole of } \text{C}_2\text{H}_2$.\n* $\text{Moles of } \text{C}_2\text{H}_2 = \frac{1}{2} \times \frac{1}{3} = \frac{1}{6}\text{ mol}$.\n* $\text{Volume of } \text{C}_2\text{H}_2 = \frac{1}{6}\text{ mol} \times 24\text{ dm}^3/\text{mol} = 4\text{ dm}^3$.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_stoich_ethanoic_acid_conc_statement-2026",
+    question: "A solution of ethanoic acid, CH₃COOH, has a concentration of 2 mol/dm³. Which statement about this solution is correct? (Ar: C = 12, H = 1, O = 16)",
+    options: [
+      { text: "20 g of ethanoic acid is dissolved in 10 cm³ of water" },
+      { text: "30 g of ethanoic acid is dissolved in 250 cm³ of water" },
+      { text: "60 g of ethanoic acid is dissolved in 1 dm³ of water" },
+      { text: "120 g of ethanoic acid is dissolved in 2 dm³ of water" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $M_r(\text{CH}_3\text{COOH}) = (2 \times 12) + (4 \times 1) + (2 \times 16) = 24 + 4 + 32 = 60\text{ g/mol}$.\n* A concentration of $2\text{ mol/dm}^3$ corresponds to $2 \times 60 = 120\text{ g/dm}^3$.\n* Checking option B: $250\text{ cm}^3 = 0.25\text{ dm}^3$. Mass dissolved = $120\text{ g/dm}^3 \times 0.25\text{ dm}^3 = 30\text{ g}$. This statement is completely correct!",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
 
   // Atoms, Elements, and Compounds
   {
@@ -2716,4 +3102,755 @@ questionBank.push(
     paperType: "mcq",
     createdAt: "2026-08-10"
   }
-)
+);
+
+// Cambridge IGCSE Unit 4: Electrochemistry Questions
+questionBank.push(
+  {
+    id: "q_elc_hcl_nacl_hydrogen_prod-2026",
+    question: "The diagram shows the electrolysis of concentrated hydrochloric acid and concentrated aqueous sodium chloride using carbon electrodes.\nCell 1: Concentrated hydrochloric acid with electrode 1 (+) and electrode 2 (-).\nCell 2: Concentrated aqueous sodium chloride with electrode 3 (+) and electrode 4 (-).\nAt which electrode(s) is hydrogen produced?",
+    options: [
+      { text: "Electrode 1 only" },
+      { text: "Electrodes 1 and 3" },
+      { text: "Electrodes 2 and 4" },
+      { text: "Electrode 2 only" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Hydrogen ions ($\\text{H}^+$) are positively charged cations attracted to the negative cathode.\n* In Cell 1 (conc. $\\text{HCl}$), the negative electrode is electrode 2; $\\text{H}^+$ is reduced to produce $\\text{H}_2\\text{(g)}.\n* In Cell 2 (conc. $\\text{NaCl}$), the negative electrode is electrode 4; $\\text{Na}^+$ is more reactive than $\\text{H}^+$, so $\\text{H}^+$ is discharged to produce $\\text{H}_2\\text{(g)}.\n* Therefore, hydrogen gas is produced at both electrodes 2 and 4.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_not_electroplated_aqueous-2026",
+    question: "Which metal could not be used for electroplating by using an aqueous solution?",
+    options: [
+      { text: "Chromium" },
+      { text: "Copper" },
+      { text: "Sodium" },
+      { text: "Silver" }
+    ],
+    correctAnswer: 2,
+    explanation: "* In aqueous solutions, $\\text{H}^+$ ions from water are present at the cathode.\n* Sodium is a highly reactive metal situated far above hydrogen in the reactivity series.\n* Therefore, $\\text{H}^+$ is discharged preferentially over $\\text{Na}^+$, forming hydrogen gas rather than depositing sodium metal.\n* Additionally, any sodium formed would immediately react violently with water.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_gas_ratio_substance_x-2026",
+    question: "When substance X is electrolyzed, the amount of gases P and Q formed is shown, where the volume of gas P is twice the volume of gas Q. What is substance X?",
+    options: [
+      { text: "Molten lead(II) bromide" },
+      { text: "Concentrated hydrochloric acid" },
+      { text: "Concentrated aqueous sodium chloride" },
+      { text: "Dilute sulfuric acid" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Dilute sulfuric acid is essentially the electrolysis of acidified water: $2\\text{H}_2\\text{O(l)} \\rightarrow 2\\text{H}_2\\text{(g)} + \\text{O}_2\\text{(g)}.\n* At the cathode, hydrogen gas (P) is evolved: $4\\text{H}^+ + 4e^- \\rightarrow 2\\text{H}_2$.\n* At the anode, oxygen gas (Q) is evolved: $4\\text{OH}^- \\rightarrow \\text{O}_2 + 2\\text{H}_2\\text{O} + 4e^-$.\n* The volume ratio of $\\text{H}_2 : \\text{O}_2$ produced is exactly $2 : 1$.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_dilute_h2so4_products-2026",
+    question: "What are the products at the electrodes when dilute sulfuric acid is electrolyzed using inert electrodes?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Anode (+)</th><th class="p-2 border">Cathode (-)</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Hydrogen</td><td class="p-2 border">Oxygen</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Sulfur</td><td class="p-2 border">Oxygen</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Oxygen</td><td class="p-2 border">Hydrogen</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Sulfur oxide</td><td class="p-2 border">Hydrogen</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Anode = Hydrogen, Cathode = Oxygen" },
+      { text: "Row B: Anode = Sulfur, Cathode = Oxygen" },
+      { text: "Row C: Anode = Oxygen, Cathode = Hydrogen" },
+      { text: "Row D: Anode = Sulfur oxide, Cathode = Hydrogen" }
+    ],
+    correctAnswer: 2,
+    explanation: "* At the positive anode (+), hydroxide ions ($\\text{OH}^-$) are oxidised in preference to sulfate ions ($\\text{SO}_4^{2-}$), producing oxygen gas ($\\text{O}_2$).\n* At the negative cathode (-), hydrogen ions ($\\text{H}^+$) are reduced to form hydrogen gas ($\\text{H}_2$).\n* Row C correctly identifies Oxygen at the anode and Hydrogen at the cathode.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_failed_pan_electroplating-2026",
+    question: "A student sets up an apparatus for plating a steel pan with copper, but mistakenly connects the copper to the cathode (-) and the pan to the anode (+). Which action will correctly plate the pan with copper?",
+    options: [
+      { text: "Making the pan the cathode and the copper the anode" },
+      { text: "Heating the copper sulfate solution to boiling point" },
+      { text: "Increasing the voltage from 3 V to 6 V" },
+      { text: "Cooling the copper sulfate solution in an ice bath" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In electroplating, the object to be coated MUST always be connected to the negative terminal as the cathode (-).\n* Positive metal cations ($\\text{Cu}^{2+}$) in the electrolyte are attracted to the cathode where they gain electrons and deposit as metallic copper.\n* The pure metal coating source (copper) must be the anode (+).",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_molten_silver_iodide-2026",
+    question: "What are the electrode products when molten silver iodide is electrolyzed between inert electrodes?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Anode (+)</th><th class="p-2 border">Cathode (-)</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Hydrogen</td><td class="p-2 border">Iodine</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Iodine</td><td class="p-2 border">Silver</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Silver</td><td class="p-2 border">Iodine</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Silver</td><td class="p-2 border">Oxygen</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Anode = Hydrogen, Cathode = Iodine" },
+      { text: "Row B: Anode = Iodine, Cathode = Silver" },
+      { text: "Row C: Anode = Silver, Cathode = Iodine" },
+      { text: "Row D: Anode = Silver, Cathode = Oxygen" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Molten silver iodide contains only $\\text{Ag}^+$ and $\\text{I}^-$ ions (no water present).\n* At the positive anode (+), negative iodide ions are oxidised to form iodine: $2\\text{I}^- \\rightarrow \\text{I}_2 + 2e^-$.\n* At the negative cathode (-), positive silver ions are reduced to form silver metal: $\\text{Ag}^+ + e^- \\rightarrow \\text{Ag}$.\n* Row B correctly gives Iodine at the anode and Silver at the cathode.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_molten_kbr_row-2026",
+    question: "Which row describes the electrolysis of molten potassium bromide?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Anode (+)</th><th class="p-2 border">Cathode (-)</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Bromine</td><td class="p-2 border">Hydrogen</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Bromine</td><td class="p-2 border">Potassium</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Hydrogen</td><td class="p-2 border">Bromine</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Potassium</td><td class="p-2 border">Bromine</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Anode = Bromine, Cathode = Hydrogen" },
+      { text: "Row B: Anode = Bromine, Cathode = Potassium" },
+      { text: "Row C: Anode = Hydrogen, Cathode = Bromine" },
+      { text: "Row D: Anode = Potassium, Cathode = Bromine" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In molten potassium bromide ($\\text{KBr}$), no water is present.\n* Bromide ions ($\\text{Br}^-$) lose electrons at the positive anode to form bromine ($\\text{Br}_2$).\n* Potassium ions ($\\text{K}^+$) gain electrons at the negative cathode to form potassium metal ($\\text{K}$).\n* Row B is the correct answer.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_silver_plating_spoon_incorrect-2026",
+    question: "The diagram shows apparatus for plating a spoon with silver. Which statement is NOT correct?",
+    options: [
+      { text: "The metal electrode would be made from silver" },
+      { text: "The electrolyte would be a silver salt dissolved in water" },
+      { text: "The spoon would be connected to the negative terminal of the power supply" },
+      { text: "Silver would stick to the spoon because it is a very reactive metal" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Silver is an unreactive precious metal near the bottom of the reactivity series, NOT a very reactive metal.\n* Silver deposits on the spoon because silver cations ($\\text{Ag}^+$) gain electrons (are reduced) at the cathode surface to form solid silver coating.\n* Statements A, B, and C are correct principles of electroplating.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_elc_nacl_litmus_five_minutes-2026",
+    question: "The diagram shows the electrolysis of concentrated aqueous sodium chloride in a U-tube containing litmus indicator. What is the color of the litmus at each electrode after five minutes?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Color at anode (+)</th><th class="p-2 border">Color at cathode (-)</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Blue</td><td class="p-2 border">Red</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Red</td><td class="p-2 border">Blue</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Yellow</td><td class="p-2 border">Colorless</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Colorless</td><td class="p-2 border">Blue</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Anode = Blue, Cathode = Red" },
+      { text: "Row B: Anode = Red, Cathode = Blue" },
+      { text: "Row C: Anode = Yellow, Cathode = Colorless" },
+      { text: "Row D: Anode = Colorless, Cathode = Blue" }
+    ],
+    correctAnswer: 3,
+    explanation: "* At the anode (+), chlorine gas ($\\text{Cl}_2$) is liberated. Chlorine is a powerful bleaching agent that rapidly bleaches litmus to completely colorless.\n* At the cathode (-), hydrogen gas ($\\text{H}_2$) is evolved, leaving an excess of hydroxide ions ($\\text{OH}^-$) in solution. This strongly alkaline sodium hydroxide solution turns litmus blue.\n* Row D correctly matches both electrode observations.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  }
+);
+
+// Cambridge IGCSE Unit 7: Acids, Bases and Salts Questions
+questionBank.push(
+  {
+    id: "q_abs_not_characteristic_base-2026",
+    question: "Which property is NOT a characteristic of a base?",
+    options: [
+      { text: "It reacts with a carbonate to form carbon dioxide" },
+      { text: "It reacts with an acid to form a salt" },
+      { text: "It reacts with an ammonium salt to form ammonia" },
+      { text: "It turns universal indicator paper blue" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Acids react with metal carbonates to liberate carbon dioxide gas ($\\text{CO}_2$).\\n* Bases do not react with metal carbonates to form carbon dioxide.\\n* Bases react with acids to form salt and water, react with ammonium salts to release ammonia, and turn universal indicator blue or purple.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_not_characteristic_acid-2026",
+    question: "Which property is NOT a characteristic of an acid?",
+    options: [
+      { text: "It dissolves magnesium oxide" },
+      { text: "It produces ammonia from ammonium compounds" },
+      { text: "It produces carbon dioxide from a carbonate" },
+      { text: "It produces hydrogen from zinc metal" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Bases and alkalis produce ammonia gas when warmed with ammonium compounds.\\n* Acids do NOT react with ammonium salts to release ammonia.\\n* Acids dissolve basic metal oxides (like $\\text{MgO}$), liberate $\\text{CO}_2$ from carbonates, and produce $\\text{H}_2$ gas from reactive metals like zinc.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_acidity_increases_ph_incorrect-2026",
+    question: "Which statement is NOT correct?",
+    options: [
+      { text: "When a base reacts with an ammonium salt, ammonia is given off" },
+      { text: "When an acid reacts with a base, neutralization takes place" },
+      { text: "When an acid reacts with a carbonate, carbon dioxide is given off" },
+      { text: "When the acidity of a solution increases, the pH increases" }
+    ],
+    correctAnswer: 3,
+    explanation: "* The pH scale has an inverse relationship with acidity (hydrogen ion concentration $[	ext{H}^+]$).\\n* As the acidity of a solution increases, the pH decreases (a lower pH value signifies greater acidity).\\n* Therefore, statement D is false and chemically incorrect.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_metal_oxide_cleaning-2026",
+    question: "Hydrochloric acid is used to clean metals. The acid reacts with the oxide layer on the surface of the metal, forming a salt and water. Which word describes the metal oxide?",
+    options: [
+      { text: "A base" },
+      { text: "An alloy" },
+      { text: "An element" },
+      { text: "An indicator" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Metal oxides react with acids to undergo neutralisation, producing a salt and water.\\n* By definition, a substance that neutralises an acid to form a salt and water is a base.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_two_statements_acid_prop-2026",
+    question: "Which statements are properties of an acid?\nStatement 1: Reacts with ammonium sulfate to form ammonia.\nStatement 2: Turns red litmus blue.",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">1</th><th class="p-2 border">2</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">✗</td><td class="p-2 border">✗</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: 1 (✓), 2 (✓)" },
+      { text: "Row B: 1 (✓), 2 (✗)" },
+      { text: "Row C: 1 (✗), 2 (✓)" },
+      { text: "Row D: 1 (✗), 2 (✗)" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Statement 1 is a property of a base/alkali, not an acid (bases liberate $\\text{NH}_3$ from ammonium salts).\\n* Statement 2 is also a property of a base/alkali (alkalis turn red litmus blue, while acids turn blue litmus red).\\n* Therefore, neither statement is a property of an acid, making Row D correct.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_sodium_carbonate_hcl_balanced-2026",
+    question: "Which equation for the reaction between solid sodium carbonate and dilute hydrochloric acid is correct?",
+    options: [
+      { text: "$\\text{Na}_2\\text{CO}_3\\text{(s)} + \\text{HCl}\\text{(aq)} \\rightarrow \\text{NaCl}\\text{(aq)} + \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{O(l)}$" },
+      { text: "$\\text{Na}_2\\text{CO}_3\\text{(s)} + \\text{HCl}\\text{(aq)} \\rightarrow \\text{Na}_2\\text{Cl}\\text{(aq)} + \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{O(l)}$" },
+      { text: "$\\text{Na}_2\\text{CO}_3\\text{(s)} + 2\\text{HCl}\\text{(aq)} \\rightarrow \\text{NaCl}\\text{(aq)} + \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{O(l)}$" },
+      { text: "$\\text{Na}_2\\text{CO}_3\\text{(s)} + 2\\text{HCl}\\text{(aq)} \\rightarrow 2\\text{NaCl}\\text{(aq)} + \\text{CO}_2\\text{(g)} + \\text{H}_2\\text{O(l)}$" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Sodium carbonate is $\\text{Na}_2\\text{CO}_3$, containing 2 sodium atoms.\\n* Each sodium forms $\\text{NaCl}$, requiring 2 moles of $\\text{HCl}$ to balance the chlorine atoms and supply hydrogen for water.\\n* The stoichiometric balanced equation is $\\text{Na}_2\\text{CO}_3 + 2\\text{HCl} \\rightarrow 2\\text{NaCl} + \\text{H}_2\\text{O} + \\text{CO}_2$.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_most_acidic_substance-2026",
+    question: "The table shows the pH of four substances: Calcium hydroxide (pH 12), Lemon juice (pH 4), Milk (pH 6), and Washing up liquid (pH 8). Which substance is the most acidic?",
+    options: [
+      { text: "Calcium hydroxide" },
+      { text: "Lemon juice" },
+      { text: "Milk" },
+      { text: "Washing up liquid" }
+    ],
+    correctAnswer: 1,
+    explanation: "* On the pH scale, lower numbers indicate greater acidity.\\n* Lemon juice has the lowest pH value ($\\text{pH} = 4$), which means it has the highest concentration of hydrogen ions ($[\\text{H}^+]$) among the four options.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_universal_indicator_wxyz-2026",
+    question: "The table shows the pH of four aqueous solutions: W (pH 7), X (pH 9), Y (pH 2), and Z (pH 5). Universal Indicator is added to each solution. Which row shows the color of each solution after the indicator is added?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">W (pH 7)</th><th class="p-2 border">X (pH 9)</th><th class="p-2 border">Y (pH 2)</th><th class="p-2 border">Z (pH 5)</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Green</td><td class="p-2 border">Blue</td><td class="p-2 border">Red</td><td class="p-2 border">Orange</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Blue</td><td class="p-2 border">Green</td><td class="p-2 border">Orange</td><td class="p-2 border">Red</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Orange</td><td class="p-2 border">Red</td><td class="p-2 border">Blue</td><td class="p-2 border">Green</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Red</td><td class="p-2 border">Orange</td><td class="p-2 border">Green</td><td class="p-2 border">Blue</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Green | Blue | Red | Orange" },
+      { text: "Row B: Blue | Green | Orange | Red" },
+      { text: "Row C: Orange | Red | Blue | Green" },
+      { text: "Row D: Red | Orange | Green | Blue" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At $\\text{pH} = 7$ (neutral), Universal Indicator is green.\\n* At $\\text{pH} = 9$ (weakly alkaline), it is blue.\\n* At $\\text{pH} = 2$ (strongly acidic), it is red.\\n* At $\\text{pH} = 5$ (weakly acidic), it is orange or yellow.\\n* Therefore, Row A is completely correct.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_periodic_acidic_oxide_element-2026",
+    question: "A section of the Periodic Table is shown with elements labeled A (Group I metal), B (Group III metal), C (Group VI non-metal), and D (Group VII non-metal / noble gas period 4). Which element forms an acidic oxide?",
+    options: [
+      { text: "Element A" },
+      { text: "Element B" },
+      { text: "Element C" },
+      { text: "Element D" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Non-metallic elements (such as sulfur or carbon in Group IV-VI) form covalent acidic oxides.\\n* Metallic elements in Group I and II form basic oxides.\\n* Element C is located in the non-metal region (Group VI), so its oxide is acidic.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_oxides_xy_metal_nonmetal-2026",
+    question: "The oxide of element X forms an aqueous solution with pH 4. The oxide of element Y forms a solution that turns Universal Indicator blue. Which row correctly classifies elements X and Y?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Element X</th><th class="p-2 border">Element Y</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Metal</td><td class="p-2 border">Metal</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Non-metal</td><td class="p-2 border">Metal</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Metal</td><td class="p-2 border">Non-metal</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Non-metal</td><td class="p-2 border">Non-metal</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Metal | Metal" },
+      { text: "Row B: Non-metal | Metal" },
+      { text: "Row C: Metal | Non-metal" },
+      { text: "Row D: Non-metal | Non-metal" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Oxide of X has $\\text{pH} = 4$ (acidic), so X must be a non-metal.\\n* Oxide of Y turns Universal Indicator blue (alkaline), so Y must be a metal (basic oxide forming an alkali).\\n* Row B correctly classifies X as a non-metal and Y as a metal.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_two_oxides_reactions_xy-2026",
+    question: "Two oxides, X and Y, are added separately to dilute sulfuric acid and dilute sodium hydroxide:\n* X reacts with dilute sulfuric acid, but does NOT react with sodium hydroxide.\n* Y reacts with aqueous sodium hydroxide, but does NOT react with sulfuric acid.\nWhich type of oxide are X and Y?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Acidic oxide</th><th class="p-2 border">Basic oxide</th><th class="p-2 border">Metallic oxide</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">X</td><td class="p-2 border">Y</td><td class="p-2 border">X</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">X</td><td class="p-2 border">Y</td><td class="p-2 border">Y</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Y</td><td class="p-2 border">X</td><td class="p-2 border">X</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Y</td><td class="p-2 border">X</td><td class="p-2 border">Y</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Acidic = X, Basic = Y, Metallic = X" },
+      { text: "Row B: Acidic = X, Basic = Y, Metallic = Y" },
+      { text: "Row C: Acidic = Y, Basic = X, Metallic = X" },
+      { text: "Row D: Acidic = Y, Basic = X, Metallic = Y" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Oxide X reacts with acid but not alkali $\\rightarrow$ X is a basic oxide (metal oxide).\\n* Oxide Y reacts with alkali but not acid $\\rightarrow$ Y is an acidic oxide (non-metal oxide).\\n* Row C correctly identifies Y as acidic oxide, X as basic oxide, and X as metallic oxide.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_statement_about_oxides_correct-2026",
+    question: "Which statement about oxides is correct?",
+    options: [
+      { text: "Magnesium oxide will react with nitric acid to make a salt" },
+      { text: "A solution of magnesium oxide will have a pH less than 7" },
+      { text: "A solution of sulfur dioxide will have a pH greater than 7" },
+      { text: "Sulfur dioxide will react with hydrochloric acid to make a salt" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Magnesium oxide ($\\text{MgO}$) is a basic metal oxide.\\n* Basic oxides react with acids (such as nitric acid, $\\text{HNO}_3$) to form salt (magnesium nitrate) and water.\\n* Basic solutions have $\\text{pH} > 7$, while sulfur dioxide is an acidic oxide that forms sulfurous acid ($\\text{pH} < 7$).",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_co2_aqueous_caoh2_reaction_type-2026",
+    question: "Carbon dioxide is an acidic oxide that reacts with aqueous calcium hydroxide (limewater). Which type of reaction takes place?",
+    options: [
+      { text: "Decomposition" },
+      { text: "Neutralization" },
+      { text: "Fermentation" },
+      { text: "Oxidation" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Carbon dioxide is an acidic oxide, and calcium hydroxide is an alkaline base.\\n* The reaction between an acidic oxide and an alkali forms a salt ($\\text{CaCO}_3$) and water ($\\text{H}_2\\text{O}$), which is a neutralisation reaction.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  }
+);
+
+// Cambridge IGCSE Unit 7: Salt Preparation & Practical Exam Questions
+questionBank.push(
+  {
+    id: "q_abs_purpose_step3_step4_cuso4-2026",
+    question: "A method used to make copper(II) sulfate crystals is shown:\n1 Place dilute sulfuric acid in a beaker\n2 Warm the acid\n3 Add copper(II) oxide until it is in excess\n4 Filter the mixture\n5 Evaporate the filtrate until crystals start to form\n6 Leave the filtrate to cool\nWhat are the purposes of step 3 and step 4?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Step 3</th><th class="p-2 border">Step 4</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">to ensure all of the acid has reacted</td><td class="p-2 border">to obtain solid copper(II) sulfate</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">to ensure all of the acid has reacted</td><td class="p-2 border">to remove excess copper(II) oxide</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">to speed up the reaction</td><td class="p-2 border">to obtain solid copper(II) sulfate</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">to speed up the reaction</td><td class="p-2 border">to remove excess copper(II) oxide</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Step 3 = to ensure all of the acid has reacted | Step 4 = to obtain solid copper(II) sulfate" },
+      { text: "Row B: Step 3 = to ensure all of the acid has reacted | Step 4 = to remove excess copper(II) oxide" },
+      { text: "Row C: Step 3 = to speed up the reaction | Step 4 = to obtain solid copper(II) sulfate" },
+      { text: "Row D: Step 3 = to speed up the reaction | Step 4 = to remove excess copper(II) oxide" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Step 3 adds copper(II) oxide in excess to guarantee that ALL the sulfuric acid has reacted completely, leaving no acid to contaminate the product.\\n* Step 4 filters the mixture to remove the unreacted solid copper(II) oxide residue from the soluble copper(II) sulfate solution.\\n* Row B is the exact Cambridge mark scheme answer.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_correct_sequence_pure_cuso4-2026",
+    question: "What is the correct sequence of steps for the preparation of a pure dry sample of copper(II) sulfate crystals from copper(II) oxide and sulfuric acid?",
+    options: [
+      { text: "dissolving → crystallization → evaporation → filtration" },
+      { text: "dissolving → evaporation → filtration → crystallization" },
+      { text: "dissolving → filtration → crystallization → evaporation" },
+      { text: "dissolving → filtration → evaporation → crystallization" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Step 1: Dissolving (reacting $\\text{CuO}$ with warm $\\text{H}_2\\text{SO}_4$).\\n* Step 2: Filtration (removing unreacted solid $\\text{CuO}$).\\n* Step 3: Evaporation (heating filtrate to the point of crystallisation).\\n* Step 4: Crystallisation (leaving to cool slowly to grow crystals).\\n* Sequence D correctly reflects this laboratory procedure.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_excess_not_removed_by_filtration-2026",
+    question: "Salts can be made by adding different substances to dilute hydrochloric acid. For which substance could any excess NOT be removed by filtration?",
+    options: [
+      { text: "Magnesium" },
+      { text: "Copper(II) oxide" },
+      { text: "Zinc hydroxide" },
+      { text: "Sodium hydroxide" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Magnesium metal, copper(II) oxide, and zinc hydroxide are all insoluble in neutral water, so any excess solid can easily be separated by filtration.\\n* Sodium hydroxide ($\\text{NaOH}$) is an alkali that is completely soluble in water; any excess $\\text{NaOH}$ dissolves and passes straight through the filter paper, contaminating the salt solution.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_order_of_stages_metal_oxide_salt-2026",
+    question: "Four stages in the preparation of a salt from an acid and a solid metal oxide are listed:\n1 Add excess solid\n2 Evaporate half the solution and leave to cool\n3 Filter to remove unwanted solid\n4 Heat the acid\nIn which order should the stages be carried out?",
+    options: [
+      { text: "1 → 3 → 4 → 2" },
+      { text: "4 → 1 → 3 → 2" },
+      { text: "2 → 1 → 3 → 4" },
+      { text: "4 → 2 → 1 → 3" }
+    ],
+    correctAnswer: 1,
+    explanation: "* First, heat the acid in a beaker to speed up the reaction (Stage 4).\\n* Second, add the solid metal oxide until it is in excess (Stage 1).\\n* Third, filter the mixture to remove the unreacted solid (Stage 3).\\n* Fourth, evaporate half the solution and leave to cool for crystallization (Stage 2).\\n* The correct order is 4 → 1 → 3 → 2 (Option B).",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_salt_reactions_pqrs_statements-2026",
+    question: "A salt is produced in each of the following reactions:\nP: magnesium + dilute hydrochloric acid\nQ: zinc oxide + dilute sulfuric acid\nR: sodium hydroxide + dilute hydrochloric acid\nS: copper carbonate + dilute sulfuric acid\nWhich statements about the products of the reactions are correct?\n1 A flammable gas is produced in reaction P\n2 Water is formed in all reactions\n3 All the salts formed are soluble in water",
+    options: [
+      { text: "1, 2 and 3" },
+      { text: "1 and 2" },
+      { text: "1 and 3" },
+      { text: "2 and 3" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Statement 1 is correct: Reaction P produces hydrogen gas ($\\text{H}_2$), which is highly flammable.\\n* Statement 2 is incorrect: Reaction P produces $\\text{MgCl}_2 + \\text{H}_2$ (NO water is formed). Water is formed only in Q, R, and S.\\n* Statement 3 is correct: $\\text{MgCl}_2$, $\\text{ZnSO}_4$, $\\text{NaCl}$, and $\\text{CuSO}_4$ are all completely soluble in water.\\n* Therefore, statements 1 and 3 are correct (Option C).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_zinc_sulfate_unnecessary_equipment-2026",
+    question: "Zinc sulfate is a soluble salt and can be prepared by reacting excess zinc carbonate with dilute sulfuric acid. Which piece of equipment would NOT be required in the preparation of zinc sulfate crystals?",
+    options: [
+      { text: "A condenser" },
+      { text: "A filter funnel" },
+      { text: "An evaporating dish" },
+      { text: "A beaker" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A condenser is used in distillation to condense vapours back to liquid.\\n* Preparing crystals requires a beaker (to mix acid and carbonate), a filter funnel (to remove excess carbonate), and an evaporating dish (to heat the filtrate to crystallization point). A condenser is not needed.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_burette_pipette_salt_prep-2026",
+    question: "Which salt preparation uses a burette and a pipette?",
+    options: [
+      { text: "calcium nitrate from calcium carbonate and nitric acid" },
+      { text: "potassium chloride from potassium hydroxide and hydrochloric acid" },
+      { text: "copper(II) sulfate from copper(II) hydroxide and sulfuric acid" },
+      { text: "zinc chloride from zinc and hydrochloric acid" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A burette and pipette are the standard apparatus used in titration (Method B).\\n* Titration is required when reacting an acid with a soluble base/alkali (such as $\\text{KOH}$) to prepare a Group I soluble salt like $\\text{KCl}$.\\n* The other salts are made by adding an excess of insoluble solid (Method A).",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_acid_reacts_ammonia_ammonium_sulfate-2026",
+    question: "Which acid reacts with ammonia to produce the salt ammonium sulfate?",
+    options: [
+      { text: "hydrochloric" },
+      { text: "nitric" },
+      { text: "phosphoric" },
+      { text: "sulfuric" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Ammonia ($\\text{NH}_3$) reacts with sulfuric acid ($\\text{H}_2\\text{SO}_4$) to form ammonium sulfate ((\\text{NH}_4)_2\\text{SO}_4): $2\\text{NH}_3 + \\text{H}_2\\text{SO}_4 \\rightarrow (\\text{NH}_4)_2\\text{SO}_4$.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_excess_metal_oxide_removed_how-2026",
+    question: "A salt is made by adding an excess of an insoluble metal oxide to an acid. How can the excess metal oxide be removed?",
+    options: [
+      { text: "chromatography" },
+      { text: "crystallization" },
+      { text: "filtration" },
+      { text: "distillation" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Insoluble solid particles suspended in a liquid are separated using filtration.\\n* The unreacted metal oxide remains on the filter paper as the residue, while the clear salt solution passes through as the filtrate.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_abs_methods_prepare_copper_chloride-2026",
+    question: "Salts can be prepared by reacting a dilute acid:\n1 with a metal\n2 with a base\n3 with a carbonate\nWhich methods could be used to prepare copper(II) chloride?",
+    options: [
+      { text: "1, 2 and 3" },
+      { text: "2 and 3" },
+      { text: "1 and 3" },
+      { text: "1 and 2" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Copper is below hydrogen in the reactivity series, so copper metal does NOT react with dilute hydrochloric acid (Method 1 cannot be used).\\n* Copper(II) chloride can be prepared by reacting dilute $\\text{HCl}$ with a base ($\\text{CuO}$ or $\\text{Cu(OH)}_2$, Method 2) or with a carbonate ($\\text{CuCO}_3$, Method 3).\\n* Therefore, methods 2 and 3 can be used (Option B).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  }
+);
+
+// Cambridge IGCSE Unit 10: Chemistry of the Environment Exam Questions
+questionBank.push(
+  {
+    id: "q_env_heating_copper_sulfate_row-2026",
+    question: "Separate samples of anhydrous copper(II) sulfate and hydrated copper(II) sulfate are heated in evaporating dishes. Which row shows the correct color change?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">anhydrous copper(II) sulfate</th><th class="p-2 border">hydrated copper(II) sulfate</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">No change</td><td class="p-2 border">White to blue</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">White to blue</td><td class="p-2 border">No change</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">No change</td><td class="p-2 border">Blue to white</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Blue to white</td><td class="p-2 border">Blue to white</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: anhydrous = No change | hydrated = White to blue" },
+      { text: "Row B: anhydrous = White to blue | hydrated = No change" },
+      { text: "Row C: anhydrous = No change | hydrated = Blue to white" },
+      { text: "Row D: anhydrous = Blue to white | hydrated = Blue to white" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Anhydrous copper(II) sulfate ($\\text{CuSO}_4$) is already a dry white powder; heating it causes no chemical reaction or color change (No change).\\n* Hydrated copper(II) sulfate ($\\text{CuSO}_4\\cdot 5\\text{H}_2\\text{O}$) contains blue crystals; heating drives off water of crystallisation to leave white anhydrous powder (Blue to white).\\n* Therefore, Row C is the correct Cambridge answer.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_env_water_purification_processes-2026",
+    question: "Water must be purified before it is suitable for use in the home. Which processes are used to remove solid impurities and kill bacteria?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">to remove solid impurities</th><th class="p-2 border">to kill bacteria</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Chlorination</td><td class="p-2 border">Chlorination</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Filtration</td><td class="p-2 border">Chlorination</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Chlorination</td><td class="p-2 border">Filtration</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Filtration</td><td class="p-2 border">Filtration</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: remove solid = Chlorination | kill bacteria = Chlorination" },
+      { text: "Row B: remove solid = Filtration | kill bacteria = Chlorination" },
+      { text: "Row C: remove solid = Chlorination | kill bacteria = Filtration" },
+      { text: "Row D: remove solid = Filtration | kill bacteria = Filtration" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Filtration through sand beds traps and removes insoluble solid dirt and suspended particles.\\n* Chlorination involves adding chlorine to water to disinfect it and kill harmful bacteria and microorganisms.\\n* Row B is the exact mark scheme answer.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_env_pollutant_source_incorrect-2026",
+    question: "Which row showing an air pollutant and its major source is NOT correct?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Pollutant</th><th class="p-2 border">Major source of pollutant</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Oxides of nitrogen</td><td class="p-2 border">Car engines</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Lead compounds</td><td class="p-2 border">Leaded petrol</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Carbon monoxide</td><td class="p-2 border">Complete combustion of carbon fuels</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Sulfur dioxide</td><td class="p-2 border">Fossil fuels containing sulfur</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Oxides of nitrogen | Car engines" },
+      { text: "Row B: Lead compounds | Leaded petrol" },
+      { text: "Row C: Carbon monoxide | Complete combustion of carbon fuels" },
+      { text: "Row D: Sulfur dioxide | Fossil fuels containing sulfur" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Carbon monoxide ($\\text{CO}$) is formed by the INCOMPLETE combustion of carbon-containing fuels (when oxygen supply is limited).\\n* Complete combustion produces non-toxic carbon dioxide ($\\text{CO}_2$).\\n* Therefore, Row C is incorrect.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_env_percentage_oxygen_polluted_air-2026",
+    question: "What is the percentage of oxygen to the nearest whole number in polluted air?",
+    options: [
+      { text: "28%" },
+      { text: "21%" },
+      { text: "81%" },
+      { text: "19%" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Even in polluted city air, pollutants are measured in parts per million (ppm) or very tiny fractions of a percent.\\n* The bulk volume of air remains approximately 78% nitrogen and 21% oxygen (rounded to the nearest whole number, it is 21%).",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_env_limestone_crumble_gas-2026",
+    question: "The limestone buildings in a city begin to crumble. Which gas is most likely to cause this damage?",
+    options: [
+      { text: "Carbon dioxide" },
+      { text: "Sulfur dioxide" },
+      { text: "Carbon monoxide" },
+      { text: "Oxygen" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Sulfur dioxide ($\\text{SO}_2$) dissolves in rainwater to produce sulfurous and sulfuric acids (acid rain).\\n* Sulfuric acid chemically attacks calcium carbonate ($\\text{CaCO}_3$) in limestone: $\\text{CaCO}_3 + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{CaSO}_4 + \\text{H}_2\\text{O} + \\text{CO}_2$, causing the stone surface to soften and crumble.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_env_co2_ch4_comparison_row-2026",
+    question: "Which row is correct for both carbon dioxide and methane?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Causes climate change</th><th class="p-2 border">Produced by burning fuels</th><th class="p-2 border">Produced by living organisms</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Causes climate change (✓), Produced by burning fuels (✗), Produced by living organisms (✓)" },
+      { text: "Row B: Causes climate change (✓), Produced by burning fuels (✓), Produced by living organisms (✗)" },
+      { text: "Row C: Causes climate change (✓), Produced by burning fuels (✓), Produced by living organisms (✓)" },
+      { text: "Row D: Causes climate change (✗), Produced by burning fuels (✓), Produced by living organisms (✓)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Both $\\text{CO}_2$ and $\\text{CH}_4$ are greenhouse gases that absorb infrared radiation and cause climate change (✓).\\n* Both can be produced in fuel combustion (e.g. incomplete/complete combustion of coal/gas) (✓).\\n* Both are produced by living organisms (respiration produces $\\text{CO}_2$, and anaerobic bacteria in ruminants produce $\\text{CH}_4$) (✓).\\n* Therefore, Row C is completely correct.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  }
+);

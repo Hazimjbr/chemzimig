@@ -17,6 +17,7 @@ import {
 import Link from 'next/link';
 import { useGamification } from '@/contexts/GamificationContext';
 import { allCurricula } from '@/data/curriculum';
+import { WeakSpotAnalyticsHeatmap } from '@/components/visual/WeakSpotAnalyticsHeatmap';
 
 export default function DashboardPage() {
     const { user } = useAuth();
@@ -218,16 +219,23 @@ export default function DashboardPage() {
                         <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-4">
                              <Link 
                                  href="/dashboard/lessons" 
-                                 className="group/btn flex items-center gap-2 bg-white text-indigo-700 px-8 py-4 rounded-2xl font-bold hover:bg-indigo-50 transition-all shadow-xl shadow-black/10 active:scale-95"
+                                 className="group/btn flex items-center gap-2 bg-white text-indigo-700 px-7 py-4 rounded-2xl font-bold hover:bg-indigo-50 transition-all shadow-xl shadow-black/10 active:scale-95"
                              >
                                  Start Learning
                                  <ChevronRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                              </Link>
                              <Link 
-                                 href="/dashboard/quizzes" 
-                                 className="flex items-center gap-2 bg-indigo-500/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-bold hover:bg-indigo-500/30 transition-all active:scale-95"
+                                 href="/dashboard/mock-exam" 
+                                 className="flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-7 py-4 rounded-2xl font-bold hover:from-emerald-600 hover:to-teal-700 transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
                              >
-                                 Practice Quiz
+                                 <span>Official Mock Exam</span>
+                                 <span className="text-xs bg-black/20 px-2 py-0.5 rounded-full uppercase font-black tracking-wider">Timed</span>
+                             </Link>
+                             <Link 
+                                 href="/dashboard/quizzes" 
+                                 className="flex items-center gap-2 bg-indigo-500/20 backdrop-blur-md border border-white/20 text-white px-6 py-4 rounded-2xl font-bold hover:bg-indigo-500/30 transition-all active:scale-95"
+                             >
+                                 Practice Bank
                              </Link>
                         </div>
                     </div>
@@ -245,6 +253,9 @@ export default function DashboardPage() {
                 <div className="absolute -top-12 -right-12 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none" />
             </div>
+
+            {/* Predictive Weak Spot Analytics & Concept Heatmap */}
+            <WeakSpotAnalyticsHeatmap />
 
             {/* Spaced Repetition & Mistake Bank Action Card */}
             <div className="glass-card bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/20 p-6 rounded-[2rem] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl shadow-amber-500/5">
