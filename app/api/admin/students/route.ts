@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllStudents, verifySession } from '@/lib/auth-store-admin';
+import { getAllStudents, verifySession, logAdminActivity, forceLogoutStudentDevices } from '@/lib/auth-store-admin';
 import { cookies } from 'next/headers';
 import { getAdminFirestore } from '@/lib/firebase-admin';
 
@@ -79,7 +79,69 @@ export async function POST(request: NextRequest) {
         if (action === 'toggle-active') {
             const current = studentSnap.data()?.isActive ?? true;
             await studentRef.update({ isActive: !current });
+            await logAdminActivity({
+                action: !current ? 'Activate Student' : 'Suspend Student',
+                details: `Changed status of student ${studentSnap.data()?.name || studentId} to ${!current ? 'Active' : 'Suspended'}`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentSnap.data()?.name,
+                category: 'student'
+            });
             return NextResponse.json({ success: true, isActive: !current });
+        }
+
+        if (action === 'update-notes') {
+            const { notes } = body;
+            await studentRef.update({ notes: notes || '' });
+            await logAdminActivity({
+                action: 'Update Teacher Remarks',
+                details: `Updated teacher notes for student ${studentSnap.data()?.name || studentId}`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentSnap.data()?.name,
+                category: 'student'
+            });
+            return NextResponse.json({ success: true });
+        }
+
+        if (action === 'force-logout') {
+            await forceLogoutStudentDevices(studentId);
+            await logAdminActivity({
+                action: 'Force Terminate All Sessions',
+                details: `Disconnected all registered devices and sessions for ${studentSnap.data()?.name || studentId}`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentSnap.data()?.name,
+                category: 'security'
+            });
+            return NextResponse.json({ success: true });
+        }
+
+        if (action === 'send-message') {
+            const { message, title } = body;
+            if (!message || !message.trim()) {
+                return NextResponse.json({ success: false, error: 'Message cannot be empty' }, { status: 400 });
+            }
+            const currentMessages = studentSnap.data()?.directNotifications || [];
+            const newNotif = {
+                id: `notif_${Date.now()}`,
+                title: title || 'Message from Master Hazim',
+                message: message.trim(),
+                sentAt: new Date().toISOString(),
+                read: false
+            };
+            await studentRef.update({
+                directNotifications: [newNotif, ...currentMessages]
+            });
+            await logAdminActivity({
+                action: 'Direct Push Notification',
+                details: `Sent direct message to ${studentSnap.data()?.name || studentId}: "${message.trim().substring(0, 40)}..."`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentSnap.data()?.name,
+                category: 'announcement'
+            });
+            return NextResponse.json({ success: true });
         }
 
         if (action === 'update-grade' || action === 'update-tracks') {
@@ -96,6 +158,14 @@ export async function POST(request: NextRequest) {
                 return NextResponse.json({ success: false, error: 'Curriculum or tracks required' }, { status: 400 });
             }
             await studentRef.update(updatePayload);
+            await logAdminActivity({
+                action: 'Update Student Tracks',
+                details: `Updated enrolled tracks for ${studentSnap.data()?.name || studentId}`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentSnap.data()?.name,
+                category: 'curriculum'
+            });
             return NextResponse.json({ success: true });
         }
 
@@ -108,11 +178,28 @@ export async function POST(request: NextRequest) {
             const salt = await bcrypt.genSalt(10);
             const passwordHash = await bcrypt.hash(newPassword, salt);
             await studentRef.update({ passwordHash });
+            await logAdminActivity({
+                action: 'Reset Student Password',
+                details: `Administrative password reset for ${studentSnap.data()?.name || studentId}`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentSnap.data()?.name,
+                category: 'security'
+            });
             return NextResponse.json({ success: true });
         }
 
         if (action === 'delete') {
+            const studentName = studentSnap.data()?.name;
             await studentRef.delete();
+            await logAdminActivity({
+                action: 'Delete Student Account',
+                details: `Deleted student account: ${studentName || studentId}`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: studentName,
+                category: 'student'
+            });
             return NextResponse.json({ success: true });
         }
 

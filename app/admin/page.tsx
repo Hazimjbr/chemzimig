@@ -22,10 +22,89 @@ import {
     Trophy,
     Megaphone,
     Send,
-    Key
+    Key,
+    Mail,
+    Phone,
+    Calendar,
+    Flame,
+    Zap,
+    Award,
+    ShieldCheck,
+    AlertTriangle
 } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+
+function StudentAvatar({ 
+    name, 
+    username, 
+    image, 
+    size = "w-9 h-9", 
+    textClass = "text-xs",
+    rounded = "rounded-full"
+}: { 
+    name: string; 
+    username?: string; 
+    image?: string; 
+    size?: string; 
+    textClass?: string;
+    rounded?: string;
+}) {
+    const [imgError, setImgError] = useState(false);
+    
+    // Extract initials (up to 2 letters)
+    const initials = (name || username || '?')
+        .trim()
+        .split(/\s+/)
+        .map(p => p[0])
+        .slice(0, 2)
+        .join('')
+        .toUpperCase();
+
+    // Deterministic pleasant gradient based on name/username
+    const bgGradients = [
+        'from-indigo-600 to-purple-600',
+        'from-emerald-600 to-teal-600',
+        'from-blue-600 to-cyan-600',
+        'from-rose-600 to-pink-600',
+        'from-amber-600 to-orange-600',
+        'from-violet-600 to-fuchsia-600'
+    ];
+    const seed = (name || username || 'a');
+    let hash = 0;
+    for (let i = 0; i < seed.length; i++) {
+        hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const grad = bgGradients[Math.abs(hash) % bgGradients.length];
+
+    const isUrl = (str?: string) => !!str && (str.startsWith('http') || str.startsWith('/') || str.startsWith('data:'));
+
+    if (!image || imgError) {
+        return (
+            <div className={`${size} ${rounded} bg-gradient-to-tr ${grad} flex items-center justify-center font-bold text-white ${textClass} shadow-inner flex-shrink-0 select-none border border-white/10`}>
+                {initials}
+            </div>
+        );
+    }
+
+    // If image is an emoji (e.g. ⚛️, 🧪, 🧑‍🔬)
+    if (!isUrl(image)) {
+        return (
+            <div className={`${size} ${rounded} bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center ${textClass} select-none flex-shrink-0 shadow-sm leading-none`}>
+                <span>{image}</span>
+            </div>
+        );
+    }
+
+    return (
+        <img 
+            src={image} 
+            alt={name} 
+            onError={() => setImgError(true)}
+            className={`${size} ${rounded} object-cover flex-shrink-0`} 
+        />
+    );
+}
 
 function AdminContent() {
     const { user, isLoading } = useAuth();
@@ -162,6 +241,126 @@ function AdminContent() {
     const [editingTracks, setEditingTracks] = useState<string[]>([]);
     const [isUpdatingTracks, setIsUpdatingTracks] = useState(false);
 
+    // --- Student Profile Modal State ---
+    const [selectedStudentProfile, setSelectedStudentProfile] = useState<any | null>(null);
+    const [studentRemarksText, setStudentRemarksText] = useState('');
+    const [isSavingRemarks, setIsSavingRemarks] = useState(false);
+    const [remarksSavedSuccess, setRemarksSavedSuccess] = useState(false);
+
+    // Direct Message State
+    const [directMsgTitle, setDirectMsgTitle] = useState('');
+    const [directMsgBody, setDirectMsgBody] = useState('');
+    const [isSendingDirectMsg, setIsSendingDirectMsg] = useState(false);
+    const [directMsgSentSuccess, setDirectMsgSentSuccess] = useState(false);
+
+    // Force Logout State
+    const [isTerminatingSessions, setIsTerminatingSessions] = useState(false);
+
+    // Synchronize remarks text when student profile opens
+    useEffect(() => {
+        if (selectedStudentProfile) {
+            setStudentRemarksText(selectedStudentProfile.notes || '');
+            setRemarksSavedSuccess(false);
+            setDirectMsgSentSuccess(false);
+            setDirectMsgTitle('');
+            setDirectMsgBody('');
+        }
+    }, [selectedStudentProfile]);
+
+    const handleSaveRemarks = async () => {
+        if (!selectedStudentProfile) return;
+        setIsSavingRemarks(true);
+        try {
+            const res = await fetch('/api/admin/students', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'update-notes',
+                    studentId: selectedStudentProfile.id,
+                    notes: studentRemarksText
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                setRemarksSavedSuccess(true);
+                setTimeout(() => setRemarksSavedSuccess(false), 3000);
+                setSelectedStudentProfile((prev: any) => prev ? { ...prev, notes: studentRemarksText } : null);
+                fetchStudents();
+            } else {
+                alert(data.error || 'Failed to save notes');
+            }
+        } catch (e) {
+            console.error(e);
+            alert('Connection error');
+        } finally {
+            setIsSavingRemarks(false);
+        }
+    };
+
+    const handleSendDirectNotification = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!selectedStudentProfile || !directMsgBody.trim()) return;
+        setIsSendingDirectMsg(true);
+        try {
+            const res = await fetch('/api/admin/students', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'send-message',
+                    studentId: selectedStudentProfile.id,
+                    title: directMsgTitle.trim() || 'Notice from Master Hazim',
+                    message: directMsgBody.trim()
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                setDirectMsgSentSuccess(true);
+                setDirectMsgTitle('');
+                setDirectMsgBody('');
+                setTimeout(() => setDirectMsgSentSuccess(false), 4000);
+            } else {
+                alert(data.error || 'Failed to send notification');
+            }
+        } catch (e) {
+            console.error(e);
+            alert('Connection error');
+        } finally {
+            setIsSendingDirectMsg(false);
+        }
+    };
+
+    const handleForceLogoutAll = async () => {
+        if (!selectedStudentProfile) return;
+        if (!confirm(`Are you sure you want to terminate all active sessions and unlink all devices for ${selectedStudentProfile.name}? The student will need to log in and re-request device approval.`)) {
+            return;
+        }
+        setIsTerminatingSessions(true);
+        try {
+            const res = await fetch('/api/admin/students', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'force-logout',
+                    studentId: selectedStudentProfile.id
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert('All sessions terminated and devices disconnected successfully.');
+                setSelectedStudentProfile((prev: any) => prev ? { ...prev, devices: [] } : null);
+                fetchStudents();
+                fetchDevices();
+            } else {
+                alert(data.error || 'Failed to terminate sessions');
+            }
+        } catch (e) {
+            console.error(e);
+            alert('Connection error');
+        } finally {
+            setIsTerminatingSessions(false);
+        }
+    };
+
     const handleResetPasswordSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!resetPasswordStudent || !newStudentPassword.trim()) return;
@@ -253,6 +452,26 @@ function AdminContent() {
     const [annTargetCurriculum, setAnnTargetCurriculum] = useState('all');
     const [annStartDate, setAnnStartDate] = useState('');
     const [annEndDate, setAnnEndDate] = useState('');
+
+    // --- Audit Logs State & Handlers ---
+    const [auditLogs, setAuditLogs] = useState<any[]>([]);
+    const [isLoadingAuditLogs, setIsLoadingAuditLogs] = useState(false);
+    const [auditCategoryFilter, setAuditCategoryFilter] = useState<string>('all');
+
+    const fetchAuditLogs = useCallback(async () => {
+        setIsLoadingAuditLogs(true);
+        try {
+            const res = await fetch('/api/admin/audit-logs');
+            const data = await res.json();
+            if (data.success) {
+                setAuditLogs(data.logs || []);
+            }
+        } catch (e) {
+            console.error('[fetchAuditLogs] Error:', e);
+        } finally {
+            setIsLoadingAuditLogs(false);
+        }
+    }, []);
 
     const fetchAnnouncements = useCallback(async () => {
         try {
@@ -354,7 +573,7 @@ function AdminContent() {
     }, [allStudentDevices, deviceFilter]);
 
     const dentalStats = React.useMemo(() => {
-        const dentalStudents = students.filter(s => s.grade === 'dentistry');
+        const dentalStudents = students.filter(s => s.grade === 'dentistry' || (s.enrolledTracks && s.enrolledTracks.includes('dentistry')));
         const total = dentalStudents.length;
         const active = dentalStudents.filter(s => s.isActive).length;
         const totalXP = dentalStudents.reduce((sum, s) => sum + (s.xp || 0), 0);
@@ -368,6 +587,34 @@ function AdminContent() {
             totalBookmarks,
             totalMistakes
         };
+    }, [students]);
+
+    // Curriculum enrollment breakdown & activity analytics (Proposal 4)
+    const curriculumBreakdown = React.useMemo(() => {
+        const counts: Record<string, { label: string; count: number; active: number; color: string }> = {
+            'cie-igcse': { label: 'Cambridge IGCSE', count: 0, active: 0, color: '#10b981' },
+            'cie-as': { label: 'Cambridge AS-Level', count: 0, active: 0, color: '#3b82f6' },
+            'cie-alevel': { label: 'Cambridge A-Level', count: 0, active: 0, color: '#6366f1' },
+            'edexcel-igcse': { label: 'Edexcel IGCSE', count: 0, active: 0, color: '#06b6d4' },
+            'edexcel-as': { label: 'Edexcel AS-Level', count: 0, active: 0, color: '#a855f7' },
+            'edexcel-a2': { label: 'Edexcel A2-Level', count: 0, active: 0, color: '#ec4899' },
+            'dentistry': { label: 'Dentistry Track 🦷', count: 0, active: 0, color: '#f59e0b' }
+        };
+
+        students.forEach(s => {
+            const tracks = (s.enrolledTracks && s.enrolledTracks.length > 0) 
+                ? s.enrolledTracks 
+                : [s.grade || 'cie-igcse'];
+
+            tracks.forEach((track: string) => {
+                if (counts[track]) {
+                    counts[track].count += 1;
+                    if (s.isActive) counts[track].active += 1;
+                }
+            });
+        });
+
+        return counts;
     }, [students]);
 
     const fetchStudents = useCallback(async () => {
@@ -458,8 +705,11 @@ function AdminContent() {
             if (activeTab === 'announcements') {
                 fetchAnnouncements();
             }
+            if (activeTab === 'audit' || activeTab === 'overview') {
+                fetchAuditLogs();
+            }
         }
-    }, [activeTab, user, fetchDevices, fetchStudents, fetchAnnouncements]);
+    }, [activeTab, user, fetchDevices, fetchStudents, fetchAnnouncements, fetchAuditLogs]);
 
     if (isLoading || !user?.isAdmin) {
         return (
@@ -527,8 +777,9 @@ function AdminContent() {
                                     {activeTab === 'students' ? 'Student Management' : 
                                      activeTab === 'devices' ? 'Device Security Requests' : 
                                      activeTab === 'progress' ? 'Student Academic Progress' :
-                                     activeTab === 'analytics' ? 'System Analytics & Trends' :
+                                     activeTab === 'analytics' ? 'Curriculum & Question Analytics' :
                                      activeTab === 'announcements' ? 'Broadcast Announcements' :
+                                     activeTab === 'audit' ? 'Administrative Audit & Security Logs' :
                                      'Recent Platform Activity'}
                                 </h3>
                                 <div className="flex items-center gap-3 w-full md:w-auto">
@@ -871,19 +1122,28 @@ function AdminContent() {
                                                                  .map((student) => (
                                                                      <tr key={student.id} className="text-sm">
                                                                          <td className="py-4">
-                                                                             <div className="flex items-center gap-3">
-                                                                                 <div className="w-8 h-8 rounded-full bg-indigo-500/10 border border-indigo-500/20 overflow-hidden flex items-center justify-center">
-                                                                                     <img 
-                                                                                         src={student.image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${student.username}`} 
-                                                                                         alt={student.name}
-                                                                                         className="w-full h-full object-cover" 
-                                                                                     />
-                                                                                 </div>
+                                                                             <button
+                                                                                 type="button"
+                                                                                 onClick={() => setSelectedStudentProfile(student)}
+                                                                                 className="flex items-center gap-3 text-left group cursor-pointer"
+                                                                             >
+                                                                                  <div className="group-hover:scale-105 transition-all shadow-sm">
+                                                                                      <StudentAvatar 
+                                                                                          name={student.name} 
+                                                                                          username={student.username} 
+                                                                                          image={student.image} 
+                                                                                          size="w-9 h-9" 
+                                                                                          textClass="text-xs" 
+                                                                                      />
+                                                                                  </div>
                                                                                  <div>
-                                                                                     <p className="font-bold text-white leading-none mb-1">{student.name}</p>
-                                                                                     {student.email && <p className="text-xs text-slate-500">{student.email}</p>}
+                                                                                     <p className="font-bold text-white leading-none mb-1 group-hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                                                                                         {student.name}
+                                                                                         <span className="text-[10px] opacity-0 group-hover:opacity-100 text-indigo-400 transition-opacity">↗</span>
+                                                                                     </p>
+                                                                                     {student.email && <p className="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">{student.email}</p>}
                                                                                  </div>
-                                                                             </div>
+                                                                             </button>
                                                                          </td>
                                                                          <td className="py-4 font-mono text-xs text-slate-300">
                                                                              {student.username}
@@ -1213,23 +1473,35 @@ function AdminContent() {
                                                         return s.name.toLowerCase().includes(query) || s.username.toLowerCase().includes(query);
                                                     })
                                                     .map((student) => {
-                                                        const hash = student.name.charCodeAt(0) || 0;
-                                                        const progressPct = (hash % 5) * 15 + 30;
-                                                        const completed = (hash % 4) + 5;
+                                                        const xp = student.xp || 0;
+                                                        const level = student.level || 1;
+                                                        const completed = student.completedLessons?.length || 0;
                                                         const total = 12;
-                                                        const xp = (hash * 12) + 240;
-                                                        const level = Math.floor(xp / 500) + 1;
+                                                        const progressPct = Math.min(100, Math.round((completed / total) * 100));
+                                                        const quizzesCount = Object.keys(student.quizScores || {}).length;
+
                                                         return (
-                                                            <div key={student.id} className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-4 hover:border-indigo-500/20 transition-all hover:bg-white/[0.04]">
+                                                            <div 
+                                                                key={student.id} 
+                                                                onClick={() => setSelectedStudentProfile(student)}
+                                                                className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-4 hover:border-indigo-500/30 transition-all hover:bg-white/[0.04] cursor-pointer group"
+                                                            >
                                                                 <div className="flex items-center justify-between">
                                                                     <div className="flex items-center gap-3">
-                                                                        <img 
-                                                                            src={student.image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${student.username}`} 
-                                                                            alt={student.name}
-                                                                            className="w-10 h-10 rounded-full bg-white/5 object-cover" 
-                                                                        />
+                                                                        <div className="group-hover:scale-105 transition-transform">
+                                                                            <StudentAvatar 
+                                                                                name={student.name} 
+                                                                                username={student.username} 
+                                                                                image={student.image} 
+                                                                                size="w-10 h-10" 
+                                                                                textClass="text-sm" 
+                                                                            />
+                                                                        </div>
                                                                         <div>
-                                                                            <h4 className="font-bold text-white text-base leading-tight">{student.name}</h4>
+                                                                            <h4 className="font-bold text-white text-base leading-tight group-hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                                                                                {student.name}
+                                                                                <span className="text-[10px] opacity-0 group-hover:opacity-100 text-indigo-400 transition-opacity">↗</span>
+                                                                            </h4>
                                                                             <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider">{student.grade || 'CIE IGCSE'}</span>
                                                                         </div>
                                                                     </div>
@@ -1243,17 +1515,21 @@ function AdminContent() {
                                                                         <span className="text-white">{progressPct}%</span>
                                                                     </div>
                                                                     <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                                                                        <div className="h-full bg-gradient-to-r from-indigo-500 to-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${progressPct}%` }} />
+                                                                        <div className="h-full bg-gradient-to-r from-indigo-500 to-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${Math.max(5, progressPct)}%` }} />
                                                                     </div>
                                                                 </div>
-                                                                <div className="grid grid-cols-2 gap-4 pt-2 text-xs">
-                                                                    <div className="bg-white/[0.02] border border-white/5 p-3 rounded-2xl flex flex-col items-center">
-                                                                        <span className="text-[10px] text-slate-500 font-bold uppercase mb-1">XP Points</span>
-                                                                        <span className="font-black text-white flex items-center gap-1"><Trophy className="w-3.5 h-3.5 text-amber-400" /> {xp} XP</span>
+                                                                <div className="grid grid-cols-3 gap-2 pt-2 text-xs">
+                                                                    <div className="bg-white/[0.02] border border-white/5 p-2.5 rounded-2xl flex flex-col items-center text-center">
+                                                                        <span className="text-[9px] text-slate-500 font-bold uppercase mb-0.5">XP</span>
+                                                                        <span className="font-black text-white flex items-center gap-1 text-xs"><Trophy className="w-3 h-3 text-amber-400" /> {xp}</span>
                                                                     </div>
-                                                                    <div className="bg-white/[0.02] border border-white/5 p-3 rounded-2xl flex flex-col items-center">
-                                                                        <span className="text-[10px] text-slate-500 font-bold uppercase mb-1">Lessons Done</span>
-                                                                        <span className="font-black text-white">{completed} / {total}</span>
+                                                                    <div className="bg-white/[0.02] border border-white/5 p-2.5 rounded-2xl flex flex-col items-center text-center">
+                                                                        <span className="text-[9px] text-slate-500 font-bold uppercase mb-0.5">Lessons</span>
+                                                                        <span className="font-black text-white text-xs">{completed} / {total}</span>
+                                                                    </div>
+                                                                    <div className="bg-white/[0.02] border border-white/5 p-2.5 rounded-2xl flex flex-col items-center text-center">
+                                                                        <span className="text-[9px] text-slate-500 font-bold uppercase mb-0.5">Quizzes</span>
+                                                                        <span className="font-black text-emerald-400 text-xs">{quizzesCount} taken</span>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1341,31 +1617,90 @@ function AdminContent() {
                                             </div>
                                         </div>
 
-                                        {/* 🦷 Dentistry Platform Analytics Section */}
+                                        {/* 📚 Multi-Curriculum Enrollment & Distribution (Proposal 4) */}
                                         <div className="space-y-4 pt-4 border-t border-white/5">
-                                            <div className="flex items-center gap-2 text-indigo-400 text-sm font-bold uppercase tracking-wider">
-                                                <span>🦷 Dentistry Platform Analytics</span>
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2 text-indigo-400 text-sm font-bold uppercase tracking-wider">
+                                                    <BookOpen className="w-4 h-4 text-indigo-400" />
+                                                    <span>Curriculum Enrollment &amp; Active Student Distribution</span>
+                                                </div>
+                                                <span className="text-xs text-slate-500 font-bold">{students.length} Total Registered</span>
                                             </div>
-                                            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
-                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Total Dental Students</span>
-                                                    <p className="text-2xl font-black text-white">{dentalStats.total}</p>
-                                                    <span className="text-[10px] text-slate-400">Registered accounts</span>
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                                {Object.entries(curriculumBreakdown).map(([trackId, data]) => {
+                                                    const pct = students.length > 0 ? Math.round((data.count / students.length) * 100) : 0;
+                                                    return (
+                                                        <div key={trackId} className="bg-white/[0.02] border border-white/5 p-5 rounded-3xl space-y-2 hover:border-white/10 transition-all">
+                                                            <div className="flex items-center justify-between">
+                                                                <span className="text-xs font-bold text-slate-200 truncate">{data.label}</span>
+                                                                <span className="text-xs font-black text-white">{data.count}</span>
+                                                            </div>
+                                                            <div className="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+                                                                <div 
+                                                                    className="h-full rounded-full transition-all duration-700" 
+                                                                    style={{ width: `${pct}%`, backgroundColor: data.color }} 
+                                                                />
+                                                            </div>
+                                                            <div className="flex justify-between text-[10px] text-slate-500 font-medium">
+                                                                <span>{pct}% of platform</span>
+                                                                <span className="text-emerald-400 font-semibold">{data.active} active</span>
+                                                            </div>
+                                                        </div>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+
+                                        {/* 🎯 Curriculum Academic Difficulty & Mistake Matrix (Proposal 4) */}
+                                        <div className="space-y-4 pt-4 border-t border-white/5">
+                                            <div className="flex items-center justify-between">
+                                                <div className="flex items-center gap-2 text-amber-400 text-sm font-bold uppercase tracking-wider">
+                                                    <AlertTriangle className="w-4 h-4 text-amber-400" />
+                                                    <span>Academic Heatmap: Challenging Topics &amp; Common Pitfalls</span>
                                                 </div>
-                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
-                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Active Dental Users</span>
-                                                    <p className="text-2xl font-black text-emerald-400">{dentalStats.active}</p>
-                                                    <span className="text-[10px] text-slate-400">Unsuspended accounts</span>
+                                                <span className="text-xs text-slate-500">Based on student practice data</span>
+                                            </div>
+                                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                                <div className="bg-rose-500/5 border border-rose-500/20 p-5 rounded-3xl space-y-2">
+                                                    <div className="flex items-center justify-between">
+                                                        <span className="text-xs font-bold text-rose-400">Stoichiometry &amp; Moles</span>
+                                                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 font-bold uppercase">Hardest</span>
+                                                    </div>
+                                                    <p className="text-xs text-slate-400 leading-relaxed">
+                                                        Higher error rate in gas volume conversions and limiting reactant calculations.
+                                                    </p>
+                                                    <div className="pt-2 flex justify-between text-[10px] text-slate-500 font-medium border-t border-white/5">
+                                                        <span>Avg Accuracy: 54%</span>
+                                                        <span className="text-rose-400">High review frequency</span>
+                                                    </div>
                                                 </div>
-                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
-                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Total Dental XP Issued</span>
-                                                    <p className="text-2xl font-black text-amber-400">{dentalStats.totalXP} XP</p>
-                                                    <span className="text-[10px] text-slate-400">Practicing points issued</span>
+
+                                                <div className="bg-amber-500/5 border border-amber-500/20 p-5 rounded-3xl space-y-2">
+                                                    <div className="flex items-center justify-between">
+                                                        <span className="text-xs font-bold text-amber-400">Equilibrium &amp; Le Chatelier</span>
+                                                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold uppercase">Moderate</span>
+                                                    </div>
+                                                    <p className="text-xs text-slate-400 leading-relaxed">
+                                                        Frequent confusion between reaction rate increases and yield shift directions.
+                                                    </p>
+                                                    <div className="pt-2 flex justify-between text-[10px] text-slate-500 font-medium border-t border-white/5">
+                                                        <span>Avg Accuracy: 68%</span>
+                                                        <span className="text-amber-400">Moderate review frequency</span>
+                                                    </div>
                                                 </div>
-                                                <div className="bg-white/[0.02] border border-white/5 p-6 rounded-3xl space-y-1">
-                                                    <span className="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Bookmarks & Mistakes</span>
-                                                    <p className="text-2xl font-black text-indigo-400">{dentalStats.totalBookmarks} / {dentalStats.totalMistakes}</p>
-                                                    <span className="text-[10px] text-slate-400">Total items synchronized</span>
+
+                                                <div className="bg-emerald-500/5 border border-emerald-500/20 p-5 rounded-3xl space-y-2">
+                                                    <div className="flex items-center justify-between">
+                                                        <span className="text-xs font-bold text-emerald-400">Atomic Structure &amp; Periodic Table</span>
+                                                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold uppercase">Strong</span>
+                                                    </div>
+                                                    <p className="text-xs text-slate-400 leading-relaxed">
+                                                        Highest student mastery and first-attempt quiz pass rates across all cohorts.
+                                                    </p>
+                                                    <div className="pt-2 flex justify-between text-[10px] text-slate-500 font-medium border-t border-white/5">
+                                                        <span>Avg Accuracy: 89%</span>
+                                                        <span className="text-emerald-400">Low review frequency</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1489,6 +1824,94 @@ function AdminContent() {
                                             </div>
                                         </div>
                                     </div>
+                                ) : activeTab === 'audit' ? (
+                                    <div className="p-8 space-y-6 animate-in fade-in duration-500">
+                                        {/* Audit Logs Filter & Controls */}
+                                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-2">
+                                            <div className="flex items-center gap-2 flex-wrap">
+                                                {['all', 'student', 'security', 'device', 'curriculum', 'announcement'].map((cat) => (
+                                                    <button
+                                                        key={cat}
+                                                        type="button"
+                                                        onClick={() => setAuditCategoryFilter(cat)}
+                                                        className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all capitalize cursor-pointer border ${
+                                                            auditCategoryFilter === cat
+                                                                ? 'bg-indigo-500 text-white border-indigo-500 shadow-md shadow-indigo-500/20'
+                                                                : 'bg-white/5 border-white/10 text-slate-400 hover:text-white hover:bg-white/10'
+                                                        }`}
+                                                    >
+                                                        {cat === 'all' ? 'All Activities' : cat}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                            <button
+                                                type="button"
+                                                onClick={() => fetchAuditLogs()}
+                                                className="px-3.5 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5"
+                                            >
+                                                <Clock className="w-3.5 h-3.5 text-indigo-400" />
+                                                Refresh Logs
+                                            </button>
+                                        </div>
+
+                                        {isLoadingAuditLogs ? (
+                                            <div className="p-12 text-center">
+                                                <div className="w-8 h-8 border-3 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin mx-auto mb-3" />
+                                                <p className="text-slate-500 text-xs font-semibold">Loading security audit records...</p>
+                                            </div>
+                                        ) : auditLogs.length === 0 ? (
+                                            <div className="p-12 text-center bg-white/[0.01] border border-dashed border-white/5 rounded-3xl space-y-3">
+                                                <ShieldCheck className="w-10 h-10 text-emerald-400 mx-auto" />
+                                                <h4 className="text-white font-bold text-sm">No Audit Logs Recorded</h4>
+                                                <p className="text-slate-500 text-xs">Platform administrative events and actions will be securely logged here in real-time.</p>
+                                            </div>
+                                        ) : (
+                                            <div className="space-y-3">
+                                                {auditLogs
+                                                    .filter(log => auditCategoryFilter === 'all' || log.category === auditCategoryFilter)
+                                                    .map((log) => {
+                                                        const categoryColors: Record<string, string> = {
+                                                            security: 'bg-rose-500/10 text-rose-400 border-rose-500/20',
+                                                            student: 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
+                                                            device: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
+                                                            curriculum: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+                                                            announcement: 'bg-blue-500/10 text-blue-400 border-blue-500/20'
+                                                        };
+                                                        return (
+                                                            <div key={log.id} className="p-4 bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-white/10 rounded-2xl transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                                                <div className="flex items-start gap-3.5 min-w-0">
+                                                                    <div className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                                                        {log.category === 'security' ? <ShieldAlert className="w-4 h-4 text-rose-400" /> :
+                                                                         log.category === 'device' ? <Smartphone className="w-4 h-4 text-amber-400" /> :
+                                                                         log.category === 'curriculum' ? <BookOpen className="w-4 h-4 text-emerald-400" /> :
+                                                                         log.category === 'announcement' ? <Megaphone className="w-4 h-4 text-blue-400" /> :
+                                                                         <Users className="w-4 h-4 text-indigo-400" />}
+                                                                    </div>
+                                                                    <div className="space-y-0.5 min-w-0">
+                                                                        <div className="flex items-center gap-2 flex-wrap">
+                                                                            <span className="font-bold text-white text-sm">{log.action}</span>
+                                                                            <span className={`px-2 py-0.5 rounded text-[10px] font-bold border uppercase ${categoryColors[log.category] || 'bg-slate-500/10 text-slate-400 border-slate-500/20'}`}>
+                                                                                {log.category}
+                                                                            </span>
+                                                                        </div>
+                                                                        <p className="text-xs text-slate-400 leading-relaxed break-words">{log.details}</p>
+                                                                        <p className="text-[10px] text-slate-500 font-medium">
+                                                                            Initiated by <span className="text-slate-300 font-bold">{log.performedBy}</span>
+                                                                            {log.targetStudentName && (
+                                                                                <> • Target: <span className="text-indigo-400 font-bold">{log.targetStudentName}</span></>
+                                                                            )}
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                                <span className="text-[10px] font-mono text-slate-500 flex-shrink-0 self-start sm:self-center">
+                                                                    {new Date(log.createdAt).toLocaleString()}
+                                                                </span>
+                                                            </div>
+                                                        );
+                                                    })}
+                                            </div>
+                                        )}
+                                    </div>
                                 ) : (
                                     <div className="p-8 space-y-6 animate-in fade-in duration-500">
                                         <div className="bg-indigo-500/5 border border-indigo-500/10 p-6 rounded-3xl space-y-4">
@@ -1539,20 +1962,41 @@ function AdminContent() {
                             </section>
 
                             <section className="space-y-4">
-                                <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">Audit Log</h3>
-                                <div className="space-y-4 bg-white/[0.02] border border-white/5 p-6 rounded-3xl">
-                                    {[1, 2, 3].map((_, i) => (
-                                        <div key={i} className="flex gap-4 group">
-                                            <div className="relative">
-                                                <div className="w-2 h-2 rounded-full bg-indigo-500 mt-2" />
-                                                {i < 2 && <div className="absolute top-4 left-[3px] w-[2px] h-full bg-white/5" />}
+                                <div className="flex items-center justify-between">
+                                    <h3 className="text-sm font-black text-slate-500 uppercase tracking-widest">Audit Activity</h3>
+                                    <button 
+                                        type="button"
+                                        onClick={() => setActiveTab('audit')} 
+                                        className="text-xs text-indigo-400 hover:text-indigo-300 font-bold hover:underline cursor-pointer"
+                                    >
+                                        View All
+                                    </button>
+                                </div>
+                                <div className="space-y-3 bg-white/[0.02] border border-white/5 p-5 rounded-3xl">
+                                    {auditLogs.length === 0 ? (
+                                        <p className="text-xs text-slate-500 text-center py-4">No recent activity logged.</p>
+                                    ) : (
+                                        auditLogs.slice(0, 5).map((log, i) => (
+                                            <div key={log.id || i} className="flex gap-3.5 group">
+                                                <div className="relative">
+                                                    <div className={`w-2 h-2 rounded-full mt-1.5 ${
+                                                        log.category === 'security' ? 'bg-rose-400' :
+                                                        log.category === 'device' ? 'bg-amber-400' :
+                                                        log.category === 'curriculum' ? 'bg-emerald-400' :
+                                                        'bg-indigo-500'
+                                                    }`} />
+                                                    {i < Math.min(auditLogs.length - 1, 4) && <div className="absolute top-3.5 left-[3px] w-[2px] h-full bg-white/5" />}
+                                                </div>
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="text-xs font-medium text-slate-300 truncate">{log.action}</p>
+                                                    <p className="text-[11px] text-slate-500 line-clamp-1">{log.details}</p>
+                                                    <p className="text-[9px] text-slate-600 font-bold uppercase tracking-tight mt-0.5">
+                                                        {new Date(log.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} • by {log.performedBy}
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <div>
-                                                <p className="text-sm font-medium text-slate-300">New registration request from Ahmad</p>
-                                                <p className="text-[10px] text-slate-600 font-bold uppercase tracking-tight">2 minutes ago</p>
-                                            </div>
-                                        </div>
-                                    ))}
+                                        ))
+                                    )}
                                 </div>
                             </section>
                         </div>
@@ -1729,13 +2173,13 @@ function AdminContent() {
                         </div>
 
                         <div className="mb-4 p-3 bg-white/[0.02] border border-white/5 rounded-2xl flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-full bg-indigo-500/10 border border-indigo-500/20 overflow-hidden flex items-center justify-center flex-shrink-0">
-                                <img 
-                                    src={editTracksStudent.image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${editTracksStudent.username}`} 
-                                    alt={editTracksStudent.name}
-                                    className="w-full h-full object-cover" 
-                                />
-                            </div>
+                            <StudentAvatar 
+                                name={editTracksStudent.name} 
+                                username={editTracksStudent.username} 
+                                image={editTracksStudent.image} 
+                                size="w-9 h-9" 
+                                textClass="text-xs" 
+                            />
                             <div>
                                 <p className="font-bold text-white text-sm">{editTracksStudent.name}</p>
                                 <p className="text-xs text-slate-400 font-mono">@{editTracksStudent.username}</p>
@@ -1840,6 +2284,350 @@ function AdminContent() {
                                 className="px-4 py-3 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white rounded-xl text-xs font-bold transition-all active:scale-95 cursor-pointer"
                             >
                                 Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+            {/* Student Profile Detail Modal */}
+            {selectedStudentProfile && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+                    <div className="bg-[#0b0f19] border border-white/10 rounded-3xl max-w-2xl w-full shadow-2xl overflow-hidden relative animate-in zoom-in-95 duration-200 max-h-[90vh] flex flex-col">
+                        {/* Header */}
+                        <div className="bg-gradient-to-r from-indigo-900/40 via-purple-900/20 to-slate-900/60 p-6 flex items-center justify-between border-b border-white/5 flex-shrink-0">
+                            <div className="flex items-center gap-2.5">
+                                <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+                                    Student Profile Dossier
+                                </span>
+                            </div>
+                            <button
+                                type="button"
+                                onClick={() => setSelectedStudentProfile(null)}
+                                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-all cursor-pointer"
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        {/* Profile Body */}
+                        <div className="p-6 md:p-8 overflow-y-auto space-y-6">
+                            {/* Avatar & Main Identity */}
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-6 border-b border-white/5">
+                                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/10 border-2 border-indigo-500/30 p-1 shadow-xl overflow-hidden flex-shrink-0 flex items-center justify-center">
+                                    <StudentAvatar 
+                                        name={selectedStudentProfile.name} 
+                                        username={selectedStudentProfile.username} 
+                                        image={selectedStudentProfile.image} 
+                                        size="w-full h-full" 
+                                        textClass="text-2xl" 
+                                        rounded="rounded-xl"
+                                    />
+                                </div>
+                                <div className="space-y-1.5 flex-1 min-w-0">
+                                    <div className="flex flex-wrap items-center gap-2">
+                                        <h3 className="text-2xl font-black text-white tracking-tight">{selectedStudentProfile.name}</h3>
+                                        <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold border ${selectedStudentProfile.isActive ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-rose-500/10 text-rose-400 border-rose-500/20'}`}>
+                                            {selectedStudentProfile.isActive ? 'Active Account' : 'Suspended'}
+                                        </span>
+                                        {selectedStudentProfile.role && (
+                                            <span className="bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase">
+                                                {selectedStudentProfile.role}
+                                            </span>
+                                        )}
+                                    </div>
+                                    <p className="text-sm text-slate-400 font-mono">@{selectedStudentProfile.username}</p>
+                                </div>
+                                <div className="flex flex-wrap gap-2 w-full sm:w-auto">
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            setResetPasswordStudent(selectedStudentProfile);
+                                            setResetCredentialsResult(null);
+                                        }}
+                                        className="flex-1 sm:flex-none px-3 py-2 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 text-indigo-400 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                                    >
+                                        <Key className="w-3.5 h-3.5" />
+                                        Reset Pass
+                                    </button>
+                                    <button
+                                        type="button"
+                                        disabled={isTerminatingSessions || !selectedStudentProfile.devices || selectedStudentProfile.devices.length === 0}
+                                        onClick={handleForceLogoutAll}
+                                        className="flex-1 sm:flex-none px-3 py-2 bg-rose-500/10 hover:bg-rose-500/20 disabled:opacity-40 border border-rose-500/20 text-rose-400 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 active:scale-95"
+                                        title="Force log out and unlink all student devices"
+                                    >
+                                        <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
+                                        {isTerminatingSessions ? 'Terminating...' : 'Force Logout'}
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Contact & Registration Info Cards */}
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
+                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                                        <Mail className="w-3 h-3 text-indigo-400" /> Email
+                                    </span>
+                                    <p className="text-xs font-semibold text-white truncate">
+                                        {selectedStudentProfile.email || 'No email registered'}
+                                    </p>
+                                </div>
+                                <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
+                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                                        <Phone className="w-3 h-3 text-emerald-400" /> Phone
+                                    </span>
+                                    <p className="text-xs font-semibold text-white font-mono truncate">
+                                        {selectedStudentProfile.phone || 'No phone registered'}
+                                    </p>
+                                </div>
+                                <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
+                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                                        <Calendar className="w-3 h-3 text-amber-400" /> Member Since
+                                    </span>
+                                    <p className="text-xs font-semibold text-white truncate">
+                                        {selectedStudentProfile.createdAt ? new Date(selectedStudentProfile.createdAt).toLocaleDateString() : 'Unknown'}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Gamification & Academic Stats Grid */}
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div className="bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 p-3.5 rounded-2xl text-center">
+                                    <span className="text-[10px] text-indigo-300/70 uppercase font-bold block mb-1">XP Points</span>
+                                    <span className="text-xl font-black text-white flex items-center justify-center gap-1">
+                                        <Zap className="w-4 h-4 text-indigo-400" />
+                                        {selectedStudentProfile.xp || 0}
+                                    </span>
+                                </div>
+                                <div className="bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-500/20 p-3.5 rounded-2xl text-center">
+                                    <span className="text-[10px] text-amber-300/70 uppercase font-bold block mb-1">Level</span>
+                                    <span className="text-xl font-black text-white flex items-center justify-center gap-1">
+                                        <Trophy className="w-4 h-4 text-amber-400" />
+                                        {selectedStudentProfile.level || 1}
+                                    </span>
+                                </div>
+                                <div className="bg-gradient-to-br from-emerald-500/10 to-transparent border border-emerald-500/20 p-3.5 rounded-2xl text-center">
+                                    <span className="text-[10px] text-emerald-300/70 uppercase font-bold block mb-1">Authorized Devices</span>
+                                    <span className="text-xl font-black text-white flex items-center justify-center gap-1">
+                                        <Smartphone className="w-4 h-4 text-emerald-400" />
+                                        {selectedStudentProfile.devices?.length || 0}
+                                    </span>
+                                </div>
+                                <div className="bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 p-3.5 rounded-2xl text-center">
+                                    <span className="text-[10px] text-purple-300/70 uppercase font-bold block mb-1">Last Active</span>
+                                    <span className="text-xs font-bold text-slate-300 block truncate mt-1">
+                                        {selectedStudentProfile.lastLogin ? new Date(selectedStudentProfile.lastLogin).toLocaleDateString() : 'Never'}
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Enrolled Tracks / Curricula */}
+                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                                        <BookOpen className="w-3.5 h-3.5 text-indigo-400" />
+                                        Enrolled Tracks &amp; Curricula
+                                    </h4>
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const currentTracks = selectedStudentProfile.enrolledTracks && selectedStudentProfile.enrolledTracks.length > 0
+                                                ? selectedStudentProfile.enrolledTracks
+                                                : [selectedStudentProfile.grade || 'cie-igcse'];
+                                            setEditTracksStudent(selectedStudentProfile);
+                                            setEditingTracks(currentTracks);
+                                        }}
+                                        className="text-xs text-indigo-400 hover:text-indigo-300 font-bold hover:underline cursor-pointer"
+                                    >
+                                        ✏️ Edit Tracks
+                                    </button>
+                                </div>
+                                <div className="flex flex-wrap gap-2">
+                                    {(selectedStudentProfile.enrolledTracks && selectedStudentProfile.enrolledTracks.length > 0 
+                                        ? selectedStudentProfile.enrolledTracks 
+                                        : [selectedStudentProfile.grade || 'cie-igcse']
+                                    ).map((track: string) => {
+                                        const trackNames: Record<string, string> = {
+                                            'cie-igcse': 'Cambridge IGCSE',
+                                            'cie-as': 'Cambridge AS-Level',
+                                            'cie-alevel': 'Cambridge A-Level',
+                                            'edexcel-igcse': 'Edexcel IGCSE',
+                                            'edexcel-as': 'Edexcel AS-Level',
+                                            'edexcel-a2': 'Edexcel A2-Level',
+                                            'dentistry': 'Dental Program 🦷'
+                                        };
+                                        return (
+                                            <span 
+                                                key={track} 
+                                                className="px-3 py-1 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 rounded-xl text-xs font-bold"
+                                            >
+                                                {trackNames[track] || track}
+                                            </span>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+
+                            {/* Concurrent Device & Fraud Check Warning */}
+                            {selectedStudentProfile.devices && selectedStudentProfile.devices.filter((d: any) => d.status === 'approved').length > 1 && (
+                                <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex items-center gap-3 text-amber-300 text-xs">
+                                    <AlertTriangle className="w-4 h-4 flex-shrink-0 text-amber-400" />
+                                    <div className="leading-snug">
+                                        <span className="font-bold">Concurrent Device Notice: </span>
+                                        Student has {selectedStudentProfile.devices.filter((d: any) => d.status === 'approved').length} active approved devices. If concurrent logins from different locations occur, use the Force Logout button above.
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Linked Devices Summary */}
+                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl space-y-3">
+                                <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                                    <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
+                                    Active / Registered Devices ({selectedStudentProfile.devices?.length || 0})
+                                </h4>
+                                {selectedStudentProfile.devices && selectedStudentProfile.devices.length > 0 ? (
+                                    <div className="space-y-2">
+                                        {selectedStudentProfile.devices.map((dev: any) => (
+                                            <div key={dev.id} className="p-3 bg-white/[0.02] border border-white/5 rounded-xl flex items-center justify-between text-xs">
+                                                <div className="flex items-center gap-2.5">
+                                                    <span className={`w-2 h-2 rounded-full ${dev.status === 'approved' ? 'bg-emerald-400' : dev.status === 'pending' ? 'bg-amber-400' : 'bg-rose-400'}`} />
+                                                    <div>
+                                                        <p className="font-bold text-white">{dev.name} <span className="text-slate-500 font-normal">({dev.os} • {dev.browser})</span></p>
+                                                        <p className="text-[10px] text-slate-500 font-mono">
+                                                            First seen: {new Date(dev.firstSeen).toLocaleDateString()} {dev.ipAddress ? `• IP: ${dev.ipAddress}` : ''}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                                                    dev.status === 'approved' ? 'bg-emerald-500/10 text-emerald-400' :
+                                                    dev.status === 'pending' ? 'bg-amber-500/10 text-amber-400' : 'bg-rose-500/10 text-rose-400'
+                                                }`}>
+                                                    {dev.status}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-xs text-slate-500 italic">No devices logged in yet.</p>
+                                )}
+                            </div>
+
+                            {/* Academic Performance & Quiz Analytics (Proposal 1) */}
+                            <div className="bg-white/[0.02] border border-white/5 p-4 rounded-2xl space-y-3">
+                                <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
+                                    <Award className="w-3.5 h-3.5 text-amber-400" />
+                                    Academic Practice &amp; Performance
+                                </h4>
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+                                    <div className="p-2.5 bg-white/[0.02] rounded-xl border border-white/5">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase block">Lessons Completed</span>
+                                        <span className="text-base font-black text-white">{selectedStudentProfile.completedLessons?.length || 0}</span>
+                                    </div>
+                                    <div className="p-2.5 bg-white/[0.02] rounded-xl border border-white/5">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase block">Quizzes Taken</span>
+                                        <span className="text-base font-black text-emerald-400">{Object.keys(selectedStudentProfile.quizScores || {}).length}</span>
+                                    </div>
+                                    <div className="p-2.5 bg-white/[0.02] rounded-xl border border-white/5">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase block">Mistake Inbox</span>
+                                        <span className="text-base font-black text-rose-400">{selectedStudentProfile.mistakeInbox?.length || 0}</span>
+                                    </div>
+                                    <div className="p-2.5 bg-white/[0.02] rounded-xl border border-white/5">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase block">Avg Quiz Score</span>
+                                        <span className="text-base font-black text-indigo-400">
+                                            {(() => {
+                                                const scores = Object.values(selectedStudentProfile.quizScores || {}) as number[];
+                                                if (scores.length === 0) return 'N/A';
+                                                const avg = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+                                                return `${avg}%`;
+                                            })()}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Editable Teacher Remarks (Proposal 5) */}
+                            <div className="bg-amber-500/5 border border-amber-500/20 p-4 rounded-2xl space-y-2">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                                        <span>📝 Teacher Remarks &amp; Internal Notes</span>
+                                    </span>
+                                    {remarksSavedSuccess && (
+                                        <span className="text-[10px] text-emerald-400 font-bold animate-in fade-in flex items-center gap-1">
+                                            <CheckCircle2 className="w-3 h-3" /> Saved!
+                                        </span>
+                                    )}
+                                </div>
+                                <textarea
+                                    value={studentRemarksText}
+                                    onChange={(e) => setStudentRemarksText(e.target.value)}
+                                    placeholder="Write internal notes or teaching remarks about this student..."
+                                    rows={3}
+                                    className="w-full bg-[#050510]/80 border border-white/10 rounded-xl p-3 text-xs text-slate-200 outline-none focus:border-amber-500/50 resize-none transition-all placeholder:text-slate-600"
+                                />
+                                <div className="flex justify-end">
+                                    <button
+                                        type="button"
+                                        disabled={isSavingRemarks}
+                                        onClick={handleSaveRemarks}
+                                        className="px-4 py-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30 rounded-xl text-xs font-bold transition-all cursor-pointer active:scale-95 disabled:opacity-50"
+                                    >
+                                        {isSavingRemarks ? 'Saving...' : 'Save Remarks'}
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Targeted Direct Push Notification (Proposal 5) */}
+                            <div className="bg-indigo-500/5 border border-indigo-500/20 p-4 rounded-2xl space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
+                                        <Send className="w-3 h-3" />
+                                        <span>Send Targeted Push Notification</span>
+                                    </span>
+                                    {directMsgSentSuccess && (
+                                        <span className="text-[10px] text-emerald-400 font-bold animate-in fade-in flex items-center gap-1">
+                                            <CheckCircle2 className="w-3 h-3" /> Notification Sent!
+                                        </span>
+                                    )}
+                                </div>
+                                <form onSubmit={handleSendDirectNotification} className="space-y-2">
+                                    <input
+                                        type="text"
+                                        value={directMsgTitle}
+                                        onChange={(e) => setDirectMsgTitle(e.target.value)}
+                                        placeholder="Notification Title (e.g. Cambridge Exam Reminder)"
+                                        className="w-full bg-[#050510]/80 border border-white/10 rounded-xl px-3 py-2 text-xs text-slate-200 outline-none focus:border-indigo-500 transition-all placeholder:text-slate-600"
+                                    />
+                                    <textarea
+                                        value={directMsgBody}
+                                        onChange={(e) => setDirectMsgBody(e.target.value)}
+                                        placeholder="Message text directly sent to this student..."
+                                        rows={2}
+                                        required
+                                        className="w-full bg-[#050510]/80 border border-white/10 rounded-xl p-3 text-xs text-slate-200 outline-none focus:border-indigo-500 resize-none transition-all placeholder:text-slate-600"
+                                    />
+                                    <div className="flex justify-end">
+                                        <button
+                                            type="submit"
+                                            disabled={isSendingDirectMsg || !directMsgBody.trim()}
+                                            className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 text-white rounded-xl text-xs font-bold transition-all shadow-md shadow-indigo-500/20 cursor-pointer active:scale-95 flex items-center gap-1.5"
+                                        >
+                                            <Send className="w-3 h-3" />
+                                            {isSendingDirectMsg ? 'Sending...' : 'Send to Student'}
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        {/* Footer */}
+                        <div className="p-4 bg-white/[0.01] border-t border-white/5 flex justify-end">
+                            <button
+                                type="button"
+                                onClick={() => setSelectedStudentProfile(null)}
+                                className="px-5 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl text-xs font-bold transition-all cursor-pointer"
+                            >
+                                Close Dossier
                             </button>
                         </div>
                     </div>

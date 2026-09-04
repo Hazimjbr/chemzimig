@@ -6,7 +6,7 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { 
     Home, LayoutDashboard, CheckSquare, Users, Smartphone, 
-    LineChart, BarChart2, Megaphone, LogOut, Menu, X, Shield
+    LineChart, BarChart2, Megaphone, LogOut, Menu, X, Shield, ShieldCheck
 } from 'lucide-react';
 
 function AdminLayoutContent({
@@ -70,6 +70,12 @@ function AdminLayoutContent({
             icon: Megaphone,
             href: '/admin?tab=announcements',
             active: pathname === '/admin' && currentTab === 'announcements',
+        },
+        {
+            label: 'Audit Logs',
+            icon: ShieldCheck,
+            href: '/admin?tab=audit',
+            active: pathname === '/admin' && currentTab === 'audit',
         },
     ];
 

@@ -42,6 +42,7 @@ export interface Student {
     level?: number;
     dentalBookmarks?: number[];
     dentalMistakes?: number[];
+    directNotifications?: Array<{ id: string; title: string; message: string; sentAt: string; read: boolean }>;
 }
 
 export interface DeviceRequest {
@@ -631,3 +632,67 @@ export async function getAuthStats() {
         blockedDevices,
     };
 }
+
+// ============ Audit Logs & Activity Tracker ============
+
+export interface ActivityLog {
+    id: string;
+    action: string;
+    details: string;
+    performedBy: string;
+    targetStudentId?: string;
+    targetStudentName?: string;
+    createdAt: string;
+    category: 'student' | 'device' | 'security' | 'announcement' | 'curriculum';
+}
+
+const AUDIT_LOGS_COLLECTION = 'admin_audit_logs';
+
+export async function logAdminActivity(log: Omit<ActivityLog, 'id' | 'createdAt'>): Promise<boolean> {
+    try {
+        const db = getDB();
+        const id = `log_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+        const entry: ActivityLog = {
+            ...log,
+            id,
+            createdAt: new Date().toISOString()
+        };
+        await db.collection(AUDIT_LOGS_COLLECTION).doc(id).set(entry);
+        return true;
+    } catch (e) {
+        console.error('[logAdminActivity] Error writing audit log:', e);
+        return false;
+    }
+}
+
+export async function getRecentAuditLogs(limitCount = 40): Promise<ActivityLog[]> {
+    try {
+        const db = getDB();
+        const snap = await db.collection(AUDIT_LOGS_COLLECTION)
+            .orderBy('createdAt', 'desc')
+            .limit(limitCount)
+            .get();
+        return snap.docs.map(d => d.data() as ActivityLog);
+    } catch (e) {
+        console.error('[getRecentAuditLogs] Error retrieving logs:', e);
+        return [];
+    }
+}
+
+export async function forceLogoutStudentDevices(studentId: string): Promise<boolean> {
+    const db = getDB();
+    const studentRef = db.collection(STUDENTS_COLLECTION).doc(studentId);
+    try {
+        return await db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(studentRef);
+            if (!snap.exists) return false;
+            // Clear all registered devices so the session tokens/fingerprints become invalid
+            transaction.update(studentRef, { devices: [] });
+            return true;
+        });
+    } catch (e) {
+        console.error('[forceLogoutStudentDevices] Error:', e);
+        return false;
+    }
+}
+

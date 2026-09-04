@@ -8,7 +8,8 @@ import {
     unblockDevice,
     removeDevice,
     getAuthStats,
-    verifySession
+    verifySession,
+    logAdminActivity
 } from '@/lib/auth-store-admin';
 import { cookies } from 'next/headers';
 
@@ -74,6 +75,13 @@ export async function POST(request: NextRequest) {
         }
 
         if (result) {
+            await logAdminActivity({
+                action: `Device ${action.toUpperCase()}`,
+                details: `Performed ${action} on device (ID: ${deviceId || requestId}) for student ${studentId || 'request'}`,
+                performedBy: 'Admin',
+                category: 'device',
+                targetStudentId: studentId
+            });
             return NextResponse.json({ success: true, message: 'Action executed successfully' });
         }
         return NextResponse.json({ success: false, error: 'Failed to execute action' }, { status: 400 });

@@ -3854,3 +3854,919 @@ questionBank.push(
     createdAt: "2026-07-04"
   }
 );
+
+// Cambridge IGCSE Unit 11: Organic Chemistry Exam Questions
+questionBank.push(
+  {
+    id: "q_org_homologous_series_not_represented-2026",
+    question: "Which homologous series is NOT represented in the compounds shown below?\n\n* Compound 1: CH₃–CH₂–CH₃\n* Compound 2: CH₃–CH₂–OH\n* Compound 3: CH₃–COOH\n* Compound 4: CH₃–CH(CH₃)–CH₃",
+    options: [
+      { text: "Alcohols" },
+      { text: "Alkanes" },
+      { text: "Alkenes" },
+      { text: "Carboxylic acids" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Compound 1 is propane (alkane).\n* Compound 2 is ethanol (alcohol).\n* Compound 3 is ethanoic acid (carboxylic acid).\n* Compound 4 is 2-methylpropane (branched alkane).\n* There are no alkenes (compounds containing C=C double bonds) present, making Option C the correct answer.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_bond_all_four_contain-2026",
+    question: "The list gives the names of four organic compounds:\n\n* Ethane\n* Ethanoic acid\n* Ethanol\n* Ethene\n\nWhich bond do all four compounds contain?",
+    options: [
+      { text: "C–C" },
+      { text: "C=C" },
+      { text: "C–H" },
+      { text: "C–O" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Ethane (C₂H₆) contains C–C and C–H bonds.\n* Ethanoic acid (CH₃COOH) contains C–C, C–H, C=O, C–O, and O–H bonds.\n* Ethanol (C₂H₅OH) contains C–C, C–H, C–O, and O–H bonds.\n* Ethene (C₂H₄) contains a C=C double bond and C–H bonds, but NO single C–C bond.\n* Therefore, the C–H single covalent bond is the only bond common to all four compounds.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_same_homologous_series_selection-2026",
+    question: "Which of the compounds shown belong to the same homologous series?\n\n1) CH₃OH\n2) CH₃CH₂OH\n3) CH₃COOH\n4) CH₃CH₂CH₂OH",
+    options: [
+      { text: "1, 2 and 3" },
+      { text: "1, 2 and 4" },
+      { text: "1, 3 and 4" },
+      { text: "2, 3 and 4" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Compounds 1 (methanol), 2 (ethanol), and 4 (propan-1-ol) all have the general formula CₙH₂ₙ₊₁OH and possess the same hydroxyl (-OH) functional group, so they belong to the alcohol homologous series.\n* Compound 3 (ethanoic acid) has a carboxyl (-COOH) functional group and belongs to carboxylic acids.\n* Therefore, 1, 2, and 4 belong to the same homologous series.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_molecules_same_homologous_series-2026",
+    question: "The structures of four molecules are given:\n\n* P: H–COOH (methanoic acid)\n* Q: H–CH₂–OH (methanol)\n* R: CH₂=CH₂ (ethene)\n* S: CH₃–COOH (ethanoic acid)\n\nWhich two molecules belong to the same homologous series?",
+    options: [
+      { text: "P and Q" },
+      { text: "P and S" },
+      { text: "Q and R" },
+      { text: "R and S" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Molecule P (methanoic acid, HCOOH) and Molecule S (ethanoic acid, CH₃COOH) both contain the -COOH carboxyl functional group.\n* They both belong to the carboxylic acid homologous series (general formula CₙH₂ₙ₊₁COOH).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_ethene_similar_chemical_properties-2026",
+    question: "Which compound has chemical properties similar to those of ethene (CH₂=CH₂)?",
+    options: [
+      { text: "Methane (CH₄)" },
+      { text: "Ethane (C₂H₆)" },
+      { text: "Ethanol (C₂H₅OH)" },
+      { text: "Propene (CH₃–CH=CH₂)" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Ethene and propene both belong to the alkene homologous series because they both contain the reactive carbon-carbon double bond (C=C).\n* Compounds in the same homologous series possess similar chemical properties (e.g. both undergo addition reactions and decolourise bromine water).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_hydrocarbon_reactions_scheme_wxyz-2026",
+    question: "What are the names of the compounds shown in the reaction scheme below?\n\nButane —(cracking)→ W + X\nX —(+ steam)→ Y\nY —(+ oxygen)→ Z (CH₃COOH)",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">W</th><th class="p-2 border">X</th><th class="p-2 border">Y</th><th class="p-2 border">Z</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethanol</td><td class="p-2 border">Ethanoic acid</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethanoic acid</td><td class="p-2 border">Ethanol</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethanoic acid</td><td class="p-2 border">Ethanol</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethanol</td><td class="p-2 border">Ethanoic acid</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: W = Ethane, X = Ethene, Y = Ethanol, Z = Ethanoic acid" },
+      { text: "Row B: W = Ethane, X = Ethene, Y = Ethanoic acid, Z = Ethanol" },
+      { text: "Row C: W = Ethene, X = Ethane, Y = Ethanoic acid, Z = Ethanol" },
+      { text: "Row D: W = Ethene, X = Ethane, Y = Ethanol, Z = Ethanoic acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Cracking butane (C₄H₁₀) gives ethane (W, C₂H₆) and ethene (X, C₂H₄).\n* Ethene reacts with steam in an addition reaction to form ethanol (Y, C₂H₅OH).\n* Oxidation of ethanol with oxygen/acidified oxidising agents produces ethanoic acid (Z, CH₃COOH).\n* Therefore, Row A is the correct sequence.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_petroleum_fractions_xyz_tower-2026",
+    question: "The diagram shows the fractional distillation of petroleum. Fractions X, Y, and Z leave the fractionating column at three different heights below gasoline and above bitumen (X is higher than Y, and Y is higher than Z). What could X, Y, and Z represent?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">X</th><th class="p-2 border">Y</th><th class="p-2 border">Z</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Diesel oil</td><td class="p-2 border">Lubricating fraction</td><td class="p-2 border">Paraffin</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Lubricating fraction</td><td class="p-2 border">Diesel oil</td><td class="p-2 border">Paraffin</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Paraffin</td><td class="p-2 border">Lubricating fraction</td><td class="p-2 border">Diesel oil</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Paraffin</td><td class="p-2 border">Diesel oil</td><td class="p-2 border">Lubricating fraction</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: X = Diesel oil, Y = Lubricating fraction, Z = Paraffin" },
+      { text: "Row B: X = Lubricating fraction, Y = Diesel oil, Z = Paraffin" },
+      { text: "Row C: X = Paraffin, Y = Lubricating fraction, Z = Diesel oil" },
+      { text: "Row D: X = Paraffin, Y = Diesel oil, Z = Lubricating fraction" }
+    ],
+    correctAnswer: 3,
+    explanation: "* In a fractionating column, boiling points increase towards the bottom.\n* Order from top to bottom: Refinery gas → Gasoline → Naphtha → Paraffin (kerosene) → Diesel oil → Lubricating fraction → Bitumen.\n* Therefore, X must be Paraffin, Y must be Diesel oil, and Z must be Lubricating fraction (Row D).",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_natural_gas_constituent-2026",
+    question: "The main constituent of natural gas is hydrocarbon X. To which homologous series does X belong and how many atoms are in one molecule of X?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">homologous series</th><th class="p-2 border">Number of atoms in one molecule</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Alkane</td><td class="p-2 border">1</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Alkane</td><td class="p-2 border">5</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Alkene</td><td class="p-2 border">1</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Alkene</td><td class="p-2 border">5</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Alkane | 1 atom" },
+      { text: "Row B: Alkane | 5 atoms" },
+      { text: "Row C: Alkene | 1 atom" },
+      { text: "Row D: Alkene | 5 atoms" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Natural gas consists primarily of methane (CH₄).\n* Methane is the first member of the alkane homologous series.\n* One molecule of CH₄ contains 1 carbon atom + 4 hydrogen atoms = 5 total atoms (Row B).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_petroleum_fraction_incorrect_use-2026",
+    question: "Which row shows an INCORRECT use for the named petroleum fraction?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Name of fraction</th><th class="p-2 border">Use</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Naphtha</td><td class="p-2 border">Making chemicals</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Gas oil (diesel)</td><td class="p-2 border">Diesel engines</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Kerosene</td><td class="p-2 border">Jet fuel</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Fuel oil</td><td class="p-2 border">Making waxes and polishes</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Naphtha | Making chemicals" },
+      { text: "Row B: Gas oil | Diesel engines" },
+      { text: "Row C: Kerosene | Jet fuel" },
+      { text: "Row D: Fuel oil | Making waxes and polishes" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Lubricating oil (not fuel oil) is used for making waxes, polishes, and engine lubricants.\n* Fuel oil is used as fuel for ships and industrial home heating furnaces.\n* Therefore, Row D is incorrect.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_petroleum_statement_not_correct-2026",
+    question: "Which statement about petroleum (crude oil) is NOT correct?",
+    options: [
+      { text: "It can be separated into useful substances by fractional distillation" },
+      { text: "It consists mainly of hydrocarbons" },
+      { text: "It is found underground in many parts of the world" },
+      { text: "Its main use is for making lubricants and polishes" }
+    ],
+    correctAnswer: 3,
+    explanation: "* The primary, overwhelming use of petroleum (over 90%) is as a fuel for transport (petrol, diesel, jet fuel) and heating, NOT for lubricants and polishes.\n* Lubricants and polishes represent only a small fraction of refined crude oil.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_alkane_properties_true_statement-2026",
+    question: "Which statement about alkanes is correct?",
+    options: [
+      { text: "Ethane has one more carbon atom and one more hydrogen atom than methane" },
+      { text: "They are converted to alcohols by reaction with steam" },
+      { text: "They contain carbon-carbon double bonds" },
+      { text: "They form carbon dioxide and water on complete combustion" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Alkanes burn completely in excess oxygen to produce carbon dioxide (CO₂) and water (H₂O).\n* Statement A is wrong because ethane (C₂H₆) has 1 more C and 2 more H atoms (CH₂ difference) than methane (CH₄).\n* Statement B is wrong because alkenes (not alkanes) react with steam to form alcohols.\n* Statement C is wrong because alkanes contain only single C–C bonds.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_methane_properties_table-2026",
+    question: "Which row correctly identifies the physical properties of methane (CH₄)?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Volatility</th><th class="p-2 border">Electrical conductivity</th><th class="p-2 border">Solubility in water</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">High</td><td class="p-2 border">Good</td><td class="p-2 border">Soluble</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">High</td><td class="p-2 border">Poor</td><td class="p-2 border">Insoluble</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Low</td><td class="p-2 border">Good</td><td class="p-2 border">Soluble</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Low</td><td class="p-2 border">Poor</td><td class="p-2 border">Insoluble</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Volatility = High | Conductivity = Good | Solubility = Soluble" },
+      { text: "Row B: Volatility = High | Conductivity = Poor | Solubility = Insoluble" },
+      { text: "Row C: Volatility = Low | Conductivity = Good | Solubility = Soluble" },
+      { text: "Row D: Volatility = Low | Conductivity = Poor | Solubility = Insoluble" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Methane is a small, non-polar simple covalent gas with weak intermolecular forces, so it has high volatility (boils at -161 °C).\n* It has no mobile electrons or free ions, so its electrical conductivity is poor (non-conductor).\n* It is non-polar, making it insoluble in polar water molecules.\n* Row B is correct.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_incomplete_combustion_ethane_equation-2026",
+    question: "Which equation represents the incomplete combustion of ethane?",
+    options: [
+      { text: "CH₄ + O₂ → CO₂ + 2H₂" },
+      { text: "2C₂H₆ + 5O₂ → 4CO + 6H₂O" },
+      { text: "2C₂H₆ + 3O₂ → 2CO + 4H₂O" },
+      { text: "2C₂H₆ + 7O₂ → 4CO₂ + 6H₂O" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Incomplete combustion of ethane occurs in a limited supply of oxygen, producing toxic carbon monoxide (CO) and water (H₂O).\n* Balancing for ethane (C₂H₆): 2C₂H₆(g) + 5O₂(g) → 4CO(g) + 6H₂O(l).\n* Equation 4 represents complete combustion (producing CO₂), whereas Equation 2 represents incomplete combustion.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_compound_q_decolorizes_bromine_water-2026",
+    question: "Compound Q decolourises aqueous bromine water. Compound Q has two carbon atoms in each molecule. Which statement about compound Q is correct?",
+    options: [
+      { text: "It contains carbon-hydrogen double bonds" },
+      { text: "It has six hydrogen atoms per molecule" },
+      { text: "It has two carbon-carbon double bonds" },
+      { text: "It is produced by cracking alkanes" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Decolourising bromine water identifies compound Q as an alkene (unsaturated hydrocarbon with a C=C double bond).\n* Two carbon atoms means Q is ethene (C₂H₄).\n* Ethene is produced industrially by the catalytic cracking of longer alkane petroleum fractions (Option D).\n* (Statement A is impossible because hydrogen forms only single bonds; statement B describes ethane C₂H₆; statement C is impossible for a 2-carbon molecule).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_substance_not_obtained_cracking_propane-2026",
+    question: "Hydrocarbons obtained by fractional distillation can be cracked to make useful products. Which substance could NOT be obtained by cracking propane (C₃H₈, Mr 44)?",
+    options: [
+      { text: "C₂H₄ (ethene)" },
+      { text: "CH₄ (methane)" },
+      { text: "C₄H₈ (butene)" },
+      { text: "H₂ (hydrogen)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Cracking breaks a larger hydrocarbon into smaller molecules.\n* Propane contains only 3 carbon atoms (C₃H₈).\n* It can crack to form: C₃H₈ → C₂H₄ + CH₄ or C₃H₈ → C₃H₆ + H₂.\n* It is chemically impossible to obtain butene (C₄H₈, 4 carbons) by cracking a 3-carbon molecule, because cracking cannot create additional carbon atoms!",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_reaction_sequence_butane_xyz-2026",
+    question: "The diagram shows a reaction sequence:\n\nButane —(process X)→ Ethene —(process Y)→ Ethanol —(process Z)→ Carbon dioxide and water\n\nWhich row correctly names the processes X, Y, and Z?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">X</th><th class="p-2 border">Y</th><th class="p-2 border">Z</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Cracking</td><td class="p-2 border">Fermentation</td><td class="p-2 border">Respiration</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Cracking</td><td class="p-2 border">Hydration</td><td class="p-2 border">Combustion</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Distillation</td><td class="p-2 border">Fermentation</td><td class="p-2 border">Respiration</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Distillation</td><td class="p-2 border">Hydration</td><td class="p-2 border">Combustion</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: X = Cracking, Y = Fermentation, Z = Respiration" },
+      { text: "Row B: X = Cracking, Y = Hydration, Z = Combustion" },
+      { text: "Row C: X = Distillation, Y = Fermentation, Z = Respiration" },
+      { text: "Row D: X = Distillation, Y = Hydration, Z = Combustion" }
+    ],
+    correctAnswer: 1,
+    explanation: "* X: Breaking large butane into small ethene is cracking.\n* Y: Adding steam to ethene to make ethanol is hydration.\n* Z: Burning ethanol in oxygen to form CO₂ and H₂O is combustion.\n* Therefore, Row B is the exact match.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_ethanol_molecule_diagram_name-2026",
+    question: "The diagram represents the molecule of an organic compound containing two carbon atoms, six hydrogen atoms, and one oxygen atom arranged as C₂H₅OH. What is the name of the compound?",
+    options: [
+      { text: "Ethane" },
+      { text: "Ethanoic acid" },
+      { text: "Ethanol" },
+      { text: "Ethene" }
+    ],
+    correctAnswer: 2,
+    explanation: "* The structure contains 2 carbon atoms, 5 hydrogen atoms bonded to carbon, and an -OH (hydroxyl) group.\n* This corresponds to C₂H₅OH, which is ethanol.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_liquid_w_burns_ph7-2026",
+    question: "Liquid W burns completely to give carbon dioxide and water. Liquid W is a compound containing carbon, hydrogen and oxygen. A solution of liquid W in water is pH 7. What is liquid W?",
+    options: [
+      { text: "Ethanoic acid" },
+      { text: "Ethanol" },
+      { text: "Gasoline" },
+      { text: "Methane" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Liquid W contains C, H, and O (eliminating gasoline and methane which only contain C and H).\n* An aqueous solution of ethanoic acid is acidic (pH < 7, around pH 3–4).\n* Ethanol dissolves in water to form a neutral solution with pH 7.\n* Therefore, liquid W is ethanol.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_production_ethanol_from_ethene-2026",
+    question: "What is used in the industrial catalytic production of ethanol from ethene?",
+    options: [
+      { text: "Steam" },
+      { text: "Hydrogen and oxygen" },
+      { text: "Oxygen only" },
+      { text: "Yeast" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ethanol is manufactured from ethene by the addition reaction with steam (H₂O(g)) at 300 °C, 60 atm pressure, in the presence of a concentrated phosphoric acid (H₃PO₄) catalyst: C₂H₄ + H₂O → C₂H₅OH.\n* (Yeast is used in fermentation of glucose, not from ethene).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_ethanol_obtained_fermentation_mixture-2026",
+    question: "Ethanol is made by fermentation of glucose. How is pure ethanol obtained from the resulting fermentation mixture?",
+    options: [
+      { text: "Chromatography" },
+      { text: "Crystallisation" },
+      { text: "Fractional distillation" },
+      { text: "Electrolysis" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Fermentation produces an aqueous solution containing approximately 10–14% ethanol alongside water and dead yeast cells.\n* Ethanol (boiling point 78 °C) and water (boiling point 100 °C) are miscible liquids with different boiling points, so fractional distillation is used to separate and concentrate the ethanol.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_ethanol_production_properties_row-2026",
+    question: "Which row correctly describes the production of ethanol and its properties?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Can be made from glucose</th><th class="p-2 border">Can be made from ethene</th><th class="p-2 border">Is used as a fuel</th><th class="p-2 border">Is used as a solvent</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: from glucose (✓), from ethene (✗), fuel (✓), solvent (✓)" },
+      { text: "Row B: from glucose (✓), from ethene (✓), fuel (✓), solvent (✓)" },
+      { text: "Row C: from glucose (✓), from ethene (✓), fuel (✓), solvent (✗)" },
+      { text: "Row D: from glucose (✗), from ethene (✓), fuel (✗), solvent (✓)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Ethanol can be manufactured both from glucose (via fermentation) and from ethene (via catalytic hydration) (✓ and ✓).\n* Ethanol is widely used both as a clean motor fuel and as an industrial/cosmetic solvent (✓ and ✓).\n* Therefore, Row B is completely correct.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 5,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_methanoic_acid_statement-2026",
+    question: "Which statement describes methanoic acid (H–COOH)?",
+    options: [
+      { text: "It is a liquid with a characteristic smell" },
+      { text: "It is a liquid which decolourises bromine water" },
+      { text: "It is a colourless flammable gas" },
+      { text: "It is formed when ethane reacts with steam" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Methanoic acid (HCOOH) is a colourless liquid with a sharp, characteristic pungent smell (found in ant stings).\n* It is a saturated carboxylic acid, so it does not decolourise bromine water.\n* It is not a gas at room temperature and is not formed from ethane.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_carboxylic_acid_not_correct_statement-2026",
+    question: "Which statement about carboxylic acids is NOT correct?",
+    options: [
+      { text: "Aqueous ethanoic acid has a pH below pH 7" },
+      { text: "They produce carbon dioxide when reacted with a metal carbonate" },
+      { text: "Methyl orange turns yellow in aqueous ethanoic acid" },
+      { text: "They contain the functional group –COOH" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Ethanoic acid is an acid (pH ~ 3–4), so it turns methyl orange indicator red (not yellow; yellow is for neutral/alkaline solutions).\n* Statements A, B, and D are all true chemical facts for carboxylic acids.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_compound_x_bonds_table_identification-2026",
+    question: "The table shows the bonds that are present and bonds that are not present in compound X:\n\n* C–C bond: present (✓)\n* C=C bond: absent (✗)\n* C–H bond: present (✓)\n* C–O bond: present (✓)\n* C=O bond: present (✓)\n* O–H bond: present (✓)\n\nWhat type of compound is X?",
+    options: [
+      { text: "A carboxylic acid" },
+      { text: "An alcohol" },
+      { text: "An alkane" },
+      { text: "An alkene" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The carboxyl functional group (-COOH) consists of a C=O double bond, a C-O single bond, and an O-H single bond attached to the same carbon atom.\n* Since compound X has C-C, C-H, C-O, C=O, and O-H bonds, it must be a carboxylic acid (e.g. ethanoic acid, CH₃COOH).",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_dilute_ethanoic_acid_properties_row-2026",
+    question: "What are the physical properties of a dilute solution of ethanoic acid?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Smell</th><th class="p-2 border">Appearance</th><th class="p-2 border">State at r.t.p.</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Odorless</td><td class="p-2 border">Colorless</td><td class="p-2 border">Gas</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Odorless</td><td class="p-2 border">Red</td><td class="p-2 border">Liquid</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Pungent smell</td><td class="p-2 border">Red</td><td class="p-2 border">Gas</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Pungent smell</td><td class="p-2 border">Colorless</td><td class="p-2 border">Liquid</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Odorless | Colorless | Gas" },
+      { text: "Row B: Odorless | Red | Liquid" },
+      { text: "Row C: Pungent smell | Red | Gas" },
+      { text: "Row D: Pungent smell | Colorless | Liquid" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Dilute ethanoic acid (vinegar) has a sharp, characteristic pungent smell.\n* It is a completely clear, colourless liquid at room temperature and pressure (Row D).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_ethene_addition_polymer_terms-2026",
+    question: "Ethene forms an addition polymer:\n\n... + CH₂=CH₂ + CH₂=CH₂ + ... → –[CH₂–CH₂–CH₂–CH₂]–\n\nWhich terms describe this polymer?",
+    options: [
+      { text: "An unsaturated compound called poly(ethene)" },
+      { text: "A saturated compound called poly(ethene)" },
+      { text: "An unsaturated compound called poly(ethane)" },
+      { text: "A saturated compound called poly(ethane)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* When ethene undergoes addition polymerisation, the carbon-carbon double bonds (C=C) break open to form a polymer chain containing ONLY single C–C bonds.\n* Therefore, poly(ethene) is a saturated macromolecule named poly(ethene).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_formation_of_polymer_row-2026",
+    question: "Which row describes the monomer and polymer correctly?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Monomer</th><th class="p-2 border">Polymer</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Ethane</td><td class="p-2 border">Poly(ethane)</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Ethene</td><td class="p-2 border">Poly(ethene)</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Ethene</td><td class="p-2 border">Poly(ethane)</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Ethane</td><td class="p-2 border">Poly(ethene)</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Ethane → Poly(ethane)" },
+      { text: "Row B: Ethene → Poly(ethene)" },
+      { text: "Row C: Ethene → Poly(ethane)" },
+      { text: "Row D: Ethane → Poly(ethene)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The monomer must be an unsaturated alkene with a C=C double bond (ethene, C₂H₄).\n* The resulting addition polymer retains the monomer's root name in brackets: poly(ethene) (Row B).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_chloroethene_pvc_monomer-2026",
+    question: "The diagram shows three repeat units in the structure of an addition polymer with chlorine atoms: –[CH₂–CHCl–CH₂–CHCl–CH₂–CHCl]–. Which alkene monomer is used to make this polymer?",
+    options: [
+      { text: "1,2-dichloroethane" },
+      { text: "1-chloroethane" },
+      { text: "Chloroethene (CH₂=CHCl)" },
+      { text: "1,2-dichloroethene" }
+    ],
+    correctAnswer: 2,
+    explanation: "* To identify the monomer from an addition polymer repeat unit: take two adjacent carbon atoms along the main chain (–CH₂–CHCl–) and insert a double bond between them.\n* This gives CH₂=CHCl, which is chloroethene (vinyl chloride, the monomer for PVC).",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_org_process_not_produce_co2-2026",
+    question: "Which process does NOT produce carbon dioxide?",
+    options: [
+      { text: "Combustion of methane" },
+      { text: "Fermentation of sugar" },
+      { text: "Polymerisation of ethene" },
+      { text: "Respiration" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Polymerisation of ethene is an addition reaction where monomers join together to form a single product, poly(ethene), with NO by-products or gas emissions.\n* Combustion of methane produces CO₂ and H₂O.\n* Fermentation of sugar produces ethanol and CO₂.\n* Respiration in living cells produces CO₂ and H₂O.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 6,
+    createdAt: "2026-07-04"
+  }
+);
+// ==========================================
+// Unit 12: Experimental Techniques and Chemical Analysis
+// ==========================================
+
+questionBank.push(
+  {
+    id: "q_exp_add_50cm3_acid_quickly-2026",
+    question: "One of the instructions for an experiment reads as follows: 'Quickly add 50 cm³ of acid to the reaction flask'. What is the best piece of apparatus to use?",
+    options: [
+      { text: "A burette" },
+      { text: "A conical flask" },
+      { text: "A measuring cylinder" },
+      { text: "A volumetric pipette" }
+    ],
+    correctAnswer: 2,
+    explanation: "* A measuring cylinder is designed to measure and pour approximate volumes of liquid rapidly.\n* A burette and a pipette are high-precision apparatus that deliver liquid dropwise or very slowly, making them unsuitable when 'quickly' is specified.\n* A conical flask is a reaction vessel, not an accurate measuring instrument.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_marble_chips_gas_syringe_apparatus-2026",
+    question: "A student uses a flask connected to a gas syringe to measure the volume of carbon dioxide gas made when different masses of marble chips are added to 25 cm³ of dilute hydrochloric acid. Which other items of apparatus are essential to complete these measurements?",
+    options: [
+      { text: "A measuring cylinder and balance" },
+      { text: "A filter funnel and stopwatch" },
+      { text: "A filter funnel and balance" },
+      { text: "A measuring cylinder and stopwatch" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A digital balance is required to measure the 'different masses of marble chips'.\n* A measuring cylinder is required to measure the '25 cm³ of dilute hydrochloric acid'.\n* Therefore, a measuring cylinder and a balance are the essential items.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_apparatus_essential_both_rate_reactions-2026",
+    question: "A student measures the rate of two different chemical reactions:\n\n* In one reaction, there is a change in mass of the reaction mixture over time.\n* In the second reaction, there is a change in temperature during the reaction over time.\n\nWhich piece of apparatus is essential in BOTH experiments?",
+    options: [
+      { text: "A balance" },
+      { text: "A pipette" },
+      { text: "A thermometer" },
+      { text: "A stopwatch (clock)" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Rate of reaction is defined as the change in amount/property divided by time.\n* Any rate-of-reaction investigation inherently requires measuring time intervals, making a stopwatch or clock essential in both experiments.\n* A balance is only needed for the mass change experiment, and a thermometer is only needed for the temperature change experiment.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_three_pieces_apparatus_identification_table-2026",
+    question: "The diagram shows three pieces of apparatus (1, 2, and 3) used for measuring liquid volumes:\n\n* Apparatus 1: cylindrical jar with graduated markings on the glass\n* Apparatus 2: long narrow vertical graduated tube with a stopcock tap at the bottom\n* Apparatus 3: narrow glass tube with a central bulb and a single etched ring mark\n\nWhat are these pieces of apparatus?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Apparatus 1</th><th class="p-2 border">Apparatus 2</th><th class="p-2 border">Apparatus 3</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Burette</td><td class="p-2 border">Measuring cylinder</td><td class="p-2 border">Pipette</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Measuring cylinder</td><td class="p-2 border">Burette</td><td class="p-2 border">Pipette</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Burette</td><td class="p-2 border">Pipette</td><td class="p-2 border">Measuring cylinder</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Measuring cylinder</td><td class="p-2 border">Pipette</td><td class="p-2 border">Burette</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Burette | Measuring cylinder | Pipette" },
+      { text: "Row B: Measuring cylinder | Burette | Pipette" },
+      { text: "Row C: Burette | Pipette | Measuring cylinder" },
+      { text: "Row D: Measuring cylinder | Pipette | Burette" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Apparatus 1 is a measuring cylinder.\n* Apparatus 2 has a stopcock tap at the base, which is a burette.\n* Apparatus 3 has a bulb with a single graduation calibration mark, which is a volumetric pipette (Row B).",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_burette_measuring_volume_statement-2026",
+    question: "Four pieces of apparatus commonly used in chemical experiments are a burette, a measuring cylinder, a pipette, and a thermometer. Which statement about the apparatus is correct?",
+    options: [
+      { text: "The burette measures the volume of liquid added in a titration" },
+      { text: "The measuring cylinder measures the mass of a substance used in an experiment" },
+      { text: "The pipette measures the volume of gas given off in a reaction" },
+      { text: "The thermometer measures the density of a solution" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A burette is designed to accurately measure and deliver variable volumes of liquid added during a titration.\n* A measuring cylinder measures liquid volume (not mass).\n* A pipette measures a fixed volume of liquid (not gas).\n* A thermometer measures temperature (not density).",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_apparatus_pqrs_correct_measurement_row-2026",
+    question: "P (burette), Q (gas syringe), R (measuring cylinder), and S (volumetric pipette) are pieces of laboratory apparatus. Which row describes the correct apparatus for the measurement made?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Apparatus</th><th class="p-2 border">Measurement made</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">P</td><td class="p-2 border">The volume of acid added to alkali in a titration</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Q</td><td class="p-2 border">5 cm³ of acid to add to calcium carbonate in a rate-determining experiment</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">R</td><td class="p-2 border">7 cm³ of a gas given off in a rate-determining experiment</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">S</td><td class="p-2 border">2 cm³ of alkali for use in a titration</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: P (burette) measures the volume of acid added to alkali in a titration" },
+      { text: "Row B: Q (gas syringe) measures 5 cm³ of acid to add to calcium carbonate" },
+      { text: "Row C: R (measuring cylinder) measures 7 cm³ of a gas given off in a rate experiment" },
+      { text: "Row D: S (pipette) measures 2 cm³ of alkali for use in a titration" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Apparatus P is a burette, which is precisely designed to deliver and measure the variable volume of acid added in a titration (Row A).\n* Q is a gas syringe (measures gas, not liquid acid).\n* S is a fixed 25 cm³ pipette (cannot measure 2 cm³).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_upturned_cylinder_water_trough_gas_statement-2026",
+    question: "A conical flask containing a reaction mixture is connected by a delivery tube to an inverted measuring cylinder filled with water in a water trough. Which statement must be correct about this reaction?",
+    options: [
+      { text: "The reaction is endothermic" },
+      { text: "The reaction is exothermic" },
+      { text: "The reaction produces a gas" },
+      { text: "The reaction produces an acid" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Inverted collection over water (downward displacement of water) is used specifically to collect and measure insoluble or sparingly soluble gases produced in a reaction.\n* It does not measure thermal changes (endothermic/exothermic) or acidity.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 1,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_liquid_x_bp_102_ui_green_identify-2026",
+    question: "The results of some tests on a clear, colourless liquid X are shown:\n\n* Boiling point = 102 °C\n* Universal Indicator turns green (pH 7)\n\nWhat is substance X?",
+    options: [
+      { text: "Hydrochloric acid" },
+      { text: "Sodium chloride solution" },
+      { text: "Pure water" },
+      { text: "Ethanol" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Pure water has a sharp boiling point of exactly 100 °C at 1 atm.\n* Dissolving a non-volatile neutral solute such as sodium chloride elevates the boiling point above 100 °C (to 102 °C) while keeping the solution neutral (pH 7, green with Universal Indicator).\n* Hydrochloric acid would turn Universal Indicator red; ethanol has a boiling point of 78 °C.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_filtration_xy_types_substance_separated-2026",
+    question: "The diagram shows a mixture containing solid X and liquid Y being poured through filter paper in a funnel into a beaker. Which types of substances can be separated by this method?",
+    options: [
+      { text: "Compounds" },
+      { text: "Elements" },
+      { text: "Mixtures" },
+      { text: "Molecules" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Filtration is a physical separation method used strictly to separate heterogeneous mixtures (such as an insoluble solid mixed with a liquid).\n* Chemical bonds in compounds or molecules cannot be separated by physical filtration.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_separate_methanol_and_ethanol_fractional-2026",
+    question: "Methanol (CH₃OH, boiling point 65 °C) and ethanol (C₂H₅OH, boiling point 78 °C) are miscible liquids. Which apparatus is used to obtain pure methanol from a mixture of ethanol and methanol?",
+    options: [
+      { text: "A filter funnel and filter paper" },
+      { text: "Fractional distillation apparatus (round-bottom flask with fractionating column and condenser)" },
+      { text: "An open evaporating dish and Bunsen burner" },
+      { text: "A test tube with delivery tube inverted over water" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Methanol and ethanol are miscible liquids with close boiling points (65 °C and 78 °C).\n* Fractional distillation with a fractionating column is required to separate miscible liquids based on their boiling point difference.\n* Filtration or open evaporation cannot separate miscible liquids.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_fractional_distillation_property_x_depended-2026",
+    question: "A mixture of ethanol and methanol are separated by fractional distillation. This method of separation depends on a difference in property X of these two alcohols. What is property X?",
+    options: [
+      { text: "Boiling point" },
+      { text: "Melting point" },
+      { text: "Colour" },
+      { text: "Solubility in water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Distillation relies on differences in volatility and boiling points of substances.\n* The liquid with the lower boiling point (methanol, 65 °C) vaporises and distils over first before the higher boiling liquid (ethanol, 78 °C).",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_fruit_drink_illegal_colouring_method-2026",
+    question: "A fruit drink coloured orange contains a dissolved mixture of red and yellow colouring agents. One of these colouring agents is suspected of being illegal. Which method could be used to separate and identify the presence of this illegal colouring agent?",
+    options: [
+      { text: "Chromatography" },
+      { text: "Distillation" },
+      { text: "Evaporation" },
+      { text: "Filtration" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Paper chromatography is specifically used to separate and identify dissolved soluble colourings and dyes by comparing their Rf values against known pure standards.\n* Distillation, evaporation, and filtration cannot separate individual dissolved food dyes.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_student_separates_salt_from_salt_sand_order-2026",
+    question: "A student separates pure sodium chloride (salt) from a mixture of solid salt and sand. What is the correct chronological order of steps for the student to take?",
+    options: [
+      { text: "Filter → evaporate → shake with water" },
+      { text: "Filter → shake with water → evaporate" },
+      { text: "Shake with water → evaporate → filter" },
+      { text: "Shake with water → filter → evaporate" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Step 1: Shake with water to dissolve the soluble salt while leaving the insoluble sand as a solid suspension.\n* Step 2: Filter the mixture so insoluble sand is trapped as the residue, and salt solution passes through as the filtrate.\n* Step 3: Evaporate water from the filtrate to crystallise and obtain pure dry salt crystals.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 2,
+    createdAt: "2026-07-04"
+  }
+);
+questionBank.push(
+  {
+    id: "q_exp_silver_chloride_sunlight_color_change-2026",
+    question: "A test-tube containing a white precipitate of silver chloride (AgCl) is left standing in direct sunlight on a window sill. What observation is made after several minutes?",
+    options: [
+      { text: "The precipitate dissolves to form a clear yellow solution" },
+      { text: "The white precipitate turns grey / violet" },
+      { text: "Effervescence occurs and a brown gas is released" },
+      { text: "The precipitate turns bright pink" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Silver halides undergo photochemical reduction in the presence of ultraviolet/visible light.\n* Silver ions (Ag⁺) are reduced to tiny particles of elemental silver metal (Ag(s)), causing the white precipitate to turn grey/violet: 2AgCl(s) → 2Ag(s) + Cl₂(g).",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_lead_nitrate_iodide_bright_yellow-2026",
+    question: "A student adds aqueous lead(II) nitrate, Pb(NO₃)₂, to an unknown colourless solution. A bright yellow precipitate forms immediately. Which anion is present in the solution?",
+    options: [
+      { text: "Chloride (Cl⁻)" },
+      { text: "Bromide (Br⁻)" },
+      { text: "Iodide (I⁻)" },
+      { text: "Sulfate (SO₄²⁻)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Lead(II) ions react with iodide ions to form an insoluble bright yellow precipitate of lead(II) iodide: Pb²⁺(aq) + 2I⁻(aq) → PbI₂(s).\n* Lead(II) chloride is white, and lead(II) sulfate is white.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_flame_test_brick_red_cation-2026",
+    question: "A student performs a flame test on a solid compound using a clean nichrome wire dipped in concentrated hydrochloric acid. The flame turns brick-red (orange-red). Which metal cation is present?",
+    options: [
+      { text: "Sodium (Na⁺)" },
+      { text: "Potassium (K⁺)" },
+      { text: "Calcium (Ca²⁺)" },
+      { text: "Barium (Ba²⁺)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Calcium ions (Ca²⁺) produce a characteristic brick-red (orange-red) flame colour.\n* Sodium produces yellow, potassium produces lilac, and barium produces apple-green.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 3,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_planning_fair_test_controlled_variable-2026",
+    question: "A student investigates the rate of reaction between dilute hydrochloric acid and calcium carbonate chips at different temperatures. Which variable must be kept constant to ensure a fair test?",
+    options: [
+      { text: "The temperature of the acid" },
+      { text: "The mass and surface area (particle size) of calcium carbonate" },
+      { text: "The rate of carbon dioxide gas production" },
+      { text: "The time taken to collect 50 cm³ of gas" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In this experiment, temperature is the independent variable (deliberately changed).\n* Rate/time of gas collection is the dependent variable (measured).\n* The mass, volume, and surface area (particle size) of calcium carbonate chips must be kept strictly constant (controlled variable) so that any rate change is solely caused by temperature.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  },
+  {
+    id: "q_exp_heating_ethanol_safety_reason-2026",
+    question: "Why should a mixture containing ethanol and an organic acid be heated in a water bath rather than directly with a Bunsen burner flame?",
+    options: [
+      { text: "Ethanol dissolves the glass if heated with a flame" },
+      { text: "Ethanol is highly flammable and its vapour can easily ignite near an open naked flame" },
+      { text: "Water baths reach higher temperatures than a roaring Bunsen burner" },
+      { text: "A Bunsen burner causes the acid to turn alkaline" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Alcohols such as ethanol are volatile and highly flammable liquids.\n* Direct heating with an open Bunsen burner flame risks igniting the escaping ethanol vapours, so an electric heating mantle or a hot water bath is required for laboratory safety.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 Paper 2",
+    lessonNum: 4,
+    createdAt: "2026-07-04"
+  }
+);
