@@ -4768,5 +4768,1441 @@ questionBank.push(
     source: "Cambridge IGCSE Chemistry 0620 Paper 2",
     lessonNum: 4,
     createdAt: "2026-07-04"
+  },
+
+  // =========================================================================
+  // 🌟 CAMBRIDGE IGCSE CHEMISTRY (0620) — MAY / JUNE 2026 HIGH-YIELD SERIES
+  // =========================================================================
+
+  // -------------------------------------------------------------------------
+  // SECTION A: PAPER 2 (MULTIPLE CHOICE — CORE & EXTENDED)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2026-mj-p2-q01",
+    question: "A gas jar of sulfur dioxide (Mr = 64) and a gas jar of chlorine (Mr = 71) are separated by a porous barrier. Both gases diffuse through the barrier into a central chamber. Which statement correctly compares the rate of diffusion of sulfur dioxide with that of chlorine?",
+    options: [
+      { text: "Sulfur dioxide diffuses faster because its relative molecular mass is lower" },
+      { text: "Chlorine diffuses faster because its relative molecular mass is higher" },
+      { text: "Both gases diffuse at identical rates because both are non-metallic molecular gases" },
+      { text: "Sulfur dioxide diffuses slower because it forms dense acidic droplets in air" }
+    ],
+    correctAnswer: 0,
+    explanation: "* According to Graham's law and kinetic particle theory, gases with lower relative molecular mass (Mr) diffuse faster at any given temperature.\n* The Mr of sulfur dioxide (SO₂) is 32 + (16 × 2) = 64.\n* The Mr of chlorine (Cl₂) is 35.5 × 2 = 71.\n* Because 64 < 71, sulfur dioxide particles have higher average velocities at the same temperature and diffuse faster.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/26 Q1",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q02",
+    question: "An atom has 19 protons, 20 neutrons, and 18 electrons. Which particle does this represent?",
+    options: [
+      { text: "An uncharged potassium atom, ³⁹₁₉K" },
+      { text: "A potassium cation, ³⁹₁₉K⁺" },
+      { text: "A calcium cation, ⁴⁰₂₀Ca²⁺" },
+      { text: "An argon atom, ⁴⁰₁₈Ar" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The atomic number (proton number) is 19, which defines the element as Potassium (K).\n* Nucleon number (mass number) = protons + neutrons = 19 + 20 = 39.\n* Number of electrons (18) is one fewer than protons (19), giving an overall net positive charge of +1 (K⁺).",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/26 Q4",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q03",
+    question: "A sample of hydrocarbon X contains 85.7% carbon and 14.3% hydrogen by mass. What is the empirical formula of hydrocarbon X? [Ar: C = 12.0, H = 1.0]",
+    options: [
+      { text: "CH" },
+      { text: "CH₂" },
+      { text: "CH₃" },
+      { text: "C₂H₅" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Moles of Carbon: 85.7 / 12.0 = 7.14 mol.\n* Moles of Hydrogen: 14.3 / 1.0 = 14.3 mol.\n* Divide by the smaller number of moles: C = 7.14 / 7.14 = 1; H = 14.3 / 7.14 = 2.00.\n* The simplest whole-number empirical ratio is CH₂.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/26 Q7",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q04",
+    question: "During the electrolysis of concentrated aqueous sodium chloride using inert carbon (graphite) electrodes, which gas is produced at the anode (+)?",
+    options: [
+      { text: "Hydrogen (H₂)" },
+      { text: "Oxygen (O₂)" },
+      { text: "Chlorine (Cl₂)" },
+      { text: "Sodium vapour (Na)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* The anions attracted to the positive anode are chloride ions (Cl⁻) and hydroxide ions (OH⁻).\n* Because the sodium chloride solution is concentrated (brine), chloride ions are in high concentration and are discharged preferentially over hydroxide ions.\n* Half-equation at anode: 2Cl⁻ → Cl₂ + 2e⁻.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/26 Q10",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q05",
+    question: "The energy profile diagram for a reversible chemical reaction is shown. The activation energy for the forward reaction is +180 kJ/mol and the enthalpy change (ΔH) of the forward reaction is -90 kJ/mol. What is the activation energy for the reverse reaction?",
+    options: [
+      { text: "+90 kJ/mol" },
+      { text: "+180 kJ/mol" },
+      { text: "+270 kJ/mol" },
+      { text: "-270 kJ/mol" }
+    ],
+    correctAnswer: 2,
+    explanation: "* In an exothermic forward reaction (ΔH = -90 kJ/mol), the products lie 90 kJ/mol lower in energy than the reactants.\n* The activation energy for the reverse reaction equals the energy gap from the products up to the transition state (peak).\n* Reverse Ea = Forward Ea + |ΔH| = 180 + 90 = +270 kJ/mol.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/23/M/J/26 Q12",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q06",
+    question: "Which of the following changes will shift the position of dynamic equilibrium for the Haber process towards the right (favouring ammonia yield)?\nN₂(g) + 3H₂(g) ⇌ 2NH₃(g)    ΔH = -92 kJ/mol",
+    options: [
+      { text: "Increasing the reaction temperature" },
+      { text: "Decreasing the total pressure" },
+      { text: "Increasing the total pressure" },
+      { text: "Adding an iron catalyst" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Reactants have 1 + 3 = 4 moles of gas; products have 2 moles of gas.\n* By Le Chatelier's principle, increasing total pressure shifts the position of equilibrium towards the side with fewer moles of gas (towards the right, yielding more NH₃).\n* Adding a catalyst increases the rate of both forward and reverse reactions equally without shifting the equilibrium position.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/26 Q16",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q07",
+    question: "Which pair of oxides are both amphoteric (react with both dilute acids and dilute alkalis)?",
+    options: [
+      { text: "Na₂O and MgO" },
+      { text: "Al₂O₃ and ZnO" },
+      { text: "CO₂ and SO₂" },
+      { text: "CO and NO" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Amphoteric oxides can behave as both bases and acids; they react with both strong acids and strong alkalis to form salt and water.\n* In Cambridge IGCSE, the key amphoteric oxides to memorise are aluminium oxide (Al₂O₃) and zinc oxide (ZnO).\n* Na₂O and MgO are basic; CO₂ and SO₂ are acidic; CO and NO are neutral.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/26 Q19",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q08",
+    question: "Which observation occurs when aqueous chlorine is added to a test-tube containing aqueous potassium iodide?",
+    options: [
+      { text: "No visible change occurs because iodine is more reactive than chlorine" },
+      { text: "The colourless solution turns dark brown due to the displacement of iodine" },
+      { text: "A white precipitate of potassium chloride immediately forms" },
+      { text: "A pungent green gas is evolved" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Chlorine is higher in Group VII than iodine, meaning chlorine is more reactive (a stronger oxidising agent).\n* Chlorine displaces iodide ions from solution: Cl₂(aq) + 2I⁻(aq) → 2Cl⁻(aq) + I₂(aq).\n* The liberated aqueous iodine gives the resulting solution a distinctive brown colour.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/26 Q24",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q09",
+    question: "In the blast furnace extraction of iron, what is the primary role of limestone (calcium carbonate, CaCO₃)?",
+    options: [
+      { text: "To act as a reducing agent converting haematite (Fe₂O₃) to iron" },
+      { text: "To provide oxygen for the combustion of coke" },
+      { text: "To thermally decompose and react with acidic silica impurities (SiO₂) to form slag (CaSiO₃)" },
+      { text: "To lower the melting point of haematite directly" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Limestone thermally decomposes in the intense furnace heat: CaCO₃ → CaO + CO₂.\n* The basic calcium oxide (CaO) reacts with acidic sandy impurities (silicon dioxide, SiO₂) in a neutralisation reaction: CaO + SiO₂ → CaSiO₃ (molten calcium silicate / slag).\n* Slag floats on top of molten iron and is tapped off separately.",
+    level: 2,
+    topic: "metals",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/23/M/J/26 Q27",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2026-mj-p2-q10",
+    question: "Which organic molecule is an isomer of but-1-ene (C₄H₈)?",
+    options: [
+      { text: "Butane" },
+      { text: "Methylpropane" },
+      { text: "Cyclobutane" },
+      { text: "Propene" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Structural isomers share the identical molecular formula but differ in their structural arrangement.\n* But-1-ene has the molecular formula C₄H₈.\n* Cyclobutane is a cyclic alkane with formula C₄H₈, making it a functional group isomer of but-1-ene.\n* Butane and methylpropane are C₄H₁₀ (alkanes).",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/26 Q35",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+
+  // -------------------------------------------------------------------------
+  // SECTION B: PAPER 4 (THEORY / EXTENDED STRUCTURED QUESTIONS)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2026-mj-p4-q01",
+    question: "Dilute sulfuric acid reacts with solid magnesium ribbon in an open conical flask according to the equation:\nMg(s) + H₂SO₄(aq) → MgSO₄(aq) + H₂(g)\nExplain in terms of particle collision theory why increasing the concentration of sulfuric acid increases the rate of reaction.",
+    options: [
+      { text: "Higher concentration provides particles with greater average kinetic energy and speed" },
+      { text: "Higher concentration increases the number of acid particles per unit volume, increasing the frequency of successful collisions" },
+      { text: "Higher concentration lowers the activation energy required for the reaction" },
+      { text: "Higher concentration increases the surface area of the solid magnesium metal" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Increasing concentration means there are more reactant particles (H⁺ ions) in a given volume of solution.\n* Consequently, reactant particles collide with the magnesium surface more frequently (greater collision frequency).\n* This leads to a greater frequency of successful collisions (collisions possessing energy ≥ activation energy), thereby increasing reaction rate.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/M/J/26 Q3(a)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "particles per unit volume", text: "State that more hydrogen ions / acid particles are present per unit volume (or closer together)." },
+        { mark: 1, keyword: "collision frequency", text: "Mention greater frequency of collisions (or more collisions per second/unit time) between particles." },
+        { mark: 1, keyword: "successful collisions", text: "Clarify that the frequency of successful / effective collisions increases." }
+      ],
+      examinerTips: "Do NOT write 'more collisions occur' without specifying 'per second' or 'collision frequency'. Collision frequency or rate of collisions is strictly required."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p4-q02",
+    question: "A student titrates 25.0 cm³ of 0.0800 mol/dm³ aqueous sodium hydroxide with dilute hydrochloric acid of unknown concentration:\nNaOH(aq) + HCl(aq) → NaCl(aq) + H₂O(l)\nExactly 20.00 cm³ of hydrochloric acid is required to reach the equivalence point. Calculate the concentration of the hydrochloric acid in mol/dm³.",
+    options: [
+      { text: "0.0640 mol/dm³" },
+      { text: "0.100 mol/dm³" },
+      { text: "0.160 mol/dm³" },
+      { text: "0.0400 mol/dm³" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Step 1: Calculate moles of NaOH = Concentration × Volume (dm³) = 0.0800 mol/dm³ × (25.0 / 1000 dm³) = 0.00200 mol.\n* Step 2: From the 1:1 stoichiometric ratio, moles of HCl = 0.00200 mol.\n* Step 3: Calculate concentration of HCl = Moles / Volume (dm³) = 0.00200 mol / (20.00 / 1000 dm³) = 0.100 mol/dm³.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/M/J/26 Q4(c)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "moles of NaOH", text: "0.00200 mol NaOH calculated from c × V." },
+        { mark: 1, keyword: "mole ratio 1:1", text: "Equating moles of HCl to 0.00200 mol." },
+        { mark: 1, keyword: "0.100 mol/dm3", text: "Final concentration = 0.100 mol/dm³ (with correct 3 significant figures)." }
+      ],
+      examinerTips: "Ensure volumes are converted from cm³ to dm³ by dividing by 1000 before multiplying."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p4-q03",
+    question: "Explain why molten sodium chloride conducts electricity, but solid sodium chloride does not conduct electricity.",
+    options: [
+      { text: "Solid contains molecules whereas molten liquid contains atoms" },
+      { text: "In solid NaCl, ions are locked in fixed positions in the lattice and cannot move; in molten NaCl, ions are free to move and carry charge" },
+      { text: "Solid NaCl has free electrons that are trapped; molten NaCl releases free delocalised electrons" },
+      { text: "Molten NaCl undergoes decomposition into sodium metal which conducts" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Sodium chloride is a giant ionic lattice.\n* In solid state, the strong electrostatic attractions lock Na⁺ cations and Cl⁻ anions in fixed lattice positions so they can only vibrate and cannot move.\n* When melted, the lattice breaks down and the ions become mobile, allowing them to flow towards electrodes and carry electric charge.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/43/M/J/26 Q2(b)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "solid ions fixed", text: "In the solid, ions are in fixed positions in a lattice (cannot move)." },
+        { mark: 1, keyword: "molten ions mobile", text: "In molten state, ions are free to move / mobile." }
+      ],
+      examinerTips: "Never refer to 'electrons' when explaining electrical conductivity of ionic salts. Marks are awarded strictly for mobile ions."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p4-q04",
+    question: "Ethanol can be manufactured either by the catalytic hydration of ethene or by the fermentation of glucose.\nState one advantage of manufacturing ethanol by fermentation compared to catalytic hydration of ethene.",
+    options: [
+      { text: "Fermentation is a continuous fast process with 100% atom economy" },
+      { text: "Fermentation uses renewable biomass (sugar/glucose) rather than finite non-renewable crude oil" },
+      { text: "Fermentation produces completely pure anhydrous ethanol without fractional distillation" },
+      { text: "Fermentation operates at extremely high temperatures and pressures" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Fermentation utilizes carbohydrates (such as glucose from sugarcane or maize), which are renewable resources.\n* In contrast, ethene for hydration is obtained from catalytic cracking of petroleum fractions, which is a non-renewable fossil fuel.\n* However, fermentation is slower and requires energy-intensive fractional distillation to concentrate the ethanol.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/M/J/26 Q6(d)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "renewable raw material", text: "Uses renewable resources (crops/sugar/yeast) / does not deplete finite crude oil." }
+      ],
+      examinerTips: "Accept 'uses lower temperature / consumes less energy' as an alternative valid advantage."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p4-q05",
+    question: "Catalytic converters in automobile exhaust systems convert toxic pollutant gases into less harmful emissions. Write a balanced chemical equation for the reduction of nitrogen monoxide (NO) by carbon monoxide (CO).",
+    options: [
+      { text: "NO + CO → N + CO₂" },
+      { text: "2NO + 2CO → N₂ + 2CO₂" },
+      { text: "2NO + CO₂ → N₂O + 2CO" },
+      { text: "NO₂ + CO → NO + CO₂" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In a catalytic converter containing platinum, palladium, or rhodium catalysts, carbon monoxide is oxidised while nitrogen monoxide is reduced.\n* Balanced equation: 2NO(g) + 2CO(g) → N₂(g) + 2CO₂(g).\n* Nitrogen gas (N₂) and carbon dioxide (CO₂) are far less harmful than toxic CO and smog-forming NO.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/M/J/26 Q5(b)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "reactants & products", text: "Correct formulae for all reactants (NO + CO) and products (N₂ + CO₂)." },
+        { mark: 1, keyword: "balancing 2, 2 -> 1, 2", text: "Correct stoichiometric balancing coefficients (2, 2 → 1, 2)." }
+      ],
+      examinerTips: "Remember that nitrogen exists as diatomic gas molecules (N₂), not atomic N."
+    }
+  },
+
+  // -------------------------------------------------------------------------
+  // SECTION C: PAPER 6 (ALTERNATIVE TO PRACTICAL & LAB EXPERIMENTAL TECHNIQUES)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2026-mj-p6-q01",
+    question: "A student performed a titration using a burette. The initial burette reading was 2.40 cm³ and the final burette reading was 26.85 cm³. What was the volume of solution delivered from the burette?",
+    options: [
+      { text: "24.45 cm³" },
+      { text: "29.25 cm³" },
+      { text: "24.40 cm³" },
+      { text: "26.85 cm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Titre volume delivered = Final reading - Initial reading.\n* Delivered volume = 26.85 cm³ - 2.40 cm³ = 24.45 cm³.\n* In Cambridge Paper 6, all burette measurements must be recorded to two decimal places (ending in .00 or .05 cm³).",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/M/J/26 Q1(a)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "24.45 cm3", text: "Correct calculation: 26.85 - 2.40 = 24.45 cm³." }
+      ],
+      examinerTips: "Always write the unit (cm³) and keep 2 decimal places in titration records."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p6-q02",
+    question: "Two aqueous solutions, Solution X and Solution Y, were tested.\n• When aqueous sodium hydroxide was added dropwise to Solution X, a light blue precipitate formed that was insoluble in excess sodium hydroxide.\n• When dilute nitric acid followed by aqueous silver nitrate was added to Solution X, a cream precipitate formed.\nIdentify the positive cation and negative anion present in Solution X.",
+    options: [
+      { text: "Iron(II) ion (Fe²⁺) and Chloride ion (Cl⁻)" },
+      { text: "Copper(II) ion (Cu²⁺) and Bromide ion (Br⁻)" },
+      { text: "Copper(II) ion (Cu²⁺) and Iodide ion (I⁻)" },
+      { text: "Zinc ion (Zn²⁺) and Bromide ion (Br⁻)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A light blue precipitate with NaOH insoluble in excess confirms the Copper(II) cation: Cu²⁺(aq) + 2OH⁻(aq) → Cu(OH)₂(s).\n* Acidification with HNO₃ followed by AgNO₃ tests for halide ions:\n  - Chloride yields a white precipitate (AgCl)\n  - Bromide yields a cream precipitate (AgBr)\n  - Iodide yields a yellow precipitate (AgI)\n* A cream precipitate confirms Bromide (Br⁻).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/M/J/26 Q2(c)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "copper(II) / Cu2+", text: "Cation identified as Copper(II) / Cu²⁺." },
+        { mark: 1, keyword: "bromide / Br-", text: "Anion identified as Bromide / Br⁻." }
+      ],
+      examinerTips: "Do not just write 'Copper' or 'Cu'. You must include the oxidation state Copper(II) or the ionic charge Cu²⁺."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p6-q03",
+    question: "In paper chromatography of food colourings, why must the baseline (origin line) be drawn in pencil rather than pen ink?",
+    options: [
+      { text: "Pencil lead is hydrophobic and repels the solvent" },
+      { text: "Pen ink contains dyes that would dissolve in the mobile solvent and travel up the paper, interfering with the chromatogram spots" },
+      { text: "Pencil graphite reacts with amino acids to make them visible" },
+      { text: "Pen ink makes the chromatography paper tear easily" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Pencil lead consists of insoluble graphite and clay, which will not dissolve in the running solvent and remains stationary on the baseline.\n* In contrast, pen ink is a mixture of soluble dyes that would dissolve in the mobile phase, separate, and contaminate the chromatogram.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/M/J/26 Q3(b)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "ink dissolves / graphite insoluble", text: "Ink is soluble in the solvent / would separate and smudge / pencil graphite is insoluble." }
+      ],
+      examinerTips: "A common student mistake is to say 'pencil is permanent'. The correct scientific rationale is that graphite is insoluble in the solvent."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p6-q04",
+    question: "A student is asked to plan an investigation to determine which of two brands of washing powder (Brand A or Brand B) contains the higher percentage of sodium carbonate. Sodium carbonate reacts with dilute hydrochloric acid to produce carbon dioxide gas.\nWhich experimental setup provides the most accurate quantitative comparison?",
+    options: [
+      { text: "Measure the change in pH of the solution using blue litmus paper" },
+      { text: "Mix equal masses of both powders with excess dilute acid and collect the volume of carbon dioxide in a gas syringe over time" },
+      { text: "Count the number of bubbles produced in 10 seconds using a glowing wooden splint" },
+      { text: "Evaporate the washing powder to dryness over a roaring flame" }
+    ],
+    correctAnswer: 1,
+    explanation: "* To compare percentages quantitatively:\n  1. Use identical weighed masses of washing powder A and B.\n  2. Add an excess of dilute hydrochloric acid so all carbonate reacts completely.\n  3. Collect and record the total volume of CO₂ gas produced using a sealed gas syringe or measure mass loss on an analytical balance.\n  4. The brand yielding the greater volume of CO₂ contains the higher percentage of sodium carbonate.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/63/M/J/26 Q4 (Planning an Investigation)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "equal masses of samples", text: "Weigh equal masses of Brand A and Brand B using a balance." },
+        { mark: 1, keyword: "excess acid & gas collection", text: "Add excess dilute hydrochloric acid and collect gas in a gas syringe (or measure mass loss on balance)." },
+        { mark: 1, keyword: "compare total volume", text: "State that the larger volume of CO₂ collected indicates higher percentage of sodium carbonate." }
+      ],
+      examinerTips: "For 6-mark Paper 6 planning questions, always specify: apparatus (balance, syringe), controlled variables (mass of powder, volume/temp of acid), measurement, and conclusion."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p6-q05",
+    question: "A sample of ammonium chloride solid is gently heated with aqueous sodium hydroxide in a boiling tube. Which test confirms the identity of the gas evolved?",
+    options: [
+      { text: "It relights a glowing wooden splint" },
+      { text: "It turns damp red litmus paper blue" },
+      { text: "It bleaches damp blue litmus paper white" },
+      { text: "It turns limewater milky and cloudy" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Heating any ammonium salt with a base liberates ammonia gas: NH₄⁺(aq) + OH⁻(aq) → NH₃(g) + H₂O(l).\n* Ammonia is the only common alkaline gas tested in IGCSE; it dissolves in the water on damp red litmus paper to form OH⁻ ions, turning the paper blue.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/M/J/26 Q2(a)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "damp red litmus blue", text: "Turns damp red litmus paper blue (ammonia gas)." }
+      ],
+      examinerTips: "Remember that the litmus paper MUST be damp; dry ammonia gas does not ionise and will not change dry indicator paper."
+    }
+  },
+
+  // =========================================================================
+  // ❄️ CAMBRIDGE IGCSE CHEMISTRY (0620) — OCTOBER / NOVEMBER 2025 WINTER SERIES
+  // =========================================================================
+
+  // -------------------------------------------------------------------------
+  // SECTION A: PAPER 2 (MULTIPLE CHOICE — CORE & EXTENDED)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2025-on-p2-q01",
+    question: "The graph shows the heating curve of pure substance Z as it is heated at a constant rate from solid to gas.\nWhich section of the heating curve represents the coexistence of both liquid and gas phases?",
+    options: [
+      { text: "The first horizontal plateau representing melting" },
+      { text: "The upward slope between melting and boiling" },
+      { text: "The second horizontal plateau representing boiling where temperature remains constant" },
+      { text: "The final upward slope corresponding to the heating of gas particles" }
+    ],
+    correctAnswer: 2,
+    explanation: "* On a heating curve, the horizontal plateaus represent phase changes where supplied thermal energy breaks intermolecular forces rather than raising temperature.\n* The first horizontal plateau is the melting point (solid + liquid in equilibrium).\n* The second horizontal plateau is the boiling point (liquid + gas in dynamic coexistence until all liquid has vaporised).",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/O/N/25 Q1",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q02",
+    question: "Which statement explains why graphite can act as an effective solid lubricant?",
+    options: [
+      { text: "Graphite has a low melting point because of weak covalent bonds" },
+      { text: "Layers of carbon hexagons are held together by weak intermolecular attractions and can easily slide over each other" },
+      { text: "Each carbon atom is bonded to four other carbon atoms in a rigid tetrahedral framework" },
+      { text: "Delocalised electrons repel the adjacent carbon atoms" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In graphite, each carbon atom is covalently bonded to three others in planar hexagonal sheets.\n* The forces between the adjacent parallel layers are weak intermolecular (van der Waals) forces.\n* These weak forces allow the layers to slide smoothly over one another under shearing force, making graphite slippery and an excellent solid lubricant.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/O/N/25 Q6",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q03",
+    question: "What volume of carbon dioxide gas (measured at room temperature and pressure, r.t.p.) is produced when 10.0 g of calcium carbonate (Mr = 100.0) completely reacts with excess dilute hydrochloric acid?\nCaCO₃(s) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)\n[Molar gas volume at r.t.p. = 24.0 dm³/mol]",
+    options: [
+      { text: "1.20 dm³" },
+      { text: "2.40 dm³" },
+      { text: "4.80 dm³" },
+      { text: "24.0 dm³" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Step 1: Calculate moles of CaCO₃ = mass / Mr = 10.0 g / 100.0 g/mol = 0.100 mol.\n* Step 2: From the reaction stoichiometry, 1 mol CaCO₃ produces 1 mol CO₂, so moles of CO₂ = 0.100 mol.\n* Step 3: Gas volume at r.t.p. = moles × 24.0 dm³/mol = 0.100 × 24.0 = 2.40 dm³.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/O/N/25 Q9",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q04",
+    question: "In a hydrogen-oxygen fuel cell operating with an alkaline electrolyte, what is the overall cell reaction and the only chemical product formed?",
+    options: [
+      { text: "2H₂ + O₂ → 2H₂O with water as the only product" },
+      { text: "H₂ + Cl₂ → 2HCl with hydrogen chloride as the only product" },
+      { text: "CH₄ + 2O₂ → CO₂ + 2H₂O with carbon dioxide and water produced" },
+      { text: "2H₂O → 2H₂ + O₂ with hydrogen and oxygen gas produced" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A hydrogen-oxygen fuel cell continuously consumes hydrogen fuel at the anode and oxygen at the cathode.\n* The overall chemical reaction is 2H₂(g) + O₂(g) → 2H₂O(l).\n* Water is the sole chemical exhaust product, making it a zero-emission clean energy source.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/23/O/N/25 Q11",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q05",
+    question: "The combustion of methane is an exothermic reaction:\nCH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g)    ΔH = -890 kJ/mol\nWhich statement correctly explains why this reaction is exothermic in terms of bond energies?",
+    options: [
+      { text: "More energy is absorbed breaking reactant bonds than is released forming product bonds" },
+      { text: "More energy is released forming new bonds in the products than is absorbed breaking bonds in the reactants" },
+      { text: "Bond breaking is exothermic and bond making is endothermic" },
+      { text: "The activation energy of the forward reaction is zero" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Bond breaking is always endothermic (absorbs energy, ΔH > 0).\n* Bond making is always exothermic (releases energy, ΔH < 0).\n* When the total energy released in forming new C=O and O-H bonds in the products exceeds the energy required to break the initial C-H and O=O bonds, the overall net reaction is exothermic (negative ΔH).",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/O/N/25 Q14",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q06",
+    question: "Which of the following describes the role of acidified potassium manganate(VII) in a redox test?",
+    options: [
+      { text: "It is a powerful reducing agent that turns from colourless to purple" },
+      { text: "It is a powerful oxidising agent that changes from purple to colourless in the presence of a reducing agent" },
+      { text: "It is a catalyst that neutralises strong acids" },
+      { text: "It acts as an indicator that turns bright yellow in alkaline solutions" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Acidified potassium manganate(VII) (KMnO₄) is a standard laboratory oxidising agent containing manganese in the +7 oxidation state.\n* When it oxidises another substance (such as SO₂ or Fe²⁺), the purple MnO₄⁻ ions are reduced to colourless Mn²⁺ ions.\n* The observed colour change is purple to colourless (decolourisation).",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/O/N/25 Q18",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q07",
+    question: "Which method is the most appropriate for preparing a pure, dry sample of the insoluble salt lead(II) sulfate (PbSO₄)?",
+    options: [
+      { text: "Titration of aqueous lead(II) nitrate with dilute sulfuric acid using phenolphthalein" },
+      { text: "Precipitation by mixing aqueous lead(II) nitrate with aqueous sodium sulfate, followed by filtration, washing with distilled water, and drying" },
+      { text: "Reacting excess solid lead metal directly with dilute sulfuric acid" },
+      { text: "Heating lead(II) oxide in a stream of sulfur dioxide gas" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Lead(II) sulfate is an insoluble salt.\n* Insoluble salts are prepared by precipitation: mixing two soluble salt solutions (e.g. aqueous lead(II) nitrate and aqueous sodium sulfate).\n* The solid precipitate is collected by filtration, washed thoroughly with distilled water to remove soluble ions, and dried between filter papers or in a desiccator.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/O/N/25 Q20",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q08",
+    question: "Which property is characteristic of transition elements but NOT typical of Group I alkali metals?",
+    options: [
+      { text: "They conduct electricity in the solid state" },
+      { text: "They form colored compounds and often act as effective catalysts" },
+      { text: "They react violently with cold water to produce hydrogen gas" },
+      { text: "They have low densities and can be easily cut with a scalpel" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Transition metals exhibit high densities, high melting points, variable oxidation states (e.g. Fe²⁺/Fe³⁺), colored compounds (e.g. blue Cu²⁺, green Fe²⁺), and catalytic activity (e.g. Fe in Haber process).\n* Group I metals form only white/colourless compounds and have low densities and low melting points.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/23/O/N/25 Q23",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q09",
+    question: "Why does aluminium resist corrosion even though it is positioned high in the reactivity series above iron?",
+    options: [
+      { text: "Aluminium does not react with oxygen at any temperature" },
+      { text: "Aluminium forms a tough, unreactive, non-porous oxide layer on its surface that prevents underlying metal from contacting air and moisture" },
+      { text: "Aluminium atoms possess full outer electron shells" },
+      { text: "Aluminium possesses sacrificial zinc coatings naturally" }
+    ],
+    correctAnswer: 1,
+    explanation: "* When freshly cut aluminium is exposed to air, it reacts immediately with oxygen to form a thin, adherent, continuous layer of aluminium oxide (Al₂O₃).\n* This oxide layer is impervious to water and air, completely shielding the underlying aluminium metal from further oxidation and corrosion.",
+    level: 1,
+    topic: "metals",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/O/N/25 Q28",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-on-p2-q10",
+    question: "Propene reacts with aqueous bromine in an addition reaction. What observation confirms the presence of the carbon-carbon double bond?",
+    options: [
+      { text: "A gas is evolved that turns limewater milky" },
+      { text: "The reddish-brown bromine solution is rapidly decolourised to colourless" },
+      { text: "A dense white precipitate forms immediately" },
+      { text: "The solution turns alkaline and turns red litmus blue" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Alkenes contain a reactive carbon-carbon double bond (C=C).\n* When shaken with aqueous bromine (bromine water), an electrophilic addition reaction occurs forming 1,2-dibromopropane.\n* The reddish-brown colour of bromine is rapidly decolourised, confirming unsaturation.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/O/N/25 Q33",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+
+  // -------------------------------------------------------------------------
+  // SECTION B: PAPER 4 (THEORY / EXTENDED STRUCTURED QUESTIONS)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2025-on-p4-q01",
+    question: "Copper(II) sulfate crystals are prepared by reacting excess copper(II) oxide with hot dilute sulfuric acid:\nCuO(s) + H₂SO₄(aq) → CuSO₄(aq) + H₂O(l)\nState two reasons why excess copper(II) oxide is used rather than exact stoichiometric amounts.",
+    options: [
+      { text: "To speed up the reaction rate and lower the activation energy" },
+      { text: "To ensure that all the sulfuric acid is completely neutralised, and because the unreacted excess solid is easily removed by filtration" },
+      { text: "To convert all copper into gaseous copper sulfate" },
+      { text: "To prevent copper from dissolving in water" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Using an excess of insoluble base (CuO) guarantees that all hazardous acid (H₂SO₄) is completely reacted and consumed so that the remaining solution is pure aqueous CuSO₄.\n* Any unreacted solid CuO remains insoluble and can be completely separated from the aqueous solution by simple filtration.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/O/N/25 Q4(a)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "neutralise all acid", text: "To ensure all acid has reacted / is completely neutralised." },
+        { mark: 1, keyword: "excess filtered off", text: "Excess unreacted solid CuO can easily be filtered off / removed by filtration." }
+      ],
+      examinerTips: "Do not write 'to get a higher yield'. The critical reason is to ensure no unreacted acid contaminates the salt crystals."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p4-q02",
+    question: "A sample of 4.80 g of magnesium ribbon is burned completely in excess oxygen to produce magnesium oxide (MgO):\n2Mg(s) + O₂(g) → 2MgO(s)\nCalculate the theoretical mass of magnesium oxide formed, and determine the percentage yield if an experimental yield of 6.40 g of MgO was obtained. [Ar: Mg = 24.0, O = 16.0]",
+    options: [
+      { text: "Theoretical mass = 8.00 g; Percentage yield = 80.0%" },
+      { text: "Theoretical mass = 10.00 g; Percentage yield = 64.0%" },
+      { text: "Theoretical mass = 7.20 g; Percentage yield = 88.9%" },
+      { text: "Theoretical mass = 8.00 g; Percentage yield = 64.0%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Step 1: Moles of Mg = 4.80 g / 24.0 g/mol = 0.200 mol.\n* Step 2: From the 2:2 (1:1) mole ratio, moles of MgO formed = 0.200 mol.\n* Step 3: Mr of MgO = 24.0 + 16.0 = 40.0 g/mol.\n* Step 4: Theoretical mass of MgO = 0.200 mol × 40.0 g/mol = 8.00 g.\n* Step 5: Percentage yield = (Actual experimental yield / Theoretical yield) × 100 = (6.40 g / 8.00 g) × 100 = 80.0%.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/O/N/25 Q3(b)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "moles of Mg = 0.200", text: "Moles of magnesium = 4.80 / 24.0 = 0.200 mol." },
+        { mark: 1, keyword: "theoretical mass = 8.00 g", text: "Theoretical mass = 0.200 × 40.0 = 8.00 g." },
+        { mark: 1, keyword: "percentage yield = 80%", text: "Yield calculation = (6.40 / 8.00) × 100 = 80.0%." }
+      ],
+      examinerTips: "Remember that percentage yield can never exceed 100% in ideal calculations; if you obtain > 100%, check if your ratio was inverted."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p4-q03",
+    question: "Describe and explain the effect of a catalyst on the rate of a chemical reaction in terms of activation energy.",
+    options: [
+      { text: "A catalyst increases the average kinetic energy of reactant particles" },
+      { text: "A catalyst provides an alternative reaction pathway with a lower activation energy, so a greater proportion of colliding particles possess energy ≥ activation energy" },
+      { text: "A catalyst increases the frequency of collisions by increasing pressure" },
+      { text: "A catalyst changes the overall enthalpy change (ΔH) of the reaction to more exothermic" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A catalyst increases the rate of reaction without being chemically altered or consumed at the end.\n* It functions by offering an alternative reaction pathway or mechanism that possesses a lower activation energy (Ea).\n* As a consequence, a significantly higher fraction of particle collisions have energy greater than or equal to this reduced activation energy, resulting in a higher frequency of successful collisions.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/43/O/N/25 Q5(c)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "alternative pathway", text: "Provides an alternative reaction pathway / mechanism." },
+        { mark: 1, keyword: "lower activation energy", text: "With a lower activation energy (Ea)." },
+        { mark: 1, keyword: "more successful collisions", text: "More particles / collisions have energy equal to or exceeding activation energy." }
+      ],
+      examinerTips: "Do not state that a catalyst 'gives energy' to particles. Particles do NOT gain kinetic energy from a catalyst; the energy barrier is simply reduced."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p4-q04",
+    question: "Ethene (C₂H₄) can undergo addition polymerisation to form poly(ethene). Draw the structure of poly(ethene) showing two repeating units, clearly indicating the extension bonds.",
+    options: [
+      { text: "-[CH₂-CH₂-CH₂-CH₂]- with single C-C bonds and extension bonds extending through brackets" },
+      { text: "-[CH=CH-CH=CH]- with double bonds intact" },
+      { text: "-[CH₃-CH₂-CH₂-CH₃]- without extension bonds" },
+      { text: "-[CH₂-CH(CH₃)]- with methyl side branches" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In addition polymerisation of ethene, the double bond breaks open (π-bond cleavage).\n* Two repeating units join together as: -CH₂-CH₂-CH₂-CH₂-.\n* In structural diagrams for Cambridge IGCSE, all carbon-carbon bonds within the chain must be single bonds, and extension bonds must protrude beyond the brackets.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/O/N/25 Q7(b)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "single C-C chain", text: "Continuous chain of 4 carbon atoms with only single C-C bonds." },
+        { mark: 1, keyword: "extension bonds & H atoms", text: "Correct number of hydrogens (2 on each carbon) with open continuation bonds at each end." }
+      ],
+      examinerTips: "Never leave double bonds in the polymer backbone. If a double bond is drawn, zero marks are awarded."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p4-q05",
+    question: "Describe how acid rain is formed from sulfur dioxide emissions and state one adverse environmental consequence of acid rain.",
+    options: [
+      { text: "SO₂ reacts with oxygen and water in the atmosphere to form dilute sulfuric acid; it lowers the pH of lakes, killing aquatic organisms" },
+      { text: "SO₂ reacts with nitrogen to form ammonia; it causes eutrophication in freshwater rivers" },
+      { text: "SO₂ depletes the ozone layer directly; it causes global warming" },
+      { text: "SO₂ dissolves in groundwater to form insoluble gypsum deposits" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Fossil fuels contain sulfur impurities which burn to form sulfur dioxide (SO₂).\n* In the upper atmosphere, sulfur dioxide is oxidised and dissolves in rain droplets: 2SO₂ + O₂ + 2H₂O → 2H₂SO₄ (dilute sulfuric acid), producing acid rain (pH < 5.0).\n* Environmental damage includes acidification of lakes and soil (leaching toxic Al³⁺ ions and killing fish) and chemical erosion of limestone buildings and statues.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/O/N/25 Q6(a)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "sulfur dioxide reacts with rain", text: "SO₂ oxidises and dissolves in atmospheric water / rain forming sulfuric acid (H₂SO₄ / H₂SO₃)." },
+        { mark: 1, keyword: "environmental effect", text: "Acidification of rivers/lakes (killing aquatic life) OR damage to limestone structures OR deforestation/leaf damage." }
+      ],
+      examinerTips: "Do not confuse acid rain with global warming or the greenhouse effect. They are distinct environmental phenomena."
+    }
+  },
+
+  // -------------------------------------------------------------------------
+  // SECTION C: PAPER 6 (ALTERNATIVE TO PRACTICAL & LAB EXPERIMENTAL TECHNIQUES)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2025-on-p6-q01",
+    question: "A student investigated the thermal decomposition of hydrated copper(II) sulfate crystals, CuSO₄·5H₂O.\nState the color change observed when blue hydrated copper(II) sulfate crystals are heated strongly in a dry boiling tube.",
+    options: [
+      { text: "Turns from blue to green" },
+      { text: "Turns from blue to a white anhydrous powder, and droplets of colourless liquid condense on the cooler neck of the boiling tube" },
+      { text: "Turns from blue to pink" },
+      { text: "Turns from blue to black with no liquid formed" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Hydrated copper(II) sulfate (CuSO₄·5H₂O) contains water of crystallisation and is bright blue.\n* Upon heating, water of crystallisation is driven off: CuSO₄·5H₂O(s) ⇌ CuSO₄(s) + 5H₂O(g).\n* The solid turns into a white powder (anhydrous copper(II) sulfate) and steam condenses as colourless water droplets near the open cooler mouth of the tube.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/O/N/25 Q1(b)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "blue to white", text: "Colour change from blue to white." },
+        { mark: 1, keyword: "condensation / droplets", text: "Observation of steam / colourless liquid droplets condensing on the tube." }
+      ],
+      examinerTips: "Mentioning the liquid droplets is frequently required for the full 2 marks."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p6-q02",
+    question: "Solid salt W was analyzed in the laboratory:\n1. A flame test was performed on solid W, giving a persistent lilac flame.\n2. Dilute hydrochloric acid was added to a solution of W followed by aqueous barium chloride; a dense white precipitate formed.\nIdentify salt W.",
+    options: [
+      { text: "Sodium chloride" },
+      { text: "Potassium sulfate" },
+      { text: "Calcium sulfate" },
+      { text: "Potassium nitrate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A lilac flame colour confirms the presence of Potassium ions (K⁺).\n* Acidifying with dilute HCl followed by aqueous BaCl₂ is the qualitative test for sulfate ions (SO₄²⁻), producing a white precipitate of insoluble barium sulfate (BaSO₄).\n* Therefore, salt W is Potassium sulfate (K₂SO₄).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/O/N/25 Q2(b)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "potassium / K+", text: "Cation = Potassium / K⁺ (from lilac flame)." },
+        { mark: 1, keyword: "sulfate / SO4 2-", text: "Anion = Sulfate / SO₄²⁻ (from BaSO₄ white precipitate)." }
+      ],
+      examinerTips: "Remember: always add dilute hydrochloric acid (or nitric acid) before barium chloride to eliminate false positives from carbonate or sulfite ions."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p6-q03",
+    question: "A student determines the solubility of potassium nitrate in water at 60 °C. Describe how the student can verify that the potassium nitrate solution is completely saturated.",
+    options: [
+      { text: "Test the solution with universal indicator paper" },
+      { text: "Add a further small crystal of potassium nitrate and observe that it does not dissolve even with thorough stirring" },
+      { text: "Boil the solution until all water evaporates" },
+      { text: "Check if the solution changes from colourless to purple" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A saturated solution is defined as one that can dissolve no further solute at that specified temperature.\n* To confirm saturation experimentally, add a small additional quantity/crystal of solute; if it remains undissolved at the bottom of the container after vigorous stirring, the solution is saturated.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/63/O/N/25 Q3(a)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "undissolved solute remains", text: "Add more solid solute; solid remains undissolved / cannot dissolve further after stirring." }
+      ],
+      examinerTips: "The keyword is 'undissolved solid remains' or 'no more dissolves'."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p6-q04",
+    question: "A student measures the time taken for a cross drawn on paper beneath a conical flask to disappear due to the precipitation of sulfur:\nNa₂S₂O₃(aq) + 2HCl(aq) → 2NaCl(aq) + SO₂(g) + S(s) + H₂O(l)\nState two safety precautions required when conducting this experiment in a school laboratory.",
+    options: [
+      { text: "Wear hearing protection and work under red light" },
+      { text: "Conduct the experiment in a well-ventilated laboratory or fume cupboard to avoid inhaling toxic sulfur dioxide gas, and wear eye protection (safety goggles)" },
+      { text: "Keep a fire extinguisher nearby because sodium thiosulfate is explosive" },
+      { text: "Wear insulated cryogenic gloves" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The reaction generates sulfur dioxide (SO₂), which is a toxic and choking respiratory irritant, particularly dangerous for asthmatic students.\n* Therefore, it must be performed in a well-ventilated room or fume cupboard, and stop baths (sodium carbonate) should be used.\n* Eye protection (safety goggles) must be worn when handling corrosive dilute hydrochloric acid.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/O/N/25 Q4(b)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "fume cupboard / ventilation", text: "Fume cupboard / open windows / well-ventilated room to avoid toxic SO₂." },
+        { mark: 1, keyword: "safety goggles / lab coat", text: "Wear eye protection / safety goggles / lab coat." }
+      ],
+      examinerTips: "Do NOT write just 'be careful'. Specific scientific reasons (e.g. 'fume cupboard because SO₂ is toxic') are required."
+    }
+  },
+  {
+    id: "cie-0620-2025-on-p6-q05",
+    question: "During paper chromatography, the distance travelled by substance A from the baseline is 4.2 cm and the distance travelled by the solvent front from the baseline is 7.0 cm. Calculate the retention factor (Rf) of substance A.",
+    options: [
+      { text: "0.60" },
+      { text: "1.67" },
+      { text: "0.42" },
+      { text: "0.70" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The retention factor formula is: Rf = distance travelled by solute spot / distance travelled by solvent front.\n* Rf = 4.2 cm / 7.0 cm = 0.60.\n* Rf values are pure dimensionless ratios that must always be less than or equal to 1.00.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/O/N/25 Q3(c)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "0.60", text: "Correct calculation: 4.2 / 7.0 = 0.60 (or 0.6)." }
+      ],
+      examinerTips: "Ensure you do not invert the division (7.0 / 4.2 = 1.67 is an impossible Rf value)."
+    }
+  },
+
+  // =========================================================================
+  // ☀️ CAMBRIDGE IGCSE CHEMISTRY (0620) — MAY / JUNE 2025 SUMMER SERIES
+  // =========================================================================
+
+  // -------------------------------------------------------------------------
+  // SECTION A: PAPER 2 (MULTIPLE CHOICE — CORE & EXTENDED)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2025-mj-p2-q01",
+    question: "A crystal of purple potassium manganate(VII) is placed at the bottom of a beaker filled with still, cold water. After several days, the entire volume of water turns a uniform pale purple without being stirred. Which processes explain this observation?",
+    options: [
+      { text: "Boiling and condensation" },
+      { text: "Dissolving followed by diffusion of particles through random motion" },
+      { text: "Neutralisation and precipitation" },
+      { text: "Active transport of solute ions" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The potassium manganate(VII) crystal dissolves in water, releasing individual K⁺ and MnO₄⁻ ions.\n* Due to random thermal motion, the dissolved ions collide with water molecules and spread out from a region of higher concentration to a region of lower concentration (diffusion).\n* Over time, this results in an even, homogeneous distribution of colour throughout the beaker.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/25 Q1",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q02",
+    question: "Which of the following pairs of substances consists of two giant covalent macromolecular structures?",
+    options: [
+      { text: "Methane and silicon dioxide" },
+      { text: "Diamond and graphite" },
+      { text: "Sodium chloride and copper" },
+      { text: "Carbon dioxide and poly(ethene)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Both diamond and graphite are allotropes of carbon with giant covalent macromolecular networks.\n* In diamond, every carbon atom forms 4 strong covalent bonds in a rigid 3D tetrahedral framework.\n* In graphite, each carbon atom forms 3 covalent bonds in 2D hexagonal planar sheets.\n* Methane and carbon dioxide are simple molecular substances.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/25 Q7",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q03",
+    question: "What is the concentration of a solution prepared by dissolving 4.00 g of sodium hydroxide (Mr = 40.0) in distilled water to make exactly 500 cm³ of solution?",
+    options: [
+      { text: "0.0800 mol/dm³" },
+      { text: "0.100 mol/dm³" },
+      { text: "0.200 mol/dm³" },
+      { text: "0.500 mol/dm³" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Step 1: Calculate moles of NaOH = mass / Mr = 4.00 g / 40.0 g/mol = 0.100 mol.\n* Step 2: Convert volume to dm³ = 500 cm³ / 1000 = 0.500 dm³.\n* Step 3: Concentration = moles / volume = 0.100 mol / 0.500 dm³ = 0.200 mol/dm³.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/25 Q8",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q04",
+    question: "During the industrial refining of impure copper by electrolysis, what occurs at the cathode (-) and the anode (+)?",
+    options: [
+      { text: "Impure copper anode dissolves; pure copper deposits on the cathode" },
+      { text: "Pure copper anode dissolves; impure copper deposits on the cathode" },
+      { text: "Oxygen gas is liberated at the anode; hydrogen gas is liberated at the cathode" },
+      { text: "Copper(II) ions are oxidised at the cathode" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In electro-refining of copper:\n  - Anode (+): Made of thick impure copper, which oxidises and dissolves into solution: Cu(s) → Cu²⁺(aq) + 2e⁻.\n  - Cathode (-): Made of a thin sheet of pure copper, where copper(II) ions are reduced and deposited as pure copper metal: Cu²⁺(aq) + 2e⁻ → Cu(s).\n* Precious metal impurities fall to the bottom beneath the anode as 'anode sludge'.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/25 Q11",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q05",
+    question: "Which of the following processes is endothermic?",
+    options: [
+      { text: "Combustion of hydrogen gas in air" },
+      { text: "Neutralisation of hydrochloric acid by sodium hydroxide" },
+      { text: "Thermal decomposition of calcium carbonate in a lime kiln" },
+      { text: "Respiration in living cells" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Thermal decomposition requires continuous input of high heat energy from the surroundings to break chemical bonds in calcium carbonate: CaCO₃(s) → CaO(s) + CO₂(g) (ΔH > 0, endothermic).\n* Combustion, neutralisation, and respiration are all strongly exothermic processes that release thermal energy to the surroundings.",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/23/M/J/25 Q13",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q06",
+    question: "When marble chips (calcium carbonate) react with dilute hydrochloric acid, which alteration to reaction conditions will increase the rate of reaction WITHOUT changing the total volume of carbon dioxide collected at completion?",
+    options: [
+      { text: "Doubling the mass of marble chips while keeping acid volume constant" },
+      { text: "Crushing the marble chips into a fine powder of equal mass" },
+      { text: "Doubling the volume and concentration of the hydrochloric acid" },
+      { text: "Cooling the acid solution in an ice bath" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Crushing marble chips into powder significantly increases the total surface area exposed to acid collisions, increasing the frequency of successful collisions and accelerating the rate.\n* Because the mass of marble chips is identical and acid remains in excess, the total moles of CO₂ gas produced at completion remains unchanged.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/25 Q15",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q07",
+    question: "Which of the following gases is classified as a neutral oxide (does not react with either dilute acids or dilute bases)?",
+    options: [
+      { text: "Sulfur dioxide (SO₂)" },
+      { text: "Carbon monoxide (CO)" },
+      { text: "Carbon dioxide (CO₂)" },
+      { text: "Aluminium oxide (Al₂O₃)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Neutral oxides do not show any acidic or basic properties and do not react with either acids or bases to form salts.\n* The standard neutral oxides specified in the Cambridge IGCSE syllabus are carbon monoxide (CO), nitrogen monoxide (NO), and dinitrogen monoxide (N₂O).\n* SO₂ and CO₂ are acidic; Al₂O₃ is amphoteric.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/25 Q18",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q08",
+    question: "Which trend is observed descending Group I (the alkali metals from lithium down to caesium)?",
+    options: [
+      { text: "Melting points increase and densities decrease" },
+      { text: "Reactivity with water increases and melting points decrease" },
+      { text: "Electronegativity increases and atomic radii decrease" },
+      { text: "The metals become harder and less reactive" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Down Group I, atomic radius increases as more electron shells are added.\n* The outer valence electron is held further from the positively charged nucleus and is shielded by inner shells, so it is lost more readily (reactivity with water increases).\n* Metallic bonding becomes weaker as ionic radius increases, so melting points decrease down the group.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/22/M/J/25 Q22",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q09",
+    question: "Why is cryolite (Na₃AlF₆) added to molten aluminium oxide (bauxite) during the Hall-Héroult electrolytic extraction of aluminium?",
+    options: [
+      { text: "To act as a catalyst that reduces Al³⁺ ions to aluminium" },
+      { text: "To dissolve aluminium oxide, lowering the melting point from ~2050 °C to ~950 °C and improving electrical conductivity" },
+      { text: "To prevent the carbon graphite anodes from burning away" },
+      { text: "To neutralise acidic fluoride impurities" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Pure aluminium oxide has an extremely high melting point exceeding 2000 °C, which would be prohibitively expensive to maintain.\n* Dissolving alumina in molten cryolite lowers the operating temperature to around 950 °C, drastically reducing electrical energy costs while providing excellent ionic conductivity.",
+    level: 2,
+    topic: "metals",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/23/M/J/25 Q26",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "cie-0620-2025-mj-p2-q10",
+    question: "Ethanoic acid reacts with ethanol in the presence of concentrated sulfuric acid as a catalyst. What are the names of the organic product and the functional group produced?",
+    options: [
+      { text: "Ethyl ethanoate containing an ester linkage (-COO-)" },
+      { text: "Methyl propanoate containing an ether linkage (-O-)" },
+      { text: "Ethanal containing a carbonyl group (-CHO)" },
+      { text: "Ethoxyethane containing an amide linkage (-CONH-)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Carboxylic acids react with alcohols via condensation esterification to yield an ester and water:\n  CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O.\n* The resulting ester is ethyl ethanoate, which possesses the characteristic sweet fruity ester linkage (-COO-).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620/21/M/J/25 Q34",
+    lessonNum: 6,
+    createdAt: "2026-09-04"
+  },
+
+  // -------------------------------------------------------------------------
+  // SECTION B: PAPER 4 (THEORY / EXTENDED STRUCTURED QUESTIONS)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2025-mj-p4-q01",
+    question: "Aqueous copper(II) sulfate was electrolysed using inert platinum electrodes.\n(a) Write the ionic half-equations occurring at the cathode (-) and the anode (+).\n(b) Describe and explain the change in color and pH of the electrolyte as electrolysis proceeds.",
+    options: [
+      { text: "Cathode: Cu²⁺ + 2e⁻ → Cu; Anode: 4OH⁻ → O₂ + 2H₂O + 4e⁻; Blue color fades to colourless as Cu²⁺ ions are discharged, and the solution becomes acidic (pH decreases) due to accumulated H⁺ and SO₄²⁻ ions" },
+      { text: "Cathode: 2H⁺ + 2e⁻ → H₂; Anode: 2SO₄²⁻ → S₂O₈²⁻ + 2e⁻; Color remains blue and pH stays neutral at 7" },
+      { text: "Cathode: Cu²⁺ + 2e⁻ → Cu; Anode: Cu → Cu²⁺ + 2e⁻; Color stays blue and pH remains constant" },
+      { text: "Cathode: SO₄²⁻ + 2e⁻ → SO₂; Anode: 2OH⁻ → O₂ + H₂ + 2e⁻; Solution becomes strongly alkaline" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At the cathode (-): Cu²⁺ ions are lower in the reactivity series than H⁺ and are discharged as reddish-brown copper metal: Cu²⁺ + 2e⁻ → Cu(s).\n* At the anode (+): OH⁻ ions are discharged preferentially over SO₄²⁻: 4OH⁻ → O₂ + 2H₂O + 4e⁻.\n* As Cu²⁺ ions are removed, the characteristic blue colour of the electrolyte fades and eventually turns colourless.\n* Because OH⁻ ions are consumed while H⁺ and SO₄²⁻ remain in solution, dilute sulfuric acid (H₂SO₄) is formed, lowering the pH.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/M/J/25 Q3(b)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "cathode half-equation", text: "Cu²⁺ + 2e⁻ → Cu." },
+        { mark: 1, keyword: "anode half-equation", text: "4OH⁻ → O₂ + 2H₂O + 4e⁻ (or 2H₂O → O₂ + 4H⁺ + 4e⁻)." },
+        { mark: 1, keyword: "blue to colourless", text: "Blue colour fades / turns colourless due to loss of Cu²⁺ ions." },
+        { mark: 1, keyword: "pH decreases / acidic", text: "Solution becomes acidic / pH decreases because H⁺ ions remain in solution." }
+      ],
+      examinerTips: "Do NOT confuse inert platinum electrodes with copper electrodes. If copper electrodes were used, the anode would dissolve and the blue color would remain constant."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p4-q02",
+    question: "Nitrogen monoxide (NO) and oxygen react to form nitrogen dioxide (NO₂) in a reversible reaction:\n2NO(g) + O₂(g) ⇌ 2NO₂(g)    ΔH = -114 kJ/mol\n(a) Predict and explain the effect of increasing temperature on the yield of NO₂.\n(b) Predict and explain the effect of decreasing the pressure on the yield of NO₂.",
+    options: [
+      { text: "(a) Yield of NO₂ decreases because forward reaction is exothermic, so equilibrium shifts left; (b) Yield of NO₂ decreases because equilibrium shifts towards the side with more moles of gas (left)" },
+      { text: "(a) Yield of NO₂ increases because heat speeds up molecules; (b) Yield increases because gas expands" },
+      { text: "(a) Yield of NO₂ decreases; (b) Yield of NO₂ increases because pressure favors products" },
+      { text: "(a) Yield of NO₂ remains unchanged; (b) Yield of NO₂ remains unchanged because catalysts are absent" }
+    ],
+    correctAnswer: 0,
+    explanation: "* By Le Chatelier's principle:\n  - (a) Increasing temperature favors the endothermic direction to absorb added heat. Because the forward reaction is exothermic (ΔH < 0), equilibrium shifts to the left, decreasing the equilibrium yield of NO₂.\n  - (b) Decreasing pressure favors the side with more moles of gas to counteract the pressure decrease. There are 3 moles of gas on the left (2NO + 1O₂) and 2 moles on the right (2NO₂). Equilibrium shifts to the left, decreasing NO₂ yield.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/M/J/25 Q5(a)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "temperature: yield decreases", text: "Yield of NO₂ decreases." },
+        { mark: 1, keyword: "exothermic explanation", text: "Forward reaction is exothermic / equilibrium shifts in endothermic direction (left)." },
+        { mark: 1, keyword: "pressure: yield decreases", text: "Yield of NO₂ decreases." },
+        { mark: 1, keyword: "more moles explanation", text: "Equilibrium shifts towards the side with more gas moles (3 moles on left vs 2 on right)." }
+      ],
+      examinerTips: "Always quote the number of gas moles on both sides of the equation (3 vs 2) when justifying pressure effects."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p4-q03",
+    question: "A chemist heats 5.35 g of ammonium chloride (NH₄Cl, Mr = 53.5) with excess calcium hydroxide (Ca(OH)₂) to produce ammonia gas:\n2NH₄Cl(s) + Ca(OH)₂(s) → CaCl₂(s) + 2H₂O(l) + 2NH₃(g)\nCalculate the maximum volume of ammonia gas (NH₃) produced at room temperature and pressure (r.t.p.). [Molar gas volume at r.t.p. = 24.0 dm³/mol]",
+    options: [
+      { text: "1.20 dm³" },
+      { text: "2.40 dm³" },
+      { text: "4.80 dm³" },
+      { text: "24.0 dm³" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Step 1: Moles of NH₄Cl = mass / Mr = 5.35 g / 53.5 g/mol = 0.100 mol.\n* Step 2: From the reaction stoichiometry, 2 moles of NH₄Cl produce 2 moles of NH₃ (1:1 mole ratio).\n* Therefore, moles of NH₃ produced = 0.100 mol.\n* Step 3: Volume of NH₃ gas at r.t.p. = moles × 24.0 dm³/mol = 0.100 × 24.0 = 2.40 dm³.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/43/M/J/25 Q4(c)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "moles of NH4Cl = 0.100", text: "Moles of NH₄Cl = 5.35 / 53.5 = 0.100 mol." },
+        { mark: 1, keyword: "mole ratio 1:1", text: "Moles of NH₃ = 0.100 mol." },
+        { mark: 1, keyword: "volume = 2.40 dm3", text: "Volume = 0.100 × 24.0 = 2.40 dm³." }
+      ],
+      examinerTips: "Remember to include the correct unit (dm³ or 2400 cm³)."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p4-q04",
+    question: "Nylon is a synthetic condensation polyamide formed from a diamine and a dicarboxylic acid.\n(a) What small molecule is eliminated during the formation of each amide link in nylon?\n(b) Give the structural formula of the characteristic functional group link present in nylon and proteins.",
+    options: [
+      { text: "(a) Water (H₂O); (b) Amide link: -CONH-" },
+      { text: "(a) Carbon dioxide (CO₂); (b) Ester link: -COO-" },
+      { text: "(a) Hydrogen (H₂); (b) Ether link: -C-O-C-" },
+      { text: "(a) Ammonia (NH₃); (b) Peptide link: -NH-" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In condensation polymerisation, monomer units join together with the simultaneous elimination of a small molecule, which is water (H₂O) when carboxylic acid and amine functional groups react.\n* The resulting functional link between monomers is the amide link (or peptide link in biological proteins): -C(=O)-NH-.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/M/J/25 Q7(d)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "water eliminated", text: "Water (H₂O) is eliminated." },
+        { mark: 1, keyword: "amide link -CONH-", text: "Amide / peptide link: -CONH-." }
+      ],
+      examinerTips: "Do not write 'HCl' unless the question specifies that an acyl dichloride was used as monomer instead of dicarboxylic acid."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p4-q05",
+    question: "Water from natural reservoirs contains dissolved mineral ions and suspended microbes. Outline the three essential stages in the industrial treatment of river water to make it potable (safe for drinking).",
+    options: [
+      { text: "Fractional distillation, electrolysis, and fluoridation" },
+      { text: "1. Screening & Sedimentation (removing large debris and settling mud); 2. Sand Filtration (removing fine insoluble suspended solids); 3. Chlorination (killing harmful bacteria and pathogens)" },
+      { text: "Desalination, acid neutralisation, and crystallization" },
+      { text: "Boiling, magnetic separation, and centrifuge" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The standard municipal water purification sequence consists of:\n  1. Screening & Coagulation/Sedimentation: Large debris is screened out, and alum/iron(III) sulfate is added to clump fine particles into flocs that settle as sediment.\n  2. Filtration: Water passes through beds of graded sand and gravel to remove remaining fine particles.\n  3. Chlorination: A controlled dose of chlorine is added to sterilise the water by killing bacteria and pathogenic microbes.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/M/J/25 Q6(b)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "screening / sedimentation", text: "Screening / sedimentation to remove large insoluble particles/debris." },
+        { mark: 1, keyword: "sand filtration", text: "Filtration (through sand/gravel) to remove fine insoluble solids." },
+        { mark: 1, keyword: "chlorination", text: "Chlorination / adding chlorine to kill bacteria / sterilise water." }
+      ],
+      examinerTips: "Do not say chlorine 'cleans' or 'purifies' water. The explicit scientific mark is awarded for 'kills bacteria / microbes'."
+    }
+  },
+
+  // -------------------------------------------------------------------------
+  // SECTION C: PAPER 6 (ALTERNATIVE TO PRACTICAL & LAB EXPERIMENTAL TECHNIQUES)
+  // -------------------------------------------------------------------------
+  {
+    id: "cie-0620-2025-mj-p6-q01",
+    question: "A student carries out a chromatography experiment on black ink using water as the solvent. When the experiment is complete, the solvent front has moved 8.0 cm from the pencil baseline, and three separate spots are visible:\n• Spot 1: moved 2.0 cm\n• Spot 2: moved 5.6 cm\n• Spot 3: moved 7.2 cm\nCalculate the Rf value for Spot 2 and explain which dye is the most soluble in water.",
+    options: [
+      { text: "Rf = 0.70; Spot 3 is the most soluble because it travels furthest with the mobile solvent" },
+      { text: "Rf = 1.43; Spot 1 is the most soluble because it stays closest to the origin" },
+      { text: "Rf = 0.35; Spot 2 is the most soluble because it has the average retention" },
+      { text: "Rf = 0.70; Spot 1 is the most soluble because it binds tightly to paper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rf for Spot 2 = distance moved by spot / distance moved by solvent front = 5.6 cm / 8.0 cm = 0.70.\n* Spot 3 travelled furthest (7.2 cm, Rf = 0.90), meaning it has the strongest affinity for the mobile phase and is the most soluble in water.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/M/J/25 Q2(a)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "Rf = 0.70", text: "Correct Rf calculation: 5.6 / 8.0 = 0.70." },
+        { mark: 1, keyword: "Spot 3 most soluble", text: "Spot 3 identified as most soluble because it travelled the greatest distance." }
+      ],
+      examinerTips: "Always show working and check that Rf is expressed as a decimal between 0 and 1."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p6-q02",
+    question: "A green crystalline solid, Solid G, was dissolved in water to make Solution G:\n1. Adding aqueous sodium hydroxide produced a dirty green precipitate that remained insoluble in excess sodium hydroxide.\n2. Adding dilute nitric acid followed by aqueous barium nitrate produced a white precipitate.\nIdentify the two ions present in Solid G.",
+    options: [
+      { text: "Iron(II) ion (Fe²⁺) and Sulfate ion (SO₄²⁻)" },
+      { text: "Iron(III) ion (Fe³⁺) and Chloride ion (Cl⁻)" },
+      { text: "Chromium(III) ion (Cr³⁺) and Sulfate ion (SO₄²⁻)" },
+      { text: "Copper(II) ion (Cu²⁺) and Carbonate ion (CO₃²⁻)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A dirty green precipitate with sodium hydroxide that is insoluble in excess confirms the Iron(II) cation: Fe²⁺(aq) + 2OH⁻(aq) → Fe(OH)₂(s).\n* Acidifying with dilute nitric acid followed by aqueous barium nitrate (or barium chloride) tests for the sulfate anion (SO₄²⁻), giving an insoluble white precipitate of BaSO₄.\n* Solid G is iron(II) sulfate (FeSO₄).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/M/J/25 Q3(b)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "iron(II) / Fe2+", text: "Cation identified as Iron(II) / Fe²⁺." },
+        { mark: 1, keyword: "sulfate / SO4 2-", text: "Anion identified as Sulfate / SO₄²⁻." }
+      ],
+      examinerTips: "Writing 'Iron' alone will lose the mark. You must specify Iron(II) with Roman numerals or ionic charge Fe²⁺."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p6-q03",
+    question: "A student investigates the rate of reaction between magnesium and excess dilute hydrochloric acid by measuring the volume of hydrogen gas evolved in a gas syringe every 30 seconds for 5 minutes.\nHow can the student verify from the results that the reaction has reached completion?",
+    options: [
+      { text: "When the temperature of the solution drops below 0 °C" },
+      { text: "When two consecutive readings of the gas volume in the gas syringe are identical (graph levels off to a horizontal plateau)" },
+      { text: "When the color of the solution turns bright yellow" },
+      { text: "When all hydrochloric acid has evaporated" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In a gas collection rate experiment, as reactants are consumed the rate decreases.\n* When the limiting reactant (magnesium) is entirely exhausted, no further gas is evolved, so the gas syringe volume stops changing.\n* Consecutive identical readings (and a horizontal plateau on the volume-time graph) confirm the reaction is complete.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/63/M/J/25 Q1(c)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "volume stops changing / constant", text: "Gas volume stops increasing / remains constant / graph becomes horizontal." }
+      ],
+      examinerTips: "Mentioning that the graph levels off or that consecutive volume readings are identical receives full credit."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p6-q04",
+    question: "A student performs a titration using a conical flask, a pipette, and a burette.\nExplain why the conical flask is rinsed with distilled water before the titration, but must NOT be rinsed with the alkali solution it is about to contain.",
+    options: [
+      { text: "Rinsing with alkali dissolves the glass of the flask" },
+      { text: "Rinsing with alkali leaves droplets of alkali on the walls, adding extra unmeasured moles of alkali that would cause an inaccurate, overly large acid titre" },
+      { text: "Distilled water speeds up the neutralisation indicator change" },
+      { text: "Alkali evaporates and explodes in dry air" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A volumetric pipette delivers an exact known volume (and thus exact moles) of alkali into the conical flask.\n* If the flask were pre-rinsed with alkali, droplets clinging to the sides would add extra moles of alkali, requiring more acid to neutralise and introducing a systematic error.\n* In contrast, rinsing with distilled water leaves only water molecules, which do not change the number of moles of alkali transferred by the pipette.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/M/J/25 Q4(a)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "extra alkali droplets", text: "Rinsing with alkali leaves residual droplets of alkali in the flask." },
+        { mark: 1, keyword: "alters moles / larger titre", text: "This increases the moles of alkali present, leading to an inaccurate / larger titre volume." }
+      ],
+      examinerTips: "Remember: burettes and pipettes must be rinsed with the solution they will contain, but the conical flask must be rinsed only with pure distilled water."
+    }
+  },
+  {
+    id: "cie-0620-2025-mj-p6-q05",
+    question: "Plan an investigation to determine the order of reactivity of four unknown metal powders (P, Q, R, and S) using samples of their aqueous sulfate solutions.\nState the method, what observations you would make, and how you would deduce the order of reactivity.",
+    options: [
+      { text: "Melt all metals and record their boiling points" },
+      { text: "Add each metal powder separately to samples of each metal sulfate solution in a spotting tile (displacement testing); observe if a color change or metal coating forms; the metal that displaces the most other metals is the most reactive" },
+      { text: "Perform flame tests on each metal and order them by flame brightness" },
+      { text: "Electrolyse each sulfate solution and weigh the battery" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A more reactive metal displaces a less reactive metal from an aqueous solution of its salt.\n* Method:\n  1. Place samples of aqueous sulfate solutions of P, Q, R, and S into test-tubes or spotting tiles.\n  2. Add a small sample of metal P to solutions of Q, R, and S; repeat for metals Q, R, and S.\n  3. Record observations (e.g. deposit of displaced metal coating the surface, temperature rise, or fading of solution colour).\n  4. The metal showing displacement in the greatest number of solutions is ranked most reactive.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/M/J/25 Q4 (Planning an Investigation)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "metal added to solutions", text: "Add each metal to the sulfate solution of each other metal (displacement reaction testing)." },
+        { mark: 1, keyword: "observe coating / color change", text: "Observe whether a reaction occurs (coating of displaced metal, colour change, or temperature increase)." },
+        { mark: 1, keyword: "deduce order", text: "The metal with the greatest number of displacement reactions is the most reactive (ranked highest)." }
+      ],
+      examinerTips: "You can also suggest measuring temperature changes (exothermic displacement) using a thermometer in a polystyrene cup."
+    }
   }
 );
+
+
+
