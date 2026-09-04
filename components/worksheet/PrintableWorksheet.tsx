@@ -147,6 +147,14 @@ export const PrintableWorksheet: React.FC<PrintableWorksheetProps> = ({
                   />
                 )}
 
+                {/* Optional Table */}
+                {q.tableHtml && (
+                  <div 
+                    className="my-3 flex justify-center max-w-lg mx-auto overflow-x-auto text-black"
+                    dangerouslySetInnerHTML={{ __html: q.tableHtml }}
+                  />
+                )}
+
                 {/* Options Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 mt-2 font-sans text-sm pl-6">
                   {q.options.map((opt, optIndex) => {

@@ -1419,12 +1419,15 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
                                                                 {(() => {
                                                                     const clean = activeQuestion.explanation
                                                                         .replace(/\\n/g, '\n')
-                                                                        .replace(/(?:\s+|\n)*(?=\d+\.\s+[A-Z\u0600-\u06FF])/g, '\n')
-                                                                        .replace(/(?:\s+|\n)*(?=[•\*]\s+)/g, '\n');
-                                                                    return clean.split('\n').map((line: string, lineIdx: number) => (
-                                                                        line.trim() === ''
-                                                                            ? <div key={lineIdx} className="h-2" />
-                                                                            : <div key={lineIdx}>{renderTextWithMath(line)}</div>
+                                                                        .replace(/([^\n])\s+(?=\d+\.\s+)/g, '$1\n')
+                                                                        .replace(/([^\n])\s+(?=[•\*]\s+)/g, '$1\n');
+                                                                    const lines = clean
+                                                                        .split('\n')
+                                                                        .map((line: string) => line.trim())
+                                                                        .filter((line: string) => line !== '' && line !== '*' && line !== '•')
+                                                                        .map((line: string) => line.replace(/^[\*\•]\s+(?=\d+\.)/, ''));
+                                                                    return lines.map((line: string, lineIdx: number) => (
+                                                                        <div key={lineIdx}>{renderTextWithMath(line)}</div>
                                                                     ));
                                                                 })()}
                                                             </div>

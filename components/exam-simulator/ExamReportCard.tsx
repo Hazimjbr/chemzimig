@@ -1,12 +1,14 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { 
   Trophy, Award, CheckCircle2, XCircle, Clock, AlertTriangle, 
   Share2, Download, ArrowRight, RotateCcw, BookOpen, ChevronRight, BarChart3, Check
 } from 'lucide-react';
 import { ExamPaperProfile, calculateGrade } from '@/data/exams/grade-boundaries';
 import { exportElementAsImage } from '@/lib/export-image';
+import { ShareableExamModal } from './ShareableExamModal';
 
 interface TopicScore {
   topic: string;
@@ -23,6 +25,7 @@ interface ExamReportCardProps {
   strikeCount: number;
   wasTerminated: boolean;
   topicBreakdown: TopicScore[];
+  studentName?: string;
   onRetry: () => void;
   onReviewQuestions: () => void;
   onExit: () => void;
@@ -36,11 +39,13 @@ export const ExamReportCard: React.FC<ExamReportCardProps> = ({
   strikeCount,
   wasTerminated,
   topicBreakdown,
+  studentName = 'ChemZim Scholar',
   onRetry,
   onReviewQuestions,
   onExit
 }) => {
   const [isExporting, setIsExporting] = React.useState(false);
+  const [shareModalOpen, setShareModalOpen] = React.useState(false);
 
   const evaluation = calculateGrade(score, total, profile.id);
   const minutes = Math.floor(timeSpentSeconds / 60);
@@ -193,10 +198,19 @@ export const ExamReportCard: React.FC<ExamReportCardProps> = ({
         {/* Topic Breakdown Bar Graph */}
         {topicBreakdown.length > 0 && (
           <div className="border-t border-white/5 pt-6 space-y-4">
-            <h3 className="text-sm font-bold text-white flex items-center gap-2">
-              <BarChart3 className="w-4 h-4 text-indigo-400" />
-              <span>Syllabus Topic Performance Analysis</span>
-            </h3>
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                <BarChart3 className="w-4 h-4 text-indigo-400" />
+                <span>Syllabus Topic Performance Analysis</span>
+              </h3>
+              <Link 
+                href="/dashboard/diagnostics"
+                className="text-xs text-indigo-300 hover:text-white font-bold flex items-center gap-1 transition-colors"
+              >
+                <span>Full Weakness Heatmap</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {topicBreakdown.map((t, idx) => (
@@ -240,6 +254,14 @@ export const ExamReportCard: React.FC<ExamReportCardProps> = ({
             <Download className="w-4 h-4 text-indigo-400" />
             <span>{isExporting ? 'Generating PNG...' : 'Export Result Card'}</span>
           </button>
+
+          <button
+            onClick={() => setShareModalOpen(true)}
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 font-bold text-xs transition-all cursor-pointer"
+          >
+            <Share2 className="w-4 h-4 text-indigo-400" />
+            <span>Share Achievement</span>
+          </button>
         </div>
 
         <div className="flex items-center gap-3">
@@ -261,6 +283,22 @@ export const ExamReportCard: React.FC<ExamReportCardProps> = ({
         </div>
 
       </div>
+
+      {/* Shareable Exam Certificate Modal */}
+      <ShareableExamModal
+        isOpen={shareModalOpen}
+        onClose={() => setShareModalOpen(false)}
+        studentName={studentName}
+        score={score}
+        total={total}
+        grade={evaluation.grade}
+        gradeLabel={evaluation.threshold.label}
+        gradeColor={evaluation.threshold.color}
+        percentage={evaluation.percentage}
+        timeSpentSeconds={timeSpentSeconds}
+        profile={profile}
+        strikeCount={strikeCount}
+      />
 
     </div>
   );

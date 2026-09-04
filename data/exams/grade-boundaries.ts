@@ -231,6 +231,36 @@ export const EXAM_PROFILES: Record<string, ExamPaperProfile> = {
     ]
   },
 
+  // 6. Pearson Edexcel IAL Chemistry Unit 6 - Practical Skills in Chemistry II
+  'edexcel-ial-u6': {
+    id: 'edexcel-ial-u6',
+    title: 'Pearson Edexcel IAL Chemistry (A2 Practical)',
+    board: 'edexcel',
+    curriculumTrack: 'edexcel-a2',
+    paperCode: 'WCH16/01',
+    paperName: 'Unit 6: Practical Skills in Chemistry II',
+    paperType: 'practical',
+    defaultQuestionCount: 15,
+    durationMinutes: 80,
+    totalMarks: 50,
+    instructions: [
+      'Written practical examination assessing A2 Core Practicals 9 to 16.',
+      'Answer all questions. Show working in all mathematical calculations with units.',
+      'Responses are evaluated against official Pearson Edexcel A2 practical mark scheme keywords and procedures.',
+      'Refer to the Periodic Table and Data Formulae provided.'
+    ],
+    gradeScale: 'letters',
+    thresholds: [
+      { grade: 'A*', minPercent: 82, label: 'Grade A* (Exceptional A2 Practical)', color: '#10b981', badgeBg: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', description: 'Outstanding mastery of advanced organic synthesis, kinetics, and transition metal analysis.' },
+      { grade: 'A',  minPercent: 70, label: 'Grade A (Top A2 Tier)', color: '#06b6d4', badgeBg: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30', description: 'Comprehensive experimental reasoning and quantitative precision.' },
+      { grade: 'B',  minPercent: 60, label: 'Grade B (Very Good)', color: '#3b82f6', badgeBg: 'bg-blue-500/20 text-blue-400 border-blue-500/30', description: 'Strong understanding of recrystallisation, redox titrations, and spectroscopy.' },
+      { grade: 'C',  minPercent: 50, label: 'Grade C (Standard Pass)', color: '#8b5cf6', badgeBg: 'bg-violet-500/20 text-violet-400 border-violet-500/30', description: 'Solid core knowledge of standard laboratory techniques.' },
+      { grade: 'D',  minPercent: 42, label: 'Grade D (Pass)', color: '#f59e0b', badgeBg: 'bg-amber-500/20 text-amber-400 border-amber-500/30', description: 'Basic threshold pass for A2 Practical Skills.' },
+      { grade: 'E',  minPercent: 34, label: 'Grade E (Minimum Pass)', color: '#f97316', badgeBg: 'bg-orange-500/20 text-orange-400 border-orange-500/30', description: 'Minimum passing mark.' },
+      { grade: 'U',  minPercent: 0,  label: 'Grade U (Ungraded)', color: '#ef4444', badgeBg: 'bg-rose-500/20 text-rose-400 border-rose-500/30', description: 'Ungraded.' },
+    ]
+  },
+
   // 5. Pearson Edexcel International GCSE (4CH1) - 9 to 1 grading
   'edexcel-igcse-4ch1': {
     id: 'edexcel-igcse-4ch1',

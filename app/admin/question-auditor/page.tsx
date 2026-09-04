@@ -13,6 +13,9 @@ import { allCurricula } from '@/data/curriculum';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 import { sanitizeKatex } from '@/lib/katex-sanitizer';
+import InteractiveGraphPlotter from '@/components/InteractiveGraphPlotter';
+import SelfMarkingRubric from '@/components/SelfMarkingRubric';
+import InteractiveScaleReader from '@/components/InteractiveScaleReader';
 
 interface AuditedQuestion {
     source: 'quiz' | 'exam';
@@ -33,6 +36,8 @@ interface AuditedQuestion {
         points: { mark: number; keyword: string; text: string }[];
         examinerTips?: string;
     };
+    graphConfig?: any;
+    apparatusScaleConfig?: any;
 }
 
 const renderTextWithMath = (text: string): React.ReactNode => {
@@ -347,7 +352,9 @@ export default function QuestionAuditorPage() {
                 createdAt: q.createdAt,
                 imageHtml: q.imageHtml,
                 paperType: q.paperType,
-                markingScheme: q.markingScheme
+                markingScheme: q.markingScheme,
+                graphConfig: q.graphConfig,
+                apparatusScaleConfig: (q as any).apparatusScaleConfig
             };
         });
 
@@ -385,7 +392,12 @@ export default function QuestionAuditorPage() {
                             track,
                             unitTitle,
                             lessonTitle,
-                            createdAt: q.createdAt
+                            createdAt: q.createdAt,
+                            imageHtml: q.imageHtml,
+                            paperType: q.paperType,
+                            markingScheme: q.markingScheme,
+                            graphConfig: q.graphConfig,
+                            apparatusScaleConfig: (q as any).apparatusScaleConfig
                         });
                     });
                 });
@@ -796,57 +808,30 @@ export default function QuestionAuditorPage() {
                                     {renderQuestionContent(q.question)}
                                 </div>
 
+                                {/* Interactive Graph Plotter for Practical Graph Questions */}
+                                {q.graphConfig && (
+                                    <div className="my-6">
+                                        <InteractiveGraphPlotter config={q.graphConfig} />
+                                    </div>
+                                )}
+
+                                {/* Interactive Apparatus Scale Reader for Practical Questions */}
+                                {q.apparatusScaleConfig && (
+                                    <div className="my-6">
+                                        <InteractiveScaleReader config={q.apparatusScaleConfig} />
+                                    </div>
+                                )}
+
                                 {/* Question Graph / Image */}
-                                {q.imageHtml && (
+                                {q.imageHtml && !q.graphConfig && (
                                     <div className="my-4 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: q.imageHtml }} />
                                 )}
 
                                 {/* Marking Scheme Breakdown for Paper 4/6 */}
                                 {q.markingScheme ? (
-                                    <div className="bg-[#0e1626] border border-indigo-500/25 rounded-2xl p-5 space-y-4">
-                                        <div className="flex items-center justify-between border-b border-indigo-500/20 pb-3">
-                                            <div className="flex items-center gap-2">
-                                                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                                                <span className="text-xs font-black text-indigo-300 uppercase tracking-wider">
-                                                    Official Cambridge Mark Scheme Rubric ({q.markingScheme.marks} Marks)
-                                                </span>
-                                            </div>
-                                            <span className="text-[11px] font-bold text-slate-400">Keyword-Assisted Evaluation</span>
-                                        </div>
-
-                                        {/* Mark Points */}
-                                        <div className="space-y-2.5">
-                                            {q.markingScheme.points.map((pt, pIdx) => (
-                                                <div key={pIdx} className="bg-white/[0.02] border border-white/5 rounded-xl p-3 flex items-start gap-3 text-xs">
-                                                    <span className="bg-emerald-500/20 text-emerald-300 font-bold px-2 py-1 rounded border border-emerald-500/30 flex-shrink-0">
-                                                        +{pt.mark} Mark
-                                                    </span>
-                                                    <div className="space-y-1 flex-1">
-                                                        <div className="text-slate-200 font-medium">
-                                                            {renderTextWithMath(pt.text)}
-                                                        </div>
-                                                        <div className="text-[11px] text-amber-300/90 font-mono flex items-center gap-1">
-                                                            <span className="text-slate-500">Key terms:</span>
-                                                            <span className="bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
-                                                                {pt.keyword}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        {/* Examiner Tips */}
-                                        {q.markingScheme.examinerTips && (
-                                            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3 text-xs text-amber-200/90 flex items-start gap-2">
-                                                <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
-                                                <div>
-                                                    <strong className="text-amber-300 font-bold block mb-0.5">Examiner Advice & Common Pitfalls:</strong>
-                                                    <span>{q.markingScheme.examinerTips}</span>
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
+                                    <SelfMarkingRubric 
+                                        markingScheme={q.markingScheme}
+                                    />
                                 ) : (
                                     /* Options for MCQ */
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
@@ -881,12 +866,15 @@ export default function QuestionAuditorPage() {
                                              {(() => {
                                                  const clean = q.explanation
                                                      .replace(/\\n/g, '\n')
-                                                     .replace(/(?:\s+|\n)*(?=\d+\.\s+[A-Z\u0600-\u06FF])/g, '\n')
-                                                     .replace(/(?:\s+|\n)*(?=[•\*]\s+)/g, '\n');
-                                                 return clean.split('\n').map((line, lineIdx) => (
-                                                     line.trim() === '' 
-                                                         ? <div key={lineIdx} className="h-2" /> 
-                                                         : <div key={lineIdx}>{renderTextWithMath(line)}</div>
+                                                     .replace(/([^\n])\s+(?=\d+\.\s+)/g, '$1\n')
+                                                     .replace(/([^\n])\s+(?=[•\*]\s+)/g, '$1\n');
+                                                 const lines = clean
+                                                     .split('\n')
+                                                     .map(line => line.trim())
+                                                     .filter(line => line !== '' && line !== '*' && line !== '•')
+                                                     .map(line => line.replace(/^[\*\•]\s+(?=\d+\.)/, ''));
+                                                 return lines.map((line, lineIdx) => (
+                                                     <div key={lineIdx}>{renderTextWithMath(line)}</div>
                                                  ));
                                              })()}
                                         </div>

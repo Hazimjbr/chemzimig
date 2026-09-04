@@ -15,6 +15,7 @@ import Link from 'next/link';
 import { useGamification } from '@/contexts/GamificationContext';
 import { useAuth } from '@/contexts/AuthContext';
 import { allCurricula } from '@/data/curriculum';
+import { analyzeStudentDiagnostics } from '@/lib/topic-analytics';
 
 export interface TopicWeakSpot {
     unitNumber: number;
@@ -55,113 +56,32 @@ export function WeakSpotAnalyticsHeatmap() {
         return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
     }, [studentTrackId]);
 
-    // 1. Analyze mistakes & attempts by curriculum & unit
+    // 1. Analyze mistakes & attempts by curriculum & unit via central engine
+    const diagnosticReport = useMemo(() => {
+        return analyzeStudentDiagnostics(solvedQuestions, mistakeInbox, studentTrackId);
+    }, [solvedQuestions, mistakeInbox, studentTrackId]);
+
     const { spots, hasRealData } = useMemo(() => {
-        const mistakes = mistakeInbox || [];
-        const solved = solvedQuestions || {};
-
-        const totalAttemptsCount = Object.keys(solved).length + mistakes.length;
-
-        // Aggregate stats by unitKey: e.g. "cie-igcse-unit-3" or "edexcel-a2-unit-4"
-        const unitStats: Record<string, {
-            mistakes: number;
-            totalAttempts: number;
-            correctAttempts: number;
-            unitNumber: number;
-            curriculumId: string;
-        }> = {};
-
-        // Extract data from solvedQuestions
-        Object.entries(solved).forEach(([qId, data]) => {
-            const match = qId.match(/^([a-z0-9\-]+?)-(?:u|unit-)(\d+)/i);
-            if (match) {
-                const curriculumTrack = match[1].toLowerCase();
-                const unitNum = parseInt(match[2], 10);
-                const key = `${curriculumTrack}-unit-${unitNum}`;
-
-                if (!unitStats[key]) {
-                    unitStats[key] = {
-                        mistakes: 0,
-                        totalAttempts: 0,
-                        correctAttempts: 0,
-                        unitNumber: unitNum,
-                        curriculumId: curriculumTrack,
-                    };
-                }
-
-                unitStats[key].totalAttempts += 1;
-                if (data.isCorrect) {
-                    unitStats[key].correctAttempts += 1;
-                } else {
-                    unitStats[key].mistakes += 1;
-                }
-            }
-        });
-
-        // Augment from mistakeInbox
-        mistakes.forEach(m => {
-            const match = m.questionId.match(/^([a-z0-9\-]+?)-(?:u|unit-)(\d+)/i);
-            if (match) {
-                const curriculumTrack = match[1].toLowerCase();
-                const unitNum = parseInt(match[2], 10);
-                const key = `${curriculumTrack}-unit-${unitNum}`;
-
-                if (!unitStats[key]) {
-                    unitStats[key] = {
-                        mistakes: 0,
-                        totalAttempts: 0,
-                        correctAttempts: 0,
-                        unitNumber: unitNum,
-                        curriculumId: curriculumTrack,
-                    };
-                }
-
-                if (unitStats[key].mistakes === 0) {
-                    unitStats[key].mistakes += 1;
-                    unitStats[key].totalAttempts = Math.max(unitStats[key].totalAttempts, unitStats[key].mistakes);
-                }
-            }
-        });
-
-        const analyzedSpots: TopicWeakSpot[] = [];
-
-        Object.entries(unitStats).forEach(([key, stat]) => {
-            const curr = allCurricula.find(c => c.id.toLowerCase().startsWith(stat.curriculumId)) || allCurricula[0];
-            const topic = curr.topics.find(t => t.number === stat.unitNumber) || curr.topics[0];
-
-            const attempts = Math.max(1, stat.totalAttempts);
-            const accuracy = Math.round((stat.correctAttempts / attempts) * 100);
-            const weakness = 100 - accuracy;
-
-            let severity: 'critical' | 'moderate' | 'stable' = 'stable';
-            if (weakness >= 50 && stat.mistakes >= 2) severity = 'critical';
-            else if (weakness >= 25 || stat.mistakes >= 1) severity = 'moderate';
-
-            const subtopics = topic.subtopics || [];
-            const recommendedLessonNum = Math.min(stat.mistakes + 1, Math.max(1, subtopics.length));
-            const recommendedLessonTitle = subtopics[recommendedLessonNum - 1] || 'Core Concepts';
-
-            analyzedSpots.push({
-                unitNumber: topic.number,
-                unitTitle: topic.title,
-                topicId: topic.id,
-                curriculumId: curr.id,
-                mistakesCount: stat.mistakes,
-                totalAttempts: attempts,
-                accuracyPercent: accuracy,
-                weaknessPercent: weakness,
-                severity,
-                recommendedLessonNum,
-                recommendedLessonTitle,
-                subtopicsSummary: subtopics.slice(0, 3)
-            });
-        });
+        const analyzedSpots: TopicWeakSpot[] = diagnosticReport.diagnostics.map(d => ({
+            unitNumber: d.unitNumber,
+            unitTitle: d.unitTitle,
+            topicId: d.topicId,
+            curriculumId: d.curriculumId,
+            mistakesCount: d.mistakesCount,
+            totalAttempts: d.totalAttempts,
+            accuracyPercent: d.accuracyPercent,
+            weaknessPercent: d.weaknessPercent,
+            severity: d.status === 'critical' ? 'critical' : d.status === 'moderate' ? 'moderate' : 'stable',
+            recommendedLessonNum: d.recommendedLessonNum,
+            recommendedLessonTitle: d.recommendedLessonTitle,
+            subtopicsSummary: d.subtopics.slice(0, 3)
+        }));
 
         return {
             spots: analyzedSpots.sort((a, b) => b.weaknessPercent - a.weaknessPercent),
-            hasRealData: totalAttemptsCount > 0 && analyzedSpots.length > 0
+            hasRealData: diagnosticReport.totalAttempts > 0
         };
-    }, [mistakeInbox, solvedQuestions]);
+    }, [diagnosticReport]);
 
     // Filtered by active tab
     const filteredAnalytics = useMemo(() => {
@@ -186,36 +106,46 @@ export function WeakSpotAnalyticsHeatmap() {
                     </p>
                 </div>
 
-                {/* Filter Pills or Calibration Badge */}
-                {hasRealData ? (
-                    <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-900/80 border border-white/10 w-fit backdrop-blur-md">
-                        <button
-                            onClick={() => setSelectedTab('all')}
-                            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                                selectedTab === 'all' 
-                                    ? 'bg-indigo-500 text-white shadow-md shadow-indigo-500/20' 
-                                    : 'text-slate-400 hover:text-white'
-                            }`}
-                        >
-                            All Topics ({spots.length})
-                        </button>
-                        <button
-                            onClick={() => setSelectedTab('critical')}
-                            className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                                selectedTab === 'critical' 
-                                    ? 'bg-rose-500 text-white shadow-md shadow-rose-500/20' 
-                                    : 'text-slate-400 hover:text-rose-400'
-                            }`}
-                        >
-                            Needs Review ({spots.filter(s => s.severity === 'critical').length})
-                        </button>
-                    </div>
-                ) : (
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold backdrop-blur-md">
-                        <Sparkles className="w-4 h-4 text-indigo-400 animate-pulse" />
-                        <span>Radar Calibrating • Ready to Learn</span>
-                    </div>
-                )}
+                {/* Filter Pills and Link to Full Diagnostic Report */}
+                <div className="flex flex-wrap items-center gap-2">
+                    {hasRealData ? (
+                        <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-900/80 border border-white/10 w-fit backdrop-blur-md">
+                            <button
+                                onClick={() => setSelectedTab('all')}
+                                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                                    selectedTab === 'all' 
+                                        ? 'bg-indigo-500 text-white shadow-md shadow-indigo-500/20' 
+                                        : 'text-slate-400 hover:text-white'
+                                }`}
+                            >
+                                All Topics ({spots.length})
+                            </button>
+                            <button
+                                onClick={() => setSelectedTab('critical')}
+                                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                                    selectedTab === 'critical' 
+                                        ? 'bg-rose-500 text-white shadow-md shadow-rose-500/20' 
+                                        : 'text-slate-400 hover:text-rose-400'
+                                }`}
+                            >
+                                Needs Review ({spots.filter(s => s.severity === 'critical').length})
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold backdrop-blur-md">
+                            <Sparkles className="w-4 h-4 text-indigo-400 animate-pulse" />
+                            <span>Radar Calibrating • Ready to Learn</span>
+                        </div>
+                    )}
+
+                    <Link
+                        href="/dashboard/diagnostics"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 text-indigo-300 hover:text-white text-xs font-bold transition-all cursor-pointer shadow-sm"
+                    >
+                        <span>Full Diagnostics</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                    </Link>
+                </div>
             </div>
 
             {/* If Student Has Real Question Data */}

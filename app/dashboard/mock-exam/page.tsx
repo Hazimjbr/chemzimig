@@ -22,6 +22,9 @@ import { PeriodicTableModal } from '@/components/exam-simulator/PeriodicTableMod
 import { ProctorWarningModal } from '@/components/exam-simulator/ProctorWarningModal';
 import { ExamReportCard } from '@/components/exam-simulator/ExamReportCard';
 import { evaluateWrittenAnswer, MarkingEvaluationResult } from '@/lib/keyword-evaluator';
+import InteractiveGraphPlotter from '@/components/InteractiveGraphPlotter';
+import InteractiveScaleReader from '@/components/InteractiveScaleReader';
+import SelfMarkingRubric from '@/components/SelfMarkingRubric';
 
 type ExamPhase = 'SELECT' | 'CONFIRM_RULES' | 'EXAM' | 'REPORT' | 'REVIEW';
 
@@ -721,13 +724,21 @@ export default function MockExamPage() {
                 {renderTextWithMath(currentQ.question)}
               </div>
 
-              {/* Optional Graph / Image */}
-              {currentQ.imageHtml && (
+              {/* Optional Graph / Image or Interactive Graph Plotter */}
+              {currentQ.graphConfig ? (
+                <div className="my-6">
+                  <InteractiveGraphPlotter config={currentQ.graphConfig} />
+                </div>
+              ) : currentQ.apparatusScaleConfig ? (
+                <div className="my-6">
+                  <InteractiveScaleReader config={currentQ.apparatusScaleConfig} />
+                </div>
+              ) : currentQ.imageHtml ? (
                 <div 
                   className="my-4 p-4 bg-[#0a0f1d] border border-white/10 rounded-2xl flex justify-center"
                   dangerouslySetInnerHTML={{ __html: currentQ.imageHtml }}
                 />
-              )}
+              ) : null}
 
               {/* Question Input Section: Either Structured Written Area or Multiple Choice Options */}
               {isCurrentQWritten ? (
@@ -1001,6 +1012,7 @@ export default function MockExamPage() {
             strikeCount={strikes}
             wasTerminated={wasTerminated}
             topicBreakdown={topicBreakdown}
+            studentName={user?.name || user?.username || 'ChemZim Scholar'}
             onRetry={() => setPhase('SELECT')}
             onReviewQuestions={() => setPhase('REVIEW')}
             onExit={() => router.push('/dashboard')}
@@ -1079,13 +1091,21 @@ export default function MockExamPage() {
                     {renderTextWithMath(q.question)}
                   </div>
 
-                  {/* Optional Graph / Image */}
-                  {q.imageHtml && (
+                  {/* Optional Graph / Image or Interactive Graph Plotter */}
+                  {q.graphConfig ? (
+                    <div className="my-6">
+                      <InteractiveGraphPlotter config={q.graphConfig} />
+                    </div>
+                  ) : q.apparatusScaleConfig ? (
+                    <div className="my-6">
+                      <InteractiveScaleReader config={q.apparatusScaleConfig} />
+                    </div>
+                  ) : q.imageHtml ? (
                     <div 
                       className="my-3 p-4 bg-[#0a0f1d] border border-white/10 rounded-2xl flex justify-center"
                       dangerouslySetInnerHTML={{ __html: q.imageHtml }}
                     />
-                  )}
+                  ) : null}
 
                   {/* Written Answer Review vs MCQ Review */}
                   {isWritten ? (
@@ -1104,81 +1124,16 @@ export default function MockExamPage() {
                         </div>
                       </div>
 
-                      {/* Cambridge Marking Scheme Rubric Breakdown */}
+                      {/* Interactive Self-Marking Checklist Rubric */}
                       {q.markingScheme && (
-                        <div className="bg-[#0c152a] border border-indigo-500/20 rounded-2xl p-5 space-y-4">
-                          <div className="flex items-center justify-between border-b border-white/5 pb-3">
-                            <span className="text-xs font-black text-indigo-300 uppercase tracking-wider flex items-center gap-2">
-                              <span>📋 Official Cambridge Mark Scheme Rubric</span>
-                              <span className="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-200">
-                                {q.markingScheme.marks} Total Marks
-                              </span>
-                            </span>
-                          </div>
-
-                          <div className="space-y-2.5">
-                            {q.markingScheme.points.map((pt, pIdx) => {
-                              const ptEvaluation = evaluation?.pointResults?.[pIdx];
-                              const isMatched = ptEvaluation?.matched;
-
-                              return (
-                                <div 
-                                  key={pIdx}
-                                  className={`p-3 rounded-xl border text-xs transition-all ${
-                                    isMatched
-                                      ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-200'
-                                      : 'bg-rose-500/10 border-rose-500/25 text-rose-200/90'
-                                  }`}
-                                >
-                                  <div className="flex items-start justify-between gap-3">
-                                    <div className="flex items-start gap-2 flex-1">
-                                      <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold flex-shrink-0 ${
-                                        isMatched
-                                          ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                                          : 'bg-rose-500/20 text-rose-400 border border-rose-500/30'
-                                      }`}>
-                                        +{pt.mark} Mark
-                                      </span>
-                                      <div className="space-y-1">
-                                        <p className="text-slate-100 font-medium leading-relaxed">{pt.text}</p>
-                                        <div className="flex flex-wrap items-center gap-1.5 pt-1">
-                                          <span className="text-[10px] text-slate-400">Target Keyword:</span>
-                                          <span className="px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono text-[10px] font-bold">
-                                            {pt.keyword}
-                                          </span>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div className="flex-shrink-0">
-                                      {isMatched ? (
-                                        <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-400 bg-emerald-500/15 px-2.5 py-1 rounded-full border border-emerald-500/30">
-                                          <Check className="w-3.5 h-3.5" />
-                                          <span>Awarded</span>
-                                        </span>
-                                      ) : (
-                                        <span className="inline-flex items-center gap-1 text-[11px] font-bold text-rose-400 bg-rose-500/15 px-2.5 py-1 rounded-full border border-rose-500/30">
-                                          <X className="w-3.5 h-3.5" />
-                                          <span>Not Detected</span>
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-
-                          {/* Examiner Tips */}
-                          {q.markingScheme.examinerTips && (
-                            <div className="mt-3 bg-amber-500/10 border border-amber-500/20 rounded-xl p-3.5 text-xs text-amber-200/90 leading-relaxed">
-                              <span className="font-bold text-amber-300 uppercase tracking-widest text-[10px] block mb-1">
-                                💡 Cambridge Examiner Insights & Common Pitfalls:
-                              </span>
-                              {q.markingScheme.examinerTips}
-                            </div>
-                          )}
-                        </div>
+                        <SelfMarkingRubric 
+                          markingScheme={q.markingScheme}
+                          studentText={writtenAnswers[idx] || ''}
+                          autoEvaluation={evaluation ? {
+                            awardedMarks: evaluation.awardedMarks,
+                            pointResults: evaluation.pointResults
+                          } : undefined}
+                        />
                       )}
                     </div>
                   ) : (

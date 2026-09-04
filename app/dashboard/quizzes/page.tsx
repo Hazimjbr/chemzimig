@@ -5,17 +5,29 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
-import { allCurricula } from '@/data/curriculum';
+import { allCurricula, edexcelAsCurriculum, edexcelA2Curriculum } from '@/data/curriculum';
 import { questionBank, examsRegistry } from '@/data/exams';
 import { curriculumRegistry } from '@/data/curriculum/registry';
 import { 
     Trophy, Play, CheckCircle2, XCircle, ArrowRight, ArrowLeft, RefreshCw, 
     Clock, HelpCircle, Check, BookOpen, AlertCircle, Layers, Settings, Compass, Sliders,
-    Flag, LayoutGrid, X, ChevronLeft, ChevronRight
+    Flag, LayoutGrid, X, ChevronLeft, ChevronRight, FileText, FlaskConical, Printer
 } from 'lucide-react';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 import { sanitizeKatex } from '@/lib/katex-sanitizer';
+import InteractiveGraphPlotter from '@/components/InteractiveGraphPlotter';
+import InteractiveScaleReader from '@/components/InteractiveScaleReader';
+import { PrintExamModal } from '@/components/exam-simulator/PrintExamModal';
+
+export const EDEXCEL_UNITS = [
+    { number: 1, title: 'Unit 1: Structure, Bonding & Intro Organic', shortTitle: 'Structure & Bonding', code: 'WCH11', level: 'AS' },
+    { number: 2, title: 'Unit 2: Energetics, Group Chem & Halogenoalkanes', shortTitle: 'Energetics & Groups', code: 'WCH12', level: 'AS' },
+    { number: 3, title: 'Unit 3: Practical Skills in Chemistry I', shortTitle: 'Practical Skills I', code: 'WCH13', level: 'AS' },
+    { number: 4, title: 'Unit 4: Rates, Equilibria & Further Organic', shortTitle: 'Rates & Equilibria', code: 'WCH14', level: 'A2' },
+    { number: 5, title: 'Unit 5: Transition Metals & Organic Nitrogen', shortTitle: 'Transition Metals & Arenes', code: 'WCH15', level: 'A2' },
+    { number: 6, title: 'Unit 6: Practical Skills in Chemistry II', shortTitle: 'Practical Skills II', code: 'WCH16', level: 'A2' }
+];
 
 interface LocalQuestion {
     source: 'quiz' | 'exam';
@@ -28,11 +40,20 @@ interface LocalQuestion {
     rawLevel: number; // 1 | 2 | 3
     track: string;
     trackId: string;
+    board: 'cambridge' | 'edexcel';
+    paperCode?: string; // 'p1' | 'p2' | 'p4' | 'p6' | 'other'
+    paperType?: 'mcq' | 'structured' | 'practical';
+    paperLabel?: string;
+    unitNumber?: number; // 1 to 12
     unitTitle: string;
     rawUnitId: string;
     lessonTitle: string;
     rawLessonNum: number;
     imageHtml?: string;
+    tableHtml?: string;
+    sourceRef?: string;
+    graphConfig?: any;
+    apparatusScaleConfig?: any;
 }
 
 const renderTextWithMath = (text: string): React.ReactNode => {
@@ -187,13 +208,7 @@ const resolveCurriculumTitle = (id: string, unitId: string): string => {
     if (cleanId === 'edexcel-igcse') return 'Edexcel IGCSE';
     if (cleanId === 'edexcel-as') return 'Edexcel AS-Level';
     if (cleanId === 'edexcel-a2') return 'Edexcel A2-Level';
-    
-    if (cleanId === 'edexcel-alevel') {
-        if (cleanUnit.includes('unit-4') || cleanUnit.includes('unit-5') || cleanUnit.includes('unit-6') || cleanUnit.includes('u4') || cleanUnit.includes('u5') || cleanUnit.includes('u6')) {
-            return 'Edexcel A2-Level';
-        }
-        return 'Edexcel AS-Level';
-    }
+    if (cleanId === 'edexcel-alevel') return 'Edexcel IAL Chemistry';
     
     return id;
 };
@@ -207,6 +222,16 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     if (cleanTrackId === 'igcse') cleanTrackId = 'cie-igcse';
     if (cleanTrackId === 'cie-alevel' || cleanTrackId === 'cie-a2') cleanTrackId = 'cie-alevel';
     
+    // Direct check against canonical Edexcel units 1-6
+    if (cleanTrackId.startsWith('edexcel') || cleanUnitId.includes('edexcel-unit') || cleanUnitId.match(/^unit-[1-6]$/)) {
+        const matchNum = cleanUnitId.match(/unit-(\d+)/) || cleanUnitId.match(/u(\d+)/);
+        if (matchNum) {
+            const num = parseInt(matchNum[1], 10);
+            const foundEdx = EDEXCEL_UNITS.find(u => u.number === num);
+            if (foundEdx) return foundEdx.title;
+        }
+    }
+
     let curriculum = allCurricula.find(c => c.id.toLowerCase() === cleanTrackId || c.id.toLowerCase().startsWith(cleanTrackId));
     if (!curriculum && (cleanTrackId === 'edexcel-alevel' || cleanTrackId === 'edexcel-as' || cleanTrackId === 'edexcel-a2')) {
         if (cleanUnitId.includes('unit-4') || cleanUnitId.includes('unit-5') || cleanUnitId.includes('unit-6') || cleanUnitId.includes('u4') || cleanUnitId.includes('u5') || cleanUnitId.includes('u6')) {
@@ -241,6 +266,113 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     return unitId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 };
 
+const mapQuestionPaperAndUnit = (q: {
+    id?: string;
+    source?: string;
+    paperType?: string;
+    markingScheme?: any;
+    topic?: string;
+    rawUnitId?: string;
+    curriculum?: string;
+    trackId?: string;
+    unitNumber?: number;
+}): {
+    board: 'cambridge' | 'edexcel';
+    paperCode: string;
+    paperType: 'mcq' | 'structured' | 'practical';
+    paperLabel: string;
+    unitNumber?: number;
+} => {
+    const rawTrack = (q.curriculum || q.trackId || '').toLowerCase().trim();
+    const rawUnit = (q.topic || q.rawUnitId || '').toLowerCase().trim();
+    const isEdx = rawTrack.includes('edexcel') || rawUnit.includes('edexcel') || (q.unitNumber !== undefined && rawTrack.startsWith('edexcel'));
+    const board: 'cambridge' | 'edexcel' = isEdx ? 'edexcel' : 'cambridge';
+
+    let unitNumber = q.unitNumber;
+    if (unitNumber === undefined) {
+        const uMatch = rawUnit.match(/unit[-_\s]*(\d+)/i) || rawUnit.match(/u(\d+)/i);
+        if (uMatch) {
+            unitNumber = parseInt(uMatch[1], 10);
+        } else if (!isEdx) {
+            const cambridgeTopicMap: Record<string, number> = {
+                'states-of-matter': 1,
+                'atoms-elements': 2,
+                'stoichiometry': 3,
+                'electrochemistry': 4,
+                'chemical-energetics': 5,
+                'chemical-reactions': 6,
+                'acids-bases-salts': 7,
+                'periodic-table': 8,
+                'metals': 9,
+                'chemistry-environment': 10,
+                'organic-chemistry': 11,
+                'experimental-techniques': 12
+            };
+            unitNumber = cambridgeTopicMap[rawUnit];
+        }
+    }
+
+    if (board === 'edexcel') {
+        if (unitNumber === 3 || unitNumber === 6) {
+            return {
+                board,
+                unitNumber,
+                paperCode: unitNumber === 3 ? 'u3' : 'u6',
+                paperType: 'practical',
+                paperLabel: unitNumber === 3 ? 'Unit 3 Practical Skills I' : 'Unit 6 Practical Skills II'
+            };
+        }
+        return {
+            board,
+            unitNumber,
+            paperCode: 'section-a',
+            paperType: 'mcq',
+            paperLabel: 'Section A (MCQs)'
+        };
+    }
+
+    // Cambridge Paper mapping
+    const src = (q.source || '').toLowerCase();
+    const qid = (q.id || '').toLowerCase();
+    const pt = (q.paperType || '').toLowerCase();
+
+    if (pt === 'practical' || src.includes('paper 6') || src.includes('/61/') || src.includes('/62/') || src.includes('/63/') || src.includes('0620/6') || qid.includes('-p6-')) {
+        return {
+            board,
+            unitNumber,
+            paperCode: 'p6',
+            paperType: 'practical',
+            paperLabel: 'Paper 6 (Alternative to Practical)'
+        };
+    }
+    if (pt === 'structured' || q.markingScheme || src.includes('paper 4') || src.includes('paper 3') || src.includes('/41/') || src.includes('/42/') || src.includes('/43/') || src.includes('0620/4') || qid.includes('-p4-')) {
+        return {
+            board,
+            unitNumber,
+            paperCode: 'p4',
+            paperType: 'structured',
+            paperLabel: 'Paper 4 (Theory & Structured)'
+        };
+    }
+    if (src.includes('paper 1') || src.includes('/11/') || src.includes('/12/') || src.includes('0620/1') || qid.includes('-p1-')) {
+        return {
+            board,
+            unitNumber,
+            paperCode: 'p1',
+            paperType: 'mcq',
+            paperLabel: 'Paper 1 (Multiple Choice Core)'
+        };
+    }
+
+    return {
+        board,
+        unitNumber,
+        paperCode: 'p2',
+        paperType: 'mcq',
+        paperLabel: 'Paper 2 (Multiple Choice Extended)'
+    };
+};
+
 function QuizzesContent() {
     const { user } = useAuth();
     const { addXP, solvedQuestions, saveQuestionAttempts, mistakeInbox } = useGamification();
@@ -265,6 +397,8 @@ function QuizzesContent() {
     
     // Configuration states
     const [selectedSource, setSelectedSource] = useState<'all' | 'exam' | 'quiz'>('all');
+    const [selectedPaper, setSelectedPaper] = useState<'all' | 'p2' | 'p4' | 'p6' | 'p1'>('all');
+    const [selectedEdexcelUnit, setSelectedEdexcelUnit] = useState<'all' | number>('all');
     const [selectedUnit, setSelectedUnit] = useState<string>('all');
     const [selectedLesson, setSelectedLesson] = useState<string>('all');
     const [selectedLevel, setSelectedLevel] = useState<string>('all');
@@ -289,6 +423,8 @@ function QuizzesContent() {
     const [showFinishConfirm, setShowFinishConfirm] = useState<boolean>(false);
 
     const [hasSavedSession, setHasSavedSession] = useState<boolean>(false);
+    const [showPrintModal, setShowPrintModal] = useState<boolean>(false);
+    const [printQuestions, setPrintQuestions] = useState<LocalQuestion[]>([]);
 
     // Live elapsed timer during exam
     useEffect(() => {
@@ -367,6 +503,16 @@ function QuizzesContent() {
                 }
             }
 
+            const { board, paperCode, paperType, paperLabel, unitNumber } = mapQuestionPaperAndUnit({
+                id: q.id,
+                source: q.source,
+                paperType: q.paperType,
+                markingScheme: q.markingScheme,
+                topic: q.topic,
+                curriculum: q.curriculum,
+                trackId
+            });
+
             return {
                 source: 'exam',
                 id: q.id,
@@ -381,11 +527,20 @@ function QuizzesContent() {
                 rawLevel: q.level,
                 track,
                 trackId,
+                board,
+                paperCode,
+                paperType,
+                paperLabel,
+                unitNumber,
                 unitTitle,
                 rawUnitId: q.topic,
                 lessonTitle: 'Exam Practice Bank',
                 rawLessonNum: 0,
-                imageHtml: q.imageHtml
+                imageHtml: q.imageHtml,
+                tableHtml: q.tableHtml,
+                sourceRef: q.source,
+                graphConfig: q.graphConfig,
+                apparatusScaleConfig: q.apparatusScaleConfig
             };
         });
 
@@ -415,6 +570,15 @@ function QuizzesContent() {
                         
                     questions.forEach(q => {
                         const level = q.level === 1 ? 'Easy' : q.level === 2 ? 'Medium' : 'Hard';
+                        const { board, paperCode, paperType, paperLabel } = mapQuestionPaperAndUnit({
+                            id: q.id,
+                            source: q.source,
+                            paperType: q.paperType,
+                            markingScheme: q.markingScheme,
+                            curriculum: curriculumId,
+                            unitNumber
+                        });
+
                         modularExamQuestions.push({
                             source: 'exam',
                             id: q.id,
@@ -429,10 +593,20 @@ function QuizzesContent() {
                             rawLevel: q.level,
                             track,
                             trackId,
+                            board,
+                            paperCode,
+                            paperType,
+                            paperLabel,
+                            unitNumber,
                             unitTitle,
                             rawUnitId: `unit-${unitNumber}`,
                             lessonTitle,
-                            rawLessonNum: lessonNumber
+                            rawLessonNum: lessonNumber,
+                            imageHtml: q.imageHtml,
+                            tableHtml: q.tableHtml,
+                            sourceRef: q.source,
+                            graphConfig: q.graphConfig,
+                            apparatusScaleConfig: q.apparatusScaleConfig
                         });
                     });
                 });
@@ -472,6 +646,12 @@ function QuizzesContent() {
                     if (q.id && q.id.includes('EASY')) { level = 'Easy'; rawLevel = 1; }
                     else if (q.id && q.id.includes('HARD')) { level = 'Hard'; rawLevel = 3; }
                     
+                    const { board, paperCode, paperType, paperLabel } = mapQuestionPaperAndUnit({
+                        id: q.id,
+                        curriculum: curriculumId,
+                        unitNumber
+                    });
+
                     quizQuestions.push({
                         source: 'quiz',
                         id: q.id || `${curriculumId}-u${unitNumber}-l${lessonNumber}-q${idx}`,
@@ -486,6 +666,11 @@ function QuizzesContent() {
                         rawLevel,
                         track,
                         trackId,
+                        board,
+                        paperCode,
+                        paperType,
+                        paperLabel,
+                        unitNumber,
                         unitTitle,
                         rawUnitId: `unit-${unitNumber}`,
                         lessonTitle: `${lessonNumber}. ${lessonItem.title}`,
@@ -507,10 +692,15 @@ function QuizzesContent() {
     // - Single-track student: single curriculum
     const availableTracks = useMemo(() => {
         if (user?.isAdmin) {
-            return allCurricula.map(c => ({
-                id: c.id.startsWith('edexcel-a2') ? 'edexcel-a2' : c.id.startsWith('edexcel-as') ? 'edexcel-as' : c.id.startsWith('edexcel-igcse') ? 'edexcel-igcse' : c.id.startsWith('cie-as') ? 'cie-as' : c.id.startsWith('cie-alevel') ? 'cie-alevel' : 'cie-igcse',
-                title: c.title
-            }));
+            return [
+                { id: 'cie-igcse', title: 'Cambridge IGCSE Chemistry (0620)' },
+                { id: 'cie-as', title: 'Cambridge AS-Level Chemistry (9701)' },
+                { id: 'cie-alevel', title: 'Cambridge A-Level Chemistry (9701)' },
+                { id: 'edexcel-alevel', title: 'Edexcel IAL Chemistry (Units 1–6)' },
+                { id: 'edexcel-as', title: 'Edexcel AS Chemistry (Units 1–3)' },
+                { id: 'edexcel-a2', title: 'Edexcel A2 Chemistry (Units 4–6)' },
+                { id: 'edexcel-igcse', title: 'Edexcel IGCSE Chemistry (4CH1)' },
+            ];
         }
 
         if (user?.enrolledTracks && user.enrolledTracks.length > 1) {
@@ -531,48 +721,71 @@ function QuizzesContent() {
     const studentTrackId = useMemo(() => {
         if (adminSelectedTrackId) return adminSelectedTrackId;
 
-        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
+        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-alevel' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         
         let normalized = track.toLowerCase().trim();
         if (normalized === 'igcse') normalized = 'cie-igcse';
-        
-        if (normalized === 'edexcel-alevel') {
-            const grade = (user?.grade || '').toLowerCase();
-            if (grade.includes('a2') || grade.includes('a level') || grade.includes('alevel') || grade.includes('unit 4') || grade.includes('unit 5') || grade.includes('unit 6')) {
-                return 'edexcel-a2';
-            }
-            return 'edexcel-as';
-        }
         
         return normalized;
     }, [user, adminSelectedTrackId]);
 
     const activeCurriculum = useMemo(() => {
+        if (studentTrackId === 'edexcel-alevel') {
+            return {
+                id: 'edexcel-alevel',
+                code: 'WCH11-16',
+                title: 'Edexcel IAL Chemistry (Units 1–6)',
+                description: 'Pearson Edexcel International A Level Chemistry covering Units 1 to 6.',
+                topics: [
+                    ...edexcelAsCurriculum.topics,
+                    ...edexcelA2Curriculum.topics
+                ]
+            };
+        }
         return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
     }, [studentTrackId]);
 
-    const isEdexcelTrack = useMemo(() => studentTrackId.startsWith('edexcel'), [studentTrackId]);
+    const isCambridgeTrack = useMemo(() => {
+        return studentTrackId.startsWith('cie') || studentTrackId === 'igcse';
+    }, [studentTrackId]);
+
+    const isEdexcelTrack = useMemo(() => {
+        return studentTrackId.startsWith('edexcel');
+    }, [studentTrackId]);
+
     const subItemTerm = isEdexcelTrack ? 'Topic' : 'Lesson';
 
     // 3. Dynamic Lists and selections matching active curriculum ONLY
     const unitsList = useMemo(() => {
+        if (isEdexcelTrack) {
+            return EDEXCEL_UNITS.map(u => u.title);
+        }
         return activeCurriculum.topics.map(t => {
             if (/^unit\s+\d+:/i.test(t.title)) {
                 return t.title;
             }
             return `Unit ${t.number}: ${t.title}`;
         });
-    }, [activeCurriculum]);
+    }, [activeCurriculum, isEdexcelTrack]);
 
     const lessonsList = useMemo(() => {
+        let matchingUnitTitle = selectedUnit;
+        if (isEdexcelTrack && selectedEdexcelUnit !== 'all') {
+            const edx = EDEXCEL_UNITS.find(u => u.number === selectedEdexcelUnit);
+            if (edx) matchingUnitTitle = edx.title;
+        }
+
         return Array.from(new Set(
             allQuestions
-                .filter(q => q.trackId === studentTrackId &&
-                             (selectedSource === 'all' || q.source === selectedSource) &&
-                             (selectedUnit === 'all' || q.unitTitle === selectedUnit))
+                .filter(q => {
+                    const matchBoard = isEdexcelTrack ? q.board === 'edexcel' : q.trackId === studentTrackId;
+                    const matchSource = selectedSource === 'all' || q.source === selectedSource;
+                    const matchUnit = matchingUnitTitle === 'all' || q.unitTitle === matchingUnitTitle;
+                    return matchBoard && matchSource && matchUnit;
+                })
                 .map(q => q.lessonTitle)
         )).filter(title => title !== 'Exam Practice Bank');
-    }, [allQuestions, studentTrackId, selectedUnit, selectedSource]);
+    }, [allQuestions, studentTrackId, isEdexcelTrack, selectedUnit, selectedEdexcelUnit, selectedSource]);
 
     const todayStr = useMemo(() => new Date().toISOString().split('T')[0], []);
     const dueMistakeMap = useMemo(() => {
@@ -589,6 +802,8 @@ function QuizzesContent() {
     const handleModeSelect = (mode: 'comprehensive' | 'unit' | 'lesson' | 'custom' | 'spaced') => {
         setSelectedMode(mode);
         setSelectedSource('all');
+        setSelectedPaper('all');
+        setSelectedEdexcelUnit('all');
         setSelectedUnit('all');
         setSelectedLesson('all');
         setSelectedLevel('all');
@@ -601,9 +816,60 @@ function QuizzesContent() {
         setStep('config');
     };
 
-    // 4b. Filter memos for smart filters
+    // 4a. Base pool for real-time button counts
+    const baseBoardPool = useMemo(() => {
+        let pool = allQuestions.filter(q => {
+            if (isEdexcelTrack) return q.board === 'edexcel';
+            return q.trackId === studentTrackId;
+        });
+        if (selectedSource !== 'all') {
+            pool = pool.filter(q => q.source === selectedSource);
+        }
+        if (selectedLevel !== 'all') {
+            pool = pool.filter(q => q.level.toLowerCase() === selectedLevel.toLowerCase());
+        }
+        return pool;
+    }, [allQuestions, studentTrackId, isEdexcelTrack, selectedSource, selectedLevel]);
+
+    const paperCounts = useMemo(() => {
+        if (!isCambridgeTrack) return { all: 0, p2: 0, p4: 0, p6: 0 };
+        return {
+            all: baseBoardPool.length,
+            p2: baseBoardPool.filter(q => q.paperCode === 'p2' || q.paperCode === 'p1').length,
+            p4: baseBoardPool.filter(q => q.paperCode === 'p4').length,
+            p6: baseBoardPool.filter(q => q.paperCode === 'p6').length,
+        };
+    }, [isCambridgeTrack, baseBoardPool]);
+
+    const edexcelUnitCounts = useMemo(() => {
+        if (!isEdexcelTrack) return {} as Record<number, number>;
+        const counts: Record<number, number> = {};
+        for (let u = 1; u <= 6; u++) {
+            counts[u] = baseBoardPool.filter(q => q.unitNumber === u).length;
+        }
+        return counts;
+    }, [isEdexcelTrack, baseBoardPool]);
+
+    // 4b. Filter memos for smart filters and exam generation
     const filteredPool = useMemo(() => {
-        let pool = allQuestions.filter(q => q.trackId === studentTrackId);
+        let pool = allQuestions.filter(q => {
+            if (isEdexcelTrack) return q.board === 'edexcel';
+            return q.trackId === studentTrackId;
+        });
+
+        // A. Cambridge Paper Type Filter
+        if (isCambridgeTrack && selectedPaper !== 'all') {
+            if (selectedPaper === 'p2') {
+                pool = pool.filter(q => q.paperCode === 'p2' || q.paperCode === 'p1');
+            } else {
+                pool = pool.filter(q => q.paperCode === selectedPaper);
+            }
+        }
+
+        // B. Edexcel Unit Filter (1 to 6)
+        if (isEdexcelTrack && selectedEdexcelUnit !== 'all') {
+            pool = pool.filter(q => q.unitNumber === selectedEdexcelUnit);
+        }
 
         // Filter by source
         if (selectedSource !== 'all') {
@@ -634,7 +900,7 @@ function QuizzesContent() {
         }
 
         return pool;
-    }, [allQuestions, studentTrackId, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
+    }, [allQuestions, studentTrackId, isEdexcelTrack, isCambridgeTrack, selectedPaper, selectedEdexcelUnit, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
 
     const filterCounts = useMemo(() => {
         const all = filteredPool.length;
@@ -704,6 +970,56 @@ function QuizzesContent() {
         setTimeStart(Date.now());
         setStep('playing');
     };
+
+    // Print & Export Handlers
+    const handleOpenPrintModalFromConfig = () => {
+        const pool = activeFilteredQuestions;
+        if (pool.length === 0) {
+            alert("No questions found matching your criteria. Please adjust your selections.");
+            return;
+        }
+        const shuffled = [...pool].sort(() => Math.random() - 0.5);
+        const selected = shuffled.slice(0, Math.min(questionCount, shuffled.length));
+        setPrintQuestions(selected);
+        setShowPrintModal(true);
+    };
+
+    const handleOpenPrintModalFromResults = () => {
+        setPrintQuestions(questions);
+        setShowPrintModal(true);
+    };
+
+    const printableExamTitle = useMemo(() => {
+        if (isCambridgeTrack) {
+            let pName = 'All Papers';
+            if (selectedPaper === 'p2') pName = 'Paper 2 (Multiple Choice)';
+            else if (selectedPaper === 'p4') pName = 'Paper 4 (Theory & Structured)';
+            else if (selectedPaper === 'p6') pName = 'Paper 6 (Alternative to Practical)';
+            else if (selectedPaper === 'p1') pName = 'Paper 1 (Multiple Choice Core)';
+            return `Cambridge IGCSE Chemistry Assessment • ${pName}`;
+        }
+        if (isEdexcelTrack) {
+            let uName = 'Units 1–6';
+            if (typeof selectedEdexcelUnit === 'number') {
+                const found = EDEXCEL_UNITS.find(u => u.number === selectedEdexcelUnit);
+                if (found) uName = found.title;
+            }
+            return `Pearson Edexcel Chemistry Examination • ${uName}`;
+        }
+        return 'Chemistry Examination Paper';
+    }, [isCambridgeTrack, isEdexcelTrack, selectedPaper, selectedEdexcelUnit]);
+
+    const printableCurriculumTitle = isCambridgeTrack 
+        ? 'Cambridge IGCSE Chemistry (0620)' 
+        : isEdexcelTrack 
+        ? 'Pearson Edexcel IAL Chemistry (WCH11–16)' 
+        : 'Comprehensive Chemistry';
+
+    const printableTopicTitle = selectedUnit !== 'all' 
+        ? selectedUnit 
+        : (isCambridgeTrack 
+            ? (selectedPaper !== 'all' ? `Paper: ${selectedPaper.toUpperCase()}` : 'All Core & Extended Topics') 
+            : (selectedEdexcelUnit !== 'all' ? `Unit ${selectedEdexcelUnit}` : 'All Units (1–6)'));
 
     // Format elapsed time as MM:SS
     const formatTime = (seconds: number): string => {
@@ -967,6 +1283,186 @@ function QuizzesContent() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 
+                                {/* 1. Cambridge Paper Type Selector */}
+                                {isCambridgeTrack && (
+                                    <div className="flex flex-col gap-2.5 sm:col-span-2 bg-[#050515]/90 p-4 md:p-5 border border-indigo-500/20 rounded-2xl shadow-lg shadow-indigo-950/20">
+                                        <div className="flex items-center justify-between">
+                                            <label className="text-xs text-indigo-300 font-bold uppercase tracking-wider flex items-center gap-2">
+                                                <FileText className="w-4 h-4 text-indigo-400" />
+                                                <span>Cambridge Paper Type (نوع ورقة كامبريدج)</span>
+                                                <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30 font-mono">
+                                                    0620 / 9701
+                                                </span>
+                                            </label>
+                                            {selectedPaper !== 'all' && (
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setSelectedPaper('all')}
+                                                    className="text-[11px] text-slate-400 hover:text-white transition-colors"
+                                                >
+                                                    Reset to All Papers
+                                                </button>
+                                            )}
+                                        </div>
+
+                                        <div className="grid grid-cols-1 sm:grid-cols-4 gap-2.5">
+                                            {[
+                                                { id: 'all', title: 'All Papers', desc: 'Full Mixed Coverage', badge: 'Mixed', icon: '🌐', count: paperCounts.all },
+                                                { id: 'p2', title: 'Paper 2', desc: 'Multiple Choice (MCQ)', badge: 'Extended', icon: '📝', count: paperCounts.p2 },
+                                                { id: 'p4', title: 'Paper 4', desc: 'Theory & Structured', badge: 'Written', icon: '📑', count: paperCounts.p4 },
+                                                { id: 'p6', title: 'Paper 6', desc: 'Alternative to Practical', badge: 'Lab Skills', icon: '🧪', count: paperCounts.p6 },
+                                            ].map(paper => {
+                                                const isActive = selectedPaper === paper.id;
+                                                return (
+                                                    <button
+                                                        key={paper.id}
+                                                        type="button"
+                                                        onClick={() => setSelectedPaper(paper.id as any)}
+                                                        className={`p-3.5 rounded-xl text-left transition-all flex flex-col justify-between border ${
+                                                            isActive
+                                                                ? 'bg-gradient-to-br from-indigo-500/25 to-violet-500/15 border-indigo-400 text-white shadow-lg shadow-indigo-500/20 ring-1 ring-indigo-400/40'
+                                                                : 'bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/[0.05] hover:text-white hover:border-white/10'
+                                                        }`}
+                                                    >
+                                                        <div className="flex items-center justify-between mb-1.5">
+                                                            <span className="text-xl">{paper.icon}</span>
+                                                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                                                                isActive ? 'bg-indigo-400 text-slate-950' : 'bg-white/5 text-slate-400 border border-white/10'
+                                                            }`}>
+                                                                {paper.badge}
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <div className="font-extrabold text-sm text-white">{paper.title}</div>
+                                                            <div className="text-[11px] text-slate-400 leading-tight mt-0.5">{paper.desc}</div>
+                                                        </div>
+                                                        <div className="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+                                                            <span className="text-slate-500">Available:</span>
+                                                            <span className={`font-bold tabular-nums ${isActive ? 'text-indigo-300' : 'text-slate-400'}`}>
+                                                                {paper.count} Qs
+                                                            </span>
+                                                        </div>
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* 2. Edexcel Unit Selector (1 to 6) */}
+                                {isEdexcelTrack && (
+                                    <div className="flex flex-col gap-3 sm:col-span-2 bg-[#050515]/90 p-4 md:p-5 border border-indigo-500/20 rounded-2xl shadow-lg shadow-indigo-950/20">
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                            <label className="text-xs text-indigo-300 font-bold uppercase tracking-wider flex items-center gap-2">
+                                                <FlaskConical className="w-4 h-4 text-indigo-400" />
+                                                <span>Edexcel Unit Selection (تحديد الوحدة 1–6)</span>
+                                                <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30 font-mono">
+                                                    IAL Units 1–6
+                                                </span>
+                                            </label>
+
+                                            {/* Quick Level Group Tabs */}
+                                            <div className="flex items-center gap-1.5 bg-black/40 p-1 rounded-xl border border-white/5 self-start sm:self-auto">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        setSelectedEdexcelUnit('all');
+                                                        setSelectedUnit('all');
+                                                        setSelectedLesson('all');
+                                                    }}
+                                                    className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
+                                                        selectedEdexcelUnit === 'all'
+                                                            ? 'bg-indigo-500 text-white shadow'
+                                                            : 'text-slate-400 hover:text-white'
+                                                    }`}
+                                                >
+                                                    All Units (1–6)
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        if (selectedEdexcelUnit !== 1 && selectedEdexcelUnit !== 2 && selectedEdexcelUnit !== 3) {
+                                                            setSelectedEdexcelUnit(1);
+                                                            setSelectedUnit(EDEXCEL_UNITS[0].title);
+                                                            setSelectedLesson('all');
+                                                        }
+                                                    }}
+                                                    className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
+                                                        typeof selectedEdexcelUnit === 'number' && selectedEdexcelUnit <= 3
+                                                            ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40'
+                                                            : 'text-slate-400 hover:text-white'
+                                                    }`}
+                                                >
+                                                    AS (Units 1–3)
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => {
+                                                        if (selectedEdexcelUnit !== 4 && selectedEdexcelUnit !== 5 && selectedEdexcelUnit !== 6) {
+                                                            setSelectedEdexcelUnit(4);
+                                                            setSelectedUnit(EDEXCEL_UNITS[3].title);
+                                                            setSelectedLesson('all');
+                                                        }
+                                                    }}
+                                                    className={`px-2.5 py-1 text-[11px] font-bold rounded-lg transition-all ${
+                                                        typeof selectedEdexcelUnit === 'number' && selectedEdexcelUnit >= 4
+                                                            ? 'bg-indigo-500/30 text-indigo-200 border border-indigo-500/40'
+                                                            : 'text-slate-400 hover:text-white'
+                                                    }`}
+                                                >
+                                                    A2 (Units 4–6)
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        {/* 6 Unit Interactive Cards */}
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5">
+                                            {EDEXCEL_UNITS.map(u => {
+                                                const isActive = selectedEdexcelUnit === u.number;
+                                                const count = edexcelUnitCounts[u.number] || 0;
+                                                return (
+                                                    <button
+                                                        key={u.number}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            if (isActive) {
+                                                                setSelectedEdexcelUnit('all');
+                                                                setSelectedUnit('all');
+                                                                setSelectedLesson('all');
+                                                            } else {
+                                                                setSelectedEdexcelUnit(u.number as any);
+                                                                setSelectedUnit(u.title);
+                                                                setSelectedLesson('all');
+                                                            }
+                                                        }}
+                                                        className={`p-3.5 rounded-xl text-left transition-all border flex flex-col justify-between ${
+                                                            isActive
+                                                                ? 'bg-gradient-to-br from-indigo-500/25 to-violet-500/15 border-indigo-400 text-white shadow-lg shadow-indigo-500/20 ring-1 ring-indigo-400/40'
+                                                                : 'bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/[0.05] hover:text-white hover:border-white/10'
+                                                        }`}
+                                                    >
+                                                        <div className="flex items-center justify-between mb-1">
+                                                            <span className="font-mono text-xs font-black text-indigo-400 bg-indigo-500/20 border border-indigo-500/30 px-2 py-0.5 rounded-md">
+                                                                Unit {u.number}
+                                                            </span>
+                                                            <span className="text-[10px] text-slate-400 font-bold">{u.level} • {u.code}</span>
+                                                        </div>
+                                                        <div className="font-bold text-xs line-clamp-2 mt-1 text-slate-200">
+                                                            {u.title.replace(/^Unit\s+\d+:\s*/i, '')}
+                                                        </div>
+                                                        <div className="mt-2 pt-2 border-t border-white/5 flex items-center justify-between text-[11px]">
+                                                            <span className="text-slate-500">Available:</span>
+                                                            <span className={`font-bold tabular-nums ${isActive ? 'text-indigo-300' : 'text-slate-400'}`}>
+                                                                {count} Qs
+                                                            </span>
+                                                        </div>
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                )}
+                                
                                 {/* A. Source Type */}
                                 <div className="flex flex-col gap-2">
                                     <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Question Source</label>
@@ -1077,7 +1573,11 @@ function QuizzesContent() {
                                             </p>
                                             <button
                                                 type="button"
-                                                onClick={() => setSelectedFilter('all')}
+                                                onClick={() => {
+                                                    setSelectedFilter('all');
+                                                    setSelectedPaper('all');
+                                                    setSelectedEdexcelUnit('all');
+                                                }}
                                                 className="mt-2 text-xs font-bold bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 px-3 py-1.5 rounded-lg transition-colors text-white"
                                             >
                                                 Switch to All Questions
@@ -1087,14 +1587,25 @@ function QuizzesContent() {
                                 )}
 
                                 {/* C. Unit selection if applicable */}
-                                {(selectedMode === 'unit' || selectedMode === 'lesson') && (
+                                {(selectedMode === 'unit' || selectedMode === 'lesson' || (!isCambridgeTrack && !isEdexcelTrack)) && (
                                     <div className="flex flex-col gap-1.5 sm:col-span-2">
-                                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Select Target Unit</label>
+                                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                                            {isEdexcelTrack ? 'Select Target Unit (الوحدة)' : 'Select Target Unit (الوحدة / الموضوع)'}
+                                        </label>
                                         <select 
                                             value={selectedUnit}
                                             onChange={e => {
-                                                setSelectedUnit(e.target.value);
+                                                const val = e.target.value;
+                                                setSelectedUnit(val);
                                                 setSelectedLesson('all');
+                                                if (isEdexcelTrack) {
+                                                    const matchNum = val.match(/unit\s+(\d+)/i);
+                                                    if (matchNum) {
+                                                        setSelectedEdexcelUnit(parseInt(matchNum[1], 10));
+                                                    } else {
+                                                        setSelectedEdexcelUnit('all');
+                                                    }
+                                                }
                                             }}
                                             className="bg-[#0b0b1a] border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-indigo-500/50 outline-none text-slate-300 w-full"
                                         >
@@ -1109,13 +1620,15 @@ function QuizzesContent() {
                                 {/* D. Lesson selection if applicable */}
                                 {selectedMode === 'lesson' && (
                                     <div className="flex flex-col gap-1.5 sm:col-span-2">
-                                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Select Lesson</label>
+                                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                                            Select {subItemTerm} (الدرس / الموضوع الفرعي)
+                                        </label>
                                         <select 
                                             value={selectedLesson}
                                             onChange={e => setSelectedLesson(e.target.value)}
                                             className="bg-[#0b0b1a] border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-indigo-500/50 outline-none text-slate-300 w-full"
                                         >
-                                            <option value="all">All Lessons in Unit</option>
+                                            <option value="all">All {subItemTerm}s in Unit</option>
                                             {lessonsList.map(lesson => (
                                                 <option key={lesson} value={lesson}>{lesson}</option>
                                             ))}
@@ -1195,6 +1708,8 @@ function QuizzesContent() {
                                                 setSelectedUnit('all');
                                                 setSelectedLesson('all');
                                                 setSelectedCustomUnits([]);
+                                                setSelectedPaper('all');
+                                                setSelectedEdexcelUnit('all');
                                             }}
                                             className="bg-[#0b0f1d] border border-white/10 rounded-lg text-white font-semibold text-xs px-2 py-1 outline-none max-w-[170px]"
                                         >
@@ -1206,6 +1721,30 @@ function QuizzesContent() {
                                         <span className="text-white font-semibold">{activeCurriculum.title}</span>
                                     )}
                                 </div>
+
+                                {/* Cambridge Paper in Overview */}
+                                {isCambridgeTrack && (
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Paper Type:</span>
+                                        <span className="text-indigo-400 font-bold text-right text-xs">
+                                            {selectedPaper === 'all' ? 'All Papers (Mixed)' :
+                                             selectedPaper === 'p2' ? 'Paper 2 (MCQ)' :
+                                             selectedPaper === 'p4' ? 'Paper 4 (Theory)' :
+                                             selectedPaper === 'p6' ? 'Paper 6 (Practical)' : 'Paper 1 (Core)'}
+                                        </span>
+                                    </div>
+                                )}
+
+                                {/* Edexcel Unit in Overview */}
+                                {isEdexcelTrack && (
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Target Unit:</span>
+                                        <span className="text-indigo-400 font-bold text-right text-xs truncate max-w-[170px]" title={typeof selectedEdexcelUnit === 'number' ? `Unit ${selectedEdexcelUnit}` : 'All Units (1–6)'}>
+                                            {typeof selectedEdexcelUnit === 'number' ? `Unit ${selectedEdexcelUnit}` : 'All Units (1–6)'}
+                                        </span>
+                                    </div>
+                                )}
+
                                 <div className="flex justify-between">
                                     <span className="text-slate-400">Mode:</span>
                                     <span className="text-indigo-400 font-bold capitalize">
@@ -1239,12 +1778,14 @@ function QuizzesContent() {
                                 Start Exam
                             </button>
 
-                            <Link
-                                href="/dashboard/worksheet"
-                                className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 py-3 rounded-2xl font-bold text-xs transition-all"
+                            <button
+                                onClick={handleOpenPrintModalFromConfig}
+                                disabled={activeFilteredQuestions.length === 0}
+                                className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 py-3 rounded-2xl font-bold text-xs transition-all disabled:opacity-40"
                             >
-                                <span>Export Paper as Printable PDF</span>
-                            </Link>
+                                <Printer className="w-4 h-4 text-emerald-400" />
+                                <span>Export Configured Exam as PDF</span>
+                            </button>
 
                             <button
                                 onClick={() => setStep('mode-select')}
@@ -1363,8 +1904,26 @@ function QuizzesContent() {
                             {renderQuestionContent(questions[currentQuestionIndex].question)}
                         </div>
 
-                        {questions[currentQuestionIndex].imageHtml && (
+                        {/* Interactive Graph Plotter */}
+                        {questions[currentQuestionIndex].graphConfig && (
+                            <div className="my-6">
+                                <InteractiveGraphPlotter config={questions[currentQuestionIndex].graphConfig} />
+                            </div>
+                        )}
+
+                        {/* Interactive Apparatus Scale Reader */}
+                        {questions[currentQuestionIndex].apparatusScaleConfig && (
+                            <div className="my-6">
+                                <InteractiveScaleReader config={questions[currentQuestionIndex].apparatusScaleConfig} />
+                            </div>
+                        )}
+
+                        {questions[currentQuestionIndex].imageHtml && !questions[currentQuestionIndex].graphConfig && !questions[currentQuestionIndex].apparatusScaleConfig && (
                             <div className="my-4 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: questions[currentQuestionIndex].imageHtml }} />
+                        )}
+
+                        {questions[currentQuestionIndex].tableHtml && (
+                            <div className="my-4 max-w-full overflow-x-auto flex justify-center text-slate-200" dangerouslySetInnerHTML={{ __html: questions[currentQuestionIndex].tableHtml }} />
                         )}
 
                         {/* Options */}
@@ -1575,7 +2134,7 @@ function QuizzesContent() {
                             </div>
                         </div>
 
-                        <div className="pt-6 flex justify-center gap-4">
+                        <div className="pt-6 flex flex-wrap justify-center gap-4">
                             <button
                                 onClick={() => setStep('mode-select')}
                                 className="flex items-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 text-white px-6 py-3.5 rounded-xl font-bold transition-all"
@@ -1588,6 +2147,13 @@ function QuizzesContent() {
                                 className="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-violet-600 text-white px-8 py-3.5 rounded-xl font-bold transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-indigo-500/20"
                             >
                                 Retry Same Exam
+                            </button>
+                            <button
+                                onClick={handleOpenPrintModalFromResults}
+                                className="flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/25 hover:bg-emerald-500/20 text-emerald-400 px-6 py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-emerald-500/5"
+                            >
+                                <Printer className="w-4 h-4" />
+                                Export Exam Paper (PDF)
                             </button>
                         </div>
                     </div>
@@ -1610,6 +2176,26 @@ function QuizzesContent() {
                                             {renderTextWithMath(q.question)}
                                         </div>
                                     </div>
+
+                                    {q.graphConfig && (
+                                        <div className="pl-0 sm:pl-12 my-3">
+                                            <InteractiveGraphPlotter config={q.graphConfig} />
+                                        </div>
+                                    )}
+
+                                    {q.apparatusScaleConfig && (
+                                        <div className="pl-0 sm:pl-12 my-3">
+                                            <InteractiveScaleReader config={q.apparatusScaleConfig} />
+                                        </div>
+                                    )}
+
+                                    {q.imageHtml && !q.graphConfig && !q.apparatusScaleConfig && (
+                                        <div className="pl-0 sm:pl-12 my-3 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: q.imageHtml }} />
+                                    )}
+
+                                    {q.tableHtml && (
+                                        <div className="pl-0 sm:pl-12 my-3 max-w-full overflow-x-auto flex justify-center text-slate-200" dangerouslySetInnerHTML={{ __html: q.tableHtml }} />
+                                    )}
 
                                     <div className="grid gap-2 pl-12">
                                         {q.options.map((opt, optIdx) => {
@@ -1640,12 +2226,15 @@ function QuizzesContent() {
                                                     {(() => {
                                                         const clean = q.explanation
                                                             .replace(/\\n/g, '\n')
-                                                            .replace(/(?:\s+|\n)*(?=\d+\.\s+[A-Z\u0600-\u06FF])/g, '\n')
-                                                            .replace(/(?:\s+|\n)*(?=[•\*]\s+)/g, '\n');
-                                                        return clean.split('\n').map((line, lineIdx) => (
-                                                            line.trim() === ''
-                                                                ? <div key={lineIdx} className="h-2" />
-                                                                : <div key={lineIdx}>{renderTextWithMath(line)}</div>
+                                                            .replace(/([^\n])\s+(?=\d+\.\s+)/g, '$1\n')
+                                                            .replace(/([^\n])\s+(?=[•\*]\s+)/g, '$1\n');
+                                                        const lines = clean
+                                                            .split('\n')
+                                                            .map(line => line.trim())
+                                                            .filter(line => line !== '' && line !== '*' && line !== '•')
+                                                            .map(line => line.replace(/^[\*\•]\s+(?=\d+\.)/, ''));
+                                                        return lines.map((line, lineIdx) => (
+                                                            <div key={lineIdx}>{renderTextWithMath(line)}</div>
                                                         ));
                                                     })()}
                                                 </div>
@@ -1658,6 +2247,16 @@ function QuizzesContent() {
                     </div>
                 </div>
             )}
+
+            {/* Print & Export Exam Modal */}
+            <PrintExamModal
+                isOpen={showPrintModal}
+                onClose={() => setShowPrintModal(false)}
+                questions={printQuestions}
+                defaultExamTitle={printableExamTitle}
+                defaultCurriculumTitle={printableCurriculumTitle}
+                defaultTopicTitle={printableTopicTitle}
+            />
         </div>
     );
 }

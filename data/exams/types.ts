@@ -94,6 +94,42 @@ export interface Question {
     points: { mark: number; keyword: string; text: string }[];
     examinerTips?: string;
   };
+  /** Optional interactive graph plotting configuration for Paper 6 / Practical questions */
+  graphConfig?: {
+    xAxis: {
+      label: string;
+      unit: string;
+      min: number;
+      max: number;
+      step: number;
+    };
+    yAxis: {
+      label: string;
+      unit: string;
+      min: number;
+      max: number;
+      step: number;
+    };
+    targetPoints: { x: number; y: number; label?: string }[];
+    curveType: 'line' | 'curve';
+    tolerance?: number; // Distance tolerance in data units
+    anomalousPointIndex?: number;
+    title?: string;
+  };
+  /** Optional interactive apparatus scale reader configuration for Paper 6 / Practical questions */
+  apparatusScaleConfig?: {
+    type: 'burette' | 'measuring-cylinder' | 'thermometer' | 'gas-syringe';
+    targetValue: number;
+    unit: string;
+    minScale: number;
+    maxScale: number;
+    step: number;
+    subdivision?: number;
+    tolerance: number; // Accepted reading tolerance (e.g. 0.05 for burette)
+    title?: string;
+    initialReading?: number; // For titrations (delivering final - initial)
+    liquidColor?: string;
+  };
 }
 
 /** Exam configuration chosen by the user */

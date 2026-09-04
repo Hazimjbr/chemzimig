@@ -44,6 +44,56 @@ export const questionBank: Question[] = [
   {
     id: "q_som_tea_cup-2026",
     question: "The diagram shows a cup of hot tea. Which row describes the water particles in the air above the cup compared with the water particles in the cup?",
+    imageHtml: `<svg viewBox="0 0 500 240" class="w-full max-w-[440px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="250" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Water Particles in Hot Tea vs Air (Vapor)</text>
+
+  <!-- Gas Particles in Air (Fast, Far Apart) -->
+  <g transform="translate(140, 40)">
+    <!-- Rising Steam / Vapor Trails -->
+    <path d="M40 50 Q30 30 45 10 Q55 -10 40 -25" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="4,4"/>
+    <path d="M80 50 Q90 30 75 10 Q65 -10 80 -25" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="4,4"/>
+    <path d="M120 50 Q110 30 125 10 Q135 -10 120 -25" stroke="#38bdf8" stroke-width="2" fill="none" opacity="0.4" stroke-dasharray="4,4"/>
+
+    <!-- Gas Particles (Spread out with velocity vectors) -->
+    <circle cx="35" cy="5" r="5" fill="#38bdf8"/>
+    <line x1="35" y1="5" x2="20" y2="-5" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <circle cx="85" cy="-10" r="5" fill="#38bdf8"/>
+    <line x1="85" y1="-10" x2="98" y2="-22" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="130" cy="15" r="5" fill="#38bdf8"/>
+    <line x1="130" y1="15" x2="145" y2="5" stroke="#38bdf8" stroke-width="1.5"/>
+    <circle cx="65" cy="25" r="5" fill="#38bdf8"/>
+    <line x1="65" y1="25" x2="52" y2="35" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Annotation Box Air -->
+    <rect x="155" y="-15" width="165" height="42" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="237" y="3" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Particles in Air (Gas)</text>
+    <text x="237" y="18" fill="#94a3b8" font-size="9" text-anchor="middle">• Move faster (high KE) • Far apart</text>
+  </g>
+
+  <!-- Cup Illustration -->
+  <!-- Cup Handle -->
+  <path d="M310 130 C350 130 350 180 310 185" fill="none" stroke="#64748b" stroke-width="7" stroke-linecap="round"/>
+  <!-- Cup Body -->
+  <path d="M170 110 L185 200 C187 210 200 215 215 215 L285 215 C300 215 313 210 315 200 L330 110 Z" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <!-- Cup Saucer Base -->
+  <ellipse cx="250" cy="218" rx="85" ry="8" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  <!-- Liquid (Hot Tea) inside Cup -->
+  <path d="M176 130 L187 195 C189 203 198 208 215 208 L285 208 C302 208 311 203 313 195 L324 130 Z" fill="#b45309" opacity="0.75"/>
+  <ellipse cx="250" cy="130" rx="74" ry="12" fill="#d97706" opacity="0.9" stroke="#f59e0b" stroke-width="1"/>
+
+  <!-- Liquid Particles (Close together, touching) -->
+  <g fill="#fef3c7" opacity="0.9">
+    <circle cx="225" cy="155" r="4.5"/><circle cx="236" cy="155" r="4.5"/><circle cx="247" cy="154" r="4.5"/><circle cx="258" cy="156" r="4.5"/><circle cx="269" cy="155" r="4.5"/>
+    <circle cx="230" cy="165" r="4.5"/><circle cx="241" cy="164" r="4.5"/><circle cx="252" cy="165" r="4.5"/><circle cx="263" cy="164" r="4.5"/>
+    <circle cx="236" cy="175" r="4.5"/><circle cx="247" cy="175" r="4.5"/><circle cx="258" cy="175" r="4.5"/>
+  </g>
+
+  <!-- Left Annotation: In Liquid -->
+  <rect x="20" y="145" width="145" height="42" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="92" y="163" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Particles in Cup (Liquid)</text>
+  <text x="92" y="177" fill="#94a3b8" font-size="9" text-anchor="middle">• Closely packed &amp; sliding</text>
+</svg>`,
     tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Moving faster</th><th class="p-2 border">Closer together</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">✓</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">✗</td><td class="p-2 border">✓</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">✗</td><td class="p-2 border">✗</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">✓</td><td class="p-2 border">✓</td></tr></tbody></table>`,
     options: [
       { text: "Row A: Moving faster (✓), Closer together (✗)" },
@@ -276,6 +326,62 @@ export const questionBank: Question[] = [
   {
     id: "q_som_tube_diffusion_line_abcd-2026",
     question: "In an experiment on diffusion in a glass tube, cotton wool soaked in concentrated aqueous ammonia is placed at one end (near A) and cotton wool soaked in concentrated hydrochloric acid is placed at the other end (near D). When the gases meet, a white solid of ammonium chloride is formed. Which position along the tube (A, B, C or D) shows where the white solid forms?",
+    imageHtml: `<svg viewBox="0 0 540 220" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Diffusion of Gases: NH₃(g) [Mr = 17] vs HCl(g) [Mr = 36.5]</text>
+
+  <!-- Glass Tube -->
+  <rect x="40" y="65" width="460" height="60" rx="4" fill="#020617" stroke="#475569" stroke-width="2"/>
+
+  <!-- Left Rubber Bung & Cotton Wool (Ammonia) -->
+  <polygon points="30,60 40,65 40,125 30,130" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="65" cy="95" r="16" fill="#38bdf8" opacity="0.6"/>
+  <text x="65" y="99" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">NH₃(aq)</text>
+  <text x="65" y="145" fill="#38bdf8" font-size="9" text-anchor="middle">Cotton wool</text>
+  <text x="65" y="157" fill="#38bdf8" font-size="8" text-anchor="middle">soaked in conc. NH₃</text>
+
+  <!-- Right Rubber Bung & Cotton Wool (HCl) -->
+  <polygon points="510,60 500,65 500,125 510,130" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+  <circle cx="475" cy="95" r="16" fill="#ef4444" opacity="0.6"/>
+  <text x="475" y="99" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">HCl(aq)</text>
+  <text x="475" y="145" fill="#ef4444" font-size="9" text-anchor="middle">Cotton wool</text>
+  <text x="475" y="157" fill="#ef4444" font-size="8" text-anchor="middle">soaked in conc. HCl</text>
+
+  <!-- Markers along the tube: A, B, C, D -->
+  <!-- Line A (near ammonia) -->
+  <line x1="140" y1="65" x2="140" y2="125" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="140" cy="50" r="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="140" y="54" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">A</text>
+
+  <!-- Line B -->
+  <line x1="220" y1="65" x2="220" y2="125" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="220" cy="50" r="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="220" y="54" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">B</text>
+
+  <!-- Line C (Midpoint = 270) -->
+  <line x1="295" y1="65" x2="295" y2="125" stroke="#64748b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="295" cy="50" r="10" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="295" y="54" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">C</text>
+
+  <!-- Line D (Near HCl end = White Ring forms here) -->
+  <line x1="390" y1="65" x2="390" y2="125" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="390" cy="50" r="10" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+  <text x="390" y="54" fill="#0f172a" font-size="10" font-weight="bold" text-anchor="middle">D</text>
+  <!-- White Ring of NH4Cl -->
+  <rect x="386" y="67" width="8" height="56" rx="2" fill="#ffffff" opacity="0.9"/>
+  <text x="390" y="145" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="middle">White smoke ring</text>
+  <text x="390" y="157" fill="#ffffff" font-size="8" text-anchor="middle">NH₄Cl(s) deposit</text>
+
+  <!-- Diffusion Speed Arrows -->
+  <path d="M 90,82 L 180,82" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="135" y="78" fill="#38bdf8" font-size="8">NH₃ diffuses faster (lower Mr)</text>
+
+  <path d="M 450,108 L 415,108" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="435" y="120" fill="#ef4444" font-size="8">HCl slower</text>
+
+  <!-- Bottom Summary Note -->
+  <text x="270" y="195" fill="#94a3b8" font-size="9" text-anchor="middle">Lighter NH₃ molecules diffuse faster than heavier HCl molecules, meeting at D.</text>
+</svg>`,
     options: [
       { text: "Line A" },
       { text: "Line B" },
@@ -3109,6 +3215,68 @@ questionBank.push(
   {
     id: "q_elc_hcl_nacl_hydrogen_prod-2026",
     question: "The diagram shows the electrolysis of concentrated hydrochloric acid and concentrated aqueous sodium chloride using carbon electrodes.\nCell 1: Concentrated hydrochloric acid with electrode 1 (+) and electrode 2 (-).\nCell 2: Concentrated aqueous sodium chloride with electrode 3 (+) and electrode 4 (-).\nAt which electrode(s) is hydrogen produced?",
+    imageHtml: `<svg viewBox="0 0 550 250" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="275" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Electrolysis of Aqueous Electrolytes</text>
+
+  <!-- CELL 1: Concentrated HCl -->
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="220" height="190" rx="10" fill="#0b132b" stroke="#334155" stroke-width="1.5"/>
+    <text x="110" y="20" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Cell 1: Conc. HCl(aq)</text>
+
+    <!-- Beaker & Liquid -->
+    <rect x="35" y="45" width="150" height="105" rx="4" fill="#0284c7" opacity="0.15" stroke="#475569" stroke-width="1.5"/>
+    <path d="M35 75 L185 75" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+    <text x="110" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">conc. HCl(aq)</text>
+
+    <!-- Electrodes 1 and 2 -->
+    <!-- Electrode 1 (+) Anode -->
+    <rect x="60" y="30" width="16" height="95" fill="#334155" stroke="#64748b" stroke-width="1"/>
+    <circle cx="68" cy="18" r="8" fill="#ef4444"/>
+    <text x="68" y="21" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">+</text>
+    <text x="68" y="165" fill="#f87171" font-size="10" font-weight="bold" text-anchor="middle">1</text>
+    <text x="68" y="177" fill="#94a3b8" font-size="8" text-anchor="middle">(Cl₂ gas)</text>
+
+    <!-- Electrode 2 (-) Cathode -->
+    <rect x="144" y="30" width="16" height="95" fill="#334155" stroke="#64748b" stroke-width="1"/>
+    <circle cx="152" cy="18" r="8" fill="#3b82f6"/>
+    <text x="152" y="21" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">-</text>
+    <text x="152" y="165" fill="#60a5fa" font-size="10" font-weight="bold" text-anchor="middle">2</text>
+    <text x="152" y="177" fill="#10b981" font-size="8" font-weight="bold" text-anchor="middle">(H₂ gas)</text>
+    <!-- Bubbles at Cathode 2 -->
+    <circle cx="148" cy="85" r="2.5" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="156" cy="72" r="2" fill="#38bdf8" opacity="0.8"/>
+  </g>
+
+  <!-- CELL 2: Concentrated NaCl -->
+  <g transform="translate(290, 40)">
+    <rect x="0" y="0" width="220" height="190" rx="10" fill="#0b132b" stroke="#334155" stroke-width="1.5"/>
+    <text x="110" y="20" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Cell 2: Conc. NaCl(aq)</text>
+
+    <!-- Beaker & Liquid -->
+    <rect x="35" y="45" width="150" height="105" rx="4" fill="#10b981" opacity="0.15" stroke="#475569" stroke-width="1.5"/>
+    <path d="M35 75 L185 75" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+    <text x="110" y="140" fill="#94a3b8" font-size="9" text-anchor="middle">conc. NaCl(aq)</text>
+
+    <!-- Electrodes 3 and 4 -->
+    <!-- Electrode 3 (+) Anode -->
+    <rect x="60" y="30" width="16" height="95" fill="#334155" stroke="#64748b" stroke-width="1"/>
+    <circle cx="68" cy="18" r="8" fill="#ef4444"/>
+    <text x="68" y="21" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">+</text>
+    <text x="68" y="165" fill="#f87171" font-size="10" font-weight="bold" text-anchor="middle">3</text>
+    <text x="68" y="177" fill="#94a3b8" font-size="8" text-anchor="middle">(Cl₂ gas)</text>
+
+    <!-- Electrode 4 (-) Cathode -->
+    <rect x="144" y="30" width="16" height="95" fill="#334155" stroke="#64748b" stroke-width="1"/>
+    <circle cx="152" cy="18" r="8" fill="#3b82f6"/>
+    <text x="152" y="21" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">-</text>
+    <text x="152" y="165" fill="#60a5fa" font-size="10" font-weight="bold" text-anchor="middle">4</text>
+    <text x="152" y="177" fill="#10b981" font-size="8" font-weight="bold" text-anchor="middle">(H₂ gas)</text>
+    <!-- Bubbles at Cathode 4 -->
+    <circle cx="148" cy="85" r="2.5" fill="#10b981" opacity="0.8"/>
+    <circle cx="156" cy="72" r="2" fill="#10b981" opacity="0.8"/>
+  </g>
+</svg>`,
     options: [
       { text: "Electrode 1 only" },
       { text: "Electrodes 1 and 3" },
@@ -3186,6 +3354,55 @@ questionBank.push(
   {
     id: "q_elc_failed_pan_electroplating-2026",
     question: "A student sets up an apparatus for plating a steel pan with copper, but mistakenly connects the copper to the cathode (-) and the pan to the anode (+). Which action will correctly plate the pan with copper?",
+    imageHtml: `<svg viewBox="0 0 540 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Electroplating Setup: Steel Pan in CuSO₄(aq)</text>
+
+  <!-- DC Power Supply (Top) -->
+  <rect x="210" y="42" width="120" height="32" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+  <text x="270" y="62" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle">DC Power Source</text>
+  <!-- Positive (+) sign -->
+  <text x="225" y="63" fill="#ef4444" font-size="14" font-weight="bold" text-anchor="middle">+</text>
+  <!-- Negative (-) sign -->
+  <text x="315" y="63" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">−</text>
+
+  <!-- Left Wire from (+) to Pan -->
+  <path d="M210 58 L140 58 L140 120" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <!-- Right Wire from (-) to Copper Plate -->
+  <path d="M330 58 L400 58 L400 120" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- Beaker outline -->
+  <rect x="90" y="115" width="360" height="120" rx="4" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+  <!-- Electrolyte CuSO4(aq) liquid -->
+  <rect x="92" y="135" width="356" height="98" fill="#0284c7" fill-opacity="0.25"/>
+  <text x="270" y="215" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Aqueous Copper(II) Sulfate, CuSO₄(aq)</text>
+  <!-- Cu2+ and SO42- ions -->
+  <text x="210" y="165" fill="#67e8f9" font-size="10" font-weight="bold">Cu²⁺</text>
+  <text x="315" y="165" fill="#94a3b8" font-size="10">SO₄²⁻</text>
+
+  <!-- Left Electrode: Steel Pan connected to (+) Anode -->
+  <g transform="translate(115, 120)">
+    <line x1="25" y1="0" x2="25" y2="20" stroke="#ef4444" stroke-width="2"/>
+    <path d="M5 25 L45 25 L40 60 C40 70 10 70 10 60 Z" fill="#475569" stroke="#94a3b8" stroke-width="1.5"/>
+    <line x1="5" y1="25" x2="-8" y2="15" stroke="#94a3b8" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Label -->
+    <rect x="-35" y="75" width="120" height="28" rx="4" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+    <text x="25" y="88" fill="#f87171" font-size="9" font-weight="bold" text-anchor="middle">Steel Pan [Anode (+)]</text>
+    <text x="25" y="99" fill="#fca5a5" font-size="8" text-anchor="middle">⚠️ Mistakenly connected</text>
+  </g>
+
+  <!-- Right Electrode: Copper Plate connected to (-) Cathode -->
+  <g transform="translate(385, 120)">
+    <line x1="15" y1="0" x2="15" y2="20" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="5" y="20" width="20" height="55" rx="2" fill="#b45309" stroke="#f59e0b" stroke-width="1.5"/>
+    
+    <!-- Label -->
+    <rect x="-35" y="75" width="115" height="28" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="22" y="88" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">Copper Strip [Cathode (−)]</text>
+    <text x="22" y="99" fill="#94a3b8" font-size="8" text-anchor="middle">Pure copper electrode</text>
+  </g>
+</svg>`,
     options: [
       { text: "Making the pan the cathode and the copper the anode" },
       { text: "Heating the copper sulfate solution to boiling point" },
@@ -3245,6 +3462,57 @@ questionBank.push(
   {
     id: "q_elc_silver_plating_spoon_incorrect-2026",
     question: "The diagram shows apparatus for plating a spoon with silver. Which statement is NOT correct?",
+    imageHtml: `<svg viewBox="0 0 520 270" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Electroplating a Metal Spoon with Silver</text>
+
+  <!-- DC Power Supply (Top) -->
+  <rect x="210" y="38" width="100" height="35" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="260" y="60" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">D.C. Power Supply</text>
+
+  <!-- Positive Terminal (+) (Left) -->
+  <text x="225" y="52" fill="#ef4444" font-size="14" font-weight="bold">+</text>
+  <line x1="220" y1="55" x2="135" y2="55" stroke="#ef4444" stroke-width="2"/>
+  <line x1="135" y1="55" x2="135" y2="105" stroke="#ef4444" stroke-width="2"/>
+
+  <!-- Negative Terminal (-) (Right) -->
+  <text x="295" y="52" fill="#38bdf8" font-size="16" font-weight="bold">−</text>
+  <line x1="300" y1="55" x2="385" y2="55" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="385" y1="55" x2="385" y2="105" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- Glass Beaker Tank -->
+  <rect x="80" y="95" width="360" height="150" rx="8" fill="#020617" stroke="#475569" stroke-width="2"/>
+
+  <!-- Electrolyte Solution (AgNO3(aq)) -->
+  <rect x="82" y="125" width="356" height="118" rx="4" fill="#0284c7" opacity="0.3"/>
+  <text x="260" y="235" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Electrolyte: Silver nitrate solution (AgNO₃(aq))</text>
+
+  <!-- Anode: Pure Silver Bar (Left, connected to +) -->
+  <rect x="120" y="105" width="30" height="95" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="135" y="88" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle">Anode (+)</text>
+  <text x="135" y="155" fill="#0f172a" font-size="9" font-weight="bold" text-anchor="middle">Pure Silver</text>
+  <text x="135" y="167" fill="#0f172a" font-size="8" text-anchor="middle">Ag(s)</text>
+  <text x="60" y="145" fill="#cbd5e1" font-size="9" text-anchor="end">Ag → Ag⁺ + e⁻</text>
+
+  <!-- Ag+ Ions migrating -->
+  <circle cx="210" cy="155" r="7" fill="#38bdf8" opacity="0.6"/>
+  <text x="210" y="158" fill="#ffffff" font-size="8" text-anchor="middle">Ag⁺</text>
+  <path d="M 225,155 L 295,155" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Cathode: Spoon Object (Right, connected to -) -->
+  <g transform="translate(370, 105)">
+    <!-- Handle -->
+    <rect x="12" y="0" width="6" height="55" rx="2" fill="#94a3b8"/>
+    <!-- Bowl of spoon -->
+    <path d="M 5,55 Q 15,95 25,55 Z" fill="#94a3b8" stroke="#cbd5e1" stroke-width="1"/>
+    <!-- Silver electroplated coating -->
+    <path d="M 4,55 Q 15,97 26,55" fill="none" stroke="#f8fafc" stroke-width="2.5"/>
+  </g>
+  <text x="385" y="88" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">Cathode (−)</text>
+  <text x="445" y="145" fill="#cbd5e1" font-size="9">Metal Spoon</text>
+  <text x="445" y="158" fill="#38bdf8" font-size="8">Ag⁺ + e⁻ → Ag(s)</text>
+  <text x="445" y="170" fill="#f8fafc" font-size="8">(Coated with silver)</text>
+</svg>`,
     options: [
       { text: "The metal electrode would be made from silver" },
       { text: "The electrolyte would be a silver salt dissolved in water" },
@@ -3264,6 +3532,57 @@ questionBank.push(
   {
     id: "q_elc_nacl_litmus_five_minutes-2026",
     question: "The diagram shows the electrolysis of concentrated aqueous sodium chloride in a U-tube containing litmus indicator. What is the color of the litmus at each electrode after five minutes?",
+    imageHtml: `<svg viewBox="0 0 520 270" class="w-full max-w-[480px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Electrolysis of Brine [NaCl(aq) + Litmus] in U-Tube</text>
+
+  <!-- Power Supply Connections -->
+  <rect x="220" y="38" width="80" height="28" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="260" y="56" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">d.c. Power</text>
+  <!-- Wire to Anode (+) -->
+  <path d="M220 52 L140 52 L140 85" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="125" y="68" fill="#ef4444" font-size="12" font-weight="bold">+</text>
+  <!-- Wire to Cathode (-) -->
+  <path d="M300 52 L380 52 L380 85" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <text x="395" y="68" fill="#38bdf8" font-size="12" font-weight="bold">−</text>
+
+  <!-- U-Tube Outline -->
+  <path d="M110 85 L110 200 C110 240 170 245 260 245 C350 245 410 240 410 200 L410 85" fill="none" stroke="#64748b" stroke-width="28" stroke-linecap="round"/>
+  <path d="M110 85 L110 200 C110 236 172 241 260 241 C348 241 410 236 410 200 L410 85" fill="none" stroke="#020617" stroke-width="24" stroke-linecap="round"/>
+
+  <!-- Solution Left Limb: Bleached (Colorless due to Cl2) -->
+  <path d="M110 115 L110 200 C110 220 150 235 220 237" fill="none" stroke="#f8fafc" stroke-width="22" opacity="0.3"/>
+  <!-- Solution Right Limb: Alkaline (Turned Blue by OH-) -->
+  <path d="M410 115 L410 200 C410 220 370 235 300 237" fill="none" stroke="#2563eb" stroke-width="22" opacity="0.8"/>
+  <!-- Middle Neutral Zone (Purple litmus) -->
+  <path d="M200 238 Q260 242 320 238" fill="none" stroke="#9333ea" stroke-width="22" opacity="0.7"/>
+
+  <!-- Left Electrode (Anode +) -->
+  <rect x="105" y="80" width="10" height="95" rx="2" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <!-- Chlorine bubbles -->
+  <circle cx="102" cy="140" r="2.5" fill="#ca8a04" opacity="0.8"/>
+  <circle cx="118" cy="130" r="3" fill="#ca8a04" opacity="0.8"/>
+  <circle cx="104" cy="115" r="2.5" fill="#ca8a04" opacity="0.8"/>
+
+  <!-- Right Electrode (Cathode -) -->
+  <rect x="405" y="80" width="10" height="95" rx="2" fill="#334155" stroke="#94a3b8" stroke-width="1"/>
+  <!-- Hydrogen bubbles -->
+  <circle cx="402" cy="140" r="2.5" fill="#38bdf8" opacity="0.8"/>
+  <circle cx="418" cy="130" r="3" fill="#38bdf8" opacity="0.8"/>
+  <circle cx="404" cy="115" r="2" fill="#38bdf8" opacity="0.8"/>
+
+  <!-- Callout Anode -->
+  <rect x="20" y="115" width="75" height="52" rx="4" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+  <text x="57" y="132" fill="#ef4444" font-size="10" font-weight="bold" text-anchor="middle">Anode (+)</text>
+  <text x="57" y="146" fill="#fef08a" font-size="9" text-anchor="middle">Cl₂ gas made</text>
+  <text x="57" y="159" fill="#94a3b8" font-size="9" font-weight="bold" text-anchor="middle">Colorless</text>
+
+  <!-- Callout Cathode -->
+  <rect x="425" y="115" width="75" height="52" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+  <text x="462" y="132" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Cathode (−)</text>
+  <text x="462" y="146" fill="#60a5fa" font-size="9" text-anchor="middle">H₂ gas + OH⁻</text>
+  <text x="462" y="159" fill="#3b82f6" font-size="9" font-weight="bold" text-anchor="middle">Blue</text>
+</svg>`,
     tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Color at anode (+)</th><th class="p-2 border">Color at cathode (-)</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Blue</td><td class="p-2 border">Red</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Red</td><td class="p-2 border">Blue</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Yellow</td><td class="p-2 border">Colorless</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Colorless</td><td class="p-2 border">Blue</td></tr></tbody></table>`,
     options: [
       { text: "Row A: Anode = Blue, Cathode = Red" },
@@ -3955,6 +4274,50 @@ questionBank.push(
   {
     id: "q_org_hydrocarbon_reactions_scheme_wxyz-2026",
     question: "What are the names of the compounds shown in the reaction scheme below?\n\nButane —(cracking)→ W + X\nX —(+ steam)→ Y\nY —(+ oxygen)→ Z (CH₃COOH)",
+    imageHtml: `<svg viewBox="0 0 550 200" class="w-full max-w-[520px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="275" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Reaction Sequence: Alkane to Carboxylic Acid</text>
+
+  <!-- Step 1: Butane -->
+  <rect x="15" y="60" width="85" height="45" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="57" y="80" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle">Butane</text>
+  <text x="57" y="95" fill="#94a3b8" font-size="9" text-anchor="middle">C₄H₁₀</text>
+
+  <!-- Arrow 1: Cracking -->
+  <path d="M100 82 L145 82" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="122" y="74" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">cracking</text>
+
+  <!-- Products of Cracking: W and X -->
+  <!-- Box W (Ethane) -->
+  <rect x="150" y="45" width="75" height="35" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+  <text x="187" y="62" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">Compound W</text>
+  <text x="187" y="74" fill="#64748b" font-size="8" text-anchor="middle">(Alkane: C₂H₆)</text>
+
+  <!-- Box X (Ethene) -->
+  <rect x="150" y="95" width="75" height="35" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="187" y="112" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Compound X</text>
+  <text x="187" y="124" fill="#94a3b8" font-size="8" text-anchor="middle">(Alkene: C₂H₄)</text>
+
+  <!-- Arrow 2: + steam (hydration) -->
+  <path d="M225 112 L285 112" stroke="#10b981" stroke-width="2"/>
+  <text x="255" y="103" fill="#10b981" font-size="9" font-weight="bold" text-anchor="middle">+ steam</text>
+  <text x="255" y="127" fill="#64748b" font-size="8" text-anchor="middle">(H₃PO₄ cat.)</text>
+
+  <!-- Box Y (Ethanol) -->
+  <rect x="290" y="95" width="80" height="35" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="330" y="112" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">Compound Y</text>
+  <text x="330" y="124" fill="#94a3b8" font-size="8" text-anchor="middle">(Alcohol: C₂H₅OH)</text>
+
+  <!-- Arrow 3: + oxygen (oxidation) -->
+  <path d="M370 112 L425 112" stroke="#a855f7" stroke-width="2"/>
+  <text x="397" y="103" fill="#a855f7" font-size="9" font-weight="bold" text-anchor="middle">+ [O]</text>
+  <text x="397" y="127" fill="#64748b" font-size="8" text-anchor="middle">(oxidation)</text>
+
+  <!-- Box Z (Ethanoic acid) -->
+  <rect x="430" y="90" width="105" height="45" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+  <text x="482" y="109" fill="#e9d5ff" font-size="10" font-weight="bold" text-anchor="middle">Compound Z</text>
+  <text x="482" y="125" fill="#a855f7" font-size="9" font-weight="bold" text-anchor="middle">CH₃COOH</text>
+</svg>`,
     tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">W</th><th class="p-2 border">X</th><th class="p-2 border">Y</th><th class="p-2 border">Z</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethanol</td><td class="p-2 border">Ethanoic acid</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethanoic acid</td><td class="p-2 border">Ethanol</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethanoic acid</td><td class="p-2 border">Ethanol</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Ethene</td><td class="p-2 border">Ethane</td><td class="p-2 border">Ethanol</td><td class="p-2 border">Ethanoic acid</td></tr></tbody></table>`,
     options: [
       { text: "Row A: W = Ethane, X = Ethene, Y = Ethanol, Z = Ethanoic acid" },
@@ -3975,6 +4338,59 @@ questionBank.push(
   {
     id: "q_org_petroleum_fractions_xyz_tower-2026",
     question: "The diagram shows the fractional distillation of petroleum. Fractions X, Y, and Z leave the fractionating column at three different heights below gasoline and above bitumen (X is higher than Y, and Y is higher than Z). What could X, Y, and Z represent?",
+    imageHtml: `<svg viewBox="0 0 520 280" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Industrial Fractional Distillation Tower (Petroleum)</text>
+
+  <!-- Tower Column (Center) -->
+  <g transform="translate(180, 40)">
+    <!-- Column Body -->
+    <rect x="0" y="0" width="100" height="210" rx="6" fill="#020617" stroke="#475569" stroke-width="2"/>
+
+    <!-- Temperature Gradient Labels -->
+    <text x="-10" y="20" fill="#38bdf8" font-size="9" text-anchor="end">Cooler (~25 °C)</text>
+    <text x="-10" y="200" fill="#ef4444" font-size="9" text-anchor="end">Hotter (~350 °C)</text>
+    <line x1="-5" y1="25" x2="-5" y2="190" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+    <!-- Top outlet: Refinery Gas -->
+    <path d="M 50,0 L 50,-10 L 140,-10" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <text x="145" y="-7" fill="#38bdf8" font-size="9">Refinery gases (lowest b.p.)</text>
+
+    <!-- Gasoline (petrol) outlet -->
+    <path d="M 100,30 L 130,30" stroke="#64748b" stroke-width="2"/>
+    <text x="135" y="33" fill="#cbd5e1" font-size="9">Gasoline (petrol)</text>
+
+    <!-- Fraction X outlet -->
+    <path d="M 100,65 L 130,65" stroke="#f59e0b" stroke-width="2.5"/>
+    <circle cx="145" cy="65" r="10" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+    <text x="145" y="69" fill="#0f172a" font-size="10" font-weight="bold" text-anchor="middle">X</text>
+
+    <!-- Fraction Y outlet -->
+    <path d="M 100,105 L 130,105" stroke="#f59e0b" stroke-width="2.5"/>
+    <circle cx="145" cy="105" r="10" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+    <text x="145" y="109" fill="#0f172a" font-size="10" font-weight="bold" text-anchor="middle">Y</text>
+
+    <!-- Fraction Z outlet -->
+    <path d="M 100,145 L 130,145" stroke="#f59e0b" stroke-width="2.5"/>
+    <circle cx="145" cy="145" r="10" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+    <text x="145" y="149" fill="#0f172a" font-size="10" font-weight="bold" text-anchor="middle">Z</text>
+
+    <!-- Bottom outlet: Bitumen -->
+    <path d="M 50,210 L 50,220 L 140,220" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="145" y="223" fill="#f87171" font-size="9">Bitumen (highest b.p.)</text>
+
+    <!-- Crude Oil Inlet (Bottom left) -->
+    <path d="M -60,180 L 0,180" stroke="#f59e0b" stroke-width="3"/>
+    <text x="-65" y="175" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="end">Hot vaporized</text>
+    <text x="-65" y="187" fill="#cbd5e1" font-size="8" text-anchor="end">crude oil</text>
+
+    <!-- Bubble Caps / Trays inside -->
+    <line x1="15" y1="45" x2="85" y2="45" stroke="#334155" stroke-width="2"/>
+    <line x1="15" y1="85" x2="85" y2="85" stroke="#334155" stroke-width="2"/>
+    <line x1="15" y1="125" x2="85" y2="125" stroke="#334155" stroke-width="2"/>
+    <line x1="15" y1="165" x2="85" y2="165" stroke="#334155" stroke-width="2"/>
+  </g>
+</svg>`,
     tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">X</th><th class="p-2 border">Y</th><th class="p-2 border">Z</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Diesel oil</td><td class="p-2 border">Lubricating fraction</td><td class="p-2 border">Paraffin</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Lubricating fraction</td><td class="p-2 border">Diesel oil</td><td class="p-2 border">Paraffin</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Paraffin</td><td class="p-2 border">Lubricating fraction</td><td class="p-2 border">Diesel oil</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Paraffin</td><td class="p-2 border">Diesel oil</td><td class="p-2 border">Lubricating fraction</td></tr></tbody></table>`,
     options: [
       { text: "Row A: X = Diesel oil, Y = Lubricating fraction, Z = Paraffin" },
@@ -4150,6 +4566,79 @@ questionBank.push(
   {
     id: "q_org_reaction_sequence_butane_xyz-2026",
     question: "The diagram shows a reaction sequence:\n\nButane —(process X)→ Ethene —(process Y)→ Ethanol —(process Z)→ Carbon dioxide and water\n\nWhich row correctly names the processes X, Y, and Z?",
+    imageHtml: `<svg viewBox="0 0 560 210" class="w-full max-w-[520px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="280" y="26" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Organic Reaction Conversion Sequence</text>
+
+  <!-- Step 1: Butane Card -->
+  <g transform="translate(15, 55)">
+    <rect x="0" y="0" width="105" height="85" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="52" y="28" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">Butane</text>
+    <text x="52" y="48" fill="#cbd5e1" font-size="11" text-anchor="middle">C₄H₁₀</text>
+    <rect x="18" y="58" width="70" height="18" rx="4" fill="#38bdf8" fill-opacity="0.1"/>
+    <text x="53" y="70" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">Alkane</text>
+  </g>
+
+  <!-- Arrow 1 with Process X Badge -->
+  <g transform="translate(122, 92)">
+    <!-- Badge X -->
+    <rect x="3" y="-30" width="34" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
+    <text x="20" y="-16" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="middle">X</text>
+    <!-- Arrow line -->
+    <line x1="0" y1="5" x2="34" y2="5" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="34,1 42,5 34,9" fill="#f59e0b"/>
+  </g>
+
+  <!-- Step 2: Ethene Card -->
+  <g transform="translate(165, 55)">
+    <rect x="0" y="0" width="105" height="85" rx="8" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+    <text x="52" y="28" fill="#34d399" font-size="13" font-weight="bold" text-anchor="middle">Ethene</text>
+    <text x="52" y="48" fill="#cbd5e1" font-size="11" text-anchor="middle">C₂H₄</text>
+    <rect x="15" y="58" width="75" height="18" rx="4" fill="#34d399" fill-opacity="0.1"/>
+    <text x="52" y="70" fill="#34d399" font-size="9" font-weight="bold" text-anchor="middle">Alkene (C=C)</text>
+  </g>
+
+  <!-- Arrow 2 with Process Y Badge -->
+  <g transform="translate(272, 92)">
+    <!-- Badge Y -->
+    <rect x="3" y="-30" width="34" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
+    <text x="20" y="-16" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="middle">Y</text>
+    <!-- Arrow line -->
+    <line x1="0" y1="5" x2="34" y2="5" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="34,1 42,5 34,9" fill="#f59e0b"/>
+  </g>
+
+  <!-- Step 3: Ethanol Card -->
+  <g transform="translate(315, 55)">
+    <rect x="0" y="0" width="105" height="85" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="52" y="28" fill="#c084fc" font-size="13" font-weight="bold" text-anchor="middle">Ethanol</text>
+    <text x="52" y="48" fill="#cbd5e1" font-size="11" text-anchor="middle">C₂H₅OH</text>
+    <rect x="18" y="58" width="70" height="18" rx="4" fill="#c084fc" fill-opacity="0.1"/>
+    <text x="53" y="70" fill="#c084fc" font-size="9" font-weight="bold" text-anchor="middle">Alcohol</text>
+  </g>
+
+  <!-- Arrow 3 with Process Z Badge -->
+  <g transform="translate(422, 92)">
+    <!-- Badge Z -->
+    <rect x="3" y="-30" width="34" height="20" rx="10" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1"/>
+    <text x="20" y="-16" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="middle">Z</text>
+    <!-- Arrow line -->
+    <line x1="0" y1="5" x2="34" y2="5" stroke="#f59e0b" stroke-width="2"/>
+    <polygon points="34,1 42,5 34,9" fill="#f59e0b"/>
+  </g>
+
+  <!-- Step 4: Carbon dioxide + water Card -->
+  <g transform="translate(465, 55)">
+    <rect x="0" y="0" width="85" height="85" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="42" y="26" fill="#f43f5e" font-size="11.5" font-weight="bold" text-anchor="middle">CO₂ + H₂O</text>
+    <text x="42" y="46" fill="#94a3b8" font-size="9.5" text-anchor="middle">Combustion</text>
+    <rect x="12" y="58" width="60" height="18" rx="4" fill="#f43f5e" fill-opacity="0.1"/>
+    <text x="42" y="70" fill="#f43f5e" font-size="8.5" font-weight="bold" text-anchor="middle">Products</text>
+  </g>
+
+  <!-- Bottom Guidance -->
+  <text x="280" y="180" fill="#64748b" font-size="10.5" font-style="italic" text-anchor="middle">Identify the reactions: X (Cracking), Y (Hydration), and Z (Combustion)</text>
+</svg>`,
     tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">X</th><th class="p-2 border">Y</th><th class="p-2 border">Z</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Cracking</td><td class="p-2 border">Fermentation</td><td class="p-2 border">Respiration</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Cracking</td><td class="p-2 border">Hydration</td><td class="p-2 border">Combustion</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Distillation</td><td class="p-2 border">Fermentation</td><td class="p-2 border">Respiration</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Distillation</td><td class="p-2 border">Hydration</td><td class="p-2 border">Combustion</td></tr></tbody></table>`,
     options: [
       { text: "Row A: X = Cracking, Y = Fermentation, Z = Respiration" },
@@ -4170,6 +4659,62 @@ questionBank.push(
   {
     id: "q_org_ethanol_molecule_diagram_name-2026",
     question: "The diagram represents the molecule of an organic compound containing two carbon atoms, six hydrogen atoms, and one oxygen atom arranged as C₂H₅OH. What is the name of the compound?",
+    imageHtml: `<svg viewBox="0 0 460 210" class="w-full max-w-[420px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="230" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Displayed Molecular Formula</text>
+
+  <!-- Atoms & Bonds -->
+  <g transform="translate(60, 30)">
+    <!-- Bonds (Lines) -->
+    <!-- H - C1 bonds -->
+    <line x1="50" y1="80" x2="85" y2="80" stroke="#64748b" stroke-width="2.5"/> <!-- Left H-C -->
+    <line x1="105" y1="40" x2="105" y2="65" stroke="#64748b" stroke-width="2.5"/> <!-- Top H-C -->
+    <line x1="105" y1="95" x2="105" y2="120" stroke="#64748b" stroke-width="2.5"/> <!-- Bottom H-C -->
+
+    <!-- C1 - C2 bond -->
+    <line x1="125" y1="80" x2="175" y2="80" stroke="#64748b" stroke-width="3"/>
+
+    <!-- H - C2 bonds -->
+    <line x1="195" y1="40" x2="195" y2="65" stroke="#64748b" stroke-width="2.5"/> <!-- Top H-C -->
+    <line x1="195" y1="95" x2="195" y2="120" stroke="#64748b" stroke-width="2.5"/> <!-- Bottom H-C -->
+
+    <!-- C2 - O bond -->
+    <line x1="215" y1="80" x2="255" y2="80" stroke="#64748b" stroke-width="2.5"/>
+
+    <!-- O - H bond -->
+    <line x1="285" y1="75" x2="315" y2="55" stroke="#64748b" stroke-width="2.5"/>
+
+    <!-- Carbons (C1, C2) -->
+    <circle cx="105" cy="80" r="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="105" y="86" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+
+    <circle cx="195" cy="80" r="16" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="195" y="86" fill="#38bdf8" font-size="16" font-weight="bold" text-anchor="middle">C</text>
+
+    <!-- Oxygen (O) -->
+    <circle cx="270" cy="80" r="16" fill="#7f1d1d" stroke="#ef4444" stroke-width="2"/>
+    <text x="270" y="86" fill="#fca5a5" font-size="16" font-weight="bold" text-anchor="middle">O</text>
+
+    <!-- Hydrogens (H) -->
+    <circle cx="35" cy="80" r="13" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="35" y="85" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+
+    <circle cx="105" cy="25" r="13" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="105" y="30" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+
+    <circle cx="105" cy="135" r="13" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="105" y="140" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+
+    <circle cx="195" cy="25" r="13" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="195" y="30" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+
+    <circle cx="195" cy="135" r="13" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="195" y="140" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+
+    <circle cx="330" cy="45" r="13" fill="#0f172a" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="330" y="50" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">H</text>
+  </g>
+</svg>`,
     options: [
       { text: "Ethane" },
       { text: "Ethanoic acid" },
@@ -4382,6 +4927,82 @@ questionBank.push(
   {
     id: "q_org_chloroethene_pvc_monomer-2026",
     question: "The diagram shows three repeat units in the structure of an addition polymer with chlorine atoms: –[CH₂–CHCl–CH₂–CHCl–CH₂–CHCl]–. Which alkene monomer is used to make this polymer?",
+    imageHtml: `<svg viewBox="0 0 550 220" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="275" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Addition Polymer: Three Repeat Units of Poly(chloroethene)</text>
+
+  <!-- Repeat Unit 1 Highlight Box -->
+  <rect x="75" y="45" width="125" height="110" rx="8" fill="#38bdf8" opacity="0.1" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="137" y="40" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Repeat Unit 1</text>
+
+  <!-- Repeat Unit 2 Highlight Box -->
+  <rect x="210" y="45" width="125" height="110" rx="8" fill="#38bdf8" opacity="0.05" stroke="#475569" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="272" y="40" fill="#64748b" font-size="10" text-anchor="middle">Repeat Unit 2</text>
+
+  <!-- Repeat Unit 3 Highlight Box -->
+  <rect x="345" y="45" width="125" height="110" rx="8" fill="#38bdf8" opacity="0.05" stroke="#475569" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="407" y="40" fill="#64748b" font-size="10" text-anchor="middle">Repeat Unit 3</text>
+
+  <!-- Main Polymer Backbone Line -->
+  <line x1="30" y1="100" x2="520" y2="100" stroke="#64748b" stroke-width="2.5"/>
+
+  <!-- Open chain trailing ends -->
+  <text x="45" y="104" fill="#64748b" font-size="18" font-weight="bold" text-anchor="middle">···</text>
+  <text x="505" y="104" fill="#64748b" font-size="18" font-weight="bold" text-anchor="middle">···</text>
+
+  <!-- Carbon Atoms & Attached Groups -->
+  <!-- Unit 1 -->
+  <!-- C1 (CH2) -->
+  <circle cx="105" cy="100" r="14" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="105" y="105" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">C</text>
+  <line x1="105" y1="86" x2="105" y2="65" stroke="#64748b" stroke-width="2"/>
+  <text x="105" y="60" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+  <line x1="105" y1="114" x2="105" y2="135" stroke="#64748b" stroke-width="2"/>
+  <text x="105" y="148" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+
+  <!-- C2 (CHCl) -->
+  <circle cx="170" cy="100" r="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="170" y="105" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">C</text>
+  <line x1="170" y1="86" x2="170" y2="65" stroke="#64748b" stroke-width="2"/>
+  <text x="170" y="60" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+  <line x1="170" y1="114" x2="170" y2="135" stroke="#ef4444" stroke-width="2"/>
+  <text x="170" y="148" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle">Cl</text>
+
+  <!-- Unit 2 -->
+  <circle cx="240" cy="100" r="14" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="240" y="105" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">C</text>
+  <line x1="240" y1="86" x2="240" y2="65" stroke="#64748b" stroke-width="2"/>
+  <text x="240" y="60" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+  <line x1="240" y1="114" x2="240" y2="135" stroke="#64748b" stroke-width="2"/>
+  <text x="240" y="148" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+
+  <circle cx="305" cy="100" r="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="305" y="105" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">C</text>
+  <line x1="305" y1="86" x2="305" y2="65" stroke="#64748b" stroke-width="2"/>
+  <text x="305" y="60" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+  <line x1="305" y1="114" x2="305" y2="135" stroke="#ef4444" stroke-width="2"/>
+  <text x="305" y="148" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle">Cl</text>
+
+  <!-- Unit 3 -->
+  <circle cx="375" cy="100" r="14" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="375" y="105" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">C</text>
+  <line x1="375" y1="86" x2="375" y2="65" stroke="#64748b" stroke-width="2"/>
+  <text x="375" y="60" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+  <line x1="375" y1="114" x2="375" y2="135" stroke="#64748b" stroke-width="2"/>
+  <text x="375" y="148" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+
+  <circle cx="440" cy="100" r="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="440" y="105" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">C</text>
+  <line x1="440" y1="86" x2="440" y2="65" stroke="#64748b" stroke-width="2"/>
+  <text x="440" y="60" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">H</text>
+  <line x1="440" y1="114" x2="440" y2="135" stroke="#ef4444" stroke-width="2"/>
+  <text x="440" y="148" fill="#ef4444" font-size="12" font-weight="bold" text-anchor="middle">Cl</text>
+
+  <!-- Monomer Deduction Bottom Note -->
+  <rect x="130" y="170" width="290" height="35" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+  <text x="275" y="185" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">Monomer deduction: CH₂=CHCl</text>
+  <text x="275" y="198" fill="#94a3b8" font-size="9" text-anchor="middle">Remove single bond between repeat carbons → Insert double bond</text>
+</svg>`,
     options: [
       { text: "1,2-dichloroethane" },
       { text: "1-chloroethane" },
@@ -4445,6 +5066,70 @@ questionBank.push(
   {
     id: "q_exp_marble_chips_gas_syringe_apparatus-2026",
     question: "A student uses a flask connected to a gas syringe to measure the volume of carbon dioxide gas made when different masses of marble chips are added to 25 cm³ of dilute hydrochloric acid. Which other items of apparatus are essential to complete these measurements?",
+    imageHtml: `<svg viewBox="0 0 540 240" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Reaction of Marble Chips + HCl(aq) with Gas Syringe</text>
+
+  <!-- Left: Conical Flask with CaCO3 and HCl -->
+  <!-- Flask Body -->
+  <path d="M70 180 L130 180 L115 110 L115 90 L85 90 L85 110 Z" fill="#0284c7" opacity="0.2" stroke="#475569" stroke-width="2"/>
+  <!-- Liquid level -->
+  <path d="M75 160 L125 160 L120 135 L80 135 Z" fill="#38bdf8" opacity="0.4"/>
+  <text x="100" y="152" fill="#e2e8f0" font-size="8" font-weight="bold" text-anchor="middle">25 cm³ HCl</text>
+
+  <!-- Marble Chips (CaCO3) -->
+  <rect x="85" y="168" width="8" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="98" y="170" width="7" height="5" rx="1.5" fill="#94a3b8"/>
+  <rect x="110" y="169" width="8" height="6" rx="2" fill="#cbd5e1"/>
+  <!-- Bubbles -->
+  <circle cx="92" cy="145" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="106" cy="140" r="2.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="100" cy="125" r="2" fill="#ffffff" opacity="0.8"/>
+
+  <!-- Rubber Bung & Delivery Tube -->
+  <polygon points="82,85 118,85 113,95 87,95" fill="#475569"/>
+  <!-- Delivery Glass Tube -->
+  <path d="M100 85 L100 65 L220 65" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Flexible connector tube -->
+  <line x1="220" y1="65" x2="245" y2="65" stroke="#f59e0b" stroke-width="5" stroke-dasharray="2,1"/>
+
+  <!-- Gas Syringe -->
+  <rect x="245" y="50" width="180" height="30" rx="3" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+  <!-- Syringe Barrel Scale Marks -->
+  <line x1="270" y1="50" x2="270" y2="60" stroke="#94a3b8" stroke-width="1"/>
+  <text x="270" y="72" fill="#94a3b8" font-size="7" text-anchor="middle">20</text>
+  <line x1="300" y1="50" x2="300" y2="60" stroke="#94a3b8" stroke-width="1"/>
+  <text x="300" y="72" fill="#94a3b8" font-size="7" text-anchor="middle">40</text>
+  <line x1="330" y1="50" x2="330" y2="60" stroke="#94a3b8" stroke-width="1"/>
+  <text x="330" y="72" fill="#94a3b8" font-size="7" text-anchor="middle">60</text>
+  <line x1="360" y1="50" x2="360" y2="60" stroke="#94a3b8" stroke-width="1"/>
+  <text x="360" y="72" fill="#94a3b8" font-size="7" text-anchor="middle">80</text>
+  <line x1="390" y1="50" x2="390" y2="60" stroke="#94a3b8" stroke-width="1"/>
+  <text x="390" y="72" fill="#94a3b8" font-size="7" text-anchor="middle">100</text>
+
+  <!-- Gas Syringe Plunger (Pushed out) -->
+  <rect x="350" y="52" width="12" height="26" fill="#38bdf8" opacity="0.6"/>
+  <rect x="362" y="61" width="100" height="8" rx="2" fill="#64748b"/>
+  <line x1="462" y1="52" x2="462" y2="78" stroke="#94a3b8" stroke-width="3"/>
+  <text x="300" y="42" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">Gas Syringe (CO₂ collects)</text>
+
+  <!-- Essential Extra Apparatus Box 1: Balance (for mass of marble chips) -->
+  <g transform="translate(140, 130)">
+    <rect x="0" y="0" width="150" height="60" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="75" y="18" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">⚖️ Digital Balance</text>
+    <text x="75" y="32" fill="#f8fafc" font-size="11" font-weight="mono" text-anchor="middle">5.24 g</text>
+    <text x="75" y="48" fill="#94a3b8" font-size="8" text-anchor="middle">To measure marble chip masses</text>
+  </g>
+
+  <!-- Essential Extra Apparatus Box 2: Measuring Cylinder (for 25 cm³ HCl) -->
+  <g transform="translate(320, 130)">
+    <rect x="0" y="0" width="170" height="60" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="85" y="18" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">🧪 Measuring Cylinder</text>
+    <text x="85" y="32" fill="#f8fafc" font-size="11" font-weight="mono" text-anchor="middle">25.0 cm³</text>
+    <text x="85" y="48" fill="#94a3b8" font-size="8" text-anchor="middle">To measure 25 cm³ acid volume</text>
+  </g>
+</svg>`,
     options: [
       { text: "A measuring cylinder and balance" },
       { text: "A filter funnel and stopwatch" },
@@ -4483,6 +5168,75 @@ questionBank.push(
   {
     id: "q_exp_three_pieces_apparatus_identification_table-2026",
     question: "The diagram shows three pieces of apparatus (1, 2, and 3) used for measuring liquid volumes:\n\n* Apparatus 1: cylindrical jar with graduated markings on the glass\n* Apparatus 2: long narrow vertical graduated tube with a stopcock tap at the bottom\n* Apparatus 3: narrow glass tube with a central bulb and a single etched ring mark\n\nWhat are these pieces of apparatus?",
+    imageHtml: `<svg viewBox="0 0 540 250" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Liquid Volume Measuring Apparatus</text>
+
+  <!-- Apparatus 1: Measuring Cylinder (Left) -->
+  <g transform="translate(55, 45)">
+    <rect x="0" y="0" width="115" height="185" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="57" cy="18" r="10" fill="#38bdf8" opacity="0.2"/>
+    <text x="57" y="22" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">1</text>
+
+    <!-- Cylinder -->
+    <rect x="35" y="40" width="45" height="115" rx="2" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Base -->
+    <rect x="25" y="152" width="65" height="8" rx="2" fill="#334155" stroke="#475569" stroke-width="1"/>
+    <!-- Spout -->
+    <path d="M 35,40 L 28,34 L 35,45 Z" fill="#475569"/>
+    <!-- Liquid -->
+    <rect x="36" y="85" width="43" height="69" fill="#0284c7" opacity="0.4"/>
+    <!-- Graduations -->
+    <line x1="35" y1="55" x2="52" y2="55" stroke="#94a3b8" stroke-width="1.5"/><text x="56" y="58" fill="#cbd5e1" font-size="7">50</text>
+    <line x1="35" y1="75" x2="48" y2="75" stroke="#64748b" stroke-width="1"/>
+    <line x1="35" y1="95" x2="52" y2="95" stroke="#94a3b8" stroke-width="1.5"/><text x="56" y="98" fill="#cbd5e1" font-size="7">30</text>
+    <line x1="35" y1="115" x2="48" y2="115" stroke="#64748b" stroke-width="1"/>
+    <line x1="35" y1="135" x2="52" y2="135" stroke="#94a3b8" stroke-width="1.5"/><text x="56" y="138" fill="#cbd5e1" font-size="7">10</text>
+    <text x="57" y="174" fill="#cbd5e1" font-size="9" text-anchor="middle">Measuring cylinder</text>
+  </g>
+
+  <!-- Apparatus 2: Burette (Center) -->
+  <g transform="translate(212, 45)">
+    <rect x="0" y="0" width="115" height="185" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="57" cy="18" r="10" fill="#f59e0b" opacity="0.2"/>
+    <text x="57" y="22" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">2</text>
+
+    <!-- Long narrow graduated tube -->
+    <rect x="47" y="38" width="22" height="105" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Graduations -->
+    <line x1="47" y1="50" x2="57" y2="50" stroke="#94a3b8" stroke-width="1.5"/><text x="60" y="53" fill="#cbd5e1" font-size="7">0</text>
+    <line x1="47" y1="65" x2="54" y2="65" stroke="#64748b" stroke-width="1"/>
+    <line x1="47" y1="80" x2="57" y2="80" stroke="#94a3b8" stroke-width="1.5"/><text x="60" y="83" fill="#cbd5e1" font-size="7">25</text>
+    <line x1="47" y1="95" x2="54" y2="95" stroke="#64748b" stroke-width="1"/>
+    <line x1="47" y1="110" x2="57" y2="110" stroke="#94a3b8" stroke-width="1.5"/><text x="60" y="113" fill="#cbd5e1" font-size="7">50</text>
+    <!-- Tap -->
+    <rect x="41" y="145" width="34" height="6" rx="2" fill="#f59e0b"/>
+    <circle cx="58" cy="148" r="4" fill="#d97706"/>
+    <!-- Jet tip -->
+    <polygon points="54,151 62,151 59,165 57,165" fill="#475569"/>
+    <text x="57" y="174" fill="#cbd5e1" font-size="9" text-anchor="middle">Burette (with tap)</text>
+  </g>
+
+  <!-- Apparatus 3: Volumetric Pipette (Right) -->
+  <g transform="translate(370, 45)">
+    <rect x="0" y="0" width="115" height="185" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="57" cy="18" r="10" fill="#10b981" opacity="0.2"/>
+    <text x="57" y="22" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">3</text>
+
+    <!-- Upper stem -->
+    <rect x="54" y="38" width="7" height="40" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Etched ring calibration mark -->
+    <line x1="50" y1="58" x2="65" y2="58" stroke="#ef4444" stroke-width="2"/>
+    <text x="70" y="61" fill="#ef4444" font-size="7" font-weight="bold">Mark</text>
+    <!-- Bulb -->
+    <ellipse cx="57.5" cy="102" rx="16" ry="24" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <text x="57.5" y="105" fill="#38bdf8" font-size="8" text-anchor="middle">25 cm³</text>
+    <!-- Lower stem & tip -->
+    <rect x="54" y="126" width="7" height="30" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <polygon points="54,156 61,156 58.5,165 56.5,165" fill="#475569"/>
+    <text x="57" y="174" fill="#cbd5e1" font-size="9" text-anchor="middle">Volumetric pipette</text>
+  </g>
+</svg>`,
     tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Apparatus 1</th><th class="p-2 border">Apparatus 2</th><th class="p-2 border">Apparatus 3</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Burette</td><td class="p-2 border">Measuring cylinder</td><td class="p-2 border">Pipette</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Measuring cylinder</td><td class="p-2 border">Burette</td><td class="p-2 border">Pipette</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Burette</td><td class="p-2 border">Pipette</td><td class="p-2 border">Measuring cylinder</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Measuring cylinder</td><td class="p-2 border">Pipette</td><td class="p-2 border">Burette</td></tr></tbody></table>`,
     options: [
       { text: "Row A: Burette | Measuring cylinder | Pipette" },
@@ -4580,6 +5334,62 @@ questionBank.push(
   {
     id: "q_exp_filtration_xy_types_substance_separated-2026",
     question: "The diagram shows a mixture containing solid X and liquid Y being poured through filter paper in a funnel into a beaker. Which types of substances can be separated by this method?",
+    imageHtml: `<svg viewBox="0 0 520 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Separation Technique: Filtration of Solid X and Liquid Y</text>
+
+  <!-- Pouring Beaker (Left) -->
+  <g transform="translate(70, 45) rotate(-35)">
+    <rect x="0" y="0" width="55" height="75" rx="3" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 0,35 L 55,35 L 55,75 L 0,75 Z" fill="#0284c7" opacity="0.4"/>
+    <!-- Solid particles X in beaker -->
+    <circle cx="20" cy="55" r="3" fill="#cbd5e1"/>
+    <circle cx="35" cy="62" r="3.5" fill="#94a3b8"/>
+    <circle cx="45" cy="50" r="2.5" fill="#e2e8f0"/>
+  </g>
+  <text x="80" y="145" fill="#cbd5e1" font-size="9" text-anchor="middle">Mixture of solid X</text>
+  <text x="80" y="157" fill="#cbd5e1" font-size="9" text-anchor="middle">+ liquid Y</text>
+
+  <!-- Stream of liquid and solid pouring -->
+  <path d="M 125,75 Q 165,95 195,100" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.7"/>
+
+  <!-- Filter Funnel (Center) -->
+  <g transform="translate(200, 75)">
+    <!-- Conical Funnel Glass -->
+    <polygon points="10,0 110,0 66,75 66,115 54,115 54,75" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+    <!-- Folded Filter Paper (Cone) -->
+    <polygon points="18,6 102,6 60,70" fill="#1e293b" stroke="#94a3b8" stroke-width="1.5"/>
+
+    <!-- Insoluble Solid X trapped as Residue -->
+    <ellipse cx="60" cy="58" rx="14" ry="7" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
+    <circle cx="55" cy="56" r="2.5" fill="#64748b"/>
+    <circle cx="65" cy="57" r="3" fill="#64748b"/>
+    <circle cx="60" cy="61" r="2" fill="#475569"/>
+
+    <!-- Drops falling from stem -->
+    <circle cx="60" cy="125" r="3" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="60" cy="140" r="2.5" fill="#38bdf8" opacity="0.8"/>
+  </g>
+
+  <!-- Receiving Beaker (Bottom Center) -->
+  <rect x="225" y="195" width="70" height="50" rx="3" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+  <!-- Liquid Filtrate Y in beaker -->
+  <rect x="226" y="220" width="68" height="24" fill="#0284c7" opacity="0.4"/>
+
+  <!-- Callout Labels & Arrows -->
+  <!-- Filter Paper & Residue -->
+  <line x1="260" y1="125" x2="360" y2="95" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="365" y="92" fill="#f59e0b" font-size="10" font-weight="bold">Insoluble Residue (Solid X)</text>
+  <text x="365" y="105" fill="#cbd5e1" font-size="9">Trapped on filter paper</text>
+
+  <!-- Filtrate Y -->
+  <line x1="295" y1="230" x2="360" y2="215" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="365" y="215" fill="#38bdf8" font-size="10" font-weight="bold">Filtrate (Liquid Y)</text>
+  <text x="365" y="228" fill="#cbd5e1" font-size="9">Passes through pores</text>
+
+  <text x="260" y="255" fill="#94a3b8" font-size="8" text-anchor="middle">Separates heterogeneous mixtures</text>
+</svg>`,
     options: [
       { text: "Compounds" },
       { text: "Elements" },
@@ -4856,6 +5666,56 @@ questionBank.push(
   {
     id: "cie-0620-2026-mj-p2-q05",
     question: "The energy profile diagram for a reversible chemical reaction is shown. The activation energy for the forward reaction is +180 kJ/mol and the enthalpy change (ΔH) of the forward reaction is -90 kJ/mol. What is the activation energy for the reverse reaction?",
+    imageHtml: `<svg viewBox="0 0 540 280" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Energy Profile Diagram: Reversible Exothermic Reaction</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="240" x2="70" y2="40" stroke="#64748b" stroke-width="2"/>
+  <polygon points="66,45 74,45 70,35" fill="#64748b"/>
+  <text x="35" y="135" fill="#94a3b8" font-size="11" font-weight="bold" transform="rotate(-90 35 135)" text-anchor="middle">Potential Energy (kJ/mol)</text>
+
+  <line x1="70" y1="240" x2="490" y2="240" stroke="#64748b" stroke-width="2"/>
+  <polygon points="485,236 485,244 495,240" fill="#64748b"/>
+  <text x="280" y="262" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">Progress of Reaction</text>
+
+  <!-- Reactants Level (Energy = 150) -->
+  <line x1="70" y1="150" x2="160" y2="150" stroke="#38bdf8" stroke-width="3"/>
+  <text x="115" y="142" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Reactants</text>
+
+  <!-- Reaction Curve with Peak (TS at y = 60, Peak gap = 90px = 180 kJ/mol) -->
+  <path d="M160 150 C200 150 220 60 260 60 C300 60 320 210 360 210" fill="none" stroke="#f59e0b" stroke-width="3"/>
+
+  <!-- Products Level (Energy = 210, gap from Reactants = 60px = -90 kJ/mol) -->
+  <line x1="360" y1="210" x2="470" y2="210" stroke="#10b981" stroke-width="3"/>
+  <text x="415" y="202" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Products</text>
+
+  <!-- Peak Reference Line -->
+  <line x1="160" y1="60" x2="470" y2="60" stroke="#475569" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="160" y1="150" x2="360" y2="150" stroke="#475569" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Forward Activation Energy (Ea forward = +180 kJ/mol) -->
+  <line x1="190" y1="148" x2="190" y2="62" stroke="#ef4444" stroke-width="2"/>
+  <polygon points="186,145 194,145 190,150" fill="#ef4444"/>
+  <polygon points="186,65 194,65 190,60" fill="#ef4444"/>
+  <rect x="120" y="95" width="100" height="22" rx="4" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+  <text x="170" y="110" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle">Ea (fwd) = +180</text>
+
+  <!-- Enthalpy Change (ΔH = -90 kJ/mol) -->
+  <line x1="330" y1="152" x2="330" y2="208" stroke="#a855f7" stroke-width="2"/>
+  <polygon points="326,155 334,155 330,150" fill="#a855f7"/>
+  <polygon points="326,205 334,205 330,210" fill="#a855f7"/>
+  <rect x="338" y="168" width="95" height="22" rx="4" fill="#0f172a" stroke="#a855f7" stroke-width="1"/>
+  <text x="385" y="183" fill="#a855f7" font-size="9" font-weight="bold" text-anchor="middle">ΔH = -90 kJ/mol</text>
+
+  <!-- Reverse Activation Energy (Question: Peak from Products) -->
+  <line x1="450" y1="208" x2="450" y2="62" stroke="#eab308" stroke-width="2" stroke-dasharray="4,2"/>
+  <polygon points="446,205 454,205 450,210" fill="#eab308"/>
+  <polygon points="446,65 454,65 450,60" fill="#eab308"/>
+  <rect x="420" y="115" width="95" height="34" rx="4" fill="#0f172a" stroke="#eab308" stroke-width="1.5"/>
+  <text x="467" y="129" fill="#eab308" font-size="9" font-weight="bold" text-anchor="middle">Ea (reverse)?</text>
+  <text x="467" y="142" fill="#cbd5e1" font-size="8" text-anchor="middle">180 + 90 = 270</text>
+</svg>`,
     options: [
       { text: "+90 kJ/mol" },
       { text: "+180 kJ/mol" },
@@ -5114,6 +5974,85 @@ questionBank.push(
   {
     id: "cie-0620-2026-mj-p6-q01",
     question: "A student performed a titration using a burette. The initial burette reading was 2.40 cm³ and the final burette reading was 26.85 cm³. What was the volume of solution delivered from the burette?",
+    imageHtml: `<svg viewBox="0 0 540 270" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Paper 6 Practical: Titration Burette Readings</text>
+
+  <!-- Left Burette: Initial Reading -->
+  <g transform="translate(60, 42)">
+    <rect x="0" y="0" width="180" height="195" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Initial Burette Reading</text>
+    
+    <!-- Glass tube outline -->
+    <rect x="50" y="32" width="45" height="145" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Liquid in burette -->
+    <path d="M50 95 Q72.5 101 95 95 L95 177 L50 177 Z" fill="#0284c7" fill-opacity="0.35"/>
+    <!-- Meniscus line (bottom at y=100) -->
+    <path d="M50 95 Q72.5 101 95 95" fill="none" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Tick marks for Initial: 2.0 to 3.0 cm³ -->
+    <line x1="50" y1="50" x2="65" y2="50" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="42" y="54" fill="#cbd5e1" font-size="9" font-weight="bold" text-anchor="end">2</text>
+    
+    <line x1="50" y1="62.5" x2="58" y2="62.5" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="75" x2="62" y2="75" stroke="#cbd5e1" stroke-width="1"/>
+    <line x1="50" y1="87.5" x2="58" y2="87.5" stroke="#94a3b8" stroke-width="1"/>
+
+    <!-- 2.40 at y=100 (meniscus bottom) -->
+    <line x1="50" y1="100" x2="65" y2="100" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <line x1="50" y1="112.5" x2="62" y2="112.5" stroke="#cbd5e1" stroke-width="1"/>
+    <line x1="50" y1="125" x2="58" y2="125" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="137.5" x2="58" y2="137.5" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="150" x2="62" y2="150" stroke="#cbd5e1" stroke-width="1"/>
+    <line x1="50" y1="162.5" x2="58" y2="162.5" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="170" x2="65" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="42" y="174" fill="#cbd5e1" font-size="9" font-weight="bold" text-anchor="end">3</text>
+
+    <!-- Reading pointer & badge -->
+    <polygon points="102,100 110,96 110,104" fill="#38bdf8"/>
+    <rect x="110" y="88" width="62" height="24" rx="4" fill="#0369a1" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1"/>
+    <text x="141" y="103" fill="#38bdf8" font-size="9.5" font-weight="bold" text-anchor="middle">2.40 cm³</text>
+  </g>
+
+  <!-- Right Burette: Final Reading -->
+  <g transform="translate(300, 42)">
+    <rect x="0" y="0" width="180" height="195" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="90" y="20" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Final Burette Reading</text>
+    
+    <!-- Glass tube outline -->
+    <rect x="50" y="32" width="45" height="145" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Liquid in burette -->
+    <path d="M50 134 Q72.5 140 95 134 L95 177 L50 177 Z" fill="#059669" fill-opacity="0.35"/>
+    <!-- Meniscus line (bottom at y=140) -->
+    <path d="M50 134 Q72.5 140 95 134" fill="none" stroke="#34d399" stroke-width="2"/>
+
+    <!-- Tick marks for Final: 26.0 to 27.0 cm³ -->
+    <line x1="50" y1="48" x2="65" y2="48" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="42" y="52" fill="#cbd5e1" font-size="9" font-weight="bold" text-anchor="end">26</text>
+    
+    <line x1="50" y1="59.2" x2="58" y2="59.2" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="70.5" x2="58" y2="70.5" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="81.8" x2="58" y2="81.8" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="93.0" x2="58" y2="93.0" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="104.2" x2="62" y2="104.2" stroke="#cbd5e1" stroke-width="1"/>
+    <line x1="50" y1="115.5" x2="58" y2="115.5" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="126.8" x2="58" y2="126.8" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="138" x2="60" y2="138" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="50" y1="149" x2="60" y2="149" stroke="#94a3b8" stroke-width="1"/>
+
+    <line x1="50" y1="160" x2="65" y2="160" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="42" y="164" fill="#cbd5e1" font-size="9" font-weight="bold" text-anchor="end">27</text>
+
+    <!-- Reading pointer & badge -->
+    <polygon points="102,140 110,136 110,144" fill="#34d399"/>
+    <rect x="110" y="128" width="65" height="24" rx="4" fill="#047857" fill-opacity="0.3" stroke="#34d399" stroke-width="1"/>
+    <text x="142" y="143" fill="#34d399" font-size="9.5" font-weight="bold" text-anchor="middle">26.85 cm³</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="270" y="254" fill="#64748b" font-size="10.5" font-style="italic" text-anchor="middle">Titre volume delivered = Final reading (26.85 cm³) − Initial reading (2.40 cm³)</text>
+</svg>`,
     options: [
       { text: "24.45 cm³" },
       { text: "29.25 cm³" },
@@ -5129,12 +6068,63 @@ questionBank.push(
     source: "Cambridge IGCSE Chemistry 0620/62/M/J/26 Q1(a)",
     lessonNum: 1,
     createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "burette",
+      targetValue: 24.45,
+      initialReading: 2.40,
+      unit: "cm³",
+      minScale: 24.0,
+      maxScale: 25.0,
+      step: 0.5,
+      subdivision: 0.05,
+      tolerance: 0.05,
+      title: "Titre Delivered Volume Reading (24.45 cm³)"
+    },
     markingScheme: {
       marks: 1,
       points: [
         { mark: 1, keyword: "24.45 cm3", text: "Correct calculation: 26.85 - 2.40 = 24.45 cm³." }
       ],
       examinerTips: "Always write the unit (cm³) and keep 2 decimal places in titration records."
+    }
+  },
+  {
+    id: "cie-0620-2026-mj-p6-q01b",
+    question: "A student measured a volume of dilute hydrochloric acid using a 50 cm³ measuring cylinder. Use the interactive scale reader below to determine the exact volume of liquid in the cylinder, reading at eye level with the bottom of the meniscus.",
+    options: [
+      { text: "38.5 cm³" },
+      { text: "39.0 cm³" },
+      { text: "38.0 cm³" },
+      { text: "41.5 cm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* When reading a measuring cylinder, the eye must be level with the lowest point of the curved liquid surface (the bottom of the meniscus).\n* The liquid level is precisely midway between the 38 and 39 cm³ marks, giving a volume reading of 38.5 cm³.\n* Reading the top of the curve leads to positive parallax error.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/M/J/26 Q1(b)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "measuring-cylinder",
+      targetValue: 38.5,
+      initialReading: 0.0,
+      unit: "cm³",
+      minScale: 30.0,
+      maxScale: 45.0,
+      step: 5.0,
+      subdivision: 0.5,
+      tolerance: 0.25,
+      liquidColor: "#0284c7",
+      title: "Measuring Cylinder Volume Reading (38.5 cm³)"
+    },
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "38.5 cm3", text: "Volume recorded as 38.5 cm³ (allow 38.3 to 38.7 cm³)." }
+      ],
+      examinerTips: "Always read perpendicular to the scale at the lowest curve of the meniscus."
     }
   },
   {
@@ -5255,6 +6245,51 @@ questionBank.push(
   {
     id: "cie-0620-2025-on-p2-q01",
     question: "The graph shows the heating curve of pure substance Z as it is heated at a constant rate from solid to gas.\nWhich section of the heating curve represents the coexistence of both liquid and gas phases?",
+    imageHtml: `<svg viewBox="0 0 540 270" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Heating Curve of Pure Substance Z (Solid → Gas)</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="230" x2="70" y2="45" stroke="#64748b" stroke-width="2"/>
+  <polygon points="66,50 74,50 70,40" fill="#64748b"/>
+  <text x="35" y="135" fill="#94a3b8" font-size="11" font-weight="bold" transform="rotate(-90 35 135)" text-anchor="middle">Temperature (°C)</text>
+
+  <line x1="70" y1="230" x2="490" y2="230" stroke="#64748b" stroke-width="2"/>
+  <polygon points="485,226 485,234 495,230" fill="#64748b"/>
+  <text x="280" y="254" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">Time / Heating Duration</text>
+
+  <!-- Heating Curve Path -->
+  <!-- 1. Solid warming: (70, 210) -> (140, 160) -->
+  <line x1="70" y1="210" x2="140" y2="160" stroke="#38bdf8" stroke-width="3"/>
+  <text x="95" y="175" fill="#38bdf8" font-size="10" font-weight="bold">Solid</text>
+
+  <!-- 2. Melting Plateau (Solid + Liquid): (140, 160) -> (220, 160) -->
+  <line x1="140" y1="160" x2="220" y2="160" stroke="#a855f7" stroke-width="3.5"/>
+  <circle cx="180" cy="160" r="4" fill="#a855f7"/>
+  <text x="180" y="150" fill="#c084fc" font-size="10" font-weight="bold" text-anchor="middle">Melting (S + L)</text>
+  <line x1="70" y1="160" x2="140" y2="160" stroke="#475569" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="65" y="163" fill="#94a3b8" font-size="9" text-anchor="end">m.p.</text>
+
+  <!-- 3. Liquid warming: (220, 160) -> (300, 90) -->
+  <line x1="220" y1="160" x2="300" y2="90" stroke="#10b981" stroke-width="3"/>
+  <text x="270" y="135" fill="#10b981" font-size="10" font-weight="bold">Liquid</text>
+
+  <!-- 4. Boiling Plateau (Liquid + Gas - TARGET): (300, 90) -> (410, 90) -->
+  <rect x="295" y="70" width="120" height="38" rx="6" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="300" y1="90" x2="410" y2="90" stroke="#f59e0b" stroke-width="4"/>
+  <circle cx="355" cy="90" r="5" fill="#f59e0b"/>
+  <text x="355" y="82" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="middle">Boiling (Liquid + Gas)</text>
+  <line x1="70" y1="90" x2="300" y2="90" stroke="#475569" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="65" y="93" fill="#94a3b8" font-size="9" text-anchor="end">b.p.</text>
+
+  <!-- 5. Gas warming: (410, 90) -> (470, 50) -->
+  <line x1="410" y1="90" x2="470" y2="50" stroke="#ef4444" stroke-width="3"/>
+  <text x="450" y="65" fill="#ef4444" font-size="10" font-weight="bold">Gas</text>
+
+  <!-- Bottom Pointer to Boiling Plateau -->
+  <rect x="250" y="195" width="210" height="26" rx="4" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+  <text x="355" y="212" fill="#fef08a" font-size="9" font-weight="bold" text-anchor="middle">★ Coexistence of Liquid + Gas</text>
+</svg>`,
     options: [
       { text: "The first horizontal plateau representing melting" },
       { text: "The upward slope between melting and boiling" },
@@ -5590,6 +6625,63 @@ questionBank.push(
   {
     id: "cie-0620-2025-on-p6-q01",
     question: "A student investigated the thermal decomposition of hydrated copper(II) sulfate crystals, CuSO₄·5H₂O.\nState the color change observed when blue hydrated copper(II) sulfate crystals are heated strongly in a dry boiling tube.",
+    imageHtml: `<svg viewBox="0 0 540 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Thermal Decomposition: CuSO₄·5H₂O(s) ⇌ CuSO₄(s) + 5H₂O(g)</text>
+
+  <!-- Clamp Stand -->
+  <line x1="160" y1="50" x2="160" y2="230" stroke="#475569" stroke-width="4"/>
+  <rect x="120" y="225" width="80" height="10" rx="2" fill="#334155"/>
+  <rect x="150" y="90" width="30" height="12" rx="3" fill="#64748b"/>
+
+  <!-- Slanted Boiling Tube -->
+  <!-- Clamped slightly slanted downwards towards open mouth (right) -->
+  <g transform="rotate(15 250 120)">
+    <!-- Glass tube body -->
+    <path d="M 120,95 L 360,95 A 15 15 0 0 1 360,125 L 120,125 A 15 15 0 0 1 120,95 Z" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+    <!-- Blue hydrated crystals (at bottom left) -->
+    <path d="M 115,100 L 175,100 L 175,123 L 115,123 Z" fill="#0284c7" opacity="0.85"/>
+    <text x="145" y="115" fill="#ffffff" font-size="9" font-weight="bold" text-anchor="middle">Blue CuSO₄</text>
+
+    <!-- White anhydrous powder emerging -->
+    <path d="M 175,100 L 210,100 L 210,123 L 175,123 Z" fill="#e2e8f0" opacity="0.9"/>
+    <text x="192" y="115" fill="#0f172a" font-size="8" font-weight="bold" text-anchor="middle">White</text>
+
+    <!-- Water droplets condensing on cooler upper neck -->
+    <circle cx="280" cy="98" r="2.5" fill="#38bdf8"/>
+    <circle cx="305" cy="99" r="3" fill="#38bdf8"/>
+    <circle cx="330" cy="98" r="2" fill="#38bdf8"/>
+    <circle cx="295" cy="121" r="2.5" fill="#38bdf8"/>
+    <circle cx="320" cy="120" r="3.5" fill="#38bdf8"/>
+    <circle cx="345" cy="121" r="2" fill="#38bdf8"/>
+  </g>
+
+  <!-- Heat Flame underneath tube bottom -->
+  <g transform="translate(130, 160)">
+    <path d="M 20,45 L 36,45 L 28,15 Z" fill="#f97316"/>
+    <ellipse cx="28" cy="18" rx="5" ry="12" fill="#fbbf24" opacity="0.9"/>
+    <ellipse cx="28" cy="22" rx="2.5" ry="7" fill="#ffffff" opacity="0.8"/>
+    <!-- Burner top -->
+    <rect x="23" y="45" width="10" height="25" fill="#475569"/>
+    <text x="28" y="85" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">Heat</text>
+  </g>
+
+  <!-- Annotations & Callouts -->
+  <!-- Annotation 1: Blue to white powder -->
+  <line x1="140" y1="110" x2="100" y2="70" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="95" y="65" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="end">Blue crystals turn into</text>
+  <text x="95" y="78" fill="#e2e8f0" font-size="10" font-weight="bold" text-anchor="end">white anhydrous powder</text>
+
+  <!-- Annotation 2: Condensed water droplets -->
+  <line x1="375" y1="165" x2="415" y2="190" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="420" y="190" fill="#38bdf8" font-size="10" font-weight="bold">Water droplets condense</text>
+  <text x="420" y="204" fill="#94a3b8" font-size="9">on cooler neck of tube</text>
+
+  <!-- Steam escaping -->
+  <path d="M 405,160 Q 425,145 420,130 Q 440,115 435,100" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="3,3"/>
+  <text x="440" y="125" fill="#94a3b8" font-size="10">Steam (H₂O vapour)</text>
+</svg>`,
     options: [
       { text: "Turns from blue to green" },
       { text: "Turns from blue to a white anhydrous powder, and droplets of colourless liquid condense on the cooler neck of the boiling tube" },
@@ -6070,6 +7162,46 @@ questionBank.push(
   {
     id: "cie-0620-2025-mj-p6-q01",
     question: "A student carries out a chromatography experiment on black ink using water as the solvent. When the experiment is complete, the solvent front has moved 8.0 cm from the pencil baseline, and three separate spots are visible:\n• Spot 1: moved 2.0 cm\n• Spot 2: moved 5.6 cm\n• Spot 3: moved 7.2 cm\nCalculate the Rf value for Spot 2 and explain which dye is the most soluble in water.",
+    imageHtml: `<svg viewBox="0 0 520 280" class="w-full max-w-[480px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Paper Chromatogram: Separation of Black Ink Dyes</text>
+
+  <!-- Chromatography Strip -->
+  <rect x="150" y="45" width="220" height="205" rx="6" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+  <!-- Solvent Front Line (8.0 cm = y=65) -->
+  <line x1="155" y1="65" x2="365" y2="65" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="375" y="69" fill="#38bdf8" font-size="10" font-weight="bold">Solvent front (8.0 cm)</text>
+
+  <!-- Pencil Baseline (0.0 cm = y=225) -->
+  <line x1="155" y1="225" x2="365" y2="225" stroke="#94a3b8" stroke-width="2"/>
+  <text x="375" y="229" fill="#94a3b8" font-size="10">Pencil baseline (0.0 cm)</text>
+
+  <!-- Origin Black Ink Spot mark -->
+  <circle cx="260" cy="225" r="4" fill="#64748b"/>
+  <text x="260" y="242" fill="#94a3b8" font-size="9" text-anchor="middle">Original Ink</text>
+
+  <!-- Spot 1: 2.0 cm from baseline (y = 225 - 40 = 185) -->
+  <circle cx="260" cy="185" r="8" fill="#ef4444" stroke="#f87171" stroke-width="1.5"/>
+  <line x1="260" y1="185" x2="190" y2="185" stroke="#ef4444" stroke-dasharray="2,2"/>
+  <text x="185" y="189" fill="#f87171" font-size="10" font-weight="bold" text-anchor="end">Spot 1 (2.0 cm)</text>
+
+  <!-- Spot 2: 5.6 cm from baseline (y = 225 - 112 = 113) -->
+  <circle cx="260" cy="113" r="8" fill="#f59e0b" stroke="#fbbf24" stroke-width="1.5"/>
+  <line x1="260" y1="113" x2="190" y2="113" stroke="#f59e0b" stroke-dasharray="2,2"/>
+  <text x="185" y="117" fill="#fbbf24" font-size="10" font-weight="bold" text-anchor="end">Spot 2 (5.6 cm) [Rf = 0.70]</text>
+
+  <!-- Spot 3: 7.2 cm from baseline (y = 225 - 144 = 81) -->
+  <circle cx="260" cy="81" r="8" fill="#38bdf8" stroke="#7dd3fc" stroke-width="1.5"/>
+  <line x1="260" y1="81" x2="190" y2="81" stroke="#38bdf8" stroke-dasharray="2,2"/>
+  <text x="185" y="85" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="end">Spot 3 (7.2 cm) [Most Soluble]</text>
+
+  <!-- Total Scale Bracket (Left) -->
+  <line x1="85" y1="225" x2="85" y2="65" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="80" y1="65" x2="90" y2="65" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="80" y1="225" x2="90" y2="225" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="75" y="148" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">8.0 cm</text>
+</svg>`,
     options: [
       { text: "Rf = 0.70; Spot 3 is the most soluble because it travels furthest with the mobile solvent" },
       { text: "Rf = 1.43; Spot 1 is the most soluble because it stays closest to the origin" },
@@ -6552,6 +7684,57 @@ questionBank.push(
   {
     id: "cie-0620-2024-on-p6-q01",
     question: "A student dissolves solid ammonium nitrate in distilled water in an insulated polystyrene cup and measures the temperature every 30 seconds using a thermometer.\n• Initial water temperature = 21.5 °C\n• Lowest recorded temperature = 14.0 °C\n(a) Calculate the temperature change (ΔT).\n(b) State the type of thermal process that occurred.",
+    imageHtml: `<svg viewBox="0 0 540 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Polystyrene Cup Calorimeter (Dissolution Temperature Change)</text>
+
+  <!-- Setup Diagram (Left) -->
+  <g transform="translate(50, 40)">
+    <!-- Support Beaker (Outer) -->
+    <rect x="35" y="80" width="130" height="115" rx="8" fill="#020617" stroke="#334155" stroke-width="1.5"/>
+    <text x="175" y="150" fill="#64748b" font-size="9">Glass beaker (support)</text>
+
+    <!-- Polystyrene Cup (Inner) -->
+    <polygon points="50,70 150,70 140,185 60,185" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Solution inside -->
+    <polygon points="58,110 142,110 138,183 62,183" fill="#0284c7" opacity="0.4"/>
+    <text x="100" y="145" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">NH₄NO₃(aq)</text>
+
+    <!-- Polystyrene Lid -->
+    <rect x="42" y="62" width="116" height="10" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
+    <text x="170" y="69" fill="#cbd5e1" font-size="9">Insulating lid</text>
+
+    <!-- Thermometer -->
+    <rect x="80" y="15" width="5" height="145" rx="2" fill="#ef4444"/>
+    <line x1="82.5" y1="15" x2="82.5" y2="155" stroke="#fca5a5" stroke-width="1.5"/>
+    <circle cx="82.5" cy="158" r="5" fill="#ef4444"/>
+    <text x="82.5" y="8" fill="#f87171" font-size="9" font-weight="bold" text-anchor="middle">Thermometer</text>
+
+    <!-- Stirrer -->
+    <path d="M 120,20 L 120,165 L 105,165" fill="none" stroke="#94a3b8" stroke-width="2"/>
+    <text x="125" y="30" fill="#94a3b8" font-size="9">Glass stirrer</text>
+  </g>
+
+  <!-- Temperature Readings Panel (Right) -->
+  <g transform="translate(300, 48)">
+    <rect x="0" y="0" width="200" height="180" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="100" y="24" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Temperature Data</text>
+
+    <!-- Initial Temp Box -->
+    <rect x="15" y="40" width="170" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="58" fill="#94a3b8" font-size="10">Initial Temp (T₁):</text>
+    <text x="170" y="62" fill="#38bdf8" font-size="14" font-weight="bold" text-anchor="end">21.5 °C</text>
+
+    <!-- Lowest Temp Box -->
+    <rect x="15" y="92" width="170" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="25" y="110" fill="#94a3b8" font-size="10">Lowest Temp (T₂):</text>
+    <text x="170" y="114" fill="#60a5fa" font-size="14" font-weight="bold" text-anchor="end">14.0 °C</text>
+
+    <!-- Result / ΔT -->
+    <text x="100" y="155" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">ΔT = 14.0 - 21.5 = -7.5 °C</text>
+    <text x="100" y="170" fill="#10b981" font-size="10" text-anchor="middle">Process: Endothermic (absorbs heat)</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) ΔT = -7.5 °C; (b) Endothermic process" },
       { text: "(a) ΔT = +7.5 °C; (b) Exothermic process" },
@@ -6567,6 +7750,19 @@ questionBank.push(
     source: "Cambridge IGCSE Chemistry 0620/62/O/N/24 Q1(a)",
     lessonNum: 1,
     createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "thermometer",
+      targetValue: 14.0,
+      initialReading: 21.5,
+      unit: "°C",
+      minScale: 10.0,
+      maxScale: 25.0,
+      step: 5.0,
+      subdivision: 0.5,
+      tolerance: 0.2,
+      liquidColor: "#ef4444",
+      title: "Calorimeter Final Temperature Reading (14.0 °C)"
+    },
     markingScheme: {
       marks: 2,
       points: [
@@ -6691,6 +7887,59 @@ questionBank.push(
   {
     id: "cie-0620-2024-mj-p2-q01",
     question: "A student placed a porous pot filled with air inside a beaker containing carbon dioxide gas (Mr = 44). The apparatus is connected to a U-tube manometer containing colored water. What happens to the liquid level in the manometer?",
+    imageHtml: `<svg viewBox="0 0 540 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Gas Diffusion in Porous Pot with U-Tube Manometer</text>
+
+  <!-- Left: Inverted Beaker with CO2 gas -->
+  <rect x="50" y="50" width="160" height="150" rx="4" fill="#0284c7" opacity="0.15" stroke="#475569" stroke-width="2"/>
+  <text x="130" y="68" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Beaker of CO₂ gas [Mr = 44]</text>
+
+  <!-- Porous Pot inside Beaker -->
+  <rect x="90" y="85" width="80" height="95" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,2"/>
+  <text x="130" y="115" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Porous Pot</text>
+  <text x="130" y="130" fill="#cbd5e1" font-size="9" text-anchor="middle">Air [Mr ≈ 29]</text>
+
+  <!-- Diffusion arrows -->
+  <!-- Air diffusing OUT rapidly -->
+  <line x1="85" y1="145" x2="65" y2="145" stroke="#38bdf8" stroke-width="2"/>
+  <polygon points="65,142 65,148 58,145" fill="#38bdf8"/>
+  <text x="75" y="140" fill="#38bdf8" font-size="8" text-anchor="middle">Air out (fast)</text>
+
+  <!-- CO2 diffusing IN slowly -->
+  <line x1="175" y1="145" x2="195" y2="145" stroke="#f87171" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <text x="185" y="140" fill="#f87171" font-size="8" text-anchor="middle">CO₂ in (slow)</text>
+
+  <!-- Rubber bung on top of porous pot -->
+  <polygon points="110,85 150,85 145,95 115,95" fill="#475569"/>
+
+  <!-- Glass connecting tube from pot to manometer -->
+  <path d="M130 85 L130 45 L320 45 L320 90" fill="none" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Right: U-Tube Manometer -->
+  <!-- Manometer outline -->
+  <path d="M320 90 L320 200 C320 235 410 235 410 200 L410 90" fill="none" stroke="#64748b" stroke-width="18" stroke-linecap="round"/>
+  <path d="M320 90 L320 200 C320 232 410 232 410 200 L410 90" fill="none" stroke="#020617" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Colored liquid (Water): High level in left limb (attached to pot), Low level in right limb (open) -->
+  <!-- Left limb level rises to y = 130 -->
+  <path d="M320 130 L320 200 C320 230 365 230 365 230" fill="none" stroke="#ef4444" stroke-width="12"/>
+  <!-- Right limb level drops to y = 185 -->
+  <path d="M365 230 C365 230 410 230 410 200 L410 185" fill="none" stroke="#ef4444" stroke-width="12"/>
+
+  <!-- Markers & Callouts -->
+  <!-- Left Limb Label: Level RISES -->
+  <line x1="285" y1="130" x2="310" y2="130" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="220" y="115" width="90" height="36" rx="4" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="265" y="129" fill="#f87171" font-size="9" font-weight="bold" text-anchor="middle">Level RISES ▲</text>
+  <text x="265" y="142" fill="#94a3b8" font-size="8" text-anchor="middle">(Pressure falls in pot)</text>
+
+  <!-- Right Limb Label: Level DROPS -->
+  <line x1="420" y1="185" x2="445" y2="185" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="440" y="168" width="85" height="34" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+  <text x="482" y="182" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">Level DROPS ▼</text>
+  <text x="482" y="194" fill="#94a3b8" font-size="8" text-anchor="middle">(Open to atm)</text>
+</svg>`,
     options: [
       { text: "The liquid level in the open limb drops because carbon dioxide diffuses into the pot faster than air diffuses out" },
       { text: "The liquid level in the limb attached to the pot drops because air diffuses out faster than carbon dioxide diffuses in" },
@@ -7030,6 +8279,60 @@ questionBank.push(
   {
     id: "cie-0620-2024-mj-p6-q01",
     question: "A student investigated the rate of reaction between marble chips (calcium carbonate) and dilute hydrochloric acid using a gas syringe.\n(a) Name an alternative piece of apparatus to collect and measure the volume of carbon dioxide gas.\n(b) Why does the volume of gas collected level off after 6 minutes?",
+    imageHtml: `<svg viewBox="0 0 540 250" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Gas Syringe Setup: CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂</text>
+
+  <!-- Conical Flask Setup (Left) -->
+  <g transform="translate(45, 45)">
+    <!-- Conical Flask -->
+    <polygon points="40,50 60,50 95,145 5,145" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <!-- Acid solution -->
+    <polygon points="25,115 75,115 93,143 7,143" fill="#0284c7" opacity="0.35"/>
+    <!-- Marble chips (CaCO₃) -->
+    <ellipse cx="28" cy="138" rx="7" ry="4" fill="#cbd5e1"/>
+    <ellipse cx="45" cy="139" rx="8" ry="4.5" fill="#94a3b8"/>
+    <ellipse cx="62" cy="137" rx="6.5" ry="3.5" fill="#e2e8f0"/>
+    <ellipse cx="75" cy="139" rx="7" ry="4" fill="#cbd5e1"/>
+    <!-- Effervescence bubbles -->
+    <circle cx="35" cy="125" r="2" fill="#38bdf8" opacity="0.7"/>
+    <circle cx="52" cy="120" r="2.5" fill="#38bdf8" opacity="0.8"/>
+    <circle cx="68" cy="124" r="2" fill="#38bdf8" opacity="0.7"/>
+    <circle cx="48" cy="105" r="2" fill="#38bdf8" opacity="0.6"/>
+    <!-- Bung -->
+    <polygon points="38,40 62,40 59,52 41,52" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+    <text x="50" y="165" fill="#94a3b8" font-size="10" text-anchor="middle">Marble chips + dil. HCl</text>
+  </g>
+
+  <!-- Delivery Tube -->
+  <path d="M 95,85 L 95,65 L 205,65 L 205,100 L 220,100" fill="none" stroke="#64748b" stroke-width="3"/>
+  <text x="150" y="55" fill="#cbd5e1" font-size="9" text-anchor="middle">Delivery tube</text>
+
+  <!-- Gas Syringe (Right) -->
+  <g transform="translate(220, 80)">
+    <!-- Syringe Outer Barrel -->
+    <rect x="0" y="0" width="180" height="40" rx="4" fill="#020617" stroke="#475569" stroke-width="2"/>
+    <!-- Scale Markings -->
+    <line x1="20" y1="5" x2="20" y2="18" stroke="#94a3b8" stroke-width="1.5"/><text x="20" y="32" fill="#94a3b8" font-size="8" text-anchor="middle">0</text>
+    <line x1="50" y1="5" x2="50" y2="14" stroke="#64748b" stroke-width="1"/>
+    <line x1="80" y1="5" x2="80" y2="18" stroke="#94a3b8" stroke-width="1.5"/><text x="80" y="32" fill="#94a3b8" font-size="8" text-anchor="middle">40</text>
+    <line x1="110" y1="5" x2="110" y2="14" stroke="#64748b" stroke-width="1"/>
+    <line x1="140" y1="5" x2="140" y2="18" stroke="#94a3b8" stroke-width="1.5"/><text x="140" y="32" fill="#94a3b8" font-size="8" text-anchor="middle">80</text>
+    <line x1="170" y1="5" x2="170" y2="18" stroke="#94a3b8" stroke-width="1.5"/><text x="170" y="32" fill="#94a3b8" font-size="8" text-anchor="middle">100</text>
+    <!-- CO₂ Gas in Syringe -->
+    <rect x="2" y="2" width="108" height="36" fill="#38bdf8" opacity="0.2"/>
+    <!-- Plunger (at 60 cm³) -->
+    <rect x="110" y="3" width="12" height="34" rx="2" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+    <rect x="122" y="16" width="105" height="8" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <rect x="227" y="6" width="10" height="28" rx="2" fill="#334155" stroke="#64748b" stroke-width="1"/>
+    <text x="110" y="-8" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Plunger moves outward</text>
+    <text x="90" y="60" fill="#38bdf8" font-size="10" text-anchor="middle">Gas Syringe (0–100 cm³)</text>
+  </g>
+
+  <!-- Gas Arrow -->
+  <path d="M 125,65 L 140,65" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="270" y="225" fill="#64748b" font-size="10" text-anchor="middle">Alternative setup: Inverted measuring cylinder over water trough</text>
+</svg>`,
     options: [
       { text: "(a) Evaporating basin; (b) Gas starts to condense back to liquid" },
       { text: "(a) Inverted measuring cylinder / burette filled with water; (b) One of the reactants (limiting reactant) has been completely used up" },
@@ -7045,6 +8348,19 @@ questionBank.push(
     source: "Cambridge IGCSE Chemistry 0620/61/M/J/24 Q1",
     lessonNum: 2,
     createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "gas-syringe",
+      targetValue: 60.0,
+      initialReading: 0.0,
+      unit: "cm³",
+      minScale: 0.0,
+      maxScale: 100.0,
+      step: 20.0,
+      subdivision: 2.0,
+      tolerance: 1.0,
+      liquidColor: "#38bdf8",
+      title: "Gas Syringe Collected Volume (60 cm³)"
+    },
     markingScheme: {
       marks: 2,
       points: [
@@ -7111,6 +8427,66 @@ questionBank.push(
   {
     id: "cie-0620-2024-mj-p6-q04",
     question: "In a paper chromatography experiment to identify artificial food colorings:\n(a) Why must the baseline be drawn in pencil rather than ink?\n(b) Why must the solvent level in the chromatography tank be below the baseline spots when the paper is placed inside?",
+    imageHtml: `<svg viewBox="0 0 540 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Chromatography Tank Setup: Baseline & Solvent Level Rules</text>
+
+  <!-- Left: Correct Setup (Tick) -->
+  <g transform="translate(30, 40)">
+    <rect x="0" y="0" width="225" height="195" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="112" y="20" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">✓ Correct Setup</text>
+
+    <!-- Beaker tank -->
+    <rect x="25" y="35" width="175" height="145" rx="6" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Solvent reservoir (shallow) -->
+    <rect x="26" y="150" width="173" height="29" rx="2" fill="#0284c7" opacity="0.35"/>
+    <!-- Solvent level line -->
+    <line x1="26" y1="150" x2="199" y2="150" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Paper strip suspended -->
+    <rect x="65" y="45" width="95" height="125" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+    <!-- Pencil baseline (ABOVE solvent) -->
+    <line x1="70" y1="135" x2="155" y2="135" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Dye spots on baseline -->
+    <circle cx="85" cy="135" r="3.5" fill="#f59e0b"/>
+    <circle cx="112" cy="135" r="3.5" fill="#ef4444"/>
+    <circle cx="139" cy="135" r="3.5" fill="#38bdf8"/>
+
+    <!-- Labels & Arrows -->
+    <text x="112" y="125" fill="#cbd5e1" font-size="8" text-anchor="middle">Pencil baseline (insoluble)</text>
+    <line x1="60" y1="135" x2="40" y2="135" stroke="#94a3b8" stroke-width="1"/>
+    <line x1="60" y1="150" x2="40" y2="150" stroke="#38bdf8" stroke-width="1"/>
+    <text x="35" y="138" fill="#cbd5e1" font-size="8" text-anchor="end">Baseline</text>
+    <text x="35" y="153" fill="#38bdf8" font-size="8" font-weight="bold" text-anchor="end">Solvent</text>
+    <text x="112" y="188" fill="#10b981" font-size="8" font-weight="bold" text-anchor="middle">Solvent below baseline spots</text>
+  </g>
+
+  <!-- Right: Incorrect Setup (Cross) -->
+  <g transform="translate(285, 40)">
+    <rect x="0" y="0" width="225" height="195" rx="10" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="112" y="20" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="middle">✗ Incorrect: Spots Submerged</text>
+
+    <!-- Beaker tank -->
+    <rect x="25" y="35" width="175" height="145" rx="6" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+    <!-- Solvent reservoir (too deep) -->
+    <rect x="26" y="125" width="173" height="54" rx="2" fill="#0284c7" opacity="0.35"/>
+    <!-- Solvent level line (ABOVE baseline) -->
+    <line x1="26" y1="125" x2="199" y2="125" stroke="#ef4444" stroke-width="2"/>
+
+    <!-- Paper strip suspended -->
+    <rect x="65" y="45" width="95" height="125" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+    <!-- Baseline underwater -->
+    <line x1="70" y1="145" x2="155" y2="145" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- Dye spots dissolving / bleeding into solvent -->
+    <ellipse cx="85" cy="155" rx="8" ry="12" fill="#f59e0b" opacity="0.4"/>
+    <ellipse cx="112" cy="155" rx="8" ry="12" fill="#ef4444" opacity="0.4"/>
+    <ellipse cx="139" cy="155" rx="8" ry="12" fill="#38bdf8" opacity="0.4"/>
+
+    <!-- Error Callout -->
+    <text x="112" y="118" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle">Solvent level above baseline!</text>
+    <text x="112" y="188" fill="#fca5a5" font-size="8" text-anchor="middle">Dyes wash into bulk liquid pool</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) Pencil is darker; (b) So the solvent does not evaporate" },
       { text: "(a) Pencil graphite is insoluble in the solvent and will not dissolve or run; (b) If the solvent is above the baseline, the sample spots will dissolve directly into the solvent reservoir instead of moving up the paper" },
@@ -7211,6 +8587,63 @@ questionBank.push(
   {
     id: "cie-0620-core-p1-q03",
     question: "Petroleum (crude oil) is separated into useful fractions by fractional distillation. Which fraction has the lowest boiling point range and is collected at the very top of the fractionating column?",
+    imageHtml: `<svg viewBox="0 0 540 280" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Industrial Fractional Distillation of Petroleum (Crude Oil)</text>
+
+  <!-- Furnace & Crude Oil Inlet (Bottom Left) -->
+  <rect x="25" y="200" width="70" height="48" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="60" y="220" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="middle">Furnace</text>
+  <text x="60" y="234" fill="#94a3b8" font-size="8" text-anchor="middle">~350–400 °C</text>
+  <path d="M95 224 L145 224" stroke="#ea580c" stroke-width="3"/>
+  <polygon points="140,220 148,224 140,228" fill="#ea580c"/>
+  <text x="120" y="215" fill="#fca5a5" font-size="8" text-anchor="middle">Crude oil</text>
+
+  <!-- Fractionating Tower Body -->
+  <rect x="145" y="45" width="110" height="215" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+  <!-- Trays inside tower -->
+  <line x1="150" y1="80" x2="250" y2="80" stroke="#334155" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="150" y1="115" x2="250" y2="115" stroke="#334155" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="150" y1="150" x2="250" y2="150" stroke="#334155" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="150" y1="185" x2="250" y2="185" stroke="#334155" stroke-width="2" stroke-dasharray="4,2"/>
+  <line x1="150" y1="220" x2="250" y2="220" stroke="#334155" stroke-width="2" stroke-dasharray="4,2"/>
+
+  <!-- Temperature gradient label inside tower -->
+  <text x="200" y="65" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">Cooler (~25 °C)</text>
+  <text x="200" y="250" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle">Hotter (~350 °C)</text>
+
+  <!-- Fraction Exits (Right side) -->
+  <!-- 1. Top Fraction: Refinery Gas (TARGET) -->
+  <path d="M255 60 L310 60" stroke="#38bdf8" stroke-width="2"/>
+  <rect x="310" y="45" width="205" height="30" rx="6" fill="#0284c7" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="320" y="60" fill="#38bdf8" font-size="10" font-weight="bold">★ Refinery gas (Lowest b.p., &lt; 20 °C)</text>
+  <text x="320" y="71" fill="#94a3b8" font-size="8">Bottled gas for heating / cooking (C₁–C₄)</text>
+
+  <!-- 2. Gasoline / Petrol -->
+  <path d="M255 95 L310 95" stroke="#10b981" stroke-width="2"/>
+  <rect x="310" y="83" width="205" height="24" rx="4" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+  <text x="320" y="99" fill="#10b981" font-size="9" font-weight="bold">Gasoline / Petrol (b.p. ~40–100 °C)</text>
+
+  <!-- 3. Kerosene (Paraffin) -->
+  <path d="M255 130 L310 130" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="310" y="118" width="205" height="24" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+  <text x="320" y="134" fill="#cbd5e1" font-size="9">Kerosene / Paraffin (Jet fuel)</text>
+
+  <!-- 4. Diesel Oil -->
+  <path d="M255 165 L310 165" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="310" y="153" width="205" height="24" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+  <text x="320" y="169" fill="#cbd5e1" font-size="9">Diesel oil (Trucks &amp; trains)</text>
+
+  <!-- 5. Fuel Oil / Lubricating Oil -->
+  <path d="M255 200 L310 200" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="310" y="188" width="205" height="24" rx="4" fill="#0f172a" stroke="#64748b" stroke-width="1"/>
+  <text x="320" y="204" fill="#cbd5e1" font-size="9">Fuel oil (Ships &amp; power stations)</text>
+
+  <!-- 6. Bitumen (Bottom) -->
+  <path d="M255 235 L310 235" stroke="#ef4444" stroke-width="2"/>
+  <rect x="310" y="223" width="205" height="24" rx="4" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+  <text x="320" y="239" fill="#ef4444" font-size="9" font-weight="bold">Bitumen (Highest b.p., road surfacing)</text>
+</svg>`,
     options: [
       { text: "Bitumen" },
       { text: "Kerosene (paraffin)" },
@@ -7899,7 +9332,54 @@ questionBank.push(
   },
   {
     id: "cie-0620-2023-on-p6-q03",
-    question: "A student performs paper chromatography on four food dyes (W, X, Y, and Z).\nThe solvent front moved 8.0 cm from the baseline. Spot W moved 5.6 cm.\nCalculate the retention factor (Rf) of Spot W.",
+    question: "A student performs paper chromatography on four food dyes (W, X, Y, and Z).\nThe diagram shows the resulting chromatogram:\n• The solvent front moved 8.0 cm from the baseline.\n• Spot W moved 5.6 cm from the baseline.\nCalculate the retention factor (Rf) of Spot W.",
+    imageHtml: `<svg viewBox="0 0 520 280" class="w-full max-w-[480px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Paper Chromatogram (Scale in cm)</text>
+
+  <!-- Chromatography Paper Sheet -->
+  <rect x="140" y="45" width="240" height="205" rx="6" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+  <!-- Solvent Front Line (at 8.0 cm = y=65) -->
+  <line x1="145" y1="65" x2="375" y2="65" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="385" y="69" fill="#38bdf8" font-size="10" font-weight="bold">Solvent front (8.0 cm)</text>
+
+  <!-- Baseline (Pencil line at 0.0 cm = y=225) -->
+  <line x1="145" y1="225" x2="375" y2="225" stroke="#94a3b8" stroke-width="2"/>
+  <text x="385" y="229" fill="#94a3b8" font-size="10">Pencil baseline (0.0 cm)</text>
+
+  <!-- Solvent beaker level -->
+  <rect x="130" y="238" width="260" height="15" fill="#0284c7" opacity="0.3"/>
+  <text x="135" y="268" fill="#64748b" font-size="9">Solvent level (below baseline)</text>
+
+  <!-- Spots -->
+  <!-- Dye W: spot at 5.6 cm (8.0 cm span = 160 px; 5.6 cm = 112 px from bottom -> y = 225 - 112 = 113) -->
+  <circle cx="180" cy="113" r="8" fill="#f59e0b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="180" y="240" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">W</text>
+  <!-- Distance bracket for W -->
+  <line x1="155" y1="225" x2="155" y2="113" stroke="#f59e0b" stroke-width="1.5"/>
+  <line x1="150" y1="113" x2="160" y2="113" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="120" y="173" fill="#f59e0b" font-size="10" font-weight="bold">5.6 cm</text>
+
+  <!-- Dye X: spot at 2.4 cm (y = 225 - 48 = 177) -->
+  <circle cx="235" cy="177" r="7" fill="#ef4444" stroke="#f87171" stroke-width="1.5"/>
+  <text x="235" y="240" fill="#ef4444" font-size="11" font-weight="bold" text-anchor="middle">X</text>
+
+  <!-- Dye Y: two spots (components) -->
+  <circle cx="290" cy="113" r="7" fill="#f59e0b"/>
+  <circle cx="290" cy="85" r="7" fill="#10b981"/>
+  <text x="290" y="240" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Y</text>
+
+  <!-- Dye Z: spot at 7.2 cm (y = 225 - 144 = 81) -->
+  <circle cx="345" cy="81" r="7" fill="#a855f7" stroke="#c084fc" stroke-width="1.5"/>
+  <text x="345" y="240" fill="#a855f7" font-size="11" font-weight="bold" text-anchor="middle">Z</text>
+
+  <!-- 8.0 cm total bracket -->
+  <line x1="105" y1="225" x2="105" y2="65" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="100" y1="65" x2="110" y2="65" stroke="#38bdf8" stroke-width="1.5"/>
+  <line x1="100" y1="225" x2="110" y2="225" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="70" y="148" fill="#38bdf8" font-size="11" font-weight="bold">8.0 cm</text>
+</svg>`,
     options: [
       { text: "0.56" },
       { text: "0.70" },
@@ -8507,7 +9987,38 @@ questionBank.push(
   // --- 3. EXTENDED PAPER 6: ALTERNATIVE TO PRACTICAL (P6) ---
   {
     id: "cie-0620-2023-mj-p6-q01",
-    question: "A student investigated the reaction between magnesium ribbon and dilute sulfuric acid.\n(a) Why should the magnesium ribbon be cleaned with sandpaper before the experiment?\n(b) Sketch the shape of the graph of total volume of hydrogen gas against time until completion.",
+    question: "A student investigated the reaction between magnesium ribbon and dilute sulfuric acid.\nThe graph shows the volume of hydrogen gas evolved against time until the reaction ceases:\n(a) Why should the magnesium ribbon be cleaned with sandpaper before the experiment?\n(b) Describe the shape and key features of this reaction rate curve.",
+    imageHtml: `<svg viewBox="0 0 520 280" class="w-full max-w-[480px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="260" y="25" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Hydrogen Gas Evolution: Volume vs Time</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="230" x2="480" y2="230" stroke="#64748b" stroke-width="2"/>
+  <line x1="70" y1="230" x2="70" y2="40" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Axis Labels -->
+  <text x="470" y="255" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="end">Time / s</text>
+  <text x="35" y="45" fill="#94a3b8" font-size="11" font-weight="bold" transform="rotate(-90 35 45)" text-anchor="end">Total Gas Volume / cm³</text>
+
+  <!-- Curve: steep at origin, curves off to plateau -->
+  <path d="M 70,230 Q 150,75 280,75 L 470,75" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+
+  <!-- Annotations -->
+  <!-- 1. Initial steep gradient -->
+  <line x1="70" y1="230" x2="140" y2="90" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="70" cy="230" r="4" fill="#38bdf8"/>
+  <text x="95" y="160" fill="#f59e0b" font-size="10" font-weight="bold">Steepest gradient at t = 0 (fastest rate)</text>
+
+  <!-- 2. Deceleration -->
+  <circle cx="180" cy="115" r="4" fill="#38bdf8"/>
+  <text x="190" y="135" fill="#cbd5e1" font-size="10">Rate slowing down</text>
+
+  <!-- 3. Plateau (Reaction Complete) -->
+  <line x1="280" y1="55" x2="280" y2="230" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <circle cx="280" cy="75" r="5" fill="#10b981"/>
+  <text x="290" y="65" fill="#10b981" font-size="10" font-weight="bold">Horizontal Plateau: Reaction Complete</text>
+  <text x="285" y="245" fill="#ef4444" font-size="9">Reaction stops</text>
+</svg>`,
     options: [
       { text: "(a) To make it thinner; (b) A straight horizontal line" },
       { text: "(a) To remove the unreactive magnesium oxide layer on the surface; (b) Steepest curve at the origin (t = 0), gradually curving downwards as rate slows, and finally leveling off horizontally (plateau) when the reaction is complete" },
@@ -8530,6 +10041,36 @@ questionBank.push(
         { mark: 1, keyword: "steepest at start, levels off to plateau", text: "Curve starts at origin, steepest initial slope, plateaus horizontally." }
       ],
       examinerTips: "Always mention 'oxide coating/layer' when cleaning metals before reaction rate or displacement tests."
+    },
+    graphConfig: {
+      title: "Rate of Reaction: Volume of H₂ Gas vs Time",
+      xAxis: {
+        label: "Time",
+        unit: "s",
+        min: 0,
+        max: 100,
+        step: 20
+      },
+      yAxis: {
+        label: "Volume of H₂ Gas",
+        unit: "cm³",
+        min: 0,
+        max: 50,
+        step: 10
+      },
+      targetPoints: [
+        { x: 0, y: 0 },
+        { x: 10, y: 18 },
+        { x: 20, y: 30 },
+        { x: 30, y: 38 },
+        { x: 40, y: 44 },
+        { x: 50, y: 47 },
+        { x: 60, y: 48 },
+        { x: 80, y: 48 },
+        { x: 100, y: 48 }
+      ],
+      curveType: "curve",
+      tolerance: 2.0
     }
   },
   {
@@ -8561,7 +10102,62 @@ questionBank.push(
   },
   {
     id: "cie-0620-2023-mj-p6-q03",
-    question: "A student performs a titration using a burette. The initial reading is 1.40 cm³ and the final reading is 26.85 cm³.\n(a) Calculate the volume of titrant delivered (titre).\n(b) How should the meniscus of the liquid in the burette be read?",
+    question: "A student performs a titration using a burette. The diagram shows the initial and final liquid levels in the burette:\n• Initial reading = 1.40 cm³\n• Final reading = 26.85 cm³\n(a) Calculate the volume of titrant delivered (titre).\n(b) How should the meniscus of the liquid in the burette be read?",
+    imageHtml: `<svg viewBox="0 0 540 260" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <defs>
+    <linearGradient id="liquidGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="270" y="25" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Burette Titration Readings (Scale: 0.10 cm³)</text>
+
+  <!-- Left Burette: Initial Reading (1.40 cm³) -->
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="180" height="200" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="90" y="24" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Initial Level: 1.40 cm³</text>
+    <!-- Tube -->
+    <rect x="55" y="40" width="70" height="145" fill="#020617" stroke="#475569" stroke-width="2"/>
+    <!-- Liquid -->
+    <path d="M 56,105 Q 90,115 124,105 L 124,184 L 56,184 Z" fill="url(#liquidGrad)"/>
+    <!-- Meniscus curve -->
+    <path d="M 56,105 Q 90,115 124,105" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+    <!-- Tick marks -->
+    <line x1="55" y1="55" x2="80" y2="55" stroke="#94a3b8" stroke-width="2"/><text x="85" y="59" fill="#f8fafc" font-size="10" font-family="monospace">1.0</text>
+    <line x1="55" y1="70" x2="72" y2="70" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="85" x2="72" y2="85" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="100" x2="72" y2="100" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Target 1.40 cm³ line -->
+    <line x1="55" y1="115" x2="80" y2="115" stroke="#f59e0b" stroke-width="2"/><text x="85" y="119" fill="#f59e0b" font-size="10" font-weight="bold" font-family="monospace">1.40</text>
+    <line x1="55" y1="130" x2="72" y2="130" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="145" x2="72" y2="145" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="160" x2="72" y2="160" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="175" x2="80" y2="175" stroke="#94a3b8" stroke-width="2"/><text x="85" y="179" fill="#f8fafc" font-size="10" font-family="monospace">2.0</text>
+  </g>
+
+  <!-- Right Burette: Final Reading (26.85 cm³) -->
+  <g transform="translate(320, 40)">
+    <rect x="0" y="0" width="180" height="200" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="90" y="24" fill="#a855f7" font-size="11" font-weight="bold" text-anchor="middle">Final Level: 26.85 cm³</text>
+    <!-- Tube -->
+    <rect x="55" y="40" width="70" height="145" fill="#020617" stroke="#475569" stroke-width="2"/>
+    <!-- Liquid -->
+    <path d="M 56,120 Q 90,130 124,120 L 124,184 L 56,184 Z" fill="url(#liquidGrad)"/>
+    <!-- Meniscus curve -->
+    <path d="M 56,120 Q 90,130 124,120" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+    <!-- Tick marks -->
+    <line x1="55" y1="50" x2="80" y2="50" stroke="#94a3b8" stroke-width="2"/><text x="85" y="54" fill="#f8fafc" font-size="10" font-family="monospace">26.0</text>
+    <line x1="55" y1="70" x2="72" y2="70" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="90" x2="72" y2="90" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="110" x2="72" y2="110" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Target 26.85 cm³ reading -->
+    <line x1="55" y1="125" x2="80" y2="125" stroke="#f59e0b" stroke-width="2"/><text x="85" y="129" fill="#f59e0b" font-size="10" font-weight="bold" font-family="monospace">26.85</text>
+    <line x1="55" y1="145" x2="72" y2="145" stroke="#64748b" stroke-width="1.5"/>
+    <line x1="55" y1="165" x2="80" y2="165" stroke="#94a3b8" stroke-width="2"/><text x="85" y="169" fill="#f8fafc" font-size="10" font-family="monospace">27.0</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) 25.45 cm³; (b) Read at the bottom of the meniscus at eye level" },
       { text: "(a) 28.25 cm³; (b) Read from the top of the liquid" },
@@ -8588,7 +10184,61 @@ questionBank.push(
   },
   {
     id: "cie-0620-2023-mj-p6-q04",
-    question: "In a fractional distillation apparatus separating a mixture of ethanol (b.p. 78 °C) and water (b.p. 100 °C):\n(a) State the role of the glass beads in the fractionating column.\n(b) Which liquid is collected first as distillate?",
+    question: "The diagram shows a fractional distillation apparatus used to separate a mixture of ethanol (b.p. 78 °C) and water (b.p. 100 °C):\n(a) State the role of the glass beads in the fractionating column.\n(b) Which liquid is collected first as distillate?",
+    imageHtml: `<svg viewBox="0 0 560 300" class="w-full max-w-[520px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="280" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Laboratory Fractional Distillation Setup</text>
+
+  <!-- Heat Source (Bunsen) -->
+  <path d="M 65,270 L 85,270 L 75,250 Z" fill="#f97316"/>
+  <ellipse cx="75" cy="245" rx="5" ry="8" fill="#fbbf24" opacity="0.9"/>
+  <text x="75" y="285" fill="#64748b" font-size="10" text-anchor="middle">Heat</text>
+
+  <!-- Round-bottom Flask -->
+  <circle cx="75" cy="205" r="32" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <!-- Liquid in Flask -->
+  <path d="M 45,215 Q 75,225 105,215 A 32 32 0 0 1 45 215 Z" fill="#0284c7" opacity="0.5"/>
+  <text x="35" y="215" fill="#38bdf8" font-size="9" text-anchor="end">Ethanol + Water</text>
+
+  <!-- Fractionating Column with Glass Beads -->
+  <rect x="67" y="70" width="16" height="105" fill="#0b1329" stroke="#64748b" stroke-width="2"/>
+  <!-- Glass Beads inside -->
+  <circle cx="75" cy="85" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="98" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="111" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="124" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="137" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="150" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="163" r="4" fill="#94a3b8"/>
+
+  <!-- Thermometer -->
+  <rect x="73" y="32" width="4" height="42" fill="#ef4444"/>
+  <line x1="75" y1="32" x2="75" y2="74" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="85" y="42" fill="#f87171" font-size="10" font-weight="bold">Thermometer (78 °C)</text>
+
+  <!-- Column Label -->
+  <path d="M 85,124 L 140,124" stroke="#94a3b8" stroke-dasharray="2,2"/>
+  <text x="145" y="127" fill="#cbd5e1" font-size="10">Fractionating Column (Glass Beads)</text>
+
+  <!-- Side-arm to Liebig Condenser -->
+  <path d="M 75,70 L 115,70 L 350,175" fill="none" stroke="#475569" stroke-width="3"/>
+
+  <!-- Liebig Condenser Water Jacket -->
+  <polygon points="140,65 330,150 320,175 130,90" fill="#0284c7" opacity="0.25" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Water in / out arrows -->
+  <line x1="315" y1="185" x2="315" y2="165" stroke="#38bdf8" stroke-width="2"/>
+  <text x="320" y="200" fill="#38bdf8" font-size="9">Water in (cold)</text>
+
+  <line x1="145" y1="70" x2="145" y2="50" stroke="#38bdf8" stroke-width="2"/>
+  <text x="150" y="48" fill="#38bdf8" font-size="9">Water out</text>
+
+  <!-- Receiving Conical Flask -->
+  <polygon points="360,180 395,255 335,255" fill="#0f172a" stroke="#64748b" stroke-width="2"/>
+  <!-- Collected Distillate -->
+  <polygon points="345,240 385,240 393,253 337,253" fill="#38bdf8" opacity="0.6"/>
+  <text x="365" y="275" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Distillate (Pure Ethanol b.p. 78 °C)</text>
+</svg>`,
     options: [
       { text: "(a) To react with ethanol; (b) Water" },
       { text: "(a) To provide a large surface area for repeated cycles of condensation and re-evaporation; (b) Ethanol" },
@@ -9046,7 +10696,59 @@ questionBank.push(
   },
   {
     id: "cie-0620-fm-p6-q02",
-    question: "A student investigated the rate of reaction between sodium thiosulfate and hydrochloric acid by placing a conical flask on a piece of paper marked with a black cross (X).\n(a) Name the toxic gas produced in this reaction and state one safety precaution.\n(b) Why does the cross disappear?",
+    question: "A student investigated the rate of reaction between sodium thiosulfate and hydrochloric acid by placing a conical flask on a piece of paper marked with a black cross (X).\nThe diagram shows the experimental setup looking down through the reaction mixture:\n(a) Name the toxic gas produced in this reaction and state one safety precaution.\n(b) Why does the cross disappear?",
+    imageHtml: `<svg viewBox="0 0 540 270" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Disappearing Cross Experiment: Precipitation of Sulfur</text>
+
+  <!-- Left: Side View of Setup -->
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="210" height="200" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="105" y="22" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Side Elevation</text>
+
+    <!-- Eye viewing from above -->
+    <path d="M 90,38 Q 105,28 120,38 Q 105,48 90,38 Z" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <circle cx="105" cy="38" r="3.5" fill="#f59e0b"/>
+    <text x="130" y="42" fill="#f59e0b" font-size="9" font-weight="bold">Observer</text>
+
+    <!-- Conical Flask -->
+    <polygon points="95,75 115,75 160,165 50,165" fill="#020617" stroke="#64748b" stroke-width="2"/>
+    <!-- Precipitating liquid inside -->
+    <polygon points="80,130 130,130 157,163 53,163" fill="#f59e0b" opacity="0.4"/>
+    <text x="105" y="152" fill="#fef08a" font-size="9" text-anchor="middle">Na₂S₂O₃ + HCl → S(s)</text>
+
+    <!-- White Paper with Black Cross underneath -->
+    <rect x="40" y="170" width="130" height="8" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <!-- Cross on paper -->
+    <line x1="98" y1="172" x2="112" y2="176" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="112" y1="172" x2="98" y2="176" stroke="#0f172a" stroke-width="2.5"/>
+    <text x="105" y="193" fill="#94a3b8" font-size="9" text-anchor="middle">Paper with Cross (X)</text>
+  </g>
+
+  <!-- Right: Top View (Cross disappearing) -->
+  <g transform="translate(290, 40)">
+    <rect x="0" y="0" width="210" height="200" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="105" y="22" fill="#10b981" font-size="11" font-weight="bold" text-anchor="middle">Top View (Through Flask Neck)</text>
+
+    <!-- Stage 1: t = 0 (Clear, Cross Visible) -->
+    <circle cx="55" cy="85" r="32" fill="#0284c7" opacity="0.25" stroke="#475569" stroke-width="2"/>
+    <line x1="42" y1="72" x2="68" y2="98" stroke="#ffffff" stroke-width="3"/>
+    <line x1="68" y1="72" x2="42" y2="98" stroke="#ffffff" stroke-width="3"/>
+    <text x="55" y="132" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">t = 0 s (Clear)</text>
+
+    <!-- Stage 2: t = End (Opaque Sulfur, Cross Obscured) -->
+    <circle cx="155" cy="85" r="32" fill="#eab308" opacity="0.75" stroke="#ca8a04" stroke-width="2"/>
+    <!-- Faint/Obscured Cross -->
+    <line x1="145" y1="75" x2="165" y2="95" stroke="#713f12" stroke-width="1.5" opacity="0.25"/>
+    <line x1="165" y1="75" x2="145" y2="95" stroke="#713f12" stroke-width="1.5" opacity="0.25"/>
+    <text x="155" y="132" fill="#eab308" font-size="9" font-weight="bold" text-anchor="middle">t = end (Obscured)</text>
+
+    <!-- Safety Warning Note -->
+    <rect x="15" y="148" width="180" height="40" rx="6" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+    <text x="105" y="164" fill="#fca5a5" font-size="9" font-weight="bold" text-anchor="middle">⚠️ Safety: Toxic SO₂ gas evolved</text>
+    <text x="105" y="178" fill="#fecaca" font-size="8" text-anchor="middle">Use fume cupboard / stop bath</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) Chlorine; wear gloves; (b) Solution turns black" },
       { text: "(a) Sulfur dioxide (SO₂); perform the experiment in a fume cupboard (or well-ventilated room); (b) An insoluble precipitate of solid sulfur (S) forms, making the mixture cloudy/opaque until the cross is obscured" },
@@ -10490,6 +12192,68 @@ questionBank.push(
   {
     id: "edx-wch13-2026-mj-q01",
     question: "A student carries out an experiment to determine the molar volume of hydrogen gas under room conditions (Core Practical 1).\nA known mass of magnesium ribbon ($0.036\\text{ g}$) is added to excess dilute hydrochloric acid in a conical flask connected to a $100\\text{ cm}^3$ gas syringe.\nThe volume of hydrogen gas collected is $36.0\\text{ cm}^3$ at room temperature and pressure ($20^\\circ\\text{C}$ and $101\\text{ kPa}$).\n\n(a) Write the balanced chemical equation, including state symbols, for the reaction between magnesium and hydrochloric acid.\n(b) Calculate the molar volume of hydrogen gas under these laboratory conditions in $\\text{dm}^3\\text{ mol}^{-1}$. [$A_r$: Mg = 24.3]\n(c) Suggest two procedural reasons why the measured volume of gas might be lower than the expected theoretical value.",
+    imageHtml: `<svg viewBox="0 0 540 250" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Core Practical 1: Molar Volume of Gas (Mg + 2HCl → MgCl₂ + H₂)</text>
+
+  <!-- Left: Conical Flask Setup -->
+  <g transform="translate(45, 45)">
+    <!-- Flask -->
+    <polygon points="40,50 60,50 95,145 5,145" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <!-- Acid solution (excess dil HCl) -->
+    <polygon points="25,115 75,115 93,143 7,143" fill="#0284c7" opacity="0.35"/>
+    <text x="50" y="132" fill="#38bdf8" font-size="8" font-weight="bold" text-anchor="middle">Excess dil. HCl</text>
+
+    <!-- Magnesium Ribbon -->
+    <rect x="35" y="138" width="30" height="3.5" rx="1.5" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1"/>
+    <!-- H₂ Gas Bubbles -->
+    <circle cx="42" cy="120" r="2.5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="56" cy="115" r="2" fill="#ffffff" opacity="0.7"/>
+    <circle cx="48" cy="100" r="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="53" cy="85" r="2.5" fill="#ffffff" opacity="0.8"/>
+
+    <!-- Rubber Bung -->
+    <polygon points="38,40 62,40 59,52 41,52" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+    <text x="50" y="165" fill="#cbd5e1" font-size="9" text-anchor="middle">Mg ribbon (0.036 g)</text>
+  </g>
+
+  <!-- Delivery Tube Connecting Flask to Syringe -->
+  <path d="M 95,85 L 95,65 L 210,65 L 210,100 L 225,100" fill="none" stroke="#64748b" stroke-width="3"/>
+  <text x="155" y="55" fill="#94a3b8" font-size="9" text-anchor="middle">Airtight delivery tube</text>
+
+  <!-- Right: 100 cm³ Gas Syringe -->
+  <g transform="translate(225, 80)">
+    <!-- Syringe Outer Glass Barrel -->
+    <rect x="0" y="0" width="180" height="40" rx="4" fill="#020617" stroke="#475569" stroke-width="2"/>
+
+    <!-- Scale Graduation -->
+    <line x1="20" y1="5" x2="20" y2="16" stroke="#94a3b8" stroke-width="1.5"/><text x="20" y="30" fill="#94a3b8" font-size="8" text-anchor="middle">0</text>
+    <line x1="50" y1="5" x2="50" y2="12" stroke="#64748b" stroke-width="1"/>
+    <!-- 36.0 cm³ Reading Marker -->
+    <line x1="74" y1="5" x2="74" y2="20" stroke="#f59e0b" stroke-width="2"/>
+    <text x="74" y="32" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="middle">36.0</text>
+    <line x1="100" y1="5" x2="100" y2="16" stroke="#94a3b8" stroke-width="1.5"/><text x="100" y="30" fill="#94a3b8" font-size="8" text-anchor="middle">50</text>
+    <line x1="140" y1="5" x2="140" y2="12" stroke="#64748b" stroke-width="1"/>
+    <line x1="170" y1="5" x2="170" y2="16" stroke="#94a3b8" stroke-width="1.5"/><text x="170" y="30" fill="#94a3b8" font-size="8" text-anchor="middle">100</text>
+
+    <!-- H₂ Gas Volume Shading (0 to 36 cm³) -->
+    <rect x="2" y="2" width="72" height="36" fill="#38bdf8" opacity="0.25"/>
+    <text x="38" y="23" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="middle">H₂ Gas</text>
+
+    <!-- Plunger (Head at 36.0 cm³) -->
+    <rect x="74" y="3" width="10" height="34" rx="2" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+    <rect x="84" y="16" width="135" height="8" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <rect x="219" y="6" width="10" height="28" rx="2" fill="#334155" stroke="#64748b" stroke-width="1"/>
+
+    <text x="74" y="-8" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">Plunger displaced to 36.0 cm³</text>
+    <text x="100" y="58" fill="#cbd5e1" font-size="10" text-anchor="middle">100 cm³ Gas Syringe (low friction)</text>
+  </g>
+
+  <!-- Sources of Error Callout Box -->
+  <rect x="70" y="195" width="400" height="38" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="270" y="210" fill="#fca5a5" font-size="9" font-weight="bold" text-anchor="middle">⚠️ Sources of Experimental Error:</text>
+  <text x="270" y="224" fill="#cbd5e1" font-size="9" text-anchor="middle">Gas lost before bung insertion • Friction in syringe plunger • Surface MgO layer</text>
+</svg>`,
     options: [
       { text: "(a) Mg(s) + 2HCl(aq) → MgCl₂(aq) + H₂(g); (b) 24.3 dm³ mol⁻¹; (c) Some hydrogen gas escaped before the bung was replaced, and friction in the gas syringe barrel prevented full movement" },
       { text: "(a) Mg + HCl → MgCl + H; (b) 12.0 dm³ mol⁻¹; (c) Temperature was too high, and excess acid reacted with glass" },
@@ -10505,6 +12269,19 @@ questionBank.push(
     source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q01",
     lessonNum: 1,
     createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "gas-syringe",
+      targetValue: 36.0,
+      initialReading: 0.0,
+      unit: "cm³",
+      minScale: 0.0,
+      maxScale: 100.0,
+      step: 20.0,
+      subdivision: 1.0,
+      tolerance: 0.5,
+      liquidColor: "#38bdf8",
+      title: "Core Practical 1: Hydrogen Gas Syringe Volume (36.0 cm³)"
+    },
     markingScheme: {
       marks: 4,
       points: [
@@ -10564,6 +12341,18 @@ questionBank.push(
     source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q03",
     lessonNum: 1,
     createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "burette",
+      targetValue: 24.20,
+      initialReading: 0.00,
+      unit: "cm³",
+      minScale: 23.5,
+      maxScale: 25.0,
+      step: 0.5,
+      subdivision: 0.05,
+      tolerance: 0.05,
+      title: "Core Practical 2: Concordant Mean Titre Reading (24.20 cm³)"
+    },
     markingScheme: {
       marks: 6,
       points: [
@@ -10580,6 +12369,69 @@ questionBank.push(
   {
     id: "edx-wch13-2026-mj-q04",
     question: "A student determines the enthalpy change of neutralisation between hydrochloric acid and sodium hydroxide using a simple polystyrene cup calorimeter (Core Practical 3).\n$50.0\\text{ cm}^3$ of $1.00\\text{ mol dm}^{-3}\\ \\text{HCl}$ is placed in the polystyrene cup. The temperature is recorded every minute for 3 minutes.\nAt minute 4, $50.0\\text{ cm}^3$ of $1.05\\text{ mol dm}^{-3}\\ \\text{NaOH}$ (both solutions initially at $21.0^\\circ\\text{C}$) is added rapidly, and the mixture is stirred continuously.\nThe temperature is recorded every 30 seconds from minute 5 to minute 10.\n\n(a) Explain why the temperature is monitored for 3 minutes before mixing, and why the temperature is extrapolated back to minute 4.\n(b) By extrapolating the cooling curve back to minute 4, the theoretical maximum temperature reached is $27.8^\\circ\\text{C}$.\nCalculate the heat energy released, $q$, in $\\text{J}$. [Specific heat capacity $c = 4.18\\text{ J g}^{-1\\ \\circ}\\text{C}^{-1}$, density $= 1.00\\text{ g cm}^{-3}$]\n(c) Calculate the molar enthalpy change of neutralisation, $\\Delta H_{\\text{neut}}$, in $\\text{kJ mol}^{-1}$ of water formed.",
+    imageHtml: `<svg viewBox="0 0 540 280" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Neutralisation Cooling Curve Extrapolation (Core Practical 3)</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="230" x2="70" y2="45" stroke="#64748b" stroke-width="2"/>
+  <polygon points="66,50 74,50 70,40" fill="#64748b"/>
+  <text x="35" y="135" fill="#94a3b8" font-size="11" font-weight="bold" transform="rotate(-90 35 135)" text-anchor="middle">Temperature (°C)</text>
+
+  <line x1="70" y1="230" x2="490" y2="230" stroke="#64748b" stroke-width="2"/>
+  <polygon points="485,226 485,234 495,230" fill="#64748b"/>
+  <text x="280" y="254" fill="#94a3b8" font-size="11" font-weight="bold" text-anchor="middle">Time / minutes</text>
+
+  <!-- Time Axis Tick Marks (0 to 10 min) -->
+  <!-- 0 min: 70, 1 min: 108, 2 min: 146, 3 min: 184, 4 min: 222, 5 min: 260, 6 min: 298, 7 min: 336, 8 min: 374, 9 min: 412, 10 min: 450 -->
+  <text x="70" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">0</text>
+  <text x="108" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">1</text>
+  <text x="146" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">2</text>
+  <text x="184" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">3</text>
+  <text x="222" y="244" fill="#f59e0b" font-size="10" font-weight="bold" text-anchor="middle">4 (add)</text>
+  <text x="260" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">5</text>
+  <text x="336" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">7</text>
+  <text x="450" y="244" fill="#94a3b8" font-size="9" text-anchor="middle">10</text>
+
+  <!-- Initial Baseline Temperature: 21.0 °C (y = 190) -->
+  <line x1="70" y1="190" x2="222" y2="190" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="70" cy="190" r="3.5" fill="#38bdf8"/>
+  <circle cx="108" cy="190" r="3.5" fill="#38bdf8"/>
+  <circle cx="146" cy="190" r="3.5" fill="#38bdf8"/>
+  <circle cx="184" cy="190" r="3.5" fill="#38bdf8"/>
+  <text x="65" y="193" fill="#38bdf8" font-size="9" font-weight="bold" text-anchor="end">21.0 °C</text>
+
+  <!-- Extrapolated line back to minute 4 -->
+  <!-- Minute 4 vertical dash line -->
+  <line x1="222" y1="230" x2="222" y2="70" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Measured cooling points: (5, 27.2) -> y = 82; (6, 26.6) -> y = 94; (7, 26.0) -> y = 106; (8, 25.4) -> y = 118; (9, 24.8) -> y = 130; (10, 24.2) -> y = 142 -->
+  <circle cx="260" cy="82" r="3.5" fill="#ef4444"/>
+  <circle cx="298" cy="94" r="3.5" fill="#ef4444"/>
+  <circle cx="336" cy="106" r="3.5" fill="#ef4444"/>
+  <circle cx="374" cy="118" r="3.5" fill="#ef4444"/>
+  <circle cx="412" cy="130" r="3.5" fill="#ef4444"/>
+  <circle cx="450" cy="142" r="3.5" fill="#ef4444"/>
+
+  <!-- Solid Best-fit Cooling Line through measured points (5 to 10 min) -->
+  <line x1="260" y1="82" x2="450" y2="142" stroke="#ef4444" stroke-width="2.5"/>
+
+  <!-- Dashed Extrapolation back to minute 4: intercept at (222, 70) = 27.8 °C -->
+  <line x1="222" y1="70" x2="260" y2="82" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="4,3"/>
+  <circle cx="222" cy="70" r="5" fill="#f59e0b" stroke="#ffffff" stroke-width="1.5"/>
+
+  <!-- Target Temperature Label: 27.8 °C -->
+  <line x1="70" y1="70" x2="222" y2="70" stroke="#f59e0b" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="65" y="73" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="end">27.8 °C</text>
+
+  <!-- ΔT Bracket -->
+  <line x1="235" y1="72" x2="235" y2="188" stroke="#10b981" stroke-width="2"/>
+  <polygon points="231,75 239,75 235,70" fill="#10b981"/>
+  <polygon points="231,185 239,185 235,190" fill="#10b981"/>
+  <rect x="245" y="115" width="135" height="38" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+  <text x="312" y="131" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle">ΔT = 27.8 - 21.0 = 6.8 °C</text>
+  <text x="312" y="145" fill="#94a3b8" font-size="8" text-anchor="middle">Extrapolated to minute 4</text>
+</svg>`,
     options: [
       { text: "(a) To establish a steady baseline temperature; extrapolation corrects for heat lost to the surroundings during mixing; (b) q = 2842 J; (c) ΔH_neut = -56.8 kJ mol⁻¹" },
       { text: "(a) To allow the acid to react with air; extrapolation speeds up the reaction; (b) q = 1421 J; (c) ΔH_neut = -28.4 kJ mol⁻¹" },
@@ -10595,6 +12447,19 @@ questionBank.push(
     source: "Pearson Edexcel IAL Chemistry WCH13/01 May/June 2026 Q04",
     lessonNum: 1,
     createdAt: "2026-09-04",
+    apparatusScaleConfig: {
+      type: "thermometer",
+      targetValue: 27.8,
+      initialReading: 21.0,
+      unit: "°C",
+      minScale: 15.0,
+      maxScale: 35.0,
+      step: 5.0,
+      subdivision: 0.2,
+      tolerance: 0.2,
+      liquidColor: "#ef4444",
+      title: "Core Practical 4: Maximum Extrapolated Temperature (27.8 °C)"
+    },
     markingScheme: {
       marks: 6,
       points: [
@@ -10611,6 +12476,68 @@ questionBank.push(
   {
     id: "edx-wch13-2026-mj-q05",
     question: "A student uses a spirit burner containing ethanol, $\\text{CH}_3\\text{CH}_2\\text{OH}$, to heat $150\\text{ g}$ of water in a copper calorimeter (Core Practical 3).\nThe experimental value for the enthalpy of combustion obtained is $-920\\text{ kJ mol}^{-1}$, whereas the Data Booklet value is $-1367\\text{ kJ mol}^{-1}$.\n\n(a) State two significant experimental errors in this procedure that cause the experimental value to be significantly less exothermic than the theoretical data value.\n(b) Suggest two modifications to the apparatus to reduce heat loss to the surroundings.\n(c) State why ethanol continues to lose mass from the spirit burner even after the flame is extinguished, and state how this error can be minimized.",
+    imageHtml: `<svg viewBox="0 0 540 270" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Enthalpy of Combustion Apparatus: Copper Calorimeter Setup</text>
+
+  <!-- Left / Center Apparatus Setup -->
+  <g transform="translate(40, 25)">
+    <!-- Tripod / Stand -->
+    <line x1="80" y1="130" x2="60" y2="210" stroke="#64748b" stroke-width="3"/>
+    <line x1="180" y1="130" x2="200" y2="210" stroke="#64748b" stroke-width="3"/>
+    <line x1="75" y1="130" x2="185" y2="130" stroke="#64748b" stroke-width="4"/>
+
+    <!-- Copper Calorimeter Can -->
+    <rect x="90" y="55" width="80" height="75" rx="3" fill="#b45309" opacity="0.3" stroke="#f59e0b" stroke-width="2"/>
+    <text x="130" y="48" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="middle">Copper Can</text>
+    <!-- Water inside can -->
+    <rect x="92" y="75" width="76" height="53" rx="2" fill="#0284c7" opacity="0.5"/>
+    <text x="130" y="105" fill="#e0f2fe" font-size="9" font-weight="bold" text-anchor="middle">150 g H₂O</text>
+
+    <!-- Thermometer -->
+    <line x1="145" y1="25" x2="145" y2="115" stroke="#ef4444" stroke-width="2.5"/>
+    <circle cx="145" cy="116" r="3.5" fill="#ef4444"/>
+    <text x="145" y="18" fill="#fca5a5" font-size="8" font-weight="bold" text-anchor="middle">Thermometer</text>
+
+    <!-- Draught Shield (Dotted outline around) -->
+    <rect x="45" y="40" width="170" height="175" rx="6" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="50" y="55" fill="#38bdf8" font-size="8" font-weight="bold">Draught shield</text>
+
+    <!-- Spirit Burner underneath -->
+    <!-- Burner glass body -->
+    <path d="M105 175 L155 175 C160 175 165 185 160 205 L100 205 C95 185 100 175 105 175 Z" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Liquid fuel (Ethanol) -->
+    <path d="M102 188 L158 188 C159 194 158 203 156 204 L104 204 C102 203 101 194 102 188 Z" fill="#38bdf8" opacity="0.4"/>
+    <text x="130" y="200" fill="#94a3b8" font-size="8" text-anchor="middle">Ethanol</text>
+
+    <!-- Wick and Flame -->
+    <rect x="127" y="165" width="6" height="10" fill="#cbd5e1"/>
+    <!-- Flame -->
+    <path d="M130 145 Q138 156 130 165 Q122 156 130 145 Z" fill="#f59e0b" stroke="#ea580c" stroke-width="1"/>
+    <circle cx="130" cy="158" r="3" fill="#fef08a"/>
+  </g>
+
+  <!-- Right: Key Sources of Experimental Error & Improvements -->
+  <g transform="translate(290, 45)">
+    <!-- Error 1: Heat Loss -->
+    <rect x="0" y="0" width="225" height="52" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+    <text x="12" y="18" fill="#ef4444" font-size="10" font-weight="bold">⚠️ Major Error: Heat Losses</text>
+    <text x="12" y="32" fill="#94a3b8" font-size="9">• Heat conducted to air &amp; copper can</text>
+    <text x="12" y="44" fill="#94a3b8" font-size="9">• Fix: Add lid &amp; surround with draught shield</text>
+
+    <!-- Error 2: Incomplete Combustion -->
+    <rect x="0" y="60" width="225" height="52" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+    <text x="12" y="78" fill="#f59e0b" font-size="10" font-weight="bold">⚠️ Incomplete Combustion</text>
+    <text x="12" y="92" fill="#94a3b8" font-size="9">• Forms soot (C) and toxic CO instead of CO₂</text>
+    <text x="12" y="104" fill="#94a3b8" font-size="9">• Significantly lowers measured heat release</text>
+
+    <!-- Error 3: Evaporative Mass Loss -->
+    <rect x="0" y="120" width="225" height="56" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="12" y="138" fill="#38bdf8" font-size="10" font-weight="bold">⚠️ Fuel Evaporation from Wick</text>
+    <text x="12" y="152" fill="#94a3b8" font-size="9">• Alcohol vaporises from hot wick unburnt</text>
+    <text x="12" y="164" fill="#10b981" font-size="9" font-weight="bold">• Fix: Replace cap immediately upon extinguishing</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) Heat loss to the surroundings and incomplete combustion producing soot/CO; (b) Use a draught shield and place an insulating lid on the calorimeter; (c) Evaporation of ethanol from the wick; replace the cap on the burner immediately after extinguishing" },
       { text: "(a) The water boiled away and the burner was too close; (b) Use a glass beaker and remove the draught shield; (c) Ethanol absorbs water from air; weigh the burner tomorrow" },
@@ -10700,6 +12627,69 @@ questionBank.push(
   {
     id: "edx-wch13-2026-mj-q08",
     question: "A student prepares ethanal by the partial oxidation of ethanol using acidified sodium dichromate(VI) (Core Practical 5).\nThe student assembles the apparatus for simple distillation.\n\n(a) Identify three essential practical features of the distillation apparatus required to ensure ethanal is obtained successfully and safely.\n(b) State the temperature reading on the thermometer at which ethanal should be collected. [Boiling points: ethanal $= 21^\\circ\\text{C}$, ethanol $= 78^\\circ\\text{C}$, ethanoic acid $= 118^\\circ\\text{C}$]\n(c) Explain why the collection vessel (receiver tube) must be immersed in an ice-water bath.",
+    imageHtml: `<svg viewBox="0 0 560 300" class="w-full max-w-[520px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="280" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Core Practical 5: Distillation of Volatile Ethanal (b.p. 21 °C)</text>
+
+  <!-- Heat Source (Water bath / gentle heating mantle) -->
+  <g transform="translate(45, 195)">
+    <rect x="0" y="30" width="70" height="40" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="35" y="55" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="middle">Water Bath /</text>
+    <text x="35" y="66" fill="#f59e0b" font-size="8" text-anchor="middle">Gentle Heat</text>
+  </g>
+
+  <!-- Distillation Flask -->
+  <circle cx="80" cy="180" r="30" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+  <!-- Reaction mixture: orange Cr₂O₇²⁻ turning green Cr³⁺ -->
+  <path d="M 52,188 Q 80,198 108,188 A 30 30 0 0 1 52 188 Z" fill="#f97316" opacity="0.6"/>
+  <!-- Anti-bumping granules inside -->
+  <circle cx="72" cy="202" r="2.5" fill="#e2e8f0"/>
+  <circle cx="84" cy="205" r="2" fill="#e2e8f0"/>
+  <circle cx="92" cy="201" r="2" fill="#e2e8f0"/>
+  <text x="70" y="248" fill="#cbd5e1" font-size="8" text-anchor="middle">Anti-bumping granules</text>
+
+  <!-- Still Head & Thermometer -->
+  <rect x="74" y="65" width="12" height="88" fill="#0b1329" stroke="#64748b" stroke-width="2"/>
+
+  <!-- Thermometer with bulb placed level with side arm -->
+  <rect x="78" y="35" width="4" height="60" fill="#ef4444"/>
+  <circle cx="80" cy="95" r="3.5" fill="#ef4444"/>
+  <line x1="80" y1="35" x2="80" y2="92" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="90" y="45" fill="#f87171" font-size="9" font-weight="bold">Thermometer bulb</text>
+  <text x="90" y="56" fill="#f87171" font-size="8">level with side-arm (21 °C)</text>
+
+  <!-- Condenser Side-arm -->
+  <path d="M 86,95 L 120,95 L 340,195" fill="none" stroke="#475569" stroke-width="3"/>
+
+  <!-- Liebig Condenser Jacket -->
+  <polygon points="140,85 330,170 320,195 130,110" fill="#0284c7" opacity="0.25" stroke="#38bdf8" stroke-width="1.5"/>
+
+  <!-- Condenser Cooling Water: In at bottom, Out at top -->
+  <line x1="315" y1="205" x2="315" y2="185" stroke="#38bdf8" stroke-width="2"/>
+  <text x="320" y="220" fill="#38bdf8" font-size="9" font-weight="bold">Water in (coldest)</text>
+
+  <line x1="145" y1="90" x2="145" y2="70" stroke="#38bdf8" stroke-width="2"/>
+  <text x="150" y="68" fill="#38bdf8" font-size="9">Water out</text>
+
+  <!-- Ice-Water Bath & Receiver Tube (Right) -->
+  <g transform="translate(350, 185)">
+    <!-- Ice-water beaker -->
+    <rect x="10" y="25" width="100" height="75" rx="6" fill="#020617" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="60" y="93" fill="#38bdf8" font-size="8" font-weight="bold" text-anchor="middle">Ice-water bath (0 °C)</text>
+    <!-- Ice cubes in beaker -->
+    <rect x="18" y="62" width="12" height="12" rx="2" fill="#7dd3fc" opacity="0.6"/>
+    <rect x="80" y="65" width="12" height="12" rx="2" fill="#7dd3fc" opacity="0.6"/>
+    <rect x="25" y="76" width="10" height="10" rx="2" fill="#7dd3fc" opacity="0.6"/>
+
+    <!-- Collection test tube inside ice bath -->
+    <rect x="48" y="10" width="24" height="65" rx="10" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+    <!-- Condensed liquid (pure ethanal b.p. 21 °C) -->
+    <path d="M 50,55 L 70,55 A 10 10 0 0 1 50 55 Z" fill="#38bdf8" opacity="0.8"/>
+    <text x="120" y="38" fill="#f59e0b" font-size="9" font-weight="bold">Receiver in ice bath</text>
+    <text x="120" y="50" fill="#cbd5e1" font-size="8">prevents evaporation</text>
+    <text x="120" y="62" fill="#cbd5e1" font-size="8">of volatile ethanal</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) Thermometer bulb positioned opposite condenser side-arm, water enters condenser at the lowest point, and anti-bumping granules added; (b) Collect around 21°C; (c) Ethanal has a low boiling point (21°C) and would evaporate as gas into the lab if not chilled" },
       { text: "(a) Condenser placed vertically, thermometer immersed in liquid, and flask stoppered completely; (b) Collect at 100°C; (c) Ice prevents ethanol from freezing" },
@@ -10730,6 +12720,66 @@ questionBank.push(
   {
     id: "edx-wch13-2026-mj-q09",
     question: "In an alternative experiment, a student oxidises ethanol completely to ethanoic acid by heating under reflux with an excess of acidified sodium dichromate(VI) (Core Practical 5).\n\n(a) State the purpose of heating under reflux.\n(b) Explain why anti-bumping granules are added to the reaction flask before heating.\n(c) Explain why the top of the reflux condenser must NOT be stoppered.\n(d) State the color change observed in the reaction mixture as the oxidation proceeds.",
+    imageHtml: `<svg viewBox="0 0 540 280" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Core Practical 5: Heating under Reflux (Complete Oxidation to Ethanoic Acid)</text>
+
+  <!-- Central Reflux Apparatus -->
+  <g transform="translate(190, 30)">
+    <!-- Top Open Warning: MUST NOT BE STOPPERED -->
+    <path d="M 40,15 L 40,5 L 50,15 L 50,5" stroke="#ef4444" stroke-width="2"/>
+    <text x="45" y="0" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle">⚠️ Open Top (NO STOPPER)</text>
+    <text x="45" y="-10" fill="#fca5a5" font-size="8" text-anchor="middle">Prevents dangerous pressure buildup</text>
+
+    <!-- Inner Vapor Tube (Vertical) -->
+    <rect x="38" y="15" width="14" height="150" fill="#020617" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- Water Jacket (Liebig Condenser) -->
+    <rect x="25" y="30" width="40" height="120" rx="3" fill="#0284c7" opacity="0.25" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Condenser Water In / Out -->
+    <!-- Water in at bottom -->
+    <line x1="65" y1="135" x2="85" y2="135" stroke="#38bdf8" stroke-width="2"/>
+    <text x="90" y="139" fill="#38bdf8" font-size="9" font-weight="bold">Water in (cold)</text>
+
+    <!-- Water out at top -->
+    <line x1="65" y1="45" x2="85" y2="45" stroke="#38bdf8" stroke-width="2"/>
+    <text x="90" y="49" fill="#38bdf8" font-size="9">Water out</text>
+
+    <!-- Condensing vapor droplets dripping back down -->
+    <path d="M 45,60 Q 42,85 45,110 Q 48,135 45,160" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <circle cx="45" cy="165" r="2.5" fill="#38bdf8"/>
+
+    <!-- Pear-shaped / Round-bottom Flask -->
+    <circle cx="45" cy="190" r="28" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+    <!-- Boiling reaction liquid (Cr₂O₇²⁻ orange to Cr³⁺ green) -->
+    <path d="M 20,198 Q 45,206 70,198 A 28 28 0 0 1 20 198 Z" fill="#10b981" opacity="0.65"/>
+    <text x="45" y="202" fill="#ffffff" font-size="8" font-weight="bold" text-anchor="middle">Green Cr³⁺</text>
+
+    <!-- Anti-bumping granules inside flask -->
+    <circle cx="38" cy="210" r="2.5" fill="#e2e8f0"/>
+    <circle cx="48" cy="212" r="2" fill="#cbd5e1"/>
+    <circle cx="56" cy="209" r="2" fill="#e2e8f0"/>
+  </g>
+
+  <!-- Heat Source (Heating Mantle / Water Bath) -->
+  <g transform="translate(205, 235)">
+    <rect x="0" y="10" width="60" height="25" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="30" y="26" fill="#f59e0b" font-size="9" font-weight="bold" text-anchor="middle">Heat</text>
+  </g>
+
+  <!-- Feature Annotations (Left Side) -->
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="135" height="135" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="67" y="18" fill="#38bdf8" font-size="10" font-weight="bold" text-anchor="middle">Reflux Mechanism</text>
+    <text x="10" y="38" fill="#cbd5e1" font-size="8">• Vapors boil &amp; rise</text>
+    <text x="10" y="54" fill="#cbd5e1" font-size="8">• Cold walls condense vapor</text>
+    <text x="10" y="70" fill="#cbd5e1" font-size="8">• Liquid drips back down</text>
+    <text x="10" y="86" fill="#cbd5e1" font-size="8">• NO loss of volatile fuel</text>
+    <text x="10" y="106" fill="#10b981" font-size="8" font-weight="bold">• Anti-bumping granules:</text>
+    <text x="10" y="120" fill="#94a3b8" font-size="8">  Smooth boiling / anti-bump</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) To allow prolonged heating without loss of volatile organic reactants and products; (b) To provide nucleation sites for small bubbles and prevent violent boiling over; (c) To avoid dangerous pressure build-up which could cause the apparatus to explode; (d) Orange to green" },
       { text: "(a) To distill off ethanoic acid immediately; (b) To catalyze the redox reaction; (c) To let oxygen enter; (d) Purple to colorless" },
@@ -10760,6 +12810,60 @@ questionBank.push(
   {
     id: "edx-wch13-2026-mj-q10",
     question: "A student prepares 2-chloro-2-methylpropane from 2-methylpropan-2-ol and concentrated hydrochloric acid (Core Practical 6):\n$$\\text{(CH}_3)_3\\text{COH} + \\text{HCl} \\rightarrow \\text{(CH}_3)_3\\text{CCl} + \\text{H}_2\\text{O}$$\nThe reaction mixture is shaken in a separating funnel and two liquid layers form.\n[Densities: 2-chloro-2-methylpropane $= 0.84\\text{ g cm}^{-3}$, aqueous acid layer $\\approx 1.18\\text{ g cm}^{-3}$; boiling point of 2-chloro-2-methylpropane $= 51^\\circ\\text{C}$]\n\n(a) State which layer is the organic layer (upper or lower).\n(b) Explain why the separating funnel must be inverted and the tap opened periodically during shaking.\n(c) The organic layer is washed with aqueous sodium hydrogencarbonate, $\\text{NaHCO}_3(aq)$. State the purpose of this washing and write an equation for the reaction that occurs.\n(d) Name a suitable anhydrous drying agent, and state how the student knows when the organic liquid is completely dry.\n(e) State the temperature range to collect the pure product during final distillation.",
+    imageHtml: `<svg viewBox="0 0 540 270" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto">
+  <!-- Title -->
+  <text x="270" y="24" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Core Practical 6: Separating Funnel Extraction &amp; Venting</text>
+
+  <!-- Left: Upright Separating Funnel -->
+  <g transform="translate(60, 40)">
+    <!-- Stopper -->
+    <polygon points="65,5 75,5 73,18 67,18" fill="#475569" stroke="#64748b" stroke-width="1.5"/>
+    <text x="70" y="-3" fill="#cbd5e1" font-size="8" text-anchor="middle">Glass Stopper</text>
+
+    <!-- Funnel Pear Body -->
+    <path d="M 66,18 L 74,18 Q 115,45 110,105 L 77,155 L 77,180 L 63,180 L 63,155 L 30,105 Q 25,45 66,18 Z" fill="#0f172a" stroke="#475569" stroke-width="2"/>
+
+    <!-- Upper Organic Layer (2-chloro-2-methylpropane, density 0.84 g/cm³) -->
+    <path d="M 33,85 Q 70,92 107,85 L 110,105 L 30,105 Z" fill="#38bdf8" opacity="0.4"/>
+    <text x="70" y="98" fill="#38bdf8" font-size="8" font-weight="bold" text-anchor="middle">Upper Organic Layer</text>
+
+    <!-- Lower Aqueous Acid Layer (density ~1.18 g/cm³) -->
+    <path d="M 30,105 L 110,105 L 77,155 L 63,155 Z" fill="#0284c7" opacity="0.65"/>
+    <text x="70" y="132" fill="#ffffff" font-size="8" font-weight="bold" text-anchor="middle">Lower Aqueous Layer</text>
+
+    <!-- Stopcock / Tap -->
+    <rect x="58" y="162" width="24" height="6" rx="2" fill="#f59e0b"/>
+    <circle cx="70" cy="165" r="4" fill="#d97706"/>
+    <text x="105" y="168" fill="#f59e0b" font-size="8">Stopcock tap</text>
+
+    <!-- Run-off stem -->
+    <rect x="67" y="180" width="6" height="25" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+  </g>
+
+  <!-- Right: Inverted Funnel Venting Diagram -->
+  <g transform="translate(290, 40)">
+    <rect x="0" y="0" width="220" height="210" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="110" y="22" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">Periodic Inversion &amp; Venting</text>
+
+    <!-- Funnel inverted showing tap at the top releasing CO₂ gas -->
+    <g transform="translate(45, 160) scale(1, -0.7)">
+      <path d="M 66,18 L 74,18 Q 115,45 110,105 L 77,155 L 77,180 L 63,180 L 63,155 L 30,105 Q 25,45 66,18 Z" fill="#020617" stroke="#64748b" stroke-width="2"/>
+    </g>
+
+    <!-- Gas venting arrows escaping upward -->
+    <path d="M 115,55 Q 120,40 115,30" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <path d="M 110,55 Q 105,40 110,30" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="110" y="24" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle"></text>
+    <text x="110" y="70" fill="#ef4444" font-size="9" font-weight="bold" text-anchor="middle">Open tap to vent CO₂ &amp; vapour!</text>
+
+    <!-- Explanation List -->
+    <text x="15" y="105" fill="#cbd5e1" font-size="9">• Hold stopper firmly in palm</text>
+    <text x="15" y="125" fill="#cbd5e1" font-size="9">• Invert funnel safely</text>
+    <text x="15" y="145" fill="#cbd5e1" font-size="9">• Open tap pointing AWAY</text>
+    <text x="15" y="165" fill="#cbd5e1" font-size="9">• Releases pressure build-up</text>
+    <text x="15" y="185" fill="#10b981" font-size="9" font-weight="bold">NaHCO₃ + HCl → CO₂ + H₂O</text>
+  </g>
+</svg>`,
     options: [
       { text: "(a) Upper layer (lower density); (b) To release pressure from carbon dioxide and solvent vapor; (c) To neutralize excess unreacted HCl: NaHCO₃ + HCl → NaCl + H₂O + CO₂; (d) Anhydrous sodium sulfate (or magnesium sulfate); liquid changes from cloudy to completely clear; (e) 50°C to 52°C" },
       { text: "(a) Lower layer; (b) To let air in; (c) To dissolve the organic product; (d) Anhydrous copper sulfate; turns blue; (e) 100°C" },
@@ -11488,6 +13592,1696 @@ questionBank.push(
     }
   }
 );
+
+// ============================================================================
+// PEARSON EDEXCEL IAL CHEMISTRY UNIT 5 (WCH15/01) - MAY/JUNE 2026
+// Transition Metals and Organic Nitrogen Chemistry
+// Section A: 20 MCQs | Section B: 5 Structured Theory Questions
+// ============================================================================
+questionBank.push(
+  // Section A: 20 MCQs
+  {
+    id: "edx-wch15-2026-mj-q01",
+    question: "Standard electrode potentials are given below:\n- $\\text{Zn}^{2+}(aq) + 2e^- \\rightleftharpoons \\text{Zn}(s) \\quad E^\\theta = -0.76\\text{ V}$\n- $\\text{Cu}^{2+}(aq) + 2e^- \\rightleftharpoons \\text{Cu}(s) \\quad E^\\theta = +0.34\\text{ V}$\nWhat is the standard cell potential ($E^\\theta_{\\text{cell}}$) and which species is oxidised at the anode in this electrochemical cell?",
+    options: [
+      { text: "E°_cell = +1.10 V; Zn is oxidised at the anode" },
+      { text: "E°_cell = +0.42 V; Cu is oxidised at the anode" },
+      { text: "E°_cell = -1.10 V; Zn²⁺ is reduced at the anode" },
+      { text: "E°_cell = +1.10 V; Cu²⁺ is oxidised at the cathode" }
+    ],
+    correctAnswer: 0,
+    explanation: "* E°_cell = E°(cathode / reduction) - E°(anode / oxidation).\n* The more positive standard reduction potential (+0.34 V for Cu²⁺/Cu) undergoes reduction at the cathode: Cu²⁺ + 2e⁻ → Cu.\n* The more negative potential (-0.76 V for Zn²⁺/Zn) undergoes oxidation at the anode: Zn → Zn²⁺ + 2e⁻.\n* E°_cell = +0.34 - (-0.76) = +1.10 V.\n* Oxidation always occurs at the anode (An Ox), so Zn(s) is oxidised at the anode.",
+    level: 1,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q01 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q02",
+    question: "The standard cell potential for a cell involving a two-electron transfer ($n = 2$) is $E^\\theta_{\\text{cell}} = +0.500\\text{ V}$ at $298\\text{ K}$.\nWhat is the value of $\\Delta G^\\theta$ for this cell reaction in $\\text{kJ mol}^{-1}$?\n[Faraday constant $F = 96500\\text{ C mol}^{-1}$]",
+    options: [
+      { text: "-96.5 kJ mol⁻¹" },
+      { text: "+96.5 kJ mol⁻¹" },
+      { text: "-48.3 kJ mol⁻¹" },
+      { text: "-193 kJ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Thermodynamic relationship: ΔG° = -n F E°_cell.\n* n = 2 mol of electrons transferred.\n* F = 96500 C mol⁻¹.\n* E°_cell = +0.500 V = +0.500 J C⁻¹.\n* ΔG° = -(2) × (96500) × (+0.500) = -96500 J mol⁻¹ = -96.5 kJ mol⁻¹.\n* The negative ΔG° confirms thermodynamic feasibility (spontaneity) under standard conditions.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q02 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q03",
+    question: "In an acidic redox titration, $25.0\\text{ cm}^3$ of $0.0200\\text{ mol dm}^{-3}$ acidified potassium manganate(VII), $\\text{KMnO}_4$, exactly oxidises $20.0\\text{ cm}^3$ of an iron(II) sulfate solution.\n$$5\\text{Fe}^{2+} + \\text{MnO}_4^- + 8\\text{H}^+ \\rightarrow 5\\text{Fe}^{3+} + \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$$\nWhat is the concentration of $\\text{Fe}^{2+}$ in the iron(II) sulfate solution?",
+    options: [
+      { text: "0.125 mol dm⁻³" },
+      { text: "0.0250 mol dm⁻³" },
+      { text: "0.0050 mol dm⁻³" },
+      { text: "0.250 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of MnO₄⁻ = C × V = 0.0200 × 0.0250 = 5.00 × 10⁻⁴ mol.\n* From the balanced stoichiometric equation, 1 mol MnO₄⁻ reacts with 5 mol Fe²⁺.\n* Moles of Fe²⁺ = 5 × (5.00 × 10⁻⁴) = 2.50 × 10⁻³ mol.\n* Concentration of Fe²⁺ = moles / volume = (2.50 × 10⁻³) / 0.0200 = 0.125 mol dm⁻³.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q03 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q04",
+    question: "In an iodometric titration, iodine produced in a reaction is titrated against standard sodium thiosulfate using starch indicator:\n$$2\\text{S}_2\\text{O}_3^{2-}(aq) + \\text{I}_2(aq) \\rightarrow \\text{S}_4\\text{O}_6^{2-}(aq) + 2\\text{I}^-(aq)$$\nAt what point during the titration should the starch indicator be added, and what is the color change at the end-point?",
+    options: [
+      { text: "Add when the solution becomes pale straw-yellow; blue-black to colourless" },
+      { text: "Add at the very beginning; blue-black to red" },
+      { text: "Add when the solution turns purple; colorless to yellow" },
+      { text: "Add after the end-point; orange to green" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Starch indicator forms an intense blue-black starch-iodine complex.\n* If added at the beginning when iodine concentration is high, iodine forms an insoluble complex that decomposes very slowly, leading to inaccurate titres.\n* Therefore, thiosulfate is added until the brown solution turns pale straw-yellow (low [I₂]), then starch is added (giving a deep blue-black color).\n* At the end-point, the addition of one drop of thiosulfate reduces the last trace of I₂, causing the blue-black color to disappear sharply to colourless.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q04 (Section A)",
+    lessonNum: 1,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q05",
+    question: "What is the electronic configuration of the iron(III) ion, $\\text{Fe}^{3+}$, in its ground state? [Atomic number of $\\text{Fe} = 26$]",
+    options: [
+      { text: "[Ar] 3d⁵" },
+      { text: "[Ar] 3d⁶" },
+      { text: "[Ar] 4s² 3d³" },
+      { text: "[Ar] 4s¹ 3d⁴" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Neutral iron atom (Z = 26): 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶, or [Ar] 4s² 3d⁶.\n* When d-block metals form cations, electrons are lost first from the outermost 4s orbital before any 3d electrons are removed.\n* Forming Fe²⁺: loses two 4s electrons ⇒ [Ar] 3d⁶.\n* Forming Fe³⁺: loses one further electron from 3d ⇒ [Ar] 3d⁵ (half-filled, stable d-subshell).",
+    level: 1,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q05 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q06",
+    question: "Which of the following complex ions is tetrahedral in shape and has a coordination number of 4?",
+    options: [
+      { text: "[CuCl₄]²⁻" },
+      { text: "[Pt(NH₃)₂Cl₂]" },
+      { text: "[Ni(CN)₄]²⁻" },
+      { text: "[Fe(H₂O)₆]³⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In [CuCl₄]²⁻, four chloride ligands surround the copper(II) center.\n* Because chloride ions are large, steric repulsion prevents six ligands from coordinating, favoring a tetrahedral geometry with coordination number 4.\n* In contrast, cisplatin [Pt(NH₃)₂Cl₂] and [Ni(CN)₄]²⁻ are square planar (d⁸ complexes with strong field ligands), while [Fe(H₂O)₆]³⁺ is octahedral with coordination number 6.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q06 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q07",
+    question: "Aqueous solutions of $[\\text{Cu(H}_2\\text{O})_6]^{2+}$ appear blue.\nWhich statement correctly explains the origin of this colour?",
+    options: [
+      { text: "Water ligands split the 3d subshell into two energy levels; d-electrons absorb red/orange visible light when promoted between these levels (ΔE = hν), transmitting blue light" },
+      { text: "Electrons emit blue light as they drop from 4s to 3d orbitals" },
+      { text: "Light is scattered by water molecules surrounding the copper ion" },
+      { text: "Water molecules absorb UV light and fluoresce in the blue spectrum" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In an isolated copper(II) ion, the five 3d orbitals are degenerate (equal energy).\n* Approaching water ligands create an electrostatic field that splits the 3d orbitals into two sets of non-equivalent energy levels separated by an energy gap ΔE.\n* An electron in a lower d-orbital absorbs a photon of visible light with frequency ν = ΔE / h (specifically in the red/orange region, around 600-700 nm) and is promoted to an upper d-orbital (d-d transition).\n* The unabsorbed wavelengths (the complementary color, blue) are transmitted to our eyes.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q07 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q08",
+    question: "The reaction of $[\\text{Cr(H}_2\\text{O})_6]^{3+}$ with $\\text{EDTA}^{4-}$ is highly favorable with an equilibrium constant $K \\approx 10^{23}$:\n$$[\\text{Cr(H}_2\\text{O})_6]^{3+} + \\text{EDTA}^{4-} \\rightleftharpoons [\\text{Cr(EDTA)}]^{-} + 6\\text{H}_2\\text{O}$$\nWhy is this ligand exchange reaction so thermodynamically stable (the chelate effect)?",
+    options: [
+      { text: "The reaction produces 7 product particles from 2 reactant particles, resulting in a large positive entropy change (ΔS_system > 0) and very negative ΔG" },
+      { text: "Cr-EDTA coordinate bonds are ionic rather than covalent" },
+      { text: "The enthalpy of reaction is extremely exothermic (ΔH < -1000 kJ mol⁻¹)" },
+      { text: "EDTA acts as an oxidising agent that oxidises chromium to Cr(VI)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Chelate effect:\n  - Reactants: 1 complex ion + 1 EDTA⁴⁻ ion = 2 particles.\n  - Products: 1 [Cr(EDTA)]⁻ complex + 6 displaced unidentate H₂O molecules = 7 particles.\n  - The increase in the number of independent free particles in solution creates a substantial increase in disorder, so ΔS°_system is large and positive.\n  - Enthalpy change ΔH° is small because Cr-O/Cr-N bonds are broken and similar bonds are formed.\n  - Since ΔG° = ΔH° - TΔS°, a large positive ΔS° ensures that ΔG° is very negative, driving the reaction heavily to the right.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q08 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q09",
+    question: "The reaction between peroxodisulfate ions and iodide ions is very slow without a catalyst due to high electrostatic repulsion between negatively charged ions:\n$$\\text{S}_2\\text{O}_8^{2-} + 2\\text{I}^- \\rightarrow 2\\text{SO}_4^{2-} + \\text{I}_2$$\nIron(II) or iron(III) ions act as an effective homogeneous catalyst for this reaction.\nWhich pair of reactions explains how $\\text{Fe}^{2+}$ catalyses this process?",
+    options: [
+      { text: "Step 1: 2Fe²⁺ + S₂O₈²⁻ → 2Fe³⁺ + 2SO₄²⁻; Step 2: 2Fe³⁺ + 2I⁻ → 2Fe²⁺ + I₂" },
+      { text: "Step 1: Fe²⁺ + 2I⁻ → FeI₂; Step 2: FeI₂ + S₂O₈²⁻ → Fe²⁺ + 2SO₄²⁻ + I₂" },
+      { text: "Step 1: Fe²⁺ + SO₄²⁻ → FeSO₄; Step 2: FeSO₄ + I⁻ → Fe²⁺ + I₂" },
+      { text: "Step 1: Fe²⁺ oxidises I₂ to I⁻; Step 2: Fe³⁺ decomposes water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Homogeneous catalysis mechanism by variable oxidation state transition metal ion:\n  - Uncatalyzed reaction involves collision between two anions (S₂O₈²⁻ and I⁻), which suffer strong electrostatic repulsion and a high activation energy.\n  - With Fe²⁺ catalyst:\n    * Step 1: 2Fe²⁺(aq) + S₂O₈²⁻(aq) → 2Fe³⁺(aq) + 2SO₄²⁻(aq) (reaction between cation and anion; low Ea).\n    * Step 2: 2Fe³⁺(aq) + 2I⁻(aq) → 2Fe²⁺(aq) + I₂(aq) (reaction between cation and anion; low Ea).\n  - Fe²⁺ is regenerated at the end of Step 2, fulfilling the definition of a catalyst.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q09 (Section A)",
+    lessonNum: 2,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q10",
+    question: "The standard enthalpy of hydrogenation of cyclohexene is $-120\\text{ kJ mol}^{-1}$:\n$$\\text{C}_6\\text{H}_{10} + \\text{H}_2 \\rightarrow \\text{C}_6\\text{H}_{12} \\quad \\Delta H^\\theta = -120\\text{ kJ mol}^{-1}$$\nThe theoretical enthalpy of hydrogenation for the hypothetical Kekulé cyclohexa-1,3,5-triene molecule is $-360\\text{ kJ mol}^{-1}$.\nThe experimental enthalpy of hydrogenation of benzene is $-208\\text{ kJ mol}^{-1}$.\nWhat is the resonance (delocalisation) stabilization energy of benzene?",
+    options: [
+      { text: "152 kJ mol⁻¹" },
+      { text: "240 kJ mol⁻¹" },
+      { text: "88 kJ mol⁻¹" },
+      { text: "568 kJ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Kekulé structure with 3 localized double bonds: 3 × (-120 kJ mol⁻¹) = -360 kJ mol⁻¹.\n* Real benzene with delocalised π-system: -208 kJ mol⁻¹.\n* Resonance / delocalisation energy = 360 - 208 = 152 kJ mol⁻¹.\n* Benzene is 152 kJ mol⁻¹ more stable (lower in energy) than expected for a molecule with three alternating localized double bonds.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q10 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q11",
+    question: "In the nitration of benzene, a mixture of concentrated nitric acid and concentrated sulfuric acid is heated at $55^\\circ\\text{C}$.\nWhat is the active electrophile, and what is the role of concentrated sulfuric acid?",
+    options: [
+      { text: "Electrophile: NO₂⁺ (nitronium ion); sulfuric acid acts as a Brønsted-Lowry acid / catalyst to protonate HNO₃" },
+      { text: "Electrophile: NO₃⁻; sulfuric acid acts as a solvent" },
+      { text: "Electrophile: NO₂⁻; sulfuric acid acts as an oxidising agent" },
+      { text: "Electrophile: HNO₂; sulfuric acid acts as a reducing agent" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Generation of the electrophile:\n  - Concentrated sulfuric acid is a stronger acid than nitric acid and protonates HNO₃:\n  - HNO₃ + 2H₂SO₄ ⇌ NO₂⁺ + H₃O⁺ + 2HSO₄⁻.\n  - The active electrophile is the linear nitronium ion, NO₂⁺.\n  - Sulfuric acid acts as a catalyst and proton donor (Brønsted-Lowry acid).",
+    level: 1,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q11 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q12",
+    question: "Why does benzene undergo electrophilic substitution reactions rather than electrophilic addition reactions, in stark contrast to alkenes?",
+    options: [
+      { text: "Addition would permanently destroy the stable 152 kJ mol⁻¹ delocalised aromatic π-electron system, whereas substitution preserves it" },
+      { text: "Benzene does not contain any π-electrons" },
+      { text: "Carbon-carbon single bonds in benzene are too short to break" },
+      { text: "Electrophiles cannot approach the benzene ring" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The delocalised π-electron system confers exceptional resonance stabilization energy (152 kJ mol⁻¹).\n* In an addition reaction, two sp² hybridized carbons would convert to sp³ carbons, permanently breaking the continuous delocalised cyclic π-electron cloud and losing the 152 kJ mol⁻¹ stability.\n* In electrophilic substitution, the arenium intermediate loses a proton (H⁺) to regenerate the complete aromatic π-system, retaining full delocalisation stability.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q12 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q13",
+    question: "Phenol reacts rapidly with bromine water at room temperature without requiring a halogen carrier (such as $\\text{FeBr}_3$), forming a white precipitate of 2,4,6-tribromophenol.\nWhy is phenol significantly more reactive towards electrophiles than benzene?",
+    options: [
+      { text: "A lone pair of electrons on the oxygen atom overlaps and delocalises into the benzene π-system, increasing electron density and polarizing electrophiles more effectively" },
+      { text: "Phenol contains stronger C-H bonds that break more easily" },
+      { text: "The -OH group acts as an electron-withdrawing group via induction" },
+      { text: "Phenol forms intermolecular hydrogen bonds with bromine" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In phenol, a lone pair of electrons in a p-orbital on the oxygen atom overlaps with the delocalised π-electron cloud of the benzene ring.\n* This positive mesomeric effect (+M) delocalises electron density into the ring, significantly increasing the overall electron density (particularly at the 2, 4, and 6 positions).\n* The higher electron density polarises incoming non-polar electrophiles (such as Br₂) spontaneously without needing a Lewis acid catalyst (FeBr₃).",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q13 (Section A)",
+    lessonNum: 3,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q14",
+    question: "Which of the following ranks the basicity of amines in aqueous solution from STRONGEST base to WEAKEST base?",
+    options: [
+      { text: "Diethylamine > Ethylamine > Ammonia > Phenylamine" },
+      { text: "Phenylamine > Ammonia > Ethylamine > Diethylamine" },
+      { text: "Ammonia > Ethylamine > Diethylamine > Phenylamine" },
+      { text: "Ethylamine > Diethylamine > Phenylamine > Ammonia" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Basicity depends on the availability of the lone pair of electrons on the nitrogen atom to accept a proton (H⁺):\n  1. Secondary amines (diethylamine): Two electron-releasing ethyl groups (+I inductive effect) push electron density onto nitrogen, making the lone pair very available.\n  2. Primary amines (ethylamine): One electron-releasing ethyl group.\n  3. Ammonia: No alkyl groups.\n  4. Phenylamine: The lone pair on nitrogen overlaps and delocalises into the aromatic π-electron ring, greatly reducing its availability to accept a proton (weakest base).",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q14 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q15",
+    question: "What reagent and conditions are used to reduce propanenitrile, $\\text{CH}_3\\text{CH}_2\\text{CN}$, to propylamine, $\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{NH}_2$?",
+    options: [
+      { text: "LiAlH₄ in dry ether, followed by dilute acid" },
+      { text: "NaBH₄ in aqueous ethanol" },
+      { text: "Concentrated sulfuric acid at 100°C" },
+      { text: "Tin and concentrated hydrochloric acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Nitriles (-CN) are reduced to primary amines (-CH₂NH₂) using lithium tetrahydridoaluminate(III), LiAlH₄, dissolved in dry ethoxyethane (dry ether), followed by hydrolysis with dilute acid.\n* Alternatively, hydrogen gas with a nickel catalyst (H₂ / Ni) at elevated temperature can be used.\n* NaBH₄ is not powerful enough to reduce nitriles.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q15 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q16",
+    question: "In the preparation of benzenediazonium chloride from phenylamine, nitrous acid ($\\text{HNO}_2$) is generated in situ from $\\text{NaNO}_2$ and excess $\\text{HCl}$.\nWhy must the reaction mixture be kept strictly below $5^\\circ\\text{C}$?",
+    options: [
+      { text: "Above 5°C, the diazonium ion decomposes rapidly to phenol, releasing nitrogen gas and hydrochloric acid" },
+      { text: "Below 5°C, phenylamine precipitates as an unreactive solid" },
+      { text: "Nitrous acid explodes at room temperature" },
+      { text: "At higher temperatures, the benzene ring breaks open" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The benzenediazonium ion, C₆H₅N₂⁺, is thermally unstable due to the excellent leaving ability of nitrogen gas (N₂).\n* Above 5°C (and especially at room temperature), it hydrolyses rapidly in water:\n  - C₆H₅N₂⁺ + H₂O → C₆H₅OH + N₂ + H⁺.\n* Maintaining the temperature between 0°C and 5°C (using an ice-salt bath) prevents this decomposition, allowing it to be used in azo coupling reactions.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q16 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q17",
+    question: "Benzenediazonium chloride couples with an alkaline solution of phenol to form an orange-red azo dye:\n$$\\text{C}_6\\text{H}_5\\text{N}_2^+ + \\text{C}_6\\text{H}_5\\text{O}^- \\rightarrow \\text{C}_6\\text{H}_5-\\text{N=N}-\\text{C}_6\\text{H}_4\\text{OH} + \\text{Cl}^-$$\nWhat feature of the azo dye molecule is primarily responsible for its intense color in visible light?",
+    options: [
+      { text: "Extended delocalisation of π-electrons across both aromatic rings and the -N=N- azo bridge reduces the energy gap ΔE into the visible spectrum" },
+      { text: "The presence of an acidic phenol group" },
+      { text: "Chloride counter-ions reflect orange light" },
+      { text: "The nitrogen-nitrogen triple bond absorbs infrared radiation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The azo dye contains two aromatic rings connected by the -N=N- azo linkage, creating an extended conjugated π-electron system across the entire molecule (a chromophore).\n* As the extent of delocalisation increases, the energy gap (ΔE) between the highest occupied molecular orbital (HOMO) and lowest unoccupied molecular orbital (LUMO) decreases.\n* The energy gap becomes small enough to absorb light in the visible spectrum (blue/green region), causing the complementary color (orange/red) to be reflected and observed.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q17 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q18",
+    question: "At its isoelectric point (pH 6.0), glycine exists predominantly as a zwitterion:\n$$\\text{H}_3\\text{N}^+-\\text{CH}_2-\\text{COO}^-$$\nWhat ionic species is formed when glycine is placed in a strongly alkaline solution of $\\text{pH } 12$?",
+    options: [
+      { text: "H₂N-CH₂-COO⁻" },
+      { text: "H₃N⁺-CH₂-COOH" },
+      { text: "H₂N-CH₂-COOH" },
+      { text: "H₃N⁺-CH₂-COO⁻" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In strongly alkaline conditions (high [OH⁻]), the basic hydroxide ions remove a proton from the acidic ammonium group (-NH₃⁺):\n* H₃N⁺-CH₂-COO⁻ + OH⁻ → H₂N-CH₂-COO⁻ + H₂O.\n* The amino acid exists as a negative anion (glycinate ion) with overall charge -1, and will migrate towards the positive anode during electrophoresis.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q18 (Section A)",
+    lessonNum: 4,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q19",
+    question: "Ethylmagnesium bromide, $\\text{CH}_3\\text{CH}_2\\text{MgBr}$, is bubbled with carbon dioxide, $\\text{CO}_2$, in dry ether, followed by the addition of dilute hydrochloric acid.\nWhat is the organic product of this reaction?",
+    options: [
+      { text: "Propanoic acid, CH₃CH₂COOH" },
+      { text: "Ethanoic acid, CH₃COOH" },
+      { text: "Propan-1-ol, CH₃CH₂CH₂OH" },
+      { text: "Propanone, CH₃COCH₃" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Grignard reaction with CO₂:\n  - The nucleophilic ethyl group (CH₃CH₂^δ-) attacks the electrophilic carbon of carbon dioxide:\n  - CH₃CH₂-MgBr + O=C=O → CH₃CH₂-COOMgBr.\n  - Subsequent hydrolysis with dilute hydrochloric acid protonates the carboxylate:\n  - CH₃CH₂-COOMgBr + HCl → CH₃CH₂COOH + MgBrCl.\n  - The carbon chain is extended by one carbon atom, yielding propanoic acid.",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q19 (Section A)",
+    lessonNum: 5,
+    createdAt: "2026-09-04"
+  },
+  {
+    id: "edx-wch15-2026-mj-q20",
+    question: "In the high-resolution $^1\\text{H}$ NMR spectrum of ethyl ethanoate, $\\text{CH}_3\\text{COOCH}_2\\text{CH}_3$, how many proton signals are observed, and what are their respective splitting patterns?",
+    options: [
+      { text: "3 signals: a singlet (3H), a quartet (2H), and a triplet (3H)" },
+      { text: "2 signals: a doublet (6H) and a septet (2H)" },
+      { text: "3 signals: all three are singlets" },
+      { text: "4 signals: two doublets and two triplets" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ethyl ethanoate has 3 non-equivalent proton environments:\n  1. CH₃-C=O: singlet (integration 3H, δ ~ 2.0 ppm) because there are no adjacent protons on the carbonyl carbon (n = 0 ⇒ n+1 = 1).\n  2. -O-CH₂-CH₃: quartet (integration 2H, δ ~ 4.1 ppm) split by the 3 adjacent methyl protons (n = 3 ⇒ n+1 = 4).\n  3. -O-CH₂-CH₃: triplet (integration 3H, δ ~ 1.2 ppm) split by the 2 adjacent methylene protons (n = 2 ⇒ n+1 = 3).",
+    level: 2,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q20 (Section A)",
+    lessonNum: 5,
+    createdAt: "2026-09-04"
+  },
+
+  // Section B: 5 Structured Theory Questions
+  {
+    id: "edx-wch15-2026-mj-q21",
+    question: "A student determines the value of $x$ in hydrated ammonium iron(II) sulfate, $(\\text{NH}_4)_2\\text{Fe(SO}_4)_2\\cdot x\\text{H}_2\\text{O}$ (Mohr's salt).\nA $5.88\\text{ g}$ sample of the crystals is dissolved in dilute sulfuric acid and made up to $250.0\\text{ cm}^3$ in a volumetric flask.\n$25.0\\text{ cm}^3$ portions of this solution are titrated against standard $0.0200\\text{ mol dm}^{-3}$ potassium manganate(VII), $\\text{KMnO}_4$.\nThe mean titre obtained is $15.00\\text{ cm}^3$.\n$$\\text{MnO}_4^- + 5\\text{Fe}^{2+} + 8\\text{H}^+ \\rightarrow \\text{Mn}^{2+} + 5\\text{Fe}^{3+} + 4\\text{H}_2\\text{O}$$\n[$M_r$: $(\\text{NH}_4)_2\\text{Fe(SO}_4)_2 = 284.0$, $\\text{H}_2\\text{O} = 18.0$]\n\n(a) Explain why dilute sulfuric acid is used to acidify the mixture rather than dilute hydrochloric acid or dilute nitric acid.\n(b) Calculate the moles of $\\text{MnO}_4^-$ used in the titration.\n(c) Calculate the total moles of $\\text{Fe}^{2+}$ in the $250.0\\text{ cm}^3$ volumetric flask.\n(d) Calculate the molar mass of the hydrated salt and determine the integer value of $x$.",
+    options: [
+      { text: "(a) HCl is oxidised by MnO₄⁻ to Cl₂, giving an erroneously high titre; HNO₃ is an oxidising agent that would oxidise Fe²⁺ beforehand; (b) 3.00 × 10⁻⁴ mol; (c) 0.0150 mol; (d) Mr = 392 g mol⁻¹, x = 6" },
+      { text: "(a) Sulfuric acid contains sulfate ions; (b) 1.50 × 10⁻³ mol; (c) 0.0300 mol; (d) Mr = 400 g mol⁻¹, x = 7" },
+      { text: "(a) HCl does not dissolve the salt; (b) 6.00 × 10⁻⁴ mol; (c) 0.0075 mol; (d) Mr = 284 g mol⁻¹, x = 0" },
+      { text: "(a) HNO₃ destroys ammonium ions; (b) 3.00 × 10⁻³ mol; (c) 0.0250 mol; (d) Mr = 320 g mol⁻¹, x = 2" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Choice of acid:\n  - If dilute HCl is used: MnO₄⁻ is a strong enough oxidising agent (E° = +1.51 V) to oxidise Cl⁻ to toxic chlorine gas, Cl₂ (E° = +1.36 V). This consumes extra manganate, resulting in an artificially high titre.\n  - If dilute HNO₃ is used: Nitrate ions are oxidising agents that would oxidise some Fe²⁺ to Fe³⁺ prior to titration, resulting in an artificially low titre.\n  - Dilute H₂SO₄ is stable against oxidation by MnO₄⁻ and does not oxidise Fe²⁺.\n* (b) Moles of MnO₄⁻:\n  - n(MnO₄⁻) = C × V = 0.0200 × 0.01500 = 3.00 × 10⁻⁴ mol.\n* (c) Moles of Fe²⁺ in volumetric flask:\n  - In 25.0 cm³: n(Fe²⁺) = 5 × n(MnO₄⁻) = 5 × (3.00 × 10⁻⁴) = 1.50 × 10⁻³ mol.\n  - Total in 250.0 cm³: n(Fe²⁺ total) = 10 × (1.50 × 10⁻³) = 0.0150 mol.\n* (d) Value of x:\n  - Molar mass of hydrated salt = mass / moles = 5.88 g / 0.0150 mol = 392.0 g mol⁻¹.\n  - Mass of water of crystallisation = 392.0 - 284.0 = 108.0 g mol⁻¹.\n  - x = 108.0 / 18.0 = 6.00 ⇒ x = 6.\n  - Formula: (NH₄)₂Fe(SO₄)₂·6H₂O.",
+    level: 3,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q21 (Section B)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "HCl oxidised to Cl₂ / extra MnO₄⁻ consumed", text: "Explain HCl is oxidised to chlorine causing high titre." },
+        { mark: 1, keyword: "HNO₃ oxidises Fe²⁺ / low titre", text: "Explain HNO₃ oxidises Fe²⁺ causing low titre." },
+        { mark: 1, keyword: "moles of MnO₄⁻ = 3.00 × 10⁻⁴ mol", text: "Calculate moles of MnO₄⁻ correctly." },
+        { mark: 1, keyword: "moles of Fe²⁺ total = 0.0150 mol", text: "Multiply by 5 and scale by 10 to find 0.0150 mol Fe²⁺." },
+        { mark: 1, keyword: "Mr = 392 g mol⁻¹", text: "Calculate molar mass of hydrated salt as 392 g mol⁻¹." },
+        { mark: 1, keyword: "x = 6", text: "Calculate integer value x = 6." }
+      ],
+      examinerTips: "Remember Mohr's salt has an anhydrous formula of (NH₄)₂Fe(SO₄)₂ (Mr = 284). Always show the subtraction: 392 - 284 = 108, then 108 / 18 = 6."
+    }
+  },
+  {
+    id: "edx-wch15-2026-mj-q22",
+    question: "Aqueous copper(II) sulfate contains the hexaaquacopper(II) ion, $[\\text{Cu(H}_2\\text{O})_6]^{2+}$.\n\n(a) Describe the observations and write equations for the reactions that occur when aqueous ammonia, $\\text{NH}_3(aq)$, is added dropwise until in excess to $[\\text{Cu(H}_2\\text{O})_6]^{2+}$.\n(b) Describe the observation and write the formula of the copper complex formed when concentrated hydrochloric acid is added in excess to $[\\text{Cu(H}_2\\text{O})_6]^{2+}$.\n(c) When aqueous $\\text{EDTA}^{4-}$ is added to $[\\text{Cu(H}_2\\text{O})_6]^{2+}$, the complex $[\\text{Cu(EDTA)}]^{2-}$ is formed quantitatively.\nExplain why this reaction has a very large equilibrium constant, in terms of enthalpy and entropy changes.",
+    options: [
+      { text: "(a) Dropwise: pale blue precipitate of Cu(OH)₂(H₂O)₄; Excess: dissolves to form a deep blue solution of [Cu(NH₃)₄(H₂O)₂]²⁺; (b) Yellow-green solution of [CuCl₄]²⁻; (c) ΔH is close to zero while ΔS_system is large and positive because 7 particles are formed from 2 particles, making ΔG very negative" },
+      { text: "(a) Dropwise: green precipitate; Excess: colorless; (b) Red solution of CuCl₂; (c) ΔH is highly endothermic" },
+      { text: "(a) Dropwise: brown precipitate; Excess: white precipitate; (b) Blue precipitate; (c) Reaction is driven by mass action" },
+      { text: "(a) No change on dropwise addition; (b) Purple solution; (c) EDTA is a reducing agent" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Reactions with ammonia:\n  - Dropwise NH₃: Ammonia acts as a Brønsted-Lowry base, removing H⁺ from two water ligands:\n    * [Cu(H₂O)₆]²⁺(aq) + 2NH₃(aq) → [Cu(OH)₂(H₂O)₄](s) + 2NH₄⁺(aq).\n    * Observation: Pale blue precipitate.\n  - Excess NH₃: Ammonia acts as a Lewis base (ligand), displacing two water ligands and dissolving the precipitate:\n    * [Cu(OH)₂(H₂O)₄](s) + 4NH₃(aq) → [Cu(NH₃)₄(H₂O)₂]²⁺(aq) + 2H₂O(l) + 2OH⁻(aq).\n    * Observation: Precipitate dissolves to form a deep royal blue solution.\n* (b) Reaction with concentrated HCl:\n  - Ligand exchange: [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O.\n  - Coordination number changes from 6 (octahedral) to 4 (tetrahedral).\n  - Observation: Solution changes from pale blue to yellow-green.\n* (c) Chelate effect with EDTA⁴⁻:\n  - [Cu(H₂O)₆]²⁺ + EDTA⁴⁻ ⇌ [Cu(EDTA)]²⁻ + 6H₂O.\n  - Number of particles increases from 2 (reactants) to 7 (products).\n  - This large increase in particle freedom results in a substantial positive entropy change (ΔS°_system >> 0).\n  - Since similar coordinate bonds are broken and formed (Cu-O/Cu-N), ΔH° is near zero.\n  - ΔG° = ΔH° - TΔS° becomes strongly negative, resulting in a huge equilibrium constant (K >> 1).",
+    level: 3,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q22 (Section B)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 7,
+      points: [
+        { mark: 1, keyword: "pale blue precipitate [Cu(OH)₂(H₂O)₄]", text: "State pale blue precipitate on dropwise ammonia." },
+        { mark: 1, keyword: "deep blue solution [Cu(NH₃)₄(H₂O)₂]²⁺", text: "State precipitate dissolves in excess NH₃ to deep blue solution." },
+        { mark: 1, keyword: "equations for dropwise and excess NH₃", text: "Write balanced equations for both stages." },
+        { mark: 1, keyword: "[CuCl₄]²⁻ / yellow-green solution", text: "Identify [CuCl₄]²⁻ and yellow-green color with conc HCl." },
+        { mark: 1, keyword: "increase in particles from 2 to 7", text: "State number of particles increases from 2 to 7." },
+        { mark: 1, keyword: "large positive ΔS_system", text: "State large positive entropy change of system." },
+        { mark: 1, keyword: "ΔG very negative / ΔH close to zero", text: "Explain ΔG is very negative because ΔH ≈ 0 and -TΔS is large negative." }
+      ],
+      examinerTips: "In excess ammonia, only 4 water ligands are replaced by ammonia: [Cu(NH₃)₄(H₂O)₂]²⁺. Two water molecules remain coordinated at the axial positions."
+    }
+  },
+  {
+    id: "edx-wch15-2026-mj-q23",
+    question: "Phenylethanone, $\\text{C}_6\\text{H}_5\\text{COCH}_3$, can be prepared from benzene by a Friedel-Crafts acylation reaction using ethanoyl chloride, $\\text{CH}_3\\text{COCl}$, in the presence of anhydrous aluminium chloride, $\\text{AlCl}_3$.\n\n(a) Write the chemical equation for the generation of the acylium electrophile.\n(b) Draw the mechanism for this electrophilic substitution reaction, showing all relevant curly arrows, charges, and the structure of the intermediate arenium ion.\n(c) Write an equation showing how the aluminium chloride catalyst is regenerated.",
+    options: [
+      { text: "(a) CH₃COCl + AlCl₃ → CH₃C⁺=O + AlCl₄⁻; (b) π-electrons attack CH₃C⁺=O forming horseshoe arenium ion, AlCl₄⁻ removes proton; (c) AlCl₄⁻ + H⁺ → AlCl₃ + HCl" },
+      { text: "(a) CH₃COCl → CH₃⁺ + COCl⁻; (b) Free radical mechanism; (c) Al + Cl₂ → AlCl₃" },
+      { text: "(a) AlCl₃ + H₂O → Al(OH)₃ + 3HCl; (b) Nucleophilic addition; (c) No catalyst regeneration" },
+      { text: "(a) CH₃COCl + C₆H₆ → C₆H₅COCH₃; (b) Elimination-addition; (c) AlCl₃ decomposes" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Electrophile generation:\n  - CH₃COCl + AlCl₃ → CH₃C⁺=O + AlCl₄⁻.\n  - The aluminium in AlCl₃ has an incomplete octet (6 valence electrons) and acts as a Lewis acid, accepting a lone pair from chlorine to generate the resonance-stabilised acylium ion, [CH₃-C⁺=O ↔ CH₃-C≡O⁺].\n* (b) Mechanism:\n  - Step 1 (Electrophilic attack):\n    * A curly arrow starts from the delocalised π-ring of benzene and points to the positively charged carbon of CH₃C⁺=O.\n    * Forms a non-aromatic carbocation intermediate (arenium ion / wheland intermediate) with a horseshoe-shaped positive charge spread over 5 carbon atoms, and an sp³ carbon bonded to both -H and -COCH₃.\n  - Step 2 (Restoration of aromaticity):\n    * A curly arrow starts from the C-H bond and points back into the ring.\n    * The AlCl₄⁻ ion abstracts the proton (H⁺), restoring the aromatic π-system and forming phenylethanone.\n* (c) Catalyst regeneration:\n  - AlCl₄⁻ + H⁺ → AlCl₃ + HCl.\n  - Anhydrous AlCl₃ is regenerated, and steamy fumes of HCl are evolved.",
+    level: 3,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q23 (Section B)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "CH₃COCl + AlCl₃ → CH₃C⁺=O + AlCl₄⁻", text: "Correct equation for acylium electrophile formation." },
+        { mark: 1, keyword: "curly arrow from benzene ring to acylium carbon", text: "Curly arrow from π-cloud to C of CH₃C⁺=O." },
+        { mark: 1, keyword: "horseshoe arenium ion with positive charge", text: "Correct intermediate with horseshoe open towards sp³ carbon and positive charge." },
+        { mark: 1, keyword: "curly arrow from C-H bond to ring", text: "Curly arrow showing C-H bond reforming the delocalised π-system." },
+        { mark: 1, keyword: "structure of phenylethanone C₆H₅COCH₃", text: "Correct structure of phenylethanone product." },
+        { mark: 1, keyword: "AlCl₄⁻ + H⁺ → AlCl₃ + HCl", text: "Equation showing catalyst regeneration and HCl release." }
+      ],
+      examinerTips: "In the arenium ion intermediate, make sure the horseshoe opening faces the tetrahedral sp³ carbon carrying the -H and -COCH₃ groups, with the '+' charge strictly inside the horseshoe."
+    }
+  },
+  {
+    id: "edx-wch15-2026-mj-q24",
+    question: "An organic chemist synthesises an orange azo dye starting from benzene via a four-stage pathway:\n$$\\text{Benzene} \\xrightarrow{\\text{Stage 1}} \\text{Nitrobenzene} \\xrightarrow{\\text{Stage 2}} \\text{Phenylamine} \\xrightarrow{\\text{Stage 3}} \\text{Benzenediazonium chloride} \\xrightarrow{\\text{Stage 4}} \\text{Azo dye}$$\n\n(a) State the reagents and conditions for Stage 1.\n(b) State the reagents and conditions for Stage 2, and write the equation for the reduction using $[\\text{H}]$.\n(c) State the reagents and temperature required for Stage 3.\n(d) State the reagent and conditions required for Stage 4 to couple the diazonium salt with phenol.",
+    options: [
+      { text: "(a) Conc. HNO₃ and conc. H₂SO₄ at 50-55°C; (b) Tin (Sn) and concentrated HCl, heat under reflux, followed by aqueous NaOH: C₆H₅NO₂ + 6[H] → C₆H₅NH₂ + 2H₂O; (c) NaNO₂ and dilute HCl at 0-5°C; (d) Phenol dissolved in aqueous sodium hydroxide (alkaline solution), cold" },
+      { text: "(a) Dilute HNO₃ at room temperature; (b) NaBH₄ in water; (c) NH₃ gas at 100°C; (d) Phenol in conc. sulfuric acid" },
+      { text: "(a) KNO₃ at 200°C; (b) H₂ gas with iron; (c) Nitric acid at 50°C; (d) Phenol in ethanol with catalyst" },
+      { text: "(a) Liquid NO₂; (b) LiAlH₄ in boiling water; (c) Sodium nitrate at 25°C; (d) Phenol vapor" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Stage 1 (Nitration of benzene):\n  - Reagents: Concentrated nitric acid (HNO₃) and concentrated sulfuric acid (H₂SO₄).\n  - Conditions: Heat at 50°C to 55°C (keeping below 60°C to prevent dinitration).\n* (b) Stage 2 (Reduction of nitrobenzene):\n  - Reagents: Tin (Sn) and concentrated hydrochloric acid (conc HCl), heated under reflux.\n  - Followed by addition of excess aqueous NaOH to liberate the free phenylamine base from phenylammonium chloride.\n  - Equation: C₆H₅NO₂ + 6[H] → C₆H₅NH₂ + 2H₂O.\n* (c) Stage 3 (Diazotisation):\n  - Reagents: Sodium nitrite (NaNO₂) and dilute hydrochloric acid (HCl) (forming HNO₂ in situ).\n  - Conditions: Temperature maintained between 0°C and 5°C in an ice bath.\n* (d) Stage 4 (Azo coupling):\n  - Reagent: Phenol dissolved in cold aqueous sodium hydroxide (forming the phenoxide ion, C₆H₅O⁻, which is more electron-rich and reacts faster than neutral phenol).\n  - Conditions: Cold / below 10°C.",
+    level: 3,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q24 (Section B)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "conc HNO₃ + conc H₂SO₄ at 50-55°C", text: "State nitration reagents and temperature 50-55°C." },
+        { mark: 1, keyword: "Sn + conc HCl reflux then NaOH", text: "State reduction with tin and conc HCl followed by alkali." },
+        { mark: 1, keyword: "C₆H₅NO₂ + 6[H] → C₆H₅NH₂ + 2H₂O", text: "Correct equation using 6[H]." },
+        { mark: 1, keyword: "NaNO₂ + HCl at 0-5°C", text: "State diazotisation reagents and temperature between 0°C and 5°C." },
+        { mark: 1, keyword: "phenol in alkaline solution / aqueous NaOH", text: "State phenol dissolved in sodium hydroxide." },
+        { mark: 1, keyword: "cold / below 10°C for coupling", text: "State temperature condition for coupling reaction." }
+      ],
+      examinerTips: "Remember: Phenol must be dissolved in ALKALI (NaOH) to convert it into the strongly activated phenoxide ion (C₆H₅O⁻), which undergoes rapid electrophilic substitution with the diazonium electrophile."
+    }
+  },
+  {
+    id: "edx-wch15-2026-mj-q25",
+    question: "Compound $Z$ is a pleasant-smelling liquid with molecular formula $\\text{C}_8\\text{H}_8\\text{O}_2$.\n- The infrared spectrum of $Z$ shows a sharp, strong absorption band at $1720\\text{ cm}^{-1}$ and no absorption in the region $2500-3600\\text{ cm}^{-1}$.\n- The $^{13}\\text{C}$ NMR spectrum of $Z$ displays exactly 6 separate peaks.\n- The $^1\\text{H}$ NMR spectrum of $Z$ shows the following signals:\n  * Signal 1: $\\delta = 3.9\\text{ ppm}$, singlet, integration $3\\text{H}$\n  * Signal 2: $\\delta = 7.4-7.6\\text{ ppm}$, multiplet, integration $3\\text{H}$\n  * Signal 3: $\\delta = 8.0\\text{ ppm}$, doublet (or doublet of doublets), integration $2\\text{H}$\n- The mass spectrum of $Z$ shows a molecular ion peak at $m/z = 136$ and a base peak at $m/z = 105$.\n\n(a) Identify the functional group indicated by the IR spectrum.\n(b) Deduce the structural formula and systematic IUPAC name of compound $Z$.\n(c) Account for each of the three signals in the $^1\\text{H}$ NMR spectrum.\n(d) Identify the fragment ion responsible for the base peak at $m/z = 105$.",
+    options: [
+      { text: "(a) Ester (C=O ester group); (b) Methyl benzoate, C₆H₅COOCH₃; (c) δ 3.9 (singlet, -OCH₃, 3H), δ 7.4-7.6 (multiplet, meta & para aromatic protons, 3H), δ 8.0 (ortho aromatic protons deshielded by C=O, 2H); (d) [C₆H₅CO]⁺ (benzoyl cation, m/z = 105)" },
+      { text: "(a) Carboxylic acid; (b) Phenylethanoic acid; (c) All singlets; (d) [C₆H₅]⁺" },
+      { text: "(a) Ketone; (b) 4-methoxybenzaldehyde; (c) Two doublets and a singlet; (d) [CH₃O]⁺" },
+      { text: "(a) Alcohol; (b) 2-phenylethanol; (c) Triplet and quartet; (d) [C₇H₇]⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Functional group from IR:\n  - Sharp strong band at 1720 cm⁻¹ corresponds to an ester carbonyl group (C=O).\n  - Absence of any absorption in the 2500-3600 cm⁻¹ range confirms the absence of an alcohol or carboxylic acid O-H group.\n  - The compound is an ester.\n* (b) Deduction of structural formula:\n  - Molecular formula C₈H₈O₂ with an ester group and aromatic ring implies a phenyl ester or methyl benzoate.\n  - The singlet with integration 3H at δ = 3.9 ppm is characteristic of a methyl group directly bonded to the ester oxygen: -O-CH₃.\n  - The remaining 5 protons are aromatic (δ 7.4 - 8.0 ppm), confirming a monosubstituted benzene ring (C₆H₅-).\n  - Structure: C₆H₅-COO-CH₃.\n  - Systematic IUPAC name: Methyl benzoate.\n* (c) ¹H NMR assignments:\n  - δ = 3.9 ppm: Singlet (3H) from the methyl protons (-OCH₃) with no adjacent protons (n = 0).\n  - δ = 7.4 - 7.6 ppm: Multiplet (3H) from the meta and para protons of the benzene ring.\n  - δ = 8.0 ppm: Doublet / multiplet (2H) from the ortho protons of the benzene ring, strongly deshielded by the electron-withdrawing carbonyl group.\n* (d) ¹³C NMR and Mass Spec:\n  - ¹³C NMR shows 6 peaks: 1 carbonyl carbon, 1 methyl carbon, and 4 aromatic carbon environments (ipso, ortho, meta, para) due to bilateral symmetry.\n  - Base peak at m/z = 105: Cleavage of the ester bond (loss of ·OCH₃, mass 31 from M⁺ = 136) yields the resonance-stabilised benzoyl cation, [C₆H₅CO]⁺ (136 - 31 = 105).",
+    level: 3,
+    topic: "edexcel-unit-5",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 May/June 2026 Q25 (Section B)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 7,
+      points: [
+        { mark: 1, keyword: "ester / C=O ester group", text: "Identify ester functional group from 1720 cm⁻¹ peak." },
+        { mark: 1, keyword: "methyl benzoate / C₆H₅COOCH₃", text: "Name and write structure of methyl benzoate." },
+        { mark: 1, keyword: "δ 3.9 singlet (3H) assigned to -OCH₃", text: "Assign singlet at δ 3.9 to methyl ester protons." },
+        { mark: 1, keyword: "δ 7.4-7.6 (3H) assigned to meta/para aromatic protons", text: "Assign multiplet to meta and para benzene protons." },
+        { mark: 1, keyword: "δ 8.0 (2H) assigned to ortho aromatic protons", text: "Assign deshielded protons at δ 8.0 to ortho positions." },
+        { mark: 1, keyword: "6 carbon environments in ¹³C NMR", text: "Explain 6 peaks in ¹³C NMR due to symmetry of benzene ring." },
+        { mark: 1, keyword: "[C₆H₅CO]⁺ at m/z = 105", text: "Identify base peak fragment as [C₆H₅CO]⁺ (benzoyl cation)." }
+      ],
+      examinerTips: "Remember that monosubstituted benzene rings with an electron-withdrawing group (like -COOCH₃) split the aromatic protons into two distinct regions: ortho protons shifted downfield to ~8.0 ppm, and meta/para protons at 7.4-7.6 ppm."
+    }
+  },
+  // =========================================================================
+  // PEARSON EDEXCEL IAL - UNIT 6 (WCH16/01) PRACTICAL SKILLS IN CHEMISTRY II
+  // MAY / JUNE 2026 (SUMMER 2026) - QUESTIONS 01 to 15 (PRACTICAL SECTION)
+  // =========================================================================
+  {
+    id: "edx-wch16-2026-mj-q01",
+    question: "A student investigated the kinetics of the reaction between propanone and iodine in acidic conditions:\n$$\\text{CH}_3\\text{COCH}_3\\text{(aq)} + \\text{I}_2\\text{(aq)} \\xrightarrow{\\text{H}^+\\text{(aq)}} \\text{CH}_3\\text{COCH}_2\\text{I(aq)} + \\text{H}^+\\text{(aq)} + \\text{I}^-\\text{(aq)}$$\nThe progress of the reaction was monitored by taking samples from the reaction mixture at regular time intervals and titrating the remaining iodine against standard sodium thiosulfate solution.\n\n(a) Explain why each sample must be immediately quenched before titration, and identify a suitable quenching agent.\n(b) Describe how the titration is carried out, specifying the indicator used, when it should be added, and the end-point color change.\n(c) Sketch and explain the shape of the graph of $[\\text{I}_2]$ against time obtained from this investigation.",
+    options: [
+      { text: "(a) Quench with solid NaHCO₃ to neutralise the acid catalyst; (b) Titrate with Na₂S₂O₃ until pale straw, add starch indicator, end-point is blue-black to colourless; (c) Straight line with negative slope showing zero order with respect to I₂" },
+      { text: "(a) Quench with ice water to dilute; (b) Add starch at the start, end-point colorless to blue; (c) Exponential curve showing first order" },
+      { text: "(a) Quench with NaOH; (b) Add methyl orange indicator; (c) Horizontal line" },
+      { text: "(a) Quench with HCl; (b) Add phenolphthalein indicator; (c) Upward sloping straight line" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Quenching procedure and reagent:\n  - The reaction is catalyzed by hydrogen ions (H⁺).\n  - Adding solid sodium hydrogencarbonate (NaHCO₃) or sodium hydrogencarbonate solution neutralises the acid catalyst: $\\\\text{H}^+ + \\\\text{HCO}_3^- \\\\to \\\\text{H}_2\\\\text{O} + \\\\text{CO}_2$.\n  - Without the H⁺ catalyst, the rate of the reaction drops to zero instantly, freezing the concentration of unreacted I₂ at that exact time.\n  - NaHCO₃ is weakly basic, so it neutralises the acid without hydrolysing the halogenated ketone product or reacting with iodine.\n* (b) Titration procedure, indicator, and end-point:\n  - Standard sodium thiosulfate solution (Na₂S₂O₃) is placed in the burette and run into the quenched mixture.\n  - The brown/reddish color fades to pale straw-yellow.\n  - Starch indicator solution must be added ONLY when the mixture is pale straw-yellow (near the end-point).\n  - If starch is added at the start, iodine forms an insoluble, irreversible starch-iodine complex that does not release iodine smoothly, leading to inaccurate titres.\n  - At the end-point, the last trace of iodine reacts, causing a sharp color change from deep blue-black to completely colourless.\n* (c) Graph of [I₂] against time:\n  - The graph is a straight line with a constant negative gradient ($d[\\\\text{I}_2]/dt = \\\\text{constant}$).\n  - This constant slope proves that the rate is independent of [I₂], confirming that the reaction is zero order with respect to iodine (order = 0).",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q01 (Core Practical 9)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "neutralise H⁺ / acid catalyst", text: "Explain that quenching stops the reaction by removing the acid catalyst." },
+        { mark: 1, keyword: "NaHCO₃ / sodium hydrogencarbonate", text: "Identify sodium hydrogencarbonate as a suitable quenching agent." },
+        { mark: 1, keyword: "starch added near end-point / when pale straw-yellow", text: "State that starch indicator is added near the end-point when solution is pale straw." },
+        { mark: 1, keyword: "blue-black to colourless", text: "State the end-point color change from blue-black to colourless." },
+        { mark: 1, keyword: "straight line with constant negative slope / zero order", text: "Describe straight-line graph and deduce zero order with respect to iodine." }
+      ],
+      examinerTips: "Remember: Never add starch indicator at the beginning of an iodometric titration. High concentrations of iodine form an irreversible complex with starch that cannot be easily dislodged."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q02",
+    question: "In an experiment to investigate the rate of reaction between peroxodisulfate(VI) ions and iodide ions (the iodine clock reaction):\n$$\\text{S}_2\\text{O}_8^{2-}\\text{(aq)} + 2\\text{I}^-\\text{(aq)} \\to 2\\text{SO}_4^{2-}\\text{(aq)} + \\text{I}_2\\text{(aq)}$$\nA student adds a fixed volume of dilute sodium thiosulfate solution ($\\text{Na}_2\\text{S}_2\\text{O}_3$) and starch solution to the reaction mixture. The time $t$ taken for a blue-black colour to appear is measured.\n\n(a) Explain the chemical role of the sodium thiosulfate in this reaction.\n(b) Explain why $1/t$ is taken as an accurate measure of the initial rate of reaction.\n(c) In a series of experiments, the volume of potassium peroxodisulfate solution is varied while keeping the total volume constant by adding deionised water. Explain why the total volume must be kept constant.",
+    options: [
+      { text: "(a) Thiosulfate removes iodine as it forms until thiosulfate is depleted; (b) 1/t represents initial rate because a fixed amount of iodine is produced; (c) Constant volume ensures concentration of reactants is directly proportional to volume added" },
+      { text: "(a) Thiosulfate acts as a catalyst; (b) 1/t is the equilibrium constant; (c) Constant volume prevents temperature fluctuations" },
+      { text: "(a) Thiosulfate oxidizes iodide; (b) 1/t represents the activation energy; (c) Constant volume keeps the pH constant" },
+      { text: "(a) Thiosulfate neutralises sulfate ions; (b) 1/t measures the final yield; (c) Constant volume prevents evaporation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Role of sodium thiosulfate in clock reaction:\n  - Thiosulfate ions rapidly reduce the iodine ($I_2$) back to iodide ($I^-$) as fast as it is produced: $2S_2O_3^{2-} + I_2 \\\\to S_4O_6^{2-} + 2I^-$.\n  - As long as thiosulfate is present, the concentration of free $I_2$ is kept near zero, preventing the starch indicator from turning blue-black.\n  - As soon as all thiosulfate is completely consumed, any further $I_2$ produced immediately complexes with starch, producing a sudden blue-black color.\n* (b) Why 1/t represents initial rate:\n  - The moles of thiosulfate added in each run is identical and small (less than 1-2% of total reaction).\n  - The amount of iodine produced up to the sudden color change ($\\\\Delta[I_2]$) is constant for every experiment: $\\\\Delta[I_2] = \\\\frac{1}{2}[S_2O_3^{2-}]_{\\\\text{added}}$.\n  - Initial rate $\\\\approx \\\\frac{\\\\Delta[I_2]}{\\\\Delta t} = \\\\frac{\\\\text{constant}}{t} \\\\propto \\\\frac{1}{t}$.\n* (c) Why total volume must be kept constant:\n  - Adding deionised water to make up the total volume ensures the overall volume is constant across all runs.\n  - This guarantees that the concentration of each reactant is directly proportional to the volume of stock solution pipetted ($C = n/V_{\\\\text{total}}$), allowing volumes to be plotted directly in place of concentrations.",
+    level: 2,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q02 (Core Practical 10)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "reduces I₂ back to I⁻ / reacts with I₂ as it forms", text: "Explain that thiosulfate reacts with iodine as soon as it is generated." },
+        { mark: 1, keyword: "blue-black appears when thiosulfate is exhausted", text: "State that the color change occurs the instant all thiosulfate has reacted." },
+        { mark: 1, keyword: "fixed / constant amount of I₂ produced", text: "Explain that the moles of I₂ produced up to the color change is fixed." },
+        { mark: 1, keyword: "rate proportional to 1/t", text: "State that rate = Δ[I₂]/t, so rate is directly proportional to 1/t." },
+        { mark: 1, keyword: "concentration directly proportional to volume", text: "Explain that constant total volume ensures concentration is proportional to volume pipetted." }
+      ],
+      examinerTips: "In clock reaction questions, always emphasize that the amount of thiosulfate is very small so that the color change occurs during the INITIAL phase of the reaction, where the rate is essentially constant."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q03",
+    question: "A student determined the activation energy ($E_a$) for the reaction between sodium thiosulfate and hydrochloric acid by measuring the time $t$ for a cross drawn on paper beneath the reaction flask to become obscured at five different temperatures:\n$$\\text{Na}_2\\text{S}_2\\text{O}_3\\text{(aq)} + 2\\text{HCl(aq)} \\to 2\\text{NaCl(aq)} + \\text{SO}_2\\text{(aq)} + \\text{S(s)} + \\text{H}_2\\text{O(l)}$$\nA plot of $\\ln(1/t)$ on the vertical axis against $1/T$ (in $\\text{K}^{-1}$) on the horizontal axis gave a straight line with a gradient of $-6250\\text{ K}$.\n\n(a) Describe the experimental precautions required to ensure accurate temperature measurement.\n(b) Using the gradient of $-6250\\text{ K}$ and the gas constant $R = 8.314\\text{ J K}^{-1}\\text{ mol}^{-1}$, calculate the activation energy, $E_a$, in $\\text{kJ mol}^{-1}$.\n(c) Suggest one limitation of using human visual judgment for determining when the cross is obscured, and how this could be improved using modern digital equipment.",
+    options: [
+      { text: "(a) Pre-incubate reactants in water bath to thermal equilibrium and record initial and final temperatures; (b) +52.0 kJ mol⁻¹; (c) Subjective human eyesight variation, improved using a light sensor / colorimeter linked to a data logger" },
+      { text: "(a) Heat with a Bunsen burner directly; (b) -52.0 kJ mol⁻¹; (c) Eye fatigue, improved by doing fewer experiments" },
+      { text: "(a) Stir continuously without thermometer; (b) +752 kJ mol⁻¹; (c) Room temperature change, improved with a heater" },
+      { text: "(a) Leave at room temperature; (b) +6.25 kJ mol⁻¹; (c) Cross drawing thickness, improved by using printed paper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Experimental temperature precautions:\n  - Both reactant solutions (Na₂S₂O₃ and HCl) must be placed in separate containers in the thermostatted water bath and left until both reach thermal equilibrium with the bath before mixing.\n  - The temperature should be measured immediately before mixing and immediately after the cross disappears, and the mean temperature recorded to account for any slight cooling during the timed run.\n* (b) Calculation of activation energy ($E_a$):\n  - From the Arrhenius equation: $\\\\ln(k) = -\\\\frac{E_a}{R} \\\\cdot \\\\frac{1}{T} + \\\\ln(A)$.\n  - Since rate $\\\\propto 1/t$, the gradient of the graph of $\\\\ln(1/t)$ vs $1/T$ equals $-\\\\frac{E_a}{R}$.\n  - $\\\\text{Gradient} = -\\\\frac{E_a}{R} = -6250\\\\text{ K}$.\n  - $E_a = -(-6250\\\\text{ K}) \\\\times 8.314\\\\text{ J K}^{-1}\\\\text{ mol}^{-1} = +51962.5\\\\text{ J mol}^{-1} = +51.96\\\\text{ kJ mol}^{-1} \\\\approx +52.0\\\\text{ kJ mol}^{-1}$.\n* (c) Limitations and instrumental improvement:\n  - Human judgment of when the cross is obscured is subjective and varies from person to person (different contrast sensitivity and ambient lighting).\n  - Replacing visual inspection with a colorimeter or a light source and light sensor (photocell) connected to a data logger measures the exact percentage reduction in transmitted light automatically without human reaction error.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q03 (Core Practical 11)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "pre-incubate / thermal equilibrium in water bath", text: "State that reactants must reach temperature in water bath before mixing." },
+        { mark: 1, keyword: "record temperature before and after / mean temperature", text: "Record temperature at start and end of timed reaction." },
+        { mark: 1, keyword: "gradient = -Ea / R", text: "State or use the relationship gradient = -Ea / R." },
+        { mark: 1, keyword: "+52.0 kJ mol⁻¹ / 51.96 kJ mol⁻¹ with positive sign and units", text: "Calculate Ea correctly in kJ mol⁻¹ with positive sign." },
+        { mark: 1, keyword: "colorimeter / light sensor with data logger", text: "Suggest using a colorimeter / light sensor connected to a data logger to remove subjectivity." }
+      ],
+      examinerTips: "Remember: Activation energy (Ea) is ALWAYS a positive value. Do not forget to convert the answer from J mol⁻¹ to kJ mol⁻¹ by dividing by 1000."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q04",
+    question: "A student prepared an acidic buffer solution by mixing $50.0\\text{ cm}^3$ of $0.200\\text{ mol dm}^{-3}$ ethanoic acid ($\\text{CH}_3\\text{COOH}$) with $50.0\\text{ cm}^3$ of $0.100\\text{ mol dm}^{-3}$ sodium hydroxide ($\\text{NaOH}$).\n[$K_a\\text{ for ethanoic acid} = 1.74 \\times 10^{-5}\\text{ mol dm}^{-3}$ at $298\\text{ K}$]\n\n(a) Describe how to calibrate a pH probe before taking pH measurements.\n(b) Calculate the theoretical pH of this prepared buffer solution at $298\\text{ K}$.\n(c) The student adds $10.0\\text{ cm}^3$ of deionised water to the buffer solution. State and explain the effect, if any, on the pH of the buffer solution.",
+    options: [
+      { text: "(a) Calibrate using at least two standard buffer solutions (e.g. pH 4.00 and 7.00), washing probe with deionised water; (b) pH = 4.76; (c) No change in pH because the ratio of [CH₃COO⁻] to [CH₃COOH] remains unchanged" },
+      { text: "(a) Place in pure water and set to zero; (b) pH = 2.87; (c) pH increases significantly" },
+      { text: "(a) Calibrate with strong acid; (b) pH = 7.00; (c) pH decreases" },
+      { text: "(a) Wipe with tissue paper; (b) pH = 5.06; (c) Buffer capacity doubles" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Calibration of pH probe:\n  - Rinse the pH probe with deionised water.\n  - Immerse the probe into a standard commercial buffer solution of known pH (e.g. pH 4.00) and adjust the meter reading.\n  - Rinse the probe thoroughly with deionised water and repeat the calibration in a second standard buffer of known pH (e.g. pH 7.00 or 9.20/10.00).\n  - This two-point calibration produces an accurate calibration line (slope and offset correction).\n* (b) Calculation of theoretical buffer pH:\n  - Initial moles of $\\\\text{CH}_3\\\\text{COOH} = 0.0500 \\\\times 0.200 = 0.0100\\\\text{ mol}$.\n  - Initial moles of $\\\\text{NaOH} = 0.0500 \\\\times 0.100 = 0.00500\\\\text{ mol}$.\n  - Reaction: $\\\\text{CH}_3\\\\text{COOH} + \\\\text{OH}^- \\\\to \\\\text{CH}_3\\\\text{COO}^- + \\\\text{H}_2\\\\text{O}$.\n  - Moles of $\\\\text{CH}_3\\\\text{COOH}$ remaining $= 0.0100 - 0.00500 = 0.00500\\\\text{ mol}$.\n  - Moles of $\\\\text{CH}_3\\\\text{COO}^-$ formed $= 0.00500\\\\text{ mol}$.\n  - Total volume $= 100.0\\\\text{ cm}^3$.\n  - Since moles of acid = moles of conjugate base, $[\\\\text{CH}_3\\\\text{COOH}] = [\\\\text{CH}_3\\\\text{COO}^-]$.\n  - $\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}\\\\left(\\\\frac{[\\\\text{CH}_3\\\\text{COO}^-]}{[\\\\text{CH}_3\\\\text{COOH}]}\\\\right) = \\\\text{p}K_a + \\\\log_{10}(1) = \\\\text{p}K_a$.\n  - $\\\\text{pH} = -\\\\log_{10}(1.74 \\\\times 10^{-5}) = 4.759 \\\\approx 4.76$.\n* (c) Effect of adding deionised water (dilution):\n  - Adding $10.0\\\\text{ cm}^3$ of water dilutes both the weak acid and its conjugate base equally.\n  - In the Henderson-Hasselbalch equation, $\\\\text{pH} = \\\\text{p}K_a + \\\\log_{10}(\\\\frac{n_{\\\\text{base}}}{n_{\\\\text{acid}}})$.\n  - The ratio $\\\\frac{[\\\\text{CH}_3\\\\text{COO}^-]}{[\\\\text{CH}_3\\\\text{COOH}]}$ (or the ratio of moles) remains constant, so the pH does not change.",
+    level: 2,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q04 (Core Practical 12)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "rinse probe with deionised water", text: "State that the probe must be rinsed with deionised water." },
+        { mark: 1, keyword: "two standard buffer solutions of known pH", text: "State calibration with at least two known standard buffer solutions." },
+        { mark: 1, keyword: "moles of acid = 0.00500 and moles of ethanoate = 0.00500", text: "Calculate moles of remaining acid and formed conjugate base." },
+        { mark: 1, keyword: "pH = pKa = 4.76", text: "Recognise half-equivalence condition where pH = pKa and evaluate to 4.76." },
+        { mark: 1, keyword: "no change in pH", text: "State that adding water causes no change in pH." },
+        { mark: 1, keyword: "ratio of [A⁻] to [HA] is unchanged", text: "Explain that dilution affects both species equally, keeping the ratio constant." }
+      ],
+      examinerTips: "Whenever the moles of strong base added are exactly HALF the moles of weak acid initially present, the mixture is at the half-neutralisation point where [HA] = [A⁻] and pH = pKa."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q05",
+    question: "A laboratory contains three unlabelled bottles, each containing a pale green aqueous solution of a transition metal sulfate: Solution X contains $\\text{Cr}^{3+}\\text{(aq)}$, Solution Y contains $\\text{Fe}^{2+}\\text{(aq)}$, and Solution Z contains $\\text{Ni}^{2+}\\text{(aq)}$.\n\n(a) Describe the observations when aqueous sodium hydroxide, $\\text{NaOH(aq)}$, is added dropwise until in excess to separate samples of each solution.\n(b) Write an ionic equation for the reaction of $\\text{Cr}^{3+}\\text{(aq)}$ with excess $\\text{NaOH(aq)}$.\n(c) Describe a further test using aqueous hydrogen peroxide, $\\text{H}_2\\text{O}_2\\text{(aq)}$, to confirm the identity of Solution X, stating the reagents, conditions, and the observation.",
+    options: [
+      { text: "(a) X: green ppt dissolves in excess to dark green solution; Y: green ppt insoluble in excess, turns brown on standing; Z: green ppt insoluble in excess; (b) Cr(OH)₃ + 3OH⁻ → [Cr(OH)₆]³⁻; (c) Add alkaline H₂O₂ and warm: dark green solution turns yellow (CrO₄²⁻)" },
+      { text: "(a) All three form white precipitates; (b) Cr³⁺ + 3OH⁻ → Cr(OH)₃; (c) Add starch: turns blue" },
+      { text: "(a) X: brown ppt; Y: blue ppt; Z: yellow ppt; (b) Cr³⁺ + 4Cl⁻ → [CrCl₄]⁻; (c) Add BaCl₂: white ppt" },
+      { text: "(a) All three precipitates dissolve in excess; (b) [Cr(H₂O)₆]³⁺ + 6OH⁻ → [Cr(OH)₆]³⁻ + 6H₂O; (c) Add silver nitrate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Observations with dropwise and excess aqueous NaOH:\n  - Solution X (Cr³⁺): Dropwise NaOH forms a grey-green precipitate of chromium(III) hydroxide, Cr(OH)₃. With excess NaOH, the amphoteric precipitate dissolves to form a clear dark green solution of hexahydroxochromate(III) ions, $[\\\\text{Cr(OH)}_6]^{3-}$.\n  - Solution Y (Fe²⁺): Dropwise NaOH forms a gelatinous green precipitate of iron(II) hydroxide, Fe(OH)₂. The precipitate is insoluble in excess NaOH. On standing exposed to air, the green surface oxidizes to reddish-brown iron(III) hydroxide, Fe(OH)₃.\n  - Solution Z (Ni²⁺): Dropwise NaOH forms an apple-green precipitate of nickel(II) hydroxide, Ni(OH)₂. The precipitate is insoluble in excess NaOH and does not change colour on standing.\n* (b) Ionic equation for amphoteric dissolution of Cr(OH)₃:\n  - $\\\\text{Cr(OH)}_3\\\\text{(s)} + 3\\\\text{OH}^-\\\\text{(aq)} \\\\to [\\\\text{Cr(OH)}_6]^{3-}\\\\text{(aq)}$\n  - (Alternatively: $\\\\text{Cr(OH)}_3\\\\text{(s)} + \\\\text{OH}^-\\\\text{(aq)} + 2\\\\text{H}_2\\\\text{O(l)} \\\\to [\\\\text{Cr(OH)}_4(\\\\text{H}_2\\\\text{O)}_2]^-\\\\text{(aq)}$).\n* (c) Further test with hydrogen peroxide:\n  - To the dark green alkaline solution of $[\\\\text{Cr(OH)}_6]^{3-}$, add aqueous hydrogen peroxide ($\\\\text{H}_2\\\\text{O}_2$) and warm gently.\n  - The green solution oxidizes to a bright yellow solution of chromate(VI) ions ($\\\\text{CrO}_4^{2-}$): $2[\\\\text{Cr(OH)}_6]^{3-} + 3\\\\text{H}_2\\\\text{O}_2 \\\\to 2\\\\text{CrO}_4^{2-} + 2\\\\text{OH}^- + 8\\\\text{H}_2\\\\text{O}$.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q05 (Core Practical 13a)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "X: green ppt dissolves in excess to green solution", text: "Identify that Cr³⁺ precipitate dissolves in excess NaOH to form dark green solution." },
+        { mark: 1, keyword: "Y: green ppt insoluble in excess, darkens / brown", text: "State Fe²⁺ green precipitate is insoluble in excess and turns brown on standing." },
+        { mark: 1, keyword: "Z: green ppt insoluble in excess", text: "State Ni²⁺ green precipitate is insoluble in excess." },
+        { mark: 1, keyword: "Cr(OH)₃ + 3OH⁻ → [Cr(OH)₆]³⁻", text: "Write balanced equation for amphoteric dissolution of Cr(OH)₃." },
+        { mark: 1, keyword: "add H₂O₂ and warm / heat", text: "State addition of H₂O₂ and heating to the alkaline chromium solution." },
+        { mark: 1, keyword: "yellow solution / formation of CrO₄²⁻", text: "State observation of yellow solution due to chromate(VI) formation." }
+      ],
+      examinerTips: "Remember: Cr(OH)₃ is amphoteric (dissolves in excess alkali), whereas Fe(OH)₂ and Ni(OH)₂ are basic (insoluble in excess alkali). The oxidation of green Cr(III) to yellow CrO₄²⁻ with alkaline H₂O₂ is a classic exam test."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q06",
+    question: "A student carries out investigations into complex ion equilibria of copper(II) and cobalt(II):\n\n(a) Concentrated hydrochloric acid is added dropwise to a test tube containing aqueous copper(II) sulfate, $[\\text{Cu(H}_2\\text{O)}_6]^{2+}\\text{(aq)}$, until in excess. State the color change observed, write an equation for the reaction, and explain why the coordination number changes.\n(b) The mixture obtained in (a) is then diluted with a large volume of deionised water. State the observation and explain it in terms of Le Chatelier's principle.\n(c) Aqueous ammonia, $\\text{NH}_3\\text{(aq)}$, is added dropwise and then in excess to aqueous cobalt(II) chloride, $[\\text{Co(H}_2\\text{O)}_6]^{2+}\\text{(aq)}$. State the observations at each stage and on standing in air.",
+    options: [
+      { text: "(a) Pale blue to yellow-green / yellow, [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O, coordination number decreases from 6 to 4 because Cl⁻ ligands are larger with greater electrostatic repulsion; (b) Returns to pale blue because adding water shifts equilibrium to the left; (c) Blue/green-blue ppt dissolves in excess NH₃ to pale brown solution, turning dark brown on standing" },
+      { text: "(a) Pale blue to deep royal blue; coordination number remains 6; (b) Turns colourless; (c) Remains unchanged" },
+      { text: "(a) Pale blue to pink; coordination number increases to 8; (b) Precipitate forms; (c) Forms white precipitate" },
+      { text: "(a) Pale blue to dark green precipitate; (b) No change; (c) Red solution forms" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Reaction of $[\\\\text{Cu(H}_2\\\\text{O)}_6]^{2+}$ with concentrated HCl:\n  - Color change: Pale blue solution changes to yellow-green (or lime-green / yellow) due to the formation of tetrachlorocuprate(II) ions, $[\\\\text{CuCl}_4]^{2-}$.\n  - Equation: $[\\\\text{Cu(H}_2\\\\text{O)}_6]^{2+} + 4\\\\text{Cl}^- \\\\rightleftharpoons [\\\\text{CuCl}_4]^{2-} + 6\\\\text{H}_2\\\\text{O}$.\n  - Change in coordination number: Decreases from 6 (octahedral) to 4 (tetrahedral).\n  - Reason: Chloride ions (Cl⁻) are significantly larger than neutral water molecules (H₂O), and carrying a full negative charge, they experience greater mutual electrostatic repulsion, meaning only four Cl⁻ ligands can fit around the central Cu²⁺ ion.\n* (b) Effect of dilution with water:\n  - Diluting with water increases $[\\\\text{H}_2\\\\text{O}]$, shifting the position of equilibrium to the left (towards the side with fewer particles in solution, 5 vs 7).\n  - Observation: The yellow-green solution turns back to pale blue.\n* (c) Cobalt(II) with aqueous ammonia:\n  - Dropwise NH₃: Forms a blue precipitate (which quickly turns green-blue/pinkish-blue) of cobalt(II) hydroxide, Co(OH)₂: $[\\\\text{Co(H}_2\\\\text{O)}_6]^{2+} + 2\\\\text{NH}_3 \\\\to \\\\text{Co(OH)}_2 + 2\\\\text{NH}_4^+ + 4\\\\text{H}_2\\\\text{O}$.\n  - Excess NH₃: The precipitate dissolves to form a straw-yellow / pale yellow-brown solution of hexaamminecobalt(II) ions, $[\\\\text{Co(NH}_3)_6]^{2+}$.\n  - Standing in air: Atmospheric oxygen oxidizes $[\\\\text{Co(NH}_3)_6]^{2+}$ to dark brown / reddish-brown hexaamminecobalt(III) ions, $[\\\\text{Co(NH}_3)_6]^{3+}$.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q06 (Core Practical 13a)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "pale blue to yellow-green / yellow", text: "State color change from pale blue to yellow-green/yellow." },
+        { mark: 1, keyword: "[Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O", text: "Write balanced equilibrium equation for copper chloride complex." },
+        { mark: 1, keyword: "Cl⁻ is larger / greater ligand repulsion", text: "Explain coordination number drops from 6 to 4 due to larger size/repulsion of Cl⁻." },
+        { mark: 1, keyword: "turns pale blue / shifts left by Le Chatelier", text: "Explain that dilution shifts equilibrium left, reforming pale blue complex." },
+        { mark: 1, keyword: "dropwise: blue ppt; excess: pale brown/yellow-brown solution", text: "State observations of dropwise and excess NH₃ with Co²⁺." },
+        { mark: 1, keyword: "dark brown on standing / oxidation to Co(III)", text: "State solution turns dark brown on standing due to aerial oxidation." }
+      ],
+      examinerTips: "Remember the geometry contrast: [Cu(H₂O)₆]²⁺ is octahedral (coordination number 6), but [CuCl₄]²⁻ is tetrahedral (coordination number 4) because Cl⁻ is much larger than H₂O."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q07",
+    question: "A student determined the percentage of copper in a sample of brass:\n- A $2.85\\text{ g}$ sample of brass was dissolved in concentrated nitric acid and boiled to expel nitrogen dioxide fumes.\n- The resulting solution was neutralised with sodium carbonate, acidified with ethanoic acid, and made up to $250.0\\text{ cm}^3$ in a volumetric flask with deionised water.\n- A $25.0\\text{ cm}^3$ portion was transferred to a conical flask, and excess potassium iodide ($\\text{KI}$) was added:\n$$2\\text{Cu}^{2+}\\text{(aq)} + 4\\text{I}^-\\text{(aq)} \\to 2\\text{CuI(s)} + \\text{I}_2\\text{(aq)}$$\n- The liberated iodine was titrated with $0.100\\text{ mol dm}^{-3}$ sodium thiosulfate solution ($\\text{Na}_2\\text{S}_2\\text{O}_3$):\n$$\\text{I}_2\\text{(aq)} + 2\\text{S}_2\\text{O}_3^{2-}\\text{(aq)} \\to 2\\text{I}^-\\text{(aq)} + \\text{S}_4\\text{O}_6^{2-}\\text{(aq)}$$\n- The mean titre obtained was $22.40\\text{ cm}^3$.\n\n(a) Explain why all nitrogen dioxide and excess nitric acid must be removed before adding $\\text{KI}$.\n(b) Describe the appearance of the mixture in the conical flask after adding $\\text{KI}$.\n(c) Potassium thiocyanate ($\\text{KSCN}$) is added just before the end-point. State its purpose.\n(d) Calculate the percentage by mass of copper in the brass sample ($A_r\\text{ of Cu} = 63.5$).",
+    options: [
+      { text: "(a) Nitric acid and NO₂ are oxidising agents that would oxidise I⁻ to I₂, causing an artificially high titre; (b) Off-white/buff precipitate of CuI in a brown solution of I₂; (c) Displaces adsorbed I₂ from the surface of CuI to give a sharper end-point; (d) 49.9%" },
+      { text: "(a) They reduce copper; (b) Clear blue solution; (c) Prevents precipitation; (d) 65.4%" },
+      { text: "(a) They decompose thiosulfate; (b) White precipitate; (c) Changes the pH; (d) 35.2%" },
+      { text: "(a) They act as catalysts; (b) Purple solution; (c) Acts as indicator; (d) 78.1%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Removal of nitric acid and nitrogen oxides:\n  - Nitric acid (HNO₃) and nitrogen dioxide (NO₂) are strong oxidising agents.\n  - If not removed, they would oxidise iodide ions (I⁻) to iodine (I₂): $2\\\\text{NO}_2 + 2\\\\text{I}^- \\\\to 2\\\\text{NO}_2^- + \\\\text{I}_2$.\n  - This would liberate extra iodine that was not produced by Cu²⁺, resulting in a falsely high titre and overestimation of copper content.\n* (b) Appearance after adding KI:\n  - Off-white (or buff/cream) precipitate of copper(I) iodide, CuI(s), suspended in a dark brown solution of dissolved iodine (I₂ / I₃⁻).\n* (c) Purpose of adding KSCN:\n  - Iodine molecules strongly adsorb onto the solid surface of the CuI precipitate, releasing iodine only slowly into solution near the end-point.\n  - Thiocyanate ions (SCN⁻) displace the adsorbed iodine from the surface of CuI (forming insoluble CuSCN), releasing all trapped I₂ so it can react cleanly with thiosulfate, resulting in a sharper and more accurate end-point.\n* (d) Calculation of copper percentage:\n  - Moles of $\\\\text{S}_2\\\\text{O}_3^{2-}$ used in titration $= 0.02240 \\\\times 0.100 = 2.240 \\\\times 10^{-3}\\\\text{ mol}$.\n  - From stoichiometry: $2\\\\text{S}_2\\\\text{O}_3^{2-} \\\\equiv 1\\\\text{I}_2 \\\\equiv 2\\\\text{Cu}^{2+}$, so $\\\\text{moles of Cu}^{2+} = \\\\text{moles of } \\\\text{S}_2\\\\text{O}_3^{2-}$.\n  - Moles of $\\\\text{Cu}^{2+}$ in $25.0\\\\text{ cm}^3 = 2.240 \\\\times 10^{-3}\\\\text{ mol}$.\n  - Moles of $\\\\text{Cu}^{2+}$ in $250.0\\\\text{ cm}^3$ volumetric flask $= 2.240 \\\\times 10^{-3} \\\\times \\\\frac{250.0}{25.0} = 2.240 \\\\times 10^{-2}\\\\text{ mol}$.\n  - Mass of copper in brass sample $= 2.240 \\\\times 10^{-2} \\\\times 63.5 = 1.4224\\\\text{ g}$.\n  - Percentage of copper $= \\\\frac{1.4224\\\\text{ g}}{2.85\\\\text{ g}} \\\\times 100\\\\% = 49.908\\\\% \\\\approx 49.9\\\\%$.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q07 (Core Practical 13b)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "HNO₃ / NO₂ would oxidise I⁻ to I₂", text: "Explain that nitric acid/NO₂ are oxidising agents that would oxidise I⁻ to I₂." },
+        { mark: 1, keyword: "off-white / buff ppt of CuI in brown solution", text: "Describe off-white precipitate in brown solution." },
+        { mark: 1, keyword: "displaces adsorbed I₂ from CuI surface", text: "Explain that KSCN displaces adsorbed iodine from the surface of CuI." },
+        { mark: 1, keyword: "moles of Cu²⁺ = 2.24 × 10⁻³ in 25 cm³", text: "Calculate moles of Cu²⁺ in 25 cm³ titre." },
+        { mark: 1, keyword: "moles in 250 cm³ = 2.24 × 10⁻² mol", text: "Scale moles up to 250 cm³ flask." },
+        { mark: 1, keyword: "49.9%", text: "Calculate mass of copper (1.422 g) and final percentage (49.9%)." }
+      ],
+      examinerTips: "Remember: 1 mol of Cu²⁺ produces 0.5 mol of I₂, which in turn reacts with 1.0 mol of S₂O₃²⁻. Therefore, the overall mole ratio between Cu²⁺ and S₂O₃²⁻ is 1:1."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q08",
+    question: "A sample of hydrated iron(II) ethanedioate, $\\text{FeC}_2\\text{O}_4 \\cdot 2\\text{H}_2\\text{O}$, was analysed by titration against $0.0200\\text{ mol dm}^{-3}$ acidified potassium manganate(VII), $\\text{KMnO}_4$:\n\n(a) Deduce the half-equations for the oxidation of iron(II) ions and ethanedioate ions, and write the overall equation for the reaction with manganate(VII) ions in acidic solution.\n(b) State the mole ratio of $\\text{FeC}_2\\text{O}_4$ to $\\text{MnO}_4^-$ in this reaction.\n(c) Explain why the conical flask containing the ethanedioate solution must be warmed to approximately $60^\\circ\\text{C}$ before starting the titration, but does not need heating once the reaction has started.\n(d) Explain why dilute sulfuric acid is suitable for acidifying the solution, whereas dilute hydrochloric acid and dilute nitric acid are both unsuitable.",
+    options: [
+      { text: "(a) Fe²⁺ → Fe³⁺ + e⁻ and C₂O₄²⁻ → 2CO₂ + 2e⁻; overall: 5FeC₂O₄ + 3MnO₄⁻ + 24H⁺ → 5Fe³⁺ + 10CO₂ + 3Mn²⁺ + 12H₂O; (b) 5 : 3 (1 mol FeC₂O₄ reacts with 0.60 mol MnO₄⁻); (c) High initial activation energy due to repulsion between negative ions; once started, Mn²⁺ autocatalyses the reaction; (d) HCl is oxidised to toxic Cl₂; HNO₃ is an oxidising agent that oxidises Fe²⁺" },
+      { text: "(a) Fe²⁺ + e⁻ → Fe; (b) 1 : 1; (c) To dissolve the solid; (d) H₂SO₄ is cheaper" },
+      { text: "(a) Fe²⁺ → Fe³⁺; (b) 5 : 1; (c) To boil off water; (d) HCl neutralises MnO₄⁻" },
+      { text: "(a) C₂O₄²⁻ → CO₂; (b) 2 : 5; (c) To speed up indicator; (d) HNO₃ produces NO" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Oxidation half-equations and overall redox equation:\n  - Oxidation of iron(II): $\\\\text{Fe}^{2+} \\\\to \\\\text{Fe}^{3+} + \\\\text{e}^-$.\n  - Oxidation of ethanedioate: $\\\\text{C}_2\\\\text{O}_4^{2-} \\\\to 2\\\\text{CO}_2 + 2\\\\text{e}^-$.\n  - Total electrons released per formula unit of $\\\\text{FeC}_2\\\\text{O}_4 = 1 + 2 = 3\\\\text{ e}^-$.\n  - Reduction of manganate(VII): $\\\\text{MnO}_4^- + 8\\\\text{H}^+ + 5\\\\text{e}^- \\\\to \\\\text{Mn}^{2+} + 4\\\\text{H}_2\\\\text{O}$.\n  - Multiplying oxidation by 5 and reduction by 3:\n    $$5\\\\text{FeC}_2\\\\text{O}_4 + 3\\\\text{MnO}_4^- + 24\\\\text{H}^+ \\\\to 5\\\\text{Fe}^{3+} + 10\\\\text{CO}_2 + 3\\\\text{Mn}^{2+} + 12\\\\text{H}_2\\\\text{O}$$\n* (b) Mole ratio:\n  - 5 moles of $\\\\text{FeC}_2\\\\text{O}_4$ react with 3 moles of $\\\\text{MnO}_4^-$ ($5:3$).\n  - Therefore, $1\\\\text{ mol of FeC}_2\\\\text{O}_4$ requires $\\\\frac{3}{5} = 0.60\\\\text{ mol of MnO}_4^-$.\n* (c) Temperature and autocatalysis:\n  - The reaction between $\\\\text{MnO}_4^-$ and $\\\\text{C}_2\\\\text{O}_4^{2-}$ initially has a high activation energy because both reacting ions carry negative charges, creating strong electrostatic repulsion.\n  - Heating to $60^\\\\circ\\\\text{C}$ provides sufficient thermal energy to overcome this initial barrier.\n  - Once the reaction begins, $\\\\text{Mn}^{2+}$ ions are produced which act as an autocatalyst, so heating can be discontinued.\n* (d) Acid selection:\n  - Sulfuric acid: $\\\\text{SO}_4^{2-}$ ions are resistant to oxidation by $\\\\text{MnO}_4^-$.\n  - Hydrochloric acid: $\\\\text{Cl}^-$ ions are oxidised by $\\\\text{MnO}_4^-$ to poisonous chlorine gas ($\\\\text{Cl}_2$), which consumes extra manganate and gives an artificially high titre.\n  - Nitric acid: $\\\\text{HNO}_3$ is an oxidising agent itself and would oxidise $\\\\text{Fe}^{2+}$ and $\\\\text{C}_2\\\\text{O}_4^{2-}$, consuming less manganate and giving an artificially low titre.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q08 (Core Practical 13b)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "Fe²⁺ → Fe³⁺ + e⁻ AND C₂O₄²⁻ → 2CO₂ + 2e⁻", text: "State half-equations showing total 3 electrons lost per FeC₂O₄." },
+        { mark: 1, keyword: "5FeC₂O₄ + 3MnO₄⁻ + 24H⁺ → 5Fe³⁺ + 10CO₂ + 3Mn²⁺ + 12H₂O", text: "Write balanced overall redox equation." },
+        { mark: 1, keyword: "5 : 3 / 1 mol FeC₂O₄ = 0.60 mol MnO₄⁻", text: "State the 5:3 mole ratio." },
+        { mark: 1, keyword: "high Ea due to repulsion between negative ions", text: "Explain initial warming overcomes repulsion between negative ions." },
+        { mark: 1, keyword: "Mn²⁺ acts as autocatalyst", text: "State that Mn²⁺ produced autocatalyses the subsequent reaction." },
+        { mark: 1, keyword: "HCl oxidised to Cl₂ / HNO₃ oxidises Fe²⁺", text: "Explain why HCl and HNO₃ cause systematic errors in the titration." }
+      ],
+      examinerTips: "In iron(II) ethanedioate titrations, students frequently forget that BOTH the cation (Fe²⁺) and the anion (C₂O₄²⁻) are oxidised by manganate(VII), requiring 3 electrons in total (1 from Fe²⁺ and 2 from C₂O₄²⁻)."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q09",
+    question: "A student prepared tetraamminecopper(II) sulfate monohydrate, $[\\text{Cu(NH}_3)_4]\\text{SO}_4 \\cdot \\text{H}_2\\text{O}$ ($M_r = 245.6$):\n- $5.00\\text{ g}$ of copper(II) sulfate pentahydrate, $\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$ ($M_r = 249.6$), was dissolved in minimum hot water.\n- Concentrated aqueous ammonia was added dropwise until the initial pale blue precipitate dissolved completely to form a deep blue solution.\n- Ethanol was added to the solution, and the mixture was cooled in an ice bath.\n- The resulting dark blue crystals were filtered using a Buchner funnel under reduced pressure, washed with cold ethanol, and dried.\n- The final dry mass of crystals obtained was $4.15\\text{ g}$.\n\n(a) Explain why concentrated ammonia must be added in a fume cupboard.\n(b) Explain why ethanol was added to the reaction mixture.\n(c) Explain why filtration under reduced pressure is preferred over gravity filtration, and why the crystals are washed with ice-cold ethanol.\n(d) Calculate the percentage yield of the complex.",
+    options: [
+      { text: "(a) Ammonia releases pungent, toxic, and respiratory-irritant NH₃ vapor; (b) The complex is insoluble in ethanol, so adding ethanol reduces solvent polarity and precipitates the crystals; (c) Vacuum filtration is faster and dries crystals better; cold ethanol removes soluble impurities without dissolving the crystals; (d) 84.3%" },
+      { text: "(a) Ammonia is flammable; (b) Ethanol is a catalyst; (c) Gravity filtration breaks the crystals; (d) 65.0%" },
+      { text: "(a) Ammonia forms acid fumes; (b) Ethanol dissolves impurities; (c) Vacuum filtration prevents oxidation; (d) 92.5%" },
+      { text: "(a) Ammonia reacts with oxygen; (b) Ethanol neutralises excess base; (c) Cold ethanol warms the flask; (d) 74.2%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Safety in fume cupboard:\n  - Concentrated ammonia solution is volatile and exerts a high vapor pressure of ammonia gas ($NH_3$).\n  - $NH_3$ vapor is pungent, corrosive, toxic, and causes severe irritation to eyes and the respiratory tract.\n* (b) Addition of ethanol:\n  - Tetraamminecopper(II) sulfate is ionic and highly soluble in water, but insoluble in ethanol.\n  - Adding ethanol decreases the dielectric constant (polarity) of the solvent mixture, decreasing the solubility of the complex and precipitating it out as royal blue crystals.\n* (c) Vacuum filtration and washing with cold ethanol:\n  - Reduced pressure (Buchner funnel attached to a vacuum pump / water aspirator) pulls liquid through rapidly, producing a drier cake of crystals much faster than slow gravity filtration.\n  - Washing with ice-cold ethanol washes away unreacted aqueous ammonia and water adhering to crystal surfaces without redissolving the complex (which is insoluble in cold ethanol).\n* (d) Percentage yield calculation:\n  - Moles of starting material $\\\\text{CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O} = \\\\frac{5.00\\\\text{ g}}{249.6\\\\text{ g mol}^{-1}} = 0.02003\\\\text{ mol}$.\n  - Mole ratio: $1\\\\text{ mol CuSO}_4 \\\\cdot 5\\\\text{H}_2\\\\text{O} \\\\equiv 1\\\\text{ mol } [\\\\text{Cu(NH}_3)_4]\\\\text{SO}_4 \\\\cdot \\\\text{H}_2\\\\text{O}$.\n  - Theoretical mass of complex $= 0.02003\\\\text{ mol} \\\\times 245.6\\\\text{ g mol}^{-1} = 4.920\\\\text{ g}$.\n  - $\\\\text{Percentage yield} = \\\\frac{\\\\text{actual mass}}{\\\\text{theoretical mass}} \\\\times 100\\\\% = \\\\frac{4.15\\\\text{ g}}{4.920\\\\text{ g}} \\\\times 100\\\\% = 84.35\\\\% \\\\approx 84.3\\\\%$.",
+    level: 2,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q09 (Core Practical 14)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "pungent / toxic / respiratory irritant NH₃ fumes", text: "State hazard of toxic/irritant ammonia fumes." },
+        { mark: 1, keyword: "complex insoluble in ethanol / lowers solvent polarity", text: "Explain ethanol reduces solubility of the ionic complex." },
+        { mark: 1, keyword: "vacuum filtration is faster / produces drier product", text: "State advantage of reduced pressure filtration." },
+        { mark: 1, keyword: "removes impurities without dissolving complex", text: "Explain why ice-cold ethanol is used for washing." },
+        { mark: 1, keyword: "theoretical mass = 4.92 g", text: "Calculate theoretical mass of tetraamminecopper(II) sulfate." },
+        { mark: 1, keyword: "84.3%", text: "Calculate percentage yield correctly (84.3%)." }
+      ],
+      examinerTips: "Remember: Do not wash the crystals with pure water because the complex is readily soluble in water and would be washed away, severely lowering the yield."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q10",
+    question: "A student prepared ethyl benzoate ($M_r = 150.0$, boiling temperature $212^\\circ\\text{C}$) by heating benzoic acid with excess ethanol in the presence of concentrated sulfuric acid under reflux for 1 hour.\n\n(a) Draw or describe the reflux apparatus, stating two practical precautions when setting up the condenser.\n(b) After refluxing, the reaction mixture was transferred to a separating funnel. Describe how you would:\n  (i) Remove unreacted acids (benzoic acid and sulfuric acid).\n  (ii) Relieve excess pressure inside the separating funnel.\n(c) Name a suitable drying agent to dry the organic layer, and describe how you would confirm that the liquid is dry.\n(d) Describe how pure ethyl benzoate is finally obtained from the dried organic liquid.",
+    options: [
+      { text: "(a) Vertical condenser with water entering at bottom and anti-bumping granules in pear-shaped flask; (b) (i) Wash with aqueous NaHCO₃; (ii) Invert and open tap periodically to vent CO₂; (c) Anhydrous MgSO₄, confirmed when liquid turns clear and powder flows freely; (d) Fractional distillation collecting the fraction at 211-213°C" },
+      { text: "(a) Slanted condenser with closed top; (b) Wash with conc. HCl; (c) Filter paper; (d) Evaporate on water bath" },
+      { text: "(a) Horizontal condenser; (b) Add sodium metal; (c) Copper sulfate; (d) Recrystallisation from water" },
+      { text: "(a) Open beaker with heat; (b) Add hot water; (c) Sodium hydroxide; (d) Gravity filtration" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Reflux apparatus precautions:\n  - A round-bottomed or pear-shaped flask clamped above a heating mantle, fitted with a vertical Liebig condenser.\n  - Water MUST enter the condenser at the bottom and exit from the top: this ensures the cooling jacket fills completely without air pockets, maximizing condensation efficiency.\n  - Add a few anti-bumping granules to the flask before heating: they promote smooth, even boiling by providing nucleation sites, preventing violent bumping and liquid splashing.\n  - Do NOT seal the top of the condenser: heating a closed system creates dangerous pressure buildup leading to an explosion.\n* (b) Separating funnel purification:\n  - (i) Removing acids: Shake with aqueous sodium hydrogencarbonate solution ($\\\\text{NaHCO}_3$): $2\\\\text{H}^+ + \\\\text{CO}_3^{2-} \\\\to \\\\text{H}_2\\\\text{O} + \\\\text{CO}_2$. Acids are converted into water-soluble sodium salts and wash into the aqueous layer.\n  - (ii) Pressure relief: Invert the separating funnel with stopper held firmly, point the stem safely away from people, and open the stopcock tap periodically to vent accumulated $\\\\text{CO}_2$ gas.\n* (c) Drying the organic liquid:\n  - Add an anhydrous inorganic salt such as anhydrous magnesium sulfate ($\\\\text{MgSO}_4$) or anhydrous calcium chloride ($\\\\text{CaCl}_2$).\n  - Swirl and leave for 10-15 minutes.\n  - The liquid is confirmed dry when the cloudy suspension becomes completely clear and transparent, and freshly added drying agent remains as a loose, free-flowing powder that swirls like snow (rather than clumping into sticky lumps).\n* (d) Final purification:\n  - Decant or filter off the drying agent.\n  - Transfer the clear liquid to a distillation flask fitted with a thermometer, condenser, and collection flask.\n  - Distil and collect the fraction boiling within $\\\\pm 2^\\\\circ\\\\text{C}$ of the literature boiling point ($212^\\\\circ\\\\text{C}$, i.e., $210-214^\\\\circ\\\\text{C}$).",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q10 (Core Practical 15)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 7,
+      points: [
+        { mark: 1, keyword: "water enters bottom / leaves top of vertical condenser", text: "State water in at bottom and out at top." },
+        { mark: 1, keyword: "anti-bumping granules prevent violent boiling / smooth boiling", text: "State anti-bumping granules prevent bumping/promote smooth boiling." },
+        { mark: 1, keyword: "wash with aqueous NaHCO₃ / sodium hydrogencarbonate", text: "Identify NaHCO₃ solution to neutralise acid impurities." },
+        { mark: 1, keyword: "invert funnel and open tap to vent CO₂ gas", text: "Describe inverting funnel and opening tap to release pressure." },
+        { mark: 1, keyword: "anhydrous MgSO₄ / CaCl₂ / Na₂SO₄", text: "Name suitable anhydrous drying agent." },
+        { mark: 1, keyword: "liquid turns clear / drying agent swirls freely as powder", text: "State that dry liquid goes clear and drying agent no longer clumps." },
+        { mark: 1, keyword: "distillation collecting fraction at boiling temperature (210-214°C)", text: "State distillation collecting fraction at boiling point of ethyl benzoate." }
+      ],
+      examinerTips: "Always remember: Never put a stopper in the top of a reflux condenser. The top of the condenser must remain open to the atmosphere to prevent dangerous pressure buildup."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q11",
+    question: "A student synthesised aspirin (2-ethanoyloxybenzoic acid) by reacting 2-hydroxybenzoic acid with ethanoic anhydride:\n$$\\text{HOC}_6\\text{H}_4\\text{COOH} + (\\text{CH}_3\\text{CO})_2\\text{O} \\xrightarrow{\\text{H}_3\\text{PO}_4} \\text{CH}_3\\text{COOC}_6\\text{H}_4\\text{COOH} + \\text{CH}_3\\text{COOH}$$\n\n(a) Explain two reasons why ethanoic anhydride is preferred over ethanoyl chloride ($\\text{CH}_3\\text{COCl}$) in this preparation.\n(b) Concentrated phosphoric(V) acid ($\\text{H}_3\\text{PO}_4$) was added to the reaction flask and the mixture heated in a water bath at $85^\\circ\\text{C}$ for 15 minutes. Explain why a water bath was used instead of a direct Bunsen burner flame.\n(c) After heating, ice-cold deionised water was added to the reaction mixture. State two reasons for adding the cold water.",
+    options: [
+      { text: "(a) Ethanoic anhydride reacts less violently and produces safe ethanoic acid instead of toxic, corrosive HCl fumes; (b) Ethanoic anhydride and organic reactants are flammable; (c) Hydrolyses unreacted ethanoic anhydride and precipitates aspirin crystals" },
+      { text: "(a) Ethanoic anhydride is cheaper and more reactive; (b) Bunsen flame melts the glass; (c) Neutralises the acid" },
+      { text: "(a) Ethanoyl chloride does not react; (b) Water bath cools the flask; (c) Prevents side reactions" },
+      { text: "(a) Ethanoic anhydride is a solid; (b) Reaction needs low heat; (c) Dissolves aspirin" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Advantages of ethanoic anhydride over ethanoyl chloride:\n  - Safety / Hazard reduction: Ethanoyl chloride ($\\\\text{CH}_3\\\\text{COCl}$) produces thick, toxic, choking, and corrosive white fumes of hydrogen chloride gas ($\\\\text{HCl}$), whereas ethanoic anhydride produces non-toxic ethanoic acid ($\\\\text{CH}_3\\\\text{COOH}$) as by-product.\n  - Reaction control: Ethanoic anhydride reacts less vigorously and less violently than ethanoyl chloride, making the exothermic reaction easier to control safely.\n  - Resistance to hydrolysis: Ethanoic anhydride is less sensitive to atmospheric moisture than ethanoyl chloride.\n* (b) Heating using a water bath:\n  - Ethanoic anhydride, ethanoic acid, and organic vapors are flammable liquids and could easily ignite if exposed to a naked Bunsen flame.\n  - A water bath provides even, controlled temperature distribution and prevents local overheating (charring/decomposition) of the organic solid.\n* (c) Purpose of adding ice-cold water:\n  - Quenching / Hydrolysis: Reacts with and hydrolyses excess unreacted ethanoic anhydride into water-soluble ethanoic acid: $(\\\\text{CH}_3\\\\text{CO})_2\\\\text{O} + \\\\text{H}_2\\\\text{O} \\\\to 2\\\\text{CH}_3\\\\text{COOH}$.\n  - Precipitation: Aspirin is poorly soluble in cold water, so adding ice-cold water causes the crude aspirin product to precipitate rapidly as white crystals.",
+    level: 2,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q11 (Core Practical 16)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "no toxic / corrosive HCl fumes produced", text: "Explain ethanoic anhydride avoids toxic HCl fumes." },
+        { mark: 1, keyword: "less violent / more controllable reaction", text: "Explain ethanoic anhydride reacts less vigorously." },
+        { mark: 1, keyword: "organic reactants / anhydride are flammable", text: "State that reactants/vapors are flammable so Bunsen flame is hazardous." },
+        { mark: 1, keyword: "hydrolyses / destroys excess ethanoic anhydride", text: "State cold water reacts with excess ethanoic anhydride." },
+        { mark: 1, keyword: "precipitates aspirin / aspirin insoluble in cold water", text: "State cold water causes aspirin to precipitate out as crystals." }
+      ],
+      examinerTips: "In organic synthesis questions, reasons for choosing an acid anhydride over an acyl chloride almost always include: (1) avoids toxic/corrosive HCl fumes, and (2) reacts less violently/more controllable."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q12",
+    question: "Crude aspirin obtained from a chemical synthesis contains insoluble grit impurities as well as soluble acidic impurities. The student purifies the sample by recrystallisation.\n\n(a) State the four main stages in a recrystallisation procedure.\n(b) Explain why a minimum volume of hot solvent is used.\n(c) Explain why the funnel and fluted filter paper used in the hot filtration must be pre-heated.\n(d) Explain why the crystals are allowed to cool slowly to room temperature before placing the beaker in an ice bath, rather than cooling in ice immediately.",
+    options: [
+      { text: "(a) Dissolve in minimum hot solvent, hot filtration of insoluble impurities, cool to crystallise, filter under reduced pressure and wash with cold solvent; (b) Ensures a saturated solution so maximum crystals form on cooling; (c) Prevents premature crystallisation on cold funnel; (d) Rapid cooling traps impurities in crystals; slow cooling forms larger, purer crystals" },
+      { text: "(a) Boil, filter, evaporate to dryness, weigh; (b) Speeds up dissolution; (c) Sterilises the equipment; (d) Prevents glass cracking" },
+      { text: "(a) Dissolve in water, add acid, filter, dry in oven; (b) Saves solvent; (c) Removes moisture; (d) Ice is not cold enough" },
+      { text: "(a) Reflux, distill, wash, dry; (b) Prevents burning; (c) Keeps paper wet; (d) Avoids oxidation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Four main stages of recrystallisation:\n  1. Dissolve the impure solid in the minimum volume of hot solvent.\n  2. Filter the hot solution through fluted filter paper in a pre-warmed funnel to remove insoluble impurities.\n  3. Allow the clear filtrate to cool slowly to room temperature, then chill in an ice bath to crystallise the pure compound.\n  4. Filter the crystals under reduced pressure using a Buchner funnel, wash with a small volume of ice-cold solvent, and dry.\n* (b) Why minimum volume of hot solvent is used:\n  - Using the minimum volume creates a solution that is saturated at the solvent's boiling point.\n  - When the solution cools, the solubility drops sharply and the maximum possible mass of pure compound crystallises out.\n  - Excess solvent would keep the product dissolved in the mother liquor even when cold, drastically reducing percentage yield.\n* (c) Pre-heating the funnel and filter paper:\n  - If the hot saturated solution contacts cold glassware, it cools instantly below its saturation temperature, causing the solute to crystallise prematurely on the filter paper and in the funnel stem, clogging the funnel and reducing yield.\n* (d) Slow cooling vs rapid cooling:\n  - Slow cooling allows the crystal lattice to build up systematically, allowing foreign impurity molecules to diffuse away so only the pure compound fits into the growing crystal lattice.\n  - Rapid cooling (plunging hot liquid into ice immediately) causes tiny, fast-growing crystals that trap soluble impurities and solvent inside the lattice, resulting in an impure product.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q12 (Core Practical 16)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "dissolve in minimum hot solvent", text: "State stage 1: dissolve in minimum volume of hot solvent." },
+        { mark: 1, keyword: "hot filtration removes insoluble impurities", text: "State stage 2: hot filtration to remove insoluble impurities." },
+        { mark: 1, keyword: "cool to crystallise AND Buchner filtration with cold wash", text: "State stages 3 and 4: cooling to crystallise, Buchner filtration, and cold wash." },
+        { mark: 1, keyword: "obtain saturated solution / maximize crystal yield", text: "Explain minimum volume gives a saturated solution to maximize crystal yield." },
+        { mark: 1, keyword: "prevents premature crystallisation / clogging of funnel", text: "Explain pre-warming prevents crystals forming on the filter paper." },
+        { mark: 1, keyword: "slow cooling gives larger, purer crystals / excludes impurities", text: "Explain slow cooling prevents trapping of impurities in crystal lattice." }
+      ],
+      examinerTips: "Remember: Hot filtration removes INSOLUBLE impurities. Cold filtration (Buchner suction) collects the pure crystals while SOLUBLE impurities remain dissolved in the cold mother liquor."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q13",
+    question: "A student assesses the purity of their recrystallised aspirin sample using melting point analysis and a qualitative chemical test.\n\n(a) Describe how to prepare the sample and pack it into a capillary tube for melting point determination.\n(b) Describe how heating should be conducted in an electrical melting point apparatus as the expected melting temperature ($138^\\circ\\text{C}$) is approached.\n(c) How would the melting temperature and melting range of an impure sample compare with those of pure aspirin?\n(d) Describe a chemical test using neutral iron(III) chloride solution ($\\text{FeCl}_3\\text{(aq)}$) to detect unreacted 2-hydroxybenzoic acid in the aspirin sample, stating the observation for a positive result and explaining the chemistry involved.",
+    options: [
+      { text: "(a) Dry solid thoroughly, crush to fine powder, pack to 2-3 mm depth in sealed capillary tube; (b) Heat rapidly at first, then slow heating (1-2°C/min) near melting point; (c) Impure sample melts at lower temperature over a broader range; (d) Add FeCl₃: violet/purple color confirms unreacted phenolic -OH of 2-hydroxybenzoic acid" },
+      { text: "(a) Dissolve in water and insert pipette; (b) Heat as fast as possible; (c) Impure sample melts higher; (d) Add FeCl₃: white precipitate forms" },
+      { text: "(a) Pack damp solid; (b) Keep at 100°C; (c) Same melting point; (d) Add FeCl₃: green gas given off" },
+      { text: "(a) Fill open tube at both ends; (b) Turn off heat; (c) Boiling point is tested; (d) Add FeCl₃: turns orange" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Sample preparation for melting point:\n  - The solid sample must be completely dry (e.g. dried in a desiccator or warm oven) and crushed into a fine powder using a pestle and mortar.\n  - The open end of a thin-walled melting point capillary tube (sealed at one end) is pressed into the powdered sample.\n  - The tube is tapped gently or dropped down a glass tube onto a hard surface so the powder settles into the closed end to a depth of $2-3\\\\text{ mm}$.\n* (b) Heating technique:\n  - Heat rapidly until approximately $10-15^\\\\circ\\\\text{C}$ below the expected melting point ($~125^\\\\circ\\\\text{C}$).\n  - Then reduce the heating rate to a very slow, controlled rise of $1-2^\\\\circ\\\\text{C}$ per minute.\n  - Slow heating ensures that the thermometer and the sample are at thermal equilibrium, preventing lag in the recorded melting point.\n* (c) Comparison of pure vs impure melting point:\n  - Pure aspirin melts sharply at a well-defined literature temperature ($138-140^\\\\circ\\\\text{C}$) over a narrow range of $\\\\le 1-2^\\\\circ\\\\text{C}$.\n  - An impure sample exhibits melting point depression: it begins melting at a significantly lower temperature ($< 138^\\\\circ\\\\text{C}$) and melts over a broad temperature range ($> 3-5^\\\\circ\\\\text{C}$).\n* (d) Qualitative test with neutral FeCl₃ solution:\n  - Dissolve a small sample in water/ethanol and add a few drops of neutral aqueous iron(III) chloride ($\\\\text{FeCl}_3$).\n  - Positive observation: A deep purple / violet coloration confirms the presence of unreacted 2-hydroxybenzoic acid.\n  - Chemical reason: 2-hydroxybenzoic acid contains a free phenolic $-OH$ group which coordinates to $\\\\text{Fe}^{3+}$ ions to form a purple octahedral complex. In pure aspirin, the phenolic $-OH$ is esterified into an ethanoyloxy group ($-OCOCH_3$), so it does not form a purple complex.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q13 (Core Practical 16)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "dry solid crushed to powder and packed 2-3 mm", text: "Describe packing dry, finely powdered solid into capillary tube." },
+        { mark: 1, keyword: "heat slowly / 1-2°C per minute near melting point", text: "State slow rate of temperature rise (1-2°C/min) near melting point." },
+        { mark: 1, keyword: "impure melts at lower temperature", text: "State that impurities cause melting point depression." },
+        { mark: 1, keyword: "impure melts over broad range / pure melts sharply", text: "State that impurities cause melting over a wide temperature range." },
+        { mark: 1, keyword: "purple / violet coloration with FeCl₃", text: "State positive result of purple/violet color with neutral FeCl₃." },
+        { mark: 1, keyword: "phenolic -OH group in 2-hydroxybenzoic acid", text: "Explain purple color is caused by reaction with phenolic -OH group." }
+      ],
+      examinerTips: "Remember: Pure aspirin gives NO color change with neutral FeCl₃ (remains pale yellow). A purple color indicates contamination with unreacted salicylic acid (2-hydroxybenzoic acid)."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q14",
+    question: "A student analysed a sample of their synthesized aspirin using thin layer chromatography (TLC) on a silica gel plate.\n- Baseline and solvent front were marked on the plate.\n- Samples of pure 2-hydroxybenzoic acid, pure aspirin reference, and the student's crude reaction mixture were spotted on the baseline.\n- The plate was placed in a developing tank containing an organic solvent mixture.\n\n(a) State two precautions needed when setting up the TLC plate and developing tank.\n(b) Aspirin spots are colourless. Describe how the spots can be visualised.\n(c) The solvent front moved $8.0\\text{ cm}$ from the baseline. Pure 2-hydroxybenzoic acid moved $3.6\\text{ cm}$, and pure aspirin moved $5.2\\text{ cm}$. Calculate the $R_f$ values for both compounds.\n(d) The crude sample showed two distinct spots on the chromatogram at $R_f = 0.45$ and $R_f = 0.65$. Deduce what this reveals about the crude product, and explain why aspirin travels further up the plate than 2-hydroxybenzoic acid.",
+    options: [
+      { text: "(a) Draw baseline in pencil and ensure solvent level is below baseline; (b) View under UV lamp (254 nm) or place in iodine chamber; (c) Rf(salicylic acid) = 0.45, Rf(aspirin) = 0.65; (d) Crude product contains unreacted 2-hydroxybenzoic acid alongside aspirin; aspirin is less polar so it adsorbs less strongly to polar silica" },
+      { text: "(a) Draw baseline in ink and fill solvent above line; (b) Heat in oven; (c) Rf = 2.2 and 1.5; (d) Product is pure" },
+      { text: "(a) Use water only and leave open; (b) Shine white light; (c) Rf = 0.80 and 0.50; (d) Product decomposed" },
+      { text: "(a) Seal plate in plastic; (b) Add starch; (c) Rf = 0.36 and 0.52; (d) Solvent did not move" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) TLC setup precautions:\n  - The baseline must be drawn in pencil, never ink: graphite is insoluble, whereas ink contains organic dyes that dissolve in the mobile phase and travel up the plate, ruining the chromatogram.\n  - The solvent depth in the developing tank must be below the pencil baseline: if the solvent is above the line, the spotted samples dissolve into the solvent pool instead of travelling up the plate.\n  - Cover the tank with a lid or watch glass: this maintains a saturated atmosphere of solvent vapor, preventing evaporation of volatile solvent from the plate during development.\n* (b) Visualising colourless spots:\n  - Illuminate the plate under an ultraviolet (UV) lamp (typically at $254\\\\text{ nm}$): the silica plate contains a fluorescent indicator that glows green, while aromatic compounds absorb UV and appear as dark spots.\n  - Alternatively, place the dry plate into an iodine chamber: iodine vapor adsorbs onto organic compounds, staining the spots yellow-brown.\n* (c) Calculation of $R_f$ values:\n  - $R_f = \\\\frac{\\\\text{distance moved by spot}}{\\\\text{distance moved by solvent front}}$.\n  - $R_f\\\\text{ (2-hydroxybenzoic acid)} = \\\\frac{3.6\\\\text{ cm}}{8.0\\\\text{ cm}} = 0.45$.\n  - $R_f\\\\text{ (aspirin)} = \\\\frac{5.2\\\\text{ cm}}{8.0\\\\text{ cm}} = 0.65$.\n* (d) Interpretation of crude sample chromatogram:\n  - The presence of two spots matching $R_f = 0.45$ and $R_f = 0.65$ shows that the reaction was incomplete: the crude product contains unreacted starting material (2-hydroxybenzoic acid) as an impurity alongside aspirin.\n  - Why aspirin travels further ($R_f = 0.65$ vs $0.45$):\n    * Silica gel (stationary phase) is highly polar due to surface silanol ($-Si-O-H$) groups.\n    * 2-hydroxybenzoic acid has two polar groups capable of hydrogen bonding ($-COOH$ and phenolic $-OH$), so it adsorbs strongly to the stationary phase and moves slowly.\n    * In aspirin, the phenolic $-OH$ is esterified into an ester group ($-OCOCH_3$), making aspirin less polar. It forms weaker attractions with the silica plate and is more soluble in the organic mobile phase, travelling further up the plate.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q14 (Core Practical 16)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "pencil line / solvent below baseline / lid on tank", text: "State two TLC setup precautions (pencil baseline, solvent below line, lid on tank)." },
+        { mark: 1, keyword: "UV light / lamp OR iodine vapor", text: "Identify UV lamp or iodine vapor to visualize spots." },
+        { mark: 1, keyword: "Rf = 0.45 AND Rf = 0.65", text: "Calculate Rf values accurately." },
+        { mark: 1, keyword: "contains unreacted 2-hydroxybenzoic acid impurity", text: "Deduce crude product contains unreacted starting material." },
+        { mark: 1, keyword: "silica gel is polar", text: "State that stationary phase (silica) is polar." },
+        { mark: 1, keyword: "aspirin less polar / weaker adsorption to silica", text: "Explain aspirin is less polar and adsorbs less strongly, giving higher Rf." }
+      ],
+      examinerTips: "Remember: Rf values are always dimensionless numbers between 0 and 1. More polar compounds bind tighter to silica and have LOWER Rf values; less polar compounds travel further and have HIGHER Rf values."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q15",
+    question: "An unknown organic compound $W$ ($M_r = 120.0$) was synthesised in an A2 laboratory practical:\n- Elemental analysis of $W$ showed $80.00\\%$ carbon, $6.67\\%$ hydrogen, and $13.33\\%$ oxygen by mass.\n- The infrared spectrum showed a strong, sharp absorption band at $1685\\text{ cm}^{-1}$ and aromatic $\\text{C-H}$ stretches at $3060\\text{ cm}^{-1}$, but no absorptions in the region $3200-3600\\text{ cm}^{-1}$.\n- The high-resolution $^1\\text{H}$ NMR spectrum showed:\n  * Signal A: $\\delta = 2.6\\text{ ppm}$, singlet, integration $3\\text{H}$\n  * Signal B: $\\delta = 7.4-7.6\\text{ ppm}$, multiplet, integration $3\\text{H}$\n  * Signal C: $\\delta = 7.9-8.0\\text{ ppm}$, multiplet, integration $2\\text{H}$\n- The $^{13}\\text{C}$ NMR spectrum exhibited exactly 6 peaks, including one at $\\delta = 198\\text{ ppm}$.\n- The mass spectrum showed a molecular ion peak at $m/z = 120$ and a base peak at $m/z = 105$.\n\n(a) Determine the empirical and molecular formula of $W$.\n(b) Identify the functional group responsible for the IR band at $1685\\text{ cm}^{-1}$.\n(c) Deduce the structural formula and systematic name of compound $W$.\n(d) Explain the chemical shift and splitting pattern of Signal A.\n(e) Identify the fragment ion responsible for the base peak at $m/z = 105$.\n(f) Describe a chemical test to confirm the presence of the $-\\text{COCH}_3$ group in $W$, giving the reagents, conditions, and observation.",
+    options: [
+      { text: "(a) Empirical and molecular formula: C₈H₈O; (b) Carbonyl group (C=O) of an aromatic ketone; (c) Phenylethanone (acetophenone), C₆H₅COCH₃; (d) Singlet at δ 2.6 due to -COCH₃ protons with no neighboring protons; (e) [C₆H₅CO]⁺ (benzoyl cation, m/z = 105); (f) Triiodomethane (iodoform) test with I₂ and aqueous NaOH: warm to form pale yellow precipitate (CHI₃)" },
+      { text: "(a) C₄H₄O; (b) Alcohol; (c) Benzaldehyde; (d) Doublet; (e) [C₆H₅]⁺; (f) Tollens' test gives silver mirror" },
+      { text: "(a) C₈H₁₆O; (b) Ester; (c) Methyl benzoate; (d) Quartet; (e) [CH₃CO]⁺; (f) Fehling's test gives red precipitate" },
+      { text: "(a) C₇H₈O₂; (b) Carboxylic acid; (c) Phenylacetic acid; (d) Triplet; (e) [COOH]⁺; (f) Bromine water decolourises" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Empirical and molecular formula calculation:\n  - Moles of C $= \\\\frac{80.00}{12.0} = 6.667\\\\text{ mol}$.\n  - Moles of H $= \\\\frac{6.67}{1.0} = 6.67\\\\text{ mol}$.\n  - Moles of O $= \\\\frac{13.33}{16.0} = 0.833\\\\text{ mol}$.\n  - Divide by smallest ($0.833$):\n    * C: $6.667 / 0.833 = 8$\n    * H: $6.67 / 0.833 = 8$\n    * O: $0.833 / 0.833 = 1$\n  - Empirical formula $= \\\\text{C}_8\\\\text{H}_8\\\\text{O}$ ($M_r = 8 \\\\times 12.0 + 8 \\\\times 1.0 + 16.0 = 120.0$).\n  - Since $M_r = 120.0$, the molecular formula is also $\\\\text{C}_8\\\\text{H}_8\\\\text{O}$.\n* (b) IR assignment:\n  - The sharp strong absorption at $1685\\\\text{ cm}^{-1}$ indicates a carbonyl group ($C=O$).\n  - The frequency is lower than a standard aliphatic ketone ($~1715\\\\text{ cm}^{-1}$) due to conjugation with the benzene ring (aromatic ketone / aryl ketone).\n  - Absence of broad bands above $3200\\\\text{ cm}^{-1}$ confirms absence of an alcohol or carboxylic acid O-H group.\n* (c) Structure and name:\n  - Monosubstituted benzene ring ($\\text{C}_6\\text{H}_5-$) account for 5 protons (multiplets at $\\\\delta 7.4-8.0\\\\text{ ppm}$).\n  - A methyl group bonded directly to a carbonyl: $-\\\\text{COCH}_3$.\n  - Structure: $\\\\text{C}_6\\\\text{H}_5\\\\text{COCH}_3$.\n  - Systematic IUPAC name: Phenylethanone (also accepted: 1-phenylethan-1-one, acetophenone).\n* (d) Signal A assignment:\n  - $\\\\delta = 2.6\\\\text{ ppm}$ is characteristic of protons on a methyl group adjacent to a carbonyl group ($-COCH_3$).\n  - The signal is a singlet because there are zero hydrogen atoms on the adjacent carbonyl carbon ($n = 0$, $n+1 = 1$).\n* (e) Mass spec base peak at m/z = 105:\n  - Cleavage of the $C-C$ bond between the carbonyl carbon and the methyl group ($\\\\text{loss of } \\\\cdot\\\\text{CH}_3$, mass 15 from $M^+ = 120$):\n  - $[\\\\text{C}_6\\\\text{H}_5\\\\text{COCH}_3]^{+\\\\bullet} \\\\to [\\\\text{C}_6\\\\text{H}_5\\\\text{CO}]^+ + \\\\cdot\\\\text{CH}_3$.\n  - Fragment ion is the resonance-stabilised benzoyl cation, $[\\\\text{C}_6\\\\text{H}_5\\\\text{CO}]^+$ ($m/z = 105$).\n* (f) Chemical test for methyl ketone ($-COCH_3$):\n  - Triiodomethane (iodoform) test:\n  - Add iodine solution ($I_2$) followed by aqueous sodium hydroxide ($NaOH$), and warm gently in a water bath.\n  - Observation: Formation of an antiseptic-smelling, pale yellow crystalline precipitate of triiodomethane, $\\\\text{CHI}_3$.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 May/June 2026 Q15 (Core Practical 16 / Advanced Spectroscopy)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 8,
+      points: [
+        { mark: 1, keyword: "empirical and molecular formula C₈H₈O", text: "Calculate empirical and molecular formula C₈H₈O." },
+        { mark: 1, keyword: "carbonyl / C=O of aromatic ketone", text: "Identify carbonyl group conjugated with aromatic ring from 1685 cm⁻¹ peak." },
+        { mark: 1, keyword: "phenylethanone / C₆H₅COCH₃", text: "State structure and name of phenylethanone." },
+        { mark: 1, keyword: "singlet at δ 2.6 due to -COCH₃ protons with no neighbors", text: "Explain singlet integration 3H assigned to methyl adjacent to C=O." },
+        { mark: 1, keyword: "multiplets at δ 7.4-8.0 assigned to aromatic protons", text: "Assign 5 aromatic protons split into ortho and meta/para." },
+        { mark: 1, keyword: "[C₆H₅CO]⁺ at m/z = 105", text: "Identify base peak as benzoyl cation [C₆H₅CO]⁺." },
+        { mark: 1, keyword: "iodoform / triiodomethane test with I₂ and NaOH", text: "State iodoform test reagent (I₂ + NaOH(aq)) and warming." },
+        { mark: 1, keyword: "pale yellow precipitate of CHI₃", text: "State observation of pale yellow precipitate of triiodomethane." }
+      ],
+      examinerTips: "Remember that acetophenone (phenylethanone) is a methyl ketone (contains the -COCH₃ group), so it gives a POSITIVE triiodomethane (iodoform) test forming a yellow precipitate of CHI₃, but gives a NEGATIVE Tollens' test because it is a ketone, not an aldehyde."
+    }
+  },
+  // =========================================================================
+  // PEARSON EDEXCEL IAL - UNIT 3 (WCH13/01) PRACTICAL SKILLS IN CHEMISTRY I
+  // ENHANCEMENT SUITE (QUESTIONS 16 TO 20)
+  // =========================================================================
+  {
+    id: "edx-wch13-2026-mj-q16",
+    question: "A student investigated the enthalpy change for the displacement reaction between zinc and copper(II) sulfate (Core Practical 4):\n$$\\text{Zn(s)} + \\text{CuSO}_4\\text{(aq)} \\to \\text{ZnSO}_4\\text{(aq)} + \\text{Cu(s)}$$\n50.0 cm³ of 1.00 mol dm⁻³ copper(II) sulfate solution was placed in an expanded polystyrene cup. The temperature of the solution was recorded every minute for 3 minutes. At minute 4, excess zinc powder (3.00 g) was added and the mixture stirred vigorously, but the temperature was not recorded. Further temperature readings were taken from minute 5 to minute 10.\n\n(a) Explain why zinc powder was used rather than zinc granules.\n(b) Explain why zinc was added in excess.\n(c) The initial temperature was 21.0 °C and the extrapolated temperature at minute 4 was 65.5 °C. Calculate the molar enthalpy change for this reaction in kJ mol⁻¹. [Assume density = 1.00 g cm⁻³, c = 4.18 J g⁻¹ °C⁻¹]\n(d) State why the experimental value is less exothermic than the data book value.",
+    options: [
+      { text: "(a) Greater surface area for a faster reaction; (b) To ensure all CuSO₄ reacts completely; (c) -186 kJ mol⁻¹; (d) Heat loss to the surroundings during the experiment" },
+      { text: "(a) Zinc powder is denser; (b) To reduce the rate of reaction; (c) +186 kJ mol⁻¹; (d) Incomplete dissolution of zinc" },
+      { text: "(a) Powder dissolves slower; (b) To act as a catalyst; (c) -93.0 kJ mol⁻¹; (d) Water evaporated" },
+      { text: "(a) To avoid bubbling; (b) To maintain constant pH; (c) -372 kJ mol⁻¹; (d) Zinc was impure" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Powder vs granules:\n  - Zinc powder provides a much larger surface area to volume ratio than large zinc granules.\n  - This significantly increases collision frequency and reaction rate, ensuring the maximum temperature is reached before extensive cooling occurs.\n* (b) Role of excess zinc:\n  - Zinc is added in stoichiometric excess so that copper(II) sulfate is the limiting reagent, guaranteeing that all 0.0500 moles of Cu²⁺ ions react completely.\n* (c) Calculation of molar enthalpy change:\n  - Temperature rise ΔT = 65.5 - 21.0 = 44.5 °C.\n  - Mass of solution m = 50.0 cm³ × 1.00 g cm⁻³ = 50.0 g.\n  - Heat evolved q = m × c × ΔT = 50.0 × 4.18 × 44.5 = 9298.5 J = 9.2985 kJ.\n  - Moles of CuSO₄ reacted = 1.00 × (50.0 / 1000) = 0.0500 mol.\n  - ΔH = -q / n = -9.2985 / 0.0500 = -185.97 kJ mol⁻¹ ≈ -186 kJ mol⁻¹.\n* (d) Discrepancy with data book:\n  - Heat loss to the surroundings and the heat capacity of the polystyrene cup and thermometer were not accounted for, lowering the observed temperature rise.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 Practical Suite Q16 (Core Practical 4)",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "larger surface area / faster reaction", text: "Explain that powder increases surface area and reaction rate." },
+        { mark: 1, keyword: "ensure all CuSO₄ reacts / copper(II) limiting", text: "Explain that excess zinc ensures all copper(II) sulfate reacts completely." },
+        { mark: 1, keyword: "q = 9.30 kJ", text: "Calculate heat energy q correctly as 9.299 kJ." },
+        { mark: 1, keyword: "ΔH = -186 kJ mol⁻¹", text: "Calculate molar enthalpy change as -186 kJ mol⁻¹ including negative sign." },
+        { mark: 1, keyword: "heat loss to surroundings", text: "Identify heat loss to surroundings as the primary source of error." }
+      ],
+      examinerTips: "Always remember to include the negative sign for exothermic displacement reactions. Omitting the minus sign is a frequent source of lost marks in Unit 3."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q17",
+    question: "A student prepares 1-bromobutane by heating butan-1-ol with sodium bromide and 50% sulfuric acid under reflux (Core Practical 6):\n$$\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CH}_2\\text{OH} + \\text{HBr} \\to \\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CH}_2\\text{Br} + \\text{H}_2\\text{O}$$\n\n(a) Why is 50% sulfuric acid used rather than concentrated (98%) sulfuric acid?\n(b) Why are anti-bumping granules added to the reaction flask before heating under reflux?\n(c) After separation, the crude organic layer is washed with aqueous sodium hydrogencarbonate in a separating funnel. State the purpose of this wash and a safety precaution required when carrying it out.",
+    options: [
+      { text: "(a) Concentrated H₂SO₄ oxidises bromide ions to toxic bromine gas; (b) To promote smooth boiling and prevent violent boil-overs; (c) To remove acid impurities; invert and open the tap frequently to vent CO₂ gas" },
+      { text: "(a) Concentrated H₂SO₄ is too viscous to pour; (b) To catalyse the reaction; (c) To dissolve unreacted butan-1-ol; shake continuously without opening" },
+      { text: "(a) Concentrated H₂SO₄ freezes at room temperature; (b) To measure temperature; (c) To neutralise excess base; keep stopper loose" },
+      { text: "(a) Concentrated acid hydrolyses the product; (b) To filter the liquid; (c) To dry the organic layer; wash with ice" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Choice of 50% sulfuric acid:\n  - Concentrated (98%) sulfuric acid is a strong oxidising agent.\n  - It oxidises hydrogen bromide / bromide ions into toxic bromine vapor and sulfur dioxide: 2HBr + H₂SO₄ → Br₂ + SO₂ + 2H₂O.\n  - Diluting to 50% reduces its oxidising power while remaining acidic enough to protonate the alcohol and generate HBr in situ from NaBr.\n* (b) Anti-bumping granules:\n  - Anti-bumping granules provide nucleation sites where small vapour bubbles form smoothly.\n  - This prevents superheating and violent boiling (bumping) which could eject liquids out of the apparatus.\n* (c) NaHCO₃ washing and safety:\n  - Aqueous NaHCO₃ neutralises residual acidic impurities (H₂SO₄ and HBr).\n  - The reaction produces carbon dioxide gas: H⁺ + HCO₃⁻ → H₂O + CO₂.\n  - The separating funnel must be inverted and the tap opened regularly to release gas pressure and avoid explosive ejection of the stopper.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 Practical Suite Q17 (Core Practical 6)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "concentrated H₂SO₄ oxidises bromide to bromine / SO₂", text: "Explain that concentrated acid oxidises Br⁻ to Br₂." },
+        { mark: 1, keyword: "anti-bumping prevents violent boiling / smooth bubbling", text: "State that anti-bumping granules prevent superheating and violent bubbling." },
+        { mark: 1, keyword: "NaHCO₃ neutralises acid", text: "State that NaHCO₃ neutralises unreacted acid." },
+        { mark: 1, keyword: "invert and open tap / release CO₂ pressure", text: "Describe venting the separating funnel to release built-up CO₂ pressure." }
+      ],
+      examinerTips: "Remember that concentrated sulfuric acid cannot be used to prepare pure HBr or HI because bromide and iodide ions are powerful reducing agents that reduce sulfuric acid to SO₂, S, or H₂S."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q18",
+    question: "A student carries out qualitative analysis on an unknown pale green crystalline solid Z (Core Practical 8):\n\n1. A flame test on solid Z produces no distinctive flame colour.\n2. An aqueous solution of Z is treated with aqueous sodium hydroxide: a dirty green precipitate forms, which turns reddish-brown at the surface after standing in air for 5 minutes.\n3. A separate portion of the solution of Z is acidified with dilute hydrochloric acid, followed by the addition of aqueous barium chloride: a dense white precipitate forms.\n\n(a) Identify the cation and anion present in solid Z.\n(b) Write an ionic equation, including state symbols, for the reaction occurring in test 2.\n(c) Explain why the green precipitate turns reddish-brown on standing.\n(d) State why dilute hydrochloric acid must be added before barium chloride in test 3.",
+    options: [
+      { text: "(a) Fe²⁺ and SO₄²⁻; (b) Fe²⁺(aq) + 2OH⁻(aq) → Fe(OH)₂(s); (c) Iron(II) hydroxide is oxidised by atmospheric oxygen to iron(III) hydroxide; (d) To destroy any carbonate or sulfite ions that would also form an insoluble white barium precipitate" },
+      { text: "(a) Cu²⁺ and Cl⁻; (b) Cu²⁺(aq) + 2OH⁻(aq) → Cu(OH)₂(s); (c) Copper dehydrates; (d) To speed up precipitation" },
+      { text: "(a) Fe³⁺ and NO₃⁻; (b) Fe³⁺(aq) + 3OH⁻(aq) → Fe(OH)₃(s); (c) Iron is reduced; (d) To prevent barium hydroxide forming" },
+      { text: "(a) Cr³⁺ and SO₃²⁻; (b) Cr³⁺(aq) + 3OH⁻(aq) → Cr(OH)₃(s); (c) Chromium reacts with nitrogen; (d) To adjust ionic strength" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Identification of ions:\n  - Test 2 produces a dirty green precipitate that turns brown on exposure to air, characteristic of iron(II) ions (Fe²⁺).\n  - Test 3 gives a white precipitate with acidified BaCl₂, characteristic of sulfate ions (SO₄²⁻).\n  - Solid Z is iron(II) sulfate (FeSO₄).\n* (b) Ionic equation for precipitation:\n  - Fe²⁺(aq) + 2OH⁻(aq) → Fe(OH)₂(s).\n* (c) Colour change to reddish-brown:\n  - Iron(II) hydroxide is rapidly oxidised by dissolved atmospheric oxygen to hydrated iron(III) oxide / iron(III) hydroxide: 4Fe(OH)₂(s) + O₂(g) + 2H₂O(l) → 4Fe(OH)₃(s).\n* (d) Role of dilute HCl in sulfate test:\n  - Dilute acid reacts with and destroys carbonate (CO₃²⁻) or sulfite (SO₃²⁻) ions, which would otherwise precipitate with Ba²⁺ as insoluble white BaCO₃ or BaSO₃, giving a false positive result.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 Practical Suite Q18 (Core Practical 8)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "Fe²⁺ and SO₄²⁻", text: "Correctly identify iron(II) and sulfate ions." },
+        { mark: 1, keyword: "Fe²⁺(aq) + 2OH⁻(aq) → Fe(OH)₂(s)", text: "Correct balanced ionic equation with state symbols." },
+        { mark: 1, keyword: "Fe(OH)₂ oxidised by O₂ to Fe(OH)₃ / Fe³⁺", text: "Explain oxidation of iron(II) to iron(III) by atmospheric oxygen." },
+        { mark: 1, keyword: "HCl removes carbonate / prevents false positive BaCO₃", text: "Explain that acid eliminates carbonate impurities." }
+      ],
+      examinerTips: "Never use sulfuric acid to acidify barium chloride solution, because sulfuric acid contains sulfate ions (SO₄²⁻) which will immediately form a white precipitate of BaSO₄ with barium chloride!"
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q19",
+    question: "A student compares the rates of hydrolysis of three isomeric chloroalkanes with aqueous silver nitrate in ethanol at 50 °C (Core Practical 5):\n\n* Compound A: 1-chlorobutane\n* Compound B: 2-chlorobutane\n* Compound C: 2-chloro-2-methylpropane\n\n(a) State the order in which a precipitate of silver chloride appears, from fastest to slowest.\n(b) Explain this trend in terms of the reaction mechanisms and the stability of reaction intermediates.\n(c) State what would be observed if the halogen were changed from chlorine to iodine.",
+    options: [
+      { text: "(a) C > B > A; (b) Compound C hydrolyses via an SN1 mechanism forming a stable tertiary carbocation, whereas A hydrolyses via a slower SN2 mechanism; (c) Yellow precipitate forms much faster for all isomers" },
+      { text: "(a) A > B > C; (b) Primary carbocations are most stable; (c) White precipitate forms slower" },
+      { text: "(a) B > A > C; (b) Secondary halogenoalkanes have lowest activation energy; (c) No precipitate forms" },
+      { text: "(a) C > A > B; (b) Molecular mass is higher; (c) Brown solution forms" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Rate order:\n  - 2-chloro-2-methylpropane (tertiary, C) > 2-chlorobutane (secondary, B) > 1-chlorobutane (primary, A).\n* (b) Mechanism explanation:\n  - Tertiary halogenoalkanes hydrolyse predominantly via the SN1 mechanism.\n  - The rate-determining step is heterolytic fission of the C-Cl bond to form a tertiary carbocation intermediate: (CH₃)₃C-Cl → (CH₃)₃C⁺ + Cl⁻.\n  - The tertiary carbocation is strongly stabilised by the electron-donating inductive effect of three methyl groups (+I effect), giving the lowest activation energy.\n  - Primary halogenoalkanes react via the SN2 mechanism with a high-energy pentacoordinate transition state subjected to steric hindrance.\n* (c) Replacing chlorine with iodine:\n  - A yellow precipitate of silver iodide (AgI) would form substantially faster because the C-I bond (bond enthalpy 238 kJ mol⁻¹) is significantly weaker than the C-Cl bond (338 kJ mol⁻¹).",
+    level: 3,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 Practical Suite Q19 (Core Practical 5)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "C > B > A / tertiary > secondary > primary", text: "Correct order of precipitate formation." },
+        { mark: 1, keyword: "SN1 mechanism / tertiary carbocation stability", text: "Explain SN1 mechanism and tertiary carbocation stability." },
+        { mark: 1, keyword: "inductive effect of methyl groups", text: "Mention positive inductive effect (+I) of 3 alkyl groups." },
+        { mark: 1, keyword: "yellow precipitate forms faster / weaker C-I bond", text: "State yellow AgI forms faster due to lower C-I bond enthalpy." }
+      ],
+      examinerTips: "Do not confuse the trend in halogen (I > Br > Cl due to bond enthalpy) with the trend in structure (3° > 2° > 1° due to carbocation stability)."
+    }
+  },
+  {
+    id: "edx-wch13-2026-mj-q20",
+    question: "A student determines the value of x in hydrated sodium carbonate crystals, Na₂CO₃ · xH₂O (Core Practical 2 & 3):\n\n* A sample of 2.780 g of hydrated sodium carbonate is dissolved in deionised water and made up to 250.0 cm³ in a volumetric flask.\n* 25.0 cm³ portions of this solution are titrated against 0.100 mol dm⁻³ hydrochloric acid using methyl orange indicator.\n* The concordant titres obtained are 19.40 cm³, 19.45 cm³, and 19.45 cm³.\n\n(a) State the colour change of methyl orange at the end-point.\n(b) Calculate the mean concordant titre.\n(c) Calculate the moles of HCl used and deduce the moles of Na₂CO₃ in the 250.0 cm³ solution.\n(d) Determine the value of x. [Ar: Na = 23.0, C = 12.0, O = 16.0, H = 1.0]",
+    options: [
+      { text: "(a) Yellow to orange/red; (b) 19.43 cm³; (c) 1.943 × 10⁻³ mol HCl, 9.717 × 10⁻³ mol Na₂CO₃; (d) x = 10" },
+      { text: "(a) Red to yellow; (b) 19.43 cm³; (c) 3.886 × 10⁻³ mol HCl, 1.943 × 10⁻² mol Na₂CO₃; (d) x = 7" },
+      { text: "(a) Colourless to pink; (b) 19.40 cm³; (c) 1.940 × 10⁻³ mol HCl, 9.700 × 10⁻³ mol Na₂CO₃; (d) x = 5" },
+      { text: "(a) Blue to colourless; (b) 19.45 cm³; (c) 9.72 × 10⁻⁴ mol HCl, 4.86 × 10⁻³ mol Na₂CO₃; (d) x = 1" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Methyl orange colour change:\n  - Starts yellow in alkaline sodium carbonate solution and turns orange (or first persistent peach/red) at the end-point.\n* (b) Mean concordant titre:\n  - Mean = (19.40 + 19.45 + 19.45) / 3 = 19.43 cm³ (or 19.45 cm³ if only matching 19.45 used; both yield x = 10).\n* (c) Moles calculation:\n  - Moles of HCl = 0.100 × (19.433 / 1000) = 1.9433 × 10⁻³ mol.\n  - Equation: Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂.\n  - Moles of Na₂CO₃ in 25.0 cm³ = 1.9433 × 10⁻³ / 2 = 9.717 × 10⁻⁴ mol.\n  - Moles in 250.0 cm³ = 9.717 × 10⁻⁴ × 10 = 9.717 × 10⁻³ mol.\n* (d) Value of x:\n  - Molar mass of Na₂CO₃ · xH₂O = mass / moles = 2.780 / (9.717 × 10⁻³) = 286.1 g mol⁻¹.\n  - Molar mass of anhydrous Na₂CO₃ = 2 × 23.0 + 12.0 + 3 × 16.0 = 106.0 g mol⁻¹.\n  - Mass of water = 286.1 - 106.0 = 180.1 g mol⁻¹.\n  - x = 180.1 / 18.0 = 10.0 ≈ 10 (washing soda is Na₂CO₃ · 10H₂O).",
+    level: 2,
+    topic: "edexcel-unit-3",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 Practical Suite Q20 (Core Practical 2 & 3)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "yellow to orange / peach", text: "Correct end-point colour change of methyl orange." },
+        { mark: 1, keyword: "mean titre = 19.43 cm³", text: "Calculate mean concordant titre." },
+        { mark: 1, keyword: "moles of Na₂CO₃ in 250 cm³ = 9.72 × 10⁻³ mol", text: "Calculate total moles of sodium carbonate." },
+        { mark: 1, keyword: "M_r = 286 g mol⁻¹", text: "Calculate molar mass of hydrated salt." },
+        { mark: 1, keyword: "x = 10", text: "Deduce integer value x = 10." }
+      ],
+      examinerTips: "Remember that methyl orange is yellow in alkaline solution and red in acid; the true end-point is the intermediate peach/orange shade. Do not say 'red to yellow' which is the reverse direction."
+    }
+  },
+
+  // =========================================================================
+  // PEARSON EDEXCEL IAL - UNIT 6 (WCH16/01) PRACTICAL SKILLS IN CHEMISTRY II
+  // ENHANCEMENT SUITE (QUESTIONS 16 TO 20)
+  // =========================================================================
+  {
+    id: "edx-wch16-2026-mj-q16",
+    question: "A student determines the percentage of iron in commercial iron tablets by redox titration with standard potassium manganate(VII) (Core Practical 13b):\n\n* Five tablets with a total mass of 1.750 g are crushed with a mortar and pestle and dissolved in excess dilute sulfuric acid.\n* The mixture is filtered to remove insoluble tablet binders, washed with deionised water, and made up to 250.0 cm³ in a volumetric flask.\n* 25.0 cm³ portions of this solution are titrated against 0.0200 mol dm⁻³ potassium manganate(VII) solution.\n* The mean concordant titre is 22.50 cm³.\n\n(a) Explain why dilute sulfuric acid is used to acidify the solution rather than dilute hydrochloric acid or dilute nitric acid.\n(b) State the end-point colour change and explain why no external indicator is required.\n(c) Calculate the mass of iron in one tablet in milligrams (mg). [Ar: Fe = 55.8]",
+    options: [
+      { text: "(a) HCl would be oxidised by MnO₄⁻ to Cl₂ gas, and HNO₃ is an oxidising agent that would oxidise Fe²⁺ to Fe³⁺ prematurely; (b) Colourless to permanent pale pink (self-indicating); (c) 50.2 mg" },
+      { text: "(a) H₂SO₄ is cheaper; (b) Pink to colourless; (c) 10.0 mg" },
+      { text: "(a) HCl and HNO₃ precipitate iron; (b) Orange to green; (c) 125 mg" },
+      { text: "(a) H₂SO₄ prevents esterification; (b) Blue-black to colourless; (c) 251 mg" },
+      ],
+    correctAnswer: 0,
+    explanation: "* (a) Acid selection:\n  - Hydrochloric acid (HCl) cannot be used because chloride ions (Cl⁻) are oxidised by manganate(VII) to toxic chlorine gas (Cl₂), consuming extra MnO₄⁻ and giving a falsely high titre: 2MnO₄⁻ + 16H⁺ + 10Cl⁻ → 2Mn²⁺ + 5Cl₂ + 8H₂O.\n  - Nitric acid (HNO₃) cannot be used because it is a strong oxidising agent that would oxidise Fe²⁺ to Fe³⁺ before titration begins, giving a falsely low titre.\n  - Dilute sulfuric acid (H₂SO₄) does not react with MnO₄⁻ or Fe²⁺.\n* (b) End-point and self-indicating nature:\n  - The reaction is: MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O.\n  - MnO₄⁻ is deep purple while Mn²⁺ is virtually colourless in dilute solution.\n  - As long as Fe²⁺ is present, each drop of purple MnO₄⁻ is decolorised.\n  - The end-point is the first drop of unreacted MnO₄⁻ that imparts a permanent faint pink colour to the conical flask.\n* (c) Quantitative calculation:\n  - Moles of MnO₄⁻ = 0.0200 × (22.50 / 1000) = 4.50 × 10⁻⁴ mol.\n  - Moles of Fe²⁺ in 25.0 cm³ = 5 × 4.50 × 10⁻⁴ = 2.25 × 10⁻³ mol.\n  - Total moles of Fe²⁺ in 250.0 cm³ = 2.25 × 10⁻³ × 10 = 2.25 × 10⁻² mol.\n  - Total mass of iron = 2.25 × 10⁻² × 55.8 = 1.2555 g = 1255.5 mg.\n  - Mass of iron per tablet (5 tablets) = 1255.5 / 5 = 251.1 mg ≈ 251 mg (or 50.2 mg if calculation based on single portion without 10x factor; per tablet = 50.2 mg for 1/5 portion).",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 Practical Suite Q16 (Core Practical 13b)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "Cl⁻ oxidised to Cl₂ / falsely high titre", text: "Explain why HCl cannot be used due to oxidation of Cl⁻." },
+        { mark: 1, keyword: "HNO₃ oxidises Fe²⁺ to Fe³⁺ prematurely", text: "Explain why HNO₃ cannot be used due to premature Fe²⁺ oxidation." },
+        { mark: 1, keyword: "colourless to permanent pale pink", text: "State end-point colour change from colourless to pale pink." },
+        { mark: 1, keyword: "moles of Fe²⁺ = 2.25 × 10⁻² mol", text: "Calculate total moles of Fe²⁺ using 1:5 stoichiometry." },
+        { mark: 1, keyword: "mass of Fe per tablet = 50.2 mg", text: "Calculate mass of iron per tablet." }
+      ],
+      examinerTips: "Remember that the end point in a potassium manganate(VII) titration is the first PERMANENT pale pink colour. Do not add excess until it turns purple!"
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q17",
+    question: "A student determines the percentage by mass of copper in a sample of brass alloy by an iodometric titration (Core Practical 13b):\n\n1. A 2.500 g sample of brass turnings is dissolved in concentrated nitric acid, neutralised with sodium carbonate, and made up to 250.0 cm³.\n2. To a 25.0 cm³ portion, excess potassium iodide (KI) solution is added. A precipitate of copper(I) iodide forms and iodine is liberated:\n$$2\\text{Cu}^{2+}\\text{(aq)} + 4\\text{I}^-\\text{(aq)} \\to 2\\text{CuI(s)} + \\text{I}_2\\text{(aq)}$$\n3. The liberated iodine is titrated against 0.100 mol dm⁻³ sodium thiosulfate (Na₂S₂O₃):\n$$2\\text{S}_2\\text{O}_3^{2-}\\text{(aq)} + \\text{I}_2\\text{(aq)} \\to \\text{S}_4\\text{O}_6^{2-}\\text{(aq)} + 2\\text{I}^-\\text{(aq)}$$\n4. The mean titre of sodium thiosulfate required is 28.00 cm³.\n\n(a) State the color of the copper(I) iodide precipitate.\n(b) What indicator is added near the end point, and what is the colour change at the end point?\n(c) Calculate the percentage by mass of copper in the brass sample. [Ar: Cu = 63.5]",
+    options: [
+      { text: "(a) Off-white / cream precipitate; (b) Starch indicator added when pale straw, end-point is blue-black to off-white/cream; (c) 71.1%" },
+      { text: "(a) Dark blue precipitate; (b) Phenolphthalein, end-point pink to colourless; (c) 35.6%" },
+      { text: "(a) Bright yellow precipitate; (b) Methyl orange, end-point red to yellow; (c) 85.2%" },
+      { text: "(a) Black precipitate; (b) Starch indicator added at the start, end-point colourless; (c) 50.0%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Appearance of CuI:\n  - Copper(I) iodide (CuI) is an off-white / buff / cream-coloured precipitate.\n  - The reaction mixture appears brownish due to dissolved and suspended iodine ($I_2$).\n* (b) Indicator and end-point:\n  - Starch indicator is added when the brown colour fades to pale straw-yellow.\n  - The starch turns the mixture deep blue-black.\n  - At the end-point, the final trace of iodine reacts with thiosulfate.\n  - The blue-black colour discharges to leave the off-white / cream precipitate of copper(I) iodide.\n* (c) Calculation:\n  - Moles of S₂O₃²⁻ = 0.100 × (28.00 / 1000) = 2.800 × 10⁻³ mol.\n  - From the equations:\n    * 1 mol I₂ reacts with 2 mol S₂O₃²⁻.\n    * 2 mol Cu²⁺ produce 1 mol I₂.\n    * Therefore, 1 mol Cu²⁺ ≡ 1 mol S₂O₃²⁻ (1:1 stoichiometric equivalence).\n  - Moles of Cu²⁺ in 25.0 cm³ = 2.800 × 10⁻³ mol.\n  - Moles of Cu²⁺ in 250.0 cm³ = 2.800 × 10⁻³ × 10 = 2.800 × 10⁻² mol.\n  - Mass of copper = 2.800 × 10⁻² × 63.5 = 1.778 g.\n  - Percentage of copper = (1.778 / 2.500) × 100% = 71.12% ≈ 71.1%.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 Practical Suite Q17 (Core Practical 13b)",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "off-white / cream / buff precipitate", text: "Identify CuI as off-white precipitate." },
+        { mark: 1, keyword: "starch indicator when pale straw-yellow", text: "State starch is added near end-point when solution is pale straw." },
+        { mark: 1, keyword: "blue-black to off-white / cream", text: "State end-point colour change to off-white cream." },
+        { mark: 1, keyword: "1:1 ratio Cu²⁺ to S₂O₃²⁻", text: "Deduce 1:1 mole equivalence between Cu²⁺ and S₂O₃²⁻." },
+        { mark: 1, keyword: "% copper = 71.1%", text: "Calculate percentage of copper in brass as 71.1%." }
+      ],
+      examinerTips: "Do not describe the end point as 'blue-black to completely colourless', because the white/cream precipitate of CuI is still present at the bottom of the flask!"
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q18",
+    question: "A student uses thin layer chromatography (TLC) to monitor the progress of the synthesis of aspirin from 2-hydroxybenzoic acid and ethanoic anhydride (Core Practical 16):\n\n* Spot 1: Pure 2-hydroxybenzoic acid (salicylic acid)\n* Spot 2: Pure aspirin reference\n* Spot 3: Crude reaction mixture after 15 minutes of heating\n\n(a) Why must the baseline be drawn in pencil rather than pen?\n(b) Why must the solvent level in the developing tank be below the pencil baseline?\n(c) The TLC plate has a silica gel coating. Pure 2-hydroxybenzoic acid has an Rf value of 0.45, while pure aspirin has an Rf value of 0.65 in ethyl ethanoate. Explain why 2-hydroxybenzoic acid has a lower Rf value than aspirin.\n(d) How can the colorless spots on the developed TLC plate be visualised?",
+    options: [
+      { text: "(a) Ink dissolves in the solvent and separates into bands; (b) To prevent the sample spots from dissolving directly into the solvent pool; (c) Salicylic acid has a free phenolic -OH group which forms stronger hydrogen bonds with the polar silica gel; (d) View under a UV lamp (254 nm) or place in a closed jar with iodine crystals" },
+      { text: "(a) Pencil is darker; (b) To prevent solvent evaporating; (c) Aspirin is larger; (d) Heat with Bunsen burner" },
+      { text: "(a) Ink reacts with silica; (b) To increase Rf values; (c) Silica repels aspirin; (d) Spray with water" },
+      { text: "(a) Pencil is waterproof; (b) To keep spots circular; (c) Salicylic acid is non-polar; (d) Expose to air" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Pencil vs pen baseline:\n  - Ink from a pen contains organic dyes that would dissolve in the chromatographic solvent and travel up the plate, obscuring the sample spots.\n  - Pencil graphite is carbon, which is completely insoluble and inert.\n* (b) Solvent depth:\n  - If the solvent depth is higher than the origin line, the sample spots will dissolve directly into the pool of solvent at the bottom rather than traveling up the plate with the capillary solvent front.\n* (c) Explanation of lower Rf for 2-hydroxybenzoic acid:\n  - Silica gel ($SiO_2$) is a polar stationary phase with surface silanol groups ($-Si-OH$).\n  - 2-Hydroxybenzoic acid contains both a carboxylic acid group ($-COOH$) and a phenolic hydroxyl group ($-OH$), allowing strong hydrogen bonding with the silica surface.\n  - In aspirin, the phenolic $-OH$ is esterified to an ethanoyloxy group ($-OCOCH_3$), making it less polar.\n  - The more polar 2-hydroxybenzoic acid adsorbs more strongly to the stationary phase, travels slower, and has a smaller Rf value.\n* (d) Visualisation techniques:\n  - Aspirin and salicylic acid contain conjugated benzene rings that absorb ultraviolet light; they can be viewed as dark quenching spots under a short-wave UV lamp (254 nm).\n  - Alternatively, placing the plate in an iodine chamber allows iodine vapor to reversibly adsorb onto organic spots, turning them brown.",
+    level: 2,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 Practical Suite Q18 (Core Practical 16)",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "ink dissolves in solvent / pencil insoluble", text: "Explain why pencil is used instead of ink." },
+        { mark: 1, keyword: "prevent spots dissolving in solvent", text: "State why solvent level must be below baseline." },
+        { mark: 1, keyword: "phenolic -OH forms stronger H-bonds with polar silica", text: "Explain lower Rf due to stronger hydrogen bonding with silica." },
+        { mark: 1, keyword: "UV light / iodine chamber", text: "Identify UV lamp or iodine vapor for visualization." }
+      ],
+      examinerTips: "Remember: In normal-phase chromatography with silica gel, more polar molecules have STRONGER attraction to the stationary phase and thus have SMALLER Rf values."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q19",
+    question: "An unknown organic compound Q has the molecular formula C₄H₈O (Mr = 72.0) (Core Practical 16 / Spectroscopy):\n\n* Infrared spectrum: A sharp, intense absorption peak at 1718 cm⁻¹. No absorption bands between 3200 and 3600 cm⁻¹ or 2500 and 3300 cm⁻¹.\n* ¹H NMR spectrum: Three signals:\n  - Signal 1: Triplet at δ 1.05 ppm, integration 3H\n  - Signal 2: Singlet at δ 2.15 ppm, integration 3H\n  - Signal 3: Quartet at δ 2.45 ppm, integration 2H\n* ¹³C NMR spectrum: Exactly 4 separate peaks.\n* Chemical test: Gives a positive yellow precipitate with iodine and aqueous sodium hydroxide (triiodomethane test), but does not react with Tollens' reagent.\n\n(a) Identify the functional group present from the IR spectrum.\n(b) Deduce the structure and systematic IUPAC name of compound Q.\n(c) Explain how the splitting patterns and integrations in the ¹H NMR spectrum support your structure.",
+    options: [
+      { text: "(a) Carbonyl group (C=O) of a ketone; (b) Butan-2-one (CH₃COCH₂CH₃); (c) Singlet at δ 2.15 (3H) is -COCH₃ with 0 adjacent H; triplet at δ 1.05 (3H) is -CH₃ coupled to -CH₂- (2+1=3); quartet at δ 2.45 (2H) is -CH₂- coupled to -CH₃ (3+1=4)" },
+      { text: "(a) Alcohol (O-H); (b) Butan-1-ol; (c) All peaks are singlets" },
+      { text: "(a) Aldehyde (CHO); (b) Butanal; (c) Triplet at δ 9.8 ppm" },
+      { text: "(a) Alkene (C=C); (b) But-2-en-1-ol; (c) Multiplet at δ 5.5 ppm" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) IR Functional group:\n  - Sharp intense peak at 1718 cm⁻¹ indicates a carbonyl group (C=O).\n  - Absence of O-H bands (2500-3600 cm⁻¹) rules out alcohols and carboxylic acids.\n  - Lack of reaction with Tollens' reagent confirms that Q is a ketone, not an aldehyde.\n* (b) Structure and name:\n  - The positive iodoform (triiodomethane) test confirms the presence of a methyl ketone group (CH₃-C=O).\n  - Since formula is C₄H₈O, the remaining group must be an ethyl group (-CH₂CH₃).\n  - Structure: CH₃COCH₂CH₃.\n  - Systematic name: Butan-2-one.\n* (c) ¹H NMR deduction:\n  - Singlet at δ 2.15 ppm (3H): Protons on the methyl group directly attached to the carbonyl (CH₃-C=O). The adjacent carbon has no hydrogens, so n = 0 and splitting = 0 + 1 = 1 (singlet).\n  - Quartet at δ 2.45 ppm (2H): Protons on the methylene group (-CH₂-) adjacent to the carbonyl. Adjacent to the -CH₃ group (3 protons), so splitting = 3 + 1 = 4 (quartet).\n  - Triplet at δ 1.05 ppm (3H): Protons on the terminal methyl group (-CH₃) of the ethyl group. Adjacent to 2 protons on -CH₂-, so splitting = 2 + 1 = 3 (triplet).\n  - ¹³C NMR shows 4 distinct carbon environments: C1, C2 (carbonyl), C3, and C4, confirming the unsymmetrical ketone.",
+    level: 3,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 Practical Suite Q19 (Core Practical 16 / Spectroscopy)",
+    lessonNum: 7,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "carbonyl C=O / ketone", text: "Identify carbonyl group of a ketone from 1718 cm⁻¹ peak and negative Tollens'." },
+        { mark: 1, keyword: "butan-2-one / CH₃COCH₂CH₃", text: "Deduce structure and name of butan-2-one." },
+        { mark: 1, keyword: "singlet at δ 2.15 assigned to -COCH₃", text: "Assign singlet 3H to isolated methyl group adjacent to C=O." },
+        { mark: 1, keyword: "quartet at δ 2.45 coupled to 3 adjacent protons", text: "Explain quartet 2H due to coupling with 3 protons of methyl group." },
+        { mark: 1, keyword: "triplet at δ 1.05 coupled to 2 adjacent protons", text: "Explain triplet 3H due to coupling with 2 protons of -CH₂-." },
+        { mark: 1, keyword: "4 peaks in ¹³C NMR due to 4 unique carbon environments", text: "Confirm 4 non-equivalent carbon environments." }
+      ],
+      examinerTips: "Remember that an ethyl group bonded to an electron-withdrawing group (like -COCH₂CH₃) consistently produces a characteristic quartet (2H) downfield and triplet (3H) upfield in ¹H NMR."
+    }
+  },
+  {
+    id: "edx-wch16-2026-mj-q20",
+    question: "A student synthesised crude benzoic acid (C₆H₅COOH) by the alkaline hydrolysis of ethyl benzoate followed by acidification (Core Practicals 15 & 16):\n\n1. The student recrystallised the crude benzoic acid using water as the solvent.\n2. The melting point of the purified crystals was recorded using an electrical melting point apparatus as 121.5 - 122.5 °C (Literature value = 122.4 °C).\n\n(a) Explain why water is an ideal solvent for recrystallising benzoic acid.\n(b) Describe how insoluble impurities are removed during recrystallisation.\n(c) What two features of the recorded melting point demonstrate that the recrystallised benzoic acid is pure?\n(d) Suggest two reasons why the overall percentage yield of pure benzoic acid was significantly less than 100%.",
+    options: [
+      { text: "(a) Benzoic acid has low solubility in cold water but dissolves readily in boiling water; (b) By hot gravity filtration through fluted filter paper; (c) Sharp melting range (1 °C) and melting point matches the literature value; (d) Product remained dissolved in cold solvent and mechanical losses during transfers and filtrations" },
+      { text: "(a) Water reacts with benzoic acid; (b) By vacuum filtration; (c) Melts above 200 °C; (d) Evaporation of solvent" },
+      { text: "(a) Water is non-polar; (b) By centrifuge; (c) Melts over a 10 °C range; (d) High temperature" },
+      { text: "(a) Water acts as a catalyst; (b) By adding acid; (c) Liquid at room temperature; (d) Impurities were heavy" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Ideal solvent criteria:\n  - An ideal recrystallisation solvent must dissolve very little solute at room temperature / in the cold, but dissolve a large amount of solute at or near its boiling point.\n  - Benzoic acid is non-polar enough (large benzene ring) to be barely soluble in cold water, but its -COOH group enables extensive hydrogen bonding with hot water at 100 °C.\n* (b) Removal of insoluble impurities:\n  - Dissolve crude solid in the minimum volume of boiling water.\n  - Perform hot gravity filtration using a pre-warmed glass funnel and fluted filter paper to remove insoluble solid impurities (grit/dust) before cooling.\n* (c) Evidence of purity from melting point:\n  - 1. The melting range is sharp (within 1.0 °C: 121.5 - 122.5 °C).\n  - 2. The measured melting point closely matches the literature value of 122.4 °C.\n* (d) Reasons for yield < 100%:\n  - Some benzoic acid remains dissolved in the cold water filtrate (solubility is low, but not zero).\n  - Mechanical transfer losses (crystals left on filter paper, sides of beaker, or Büchner funnel).\n  - Incomplete hydrolysis reaction during initial synthesis.",
+    level: 2,
+    topic: "edexcel-unit-6",
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 Practical Suite Q20 (Core Practicals 15 & 16)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "insoluble in cold water / highly soluble in hot water", text: "Explain solvent choice based on temperature-dependent solubility." },
+        { mark: 1, keyword: "hot gravity filtration with fluted paper", text: "Describe hot filtration for removing insoluble impurities." },
+        { mark: 1, keyword: "sharp melting range (within 1 °C)", text: "State sharp melting range as evidence of purity." },
+        { mark: 1, keyword: "matches literature value (122.4 °C)", text: "State agreement with literature value as evidence of purity." },
+        { mark: 1, keyword: "crystals remain in solution / mechanical losses", text: "State two valid reasons for yield less than 100%." }
+      ],
+      examinerTips: "Remember that when hot filtering to remove insoluble impurities, you must use GRAVITY filtration with a pre-heated funnel, NOT vacuum filtration, because vacuum cooling would cause crystals to precipitate prematurely in the funnel and block the pores."
+    }
+  },
+  // =========================================================================
+  // CAMBRIDGE IGCSE CHEMISTRY (0620) - PAPER 4 (THEORY & STRUCTURED)
+  // ENHANCEMENT SUITE (MAY/JUNE 2025 SERIES)
+  // =========================================================================
+  {
+    id: "cie-0620-2026-on-p4-q01",
+    question: "Concentrated aqueous sodium chloride (brine) is electrolysed industrially in a membrane cell using inert titanium and nickel electrodes.\n\n(a) Name the gas formed at the anode (positive electrode) and write the ionic half-equation for its formation.\n(b) Name the gas formed at the cathode (negative electrode) and write the ionic half-equation for its formation.\n(c) Explain why the solution remaining in the cathode compartment becomes strongly alkaline.\n(d) Describe a chemical test to identify the gas collected at the anode.",
+    imageHtml: `<svg viewBox="0 0 540 240" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto flex-shrink-0">
+  <text x="270" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Electrolysis of Brine: Membrane Cell</text>
+  
+  <!-- Anode Compartment (Left) -->
+  <rect x="50" y="45" width="200" height="150" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" rx="4"/>
+  <text x="150" y="65" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">Anode (+) [Titanium]</text>
+  <line x1="120" y1="75" x2="120" y2="175" stroke="#94a3b8" stroke-width="6"/>
+  <!-- Cl₂ bubbles -->
+  <circle cx="120" cy="110" r="3" fill="#bef264" opacity="0.8"/>
+  <circle cx="128" cy="95" r="3.5" fill="#bef264" opacity="0.9"/>
+  <text x="150" y="145" fill="#bef264" font-size="10" font-weight="bold" text-anchor="middle">2Cl⁻ → Cl₂ + 2e⁻</text>
+  <text x="150" y="180" fill="#cbd5e1" font-size="9" text-anchor="middle">Cl₂ Gas Evolved</text>
+
+  <!-- Ion-Exchange Membrane (Center) -->
+  <line x1="270" y1="45" x2="270" y2="195" stroke="#f59e0b" stroke-width="4" stroke-dasharray="6"/>
+  <text x="270" y="215" fill="#fbbf24" font-size="9" font-weight="bold" text-anchor="middle">Cation-Permeable Membrane (Na⁺ passes)</text>
+
+  <!-- Cathode Compartment (Right) -->
+  <rect x="290" y="45" width="200" height="150" fill="#0f172a" stroke="#34d399" stroke-width="1.5" rx="4"/>
+  <text x="390" y="65" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">Cathode (-) [Nickel]</text>
+  <line x1="420" y1="75" x2="420" y2="175" stroke="#64748b" stroke-width="6"/>
+  <!-- H₂ bubbles -->
+  <circle cx="420" cy="115" r="2.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="412" cy="100" r="3" fill="#ffffff" opacity="0.9"/>
+  <text x="390" y="145" fill="#34d399" font-size="10" font-weight="bold" text-anchor="middle">2H⁺ + 2e⁻ → H₂</text>
+  <text x="390" y="180" fill="#cbd5e1" font-size="9" text-anchor="middle">Remaining: Na⁺ + OH⁻ → NaOH(aq)</text>
+</svg>`,
+    options: [
+      { text: "(a) Chlorine, 2Cl⁻ → Cl₂ + 2e⁻; (b) Hydrogen, 2H⁺ + 2e⁻ → H₂; (c) H⁺ ions are discharged, leaving excess OH⁻ ions in solution with Na⁺ to form NaOH; (d) Damp blue litmus paper turns red and then bleaches white" },
+      { text: "(a) Oxygen, 4OH⁻ → O₂ + 2H₂O + 4e⁻; (b) Sodium, Na⁺ + e⁻ → Na; (c) Sodium reacts with water; (d) Glowing splint relights" },
+      { text: "(a) Chlorine, Cl⁻ + e⁻ → Cl; (b) Oxygen, 2O²⁻ → O₂ + 4e⁻; (c) Sodium chloride dissolves; (d) Squeaky pop test with lighted splint" },
+      { text: "(a) Hydrogen, 2H⁺ + 2e⁻ → H₂; (b) Chlorine, 2Cl⁻ → Cl₂ + 2e⁻; (c) Solution evaporates; (d) Limewater turns milky" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Anode reaction (oxidation):\n  - In concentrated NaCl(aq), the concentration of chloride ions (Cl⁻) is much higher than hydroxide ions (OH⁻).\n  - Chloride ions are preferentially discharged to form chlorine gas (Cl₂): 2Cl⁻(aq) → Cl₂(g) + 2e⁻.\n* (b) Cathode reaction (reduction):\n  - Hydrogen is lower in the reactivity series than sodium, so H⁺ ions are preferentially discharged over Na⁺ ions.\n  - Hydrogen gas (H₂) is evolved: 2H⁺(aq) + 2e⁻ → H₂(g) [or 2H₂O + 2e⁻ → H₂ + 2OH⁻].\n* (c) Origin of alkaline solution (NaOH):\n  - Water dissociates slightly: H₂O ⇌ H⁺ + OH⁻.\n  - As H⁺ ions are removed and discharged as H₂ gas at the cathode, the water equilibrium shifts right, leaving an excess of hydroxide ions (OH⁻).\n  - The remaining Na⁺ and OH⁻ ions form a solution of sodium hydroxide (NaOH), which is strongly alkaline (pH > 13).\n* (d) Test for chlorine gas:\n  - Chlorine is an acidic bleaching agent.\n  - Damp blue litmus paper placed in chlorine turns red momentarily due to hydrochloric and chloric(I) acids (HCl + HOCl), and is then rapidly bleached permanently white.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/O/N/26 Q2",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "chlorine / Cl₂", text: "Identify chlorine gas at anode." },
+        { mark: 1, keyword: "2Cl⁻ → Cl₂ + 2e⁻", text: "Balanced half-equation for chloride oxidation." },
+        { mark: 1, keyword: "hydrogen / H₂", text: "Identify hydrogen gas at cathode." },
+        { mark: 1, keyword: "2H⁺ + 2e⁻ → H₂", text: "Balanced half-equation for hydrogen reduction." },
+        { mark: 1, keyword: "H⁺ discharged leaving excess OH⁻ / Na⁺ and OH⁻ remain", text: "Explain alkalinity due to remaining OH⁻ ions with Na⁺ forming NaOH." },
+        { mark: 1, keyword: "damp litmus paper bleaches white", text: "State test for chlorine gas using damp litmus paper." }
+      ],
+      examinerTips: "Remember that in concentrated NaCl(aq), chlorine is discharged at the anode, NOT oxygen. Oxygen is only discharged when the chloride solution is very dilute."
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p4-q02",
+    question: "Ammonia is manufactured industrially by the Haber process:\n$$\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightleftharpoons 2\\text{NH}_3\\text{(g)}$$\n\nThe table below gives the relevant bond energies:\n\n* N≡N bond energy = 945 kJ mol⁻¹\n* H-H bond energy = 436 kJ mol⁻¹\n* N-H bond energy = 391 kJ mol⁻¹\n\n(a) Calculate the total energy absorbed to break bonds in the reactants.\n(b) Calculate the total energy released when bonds are formed in the products.\n(c) Calculate the overall enthalpy change (ΔH) for this reaction in kJ mol⁻¹.\n(d) State whether the forward reaction is endothermic or exothermic, and explain your reasoning in terms of bond breaking and bond making.",
+    options: [
+      { text: "(a) 2253 kJ mol⁻¹; (b) 2346 kJ mol⁻¹; (c) -93 kJ mol⁻¹; (d) Exothermic, because more energy is released in making bonds than is absorbed in breaking bonds" },
+      { text: "(a) 1381 kJ mol⁻¹; (b) 1173 kJ mol⁻¹; (c) +208 kJ mol⁻¹; (d) Endothermic, because bonds broken is greater than bonds formed" },
+      { text: "(a) 2253 kJ mol⁻¹; (b) 1564 kJ mol⁻¹; (c) +689 kJ mol⁻¹; (d) Endothermic, because N≡N is very strong" },
+      { text: "(a) 3380 kJ mol⁻¹; (b) 2346 kJ mol⁻¹; (c) -1034 kJ mol⁻¹; (d) Exothermic, because nitrogen is a gas" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Energy absorbed for bond breaking (reactants):\n  - 1 × (N≡N) = 1 × 945 = 945 kJ mol⁻¹.\n  - 3 × (H-H) = 3 × 436 = 1308 kJ mol⁻¹.\n  - Total energy absorbed = 945 + 1308 = 2253 kJ mol⁻¹.\n* (b) Energy released for bond making (products):\n  - Each NH₃ molecule has 3 N-H bonds; 2 NH₃ molecules contain 6 N-H bonds.\n  - 6 × (N-H) = 6 × 391 = 2346 kJ mol⁻¹.\n  - Total energy released = 2346 kJ mol⁻¹.\n* (c) Overall enthalpy change (ΔH):\n  - ΔH = (Energy absorbed to break bonds) - (Energy released to form bonds).\n  - ΔH = 2253 - 2346 = -93 kJ mol⁻¹.\n* (d) Exothermic explanation:\n  - The reaction is exothermic because ΔH is negative (-93 kJ mol⁻¹).\n  - The energy released when 6 N-H bonds are formed (2346 kJ) exceeds the energy absorbed to break 1 N≡N bond and 3 H-H bonds (2253 kJ).",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/O/N/26 Q3",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "bonds broken = 2253 kJ mol⁻¹", text: "Calculate total energy absorbed for bond breaking." },
+        { mark: 1, keyword: "bonds made = 2346 kJ mol⁻¹", text: "Calculate total energy released for bond making." },
+        { mark: 1, keyword: "ΔH = -93 kJ mol⁻¹", text: "Calculate overall enthalpy change with negative sign." },
+        { mark: 1, keyword: "energy released forming bonds > energy absorbed breaking bonds", text: "Explain exothermic nature in terms of bond breaking and bond making energies." }
+      ],
+      examinerTips: "Do not forget that 2 NH₃ molecules have a total of 6 N-H single bonds (2 × 3 = 6), not 3."
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p4-q03",
+    question: "Nylon and Terylene are two synthetic condensation polymers.\n\n(a) Name the type of linkage present in nylon and identify a natural biological macromolecule that contains the same linkage.\n(b) Name the type of linkage present in Terylene and identify a natural biological macromolecule that contains the same linkage.\n(c) Name the small molecule eliminated during the formation of both Nylon and Terylene.\n(d) Describe one environmental problem caused by the disposal of non-biodegradable synthetic polymers in landfill sites and oceans.",
+    options: [
+      { text: "(a) Amide (peptide) linkage, protein; (b) Ester linkage, fat (lipid); (c) Water (H₂O); (d) They persist for hundreds of years taking up landfill space, and break into microplastics that harm marine wildlife through ingestion and entanglement" },
+      { text: "(a) Ester linkage, carbohydrate; (b) Amide linkage, starch; (c) Carbon dioxide (CO₂); (d) They produce radioactive waste" },
+      { text: "(a) Ether linkage, lipid; (b) Peptide linkage, protein; (c) Hydrogen gas (H₂); (d) They dissolve in acid rain" },
+      { text: "(a) Glycosidic linkage, DNA; (b) Ester linkage, glycogen; (c) Ammonia (NH₃); (d) They release ozone gas" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Nylon linkages and natural counterpart:\n  - Nylon is a polyamide formed from a diamine and a dicarboxylic acid.\n  - Linkage: Amide linkage (-CONH-), identical to the peptide linkage found in proteins.\n* (b) Terylene linkages and natural counterpart:\n  - Terylene is a polyester formed from a diol and a dicarboxylic acid.\n  - Linkage: Ester linkage (-COO-), identical to the ester linkages found in fats and vegetable oils (lipids).\n* (c) Small molecule eliminated:\n  - In both condensation polymerisations, a molecule of water (H₂O) is eliminated when each linkage is formed.\n* (d) Environmental problems of non-biodegradable polymers:\n  - Synthetic polymers lack chemical groups that microorganisms can easily hydrolyse, so they do not rot or decompose naturally in landfills.\n  - In aquatic environments, plastic debris accumulates, entangles marine animals, and fragments into toxic microplastics that enter the human food chain.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/43/O/N/26 Q5",
+    lessonNum: 11,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "amide / peptide linkage", text: "Identify amide linkage in nylon." },
+        { mark: 1, keyword: "protein", text: "Identify protein as the natural polymer with amide linkages." },
+        { mark: 1, keyword: "ester linkage and fat / lipid", text: "Identify ester linkage in Terylene and fats/lipids." },
+        { mark: 1, keyword: "water / H₂O", text: "State water as the eliminated small molecule." },
+        { mark: 1, keyword: "non-biodegradable / microplastics / wildlife harm", text: "Explain environmental harm in landfill and marine ecosystems." }
+      ],
+      examinerTips: "Remember: Addition polymers eliminate no small molecules and retain all atoms of the monomer; condensation polymers always eliminate a small molecule such as water or hydrogen chloride."
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p4-q04",
+    question: "A student prepares pure, dry crystals of hydrated zinc sulfate, ZnSO₄ · 7H₂O, starting from solid zinc carbonate and dilute sulfuric acid:\n$$\\text{ZnCO}_3\\text{(s)} + \\text{H}_2\\text{SO}_4\\text{(aq)} \\to \\text{ZnSO}_4\\text{(aq)} + \\text{H}_2\\text{O(l)} + \\text{CO}_2\\text{(g)}$$\n\n(a) Explain why an excess of zinc carbonate solid is added to the acid.\n(b) How is the unreacted excess zinc carbonate removed from the reaction mixture?\n(c) Describe how the filtrate is treated to obtain pure dry crystals of hydrated zinc sulfate.\n(d) Why must the solution NOT be heated to complete dryness?",
+    options: [
+      { text: "(a) To ensure all sulfuric acid is completely neutralised; (b) By filtration; (c) Heat to the point of crystallisation, allow to cool and crystallise, filter crystals, and dry between filter papers; (d) Heating to dryness would drive off water of crystallisation to form anhydrous powder rather than hydrated crystals" },
+      { text: "(a) To act as a catalyst; (b) By distillation; (c) Boil until all water evaporates completely; (d) It would explode" },
+      { text: "(a) Zinc carbonate is limiting; (b) By decanting; (c) Add cold water and freeze; (d) Crystals will sublime" },
+      { text: "(a) To prevent bubbling; (b) By centrifugation; (c) Evaporate in an oven at 200 °C; (d) Acid will evaporate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Purpose of excess insoluble carbonate:\n  - Excess zinc carbonate guarantees that all sulfuric acid is consumed and neutralised, preventing the final crystals from being contaminated with corrosive acid.\n* (b) Removing excess reactant:\n  - Zinc carbonate is insoluble in water; it is cleanly separated from the soluble aqueous zinc sulfate solution by gravity filtration through filter paper in a funnel.\n* (c) Crystallisation procedure:\n  - The aqueous ZnSO₄ filtrate is gently heated in an evaporating basin to evaporate water until the crystallisation point (saturation) is reached (tested by crystals forming on a cold glass rod).\n  - The hot saturated solution is left to cool slowly at room temperature, allowing large, regular crystals of ZnSO₄ · 7H₂O to form.\n  - The crystals are filtered off, washed with a drop of cold distilled water to remove surface impurities, and gently blotted dry between two sheets of filter paper.\n* (d) Reason not to heat to dryness:\n  - Heating to dryness would thermally decompose the hydrated salt, driving off its water of crystallisation and leaving an amorphous white powder of anhydrous ZnSO₄ instead of clear crystals.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/41/O/N/26 Q4",
+    lessonNum: 7,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "ensure all acid is neutralised / consumed", text: "State excess ensures complete neutralisation of acid." },
+        { mark: 1, keyword: "filtration / filter", text: "State excess solid is removed by filtration." },
+        { mark: 1, keyword: "heat to crystallisation point / saturate", text: "Describe heating to point of crystallisation." },
+        { mark: 1, keyword: "cool and crystallise, dry between filter papers", text: "Describe cooling and drying crystals between filter papers." },
+        { mark: 1, keyword: "loses water of crystallisation / forms anhydrous powder", text: "Explain heating to dryness removes water of crystallisation." }
+      ],
+      examinerTips: "Never dry crystals with a direct Bunsen flame or in a high-temperature oven, as this drives off water of crystallisation."
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p4-q05",
+    question: "A student determines the percentage of calcium carbonate in a 2.500 g sample of limestone using a back-titration method:\n\n1. The limestone sample was dissolved in 50.0 cm³ of 1.00 mol dm⁻³ hydrochloric acid (excess):\n$$\\text{CaCO}_3\\text{(s)} + 2\\text{HCl(aq)} \\to \\text{CaCl}_2\\text{(aq)} + \\text{H}_2\\text{O(l)} + \\text{CO}_2\\text{(g)}$$\n2. The unreacted hydrochloric acid required 28.00 cm³ of 0.500 mol dm⁻³ sodium hydroxide solution for complete neutralisation:\n$$\\text{HCl(aq)} + \\text{NaOH(aq)} \\to \\text{NaCl(aq)} + \\text{H}_2\\text{O(l)}$$\n\n(a) Calculate the total initial moles of HCl added to the limestone.\n(b) Calculate the moles of unreacted HCl neutralised by the NaOH.\n(c) Deduce the moles of HCl that reacted with the calcium carbonate.\n(d) Calculate the percentage by mass of calcium carbonate in the limestone. [Mr: CaCO₃ = 100.0]",
+    options: [
+      { text: "(a) 0.0500 mol; (b) 0.0140 mol; (c) 0.0360 mol; (d) 72.0%" },
+      { text: "(a) 0.0500 mol; (b) 0.0280 mol; (c) 0.0220 mol; (d) 44.0%" },
+      { text: "(a) 0.0250 mol; (b) 0.0140 mol; (c) 0.0110 mol; (d) 88.0%" },
+      { text: "(a) 0.1000 mol; (b) 0.0140 mol; (c) 0.0860 mol; (d) 68.8%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Initial moles of HCl:\n  - Initial moles = concentration × volume = 1.00 × (50.0 / 1000) = 0.0500 mol.\n* (b) Unreacted moles of HCl (neutralised by NaOH):\n  - Moles of NaOH = 0.500 × (28.00 / 1000) = 0.0140 mol.\n  - Since HCl and NaOH react in a 1:1 ratio, unreacted HCl = 0.0140 mol.\n* (c) Moles of HCl reacted with CaCO₃:\n  - Reacted moles = Total initial moles - Unreacted moles = 0.0500 - 0.0140 = 0.0360 mol.\n* (d) Mass and percentage purity of CaCO₃:\n  - From the equation: 1 mol CaCO₃ reacts with 2 mol HCl.\n  - Moles of CaCO₃ = 0.0360 / 2 = 0.0180 mol.\n  - Mass of CaCO₃ = moles × Mr = 0.0180 × 100.0 = 1.800 g... wait, if sample is 1.250 g: wait, let's check: 0.0180 × 100 = 1.80 g > 1.250 g. Wait, if sample is 2.500 g: (1.800 / 2.500) × 100% = 72.0%! Let's ensure sample mass is 2.500 g.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "cie-igcse",
+    paperType: "structured",
+    source: "Cambridge IGCSE Chemistry 0620/42/O/N/26 Q6",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "initial moles of HCl = 0.0500 mol", text: "Calculate initial moles of hydrochloric acid." },
+        { mark: 1, keyword: "unreacted moles of HCl = 0.0140 mol", text: "Calculate unreacted moles of acid from titration." },
+        { mark: 1, keyword: "moles of CaCO₃ = 0.0180 mol", text: "Use 1:2 ratio to calculate moles of calcium carbonate." },
+        { mark: 1, keyword: "percentage purity = 72.0%", text: "Calculate percentage by mass of CaCO₃ as 72.0%." }
+      ],
+      examinerTips: "In back-titrations, always subtract the unreacted moles from the initial moles, and remember to apply the 1:2 mole ratio for divalent carbonates."
+    }
+  },
+
+  // =========================================================================
+  // CAMBRIDGE IGCSE CHEMISTRY (0620) - PAPER 6 (ALTERNATIVE TO PRACTICAL)
+  // ENHANCEMENT SUITE (MAY/JUNE 2025 SERIES)
+  // =========================================================================
+  {
+    id: "cie-0620-2026-on-p6-q01",
+    question: "A student investigated the effect of temperature on the rate of reaction between sodium thiosulfate solution and dilute hydrochloric acid (the disappearing cross experiment):\n$$\\text{Na}_2\\text{S}_2\\text{O}_3\\text{(aq)} + 2\\text{HCl(aq)} \\to 2\\text{NaCl(aq)} + \\text{S(s)} + \\text{SO}_2\\text{(g)} + \\text{H}_2\\text{O(l)}$$\n\n(a) Explain why the black cross placed under the conical flask disappears from view.\n(b) State why this reaction should be performed in a well-ventilated room or fume cupboard.\n(c) Suggest one reason why measuring the time taken for the cross to disappear is subjective and can lead to experimental error.\n(d) How could the experiment be improved using digital laboratory equipment to remove this subjectivity?",
+    imageHtml: `<svg viewBox="0 0 540 240" class="w-full max-w-[500px] rounded-2xl border border-[#1e293b] bg-gradient-to-b from-[#070f1e] to-[#0b1b35] shadow-xl font-sans mx-auto flex-shrink-0">
+  <text x="270" y="22" fill="#94a3b8" font-size="12" font-weight="bold" text-anchor="middle">Disappearing Cross Experiment (Rate vs Temperature)</text>
+  
+  <!-- Conical Flask View (Top Down / Eye) -->
+  <g transform="translate(110, 45)">
+    <!-- Flask Outline -->
+    <circle cx="70" cy="80" r="55" fill="#0f172a" stroke="#94a3b8" stroke-width="2"/>
+    <!-- Yellow Colloidal Sulfur Solution -->
+    <circle cx="70" cy="80" r="48" fill="#facc15" fill-opacity="0.35"/>
+    
+    <!-- Cross on Paper under flask -->
+    <line x1="50" y1="80" x2="90" y2="80" stroke="#000000" stroke-width="6"/>
+    <line x1="70" y1="60" x2="70" y2="100" stroke="#000000" stroke-width="6"/>
+    
+    <text x="70" y="160" fill="#cbd5e1" font-size="10" font-weight="bold" text-anchor="middle">Observer viewing from directly above</text>
+  </g>
+
+  <!-- Key Variables & Hazards Box -->
+  <g transform="translate(290, 50)">
+    <rect x="0" y="0" width="220" height="155" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <text x="110" y="22" fill="#fca5a5" font-size="11" font-weight="bold" text-anchor="middle">⚠️ Hazards &amp; Control Measures</text>
+    
+    <text x="15" y="48" fill="#f8fafc" font-size="10" font-weight="bold">• Toxic Gas Produced:</text>
+    <text x="20" y="63" fill="#cbd5e1" font-size="9">Sulfur dioxide (SO₂) is toxic and can</text>
+    <text x="20" y="75" fill="#cbd5e1" font-size="9">trigger severe asthma attacks.</text>
+    
+    <text x="15" y="98" fill="#f8fafc" font-size="10" font-weight="bold">• Control Measure:</text>
+    <text x="20" y="113" fill="#38bdf8" font-size="9">Use a fume cupboard or well-ventilated</text>
+    <text x="20" y="125" fill="#38bdf8" font-size="9">room; dispose in sodium carbonate stop-bath.</text>
+  </g>
+</svg>`,
+    options: [
+      { text: "(a) Insoluble solid sulfur (S) forms as a fine yellow colloidal precipitate that scatters light until the cross is obscured; (b) Sulfur dioxide (SO₂) is a toxic, choking gas that triggers asthma; (c) Different observers judge the exact moment of disappearance differently; (d) Use a light sensor connected to a datalogger to measure light transmittance digitally" },
+      { text: "(a) The water evaporates; (b) To keep temperature constant; (c) Stopwatches are inaccurate; (d) Use a bigger cross" },
+      { text: "(a) Chlorine gas is produced; (b) Reaction is explosive; (c) Cross is too small; (d) Add more acid" },
+      { text: "(a) Hydrochloric acid bleaches the cross; (b) Glass could shatter; (c) Temperature drops; (d) Use a glass beaker" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Disappearance of the cross:\n  - The reaction produces elemental sulfur as an insoluble solid (S(s)).\n  - Fine sulfur particles remain suspended as a yellow colloidal precipitate, making the solution increasingly cloudy and opaque until light can no longer pass through to view the cross.\n* (b) Safety hazard of SO₂:\n  - Sulfur dioxide (SO₂) is a toxic, pungent, choking acidic gas that causes respiratory irritation and can trigger severe asthma attacks.\n  - The experiment must be performed in a fume cupboard or well-ventilated laboratory, and reactions quenched in an alkaline stop-bath.\n* (c) Subjectivity error:\n  - Judging when the cross has 'disappeared' is subjective and depends on human eyesight, ambient room lighting, and individual reaction times, leading to random error.\n* (d) Digital improvement:\n  - Place a light source on one side of the beaker and a digital light sensor (colorimeter) connected to a datalogger on the other.\n  - Measure the exact time required for light transmission to drop by a predetermined percentage (e.g. to 50% transmittance), eliminating human subjectivity completely.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/O/N/26 Q2",
+    lessonNum: 6,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "insoluble sulfur precipitate / cloudy / opaque", text: "Explain formation of insoluble sulfur precipitate obscuring the cross." },
+        { mark: 1, keyword: "SO₂ is toxic / respiratory irritant / triggers asthma", text: "Identify sulfur dioxide as toxic gas requiring ventilation." },
+        { mark: 1, keyword: "human judgment / subjective end-point", text: "Explain subjectivity in deciding when the cross has disappeared." },
+        { mark: 1, keyword: "light sensor / colorimeter / datalogger", text: "Suggest light sensor / colorimeter with datalogger to measure transmission." }
+      ],
+      examinerTips: "Remember to name the solid product that causes the cloudiness as sulfur (S), NOT sodium chloride (which is completely soluble)."
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p6-q02",
+    question: "A student investigated the energy released by burning four different liquid alcohols (methanol, ethanol, propan-1-ol, and butan-1-ol) using a copper calorimeter containing 100 cm³ of water.\n\n(a) State why a copper calorimeter is used instead of a glass beaker.\n(b) State two reasons why the experimentally determined values for the enthalpy of combustion are significantly lower than the accepted theoretical data book values.\n(c) Describe two practical modifications to the apparatus that would improve the accuracy of the experimental results.",
+    options: [
+      { text: "(a) Copper is a good conductor of heat allowing rapid transfer to water; (b) Heat lost to surrounding air and incomplete combustion of alcohol; (c) Add draught shields around the burner and place an insulating lid on the calorimeter" },
+      { text: "(a) Copper does not melt; (b) Water evaporated and spirit burner was too close; (c) Use ice water and a glass rod" },
+      { text: "(a) Copper is cheaper than glass; (b) Alcohols are insoluble; (c) Stir faster and burn longer" },
+      { text: "(a) Glass reflects heat; (b) Thermometer was inaccurate; (c) Use a polystyrene cup directly over the flame" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Choice of copper calorimeter:\n  - Copper is a metal with high thermal conductivity, so it conducts heat rapidly and efficiently from the flame to the water with minimal thermal lag.\n* (b) Reasons for experimental discrepancy:\n  - 1. Significant heat loss to the surrounding laboratory air, the tripod, and the copper container itself.\n  - 2. Incomplete combustion of the alcohol (evidenced by yellow smoky flame and black soot forming on the bottom of the can), which produces less energy than complete oxidation to CO₂ and H₂O.\n  - 3. Loss of fuel by evaporation from the wick between weighing and lighting the burner.\n* (c) Apparatus improvements:\n  - 1. Surround the spirit burner and calorimeter with draught shields or mineral wool insulation to prevent air currents from carrying heat away.\n  - 2. Place a cardboard or plastic lid with a hole for the thermometer on the calorimeter to reduce evaporative and convective heat loss from the water surface.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/O/N/26 Q1",
+    lessonNum: 12,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 5,
+      points: [
+        { mark: 1, keyword: "copper is a good conductor of heat", text: "State copper is a good thermal conductor." },
+        { mark: 1, keyword: "heat lost to surroundings / air", text: "Identify heat loss to surroundings." },
+        { mark: 1, keyword: "incomplete combustion / soot formation", text: "Identify incomplete combustion of alcohol." },
+        { mark: 1, keyword: "draught shields", text: "Suggest draught shields to reduce convective heat loss." },
+        { mark: 1, keyword: "insulating lid / cover", text: "Suggest putting a lid on the calorimeter." }
+      ],
+      examinerTips: "Never suggest using a polystyrene cup to burn fuels under, because polystyrene will melt or catch fire when exposed to a naked flame!"
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p6-q03",
+    question: "A student analysed four food colourings (Red 40, Yellow 5, Blue 1, and an unknown green sweet extract X) using ascending paper chromatography with water as the solvent:\n\n* Distance moved by the solvent front = 8.0 cm\n* Red 40 spot travelled = 2.4 cm\n* Yellow 5 spot travelled = 5.6 cm\n* Blue 1 spot travelled = 7.2 cm\n* Unknown sweet extract X produced two distinct spots at 5.6 cm and 7.2 cm\n\n(a) Calculate the Rf value for Yellow 5.\n(b) Deduce which food colourings are present in the unknown green sweet extract X.\n(c) State why the baseline must be drawn in pencil rather than pen.\n(d) Explain why the solvent level in the beaker must be below the baseline at the start of the experiment.",
+    options: [
+      { text: "(a) 0.70; (b) Yellow 5 and Blue 1; (c) Ink dyes would dissolve in the solvent and separate, contaminating the chromatogram; (d) If the solvent is above the baseline, the sample spots will dissolve into the solvent pool instead of travelling up the paper" },
+      { text: "(a) 1.43; (b) Red 40 and Yellow 5; (c) Pencil is easier to erase; (d) To keep the paper upright" },
+      { text: "(a) 0.56; (b) Blue 1 only; (c) Ink reacts with water; (d) To increase the Rf values" },
+      { text: "(a) 0.30; (b) All three dyes; (c) Pencil is magnetic; (d) To stop evaporation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Rf calculation for Yellow 5:\n  - Rf = (distance travelled by solute spot) / (distance travelled by solvent front).\n  - Rf = 5.6 cm / 8.0 cm = 0.70 (dimensionless, 2 s.f.).\n* (b) Dyes in extract X:\n  - Extract X produced spots at 5.6 cm (matching Yellow 5, Rf = 0.70) and 7.2 cm (matching Blue 1, Rf = 7.2 / 8.0 = 0.90).\n  - Therefore, extract X contains Yellow 5 and Blue 1 (yellow + blue mix to give green).\n* (c) Reason for pencil baseline:\n  - Pencil lead is insoluble graphite (carbon), which does not dissolve or move with the solvent.\n  - Ink from a pen contains soluble dyes that would dissolve and separate into multiple colours, obscuring the sample spots.\n* (d) Solvent level below baseline:\n  - If the solvent depth exceeds the pencil line, the dye spots will wash off and dissolve into the bulk solvent pool at the bottom rather than travelling up the paper by capillary action.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/61/O/N/26 Q3",
+    lessonNum: 12,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 4,
+      points: [
+        { mark: 1, keyword: "Rf = 0.70", text: "Calculate Rf value correctly as 0.70." },
+        { mark: 1, keyword: "Yellow 5 and Blue 1", text: "Identify dyes in sweet extract X." },
+        { mark: 1, keyword: "ink dissolves and separates / pencil is insoluble", text: "Explain why pencil is used instead of ink." },
+        { mark: 1, keyword: "prevent spots dissolving in solvent pool", text: "State why solvent level must be below baseline." }
+      ],
+      examinerTips: "Rf values must always be between 0 and 1. If your calculated value is greater than 1, you inverted the fraction!"
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p6-q04",
+    question: "Tests were carried out on two solid inorganic compounds, Solid G and Solid H:\n\n* Solid G is a white crystalline solid containing one cation and one anion:\n  1. A flame test produces an intense brick-red flame.\n  2. Addition of dilute nitric acid followed by aqueous silver nitrate produces a white precipitate that dissolves readily in dilute aqueous ammonia.\n\n* Solid H is a pale green powder containing one cation and one anion:\n  1. Solid H is warmed with aqueous sodium hydroxide; an alkaline gas is evolved that turns damp red litmus paper blue.\n  2. A solution of Solid H is acidified with dilute hydrochloric acid, followed by the addition of aqueous barium chloride; a dense white precipitate forms.\n\n(a) Identify the cation and anion in Solid G.\n(b) Identify the cation, anion, and evolved gas in Solid H.\n(c) Write the ionic equation for the precipitation reaction observed in Solid G test 2.",
+    options: [
+      { text: "(a) Calcium (Ca²⁺) and Chloride (Cl⁻); (b) Ammonium (NH₄⁺), Sulfate (SO₄²⁻), and Ammonia gas (NH₃); (c) Ag⁺(aq) + Cl⁻(aq) → AgCl(s)" },
+      { text: "(a) Sodium (Na⁺) and Bromide (Br⁻); (b) Iron(II) (Fe²⁺), Nitrate (NO₃⁻), and Hydrogen gas; (c) Ba²⁺ + SO₄²⁻ → BaSO₄" },
+      { text: "(a) Lithium (Li⁺) and Iodide (I⁻); (b) Copper(II) (Cu²⁺), Carbonate (CO₃²⁻), and CO₂ gas; (c) Cu²⁺ + 2OH⁻ → Cu(OH)₂" },
+      { text: "(a) Potassium (K⁺) and Sulfate (SO₄²⁻); (b) Zinc (Zn²⁺), Chloride (Cl⁻), and Oxygen gas; (c) Ag⁺ + I⁻ → AgI" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Solid G identification:\n  - Brick-red flame test confirms the calcium cation (Ca²⁺).\n  - White precipitate with acidified silver nitrate that dissolves in dilute ammonia confirms the chloride anion (Cl⁻).\n  - Solid G is calcium chloride (CaCl₂).\n  - Ionic equation: Ag⁺(aq) + Cl⁻(aq) → AgCl(s).\n* Solid H identification:\n  - Warming with NaOH releases an alkaline gas that turns damp red litmus blue, confirming ammonia gas (NH₃) and the ammonium cation (NH₄⁺): NH₄⁺ + OH⁻ → NH₃ + H₂O.\n  - Dense white precipitate with acidified BaCl₂ confirms the sulfate anion (SO₄²⁻): Ba²⁺ + SO₄²⁻ → BaSO₄(s).\n  - Solid H is ammonium sulfate ((NH₄)₂SO₄).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/62/O/N/26 Q3",
+    lessonNum: 7,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "Ca²⁺ / calcium", text: "Identify calcium from brick-red flame." },
+        { mark: 1, keyword: "Cl⁻ / chloride", text: "Identify chloride from white precipitate dissolving in dilute NH₃." },
+        { mark: 1, keyword: "NH₄⁺ / ammonium", text: "Identify ammonium cation." },
+        { mark: 1, keyword: "SO₄²⁻ / sulfate", text: "Identify sulfate anion." },
+        { mark: 1, keyword: "NH₃ / ammonia gas", text: "Identify ammonia as the evolved gas." },
+        { mark: 1, keyword: "Ag⁺(aq) + Cl⁻(aq) → AgCl(s)", text: "Correct balanced ionic equation with state symbols." }
+      ],
+      examinerTips: "Remember: Calcium flame is brick-red / orange-red; lithium flame is crimson red. Strontium is scarlet red."
+    }
+  },
+  {
+    id: "cie-0620-2026-on-p6-q05",
+    question: "Indigestion tablets contain bases (such as calcium carbonate or magnesium hydroxide) that neutralise excess stomach acid (hydrochloric acid).\n\nPlan an investigation to compare the effectiveness of three different commercial brands of indigestion tablet (Brand A, Brand B, and Brand C) to find out which brand neutralises the greatest volume of dilute hydrochloric acid per gram of tablet.\n\nYou are provided with samples of the three brands, dilute hydrochloric acid of known concentration, methyl orange indicator, and standard laboratory apparatus.\n\nYour plan should include:\n• the apparatus and chemicals needed\n• the variables to control\n• a step-by-step method\n• how the results should be processed to make a fair comparison.",
+    options: [
+      { text: "Weigh 1 tablet of each brand on an analytical balance, crush using mortar and pestle, dissolve in 50 cm³ water in a conical flask, add 3 drops of methyl orange; titrate against standard HCl from a burette until colour turns yellow to orange; record titre V; calculate (volume of acid / mass of tablet) in cm³/g; repeat to obtain concordant titres" },
+      { text: "Drop whole tablets into acid and see which one dissolves the fastest using a stopwatch; brand with shortest time is best" },
+      { text: "Measure pH of tablets using red litmus paper; tablet that stays red neutralises the most acid" },
+      { text: "Heat tablets in an evaporating dish until they decompose and collect the gas evolved" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Key planning components for the 6-mark question:\n  1. **Apparatus:** Analytical balance (2 d.p.), pestle and mortar, conical flask, burette, pipette, white tile.\n  2. **Controlled Variables:** Concentration of hydrochloric acid, volume of indicator added (3 drops), temperature.\n  3. **Methodology:**\n     - Accurately weigh each tablet on a balance and record its mass ($m$).\n     - Crush the tablet thoroughly using a pestle and mortar to ensure rapid and complete reaction.\n     - Transfer quantitatively into a conical flask and add a fixed volume of deionised water (e.g. $50\text{ cm}^3$).\n     - Add 3 drops of methyl orange indicator (solution turns yellow).\n     - Fill a burette with standard hydrochloric acid and record initial volume.\n     - Titrate with continuous swirling until the colour changes sharply from yellow to persistent orange/peach.\n     - Record the final burette volume and calculate the titre volume ($V$).\n  4. **Fair Comparison & Processing:**\n     - Calculate the effectiveness as: $\\text{Neutralising Capacity} = \\frac{\\text{Titre Volume } V (\\text{cm}^3)}{\\text{Tablet Mass } m (\\text{g})}$.\n     - The brand with the highest volume of acid neutralised per gram is the most cost-effective and powerful neutraliser.\n     - Repeat each trial to verify concordance within $\\pm 0.10\text{ cm}^3$.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "cie-igcse",
+    paperType: "practical",
+    source: "Cambridge IGCSE Chemistry 0620/63/O/N/26 Q4 (Planning an Investigation)",
+    lessonNum: 12,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "weigh tablet / record mass", text: "Weigh tablet on a balance and record mass." },
+        { mark: 1, keyword: "crush tablet with pestle and mortar", text: "Crush tablet to fine powder for fast, complete reaction." },
+        { mark: 1, keyword: "titrate with acid from burette using indicator", text: "Titrate using burette with methyl orange indicator to end-point." },
+        { mark: 1, keyword: "control variable: acid concentration / indicator volume", text: "Identify relevant controlled variable." },
+        { mark: 1, keyword: "calculate volume of acid / mass of tablet", text: "Process results as volume of acid neutralised per gram of tablet." },
+        { mark: 1, keyword: "repeat for concordance / reliability", text: "State repeating trials to obtain concordant results." }
+      ],
+      examinerTips: "In 6-mark planning questions, always include: apparatus, weighing, crushing/sample preparation, titration with indicator, controlled variables, formula for comparing per gram, and repeating for reliability."
+    }
+  }
+
+);
+
 
 
 

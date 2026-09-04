@@ -16,7 +16,8 @@ import {
     Stethoscope,
     FileCheck,
     Printer,
-    Search
+    Search,
+    BarChart3
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
@@ -30,6 +31,7 @@ const ToothIcon = ({ className }: { className?: string }) => (
 const chemistryNavItems = [
     { name: 'Study Hub', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
+    { name: 'Diagnostics', href: '/dashboard/diagnostics', icon: BarChart3 },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Mock Simulator', href: '/dashboard/mock-exam', icon: FileCheck },
     { name: 'Worksheets', href: '/dashboard/worksheet', icon: Printer },
@@ -82,6 +84,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         } else if (
             pathname === '/dashboard' ||
             pathname?.startsWith('/dashboard/curriculum') ||
+            pathname?.startsWith('/dashboard/diagnostics') ||
             pathname?.startsWith('/dashboard/quizzes') ||
             pathname?.startsWith('/dashboard/mock-exam') ||
             pathname?.startsWith('/dashboard/worksheet')
