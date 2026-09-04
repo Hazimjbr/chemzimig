@@ -692,7 +692,7 @@ export default function MockExamPage() {
                     Question {currentIndex + 1}
                   </span>
                   <span className="text-xs text-slate-500 font-medium">
-                    of {questions.length} [1 Mark]
+                    of {questions.length} [{currentQ.markingScheme?.marks || 1} {currentQ.markingScheme?.marks === 1 ? 'Mark' : 'Marks'}]
                   </span>
                 </div>
 
@@ -729,52 +729,100 @@ export default function MockExamPage() {
                 />
               )}
 
-              {/* Multiple Choice Options */}
-              <div className="space-y-3 pt-2">
-                {currentQ.options.map((opt, optIdx) => {
-                  const isSelected = answers[currentIndex] === optIdx;
-                  const letter = String.fromCharCode(65 + optIdx);
+              {/* Question Input Section: Either Structured Written Area or Multiple Choice Options */}
+              {isCurrentQWritten ? (
+                <div className="space-y-4 pt-2">
+                  <div className="bg-[#0b1224] border border-indigo-500/20 rounded-2xl p-5 space-y-3 shadow-inner">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-bold uppercase tracking-wider text-indigo-400 flex items-center gap-2">
+                        <span>📝 Student Written Response</span>
+                        <span className="text-[10px] px-2 py-0.5 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 font-mono">
+                          {currentQ.markingScheme?.marks || 1} Marks Allocated
+                        </span>
+                      </label>
+                      <span className="text-[11px] text-slate-500 font-mono">
+                        {(writtenAnswers[currentIndex] || '').length} characters
+                      </span>
+                    </div>
 
-                  return (
-                    <button
-                      key={optIdx}
-                      onClick={() => setAnswers(prev => ({ ...prev, [currentIndex]: optIdx }))}
-                      className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center gap-4 group ${
-                        isSelected
-                          ? 'bg-indigo-600/20 border-indigo-500 text-white shadow-lg shadow-indigo-500/10 ring-1 ring-indigo-400'
-                          : 'bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/5 hover:border-white/10'
-                      }`}
-                    >
-                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-black text-sm flex-shrink-0 transition-colors ${
-                        isSelected
-                          ? 'bg-indigo-500 text-white'
-                          : 'bg-white/5 text-slate-400 group-hover:text-white'
-                      }`}>
-                        {letter}
-                      </div>
-                      <div className="flex-1 text-sm md:text-base font-normal">
-                        {renderTextWithMath(opt.text)}
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
+                    <textarea
+                      value={writtenAnswers[currentIndex] || ''}
+                      onChange={(e) => setWrittenAnswers(prev => ({ ...prev, [currentIndex]: e.target.value }))}
+                      placeholder="Write your complete chemical explanation, balanced chemical equations, or quantitative calculations here. Your response is automatically evaluated against Cambridge mark scheme keywords..."
+                      rows={6}
+                      className="w-full bg-[#060913] border border-white/10 rounded-xl p-4 text-sm md:text-base text-slate-100 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all resize-y leading-relaxed font-sans"
+                    />
 
-              {/* Clear answer option */}
-              {answers[currentIndex] !== undefined && (
-                <div className="flex justify-end">
-                  <button
-                    onClick={() => {
-                      setAnswers(prev => {
-                        const updated = { ...prev };
-                        delete updated[currentIndex];
-                        return updated;
-                      });
-                    }}
-                    className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
-                  >
-                    Clear selection
-                  </button>
+                    <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1">
+                      <span className="flex items-center gap-1.5">
+                        <span className="text-amber-400">💡</span>
+                        <span>Include key scientific terms, state symbols, and correct units.</span>
+                      </span>
+
+                      {writtenAnswers[currentIndex] && (
+                        <button
+                          onClick={() => {
+                            setWrittenAnswers(prev => {
+                              const updated = { ...prev };
+                              delete updated[currentIndex];
+                              return updated;
+                            });
+                          }}
+                          className="text-xs text-rose-400 hover:text-rose-300 transition-colors"
+                        >
+                          Clear text
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-3 pt-2">
+                  {currentQ.options.map((opt, optIdx) => {
+                    const isSelected = answers[currentIndex] === optIdx;
+                    const letter = String.fromCharCode(65 + optIdx);
+
+                    return (
+                      <button
+                        key={optIdx}
+                        onClick={() => setAnswers(prev => ({ ...prev, [currentIndex]: optIdx }))}
+                        className={`w-full p-4 rounded-2xl border text-left transition-all flex items-center gap-4 group ${
+                          isSelected
+                            ? 'bg-indigo-600/20 border-indigo-500 text-white shadow-lg shadow-indigo-500/10 ring-1 ring-indigo-400'
+                            : 'bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/5 hover:border-white/10'
+                        }`}
+                      >
+                        <div className={`w-8 h-8 rounded-xl flex items-center justify-center font-black text-sm flex-shrink-0 transition-colors ${
+                          isSelected
+                            ? 'bg-indigo-500 text-white'
+                            : 'bg-white/5 text-slate-400 group-hover:text-white'
+                        }`}>
+                          {letter}
+                        </div>
+                        <div className="flex-1 text-sm md:text-base font-normal">
+                          {renderTextWithMath(opt.text)}
+                        </div>
+                      </button>
+                    );
+                  })}
+
+                  {/* Clear answer option */}
+                  {answers[currentIndex] !== undefined && (
+                    <div className="flex justify-end">
+                      <button
+                        onClick={() => {
+                          setAnswers(prev => {
+                            const updated = { ...prev };
+                            delete updated[currentIndex];
+                            return updated;
+                          });
+                        }}
+                        className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                      >
+                        Clear selection
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -845,8 +893,9 @@ export default function MockExamPage() {
 
                 {/* Grid */}
                 <div className="flex-1 overflow-y-auto py-4 grid grid-cols-5 sm:grid-cols-8 gap-2">
-                  {questions.map((_, idx) => {
-                    const isAnswered = answers[idx] !== undefined;
+                  {questions.map((q, idx) => {
+                    const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+                    const isAnswered = isWritten ? !!(writtenAnswers[idx] && writtenAnswers[idx].trim().length > 0) : answers[idx] !== undefined;
                     const isFlagged = flaggedIndices.has(idx);
                     const isCurrent = idx === currentIndex;
 
@@ -946,7 +995,7 @@ export default function MockExamPage() {
         <div className="w-full max-w-5xl mx-auto px-4 py-12">
           <ExamReportCard
             score={totalScore}
-            total={questions.length}
+            total={totalPossibleMarks}
             timeSpentSeconds={timeSpentSeconds}
             profile={activeProfile}
             strikeCount={strikes}
@@ -981,54 +1030,184 @@ export default function MockExamPage() {
 
           <div className="space-y-6">
             {questions.map((q, idx) => {
+              const isWritten = q.paperType === 'structured' || q.paperType === 'practical' || !!q.markingScheme;
+              const evaluation = writtenEvaluations[idx];
               const studentChoice = answers[idx];
-              const isCorrect = studentChoice === q.correctAnswer;
+              const isMcqCorrect = studentChoice === q.correctAnswer;
+              const awardedMarks = isWritten ? (evaluation?.awardedMarks || 0) : (isMcqCorrect ? 1 : 0);
+              const maxMarks = q.markingScheme?.marks || 1;
 
               return (
-                <div key={q.id} className="bg-[#0b0f1d] border border-white/5 rounded-3xl p-6 md:p-8 space-y-4">
+                <div key={q.id} className="bg-[#0b0f1d] border border-white/5 rounded-3xl p-6 md:p-8 space-y-5 shadow-xl">
                   
                   {/* Status header */}
-                  <div className="flex items-center justify-between border-b border-white/5 pb-3 text-xs">
-                    <span className="font-bold text-slate-400">Question {idx + 1}</span>
-                    <span className={`font-bold px-3 py-1 rounded-full border ${
-                      isCorrect
+                  <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/5 pb-4 text-xs">
+                    <div className="flex items-center gap-2">
+                      <span className="font-black text-white text-sm">Question {idx + 1}</span>
+                      {q.paperType && (
+                        <span className="px-2 py-0.5 rounded-md bg-white/5 text-slate-400 font-mono text-[10px] uppercase">
+                          {q.paperType}
+                        </span>
+                      )}
+                      {q.source && (
+                        <span className="text-[11px] text-slate-500 truncate max-w-xs sm:max-w-md">
+                          ({q.source})
+                        </span>
+                      )}
+                    </div>
+
+                    <span className={`font-black px-3.5 py-1.5 rounded-full border text-xs flex items-center gap-1.5 ${
+                      awardedMarks === maxMarks
                         ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                        : awardedMarks > 0
+                        ? 'bg-amber-500/10 border-amber-500/30 text-amber-400'
                         : 'bg-rose-500/10 border-rose-500/30 text-rose-400'
                     }`}>
-                      {isCorrect ? 'Correct (+1 Mark)' : 'Incorrect (0 Marks)'}
+                      {awardedMarks === maxMarks ? (
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                      ) : (
+                        <AlertCircle className="w-3.5 h-3.5" />
+                      )}
+                      <span>
+                        {awardedMarks} / {maxMarks} {maxMarks === 1 ? 'Mark' : 'Marks'}
+                      </span>
                     </span>
                   </div>
 
                   {/* Question prompt */}
-                  <div className="text-base text-white font-medium">
+                  <div className="text-base text-white font-medium leading-relaxed">
                     {renderTextWithMath(q.question)}
                   </div>
 
-                  {/* Options */}
-                  <div className="space-y-2 pt-2">
-                    {q.options.map((opt, optIdx) => {
-                      const isCorrectOpt = optIdx === q.correctAnswer;
-                      const isStudentOpt = optIdx === studentChoice;
+                  {/* Optional Graph / Image */}
+                  {q.imageHtml && (
+                    <div 
+                      className="my-3 p-4 bg-[#0a0f1d] border border-white/10 rounded-2xl flex justify-center"
+                      dangerouslySetInnerHTML={{ __html: q.imageHtml }}
+                    />
+                  )}
 
-                      let optStyle = 'bg-white/[0.01] border-white/5 text-slate-400';
-                      if (isCorrectOpt) {
-                        optStyle = 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold';
-                      } else if (isStudentOpt && !isCorrect) {
-                        optStyle = 'bg-rose-500/15 border-rose-500/40 text-rose-300';
-                      }
-
-                      return (
-                        <div key={optIdx} className={`p-3.5 rounded-xl border text-sm flex items-center gap-3 ${optStyle}`}>
-                          <span className="font-bold">{String.fromCharCode(65 + optIdx)}.</span>
-                          <span className="flex-1">{renderTextWithMath(opt.text)}</span>
-                          {isCorrectOpt && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
-                          {isStudentOpt && !isCorrect && <XCircle className="w-4 h-4 text-rose-400" />}
+                  {/* Written Answer Review vs MCQ Review */}
+                  {isWritten ? (
+                    <div className="space-y-4 pt-1">
+                      {/* Student's written answer */}
+                      <div className="bg-white/[0.02] border border-white/10 rounded-2xl p-4 space-y-2">
+                        <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                          Your Submitted Written Response:
+                        </span>
+                        <div className="text-sm text-slate-200 whitespace-pre-wrap font-sans leading-relaxed bg-[#060913] p-3.5 rounded-xl border border-white/5 min-h-[60px]">
+                          {writtenAnswers[idx] && writtenAnswers[idx].trim().length > 0 ? (
+                            writtenAnswers[idx]
+                          ) : (
+                            <span className="text-slate-500 italic">No response submitted for this question.</span>
+                          )}
                         </div>
-                      );
-                    })}
-                  </div>
+                      </div>
 
-                  {/* Explanation */}
+                      {/* Cambridge Marking Scheme Rubric Breakdown */}
+                      {q.markingScheme && (
+                        <div className="bg-[#0c152a] border border-indigo-500/20 rounded-2xl p-5 space-y-4">
+                          <div className="flex items-center justify-between border-b border-white/5 pb-3">
+                            <span className="text-xs font-black text-indigo-300 uppercase tracking-wider flex items-center gap-2">
+                              <span>📋 Official Cambridge Mark Scheme Rubric</span>
+                              <span className="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-200">
+                                {q.markingScheme.marks} Total Marks
+                              </span>
+                            </span>
+                          </div>
+
+                          <div className="space-y-2.5">
+                            {q.markingScheme.points.map((pt, pIdx) => {
+                              const ptEvaluation = evaluation?.pointResults?.[pIdx];
+                              const isMatched = ptEvaluation?.matched;
+
+                              return (
+                                <div 
+                                  key={pIdx}
+                                  className={`p-3 rounded-xl border text-xs transition-all ${
+                                    isMatched
+                                      ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-200'
+                                      : 'bg-rose-500/10 border-rose-500/25 text-rose-200/90'
+                                  }`}
+                                >
+                                  <div className="flex items-start justify-between gap-3">
+                                    <div className="flex items-start gap-2 flex-1">
+                                      <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold flex-shrink-0 ${
+                                        isMatched
+                                          ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                                          : 'bg-rose-500/20 text-rose-400 border border-rose-500/30'
+                                      }`}>
+                                        +{pt.mark} Mark
+                                      </span>
+                                      <div className="space-y-1">
+                                        <p className="text-slate-100 font-medium leading-relaxed">{pt.text}</p>
+                                        <div className="flex flex-wrap items-center gap-1.5 pt-1">
+                                          <span className="text-[10px] text-slate-400">Target Keyword:</span>
+                                          <span className="px-2 py-0.5 rounded bg-amber-500/15 border border-amber-500/30 text-amber-300 font-mono text-[10px] font-bold">
+                                            {pt.keyword}
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className="flex-shrink-0">
+                                      {isMatched ? (
+                                        <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-400 bg-emerald-500/15 px-2.5 py-1 rounded-full border border-emerald-500/30">
+                                          <Check className="w-3.5 h-3.5" />
+                                          <span>Awarded</span>
+                                        </span>
+                                      ) : (
+                                        <span className="inline-flex items-center gap-1 text-[11px] font-bold text-rose-400 bg-rose-500/15 px-2.5 py-1 rounded-full border border-rose-500/30">
+                                          <X className="w-3.5 h-3.5" />
+                                          <span>Not Detected</span>
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+
+                          {/* Examiner Tips */}
+                          {q.markingScheme.examinerTips && (
+                            <div className="mt-3 bg-amber-500/10 border border-amber-500/20 rounded-xl p-3.5 text-xs text-amber-200/90 leading-relaxed">
+                              <span className="font-bold text-amber-300 uppercase tracking-widest text-[10px] block mb-1">
+                                💡 Cambridge Examiner Insights & Common Pitfalls:
+                              </span>
+                              {q.markingScheme.examinerTips}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    /* Multiple Choice Review */
+                    <div className="space-y-2 pt-2">
+                      {q.options.map((opt, optIdx) => {
+                        const isCorrectOpt = optIdx === q.correctAnswer;
+                        const isStudentOpt = optIdx === studentChoice;
+
+                        let optStyle = 'bg-white/[0.01] border-white/5 text-slate-400';
+                        if (isCorrectOpt) {
+                          optStyle = 'bg-emerald-500/15 border-emerald-500/40 text-emerald-300 font-semibold';
+                        } else if (isStudentOpt && !isMcqCorrect) {
+                          optStyle = 'bg-rose-500/15 border-rose-500/40 text-rose-300';
+                        }
+
+                        return (
+                          <div key={optIdx} className={`p-3.5 rounded-xl border text-sm flex items-center gap-3 ${optStyle}`}>
+                            <span className="font-bold">{String.fromCharCode(65 + optIdx)}.</span>
+                            <span className="flex-1">{renderTextWithMath(opt.text)}</span>
+                            {isCorrectOpt && <CheckCircle2 className="w-4 h-4 text-emerald-400" />}
+                            {isStudentOpt && !isMcqCorrect && <XCircle className="w-4 h-4 text-rose-400" />}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
+
+                  {/* General Explanation */}
                   {q.explanation && (
                     <div className="mt-4 bg-indigo-500/5 border border-indigo-500/15 rounded-2xl p-4 text-xs text-indigo-200/90 leading-relaxed">
                       <span className="font-bold text-indigo-400 uppercase tracking-widest text-[10px] block mb-1">

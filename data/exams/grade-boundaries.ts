@@ -18,6 +18,7 @@ export interface ExamPaperProfile {
   curriculumTrack: string; // 'cie-igcse' | 'edexcel-as' | 'edexcel-a2'
   paperCode: string;
   paperName: string;
+  paperType?: 'mcq' | 'structured' | 'practical';
   defaultQuestionCount: number;
   durationMinutes: number;
   totalMarks: number;
@@ -35,6 +36,7 @@ export const EXAM_PROFILES: Record<string, ExamPaperProfile> = {
     curriculumTrack: 'cie-igcse',
     paperCode: '0620/22',
     paperName: 'Paper 2 Multiple Choice (Extended)',
+    paperType: 'mcq',
     defaultQuestionCount: 40,
     durationMinutes: 45,
     totalMarks: 40,
@@ -54,6 +56,66 @@ export const EXAM_PROFILES: Record<string, ExamPaperProfile> = {
       { grade: 'D',  minPercent: 40, label: 'Grade D (Satisfactory)', color: '#f59e0b', badgeBg: 'bg-amber-500/20 text-amber-400 border-amber-500/30', description: 'Satisfactory basic knowledge with some conceptual gaps.' },
       { grade: 'E',  minPercent: 30, label: 'Grade E (Sufficient)', color: '#f97316', badgeBg: 'bg-orange-500/20 text-orange-400 border-orange-500/30', description: 'Minimum pass standard. Needs intensive review.' },
       { grade: 'U',  minPercent: 0,  label: 'Grade U (Ungraded)', color: '#ef4444', badgeBg: 'bg-rose-500/20 text-rose-400 border-rose-500/30', description: 'Below minimum passing threshold.' },
+    ]
+  },
+
+  // 2. Cambridge IGCSE Chemistry 0620 - Paper 4 (Theory / Structured)
+  'cie-0620-p4': {
+    id: 'cie-0620-p4',
+    title: 'Cambridge IGCSE Chemistry (0620)',
+    board: 'cambridge',
+    curriculumTrack: 'cie-igcse',
+    paperCode: '0620/42',
+    paperName: 'Paper 4 Theory & Structured Written Exam',
+    paperType: 'structured',
+    defaultQuestionCount: 15,
+    durationMinutes: 75,
+    totalMarks: 50,
+    instructions: [
+      'Authentic Written Paper: Write your answers directly in the provided response areas.',
+      'Your responses are automatically evaluated against the official Cambridge mark scheme keywords and scientific terminology.',
+      'Show all calculation steps and include correct state symbols and units where appropriate.',
+      'Detailed mark allocation, examiner tips, and official model answers will be provided in your final performance report.'
+    ],
+    gradeScale: 'letters',
+    thresholds: [
+      { grade: 'A*', minPercent: 82, label: 'Grade A* (Top Tier)', color: '#10b981', badgeBg: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', description: 'Flawless recall, precise scientific keywords, and high mathematical accuracy.' },
+      { grade: 'A',  minPercent: 70, label: 'Grade A (Excellent)', color: '#06b6d4', badgeBg: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30', description: 'Comprehensive coverage of core chemical mechanisms and explanations.' },
+      { grade: 'B',  minPercent: 58, label: 'Grade B (Very Good)', color: '#3b82f6', badgeBg: 'bg-blue-500/20 text-blue-400 border-blue-500/30', description: 'Strong conceptual understanding with minor terminology omissions.' },
+      { grade: 'C',  minPercent: 48, label: 'Grade C (Standard Pass)', color: '#8b5cf6', badgeBg: 'bg-violet-500/20 text-violet-400 border-violet-500/30', description: 'Satisfactory mastery of fundamental structured questions.' },
+      { grade: 'D',  minPercent: 38, label: 'Grade D (Basic)', color: '#f59e0b', badgeBg: 'bg-amber-500/20 text-amber-400 border-amber-500/30', description: 'Marginal pass with several key definitions omitted.' },
+      { grade: 'E',  minPercent: 28, label: 'Grade E (Minimum Pass)', color: '#f97316', badgeBg: 'bg-orange-500/20 text-orange-400 border-orange-500/30', description: 'Minimum acceptable standard for Paper 4.' },
+      { grade: 'U',  minPercent: 0,  label: 'Grade U (Ungraded)', color: '#ef4444', badgeBg: 'bg-rose-500/20 text-rose-400 border-rose-500/30', description: 'Below passing threshold.' },
+    ]
+  },
+
+  // 3. Cambridge IGCSE Chemistry 0620 - Paper 6 (Alternative to Practical)
+  'cie-0620-p6': {
+    id: 'cie-0620-p6',
+    title: 'Cambridge IGCSE Chemistry (0620)',
+    board: 'cambridge',
+    curriculumTrack: 'cie-igcse',
+    paperCode: '0620/62',
+    paperName: 'Paper 6 Alternative to Practical Written Paper',
+    paperType: 'practical',
+    defaultQuestionCount: 15,
+    durationMinutes: 60,
+    totalMarks: 40,
+    instructions: [
+      'Laboratory & Experimental Investigation Paper.',
+      'Answer written questions on apparatus readings, qualitative tests (cations/anions/gases), and experimental planning.',
+      'State specific laboratory apparatus, controlled variables, and observations with exact precipitate colors.',
+      'Evaluated using official Cambridge Paper 6 mark schemes and investigation criteria.'
+    ],
+    gradeScale: 'letters',
+    thresholds: [
+      { grade: 'A*', minPercent: 84, label: 'Grade A*', color: '#10b981', badgeBg: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30', description: 'Flawless qualitative analysis and experimental design.' },
+      { grade: 'A',  minPercent: 72, label: 'Grade A', color: '#06b6d4', badgeBg: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30', description: 'Precise apparatus reading and rigorous control of variables.' },
+      { grade: 'B',  minPercent: 60, label: 'Grade B', color: '#3b82f6', badgeBg: 'bg-blue-500/20 text-blue-400 border-blue-500/30', description: 'Sound experimental logic and correct reagent identification.' },
+      { grade: 'C',  minPercent: 50, label: 'Grade C', color: '#8b5cf6', badgeBg: 'bg-violet-500/20 text-violet-400 border-violet-500/30', description: 'Standard pass on laboratory techniques.' },
+      { grade: 'D',  minPercent: 40, label: 'Grade D', color: '#f59e0b', badgeBg: 'bg-amber-500/20 text-amber-400 border-amber-500/30', description: 'Basic threshold pass.' },
+      { grade: 'E',  minPercent: 30, label: 'Grade E', color: '#f97316', badgeBg: 'bg-orange-500/20 text-orange-400 border-orange-500/30', description: 'Minimum passing mark.' },
+      { grade: 'U',  minPercent: 0,  label: 'Grade U', color: '#ef4444', badgeBg: 'bg-rose-500/20 text-rose-400 border-rose-500/30', description: 'Ungraded.' },
     ]
   },
 

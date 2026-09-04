@@ -9796,8 +9796,691 @@ questionBank.push(
       ],
       examinerTips: "Always classify carbocations as primary, secondary, or tertiary, and explicitly link stability to the 'positive inductive effect of alkyl groups' dispersing the positive charge."
     }
+  },
+  // ==========================================================
+  // PEARSON EDEXCEL IAL CHEMISTRY - UNIT 2 (WCH12/01)
+  // SUMMER MAY / JUNE 2026 COMPREHENSIVE EXAM BANK (25 QUESTIONS: SECTION A & B)
+  // ==========================================================
+  {
+    id: "edx-wch12-2026-mj-q01",
+    question: "The standard enthalpy changes of formation ($\\Delta H_f^\\theta$) at $298\\text{ K}$ are:\n• $\\text{CH}_3\\text{OH(l)}: -239\\text{ kJ mol}^{-1}$\n• $\\text{CO}_2\\text{(g)}: -394\\text{ kJ mol}^{-1}$\n• $\\text{H}_2\\text{O(l)}: -286\\text{ kJ mol}^{-1}$\nWhat is the standard enthalpy of combustion ($\\Delta H_c^\\theta$) of liquid methanol in $\\text{kJ mol}^{-1}$?\n$$\\text{CH}_3\\text{OH(l)} + 1.5\\text{O}_2\\text{(g)} \\rightarrow \\text{CO}_2\\text{(g)} + 2\\text{H}_2\\text{O(l)}$$",
+    options: [
+      { text: "-441 kJ mol⁻¹" },
+      { text: "-727 kJ mol⁻¹" },
+      { text: "-919 kJ mol⁻¹" },
+      { text: "-1205 kJ mol⁻¹" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Using Hess's law: ΔH_reaction = Σ ΔH_f(products) - Σ ΔH_f(reactants).\n* Products: [1 × (-394)] + [2 × (-286)] = -394 - 572 = -966 kJ mol⁻¹.\n* Reactants: [1 × (-239)] + [1.5 × 0 (element in standard state)] = -239 kJ mol⁻¹.\n* ΔH_c = -966 - (-239) = -966 + 239 = -727 kJ mol⁻¹.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q1",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "-727 kJ mol⁻¹", text: "Calculates ΔH = [(-394) + 2(-286)] - (-239) = -727 kJ mol⁻¹." }
+      ],
+      examinerTips: "Remember that ΔH_f of pure elements in their standard states (O₂ gas) is by definition zero."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q02",
+    question: "A student measured the enthalpy of combustion of propan-1-ol using a simple spirit burner and copper calorimeter. The experimental value obtained was $-1450\\text{ kJ mol}^{-1}$, whereas the data book value is $-2021\\text{ kJ mol}^{-1}$. Which factor is the PRIMARY cause of this discrepancy?",
+    options: [
+      { text: "Incomplete combustion and heat loss to the surroundings" },
+      { text: "Using a copper calorimeter instead of an insulated polystyrene cup" },
+      { text: "Evaporation of water from the beaker during heating" },
+      { text: "The specific heat capacity of water varies significantly with temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In simple flame calorimetry experiments:\n  1. Major heat loss occurs by radiation, convection, and conduction to the surrounding air and tripod rather than into the water.\n  2. Incomplete combustion of propan-1-ol produces carbon monoxide and soot (black carbon deposit on beaker base), releasing far less energy than complete combustion to CO₂ and H₂O.\n* Both factors combine to make the recorded temperature rise, and hence the calculated enthalpy change, significantly less exothermic than theoretical values.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q2",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "heat loss and incomplete combustion", text: "Identifies heat loss and incomplete combustion as the primary reasons for lower experimental values." }
+      ],
+      examinerTips: "In Edexcel practical questions, always cite 'heat loss to surroundings' and 'incomplete combustion' together."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q03",
+    question: "Mean bond enthalpies are given below in $\\text{kJ mol}^{-1}$:\n• $\\text{N}\\equiv\\text{N}: +945$\n• $\\text{H}-\\text{H}: +436$\n• $\\text{N}-\\text{H}: +391$\nCalculate the standard enthalpy change of reaction for the Haber process:\n$$\\text{N}_2\\text{(g)} + 3\\text{H}_2\\text{(g)} \\rightarrow 2\\text{NH}_3\\text{(g)}$$",
+    options: [
+      { text: "+93 kJ mol⁻¹" },
+      { text: "-93 kJ mol⁻¹" },
+      { text: "-186 kJ mol⁻¹" },
+      { text: "-1093 kJ mol⁻¹" }
+    ],
+    correctAnswer: 1,
+    explanation: "* ΔH_reaction = Σ (bonds broken) - Σ (bonds formed).\n* Bonds broken (endothermic): [1 × N≡N] + [3 × H-H] = 945 + 3(436) = 945 + 1308 = +2253 kJ mol⁻¹.\n* Bonds formed (exothermic): [2 molecules × 3 N-H bonds] = 6 × 391 = 2346 kJ mol⁻¹.\n* ΔH = +2253 - 2346 = -93 kJ mol⁻¹.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q3",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "-93 kJ mol⁻¹", text: "Calculates ΔH = 2253 - 2346 = -93 kJ mol⁻¹." }
+      ],
+      examinerTips: "Remember each NH₃ molecule has 3 N-H bonds, so 2 NH₃ molecules contain a total of 6 N-H bonds."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q04",
+    question: "Water ($\\text{H}_2\\text{O}$, boiling point $100^\\circ\\text{C}$) has a substantially higher boiling point than hydrogen fluoride ($\\text{HF}$, boiling point $19.5^\\circ\\text{C}$), despite fluorine being more electronegative than oxygen. What is the explanation for this difference?",
+    options: [
+      { text: "Water molecules have stronger covalent bonds than hydrogen fluoride" },
+      { text: "Each water molecule can form an average of two hydrogen bonds, whereas each hydrogen fluoride molecule forms only one" },
+      { text: "Water has greater London dispersion forces due to having more electrons" },
+      { text: "Hydrogen fluoride undergoes dimerisation in the gas phase which lowers its boiling point" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Hydrogen bonding capacity depends on the ratio of hydrogen atoms (δ+) to lone pairs (δ-):\n  - In H₂O: The oxygen atom has 2 lone pairs and 2 hydrogen atoms, allowing each molecule to participate in 4 hydrogen bonds (2 donated, 2 accepted), averaging 2 hydrogen bonds per molecule in a 3D network.\n  - In HF: Although each H-F bond is more polar than an O-H bond, fluorine has 3 lone pairs but only 1 hydrogen atom (hydrogen-deficient). Therefore, each HF molecule can only form an average of 1 hydrogen bond.\n* The greater total number of hydrogen bonds per molecule in water requires more thermal energy to overcome, resulting in a higher boiling point.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q4",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "H₂O forms 2 hydrogen bonds per molecule on average / HF forms 1", text: "Explains water forms on average two hydrogen bonds per molecule compared to one in HF." }
+      ],
+      examinerTips: "Always mention the *number* of hydrogen bonds per molecule, not just bond polarity."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q05",
+    question: "The boiling points of three structural isomers of $\\text{C}_5\\text{H}_{12}$ are:\n• Pentane: $36.1^\\circ\\text{C}$\n• 2-methylbutane: $27.8^\\circ\\text{C}$\n• 2,2-dimethylpropane: $9.5^\\circ\\text{C}$\nWhy does 2,2-dimethylpropane have the lowest boiling point?",
+    options: [
+      { text: "It has weaker $\\text{C}-\\text{C}$ covalent bonds" },
+      { text: "Its branched spherical shape gives a smaller surface contact area, leading to weaker London dispersion forces" },
+      { text: "It contains permanent dipole-dipole attractions that cancel out" },
+      { text: "Branching increases the activation energy for vaporisation" }
+    ],
+    correctAnswer: 1,
+    explanation: "* All three compounds are non-polar alkanes with the same molecular formula (C₅H₁₂) and same number of electrons (42 electrons), so the potential polarisability of the electron cloud is similar.\n* However, 2,2-dimethylpropane is highly branched and adopts a compact, spherical geometry.\n* Spherical molecules pack less closely and have a smaller surface area of molecular contact with neighboring molecules.\n* Consequently, instantaneous dipole - induced dipole attractions (London dispersion forces) are weaker and easily overcome at a lower temperature ($9.5^\\circ\\text{C}$).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q5",
+    lessonNum: 2,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "smaller surface contact area & weaker London forces", text: "Identifies smaller surface area of contact and weaker London dispersion forces due to spherical branching." }
+      ],
+      examinerTips: "Use the precise term 'surface area of contact' rather than just 'surface area'."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q06",
+    question: "Chlorine gas dissolves in cold, dilute aqueous sodium hydroxide according to the equation:\n$$\\text{Cl}_2\\text{(g)} + 2\\text{NaOH(aq)} \\rightarrow \\text{NaCl(aq)} + \\text{NaClO(aq)} + \\text{H}_2\\text{O(l)}$$\nWhat are the oxidation states of chlorine in the products, and what type of redox reaction is this?",
+    options: [
+      { text: "Oxidation states: -1 and +1; Disproportionation reaction" },
+      { text: "Oxidation states: -1 and +5; Neutralisation reaction" },
+      { text: "Oxidation states: 0 and -1; Displacement reaction" },
+      { text: "Oxidation states: +1 and +3; Precipitation reaction" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Chlorine in reactant Cl₂ has an oxidation state of 0.\n* In the product NaCl: Na is +1, so Cl is -1 (chlorine is reduced: 0 → -1).\n* In the product NaClO: Na is +1, O is -2, so Cl is +1 (chlorine is oxidised: 0 → +1).\n* Because the same element is simultaneously oxidised and reduced in the same reaction, it is classified as a disproportionation reaction.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q6",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "-1 and +1 & disproportionation", text: "Correct oxidation states -1 and +1 and names disproportionation." }
+      ],
+      examinerTips: "Note that reaction with *hot concentrated* NaOH gives NaCl (-1) and NaClO₃ (+5)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q07",
+    question: "Which of the following Group 2 nitrates requires the HIGHEST temperature to decompose thermally?",
+    options: [
+      { text: "Magnesium nitrate, Mg(NO₃)₂" },
+      { text: "Calcium nitrate, Ca(NO₃)₂" },
+      { text: "Strontium nitrate, Sr(NO₃)₂" },
+      { text: "Barium nitrate, Ba(NO₃)₂" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Down Group 2 (Mg²⁺ to Ba²⁺):\n  1. The cationic charge remains constant (+2), but the ionic radius increases significantly.\n  2. This causes the charge density of the cation to decrease down the group.\n  3. The larger Ba²⁺ cation has much lower polarising power and distorts the electron cloud of the neighboring nitrate ion far less.\n  4. As the N-O covalent bonds in the nitrate ion are weakened less, more thermal energy is required to decompose the salt.\n* Therefore, Ba(NO₃)₂ has the greatest thermal stability and requires the highest decomposition temperature.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q7",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "Ba(NO₃)₂ / largest cation radius & least polarising", text: "Identifies Ba(NO₃)₂ due to larger ionic radius and lower polarising power." }
+      ],
+      examinerTips: "Remember: thermal stability of Group 2 carbonates and nitrates INCREASES down the group."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q08",
+    question: "A solid unknown hydrated Group 2 salt $M$ gives a persistent crimson-red color in a flame test. When heated strongly with bunsen flame, it emits a brown toxic gas and a gas that relights a glowing splint. What is the identity of salt $M$?",
+    options: [
+      { text: "Calcium chloride" },
+      { text: "Strontium nitrate" },
+      { text: "Barium carbonate" },
+      { text: "Lithium sulfate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Flame test color:\n  - Calcium gives brick-red.\n  - Strontium gives crimson-red.\n  - Barium gives apple-green.\n* Thermal decomposition gases:\n  - The brown gas is nitrogen dioxide (NO₂).\n  - The gas that relights a glowing splint is oxygen (O₂).\n  - This confirms the anion is a nitrate: 2Sr(NO₃)₂(s) → 2SrO(s) + 4NO₂(g) + O₂(g).\n* Hence, salt M is strontium nitrate.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q8",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "Strontium nitrate", text: "Identifies crimson flame = Sr²⁺ and brown gas = NO₂ from nitrate decomposition." }
+      ],
+      examinerTips: "Do not confuse calcium (brick-red / orange-red) with strontium (crimson / deep red)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q09",
+    question: "When solid sodium iodide reacts with concentrated sulfuric acid, steamy fumes, purple vapors, a bad-egg smell, and a yellow solid deposit are observed. Which species is responsible for the yellow solid deposit?",
+    options: [
+      { text: "Iodine crystals, I₂" },
+      { text: "Solid elemental sulfur, S" },
+      { text: "Sodium sulfide, Na₂S" },
+      { text: "Sulfur dioxide, SO₂" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Iodide ions (I⁻) are powerful reducing agents that reduce concentrated H₂SO₄ through multiple stages:\n  - H₂SO₄ (+6) → SO₂ (+4, choking gas)\n  - H₂SO₄ (+6) → S (0, yellow solid precipitate)\n  - H₂SO₄ (+6) → H₂S (-2, toxic gas with bad-egg smell)\n* Meanwhile, iodide is oxidised to elemental iodine (I₂), producing purple vapors and black solid crystals.\n* The yellow solid deposit observed on the tube wall is elemental sulfur (S).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q9",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "elemental sulfur / S", text: "Identifies yellow solid as sulfur formed by reduction of sulfuric acid." }
+      ],
+      examinerTips: "Memorise the 4 reduction products of H₂SO₄ with iodide: NaHSO₄ (acid-base), SO₂, S (yellow solid), and H₂S (bad eggs)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q10",
+    question: "An aqueous solution of potassium bromide is treated with chlorine water. Hexane is then added, the mixture shaken, and allowed to separate into two layers. What is the color of the upper organic layer?",
+    options: [
+      { text: "Pale yellow" },
+      { text: "Orange-brown" },
+      { text: "Purple" },
+      { text: "Colorless" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Chlorine is more electronegative and a stronger oxidising agent than bromine.\n* Chlorine displaces bromide ions from solution: Cl₂(aq) + 2KBr(aq) → 2KCl(aq) + Br₂(aq).\n* When non-polar hexane is added, the non-polar halogen molecules preferentially dissolve in the upper organic solvent layer (hexane has a lower density than water, $\\rho \\approx 0.66\\text{ g cm}^{-3}$).\n* Dissolved bromine (Br₂) turns the upper hexane layer orange / orange-brown (iodine would turn purple).",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q10",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "orange-brown (Br₂ in hexane)", text: "Deduces Br₂ formed and colors upper organic layer orange-brown." }
+      ],
+      examinerTips: "Remember: Chlorine in organic solvent = pale yellow/colorless; Bromine = orange-red; Iodine = purple."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q11",
+    question: "How does the addition of a heterogeneous catalyst affect the Maxwell-Boltzmann energy distribution curve of a gaseous reaction mixture?",
+    options: [
+      { text: "The peak of the curve shifts to the right and becomes lower" },
+      { text: "The curve remains unchanged, but the activation energy position $E_a$ shifts to the left" },
+      { text: "The area under the curve increases significantly" },
+      { text: "The activation energy $E_a$ remains fixed while the average kinetic energy increases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The Maxwell-Boltzmann distribution curve is determined purely by temperature and the total number of gas molecules.\n* Adding a catalyst does NOT change the temperature or kinetic energy distribution of the molecules, so the curve shape, peak height, and peak position remain completely unchanged.\n* The catalyst provides an alternative reaction pathway with a lower activation energy ($E_{cat} < E_a$).\n* On the graph, the vertical activation energy line shifts to the left, which dramatically increases the shaded area under the curve representing the fraction of molecules possessing energy $E \\ge E_a$.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q11",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "curve unchanged & Ea shifts left", text: "Explains curve does not change shape; activation energy marker moves to the left." }
+      ],
+      examinerTips: "Only changing temperature shifts the peak of the Maxwell-Boltzmann distribution curve."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q12",
+    question: "According to collision theory, why does doubling the concentration of a dissolved reactant increase the rate of reaction?",
+    options: [
+      { text: "The average kinetic energy of the reacting particles doubles" },
+      { text: "The activation energy of the reaction is halved" },
+      { text: "The number of particles per unit volume doubles, leading to a greater collision frequency" },
+      { text: "The fraction of collisions that are energetically successful increases" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Increasing concentration means there are more solute particles packed into the same unit volume ($1\\text{ dm}^3$).\n* As particles are closer together, the frequency of collisions (number of collisions per unit time) between reactant particles increases proportionally.\n* Provided the temperature is constant, the fraction of successful collisions (those with $E \\ge E_a$) remains unchanged, but the overall rate increases because total collisions per second increases.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q12",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "particles per unit volume & collision frequency", text: "Mentions more particles per unit volume and greater collision frequency." }
+      ],
+      examinerTips: "Do not say 'more collisions occur'; always specify 'collision frequency' or 'collisions per second'."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q13",
+    question: "Nitrogen monoxide is synthesised according to the endothermic equilibrium:\n$$\\text{N}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\rightleftharpoons 2\\text{NO(g)} \\quad \\Delta H = +180\\text{ kJ mol}^{-1}$$\nWhich of the following modifications will INCREASE the numerical value of the equilibrium constant, $K_c$?",
+    options: [
+      { text: "Increasing the total pressure at constant temperature" },
+      { text: "Increasing the temperature" },
+      { text: "Adding a platinum-rhodium gauze catalyst" },
+      { text: "Increasing the concentration of oxygen gas" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The numerical value of an equilibrium constant ($K_c$ or $K_p$) is dependent ONLY upon temperature; catalysts, pressure, and concentrations have zero effect on $K_c$.\n* According to Le Chatelier's principle, for an endothermic forward reaction ($\\Delta H > 0$):\n  - An increase in temperature shifts the position of equilibrium in the endothermic forward direction to absorb added heat.\n  - This increases the equilibrium concentration of products ([NO]) and decreases reactants ([N₂] and [O₂]).\n  - Since $K_c = [\\text{NO}]^2 / ([\\text{N}_2][\\text{O}_2])$, the numerical value of $K_c$ increases.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q13",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "increasing temperature (only factor that changes Kc)", text: "Identifies temperature as the only factor that changes Kc, and forward reaction is endothermic." }
+      ],
+      examinerTips: "Crucial rule: Catalysts, pressure changes, and concentration changes NEVER change the numerical value of Kc."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q14",
+    question: "Consider the dynamic gaseous equilibrium in the Contact process:\n$$2\\text{SO}_2\\text{(g)} + \\text{O}_2\\text{(g)} \\rightleftharpoons 2\\text{SO}_3\\text{(g)}$$\nWhat are the correct units for the equilibrium constant, $K_c$?",
+    options: [
+      { text: "No units (dimensionless)" },
+      { text: "mol dm⁻³" },
+      { text: "dm³ mol⁻¹" },
+      { text: "dm⁶ mol⁻²" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Write the expression for Kc: Kc = [SO₃]² / ([SO₂]² × [O₂]).\n* Substitute units of concentration (mol dm⁻³):\n  - Units = (mol dm⁻³)² / [(mol dm⁻³)² × (mol dm⁻³)]\n  - Cancel (mol dm⁻³)²: Units = 1 / (mol dm⁻³) = mol⁻¹ dm³ = dm³ mol⁻¹.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q14",
+    lessonNum: 4,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "dm³ mol⁻¹", text: "Correct unit algebra yielding dm³ mol⁻¹." }
+      ],
+      examinerTips: "Always cancel out identical concentration terms in the numerator and denominator before inverting."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q15",
+    question: "Separate samples of 1-chlorobutane, 1-bromobutane, and 1-iodobutane were heated in a water bath at $50^\\circ\\text{C}$ with aqueous ethanol and silver nitrate solution. 1-iodobutane formed a precipitate fastest. What is the reason for this observation?",
+    options: [
+      { text: "The $\\text{C}-\\text{Cl}$ bond is more polar than the $\\text{C}-\\text{I}$ bond" },
+      { text: "The $\\text{C}-\\text{I}$ bond enthalpy is lower than the $\\text{C}-\\text{Br}$ and $\\text{C}-\\text{Cl}$ bond enthalpies" },
+      { text: "Iodide ions are smaller and more easily solvated by water molecules" },
+      { text: "Silver iodide has a higher lattice energy than silver chloride" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In the nucleophilic substitution hydrolysis of halogenoalkanes by water:\n  - The rate-determining factor is the strength (bond enthalpy) of the carbon-halogen bond, NOT bond polarity.\n  - Bond enthalpies: C-Cl (338 kJ/mol) > C-Br (276 kJ/mol) > C-I (238 kJ/mol).\n  - The C-I bond is the longest and weakest due to greater shielding and larger atomic radius of iodine.\n  - The C-I bond breaks most readily with the lowest activation energy, releasing I⁻ ions that immediately precipitate with Ag⁺ as yellow AgI.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q15",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "C-I bond enthalpy is lowest / weakest bond", text: "Identifies C-I bond enthalpy is lowest and easiest to break as the rate-determining factor." }
+      ],
+      examinerTips: "Common trap: Bond enthalpy determines hydrolysis rate, NOT bond polarity (even though C-Cl is the most polar, it reacts slowest)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q16",
+    question: "Which of the following halogenoalkanes undergoes hydrolysis predominantly via an $S_N1$ mechanism with a two-step pathway involving a carbocation intermediate?",
+    options: [
+      { text: "1-bromobutane" },
+      { text: "1-bromo-2-methylpropane" },
+      { text: "2-bromobutane" },
+      { text: "2-bromo-2-methylpropane" }
+    ],
+    correctAnswer: 3,
+    explanation: "* 2-bromo-2-methylpropane is a tertiary halogenoalkane [(CH₃)₃C-Br].\n* In tertiary halogenoalkanes:\n  1. Severe steric hindrance prevents direct backside nucleophilic attack by OH⁻ (ruling out the SN2 mechanism).\n  2. Heterolytic fission of the C-Br bond forms a tertiary carbocation, (CH₃)₃C⁺.\n  3. The tertiary carbocation is exceptionally stable due to the positive inductive effect (+I) of three electron-donating methyl groups.\n* Hence, tertiary halogenoalkanes react almost exclusively via the two-step SN1 mechanism.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q16",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "2-bromo-2-methylpropane / tertiary halogenoalkane", text: "Identifies tertiary halogenoalkane reacting via stable carbocation intermediate." }
+      ],
+      examinerTips: "Remember: Primary = SN2 (backside attack, transition state); Tertiary = SN1 (carbocation intermediate)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q17",
+    question: "When 2-bromobutane, $\\text{CH}_3\\text{CH(Br)CH}_2\\text{CH}_3$, is heated under reflux with concentrated potassium hydroxide dissolved in ethanol ($\\text{KOH / ethanol}$), an elimination reaction occurs. What is the major organic product formed?",
+    options: [
+      { text: "Butan-2-ol" },
+      { text: "But-1-ene" },
+      { text: "But-2-ene" },
+      { text: "1-bromobut-2-ene" }
+    ],
+    correctAnswer: 2,
+    explanation: "* In ethanolic KOH at high temperature, the hydroxide ion acts as a Brønsted-Lowry base (proton abstractor) rather than a nucleophile, favoring elimination.\n* Hydrogen can be abstracted from either C1 or C3:\n  - Removal from C1 yields but-1-ene (CH₂=CH-CH₂CH₃).\n  - Removal from C3 yields but-2-ene (CH₃-CH=CH-CH₃).\n* According to Zaitsev's rule, the more substituted alkene (alkene with more alkyl groups attached to the double bond) is more thermodynamically stable and forms as the major product.\n* Therefore, but-2-ene (a disubstituted alkene) is the major product.",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q17",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "But-2-ene / more substituted alkene", text: "Identifies but-2-ene as the major product of elimination." }
+      ],
+      examinerTips: "Ethanolic KOH promotes elimination to form alkenes; aqueous KOH promotes substitution to form alcohols."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q18",
+    question: "An alcohol $A$ with molecular formula $\\text{C}_4\\text{H}_{10}\\text{O}$ was heated under reflux with acidified potassium dichromate(VI), $\\text{K}_2\\text{Cr}_2\\text{O}_7 / \\text{H}_2\\text{SO}_4$. The orange solution turned green, and organic compound $B$ was isolated. Compound $B$ gives an orange precipitate with 2,4-DNPH, but does NOT react with Tollens' reagent. Which compound is alcohol $A$?",
+    options: [
+      { text: "Butan-1-ol" },
+      { text: "Butan-2-ol" },
+      { text: "2-methylpropan-2-ol" },
+      { text: "2-methylpropan-1-ol" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Orange dichromate turns green (Cr₂O₇²⁻ reduced to Cr³⁺), meaning alcohol A is oxidisable (rules out tertiary alcohol 2-methylpropan-2-ol).\n* Compound B gives an orange precipitate with 2,4-DNPH, confirming it contains a carbonyl group (C=O, aldehyde or ketone).\n* Compound B does NOT react with Tollens' reagent (no silver mirror), which proves it is a ketone, NOT an aldehyde.\n* Ketones are formed exclusively by the oxidation of secondary alcohols.\n* The only secondary alcohol among the choices is butan-2-ol (oxidised to butanone).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q18",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "Butan-2-ol / secondary alcohol oxidised to ketone", text: "Deduces ketone formed from secondary alcohol butan-2-ol." }
+      ],
+      examinerTips: "Primary alcohols oxidise to aldehydes (positive Tollens' test) and then carboxylic acids; secondary alcohols oxidise to ketones (negative Tollens' test)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q19",
+    question: "The infrared (IR) spectrum of an unknown compound shows a very broad, rounded absorption band extending from $3200\\text{ cm}^{-1}$ to $3650\\text{ cm}^{-1}$, but shows NO absorption in the $1680-1750\\text{ cm}^{-1}$ region. Which compound could this be?",
+    options: [
+      { text: "Propanoic acid" },
+      { text: "Propan-1-ol" },
+      { text: "Propanal" },
+      { text: "Ethyl propanoate" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The broad absorption band at 3200-3650 cm⁻¹ is the characteristic stretch of hydrogen-bonded O-H in an alcohol.\n* The absence of any peak at 1680-1750 cm⁻¹ confirms the complete absence of a carbonyl group (C=O).\n* Propanoic acid would show both a very broad O-H (2500-3300 cm⁻¹) and a strong C=O (1710 cm⁻¹).\n* Propanal and ethyl propanoate both contain strong C=O peaks.\n* Therefore, the unknown compound is propan-1-ol.",
+    level: 1,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q19",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "Propan-1-ol / alcohol O-H without C=O", text: "Identifies alcohol O-H absorption and lack of C=O stretch." }
+      ],
+      examinerTips: "Distinguish alcohol O-H (smooth, rounded at 3200-3600 cm⁻¹) from carboxylic acid O-H (very broad, jagged at 2500-3300 cm⁻¹ overlapping C-H)."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q20",
+    question: "In the mass spectrum of propan-2-one (acetone, $\\text{CH}_3\\text{COCH}_3$, molecular ion $M^+ = 58$), the base peak (most intense peak) appears at $m/z = 43$. Which fragment ion is responsible for this peak?",
+    options: [
+      { text: "[CH₃]⁺" },
+      { text: "[CH₃CO]⁺" },
+      { text: "[C₂H₅]⁺" },
+      { text: "[COCH₃]⁻" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The molecular ion [CH₃-CO-CH₃]⁺• undergoes fragmentation by loss of a neutral methyl radical (•CH₃, mass 15):\n  $$[\\text{CH}_3\\text{COCH}_3]^{+\\bullet} \\rightarrow [\\text{CH}_3\\text{CO}]^+ + \\,^\\bullet\\text{CH}_3$$\n* Mass of [CH₃CO]⁺ = (12 + 3) + 12 + 16 = 15 + 28 = 43.\n* The acylium cation [CH₃-C≡O⁺] is resonance-stabilised by delocalisation of the positive charge onto the oxygen lone pair, making it exceptionally stable and therefore the base peak.\n* Fragment ions in mass spectrometry must always carry a positive charge (ruling out option D).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q20",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 1,
+      points: [
+        { mark: 1, keyword: "[CH₃CO]⁺ / acylium ion", text: "Identifies m/z = 43 as the [CH₃CO]⁺ fragment ion formed by loss of •CH₃." }
+      ],
+      examinerTips: "Always write the positive charge on fragment ions: [CH₃CO]⁺."
+    }
+  },
+  // --- SECTION B: STRUCTURED THEORY QUESTIONS (WCH12/01 MAY/JUNE 2026) ---
+  {
+    id: "edx-wch12-2026-mj-q21",
+    question: "Hydrated copper(II) sulfate crystals, $\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$, dissolve endothermically in water, whereas anhydrous copper(II) sulfate, $\\text{CuSO}_4\\text{(s)}$, dissolves exothermically.\n$$\\text{CuSO}_4\\text{(s)} + 5\\text{H}_2\\text{O(l)} \\rightarrow \\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O(s)} \\quad \\Delta H_r$$\n\nExperimental enthalpies of solution are:\n• $\\Delta H_{\\text{soln}}[\\text{CuSO}_4\\text{(s)}] = -66.5\\text{ kJ mol}^{-1}$\n• $\\Delta H_{\\text{soln}}[\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O(s)}] = +11.5\\text{ kJ mol}^{-1}$\n\n(a) Explain why the standard enthalpy of hydration of anhydrous copper(II) sulfate cannot be measured directly in a simple lab calorimeter.\n(b) Using Hess's Law, calculate the enthalpy change of reaction, $\\Delta H_r$, in $\\text{kJ mol}^{-1}$.\n(c) State the sign of the entropy change of the system ($\\Delta S_{\\text{system}}$) when anhydrous copper(II) sulfate reacts with liquid water to form the solid hydrated crystals, and justify your answer.",
+    options: [
+      { text: "(a) Adding water directly causes partial dissolution and hydrated solid cannot be formed with exact stoichiometric water without dissolving; (b) ΔHr = -78.0 kJ mol⁻¹; (c) Negative, because liquid water is converted into an ordered solid crystal lattice" },
+      { text: "(a) The reaction is too slow; (b) ΔHr = -55.0 kJ mol⁻¹; (c) Positive, because heat is released" },
+      { text: "(a) Toxic gases are produced; (b) ΔHr = +78.0 kJ mol⁻¹; (c) Zero, because mass is conserved" },
+      { text: "(a) Anhydrous copper sulfate is insoluble; (b) ΔHr = -22.0 kJ mol⁻¹; (c) Negative, because pressure drops" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) The reaction cannot be measured directly because when water is added to anhydrous copper(II) sulfate, it dissolves immediately to form an aqueous solution rather than remaining as solid hydrated crystals with exactly 5 moles of water.\n* (b) Using Hess's Law:\n  - Route 1: Direct reaction: CuSO₄(s) + 5H₂O(l) → CuSO₄•5H₂O(s) [ΔHr]\n  - Both forms dissolve in excess water to give the identical final state: CuSO₄(aq).\n  - Cycle equation: ΔH_soln[CuSO₄(s)] = ΔHr + ΔH_soln[CuSO₄•5H₂O(s)].\n  - -66.5 = ΔHr + (+11.5) → ΔHr = -66.5 - 11.5 = -78.0 kJ mol⁻¹.\n* (c) ΔS_system is negative because 5 moles of disordered liquid water molecules are fixed into a highly ordered 3D crystalline lattice framework, reducing disorder.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q21 (Section B)",
+    lessonNum: 1,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "cannot add exact water without dissolving", text: "Explain that solid crystals dissolve in water so stoichiometric hydration without dissolution is impossible directly." },
+        { mark: 1, keyword: "Hess cycle construction", text: "Construct or state correct Hess cycle relating solution enthalpies to hydration." },
+        { mark: 1, keyword: "ΔHr = -66.5 - (+11.5)", text: "Set up calculation: -66.5 - 11.5." },
+        { mark: 1, keyword: "-78.0 kJ mol⁻¹", text: "Correct final answer: -78.0 kJ mol⁻¹ with negative sign." },
+        { mark: 1, keyword: "ΔS is negative", text: "State entropy change is negative." },
+        { mark: 1, keyword: "liquid water trapped in solid crystal lattice", text: "Justify that disordered liquid water molecules become ordered in a solid crystal lattice." }
+      ],
+      examinerTips: "Always include units (kJ mol⁻¹) and an explicit negative sign for exothermic enthalpy values in Section B."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q22",
+    question: "This question concerns Group 2 chemistry and thermal decomposition.\n\n(a) Write a balanced chemical equation, including state symbols, for the thermal decomposition of solid magnesium nitrate, $\\text{Mg(NO}_3)_2$.\n(b) Explain, in terms of cation size, charge density, and polarising power, why magnesium nitrate decomposes at a significantly lower temperature than barium nitrate, $\\text{Ba(NO}_3)_2$.\n(c) Describe how to perform a flame test on a solid sample of a Group 2 metal chloride, and give the flame color observed for barium ions.",
+    options: [
+      { text: "(a) 2Mg(NO₃)₂(s) → 2MgO(s) + 4NO₂(g) + O₂(g); (b) Mg²⁺ has a smaller ionic radius and higher charge density, polarising and weakening the N-O bond in the nitrate ion more; (c) Dip clean nichrome wire in conc. HCl, touch sample, place in non-luminous flame; apple-green" },
+      { text: "(a) Mg(NO₃)₂(s) → Mg(NO₂)₂(s) + O₂(g); (b) Ba²⁺ has higher charge density; (c) Use copper wire in yellow flame; brick-red" },
+      { text: "(a) 2Mg(NO₃)₂(s) → 2Mg(s) + 2N₂(g) + 6O₂(g); (b) Magnesium is less reactive than barium; (c) Dissolve in water and add silver nitrate; white" },
+      { text: "(a) Mg(NO₃)₂(s) → MgO(s) + N₂O₅(g); (b) Barium has more electrons; (c) Use platinum wire in cold flame; crimson" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Group 2 nitrates decompose to metal oxide, nitrogen dioxide gas (brown fumes), and oxygen gas:\n  $$2\\text{Mg(NO}_3)_2\\text{(s)} \\rightarrow 2\\text{MgO(s)} + 4\\text{NO}_2\\text{(g)} + \\text{O}_2\\text{(g)}$$\n* (b) Polarising power rationale:\n  - Both Mg²⁺ and Ba²⁺ have a +2 charge.\n  - Mg²⁺ has a much smaller ionic radius than Ba²⁺ (0.072 nm vs 0.135 nm).\n  - Mg²⁺ has a much higher charge density and polarising power.\n  - Mg²⁺ polarises and distorts the electron cloud of the nitrate (NO₃⁻) anion more strongly, weakening the N-O covalent bonds within the nitrate group.\n  - Consequently, less thermal energy is required to decompose magnesium nitrate.\n* (c) Flame test procedure: Clean a nichrome/platinum wire by dipping into concentrated hydrochloric acid and placing in a hot, non-luminous Bunsen flame until no color is imparted. Dip wire into conc. HCl, touch the solid sample, and hold in the edge of the roaring blue flame. Barium produces an apple-green flame.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q22 (Section B)",
+    lessonNum: 3,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 7,
+      points: [
+        { mark: 1, keyword: "2Mg(NO₃)₂(s) → 2MgO(s) + 4NO₂(g) + O₂(g)", text: "Balanced equation for thermal decomposition." },
+        { mark: 1, keyword: "state symbols (s), (s), (g), (g)", text: "Correct state symbols included." },
+        { mark: 1, keyword: "Mg²⁺ smaller ionic radius / smaller cation", text: "State Mg²⁺ has a smaller ionic radius than Ba²⁺ (same +2 charge)." },
+        { mark: 1, keyword: "higher charge density & polarising power", text: "State Mg²⁺ has higher charge density and greater polarising power." },
+        { mark: 1, keyword: "polarises / weakens N-O bond in nitrate", text: "Explains Mg²⁺ distorts electron cloud of nitrate, weakening N-O bonds." },
+        { mark: 1, keyword: "clean nichrome wire with conc. HCl in non-luminous flame", text: "Describe flame test: clean wire in conc. HCl, place in non-luminous/blue flame." },
+        { mark: 1, keyword: "apple-green", text: "State flame color for barium is apple-green." }
+      ],
+      examinerTips: "Always specify that the Bunsen burner flame must be 'non-luminous' or 'roaring blue' so the flame color is clearly visible."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q23",
+    question: "Bromoethane reacts with warm aqueous sodium hydroxide in a nucleophilic substitution reaction:\n$$\\text{CH}_3\\text{CH}_2\\text{Br} + \\text{OH}^- \\rightarrow \\text{CH}_3\\text{CH}_2\\text{OH} + \\text{Br}^-$$" +
+      "\n\n(a) Name the specific mechanism ($S_N1$ or $S_N2$) by which this primary halogenoalkane reacts.\n(b) Describe the key features of this mechanism, including the role of curly arrows, the formation of the transition state, and the direction of nucleophilic attack.\n(c) If an optically active single enantiomer of a chiral secondary halogenoalkane were to react via this pure mechanism, state and explain the stereochemical outcome of the product.",
+    options: [
+      { text: "(a) SN2 mechanism; (b) One-step bimolecular pathway: hydroxide ion attacks carbon from backside opposite the leaving Br atom, forming a five-coordinate transition state with partial bonds; (c) Inversion of configuration (Walden inversion) because nucleophile attacks strictly from the rear" },
+      { text: "(a) SN1 mechanism; (b) Two-step pathway via carbocation intermediate; (c) Racemic mixture formed" },
+      { text: "(a) Electrophilic substitution; (b) Heterolytic cleavage of hydroxide; (c) Retention of configuration" },
+      { text: "(a) Free-radical substitution; (b) Homolytic cleavage under UV light; (c) Complete racemisation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Primary halogenoalkanes react via the SN2 mechanism (Substitution Nucleophilic Bimolecular).\n* (b) Mechanism details:\n  - The C-Br bond is polar (C^δ+ - Br^δ-).\n  - The nucleophile (:OH⁻) uses its lone pair to attack the electron-deficient carbon atom strictly from the backside (180° opposite the bulky bromine atom to minimise steric and electrostatic repulsion).\n  - A single transition state forms where the C-OH bond is partially making while the C-Br bond is partially breaking (five-coordinate carbon, [HO---C---Br]⁻, with dotted bonds and a negative charge in square brackets).\n  - Bromide departs as a leaving group (:Br⁻).\n* (c) Stereochemical outcome: Because backside attack forces the other three groups to invert like an umbrella blowing inside out in a storm, there is 100% Inversion of Configuration (Walden Inversion).",
+    level: 3,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q23 (Section B)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "SN2", text: "Identify mechanism as SN2 (substitution nucleophilic bimolecular)." },
+        { mark: 1, keyword: "backside attack / opposite leaving group", text: "State nucleophile attacks electron-deficient carbon from the backside (opposite Br)." },
+        { mark: 1, keyword: "curly arrow from OH⁻ lone pair to carbon", text: "Describe curly arrow from lone pair on :OH⁻ to C^δ+." },
+        { mark: 1, keyword: "transition state with partial bonds and charge", text: "Describe five-coordinate transition state with partial bonds and overall negative charge." },
+        { mark: 1, keyword: "inversion of configuration / Walden inversion", text: "State stereochemical outcome is inversion of configuration (Walden inversion)." },
+        { mark: 1, keyword: "umbrella inversion due to rear attack", text: "Explain that backside attack flips the arrangement of the other three bonds." }
+      ],
+      examinerTips: "In SN2 transition states, use dotted lines for making/breaking bonds and place brackets with a negative charge: [HO···C···Br]⁻."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q24",
+    question: "Ethanol can be oxidised to either ethanal, $\\text{CH}_3\\text{CHO}$, or ethanoic acid, $\\text{CH}_3\\text{COOH}$, using acidified sodium dichromate(VI).\n\n(a) State the experimental apparatus and conditions required to ensure that ethanal is collected as the main product rather than ethanoic acid.\n(b) Explain why ethanal can be separated easily from the reaction mixture using simple distillation.\n(c) Write the half-equation for the reduction of the dichromate(VI) ion in acidic solution, and state the color change observed.",
+    options: [
+      { text: "(a) Immediate distillation with excess ethanol and dilute acid; (b) Ethanal has no hydrogen bonding, giving it a much lower boiling point (21°C) than ethanol (78°C) and ethanoic acid (118°C); (c) Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O; Orange to green" },
+      { text: "(a) Heating under reflux with excess oxidising agent; (b) Ethanal is insoluble in water; (c) Cr₂O₇²⁻ + 2e⁻ → CrO₄²⁻; Green to orange" },
+      { text: "(a) Fractional distillation at 100°C; (b) Ethanal decomposes on heating; (c) Cr³⁺ + 3e⁻ → Cr; Purple to colorless" },
+      { text: "(a) Reflux with concentrated alkali; (b) Ethanal has strong ionic attractions; (c) Cr₂O₇²⁻ → 2CrO₂; Yellow to blue" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) To prepare and isolate ethanal:\n  - Use excess ethanol (limiting the oxidising agent).\n  - Set up for simple distillation (heating gently so ethanal vaporises and distils off as soon as it forms, preventing further oxidation to ethanoic acid).\n* (b) Boiling points and intermolecular forces:\n  - Ethanal (CH₃CHO) has permanent dipole-dipole attractions and London forces, but CANNOT form intermolecular hydrogen bonds with itself (no hydrogen attached to oxygen).\n  - Ethanol (CH₃CH₂OH) and ethanoic acid (CH₃COOH) both have strong intermolecular hydrogen bonding.\n  - Consequently, ethanal boils at just 21°C (compared to ethanol at 78°C and ethanoic acid at 118°C) and boils off immediately upon formation.\n* (c) Reduction half-equation: Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O.\n  - Color change: Orange (Cr₂O₇²⁻) to green (Cr³⁺).",
+    level: 2,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q24 (Section B)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "distillation / distil immediately", text: "State distillation apparatus and gentle heating to distil off ethanal as formed." },
+        { mark: 1, keyword: "excess ethanol / limiting dichromate", text: "State excess ethanol or limited oxidising agent." },
+        { mark: 1, keyword: "ethanal has no hydrogen bonding", text: "Explain ethanal cannot form hydrogen bonds with other ethanal molecules." },
+        { mark: 1, keyword: "much lower boiling point (21°C)", text: "State ethanal has a much lower boiling point than ethanol or ethanoic acid." },
+        { mark: 1, keyword: "Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O", text: "Correct balanced half-equation for dichromate reduction." },
+        { mark: 1, keyword: "orange to green", text: "Correct color change: orange to green." }
+      ],
+      examinerTips: "To get full marks for distillation vs reflux: Distillation = partial oxidation to aldehyde; Reflux = complete oxidation to carboxylic acid."
+    }
+  },
+  {
+    id: "edx-wch12-2026-mj-q25",
+    question: "An unknown organic compound $Q$ contains $60.0\\%$ carbon, $13.3\\%$ hydrogen, and $26.7\\%$ oxygen by mass.\n\n(a) Determine the empirical formula of compound $Q$. [$A_r$: C = 12.0, H = 1.0, O = 16.0]\n(b) The mass spectrum of $Q$ shows a molecular ion peak at $m/z = 60$ and a prominent fragment peak at $m/z = 45$.\nDeduce the molecular formula of $Q$.\n(c) The infrared spectrum of $Q$ shows a strong, broad absorption band at $3350\\text{ cm}^{-1}$ and no peak in the region $1650-1750\\text{ cm}^{-1}$.\nDeduce the structural formula and systematic name of compound $Q$, and identify the fragment ion at $m/z = 45$.",
+    options: [
+      { text: "(a) C₃H₈O; (b) Molecular formula is C₃H₈O (Mr = 60); (c) Propan-1-ol (CH₃CH₂CH₂OH) or Propan-2-ol (CH₃CH(OH)CH₃); Fragment ion at m/z = 45 is [CH₂CH₂OH]⁺ or [CH(OH)CH₃]⁺" },
+      { text: "(a) C₂H₆O₂; (b) Molecular formula is C₂H₆O₂; (c) Ethane-1,2-diol; Fragment is [COOH]⁺" },
+      { text: "(a) C₃H₆O; (b) Molecular formula is C₃H₆O; (c) Propanal; Fragment is [CHO]⁺" },
+      { text: "(a) C₄H₁₀O; (b) Molecular formula is C₄H₁₀O; (c) Butan-1-ol; Fragment is [C₂H₅O]⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* (a) Empirical formula calculation:\n  - Moles C = 60.0 / 12.0 = 5.00 mol.\n  - Moles H = 13.3 / 1.0 = 13.3 mol.\n  - Moles O = 26.7 / 16.0 = 1.669 mol.\n  - Mole ratio: C = 5.00 / 1.669 = 3.00; H = 13.3 / 1.669 = 7.97 ≈ 8; O = 1.669 / 1.669 = 1.00.\n  - Empirical formula: C₃H₈O.\n* (b) Molecular formula:\n  - Empirical mass = (3 × 12.0) + (8 × 1.0) + 16.0 = 60.0 g mol⁻¹.\n  - Since M⁺ = 60, molecular formula is identical to empirical formula: C₃H₈O.\n* (c) Structural deduction:\n  - Broad IR peak at 3350 cm⁻¹ confirms an alcohol O-H group.\n  - Absence of C=O peak at 1650-1750 cm⁻¹ confirms it is an alcohol (not an ester or carboxylic acid).\n  - With 3 carbons, the compound is either propan-1-ol (CH₃CH₂CH₂OH) or propan-2-ol (CH₃CH(OH)CH₃).\n  - Fragment ion at m/z = 45: Loss of a methyl group (mass 15) from M⁺ (60 - 15 = 45) yields the resonance-stabilised oxonium ion [CH₃CH=OH]⁺ or [CH₂=CH-OH₂]⁺.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 May/June 2026 Q25 (Section B)",
+    lessonNum: 5,
+    createdAt: "2026-09-04",
+    markingScheme: {
+      marks: 6,
+      points: [
+        { mark: 1, keyword: "moles of C, H, O", text: "Calculate moles: C = 5.00, H = 13.3, O = 1.67." },
+        { mark: 1, keyword: "C₃H₈O empirical formula", text: "Deduce empirical formula C₃H₈O." },
+        { mark: 1, keyword: "C₃H₈O molecular formula", text: "Confirm molecular formula is C₃H₈O using M⁺ = 60." },
+        { mark: 1, keyword: "alcohol O-H group", text: "Identify alcohol O-H group from 3350 cm⁻¹ IR absorption." },
+        { mark: 1, keyword: "propan-1-ol or propan-2-ol", text: "Name propan-1-ol or propan-2-ol with correct structure." },
+        { mark: 1, keyword: "[CH₃CHOH]⁺ / [CH₂CH₂OH]⁺ at m/z = 45", text: "Identify fragment ion [CH₃CHOH]⁺ or [C₂H₅O]⁺ at m/z = 45 (M - 15)." }
+      ],
+      examinerTips: "Always show all working for empirical formula calculations: mass → moles → simplest whole number ratio."
+    }
   }
 );
+
 
 
 

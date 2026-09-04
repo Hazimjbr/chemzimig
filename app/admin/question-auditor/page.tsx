@@ -27,6 +27,12 @@ interface AuditedQuestion {
     lessonTitle: string;
     createdAt?: string;
     imageHtml?: string;
+    paperType?: 'mcq' | 'structured' | 'practical';
+    markingScheme?: {
+        marks: number;
+        points: { mark: number; keyword: string; text: string }[];
+        examinerTips?: string;
+    };
 }
 
 const renderTextWithMath = (text: string): React.ReactNode => {
@@ -295,6 +301,7 @@ export default function QuestionAuditorPage() {
     // Filters State
     const [selectedTrack, setSelectedTrack] = useState<string>('all');
     const [selectedSource, setSelectedSource] = useState<string>('all');
+    const [selectedPaperType, setSelectedPaperType] = useState<string>('all');
     const [selectedUnit, setSelectedUnit] = useState<string>('all');
     const [selectedLesson, setSelectedLesson] = useState<string>('all');
     const [selectedLevel, setSelectedLevel] = useState<string>('all');
@@ -338,7 +345,9 @@ export default function QuestionAuditorPage() {
                 unitTitle,
                 lessonTitle,
                 createdAt: q.createdAt,
-                imageHtml: q.imageHtml
+                imageHtml: q.imageHtml,
+                paperType: q.paperType,
+                markingScheme: q.markingScheme
             };
         });
 
@@ -487,10 +496,15 @@ export default function QuestionAuditorPage() {
         const matchesUnit = selectedUnit === 'all' || q.unitTitle === selectedUnit;
         const matchesLesson = selectedLesson === 'all' || q.lessonTitle === selectedLesson;
         const matchesLevel = selectedLevel === 'all' || q.level.toLowerCase() === selectedLevel.toLowerCase();
+        const matchesPaperType = selectedPaperType === 'all' || 
+            (selectedPaperType === 'mcq' && (!q.paperType || q.paperType === 'mcq')) ||
+            q.paperType === selectedPaperType;
+        
         const matchesSearch = 
             q.question.toLowerCase().includes(searchQuery.toLowerCase()) || 
             q.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (q.explanation && q.explanation.toLowerCase().includes(searchQuery.toLowerCase()));
+            (q.explanation && q.explanation.toLowerCase().includes(searchQuery.toLowerCase())) ||
+            (q.markingScheme?.examinerTips && q.markingScheme.examinerTips.toLowerCase().includes(searchQuery.toLowerCase()));
         
         let matchesDate = true;
         if (dateFrom) {
@@ -503,7 +517,7 @@ export default function QuestionAuditorPage() {
             }
         }
 
-        return matchesTrack && matchesSource && matchesUnit && matchesLesson && matchesLevel && matchesSearch && matchesDate;
+        return matchesTrack && matchesSource && matchesPaperType && matchesUnit && matchesLesson && matchesLevel && matchesSearch && matchesDate;
     });
 
     return (
@@ -536,6 +550,7 @@ export default function QuestionAuditorPage() {
                             onClick={() => {
                                 setSelectedTrack('all');
                                 setSelectedSource('all');
+                                setSelectedPaperType('all');
                                 setSelectedUnit('all');
                                 setSelectedLesson('all');
                                 setSelectedLevel('all');
@@ -587,9 +602,24 @@ export default function QuestionAuditorPage() {
                             }}
                             className="bg-[#0b0b1a] border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-indigo-500/50 outline-none text-slate-300 w-full"
                         >
-                            <option value="all">All Types</option>
+                            <option value="all">All Sources</option>
                             <option value="quiz">Lesson Quiz</option>
                             <option value="exam">Exam Practice</option>
+                        </select>
+                    </div>
+
+                    {/* 2.5 Paper Format */}
+                    <div className="flex flex-col gap-1.5">
+                        <label className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Paper Format</label>
+                        <select 
+                            value={selectedPaperType}
+                            onChange={e => setSelectedPaperType(e.target.value)}
+                            className="bg-[#0b0b1a] border border-white/10 rounded-xl px-4 py-3 text-sm focus:border-indigo-500/50 outline-none text-slate-300 w-full"
+                        >
+                            <option value="all">All Formats</option>
+                            <option value="mcq">🔘 Paper 1/2: MCQ</option>
+                            <option value="structured">📝 Paper 3/4: Theory / Written</option>
+                            <option value="practical">🧪 Paper 6: Practical Skills</option>
                         </select>
                     </div>
 
@@ -743,8 +773,26 @@ export default function QuestionAuditorPage() {
                                     )}
                                 </div>
 
+                                {/* Paper Type & Marking Scheme Badge */}
+                                {q.paperType && q.paperType !== 'mcq' && (
+                                    <div className="flex items-center gap-2">
+                                        <span className={`text-xs font-black px-3 py-1 rounded-xl border flex items-center gap-1.5 ${
+                                            q.paperType === 'structured' 
+                                                ? 'bg-amber-500/15 border-amber-500/30 text-amber-300' 
+                                                : 'bg-emerald-500/15 border-emerald-500/30 text-emerald-300'
+                                        }`}>
+                                            <span>{q.paperType === 'structured' ? '📝 Paper 4 Theory / Structured' : '🧪 Paper 6 Practical Skills'}</span>
+                                            {q.markingScheme && (
+                                                <span className="bg-white/10 px-1.5 py-0.5 rounded text-[10px]">
+                                                    [{q.markingScheme.marks} Marks]
+                                                </span>
+                                            )}
+                                        </span>
+                                    </div>
+                                )}
+
                                 {/* Question Content */}
-                                <div className="text-white text-base md:text-lg font-medium leading-relaxed">
+                                <div className="text-white text-base md:text-lg font-medium leading-relaxed whitespace-pre-line">
                                     {renderQuestionContent(q.question)}
                                 </div>
 
@@ -753,29 +801,77 @@ export default function QuestionAuditorPage() {
                                     <div className="my-4 max-w-full overflow-x-auto flex justify-center" dangerouslySetInnerHTML={{ __html: q.imageHtml }} />
                                 )}
 
-                                {/* Options */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                                    {q.options.map((opt, oIdx) => {
-                                        const isCorrect = opt.isCorrect || oIdx === q.correctAnswerIndex;
-                                        return (
-                                            <div 
-                                                key={oIdx}
-                                                className={`p-4 rounded-2xl border transition-all text-sm flex items-center justify-between ${
-                                                    isCorrect 
-                                                        ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 font-bold' 
-                                                        : 'bg-white/[0.01] border-white/5 text-slate-400'
-                                                }`}
-                                            >
-                                                <span dir="ltr" className="text-left flex-1">{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
-                                                {isCorrect && (
-                                                    <span className="text-[10px] font-black uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded">
-                                                        Correct Answer
-                                                    </span>
-                                                )}
+                                {/* Marking Scheme Breakdown for Paper 4/6 */}
+                                {q.markingScheme ? (
+                                    <div className="bg-[#0e1626] border border-indigo-500/25 rounded-2xl p-5 space-y-4">
+                                        <div className="flex items-center justify-between border-b border-indigo-500/20 pb-3">
+                                            <div className="flex items-center gap-2">
+                                                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                                                <span className="text-xs font-black text-indigo-300 uppercase tracking-wider">
+                                                    Official Cambridge Mark Scheme Rubric ({q.markingScheme.marks} Marks)
+                                                </span>
                                             </div>
-                                        );
-                                    })}
-                                </div>
+                                            <span className="text-[11px] font-bold text-slate-400">Keyword-Assisted Evaluation</span>
+                                        </div>
+
+                                        {/* Mark Points */}
+                                        <div className="space-y-2.5">
+                                            {q.markingScheme.points.map((pt, pIdx) => (
+                                                <div key={pIdx} className="bg-white/[0.02] border border-white/5 rounded-xl p-3 flex items-start gap-3 text-xs">
+                                                    <span className="bg-emerald-500/20 text-emerald-300 font-bold px-2 py-1 rounded border border-emerald-500/30 flex-shrink-0">
+                                                        +{pt.mark} Mark
+                                                    </span>
+                                                    <div className="space-y-1 flex-1">
+                                                        <div className="text-slate-200 font-medium">
+                                                            {renderTextWithMath(pt.text)}
+                                                        </div>
+                                                        <div className="text-[11px] text-amber-300/90 font-mono flex items-center gap-1">
+                                                            <span className="text-slate-500">Key terms:</span>
+                                                            <span className="bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">
+                                                                {pt.keyword}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Examiner Tips */}
+                                        {q.markingScheme.examinerTips && (
+                                            <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-3 text-xs text-amber-200/90 flex items-start gap-2">
+                                                <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                                                <div>
+                                                    <strong className="text-amber-300 font-bold block mb-0.5">Examiner Advice & Common Pitfalls:</strong>
+                                                    <span>{q.markingScheme.examinerTips}</span>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    /* Options for MCQ */
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                                        {q.options.map((opt, oIdx) => {
+                                            const isCorrect = opt.isCorrect || oIdx === q.correctAnswerIndex;
+                                            return (
+                                                <div 
+                                                    key={oIdx}
+                                                    className={`p-4 rounded-2xl border transition-all text-sm flex items-center justify-between ${
+                                                        isCorrect 
+                                                            ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 font-bold' 
+                                                            : 'bg-white/[0.01] border-white/5 text-slate-400'
+                                                    }`}
+                                                >
+                                                    <span dir="ltr" className="text-left flex-1">{String.fromCharCode(65 + oIdx)}. {renderTextWithMath(opt.text)}</span>
+                                                    {isCorrect && (
+                                                        <span className="text-[10px] font-black uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded">
+                                                            Correct Answer
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
 
                                 {/* Explanation */}
                                 {q.explanation && (
