@@ -925,6 +925,139 @@ const arrheniusGraphSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 
   </g>
 </svg>`;
 
+const heterogeneousCatalysisSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 320" class="w-full max-w-2xl mx-auto h-auto rounded-lg" style="background: linear-gradient(to bottom right, #070f1e, #0b1b35); border: 1px solid #1e293b; font-family: system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 Z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="325" y="26" text-anchor="middle" fill="#f8fafc" font-size="15" font-weight="bold">Heterogeneous Catalysis: Three Stages on a Solid Surface</text>
+
+  <!-- Stage labels -->
+  <text x="108" y="52" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="bold">1. Adsorption</text>
+  <text x="325" y="52" text-anchor="middle" fill="#f59e0b" font-size="13" font-weight="bold">2. Reaction</text>
+  <text x="542" y="52" text-anchor="middle" fill="#34d399" font-size="13" font-weight="bold">3. Desorption</text>
+
+  <!-- Arrows between stages -->
+  <text x="218" y="178" text-anchor="middle" fill="#94a3b8" font-size="22">&#8594;</text>
+  <text x="435" y="178" text-anchor="middle" fill="#94a3b8" font-size="22">&#8594;</text>
+
+  <!-- ===== STAGE 1: ADSORPTION ===== -->
+  <g transform="translate(18, 65)">
+    <rect x="0" y="195" width="182" height="42" rx="4" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="91" y="221" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="bold">SURFACE OF CATALYST</text>
+    <ellipse cx="36" cy="195" rx="12" ry="6" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <ellipse cx="91" cy="195" rx="12" ry="6" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <ellipse cx="146" cy="195" rx="12" ry="6" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <!-- Reactant A (green) being adsorbed -->
+    <circle cx="36" cy="155" r="13" fill="#22c55e" fill-opacity="0.85" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="36" y="159" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">A</text>
+    <circle cx="91" cy="155" r="13" fill="#22c55e" fill-opacity="0.85" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="91" y="159" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">A</text>
+    <circle cx="146" cy="155" r="13" fill="#22c55e" fill-opacity="0.85" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="146" y="159" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">A</text>
+    <!-- Bond lines to surface -->
+    <line x1="36" y1="168" x2="36" y2="189" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="91" y1="168" x2="91" y2="189" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="146" y1="168" x2="146" y2="189" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- Reactant B (orange) approaching -->
+    <circle cx="36" cy="108" r="13" fill="#f97316" fill-opacity="0.85" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="36" y="112" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">B</text>
+    <circle cx="91" cy="108" r="13" fill="#f97316" fill-opacity="0.85" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="91" y="112" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">B</text>
+    <circle cx="146" cy="108" r="13" fill="#f97316" fill-opacity="0.85" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="146" y="112" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">B</text>
+    <!-- Down arrows -->
+    <line x1="36" y1="122" x2="36" y2="140" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <line x1="91" y1="122" x2="91" y2="140" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <line x1="146" y1="122" x2="146" y2="140" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+    <text x="91" y="252" text-anchor="middle" fill="#94a3b8" font-size="10">Reactants bond to active sites</text>
+    <text x="91" y="265" text-anchor="middle" fill="#94a3b8" font-size="10">Covalent bonds weakened</text>
+  </g>
+
+  <!-- ===== STAGE 2: REACTION ===== -->
+  <g transform="translate(235, 65)">
+    <rect x="0" y="195" width="182" height="42" rx="4" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="91" y="221" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="bold">SURFACE OF CATALYST</text>
+    <ellipse cx="36" cy="195" rx="12" ry="6" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <ellipse cx="91" cy="195" rx="12" ry="6" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <ellipse cx="146" cy="195" rx="12" ry="6" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <!-- A+B pairs reacting on surface -->
+    <circle cx="26" cy="170" r="13" fill="#22c55e" fill-opacity="0.8" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="26" y="174" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">A</text>
+    <circle cx="46" cy="170" r="13" fill="#f97316" fill-opacity="0.8" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="46" y="174" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">B</text>
+    <text x="36" y="153" text-anchor="middle" fill="#fbbf24" font-size="13">&#9889;</text>
+    <circle cx="81" cy="170" r="13" fill="#22c55e" fill-opacity="0.8" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="81" y="174" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">A</text>
+    <circle cx="101" cy="170" r="13" fill="#f97316" fill-opacity="0.8" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="101" y="174" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">B</text>
+    <text x="91" y="153" text-anchor="middle" fill="#fbbf24" font-size="13">&#9889;</text>
+    <circle cx="136" cy="170" r="13" fill="#22c55e" fill-opacity="0.8" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="136" y="174" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">A</text>
+    <circle cx="156" cy="170" r="13" fill="#f97316" fill-opacity="0.8" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="156" y="174" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">B</text>
+    <text x="146" y="153" text-anchor="middle" fill="#fbbf24" font-size="13">&#9889;</text>
+    <!-- Product AB forming above -->
+    <circle cx="36" cy="108" r="13" fill="#a78bfa" fill-opacity="0.7" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="36" y="112" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <circle cx="91" cy="100" r="13" fill="#a78bfa" fill-opacity="0.7" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="91" y="104" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <circle cx="146" cy="108" r="13" fill="#a78bfa" fill-opacity="0.7" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="146" y="112" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <text x="91" y="252" text-anchor="middle" fill="#94a3b8" font-size="10">Bonds break and new bonds form</text>
+    <text x="91" y="265" text-anchor="middle" fill="#94a3b8" font-size="10">Product AB molecules created</text>
+  </g>
+
+  <!-- ===== STAGE 3: DESORPTION ===== -->
+  <g transform="translate(452, 65)">
+    <rect x="0" y="195" width="182" height="42" rx="4" fill="#334155" stroke="#475569" stroke-width="1.5"/>
+    <text x="91" y="221" text-anchor="middle" fill="#94a3b8" font-size="11" font-weight="bold">SURFACE OF CATALYST</text>
+    <!-- Free active sites (green outline) -->
+    <ellipse cx="36" cy="195" rx="12" ry="6" fill="#475569" stroke="#34d399" stroke-width="1.5"/>
+    <ellipse cx="91" cy="195" rx="12" ry="6" fill="#475569" stroke="#34d399" stroke-width="1.5"/>
+    <ellipse cx="146" cy="195" rx="12" ry="6" fill="#475569" stroke="#34d399" stroke-width="1.5"/>
+    <!-- Products leaving surface -->
+    <circle cx="36" cy="168" r="13" fill="#a78bfa" fill-opacity="0.85" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="36" y="172" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <line x1="36" y1="154" x2="36" y2="135" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <circle cx="91" cy="168" r="13" fill="#a78bfa" fill-opacity="0.85" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="91" y="172" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <line x1="91" y1="154" x2="91" y2="135" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <circle cx="146" cy="168" r="13" fill="#a78bfa" fill-opacity="0.85" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="146" y="172" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <line x1="146" y1="154" x2="146" y2="135" stroke="#34d399" stroke-width="2" marker-end="url(#arrowGreen)"/>
+    <!-- Products freely diffusing away -->
+    <circle cx="36" cy="108" r="13" fill="#a78bfa" fill-opacity="0.55" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="36" y="112" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <circle cx="91" cy="100" r="13" fill="#a78bfa" fill-opacity="0.55" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="91" y="104" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <circle cx="146" cy="108" r="13" fill="#a78bfa" fill-opacity="0.55" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="146" y="112" text-anchor="middle" fill="#fff" font-size="9">AB</text>
+    <text x="91" y="252" text-anchor="middle" fill="#94a3b8" font-size="10">Products leave the surface</text>
+    <text x="91" y="265" text-anchor="middle" fill="#94a3b8" font-size="10">Active sites freed for reuse</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(18, 298)">
+    <circle cx="10" cy="8" r="7" fill="#22c55e" stroke="#16a34a" stroke-width="1"/>
+    <text x="22" y="12" fill="#cbd5e1" font-size="10">Reactant A</text>
+    <circle cx="95" cy="8" r="7" fill="#f97316" stroke="#ea580c" stroke-width="1"/>
+    <text x="107" y="12" fill="#cbd5e1" font-size="10">Reactant B</text>
+    <circle cx="180" cy="8" r="7" fill="#a78bfa" stroke="#7c3aed" stroke-width="1"/>
+    <text x="192" y="12" fill="#cbd5e1" font-size="10">Product AB</text>
+    <ellipse cx="280" cy="8" rx="10" ry="5" fill="#475569" stroke="#34d399" stroke-width="1.5"/>
+    <text x="294" y="12" fill="#cbd5e1" font-size="10">Free active site</text>
+    <ellipse cx="390" cy="8" rx="10" ry="5" fill="#475569" stroke="#64748b" stroke-width="1"/>
+    <text x="404" y="12" fill="#cbd5e1" font-size="10">Occupied active site</text>
+  </g>
+</svg>`;
+
 export const parts: LessonPart[] = [
   {
     id: 'experimental-rates-u4-l1',
@@ -2182,6 +2315,8 @@ export const parts: LessonPart[] = [
 >   1. **Adsorption:** Reactant molecules form weak bonds with active sites on the solid catalyst surface.
 >   2. **Reaction:** The bonds within the reactant molecules are weakened/broken, and new bonds are formed to create the products.
 >   3. **Desorption:** The product molecules break their bonds to the surface active sites and diffuse away.
+> 
+> ${svgToken(heterogeneousCatalysisSvg)}
 > * **Key Industrial Examples:**
 >   * **Haber Process:** Solid iron (Fe) catalyst.
 >     N₂ (g) + 3H₂ (g) ⇌ 2NH₃ (g)
