@@ -15,11 +15,13 @@ import {
     Crown,
     Stethoscope,
     FileCheck,
-    Printer
+    Printer,
+    Search
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import { GlobalSearchPalette } from '@/components/ui/GlobalSearchPalette';
 
 const ToothIcon = ({ className }: { className?: string }) => (
     <span className={`text-lg leading-none ${className || ''}`}>🦷</span>
@@ -44,9 +46,22 @@ const dentalNavItems = [
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     const pathname = usePathname();
     const { user, logout } = useAuth();
     const { xp, level, streak } = useGamification();
+
+    // Global shortcut for Search Palette (Ctrl+K or Cmd+K)
+    useEffect(() => {
+        const handleGlobalKeyDown = (e: KeyboardEvent) => {
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                setIsSearchOpen(prev => !prev);
+            }
+        };
+        window.addEventListener('keydown', handleGlobalKeyDown);
+        return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+    }, []);
 
     // ─── "Last Mode" Tracking (Solution A) ────────────────────────────────────
     // lastMode tracks which section the user last actively visited.
@@ -110,7 +125,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* Sidebar */}
             <aside className={`
                 fixed inset-y-0 left-0 z-50 w-72 bg-surface/80 backdrop-blur-2xl border-r border-border
-                transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0
+                transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 print:hidden
                 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
             `}>
                 <div className="flex flex-col h-full p-6">
@@ -203,13 +218,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             </aside>
 
             {/* Main Content */}
-            <main className="flex-1 flex flex-col h-screen overflow-hidden relative">
+            <main className="flex-1 flex flex-col h-screen overflow-hidden relative print:h-auto print:overflow-visible print:bg-white print:block">
                 {/* Visual Background Orbs */}
-                <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none" />
-                <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
+                <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none print:hidden" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none print:hidden" />
 
                 {/* Header */}
-                <header className="h-20 border-b border-border bg-background/80 backdrop-blur-md flex items-center justify-between px-6 lg:px-10 shrink-0 z-10">
+                <header className="h-20 border-b border-border bg-background/80 backdrop-blur-md flex items-center justify-between px-6 lg:px-10 shrink-0 z-10 print:hidden">
                     <button 
                         onClick={() => setIsSidebarOpen(true)}
                         className="lg:hidden p-2 -ml-2 text-slate-400 hover:text-foreground transition-colors cursor-pointer"
@@ -224,7 +239,20 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                         </h2>
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
+                        {/* Quick Search Button */}
+                        <button
+                            onClick={() => setIsSearchOpen(true)}
+                            className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 text-slate-400 hover:text-white transition-all cursor-pointer text-xs group"
+                            title="Omnisearch (Ctrl+K)"
+                        >
+                            <Search className="w-4 h-4 text-indigo-400 group-hover:scale-110 transition-transform" />
+                            <span className="hidden sm:inline font-medium">Search knowledge...</span>
+                            <kbd className="hidden md:inline-flex items-center gap-0.5 text-[10px] font-mono text-slate-500 bg-white/5 border border-white/10 px-1.5 py-0.5 rounded">
+                                ⌘K
+                            </kbd>
+                        </button>
+
                         {/* Streak Badge */}
                         {!isDentalUser && streak?.currentStreak > 0 && (
                             <div className="hidden md:flex items-center gap-1.5 bg-orange-500/10 border border-orange-500/20 px-3 py-1.5 rounded-full">
@@ -244,10 +272,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                     </div>
                 </header>
 
-                <div className="flex-1 overflow-y-auto p-6 lg:p-10 relative z-0">
+                <div className="flex-1 overflow-y-auto p-6 lg:p-10 relative z-0 print:p-0 print:overflow-visible print:block">
                     {children}
                 </div>
             </main>
+
+            {/* Global Command / Search Palette */}
+            <GlobalSearchPalette 
+                isOpen={isSearchOpen} 
+                onClose={() => setIsSearchOpen(false)} 
+            />
         </div>
     );
 }

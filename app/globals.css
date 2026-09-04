@@ -432,3 +432,49 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* ========================================================================= */
+/* Print & PDF Export Overrides                                              */
+/* ========================================================================= */
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm 15mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Force background colors to print accurately */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Avoid awkward page breaks in questions and cards */
+  .break-inside-avoid,
+  .worksheet-question-card,
+  article,
+  blockquote {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .break-before-page {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Hide interactive, dark background orbs and nav elements */
+  nav,
+  aside,
+  header:not(.print-header),
+  button:not(.print-visible),
+  .no-print {
+    display: none !important;
+  }
+}

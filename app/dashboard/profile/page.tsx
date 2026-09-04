@@ -5,8 +5,10 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import { 
     User as UserIcon, Shield, Award, Calendar, BookOpen, 
-    Flame, Zap, Trophy, ShieldCheck, Laptop, LogOut, Camera, X as CloseIcon
+    Flame, Zap, Trophy, ShieldCheck, Laptop, LogOut, Camera, X as CloseIcon,
+    FileText, Printer
 } from 'lucide-react';
+import { AllNotesModal } from '@/components/visual/AllNotesModal';
 
 const PRESET_AVATARS = [
     { value: '/images/avatars/assassin.jpg', name: 'Assassin', color: 'bg-indigo-500/10 border-indigo-500/20', isImage: true },
@@ -87,6 +89,7 @@ export default function ProfilePage() {
     } = useGamification();
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isNotesModalOpen, setIsNotesModalOpen] = useState(false);
     const [isUpdating, setIsUpdating] = useState(false);
 
     const totalQuizzesSolved = Object.keys(quizScores).length;
@@ -141,15 +144,28 @@ export default function ProfilePage() {
                 </div>
 
                 <div className="flex-1 space-y-2">
-                    <div className="flex flex-col md:flex-row md:items-center gap-2">
-                        <h1 className="text-3xl font-extrabold text-white font-[family-name:var(--font-space-grotesk)]">
-                            {user?.name || 'Guest Student'}
-                        </h1>
-                        <span className={`inline-fit w-fit mx-auto md:mx-0 px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                            user?.isAdmin ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20'
-                        }`}>
-                            {user?.role ? user.role.toUpperCase() : 'STUDENT'}
-                        </span>
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                        <div className="flex flex-col md:flex-row md:items-center gap-2">
+                            <h1 className="text-3xl font-extrabold text-white font-[family-name:var(--font-space-grotesk)]">
+                                {user?.name || 'Guest Student'}
+                            </h1>
+                            <span className={`inline-fit w-fit mx-auto md:mx-0 px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                                user?.isAdmin ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20'
+                            }`}>
+                                {user?.role ? user.role.toUpperCase() : 'STUDENT'}
+                            </span>
+                        </div>
+
+                        {/* View & Export My Notes Action Button */}
+                        <button
+                            type="button"
+                            onClick={() => setIsNotesModalOpen(true)}
+                            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-500/15 hover:bg-indigo-500/25 border border-indigo-500/30 hover:border-indigo-400 text-indigo-300 hover:text-white rounded-2xl text-xs font-bold transition-all shadow-md shadow-indigo-500/10 active:scale-95 cursor-pointer w-fit mx-auto md:mx-0"
+                        >
+                            <FileText className="w-4 h-4 text-indigo-400" />
+                            <span>My Study Notes</span>
+                            <span className="text-[10px] bg-indigo-500/30 px-1.5 py-0.5 rounded-full text-white font-mono">Export/Print</span>
+                        </button>
                     </div>
                     <p className="text-slate-400 text-sm">@{user?.username || 'guest'}</p>
                     <p className="text-slate-400 text-xs flex items-center justify-center md:justify-start gap-1.5">
@@ -163,37 +179,52 @@ export default function ProfilePage() {
 
             {/* Avatar Selector Modal */}
             {isModalOpen && (
-                <div className="fixed inset-0 bg-navy-950/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-200">
-                    <div className="glass-card max-w-md w-full p-6 space-y-6 relative border border-white/10 shadow-2xl max-h-[85vh] overflow-y-auto">
-                        <button 
-                            onClick={() => setIsModalOpen(false)}
-                            className="absolute top-4 right-4 p-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer"
-                        >
-                            <CloseIcon className="w-5 h-5" />
-                        </button>
-                        <div className="space-y-1">
-                            <h3 className="text-xl font-bold text-white">Select Chemistry Avatar</h3>
-                            <p className="text-slate-400 text-xs">Choose a scientific avatar to represent your chemical identity.</p>
+                <div 
+                    className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 animate-in fade-in duration-200"
+                    onClick={(e) => {
+                        if (e.target === e.currentTarget) setIsModalOpen(false);
+                    }}
+                >
+                    <div className="bg-[#0b1022]/95 border border-white/15 rounded-3xl p-6 shadow-2xl shadow-black/80 max-w-2xl w-full flex flex-col max-h-[85vh] relative">
+                        {/* Header (fixed at top) */}
+                        <div className="flex items-start justify-between pb-4 border-b border-white/10 flex-shrink-0">
+                            <div className="space-y-1">
+                                <h3 className="text-xl font-bold text-white flex items-center gap-2">
+                                    <span>Select Chemistry Avatar</span>
+                                    <span className="text-xs px-2.5 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 font-semibold border border-indigo-500/30">
+                                        {PRESET_AVATARS.length} Avatars
+                                    </span>
+                                </h3>
+                                <p className="text-slate-400 text-xs">Choose a scientific avatar to represent your chemical identity.</p>
+                            </div>
+                            <button 
+                                onClick={() => setIsModalOpen(false)}
+                                className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-all cursor-pointer border border-white/5"
+                                title="Close"
+                            >
+                                <CloseIcon className="w-5 h-5" />
+                            </button>
                         </div>
 
-                        <div className="grid grid-cols-4 gap-3">
+                        {/* Scrollable Grid */}
+                        <div className="flex-1 overflow-y-auto py-4 pr-1 mt-2 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 [scrollbar-width:thin] [scrollbar-color:rgba(255,255,255,0.2)_transparent]">
                             {PRESET_AVATARS.map((av) => (
                                 <button
                                     key={av.name}
                                     onClick={() => handleSelectAvatar(av.value)}
                                     disabled={isUpdating}
                                     className={`aspect-square rounded-2xl border text-3xl flex flex-col items-center justify-center p-2 transition-all hover:scale-105 hover:bg-white/5 cursor-pointer ${av.color} ${
-                                        user?.image === av.value ? 'ring-2 ring-indigo-500 border-transparent' : 'border-white/5'
+                                        user?.image === av.value ? 'ring-2 ring-indigo-500 border-transparent shadow-lg shadow-indigo-500/20' : 'border-white/10'
                                     }`}
                                 >
                                     {av.isImage ? (
-                                        <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center bg-navy-950">
+                                        <div className="w-14 h-14 rounded-xl overflow-hidden flex items-center justify-center bg-navy-950 shadow-inner">
                                             <img src={av.value} alt={av.name} className="w-full h-full object-cover" />
                                         </div>
                                     ) : (
-                                        <span>{av.value}</span>
+                                        <span className="text-4xl my-auto">{av.value}</span>
                                     )}
-                                    <span className="text-[10px] text-slate-500 font-semibold mt-1">{av.name}</span>
+                                    <span className="text-[10px] text-slate-300 font-semibold mt-1 text-center truncate w-full px-1">{av.name}</span>
                                 </button>
                             ))}
                         </div>
@@ -350,6 +381,14 @@ export default function ProfilePage() {
                     </div>
                 </div>
             </div>
+
+            {/* All Notes Aggregator Modal */}
+            <AllNotesModal
+                isOpen={isNotesModalOpen}
+                onClose={() => setIsNotesModalOpen(false)}
+                studentName={user?.name}
+            />
         </div>
     );
 }
+

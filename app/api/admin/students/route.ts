@@ -169,6 +169,28 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ success: true });
         }
 
+        if (action === 'edit-profile') {
+            const { name, email, phone } = body;
+            if (!name || !name.trim()) {
+                return NextResponse.json({ success: false, error: 'Student name is required' }, { status: 400 });
+            }
+            const updatePayload: Record<string, any> = {
+                name: name.trim(),
+                email: (email || '').trim(),
+                phone: (phone || '').trim()
+            };
+            await studentRef.update(updatePayload);
+            await logAdminActivity({
+                action: 'Edit Student Profile',
+                details: `Updated info for student ${name.trim()} (${studentSnap.data()?.username || studentId})`,
+                performedBy: session.name || 'Admin',
+                targetStudentId: studentId,
+                targetStudentName: name.trim(),
+                category: 'student'
+            });
+            return NextResponse.json({ success: true, updated: updatePayload });
+        }
+
         if (action === 'reset-password') {
             const { newPassword } = body;
             if (!newPassword || newPassword.trim().length < 6) {

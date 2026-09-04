@@ -80,6 +80,9 @@ interface LeaderboardEntry {
     grade?: string;
 }
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function GET(request: NextRequest) {
     try {
         const { searchParams } = new URL(request.url);
@@ -92,8 +95,8 @@ export async function GET(request: NextRequest) {
         try {
             const db = getAdminFirestore();
             if (db) {
-                // Fetch extra docs when grade filtering is needed
-                const fetchLimit = gradeFilter === 'all' ? limitCount : limitCount * 3;
+                // Fetch all active students sorted by XP
+                const fetchLimit = gradeFilter === 'all' ? Math.max(limitCount, 50) : 100;
                 const snapshot = await db.collection('students')
                     .orderBy('xp', 'desc')
                     .limit(fetchLimit)
@@ -125,14 +128,11 @@ export async function GET(request: NextRequest) {
                         });
                     }
 
-                    // Trim to requested limit after filtering
-                    docs = docs.slice(0, limitCount);
-
                     leaderboard = docs.map((doc, index) => {
                         const data = doc.data();
                         return {
                             rank: index + 1,
-                            id: `player-${index + 1}`,
+                            id: doc.id || `player-${index + 1}`,
                             name: data.name || 'Student',
                             title: data.title || '',
                             avatar: data.image || data.avatar || null,
@@ -151,22 +151,13 @@ export async function GET(request: NextRequest) {
             console.warn('Database fetch failed, falling back to mock data', dbError);
         }
 
-        // If DB has real users but less than 10, pad with mock data
-        if (leaderboard.length > 0 && leaderboard.length < 10) {
-            const lowestRealXP = leaderboard[leaderboard.length - 1].xp || 1000;
-            const needed = 10 - leaderboard.length;
-            const mocks = generateMockData(needed).map((m, idx) => ({
-                ...m,
-                id: `mock-fill-${idx}`,
-                xp: Math.max(100, Math.floor(lowestRealXP * Math.pow(0.85, idx + 1))),
-                level: Math.max(1, Math.floor((lowestRealXP * Math.pow(0.85, idx + 1)) / 1000) + 1),
-            }));
-
-            const merged = [...leaderboard, ...mocks].sort((a, b) => b.xp - a.xp);
-            leaderboard = merged.map((entry, index) => ({ ...entry, rank: index + 1 }));
-        } else if (leaderboard.length === 0) {
+        // Only use mock data if database is completely empty (no real students found)
+        if (leaderboard.length === 0) {
             leaderboard = generateMockData(limitCount);
         }
+
+        // Trim to requested limit after sorting
+        leaderboard = leaderboard.slice(0, limitCount);
 
         // SERVER-SIDE SORTING for Mad Scientist mode
         if (period === 'mad-scientist') {

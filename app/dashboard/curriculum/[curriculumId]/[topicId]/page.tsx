@@ -19,7 +19,10 @@ import SafeHTML from '@/components/ui/SafeHTML';
 import { sanitizeKatex } from '@/lib/katex-sanitizer';
 import { CurriculumUpsellModal } from '@/components/ui/CurriculumUpsellModal';
 
-const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { ssr: false });
+const EquationAnimator = dynamic(() => import('@/components/visual/EquationAnimator'), { 
+    ssr: false,
+    loading: () => <div className="h-[220px] animate-pulse bg-slate-800/10 rounded-2xl border border-white/5 flex-shrink-0" />
+});
 const GasLawSimulator = dynamic(() => import('@/components/visual/GasLawSimulator'), {
     ssr: false,
     loading: () => <div className="h-[350px] animate-pulse bg-slate-800/10 rounded-xl border border-white/5" />

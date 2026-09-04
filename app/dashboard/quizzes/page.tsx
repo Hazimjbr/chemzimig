@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
 import { allCurricula } from '@/data/curriculum';
@@ -240,16 +241,27 @@ const resolveUnitTitle = (unitId: string, trackId: string): string => {
     return unitId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 };
 
-export default function QuizzesPage() {
+function QuizzesContent() {
     const { user } = useAuth();
     const { addXP, solvedQuestions, saveQuestionAttempts, mistakeInbox } = useGamification();
 
+    const searchParams = useSearchParams();
+    const queryMode = searchParams.get('mode');
+
     const [allQuestions, setAllQuestions] = useState<LocalQuestion[]>([]);
-    
+
     // Multi-step states
     const [step, setStep] = useState<'mode-select' | 'config' | 'playing' | 'result'>('mode-select');
     const [selectedMode, setSelectedMode] = useState<'comprehensive' | 'unit' | 'lesson' | 'custom' | 'spaced'>('comprehensive');
     const [selectedFilter, setSelectedFilter] = useState<'all' | 'new' | 'incorrect' | 'correct' | 'due'>('new');
+
+    useEffect(() => {
+        if (queryMode === 'spaced' || queryMode === 'mistakes') {
+            setSelectedMode('spaced');
+            setSelectedFilter('due');
+            setStep('config');
+        }
+    }, [queryMode]);
     
     // Configuration states
     const [selectedSource, setSelectedSource] = useState<'all' | 'exam' | 'quiz'>('all');
@@ -1647,5 +1659,17 @@ export default function QuizzesPage() {
                 </div>
             )}
         </div>
+    );
+}
+
+export default function QuizzesPage() {
+    return (
+        <Suspense fallback={
+            <div className="flex items-center justify-center min-h-[60vh]">
+                <div className="w-10 h-10 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
+            </div>
+        }>
+            <QuizzesContent />
+        </Suspense>
     );
 }

@@ -30,10 +30,14 @@ import {
     Zap,
     Award,
     ShieldCheck,
-    AlertTriangle
+    AlertTriangle,
+    Edit2,
+    Save,
+    Printer
 } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { StudentParentReportModal } from '@/components/admin/StudentParentReportModal';
 
 function StudentAvatar({ 
     name, 
@@ -243,6 +247,7 @@ function AdminContent() {
 
     // --- Student Profile Modal State ---
     const [selectedStudentProfile, setSelectedStudentProfile] = useState<any | null>(null);
+    const [isParentReportOpen, setIsParentReportOpen] = useState(false);
     const [studentRemarksText, setStudentRemarksText] = useState('');
     const [isSavingRemarks, setIsSavingRemarks] = useState(false);
     const [remarksSavedSuccess, setRemarksSavedSuccess] = useState(false);
@@ -256,16 +261,73 @@ function AdminContent() {
     // Force Logout State
     const [isTerminatingSessions, setIsTerminatingSessions] = useState(false);
 
-    // Synchronize remarks text when student profile opens
+    // Direct Student Profile Editing State
+    const [isEditingDetails, setIsEditingDetails] = useState(false);
+    const [editName, setEditName] = useState('');
+    const [editEmail, setEditEmail] = useState('');
+    const [editPhone, setEditPhone] = useState('');
+    const [isSavingDetails, setIsSavingDetails] = useState(false);
+    const [detailsSavedSuccess, setDetailsSavedSuccess] = useState(false);
+
+    // Synchronize remarks and edit details text when student profile opens
     useEffect(() => {
         if (selectedStudentProfile) {
             setStudentRemarksText(selectedStudentProfile.notes || '');
+            setEditName(selectedStudentProfile.name || '');
+            setEditEmail(selectedStudentProfile.email || '');
+            setEditPhone(selectedStudentProfile.phone || '');
+            setIsEditingDetails(false);
+            setDetailsSavedSuccess(false);
             setRemarksSavedSuccess(false);
             setDirectMsgSentSuccess(false);
             setDirectMsgTitle('');
             setDirectMsgBody('');
         }
     }, [selectedStudentProfile]);
+
+    const handleSaveStudentDetails = async () => {
+        if (!selectedStudentProfile || !editName.trim()) return;
+        setIsSavingDetails(true);
+        try {
+            const res = await fetch('/api/admin/students', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'edit-profile',
+                    studentId: selectedStudentProfile.id,
+                    name: editName.trim(),
+                    email: editEmail.trim(),
+                    phone: editPhone.trim()
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                setDetailsSavedSuccess(true);
+                setIsEditingDetails(false);
+                setSelectedStudentProfile((prev: any) => ({
+                    ...prev,
+                    name: editName.trim(),
+                    email: editEmail.trim(),
+                    phone: editPhone.trim()
+                }));
+                // Update in students list state
+                setStudents(prev => prev.map(s => s.id === selectedStudentProfile.id ? {
+                    ...s,
+                    name: editName.trim(),
+                    email: editEmail.trim(),
+                    phone: editPhone.trim()
+                } : s));
+                setTimeout(() => setDetailsSavedSuccess(false), 3000);
+            } else {
+                alert(data.error || 'Failed to update student details');
+            }
+        } catch (e) {
+            console.error(e);
+            alert('Failed to update student details');
+        } finally {
+            setIsSavingDetails(false);
+        }
+    };
 
     const handleSaveRemarks = async () => {
         if (!selectedStudentProfile) return;
@@ -2341,6 +2403,27 @@ function AdminContent() {
                                 <div className="flex flex-wrap gap-2 w-full sm:w-auto">
                                     <button
                                         type="button"
+                                        onClick={() => setIsEditingDetails(!isEditingDetails)}
+                                        className={`flex-1 sm:flex-none px-3 py-2 border rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                                            isEditingDetails 
+                                                ? 'bg-amber-500/20 border-amber-500/40 text-amber-300' 
+                                                : 'bg-white/5 hover:bg-white/10 border-white/10 text-slate-300 hover:text-white'
+                                        }`}
+                                    >
+                                        <Edit2 className="w-3.5 h-3.5" />
+                                        {isEditingDetails ? 'Cancel Edit' : 'Edit Details'}
+                                    </button>
+                                    <button
+                                        type="button"
+                                        onClick={() => setIsParentReportOpen(true)}
+                                        className="flex-1 sm:flex-none px-3 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/20 text-emerald-400 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5 active:scale-95"
+                                        title="Print A4 Parent Progress Dossier"
+                                    >
+                                        <Printer className="w-3.5 h-3.5 text-emerald-400" />
+                                        Parent Report
+                                    </button>
+                                    <button
+                                        type="button"
                                         onClick={() => {
                                             setResetPasswordStudent(selectedStudentProfile);
                                             setResetCredentialsResult(null);
@@ -2363,33 +2446,99 @@ function AdminContent() {
                                 </div>
                             </div>
 
-                            {/* Contact & Registration Info Cards */}
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
-                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
-                                        <Mail className="w-3 h-3 text-indigo-400" /> Email
-                                    </span>
-                                    <p className="text-xs font-semibold text-white truncate">
-                                        {selectedStudentProfile.email || 'No email registered'}
-                                    </p>
+                            {/* Contact & Registration Info Cards (Editable) */}
+                            {isEditingDetails ? (
+                                <div className="p-4 bg-indigo-500/5 border border-indigo-500/20 rounded-2xl space-y-4 animate-in fade-in duration-200">
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-xs font-bold text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
+                                            <Edit2 className="w-3.5 h-3.5" /> Edit Student Information
+                                        </span>
+                                        {detailsSavedSuccess && (
+                                            <span className="text-xs font-bold text-emerald-400 flex items-center gap-1">
+                                                <Check className="w-3.5 h-3.5" /> Saved Successfully!
+                                            </span>
+                                        )}
+                                    </div>
+                                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                        <div>
+                                            <label className="text-[10px] text-slate-400 font-bold uppercase block mb-1">Full Name</label>
+                                            <input 
+                                                type="text" 
+                                                value={editName}
+                                                onChange={e => setEditName(e.target.value)}
+                                                className="w-full bg-[#050510] border border-white/15 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-indigo-400"
+                                                placeholder="Student Name"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="text-[10px] text-slate-400 font-bold uppercase block mb-1">Email</label>
+                                            <input 
+                                                type="email" 
+                                                value={editEmail}
+                                                onChange={e => setEditEmail(e.target.value)}
+                                                className="w-full bg-[#050510] border border-white/15 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-indigo-400"
+                                                placeholder="student@example.com"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="text-[10px] text-slate-400 font-bold uppercase block mb-1">Phone Number</label>
+                                            <input 
+                                                type="tel" 
+                                                value={editPhone}
+                                                onChange={e => setEditPhone(e.target.value)}
+                                                className="w-full bg-[#050510] border border-white/15 rounded-xl px-3 py-2 text-xs text-white outline-none focus:border-indigo-400 font-mono"
+                                                placeholder="+962 7..."
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-end gap-2 pt-1">
+                                        <button
+                                            type="button"
+                                            onClick={() => setIsEditingDetails(false)}
+                                            className="px-3.5 py-1.5 bg-white/5 hover:bg-white/10 text-slate-300 rounded-xl text-xs font-bold transition-all cursor-pointer"
+                                        >
+                                            Cancel
+                                        </button>
+                                        <button
+                                            type="button"
+                                            disabled={isSavingDetails || !editName.trim()}
+                                            onClick={handleSaveStudentDetails}
+                                            className="px-4 py-1.5 bg-indigo-500 hover:bg-indigo-600 disabled:opacity-50 text-white rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 shadow-md shadow-indigo-500/20 cursor-pointer"
+                                        >
+                                            <Save className="w-3.5 h-3.5" />
+                                            {isSavingDetails ? 'Saving...' : 'Save Changes'}
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
-                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
-                                        <Phone className="w-3 h-3 text-emerald-400" /> Phone
-                                    </span>
-                                    <p className="text-xs font-semibold text-white font-mono truncate">
-                                        {selectedStudentProfile.phone || 'No phone registered'}
-                                    </p>
+                            ) : (
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                    <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                                            <Mail className="w-3 h-3 text-indigo-400" /> Email
+                                        </span>
+                                        <p className="text-xs font-semibold text-white truncate">
+                                            {selectedStudentProfile.email || 'No email registered'}
+                                        </p>
+                                    </div>
+                                    <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                                            <Phone className="w-3 h-3 text-emerald-400" /> Phone
+                                        </span>
+                                        <p className="text-xs font-semibold text-white font-mono truncate">
+                                            {selectedStudentProfile.phone || 'No phone registered'}
+                                        </p>
+                                    </div>
+                                    <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
+                                        <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
+                                            <Calendar className="w-3 h-3 text-amber-400" /> Member Since
+                                        </span>
+                                        <p className="text-xs font-semibold text-white truncate">
+                                            {selectedStudentProfile.createdAt ? new Date(selectedStudentProfile.createdAt).toLocaleDateString() : 'Unknown'}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="bg-white/[0.02] border border-white/5 p-3.5 rounded-2xl space-y-1">
-                                    <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider flex items-center gap-1">
-                                        <Calendar className="w-3 h-3 text-amber-400" /> Member Since
-                                    </span>
-                                    <p className="text-xs font-semibold text-white truncate">
-                                        {selectedStudentProfile.createdAt ? new Date(selectedStudentProfile.createdAt).toLocaleDateString() : 'Unknown'}
-                                    </p>
-                                </div>
-                            </div>
+                            )}
 
                             {/* Gamification & Academic Stats Grid */}
                             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -2633,9 +2782,18 @@ function AdminContent() {
                     </div>
                 </div>
             )}
+
+            {/* Student Parent Printable Report Modal */}
+            <StudentParentReportModal
+                isOpen={isParentReportOpen}
+                onClose={() => setIsParentReportOpen(false)}
+                student={selectedStudentProfile}
+                teacherRemarks={studentRemarksText}
+            />
         </div>
     );
 }
+
 
 export default function AdminPage() {
     return (

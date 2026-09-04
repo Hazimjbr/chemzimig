@@ -18,6 +18,7 @@ import Link from 'next/link';
 import { useGamification } from '@/contexts/GamificationContext';
 import { allCurricula } from '@/data/curriculum';
 import { WeakSpotAnalyticsHeatmap } from '@/components/visual/WeakSpotAnalyticsHeatmap';
+import { WeeklyStudyGoalCard } from '@/components/gamification/WeeklyStudyGoalCard';
 
 export default function DashboardPage() {
     const { user } = useAuth();
@@ -109,7 +110,7 @@ export default function DashboardPage() {
     useEffect(() => {
         const fetchPreview = async () => {
             try {
-                const res = await fetch('/api/leaderboard?limit=3');
+                const res = await fetch('/api/leaderboard?limit=10', { cache: 'no-store' });
                 const data = await res.json();
                 if (data.success) {
                     setPreviewLeaderboard(data.leaderboard);
@@ -257,6 +258,9 @@ export default function DashboardPage() {
             {/* Predictive Weak Spot Analytics & Concept Heatmap */}
             <WeakSpotAnalyticsHeatmap />
 
+            {/* Weekly Study Commitment & Progress Ring */}
+            <WeeklyStudyGoalCard />
+
             {/* Spaced Repetition & Mistake Bank Action Card */}
             <div className="glass-card bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border border-amber-500/20 p-6 rounded-[2rem] flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-xl shadow-amber-500/5">
                 <div className="flex items-center gap-4">
@@ -289,7 +293,7 @@ export default function DashboardPage() {
                     </div>
                 </div>
                 <Link
-                    href="/dashboard/quizzes"
+                    href="/dashboard/quizzes?mode=spaced"
                     className="flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 px-6 py-3.5 rounded-xl font-extrabold transition-all active:scale-95 text-sm cursor-pointer shadow-lg shadow-amber-500/20 flex-shrink-0"
                 >
                     Launch Smart Review
