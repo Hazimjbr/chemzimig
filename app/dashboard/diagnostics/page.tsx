@@ -18,25 +18,78 @@ export default function DiagnosticsPage() {
 
     // Track state (allows switching tracks to see diagnostic across syllabuses)
     const defaultTrack = useMemo(() => {
-        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-alevel' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
+        if (user?.enrolledTracks && user.enrolledTracks.length > 0) {
+            return user.enrolledTracks[0].replace(/-2026\d+$/, '').toLowerCase().trim();
+        }
+        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? (user?.grade?.toLowerCase().includes('a2') ? 'edexcel-a2' : 'edexcel-as') : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         let normalized = track.toLowerCase().trim();
         if (normalized === 'igcse') normalized = 'cie-igcse';
         return normalized;
     }, [user]);
+
+    const ALL_SYLLABUS_OPTIONS = useMemo(() => [
+        { id: 'edexcel-as', title: 'Edexcel AS (Units 1–3)' },
+        { id: 'edexcel-a2', title: 'Edexcel A2 (Units 4–6)' },
+        { id: 'edexcel-alevel', title: 'Edexcel IAL (Units 1–6)' },
+        { id: 'edexcel-igcse', title: 'Edexcel IGCSE (4CH1)' },
+        { id: 'cie-igcse', title: 'Cambridge IGCSE (0620)' },
+        { id: 'cie-as', title: 'Cambridge AS (9701)' },
+        { id: 'cie-alevel', title: 'Cambridge A2 (9701)' },
+    ], []);
+
+    const studentEnrolledTracks = useMemo(() => {
+        if (!user) return ['edexcel-as', 'edexcel-a2'];
+        if (user.isAdmin || user.role === 'admin' || user.role === 'moderator') {
+            return ['all'];
+        }
+        const enrolled = (user.enrolledTracks && user.enrolledTracks.length > 0)
+            ? user.enrolledTracks.map(t => t.toLowerCase().trim())
+            : [(user.track || (user.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user.grade === 'AS Level' ? 'cie-as' : (user.grade === 'A2 Level' || user.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')))).toLowerCase().trim()];
+        return enrolled;
+    }, [user]);
+
+    const syllabusOptions = useMemo(() => {
+        const isAdmin = user?.isAdmin || user?.role === 'admin' || user?.role === 'moderator';
+        if (isAdmin || studentEnrolledTracks.includes('all')) {
+            return ALL_SYLLABUS_OPTIONS;
+        }
+
+        const filtered = ALL_SYLLABUS_OPTIONS.filter(opt => {
+            return studentEnrolledTracks.some(e => {
+                const clean = e.replace(/-2026\d+$/, '').toLowerCase().trim();
+                if (opt.id === 'edexcel-alevel') {
+                    const hasBoth = studentEnrolledTracks.some(t => t.includes('edexcel-as')) && studentEnrolledTracks.some(t => t.includes('edexcel-a2'));
+                    const hasIAL = studentEnrolledTracks.some(t => t.includes('edexcel-alevel') || t.includes('edexcel-ial'));
+                    return hasBoth || hasIAL;
+                }
+                return opt.id === clean || opt.id.startsWith(clean) || clean.startsWith(opt.id);
+            });
+        });
+
+        return filtered.length > 0 ? filtered : ALL_SYLLABUS_OPTIONS.slice(0, 2);
+    }, [user, studentEnrolledTracks, ALL_SYLLABUS_OPTIONS]);
 
     const [selectedTrack, setSelectedTrack] = useState<string>(defaultTrack);
     const [selectedFilter, setSelectedFilter] = useState<'all' | 'critical' | 'moderate' | 'mastered'>('all');
     const [inspectedUnit, setInspectedUnit] = useState<TopicDiagnostic | null>(null);
 
     React.useEffect(() => {
+        if (syllabusOptions.length === 0) return;
         if (typeof window !== 'undefined') {
             const saved = localStorage.getItem('chemzim_active_track');
             if (saved) {
                 const clean = saved.replace(/-2026\d+$/, '').toLowerCase().trim();
-                setSelectedTrack(clean);
+                const matched = syllabusOptions.find(c => c.id === clean || c.id.startsWith(clean));
+                if (matched) {
+                    setSelectedTrack(matched.id);
+                    return;
+                }
             }
         }
-    }, []);
+        if (!syllabusOptions.some(s => s.id === selectedTrack)) {
+            setSelectedTrack(syllabusOptions[0].id);
+        }
+    }, [syllabusOptions]);
 
     const handleSelectTrack = (trackId: string) => {
         setSelectedTrack(trackId);
@@ -45,15 +98,6 @@ export default function DiagnosticsPage() {
             window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId } }));
         }
     };
-
-    const syllabusOptions = useMemo(() => [
-        { id: 'cie-igcse', title: 'Cambridge IGCSE (0620)' },
-        { id: 'cie-as', title: 'Cambridge AS (9701)' },
-        { id: 'cie-alevel', title: 'Cambridge A2 (9701)' },
-        { id: 'edexcel-alevel', title: 'Edexcel IAL (Units 1–6)' },
-        { id: 'edexcel-as', title: 'Edexcel AS (Units 1–3)' },
-        { id: 'edexcel-a2', title: 'Edexcel A2 (Units 4–6)' },
-    ], []);
 
     // Compute Diagnostic Report
     const report = useMemo(() => {

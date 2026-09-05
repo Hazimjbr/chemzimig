@@ -25,6 +25,7 @@ ChemZim is built for speed, security, and scientific precision.
   - Added an interactive multi-track switcher bar on the Study Hub for students enrolled in multiple curricula (e.g. Edexcel AS + Edexcel A2), allowing instant one-click toggling between active tracks with units preview.
   - Dynamically updates the Diagnostic Weak Spot Radar (`WeakSpotAnalyticsHeatmap`) to display the selected curriculum's units (e.g. Units 1–3 for AS vs Units 4–6 for A2), re-computes the Syllabus Progress bar, and refreshes the "Recommended for You" lesson cards in real-time.
   - Restricted Speed Blitz (`/dashboard/speed-challenge`) curriculum selector strictly to the student's enrolled curricula (`user.enrolledTracks`), hiding un-enrolled tracks (such as Cambridge IGCSE for Edexcel students), auto-selecting the active track, and scoping the Mixed question pool exclusively to enrolled tracks.
+  - Restricted Syllabus Weakness Heatmap (`/dashboard/diagnostics`) track selector pills strictly to the student's enrolled tracks, completely hiding un-enrolled curricula.
 - **Consistent Edexcel Title Formatting:** Updated Unit 3/5/6 title logic to eliminate duplicate "Unit X" text and ensure consistent display:
   - Unit 3: "Unit 3 Practical: AS Laboratory Skills"
   - Unit 5 Topic 20: "Unit 5 - Topic 20: Transition Metals & Organic Nitrogen Chemistry"
