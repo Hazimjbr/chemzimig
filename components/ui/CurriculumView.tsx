@@ -50,11 +50,22 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({
         return enrolledTracks.some(t => currId === t || currId === `${t}-20260106` || currId.startsWith(t + '-'));
     };
 
-    // Pick first unlocked curriculum as default if available, otherwise first curriculum
+    // Pick saved track or first unlocked curriculum as default
     const firstUnlocked = curricula.find(c => isCurriculumUnlocked(c.id));
-    const defaultTab = (trackParam && curricula.some(c => c.id === trackParam))
-        ? trackParam
-        : (firstUnlocked ? firstUnlocked.id : curricula[0].id);
+    const defaultTab = React.useMemo(() => {
+        if (trackParam && curricula.some(c => c.id === trackParam)) {
+            return trackParam;
+        }
+        if (typeof window !== 'undefined') {
+            const savedTrack = localStorage.getItem('chemzim_active_track');
+            if (savedTrack) {
+                const clean = savedTrack.replace(/-2026\d+$/, '').toLowerCase().trim();
+                const matchedSaved = curricula.find(c => (c.id === clean || c.id.startsWith(clean)) && isCurriculumUnlocked(c.id));
+                if (matchedSaved) return matchedSaved.id;
+            }
+        }
+        return firstUnlocked ? firstUnlocked.id : curricula[0].id;
+    }, [trackParam, curricula, firstUnlocked]);
 
     const [activeTab, setActiveTab] = useState(defaultTab);
     const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -63,8 +74,20 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({
     React.useEffect(() => {
         if (trackParam && curricula.some(c => c.id === trackParam)) {
             setActiveTab(trackParam);
+            const clean = trackParam.replace(/-2026\d+$/, '').toLowerCase().trim();
+            localStorage.setItem('chemzim_active_track', clean);
+            window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: clean } }));
         }
     }, [trackParam, curricula]);
+
+    const handleSelectCurriculum = (currId: string) => {
+        setActiveTab(currId);
+        const clean = currId.replace(/-2026\d+$/, '').toLowerCase().trim();
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('chemzim_active_track', clean);
+            window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: clean } }));
+        }
+    };
 
     const activeCurriculum = curricula.find(c => c.id === activeTab);
     const isCurrentCurriculumLocked = activeCurriculum ? !isCurriculumUnlocked(activeCurriculum.id) : false;
@@ -88,7 +111,7 @@ export const CurriculumView: React.FC<CurriculumViewProps> = ({
                         return (
                             <button
                                 key={curr.id}
-                                onClick={() => setActiveTab(curr.id)}
+                                onClick={() => handleSelectCurriculum(curr.id)}
                                 className={`relative px-5 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                                     activeTab === curr.id ? 'text-indigo-600 dark:text-white' : 'text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white'
                                 }`}

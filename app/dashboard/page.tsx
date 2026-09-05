@@ -12,6 +12,7 @@ import {
     Zap,
     TrendingUp,
     Megaphone,
+    Layers,
     X
 } from 'lucide-react';
 import Link from 'next/link';
@@ -35,7 +36,7 @@ export default function DashboardPage() {
     }, [mistakeInbox, todayStr]);
     const totalMistakesCount = (mistakeInbox || []).length;
 
-    // Resolve track and curriculum dynamically
+    // Resolve default track
     const studentTrackId = React.useMemo(() => {
         const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         let normalized = track.toLowerCase().trim();
@@ -50,9 +51,59 @@ export default function DashboardPage() {
         return normalized;
     }, [user]);
 
+    // Multi-track support
+    const studentTracks = React.useMemo(() => {
+        if (user?.enrolledTracks && user.enrolledTracks.length > 0) {
+            return user.enrolledTracks.map(t => t.toLowerCase().trim());
+        }
+        return [studentTrackId];
+    }, [user, studentTrackId]);
+
+    const [activeTrack, setActiveTrack] = useState<string>('');
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('chemzim_active_track');
+            if (saved) {
+                const cleanSaved = saved.replace(/-2026\d+$/, '').toLowerCase().trim();
+                const matched = studentTracks.find(t => t === cleanSaved || cleanSaved.startsWith(t));
+                if (matched) {
+                    setActiveTrack(matched);
+                    return;
+                }
+            }
+        }
+        setActiveTrack(studentTrackId);
+    }, [studentTracks, studentTrackId]);
+
+    useEffect(() => {
+        const handleTrackChange = (e: any) => {
+            const newTrack = e.detail?.trackId;
+            if (newTrack) {
+                const clean = newTrack.replace(/-2026\d+$/, '').toLowerCase().trim();
+                setActiveTrack(clean);
+            }
+        };
+        window.addEventListener('chemzim_track_changed', handleTrackChange);
+        return () => window.removeEventListener('chemzim_track_changed', handleTrackChange);
+    }, []);
+
+    const effectiveTrackId = activeTrack || studentTrackId;
+
+    const handleSwitchTrack = (newTrack: string) => {
+        const clean = newTrack.toLowerCase().trim();
+        setActiveTrack(clean);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('chemzim_active_track', clean);
+            window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: clean } }));
+        }
+    };
+
     const activeCurriculum = React.useMemo(() => {
-        return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
-    }, [studentTrackId]);
+        return allCurricula.find(c => c.id.startsWith(effectiveTrackId)) || 
+               allCurricula.find(c => c.id.startsWith(studentTrackId)) || 
+               allCurricula[0];
+    }, [effectiveTrackId, studentTrackId]);
 
     const totalLessonsInCurriculum = React.useMemo(() => {
         return activeCurriculum.topics.reduce((acc, topic) => acc + (topic.subtopics?.length || 0), 0);
@@ -60,8 +111,8 @@ export default function DashboardPage() {
 
     const completedCountForTrack = React.useMemo(() => {
         if (!completedLessons) return 0;
-        return completedLessons.filter(id => id.startsWith(studentTrackId)).length;
-    }, [completedLessons, studentTrackId]);
+        return completedLessons.filter(id => id.startsWith(effectiveTrackId)).length;
+    }, [completedLessons, effectiveTrackId]);
 
     const progressPercentage = React.useMemo(() => {
         if (totalLessonsInCurriculum === 0) return 0;
@@ -189,6 +240,64 @@ export default function DashboardPage() {
                 ))
             }
 
+            {/* Multi-track Curriculum Switcher */}
+            {studentTracks.length > 1 && (
+                <div className="p-4 sm:p-5 rounded-3xl bg-slate-900/90 border border-indigo-500/25 backdrop-blur-2xl shadow-2xl shadow-indigo-500/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4 animate-in slide-in-from-top-3">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-2xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                            <Layers className="w-5 h-5" />
+                        </div>
+                        <div>
+                            <div className="flex items-center gap-2">
+                                <span className="text-[10px] font-black uppercase tracking-widest text-indigo-400">
+                                    Current Curriculum
+                                </span>
+                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                            </div>
+                            <span className="text-sm sm:text-base font-extrabold text-white block">
+                                {activeCurriculum.title}
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Track Options Pills */}
+                    <div className="flex flex-wrap items-center gap-2">
+                        {studentTracks.map((t) => {
+                            const clean = t.toLowerCase().trim();
+                            const isSelected = effectiveTrackId === clean || (effectiveTrackId.startsWith(clean) && !effectiveTrackId.includes('cie') === !clean.includes('cie'));
+                            const trackMeta = clean.includes('a2') 
+                                ? { name: 'Edexcel A2', badge: 'Units 4, 5, 6', icon: '🛡️', activeClass: 'bg-pink-500/20 text-pink-300 border-pink-500/40 shadow-pink-500/20' }
+                                : clean.includes('as') && clean.includes('edexcel')
+                                ? { name: 'Edexcel AS', badge: 'Units 1, 2, 3', icon: '🧬', activeClass: 'bg-purple-500/20 text-purple-300 border-purple-500/40 shadow-purple-500/20' }
+                                : clean.includes('igcse') && clean.includes('edexcel')
+                                ? { name: 'Edexcel IGCSE', badge: '4CH1', icon: '⚡', activeClass: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40 shadow-cyan-500/20' }
+                                : clean.includes('alevel') || (clean.includes('a2') && clean.includes('cie'))
+                                ? { name: 'Cambridge A2', badge: '9701 A2', icon: '💎', activeClass: 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40 shadow-indigo-500/20' }
+                                : clean.includes('as')
+                                ? { name: 'Cambridge AS', badge: '9701 AS', icon: '🧪', activeClass: 'bg-blue-500/20 text-blue-300 border-blue-500/40 shadow-blue-500/20' }
+                                : { name: 'Cambridge IGCSE', badge: '0620', icon: '⚛️', activeClass: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-emerald-500/20' };
+
+                            return (
+                                <button
+                                    key={t}
+                                    type="button"
+                                    onClick={() => handleSwitchTrack(clean)}
+                                    className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-bold border transition-all cursor-pointer ${
+                                        isSelected
+                                            ? `${trackMeta.activeClass} border-current ring-1 ring-current/30 shadow-lg scale-[1.02]`
+                                            : 'bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border-white/10'
+                                    }`}
+                                >
+                                    <span>{trackMeta.icon}</span>
+                                    <span>{trackMeta.name}</span>
+                                    <span className="text-[10px] opacity-75 font-mono">({trackMeta.badge})</span>
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+            )}
+
             {/* Hero Welcome Section */}
             <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-600 via-indigo-700 to-violet-800 p-8 lg:p-14 shadow-2xl shadow-indigo-500/20 group">
                 <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -267,7 +376,7 @@ export default function DashboardPage() {
             <DailyStreakChallengeCard />
 
             {/* Predictive Weak Spot Analytics & Concept Heatmap */}
-            <WeakSpotAnalyticsHeatmap />
+            <WeakSpotAnalyticsHeatmap curriculumTrackId={effectiveTrackId} />
 
             {/* Weekly Study Commitment & Progress Ring */}
             <WeeklyStudyGoalCard />

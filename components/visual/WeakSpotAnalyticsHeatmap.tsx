@@ -32,12 +32,12 @@ export interface TopicWeakSpot {
     subtopicsSummary: string[];
 }
 
-export function WeakSpotAnalyticsHeatmap() {
+export function WeakSpotAnalyticsHeatmap({ curriculumTrackId }: { curriculumTrackId?: string } = {}) {
     const { user } = useAuth();
     const { mistakeInbox, solvedQuestions } = useGamification();
     const [selectedTab, setSelectedTab] = useState<'all' | 'critical' | 'moderate'>('all');
 
-    // Resolve current student track
+    // Resolve current student default track
     const studentTrackId = useMemo(() => {
         const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         let normalized = track.toLowerCase().trim();
@@ -52,14 +52,43 @@ export function WeakSpotAnalyticsHeatmap() {
         return normalized;
     }, [user]);
 
+    const [syncedTrack, setSyncedTrack] = useState<string>(curriculumTrackId || '');
+
+    React.useEffect(() => {
+        if (curriculumTrackId) {
+            setSyncedTrack(curriculumTrackId);
+            return;
+        }
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('chemzim_active_track');
+            if (saved) {
+                setSyncedTrack(saved.replace(/-2026\d+$/, '').toLowerCase().trim());
+            }
+        }
+    }, [curriculumTrackId]);
+
+    React.useEffect(() => {
+        const handler = (e: any) => {
+            if (e.detail?.trackId) {
+                setSyncedTrack(e.detail.trackId.replace(/-2026\d+$/, '').toLowerCase().trim());
+            }
+        };
+        window.addEventListener('chemzim_track_changed', handler);
+        return () => window.removeEventListener('chemzim_track_changed', handler);
+    }, []);
+
+    const effectiveTrackId = curriculumTrackId || syncedTrack || studentTrackId;
+
     const activeCurriculum = useMemo(() => {
-        return allCurricula.find(c => c.id.startsWith(studentTrackId)) || allCurricula[0];
-    }, [studentTrackId]);
+        return allCurricula.find(c => c.id.startsWith(effectiveTrackId)) || 
+               allCurricula.find(c => c.id.startsWith(studentTrackId)) || 
+               allCurricula[0];
+    }, [effectiveTrackId, studentTrackId]);
 
     // 1. Analyze mistakes & attempts by curriculum & unit via central engine
     const diagnosticReport = useMemo(() => {
-        return analyzeStudentDiagnostics(solvedQuestions, mistakeInbox, studentTrackId);
-    }, [solvedQuestions, mistakeInbox, studentTrackId]);
+        return analyzeStudentDiagnostics(solvedQuestions, mistakeInbox, effectiveTrackId);
+    }, [solvedQuestions, mistakeInbox, effectiveTrackId]);
 
     const { spots, hasRealData } = useMemo(() => {
         const analyzedSpots: TopicWeakSpot[] = diagnosticReport.diagnostics.map(d => ({

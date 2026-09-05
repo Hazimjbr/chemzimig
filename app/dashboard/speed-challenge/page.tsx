@@ -19,7 +19,8 @@ import {
     ShieldCheck, 
     Award,
     Home,
-    HelpCircle
+    HelpCircle,
+    LogOut
 } from 'lucide-react';
 import { useGamification } from '@/contexts/GamificationContext';
 import { useAuth } from '@/contexts/AuthContext';
@@ -30,7 +31,7 @@ import { sanitizeKatex } from '@/lib/katex-sanitizer';
 
 // Types for Speed Challenge
 type ChallengeMode = 'lightning' | 'blitz' | 'sprint';
-type CurriculumFilter = 'all' | 'edexcel-as' | 'edexcel-a2' | 'cie-igcse';
+type CurriculumFilter = string;
 type GameState = 'LOBBY' | 'COUNTDOWN' | 'PLAYING' | 'RESULTS';
 
 interface ModeConfig {
@@ -77,12 +78,58 @@ const MODES: ModeConfig[] = [
     }
 ];
 
-const CURRICULA: { id: CurriculumFilter; label: string; icon: string; subtitle: string }[] = [
-    { id: 'all', label: 'All Curricula (Mixed)', icon: '🌍', subtitle: 'Randomized questions across all levels' },
-    { id: 'edexcel-as', label: 'Edexcel AS (Units 1–3)', icon: '⚗️', subtitle: 'Formulae, Bonding & Core Practicals I' },
-    { id: 'edexcel-a2', label: 'Edexcel A2 (Units 4–6)', icon: '🔬', subtitle: 'Kinetics, Equilibria, Transition Metals & Practicals II' },
-    { id: 'cie-igcse', label: 'Cambridge IGCSE (0620)', icon: '🏛️', subtitle: 'Foundations, Organic & Experimental Chemistry' }
+const ALL_CURRICULA_OPTIONS: { id: string; label: string; icon: string; subtitle: string }[] = [
+    { id: 'edexcel-as', label: 'Edexcel AS (Units 1–3)', icon: '🧬', subtitle: 'Formulae, Bonding, Energetics & Practicals I' },
+    { id: 'edexcel-a2', label: 'Edexcel A2 (Units 4–6)', icon: '🛡️', subtitle: 'Kinetics, Equilibria, Transition Metals & Practicals II' },
+    { id: 'edexcel-igcse', label: 'Edexcel IGCSE (4CH1)', icon: '⚡', subtitle: 'Principles of Chemistry & Organic' },
+    { id: 'cie-igcse', label: 'Cambridge IGCSE (0620)', icon: '⚛️', subtitle: 'Foundations, Organic & Experimental Chemistry' },
+    { id: 'cie-as', label: 'Cambridge AS (9701)', icon: '🧪', subtitle: 'Physical, Inorganic & Organic AS' },
+    { id: 'cie-alevel', label: 'Cambridge A2 (9701)', icon: '💎', subtitle: 'Advanced Physical, Organic & Transition Elements' }
 ];
+
+function isQuestionMatchCurriculum(q: Question, curriculumId: string): boolean {
+    const curId = (typeof q.curriculum === 'string' ? q.curriculum : ((q.curriculum as any)?.id || '')).toLowerCase();
+    const topId = (q.topic || '').toLowerCase();
+    const source = (q.source || '').toLowerCase();
+    const qId = q.id.toLowerCase();
+
+    if (curriculumId === 'edexcel-as') {
+        return curId.includes('edexcel-as') || curId.includes('wch11') || curId.includes('wch12') || curId.includes('wch13') ||
+            topId.includes('unit-1') || topId.includes('unit-2') || topId.includes('unit-3') ||
+            source.includes('wch11') || source.includes('wch12') || source.includes('wch13') ||
+            qId.includes('_u1_') || qId.includes('_u2_') || qId.includes('_u3_') ||
+            qId.startsWith('ex_ed_u1_') || qId.startsWith('ex_ed_u2_') || qId.startsWith('ex_ed_u3_');
+    }
+
+    if (curriculumId === 'edexcel-a2') {
+        return curId.includes('edexcel-a2') || curId.includes('wch14') || curId.includes('wch15') || curId.includes('wch16') ||
+            topId.includes('unit-4') || topId.includes('unit-5') || topId.includes('unit-6') ||
+            source.includes('wch14') || source.includes('wch15') || source.includes('wch16') ||
+            qId.includes('_u4_') || qId.includes('_u5_') || qId.includes('_u6_') ||
+            qId.startsWith('ex_ed_u4_') || qId.startsWith('ex_ed_u5_') || qId.startsWith('ex_ed_u6_');
+    }
+
+    if (curriculumId === 'edexcel-igcse') {
+        return curId.includes('edexcel-igcse') || curId.includes('4ch1') || source.includes('4ch1') || qId.includes('4ch1');
+    }
+
+    if (curriculumId === 'cie-igcse') {
+        return (curId.includes('igcse') && !curId.includes('edexcel')) || curId.includes('0620') || source.includes('0620') || qId.includes('0620') || 
+            qId.startsWith('q_som_') || qId.startsWith('q_atom_') || qId.startsWith('q_stoich_') || 
+            qId.startsWith('q_elec_') || qId.startsWith('q_ener_') || qId.startsWith('q_rate_') || 
+            qId.startsWith('q_acid_') || qId.startsWith('q_ptable_');
+    }
+
+    if (curriculumId === 'cie-as') {
+        return curId.includes('cie-as') || curId.includes('as-level') || (curId.includes('9701') && !source.includes('paper 4') && !source.includes('paper 5'));
+    }
+
+    if (curriculumId === 'cie-alevel') {
+        return curId.includes('cie-alevel') || curId.includes('a-level') || curId.includes('a2') || (curId.includes('9701') && (source.includes('paper 4') || source.includes('paper 5')));
+    }
+
+    return true;
+}
 
 // Simple synthesizer sound effects using Web Audio API
 function playBeep(freq: number, type: OscillatorType, duration: number, audioCtx: AudioContext | null) {
@@ -148,6 +195,74 @@ export default function SpeedChallengePage() {
     const [gameState, setGameState] = useState<GameState>('LOBBY');
     const [soundEnabled, setSoundEnabled] = useState(true);
 
+    // Enrolled Tracks for the student
+    const studentEnrolledTracks = useMemo(() => {
+        if (!user) return ['edexcel-as', 'edexcel-a2'];
+        if (user.isAdmin || user.role === 'admin' || user.role === 'moderator') {
+            return ['all', 'edexcel-as', 'edexcel-a2', 'edexcel-igcse', 'cie-igcse', 'cie-as', 'cie-alevel'];
+        }
+
+        const enrolled = (user.enrolledTracks && user.enrolledTracks.length > 0)
+            ? user.enrolledTracks.map(t => t.toLowerCase().trim())
+            : [(user.track || (user.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user.grade === 'AS Level' ? 'cie-as' : (user.grade === 'A2 Level' || user.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')))).toLowerCase().trim()];
+
+        return enrolled;
+    }, [user]);
+
+    const availableCurricula = useMemo(() => {
+        const isAdmin = user?.isAdmin || user?.role === 'admin' || user?.role === 'moderator';
+        if (isAdmin) {
+            return [
+                { id: 'all', label: 'All Curricula (Mixed)', icon: '🌍', subtitle: 'Randomized questions across all levels' },
+                ...ALL_CURRICULA_OPTIONS
+            ];
+        }
+
+        const filtered = ALL_CURRICULA_OPTIONS.filter(opt => {
+            return studentEnrolledTracks.some(e => {
+                const clean = e.replace(/-2026\d+$/, '').toLowerCase().trim();
+                return opt.id === clean || opt.id.startsWith(clean) || clean.startsWith(opt.id);
+            });
+        });
+
+        if (filtered.length > 1) {
+            return [
+                { id: 'all', label: 'All Enrolled Curricula (Mixed)', icon: '🌍', subtitle: 'Randomized questions across your enrolled levels' },
+                ...filtered
+            ];
+        }
+
+        return filtered.length > 0 ? filtered : ALL_CURRICULA_OPTIONS.slice(0, 2);
+    }, [user, studentEnrolledTracks]);
+
+    // Initialize or adapt selectedCurriculum from availableCurricula and active track
+    useEffect(() => {
+        if (availableCurricula.length === 0) return;
+
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('chemzim_active_track');
+            if (saved) {
+                const clean = saved.replace(/-2026\d+$/, '').toLowerCase().trim();
+                const matched = availableCurricula.find(c => c.id === clean || c.id.startsWith(clean));
+                if (matched) {
+                    setSelectedCurriculum(matched.id);
+                    return;
+                }
+            }
+        }
+
+        const firstSpecific = availableCurricula.find(c => c.id !== 'all') || availableCurricula[0];
+        setSelectedCurriculum(firstSpecific.id);
+    }, [availableCurricula]);
+
+    const handleSelectCurriculum = (currId: string) => {
+        setSelectedCurriculum(currId);
+        if (currId !== 'all' && typeof window !== 'undefined') {
+            localStorage.setItem('chemzim_active_track', currId);
+            window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: currId } }));
+        }
+    };
+
     // Audio Context Ref
     const audioCtxRef = useRef<AudioContext | null>(null);
 
@@ -159,6 +274,7 @@ export default function SpeedChallengePage() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null);
     const [isAnswerLocked, setIsAnswerLocked] = useState(false);
+    const [showQuitConfirm, setShowQuitConfirm] = useState(false);
     
     // Timer State
     const activeModeConfig = useMemo(() => MODES.find(m => m.id === selectedMode)!, [selectedMode]);
@@ -215,31 +331,13 @@ export default function SpeedChallengePage() {
             if (!q.options || q.options.length < 2 || typeof q.correctAnswer !== 'number') return false;
             if (q.correctAnswer < 0 || q.correctAnswer >= q.options.length) return false;
 
-            if (selectedCurriculum === 'all') return true;
-
-            const curId = (typeof q.curriculum === 'string' ? q.curriculum : ((q.curriculum as any)?.id || '')).toLowerCase();
-            const topId = (q.topic || '').toLowerCase();
-            const source = (q.source || '').toLowerCase();
-
-            if (selectedCurriculum === 'edexcel-as') {
-                return curId.includes('edexcel-as') || curId.includes('wch11') || curId.includes('wch12') || curId.includes('wch13') ||
-                    topId.includes('unit-1') || topId.includes('unit-2') || topId.includes('unit-3') ||
-                    source.includes('wch11') || source.includes('wch12') || source.includes('wch13');
+            if (selectedCurriculum === 'all') {
+                return studentEnrolledTracks.some(t => isQuestionMatchCurriculum(q, t));
             }
 
-            if (selectedCurriculum === 'edexcel-a2') {
-                return curId.includes('edexcel-a2') || curId.includes('wch14') || curId.includes('wch15') || curId.includes('wch16') ||
-                    topId.includes('unit-4') || topId.includes('unit-5') || topId.includes('unit-6') ||
-                    source.includes('wch14') || source.includes('wch15') || source.includes('wch16');
-            }
-
-            if (selectedCurriculum === 'cie-igcse') {
-                return curId.includes('igcse') || curId.includes('0620') || topId.includes('igcse') || source.includes('0620');
-            }
-
-            return true;
+            return isQuestionMatchCurriculum(q, selectedCurriculum);
         });
-    }, [selectedCurriculum]);
+    }, [selectedCurriculum, studentEnrolledTracks]);
 
     // Start Countdown
     const startCountdown = () => {
@@ -300,7 +398,7 @@ export default function SpeedChallengePage() {
 
     // Overall Game Timer
     useEffect(() => {
-        if (gameState !== 'PLAYING') return;
+        if (gameState !== 'PLAYING' || showQuitConfirm) return;
 
         const timer = setInterval(() => {
             setTimeLeftTotal(prev => {
@@ -314,11 +412,11 @@ export default function SpeedChallengePage() {
         }, 1000);
 
         return () => clearInterval(timer);
-    }, [gameState]);
+    }, [gameState, showQuitConfirm]);
 
     // Per-Question Countdown Timer
     useEffect(() => {
-        if (gameState !== 'PLAYING' || isAnswerLocked) return;
+        if (gameState !== 'PLAYING' || isAnswerLocked || showQuitConfirm) return;
 
         const qTimer = setInterval(() => {
             setTimeLeftQuestion(prev => {
@@ -335,7 +433,7 @@ export default function SpeedChallengePage() {
         }, 1000);
 
         return () => clearInterval(qTimer);
-    }, [gameState, isAnswerLocked, currentQuestionIndex]);
+    }, [gameState, isAnswerLocked, currentQuestionIndex, showQuitConfirm]);
 
     // Handle Question Timeout (time ran out on current question)
     const handleQuestionTimeout = () => {
@@ -550,6 +648,18 @@ export default function SpeedChallengePage() {
                         </div>
                     </div>
 
+                    {/* Exit Challenge Button (during active game or countdown) */}
+                    {(gameState === 'PLAYING' || gameState === 'COUNTDOWN') && (
+                        <button
+                            onClick={() => setShowQuitConfirm(true)}
+                            className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 hover:bg-rose-500/20 hover:border-rose-500/50 transition-all font-bold text-xs cursor-pointer shadow-lg shadow-rose-500/5"
+                            title="Exit Challenge"
+                        >
+                            <LogOut className="w-4 h-4" />
+                            <span>Exit</span>
+                        </button>
+                    )}
+
                     {/* Sound Toggle */}
                     <button
                         onClick={() => setSoundEnabled(prev => !prev)}
@@ -658,12 +768,12 @@ export default function SpeedChallengePage() {
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            {CURRICULA.map(curr => {
+                            {availableCurricula.map(curr => {
                                 const isSelected = selectedCurriculum === curr.id;
                                 return (
                                     <button
                                         key={curr.id}
-                                        onClick={() => setSelectedCurriculum(curr.id)}
+                                        onClick={() => handleSelectCurriculum(curr.id)}
                                         className={`p-4 rounded-2xl border text-left transition-all cursor-pointer flex items-center gap-4 ${
                                             isSelected
                                                 ? 'bg-surface border-indigo-500 ring-2 ring-indigo-500/30 text-white'
@@ -823,6 +933,14 @@ export default function SpeedChallengePage() {
                                         {currentQuestion.source}
                                     </span>
                                 )}
+                                <button
+                                    onClick={() => setShowQuitConfirm(true)}
+                                    className="ml-2 flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-800/80 hover:bg-rose-500/10 border border-slate-700 hover:border-rose-500/30 text-slate-400 hover:text-rose-400 transition-all text-xs font-semibold cursor-pointer"
+                                    title="Quit Challenge"
+                                >
+                                    <LogOut className="w-3.5 h-3.5" />
+                                    <span>Exit</span>
+                                </button>
                             </div>
                         </div>
 
@@ -1051,6 +1169,44 @@ export default function SpeedChallengePage() {
                         </div>
                     )}
 
+                </div>
+            )}
+
+            {/* ─── MODAL: CONFIRM QUIT CHALLENGE ───────────────────────── */}
+            {showQuitConfirm && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="w-full max-w-md rounded-3xl bg-slate-900 border border-slate-700/80 p-6 sm:p-8 space-y-6 shadow-2xl relative animate-in zoom-in-95 duration-200">
+                        <div className="w-14 h-14 rounded-2xl bg-rose-500/15 border border-rose-500/30 text-rose-400 flex items-center justify-center mx-auto">
+                            <LogOut className="w-7 h-7" />
+                        </div>
+
+                        <div className="text-center space-y-2">
+                            <h3 className="text-xl font-extrabold text-white">
+                                Quit Speed Challenge?
+                            </h3>
+                            <p className="text-sm text-slate-300 leading-relaxed">
+                                Are you sure you want to exit? Your progress for this blitz run will be saved up to this question, but unfinished questions won't count.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <button
+                                onClick={() => setShowQuitConfirm(false)}
+                                className="w-full py-3.5 px-4 rounded-xl bg-surface-hover hover:bg-slate-700 text-white font-bold text-sm border border-border transition-all cursor-pointer"
+                            >
+                                Resume Challenge
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setShowQuitConfirm(false);
+                                    setGameState('LOBBY');
+                                }}
+                                className="w-full py-3.5 px-4 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm shadow-lg shadow-rose-600/30 transition-all cursor-pointer"
+                            >
+                                Exit to Menu
+                            </button>
+                        </div>
+                    </div>
                 </div>
             )}
 

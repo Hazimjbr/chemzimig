@@ -28,6 +28,24 @@ export default function DiagnosticsPage() {
     const [selectedFilter, setSelectedFilter] = useState<'all' | 'critical' | 'moderate' | 'mastered'>('all');
     const [inspectedUnit, setInspectedUnit] = useState<TopicDiagnostic | null>(null);
 
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('chemzim_active_track');
+            if (saved) {
+                const clean = saved.replace(/-2026\d+$/, '').toLowerCase().trim();
+                setSelectedTrack(clean);
+            }
+        }
+    }, []);
+
+    const handleSelectTrack = (trackId: string) => {
+        setSelectedTrack(trackId);
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('chemzim_active_track', trackId);
+            window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId } }));
+        }
+    };
+
     const syllabusOptions = useMemo(() => [
         { id: 'cie-igcse', title: 'Cambridge IGCSE (0620)' },
         { id: 'cie-as', title: 'Cambridge AS (9701)' },
@@ -81,7 +99,7 @@ export default function DiagnosticsPage() {
                         return (
                             <button
                                 key={c.id}
-                                onClick={() => setSelectedTrack(c.id)}
+                                onClick={() => handleSelectTrack(c.id)}
                                 className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                                     selectedTrack === c.id
                                         ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'

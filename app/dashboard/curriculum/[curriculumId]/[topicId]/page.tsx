@@ -819,6 +819,15 @@ export default function TopicPage({ params, searchParams }: TopicPageProps) {
     const { user, updateUser } = useAuth();
     const [showUpsell, setShowUpsell] = useState(false);
 
+    // Synchronize active track with localStorage and global events
+    useEffect(() => {
+        if (curriculumId && typeof window !== 'undefined') {
+            const clean = curriculumId.replace(/-2026\d+$/, '').toLowerCase().trim();
+            localStorage.setItem('chemzim_active_track', clean);
+            window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: clean } }));
+        }
+    }, [curriculumId]);
+
     // Determine next / prev lessons and topics
     const { prevLink, nextLink } = useMemo(() => {
         let prev = null;
