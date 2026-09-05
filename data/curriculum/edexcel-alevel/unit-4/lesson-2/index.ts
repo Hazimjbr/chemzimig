@@ -708,7 +708,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Calculate the system entropy change ($\\\\Delta S^\\\\theta\\\\text{(system)}$):**
-> >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = S^\\\\theta\\\\text{[H}_2\\\\text{O(l)]} - \\\\left( S^\\\\theta\\\\text{[H}_2\\\\text{(g)]} + \\\\frac{1}{2}\\\\text{S}^\\\\theta\\\\text{[O}_2\\\\text{(g)]} \\\\right)$$
+> >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = S^\\\\theta[\\\\text{H₂O(l)}] - \\\\left( S^\\\\theta[\\\\text{H₂(g)}] + \\\\frac{1}{2}\\\\text{S}^\\\\theta[\\\\text{O₂(g)}] \\\\right)$$
 > >    $$\\\\Delta S^\\\\theta\\\\text{(system)} = 69.9 - (130.6 + \\\\frac{1}{2} \\\\times 205) = -163.2\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
 > > 2. **Calculate the total entropy change ($\\\\Delta S^\\\\theta\\\\text{(total)}$):**
@@ -744,8 +744,8 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > [!EXAMPLE]
 > #### 📝 Worked Example 3: Spontaneity of Freezing Water
 > **Question:** Water freezes to ice according to the following equation:
-> $$\\\\text{H}_2\\\\text{O(l)} \\\\rightarrow \\\\text{H}_2\\\\text{O(s)} \\\\quad \\\\Delta H = -6010\\\\text{ J mol}^{-1}$$
-> Use the data in the table below to calculate whether water will freeze spontaneously at $+5\\\\text{ °C}$ ($278\\\\text{ K}$) and at $-5\\\\text{ °C}$ ($268\\\\text{ K}$).
+> $$\\\\text{H₂O(l)} \\\\rightarrow \\\\text{H₂O(s)} \\\\quad \\\\Delta H = -6010\\\\text{ J mol}^{-1}$$
+> Use the data in the table below to calculate whether water will freeze spontaneously at $+5^\\\\circ\\\\text{C}$ ($278\\\\text{ K}$) and at $-5^\\\\circ\\\\text{C}$ ($268\\\\text{ K}$).
 > 
 > | Substance | S° (J K⁻¹ mol⁻¹) |
 > | :--- | :---: |
@@ -756,24 +756,24 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > > **🔑 Step-by-step Solution:**
 > > 
 > > 1. **Calculate the system entropy change ($\\\\Delta S_{\\\\text{system}}$):**
-> >    $$\\\\Delta S_{\\\\text{system}} = S^\\\\theta\\\\text{[H}_2\\\\text{O(s)]} - S^\\\\theta\\\\text{[H}_2\\\\text{O(l)]}$$
+> >    $$\\\\Delta S_{\\\\text{system}} = S^\\\\theta[\\\\text{H₂O(s)}] - S^\\\\theta[\\\\text{H₂O(l)}]$$
 > >    $$\\\\Delta S_{\\\\text{system}} = 47.9 - 69.9 = -22.0\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > > 
-> > 2. **Calculate spontaneity at $-5\\\\text{ °C}$ ($268\\\\text{ K}$):**
+> > 2. **Calculate spontaneity at $-5^\\\\circ\\\\text{C}$ ($268\\\\text{ K}$):**
 > >    * Calculate surroundings entropy change:
 > >      $$\\\\Delta S_{\\\\text{surroundings}} = -\\\\frac{-6010}{268} = +22.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > >    * Calculate total entropy change:
 > >      $$\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$$
 > >      $$\\\\Delta S_{\\\\text{total}} = -22.0 + 22.4 = +0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
-> >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} > 0$, freezing is spontaneous at $-5\\\\text{ °C}$
+> >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} > 0$, freezing is spontaneous at $-5^\\\\circ\\\\text{C}$
 > > 
-> > 3. **Calculate spontaneity at $+5\\\\text{ °C}$ ($278\\\\text{ K}$):**
+> > 3. **Calculate spontaneity at $+5^\\\\circ\\\\text{C}$ ($278\\\\text{ K}$):**
 > >    * Calculate surroundings entropy change:
 > >      $$\\\\Delta S_{\\\\text{surroundings}} = -\\\\frac{-6010}{278} = +21.6\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
 > >    * Calculate total entropy change:
 > >      $$\\\\Delta S_{\\\\text{total}} = \\\\Delta S_{\\\\text{system}} + \\\\Delta S_{\\\\text{surroundings}}$$
 > >      $$\\\\Delta S_{\\\\text{total}} = -22.0 + 21.6 = -0.4\\\\text{ J K}^{-1}\\\\text{ mol}^{-1}$$
-> >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} < 0$, freezing is not spontaneous at $+5\\\\text{ °C}$
+> >    * *Conclusion:* Since $\\\\Delta S_{\\\\text{total}} < 0$, freezing is not spontaneous at $+5^\\\\circ\\\\text{C}$
 `,
     keyPoints: [
       'Spontaneity (feasibility) requires a positive total entropy change: ΔS(total) = ΔS(system) + ΔS(surroundings) > 0.',
@@ -1005,7 +1005,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
  
 > [!EXAMPLE]
 > #### 📝 Worked Example 2: Calculating Lattice Enthalpy for $\\\\text{MgCl}_2$ (Coefficient multiplier trick)
-> **Question:** Use the standard thermodynamic data below to calculate the standard lattice formation energy of magnesium chloride ($\\\\Delta_{\\\\text{LE}}H^\\\\theta\\\\text{[MgCl}_2\\\\text{(s)]}$):
+> **Question:** Use the standard thermodynamic data below to calculate the standard lattice formation energy of magnesium chloride ($\\\\Delta_{\\\\text{LE}}H^\\\\theta[\\\\text{MgCl₂}(s)]$):
 > 
 > * **Standard Enthalpy of Formation of $\\\\text{MgCl}_2\\\\text{(s)}$:** $-642\\\\text{ kJ mol}^{-1}$
 > * **Standard Enthalpy of Atomization of Mg(s):** $+148\\\\text{ kJ mol}^{-1}$
@@ -1024,7 +1024,7 @@ ${svgToken(reactionEnergyProfilesSvg)}
 > >      $$\\\\Delta EA_1\\\\text{(Cl total)} = 2 \\\\times (-349) = -698\\\\text{ kJ mol}^{-1}$$
 > > 
 > > 2. **Apply the Hess\'s Law equation:**
-> >    $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}\\\\text{(Mg)} + IE_1\\\\text{(Mg)} + IE_2\\\\text{(Mg)} + 2\\\\Delta H_{\\\\text{at}}\\\\text{(Cl)} + 2EA_1\\\\text{(Cl)} + \\\\Delta_{\\\\text{LE}}H^\\\\theta\\\\text{[MgCl}_2\\\\text{(s)]}$$
+> >    $$\\\\Delta H_f^\\\\theta = \\\\Delta H_{\\\\text{at}}\\\\text{(Mg)} + IE_1\\\\text{(Mg)} + IE_2\\\\text{(Mg)} + 2\\\\Delta H_{\\\\text{at}}\\\\text{(Cl)} + 2EA_1\\\\text{(Cl)} + \\\\Delta_{\\\\text{LE}}H^\\\\theta[\\\\text{MgCl₂}(s)]$$
 > > 
 > > 3. **Rearrange to calculate lattice energy:**
 > >    $$\\\\Delta_{\\\\text{LE}}H^\\\\theta = \\\\Delta H_f^\\\\theta - [\\\\Delta H_{\\\\text{at}}\\\\text{(Mg)} + IE_1\\\\text{(Mg)} + IE_2\\\\text{(Mg)} + 2\\\\Delta H_{\\\\text{at}}\\\\text{(Cl)} + 2EA_1\\\\text{(Cl)}]$$
