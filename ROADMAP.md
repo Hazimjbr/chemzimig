@@ -10,7 +10,7 @@
 - ✅ **Next.js Middleware:** حماية مسارات الإدارة وصفحات الطلاب الحساسة بالكامل.
 - ✅ **Firebase Admin SDK:** ربط السيرفر محلياً وسحابياً بقاعدة البيانات الجديدة `chemzim-15e83` بشكل مستقل.
 - ✅ **JWT Signed Sessions:** استخدام جلسات مشفرة وموقعة برمز سري لمنع التزوير.
-- ✅ **Device Lockdown & Mobile Resilience:** تفعيل فحص البصمة الرقمية للأجهزة للطلاب لمنع تشارك الحسابات، مع معالجة استثناءات البصمة الرقمية للهواتف المحمولة (`webkitAudioContext`) لمنع تعطل التسجيل.
+- ✅ **Device Lockdown, Fingerprint Stabilization & UUID Persistence:** تفعيل وتثبيت فحص البصمة الرقمية للأجهزة للطلاب لمنع تشارك الحسابات، واستبدال فحص الصوت القديم بـ `OfflineAudioContext` التحديدية لإلغاء تقلبات المهلة اللحظية (Race Conditions)، مع حفظ وتثبيت معرّف البصمة في `localStorage` (`device_fingerprint`) لمنع تكرار شاشة طلب موافقة الجهاز (New Device Detected) على نفس المتصفح.
 - ✅ **Resilient Auth & Session Secret Fallbacks:** إضافة آلية تشفير وتوقيع جلسات JWT مرنة تدعم القيم الاحتياطية تلقائياً لمنع خطأ 500 واستثناءات الاتصال (`Connection error occurred`).
 - ✅ **Google Authentication (Admin):** تفعيل مصادقة حساب Google للمسؤول للولوج الآمن (تم إصلاح مفتاح Firebase API وتفعيله بنجاح).
 - ✅ **Bcrypt Password Hashing:** تشفير وحماية كلمات مرور الطلاب عند الإنشاء تلقائياً.
@@ -22,7 +22,8 @@
 
 ### 📝 المناهج والامتحانات والتقييم والبيئة المؤتمتة
 - ✅ **Syllabus Porting:** نقل وتجهيز هيكلية المناهج الدولية (IGCSE, AS Level, A2 Level).
-- ✅ **KaTeX Integration:** تفعيل محرك كتابة المعادلات الكيميائية والرياضية بدقة ممتازة على الواجهة.
+- ✅ **KaTeX Integration & Markdown Collision Resolution:** تفعيل محرك كتابة المعادلات الكيميائية والرياضية بدقة ممتازة على الواجهة، مع تصحيح تصادم علامات الماركداون مع الخطوط السفلية المزدوجة في KaTeX لدروس الوحدة الرابعة (Unit 4 Lesson 2 - Worked Examples 2 & 3)، واستبدالها بصيغ Unicode واضحة (`H₂O(s)`, `H₂O(l)`) وتصحيح رمز درجات الحرارة المئوية `$^\circ\text{C}$`.
+- ✅ **Multi-Track Synchronization & Enrolled-Only Scoping:** دعم ومزامنة تعدد المسارات للطلاب المشتركين في أكثر من منهاج (مثل Edexcel AS + Edexcel A2) عبر شريط تبديل علوي وحفظ المسار النشط في `localStorage` (`chemzim_active_track`) وبث التغييرات للواجهات، مع حصر قوائم المنهاج في تحدي السرعة (Speed Blitz)، وخريطة الضعف (Weakness Heatmap)، ومولد الاختبارات المخصصة (Custom Quizzes) بالمسارات المسجل بها الطالب فقط (`user.enrolledTracks`).
 - ✅ **Automated Testing Suite (Vitest):** بناء بيئة الاختبارات المؤتمتة باستخدام Vitest و JSDOM و React Testing Library وتفعيل فحص سلامة سجل المناهج (`npm test`).
 - ✅ **Smart Content & ID Linter:** دمج سكربتات التدقيق التلقائي للمحتوى وراموز صيغ KaTeX وفحص المعرفات المكررة (`scripts/lint-content.js` و `scripts/find-duplicate-ids.js`).
 - ✅ **Interactive 3D & Recharts Visualization:** تفعيل الرسومات ثلاثية الأبعاد (Three.js / React Three Fiber) ومخططات الحركية الكيميائية التفاعلية (`Recharts` / `KineticsChart.tsx`).

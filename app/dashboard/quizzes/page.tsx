@@ -410,6 +410,17 @@ function QuizzesContent() {
             setSelectedFilter('all');
             setStep('config');
         }
+
+        const handleTrackChanged = (e: any) => {
+            if (e?.detail?.trackId) {
+                setAdminSelectedTrackId(e.detail.trackId);
+                setSelectedUnit('all');
+                setSelectedLesson('all');
+                setSelectedEdexcelUnit('all');
+            }
+        };
+        window.addEventListener('chemzim_track_changed', handleTrackChanged);
+        return () => window.removeEventListener('chemzim_track_changed', handleTrackChanged);
     }, [queryMode, queryUnit, queryUnitNum, queryTrack]);
     
     // Configuration states
@@ -714,21 +725,28 @@ function QuizzesContent() {
                 { id: 'cie-igcse', title: 'Cambridge IGCSE Chemistry (0620)' },
                 { id: 'cie-as', title: 'Cambridge AS-Level Chemistry (9701)' },
                 { id: 'cie-alevel', title: 'Cambridge A-Level Chemistry (9701)' },
-                { id: 'edexcel-alevel', title: 'Edexcel IAL Chemistry (Units 1–6)' },
                 { id: 'edexcel-as', title: 'Edexcel AS Chemistry (Units 1–3)' },
                 { id: 'edexcel-a2', title: 'Edexcel A2 Chemistry (Units 4–6)' },
+                { id: 'edexcel-alevel', title: 'Edexcel IAL Chemistry (Units 1–6)' },
                 { id: 'edexcel-igcse', title: 'Edexcel IGCSE Chemistry (4CH1)' },
             ];
         }
 
-        if (user?.enrolledTracks && user.enrolledTracks.length > 1) {
+        if (user?.enrolledTracks && user.enrolledTracks.length > 0) {
             return user.enrolledTracks.map(t => {
-                const clean = t.toLowerCase().trim();
-                const matched = allCurricula.find(c => c.id.startsWith(clean));
-                return {
-                    id: clean,
-                    title: matched ? matched.title : t
-                };
+                const clean = t.replace(/-2026\d+$/, '').toLowerCase().trim();
+                let title = t;
+                if (clean === 'edexcel-as') title = 'Edexcel AS Chemistry (Units 1–3)';
+                else if (clean === 'edexcel-a2') title = 'Edexcel A2 Chemistry (Units 4–6)';
+                else if (clean === 'edexcel-alevel') title = 'Edexcel IAL Chemistry (Units 1–6)';
+                else if (clean === 'cie-igcse') title = 'Cambridge IGCSE Chemistry (0620)';
+                else if (clean === 'cie-as') title = 'Cambridge AS-Level Chemistry (9701)';
+                else if (clean === 'cie-alevel') title = 'Cambridge A-Level Chemistry (9701)';
+                else {
+                    const matched = allCurricula.find(c => c.id.startsWith(clean));
+                    if (matched) title = matched.title;
+                }
+                return { id: clean, title };
             });
         }
 
@@ -739,13 +757,33 @@ function QuizzesContent() {
     const studentTrackId = useMemo(() => {
         if (adminSelectedTrackId) return adminSelectedTrackId;
 
-        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-alevel' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
+        // Check localStorage first for active track selected by student across dashboard
+        if (typeof window !== 'undefined') {
+            const saved = localStorage.getItem('chemzim_active_track');
+            if (saved) {
+                const cleanSaved = saved.replace(/-2026\d+$/, '').toLowerCase().trim();
+                const matchedTrack = availableTracks.find(t => t.id === cleanSaved || t.id.startsWith(cleanSaved) || cleanSaved.startsWith(t.id));
+                if (matchedTrack) {
+                    return matchedTrack.id;
+                }
+            }
+        }
+
+        // Check if student has enrolledTracks
+        if (user?.enrolledTracks && user.enrolledTracks.length > 0) {
+            const firstClean = user.enrolledTracks[0].replace(/-2026\d+$/, '').toLowerCase().trim();
+            return firstClean;
+        }
+
+        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') 
+            ? (user?.grade?.toLowerCase().includes('a2') ? 'edexcel-a2' : (user?.grade?.toLowerCase().includes('as') ? 'edexcel-as' : 'edexcel-as'))
+            : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         
         let normalized = track.toLowerCase().trim();
         if (normalized === 'igcse') normalized = 'cie-igcse';
         
         return normalized;
-    }, [user, adminSelectedTrackId]);
+    }, [user, adminSelectedTrackId, availableTracks]);
 
     const activeCurriculum = useMemo(() => {
         if (studentTrackId === 'edexcel-alevel') {
@@ -1268,10 +1306,16 @@ function QuizzesContent() {
                                     <select
                                         value={studentTrackId}
                                         onChange={e => {
-                                            setAdminSelectedTrackId(e.target.value);
+                                            const newTrack = e.target.value;
+                                            setAdminSelectedTrackId(newTrack);
                                             setSelectedUnit('all');
                                             setSelectedLesson('all');
+                                            setSelectedEdexcelUnit('all');
                                             setSelectedCustomUnits([]);
+                                            if (typeof window !== 'undefined') {
+                                                localStorage.setItem('chemzim_active_track', newTrack);
+                                                window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: newTrack } }));
+                                            }
                                         }}
                                         className="bg-transparent text-indigo-200 text-sm font-bold outline-none cursor-pointer pr-2"
                                     >
@@ -1388,10 +1432,46 @@ function QuizzesContent() {
                     {/* Filter Inputs Column */}
                     <div className="lg:col-span-2 space-y-6">
                         <div className="bg-[#0a0a1f]/60 border border-white/5 rounded-3xl p-6 md:p-8 space-y-6">
-                            <h3 className="text-lg font-bold flex items-center gap-2">
-                                <Settings className="w-5 h-5 text-indigo-400" />
-                                Configure Selections
-                            </h3>
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/5 pb-4">
+                                <h3 className="text-lg font-bold flex items-center gap-2">
+                                    <Settings className="w-5 h-5 text-indigo-400" />
+                                    Configure Selections
+                                </h3>
+
+                                <div className="flex items-center gap-2">
+                                    <span className="text-xs text-slate-400">Curriculum:</span>
+                                    {availableTracks.length > 1 ? (
+                                        <div className="inline-flex items-center gap-1.5 bg-indigo-500/15 border border-indigo-500/30 px-2.5 py-1 rounded-xl shadow-inner">
+                                            <select
+                                                value={studentTrackId}
+                                                onChange={e => {
+                                                    const newTrack = e.target.value;
+                                                    setAdminSelectedTrackId(newTrack);
+                                                    setSelectedUnit('all');
+                                                    setSelectedLesson('all');
+                                                    setSelectedEdexcelUnit('all');
+                                                    setSelectedCustomUnits([]);
+                                                    if (typeof window !== 'undefined') {
+                                                        localStorage.setItem('chemzim_active_track', newTrack);
+                                                        window.dispatchEvent(new CustomEvent('chemzim_track_changed', { detail: { trackId: newTrack } }));
+                                                    }
+                                                }}
+                                                className="bg-transparent text-indigo-200 text-xs font-bold outline-none cursor-pointer pr-1"
+                                            >
+                                                {availableTracks.map(track => (
+                                                    <option key={track.id} value={track.id} className="bg-[#0b0f1d] text-white">
+                                                        {track.title}
+                                                    </option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                    ) : (
+                                        <span className="text-indigo-300 font-bold text-xs bg-indigo-500/15 border border-indigo-500/30 px-2.5 py-1 rounded-xl">
+                                            {activeCurriculum.title}
+                                        </span>
+                                    )}
+                                </div>
+                            </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 
