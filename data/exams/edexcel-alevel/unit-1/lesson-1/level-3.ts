@@ -17,6 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q2",
     createdAt: "2026-06-18T13:40:00Z"
   },
   {
@@ -35,6 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q3",
     createdAt: "2026-08-19"
   },
   {
@@ -53,6 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q4",
     createdAt: "2026-08-19"
   },
   {
@@ -71,6 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q5",
     createdAt: "2026-08-19"
   },
   {
@@ -89,6 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q6",
     createdAt: "2026-08-19"
   },
   {
@@ -107,6 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q7",
     createdAt: "2026-08-19"
   },
   {
@@ -125,7 +131,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2025 Paper 1 Q9",
     createdAt: "2026-05-06T10:00:00Z"
   },
   {
@@ -144,7 +150,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q10",
     createdAt: "2026-05-06T10:00:00Z"
   },
   {
@@ -163,7 +169,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2025 Paper 1 Q11",
     createdAt: "2026-05-07T10:00:00Z"
   },
   {
@@ -182,7 +188,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2025 Paper 1 Q12",
     createdAt: "2026-05-12T10:00:00Z"
   },
   {
@@ -201,7 +207,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q13",
     createdAt: "2026-05-12T10:00:00Z"
   },
   {
@@ -220,7 +226,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2025 Paper 1 Q14",
     createdAt: "2026-05-13T10:00:00Z"
   },
   {
@@ -239,7 +245,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Oct 2025 Paper 1 Q13",
     createdAt: "2026-05-18T10:00:00Z"
   },
   {
@@ -258,7 +264,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q14",
     createdAt: "2026-05-18T10:00:00Z"
   },
   {
@@ -277,7 +283,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2025 Paper 1 Q15",
     createdAt: "2026-05-19T10:00:00Z"
   },
   {
@@ -296,8 +302,46 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q17",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q17",
     createdAt: "2026-08-21T10:20:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_16-june2026",
+    question: "A sample of a pure element X exhibits the following successive ionisation energies (in kJ mol⁻¹):\nIE₁ = 578, IE₂ = 1817, IE₃ = 2745, IE₄ = 11578, IE₅ = 14842\nIn which group of the Periodic Table does element X belong?",
+    options: [
+      { text: "Group 1" },
+      { text: "Group 2" },
+      { text: "Group 3 (Group 13)", isCorrect: true },
+      { text: "Group 4 (Group 14)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Notice the massive jump in ionisation energy between $\\\\text{IE}_3$ ($2745\\\\text{ kJ mol}^{-1}$) and $\\\\text{IE}_4$ ($11578\\\\text{ kJ mol}^{-1}$).\n* This sharp increase occurs because the 4th electron is removed from an inner quantum shell much closer to the nucleus and with significantly less shielding.\n* This demonstrates that element X has exactly 3 valence electrons and belongs to Group 3 (Group 13).",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q1",
+    createdAt: "2026-06-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l1_lv3_17-june2026",
+    question: "Bromine has two stable isotopes: ⁷⁹Br and ⁸¹Br with equal 50:50 natural abundance. In the mass spectrum of dibromomethane, CH₂Br₂, what is the relative ratio of the molecular ion peak heights at m/z 172, 174, and 176?",
+    options: [
+      { text: "1 : 2 : 1", isCorrect: true },
+      { text: "1 : 1 : 1" },
+      { text: "3 : 2 : 1" },
+      { text: "9 : 6 : 1" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The three molecular ion peaks correspond to combinations of bromine isotopes:\n  * $m/z = 172$: $\\\\text{CH}_2^{79}\\\\text{Br}_2 \\\\implies 0.5 \\\\times 0.5 = 0.25$\n  * $m/z = 174$: $\\\\text{CH}_2^{79}\\\\text{Br}^{81}\\\\text{Br} \\\\implies 2 \\\\times (0.5 \\\\times 0.5) = 0.50$\n  * $m/z = 176$: $\\\\text{CH}_2^{81}\\\\text{Br}_2 \\\\implies 0.5 \\\\times 0.5 = 0.25$\n* Simplifying the ratio gives $1 : 2 : 1$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q2",
+    createdAt: "2026-06-15T10:00:00Z"
   }
 ];
 

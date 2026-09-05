@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q472",
     createdAt: "2026-08-22T06:35:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv2_5-2023",
+    question: "A student performs tests on an unknown ionic solid X:\n1. A flame test gives a lilac flame.\n2. When an aqueous solution of X is acidified with dilute nitric acid and aqueous silver nitrate is added, a cream precipitate forms.\nWhat is the identity of compound X?",
+    options: [
+      { text: "Potassium bromide", isCorrect: true },
+      { text: "Potassium iodide" },
+      { text: "Sodium bromide" },
+      { text: "Calcium chloride" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The lilac flame test indicates the presence of potassium cations ($K^+$).\n* Acidified silver nitrate producing a cream precipitate of silver bromide ($AgBr$) confirms bromide anions ($Br^-$).\n* Therefore, compound X is potassium bromide ($KBr$).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q40",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv2_6-2024",
+    question: "A green precipitate is formed when aqueous sodium hydroxide is added to an aqueous solution containing cation M.\nThe precipitate does not dissolve in excess sodium hydroxide.\nOn standing in air, the top of the precipitate slowly turns brown.\nWhat is cation M?",
+    options: [
+      { text: "Iron(II) ion, Fe²⁺", isCorrect: true },
+      { text: "Iron(III) ion, Fe³⁺" },
+      { text: "Chromium(III) ion, Cr³⁺" },
+      { text: "Copper(II) ion, Cu²⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $Fe^{2+}$ ions react with $OH^-$ to form green iron(II) hydroxide, $Fe(OH)_2$.\n* In air, oxygen oxidises the green $Fe(OH)_2$ precipitate to red-brown iron(III) hydroxide, $Fe(OH)_3$, at the surface.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q39",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv2_7-2025",
+    question: "An aqueous solution containing cation Q gives a light blue precipitate with a few drops of aqueous ammonia.\nWhen excess aqueous ammonia is added, the precipitate dissolves to give a deep blue solution.\nWhat is cation Q?",
+    options: [
+      { text: "Copper(II) ion, Cu²⁺", isCorrect: true },
+      { text: "Iron(II) ion, Fe²⁺" },
+      { text: "Zinc ion, Zn²⁺" },
+      { text: "Aluminium ion, Al³⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Copper(II) ions ($Cu^{2+}$) form a light blue precipitate of $Cu(OH)_2$ with ammonia.\n* In excess aqueous ammonia, the precipitate dissolves to form a characteristic deep blue soluble complex ion, $[Cu(NH_3)_4(H_2O)_2]^{2+}$.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q39",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

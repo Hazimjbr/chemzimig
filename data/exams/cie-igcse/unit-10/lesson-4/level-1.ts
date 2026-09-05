@@ -73,5 +73,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q384",
     createdAt: "2026-08-21T21:15:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv1_5-2023",
+    question: "Which equation correctly represents the process of photosynthesis in plants?",
+    options: [
+      { text: "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂", isCorrect: true },
+      { text: "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O" },
+      { text: "CO₂ + 2H₂O → CH₄ + 2O₂" },
+      { text: "6CO + 6H₂O → C₆H₁₂O₆ + 3O₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Photosynthesis converts carbon dioxide and water into glucose and oxygen in the presence of chlorophyll and sunlight:\n  6CO₂(g) + 6H₂O(l) → C₆H₁₂O₆(aq) + 6O₂(g).",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q140",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv1_6-2024",
+    question: "Which natural process removes carbon dioxide from the Earth's atmosphere?",
+    options: [
+      { text: "Photosynthesis by green plants", isCorrect: true },
+      { text: "Combustion of wood" },
+      { text: "Respiration by animals" },
+      { text: "Decomposition of dead vegetation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Green plants and phytoplankton absorb carbon dioxide from the atmosphere during photosynthesis.\n* Respiration, combustion, and decomposition all release carbon dioxide into the air.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q141",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv1_7-2025",
+    question: "How does widespread deforestation affect the carbon cycle?",
+    options: [
+      { text: "It decreases the rate of photosynthesis, causing atmospheric carbon dioxide levels to rise", isCorrect: true },
+      { text: "It increases the rate of photosynthesis, decreasing carbon dioxide levels" },
+      { text: "It causes oxygen levels to increase sharply" },
+      { text: "It has no measurable effect on the concentration of atmospheric gases" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Trees remove CO₂ from the air via photosynthesis.\n* Removing forests reduces the global rate of CO₂ absorption, and burning or rotting trees releases stored carbon as additional CO₂.",
+    level: 1,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q142",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

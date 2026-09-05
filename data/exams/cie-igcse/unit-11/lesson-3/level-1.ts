@@ -55,5 +55,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q411",
     createdAt: "2026-08-22T00:10:00Z"
+  },
+  {
+    id: "ex_ci_u11_l3_lv1_4-2023",
+    question: "What is the functional group present in all alcohols?",
+    options: [
+      { text: "–OH (hydroxyl group)", isCorrect: true },
+      { text: "–COOH (carboxyl group)" },
+      { text: "–COO– (ester group)" },
+      { text: "–C=C– (alkene double bond)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The functional group characteristic of the alcohol homologous series is the hydroxyl group (–OH).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q167",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l3_lv1_5-2024",
+    question: "Which set of conditions is necessary for the fermentation of aqueous glucose by yeast to produce ethanol?",
+    options: [
+      { text: "Yeast, approximately 30 °C, and absence of oxygen (anaerobic)", isCorrect: true },
+      { text: "Yeast, 100 °C, and presence of oxygen" },
+      { text: "Phosphoric acid catalyst, 300 °C, and 60 atm" },
+      { text: "Nickel catalyst, 200 °C, and high pressure" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Fermentation requires living yeast cells providing enzymes at around 25–35 °C, in the absence of oxygen (anaerobic) to prevent the ethanol from oxidising into ethanoic acid.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q168",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l3_lv1_6-2025",
+    question: "What are two important industrial and domestic uses of ethanol?",
+    options: [
+      { text: "As a fuel and as an organic solvent", isCorrect: true },
+      { text: "As an electrical conductor and as an acid catalyst" },
+      { text: "As a polymer plastic and as a food preservative" },
+      { text: "As an oxidising agent and as a road building material" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ethanol is widely used as a renewable biofuel (in motor vehicles) and as an effective solvent in cosmetics, paints, and pharmaceuticals.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q169",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

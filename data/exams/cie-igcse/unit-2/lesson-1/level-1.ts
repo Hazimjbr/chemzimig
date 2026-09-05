@@ -137,7 +137,60 @@ export const level1Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q18",
     createdAt: "2026-04-22T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv1_9-2023",
+    question: "An atom of an element has the symbol $^{31}_{15}\\text{P}$. Which row correctly gives the numbers of protons, neutrons, and electrons in this neutral atom?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Protons</th><th class="p-2 border">Neutrons</th><th class="p-2 border">Electrons</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">15</td><td class="p-2 border">16</td><td class="p-2 border">15</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">15</td><td class="p-2 border">31</td><td class="p-2 border">15</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">16</td><td class="p-2 border">15</td><td class="p-2 border">16</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">31</td><td class="p-2 border">15</td><td class="p-2 border">16</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: 15 protons | 16 neutrons | 15 electrons" },
+      { text: "Row B: 15 protons | 31 neutrons | 15 electrons" },
+      { text: "Row C: 16 protons | 15 neutrons | 16 electrons" },
+      { text: "Row D: 31 protons | 15 neutrons | 16 electrons" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The atomic number (subscript 15) equals the number of protons, which also equals the number of electrons in a neutral atom (15).\n* The number of neutrons is nucleon number minus proton number: $31 - 15 = 16$.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q6",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv1_10-2024",
+    question: "What is the relative mass of an electron compared to a proton?",
+    options: [
+      { text: "1" },
+      { text: "0" },
+      { text: "Approximately 1/1840 (or negligible)" },
+      { text: "2" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Protons and neutrons each have an approximate relative mass of 1.\n* Electrons are vastly lighter, with a relative mass of approximately $\\frac{1}{1840}$ of a proton, often described as negligible.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q6",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv1_11-2025",
+    question: "Which particle has a relative charge of +1 and a relative mass of 1?",
+    options: [
+      { text: "Proton" },
+      { text: "Neutron" },
+      { text: "Electron" },
+      { text: "Alpha particle" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A proton has a relative mass of 1 and a relative charge of $+1$.\n* A neutron has mass 1 and charge 0; an electron has mass $\\approx 1/1840$ and charge $-1$.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q6",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

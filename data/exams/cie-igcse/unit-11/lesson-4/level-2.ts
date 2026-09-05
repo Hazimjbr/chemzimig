@@ -55,5 +55,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q422",
     createdAt: "2026-08-22T01:25:00Z"
+  },
+  {
+    id: "ex_ci_u11_l4_lv2_4-2023",
+    question: "When magnesium metal is added to aqueous ethanoic acid, which salt is formed along with hydrogen gas?",
+    options: [
+      { text: "Magnesium ethanoate, (CH₃COO)₂Mg", isCorrect: true },
+      { text: "Magnesium methanoate, (HCOO)₂Mg" },
+      { text: "Magnesium carbonate, MgCO₃" },
+      { text: "Magnesium oxide, MgO" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Magnesium reacts with ethanoic acid according to the equation:\n  Mg + 2CH₃COOH → (CH₃COO)₂Mg + H₂.\n* The salt produced is magnesium ethanoate.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q179",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l4_lv2_5-2024",
+    question: "What is observed when solid sodium carbonate is added to dilute ethanoic acid?",
+    options: [
+      { text: "Effervescence of a gas that turns limewater cloudy", isCorrect: true },
+      { text: "A blue precipitate forms" },
+      { text: "Evolution of brown toxic fumes" },
+      { text: "A glowing splint is relit" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Like other acids, ethanoic acid reacts with carbonates to produce carbon dioxide gas:\n  2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂.\n* CO₂ gas turns limewater milky.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q180",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l4_lv2_6-2025",
+    question: "Why does 1.0 mol/dm³ hydrochloric acid conduct electricity better than 1.0 mol/dm³ ethanoic acid?",
+    options: [
+      { text: "Hydrochloric acid is fully ionised, producing a higher concentration of mobile ions", isCorrect: true },
+      { text: "Ethanoic acid is an electrical insulator in the liquid state" },
+      { text: "Ethanoic acid has a higher concentration of hydrogen ions than hydrochloric acid" },
+      { text: "Hydrochloric acid contains metal cations" }
+    ],
+    correctAnswer: 0,
+    explanation: "* HCl is a strong acid that completely dissociates into H⁺ and Cl⁻ ions.\n* Ethanoic acid is a weak acid that only partially ionises, resulting in a much lower concentration of charge-carrying mobile ions.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q181",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Oct 2025 Paper 1 Q24",
     createdAt: "2026-06-05T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q24",
     createdAt: "2026-06-05T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2026 Paper 1 Q24",
     createdAt: "2026-06-06T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q27",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Oct 2025 Paper 1 Q27",
     createdAt: "2026-06-11T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q28",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q28",
     createdAt: "2026-06-11T10:00:00Z"
   },
   {
@@ -112,8 +112,46 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q27",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2026 Paper 1 Q27",
     createdAt: "2026-06-12T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l3_lv3_7-june2026",
+    question: "What is the shape and approximate bond angle of chlorine trifluoride, ClF₃?",
+    options: [
+      { text: "T-shaped, ~87.5°", isCorrect: true },
+      { text: "Trigonal planar, 120°" },
+      { text: "Trigonal pyramidal, 107°" },
+      { text: "See-saw, ~102° and ~173°" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The central chlorine atom has 7 valence electrons, forming 3 single bonds with fluorines and leaving 2 non-bonding lone pairs (total 5 electron pairs $\\\\implies$ trigonal bipyramidal electron geometry).\n* The 2 lone pairs occupy equatorial positions to minimise $90^\\\\circ$ repulsions, giving a **T-shaped** molecular geometry with bond angles compressed to approximately $87.5^\\\\circ$.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q5",
+    createdAt: "2026-06-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u1_l3_lv3_8-june2026",
+    question: "Which of the following Group 2 carbonates requires the HIGHEST temperature to undergo thermal decomposition?",
+    options: [
+      { text: "Barium carbonate, BaCO₃", isCorrect: true },
+      { text: "Strontium carbonate, SrCO₃" },
+      { text: "Calcium carbonate, CaCO₃" },
+      { text: "Magnesium carbonate, MgCO₃" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moving down Group 2, the ionic radius of the cation increases ($\\\\text{Mg}^{2+} < \\\\text{Ca}^{2+} < \\\\text{Sr}^{2+} < \\\\text{Ba}^{2+}$), reducing charge density and polarizing power.\n* The larger $\\\\text{Ba}^{2+}$ cation polarises the large $\\\\text{CO}_3^{2-}$ electron cloud least effectively, weakening the $\\\\text{C–O}$ bond least.\n* Consequently, $\\\\text{BaCO}_3$ is thermally the most stable and requires the highest decomposition temperature.",
+    level: 3,
+    topic: "edexcel-unit-1",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q6",
+    createdAt: "2026-06-15T10:00:00Z"
   }
 ];
 

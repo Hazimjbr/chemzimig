@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q100",
     createdAt: "2026-08-20T17:35:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv2_5-2023",
+    question: "Which of the following represents the half-equation occurring at the negative electrode (anode) of an acidic hydrogen-oxygen fuel cell?",
+    options: [
+      { text: "H₂ → 2H⁺ + 2e⁻", isCorrect: true },
+      { text: "2H⁺ + 2e⁻ → H₂" },
+      { text: "O₂ + 4H⁺ + 4e⁻ → 2H₂O" },
+      { text: "4OH⁻ → O₂ + 2H₂O + 4e⁻" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At the negative electrode of a fuel cell, hydrogen gas is oxidised (loses electrons) to produce hydrogen ions:\n  $H_2 \\rightarrow 2H^+ + 2e^-$.\n* The electrons then travel through the external circuit to the other electrode.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q22",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv2_6-2024",
+    question: "A simple cell is made using metal X and copper in dilute sulfuric acid. Electrons flow from metal X to copper in the external circuit. What is metal X?",
+    options: [
+      { text: "Silver" },
+      { text: "Gold" },
+      { text: "Zinc", isCorrect: true },
+      { text: "Platinum" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Electrons flow from the more reactive metal to the less reactive metal.\n* Since electrons flow from X to copper, X must be more reactive than copper.\n* Zinc is more reactive than copper, whereas silver, gold, and platinum are less reactive.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q22",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv2_7-2025",
+    question: "Which statement about the hydrogen-oxygen fuel cell is correct?",
+    options: [
+      { text: "Hydrogen is oxidised at one electrode and oxygen is reduced at the other electrode", isCorrect: true },
+      { text: "Both hydrogen and oxygen are oxidised" },
+      { text: "Hydrogen is reduced at one electrode and oxygen is oxidised at the other electrode" },
+      { text: "Both hydrogen and oxygen are reduced" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In a hydrogen-oxygen fuel cell, hydrogen loses electrons (oxidation: $H_2 \\rightarrow 2H^+ + 2e^-$) while oxygen gains electrons (reduction: $O_2 + 4H^+ + 4e^- \\rightarrow 2H_2O$).",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q23",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

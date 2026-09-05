@@ -73,5 +73,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q468",
     createdAt: "2026-08-22T06:15:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv1_5-2023",
+    question: "Which gas turns damp red litmus paper blue?",
+    options: [
+      { text: "Ammonia (NH₃)", isCorrect: true },
+      { text: "Chlorine (Cl₂)" },
+      { text: "Sulfur dioxide (SO₂)" },
+      { text: "Carbon dioxide (CO₂)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ammonia ($NH_3$) is an alkaline gas that dissolves in moisture on red litmus paper to form hydroxide ions, turning it blue.\n* Chlorine bleaches litmus paper, and sulfur dioxide / carbon dioxide are acidic gases that turn blue litmus paper red.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q39",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv1_6-2024",
+    question: "When dilute hydrochloric acid and aqueous barium nitrate are added to a solution of compound Z, a white precipitate forms.\nWhich ion is present in compound Z?",
+    options: [
+      { text: "Sulfate ion (SO₄²⁻)", isCorrect: true },
+      { text: "Chloride ion (Cl⁻)" },
+      { text: "Carbonate ion (CO₃²⁻)" },
+      { text: "Nitrate ion (NO₃⁻)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The test for sulfate ions ($SO_4^{2-}$) involves adding dilute acid followed by barium nitrate or barium chloride solution.\n* A white precipitate of insoluble barium sulfate ($BaSO_4$) confirms the presence of sulfate ions.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q40",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv1_7-2025",
+    question: "Which test confirms that a gas is carbon dioxide?",
+    options: [
+      { text: "Bubbling through limewater turns it milky / cloudy", isCorrect: true },
+      { text: "Bleaches damp blue litmus paper" },
+      { text: "Burns with a 'squeaky pop' sound" },
+      { text: "Relights a glowing splint" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Carbon dioxide reacts with aqueous calcium hydroxide (limewater) to form insoluble calcium carbonate ($CaCO_3$), turning the limewater cloudy/milky.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q40",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

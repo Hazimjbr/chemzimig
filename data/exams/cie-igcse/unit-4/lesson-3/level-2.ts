@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q88",
     createdAt: "2026-08-20T16:35:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv2_5-2023",
+    question: "During the electroplating of an iron spoon with copper, which ionic half-equation represents the reaction taking place at the surface of the spoon?",
+    options: [
+      { text: "Cu²⁺ + 2e⁻ → Cu", isCorrect: true },
+      { text: "Cu → Cu²⁺ + 2e⁻" },
+      { text: "Fe²⁺ + 2e⁻ → Fe" },
+      { text: "2H⁺ + 2e⁻ → H₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The spoon acts as the cathode (negative electrode).\n* Copper ions ($Cu^{2+}$) from the electrolyte migrate to the spoon, gain electrons (reduction), and form a solid layer of copper: $Cu^{2+} + 2e^- \\rightarrow Cu$.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q21",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv2_6-2024",
+    question: "In the industrial electrolytic refining of impure copper, which statement about the electrodes is correct?",
+    options: [
+      { text: "The impure copper is the anode, and pure copper is the cathode", isCorrect: true },
+      { text: "The impure copper is the cathode, and pure copper is the anode" },
+      { text: "Both electrodes are made of impure copper" },
+      { text: "Both electrodes are made of inert carbon" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the refining of copper, the impure copper block is made the anode (where copper dissolves), and a thin sheet of pure copper is made the cathode (where pure copper deposits).",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q20",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv2_7-2025",
+    question: "During the copper refining process, what happens to impurities such as silver and gold present in the copper anode?",
+    options: [
+      { text: "They collect under the anode as an insoluble 'anode sludge'", isCorrect: true },
+      { text: "They dissolve in the electrolyte and plate onto the cathode" },
+      { text: "They react to produce hydrogen gas at the cathode" },
+      { text: "They vaporise into the air" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Silver and gold are less reactive than copper and do not oxidise or lose electrons at the operating voltage.\n* When copper dissolves from the anode, these unreactive precious metals fall to the bottom of the cell as 'anode sludge' (or slime), which is collected and refined.",
+    level: 2,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q21",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

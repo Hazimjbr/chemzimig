@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q210",
     createdAt: "2026-08-21T03:45:00Z"
+  },
+  {
+    id: "ex_ci_u7_l1_lv3_4-2023",
+    question: "A student added excess solid basic copper(II) oxide to warm dilute sulfuric acid until no more would dissolve. After filtering the excess oxide, what is the next correct step to obtain pure, dry crystals of hydrated copper(II) sulfate?",
+    options: [
+      { text: "Heat the filtrate until crystallization point, cool to crystallize, filter crystals, and dry between filter papers", isCorrect: true },
+      { text: "Evaporate the solution completely to dryness in an evaporating basin over strong heat" },
+      { text: "Distil the solution to collect dry anhydrous copper sulfate powder" },
+      { text: "Add excess ethanol to precipitate copper oxide" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Evaporating to complete dryness would decompose the hydrated crystals into anhydrous white powder.\n* The solution is gently heated to the crystallization point (tested on a cold glass rod), cooled slowly to form large blue crystals, which are filtered and patted dry between filter papers.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q32",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l1_lv3_5-2024",
+    question: "Which of the following explains why universal indicator is NOT suitable as an indicator for finding the precise end-point in an acid-base titration?",
+    options: [
+      { text: "Universal indicator undergoes a continuous gradual spectrum of colour changes rather than a sharp, distinct single-drop colour change", isCorrect: true },
+      { text: "Universal indicator reacts chemically with acids to form toxic gases" },
+      { text: "Universal indicator only changes colour at exactly 100 °C" },
+      { text: "Universal indicator bleaches and becomes permanently colourless in neutral water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Acid-base titrations require single indicators (like phenolphthalein or methyl orange) that provide an abrupt, sharp colour change with a single drop of titrant.\n* Universal indicator is a mixture of indicators showing a smooth, continuous spectrum of colours across a wide pH range, making exact end-point identification difficult.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q32",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l1_lv3_6-2025",
+    question: "Equal volumes of 0.1 mol/dm³ hydrochloric acid (HCl) and 0.1 mol/dm³ ethanoic acid (CH₃COOH) are compared. Which statement correctly contrasts the two solutions?",
+    options: [
+      { text: "HCl has a lower pH, higher electrical conductivity, and reacts faster with magnesium, but neutralises the exact same volume of 0.1 mol/dm³ NaOH", isCorrect: true },
+      { text: "HCl has a higher pH and requires twice the volume of NaOH to neutralise" },
+      { text: "Ethanoic acid has a higher electrical conductivity because it contains more hydrogen ions" },
+      { text: "Ethanoic acid neutralises more NaOH because it is an organic molecule" }
+    ],
+    correctAnswer: 0,
+    explanation: "* HCl is a strong acid (completely ionised), so $[H^+]$ is higher, pH is lower, conductivity is greater, and reaction rate is faster.\n* However, both acids are monoprotic and have equal molar concentrations and volumes, so they contain the exact same total number of neutralisable acidic protons and therefore require identical volumes of $NaOH$.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q32",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

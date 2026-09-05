@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q248",
     createdAt: "2026-08-21T07:40:00Z"
+  },
+  {
+    id: "ex_ci_u7_l5_lv3_4-2023",
+    question: "A 25.0 cm³ sample of aqueous sodium hydroxide required 21.50 cm³ of 0.100 mol/dm³ sulfuric acid for complete neutralisation in a titration:\n2NaOH(aq) + H₂SO₄(aq) → Na₂SO₄(aq) + 2H₂O(l)\nWhat was the concentration of the sodium hydroxide solution in mol/dm³?",
+    options: [
+      { text: "0.172 mol/dm³", isCorrect: true },
+      { text: "0.086 mol/dm³" },
+      { text: "0.043 mol/dm³" },
+      { text: "0.344 mol/dm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of $H_2SO_4 = \\frac{21.50}{1000} \\times 0.100 = 0.00215\\text{ mol}$.\n* From stoichiometry, 1 mole of $H_2SO_4$ reacts with 2 moles of $NaOH$.\n* Moles of $NaOH = 0.00215 \\times 2 = 0.00430\\text{ mol}$.\n* Concentration of $NaOH = \\frac{0.00430}{0.0250} = 0.172\\text{ mol/dm}^3$.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q36",
+    lessonNum: 5,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l5_lv3_5-2024",
+    question: "Consider the hydrogen carbonate equilibrium in water:\nHCO₃⁻(aq) + OH⁻(aq) ⇌ CO₃²⁻(aq) + H₂O(l)\nWhich of the following describes the role of the hydrogen carbonate ion (HCO₃⁻) in the forward reaction?",
+    options: [
+      { text: "It donates a proton to OH⁻ and therefore acts as a Brønsted–Lowry acid", isCorrect: true },
+      { text: "It accepts a proton and acts as a Brønsted–Lowry base" },
+      { text: "It acts as a reducing agent by gaining electrons" },
+      { text: "It acts as an oxidising agent by losing oxygen" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the forward reaction, $HCO_3^-$ loses a hydrogen ion ($H^+$) to $OH^-$, forming $CO_3^{2-}$ and $H_2O$.\n* As a proton donor, $HCO_3^-$ is functioning as a Brønsted–Lowry acid.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q36",
+    lessonNum: 5,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l5_lv3_6-2025",
+    question: "A student adds 0.1 mol/dm³ sodium hydroxide dropwise to 25 cm³ of 0.1 mol/dm³ ethanoic acid (CH₃COOH) while recording the pH. Why is the pH at the equivalence point slightly alkaline (pH ≈ 8.8) rather than neutral (pH = 7.0)?",
+    options: [
+      { text: "The ethanoate ion (CH₃COO⁻) hydrolyses in water to generate hydroxide ions (OH⁻)", isCorrect: true },
+      { text: "Ethanoic acid is a stronger acid than hydrochloric acid" },
+      { text: "Sodium ions react with water to form excess hydrogen ions" },
+      { text: "Phenolphthalein indicator neutralises the acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At the equivalence point of a weak acid - strong base titration, sodium ethanoate ($CH_3COONa$) is formed.\n* Ethanoate ions are conjugate bases of a weak acid and react with water in a salt hydrolysis equilibrium: $CH_3COO^- + H_2O \\rightleftharpoons CH_3COOH + OH^-$.\n* The resulting production of $OH^-$ ions makes the solution weakly alkaline (pH ~ 8.8).",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q36",
+    lessonNum: 5,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

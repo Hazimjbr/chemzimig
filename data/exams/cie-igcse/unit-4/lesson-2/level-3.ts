@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q80",
     createdAt: "2026-08-20T15:55:00Z"
+  },
+  {
+    id: "ex_ci_u4_l2_lv3_5-2023",
+    question: "Aqueous copper(II) sulfate is electrolysed using pure copper electrodes for 30 minutes. Which statement describes the changes in the mass of the electrodes and the concentration of the electrolyte?",
+    options: [
+      { text: "Cathode gains mass, anode loses identical mass, concentration of Cu²⁺ remains constant", isCorrect: true },
+      { text: "Cathode gains mass, anode loses mass, concentration of Cu²⁺ decreases" },
+      { text: "Both electrodes lose mass, concentration of Cu²⁺ decreases" },
+      { text: "Cathode gains mass, anode has gas evolved, concentration of Cu²⁺ remains constant" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At the anode: $Cu(s) \\rightarrow Cu^{2+}(aq) + 2e^-$ (copper dissolves, losing mass).\n* At the cathode: $Cu^{2+}(aq) + 2e^- \\rightarrow Cu(s)$ (copper deposits, gaining mass).\n* Since the rate of copper dissolving at the anode equals the rate of copper depositing at the cathode, the concentration of $Cu^{2+}$ ions and the blue colour of the solution remain unchanged.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q20",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l2_lv3_6-2024",
+    question: "During the electrolysis of concentrated aqueous sodium chloride, 40 cm³ of chlorine gas is collected at the anode. What volume of gas is collected at the cathode under the same conditions of temperature and pressure?",
+    options: [
+      { text: "20 cm³ of hydrogen" },
+      { text: "40 cm³ of hydrogen", isCorrect: true },
+      { text: "80 cm³ of hydrogen" },
+      { text: "40 cm³ of oxygen" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Anode: $2Cl^- \\rightarrow Cl_2(g) + 2e^-$.\n* Cathode: $2H^+ + 2e^- \\rightarrow H_2(g)$.\n* The molar ratio between $Cl_2$ produced and $H_2$ produced is 1:1.\n* According to Avogadro's law, equal volumes of gases at the same temperature and pressure contain equal numbers of molecules, so 40 cm³ of $H_2$ gas is produced.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q20",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l2_lv3_7-2025",
+    question: "A solution of dilute sulfuric acid is electrolysed between inert platinum electrodes. Which statement correctly compares the volumes of gases produced at the electrodes?",
+    options: [
+      { text: "The volume of gas at the cathode is double the volume of gas at the anode", isCorrect: true },
+      { text: "The volume of gas at the anode is double the volume of gas at the cathode" },
+      { text: "Equal volumes of gas are produced at both electrodes" },
+      { text: "The volume of gas at the cathode is four times that at the anode" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Cathode: $4H^+ + 4e^- \\rightarrow 2H_2(g)$ (2 moles of $H_2$).\n* Anode: $4OH^- \\rightarrow O_2(g) + 2H_2O + 4e^-$ (1 mole of $O_2$).\n* For the transfer of 4 moles of electrons, 2 moles of hydrogen are formed for every 1 mole of oxygen.\n* Therefore, the volume ratio of cathode gas ($H_2$) to anode gas ($O_2$) is 2:1.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q21",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

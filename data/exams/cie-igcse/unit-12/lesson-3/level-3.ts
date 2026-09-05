@@ -73,5 +73,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q476",
     createdAt: "2026-08-22T06:55:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv3_5-2023",
+    question: "A mixture of two solid salts, X and Y, was dissolved in water.\n1. Addition of excess aqueous sodium hydroxide gave a white precipitate which remained undissolved.\n2. When the mixture was heated, a gas was evolved that turned damp red litmus paper blue.\n3. Addition of dilute nitric acid followed by aqueous barium nitrate produced a thick white precipitate.\nWhich two compounds could be salts X and Y?",
+    options: [
+      { text: "Magnesium sulfate and ammonium chloride", isCorrect: true },
+      { text: "Zinc sulfate and potassium chloride" },
+      { text: "Calcium chloride and sodium carbonate" },
+      { text: "Aluminium sulfate and sodium nitrate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Magnesium ions ($Mg^{2+}$) produce a white precipitate with NaOH that is insoluble in excess.\n* Ammonium ions ($NH_4^+$) evolve ammonia gas ($NH_3$) when heated with aqueous NaOH, turning damp red litmus blue.\n* Sulfate ions ($SO_4^{2-}$) form a white precipitate of barium sulfate with acidified barium nitrate.\n* Chloride ions remain soluble in these conditions. Hence, magnesium sulfate + ammonium chloride fits all tests.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q40",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv3_6-2024",
+    question: "A sample of green crystals of salt G is heated in a dry test tube.\nA colourless liquid condenses on the cooler parts of the test tube, and a pungent gas is evolved that turns acidified potassium manganate(VII) from purple to colourless.\nThe residue in the test tube is a red-brown solid.\nWhat is salt G?",
+    options: [
+      { text: "Hydrated iron(II) sulfate", isCorrect: true },
+      { text: "Hydrated copper(II) carbonate" },
+      { text: "Anhydrous iron(III) chloride" },
+      { text: "Hydrated nickel(II) nitrate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Hydrated iron(II) sulfate ($FeSO_4 \\cdot 7H_2O$) is pale green.\n* On heating, it releases water of crystallisation (colourless liquid) and decomposes to give sulfur dioxide ($SO_2$), which decolourises acidified potassium manganate(VII).\n* The red-brown solid residue is iron(III) oxide ($Fe_2O_3$).",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q40",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l3_lv3_7-2025",
+    question: "A solution contains both chloride ions (Cl⁻) and iodide ions (I⁻).\nWhich reagent and observation can be used to prove the presence of iodide ions without interference from chloride ions?",
+    options: [
+      { text: "Add chlorine water and a few drops of starch solution: a deep blue-black colour appears", isCorrect: true },
+      { text: "Add acidified silver nitrate: a white precipitate appears" },
+      { text: "Add dilute hydrochloric acid: effervescence occurs" },
+      { text: "Add aqueous sodium hydroxide: a yellow precipitate forms" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Chlorine water is a stronger oxidizing agent than iodine, displacing iodide ions: $Cl_2 + 2I^- \\rightarrow 2Cl^- + I_2$.\n* The liberated iodine ($I_2$) gives an intense blue-black colour with starch solution.\n* Chloride ions do not react with chlorine water.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 3,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q39",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

@@ -135,6 +135,59 @@ export const level1Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Specimen Paper 2 Q4",
     createdAt: "2026-03-02T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv1_9-2023",
+    question: "Which row describes the arrangement and motion of particles in a solid?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Arrangement of particles</th><th class="p-2 border">Motion of particles</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">regular lattice</td><td class="p-2 border">vibrating about fixed positions</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">regular lattice</td><td class="p-2 border">sliding over each other</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">random</td><td class="p-2 border">vibrating about fixed positions</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">random</td><td class="p-2 border">moving freely and rapidly</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: regular lattice | vibrating about fixed positions" },
+      { text: "Row B: regular lattice | sliding over each other" },
+      { text: "Row C: random | vibrating about fixed positions" },
+      { text: "Row D: random | moving freely and rapidly" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In crystalline solids, particles are arranged in a regular three-dimensional lattice.\n* They do not have enough energy to move from place to place, so they only vibrate about fixed positions.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q1",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv1_10-2024",
+    question: "Which process describes the transition of a substance from the gas state directly to the liquid state?",
+    options: [
+      { text: "Boiling" },
+      { text: "Condensation" },
+      { text: "Sublimation" },
+      { text: "Evaporation" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Condensation is the phase change from gas to liquid upon cooling.\n* Gas particles lose kinetic energy, move closer together, and attractive intermolecular forces hold them in the liquid state.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q1",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv1_11-2025",
+    question: "In which states of matter can the particles slide over each other?",
+    options: [
+      { text: "Solids and liquids" },
+      { text: "Liquids only" },
+      { text: "Liquids and gases" },
+      { text: "Gases only" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In liquids, particles are close together and touch each other, but they are free to slide past one another.\n* In solids, particles are locked in fixed positions in a lattice.\n* In gases, particles move freely and independently in all directions rather than sliding over one another.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q1",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

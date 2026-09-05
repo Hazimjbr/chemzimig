@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q207",
     createdAt: "2026-08-21T03:30:00Z"
+  },
+  {
+    id: "ex_ci_u7_l1_lv2_5-2023",
+    question: "Which of the following describes what happens when solid ammonium chloride is heated gently with aqueous sodium hydroxide?",
+    options: [
+      { text: "A pungent, alkaline gas is evolved that turns damp red litmus paper blue", isCorrect: true },
+      { text: "A brown gas is evolved that bleaches litmus paper" },
+      { text: "A colourless odourless gas is evolved that relights a glowing splint" },
+      { text: "A white precipitate of sodium chloride forms" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Heating any ammonium salt with a base displaces ammonia gas:\n  $NH_4Cl(s) + NaOH(aq) \\rightarrow NaCl(aq) + H_2O(l) + NH_3(g)$.\n* Ammonia is a pungent alkaline gas that turns damp red litmus paper blue.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q33",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l1_lv2_6-2024",
+    question: "Which colour change is observed when methyl orange indicator is added to a solution of aqueous ethanoic acid?",
+    options: [
+      { text: "Turns red", isCorrect: true },
+      { text: "Turns yellow" },
+      { text: "Turns blue" },
+      { text: "Turns colourless" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Methyl orange is red in acidic solutions (pH < 3.1) and yellow in alkaline solutions (pH > 4.4).\n* Ethanoic acid is an acid, so methyl orange turns red.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q31",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l1_lv2_7-2025",
+    question: "Which ionic equation correctly represents the neutralisation reaction between any aqueous strong acid and strong alkali?",
+    options: [
+      { text: "H⁺(aq) + OH⁻(aq) → H₂O(l)", isCorrect: true },
+      { text: "Na⁺(aq) + Cl⁻(aq) → NaCl(s)" },
+      { text: "2H⁺(aq) + O²⁻(aq) → H₂O(l)" },
+      { text: "H⁺(aq) + H₂O(l) → H₃O⁺(aq)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In all neutralisation reactions between strong aqueous acids and alkalis, hydrogen ions from the acid combine with hydroxide ions from the alkali to form neutral liquid water: $H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q34",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

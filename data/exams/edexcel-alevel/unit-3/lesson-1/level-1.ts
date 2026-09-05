@@ -17,7 +17,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q1",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q1",
     createdAt: "2026-08-21T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q2",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q2",
     createdAt: "2026-08-21T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q1",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q1",
     createdAt: "2026-08-22T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q2",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q2",
     createdAt: "2026-08-22T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q3",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q3",
     createdAt: "2026-08-23T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q2",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q2",
     createdAt: "2026-08-23T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q3",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q3",
     createdAt: "2026-08-24T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q4",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q4",
     createdAt: "2026-08-24T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q8",
     createdAt: "2026-08-31T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q9",
     createdAt: "2026-08-31T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q7",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q7",
     createdAt: "2026-09-01T10:00:00Z"
   },
   {
@@ -226,7 +226,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q9",
     createdAt: "2026-09-01T10:00:00Z"
   },
   {
@@ -245,7 +245,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q10",
     createdAt: "2026-09-02T10:00:00Z"
   },
   {
@@ -264,7 +264,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q8",
     createdAt: "2026-09-02T10:00:00Z"
   },
   {
@@ -283,7 +283,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q10",
     createdAt: "2026-09-03T10:00:00Z"
   },
   {
@@ -302,7 +302,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q11",
     createdAt: "2026-09-03T10:00:00Z"
   },
   {
@@ -321,7 +321,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q8",
     createdAt: "2026-09-10T10:00:00Z"
   },
   {
@@ -340,7 +340,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q9",
     createdAt: "2026-09-10T10:00:00Z"
   },
   {
@@ -359,7 +359,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q8",
     createdAt: "2026-09-11T10:00:00Z"
   },
   {
@@ -378,7 +378,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q9",
     createdAt: "2026-09-11T10:00:00Z"
   },
   {
@@ -397,7 +397,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q10",
     createdAt: "2026-09-12T10:00:00Z"
   },
   {
@@ -416,7 +416,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q9",
     createdAt: "2026-09-12T10:00:00Z"
   },
   {
@@ -435,7 +435,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2025 Paper 3 Q11",
     createdAt: "2026-09-13T10:00:00Z"
   },
   {
@@ -454,7 +454,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q16",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q16",
     createdAt: "2026-09-21T10:00:00Z"
   },
   {
@@ -473,7 +473,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q19",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q19",
     createdAt: "2026-09-21T10:00:00Z"
   },
   {
@@ -492,7 +492,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q15",
     createdAt: "2026-09-22T10:00:00Z"
   },
   {
@@ -511,7 +511,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q17",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q17",
     createdAt: "2026-09-22T10:00:00Z"
   },
   {
@@ -530,7 +530,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q20",
     createdAt: "2026-09-23T10:00:00Z"
   },
   {
@@ -549,7 +549,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q16",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q16",
     createdAt: "2026-09-23T10:00:00Z"
   },
   {
@@ -568,8 +568,84 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q21",
     createdAt: "2026-09-24T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_31-june2026",
+    question: "Which of the following is an essential property of a primary standard used to prepare standard solutions for acid–base titrations?",
+    options: [
+      { text: "It must be available in a very high state of purity, be stable in air without absorbing moisture, and have a relatively high molar mass", isCorrect: true },
+      { text: "It must be a strong acid with a very low boiling point" },
+      { text: "It must absorb water vapor rapidly from the atmosphere" },
+      { text: "It must decompose upon gentle warming" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A primary standard (such as anhydrous $\\\\text{Na}_2\\\\text{CO}_3$) must be non-hygroscopic, stable in air, 100% pure, and have a high molar mass to minimize percentage weighing errors.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q1",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_32-june2026",
+    question: "Why are anti-bumping granules (boiling stones) added to a round-bottom flask before heating under reflux or distillation?",
+    options: [
+      { text: "To promote smooth boiling by providing nucleation sites for small bubbles, preventing violent bumping and liquid splashing", isCorrect: true },
+      { text: "To catalyze the chemical reaction" },
+      { text: "To increase the boiling point of the organic mixture" },
+      { text: "To absorb water formed during the reaction" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Anti-bumping granules are porous pieces of unglazed porcelain containing trapped air.\n* They release small bubbles that promote smooth, uniform boiling and prevent dangerous superheating and bumping.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q2",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_33-june2026",
+    question: "What flame colours are observed in a Bunsen burner flame test for calcium (Ca²⁺), strontium (Sr²⁺), and barium (Ba²⁺) ions?",
+    options: [
+      { text: "Ca²⁺: Brick-red; Sr²⁺: Crimson-red; Ba²⁺: Apple-green", isCorrect: true },
+      { text: "Ca²⁺: Apple-green; Sr²⁺: Brick-red; Ba²⁺: Lilac" },
+      { text: "Ca²⁺: Yellow; Sr²⁺: Crimson-red; Ba²⁺: Blue" },
+      { text: "Ca²⁺: Lilac; Sr²⁺: Orange-red; Ba²⁺: Apple-green" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Thermal excitation of outer electrons followed by de-excitation emits light of characteristic wavelengths:\n* $\\\\text{Ca}^{2+}$ imparts a **brick-red** colour, $\\\\text{Sr}^{2+}$ imparts a **crimson-red** colour, and $\\\\text{Ba}^{2+}$ imparts an **apple-green** colour.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q3",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv1_34-june2026",
+    question: "When taking a volume reading from a burette filled with a colourless aqueous solution, how must the measurement be recorded to avoid parallax error?",
+    options: [
+      { text: "Align the eye horizontally level with the bottom of the liquid meniscus", isCorrect: true },
+      { text: "Look down from above the top edge of the meniscus" },
+      { text: "Look up from below the bottom of the meniscus" },
+      { text: "Read the volume from the top curved edges of the meniscus" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Surface tension forms a concave meniscus with water.\n* The correct volume is read by positioning the eye directly perpendicular and level with the bottom of the meniscus to eliminate parallax error.",
+    level: 1,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q4",
+    createdAt: "2026-06-21T10:00:00Z"
   }
 ];
 

@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q271",
     createdAt: "2026-08-21T10:10:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv1_4-2023",
+    question: "What is the physical state and appearance of bromine at room temperature (25 °C)?",
+    options: [
+      { text: "Red-brown liquid", isCorrect: true },
+      { text: "Pale green gas" },
+      { text: "Grey-black solid" },
+      { text: "Colourless gas" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In Group VII at room temperature:\n  - Fluorine: pale yellow gas\n  - Chlorine: pale green-yellow gas\n  - Bromine: dense red-brown volatile liquid\n  - Iodine: grey-black crystalline solid.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q40",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv1_5-2024",
+    question: "How does the colour intensity and boiling point of the halogens change as you go down Group VII from fluorine to iodine?",
+    options: [
+      { text: "Colours become darker and boiling points increase", isCorrect: true },
+      { text: "Colours become lighter and boiling points increase" },
+      { text: "Colours become darker and boiling points decrease" },
+      { text: "Colours become lighter and boiling points decrease" }
+    ],
+    correctAnswer: 0,
+    explanation: "* As you descend Group VII, molecular size increases, resulting in stronger intermolecular van der Waals forces that increase boiling points.\n* Simultaneously, electron cloud polarisation makes colours progressively darker (yellow gas $\\rightarrow$ green gas $\\rightarrow$ red-brown liquid $\\rightarrow$ purple-black solid).",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q41",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv1_6-2025",
+    question: "Which halogen is the most reactive non-metal in Group VII?",
+    options: [
+      { text: "Fluorine", isCorrect: true },
+      { text: "Chlorine" },
+      { text: "Bromine" },
+      { text: "Iodine" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Fluorine has the smallest atomic radius with only two electron shells, so an incoming electron experiences the strongest positive electrostatic attraction to the nucleus.\n* Therefore, fluorine gains electrons most easily, making it the most reactive halogen.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q43",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -73,5 +73,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q60",
     createdAt: "2026-08-20T14:15:00Z"
+  },
+  {
+    id: "ex_ci_u4_l1_lv1_5-2023",
+    question: "During the electrolysis of concentrated aqueous sodium chloride (brine) using inert graphite electrodes, which gas is produced at the cathode?",
+    options: [
+      { text: "Chlorine" },
+      { text: "Oxygen" },
+      { text: "Hydrogen", isCorrect: true },
+      { text: "Sodium vapor" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Aqueous sodium chloride contains $Na^+$, $Cl^-$, $H^+$, and $OH^-$ ions.\n* At the cathode (negative electrode), $H^+$ ions are preferentially discharged over $Na^+$ ions because hydrogen is less reactive than sodium: $2H^+ + 2e^- \\rightarrow H_2(g)$.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q19",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l1_lv1_6-2024",
+    question: "Which material is suitable for use as an inert electrode in the electrolysis of molten salts and aqueous solutions?",
+    options: [
+      { text: "Graphite (carbon)", isCorrect: true },
+      { text: "Magnesium" },
+      { text: "Sodium" },
+      { text: "Zinc" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Inert electrodes must conduct electricity efficiently and not react with the electrolyte or the products formed.\n* Graphite (carbon) and platinum are standard inert electrode materials used in electrolysis.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q19",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l1_lv1_7-2025",
+    question: "What is the process that occurs at the anode (positive electrode) during electrolysis?",
+    options: [
+      { text: "Oxidation, where anions lose electrons", isCorrect: true },
+      { text: "Reduction, where cations gain electrons" },
+      { text: "Neutralisation" },
+      { text: "Hydration" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Remember OIL RIG: Oxidation Is Loss, Reduction Is Gain of electrons.\n* Anions migrate to the anode (positive electrode) and lose electrons (oxidation).\n* Cations migrate to the cathode (negative electrode) and gain electrons (reduction).",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q21",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

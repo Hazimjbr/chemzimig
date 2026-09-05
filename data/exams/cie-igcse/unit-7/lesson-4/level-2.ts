@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q236",
     createdAt: "2026-08-21T06:30:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv2_5-2023",
+    question: "When aqueous sodium hydroxide is added dropwise to a solution of salt X, a green precipitate forms which is insoluble in excess NaOH. What is cation X?",
+    options: [
+      { text: "Iron(II) ion, Fe²⁺", isCorrect: true },
+      { text: "Iron(III) ion, Fe³⁺" },
+      { text: "Copper(II) ion, Cu²⁺" },
+      { text: "Chromium(III) ion, Cr³⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Iron(II) ions ($Fe^{2+}$) react with $NaOH$ to form a dirty green precipitate of iron(II) hydroxide ($Fe(OH)_2$) which does not dissolve in excess sodium hydroxide.\n* (Iron(III) gives red-brown, copper(II) gives light blue).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q36",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv2_6-2024",
+    question: "A solution of an unknown sodium salt was acidified with dilute nitric acid and then aqueous silver nitrate was added. A yellow precipitate was formed. Which anion was present in the salt?",
+    options: [
+      { text: "Iodide, I⁻", isCorrect: true },
+      { text: "Chloride, Cl⁻" },
+      { text: "Bromide, Br⁻" },
+      { text: "Sulfate, SO₄²⁻" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Silver nitrate halide tests:\n  - Chloride ($Cl^-$): white precipitate ($AgCl$)\n  - Bromide ($Br^-$): cream precipitate ($AgBr$)\n  - Iodide ($I^-$): yellow precipitate ($AgI$).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q34",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv2_7-2025",
+    question: "To test for nitrate ions (NO₃⁻) in an aqueous solution, which combination of reagents and conditions is required, and what gas is evolved?",
+    options: [
+      { text: "Aqueous sodium hydroxide and aluminium foil, heated gently → Ammonia gas evolved", isCorrect: true },
+      { text: "Dilute hydrochloric acid and barium chloride → Sulfur dioxide gas evolved" },
+      { text: "Aqueous sodium hydroxide and zinc powder, cold → Hydrogen gas evolved" },
+      { text: "Dilute nitric acid and silver nitrate → Nitrogen dioxide gas evolved" }
+    ],
+    correctAnswer: 0,
+    explanation: "* To test for nitrate ions ($NO_3^-$), add aqueous sodium hydroxide, add aluminium powder or foil, and warm gently.\n* The nitrate is reduced to ammonia gas ($NH_3$), which turns damp red litmus paper blue.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q37",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

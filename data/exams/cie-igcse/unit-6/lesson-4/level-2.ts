@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q188",
     createdAt: "2026-08-21T01:30:00Z"
+  },
+  {
+    id: "ex_ci_u6_l4_lv2_5-2023",
+    question: "The reaction between sulfur dioxide and oxygen is reversible:\n2SO₂(g) + O₂(g) ⇌ 2SO₃(g)    ΔH = -197 kJ/mol\nWhich set of conditions shifts the equilibrium to the right to increase the yield of SO₃?",
+    options: [
+      { text: "High pressure and low temperature", isCorrect: true },
+      { text: "Low pressure and high temperature" },
+      { text: "High pressure and high temperature" },
+      { text: "Low pressure and low temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Forward reaction produces fewer gas moles (3 moles on left $\\rightarrow$ 2 moles on right), so increasing pressure shifts equilibrium to the right.\n* Forward reaction is exothermic (negative $\\Delta H$), so decreasing temperature shifts equilibrium to the right to release heat.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q31",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l4_lv2_6-2024",
+    question: "In the Haber process: N₂(g) + 3H₂(g) ⇌ 2NH₃(g)    ΔH = -92 kJ/mol\nWhy is an operating temperature of 450 °C used industrially instead of a much lower temperature?",
+    options: [
+      { text: "450 °C provides a compromised compromise between an acceptable rate of reaction and an economic yield", isCorrect: true },
+      { text: "450 °C gives 100% yield of ammonia at equilibrium" },
+      { text: "The iron catalyst only melts and becomes active above 450 °C" },
+      { text: "The reaction becomes endothermic above 450 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Although lower temperatures favor a higher equilibrium yield of ammonia (exothermic forward reaction), the rate of reaction would be too slow to be commercially viable.\n* 450 °C is an optimum compromise temperature giving a fast enough rate with an acceptable yield.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q29",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l4_lv2_7-2025",
+    question: "When brown nitrogen dioxide gas is cooled in a sealed syringe, the colour fades to pale yellow/colourless:\n2NO₂(g) (brown) ⇌ N₂O₄(g) (colourless)\nWhat deduction can be made about the forward reaction?",
+    options: [
+      { text: "The forward reaction is exothermic", isCorrect: true },
+      { text: "The forward reaction is endothermic" },
+      { text: "The forward reaction produces more gas molecules" },
+      { text: "The forward reaction is neutral" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Lowering temperature shifts the equilibrium in the direction of the exothermic reaction (to release heat).\n* Because the mixture turns colourless ($N_2O_4$), the forward reaction is favored upon cooling, meaning the forward reaction must be exothermic.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q32",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

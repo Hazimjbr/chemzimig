@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q448",
     createdAt: "2026-08-22T04:35:00Z"
+  },
+  {
+    id: "ex_ci_u12_l1_lv2_5-2023",
+    question: "Which drying agent should be used to dry moist ammonia gas?",
+    options: [
+      { text: "Calcium oxide (CaO)", isCorrect: true },
+      { text: "Concentrated sulfuric acid (H₂SO₄)" },
+      { text: "Phosphorus(V) oxide (P₂O₅)" },
+      { text: "Anhydrous calcium chloride" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ammonia is an alkaline gas.\n* Acidic drying agents like concentrated sulfuric acid would react with ammonia to form ammonium sulfate.\n* Basic calcium oxide (quicklime) dries ammonia without reacting.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q206",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l1_lv2_6-2024",
+    question: "How should a student correctly read the liquid volume in a burette to avoid parallax error?",
+    options: [
+      { text: "Read the scale with the eye positioned level with the bottom of the meniscus", isCorrect: true },
+      { text: "Read the scale with the eye level with the top edges of the meniscus" },
+      { text: "Look down from above at a 45° angle" },
+      { text: "Look up from below the liquid surface" }
+    ],
+    correctAnswer: 0,
+    explanation: "* To prevent parallax errors, the line of sight must be horizontal and aligned precisely with the bottom of the curved meniscus for transparent liquids.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q207",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l1_lv2_7-2025",
+    question: "Why is a loose plug of cotton wool placed in the neck of a conical flask during a reaction between marble chips and acid on a balance?",
+    options: [
+      { text: "To allow carbon dioxide gas to escape while preventing acid spray from splashing out", isCorrect: true },
+      { text: "To prevent gas from escaping so mass remains constant" },
+      { text: "To prevent air from entering and reacting with the chips" },
+      { text: "To keep the temperature inside the flask constant" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The cotton wool plug allows carbon dioxide gas to escape freely so the mass loss can be measured, but traps any aerosol acid droplets that would otherwise escape and cause an artificially high mass loss reading.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q208",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

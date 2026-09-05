@@ -73,5 +73,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q456",
     createdAt: "2026-08-22T05:15:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv1_5-2023",
+    question: "A mixture contains solid sodium chloride dissolved in water and solid sand. Which pair of processes will separate sand first, and then dry sodium chloride crystals?",
+    options: [
+      { text: "Filtration followed by crystallisation", isCorrect: true },
+      { text: "Simple distillation followed by filtration" },
+      { text: "Chromatography followed by decanting" },
+      { text: "Fractional distillation followed by centrifuging" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Sand is insoluble in water and is removed as residue by filtration.\n* Sodium chloride dissolves in water, so crystals of NaCl are obtained from the filtrate by crystallisation.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q3",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv1_6-2024",
+    question: "In paper chromatography, why must the solvent level in the chromatography tank be below the pencil baseline containing the sample spots?",
+    options: [
+      { text: "To prevent the sample spots from dissolving directly into the solvent at the bottom of the beaker", isCorrect: true },
+      { text: "To ensure the solvent rises up the paper much more quickly" },
+      { text: "To stop the paper from absorbing water" },
+      { text: "To prevent the pencil baseline from evaporating" }
+    ],
+    correctAnswer: 0,
+    explanation: "* If the solvent level is above the baseline, the sample spots will dissolve directly into the solvent pool and wash off the paper, rather than travelling up the paper.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q4",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv1_7-2025",
+    question: "Which piece of apparatus is used in simple distillation to cool the hot vapour so that it condenses into a liquid?",
+    options: [
+      { text: "Liebig condenser", isCorrect: true },
+      { text: "Fractionating column" },
+      { text: "Separating funnel" },
+      { text: "Burette" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A Liebig condenser has a central tube through which vapor passes surrounded by a water jacket that cools and condenses the vapor into distillate liquid.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q4",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

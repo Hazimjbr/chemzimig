@@ -137,7 +137,61 @@ export const level1Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q10",
     createdAt: "2026-03-29T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv1_9-2023",
+    question: "Which row correctly identifies an exothermic process and an endothermic process involving state changes?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Exothermic process</th><th class="p-2 border">Endothermic process</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Melting</td><td class="p-2 border">Freezing</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Condensation</td><td class="p-2 border">Boiling</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Evaporation</td><td class="p-2 border">Condensation</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Sublimation</td><td class="p-2 border">Freezing</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Melting | Freezing" },
+      { text: "Row B: Condensation | Boiling" },
+      { text: "Row C: Evaporation | Condensation" },
+      { text: "Row D: Sublimation | Freezing" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Condensation releases latent heat as intermolecular bonds form, making it an exothermic process.\n* Boiling requires thermal energy from the surroundings to overcome attractive forces, making it an endothermic process.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q1",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv1_10-2024",
+    question: "A substance melts at -114 °C and boils at 78 °C. What is the physical state of this substance at -120 °C and at 25 °C?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">At -120 °C</th><th class="p-2 border">At 25 °C</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Solid</td><td class="p-2 border">Liquid</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Liquid</td><td class="p-2 border">Gas</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Solid</td><td class="p-2 border">Gas</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Liquid</td><td class="p-2 border">Liquid</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Solid at -120 °C | Liquid at 25 °C" },
+      { text: "Row B: Liquid at -120 °C | Gas at 25 °C" },
+      { text: "Row C: Solid at -120 °C | Gas at 25 °C" },
+      { text: "Row D: Liquid at -120 °C | Liquid at 25 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At -120 °C, the temperature is below the melting point (-114 °C), so the substance is a solid.\n* At 25 °C, the temperature is between the melting point (-114 °C) and the boiling point (78 °C), so it is a liquid.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q3",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv1_11-2025",
+    question: "Which of the following changes of state involves particles losing energy and forming stronger attractive forces?",
+    options: [
+      { text: "Melting and boiling" },
+      { text: "Freezing and condensation" },
+      { text: "Sublimation and evaporation" },
+      { text: "Boiling and evaporation" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Both freezing (liquid to solid) and condensation (gas to liquid) occur upon cooling.\n* Particles lose kinetic energy and are brought together by attractive forces, releasing energy to the surroundings.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q1",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

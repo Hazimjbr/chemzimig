@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q255",
     createdAt: "2026-08-21T08:30:00Z"
+  },
+  {
+    id: "ex_ci_u8_l1_lv2_5-2023",
+    question: "Which property decreases as you move from left to right across Period 3 of the Periodic Table?",
+    options: [
+      { text: "Metallic character and atomic radius", isCorrect: true },
+      { text: "Nuclear charge (number of protons)" },
+      { text: "Number of valence electrons" },
+      { text: "Electronegativity" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Across Period 3 from sodium to chlorine, elements transition from active metals to non-metals, so metallic character decreases.\n* The increasing positive nuclear charge pulls electron shells closer, causing atomic radius to decrease.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q38",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l1_lv2_6-2024",
+    question: "An element X has an electronic configuration of 2,8,6. Which row correctly describes element X?",
+    options: [
+      { text: "Period: 3; Group: VI; Non-metal", isCorrect: true },
+      { text: "Period: 6; Group: III; Metal" },
+      { text: "Period: 3; Group: II; Metal" },
+      { text: "Period: 2; Group: VI; Non-metal" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Configuration 2,8,6 has 3 electron shells (Period 3) and 6 outer electrons (Group VI).\n* With 6 valence electrons, it gains electrons to form anions ($X^{2-}$), which is typical non-metallic behavior (it is sulfur).",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q36",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l1_lv2_7-2025",
+    question: "Which statement about the transition from metals to non-metals across Period 3 is correct?",
+    options: [
+      { text: "Electrical conductivity decreases from high in Na, Mg, Al to poor/semiconducting in Si and non-conducting insulators in P, S, Cl", isCorrect: true },
+      { text: "All Period 3 elements conduct electricity equally well" },
+      { text: "Oxides change from acidic on the left to basic on the right" },
+      { text: "Boiling points decrease continuously from sodium to argon" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Na, Mg, and Al have delocalised sea of electrons (good metallic conductors).\n* Silicon is a metalloid semiconductor.\n* P, S, Cl, and Ar are covalent/simple molecular insulators with no free mobile charge carriers.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q39",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

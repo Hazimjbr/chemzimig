@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q191",
     createdAt: "2026-08-21T01:45:00Z"
+  },
+  {
+    id: "ex_ci_u6_l4_lv3_4-2023",
+    question: "In the contact process, the conversion of SO₂ to SO₃ is carried out at a moderate pressure of 1 to 2 atmospheres (approx. 200 kPa) rather than at very high pressure (e.g. 200 atm). What is the economic reason for this choice?",
+    options: [
+      { text: "The equilibrium yield of SO₃ is already over 98% at 1–2 atm, so building expensive high-pressure equipment is not cost-effective", isCorrect: true },
+      { text: "Higher pressure reverses the reaction and forms sulfur and oxygen" },
+      { text: "The vanadium(V) oxide catalyst is destroyed at pressures above 2 atm" },
+      { text: "SO₃ gas condenses into a corrosive liquid that corrodes high-pressure pumps" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At 450 °C and 1–2 atmospheres with $V_2O_5$, the equilibrium conversion of $SO_2$ to $SO_3$ exceeds 98%.\n* Generating higher pressures requires expensive high-pressure compressors and pipes with heavy energy running costs, offering negligible additional yield benefit.",
+    level: 3,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q30",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l4_lv3_5-2024",
+    question: "The following equilibrium is established in a syringe:\nCH₄(g) + H₂O(g) ⇌ CO(g) + 3H₂(g)    ΔH = +206 kJ/mol\nWhich combination of changes will shift the position of equilibrium furthest to the right?",
+    options: [
+      { text: "Increasing temperature and decreasing pressure", isCorrect: true },
+      { text: "Decreasing temperature and increasing pressure" },
+      { text: "Increasing temperature and increasing pressure" },
+      { text: "Decreasing temperature and decreasing pressure" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The forward reaction is endothermic ($+\\Delta H$), so increasing temperature shifts equilibrium to the right.\n* The forward reaction produces 4 moles of gas from 2 moles of reactant gas ($2 \\rightarrow 4$), so decreasing pressure shifts equilibrium to the side with more moles of gas (to the right).",
+    level: 3,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q30",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l4_lv3_6-2025",
+    question: "A mixture of gases X, Y, and Z is in dynamic equilibrium: X(g) + 2Y(g) ⇌ 2Z(g). The total pressure is suddenly increased at constant temperature. What happens to the rate of the forward reaction and the rate of the reverse reaction immediately after the pressure increase?",
+    options: [
+      { text: "Both rates increase, but the forward rate increases more than the reverse rate", isCorrect: true },
+      { text: "The forward rate increases, while the reverse rate decreases" },
+      { text: "Both rates increase by the exact same amount" },
+      { text: "The forward rate decreases, while the reverse rate increases" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Increasing pressure increases the concentration of all gaseous species, so collision frequency increases and both forward and reverse rates increase.\n* However, because the forward reaction involves 3 reactant molecules ($X + 2Y$) compared to 2 molecules for the reverse reaction ($2Z$), the forward rate increases to a greater extent, causing a net shift to the right until a new equilibrium is reached.",
+    level: 3,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q30",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

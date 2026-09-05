@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q128",
     createdAt: "2026-08-20T19:55:00Z"
+  },
+  {
+    id: "ex_ci_u5_l2_lv3_5-2023",
+    question: "The reaction profile for the reaction W + X → Y + Z shows: reactants at 100 kJ, peak of curve at 260 kJ, and products at 40 kJ. What are the activation energy (Ea) and enthalpy change (ΔH) for this reaction?",
+    options: [
+      { text: "Ea = +160 kJ, ΔH = -60 kJ", isCorrect: true },
+      { text: "Ea = +260 kJ, ΔH = -60 kJ" },
+      { text: "Ea = +160 kJ, ΔH = +60 kJ" },
+      { text: "Ea = +220 kJ, ΔH = -60 kJ" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $E_a = \\text{peak energy} - \\text{reactant energy} = 260 - 100 = +160\\text{ kJ}$.\n* $\\Delta H = \\text{product energy} - \\text{reactant energy} = 40 - 100 = -60\\text{ kJ}$.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q24",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l2_lv3_6-2024",
+    question: "In a multistep biological or chemical reaction pathway, the reaction mechanism has two peaks with activation energies Ea1 = 45 kJ/mol and Ea2 = 90 kJ/mol. Which step is the rate-determining step, and how does a catalyst affect it?",
+    options: [
+      { text: "The second step is rate-determining, and a catalyst lowers its activation energy barrier", isCorrect: true },
+      { text: "The first step is rate-determining, and a catalyst lowers its activation energy barrier" },
+      { text: "Both steps occur at equal rates regardless of Ea" },
+      { text: "The second step is rate-determining, but catalysts only affect the first step" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The rate-determining step is the slowest step in a reaction mechanism, which corresponds to the step with the highest activation energy ($E_{a2} = 90\\text{ kJ/mol}$).\n* A catalyst lowers the activation energy of the rate-determining step, dramatically accelerating the overall reaction rate.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q24",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l2_lv3_7-2025",
+    question: "A reaction has an activation energy of +50 kJ/mol and ΔH = +20 kJ/mol. What is the activation energy for the reverse reaction?",
+    options: [
+      { text: "+30 kJ/mol", isCorrect: true },
+      { text: "+70 kJ/mol" },
+      { text: "-30 kJ/mol" },
+      { text: "+50 kJ/mol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* For an endothermic reaction, products are higher in energy than reactants by 20 kJ/mol ($\\Delta H = +20\\text{ kJ/mol}$).\n* The peak is 50 kJ/mol above the reactants.\n* Therefore, the energy difference between the products and the peak is $50 - 20 = 30\\text{ kJ/mol}$, which is the activation energy of the reverse reaction.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q25",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

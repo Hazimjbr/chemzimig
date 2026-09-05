@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q175",
     createdAt: "2026-08-21T00:10:00Z"
+  },
+  {
+    id: "ex_ci_u6_l3_lv1_4-2023",
+    question: "Which statement about a catalyst in a chemical reaction is correct?",
+    options: [
+      { text: "It increases the rate of reaction and remains chemically unchanged at the end", isCorrect: true },
+      { text: "It increases the yield of product formed at the end" },
+      { text: "It is completely consumed during the reaction" },
+      { text: "It increases the activation energy of the reaction" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A catalyst speeds up the chemical reaction by providing an alternative reaction pathway with lower activation energy.\n* It does not undergo any permanent chemical change and is not used up in the reaction.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q30",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l3_lv1_5-2024",
+    question: "Which metal is used as a catalyst in the industrial Haber process for the manufacture of ammonia?",
+    options: [
+      { text: "Iron", isCorrect: true },
+      { text: "Vanadium(V) oxide" },
+      { text: "Nickel" },
+      { text: "Copper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The Haber process ($N_2 + 3H_2 \\rightleftharpoons 2NH_3$) uses finely divided iron as the heterogeneous catalyst.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q31",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l3_lv1_6-2025",
+    question: "What are biological catalysts called?",
+    options: [
+      { text: "Enzymes", isCorrect: true },
+      { text: "Electrolytes" },
+      { text: "Polymers" },
+      { text: "Isotopes" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Enzymes are biological catalysts, which are protein molecules that speed up specific metabolic biochemical reactions in living organisms.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q33",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

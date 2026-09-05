@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q23",
     createdAt: "2026-08-20T11:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l2_lv1_4-2023",
+    question: "What is the number of moles in 88 g of carbon dioxide ($CO_2$)?\n(Given: $A_r$: C = 12, O = 16)",
+    options: [
+      { text: "0.5 mol" },
+      { text: "1.0 mol" },
+      { text: "2.0 mol", isCorrect: true },
+      { text: "4.0 mol" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $M_r$ of $\\text{CO}_2 = 12 + (2 \\times 16) = 44\\text{ g/mol}$.\n* $\\text{Number of moles} = \\frac{\\text{mass}}{M_r} = \\frac{88}{44} = 2.0\\text{ mol}$.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q13",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l2_lv1_5-2024",
+    question: "One mole of any substance contains the Avogadro constant ($6.02 \\times 10^{23}$) number of specified particles. How many molecules are there in 9.0 g of water ($H_2O$)?\n(Given: $A_r$: H = 1, O = 16)",
+    options: [
+      { text: "$3.01 \\times 10^{23}$", isCorrect: true },
+      { text: "$6.02 \\times 10^{23}$" },
+      { text: "$1.20 \\times 10^{24}$" },
+      { text: "$1.50 \\times 10^{23}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $M_r$ of $H_2O = (2 \\times 1) + 16 = 18\\text{ g/mol}$.\n* $\\text{Moles of } H_2O = \\frac{9.0}{18} = 0.50\\text{ mol}$.\n* $\\text{Number of molecules} = 0.50 \\times 6.02 \\times 10^{23} = 3.01 \\times 10^{23}\\text{ molecules}$.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q13",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l2_lv1_6-2025",
+    question: "What is the mass in grams of 0.25 mol of sulfuric acid, $H_2SO_4$?\n(Given: $A_r$: H = 1, S = 32, O = 16)",
+    options: [
+      { text: "24.5 g", isCorrect: true },
+      { text: "49.0 g" },
+      { text: "98.0 g" },
+      { text: "196 g" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $M_r$ of $H_2SO_4 = (2 \\times 1) + 32 + (4 \\times 16) = 2 + 32 + 64 = 98\\text{ g/mol}$.\n* $\\text{Mass} = \\text{moles} \\times M_r = 0.25 \\times 98 = 24.5\\text{ g}$.",
+    level: 1,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q14",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -103,7 +103,59 @@ export const level3Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q9",
     createdAt: "2026-03-21T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l2_lv3_7-2023",
+    question: "A porous pot containing air is connected to a U-tube manometer filled with colored water. A beaker containing gas Z is placed over the porous pot. The colored liquid level in the U-tube falls on the side connected to the porous pot and rises on the open side. What could be the identity of gas Z?",
+    options: [
+      { text: "Hydrogen ($H_2$, $M_r = 2$)" },
+      { text: "Carbon dioxide ($CO_2$, $M_r = 44$)" },
+      { text: "Sulfur dioxide ($SO_2$, $M_r = 64$)" },
+      { text: "Chlorine ($Cl_2$, $M_r = 71$)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The water level in the limb attached to the pot is pushed down, indicating an increase in gas pressure inside the pot.\n* This occurs when gas Z diffuses into the pot faster than air ($M_r \\approx 29$) diffuses out.\n* Gas Z must therefore have a lower relative molecular mass ($M_r$) than air. Hydrogen ($M_r = 2$) is the only gas lighter than air among the options.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q3",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l2_lv3_8-2024",
+    question: "A long glass tube is set up with cotton wool soaked in concentrated aqueous ammonia at one end and concentrated hydrochloric acid at the other. The experiment is carried out at $20\\text{ }^{\\circ}\\text{C}$ and the white ring forms at distance $d$ from the HCl end after 5 minutes. If the experiment is repeated at $40\\text{ }^{\\circ}\\text{C}$, what will happen to the time taken and the position of the ring?",
+    options: [
+      { text: "Time taken is less than 5 minutes; ring forms at approximately distance $d$" },
+      { text: "Time taken is more than 5 minutes; ring forms closer to the NH₃ end" },
+      { text: "Time taken is less than 5 minutes; ring forms at the exact center of the tube" },
+      { text: "Time taken remains 5 minutes; ring forms closer to the HCl end" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At higher temperature ($40\\text{ }^{\\circ}\\text{C}$), particles have greater kinetic energy and travel faster, so they meet in less time (less than 5 minutes).\n* Both gases speed up proportionally according to Graham's Law, so the relative ratio of their speeds remains nearly unchanged and the white ring still forms at approximately the same position $d$ (closer to the heavier HCl).",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q3",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l2_lv3_9-2025",
+    question: "Four gas jars contain different pure gases: ammonia (NH₃), methane (CH₄), nitrogen (N₂), and propane (C₃H₈). If identical tiny pinhole leaks are introduced in each jar under identical conditions, which gas will escape the fastest?",
+    options: [
+      { text: "Propane ($C_3H_8$)" },
+      { text: "Nitrogen ($N_2$)" },
+      { text: "Ammonia ($NH_3$)" },
+      { text: "Methane ($CH_4$)" }
+    ],
+    correctAnswer: 3,
+    explanation: "* Rate of effusion/diffusion through a small hole is inversely proportional to the square root of relative molecular mass ($M_r$).\n* Relative molecular masses: $CH_4 = 16$, $NH_3 = 17$, $N_2 = 28$, $C_3H_8 = 44$.\n* Methane ($CH_4$) has the lowest molar mass ($M_r = 16$), so its molecules have the highest average velocity and escape the fastest.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q3",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

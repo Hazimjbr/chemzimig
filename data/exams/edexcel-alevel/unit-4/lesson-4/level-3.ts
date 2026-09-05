@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q48",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q48",
     createdAt: "2026-11-16T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q49",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q49",
     createdAt: "2026-11-16T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q41",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q41",
     createdAt: "2026-11-17T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q49",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q49",
     createdAt: "2026-11-17T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q50",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q50",
     createdAt: "2026-11-18T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q42",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q42",
     createdAt: "2026-11-18T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q55",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q55",
     createdAt: "2026-11-26T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q56",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q56",
     createdAt: "2026-11-26T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q47",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q47",
     createdAt: "2026-11-27T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q56",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q56",
     createdAt: "2026-11-27T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q57",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q57",
     createdAt: "2026-11-28T10:00:00Z"
   },
   {
@@ -226,7 +226,7 @@ export const level3Questions: Question[] = [
     lessonNum: 4,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q48",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q48",
     createdAt: "2026-11-28T10:00:00Z"
   }
 ];

@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q6",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q6",
     createdAt: "2026-08-28T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q7",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q7",
     createdAt: "2026-08-28T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q5",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q5",
     createdAt: "2026-08-29T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q7",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q7",
     createdAt: "2026-08-29T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q8",
     createdAt: "2026-08-30T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q6",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q6",
     createdAt: "2026-08-30T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q13",
     createdAt: "2026-09-07T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q14",
     createdAt: "2026-09-07T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q11",
     createdAt: "2026-09-08T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q14",
     createdAt: "2026-09-08T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q15",
     createdAt: "2026-09-09T10:00:00Z"
   },
   {
@@ -226,7 +226,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q12",
     createdAt: "2026-09-09T10:00:00Z"
   },
   {
@@ -245,7 +245,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q17",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q17",
     createdAt: "2026-09-18T10:00:00Z"
   },
   {
@@ -264,7 +264,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q14",
     createdAt: "2026-09-18T10:00:00Z"
   },
   {
@@ -283,7 +283,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q13",
     createdAt: "2026-09-19T10:00:00Z"
   },
   {
@@ -302,7 +302,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q18",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q18",
     createdAt: "2026-09-19T10:00:00Z"
   },
   {
@@ -321,7 +321,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q15",
     createdAt: "2026-09-20T10:00:00Z"
   },
   {
@@ -340,7 +340,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q14",
     createdAt: "2026-09-20T10:00:00Z"
   },
   {
@@ -359,7 +359,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q25",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q25",
     createdAt: "2026-09-28T10:00:00Z"
   },
   {
@@ -378,7 +378,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q20",
     createdAt: "2026-09-28T10:00:00Z"
   },
   {
@@ -397,7 +397,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q19",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q19",
     createdAt: "2026-09-29T10:00:00Z"
   },
   {
@@ -416,7 +416,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q26",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q26",
     createdAt: "2026-09-29T10:00:00Z"
   },
   {
@@ -435,7 +435,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q21",
     createdAt: "2026-09-30T10:00:00Z"
   },
   {
@@ -454,8 +454,215 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q20",
     createdAt: "2026-09-30T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_25-june2026",
+    question: "In a laboratory experiment using a copper calorimeter and a spirit burner, a student measures the enthalpy of combustion of propan-1-ol. The experimental value obtained is significantly less exothermic than the Data Booklet value. Which of the following represents the single greatest source of systematic error?",
+    options: [
+      { text: "Unprevented heat loss to the surroundings, incomplete combustion producing carbon soot, and evaporative loss of fuel from the burner wick", isCorrect: true },
+      { text: "Using a copper calorimeter instead of an insulating glass beaker" },
+      { text: "Using a thermometer with 0.1 °C graduations" },
+      { text: "The copper metal reacting with water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Heat loss by convection and radiation to the surrounding air, incomplete combustion forming carbon (soot) and $\\\\text{CO}$, and evaporation of volatile alcohol from the wick between weighings are the primary systematic causes.\n* Together they result in a measured heat absorption that is substantially lower than the theoretical standard combustion enthalpy.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q1",
+    createdAt: "2026-06-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_26-june2026",
+    question: "A student adds aqueous silver nitrate (AgNO₃) acidified with dilute nitric acid to three unknown colourless halide solutions X, Y, and Z. Yellow precipitate Z is insoluble in concentrated aqueous ammonia. Cream precipitate Y dissolves only in concentrated aqueous ammonia. White precipitate X dissolves in dilute aqueous ammonia. Identify halides X, Y, and Z.",
+    options: [
+      { text: "X = Cl⁻, Y = Br⁻, Z = I⁻", isCorrect: true },
+      { text: "X = I⁻, Y = Br⁻, Z = Cl⁻" },
+      { text: "X = Br⁻, Y = Cl⁻, Z = I⁻" },
+      { text: "X = F⁻, Y = Cl⁻, Z = Br⁻" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $\\\\text{AgCl}$ forms a white precipitate that dissolves readily in dilute aqueous $\\\\text{NH}_3$ to form $[\\\\text{Ag(NH}_3)_2]^+$.\n* $\\\\text{AgBr}$ forms a cream precipitate that is insoluble in dilute $\\\\text{NH}_3$ but dissolves in concentrated $\\\\text{NH}_3$.\n* $\\\\text{AgI}$ forms a yellow precipitate that is completely insoluble even in concentrated $\\\\text{NH}_3$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q2",
+    createdAt: "2026-06-17T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_27-june2026",
+    question: "When measuring the molar volume of a gas produced in a reaction, why is collecting the gas in a dry gas syringe significantly more accurate than collecting it by downward displacement of water in an inverted measuring cylinder?",
+    options: [
+      { text: "Water dissolves slightly soluble gases (like CO₂), and saturated water vapor pressure adds to the gas volume inside the cylinder", isCorrect: true },
+      { text: "Gas syringes measure mass directly instead of volume" },
+      { text: "Gases cannot enter an inverted measuring cylinder" },
+      { text: "Water creates a chemical vacuum that prevents gas formation" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Collecting over water introduces two major systematic errors: moderately soluble gases (such as $\\\\text{CO}_2$ or $\\\\text{SO}_2$) partially dissolve in the water trough, and water evaporates, contributing water vapor pressure ($p_{\\\\text{H}_2\\\\text{O}}$) to the gas mixture.\n* A dry gas syringe eliminates both problems.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q9",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_28-june2026",
+    question: "In the disappearing cross reaction between sodium thiosulfate and hydrochloric acid (Core Practical 5), the reaction time (t) is measured at different temperatures. Why is 1/t taken as an approximation of the initial rate of reaction?",
+    options: [
+      { text: "The cross disappears when a fixed amount of sulfur precipitate has formed, so the time taken is inversely proportional to the initial rate (rate ∝ 1/t)", isCorrect: true },
+      { text: "Because temperature is inversely proportional to time" },
+      { text: "Because thiosulfate concentration remains 100% constant" },
+      { text: "Because sulfur dissolves as the reaction proceeds" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The cross disappears when a constant mass/turbidity of solid sulfur ($\\\\text{S(s)}$) is produced.\n* Since the change in concentration $\\\\Delta [\\\\text{S}]$ is constant for all runs, the initial rate $= \\\\frac{\\\\Delta [\\\\text{S}]}{t} \\\\propto \\\\frac{1}{t}$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q10",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_29-june2026",
+    question: "A green aqueous solution of an unknown salt produces a green gelatinous precipitate with aqueous sodium hydroxide. On standing in air, the top of the precipitate turns foxy-red/brown. What metal ion is present in the solution?",
+    options: [
+      { text: "Iron(II) [Fe²⁺]", isCorrect: true },
+      { text: "Copper(II) [Cu²⁺]" },
+      { text: "Iron(III) [Fe³⁺]" },
+      { text: "Chromium(III) [Cr³⁺]" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $\\\\text{Fe}^{2+}$ reacts with $\\\\text{OH}^-$ to form a dirty green precipitate of $\\\\text{Fe(OH)}_2$.\n* Atmospheric oxygen rapidly oxidises $\\\\text{Fe(OH)}_2$ at the air–liquid interface to reddish-brown $\\\\text{Fe(OH)}_3$ (or hydrated $\\\\text{Fe}_2\\\\text{O}_3$).",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q11",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_30-june2026",
+    question: "A student prepares a standard solution of anhydrous sodium carbonate. The mass weighed by difference is 2.65 g using a balance with uncertainty ±0.005 g per reading. The solution is made up in a 250 cm³ volumetric flask with uncertainty ±0.20 cm³. What is the total apparatus percentage uncertainty in the concentration of the standard solution?",
+    options: [
+      { text: "0.46%", isCorrect: true },
+      { text: "0.27%" },
+      { text: "0.19%" },
+      { text: "0.92%" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Weighing by difference involves two readings: absolute uncertainty $= 2 \\\\times (\\\\pm 0.005) = \\\\pm 0.010\\\\text{ g}$.\n* Percentage error in mass $= \\\\frac{0.010}{2.65} \\\\times 100 = 0.377\\%$.\n* Percentage error in volumetric flask $= \\\\frac{0.20}{250} \\\\times 100 = 0.080\\%$.\n* Total percentage uncertainty $= 0.377\\% + 0.080\\% = 0.457\\% \\\\approx 0.46\\%$.",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q12",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_32-interactive",
+    question: "In Core Practical 3, a student investigates the effect of sodium thiosulfate concentration on the initial reaction rate with dilute hydrochloric acid (disappearing cross experiment). The reciprocal of time (1/t in ×10⁻² s⁻¹) is taken as a measure of rate. Use the interactive graph plotter below to plot 1/t against [Na₂S₂O₃] and draw the line of best fit to determine the reaction order.",
+    options: [
+      { text: "Straight line passing through the origin (0,0), confirming first order with respect to thiosulfate", isCorrect: true },
+      { text: "Horizontal straight line parallel to x-axis, confirming zero order" },
+      { text: "Exponential curve curving upwards with increasing slope, confirming second order" },
+      { text: "Inverted parabolic curve with a maximum at 0.15 mol dm⁻³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Plotting initial rate ($1/t$) against concentration yields a straight line passing directly through the origin $(0,0)$\n* A straight line passing through the origin proves direct proportionality: $\\text{Rate} \\propto [\\text{Na}_2\\text{S}_2\\text{O}_3]^1$\n* Hence, the reaction is strictly first order with respect to sodium thiosulfate",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q13",
+    createdAt: "2026-06-23T10:00:00Z",
+    graphConfig: {
+      title: "Core Practical 3: Initial Rate (1/t) vs Sodium Thiosulfate Concentration",
+      xAxis: {
+        label: "[Na₂S₂O₃]",
+        unit: "mol dm⁻³",
+        min: 0,
+        max: 0.25,
+        step: 0.05
+      },
+      yAxis: {
+        label: "1/t",
+        unit: "×10⁻² s⁻¹",
+        min: 0,
+        max: 5.0,
+        step: 1.0
+      },
+      targetPoints: [
+        { x: 0.00, y: 0.0 },
+        { x: 0.05, y: 1.0 },
+        { x: 0.10, y: 2.0 },
+        { x: 0.15, y: 3.0 },
+        { x: 0.20, y: 4.0 },
+        { x: 0.25, y: 5.0 }
+      ],
+      curveType: "line",
+      tolerance: 0.25
+    },
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "straight line through origin", text: "Points plotted correctly and line of best fit drawn through (0,0)." },
+        { mark: 1, keyword: "first order / directly proportional", text: "Rate is directly proportional to concentration, proving first order." },
+        { mark: 1, keyword: "constant temperature and acid excess", text: "State that constant temperature and excess HCl are maintained." }
+      ],
+      examinerTips: "In disappearing cross graphs, the line must always be drawn through the origin because at zero concentration, rate is zero."
+    }
+  },
+  {
+    id: "ex_ed_u3_l1_lv3_33-interactive",
+    question: "In Core Practical 2, a student reacted 0.00300 mol of magnesium ribbon with excess dilute hydrochloric acid in a conical flask connected to a 100 cm³ gas syringe. Use the interactive gas syringe scale reader below to read the final volume of hydrogen gas collected, and calculate the molar volume of hydrogen under laboratory conditions.",
+    options: [
+      { text: "72.0 cm³; Molar Volume = 24.0 dm³ mol⁻¹", isCorrect: true },
+      { text: "75.0 cm³; Molar Volume = 25.0 dm³ mol⁻¹" },
+      { text: "68.0 cm³; Molar Volume = 22.7 dm³ mol⁻¹" },
+      { text: "80.0 cm³; Molar Volume = 26.7 dm³ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The gas syringe scale reading indicates exactly $72.0\\text{ cm}^3$ ($0.0720\\text{ dm}^3$)\n* Stoichiometry: $\\text{Mg} + 2\\text{HCl} \\rightarrow \\text{MgCl}_2 + \\text{H}_2$, so $n(\\text{H}_2) = 0.00300\\text{ mol}$\n* Molar volume $V_m = \\frac{V}{n} = \\frac{0.0720\\text{ dm}^3}{0.00300\\text{ mol}} = 24.0\\text{ dm}^3\\text{ mol}^{-1}$",
+    level: 3,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q14",
+    createdAt: "2026-06-23T10:00:00Z",
+    apparatusScaleConfig: {
+      type: "gas-syringe",
+      targetValue: 72.0,
+      unit: "cm³",
+      minScale: 0.0,
+      maxScale: 100.0,
+      step: 10.0,
+      subdivision: 1.0,
+      tolerance: 1.0,
+      title: "Gas Syringe Final Hydrogen Volume (72.0 cm³)"
+    },
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "72.0 cm3", text: "Read gas syringe volume accurately as 72.0 cm³." },
+        { mark: 1, keyword: "24.0 dm3 mol-1", text: "Calculate molar volume as 24.0 dm³ mol⁻¹." }
+      ],
+      examinerTips: "Read perpendicular to the syringe barrel to eliminate parallax error, noting that 1 small division is 1 cm³."
+    }
   }
 ];
 

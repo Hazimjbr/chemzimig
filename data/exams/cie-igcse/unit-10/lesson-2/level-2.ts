@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q364",
     createdAt: "2026-08-21T19:35:00Z"
+  },
+  {
+    id: "ex_ci_u10_l2_lv2_5-2023",
+    question: "Why is a temperature of around 450 °C used in the Haber process instead of a much lower temperature?",
+    options: [
+      { text: "At lower temperatures the reaction rate is too slow, so 450 °C is an optimum compromise between rate and yield", isCorrect: true },
+      { text: "Lower temperatures decrease the percentage yield of ammonia at equilibrium" },
+      { text: "The iron catalyst becomes poisoned and inactive at lower temperatures" },
+      { text: "Ammonia decomposes completely at temperatures below 200 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The formation of ammonia is exothermic (ΔH = -92 kJ/mol).\n* Lower temperatures favour higher equilibrium yield, but at low temperatures the rate of reaching equilibrium is impractically slow.\n* 450 °C provides an acceptable reaction rate while still giving a reasonable yield.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q125",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l2_lv2_6-2024",
+    question: "Why should slaked lime (calcium hydroxide) not be added to soil at the same time as ammonium fertilisers?",
+    options: [
+      { text: "They react together to produce ammonia gas, resulting in the loss of nitrogen from the soil", isCorrect: true },
+      { text: "They form an insoluble precipitate that blocks plant roots from absorbing water" },
+      { text: "The mixture becomes dangerously explosive when exposed to moisture" },
+      { text: "They react to produce toxic chlorine gas" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Slaked lime is an alkaline base.\n* When mixed with ammonium fertiliser, an acid-base displacement occurs: Ca(OH)₂ + 2NH₄⁺ → Ca²⁺ + 2NH₃(g) + 2H₂O.\n* The released ammonia gas escapes into the air, wasting the valuable nitrogen nutrient.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q126",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l2_lv2_7-2025",
+    question: "How is ammonia separated from unreacted nitrogen and hydrogen in the Haber process output gas mixture?",
+    options: [
+      { text: "By cooling the mixture so that ammonia condenses into a liquid while nitrogen and hydrogen remain gases", isCorrect: true },
+      { text: "By passing the gases through water to dissolve nitrogen" },
+      { text: "By filtering the mixture through porous carbon" },
+      { text: "By reacting the mixture with iron catalyst at room temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ammonia has a much higher boiling point (-33 °C) than nitrogen (-196 °C) or hydrogen (-253 °C).\n* Cooling the pressurised reaction mixture causes ammonia to condense into a liquid which is drawn off, while unreacted N₂ and H₂ are recycled.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q127",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

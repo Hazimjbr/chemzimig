@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q20",
     createdAt: "2026-07-30T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2026 Paper 1 Q21",
     createdAt: "2026-07-30T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q17",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q17",
     createdAt: "2026-07-31T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q21",
     createdAt: "2026-07-31T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q22",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2025 Paper 1 Q22",
     createdAt: "2026-08-01T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q18",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q18",
     createdAt: "2026-08-01T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q24",
     createdAt: "2026-08-16T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q23",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q23",
     createdAt: "2026-08-16T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q31",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2026 Paper 1 Q31",
     createdAt: "2026-08-17T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q25",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q25",
     createdAt: "2026-08-17T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q24",
     createdAt: "2026-08-18T10:00:00Z"
   },
   {
@@ -226,8 +226,46 @@ export const level3Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q32",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2025 Paper 1 Q32",
     createdAt: "2026-08-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_13-june2026",
+    question: "Given the standard enthalpies of combustion (in kJ mol⁻¹):\nΔ_c H°[C(s, graphite)] = −393.5\nΔ_c H°[H₂(g)] = −285.8\nΔ_c H°[CH₄(g)] = −890.3\nCalculate the standard enthalpy of formation, Δ_f H°, of methane, CH₄(g).",
+    options: [
+      { text: "−74.8 kJ mol⁻¹", isCorrect: true },
+      { text: "+74.8 kJ mol⁻¹" },
+      { text: "−211.0 kJ mol⁻¹" },
+      { text: "−1569.6 kJ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Target reaction: $\\\\text{C(s)} + 2\\\\text{H}_2\\\\text{(g)} \\\\rightarrow \\\\text{CH}_4\\\\text{(g)}$.\n* Using Hess's Law with enthalpies of combustion: $\\\\Delta_f H^\\\\circ = \\\\sum \\\\Delta_c H^\\\\circ(\\\\text{reactants}) - \\\\sum \\\\Delta_c H^\\\\circ(\\\\text{products})$.\n* $\\\\Delta_f H^\\\\circ = [(-393.5) + 2(-285.8)] - (-890.3) = [-393.5 - 571.6] + 890.3 = -965.1 + 890.3 = -74.8\\\\text{ kJ mol}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2026 Paper 1 Q7",
+    createdAt: "2026-06-16T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv3_14-june2026",
+    question: "Why does the standard enthalpy of combustion obtained from mean bond enthalpies usually differ from the experimental value measured by bomb calorimetry?",
+    options: [
+      { text: "Mean bond enthalpies are averages taken over various distinct molecular environments, and bond enthalpies apply only to species in the gaseous state", isCorrect: true },
+      { text: "Mean bond enthalpies take into account intermolecular London dispersion forces" },
+      { text: "Calorimetry measurements always assume 100% heat loss to the surroundings" },
+      { text: "Bond enthalpies cannot be defined for covalent bonds" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Mean bond enthalpies are averaged across a wide range of different chemical compounds rather than the specific molecule under test.\n* Furthermore, bond enthalpy calculations assume all reactants and products are in the gaseous state, neglecting enthalpies of vaporisation or condensation (such as liquid water formed in combustion).",
+    level: 3,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2025 Paper 1 Q8",
+    createdAt: "2026-06-16T10:00:00Z"
   }
 ];
 

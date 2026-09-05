@@ -73,5 +73,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q444",
     createdAt: "2026-08-22T04:15:00Z"
+  },
+  {
+    id: "ex_ci_u12_l1_lv1_5-2023",
+    question: "Which piece of laboratory apparatus is most suitable for accurately measuring exactly 25.0 cm³ of a solution for use in a titration?",
+    options: [
+      { text: "A 25.0 cm³ volumetric pipette", isCorrect: true },
+      { text: "A 50 cm³ beaker" },
+      { text: "A 100 cm³ measuring cylinder" },
+      { text: "A 250 cm³ conical flask" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A volumetric pipette is calibrated to deliver a single fixed volume (25.0 cm³) with high accuracy.\n* Beakers and measuring cylinders are less precise.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q203",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l1_lv1_6-2024",
+    question: "Which piece of apparatus is used to accurately measure variable volumes of liquid up to 50.0 cm³ during a titration?",
+    options: [
+      { text: "Burette", isCorrect: true },
+      { text: "Gas syringe" },
+      { text: "Volumetric pipette" },
+      { text: "Boiling tube" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A burette is designed to deliver precisely measured variable volumes of liquid dropwise to within 0.05 cm³ during titrations.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q204",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l1_lv1_7-2025",
+    question: "Which apparatus is best suited for collecting and measuring the volume of gas produced in a chemical reaction?",
+    options: [
+      { text: "Gas syringe", isCorrect: true },
+      { text: "Conical flask" },
+      { text: "Pipette" },
+      { text: "Beaker" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A graduated gas syringe allows direct collection and accurate volume measurement of gases, including those soluble in water.",
+    level: 1,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q205",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

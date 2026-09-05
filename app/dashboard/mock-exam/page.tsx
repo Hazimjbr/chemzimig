@@ -7,7 +7,7 @@ import {
   Trophy, ArrowLeft, Clock, CheckCircle2, XCircle, AlertCircle, 
   ChevronRight, ChevronLeft, Sparkles, Award, BarChart2, Lock, 
   BookOpen, Check, X, Flag, LayoutGrid, ShieldAlert, Maximize2, 
-  Minimize2, RefreshCw, AlertTriangle, ExternalLink, HelpCircle
+  Minimize2, RefreshCw, AlertTriangle, ExternalLink, HelpCircle, Printer
 } from 'lucide-react';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
@@ -21,6 +21,7 @@ import { EXAM_PROFILES, ExamPaperProfile, calculateGrade } from '@/data/exams/gr
 import { PeriodicTableModal } from '@/components/exam-simulator/PeriodicTableModal';
 import { ProctorWarningModal } from '@/components/exam-simulator/ProctorWarningModal';
 import { ExamReportCard } from '@/components/exam-simulator/ExamReportCard';
+import { PrintExamModal } from '@/components/exam-simulator/PrintExamModal';
 import { evaluateWrittenAnswer, MarkingEvaluationResult } from '@/lib/keyword-evaluator';
 import InteractiveGraphPlotter from '@/components/InteractiveGraphPlotter';
 import InteractiveScaleReader from '@/components/InteractiveScaleReader';
@@ -65,6 +66,7 @@ export default function MockExamPage() {
   const [periodicTableOpen, setPeriodicTableOpen] = useState<boolean>(false);
   const [paletteOpen, setPaletteOpen] = useState<boolean>(false);
   const [finishConfirmOpen, setFinishConfirmOpen] = useState<boolean>(false);
+  const [printModalOpen, setPrintModalOpen] = useState<boolean>(false);
 
   // Filter profiles based on student enrollment, or show all for admin
   const availableProfiles = useMemo(() => {
@@ -123,6 +125,30 @@ export default function MockExamPage() {
     return text;
   };
 
+  // Filter tab state
+  const [activeTab, setActiveTab] = useState<'all' | 'oct2026' | 'june2026' | 'jan2026' | 'oct2025' | 'june2025' | 'jan2025' | 'specimen' | 'edexcel-as' | 'edexcel-a2' | 'cambridge' | 'cie-2025' | 'cie-2024' | 'cie-2023'>('all');
+
+  // Filtered profiles for current tab
+  const displayedProfiles = useMemo(() => {
+    return availableProfiles.filter(profile => {
+      if (activeTab === 'all') return true;
+      if (activeTab === 'oct2026') return profile.id.includes('oct2026');
+      if (activeTab === 'june2026') return profile.id.includes('june2026');
+      if (activeTab === 'jan2026') return profile.id.includes('jan2026');
+      if (activeTab === 'oct2025') return profile.id.includes('oct2025');
+      if (activeTab === 'june2025') return profile.id.includes('june2025');
+      if (activeTab === 'jan2025') return profile.id.includes('jan2025');
+      if (activeTab === 'specimen') return profile.id.includes('specimen');
+      if (activeTab === 'cie-2025') return profile.id.includes('cie') && profile.id.includes('2025');
+      if (activeTab === 'cie-2024') return profile.id.includes('cie') && profile.id.includes('2024');
+      if (activeTab === 'cie-2023') return profile.id.includes('cie') && profile.id.includes('2023');
+      if (activeTab === 'edexcel-as') return profile.board === 'edexcel' && profile.curriculumTrack === 'edexcel-as';
+      if (activeTab === 'edexcel-a2') return profile.board === 'edexcel' && profile.curriculumTrack === 'edexcel-a2';
+      if (activeTab === 'cambridge') return profile.board === 'cambridge';
+      return true;
+    });
+  }, [availableProfiles, activeTab]);
+
   // Build question pool matching the chosen profile
   const generateExamQuestions = useCallback((profile: ExamPaperProfile): Question[] => {
     let pool: Question[] = [];
@@ -132,32 +158,143 @@ export default function MockExamPage() {
         q.curriculum === 'igcse' || q.curriculum === 'cie-igcse' || (q.source && q.source.toLowerCase().includes('cambridge'))
       );
 
+      const isJune2025 = profile.id.includes('june2025');
+      const isJune2024 = profile.id.includes('june2024');
+      const isJune2023 = profile.id.includes('june2023');
+
       if (profile.paperType === 'structured') {
-        const structuredPool = cieQuestions.filter(q => q.paperType === 'structured' || (q.source && (q.source.includes('Paper 4') || q.source.includes('Paper 3') || q.source.includes('0620/4') || q.source.includes('0620/3'))));
+        let structuredPool = cieQuestions.filter(q => q.paperType === 'structured' || (q.source && (q.source.includes('Paper 4') || q.source.includes('Paper 3') || q.source.includes('0620/4') || q.source.includes('0620/3'))));
+        if (isJune2025) {
+          const y25 = structuredPool.filter(q => q.id.includes('2025') || (q.source && q.source.includes('2025')));
+          if (y25.length >= 5) structuredPool = y25;
+        }
         pool = structuredPool.length >= 5 ? structuredPool : cieQuestions;
       } else if (profile.paperType === 'practical') {
-        const practicalPool = cieQuestions.filter(q => q.paperType === 'practical' || (q.source && (q.source.includes('Paper 6') || q.source.includes('0620/6'))));
+        let practicalPool = cieQuestions.filter(q => q.paperType === 'practical' || (q.source && (q.source.includes('Paper 6') || q.source.includes('0620/6'))));
+        if (isJune2025) {
+          const y25 = practicalPool.filter(q => q.id.includes('2025') || (q.source && q.source.includes('2025')));
+          if (y25.length >= 5) practicalPool = y25;
+        }
         pool = practicalPool.length >= 5 ? practicalPool : cieQuestions;
+      } else if (isJune2025) {
+        const y25Questions = cieQuestions.filter(q => q.id.includes('2025') || (q.source && q.source.includes('2025')));
+        const nonY25 = cieQuestions.filter(q => !q.id.includes('2025') && (!q.source || !q.source.includes('2025')));
+        const shuffledNon = [...nonY25].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - y25Questions.length);
+        pool = [...y25Questions, ...shuffledNon.slice(0, needed)];
+      } else if (isJune2024) {
+        const y24Questions = cieQuestions.filter(q => q.id.includes('2024') || (q.source && q.source.includes('2024')));
+        const nonY24 = cieQuestions.filter(q => !q.id.includes('2024') && (!q.source || !q.source.includes('2024')));
+        const shuffledNon = [...nonY24].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - y24Questions.length);
+        pool = [...y24Questions, ...shuffledNon.slice(0, needed)];
+      } else if (isJune2023) {
+        const y23Questions = cieQuestions.filter(q => q.id.includes('2023') || (q.source && q.source.includes('2023')));
+        const nonY23 = cieQuestions.filter(q => !q.id.includes('2023') && (!q.source || !q.source.includes('2023')));
+        const shuffledNon = [...nonY23].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - y23Questions.length);
+        pool = [...y23Questions, ...shuffledNon.slice(0, needed)];
       } else {
-        // MCQ (Paper 1 / Paper 2)
+        // MCQ (Paper 1 / Paper 2 general mock)
         const mcqPool = cieQuestions.filter(q => !q.paperType || q.paperType === 'mcq' || (q.source && (q.source.includes('Paper 2') || q.source.includes('Paper 1') || q.source.includes('0620/2') || q.source.includes('0620/1'))));
         pool = mcqPool.length >= profile.defaultQuestionCount ? mcqPool : cieQuestions;
       }
     } else {
       // Edexcel
-      const isA2 = profile.id === 'edexcel-ial-a2';
-      const edexcelQuestions = questionBank.filter(q => {
+      const isOct2026 = profile.id.includes('oct2026');
+      const isJune2026 = profile.id.includes('june2026');
+      const isJan2026 = profile.id.includes('jan2026');
+      const isOct2025 = profile.id.includes('oct2025');
+      const isJune2025 = profile.id.includes('june2025');
+      const isJan2025 = profile.id.includes('jan2025');
+      const isSpecimen = profile.id.includes('specimen');
+      let targetUnit = '';
+      if (profile.id.includes('u1')) targetUnit = 'edexcel-unit-1';
+      else if (profile.id.includes('u2')) targetUnit = 'edexcel-unit-2';
+      else if (profile.id.includes('u3')) targetUnit = 'edexcel-unit-3';
+      else if (profile.id.includes('u4')) targetUnit = 'edexcel-unit-4';
+      else if (profile.id.includes('u5')) targetUnit = 'edexcel-unit-5';
+      else if (profile.id.includes('u6')) targetUnit = 'edexcel-unit-6';
+
+      const isA2 = profile.id === 'edexcel-ial-a2' || targetUnit === 'edexcel-unit-4' || targetUnit === 'edexcel-unit-5' || targetUnit === 'edexcel-unit-6';
+
+      let unitQuestions = questionBank.filter(q => {
         const isEdx = q.curriculum?.includes('edexcel') || (q.source && q.source.toLowerCase().includes('edexcel'));
         if (!isEdx) return false;
+        if (targetUnit) {
+          return q.topic === targetUnit || q.topic?.includes(targetUnit);
+        }
         if (isA2) {
           return q.topic?.includes('unit-4') || q.topic?.includes('unit-5') || q.topic?.includes('unit-6');
         }
         return q.topic?.includes('unit-1') || q.topic?.includes('unit-2') || q.topic?.includes('unit-3') || q.curriculum === 'edexcel-as';
       });
 
-      pool = edexcelQuestions.length >= profile.defaultQuestionCount 
-        ? edexcelQuestions 
-        : questionBank.filter(q => q.curriculum?.includes('edexcel') || q.curriculum === 'igcse');
+      if (profile.paperType === 'practical') {
+        const practicalOnly = unitQuestions.filter(q => q.paperType === 'practical' || (q.source && (q.source.includes('WCH13') || q.source.includes('WCH16') || q.source.toLowerCase().includes('practical'))));
+        if (practicalOnly.length >= 10) {
+          unitQuestions = practicalOnly;
+        }
+      }
+
+      if (isOct2026) {
+        const oct26Questions = unitQuestions.filter(q => q.source && q.source.includes('Oct 2026'));
+        const nonOct26Questions = unitQuestions.filter(q => !q.source || !q.source.includes('Oct 2026'));
+        const shuffledNon = [...nonOct26Questions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - oct26Questions.length);
+        const combined = [...oct26Questions, ...shuffledNon.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else if (isSpecimen) {
+        const specQuestions = unitQuestions.filter(q => q.source && (q.source.includes('Specimen') || q.source.includes('Sample')));
+        const nonSpecQuestions = unitQuestions.filter(q => !q.source || (!q.source.includes('Specimen') && !q.source.includes('Sample')));
+        const shuffledNon = [...nonSpecQuestions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - specQuestions.length);
+        const combined = [...specQuestions, ...shuffledNon.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else if (isJan2025) {
+        const jan25Questions = unitQuestions.filter(q => q.source && q.source.includes('Jan 2025'));
+        const nonJan25Questions = unitQuestions.filter(q => !q.source || !q.source.includes('Jan 2025'));
+        const shuffledNon = [...nonJan25Questions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - jan25Questions.length);
+        const combined = [...jan25Questions, ...shuffledNon.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else if (isJune2025) {
+        const june25Questions = unitQuestions.filter(q => q.source && q.source.includes('June 2025'));
+        const nonJune25Questions = unitQuestions.filter(q => !q.source || !q.source.includes('June 2025'));
+        const shuffledNon = [...nonJune25Questions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - june25Questions.length);
+        const combined = [...june25Questions, ...shuffledNon.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else if (isOct2025) {
+        const octQuestions = unitQuestions.filter(q => q.source && q.source.includes('Oct 2025'));
+        const nonOctQuestions = unitQuestions.filter(q => !q.source || !q.source.includes('Oct 2025'));
+        const shuffledNonOct = [...nonOctQuestions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - octQuestions.length);
+        const combined = [...octQuestions, ...shuffledNonOct.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else if (isJan2026) {
+        const janQuestions = unitQuestions.filter(q => q.source && q.source.includes('Jan 2026'));
+        const nonJanQuestions = unitQuestions.filter(q => !q.source || !q.source.includes('Jan 2026'));
+        const shuffledNonJan = [...nonJanQuestions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - janQuestions.length);
+        const combined = [...janQuestions, ...shuffledNonJan.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else if (isJune2026) {
+        const juneQuestions = unitQuestions.filter(q => q.source && q.source.includes('June 2026'));
+        const nonJuneQuestions = unitQuestions.filter(q => !q.source || !q.source.includes('June 2026'));
+        const shuffledNonJune = [...nonJuneQuestions].sort(() => Math.random() - 0.5);
+        const needed = Math.max(0, profile.defaultQuestionCount - juneQuestions.length);
+        const combined = [...juneQuestions, ...shuffledNonJune.slice(0, needed)];
+        pool = combined.length > 0 ? combined : unitQuestions;
+      } else {
+        pool = unitQuestions.length >= profile.defaultQuestionCount 
+          ? unitQuestions 
+          : questionBank.filter(q => q.curriculum?.includes('edexcel') || q.curriculum === 'igcse');
+      }
+    }
+
+    if (profile.id.includes('oct2026') || profile.id.includes('june2026') || profile.id.includes('jan2026') || profile.id.includes('oct2025') || profile.id.includes('june2025') || profile.id.includes('jan2025') || profile.id.includes('specimen')) {
+      return [...pool].sort(() => Math.random() - 0.5);
     }
 
     // Shuffle and pick desired count
@@ -450,11 +587,94 @@ export default function MockExamPage() {
             </Link>
           </div>
 
+          {/* Category Filter Tabs */}
+          <div className="flex flex-wrap items-center gap-2 pb-2">
+            {[
+              { id: 'all', label: 'All Papers' },
+              { id: 'cie-2025', label: '🏛️ CIE June 2025', highlightCie25: true },
+              { id: 'cie-2024', label: '🏛️ CIE June 2024', highlightCie24: true },
+              { id: 'cie-2023', label: '🏛️ CIE June 2023', highlightCie23: true },
+              { id: 'oct2026', label: '🍁 Oct 2026 Series', highlightOct26: true },
+              { id: 'june2026', label: '✨ June 2026 Series', highlightJune: true },
+              { id: 'jan2026', label: '❄️ Jan 2026 Series', highlightJan: true },
+              { id: 'oct2025', label: '🍂 Oct 2025 Series', highlightOct: true },
+              { id: 'june2025', label: '☀️ June 2025 Series', highlightJune25: true },
+              { id: 'jan2025', label: '🧊 Jan 2025 Series', highlightJan25: true },
+              { id: 'specimen', label: '📜 Specimen Papers', highlightSpecimen: true },
+              { id: 'cambridge', label: 'Cambridge IGCSE (All)' },
+              { id: 'edexcel-as', label: 'Pearson Edexcel AS' },
+              { id: 'edexcel-a2', label: 'Pearson Edexcel A2' },
+            ].map(tab => {
+              const isActive = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 ${
+                    isActive
+                      ? (tab as any).highlightCie25
+                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white shadow-lg shadow-emerald-500/20'
+                        : (tab as any).highlightCie24
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20'
+                        : (tab as any).highlightCie23
+                        ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg shadow-blue-500/20'
+                        : tab.highlightOct26
+                        ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white shadow-lg shadow-orange-500/20'
+                        : tab.highlightJune
+                        ? 'bg-gradient-to-r from-rose-500 to-amber-500 text-white shadow-lg shadow-rose-500/20'
+                        : tab.highlightJan
+                        ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-lg shadow-sky-500/20'
+                        : tab.highlightOct
+                        ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg shadow-amber-500/20'
+                        : tab.highlightJune25
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/20'
+                        : tab.highlightJan25
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/20'
+                        : tab.highlightSpecimen
+                        ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white shadow-lg shadow-purple-500/20'
+                        : 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/20'
+                      : (tab as any).highlightCie25
+                      ? 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 hover:bg-emerald-500/20'
+                      : (tab as any).highlightCie24
+                      ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 hover:bg-cyan-500/20'
+                      : (tab as any).highlightCie23
+                      ? 'bg-blue-500/10 text-blue-300 border border-blue-500/20 hover:bg-blue-500/20'
+                      : tab.highlightOct26
+                      ? 'bg-orange-500/10 text-orange-300 border border-orange-500/20 hover:bg-orange-500/20'
+                      : tab.highlightJune
+                      ? 'bg-rose-500/10 text-rose-300 border border-rose-500/20 hover:bg-rose-500/20'
+                      : tab.highlightJan
+                      ? 'bg-sky-500/10 text-sky-300 border border-sky-500/20 hover:bg-sky-500/20'
+                      : tab.highlightOct
+                      ? 'bg-amber-500/10 text-amber-300 border border-amber-500/20 hover:bg-amber-500/20'
+                      : tab.highlightJune25
+                      ? 'bg-teal-500/10 text-teal-300 border border-teal-500/20 hover:bg-teal-500/20'
+                      : tab.highlightJan25
+                      ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 hover:bg-cyan-500/20'
+                      : tab.highlightSpecimen
+                      ? 'bg-purple-500/10 text-purple-300 border border-purple-500/20 hover:bg-purple-500/20'
+                      : 'bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/5'
+                  }`}
+                >
+                  {tab.id === 'june2026' && <Sparkles className="w-3.5 h-3.5 text-amber-300" />}
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
           {/* Exam Profiles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {availableProfiles.map(profile => {
+            {displayedProfiles.map(profile => {
               const isSelected = selectedProfileId === profile.id;
               const isCambridge = profile.board === 'cambridge';
+              const isOct2026 = profile.id.includes('oct2026');
+              const isJune2026 = profile.id.includes('june2026');
+              const isJan2026 = profile.id.includes('jan2026');
+              const isOct2025 = profile.id.includes('oct2025');
+              const isJune2025 = profile.id.includes('june2025');
+              const isJan2025 = profile.id.includes('jan2025');
+              const isSpecimen = profile.id.includes('specimen');
 
               return (
                 <div
@@ -462,7 +682,27 @@ export default function MockExamPage() {
                   onClick={() => setSelectedProfileId(profile.id)}
                   className={`relative p-6 md:p-8 rounded-3xl border text-left cursor-pointer transition-all duration-300 flex flex-col justify-between h-80 ${
                     isSelected
-                      ? 'bg-gradient-to-br from-indigo-950/40 via-[#0d1428] to-[#070b14] border-indigo-500/50 shadow-2xl shadow-indigo-500/10 ring-2 ring-indigo-500/30'
+                      ? profile.id.includes('cie') && profile.id.includes('2025')
+                        ? 'bg-gradient-to-br from-emerald-950/40 via-[#0a201c] to-[#070b14] border-emerald-500/50 shadow-2xl shadow-emerald-500/15 ring-2 ring-emerald-500/30'
+                        : profile.id.includes('cie') && profile.id.includes('2024')
+                        ? 'bg-gradient-to-br from-cyan-950/40 via-[#081e2b] to-[#070b14] border-cyan-500/50 shadow-2xl shadow-cyan-500/15 ring-2 ring-cyan-500/30'
+                        : profile.id.includes('cie') && profile.id.includes('2023')
+                        ? 'bg-gradient-to-br from-blue-950/40 via-[#0a1832] to-[#070b14] border-blue-500/50 shadow-2xl shadow-blue-500/15 ring-2 ring-blue-500/30'
+                        : isOct2026
+                        ? 'bg-gradient-to-br from-orange-950/40 via-[#20100a] to-[#070b14] border-orange-500/50 shadow-2xl shadow-orange-500/15 ring-2 ring-orange-500/30'
+                        : isJan2026
+                        ? 'bg-gradient-to-br from-sky-950/40 via-[#0a1832] to-[#070b14] border-sky-500/50 shadow-2xl shadow-sky-500/15 ring-2 ring-sky-500/30'
+                        : isJan2025
+                        ? 'bg-gradient-to-br from-cyan-950/40 via-[#081e2b] to-[#070b14] border-cyan-500/50 shadow-2xl shadow-cyan-500/15 ring-2 ring-cyan-500/30'
+                        : isOct2025
+                        ? 'bg-gradient-to-br from-amber-950/40 via-[#1e140a] to-[#070b14] border-amber-500/50 shadow-2xl shadow-amber-500/15 ring-2 ring-amber-500/30'
+                        : isJune2025
+                        ? 'bg-gradient-to-br from-teal-950/40 via-[#0a201c] to-[#070b14] border-teal-500/50 shadow-2xl shadow-teal-500/15 ring-2 ring-teal-500/30'
+                        : isJune2026
+                        ? 'bg-gradient-to-br from-rose-950/40 via-[#161028] to-[#070b14] border-rose-500/50 shadow-2xl shadow-rose-500/15 ring-2 ring-rose-500/30'
+                        : isSpecimen
+                        ? 'bg-gradient-to-br from-purple-950/40 via-[#180a2b] to-[#070b14] border-purple-500/50 shadow-2xl shadow-purple-500/15 ring-2 ring-purple-500/30'
+                        : 'bg-gradient-to-br from-indigo-950/40 via-[#0d1428] to-[#070b14] border-indigo-500/50 shadow-2xl shadow-indigo-500/10 ring-2 ring-indigo-500/30'
                       : 'bg-white/[0.02] border-white/5 hover:border-white/15 hover:bg-white/[0.04]'
                   }`}
                 >
@@ -472,14 +712,80 @@ export default function MockExamPage() {
                       <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-xl font-bold border ${
                         isCambridge
                           ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300'
+                          : isOct2026
+                          ? 'bg-orange-500/10 border-orange-500/30 text-orange-300'
+                          : isOct2025
+                          ? 'bg-amber-500/10 border-amber-500/30 text-amber-300'
+                          : isJan2026
+                          ? 'bg-sky-500/10 border-sky-500/30 text-sky-300'
+                          : isJan2025
+                          ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300'
+                          : isJune2025
+                          ? 'bg-teal-500/10 border-teal-500/30 text-teal-300'
+                          : isJune2026
+                          ? 'bg-rose-500/10 border-rose-500/30 text-rose-300'
+                          : isSpecimen
+                          ? 'bg-purple-500/10 border-purple-500/30 text-purple-300'
                           : 'bg-purple-500/10 border-purple-500/30 text-purple-300'
                       }`}>
-                        {isCambridge ? '🏛️' : '🎓'}
+                        {isCambridge ? '🏛️' : isOct2026 ? '🍁' : isSpecimen ? '📜' : isOct2025 ? '🍂' : isJan2026 ? '❄️' : isJan2025 ? '🧊' : isJune2025 ? '☀️' : isJune2026 ? '🌟' : '🎓'}
                       </div>
                       <div>
-                        <span className="text-[11px] font-bold text-indigo-400 uppercase tracking-wider block">
-                          {profile.paperCode}
-                        </span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] font-bold text-indigo-400 uppercase tracking-wider block">
+                            {profile.paperCode}
+                          </span>
+                          {profile.id.includes('cie') && profile.id.includes('2025') && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-300">
+                              June 2025 Series
+                            </span>
+                          )}
+                          {profile.id.includes('cie') && profile.id.includes('2024') && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300">
+                              June 2024 Series
+                            </span>
+                          )}
+                          {profile.id.includes('cie') && profile.id.includes('2023') && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-300">
+                              June 2023 Series
+                            </span>
+                          )}
+                          {isOct2026 && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-orange-500/20 border border-orange-500/40 text-orange-300">
+                              Oct 2026
+                            </span>
+                          )}
+                          {isJan2025 && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-500/40 text-cyan-300">
+                              Jan 2025
+                            </span>
+                          )}
+                          {isJune2025 && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-teal-500/20 border border-teal-500/40 text-teal-300">
+                              June 2025
+                            </span>
+                          )}
+                          {isOct2025 && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300">
+                              Oct 2025
+                            </span>
+                          )}
+                          {isJan2026 && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-sky-500/20 border border-sky-500/40 text-sky-300">
+                              Jan 2026
+                            </span>
+                          )}
+                          {isJune2026 && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-rose-500/20 border border-rose-500/40 text-rose-300">
+                              June 2026
+                            </span>
+                          )}
+                          {isSpecimen && (
+                            <span className="text-[9px] font-black uppercase px-2 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/40 text-purple-300">
+                              Specimen
+                            </span>
+                          )}
+                        </div>
                         <h3 className="text-lg font-bold text-white">{profile.title}</h3>
                       </div>
                     </div>
@@ -522,10 +828,12 @@ export default function MockExamPage() {
                   {/* Bottom: Select indicator */}
                   <div className="pt-4 border-t border-white/5 flex items-center justify-between">
                     <span className="text-xs text-slate-400">
-                      {isCambridge ? 'Cambridge International Standards' : 'Pearson Edexcel IAL Specification'}
+                      {profile.id.includes('cie') && profile.id.includes('2025') ? 'Official Cambridge June 2025 Exam Series' : profile.id.includes('cie') && profile.id.includes('2024') ? 'Official Cambridge June 2024 Exam Series' : profile.id.includes('cie') && profile.id.includes('2023') ? 'Official Cambridge June 2023 Exam Series' : isCambridge ? 'Cambridge International Standards' : isOct2026 ? 'Autumn 2026 Examination Series' : isSpecimen ? 'Official Pearson Specimen Assessment' : isOct2025 ? 'Autumn 2025 Examination Series' : isJan2026 ? 'Winter 2026 Examination Series' : isJan2025 ? 'Winter 2025 Examination Series' : isJune2025 ? 'Summer 2025 Examination Series' : isJune2026 ? 'Summer 2026 Examination Series' : 'Pearson Edexcel IAL Specification'}
                     </span>
                     <div className={`w-6 h-6 rounded-full flex items-center justify-center border ${
-                      isSelected ? 'bg-indigo-500 border-indigo-400 text-white' : 'border-white/20'
+                      isSelected 
+                        ? profile.id.includes('cie') && profile.id.includes('2025') ? 'bg-emerald-500 border-emerald-400 text-white' : profile.id.includes('cie') && profile.id.includes('2024') ? 'bg-cyan-500 border-cyan-400 text-white' : profile.id.includes('cie') && profile.id.includes('2023') ? 'bg-blue-500 border-blue-400 text-white' : isOct2026 ? 'bg-orange-500 border-orange-400 text-white' : isJan2026 ? 'bg-sky-500 border-sky-400 text-white' : isJan2025 ? 'bg-cyan-500 border-cyan-400 text-white' : isOct2025 ? 'bg-amber-500 border-amber-400 text-white' : isJune2025 ? 'bg-teal-500 border-teal-400 text-white' : isJune2026 ? 'bg-rose-500 border-rose-400 text-white' : isSpecimen ? 'bg-purple-500 border-purple-400 text-white' : 'bg-indigo-500 border-indigo-400 text-white' 
+                        : 'border-white/20'
                     }`}>
                       {isSelected && <Check className="w-3.5 h-3.5" />}
                     </div>
@@ -535,11 +843,19 @@ export default function MockExamPage() {
             })}
           </div>
 
-          {/* Proceed Button */}
-          <div className="flex justify-end pt-4">
+          {/* Proceed & Print Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/5">
+            <button
+              onClick={() => setPrintModalOpen(true)}
+              className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white font-bold text-sm flex items-center justify-center gap-2.5 transition-all active:scale-95"
+            >
+              <Printer className="w-4 h-4 text-emerald-400" />
+              <span>Print Paper / Save PDF</span>
+            </button>
+
             <button
               onClick={() => setPhase('CONFIRM_RULES')}
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold text-sm shadow-xl shadow-indigo-500/25 flex items-center gap-3 transition-all hover:scale-[1.02] active:scale-98"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold text-sm shadow-xl shadow-indigo-500/25 flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-98"
             >
               <span>Review Examination Instructions</span>
               <ChevronRight className="w-4 h-4" />
@@ -596,21 +912,31 @@ export default function MockExamPage() {
             </div>
 
             {/* Action buttons */}
-            <div className="flex items-center justify-between pt-4 border-t border-white/5">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/5">
               <button
                 onClick={() => setPhase('SELECT')}
-                className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-bold transition-all"
+                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 text-xs font-bold transition-all"
               >
                 Change Paper
               </button>
 
-              <button
-                onClick={handleStartExam}
-                className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold text-sm shadow-xl shadow-emerald-500/25 flex items-center gap-2 transition-all hover:scale-[1.02] active:scale-98"
-              >
-                <Maximize2 className="w-4 h-4" />
-                <span>Accept & Enter Examination</span>
-              </button>
+              <div className="flex items-center gap-3 w-full sm:w-auto">
+                <button
+                  onClick={() => setPrintModalOpen(true)}
+                  className="flex-1 sm:flex-initial px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition-all active:scale-95"
+                >
+                  <Printer className="w-4 h-4 text-emerald-400" />
+                  <span>Print Paper PDF</span>
+                </button>
+
+                <button
+                  onClick={handleStartExam}
+                  className="flex-1 sm:flex-initial px-8 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-extrabold text-sm shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-98"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                  <span>Accept & Enter Examination</span>
+                </button>
+              </div>
             </div>
 
           </div>
@@ -1178,6 +1504,18 @@ export default function MockExamPage() {
           </div>
 
         </div>
+      )}
+
+      {/* Print Paper Modal */}
+      {printModalOpen && (
+        <PrintExamModal
+          isOpen={printModalOpen}
+          onClose={() => setPrintModalOpen(false)}
+          questions={generateExamQuestions(activeProfile)}
+          defaultExamTitle={`${activeProfile.paperCode}: ${activeProfile.paperName}`}
+          defaultCurriculumTitle={activeProfile.board === 'cambridge' ? 'Cambridge International IGCSE' : 'Pearson Edexcel International A-Level'}
+          defaultTopicTitle={activeProfile.title}
+        />
       )}
 
     </div>

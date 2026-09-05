@@ -73,5 +73,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q84",
     createdAt: "2026-08-20T16:15:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv1_5-2023",
+    question: "A steel cutlery knife is to be electroplated with nickel. What should be used as the cathode and what should be used as the anode?",
+    options: [
+      { text: "Cathode: steel knife; Anode: pure nickel", isCorrect: true },
+      { text: "Cathode: pure nickel; Anode: steel knife" },
+      { text: "Cathode: graphite; Anode: steel knife" },
+      { text: "Cathode: steel knife; Anode: platinum" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In electroplating, the object to be plated is always connected as the cathode (negative electrode).\n* The anode (positive electrode) is made of the pure plating metal (nickel), which dissolves into the solution to supply metal ions.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q21",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv1_6-2024",
+    question: "Which of the following is a primary reason for electroplating metals?",
+    options: [
+      { text: "To improve corrosion resistance and enhance appearance", isCorrect: true },
+      { text: "To make the metal conduct electricity less efficiently" },
+      { text: "To increase the density and weight of the metal" },
+      { text: "To lower the melting point of the metal" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Electroplating is primarily carried out to protect reactive metals from corrosion (such as rusting) and to improve the aesthetic appearance with a shiny decorative finish.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q21",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv1_7-2025",
+    question: "A copper medallion is to be electroplated with silver. Which electrolyte solution should be used?",
+    options: [
+      { text: "Aqueous silver nitrate", isCorrect: true },
+      { text: "Aqueous copper(II) sulfate" },
+      { text: "Dilute nitric acid" },
+      { text: "Aqueous sodium chloride" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The electrolyte solution must contain the cations of the metal being deposited.\n* For silver plating, aqueous silver nitrate ($AgNO_3$) contains silver ions ($Ag^+$), which are reduced at the cathode to form a coating of silver.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q23",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

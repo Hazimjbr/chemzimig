@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q388",
     createdAt: "2026-08-21T21:35:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv2_5-2023",
+    question: "Why is bioethanol considered to be a 'carbon-neutral' fuel?",
+    options: [
+      { text: "The carbon dioxide released when bioethanol burns equals the carbon dioxide absorbed by the plants as they grew", isCorrect: true },
+      { text: "Bioethanol burns without forming any carbon dioxide" },
+      { text: "Bioethanol contains only hydrogen and oxygen atoms" },
+      { text: "Bioethanol produces ozone when it combusts" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Crops absorb CO₂ from the atmosphere during photosynthesis as they grow.\n* When the bioethanol fuel produced from these crops is burned, the same amount of CO₂ is released, resulting in net zero addition of carbon to the atmosphere.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q143",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv2_6-2024",
+    question: "How do the Earth's oceans function as an important natural carbon sink?",
+    options: [
+      { text: "They dissolve carbon dioxide, which marine organisms use to build calcium carbonate shells and skeletons", isCorrect: true },
+      { text: "They freeze carbon dioxide into solid dry ice on the ocean bed" },
+      { text: "They react carbon dioxide with sodium chloride to produce methane" },
+      { text: "They convert dissolved carbon dioxide into petroleum oil" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Oceans absorb huge quantities of dissolved CO₂.\n* Marine organisms like corals and molluscs incorporate this dissolved carbon into calcium carbonate (CaCO₃) shells, which eventually form limestone sediments on the seabed.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q144",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv2_7-2025",
+    question: "Which of the following strategies helps reduce global greenhouse gas emissions?",
+    options: [
+      { text: "Generating electricity from renewable sources like wind, solar, and hydroelectric power", isCorrect: true },
+      { text: "Replacing natural gas power stations with coal-fired power stations" },
+      { text: "Increasing reliance on petrol and diesel transport vehicles" },
+      { text: "Clearing forests to create more open agricultural grazing land" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Renewable energy systems (wind, solar, hydro) generate electricity without combusting fossil fuels, avoiding carbon dioxide emissions into the atmosphere.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q145",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

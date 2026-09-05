@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q232",
     createdAt: "2026-08-21T06:10:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv1_4-2023",
+    question: "Which test confirms that an unknown evolved gas is chlorine?",
+    options: [
+      { text: "It bleaches damp litmus paper white", isCorrect: true },
+      { text: "It relights a glowing wooden splint" },
+      { text: "It turns limewater milky and cloudy" },
+      { text: "It pops with a lighted splint" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Chlorine ($Cl_2$) is a pale green gas that turns damp blue litmus paper red (due to acidic hypochlorous acid) and then bleaches it completely white.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q36",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv1_5-2024",
+    question: "What flame colour is produced by sodium compounds during a flame test?",
+    options: [
+      { text: "Yellow", isCorrect: true },
+      { text: "Lilac" },
+      { text: "Crimson red" },
+      { text: "Apple green" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In a flame test:\n  - Sodium ($Na^+$): persistent bright yellow flame\n  - Potassium ($K^+$): lilac\n  - Lithium ($Li^+$): red/crimson\n  - Copper ($Cu^{2+}$): blue-green.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q37",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv1_6-2025",
+    question: "Which gas extinguishes a lighted splint with a characteristic squeaky 'pop' sound?",
+    options: [
+      { text: "Hydrogen", isCorrect: true },
+      { text: "Oxygen" },
+      { text: "Carbon dioxide" },
+      { text: "Ammonia" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Hydrogen gas is flammable and reacts explosively with oxygen when a lighted wooden splint is held at the mouth of a test tube, creating a distinct 'pop' sound.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q39",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

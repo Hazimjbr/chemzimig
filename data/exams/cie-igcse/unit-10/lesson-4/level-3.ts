@@ -73,5 +73,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q392",
     createdAt: "2026-08-21T21:55:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv3_5-2023",
+    question: "During photosynthesis, a green plant absorbs 72.0 dm³ of carbon dioxide measured at r.t.p. What mass of glucose is produced by this reaction?\n6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂\n($M_r(\\text{glucose}) = 180$; Molar volume of gas at r.t.p. = 24.0 dm³/mol)",
+    options: [
+      { text: "90.0 g", isCorrect: true },
+      { text: "180 g" },
+      { text: "540 g" },
+      { text: "15.0 g" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles of CO₂ absorbed = 72.0 / 24.0 = 3.00 mol.\n* From the stoichiometric equation, 6 mol CO₂ produce 1 mol glucose.\n* Moles of glucose = 3.00 / 6 = 0.500 mol.\n* Mass of glucose = 0.500 mol × 180 g/mol = 90.0 g.",
+    level: 3,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q146",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv3_6-2024",
+    question: "Why is a vehicle powered by a hydrogen-oxygen fuel cell considered zero-emission during operation?",
+    options: [
+      { text: "The only chemical product emitted from the exhaust is pure water vapour", isCorrect: true },
+      { text: "The vehicle consumes and filters harmful pollutants from ambient air" },
+      { text: "Hydrogen fuel cells operate without undergoing any chemical change" },
+      { text: "The vehicle's emissions are stored indefinitely inside the battery" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In a hydrogen-oxygen fuel cell, hydrogen fuel is electrochemically oxidised: 2H₂(g) + O₂(g) → 2H₂O(l).\n* The only chemical exhaust product is harmless water vapour; no greenhouse gases or toxic pollutants are released at point of use.",
+    level: 3,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q147",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l4_lv3_7-2025",
+    question: "What is meant by 'green hydrogen' in sustainable environmental chemistry?",
+    options: [
+      { text: "Hydrogen produced by water electrolysis powered entirely by renewable energy sources", isCorrect: true },
+      { text: "Hydrogen extracted directly from chlorophyll in green plants" },
+      { text: "Hydrogen manufactured from the steam reforming of methane with carbon capture" },
+      { text: "Hydrogen compressed into a green-tinted liquid cylinder" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Green hydrogen is generated through the electrolysis of water (2H₂O → 2H₂ + O₂) using electricity derived 100% from renewable sources (such as wind or solar), leaving zero carbon footprint.",
+    level: 3,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q148",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

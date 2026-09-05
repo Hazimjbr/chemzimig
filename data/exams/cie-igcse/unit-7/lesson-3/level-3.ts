@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q229",
     createdAt: "2026-08-21T05:45:00Z"
+  },
+  {
+    id: "ex_ci_u7_l3_lv3_4-2023",
+    question: "A student prepares a pure, dry sample of barium sulfate (BaSO₄) by mixing 50 cm³ of 1.0 mol/dm³ BaCl₂ with 50 cm³ of 1.0 mol/dm³ Na₂SO₄. Which experimental procedure correctly describes how to obtain the pure, dry salt from the reaction mixture?",
+    options: [
+      { text: "Filter the mixture, wash the residue with cold distilled water, and dry on filter paper or in an oven below 100 °C", isCorrect: true },
+      { text: "Evaporate the mixture until crystallization occurs, then filter" },
+      { text: "Filter the mixture, wash the residue with dilute hydrochloric acid, and evaporate to dryness" },
+      { text: "Centrifuge the mixture and crystallise the supernatant liquid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In precipitation, the insoluble solid ($BaSO_4$) is filtered.\n* The residue contains adhering spectator solution ($NaCl$).\n* Washing thoroughly with small portions of distilled water removes all dissolved spectator ions, and drying on filter paper leaves pure, dry $BaSO_4$.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q34",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l3_lv3_5-2024",
+    question: "Why can calcium sulfate (CaSO₄) NOT be successfully prepared in high yield by reacting solid calcium carbonate lumps with dilute sulfuric acid?",
+    options: [
+      { text: "An insoluble layer of CaSO₄ quickly coats the carbonate lumps, preventing further acid from reaching the interior", isCorrect: true },
+      { text: "Calcium sulfate is a gas and escapes immediately" },
+      { text: "Sulfuric acid is too weak an acid to react with carbonates" },
+      { text: "Calcium carbonate decomposes into calcium metal" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Calcium sulfate is only sparingly soluble in water.\n* As soon as the reaction begins, an insoluble crust of $CaSO_4$ forms on the surface of the $CaCO_3$ lumps, acting as a physical barrier that stops the acid from reacting further.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q34",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l3_lv3_6-2025",
+    question: "A hydrated salt has the empirical formula MgSO₄·xH₂O. A 5.00 g sample was heated until all water was driven off, leaving 2.44 g of anhydrous MgSO₄ (Mr = 120.4). What is the value of x? (Mr of H₂O = 18.0)",
+    options: [
+      { text: "7", isCorrect: true },
+      { text: "5" },
+      { text: "6" },
+      { text: "2" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Mass of water lost $= 5.00 - 2.44 = 2.56\\text{ g}$.\n* Moles of MgSO₄ $= 2.44 / 120.4 = 0.02027\\text{ mol}$.\n* Moles of H₂O $= 2.56 / 18.0 = 0.1422\\text{ mol}$.\n* Ratio $x = 0.1422 / 0.02027 = 7.01 \\approx 7$ (Epsom salts: $MgSO_4\\cdot 7H_2O$).",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q34",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

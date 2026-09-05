@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q303",
     createdAt: "2026-08-21T13:30:00Z"
+  },
+  {
+    id: "ex_ci_u9_l1_lv2_5-2023",
+    question: "When magnesium ribbon is heated and exposed to steam, which products are formed?",
+    options: [
+      { text: "Magnesium oxide (MgO) and hydrogen gas (H₂)", isCorrect: true },
+      { text: "Magnesium hydroxide (Mg(OH)₂) and hydrogen gas (H₂)" },
+      { text: "Magnesium hydride and oxygen gas" },
+      { text: "No reaction takes place" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Magnesium reacts with steam according to the equation:\n  Mg(s) + H₂O(g) → MgO(s) + H₂(g).\n* It burns with a bright white flame producing white magnesium oxide solid and hydrogen gas.",
+    level: 2,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q71",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l1_lv2_6-2024",
+    question: "Why does aluminium resist corrosion even though it is high in the reactivity series?",
+    options: [
+      { text: "It has a thin, unreactive and impermeable protective layer of aluminium oxide", isCorrect: true },
+      { text: "It does not react with oxygen even at high temperatures" },
+      { text: "It forms strong ionic bonds with airborne nitrogen" },
+      { text: "Its positive ions are tightly packed and repel water molecules" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Aluminium reacts immediately with atmospheric oxygen to form a thin, tough, non-porous layer of aluminium oxide (Al₂O₃) that adheres tightly to the metal surface, shielding it from further attack.",
+    level: 2,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q72",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l1_lv2_7-2025",
+    question: "Which metal does NOT react with dilute hydrochloric acid to produce hydrogen gas?",
+    options: [
+      { text: "Copper", isCorrect: true },
+      { text: "Zinc" },
+      { text: "Iron" },
+      { text: "Magnesium" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the reactivity series, copper is positioned below hydrogen.\n* Therefore, copper cannot displace hydrogen from dilute acids, so no reaction occurs.",
+    level: 2,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q73",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

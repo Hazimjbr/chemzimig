@@ -11,7 +11,7 @@ import { curriculumRegistry } from '@/data/curriculum/registry';
 import { 
     Trophy, Play, CheckCircle2, XCircle, ArrowRight, ArrowLeft, RefreshCw, 
     Clock, HelpCircle, Check, BookOpen, AlertCircle, Layers, Settings, Compass, Sliders,
-    Flag, LayoutGrid, X, ChevronLeft, ChevronRight, FileText, FlaskConical, Printer
+    Flag, LayoutGrid, X, ChevronLeft, ChevronRight, FileText, FlaskConical, Printer, Sparkles, Zap
 } from 'lucide-react';
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
@@ -379,6 +379,9 @@ function QuizzesContent() {
 
     const searchParams = useSearchParams();
     const queryMode = searchParams.get('mode');
+    const queryUnit = searchParams.get('unit');
+    const queryUnitNum = searchParams.get('unitNum');
+    const queryTrack = searchParams.get('track');
 
     const [allQuestions, setAllQuestions] = useState<LocalQuestion[]>([]);
 
@@ -388,16 +391,31 @@ function QuizzesContent() {
     const [selectedFilter, setSelectedFilter] = useState<'all' | 'new' | 'incorrect' | 'correct' | 'due'>('new');
 
     useEffect(() => {
+        if (queryMode === 'speed' || queryMode === 'blitz') {
+            window.location.href = '/dashboard/speed-challenge';
+            return;
+        }
         if (queryMode === 'spaced' || queryMode === 'mistakes') {
             setSelectedMode('spaced');
             setSelectedFilter('due');
             setStep('config');
+        } else if (queryMode === 'unit' && (queryUnit || queryUnitNum)) {
+            setSelectedMode('unit');
+            if (queryUnit) setSelectedUnit(decodeURIComponent(queryUnit));
+            if (queryUnitNum) {
+                const uNum = parseInt(queryUnitNum, 10);
+                if (!isNaN(uNum)) setSelectedEdexcelUnit(uNum);
+            }
+            if (queryTrack) setAdminSelectedTrackId(queryTrack);
+            setSelectedFilter('all');
+            setStep('config');
         }
-    }, [queryMode]);
+    }, [queryMode, queryUnit, queryUnitNum, queryTrack]);
     
     // Configuration states
     const [selectedSource, setSelectedSource] = useState<'all' | 'exam' | 'quiz'>('all');
     const [selectedPaper, setSelectedPaper] = useState<'all' | 'p2' | 'p4' | 'p6' | 'p1'>('all');
+    const [selectedSeries, setSelectedSeries] = useState<string>('all');
     const [selectedEdexcelUnit, setSelectedEdexcelUnit] = useState<'all' | number>('all');
     const [selectedUnit, setSelectedUnit] = useState<string>('all');
     const [selectedLesson, setSelectedLesson] = useState<string>('all');
@@ -829,6 +847,7 @@ function QuizzesContent() {
         setSelectedMode(mode);
         setSelectedSource('all');
         setSelectedPaper('all');
+        setSelectedSeries('all');
         setSelectedEdexcelUnit('all');
         setSelectedUnit('all');
         setSelectedLesson('all');
@@ -884,6 +903,23 @@ function QuizzesContent() {
         return counts;
     }, [isEdexcelIalTrack, baseBoardPool]);
 
+    const seriesCounts = useMemo(() => {
+        const pool = baseBoardPool;
+        return {
+            all: pool.length,
+            oct2026: pool.filter(q => (q.sourceRef || q.source || '').includes('Oct 2026')).length,
+            june2026: pool.filter(q => (q.sourceRef || q.source || '').includes('June 2026')).length,
+            jan2026: pool.filter(q => (q.sourceRef || q.source || '').includes('Jan 2026')).length,
+            oct2025: pool.filter(q => (q.sourceRef || q.source || '').includes('Oct 2025')).length,
+            june2025: pool.filter(q => (q.sourceRef || q.source || '').includes('June 2025')).length,
+            jan2025: pool.filter(q => (q.sourceRef || q.source || '').includes('Jan 2025')).length,
+            specimen: pool.filter(q => {
+                const s = q.sourceRef || q.source || '';
+                return s.includes('Specimen') || s.includes('Sample');
+            }).length,
+        };
+    }, [baseBoardPool]);
+
     // 4b. Filter memos for smart filters and exam generation
     const filteredPool = useMemo(() => {
         let pool = allQuestions.filter(q => {
@@ -911,6 +947,21 @@ function QuizzesContent() {
         // B. Edexcel Unit Filter (1 to 6)
         if (isEdexcelIalTrack && selectedEdexcelUnit !== 'all') {
             pool = pool.filter(q => q.unitNumber === selectedEdexcelUnit);
+        }
+
+        // C. Examination Series Filter
+        if (selectedSeries !== 'all') {
+            pool = pool.filter(q => {
+                const s = q.sourceRef || q.source || '';
+                if (selectedSeries === 'oct2026') return s.includes('Oct 2026');
+                if (selectedSeries === 'june2026') return s.includes('June 2026');
+                if (selectedSeries === 'jan2026') return s.includes('Jan 2026');
+                if (selectedSeries === 'oct2025') return s.includes('Oct 2025');
+                if (selectedSeries === 'june2025') return s.includes('June 2025');
+                if (selectedSeries === 'jan2025') return s.includes('Jan 2025');
+                if (selectedSeries === 'specimen') return s.includes('Specimen') || s.includes('Sample');
+                return true;
+            });
         }
 
         // Filter by source
@@ -942,7 +993,7 @@ function QuizzesContent() {
         }
 
         return pool;
-    }, [allQuestions, studentTrackId, isEdexcelTrack, isEdexcelAs, isEdexcelA2, isCambridgeTrack, selectedPaper, selectedEdexcelUnit, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
+    }, [allQuestions, studentTrackId, isEdexcelTrack, isEdexcelAs, isEdexcelA2, isCambridgeTrack, selectedPaper, selectedEdexcelUnit, selectedSeries, selectedSource, selectedMode, selectedUnit, selectedLesson, selectedCustomUnits, selectedLevel]);
 
     const filterCounts = useMemo(() => {
         const all = filteredPool.length;
@@ -1297,7 +1348,7 @@ function QuizzesContent() {
 
                         <button 
                             onClick={() => handleModeSelect('custom')}
-                            className="bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-indigo-500/30 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56 md:col-span-2 lg:col-span-2"
+                            className="bg-white/[0.02] hover:bg-white/[0.04] border border-white/5 hover:border-indigo-500/30 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56"
                         >
                             <div className="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center border border-purple-500/20 group-hover:scale-110 transition-transform">
                                 <Sliders className="w-6 h-6 text-purple-400" />
@@ -1307,6 +1358,25 @@ function QuizzesContent() {
                                 <p className="text-slate-400 text-sm">Choose multiple units, question source types, and difficulty level.</p>
                             </div>
                         </button>
+
+                        <Link 
+                            href="/dashboard/speed-challenge"
+                            className="bg-gradient-to-br from-amber-500/15 via-orange-500/10 to-yellow-500/5 hover:from-amber-500/25 hover:via-orange-500/20 border border-amber-500/30 hover:border-amber-400/50 rounded-3xl p-8 text-left transition-all group flex flex-col justify-between h-56 shadow-lg shadow-amber-500/5 relative overflow-hidden"
+                        >
+                            <div className="absolute top-4 right-4 bg-amber-400/20 text-amber-300 text-[10px] font-black uppercase px-2.5 py-1 rounded-full border border-amber-400/30 tracking-wider flex items-center gap-1">
+                                <span>⚡ Double XP</span>
+                            </div>
+                            <div className="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center border border-amber-500/30 group-hover:scale-110 transition-transform">
+                                <Zap className="w-6 h-6 text-amber-400 fill-current group-hover:scale-110 transition-transform" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-black mb-1 text-amber-200 flex items-center gap-1.5">
+                                    <span>⚡ Speed Blitz</span>
+                                    <span className="text-xs text-orange-400 font-semibold">🔥 Streak</span>
+                                </h3>
+                                <p className="text-slate-300 text-sm">Rapid reaction sprints: 1-min, 3-min, or 5-min drills with combo multipliers.</p>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             )}
@@ -1526,6 +1596,68 @@ function QuizzesContent() {
                                         </div>
                                     </div>
                                 )}
+
+                                {/* 3. Examination Series Selector (Oct 2026, June 2026, Jan 2026, Oct 2025, June 2025, Jan 2025, Specimen) */}
+                                <div className="flex flex-col gap-2.5 sm:col-span-2 bg-[#050515]/90 p-4 md:p-5 border border-indigo-500/20 rounded-2xl shadow-lg shadow-indigo-950/20">
+                                    <div className="flex items-center justify-between">
+                                        <label className="text-xs text-indigo-300 font-bold uppercase tracking-wider flex items-center gap-2">
+                                            <Sparkles className="w-4 h-4 text-amber-400" />
+                                            <span>Examination Series Quick Filter</span>
+                                            <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-500/30 font-mono">
+                                                2025–2026 Series
+                                            </span>
+                                        </label>
+                                        {selectedSeries !== 'all' && (
+                                            <button
+                                                type="button"
+                                                onClick={() => setSelectedSeries('all')}
+                                                className="text-[11px] text-slate-400 hover:text-white transition-colors"
+                                            >
+                                                Reset to All Series
+                                            </button>
+                                        )}
+                                    </div>
+
+                                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                                        {[
+                                            { id: 'all', label: 'All Series', desc: 'Comprehensive', icon: '🌐', count: seriesCounts.all },
+                                            { id: 'oct2026', label: 'Oct 2026', desc: 'Autumn Series', icon: '🍁', count: seriesCounts.oct2026 },
+                                            { id: 'june2026', label: 'June 2026', desc: 'Summer Series', icon: '✨', count: seriesCounts.june2026 },
+                                            { id: 'jan2026', label: 'Jan 2026', desc: 'Winter Series', icon: '❄️', count: seriesCounts.jan2026 },
+                                            { id: 'oct2025', label: 'Oct 2025', desc: 'Autumn Series', icon: '🍂', count: seriesCounts.oct2025 },
+                                            { id: 'june2025', label: 'June 2025', desc: 'Summer Series', icon: '☀️', count: seriesCounts.june2025 },
+                                            { id: 'jan2025', label: 'Jan 2025', desc: 'Winter Series', icon: '🧊', count: seriesCounts.jan2025 },
+                                            { id: 'specimen', label: 'Specimen', desc: 'Sample Papers', icon: '📜', count: seriesCounts.specimen },
+                                        ].map(ser => {
+                                            const isActive = selectedSeries === ser.id;
+                                            return (
+                                                <button
+                                                    key={ser.id}
+                                                    type="button"
+                                                    onClick={() => setSelectedSeries(ser.id)}
+                                                    className={`p-2.5 rounded-xl text-left transition-all flex flex-col justify-between border ${
+                                                        isActive
+                                                            ? 'bg-gradient-to-br from-indigo-500/25 to-violet-500/15 border-indigo-400 text-white shadow-lg shadow-indigo-500/20 ring-1 ring-indigo-400/40'
+                                                            : 'bg-white/[0.02] border-white/5 text-slate-300 hover:bg-white/[0.05] hover:text-white hover:border-white/10'
+                                                    }`}
+                                                >
+                                                    <div className="flex items-center justify-between mb-1">
+                                                        <span className="text-base">{ser.icon}</span>
+                                                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                                                            isActive ? 'bg-indigo-400 text-slate-950' : 'bg-white/5 text-slate-400 border border-white/10'
+                                                        }`}>
+                                                            {ser.count} Qs
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <div className="font-extrabold text-xs text-white">{ser.label}</div>
+                                                        <div className="text-[10px] text-slate-400 leading-tight">{ser.desc}</div>
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
                                 
                                 {/* A. Source Type */}
                                 <div className="flex flex-col gap-2">
@@ -1640,6 +1772,7 @@ function QuizzesContent() {
                                                 onClick={() => {
                                                     setSelectedFilter('all');
                                                     setSelectedPaper('all');
+                                                    setSelectedSeries('all');
                                                     setSelectedEdexcelUnit('all');
                                                 }}
                                                 className="mt-2 text-xs font-bold bg-rose-500/20 hover:bg-rose-500/30 border border-rose-500/30 px-3 py-1.5 rounded-lg transition-colors text-white"
@@ -1809,7 +1942,23 @@ function QuizzesContent() {
                                         >
                                             {typeof selectedEdexcelUnit === 'number' 
                                                 ? `Unit ${selectedEdexcelUnit}` 
-                                                : (isEdexcelAs ? 'All AS Units (1–3)' : isEdexcelA2 ? 'All A2 Units (4–6)' : 'All Units (1–6)')}
+                                                : (isEdexcelAs ? 'AS Units (1–3)' : isEdexcelA2 ? 'A2 Units (4–6)' : 'All Units (1–6)')}
+                                        </span>
+                                    </div>
+                                )}
+
+                                {/* Series in Overview */}
+                                {selectedSeries !== 'all' && (
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-slate-400">Series:</span>
+                                        <span className="text-amber-400 font-bold text-right text-xs">
+                                            {selectedSeries === 'oct2026' ? '🍁 Oct 2026' :
+                                             selectedSeries === 'june2026' ? '✨ June 2026' :
+                                             selectedSeries === 'jan2026' ? '❄️ Jan 2026' :
+                                             selectedSeries === 'oct2025' ? '🍂 Oct 2025' :
+                                             selectedSeries === 'june2025' ? '☀️ June 2025' :
+                                             selectedSeries === 'jan2025' ? '🧊 Jan 2025' :
+                                             '📜 Specimen'}
                                         </span>
                                     </div>
                                 )}

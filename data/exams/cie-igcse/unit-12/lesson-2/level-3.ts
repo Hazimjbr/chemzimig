@@ -73,5 +73,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q464",
     createdAt: "2026-08-22T05:55:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv3_5-2023",
+    question: "A student performs paper chromatography to identify the amino acids in a protein hydrolysate.\nAfter developing the chromatogram, no spots are visible under normal light.\nWhich two steps should the student carry out to locate and measure the spots?",
+    options: [
+      { text: "Spray the paper with ninhydrin (a locating agent) and dry gently with a warm hairdryer", isCorrect: true },
+      { text: "Place the paper back in water and shake vigorously" },
+      { text: "Dip the chromatogram in concentrated hydrochloric acid" },
+      { text: "Expose the paper to sulfur dioxide gas in a fume hood" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Amino acids are colourless compounds and are invisible on standard chromatography paper.\n* Spraying with a locating agent such as ninhydrin and warming causes chemical reactions that turn the amino acid spots purple or pink.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q4",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv3_6-2024",
+    question: "Liquid X (b.p. 65 °C) and liquid Y (b.p. 110 °C) are miscible and form a homogeneous solution.\nDuring fractional distillation of this mixture, which temperature will the thermometer at the top of the fractionating column register while the first pure distillate is being collected?",
+    options: [
+      { text: "Steadily at 65 °C", isCorrect: true },
+      { text: "Steadily at 110 °C" },
+      { text: "Steadily at 87.5 °C (the average b.p.)" },
+      { text: "Constantly fluctuating between 65 °C and 110 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The lower-boiling component (liquid X, b.p. 65 °C) reaches the top of the fractionating column first.\n* While pure X distils over, the thermometer at the stillhead remains steady at its boiling point (65 °C) until all X has evaporated.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q5",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv3_7-2025",
+    question: "A sample of salt contaminated with an insoluble metal oxide and a soluble coloring agent is given to a student.\nWhich sequence of procedures produces pure dry crystals of the salt?",
+    options: [
+      { text: "Dissolve in minimum hot water → filter off insoluble oxide → add activated charcoal to decolorize & filter → crystallise filtrate", isCorrect: true },
+      { text: "Filter dry solid → add water → simple distillation → condense vapor" },
+      { text: "Fractional distillation of the solid mixture → chromatography" },
+      { text: "Evaporate dry solid to dryness → centrifuge → scrape residue" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Dissolving in water allows the insoluble metal oxide to be removed by filtration as residue.\n* Activated charcoal absorbs soluble dye/coloring agents, which are then filtered out.\n* Crystallising the remaining pure salt solution and cooling yields pure dry salt crystals.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q4",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

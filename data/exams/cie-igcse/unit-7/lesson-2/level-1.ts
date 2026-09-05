@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q213",
     createdAt: "2026-08-21T04:10:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv1_4-2023",
+    question: "Which of the following oxides dissolves in water to form an acidic solution that turns universal indicator red?",
+    options: [
+      { text: "Sulfur dioxide, SO₂", isCorrect: true },
+      { text: "Magnesium oxide, MgO" },
+      { text: "Sodium oxide, Na₂O" },
+      { text: "Copper(II) oxide, CuO" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Non-metal oxides like sulfur dioxide ($SO_2$) and carbon dioxide ($CO_2$) are acidic oxides.\n* They react with water to form acidic solutions ($SO_2 + H_2O \\rightarrow H_2SO_3$, sulfurous acid), turning universal indicator red.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q34",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv1_5-2024",
+    question: "Which pair of oxides consists of a basic oxide and an acidic oxide?",
+    options: [
+      { text: "Calcium oxide (CaO) and sulfur trioxide (SO₃)", isCorrect: true },
+      { text: "Copper(II) oxide (CuO) and magnesium oxide (MgO)" },
+      { text: "Carbon dioxide (CO₂) and phosphorus pentoxide (P₄O₁₀)" },
+      { text: "Carbon monoxide (CO) and zinc oxide (ZnO)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Calcium oxide ($CaO$) is a metal oxide and basic.\n* Sulfur trioxide ($SO_3$) is a non-metal oxide and acidic.",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q35",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv1_6-2025",
+    question: "Which type of oxide reacts with BOTH acids and alkalis to form a salt and water?",
+    options: [
+      { text: "Amphoteric oxide", isCorrect: true },
+      { text: "Basic oxide" },
+      { text: "Acidic oxide" },
+      { text: "Neutral oxide" }
+    ],
+    correctAnswer: 0,
+    explanation: "* An amphoteric oxide is defined as an oxide that displays both basic and acidic properties, reacting with both acids and bases to produce salt and water (e.g. $Al_2O_3$ and $ZnO$).",
+    level: 1,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q37",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

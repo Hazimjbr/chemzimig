@@ -17,7 +17,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q4",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q4",
     createdAt: "2026-08-25T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q5",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q5",
     createdAt: "2026-08-25T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q3",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q3",
     createdAt: "2026-08-26T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q5",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q5",
     createdAt: "2026-08-26T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q6",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q6",
     createdAt: "2026-08-27T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q4",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q4",
     createdAt: "2026-08-27T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q11",
     createdAt: "2026-09-04T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q12",
     createdAt: "2026-09-04T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q9",
     createdAt: "2026-09-05T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q12",
     createdAt: "2026-09-05T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q13",
     createdAt: "2026-09-06T10:00:00Z"
   },
   {
@@ -226,7 +226,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q10",
     createdAt: "2026-09-06T10:00:00Z"
   },
   {
@@ -245,7 +245,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q14",
     createdAt: "2026-09-14T10:00:00Z"
   },
   {
@@ -264,7 +264,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q13",
     createdAt: "2026-09-14T10:00:00Z"
   },
   {
@@ -283,7 +283,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q11",
     createdAt: "2026-09-15T10:00:00Z"
   },
   {
@@ -302,7 +302,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q15",
     createdAt: "2026-09-15T10:00:00Z"
   },
   {
@@ -321,7 +321,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q14",
     createdAt: "2026-09-16T10:00:00Z"
   },
   {
@@ -340,7 +340,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q12",
     createdAt: "2026-09-16T10:00:00Z"
   },
   {
@@ -359,7 +359,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q16",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q16",
     createdAt: "2026-09-17T10:00:00Z"
   },
   {
@@ -378,7 +378,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q22",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q22",
     createdAt: "2026-09-24T10:00:00Z"
   },
   {
@@ -397,7 +397,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q18",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q18",
     createdAt: "2026-09-25T10:00:00Z"
   },
   {
@@ -416,7 +416,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q17",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q17",
     createdAt: "2026-09-25T10:00:00Z"
   },
   {
@@ -435,7 +435,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q23",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q23",
     createdAt: "2026-09-26T10:00:00Z"
   },
   {
@@ -454,7 +454,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Specimen Paper 1 Q19",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Oct 2025 Paper 3 Q19",
     createdAt: "2026-09-26T10:00:00Z"
   },
   {
@@ -473,7 +473,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Series Q18",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / Jan 2026 Paper 3 Q18",
     createdAt: "2026-09-27T10:00:00Z"
   },
   {
@@ -492,8 +492,164 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH13 / 2026 Paper 1 Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q24",
     createdAt: "2026-09-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_27-june2026",
+    question: "In an experiment to measure the enthalpy change of a reaction in a polystyrene cup, why are temperature readings taken every minute for 3 minutes before adding the second reactant at the 4th minute?",
+    options: [
+      { text: "To establish a reliable initial temperature baseline for the solution before reaction, allowing accurate extrapolation to find the true temperature change", isCorrect: true },
+      { text: "To give the thermometer time to reach boiling point" },
+      { text: "To ensure that all ambient air inside the cup has been displaced" },
+      { text: "To allow the first reactant to react with atmospheric nitrogen" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Recording temperatures at $1, 2, 3\\\\text{ minutes}$ establishes the ambient baseline drift before mixing.\n* Extrapolating both the initial and cooling curves to the minute of mixing (minute 4) compensates for heat exchange with the surroundings.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q5",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_28-june2026",
+    question: "A student performs four titration trials with the following burette results:\nTrial 1: 24.60 cm³; Trial 2: 23.90 cm³; Trial 3: 24.00 cm³; Trial 4: 23.95 cm³\nWhat is the mean titre value that should be used in the stoichiometric calculation?",
+    options: [
+      { text: "23.95 cm³", isCorrect: true },
+      { text: "24.11 cm³" },
+      { text: "24.60 cm³" },
+      { text: "23.90 cm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Concordant titres are those within $\\\\pm 0.10\\\\text{ cm}^3$ of each other.\n* Trials 2 ($23.90$), 3 ($24.00$), and 4 ($23.95$) are concordant, while Trial 1 ($24.60$) is an anomalous rough titre and must be discarded.\n* $\\\\text{Mean titre} = \\\\frac{23.90 + 24.00 + 23.95}{3} = 23.95\\\\text{ cm}^3$.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q6",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_29-june2026",
+    question: "How can a student determine visually that an organic liquid has been completely dried by an anhydrous drying agent such as anhydrous magnesium sulfate (MgSO₄)?",
+    options: [
+      { text: "The cloudy liquid becomes completely clear, and newly added drying agent swirls freely as a fine powder rather than clumping together", isCorrect: true },
+      { text: "The drying agent changes colour from blue to pink" },
+      { text: "Gas bubbles stop evolving from the mixture" },
+      { text: "The organic liquid freezes into a solid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Water suspended in organic liquids forms a cloudy emulsion.\n* Anhydrous $\\\\text{MgSO}_4$ binds water and clumps.\n* When dry, the liquid becomes crystal clear and excess drying agent floats freely like snow when swirled.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q7",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_30-june2026",
+    question: "Why must ethanal be distilled off immediately into an ice-cooled receiver during the oxidation of ethanol by acidified potassium dichromate(VI)?",
+    options: [
+      { text: "Ethanal has a lower boiling point (21 °C) than ethanol and water, and immediate distillation prevents its further oxidation into ethanoic acid", isCorrect: true },
+      { text: "Ethanal explodes if heated in an open flask" },
+      { text: "Ice acts as an essential catalyst for the reaction" },
+      { text: "Ethanal reacts with glass at room temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ethanal lacks hydrogen bonding and boils at $21^\\\\circ\\\\text{C}$ (much lower than ethanol, $78^\\\\circ\\\\text{C}$).\n* Distilling it off as soon as it forms removes it from contact with the oxidising agent, preventing secondary oxidation to ethanoic acid.\n* The ice-bath prevents evaporation of the volatile aldehyde.",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q8",
+    createdAt: "2026-06-21T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_31-interactive",
+    question: "In an acid-base titration, a student uses a burette to neutralise 25.0 cm³ of sodium carbonate solution with dilute hydrochloric acid. The initial burette reading was 1.20 cm³. Use the interactive burette scale reader below to determine the final reading and the total volume of acid delivered.",
+    options: [
+      { text: "21.65 cm³ (Final: 22.85 cm³)", isCorrect: true },
+      { text: "22.85 cm³ (Final: 24.05 cm³)" },
+      { text: "23.15 cm³ (Final: 24.35 cm³)" },
+      { text: "20.45 cm³ (Final: 21.65 cm³)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The bottom of the liquid meniscus on the burette aligns with $22.85\\text{ cm}^3$\n* Delivered titre volume $= 22.85 - 1.20 = 21.65\\text{ cm}^3$\n* Titration records must always be cited to two decimal places ending in $.00$ or $.05$",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2026 Paper 3 Q9",
+    createdAt: "2026-06-23T10:00:00Z",
+    apparatusScaleConfig: {
+      type: "burette",
+      targetValue: 22.85,
+      initialReading: 1.20,
+      unit: "cm³",
+      minScale: 22.0,
+      maxScale: 23.5,
+      step: 0.5,
+      subdivision: 0.05,
+      tolerance: 0.05,
+      title: "Unit 3 Titration Burette Reading (22.85 cm³)",
+      liquidColor: "rgba(239, 68, 68, 0.4)"
+    },
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "22.85", text: "Read final burette volume accurately as 22.85 cm³." },
+        { mark: 1, keyword: "21.65 cm3", text: "Calculate delivered volume: 22.85 - 1.20 = 21.65 cm³." }
+      ],
+      examinerTips: "Always read at eye level with the bottom of the meniscus to avoid parallax error."
+    }
+  },
+  {
+    id: "ex_ed_u3_l1_lv2_32-interactive",
+    question: "A student measures the temperature rise in a neutralisation reaction using a polystyrene cup calorimeter. The initial temperature of the acid was 21.2 °C. Use the interactive thermometer scale reader below to determine the maximum temperature reached and calculate the temperature change (ΔT).",
+    options: [
+      { text: "Maximum: 34.6 °C; ΔT = +13.4 °C", isCorrect: true },
+      { text: "Maximum: 35.0 °C; ΔT = +13.8 °C" },
+      { text: "Maximum: 34.2 °C; ΔT = +13.0 °C" },
+      { text: "Maximum: 36.4 °C; ΔT = +15.2 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The top of the thermometer liquid thread shows $34.6\\text{ }^\\circ\\text{C}$\n* Temperature rise $\\Delta T = T_\\text{max} - T_\\text{initial} = 34.6 - 21.2 = +13.4\\text{ }^\\circ\\text{C}$\n* A positive $\\Delta T$ confirms that neutralisation is an exothermic process",
+    level: 2,
+    topic: "edexcel-unit-3",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH13/01 / June 2025 Paper 3 Q10",
+    createdAt: "2026-06-23T10:00:00Z",
+    apparatusScaleConfig: {
+      type: "thermometer",
+      targetValue: 34.6,
+      initialReading: 21.2,
+      unit: "°C",
+      minScale: 20.0,
+      maxScale: 40.0,
+      step: 2.0,
+      subdivision: 0.2,
+      tolerance: 0.1,
+      title: "Calorimetry Maximum Temperature Reading (34.6 °C)",
+      liquidColor: "rgba(239, 68, 68, 0.7)"
+    },
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "34.6", text: "Record maximum temperature as 34.6 °C." },
+        { mark: 1, keyword: "13.4 °C / 13.4 K", text: "Calculate temperature change: ΔT = 34.6 - 21.2 = 13.4 °C." }
+      ],
+      examinerTips: "Read the top of the thermometer meniscus at eye level."
+    }
   }
 ];
 

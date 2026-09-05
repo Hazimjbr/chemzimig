@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q323",
     createdAt: "2026-08-21T15:30:00Z"
+  },
+  {
+    id: "ex_ci_u9_l3_lv2_5-2023",
+    question: "What is the role of carbon monoxide (CO) in the blast furnace extraction of iron?",
+    options: [
+      { text: "It reduces iron(III) oxide to iron: Fe₂O₃ + 3CO → 2Fe + 3CO₂", isCorrect: true },
+      { text: "It oxidises calcium carbonate to calcium oxide" },
+      { text: "It reacts with acidic impurities to produce slag" },
+      { text: "It provides the fuel that ignites the coke" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the upper parts of the blast furnace, carbon monoxide gas is the principal reducing agent that reduces solid hematite (Fe₂O₃) to molten iron.",
+    level: 2,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q89",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l3_lv2_6-2024",
+    question: "Why is cryolite added to aluminium oxide in the extraction of aluminium by electrolysis?",
+    options: [
+      { text: "To lower the melting point of the electrolyte and improve electrical conductivity", isCorrect: true },
+      { text: "To prevent the carbon anodes from burning away" },
+      { text: "To react with acidic silica impurities" },
+      { text: "To convert aluminium into bauxite ore" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Pure aluminium oxide has an extremely high melting point (~2045 °C).\n* Dissolving it in molten cryolite lowers the melting point to approximately 950 °C, which substantially reduces the energy required and makes the electrolytic process viable.",
+    level: 2,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q90",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l3_lv2_7-2025",
+    question: "Which equation shows the formation of slag in the blast furnace?",
+    options: [
+      { text: "CaO + SiO₂ → CaSiO₃", isCorrect: true },
+      { text: "CaCO₃ → CaO + CO₂" },
+      { text: "C + O₂ → CO₂" },
+      { text: "Fe₂O₃ + 3CO → 2Fe + 3CO₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Slag is calcium silicate (CaSiO₃).\n* It forms when basic calcium oxide (from thermal decomposition of limestone) reacts with acidic silicon dioxide (sand/silica): CaO(s) + SiO₂(s) → CaSiO₃(l).",
+    level: 2,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q91",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

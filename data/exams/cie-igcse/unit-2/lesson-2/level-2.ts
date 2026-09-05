@@ -55,6 +55,62 @@ export const level2Questions: Question[] = [
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q4",
     lessonNum: 2,
     createdAt: "2026-05-11T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv2_4-2023",
+    question: "A mixture containing iron filings and sulfur powder is heated strongly in a test tube. A glow spreads through the mixture and a black solid, iron(II) sulfide (FeS), is formed. How does this product differ from the original mixture?",
+    options: [
+      { text: "The iron can still be separated from the sulfur by using a bar magnet" },
+      { text: "A chemical reaction has occurred forming a new compound with completely different properties that cannot be separated by a magnet" },
+      { text: "The iron and sulfur can be separated by adding water because sulfur dissolves" },
+      { text: "The mass of the product is significantly less than the sum of the reactants" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Heating initiates an exothermic chemical reaction: $\\text{Fe} + \\text{S} \\rightarrow \\text{FeS}$.\n* A compound is formed where atoms are bonded chemically in a fixed ratio, losing individual magnetic and physical properties of elemental iron and sulfur.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q7",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv2_5-2024",
+    question: "Which of the following statements about mixtures and compounds is NOT correct?",
+    options: [
+      { text: "The components of a mixture can be separated by physical methods" },
+      { text: "The formation of a compound from its elements usually involves a detectable energy change" },
+      { text: "A mixture always has a sharp, fixed boiling point" },
+      { text: "A compound has a fixed, definite composition by mass" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Pure substances (elements and compounds) melt and boil at sharp, fixed temperatures.\n* Mixtures melt and boil over a range of temperatures depending on their variable composition.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q7",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv2_6-2025",
+    question: "Which row correctly identifies a mixture of elements, a mixture of compounds, and a mixture of an element and a compound?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Mixture of elements</th><th class="p-2 border">Mixture of compounds</th><th class="p-2 border">Mixture of an element and a compound</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">Brass (Cu + Zn)</td><td class="p-2 border">Petroleum (hydrocarbons)</td><td class="p-2 border">Air containing damp argon and water vapor</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">Steel (Fe + C)</td><td class="p-2 border">Air (N₂ + O₂)</td><td class="p-2 border">Sea water (NaCl + H₂O)</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">Water (H₂O)</td><td class="p-2 border">Air</td><td class="p-2 border">Brass</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">Air</td><td class="p-2 border">Sea water</td><td class="p-2 border">Petroleum</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Brass (Cu + Zn) | Petroleum (hydrocarbons) | Air containing argon and water vapor" },
+      { text: "Row B: Steel (Fe + C) | Air (N₂ + O₂) | Sea water (NaCl + H₂O)" },
+      { text: "Row C: Water (H₂O) | Air | Brass" },
+      { text: "Row D: Air | Sea water | Petroleum" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Brass consists of copper and zinc (two metallic elements).\n* Petroleum is a mixture of various alkane compounds.\n* Atmospheric air containing argon (element) and water vapor ($H_2O$, compound) is a mixture of an element and a compound.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q6",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

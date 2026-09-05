@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q19",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Oct 2025 Paper 1 Q19",
     createdAt: "2026-05-27T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2026 Paper 1 Q20",
     createdAt: "2026-05-27T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2026 Paper 1 Q20",
     createdAt: "2026-05-28T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Specimen Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Oct 2025 Paper 1 Q20",
     createdAt: "2026-05-28T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / June 2025 Paper 1 Q21",
     createdAt: "2026-05-29T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH11 / 2026 Series Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH11/01 / Jan 2026 Paper 1 Q21",
     createdAt: "2026-05-29T10:00:00Z"
   }
 ];

@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Specimen Paper 1 Q6",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q6",
     createdAt: "2027-01-15T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Paper 1 Q7",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / June 2026 Paper 1 Q7",
     createdAt: "2027-01-15T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Series Q5",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q5",
     createdAt: "2027-01-16T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Specimen Paper 1 Q7",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q7",
     createdAt: "2027-01-16T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Paper 1 Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / June 2025 Paper 1 Q8",
     createdAt: "2027-01-17T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Series Q6",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q6",
     createdAt: "2027-01-17T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Specimen Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q13",
     createdAt: "2027-01-25T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / June 2026 Paper 1 Q14",
     createdAt: "2027-01-25T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Series Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q11",
     createdAt: "2027-01-26T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Specimen Paper 1 Q14",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q14",
     createdAt: "2027-01-26T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Paper 1 Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / June 2025 Paper 1 Q15",
     createdAt: "2027-01-27T10:00:00Z"
   },
   {
@@ -226,8 +226,46 @@ export const level3Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH15 / 2026 Series Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / Jan 2025 Paper 1 Q12",
     createdAt: "2027-01-27T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u5_l1_lv3_13-june2026",
+    question: "Why is the substitution of monodentate water ligands in [Cu(H₂O)₆]²⁺ by the hexadentate ligand EDTA⁴⁻ thermodynamically highly favourable, resulting in an exceptionally large stability constant (K_stab)?",
+    options: [
+      { text: "The chelate effect: 1 complex ion + 1 EDTA⁴⁻ generates 1 complex ion + 6 H₂O molecules, resulting in a large positive increase in system entropy (ΔS_system > 0)", isCorrect: true },
+      { text: "EDTA⁴⁻ forms much weaker coordinate bonds than water" },
+      { text: "The reaction is extremely endothermic with negative entropy change" },
+      { text: "EDTA⁴⁻ oxidises copper(II) to copper(III)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Reaction: $[\\\\text{Cu(H}_2\\\\text{O)}_6]^{2+} + \\\\text{EDTA}^{4-} \\\\rightleftharpoons [\\\\text{Cu(EDTA)}]^{2-} + 6\\\\text{H}_2\\\\text{O}$.\n* Two reactant particles produce seven product particles in solution, creating a massive increase in positional disorder ($\\\\Delta S_{\\\\text{system}} \\\\gg 0$).\n* Because $\\\\Delta G^\\\\circ = \\\\Delta H^\\\\circ - T\\\\Delta S^\\\\circ$, this large positive entropy makes $\\\\Delta G^\\\\circ$ very negative, giving a huge stability constant.",
+    level: 3,
+    topic: "edexcel-unit-5",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / June 2026 Paper 1 Q11",
+    createdAt: "2026-06-19T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u5_l1_lv3_14-june2026",
+    question: "Why is scandium (Sc) NOT classified as a d-block transition metal according to the IUPAC definition, despite being located in the d-block of the Periodic Table?",
+    options: [
+      { text: "Sc forms only one stable oxidation state, Sc³⁺ ([Ar] 3d⁰), which has an empty d-subshell and never forms any stable ion with an incompletely filled d-subshell", isCorrect: true },
+      { text: "Scandium has a higher electronegativity than all other d-block elements" },
+      { text: "Scandium has completely filled d-orbitals in its elemental atom" },
+      { text: "Scandium compounds are paramagnetic" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The IUPAC definition of a transition element is an element whose atom has a partially filled d-subshell, or which can give rise to cations with an incomplete d-subshell.\n* Scandium's only common stable ion is $\\\\text{Sc}^{3+}$, with electron configuration $[\\\\text{Ar}] 3d^0$ (empty d-subshell). Thus it does not meet the definition.",
+    level: 3,
+    topic: "edexcel-unit-5",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH15/01 / June 2025 Paper 1 Q12",
+    createdAt: "2026-06-19T10:00:00Z"
   }
 ];
 

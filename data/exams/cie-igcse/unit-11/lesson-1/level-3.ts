@@ -37,5 +37,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q400",
     createdAt: "2026-08-21T22:35:00Z"
+  },
+  {
+    id: "ex_ci_u11_l1_lv3_3-2023",
+    question: "A 10 cm³ sample of a gaseous hydrocarbon CₓHᵧ was completely burned in 70 cm³ of oxygen (an excess). After cooling to room temperature, the total volume of gas remaining was 50 cm³. When this gas was shaken with aqueous sodium hydroxide, the volume decreased to 20 cm³.\nWhat is the formula of the hydrocarbon?\n(All volumes measured at r.t.p.)",
+    options: [
+      { text: "C₃H₈", isCorrect: true },
+      { text: "C₂H₆" },
+      { text: "C₄H₁₀" },
+      { text: "CH₄" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The volume absorbed by NaOH is CO₂: 50 cm³ - 20 cm³ = 30 cm³ CO₂.\n* Since 10 cm³ of CₓHᵧ produced 30 cm³ CO₂, x = 30 / 10 = 3.\n* Unreacted oxygen = 20 cm³ $\\implies$ Oxygen reacted = 70 - 20 = 50 cm³.\n* Equation: C₃Hᵧ + (3 + y/4)O₂ → 3CO₂ + (y/2)H₂O.\n* Ratio: (3 + y/4) / 1 = 50 / 10 = 5 $\\implies$ y/4 = 2 $\\implies$ y = 8.\n* Formula is C₃H₈ (propane).",
+    level: 3,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q155",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l1_lv3_4-2024",
+    question: "Methane undergoes photochemical substitution with excess chlorine gas. What is the molecular formula of the final organic product when all hydrogen atoms are replaced?",
+    options: [
+      { text: "CCl₄", isCorrect: true },
+      { text: "CH₃Cl" },
+      { text: "CH₂Cl₂" },
+      { text: "CHCl₃" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In excess chlorine and under prolonged UV irradiation, each hydrogen atom in methane (CH₄) is progressively substituted:\n  CH₄ → CH₃Cl → CH₂Cl₂ → CHCl₃ → CCl₄ (tetrachloromethane).",
+    level: 3,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q156",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l1_lv3_5-2025",
+    question: "How many structural isomers exist for the alkane with molecular formula C₅H₁₂?",
+    options: [
+      { text: "3", isCorrect: true },
+      { text: "2" },
+      { text: "4" },
+      { text: "5" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Pentane (C₅H₁₂) has exactly 3 structural isomers:\n  1. Pentane (straight chain: CH₃CH₂CH₂CH₂CH₃)\n  2. 2-methylbutane (branched: CH₃CH(CH₃)CH₂CH₃)\n  3. 2,2-dimethylpropane (cross-branched: C(CH₃)₄).",
+    level: 3,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q157",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

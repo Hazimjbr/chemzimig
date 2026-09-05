@@ -103,7 +103,59 @@ export const level3Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q21",
     createdAt: "2026-04-26T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv3_7-2023",
+    question: "A sample of neon contains three isotopes: $^{20}\\text{Ne}$ (90.5%), $^{21}\\text{Ne}$ (0.3%), and $^{22}\\text{Ne}$ (9.2%). Which calculation gives the relative atomic mass of neon to 2 decimal places?",
+    options: [
+      { text: "$\\frac{(20 \\times 90.5) + (21 \\times 0.3) + (22 \\times 9.2)}{100} = 20.19$" },
+      { text: "$\\frac{20 + 21 + 22}{3} = 21.00$" },
+      { text: "$\\frac{(20 \\times 0.3) + (21 \\times 9.2) + (22 \\times 90.5)}{100} = 21.80$" },
+      { text: "$\\frac{(20 \\times 90.5) + (22 \\times 9.2)}{2} = 1006.2$" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The relative atomic mass ($A_r$) takes into account the percentage abundance of all naturally occurring isotopes.\n* $A_r = \\frac{(20 \\times 90.5) + (21 \\times 0.3) + (22 \\times 9.2)}{100} = \\frac{1810 + 6.3 + 202.4}{100} = \\frac{2018.7}{100} \\approx 20.19$.",
+    level: 3,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q6",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv3_8-2024",
+    question: "Which of the following species contains the same electronic configuration as a fluoride ion ($F^-$)? ($Z$: F = 9, Na = 11, Mg = 12, Al = 13, Ne = 10, O = 8, Cl = 17)",
+    options: [
+      { text: "$Na^+$, $Mg^{2+}$, and $O^{2-}$" },
+      { text: "$Cl^-$, $K^+$, and $Ca^{2+}$" },
+      { text: "$Li^+$, $Be^{2+}$, and $H^-$" },
+      { text: "$Al^{3+}$, $Si^{4+}$, and $P^{3-}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Fluorine has $Z = 9$. The fluoride ion ($F^-$) has gained 1 electron, giving it 10 electrons ($2, 8$).\n* $Na^+$ ($11 - 1 = 10$), $Mg^{2+}$ ($12 - 2 = 10$), and $O^{2-}$ ($8 + 2 = 10$) are all isoelectronic with 10 electrons ($2, 8$).",
+    level: 3,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q6",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv3_9-2025",
+    question: "An element Z forms an ion with a $3+$ charge. The electron configuration of this ion $Z^{3+}$ is $2, 8$. The nucleus contains 14 neutrons. What is the nucleon number of element Z?",
+    options: [
+      { text: "24" },
+      { text: "27" },
+      { text: "14" },
+      { text: "17" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The ion $Z^{3+}$ has $2 + 8 = 10$ electrons.\n* Because it lost 3 electrons to form $Z^{3+}$, the neutral atom has $10 + 3 = 13$ electrons and therefore 13 protons (aluminum, Al).\n* Nucleon number = protons + neutrons = $13 + 14 = 27$.",
+    level: 3,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q5",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

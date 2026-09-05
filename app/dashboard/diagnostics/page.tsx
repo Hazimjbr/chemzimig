@@ -18,7 +18,7 @@ export default function DiagnosticsPage() {
 
     // Track state (allows switching tracks to see diagnostic across syllabuses)
     const defaultTrack = useMemo(() => {
-        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-as' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
+        const track = user?.track || (user?.grade?.toLowerCase().includes('edexcel') ? 'edexcel-alevel' : (user?.grade === 'AS Level' ? 'cie-as' : (user?.grade === 'A2 Level' || user?.grade === 'IB' || user?.grade === 'A Level' ? 'cie-alevel' : 'cie-igcse')));
         let normalized = track.toLowerCase().trim();
         if (normalized === 'igcse') normalized = 'cie-igcse';
         return normalized;
@@ -27,6 +27,15 @@ export default function DiagnosticsPage() {
     const [selectedTrack, setSelectedTrack] = useState<string>(defaultTrack);
     const [selectedFilter, setSelectedFilter] = useState<'all' | 'critical' | 'moderate' | 'mastered'>('all');
     const [inspectedUnit, setInspectedUnit] = useState<TopicDiagnostic | null>(null);
+
+    const syllabusOptions = useMemo(() => [
+        { id: 'cie-igcse', title: 'Cambridge IGCSE (0620)' },
+        { id: 'cie-as', title: 'Cambridge AS (9701)' },
+        { id: 'cie-alevel', title: 'Cambridge A2 (9701)' },
+        { id: 'edexcel-alevel', title: 'Edexcel IAL (Units 1–6)' },
+        { id: 'edexcel-as', title: 'Edexcel AS (Units 1–3)' },
+        { id: 'edexcel-a2', title: 'Edexcel A2 (Units 4–6)' },
+    ], []);
 
     // Compute Diagnostic Report
     const report = useMemo(() => {
@@ -67,19 +76,19 @@ export default function DiagnosticsPage() {
 
                 {/* Track Selector Pills */}
                 <div className="flex flex-wrap items-center gap-2 bg-slate-900/80 p-1.5 rounded-2xl border border-white/10 backdrop-blur-md">
-                    {allCurricula.map(c => {
-                        const isSelected = selectedTrack.startsWith(c.id.slice(0, 8)) || selectedTrack === c.id;
+                    {syllabusOptions.map(c => {
+                        const isSelected = selectedTrack === c.id || (selectedTrack.startsWith(c.id.slice(0, 8)) && selectedTrack.includes('edexcel') === c.id.includes('edexcel'));
                         return (
                             <button
                                 key={c.id}
                                 onClick={() => setSelectedTrack(c.id)}
                                 className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                                    isSelected
+                                    selectedTrack === c.id
                                         ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30'
                                         : 'text-slate-400 hover:text-white hover:bg-white/5'
                                 }`}
                             >
-                                {c.title.replace('Cambridge ', '').replace(' Chemistry', '')}
+                                {c.title}
                             </button>
                         );
                     })}
@@ -153,6 +162,97 @@ export default function DiagnosticsPage() {
 
             </div>
 
+            {/* Paper Skills Diagnostic Radar (MCQ vs Practical Skills vs Theory Calculations) */}
+            <div className="bg-[#0c1427] border border-white/10 rounded-3xl p-6 sm:p-8 space-y-6">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/5 pb-4">
+                    <div>
+                        <div className="flex items-center gap-2 mb-1">
+                            <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                                Component Performance
+                            </span>
+                            <span className="text-xs font-bold text-slate-400">Core Paper Competencies</span>
+                        </div>
+                        <h3 className="text-lg font-black text-white flex items-center gap-2">
+                            <span>Paper Skills & Practical Examination Radar</span>
+                        </h3>
+                    </div>
+
+                    <Link
+                        href="/dashboard/mock-exam"
+                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 hover:text-white text-xs font-bold transition-all self-start sm:self-auto"
+                    >
+                        <span>Full Mock Exam Simulator</span>
+                        <ChevronRight className="w-4 h-4" />
+                    </Link>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {report.skillsBreakdown.map((skill) => {
+                        const isStrong = skill.status === 'strong';
+                        const isModerate = skill.status === 'moderate';
+                        const isCritical = skill.status === 'critical';
+                        const isUnassessed = skill.status === 'unassessed';
+
+                        const borderStyle = isCritical 
+                            ? 'border-rose-500/30 bg-rose-950/10' 
+                            : isModerate 
+                            ? 'border-amber-500/30 bg-amber-950/10' 
+                            : isStrong 
+                            ? 'border-emerald-500/30 bg-emerald-950/10' 
+                            : 'border-white/5 bg-white/[0.02]';
+
+                        const badgeColor = isCritical
+                            ? 'bg-rose-500/20 text-rose-300 border-rose-500/30'
+                            : isModerate
+                            ? 'bg-amber-500/20 text-amber-300 border-amber-500/30'
+                            : isStrong
+                            ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
+                            : 'bg-slate-800 text-slate-400 border-white/10';
+
+                        const statusText = isCritical
+                            ? 'Needs Urgent Intervention'
+                            : isModerate
+                            ? 'Moderate Proficiency'
+                            : isStrong
+                            ? 'Strong Competency'
+                            : 'Not Assessed Yet';
+
+                        return (
+                            <div key={skill.category} className={`p-5 rounded-2xl border ${borderStyle} flex flex-col justify-between space-y-4`}>
+                                <div className="flex items-center justify-between">
+                                    <div className="flex items-center gap-2.5">
+                                        <span className="text-2xl">{skill.icon}</span>
+                                        <h4 className="text-sm font-bold text-white">{skill.label}</h4>
+                                    </div>
+                                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${badgeColor}`}>
+                                        {statusText}
+                                    </span>
+                                </div>
+
+                                <div className="space-y-1.5">
+                                    <div className="flex items-center justify-between text-xs">
+                                        <span className="text-slate-400">Component Accuracy:</span>
+                                        <span className="font-mono font-bold text-white">
+                                            {isUnassessed ? '—' : `${skill.accuracyPercent}% (${skill.correctAttempts}/${skill.totalAttempts})`}
+                                        </span>
+                                    </div>
+                                    <div className="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                        <div
+                                            className={`h-full rounded-full transition-all duration-700 ${
+                                                isCritical ? 'bg-gradient-to-r from-rose-500 to-red-600' :
+                                                isModerate ? 'bg-gradient-to-r from-amber-500 to-orange-500' :
+                                                isStrong ? 'bg-gradient-to-r from-emerald-500 to-teal-400' : 'bg-slate-700'
+                                            }`}
+                                            style={{ width: isUnassessed ? '100%' : `${skill.accuracyPercent}%`, opacity: isUnassessed ? 0.2 : 1 }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
             {/* Priority Rescue Alert (if critical weak spots exist) */}
             {report.topWeakSpots.length > 0 && (
                 <div className="rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-rose-500/15 via-rose-500/5 to-indigo-500/10 border border-rose-500/30 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-2xl shadow-rose-500/5 backdrop-blur-xl">
@@ -187,11 +287,11 @@ export default function DiagnosticsPage() {
                             <span>Study Rescue Lesson</span>
                         </Link>
                         <Link
-                            href="/dashboard/quizzes"
+                            href={`/dashboard/quizzes?mode=unit&unit=${encodeURIComponent(report.topWeakSpots[0].unitTitle)}&unitNum=${report.topWeakSpots[0].unitNumber}&track=${report.topWeakSpots[0].curriculumId}`}
                             className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 font-bold text-xs transition-all cursor-pointer"
                         >
-                            <Target className="w-4 h-4 text-indigo-400" />
-                            <span>Practice Unit</span>
+                            <Target className="w-4 h-4 text-emerald-400" />
+                            <span>Targeted Rescue Drill</span>
                         </Link>
                     </div>
                 </div>
@@ -349,11 +449,12 @@ export default function DiagnosticsPage() {
                                 </Link>
 
                                 <Link
-                                    href="/dashboard/quizzes"
-                                    className="inline-flex items-center justify-center p-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-all border border-white/5"
+                                    href={`/dashboard/quizzes?mode=unit&unit=${encodeURIComponent(diag.unitTitle)}&unitNum=${diag.unitNumber}&track=${diag.curriculumId}`}
+                                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 hover:text-white text-xs font-bold transition-all border border-emerald-500/20 hover:border-emerald-500/40"
                                     title="Practice Unit Questions"
                                 >
-                                    <Target className="w-4 h-4 text-emerald-400" />
+                                    <Target className="w-3.5 h-3.5 text-emerald-400" />
+                                    <span>Drill</span>
                                 </Link>
                             </div>
                         </div>

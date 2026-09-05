@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q56",
     createdAt: "2026-08-20T13:45:00Z"
+  },
+  {
+    id: "ex_ci_u3_l5_lv3_4-2023",
+    question: "A $25.0\\text{ cm}^3$ portion of vinegar containing ethanoic acid ($\\text{CH}_3\\text{COOH}$) requires $30.0\\text{ cm}^3$ of $0.150\\text{ mol/dm}^3$ sodium hydroxide for complete neutralisation:\n$$\\text{CH}_3\\text{COOH} + \\text{NaOH} \\rightarrow \\text{CH}_3\\text{COONa} + \\text{H}_2\\text{O}$$\nWhat is the concentration of ethanoic acid in the vinegar in $\\text{g/dm}^3$?\n(Given: $A_r$: C = 12, H = 1, O = 16)",
+    options: [
+      { text: "5.40 g/dm³" },
+      { text: "10.8 g/dm³", isCorrect: true },
+      { text: "18.0 g/dm³" },
+      { text: "21.6 g/dm³" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Moles of NaOH $= 0.150 \\times \\frac{30.0}{1000} = 0.0045\\text{ mol}$.\n* Stoichiometric ratio $1 : 1$, so moles of $\\text{CH}_3\\text{COOH} = 0.0045\\text{ mol}$.\n* Concentration in $\\text{mol/dm}^3 = \\frac{0.0045}{0.0250} = 0.180\\text{ mol/dm}^3$.\n* $M_r$ of $\\text{CH}_3\\text{COOH} = (2 \\times 12) + (4 \\times 1) + (2 \\times 16) = 24 + 4 + 32 = 60\\text{ g/mol}$.\n* Concentration in $\\text{g/dm}^3 = 0.180 \\times 60 = 10.8\\text{ g/dm}^3$.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q14",
+    lessonNum: 5,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l5_lv3_5-2024",
+    question: "A tablet of antacid containing magnesium hydroxide, $\\text{Mg(OH)}_2$, has a mass of 1.20 g. It was dissolved in excess hydrochloric acid, and the unreacted acid required titration. The experimental result showed that exactly 0.035 mol of HCl was neutralised by the $\\text{Mg(OH)}_2$ in the tablet:\n$$\\text{Mg(OH)}_2 + 2\\text{HCl} \\rightarrow \\text{MgCl}_2 + 2\\text{H}_2\\text{O}$$\nWhat is the percentage by mass of $\\text{Mg(OH)}_2$ in the antacid tablet?\n(Given: $M_r$ of $\\text{Mg(OH)}_2 = 58$)",
+    options: [
+      { text: "42.3%" },
+      { text: "70.0%" },
+      { text: "84.6%", isCorrect: true },
+      { text: "95.2%" }
+    ],
+    correctAnswer: 2,
+    explanation: "* From the equation, $1\\text{ mol Mg(OH)}_2$ neutralises $2\\text{ mol HCl}$.\n* Moles of $\\text{Mg(OH)}_2 = \\frac{0.035}{2} = 0.0175\\text{ mol}$.\n* Mass of pure $\\text{Mg(OH)}_2 = 0.0175 \\times 58 = 1.015\\text{ g}$.\n* $\\%\\text{ Purity} = \\frac{1.015}{1.20} \\times 100\\% \\approx 84.6\\%$.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q14",
+    lessonNum: 5,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l5_lv3_6-2025",
+    question: "An experiment is carried out to determine the concentration of limewater (aqueous calcium hydroxide, $\\text{Ca(OH)}_2$). $250\\text{ cm}^3$ of limewater is neutralised by $20.0\\text{ cm}^3$ of $0.050\\text{ mol/dm}^3$ hydrochloric acid:\n$$\\text{Ca(OH)}_2 + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + 2\\text{H}_2\\text{O}$$\nWhat is the concentration of the limewater in $\\text{mol/dm}^3$?",
+    options: [
+      { text: "$0.0010\\text{ mol/dm}^3$" },
+      { text: "$0.0020\\text{ mol/dm}^3$", isCorrect: true },
+      { text: "$0.0040\\text{ mol/dm}^3$" },
+      { text: "$0.0080\\text{ mol/dm}^3$" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Moles of HCl used $= 0.050 \\times \\frac{20.0}{1000} = 0.0010\\text{ mol}$.\n* Stoichiometry: $2\\text{ mol HCl} : 1\\text{ mol Ca(OH)}_2$.\n* Moles of $\\text{Ca(OH)}_2 = \\frac{0.0010}{2} = 0.00050\\text{ mol}$.\n* Volume of limewater $= 250\\text{ cm}^3 = 0.250\\text{ dm}^3$.\n* $\\text{Concentration} = \\frac{0.00050}{0.250} = 0.0020\\text{ mol/dm}^3$.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q20",
+    lessonNum: 5,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

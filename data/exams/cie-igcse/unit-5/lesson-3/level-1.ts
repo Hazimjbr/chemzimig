@@ -73,5 +73,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q132",
     createdAt: "2026-08-20T20:15:00Z"
+  },
+  {
+    id: "ex_ci_u5_l3_lv1_5-2023",
+    question: "Which statement about bond breaking and bond making in a chemical reaction is correct?",
+    options: [
+      { text: "Bond breaking is endothermic and bond making is exothermic", isCorrect: true },
+      { text: "Bond breaking is exothermic and bond making is endothermic" },
+      { text: "Both bond breaking and bond making are endothermic" },
+      { text: "Both bond breaking and bond making are exothermic" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Energy is required to break chemical bonds, so bond breaking is always an endothermic process.\n* Energy is released when new chemical bonds form, so bond making is always an exothermic process (MEXO BENDO).",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q26",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l3_lv1_6-2024",
+    question: "In an exothermic reaction, how does the energy absorbed in bond breaking compare to the energy released in bond making?",
+    options: [
+      { text: "The energy released in bond making is greater than the energy absorbed in bond breaking", isCorrect: true },
+      { text: "The energy absorbed in bond breaking is greater than the energy released in bond making" },
+      { text: "The energy absorbed in bond breaking is exactly equal to the energy released in bond making" },
+      { text: "No energy is absorbed during bond breaking" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In an exothermic reaction, the overall energy change is negative (energy is released to the surroundings).\n* This occurs because the energy released when new bonds are formed in the products exceeds the energy required to break the bonds in the reactants.",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q25",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l3_lv1_7-2025",
+    question: "Which of the following processes requires bond breaking and is therefore endothermic?",
+    options: [
+      { text: "Splitting a chlorine molecule into two chlorine atoms: Cl₂(g) → 2Cl(g)", isCorrect: true },
+      { text: "Combining two hydrogen atoms into a hydrogen molecule: 2H(g) → H₂(g)" },
+      { text: "Combining hydrogen and oxygen to form water" },
+      { text: "Freezing liquid water to solid ice" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Separating a diatomic molecule ($Cl_2$) into individual atoms requires overcoming the covalent bond between the chlorine atoms, which absorbs energy (bond breaking = endothermic).",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q27",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

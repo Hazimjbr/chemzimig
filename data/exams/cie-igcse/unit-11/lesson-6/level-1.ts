@@ -55,5 +55,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q435",
     createdAt: "2026-08-22T03:10:00Z"
+  },
+  {
+    id: "ex_ci_u11_l6_lv1_4-2023",
+    question: "Which two organic substances react together to form an ester?",
+    options: [
+      { text: "A carboxylic acid and an alcohol", isCorrect: true },
+      { text: "An alkane and an alkene" },
+      { text: "An alcohol and an alkane" },
+      { text: "A carboxylic acid and an alkane" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Esters are formed in a condensation reaction between a carboxylic acid and an alcohol in the presence of an acid catalyst, producing an ester and water.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q194",
+    lessonNum: 6,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l6_lv1_5-2024",
+    question: "What distinctive physical property makes esters particularly suitable for use in perfumes and food flavourings?",
+    options: [
+      { text: "They have pleasant, sweet and fruity smells", isCorrect: true },
+      { text: "They are completely non-flammable" },
+      { text: "They act as powerful oxidising agents" },
+      { text: "They form solid coloured crystals at room temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Esters are volatile organic compounds with characteristic sweet, fruity aromas and flavours, widely used as artificial flavourings and fragrances.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q195",
+    lessonNum: 6,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l6_lv1_6-2025",
+    question: "Which catalyst is commonly used in the laboratory preparation of an ester from an alcohol and a carboxylic acid?",
+    options: [
+      { text: "Concentrated sulfuric acid", isCorrect: true },
+      { text: "Finely divided iron" },
+      { text: "Nickel metal" },
+      { text: "Manganese(IV) oxide" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Concentrated sulfuric acid acts as a catalyst in esterification reactions, speeding up the reaction and removing water to shift the equilibrium towards ester formation.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q196",
+    lessonNum: 6,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

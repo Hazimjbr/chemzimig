@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q265",
     createdAt: "2026-08-21T09:30:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv2_5-2023",
+    question: "When potassium reacts with water, a lilac flame is seen. What is the cause of this flame?",
+    options: [
+      { text: "The hydrogen gas produced catches fire due to the high reaction temperature and burns with potassium vapour", isCorrect: true },
+      { text: "Potassium burns in nitrogen to form potassium nitride" },
+      { text: "Water decomposes into steam which glows purple" },
+      { text: "Oxygen gas released by the reaction burns with a purple flame" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The reaction of potassium with water is vigorously exothermic ($2K + 2H_2O \\rightarrow 2KOH + H_2$).\n* The heat released ignites the evolved hydrogen gas, and the high temperature vaporises a small amount of potassium, giving its characteristic lilac flame colour.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q39",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv2_6-2024",
+    question: "Which trend in physical properties is observed as you go down Group I from lithium to francium?",
+    options: [
+      { text: "Melting point decreases and density generally increases", isCorrect: true },
+      { text: "Melting point increases and density decreases" },
+      { text: "Both melting point and density increase" },
+      { text: "Both melting point and density decrease" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Down Group I, atomic radii increase so the metallic bonds between cations and the delocalised electrons weaken, causing melting points to decrease.\n* At the same time, atomic mass increases more rapidly than atomic volume, so density generally increases.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q37",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv2_7-2025",
+    question: "What is the formula and nature of the compound formed when sodium burns in excess oxygen?",
+    options: [
+      { text: "Na₂O₂ (sodium peroxide), which dissolves in water to form an alkaline solution", isCorrect: true },
+      { text: "NaO, which forms an acidic solution" },
+      { text: "NaO₂, which is a neutral gas" },
+      { text: "Na₂O₃, which is amphoteric" }
+    ],
+    correctAnswer: 0,
+    explanation: "* When burned in excess oxygen, sodium forms a mixture of sodium oxide ($Na_2O$) and predominantly sodium peroxide ($Na_2O_2$), an ionic solid that dissolves in water to produce strongly alkaline sodium hydroxide ($NaOH$) and hydrogen peroxide.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q40",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

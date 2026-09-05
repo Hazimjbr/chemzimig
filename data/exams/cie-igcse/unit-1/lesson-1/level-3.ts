@@ -102,6 +102,58 @@ export const level3Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q5",
     createdAt: "2026-03-06T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv3_7-2023",
+    question: "A cylinder fitted with a frictionless piston contains an ideal gas at $25\\text{ }^{\\circ}\\text{C}$. The gas is heated slowly to $50\\text{ }^{\\circ}\\text{C}$ while the external atmospheric pressure remains constant. Which statement accurately describes what occurs at the molecular level?",
+    options: [
+      { text: "The volume doubles because the temperature in degrees Celsius doubles" },
+      { text: "The average kinetic energy increases, molecules hit the piston more vigorously, and the gas expands so collision frequency per unit area matches the external pressure" },
+      { text: "The particles expand in diameter, causing the total volume to increase without any change in kinetic energy" },
+      { text: "The collision rate per unit area increases permanently, causing permanent pressure rise" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Heating increases the average kinetic energy of gas molecules.\n* The particles collide harder and more frequently with the piston, pushing it outwards.\n* As the volume increases, particles travel greater distances between collisions, restoring the internal pressure to equilibrium with external atmospheric pressure.\n* Note that volume is proportional to Kelvin temperature (not Celsius), so volume does not double.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q2",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv3_8-2024",
+    question: "A sample of pure solid stearic acid is melted and then allowed to cool slowly while its temperature is recorded at 1-minute intervals. A flat horizontal plateau is observed on the cooling curve at 69 °C. Which statement explains why the temperature remains constant during this time interval?",
+    options: [
+      { text: "The thermometer stops functioning because the liquid becomes too viscous" },
+      { text: "Energy is absorbed by the particles to overcome intermolecular forces" },
+      { text: "Energy released as intermolecular attractions form compensates for the heat being lost to the surroundings" },
+      { text: "Stearic acid decomposes into liquid components with higher melting points" }
+    ],
+    correctAnswer: 2,
+    explanation: "* During freezing (liquid to solid transition), latent heat of fusion is released as intermolecular bonds form.\n* This released thermal energy balances the rate of heat loss to the surroundings, keeping the average kinetic energy of particles and therefore the temperature constant.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q1",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv3_9-2025",
+    question: "The graph shows the heating curve for a pure substance initially in the solid state. If the substance is impure, how would the melting region on the heating curve differ?",
+    options: [
+      { text: "It would melt sharply at a higher fixed temperature" },
+      { text: "It would melt over a temperature range and at a lower temperature than the pure substance" },
+      { text: "It would sublime directly without any plateau region" },
+      { text: "The flat plateau would remain completely unchanged because impurities only affect boiling" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Impurities disrupt the regular crystal lattice structure of a solid.\n* Consequently, impurities lower the melting point and cause the substance to melt over a range of temperatures rather than at a sharp, distinct melting point.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q2",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

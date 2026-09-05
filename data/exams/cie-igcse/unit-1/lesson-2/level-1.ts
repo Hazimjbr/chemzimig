@@ -137,6 +137,58 @@ export const level1Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q6",
     createdAt: "2026-03-17T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l2_lv1_9-2023",
+    question: "A drop of liquid bromine is placed at the bottom of a gas jar. The gas jar is covered with a lid. After several hours, the entire gas jar contains a uniform red-brown gas. Which statement explains this observation?",
+    options: [
+      { text: "Bromine particles expand to fill the entire container" },
+      { text: "Bromine particles evaporate and diffuse randomly throughout the gas jar" },
+      { text: "Bromine decomposes into brown nitrogen dioxide" },
+      { text: "Gravity pulls air down and forces bromine liquid upwards" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Liquid bromine evaporates readily at room temperature to form brown bromine vapor.\n* The bromine particles then move randomly in all directions and collide with air particles, diffusing until evenly distributed.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q2",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l2_lv1_10-2024",
+    question: "Which of the following factors increases the rate of diffusion of gas particles?",
+    options: [
+      { text: "Decreasing the temperature of the gas" },
+      { text: "Increasing the temperature of the gas" },
+      { text: "Increasing the relative molecular mass ($M_r$) of the gas" },
+      { text: "Decreasing the concentration gradient" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Increasing temperature increases the average kinetic energy and speed of gas particles.\n* Fast-moving particles spread out and mix much more quickly, increasing the rate of diffusion.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q2",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l2_lv1_11-2025",
+    question: "When perfume is sprayed in one corner of a room, a person in the opposite corner smells it after a short time. What process is responsible for the perfume spreading through the air?",
+    options: [
+      { text: "Distillation" },
+      { text: "Diffusion" },
+      { text: "Filtration" },
+      { text: "Neutralisation" }
+    ],
+    correctAnswer: 1,
+    explanation: "* The vaporized aroma particles move randomly from an area of high concentration (near the spray) to areas of lower concentration throughout the room by diffusion.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q1",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

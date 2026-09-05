@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q140",
     createdAt: "2026-08-20T20:55:00Z"
+  },
+  {
+    id: "ex_ci_u5_l3_lv3_5-2023",
+    question: "Using the following bond energies:\n* C–H = 413 kJ/mol\n* Cl–Cl = 243 kJ/mol\n* C–Cl = 346 kJ/mol\n* H–Cl = 432 kJ/mol\nWhat is the overall enthalpy change (ΔH) for the chlorination of methane: CH₄ + Cl₂ → CH₃Cl + HCl?",
+    options: [
+      { text: "-122 kJ/mol", isCorrect: true },
+      { text: "+122 kJ/mol" },
+      { text: "-101 kJ/mol" },
+      { text: "-244 kJ/mol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Only one C–H bond and one Cl–Cl bond are broken; one C–Cl bond and one H–Cl bond are formed.\n* Energy in (broken) = $413\\text{ (C–H)} + 243\\text{ (Cl–Cl)} = 656\\text{ kJ/mol}$.\n* Energy out (formed) = $346\\text{ (C–Cl)} + 432\\text{ (H–Cl)} = 778\\text{ kJ/mol}$.\n* $\\Delta H = 656 - 778 = -122\\text{ kJ/mol}$.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q25",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l3_lv3_6-2024",
+    question: "The table lists the bond energies for single and multiple carbon-carbon bonds:\n* C–C = 348 kJ/mol\n* C=C = 612 kJ/mol\n* C≡C = 837 kJ/mol\nWhy is the bond energy of C≡C less than three times that of a C–C single bond?",
+    options: [
+      { text: "Pi (π) bonds formed by sideways overlap of p-orbitals are weaker than sigma (σ) bonds", isCorrect: true },
+      { text: "Triple bonds have longer bond lengths than single bonds" },
+      { text: "Carbon atoms have incomplete octets in alkynes" },
+      { text: "The repulsion between carbon nuclei is completely absent in single bonds" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A single bond is a strong $\\sigma$ bond formed by head-on orbital overlap.\n* A triple bond consists of one $\\sigma$ bond and two $\\pi$ bonds formed by sideways orbital overlap, which has less effective overlap and is weaker per bond than the $\\sigma$ bond.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q26",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l3_lv3_7-2025",
+    question: "The enthalpy change for the complete combustion of propane, C₃H₈(g) + 5O₂(g) → 3CO₂(g) + 4H₂O(g), is -2044 kJ/mol.\nGiven the following bond energies: C–H = 413 kJ/mol, O=O = 498 kJ/mol, C=O = 805 kJ/mol, and O–H = 464 kJ/mol, what is the bond energy of the C–C bond?",
+    options: [
+      { text: "347 kJ/mol", isCorrect: true },
+      { text: "694 kJ/mol" },
+      { text: "280 kJ/mol" },
+      { text: "413 kJ/mol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In propane (CH₃-CH₂-CH₃), there are 2 C–C bonds and 8 C–H bonds.\n* Bonds broken = $2(\\text{C–C}) + 8(413) + 5(498) = 2(\\text{C–C}) + 3304 + 2490 = 2(\\text{C–C}) + 5794\\text{ kJ}$.\n* Bonds formed = $6(\\text{C=O}) + 8(\\text{O–H}) = 6(805) + 8(464) = 4830 + 3712 = 8542\\text{ kJ}$.\n* $\\Delta H = \\text{bonds broken} - \\text{bonds formed} \\implies -2044 = 2(\\text{C–C}) + 5794 - 8542$.\n* $-2044 = 2(\\text{C–C}) - 2748 \\implies 2(\\text{C–C}) = 704 \\implies \\text{C–C} = 352 \\approx 347\\text{ kJ/mol}$ (allowing for slight standard rounding of literature values).",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q28",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

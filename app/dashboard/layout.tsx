@@ -17,7 +17,8 @@ import {
     FileCheck,
     Printer,
     Search,
-    BarChart3
+    BarChart3,
+    Zap
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useGamification } from '@/contexts/GamificationContext';
@@ -32,6 +33,7 @@ const chemistryNavItems = [
     { name: 'Study Hub', href: '/dashboard', icon: LayoutDashboard },
     { name: 'Syllabus', href: '/dashboard/curriculum', icon: BookOpen },
     { name: 'Diagnostics', href: '/dashboard/diagnostics', icon: BarChart3 },
+    { name: 'Speed Blitz', href: '/dashboard/speed-challenge', icon: Zap },
     { name: 'Exams', href: '/dashboard/quizzes', icon: Trophy },
     { name: 'Mock Simulator', href: '/dashboard/mock-exam', icon: FileCheck },
     { name: 'Worksheets', href: '/dashboard/worksheet', icon: Printer },
@@ -85,6 +87,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             pathname === '/dashboard' ||
             pathname?.startsWith('/dashboard/curriculum') ||
             pathname?.startsWith('/dashboard/diagnostics') ||
+            pathname?.startsWith('/dashboard/speed-challenge') ||
             pathname?.startsWith('/dashboard/quizzes') ||
             pathname?.startsWith('/dashboard/mock-exam') ||
             pathname?.startsWith('/dashboard/worksheet')

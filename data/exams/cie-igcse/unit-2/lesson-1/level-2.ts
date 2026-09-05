@@ -103,7 +103,59 @@ export const level2Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q19",
     createdAt: "2026-04-24T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_7-2023",
+    question: "An element X has two isotopes: $^{35}\\text{X}$ with an abundance of 75% and $^{37}\\text{X}$ with an abundance of 25%. What is the relative atomic mass ($A_r$) of element X?",
+    options: [
+      { text: "35.0" },
+      { text: "35.5" },
+      { text: "36.0" },
+      { text: "37.0" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Relative atomic mass ($A_r$) is the weighted average mass of naturally occurring isotopes relative to carbon-12.\n* $A_r = \\frac{(35 \\times 75) + (37 \\times 25)}{100} = \\frac{2625 + 925}{100} = \\frac{3550}{100} = 35.5$.\n* This matches chlorine ($Cl$).",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q6",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_8-2024",
+    question: "Which statement correctly describes two isotopes of the same element?",
+    options: [
+      { text: "They have identical numbers of neutrons but different numbers of protons" },
+      { text: "They have different chemical properties because their electron configurations differ" },
+      { text: "They have the same number of protons and identical chemical properties, but different physical properties such as density and mass" },
+      { text: "They have identical nucleon numbers" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Isotopes have identical proton numbers and identical electron configurations, giving them identical chemical properties.\n* Because they have different numbers of neutrons, they have different mass numbers and different physical properties (such as density and diffusion rates).",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q6",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l1_lv2_9-2025",
+    question: "An ion of element Y has 18 electrons, 16 protons, and 16 neutrons. What is the correct formula and symbol for this ion?",
+    options: [
+      { text: "$^{32}_{16}\\text{S}^{2-}$" },
+      { text: "$^{32}_{16}\\text{S}^{2+}$" },
+      { text: "$^{34}_{16}\\text{S}^{2-}$" },
+      { text: "$^{34}_{18}\\text{Ar}^{2-}$" }
+    ],
+    correctAnswer: 0,
+    explanation: "* 16 protons identifies the element as sulfur (S, $Z = 16$).\n* Nucleon number = 16 protons + 16 neutrons = 32.\n* Charge = 16 protons (+) + 18 electrons (-) = $2-$.\n* The complete symbol is $^{32}_{16}\\text{S}^{2-}$.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q6",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

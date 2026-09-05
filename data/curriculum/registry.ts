@@ -613,6 +613,8 @@ import * as ed_u4_l4_theory from './edexcel-alevel/unit-4/lesson-4/index';
 import * as ed_u4_l4_quiz from './edexcel-alevel/unit-4/lesson-4/quiz';
 import * as ed_u4_l5_theory from './edexcel-alevel/unit-4/lesson-5/index';
 import * as ed_u4_l5_quiz from './edexcel-alevel/unit-4/lesson-5/quiz';
+import * as ed_u4_l6_theory from './edexcel-alevel/unit-4/lesson-6/index';
+import * as ed_u4_l6_quiz from './edexcel-alevel/unit-4/lesson-6/quiz';
 import * as ed_u5_l1_theory from './edexcel-alevel/unit-5/lesson-1/index';
 import * as ed_u5_l1_quiz from './edexcel-alevel/unit-5/lesson-1/quiz';
 import * as ed_u5_l2_theory from './edexcel-alevel/unit-5/lesson-2/index';
@@ -651,6 +653,7 @@ export const edexcelRegistry: Record<string, Record<number, LessonRegistryItem>>
         3: { title: ed_u4_l3_theory.lessonTitle, number: ed_u4_l3_theory.lessonNumber, theory: ed_u4_l3_theory.theoryMarkdown, quiz: ed_u4_l3_quiz.lessonQuiz, parts: ed_u4_l3_theory.parts },
         4: { title: ed_u4_l4_theory.lessonTitle, number: ed_u4_l4_theory.lessonNumber, theory: ed_u4_l4_theory.theoryMarkdown, quiz: ed_u4_l4_quiz.lessonQuiz, parts: ed_u4_l4_theory.parts },
         5: { title: ed_u4_l5_theory.lessonTitle, number: ed_u4_l5_theory.lessonNumber, theory: ed_u4_l5_theory.theoryMarkdown, quiz: ed_u4_l5_quiz.lessonQuiz, parts: ed_u4_l5_theory.parts },
+        6: { title: ed_u4_l6_theory.lessonTitle, number: ed_u4_l6_theory.lessonNumber, theory: ed_u4_l6_theory.theoryMarkdown, quiz: ed_u4_l6_quiz.lessonQuiz, parts: ed_u4_l6_theory.parts },
     },
     'edexcel-alevel-unit-5': {
         1: { title: ed_u5_l1_theory.lessonTitle, number: ed_u5_l1_theory.lessonNumber, theory: ed_u5_l1_theory.theoryMarkdown, quiz: ed_u5_l1_quiz.lessonQuiz, parts: ed_u5_l1_theory.parts },

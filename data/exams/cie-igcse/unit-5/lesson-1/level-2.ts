@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q112",
     createdAt: "2026-08-20T18:35:00Z"
+  },
+  {
+    id: "ex_ci_u5_l1_lv2_5-2023",
+    question: "When solid sodium hydroxide dissolves in water, the temperature rises from 20 °C to 28 °C. Which statement about this process is correct?",
+    options: [
+      { text: "It is an exothermic process because thermal energy is transferred to the water", isCorrect: true },
+      { text: "It is an endothermic process because thermal energy is absorbed by the solution" },
+      { text: "The chemical energy of the system increases" },
+      { text: "The enthalpy change of solution is positive (+ΔH)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The rise in temperature indicates that thermal energy is released to the water (surroundings).\n* A process that transfers heat to the surroundings is exothermic, and its enthalpy change ($\\Delta H$) is negative.",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q23",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l1_lv2_6-2024",
+    question: "Which of the following equations represents an endothermic process?",
+    options: [
+      { text: "CaCO₃(s) → CaO(s) + CO₂(g)    ΔH = +178 kJ/mol", isCorrect: true },
+      { text: "CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(l)    ΔH = -890 kJ/mol" },
+      { text: "HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l)    ΔH = -57 kJ/mol" },
+      { text: "C(s) + O₂(g) → CO₂(g)    ΔH = -394 kJ/mol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* An endothermic reaction has a positive enthalpy change ($+\\Delta H$).\n* The thermal decomposition of calcium carbonate requires heating and has $\\Delta H = +178\\text{ kJ/mol}$, making it endothermic.",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q22",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l1_lv2_7-2025",
+    question: "A student measured the temperature change when excess zinc powder was added to aqueous copper(II) sulfate in an insulated cup. The temperature increased by 15 °C. Which statement is correct?",
+    options: [
+      { text: "The reaction is exothermic and the products have less energy than the reactants", isCorrect: true },
+      { text: "The reaction is endothermic and the products have more energy than the reactants" },
+      { text: "The reaction is exothermic and the products have more energy than the reactants" },
+      { text: "The reaction is endothermic and the products have less energy than the reactants" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The temperature increase indicates an exothermic displacement reaction.\n* In any exothermic reaction, energy is released to the surroundings, meaning the products have less chemical potential energy than the reactants (negative $\\Delta H$).",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q25",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

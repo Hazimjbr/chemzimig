@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q172",
     createdAt: "2026-08-20T23:45:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv3_4-2023",
+    question: "A Maxwell-Boltzmann distribution curve shows the molecular energies in a gas at temperature T1. When the gas is heated to temperature T2 (T2 > T1), which change occurs to the curve?",
+    options: [
+      { text: "The peak shifts to the right and becomes lower, with a larger area under the curve beyond Ea", isCorrect: true },
+      { text: "The peak shifts to the left and becomes higher" },
+      { text: "The peak shifts to the right and becomes higher" },
+      { text: "The total area under the whole curve increases" }
+    ],
+    correctAnswer: 0,
+    explanation: "* As temperature increases, the average molecular speed increases, shifting the distribution peak to higher energy (to the right).\n* Since total number of particles (area under curve) is constant, the peak must broaden and become lower, resulting in a substantially larger area under the tail beyond the activation energy ($E_a$).",
+    level: 3,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q28",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv3_5-2024",
+    question: "Two experiments are carried out between magnesium and hydrochloric acid:\n* Exp 1: 0.12 g Mg ribbon + 50 cm³ of 1.0 mol/dm³ HCl\n* Exp 2: 0.12 g Mg powder + 25 cm³ of 2.0 mol/dm³ HCl\nWhich statement correctly compares the initial rate of reaction and the total volume of H₂ gas collected at r.t.p.?",
+    options: [
+      { text: "Exp 2 has a higher initial rate, and both produce identical total volumes of H₂ gas", isCorrect: true },
+      { text: "Exp 2 has a higher initial rate and produces twice the volume of H₂ gas" },
+      { text: "Both experiments have identical initial rates and produce identical volumes of H₂" },
+      { text: "Exp 1 has a higher initial rate because the volume of acid is larger" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In both experiments, magnesium is the limiting reactant ($n = 0.12/24 = 0.005\\text{ mol}$). Acid moles = $0.050\\text{ mol}$ in Exp 1 and $0.050\\text{ mol}$ in Exp 2 (both in large excess).\n* Therefore, both yield identical amounts of $H_2$ gas.\n* Exp 2 uses powdered Mg (higher surface area) and 2.0 mol/dm³ HCl (higher concentration), giving a significantly faster initial rate.",
+    level: 3,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q30",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv3_6-2025",
+    question: "Why does an increase in pressure increase the rate of reaction between sulfur dioxide and oxygen in the Contact process, but have no effect on the rate of reaction between aqueous sodium hydroxide and hydrochloric acid?",
+    options: [
+      { text: "Gases are compressible so pressure increases particle density; liquids and solutions are virtually incompressible", isCorrect: true },
+      { text: "Pressure lowers the activation energy of gas reactions only" },
+      { text: "Aqueous reactions do not involve collisions between particles" },
+      { text: "Sulfur dioxide is a catalyst" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Increasing pressure reduces the volume occupied by gases, forcing gas molecules closer together and increasing collision frequency.\n* In liquids and solutions, particles are already closely packed and virtually incompressible, so pressure changes do not significantly alter particle spacing or collision rates.",
+    level: 3,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q32",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

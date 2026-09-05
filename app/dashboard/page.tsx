@@ -19,6 +19,7 @@ import { useGamification } from '@/contexts/GamificationContext';
 import { allCurricula } from '@/data/curriculum';
 import { WeakSpotAnalyticsHeatmap } from '@/components/visual/WeakSpotAnalyticsHeatmap';
 import { WeeklyStudyGoalCard } from '@/components/gamification/WeeklyStudyGoalCard';
+import { DailyStreakChallengeCard } from '@/components/gamification/DailyStreakChallengeCard';
 
 export default function DashboardPage() {
     const { user } = useAuth();
@@ -233,6 +234,13 @@ export default function DashboardPage() {
                                  <span className="text-xs bg-black/20 px-2 py-0.5 rounded-full uppercase font-black tracking-wider">Timed</span>
                              </Link>
                              <Link 
+                                 href="/dashboard/speed-challenge" 
+                                 className="flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 px-6 py-4 rounded-2xl font-black hover:from-amber-400 hover:to-orange-400 transition-all shadow-lg shadow-amber-500/20 active:scale-95"
+                             >
+                                 <Zap className="w-5 h-5 fill-current" />
+                                 <span>Speed Blitz</span>
+                             </Link>
+                             <Link 
                                  href="/dashboard/quizzes" 
                                  className="flex items-center gap-2 bg-indigo-500/20 backdrop-blur-md border border-white/20 text-white px-6 py-4 rounded-2xl font-bold hover:bg-indigo-500/30 transition-all active:scale-95"
                              >
@@ -254,6 +262,9 @@ export default function DashboardPage() {
                 <div className="absolute -top-12 -right-12 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-emerald-400/10 rounded-full blur-2xl pointer-events-none" />
             </div>
+
+            {/* Daily Momentum & Speed Blitz Challenge Engine */}
+            <DailyStreakChallengeCard />
 
             {/* Predictive Weak Spot Analytics & Concept Heatmap */}
             <WeakSpotAnalyticsHeatmap />

@@ -38,6 +38,7 @@ interface AuditedQuestion {
     };
     graphConfig?: any;
     apparatusScaleConfig?: any;
+    sourceRef?: string;
 }
 
 const renderTextWithMath = (text: string): React.ReactNode => {
@@ -354,7 +355,8 @@ export default function QuestionAuditorPage() {
                 paperType: q.paperType,
                 markingScheme: q.markingScheme,
                 graphConfig: q.graphConfig,
-                apparatusScaleConfig: (q as any).apparatusScaleConfig
+                apparatusScaleConfig: (q as any).apparatusScaleConfig,
+                sourceRef: q.source
             };
         });
 
@@ -397,7 +399,8 @@ export default function QuestionAuditorPage() {
                             paperType: q.paperType,
                             markingScheme: q.markingScheme,
                             graphConfig: q.graphConfig,
-                            apparatusScaleConfig: (q as any).apparatusScaleConfig
+                            apparatusScaleConfig: (q as any).apparatusScaleConfig,
+                            sourceRef: q.source
                         });
                     });
                 });
@@ -515,6 +518,7 @@ export default function QuestionAuditorPage() {
         const matchesSearch = 
             q.question.toLowerCase().includes(searchQuery.toLowerCase()) || 
             q.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (q.sourceRef && q.sourceRef.toLowerCase().includes(searchQuery.toLowerCase())) ||
             (q.explanation && q.explanation.toLowerCase().includes(searchQuery.toLowerCase())) ||
             (q.markingScheme?.examinerTips && q.markingScheme.examinerTips.toLowerCase().includes(searchQuery.toLowerCase()));
         
@@ -775,8 +779,13 @@ export default function QuestionAuditorPage() {
                                 </div>
 
                                 {/* ID and Date info */}
-                                <div className="flex justify-between items-center text-[10px] font-mono text-slate-500 bg-white/[0.01] px-4 py-1.5 rounded-xl border border-white/5">
+                                <div className="flex flex-wrap justify-between items-center gap-2 text-[10px] font-mono text-slate-500 bg-white/[0.01] px-4 py-1.5 rounded-xl border border-white/5">
                                     <span>ID: <strong className="text-indigo-400">{q.id}</strong></span>
+                                    {q.sourceRef && (
+                                        <span className="text-indigo-300/80 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">
+                                            {q.sourceRef}
+                                        </span>
+                                    )}
                                     {q.createdAt && (
                                         <span className="flex items-center gap-1">
                                             <Calendar className="w-3 h-3" />

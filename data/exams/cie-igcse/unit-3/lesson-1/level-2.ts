@@ -73,5 +73,64 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q17",
     createdAt: "2026-08-20T10:30:00Z"
+  },
+  {
+    id: "ex_ci_u3_l1_lv2_5-2023",
+    question: "A hydrocarbon contains 85.7% carbon and 14.3% hydrogen by mass. Its relative molecular mass ($M_r$) is 56. What are its empirical formula and molecular formula?\n(Given: $A_r$: C = 12, H = 1)",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Empirical formula</th><th class="p-2 border">Molecular formula</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">CH₂</td><td class="p-2 border">C₄H₈</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">CH</td><td class="p-2 border">C₄H₄</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">CH₂</td><td class="p-2 border">C₂H₄</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">CH₃</td><td class="p-2 border">C₄H₁₂</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Empirical CH₂ | Molecular C₄H₈", isCorrect: true },
+      { text: "Row B: Empirical CH | Molecular C₄H₄" },
+      { text: "Row C: Empirical CH₂ | Molecular C₂H₄" },
+      { text: "Row D: Empirical CH₃ | Molecular C₄H₁₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Moles: $\\text{C} = 85.7 / 12 = 7.14$; $\\text{H} = 14.3 / 1 = 14.3$.\n* Ratio: $\\text{C} : \\text{H} = 1 : 2$, so empirical formula is $\\text{CH}_2$ ($M_{\\text{emp}} = 14$).\n* Scaling factor $n = 56 / 14 = 4$, so molecular formula is $(\\text{CH}_2)_4 = \\text{C}_4\\text{H}_8$ (butene/cyclobutane).",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q12",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l1_lv2_6-2024",
+    question: "When 4.8 g of magnesium metal is heated in a crucible with excess oxygen, 8.0 g of magnesium oxide is produced. What is the empirical formula of magnesium oxide?\n(Given: $A_r$: Mg = 24, O = 16)",
+    options: [
+      { text: "MgO", isCorrect: true },
+      { text: "Mg₂O" },
+      { text: "MgO₂" },
+      { text: "Mg₂O₃" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Mass of oxygen reacted $= 8.0 - 4.8 = 3.2\\text{ g}$.\n* Moles of $\\text{Mg} = 4.8 / 24 = 0.20\\text{ mol}$.\n* Moles of $\\text{O} = 3.2 / 16 = 0.20\\text{ mol}$.\n* Mole ratio $\\text{Mg} : \\text{O} = 0.20 : 0.20 = 1 : 1$, so the empirical formula is MgO.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q12",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l1_lv2_7-2025",
+    question: "Consider the unbalanced equation:\n$$x\\text{Fe}_2\\text{O}_3 + y\\text{CO} \\rightarrow z\\text{Fe} + w\\text{CO}_2$$\nWhat are the values of $x, y, z,$ and $w$ when the equation is balanced using the lowest whole-number coefficients?",
+    options: [
+      { text: "x = 1, y = 3, z = 2, w = 3", isCorrect: true },
+      { text: "x = 1, y = 2, z = 2, w = 2" },
+      { text: "x = 2, y = 3, z = 4, w = 3" },
+      { text: "x = 1, y = 1, z = 2, w = 1" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The balanced blast furnace reduction equation is: $\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2$.\n* Iron: Left = $1 \\times 2 = 2$, Right = 2.\n* Carbon: Left = 3, Right = 3.\n* Oxygen: Left = $3 + 3 = 6$, Right = $3 \\times 2 = 6$.",
+    level: 2,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q12",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

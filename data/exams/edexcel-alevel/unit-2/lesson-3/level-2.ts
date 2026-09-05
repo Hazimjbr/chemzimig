@@ -17,7 +17,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q18",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q18",
     createdAt: "2026-07-27T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q19",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2026 Paper 1 Q19",
     createdAt: "2026-07-27T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q15",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q15",
     createdAt: "2026-07-28T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q19",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q19",
     createdAt: "2026-07-28T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2025 Paper 1 Q20",
     createdAt: "2026-07-29T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q16",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q16",
     createdAt: "2026-07-29T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q28",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2026 Paper 1 Q28",
     createdAt: "2026-08-12T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q22",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q22",
     createdAt: "2026-08-12T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q21",
     createdAt: "2026-08-13T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q29",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2025 Paper 1 Q29",
     createdAt: "2026-08-13T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Specimen Paper 1 Q23",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Oct 2025 Paper 1 Q23",
     createdAt: "2026-08-14T10:00:00Z"
   },
   {
@@ -226,7 +226,7 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Series Q22",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / Jan 2026 Paper 1 Q22",
     createdAt: "2026-08-14T10:00:00Z"
   },
   {
@@ -245,8 +245,46 @@ export const level2Questions: Question[] = [
     lessonNum: 3,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH12 / 2026 Paper 1 Q30",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2026 Paper 1 Q30",
     createdAt: "2026-08-15T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u2_l3_lv2_14-interactive",
+    question: "A sample of anhydrous calcium nitrate, Ca(NO₃)₂, is strongly heated in a test tube connected to a 100 cm³ gas syringe: 2Ca(NO₃)₂(s) → 2CaO(s) + 4NO₂(g) + O₂(g). Use the interactive gas syringe scale reader below to determine the total gas volume collected, and calculate the volume of brown nitrogen dioxide (NO₂) gas present in the mixture at r.t.p.",
+    options: [
+      { text: "Total Volume: 60.0 cm³; Volume of NO₂ = 48.0 cm³", isCorrect: true },
+      { text: "Total Volume: 60.0 cm³; Volume of NO₂ = 30.0 cm³" },
+      { text: "Total Volume: 50.0 cm³; Volume of NO₂ = 40.0 cm³" },
+      { text: "Total Volume: 70.0 cm³; Volume of NO₂ = 56.0 cm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The gas syringe scale clearly indicates a total volume of $60.0\\text{ cm}^3$\n* From the balanced equation: $4\\text{ mol of } \\text{NO}_2$ are formed for every $1\\text{ mol of } \\text{O}_2$ (total 5 mol of gas)\n* Mole fraction of $\\text{NO}_2 = \\frac{4}{5} = 0.80$\n* Volume of $\\text{NO}_2 = 0.80 \\times 60.0\\text{ cm}^3 = 48.0\\text{ cm}^3$",
+    level: 2,
+    topic: "edexcel-unit-2",
+    lessonNum: 3,
+    curriculum: "edexcel-alevel",
+    paperType: "practical",
+    source: "Pearson Edexcel IAL Chemistry WCH12/01 / June 2025 Paper 1 Q31",
+    createdAt: "2026-08-16T10:00:00Z",
+    apparatusScaleConfig: {
+      type: "gas-syringe",
+      targetValue: 60.0,
+      unit: "cm³",
+      minScale: 0.0,
+      maxScale: 100.0,
+      step: 10.0,
+      subdivision: 1.0,
+      tolerance: 1.0,
+      title: "Gas Syringe Total Decomposition Gas Volume (60.0 cm³)"
+    },
+    markingScheme: {
+      marks: 2,
+      points: [
+        { mark: 1, keyword: "60.0 cm3", text: "Read gas syringe correctly as 60.0 cm³." },
+        { mark: 1, keyword: "48.0 cm3 NO2", text: "Calculate volume of NO₂: (4/5) × 60.0 = 48.0 cm³." }
+      ],
+      examinerTips: "Group 2 nitrates decompose fully to oxide, NO₂ (brown gas), and O₂ (colourless gas)."
+    }
   }
 ];
 

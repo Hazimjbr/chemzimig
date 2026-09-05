@@ -35,5 +35,61 @@ export const level2Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q9",
     createdAt: "2026-05-17T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l4_lv2_3-2023",
+    question: "Carbon dioxide ($CO_2$) is a gas at room temperature, while silicon dioxide ($SiO_2$) is a solid with a very high melting point (> 1600 °C). Which statement accounts for this huge difference?",
+    options: [
+      { text: "$CO_2$ contains ionic bonds while $SiO_2$ contains covalent bonds" },
+      { text: "$CO_2$ consists of simple molecules held by weak intermolecular forces, whereas $SiO_2$ has a giant covalent lattice with strong covalent bonds extending throughout" },
+      { text: "Carbon is a non-metal while silicon is a metal" },
+      { text: "Silicon has more neutrons than carbon" }
+    ],
+    correctAnswer: 1,
+    explanation: "* $CO_2$ has a simple molecular structure with weak intermolecular forces between molecules that are easily overcome at low temperatures.\n* $SiO_2$ is a giant covalent macromolecule where every silicon atom is bonded to 4 oxygen atoms and every oxygen to 2 silicon atoms in a continuous 3D network of strong covalent bonds.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q10",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l4_lv2_4-2024",
+    question: "In which of the following molecules are ALL the valence shell electrons of all bonded atoms involved in covalent bonding (i.e. no lone pairs on any atom)?",
+    options: [
+      { text: "Ammonia ($NH_3$)" },
+      { text: "Methane ($CH_4$)" },
+      { text: "Water ($H_2O$)" },
+      { text: "Hydrogen chloride ($HCl$)" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In methane ($CH_4$), carbon has 4 valence electrons and forms 4 single C-H bonds with 4 hydrogen atoms.\n* All 4 carbon electrons and each hydrogen electron are shared in bonding, leaving zero lone pairs in the entire molecule.\n* $NH_3$ has 1 lone pair, $H_2O$ has 2 lone pairs, and $HCl$ has 3 lone pairs on chlorine.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q9",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l4_lv2_5-2025",
+    question: "Which row correctly describes the electrical conductivity of ethanol ($C_2H_5OH$) in the liquid state and when dissolved in water?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Liquid ethanol</th><th class="p-2 border">Aqueous ethanol</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">does not conduct</td><td class="p-2 border">does not conduct</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">conducts well</td><td class="p-2 border">conducts well</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">does not conduct</td><td class="p-2 border">conducts well</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">conducts well</td><td class="p-2 border">does not conduct</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: does not conduct | does not conduct" },
+      { text: "Row B: conducts well | conducts well" },
+      { text: "Row C: does not conduct | conducts well" },
+      { text: "Row D: conducts well | does not conduct" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ethanol is a covalent molecular compound consisting of uncharged neutral molecules.\n* Because it contains no mobile ions or free delocalised electrons in either pure liquid form or in aqueous solution, it cannot conduct electricity in either state.",
+    level: 2,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q9",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

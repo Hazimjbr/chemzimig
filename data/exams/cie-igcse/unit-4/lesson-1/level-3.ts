@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q68",
     createdAt: "2026-08-20T14:55:00Z"
+  },
+  {
+    id: "ex_ci_u4_l1_lv3_5-2023",
+    question: "A current of 2.00 A is passed for 1930 seconds through an electrolysis cell containing aqueous copper(II) sulfate using inert electrodes. What mass of copper metal is deposited at the cathode?\n(Given: Faraday constant $F = 96500\\text{ C/mol}$; $A_r$: Cu = 64)",
+    options: [
+      { text: "0.64 g" },
+      { text: "1.28 g", isCorrect: true },
+      { text: "2.56 g" },
+      { text: "6.40 g" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Charge $Q = I \\times t = 2.00 \\times 1930 = 3860\\text{ C}$.\n* Moles of electrons $= \\frac{Q}{F} = \\frac{3860}{96500} = 0.040\\text{ mol of } e^-$.\n* Cathode half-equation: $\\text{Cu}^{2+} + 2e^- \\rightarrow \\text{Cu}$.\n* Moles of Cu deposited $= \\frac{0.040}{2} = 0.020\\text{ mol}$.\n* Mass of Cu $= 0.020 \\times 64 = 1.28\\text{ g}$.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q15",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l1_lv3_6-2024",
+    question: "During the electrolysis of concentrated aqueous hydrochloric acid using carbon electrodes, equal moles of electrons produce gases at both electrodes. What are the volumes of gas collected at the anode and cathode at r.t.p.?",
+    options: [
+      { text: "Anode: 1 volume; Cathode: 1 volume", isCorrect: true },
+      { text: "Anode: 1 volume; Cathode: 2 volumes" },
+      { text: "Anode: 2 volumes; Cathode: 1 volume" },
+      { text: "Anode: 1 volume; Cathode: 4 volumes" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Cathode reaction: $2H^+ + 2e^- \\rightarrow H_2(g)$ (1 mole of $H_2$ per 2 moles of electrons).\n* Anode reaction: $2Cl^- \\rightarrow Cl_2(g) + 2e^-$ (1 mole of $Cl_2$ per 2 moles of electrons).\n* Since both reactions produce 1 mole of diatomic gas per 2 moles of electrons transferred, the molar and volume ratio is exactly $1 : 1$.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q15",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l1_lv3_7-2025",
+    question: "In the Hall-Héroult cell for aluminum extraction, 108 kg of aluminum is produced at the cathode. Assuming all oxygen formed at the carbon anodes reacts completely to form carbon dioxide, what mass of carbon anode is consumed?\n(Given: $A_r$: Al = 27, C = 12, O = 16)",
+    options: [
+      { text: "18 kg" },
+      { text: "36 kg", isCorrect: true },
+      { text: "48 kg" },
+      { text: "72 kg" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Overall cell reaction: $2\\text{Al}_2\\text{O}_3 + 3\\text{C} \\rightarrow 4\\text{Al} + 3\\text{CO}_2$.\n* Moles of Al produced $= \\frac{108000\\text{ g}}{27\\text{ g/mol}} = 4000\\text{ mol}$.\n* Stoichiometric ratio of C to Al is $3 : 4$.\n* Moles of C consumed $= 4000 \\times \\frac{3}{4} = 3000\\text{ mol}$.\n* Mass of carbon $= 3000 \\times 12 = 36000\\text{ g} = 36\\text{ kg}$.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q22",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

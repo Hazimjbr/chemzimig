@@ -91,6 +91,61 @@ export const level1Questions: Question[] = [
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q9",
     lessonNum: 4,
     createdAt: "2026-05-16T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l4_lv1_6-2023",
+    question: "How many shared pairs of electrons (covalent bonds) and how many unshared lone pairs of electrons are present in a molecule of water ($H_2O$)?",
+    options: [
+      { text: "2 shared pairs, 2 lone pairs" },
+      { text: "2 shared pairs, 0 lone pairs" },
+      { text: "4 shared pairs, 0 lone pairs" },
+      { text: "1 shared pair, 3 lone pairs" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Oxygen has 6 valence electrons ($2, 6$).\n* It shares 1 electron with each of the two hydrogen atoms, forming 2 single covalent bonds (2 shared pairs).\n* The remaining 4 valence electrons remain on the oxygen atom as 2 non-bonding lone pairs.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q10",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l4_lv1_7-2024",
+    question: "Which of the following molecules contains a double covalent bond?",
+    options: [
+      { text: "Hydrogen ($H_2$)" },
+      { text: "Methane ($CH_4$)" },
+      { text: "Oxygen ($O_2$)" },
+      { text: "Nitrogen ($N_2$)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Oxygen atoms have 6 valence electrons and each needs 2 electrons to complete its octet.\n* Two oxygen atoms share 2 pairs of electrons (4 electrons total), forming a double covalent bond ($O=O$).\n* $H_2$ and $CH_4$ contain single bonds; $N_2$ contains a triple bond.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q10",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l4_lv1_8-2025",
+    question: "Why do simple molecular covalent substances such as methane ($CH_4$) and oxygen ($O_2$) have low boiling points?",
+    options: [
+      { text: "The covalent bonds between atoms within the molecules are extremely weak" },
+      { text: "Only weak intermolecular forces exist between the molecules, requiring little thermal energy to overcome" },
+      { text: "They conduct electricity easily, causing them to boil" },
+      { text: "Their molecules lose mass upon gentle heating" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In simple molecular structures, strong covalent bonds join the atoms inside each molecule.\n* However, the intermolecular forces between separate molecules are very weak, and it is only these weak forces that are overcome during melting and boiling.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q10",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

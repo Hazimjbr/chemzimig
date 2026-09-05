@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q268",
     createdAt: "2026-08-21T09:45:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv3_4-2023",
+    question: "A piece of sodium metal (density = 0.97 g/cm³) floats on water, whereas a piece of rubidium metal (density = 1.53 g/cm³) sinks to the bottom before reacting violently. What explains why rubidium sinks while sodium floats?",
+    options: [
+      { text: "The large increase in mass of rubidium nuclei outweighs the increase in atomic volume, so density exceeds that of water (1.00 g/cm³)", isCorrect: true },
+      { text: "Sodium atoms have more electron shells than rubidium atoms" },
+      { text: "Rubidium reacts endothermically, cooling the water and freezing it" },
+      { text: "Sodium reacts with water to form solid ice that floats" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The density of water is 1.00 g/cm³.\n* Sodium has a density of 0.97 g/cm³ (< 1.0) and floats.\n* Rubidium's atomic mass (85.5) is much greater relative to its increase in volume, giving a density of 1.53 g/cm³ (> 1.0), causing it to sink.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q38",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv3_5-2024",
+    question: "Francium (Fr) is the heaviest alkali metal in Group I. Based on periodic trends, which prediction is most reliable?",
+    options: [
+      { text: "Francium has the lowest first ionisation energy and reacts explosively with water", isCorrect: true },
+      { text: "Francium has the highest melting point in Group I" },
+      { text: "Francium atoms have a smaller atomic radius than lithium atoms" },
+      { text: "Francium forms a covalent hydride with formula FrH₄" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Down Group I, the valence electron is in the 7th shell, furthest from the nucleus with maximum shielding, making it the easiest to remove (lowest ionisation energy and highest chemical reactivity).",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q38",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv3_6-2025",
+    question: "When 0.46 g of sodium (Ar = 23) is added to excess cold water, what volume of hydrogen gas is collected at r.t.p.? (Molar gas volume at r.t.p. = 24 dm³)",
+    options: [
+      { text: "240 cm³", isCorrect: true },
+      { text: "480 cm³" },
+      { text: "120 cm³" },
+      { text: "24 dm³" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Equation: $2Na + 2H_2O \\rightarrow 2NaOH + H_2$.\n* Moles of $Na = 0.46 / 23 = 0.020\\text{ mol}$.\n* Moles of $H_2 = 0.020 / 2 = 0.010\\text{ mol}$.\n* Volume of $H_2 = 0.010 \\times 24000\\text{ cm}^3 = 240\\text{ cm}^3$.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q38",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

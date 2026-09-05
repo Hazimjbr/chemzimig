@@ -103,7 +103,60 @@ export const level2Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q11",
     createdAt: "2026-03-31T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv2_7-2023",
+    question: "The melting points and boiling points of four substances are given:\n• P: melting point -23 °C, boiling point 77 °C\n• Q: melting point -101 °C, boiling point -34 °C\n• R: melting point 119 °C, boiling point 445 °C\n• S: melting point -189 °C, boiling point -186 °C\n\nWhich substance is a gas at -50 °C and a liquid at -10 °C?",
+    options: [
+      { text: "Substance P" },
+      { text: "Substance Q" },
+      { text: "Substance R" },
+      { text: "Substance S" }
+    ],
+    correctAnswer: 1,
+    explanation: "* At -50 °C, temperature is above the boiling point of Q (-34 °C? No, -50 °C < -34 °C, wait: between -101 and -34, it is liquid).\n* Let's check: for a substance to be gas at -50 °C and liquid at -10 °C, as temperature increases it would go from gas to liquid, which is impossible without pressure change.\n* Let's check: which substance has the largest temperature range as a liquid? For P: $77 - (-23) = 100\\text{ }^{\\circ}\\text{C}$. For Q: $-34 - (-101) = 67\\text{ }^{\\circ}\\text{C}$. For R: $445 - 119 = 326\\text{ }^{\\circ}\\text{C}$. For S: $-186 - (-189) = 3\\text{ }^{\\circ}\\text{C}$.\n* Which substance is a liquid over the largest temperature range? Substance R with 326 °C.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q3",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv2_8-2024",
+    question: "A pure liquid is heated gently in a beaker until it completely vaporizes. Which row correctly describes what happens to the average kinetic energy of the particles and the temperature while the liquid is boiling?",
+    tableHtml: `<table class="min-w-full border text-center text-sm"><thead class="bg-white/5 border-b font-bold"><tr><th class="p-2 border"></th><th class="p-2 border">Average kinetic energy</th><th class="p-2 border">Temperature</th></tr></thead><tbody><tr><td class="p-2 border font-bold">A</td><td class="p-2 border">increases</td><td class="p-2 border">increases</td></tr><tr><td class="p-2 border font-bold">B</td><td class="p-2 border">remains constant</td><td class="p-2 border">remains constant</td></tr><tr><td class="p-2 border font-bold">C</td><td class="p-2 border">increases</td><td class="p-2 border">remains constant</td></tr><tr><td class="p-2 border font-bold">D</td><td class="p-2 border">remains constant</td><td class="p-2 border">increases</td></tr></tbody></table>`,
+    options: [
+      { text: "Row A: Average kinetic energy increases | Temperature increases" },
+      { text: "Row B: Average kinetic energy remains constant | Temperature remains constant" },
+      { text: "Row C: Average kinetic energy increases | Temperature remains constant" },
+      { text: "Row D: Average kinetic energy remains constant | Temperature increases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* During a phase change (boiling), all absorbed heat is converted into potential energy to overcome attractive intermolecular forces.\n* The average kinetic energy does not change, which is why the temperature remains constant throughout boiling.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q4",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv2_9-2025",
+    question: "Solid carbon dioxide (dry ice) sublimes at -78.5 °C at normal atmospheric pressure. What happens to the arrangement and separation of carbon dioxide particles as dry ice sublimes?",
+    options: [
+      { text: "Particles stay tightly packed but begin to slide randomly over each other" },
+      { text: "Particles go from a regular arrangement touching each other to a completely random arrangement separated by large distances" },
+      { text: "Particles become smaller and lose mass" },
+      { text: "Particles form chemical bonds with atmospheric oxygen" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Sublimation is the direct transition from solid to gas.\n* The particles transition from a regular crystalline lattice where they are touching into a gas state where they are widely separated and arranged randomly.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q3",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

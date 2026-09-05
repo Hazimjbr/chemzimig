@@ -200,6 +200,9 @@ import { level3Questions as ed_u2_l4_lv3 } from './edexcel-alevel/unit-2/lesson-
 import { level1Questions as ed_u2_l5_lv1 } from './edexcel-alevel/unit-2/lesson-5/level-1';
 import { level2Questions as ed_u2_l5_lv2 } from './edexcel-alevel/unit-2/lesson-5/level-2';
 import { level3Questions as ed_u2_l5_lv3 } from './edexcel-alevel/unit-2/lesson-5/level-3';
+import { level1Questions as ed_u2_l6_lv1 } from './edexcel-alevel/unit-2/lesson-6/level-1';
+import { level2Questions as ed_u2_l6_lv2 } from './edexcel-alevel/unit-2/lesson-6/level-2';
+import { level3Questions as ed_u2_l6_lv3 } from './edexcel-alevel/unit-2/lesson-6/level-3';
 
 import { level1Questions as ed_u3_l1_lv1 } from './edexcel-alevel/unit-3/lesson-1/level-1';
 import { level2Questions as ed_u3_l1_lv2 } from './edexcel-alevel/unit-3/lesson-1/level-2';
@@ -298,6 +301,11 @@ export const examsRegistry: Record<string, Record<number, Record<number, Questio
                 ...ed_u2_l5_lv1,
                 ...ed_u2_l5_lv2,
                 ...ed_u2_l5_lv3
+            ],
+            6: [
+                ...ed_u2_l6_lv1,
+                ...ed_u2_l6_lv2,
+                ...ed_u2_l6_lv3
             ],
         },
         3: {

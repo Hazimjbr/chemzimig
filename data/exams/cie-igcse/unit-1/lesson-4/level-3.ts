@@ -103,7 +103,59 @@ export const level3Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q17",
     createdAt: "2026-04-14T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv3_7-2023",
+    question: "Under which set of conditions does a real gas behave most like an ideal gas?",
+    options: [
+      { text: "High temperature and high pressure" },
+      { text: "Low temperature and high pressure" },
+      { text: "High temperature and low pressure" },
+      { text: "Low temperature and low pressure" }
+    ],
+    correctAnswer: 2,
+    explanation: "* At high temperature, gas particles move with high kinetic energy, making intermolecular attractions negligible.\n* At low pressure, particles are very far apart, making the actual molecular volume negligible compared to the total gas volume.\n* These are the two primary assumptions of the ideal gas model.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q3",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv3_8-2024",
+    question: "A weather balloon containing helium has a volume of $10.0\\text{ m}^3$ at ground level where the temperature is $27\\text{ }^{\\circ}\\text{C}$ ($300\\text{ K}$) and pressure is $100\\text{ kPa}$. At high altitude, the pressure drops to $20\\text{ kPa}$ and the temperature falls to $-33\\text{ }^{\\circ}\\text{C}$ ($240\\text{ K}$). What is the new volume of the balloon?",
+    options: [
+      { text: "$25.0\\text{ m}^3$" },
+      { text: "$40.0\\text{ m}^3$" },
+      { text: "$50.0\\text{ m}^3$" },
+      { text: "$62.5\\text{ m}^3$" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Using the combined gas law: $\\frac{P_1 V_1}{T_1} = \\frac{P_2 V_2}{T_2}$.\n* Rearranging for $V_2$: $V_2 = \\frac{P_1 V_1 T_2}{P_2 T_1}$.\n* $V_2 = \\frac{100 \\times 10.0 \\times 240}{20 \\times 300} = \\frac{240000}{6000} = 40.0\\text{ m}^3$.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q5",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv3_9-2025",
+    question: "A gas syringe contains $50\\text{ cm}^3$ of gas X at $25\\text{ }^{\\circ}\\text{C}$. The gas is cooled to $-10\\text{ }^{\\circ}\\text{C}$ at constant atmospheric pressure. Which calculation gives the new volume in $\\text{cm}^3$?",
+    options: [
+      { text: "$50 \\times \\frac{-10}{25}$" },
+      { text: "$50 \\times \\frac{263}{298}$" },
+      { text: "$50 \\times \\frac{298}{263}$" },
+      { text: "$50 \\times \\frac{25}{-10}$" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Charles's Law states that at constant pressure, volume is directly proportional to absolute temperature in Kelvin ($V_1/T_1 = V_2/T_2$).\n* Convert Celsius to Kelvin: $T_1 = 25 + 273 = 298\\text{ K}$, and $T_2 = -10 + 273 = 263\\text{ K}$.\n* Solving for $V_2 = V_1 \\times \\frac{T_2}{T_1} = 50 \\times \\frac{263}{298}$.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q4",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

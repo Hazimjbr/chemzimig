@@ -55,5 +55,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q278",
     createdAt: "2026-08-21T10:45:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv3_4-2023",
+    question: "Chlorine gas is bubbled into aqueous sodium bromide: Cl₂(g) + 2NaBr(aq) → 2NaCl(aq) + Br₂(aq).\nWhich statement about this reaction is correct?",
+    options: [
+      { text: "Bromide ions are oxidised because each loses an electron", isCorrect: true },
+      { text: "Chlorine atoms are oxidised because they gain electrons" },
+      { text: "Bromide ions act as oxidising agents" },
+      { text: "Sodium ions are reduced during the reaction" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The ionic equation is Cl₂ + 2Br⁻ → 2Cl⁻ + Br₂.\n* Each bromide ion loses one electron to form bromine: 2Br⁻ → Br₂ + 2e⁻ (oxidation).\n* Chlorine gains electrons: Cl₂ + 2e⁻ → 2Cl⁻ (reduction).\n* Since bromide ions lose electrons, they are oxidised and act as the reducing agent.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q47",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv3_5-2024",
+    question: "Fluorine, chlorine, bromine, and iodine form hydride compounds with hydrogen (HX). What is the trend in thermal stability of the hydrogen halides down Group VII?",
+    options: [
+      { text: "Thermal stability decreases because the H–X bond becomes longer and weaker down the group", isCorrect: true },
+      { text: "Thermal stability increases because the molecules become heavier" },
+      { text: "Thermal stability decreases because electronegativity increases down the group" },
+      { text: "Thermal stability remains constant for all halogen hydrides" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Down Group VII, atomic radius increases from F to I.\n* The overlap of atomic orbitals with hydrogen becomes less effective, resulting in longer and weaker H–X covalent bonds.\n* Less thermal energy is required to break the weaker H–X bond, so thermal stability decreases down the group.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q48",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv3_6-2025",
+    question: "Astatine is placed below iodine in Group VII. In a reaction between astatine (At₂) and aqueous sodium iodide (NaI), which prediction is correct?",
+    options: [
+      { text: "No reaction occurs because astatine is less reactive than iodine", isCorrect: true },
+      { text: "Astatine oxidises iodide ions to form iodine and sodium astatide" },
+      { text: "Astatine displaces sodium to produce hydrogen gas" },
+      { text: "Iodide ions reduce astatine atoms to form astatine gas" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Reactivity and oxidising power decrease down Group VII: F₂ > Cl₂ > Br₂ > I₂ > At₂.\n* Astatine is lower than iodine, making it a weaker oxidising agent than iodine.\n* Therefore, astatine cannot displace iodide ions from solution, and no reaction takes place.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q49",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

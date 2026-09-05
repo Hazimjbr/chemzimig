@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q352",
     createdAt: "2026-08-21T18:35:00Z"
+  },
+  {
+    id: "ex_ci_u10_l1_lv2_5-2023",
+    question: "What is the primary function of carbon (charcoal) filters in a domestic water treatment plant?",
+    options: [
+      { text: "To remove dissolved organic impurities and improve taste and odour", isCorrect: true },
+      { text: "To kill all bacteria and viruses" },
+      { text: "To soften hard water by removing calcium ions" },
+      { text: "To adjust the pH of the water" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Activated carbon has a high surface area and adsorbs dissolved organic compounds, traces of pesticides, and molecules responsible for unpleasant tastes and smells.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q116",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l1_lv2_6-2024",
+    question: "Which of the following substances present in natural untreated water is BENEFICIAL to aquatic life?",
+    options: [
+      { text: "Dissolved oxygen", isCorrect: true },
+      { text: "Lead(II) ions" },
+      { text: "Phosphates from agricultural run-off" },
+      { text: "Untreated sewage" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Dissolved oxygen gas is required for the aerobic respiration of fish and aquatic organisms.\n* Lead ions, phosphates (which cause eutrophication), and sewage are pollutants.",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q117",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l1_lv2_7-2025",
+    question: "How does the presence of dissolved sodium chloride affect the boiling point and freezing point of pure water?",
+    options: [
+      { text: "It raises the boiling point above 100 °C and lowers the freezing point below 0 °C", isCorrect: true },
+      { text: "It lowers the boiling point and raises the freezing point" },
+      { text: "It raises both the boiling point and the freezing point" },
+      { text: "It lowers both the boiling point and the freezing point" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Dissolved impurities disrupt the crystal structure of ice, lowering the melting/freezing point below 0 °C.\n* They also lower the vapour pressure of water, requiring higher temperatures to boil (boiling point above 100 °C).",
+    level: 2,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q118",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

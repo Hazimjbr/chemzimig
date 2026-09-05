@@ -118,6 +118,9 @@ const allAchievements: Achievement[] = [
     { id: 'streak-30', name: '30-Day Streak', description: 'Maintain a 30-day active streak', icon: '🔥🔥🔥', requirement: { type: 'streak', value: 30 } },
     { id: 'level-5', name: 'Level 5 Reached', description: 'Reach Level 5', icon: '🎖️', requirement: { type: 'level', value: 5 } },
     { id: 'level-10', name: 'Level 10 Reached', description: 'Reach Level 10', icon: '🏅', requirement: { type: 'level', value: 10 } },
+    { id: 'speed-first', name: 'Lightning Chemist', description: 'Complete your first Speed Blitz challenge', icon: '⚡', requirement: { type: 'quizzes', value: 1 } },
+    { id: 'speed-streak-5', name: 'Rapid Reaction', description: 'Hit a 5-question combo streak in Speed Mode', icon: '🔥', requirement: { type: 'quizzes', value: 5 } },
+    { id: 'speed-ace', name: 'Flawless Blitz', description: 'Score 100% in a Speed Challenge', icon: '💎', requirement: { type: 'quizzes', value: 100 } },
 ];
 
 const GamificationContext = createContext<GamificationContextType | undefined>(undefined);

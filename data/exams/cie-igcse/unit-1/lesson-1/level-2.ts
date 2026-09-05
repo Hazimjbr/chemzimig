@@ -102,6 +102,58 @@ export const level2Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q3",
     createdAt: "2026-03-04T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv2_7-2023",
+    question: "A liquid is heated until it boils. Which statement about the boiling process is correct?",
+    options: [
+      { text: "Bubbles of gas form only at the surface of the liquid" },
+      { text: "Bubbles of gas form throughout the bulk of the liquid at a constant temperature" },
+      { text: "The temperature of the liquid continues to rise continuously as it boils" },
+      { text: "Particles lose energy as intermolecular forces are overcome" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Boiling occurs at a specific fixed boiling point throughout the entire liquid, with vapor bubbles forming throughout the bulk of the liquid.\n* Evaporation, in contrast, occurs only at the surface and at any temperature below the boiling point.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q1",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv2_8-2024",
+    question: "A gas syringe contains a sample of argon gas at room temperature and pressure. The volume is 60 cm³. If the temperature of the gas is increased while keeping the pressure constant, what happens to the volume and why?",
+    options: [
+      { text: "Volume decreases because particles lose kinetic energy" },
+      { text: "Volume decreases because particles attract each other more strongly" },
+      { text: "Volume increases because particles move faster and push the plunger outward to maintain constant pressure" },
+      { text: "Volume remains constant because argon is an unreactive noble gas" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Heating a gas increases the average kinetic energy of its particles.\n* The particles collide more frequently and forcefully with the syringe plunger, expanding the gas until the internal pressure equals atmospheric pressure.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q2",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l1_lv2_9-2025",
+    question: "A student leaves an open dish of pure ethanol ($C_2H_5OH$) in a room at 20 °C. The boiling point of ethanol is 78 °C. After several days, the dish is completely dry. Which statement explains this result?",
+    options: [
+      { text: "The ethanol reacted with atmospheric nitrogen to form a solid that blew away" },
+      { text: "Particles with higher kinetic energy escaped from the liquid surface into the air" },
+      { text: "The ethanol boiled because room temperature reached 78 °C" },
+      { text: "Ethanol particles decomposed into carbon and hydrogen gases" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Evaporation can occur at any temperature below the boiling point.\n* Particles at the surface that possess sufficient kinetic energy overcome intermolecular attractions and escape as gas particles.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q2",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

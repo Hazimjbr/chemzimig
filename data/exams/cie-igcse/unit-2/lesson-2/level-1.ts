@@ -109,6 +109,61 @@ export const level1Questions: Question[] = [
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q2",
     lessonNum: 2,
     createdAt: "2026-05-10T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_7-2023",
+    question: "Which statement about elements, compounds, and mixtures is correct?",
+    options: [
+      { text: "Air is a compound because its gases cannot be separated" },
+      { text: "Water ($H_2O$) is a compound because hydrogen and oxygen are chemically bonded in a fixed ratio" },
+      { text: "Methane ($CH_4$) is a mixture of carbon and hydrogen" },
+      { text: "Brass is an element because it is a metal" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Water is a compound containing hydrogen and oxygen chemically joined in a fixed 2:1 ratio by covalent bonds.\n* Air and brass are mixtures; methane is a compound, not a mixture.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q7",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_8-2024",
+    question: "Which of the following substances is an element?",
+    options: [
+      { text: "Clean dry air" },
+      { text: "Carbon monoxide" },
+      { text: "Diamond" },
+      { text: "Petroleum" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Diamond is an allotrope of carbon, consisting only of carbon atoms bonded in a giant tetrahedral lattice, so it is an element.\n* Carbon monoxide is a compound ($CO$); air and petroleum are mixtures.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q7",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l2_lv1_9-2025",
+    question: "Which process is a physical change rather than a chemical change?",
+    options: [
+      { text: "Burning ethanol in air" },
+      { text: "Separating crude oil into fractions by fractional distillation" },
+      { text: "Rusting of iron in damp air" },
+      { text: "Neutralising hydrochloric acid with sodium hydroxide" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Fractional distillation is a physical separation technique based on differences in boiling points.\n* No new chemical bonds are formed or broken between different elements; hydrocarbons simply vaporise and condense.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q7",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

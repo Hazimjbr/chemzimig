@@ -55,5 +55,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q395",
     createdAt: "2026-08-21T22:10:00Z"
+  },
+  {
+    id: "ex_ci_u11_l1_lv1_4-2023",
+    question: "What is the general formula of the homologous series of alkanes?",
+    options: [
+      { text: "CₙH₂ₙ₊₂", isCorrect: true },
+      { text: "CₙH₂ₙ" },
+      { text: "CₙH₂ₙ₋₂" },
+      { text: "CₙH₂ₙ₊₁OH" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Alkanes are saturated hydrocarbons containing only single carbon-carbon bonds, conforming to the general formula CₙH₂ₙ₊₂.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q149",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l1_lv1_5-2024",
+    question: "Which statement explains why alkanes are described as 'saturated' hydrocarbons?",
+    options: [
+      { text: "All the carbon-carbon bonds in their molecules are single covalent bonds", isCorrect: true },
+      { text: "They contain carbon-carbon double bonds" },
+      { text: "They are completely dissolved in water" },
+      { text: "They react rapidly with aqueous bromine at room temperature" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A saturated hydrocarbon is one in which all bonds between carbon atoms are single covalent bonds, holding the maximum number of hydrogen atoms.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q150",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l1_lv1_6-2025",
+    question: "Which fraction obtained from the fractional distillation of petroleum is used as fuel for jet aircraft?",
+    options: [
+      { text: "Kerosene (paraffin)", isCorrect: true },
+      { text: "Refinery gas" },
+      { text: "Gasoline (petrol)" },
+      { text: "Bitumen" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Kerosene (also called paraffin) is the fraction used as jet aircraft fuel.\n* Gasoline is car fuel; refinery gas is for bottled heating/cooking; bitumen is for road surfacing.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q151",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

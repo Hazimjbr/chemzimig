@@ -73,5 +73,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q368",
     createdAt: "2026-08-21T19:55:00Z"
+  },
+  {
+    id: "ex_ci_u10_l2_lv3_5-2023",
+    question: "Which of the following compounds has the highest percentage by mass of nitrogen?\n($A_r: \\text{H} = 1, \\text{C} = 12, \\text{N} = 14, \\text{O} = 16, \\text{S} = 32$)",
+    options: [
+      { text: "Urea, (NH₂)₂CO ($M_r = 60$)", isCorrect: true },
+      { text: "Ammonium nitrate, NH₄NO₃ ($M_r = 80$)" },
+      { text: "Ammonium sulfate, (NH₄)₂SO₄ ($M_r = 132$)" },
+      { text: "Potassium nitrate, KNO₃ ($M_r = 101$)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Urea: $(28 / 60) \\times 100\\% = 46.7\\%\\text{ N}$.\n* Ammonium nitrate: $(28 / 80) \\times 100\\% = 35.0\\%\\text{ N}$.\n* Ammonium sulfate: $(28 / 132) \\times 100\\% = 21.2\\%\\text{ N}$.\n* Potassium nitrate: $(14 / 101) \\times 100\\% = 13.9\\%\\text{ N}$.\n* Therefore, urea contains the highest proportion of nitrogen by mass.",
+    level: 3,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q128",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l2_lv3_6-2024",
+    question: "Why does increasing pressure in the Haber process (N₂(g) + 3H₂(g) ⇌ 2NH₃(g)) increase the yield of ammonia at equilibrium?",
+    options: [
+      { text: "The forward reaction produces fewer moles of gas than the backward reaction", isCorrect: true },
+      { text: "The forward reaction is exothermic" },
+      { text: "High pressure increases the collision energy of molecules" },
+      { text: "High pressure changes the activation energy of the reaction" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the balanced equation, 4 moles of gaseous reactants produce 2 moles of gaseous product.\n* By Le Chatelier's principle, increasing pressure favours the direction that produces fewer moles of gas (forward direction), shifting the equilibrium to the right.",
+    level: 3,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q129",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u10_l2_lv3_7-2025",
+    question: "What mass of ammonia is produced from the complete reaction of 28.0 g of nitrogen gas with excess hydrogen in the Haber process?\nN₂(g) + 3H₂(g) → 2NH₃(g)\n($A_r: \\text{N} = 14, \\text{H} = 1$)",
+    options: [
+      { text: "34.0 g", isCorrect: true },
+      { text: "17.0 g" },
+      { text: "68.0 g" },
+      { text: "56.0 g" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $M_r(\\text{N}_2) = 28$ g/mol $\\implies$ Moles of $\\text{N}_2 = 28.0 / 28 = 1.00$ mol.\n* Moles of $\\text{NH}_3$ produced = $1.00 \\times 2 = 2.00$ mol.\n* $M_r(\\text{NH}_3) = 14 + 3 = 17$ g/mol.\n* Mass of $\\text{NH}_3 = 2.00 \\times 17 = 34.0$ g.",
+    level: 3,
+    topic: "chemistry-environment",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q130",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

@@ -103,7 +103,59 @@ export const level3Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 21 Q13",
     createdAt: "2026-04-02T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv3_7-2023",
+    question: "A liquid X has a boiling point of 65 °C at 1.0 atm. When liquid X is boiled at high altitude where atmospheric pressure is 0.8 atm, at what temperature does it boil?",
+    options: [
+      { text: "At exactly 65 °C because boiling point is a fixed constant" },
+      { text: "At a temperature below 65 °C because less vapor pressure is required to match the lower atmospheric pressure" },
+      { text: "At a temperature above 65 °C because air is thinner" },
+      { text: "Liquid X cannot boil at reduced atmospheric pressure" }
+    ],
+    correctAnswer: 1,
+    explanation: "* A liquid boils when its saturated vapor pressure equals the external atmospheric pressure.\n* At high altitude, atmospheric pressure is lower, so vapor pressure reaches the external pressure at a lower temperature, resulting in a lower boiling point.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q4",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv3_8-2024",
+    question: "An experiment is carried out to investigate the cooling curve of liquid naphthalene. Samples containing different amounts of anthracene impurity are cooled. How does the presence of an impurity affect the freezing point of naphthalene?",
+    options: [
+      { text: "Freezing occurs sharply at a higher temperature" },
+      { text: "Freezing begins at a lower temperature and occurs over a range of temperatures" },
+      { text: "The freezing plateau becomes completely vertical" },
+      { text: "The impurity prevents the formation of any solid particles" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Foreign molecules (impurities) disrupt the regular arrangement of the crystal lattice.\n* Less thermal energy must be removed for attractive forces to overcome kinetic motion, lowering the freezing point and spreading the transition over a range of temperatures.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q4",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l3_lv3_9-2025",
+    question: "Which statement explains why steam at 100 °C produces more severe burns than boiling water at 100 °C?",
+    options: [
+      { text: "Steam particles have a higher temperature than boiling water" },
+      { text: "Steam condenses on the skin, releasing a large amount of latent heat of vaporisation in addition to the thermal energy released as hot water cools" },
+      { text: "Steam reacts chemically with human skin cells to form acids" },
+      { text: "Gas particles move faster and therefore penetrate skin cells mechanically" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Steam at 100 °C contains both sensible heat and latent heat of vaporisation.\n* When steam hits skin, it must first condense into water at 100 °C, releasing roughly 2260 J per gram of latent heat before cooling further as liquid water.",
+    level: 3,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q4",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

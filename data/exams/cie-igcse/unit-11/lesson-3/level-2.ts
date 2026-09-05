@@ -55,5 +55,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q414",
     createdAt: "2026-08-22T00:25:00Z"
+  },
+  {
+    id: "ex_ci_u11_l3_lv2_4-2023",
+    question: "When ethanol is warmed with acidified potassium manganate(VII), what colour change is observed?",
+    options: [
+      { text: "Purple to colourless", isCorrect: true },
+      { text: "Orange to green" },
+      { text: "Colourless to pink" },
+      { text: "Blue to green" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Acidified potassium manganate(VII) is a powerful oxidising agent.\n* When it oxidises ethanol into ethanoic acid, the purple manganate(VII) ions (MnO₄⁻) are reduced to colourless manganese(II) ions (Mn²⁺).",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q170",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l3_lv2_5-2024",
+    question: "Which of the following is a major advantage of producing ethanol by the catalytic hydration of ethene rather than by fermentation?",
+    options: [
+      { text: "It is a continuous and rapid process producing pure ethanol", isCorrect: true },
+      { text: "It relies on renewable sugar cane feedstock" },
+      { text: "It runs at room temperature and standard pressure" },
+      { text: "It requires no sophisticated chemical engineering equipment" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Catalytic hydration of ethene operates continuously and quickly produces high-purity ethanol without requiring fractional distillation.\n* Fermentation is a batch process producing dilute impure ethanol, although it uses renewable resources.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q171",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l3_lv2_6-2025",
+    question: "What is the balanced equation for the complete combustion of ethanol?",
+    options: [
+      { text: "C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O", isCorrect: true },
+      { text: "C₂H₅OH + 2O₂ → 2CO₂ + 3H₂" },
+      { text: "2C₂H₅OH + 5O₂ → 4CO₂ + 6H₂O" },
+      { text: "C₂H₅OH + O₂ → CH₃COOH + H₂O" }
+    ],
+    correctAnswer: 0,
+    explanation: "* 1 mole of ethanol (C₂H₅OH) reacts with 3 moles of oxygen gas to undergo complete combustion, producing 2 moles of carbon dioxide and 3 moles of water.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q172",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

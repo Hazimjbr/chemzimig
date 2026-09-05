@@ -55,5 +55,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q197",
     createdAt: "2026-08-21T02:25:00Z"
+  },
+  {
+    id: "ex_ci_u6_l5_lv2_4-2023",
+    question: "In the reaction: Zn(s) + CuSO₄(aq) → ZnSO₄(aq) + Cu(s)\nWhich species acts as the reducing agent?",
+    options: [
+      { text: "Zinc atoms (Zn)", isCorrect: true },
+      { text: "Copper(II) ions (Cu²⁺)" },
+      { text: "Sulfate ions (SO₄²⁻)" },
+      { text: "Copper atoms (Cu)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The reducing agent donates electrons to reduce another species and is itself oxidised.\n* Zinc atoms lose two electrons ($Zn \\rightarrow Zn^{2+} + 2e^-$), thus acting as the reducing agent.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q32",
+    lessonNum: 5,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l5_lv2_5-2024",
+    question: "What is the oxidation state of sulfur in sodium sulfite, Na₂SO₃?",
+    options: [
+      { text: "+4", isCorrect: true },
+      { text: "+6" },
+      { text: "-2" },
+      { text: "+2" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In $Na_2SO_3$: each $Na$ is +1, each $O$ is -2.\n* Let $x$ be the oxidation state of sulfur: $2(+1) + x + 3(-2) = 0 \\implies 2 + x - 6 = 0 \\implies x = +4$.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q30",
+    lessonNum: 5,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l5_lv2_6-2025",
+    question: "When potassium iodide solution is added to acidified hydrogen peroxide, a red-brown colour forms. Which statement explains this observation?",
+    options: [
+      { text: "Iodide ions (I⁻) are oxidised to iodine (I₂) by hydrogen peroxide", isCorrect: true },
+      { text: "Iodide ions (I⁻) are reduced to iodine (I₂) by hydrogen peroxide" },
+      { text: "Hydrogen peroxide is oxidised to water" },
+      { text: "Potassium ions form a red-brown insoluble precipitate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Iodide ions ($I^-$) lose electrons to form molecular iodine ($I_2$), turning the solution red-brown: $2I^- \\rightarrow I_2 + 2e^-$.\n* Loss of electrons is oxidation; hydrogen peroxide acts as the oxidising agent.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q33",
+    lessonNum: 5,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -23,6 +23,8 @@ export default function WorksheetGeneratorPage() {
   // Board & Track
   const [selectedBoard, setSelectedBoard] = useState<string>('all');
   const [selectedUnit, setSelectedUnit] = useState<string>('all');
+  const [selectedSeries, setSelectedSeries] = useState<string>('all');
+  const [selectedPaperType, setSelectedPaperType] = useState<string>('all');
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('all');
   const [questionCount, setQuestionCount] = useState<number>(20);
 
@@ -59,12 +61,35 @@ export default function WorksheetGeneratorPage() {
     }));
   }, [activeCurriculum]);
 
+  // Series Display Label
+  const selectedSeriesLabel = useMemo(() => {
+    switch (selectedSeries) {
+      case 'oct2026': return 'Oct 2026 Series';
+      case 'june2026': return 'June 2026 Series';
+      case 'jan2026': return 'Jan 2026 Series';
+      case 'oct2025': return 'Oct 2025 Series';
+      case 'june2025': return 'June 2025 Series';
+      case 'jan2025': return 'Jan 2025 Series';
+      case 'specimen': return 'Specimen Papers';
+      default: return '';
+    }
+  }, [selectedSeries]);
+
   // Resolve Human Readable Topic Title for Header
   const currentTopicDisplayTitle = useMemo(() => {
-    if (selectedUnit === 'all') return 'Comprehensive Assessment (All Units)';
-    const found = topicsList.find(t => t.id === selectedUnit);
-    return found ? found.title : selectedUnit.replace(/-/g, ' ');
-  }, [selectedUnit, topicsList]);
+    let base = 'Comprehensive Assessment (All Units)';
+    if (selectedUnit !== 'all') {
+      const found = topicsList.find(t => t.id === selectedUnit);
+      base = found ? found.title : selectedUnit.replace(/-/g, ' ');
+    }
+    if (selectedPaperType === 'practical') {
+      base += ' • Practical Skills Focus';
+    }
+    if (selectedSeriesLabel) {
+      base += ` (${selectedSeriesLabel})`;
+    }
+    return base;
+  }, [selectedUnit, topicsList, selectedPaperType, selectedSeriesLabel]);
 
   // Curriculum Display Title for Header
   const currentCurriculumDisplayTitle = useMemo(() => {
@@ -120,7 +145,37 @@ export default function WorksheetGeneratorPage() {
       });
     }
 
-    // 3. Filter by difficulty
+    // 3. Filter by Examination Series
+    if (selectedSeries !== 'all') {
+      pool = pool.filter(q => {
+        const s = q.source || '';
+        if (selectedSeries === 'oct2026') return s.includes('Oct 2026');
+        if (selectedSeries === 'june2026') return s.includes('June 2026');
+        if (selectedSeries === 'jan2026') return s.includes('Jan 2026');
+        if (selectedSeries === 'oct2025') return s.includes('Oct 2025');
+        if (selectedSeries === 'june2025') return s.includes('June 2025');
+        if (selectedSeries === 'jan2025') return s.includes('Jan 2025');
+        if (selectedSeries === 'specimen') return s.includes('Specimen') || s.includes('Sample');
+        return true;
+      });
+    }
+
+    // 4. Filter by Paper Type / Practical Skills
+    if (selectedPaperType !== 'all') {
+      pool = pool.filter(q => {
+        const isPractical = q.paperType === 'practical' || 
+          q.topic?.includes('unit-3') || 
+          q.topic?.includes('unit-6') || 
+          (q.source && (q.source.includes('WCH13') || q.source.includes('WCH16') || q.source.includes('Paper 6') || q.source.includes('0620/6')));
+
+        if (selectedPaperType === 'practical') return isPractical;
+        if (selectedPaperType === 'mcq') return !isPractical && (!q.paperType || q.paperType === 'mcq');
+        if (selectedPaperType === 'structured') return q.paperType === 'structured' || (q.source && (q.source.includes('Paper 4') || q.source.includes('0620/4')));
+        return true;
+      });
+    }
+
+    // 5. Filter by difficulty
     if (selectedDifficulty !== 'all') {
       const targetLevel = selectedDifficulty === 'easy' ? 1 : selectedDifficulty === 'medium' ? 2 : 3;
       pool = pool.filter(q => q.level === targetLevel);
@@ -128,7 +183,7 @@ export default function WorksheetGeneratorPage() {
 
     // Fallback if very narrow filter yielded nothing
     if (pool.length === 0) {
-      // Relax difficulty first
+      // Relax difficulty & series first
       pool = questionBank.filter(q => {
         if (selectedBoard === 'all') return true;
         const c = (q.curriculum || '').toLowerCase();
@@ -142,7 +197,7 @@ export default function WorksheetGeneratorPage() {
 
     setGeneratedQuestions(selected);
     setHasGenerated(true);
-  }, [selectedBoard, selectedUnit, selectedDifficulty, questionCount, topicsList]);
+  }, [selectedBoard, selectedUnit, selectedSeries, selectedPaperType, selectedDifficulty, questionCount, topicsList]);
 
   // When board changes, reset unit to 'all' so stale units from other curricula are not kept
   const handleBoardChange = (newBoard: string) => {
@@ -183,7 +238,7 @@ export default function WorksheetGeneratorPage() {
               Smart Worksheet & Assessment Generator
             </h1>
             <p className="text-slate-400 text-xs mt-1">
-              Select 20 questions from Cambridge / Edexcel banks and produce print-perfect worksheets with complete solutions.
+              Select questions from Cambridge and Edexcel official series (2025–2026) and generate print-perfect worksheets with complete solutions.
             </p>
           </div>
 
@@ -264,8 +319,8 @@ export default function WorksheetGeneratorPage() {
             </div>
           </div>
 
-          {/* Filters Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2 border-t border-white/5">
+          {/* Filters Row 1: Board, Unit, Series */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2 border-t border-white/5">
             {/* Exam Board */}
             <div>
               <label className="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">
@@ -302,6 +357,47 @@ export default function WorksheetGeneratorPage() {
               </select>
             </div>
 
+            {/* Examination Series */}
+            <div>
+              <label className="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">
+                Examination Series
+              </label>
+              <select
+                value={selectedSeries}
+                onChange={e => setSelectedSeries(e.target.value)}
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500/50"
+              >
+                <option value="all" className="bg-[#0b101e]">All Series (Comprehensive)</option>
+                <option value="oct2026" className="bg-[#0b101e]">🍁 Autumn 2026 Series (Oct 2026)</option>
+                <option value="june2026" className="bg-[#0b101e]">✨ Summer 2026 Series (June 2026)</option>
+                <option value="jan2026" className="bg-[#0b101e]">❄️ Winter 2026 Series (Jan 2026)</option>
+                <option value="oct2025" className="bg-[#0b101e]">🍂 Autumn 2025 Series (Oct 2025)</option>
+                <option value="june2025" className="bg-[#0b101e]">☀️ Summer 2025 Series (June 2025)</option>
+                <option value="jan2025" className="bg-[#0b101e]">🧊 Winter 2025 Series (Jan 2025)</option>
+                <option value="specimen" className="bg-[#0b101e]">📜 Official Specimen Papers</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Filters Row 2: Paper Type, Difficulty, Question Count */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2 border-t border-white/5">
+            {/* Paper Type / Practical Skills */}
+            <div>
+              <label className="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">
+                Paper Type & Skills
+              </label>
+              <select
+                value={selectedPaperType}
+                onChange={e => setSelectedPaperType(e.target.value)}
+                className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500/50"
+              >
+                <option value="all" className="bg-[#0b101e]">All Question Types</option>
+                <option value="mcq" className="bg-[#0b101e]">🔘 Multiple Choice (MCQ)</option>
+                <option value="practical" className="bg-[#0b101e]">🧪 Practical Skills (Unit 3, Unit 6 & P6)</option>
+                <option value="structured" className="bg-[#0b101e]">📝 Structured / Theory Questions</option>
+              </select>
+            </div>
+
             {/* Difficulty */}
             <div>
               <label className="text-[10px] uppercase font-bold text-slate-400 block mb-1.5">
@@ -325,7 +421,7 @@ export default function WorksheetGeneratorPage() {
                 Number of Questions
               </label>
               <div className="flex gap-1.5">
-                {[10, 20, 30, 40].map(count => (
+                {[10, 15, 20, 30, 40].map(count => (
                   <button
                     key={count}
                     onClick={() => setQuestionCount(count)}

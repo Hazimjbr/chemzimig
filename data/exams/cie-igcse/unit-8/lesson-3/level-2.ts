@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q275",
     createdAt: "2026-08-21T10:30:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv2_5-2023",
+    question: "Aqueous chlorine is added to a test-tube containing potassium bromide solution, and hexane is added to the mixture. What colour is observed in the upper organic hexane layer after shaking?",
+    options: [
+      { text: "Orange / reddish-brown", isCorrect: true },
+      { text: "Colourless" },
+      { text: "Pale green" },
+      { text: "Violet / purple" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Chlorine displaces bromine from aqueous potassium bromide: Cl₂(aq) + 2KBr(aq) → 2KCl(aq) + Br₂(aq).\n* The non-polar bromine (Br₂) dissolves preferentially in the non-polar top hexane layer, turning it orange / reddish-brown.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q44",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv2_6-2024",
+    question: "Which mixture will undergo a halogen displacement reaction?",
+    options: [
+      { text: "Bromine water + potassium iodide solution", isCorrect: true },
+      { text: "Iodine solution + sodium chloride solution" },
+      { text: "Bromine water + potassium chloride solution" },
+      { text: "Iodine solution + sodium bromide solution" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A halogen can only displace a halide ion that is below it in Group VII (less reactive).\n* Bromine is higher than iodine in Group VII, so bromine displaces iodide ions to form iodine: Br₂ + 2I⁻ → 2Br⁻ + I₂.\n* Iodine is less reactive than chlorine and bromine, so it cannot displace chloride or bromide.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q45",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l3_lv2_7-2025",
+    question: "Which statement explains why chlorine displaces iodide ions from aqueous sodium iodide?",
+    options: [
+      { text: "Chlorine is a stronger oxidising agent than iodine because its atoms gain electrons more readily", isCorrect: true },
+      { text: "Iodide ions are stronger oxidising agents than chloride ions" },
+      { text: "Chlorine atoms lose electrons more readily than iodine atoms" },
+      { text: "Iodine is higher than chlorine in Group VII of the Periodic Table" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Reactivity of Group VII elements decreases down the group.\n* Chlorine atoms have fewer shells than iodine, so they have a stronger attraction for electrons and gain electrons more easily (acting as a stronger oxidising agent).\n* Therefore, Cl₂ oxidises 2I⁻ into I₂ while itself being reduced to 2Cl⁻.",
+    level: 2,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q46",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

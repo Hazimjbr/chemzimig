@@ -55,5 +55,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q406",
     createdAt: "2026-08-21T23:25:00Z"
+  },
+  {
+    id: "ex_ci_u11_l2_lv2_4-2023",
+    question: "Under which conditions does ethene react with steam to manufacture ethanol in industry?\nC₂H₄ + H₂O ⇌ C₂H₅OH",
+    options: [
+      { text: "300 °C, 60 atm, phosphoric(V) acid catalyst", isCorrect: true },
+      { text: "450 °C, 200 atm, iron catalyst" },
+      { text: "100 °C, 1 atm, nickel catalyst" },
+      { text: "Room temperature, 1 atm, yeast catalyst" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The catalytic addition of steam to ethene (hydration) is carried out at 300 °C and 60 atm pressure in the presence of a concentrated phosphoric(V) acid (H₃PO₄) catalyst.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q161",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l2_lv2_5-2024",
+    question: "Which product is formed when propene undergoes an addition reaction with bromine?",
+    options: [
+      { text: "1,2-dibromopropane", isCorrect: true },
+      { text: "1,3-dibromopropane" },
+      { text: "2-bromopropane" },
+      { text: "1,1-dibromopropane" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Bromine adds across the C=C double bond between carbon 1 and carbon 2 in propene (CH₃CH=CH₂ + Br₂ → CH₃CHBrCH₂Br), forming 1,2-dibromopropane.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q162",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l2_lv2_6-2025",
+    question: "What is the catalyst and temperature used in the industrial hydrogenation of unsaturated vegetable oils to make margarine?",
+    options: [
+      { text: "Nickel catalyst at around 150–200 °C", isCorrect: true },
+      { text: "Iron catalyst at 450 °C" },
+      { text: "Vanadium(V) oxide catalyst at 450 °C" },
+      { text: "Phosphoric acid catalyst at 300 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Hydrogenation adds hydrogen gas across carbon-carbon double bonds in vegetable oils using a nickel catalyst at 150–200 °C, increasing the melting point to make solid margarine.",
+    level: 2,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q163",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

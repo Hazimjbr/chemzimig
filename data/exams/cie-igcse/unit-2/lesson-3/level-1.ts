@@ -73,6 +73,61 @@ export const level1Questions: Question[] = [
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 23 Q6",
     lessonNum: 3,
     createdAt: "2026-05-13T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l3_lv1_5-2023",
+    question: "When a potassium atom ($Z = 19$) reacts with a bromine atom ($Z = 35$) to form potassium bromide (KBr), which process takes place?",
+    options: [
+      { text: "Each potassium atom shares a pair of electrons with a bromine atom" },
+      { text: "Each potassium atom transfers one electron to a bromine atom" },
+      { text: "Each bromine atom transfers one electron to a potassium atom" },
+      { text: "Two pairs of electrons are shared between the atoms" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Potassium ($2, 8, 8, 1$) is a Group I metal and loses its single valence electron to achieve a stable octet ($K^+$).\n* Bromine ($2, 8, 18, 7$) is a Group VII halogen and accepts that electron into its outer shell to form bromide ($Br^-$).",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q9",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l3_lv1_6-2024",
+    question: "What is the formula of the ionic compound formed between calcium ions ($Ca^{2+}$) and nitrate ions ($NO_3^-$)?",
+    options: [
+      { text: "$CaNO_3$" },
+      { text: "$Ca(NO_3)_2$" },
+      { text: "$Ca_2NO_3$" },
+      { text: "$Ca_2(NO_3)_2$" }
+    ],
+    correctAnswer: 1,
+    explanation: "* An ionic compound must be electrically neutral overall.\n* One calcium ion has a $2+$ charge ($Ca^{2+}$), so it requires two nitrate ions ($NO_3^-$) with $1-$ charge each to balance the charge: $Ca(NO_3)_2$.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q9",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u2_l3_lv1_7-2025",
+    question: "Which property is characteristic of most ionic compounds such as sodium chloride?",
+    options: [
+      { text: "Low melting and boiling points" },
+      { text: "High volatility and rapid evaporation" },
+      { text: "High melting points and ability to conduct electricity when molten or dissolved in water" },
+      { text: "Good electrical conductivity in the solid state" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Giant ionic lattices are held together by strong electrostatic attractions between oppositely charged ions in all directions, requiring large amounts of thermal energy to break (high melting points).\n* When solid, ions are locked in fixed lattice sites and cannot conduct electricity, but when molten or aqueous, ions are mobile to carry current.",
+    level: 1,
+    topic: "atoms-elements",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q9",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 

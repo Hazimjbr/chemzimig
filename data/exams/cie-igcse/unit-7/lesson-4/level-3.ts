@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q239",
     createdAt: "2026-08-21T06:45:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv3_4-2023",
+    question: "A solid compound X was analysed:\n1. A flame test on X gave a lilac flame\n2. When aqueous barium nitrate was added to an acidified solution of X, no precipitate formed\n3. When aqueous silver nitrate was added to an acidified solution of X, a cream precipitate formed which was sparingly soluble in dilute ammonia\nWhat is the chemical formula of compound X?",
+    options: [
+      { text: "KBr (potassium bromide)", isCorrect: true },
+      { text: "KCl (potassium chloride)" },
+      { text: "KI (potassium iodide)" },
+      { text: "K₂SO₄ (potassium sulfate)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Lilac flame test confirms potassium ($K^+$).\n* No precipitate with acidified barium nitrate rules out sulfate ($SO_4^{2-}$).\n* A cream precipitate with acidified silver nitrate confirms bromide ($Br^-$).\n* Therefore, compound X is potassium bromide ($KBr$).",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q35",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv3_5-2024",
+    question: "A student adds aqueous sodium hydroxide dropwise to an unknown solution until in excess. A white precipitate forms which dissolves in excess NaOH to give a colourless solution.\nWhen aqueous ammonia is added dropwise to a fresh sample of the same unknown solution, a white precipitate forms which is INSOLUBLE in excess ammonia.\nWhich cation is present in the solution?",
+    options: [
+      { text: "Aluminium ion, Al³⁺", isCorrect: true },
+      { text: "Zinc ion, Zn²⁺" },
+      { text: "Calcium ion, Ca²⁺" },
+      { text: "Lead(II) ion, Pb²⁺" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $Al^{3+}$, $Zn^{2+}$, and $Pb^{2+}$ all dissolve in excess $NaOH$.\n* In excess aqueous ammonia ($NH_3$), $Zn^{2+}$ precipitates redissolve, whereas $Al^{3+}$ precipitates remain insoluble.\n* Calcium ($Ca^{2+}$) does not dissolve in excess $NaOH$. Hence, the cation is $Al^{3+}$.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q35",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l4_lv3_6-2025",
+    question: "To test for sulfite ions (SO₃²⁻) in a solid sample, dilute hydrochloric acid is added and the mixture is warmed gently. What gas is evolved, and which test confirms its identity?",
+    options: [
+      { text: "Sulfur dioxide (SO₂), which turns acidified potassium manganate(VII) from purple to colourless", isCorrect: true },
+      { text: "Hydrogen sulfide (H₂S), which turns lead acetate paper black" },
+      { text: "Carbon dioxide (CO₂), which turns limewater milky" },
+      { text: "Chlorine (Cl₂), which bleaches damp litmus paper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Acidifying and warming sulfite ions releases sulfur dioxide gas:\n  $SO_3^{2-}(aq) + 2H^+(aq) \\rightarrow H_2O(l) + SO_2(g)$.\n* Sulfur dioxide is a reducing agent that reduces acidified potassium manganate(VII) from purple to colourless.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q35",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -103,7 +103,59 @@ export const level2Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q15",
     createdAt: "2026-04-12T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv2_7-2023",
+    question: "A sealed rigid container contains helium gas. The container is heated from 300 K to 600 K. What happens to the average speed of the helium atoms and the pressure inside the container?",
+    options: [
+      { text: "Average speed increases; pressure doubles" },
+      { text: "Average speed remains constant; pressure doubles" },
+      { text: "Average speed doubles; pressure quadruples" },
+      { text: "Average speed halves; pressure halves" }
+    ],
+    correctAnswer: 0,
+    explanation: "* By Gay-Lussac's Law, for a fixed volume of gas, pressure is directly proportional to absolute temperature in Kelvin ($P \\propto T$).\n* Doubling absolute temperature from 300 K to 600 K doubles the pressure, because particles have greater average speed and kinetic energy, hitting the walls more forcefully and frequently.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q5",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv2_8-2024",
+    question: "A gas is contained in a syringe. The piston is pulled outward slowly at constant temperature, increasing the volume of the gas from 20 cm³ to 40 cm³. How does this change affect the pressure exerted by the gas?",
+    options: [
+      { text: "Pressure doubles because particles travel faster" },
+      { text: "Pressure is halved because the same number of particles collide with a larger surface area less frequently" },
+      { text: "Pressure remains unchanged because temperature is constant" },
+      { text: "Pressure drops to zero immediately" }
+    ],
+    correctAnswer: 1,
+    explanation: "* According to Boyle's Law ($P_1V_1 = P_2V_2$), at constant temperature, pressure is inversely proportional to volume.\n* Doubling the volume halves the particle concentration, meaning collisions per unit area of the container walls are halved.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q5",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv2_9-2025",
+    question: "Which of the following changes will decrease the rate of evaporation of water from an open beaker?",
+    options: [
+      { text: "Increasing the surface area of the water" },
+      { text: "Increasing the humidity of the surrounding air" },
+      { text: "Increasing the temperature of the water" },
+      { text: "Blowing dry air over the surface of the beaker" }
+    ],
+    correctAnswer: 1,
+    explanation: "* High atmospheric humidity means the air already contains a high concentration of water vapor molecules.\n* This reduces the net rate of evaporation because more water vapor molecules condense back into the liquid.",
+    level: 2,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q5",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

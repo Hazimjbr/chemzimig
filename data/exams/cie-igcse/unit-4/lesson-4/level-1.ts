@@ -73,5 +73,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q96",
     createdAt: "2026-08-20T17:15:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv1_5-2023",
+    question: "Which of the following is a major advantage of using hydrogen-oxygen fuel cells in motor vehicles compared to petrol engines?",
+    options: [
+      { text: "Water is the only chemical product formed, reducing air pollution", isCorrect: true },
+      { text: "Hydrogen is easier to store as a liquid at room temperature than petrol" },
+      { text: "Fuel cell vehicles require no external fuel source" },
+      { text: "Fuel cells produce carbon dioxide which is beneficial to plants" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Hydrogen-oxygen fuel cells emit only water ($H_2O$) as a byproduct.\n* They do not produce carbon dioxide ($CO_2$), carbon monoxide, or nitrogen oxides ($NO_x$), greatly reducing greenhouse gas emissions and urban air pollution.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q22",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv1_6-2024",
+    question: "A simple electrochemical cell consists of strips of two metals immersed in dilute sulfuric acid. Which pair of metal electrodes produces the highest reading on the voltmeter?",
+    options: [
+      { text: "Magnesium and copper", isCorrect: true },
+      { text: "Iron and copper" },
+      { text: "Zinc and iron" },
+      { text: "Copper and silver" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In an electrochemical cell, the voltage produced is proportional to the difference in reactivity between the two metal electrodes.\n* Magnesium is high up in the reactivity series while copper is low, providing the largest difference in reactivity and thus the highest voltage.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q21",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv1_7-2025",
+    question: "In a hydrogen-oxygen fuel cell, what reaction occurs to release electrical energy?",
+    options: [
+      { text: "Reaction between hydrogen and oxygen to produce water", isCorrect: true },
+      { text: "Thermal decomposition of water into hydrogen and oxygen" },
+      { text: "Combustion of methane in oxygen to form carbon dioxide and water" },
+      { text: "Electrolysis of aqueous sodium chloride" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A hydrogen-oxygen fuel cell uses the chemical reaction between hydrogen fuel and oxygen from the air: $2H_2 + O_2 \\rightarrow 2H_2O$.\n* The chemical energy is converted directly into electrical energy.",
+    level: 1,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q24",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

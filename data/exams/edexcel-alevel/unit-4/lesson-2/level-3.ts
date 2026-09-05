@@ -17,7 +17,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q20",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q20",
     createdAt: "2026-10-07T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q21",
     createdAt: "2026-10-07T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q17",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q17",
     createdAt: "2026-10-08T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q21",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q21",
     createdAt: "2026-10-08T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q22",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q22",
     createdAt: "2026-10-09T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q18",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q18",
     createdAt: "2026-10-09T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q27",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q27",
     createdAt: "2026-10-17T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q28",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q28",
     createdAt: "2026-10-17T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q23",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q23",
     createdAt: "2026-10-18T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q28",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Oct 2025 Paper 1 Q28",
     createdAt: "2026-10-18T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q29",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q29",
     createdAt: "2026-10-19T10:00:00Z"
   },
   {
@@ -226,8 +226,46 @@ export const level3Questions: Question[] = [
     lessonNum: 2,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q24",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2026 Paper 1 Q24",
     createdAt: "2026-10-19T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l2_lv3_13-june2026",
+    question: "A graph of ln k against 1/T for a reaction has a gradient of −8.45 × 10³ K. What is the activation energy (E_a) of this reaction in kJ mol⁻¹? (R = 8.314 J mol⁻¹ K⁻¹)",
+    options: [
+      { text: "+70.3 kJ mol⁻¹", isCorrect: true },
+      { text: "+101.6 kJ mol⁻¹" },
+      { text: "−70.3 kJ mol⁻¹" },
+      { text: "+1.02 kJ mol⁻¹" }
+    ],
+    correctAnswer: 0,
+    explanation: "* According to the Arrhenius equation: $\\\\ln k = -\\\\frac{E_a}{R}\\\\left(\\\\frac{1}{T}\\\\right) + \\\\ln A$.\n* $\\\\text{Gradient} = -\\\\frac{E_a}{R} = -8.45 \\\\times 10^3\\\\text{ K}$.\n* $E_a = -(-8.45 \\\\times 10^3) \\\\times 8.314 = 70,253\\\\text{ J mol}^{-1} = +70.3\\\\text{ kJ mol}^{-1}$.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q9",
+    createdAt: "2026-06-18T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l2_lv3_14-june2026",
+    question: "For the reaction 2NO(g) + O₂(g) → 2NO₂(g), the experimental rate equation is Rate = k[NO]²[O₂]. Which of the following multi-step mechanisms is consistent with this rate equation?",
+    options: [
+      { text: "Step 1 (fast equilibrium): 2NO ⇌ N₂O₂; Step 2 (slow, rate-determining): N₂O₂ + O₂ → 2NO₂", isCorrect: true },
+      { text: "Step 1 (slow): NO + O₂ → NO₃; Step 2 (fast): NO₃ + NO → 2NO₂" },
+      { text: "Step 1 (slow): 2NO → N₂ + O₂; Step 2 (fast): N₂ + 2O₂ → 2NO₂" },
+      { text: "Single step termolecular collision of 2NO and O₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* For Step 1 at equilibrium: $K = \\\\frac{[\\\\text{N}_2\\\\text{O}_2]}{[\\\\text{NO}]^2} \\\\implies [\\\\text{N}_2\\\\text{O}_2] = K[\\\\text{NO}]^2$.\n* The rate-determining step is Step 2: $\\\\text{Rate} = k_2[\\\\text{N}_2\\\\text{O}_2][\\\\text{O}_2]$.\n* Substituting $[\\\\text{N}_2\\\\text{O}_2]$ gives: $\\\\text{Rate} = k_2 K[\\\\text{NO}]^2[\\\\text{O}_2] = k[\\\\text{NO}]^2[\\\\text{O}_2]$, matching experiment.",
+    level: 3,
+    topic: "edexcel-unit-4",
+    lessonNum: 2,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q10",
+    createdAt: "2026-06-18T10:00:00Z"
   }
 ];
 

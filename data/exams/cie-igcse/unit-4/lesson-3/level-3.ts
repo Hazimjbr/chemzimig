@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q92",
     createdAt: "2026-08-20T16:55:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv3_5-2023",
+    question: "During copper refining, an impure copper anode contains zinc and silver impurities. Which statement describes what happens to these two impurities during electrolysis?",
+    options: [
+      { text: "Zinc dissolves into the electrolyte as Zn²⁺ ions; silver falls to the bottom as anode sludge", isCorrect: true },
+      { text: "Zinc falls to the bottom as anode sludge; silver dissolves into the electrolyte" },
+      { text: "Both zinc and silver deposit on the pure copper cathode" },
+      { text: "Both zinc and silver dissolve into the electrolyte as cations" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Zinc is more reactive than copper; it loses electrons readily and dissolves into the electrolyte as $Zn^{2+}$ ions without depositing at the cathode.\n* Silver is less reactive than copper; it cannot be oxidised at the voltage used and drops to the bottom of the cell below the anode as insoluble anode sludge.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q22",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv3_6-2024",
+    question: "In an electroplating experiment, a spoon is coated with silver using a current of 2.0 A for 10 minutes. If the current is doubled to 4.0 A and the time is doubled to 20 minutes, how will the mass of silver deposited change?",
+    options: [
+      { text: "It will be four times greater", isCorrect: true },
+      { text: "It will be twice as great" },
+      { text: "It will be eight times greater" },
+      { text: "It will remain the same" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The mass of substance deposited in electrolysis is directly proportional to the total electric charge passed: $Q = I \\times t$.\n* Doubling both the electric current ($2 \\times$) and the time ($2 \\times$) increases the total charge passed by a factor of $2 \\times 2 = 4$.\n* Consequently, the mass of silver deposited becomes four times greater.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q20",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l3_lv3_7-2025",
+    question: "A piece of copper is electroplated onto an iron object. Why is it essential that the object is thoroughly cleaned and grease-free before electroplating begins?",
+    options: [
+      { text: "To ensure the electroplated copper layer adheres firmly and evenly to the surface", isCorrect: true },
+      { text: "To prevent the iron object from dissolving in the electrolyte" },
+      { text: "To increase the voltage of the power supply" },
+      { text: "To prevent the formation of hydrogen gas at the anode" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Any grease, dirt, or oxide film on the metal object prevents direct contact between the depositing copper atoms and the metal substrate.\n* Thorough cleaning ensures that the electroplated metal adheres strongly and forms a uniform, non-peeling coating.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q22",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

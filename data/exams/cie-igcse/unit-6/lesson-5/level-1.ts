@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q194",
     createdAt: "2026-08-21T02:10:00Z"
+  },
+  {
+    id: "ex_ci_u6_l5_lv1_4-2023",
+    question: "Which of the following definitions describes reduction in terms of electron transfer?",
+    options: [
+      { text: "Reduction is the gain of electrons", isCorrect: true },
+      { text: "Reduction is the loss of electrons" },
+      { text: "Reduction is the gain of oxygen" },
+      { text: "Reduction is the loss of hydrogen" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Using the acronym OIL RIG:\n* Oxidation Is Loss of electrons.\n* Reduction Is Gain of electrons.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q32",
+    lessonNum: 5,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l5_lv1_5-2024",
+    question: "In the blast furnace reaction: Fe₂O₃ + 3CO → 2Fe + 3CO₂\nWhich substance is oxidised?",
+    options: [
+      { text: "Carbon monoxide (CO)", isCorrect: true },
+      { text: "Iron(III) oxide (Fe₂O₃)" },
+      { text: "Iron (Fe)" },
+      { text: "Carbon dioxide (CO₂)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Carbon monoxide ($CO$) gains oxygen atoms to form carbon dioxide ($CO_2$).\n* Gain of oxygen is defined as oxidation, so $CO$ is the substance oxidised.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q33",
+    lessonNum: 5,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l5_lv1_6-2025",
+    question: "What colour change is observed when acidified potassium manganate(VII) acts as an oxidising agent?",
+    options: [
+      { text: "Turns from purple to colourless", isCorrect: true },
+      { text: "Turns from colourless to purple" },
+      { text: "Turns from orange to green" },
+      { text: "Turns from red-brown to colourless" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Potassium manganate(VII) contains the deeply purple manganate(VII) ion ($MnO_4^-$).\n* When reduced in acidic solution by a reducing agent, it forms virtually colourless manganese(II) ions ($Mn^{2+}$).",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q35",
+    lessonNum: 5,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

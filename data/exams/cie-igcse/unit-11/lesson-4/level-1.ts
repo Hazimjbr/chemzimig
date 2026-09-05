@@ -55,5 +55,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q419",
     createdAt: "2026-08-22T01:10:00Z"
+  },
+  {
+    id: "ex_ci_u11_l4_lv1_4-2023",
+    question: "What is the functional group present in ethanoic acid and other carboxylic acids?",
+    options: [
+      { text: "–COOH (carboxyl group)", isCorrect: true },
+      { text: "–OH (hydroxyl group)" },
+      { text: "–COO– (ester link)" },
+      { text: "–C=C– (double bond)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* All carboxylic acids contain the carboxyl functional group, –COOH.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q176",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l4_lv1_5-2024",
+    question: "Why is aqueous ethanoic acid classified as a weak acid compared to hydrochloric acid?",
+    options: [
+      { text: "It only partially ionises in water to produce hydrogen ions", isCorrect: true },
+      { text: "It cannot react with metal carbonates" },
+      { text: "It is an organic compound that does not contain hydrogen" },
+      { text: "It has a pH value greater than 7" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Weak acids, like ethanoic acid, dissociate only partially in aqueous solution: CH₃COOH ⇌ CH₃COO⁻ + H⁺, whereas strong acids ionise completely.",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q177",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u11_l4_lv1_6-2025",
+    question: "Which carboxylic acid contains exactly three carbon atoms?",
+    options: [
+      { text: "Propanoic acid", isCorrect: true },
+      { text: "Methanoic acid" },
+      { text: "Ethanoic acid" },
+      { text: "Butanoic acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Methanoic acid has 1 carbon (HCOOH), ethanoic acid has 2 carbons (CH₃COOH), propanoic acid has 3 carbons (C₂H₅COOH), and butanoic acid has 4 carbons (C₃H₇COOH).",
+    level: 1,
+    topic: "organic-chemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q178",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

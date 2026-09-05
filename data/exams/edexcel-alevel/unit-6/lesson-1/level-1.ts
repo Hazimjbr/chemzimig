@@ -17,7 +17,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Specimen Paper 6 Q1",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Oct 2025 Paper 6 Q1",
     createdAt: "2026-12-09T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Paper 6 Q2",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q2",
     createdAt: "2026-12-09T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Series Q1",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q1",
     createdAt: "2026-12-10T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Specimen Paper 6 Q2",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Oct 2025 Paper 6 Q2",
     createdAt: "2026-12-10T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Paper 6 Q3",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q3",
     createdAt: "2026-12-11T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Series Q2",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q2",
     createdAt: "2026-12-11T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Specimen Paper 6 Q3",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Oct 2025 Paper 6 Q3",
     createdAt: "2026-12-12T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Paper 6 Q4",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q4",
     createdAt: "2026-12-12T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Specimen Paper 6 Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Oct 2025 Paper 6 Q8",
     createdAt: "2026-12-19T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Paper 6 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q9",
     createdAt: "2026-12-19T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Series Q7",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2026 Paper 6 Q7",
     createdAt: "2026-12-20T10:00:00Z"
   },
   {
@@ -226,7 +226,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Specimen Paper 6 Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Oct 2025 Paper 6 Q9",
     createdAt: "2026-12-20T10:00:00Z"
   },
   {
@@ -245,7 +245,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Paper 6 Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q10",
     createdAt: "2026-12-21T10:00:00Z"
   },
   {
@@ -264,7 +264,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Series Q8",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2026 Paper 6 Q8",
     createdAt: "2026-12-21T10:00:00Z"
   },
   {
@@ -283,7 +283,7 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Specimen Paper 6 Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Oct 2025 Paper 6 Q10",
     createdAt: "2026-12-22T10:00:00Z"
   },
   {
@@ -302,8 +302,160 @@ export const level1Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH16 / 2026 Paper 6 Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q11",
     createdAt: "2026-12-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_17-june2026",
+    question: "What is the primary criterion for selecting a suitable solvent to recrystallise an impure organic solid (such as aspirin)?",
+    options: [
+      { text: "The solid must be readily soluble in the hot solvent but virtually insoluble in the cold solvent, while impurities are either completely soluble or insoluble at both temperatures", isCorrect: true },
+      { text: "The solid must be completely insoluble in the hot solvent" },
+      { text: "The solvent must have a boiling point above 250 °C" },
+      { text: "The solid and solvent must react to form a gas" }
+    ],
+    correctAnswer: 0,
+    explanation: "* An ideal recrystallisation solvent dissolves the compound when boiling/hot and allows it to crystallise out in high yield upon cooling to $0-5^\\\\circ\\\\text{C}$.\n* Soluble impurities remain dissolved in the cold mother liquor, and insoluble impurities are removed by hot filtration.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q3",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_18-june2026",
+    question: "Why is suction filtration using a Büchner funnel and water aspirator preferred over simple gravity filtration when collecting recrystallised organic crystals?",
+    options: [
+      { text: "It is significantly faster and draws air through the crystal cake, partially drying the crystals", isCorrect: true },
+      { text: "It cools the crystals below 0 °C" },
+      { text: "It dissolves any remaining solid impurities" },
+      { text: "It eliminates the need for filter paper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The reduced pressure created by the water aspirator/pump speeds up filtration tenfold compared to gravity.\n* The continuous airflow through the Büchner funnel pulls residual solvent out, leaving a nearly dry crystalline cake.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / Jan 2025 Paper 6 Q4",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_19-june2026",
+    question: "During an iodine–thiosulfate titration, why must the starch indicator NOT be added at the start of the titration, but only when the solution becomes pale straw-yellow?",
+    options: [
+      { text: "At high iodine concentrations, starch forms an insoluble starch–iodine complex that decomposes very slowly, causing inaccurate premature endpoints", isCorrect: true },
+      { text: "Starch decomposes in cold water" },
+      { text: "Starch oxidises sodium thiosulfate into sulfate" },
+      { text: "Starch is acidic and neutralises thiosulfate" }
+    ],
+    correctAnswer: 0,
+    explanation: "* If added when iodine concentration is high (dark brown), starch forms a strongly bound, insoluble blue-black complex that releases iodine too slowly at the endpoint.\n* Adding it when $[\\\\text{I}_2]$ is low (pale straw yellow) yields an immediate, sharp transition from blue-black to colourless.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / June 2026 Paper 6 Q5",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_20-june2026",
+    question: "Why is no external chemical indicator required when titrating iron(II) ions with standard potassium manganate(VII) in acidic solution?",
+    options: [
+      { text: "Potassium manganate(VII) is self-indicating: a single excess drop of intensely purple MnO₄⁻ imparts a permanent pale pink colour to the colourless reaction mixture", isCorrect: true },
+      { text: "Iron(II) ions turn bright yellow at the equivalence point" },
+      { text: "The reaction produces bubbles of oxygen at the endpoint" },
+      { text: "The solution turns boiling hot at the equivalence point" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Deep purple $\\\\text{MnO}_4^-$ is reduced to virtually colourless $\\\\text{Mn}^{2+}$ during the reaction.\n* As soon as all $\\\\text{Fe}^{2+}$ is oxidised, the first unreacted drop of $\\\\text{KMnO}_4$ colors the solution **permanent pale pink**, serving as an ideal internal indicator.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / June 2025 Paper 6 Q6",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_21-june2026",
+    question: "How should a digital pH meter be calibrated before recording a pH titration curve in the laboratory?",
+    options: [
+      { text: "By rinsing the electrode with distilled water and measuring the pH of two standard buffer solutions of known pH (e.g. pH 4.00 and pH 7.00)", isCorrect: true },
+      { text: "By placing it in boiling water at 100 °C" },
+      { text: "By soaking it in concentrated sulfuric acid for 10 minutes" },
+      { text: "By shaking it vigorously in air" }
+    ],
+    correctAnswer: 0,
+    explanation: "* pH meters suffer from instrument drift.\n* A two-point calibration using standard buffer solutions (such as $\\\\text{pH } 7.00$ and $\\\\text{pH } 4.00$ for acid titrations) adjusts both the zero offset and slope/gain.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / June 2026 Paper 6 Q7",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_22-june2026",
+    question: "What is observed when excess concentrated aqueous ammonia is added to pale blue aqueous copper(II) sulfate?",
+    options: [
+      { text: "A pale blue precipitate forms initially, which dissolves in excess ammonia to give a deep royal blue solution", isCorrect: true },
+      { text: "A permanent white precipitate forms with no colour change" },
+      { text: "The solution turns bright orange with effervescence" },
+      { text: "A blood-red precipitate forms that sinks to the bottom" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Dropwise $\\\\text{NH}_3$ precipitates pale blue $\\\\text{Cu(OH)}_2\\\\text{(s)}$.\n* Excess $\\\\text{NH}_3$ undergoes ligand substitution: $\\\\text{Cu(OH)}_2 + 4\\\\text{NH}_3 + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow [\\\\text{Cu(NH}_3)_4(\\\\text{H}_2\\\\text{O)}_2]^{2+} + 2\\\\text{OH}^-$, forming a characteristic **deep royal blue** solution.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / June 2025 Paper 6 Q8",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_23-june2026",
+    question: "When measuring the melting point of a pure solid in a capillary tube using a Thiele tube or electrical melting point apparatus, why must the temperature be raised very slowly (approx. 1–2 °C min⁻¹) close to the expected melting point?",
+    options: [
+      { text: "To ensure thermal equilibrium between the heating oil/block, the thermometer, and the capillary tube sample", isCorrect: true },
+      { text: "To prevent the glass capillary tube from melting" },
+      { text: "To allow the solid to decompose into gas" },
+      { text: "To avoid evaporating the heating oil" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rapid heating causes the thermometer reading to lag behind the actual block temperature, leading to recorded melting temperatures that are artificially high and artificially broad.\n* Heating at $1-2^\\\\circ\\\\text{C min}^{-1}$ guarantees accurate thermal equilibrium.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / June 2026 Paper 6 Q9",
+    createdAt: "2026-06-22T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u6_l1_lv1_24-june2026",
+    question: "When using a colorimeter to measure the absorbance of a blue copper(II) sulfate solution, which color filter should be selected?",
+    options: [
+      { text: "Red or orange filter (complementary colour to blue)", isCorrect: true },
+      { text: "Blue filter" },
+      { text: "Violet filter" },
+      { text: "Green filter" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A colored solution transmits light of its own colour and absorbs its complementary colour.\n* A blue solution strongly absorbs red/orange light ($\\\\sim 600-700\\\\text{ nm}$); selecting an orange/red filter maximises instrument sensitivity and linear absorbance.",
+    level: 1,
+    topic: "edexcel-unit-6",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "mcq",
+    source: "Pearson Edexcel IAL Chemistry WCH16/01 / June 2025 Paper 6 Q10",
+    createdAt: "2026-06-22T10:00:00Z"
   }
 ];
 

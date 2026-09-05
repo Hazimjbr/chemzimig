@@ -73,5 +73,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q144",
     createdAt: "2026-08-20T21:15:00Z"
+  },
+  {
+    id: "ex_ci_u5_l4_lv1_5-2023",
+    question: "Which of the following is a major environmental benefit of using hydrogen as a fuel instead of gasoline or diesel?",
+    options: [
+      { text: "It produces water as the only product of combustion and does not emit CO₂", isCorrect: true },
+      { text: "It is denser and easier to transport than gasoline" },
+      { text: "It is naturally available in large underground reservoirs like crude oil" },
+      { text: "It does not catch fire easily" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The combustion of hydrogen: $2H_2 + O_2 \\rightarrow 2H_2O$.\n* Water is the sole exhaust product, meaning hydrogen fuel does not emit carbon dioxide, which is a major contributor to global climate change.",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q26",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l4_lv1_6-2024",
+    question: "What is the main chemical component of natural gas?",
+    options: [
+      { text: "Methane", isCorrect: true },
+      { text: "Hydrogen" },
+      { text: "Carbon monoxide" },
+      { text: "Ethanol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Natural gas is a fossil fuel composed primarily of methane ($CH_4$), typically accounting for 70% to 90% of its volume.",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q25",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l4_lv1_7-2025",
+    question: "Which fuel is considered a renewable source of energy?",
+    options: [
+      { text: "Bioethanol produced by fermentation of sugar crops", isCorrect: true },
+      { text: "Petroleum" },
+      { text: "Natural gas" },
+      { text: "Coal" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Bioethanol is produced from plant biomass (such as sugar cane or maize) that can be grown and replenished continuously, making it a renewable biofuel.\n* Petroleum, natural gas, and coal are non-renewable fossil fuels.",
+    level: 1,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q28",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

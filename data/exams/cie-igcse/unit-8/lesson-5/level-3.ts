@@ -55,5 +55,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q296",
     createdAt: "2026-08-21T12:40:00Z"
+  },
+  {
+    id: "ex_ci_u8_l5_lv3_4-2023",
+    question: "Samples of helium ($A_r = 4$) and argon ($A_r = 40$) are placed in separate containers at the same temperature and pressure. Which statement comparing the two gases is correct?",
+    options: [
+      { text: "Helium gas diffuses faster than argon gas because its atoms have a lower mass", isCorrect: true },
+      { text: "Argon gas diffuses faster because its atoms have more electrons" },
+      { text: "Both gases diffuse at the exact same rate at the same temperature" },
+      { text: "Argon is less dense than helium under identical conditions" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The rate of diffusion of gas particles is inversely proportional to the square root of relative atomic/molecular mass ($M_r$).\n* Helium atoms are lighter ($A_r = 4$) than argon atoms ($A_r = 40$), so helium atoms travel at higher average speeds and diffuse faster.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q65",
+    lessonNum: 5,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l5_lv3_5-2024",
+    question: "Although Group VIII elements are described as inert, xenon can react with fluorine to form xenon tetrafluoride, XeF₄. Why can xenon form compounds whereas helium cannot?",
+    options: [
+      { text: "Xenon has outer electrons that are far from the nucleus and shielded, making them easier to share with highly electronegative fluorine", isCorrect: true },
+      { text: "Xenon has fewer occupied electron shells than helium" },
+      { text: "Helium has a lower first ionisation energy than xenon" },
+      { text: "Xenon atoms readily lose all 8 outer electrons to form ionic lattices" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Down Group VIII, atomic radius increases and the outer electron shells are farther from the nucleus and shielded by inner electrons.\n* As a result, the ionisation energy of xenon is significantly lower than that of helium, allowing powerful oxidising agents like fluorine to form covalent bonds with xenon.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q66",
+    lessonNum: 5,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l5_lv3_6-2025",
+    question: "An element Z has atomic number 18. Which statement correctly describes the bonding and physical state of element Z at 20 °C?",
+    options: [
+      { text: "It is a monatomic gas that does not readily form covalent or ionic bonds", isCorrect: true },
+      { text: "It forms diatomic covalent molecules like Z₂" },
+      { text: "It forms a giant covalent structure with high melting point" },
+      { text: "It forms a metallic lattice of Z⁺ ions in a sea of electrons" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Element 18 is Argon (electron configuration 2,8,8).\n* Having a completely full outer valence shell, argon has no drive to form chemical bonds and exists at room temperature as independent, unbonded monatomic gas atoms.",
+    level: 3,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q67",
+    lessonNum: 5,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

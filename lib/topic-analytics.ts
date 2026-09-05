@@ -18,6 +18,16 @@ export interface TopicDiagnostic {
   subtopics: string[];
 }
 
+export interface SkillCategoryBreakdown {
+  category: 'mcq' | 'practical' | 'structured';
+  label: string;
+  icon: string;
+  totalAttempts: number;
+  correctAttempts: number;
+  accuracyPercent: number;
+  status: 'strong' | 'moderate' | 'critical' | 'unassessed';
+}
+
 export interface StudentDiagnosticReport {
   overallAccuracy: number;
   readinessIndex: number;
@@ -28,6 +38,7 @@ export interface StudentDiagnosticReport {
   diagnostics: TopicDiagnostic[];
   topWeakSpots: TopicDiagnostic[];
   activeCurriculum: CurriculumLevel;
+  skillsBreakdown: SkillCategoryBreakdown[];
 }
 
 // Cambridge canonical unit mapping fallback
@@ -59,9 +70,14 @@ function getQuestionMap(): Map<string, Question> {
 }
 
 /**
- * Resolves the unit number and track for any given question ID or data
+ * Resolves the unit number, track, and skill category for any given question ID
  */
-export function resolveQuestionUnit(questionId: string): { track: string; unitNumber: number; lessonNum?: number } | null {
+export function resolveQuestionUnit(questionId: string): { 
+  track: string; 
+  unitNumber: number; 
+  lessonNum?: number;
+  paperType: 'mcq' | 'practical' | 'structured';
+} | null {
   // 1. Direct cache check from questionBank
   const map = getQuestionMap();
   const q = map.get(questionId);
@@ -94,13 +110,22 @@ export function resolveQuestionUnit(questionId: string): { track: string; unitNu
       }
     }
 
+    const isPractical = q.paperType === 'practical' || 
+      topicStr.includes('unit-3') || 
+      topicStr.includes('unit-6') || 
+      (q.source && (q.source.includes('WCH13') || q.source.includes('WCH16') || q.source.includes('Paper 6') || q.source.includes('0620/6')));
+    
+    const isStructured = q.paperType === 'structured' || 
+      (q.source && (q.source.includes('Paper 4') || q.source.includes('0620/4') || q.source.includes('Paper 3')));
+
+    const paperType: 'mcq' | 'practical' | 'structured' = isPractical ? 'practical' : isStructured ? 'structured' : 'mcq';
+
     if (unitNumber) {
-      return { track, unitNumber, lessonNum: q.lessonNum };
+      return { track, unitNumber, lessonNum: q.lessonNum, paperType };
     }
   }
 
   // 2. Fallback heuristic pattern matching on question ID
-  // e.g. "ex_ci_u2_l3_lv1_1-2026" or "cie-igcse-unit-3" or "edexcel-a2-unit-5"
   const mModular = questionId.match(/^ex_([a-z]{2})_u(\d+)_l(\d+)/i);
   if (mModular) {
     const code = mModular[1].toLowerCase();
@@ -112,29 +137,31 @@ export function resolveQuestionUnit(questionId: string): { track: string; unitNu
     } else if (code === 'ca') {
       track = 'cie-alevel';
     }
-    return { track, unitNumber, lessonNum };
+    const paperType = (unitNumber === 3 || unitNumber === 6) ? 'practical' : 'mcq';
+    return { track, unitNumber, lessonNum, paperType };
   }
 
   const matchGeneral = questionId.match(/^([a-z0-9\-]+?)-(?:u|unit-)(\d+)/i);
   if (matchGeneral) {
     const track = matchGeneral[1].toLowerCase();
     const unitNumber = parseInt(matchGeneral[2], 10);
-    return { track, unitNumber };
+    const paperType = (unitNumber === 3 || unitNumber === 6) ? 'practical' : 'mcq';
+    return { track, unitNumber, paperType };
   }
 
   // Check som, atom, stoich prefixes
-  if (questionId.startsWith('q_som_')) return { track: 'cie-igcse', unitNumber: 1 };
-  if (questionId.startsWith('q_atom_') || questionId.startsWith('q_elem_')) return { track: 'cie-igcse', unitNumber: 2 };
-  if (questionId.startsWith('q_stoich_') || questionId.startsWith('q_mole_')) return { track: 'cie-igcse', unitNumber: 3 };
-  if (questionId.startsWith('q_elec_')) return { track: 'cie-igcse', unitNumber: 4 };
-  if (questionId.startsWith('q_ener_')) return { track: 'cie-igcse', unitNumber: 5 };
-  if (questionId.startsWith('q_rate_') || questionId.startsWith('q_react_')) return { track: 'cie-igcse', unitNumber: 6 };
-  if (questionId.startsWith('q_acid_')) return { track: 'cie-igcse', unitNumber: 7 };
-  if (questionId.startsWith('q_ptable_')) return { track: 'cie-igcse', unitNumber: 8 };
-  if (questionId.startsWith('q_metal_')) return { track: 'cie-igcse', unitNumber: 9 };
-  if (questionId.startsWith('q_env_')) return { track: 'cie-igcse', unitNumber: 10 };
-  if (questionId.startsWith('q_org_')) return { track: 'cie-igcse', unitNumber: 11 };
-  if (questionId.startsWith('q_exp_')) return { track: 'cie-igcse', unitNumber: 12 };
+  if (questionId.startsWith('q_som_')) return { track: 'cie-igcse', unitNumber: 1, paperType: 'mcq' };
+  if (questionId.startsWith('q_atom_') || questionId.startsWith('q_elem_')) return { track: 'cie-igcse', unitNumber: 2, paperType: 'mcq' };
+  if (questionId.startsWith('q_stoich_') || questionId.startsWith('q_mole_')) return { track: 'cie-igcse', unitNumber: 3, paperType: 'mcq' };
+  if (questionId.startsWith('q_elec_')) return { track: 'cie-igcse', unitNumber: 4, paperType: 'mcq' };
+  if (questionId.startsWith('q_ener_')) return { track: 'cie-igcse', unitNumber: 5, paperType: 'mcq' };
+  if (questionId.startsWith('q_rate_') || questionId.startsWith('q_react_')) return { track: 'cie-igcse', unitNumber: 6, paperType: 'mcq' };
+  if (questionId.startsWith('q_acid_')) return { track: 'cie-igcse', unitNumber: 7, paperType: 'mcq' };
+  if (questionId.startsWith('q_ptable_')) return { track: 'cie-igcse', unitNumber: 8, paperType: 'mcq' };
+  if (questionId.startsWith('q_metal_')) return { track: 'cie-igcse', unitNumber: 9, paperType: 'mcq' };
+  if (questionId.startsWith('q_env_')) return { track: 'cie-igcse', unitNumber: 10, paperType: 'mcq' };
+  if (questionId.startsWith('q_org_')) return { track: 'cie-igcse', unitNumber: 11, paperType: 'mcq' };
+  if (questionId.startsWith('q_exp_')) return { track: 'cie-igcse', unitNumber: 12, paperType: 'practical' };
 
   return null;
 }
@@ -152,9 +179,25 @@ export function analyzeStudentDiagnostics(
   if (track === 'igcse') track = 'cie-igcse';
   if (track === 'as level' || track === 'as-level') track = 'cie-as';
   if (track === 'a2 level' || track === 'a level' || track === 'a-level') track = 'cie-alevel';
-  if (track === 'edexcel-alevel') track = 'edexcel-as';
 
-  const activeCurriculum = allCurricula.find(c => c.id.toLowerCase().startsWith(track)) || allCurricula[0];
+  // Unified 6-unit curriculum for Edexcel IAL
+  let activeCurriculum: CurriculumLevel;
+  if (track === 'edexcel-alevel' || track === 'edexcel-ial' || track === 'edexcel') {
+    const asCurriculum = allCurricula.find(c => c.id.startsWith('edexcel-as')) || allCurricula[0];
+    const a2Curriculum = allCurricula.find(c => c.id.startsWith('edexcel-a2')) || allCurricula[0];
+    activeCurriculum = {
+      id: 'edexcel-alevel',
+      code: 'WCH11-16',
+      title: 'Pearson Edexcel IAL Chemistry (Units 1–6)',
+      description: 'Pearson Edexcel International Advanced Level Chemistry Specification',
+      topics: [
+        ...asCurriculum.topics,
+        ...a2Curriculum.topics
+      ]
+    };
+  } else {
+    activeCurriculum = allCurricula.find(c => c.id.toLowerCase().startsWith(track)) || allCurricula[0];
+  }
 
   // Map each unit in the active curriculum
   const unitStats: Record<number, {
@@ -173,10 +216,23 @@ export function analyzeStudentDiagnostics(
     };
   });
 
+  // Skills breakdown tracking
+  const skillsStats = {
+    mcq: { attempts: 0, correct: 0 },
+    practical: { attempts: 0, correct: 0 },
+    structured: { attempts: 0, correct: 0 }
+  };
+
   // Aggregate from solvedQuestions
   Object.entries(solved).forEach(([qId, data]) => {
     const resolved = resolveQuestionUnit(qId);
     if (!resolved) return;
+
+    // Track skills category
+    skillsStats[resolved.paperType].attempts += (data.attemptsCount || 1);
+    if (data.isCorrect) {
+      skillsStats[resolved.paperType].correct += 1;
+    }
 
     // Check if belongs to current curriculum (or general track matching)
     if (unitStats[resolved.unitNumber]) {
@@ -256,7 +312,7 @@ export function analyzeStudentDiagnostics(
     const recLessonTitle = subtopics[recLessonNum - 1] || 'Core Concepts & Principles';
 
     return {
-      curriculumId: activeCurriculum.id,
+      curriculumId: topic.number >= 4 && activeCurriculum.id === 'edexcel-alevel' ? 'edexcel-a2' : (topic.number <= 3 && activeCurriculum.id === 'edexcel-alevel' ? 'edexcel-as' : activeCurriculum.id),
       unitNumber: topic.number,
       unitTitle: topic.title,
       topicId: topic.id,
@@ -289,6 +345,37 @@ export function analyzeStudentDiagnostics(
   const masteredUnitsCount = diagnostics.filter(d => d.status === 'mastered').length;
   const criticalUnitsCount = diagnostics.filter(d => d.status === 'critical').length;
 
+  // Build skills breakdown items
+  const skillsBreakdown: SkillCategoryBreakdown[] = [
+    {
+      category: 'mcq',
+      label: 'Multiple Choice & Recall',
+      icon: '🔘',
+      totalAttempts: skillsStats.mcq.attempts,
+      correctAttempts: skillsStats.mcq.correct,
+      accuracyPercent: skillsStats.mcq.attempts > 0 ? Math.round((skillsStats.mcq.correct / skillsStats.mcq.attempts) * 100) : 0,
+      status: skillsStats.mcq.attempts === 0 ? 'unassessed' : (skillsStats.mcq.correct / skillsStats.mcq.attempts >= 0.8 ? 'strong' : skillsStats.mcq.correct / skillsStats.mcq.attempts >= 0.6 ? 'moderate' : 'critical')
+    },
+    {
+      category: 'practical',
+      label: 'Core Practicals & Lab Techniques',
+      icon: '🧪',
+      totalAttempts: skillsStats.practical.attempts,
+      correctAttempts: skillsStats.practical.correct,
+      accuracyPercent: skillsStats.practical.attempts > 0 ? Math.round((skillsStats.practical.correct / skillsStats.practical.attempts) * 100) : 0,
+      status: skillsStats.practical.attempts === 0 ? 'unassessed' : (skillsStats.practical.correct / skillsStats.practical.attempts >= 0.8 ? 'strong' : skillsStats.practical.correct / skillsStats.practical.attempts >= 0.6 ? 'moderate' : 'critical')
+    },
+    {
+      category: 'structured',
+      label: 'Structured & Written Calculations',
+      icon: '📝',
+      totalAttempts: skillsStats.structured.attempts,
+      correctAttempts: skillsStats.structured.correct,
+      accuracyPercent: skillsStats.structured.attempts > 0 ? Math.round((skillsStats.structured.correct / skillsStats.structured.attempts) * 100) : 0,
+      status: skillsStats.structured.attempts === 0 ? 'unassessed' : (skillsStats.structured.correct / skillsStats.structured.attempts >= 0.8 ? 'strong' : skillsStats.structured.correct / skillsStats.structured.attempts >= 0.6 ? 'moderate' : 'critical')
+    }
+  ];
+
   return {
     overallAccuracy,
     readinessIndex,
@@ -298,6 +385,7 @@ export function analyzeStudentDiagnostics(
     criticalUnitsCount,
     diagnostics,
     topWeakSpots,
-    activeCurriculum
+    activeCurriculum,
+    skillsBreakdown
   };
 }

@@ -55,5 +55,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q216",
     createdAt: "2026-08-21T04:25:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv2_4-2023",
+    question: "Which of the following oxides reacts with dilute hydrochloric acid AND ALSO reacts with aqueous sodium hydroxide?",
+    options: [
+      { text: "Zinc oxide, ZnO", isCorrect: true },
+      { text: "Magnesium oxide, MgO" },
+      { text: "Copper(II) oxide, CuO" },
+      { text: "Sulfur dioxide, SO₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Zinc oxide ($ZnO$) and aluminium oxide ($Al_2O_3$) are amphoteric oxides.\n* They react with acids like $HCl$ to form zinc chloride and water, and also react with alkalis like $NaOH$ to form sodium zincate ($Na_2Zn(OH)_4$).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q34",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv2_5-2024",
+    question: "Four oxide powders (W, X, Y, Z) were tested with aqueous hydrochloric acid and aqueous sodium hydroxide:\n* W reacts with HCl only\n* X reacts with NaOH only\n* Y reacts with both HCl and NaOH\n* Z reacts with neither\nWhich oxide is neutral?",
+    options: [
+      { text: "Z", isCorrect: true },
+      { text: "W" },
+      { text: "X" },
+      { text: "Y" }
+    ],
+    correctAnswer: 0,
+    explanation: "* W is a basic oxide (reacts with acid only).\n* X is an acidic oxide (reacts with base only).\n* Y is an amphoteric oxide (reacts with both).\n* Z is a neutral oxide (reacts with neither, e.g. $CO$ or $NO$).",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q32",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv2_6-2025",
+    question: "Why does atmospheric sulfur dioxide form acid rain in the presence of rainwater and oxygen?",
+    options: [
+      { text: "It is an acidic non-metal oxide that dissolves and oxidises to form sulfurous and sulfuric acids", isCorrect: true },
+      { text: "It acts as a basic catalyst neutralising clouds" },
+      { text: "It decomposes to form solid sulfur which is corrosive" },
+      { text: "It reacts with nitrogen in the air to produce ammonia" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Sulfur dioxide ($SO_2$) is an acidic oxide from the combustion of fossil fuels containing sulfur impurities.\n* In cloud droplets, it dissolves and is oxidised by oxygen and ozone into sulfuric acid ($H_2SO_4$), resulting in acid precipitation with pH below 5.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q35",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -55,5 +55,62 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q309",
     createdAt: "2026-08-21T14:10:00Z"
+  },
+  {
+    id: "ex_ci_u9_l2_lv1_4-2023",
+    question: "Which of the following metals is found native (as the uncombined element) in the Earth's crust?",
+    options: [
+      { text: "Gold", isCorrect: true },
+      { text: "Sodium", isCorrect: false },
+      { text: "Magnesium", isCorrect: false },
+      { text: "Aluminium", isCorrect: false }
+    ],
+    correctAnswer: 0,
+    explanation: "* Gold is at the bottom of the reactivity series and is chemically very unreactive.\n* Because it does not react with oxygen, water, or atmospheric gases, it is found uncombined (native) in the Earth's crust.",
+    level: 1,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q77",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l2_lv1_5-2024",
+    question: "When a piece of zinc metal is placed into a solution of copper(II) sulfate, which observation confirms that a displacement reaction occurred?",
+    options: [
+      { text: "The blue colour of the solution fades and a reddish-brown coating forms on the zinc", isCorrect: true },
+      { text: "A gas is evolved and a white precipitate forms" },
+      { text: "The solution turns bright yellow and no solid is seen" },
+      { text: "No visible change occurs because copper is more reactive than zinc" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Zinc is more reactive than copper: Zn(s) + CuSO₄(aq) → ZnSO₄(aq) + Cu(s).\n* The blue colour of aqueous Cu²⁺ fades as colourless Zn²⁺ forms, and reddish-brown solid copper coats the zinc.",
+    level: 1,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q78",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u9_l2_lv1_6-2025",
+    question: "Which list shows metals in order of DECREASING reactivity?",
+    options: [
+      { text: "Potassium, Magnesium, Zinc, Copper", isCorrect: true },
+      { text: "Copper, Zinc, Magnesium, Potassium" },
+      { text: "Magnesium, Potassium, Copper, Zinc" },
+      { text: "Zinc, Magnesium, Potassium, Copper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In the reactivity series:\n  - Potassium is the most reactive.\n  - Followed by Magnesium, then Zinc.\n  - Copper is near the bottom and least reactive.",
+    level: 1,
+    topic: "metals",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q79",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];

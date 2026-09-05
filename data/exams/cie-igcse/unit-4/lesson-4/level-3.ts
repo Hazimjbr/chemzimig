@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q104",
     createdAt: "2026-08-20T17:55:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv3_5-2023",
+    question: "In an alkaline hydrogen-oxygen fuel cell, hydroxide ions (OH⁻) are present in the electrolyte. What is the reaction occurring at the negative electrode (anode)?",
+    options: [
+      { text: "2H₂ + 4OH⁻ → 4H₂O + 4e⁻", isCorrect: true },
+      { text: "O₂ + 2H₂O + 4e⁻ → 4OH⁻" },
+      { text: "2H⁺ + 2e⁻ → H₂" },
+      { text: "4OH⁻ → O₂ + 2H₂O + 4e⁻" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In an alkaline fuel cell, $H_2$ fuel reacts with $OH^-$ ions from the electrolyte at the anode (negative electrode).\n* Hydrogen is oxidised, transferring electrons: $2H_2 + 4OH^- \\rightarrow 4H_2O + 4e^-$.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q23",
+    lessonNum: 4,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv3_6-2024",
+    question: "Three electrochemical cells are set up with copper as one electrode and metals P, Q, and R as the other electrode. The voltages and polarities are:\nCell 1: Metal P is negative, Voltage = +1.10 V\nCell 2: Metal Q is negative, Voltage = +0.78 V\nCell 3: Metal R is positive, Voltage = +0.46 V\nWhat is the order of reactivity of the metals, from most reactive to least reactive?",
+    options: [
+      { text: "P > Q > Cu > R", isCorrect: true },
+      { text: "R > Cu > Q > P" },
+      { text: "P > Q > R > Cu" },
+      { text: "Q > P > Cu > R" }
+    ],
+    correctAnswer: 0,
+    explanation: "* When another metal is negative relative to copper, it is more reactive than copper. The larger the positive cell voltage, the greater the reactivity difference.\n* P gives +1.10 V and Q gives +0.78 V, so P is more reactive than Q, and both are more reactive than copper ($P > Q > Cu$).\n* Metal R is positive relative to copper, meaning R is less reactive than copper ($Cu > R$).\n* Combining these gives: $P > Q > Cu > R$.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q22",
+    lessonNum: 4,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u4_l4_lv3_7-2025",
+    question: "Which feature is an operational disadvantage of hydrogen-oxygen fuel cells compared to conventional rechargeable lithium-ion batteries?",
+    options: [
+      { text: "Hydrogen gas is highly flammable and requires bulky high-pressure storage tanks or cryogenic cooling", isCorrect: true },
+      { text: "Fuel cells generate toxic pollutant emissions such as nitrogen dioxide" },
+      { text: "Fuel cells have a significantly lower energy efficiency than internal combustion engines" },
+      { text: "Fuel cells must be discarded after a single discharge" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Hydrogen has a very low density at ambient conditions, meaning it must be stored either at extremely high pressures (up to 700 bar) or as a cryogenic liquid at -253 °C.\n* This requires complex, heavy, and expensive storage infrastructure, posing safety risks due to hydrogen's high flammability.",
+    level: 3,
+    topic: "electrochemistry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q24",
+    lessonNum: 4,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

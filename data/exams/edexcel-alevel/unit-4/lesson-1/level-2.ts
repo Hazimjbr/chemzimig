@@ -17,7 +17,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q4",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q4",
     createdAt: "2026-09-14T10:00:00Z"
   },
   {
@@ -36,7 +36,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q5",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q5",
     createdAt: "2026-09-14T10:00:00Z"
   },
   {
@@ -55,7 +55,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q3",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q3",
     createdAt: "2026-09-15T10:00:00Z"
   },
   {
@@ -74,7 +74,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q5",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q5",
     createdAt: "2026-09-15T10:00:00Z"
   },
   {
@@ -93,7 +93,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q6",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q6",
     createdAt: "2026-09-16T10:00:00Z"
   },
   {
@@ -112,7 +112,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q4",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q4",
     createdAt: "2026-09-16T10:00:00Z"
   },
   {
@@ -131,7 +131,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q11",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q11",
     createdAt: "2026-09-24T10:00:00Z"
   },
   {
@@ -150,7 +150,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q12",
     createdAt: "2026-09-24T10:00:00Z"
   },
   {
@@ -169,7 +169,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q9",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q9",
     createdAt: "2026-09-25T10:00:00Z"
   },
   {
@@ -188,7 +188,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Specimen Paper 1 Q12",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q12",
     createdAt: "2026-09-25T10:00:00Z"
   },
   {
@@ -207,7 +207,7 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Paper 1 Q13",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2025 Paper 1 Q13",
     createdAt: "2026-09-26T10:00:00Z"
   },
   {
@@ -226,8 +226,62 @@ export const level2Questions: Question[] = [
     lessonNum: 1,
     curriculum: "edexcel-alevel",
     paperType: "mcq",
-    source: "Edexcel International A Level Chemistry WCH14 / 2026 Series Q10",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / Jan 2025 Paper 1 Q10",
     createdAt: "2026-09-26T10:00:00Z"
+  },
+  {
+    id: "ex_ed_u4_l1_lv2_13-interactive",
+    question: "A student studies the decomposition of hydrogen peroxide: 2H₂O₂ → 2H₂O + O₂ at 298 K. The concentration of reactant [H₂O₂] was recorded every 50 seconds. Use the interactive graph plotter below to plot [H₂O₂] against time, draw the curve of best fit, and verify the order of reaction by measuring two successive half-lives (t₁/₂).",
+    options: [
+      { text: "First order: two consecutive half-lives are constant at t₁/₂ = 50 s", isCorrect: true },
+      { text: "Zero order: the concentration falls at a constant linear rate" },
+      { text: "Second order: the half-life doubles from 50 s to 100 s" },
+      { text: "Third order: the half-life quadruples" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The plotted points form a smooth downward exponential decay curve\n* The time taken for $[\\text{H}_2\\text{O}_2]$ to decrease from $1.00\\text{ mol dm}^{-3}$ to $0.50\\text{ mol dm}^{-3}$ is $50\\text{ s}$\n* The time taken to fall from $0.50\\text{ mol dm}^{-3}$ to $0.25\\text{ mol dm}^{-3}$ is another $50\\text{ s}$ ($100 - 50 = 50\\text{ s}$)\n* A constant half-life independent of initial concentration is the definitive characteristic of a first-order reaction",
+    level: 2,
+    topic: "edexcel-unit-4",
+    lessonNum: 1,
+    curriculum: "edexcel-alevel",
+    paperType: "structured",
+    source: "Pearson Edexcel IAL Chemistry WCH14/01 / June 2026 Paper 1 Q14",
+    createdAt: "2026-09-27T10:00:00Z",
+    graphConfig: {
+      title: "First Order Decomposition: [H₂O₂] vs Time (Constant Half-Life Analysis)",
+      xAxis: {
+        label: "Time",
+        unit: "s",
+        min: 0,
+        max: 200,
+        step: 25
+      },
+      yAxis: {
+        label: "[H₂O₂]",
+        unit: "mol dm⁻³",
+        min: 0,
+        max: 1.0,
+        step: 0.2
+      },
+      targetPoints: [
+        { x: 0, y: 1.00 },
+        { x: 50, y: 0.50 },
+        { x: 100, y: 0.25 },
+        { x: 150, y: 0.125 },
+        { x: 200, y: 0.0625 }
+      ],
+      curveType: "curve",
+      tolerance: 0.05
+    },
+    markingScheme: {
+      marks: 3,
+      points: [
+        { mark: 1, keyword: "exponential decay curve", text: "Points plotted correctly and smooth decay curve drawn." },
+        { mark: 1, keyword: "successive half-lives are constant at 50 s", text: "Show that first half-life = 50 s and second half-life = 50 s." },
+        { mark: 1, keyword: "first order / k = ln 2 / t1/2", text: "Conclude first order and deduce rate constant k = 0.693 / 50 = 0.0139 s⁻¹." }
+      ],
+      examinerTips: "In exam questions asking to prove first-order kinetics from a concentration-time graph, you must state that at least two consecutive half-lives are constant."
+    }
   }
 ];
 

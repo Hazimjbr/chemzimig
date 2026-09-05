@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q226",
     createdAt: "2026-08-21T05:30:00Z"
+  },
+  {
+    id: "ex_ci_u7_l3_lv2_5-2023",
+    question: "A student wants to prepare pure crystals of copper(II) sulfate from dilute sulfuric acid and an insoluble solid. Which substance is NOT suitable to use with the acid?",
+    options: [
+      { text: "Copper metal, Cu", isCorrect: true },
+      { text: "Copper(II) oxide, CuO" },
+      { text: "Copper(II) carbonate, CuCO₃" },
+      { text: "Copper(II) hydroxide, Cu(OH)₂" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Copper is below hydrogen in the reactivity series and does not react with dilute non-oxidising acids like dilute sulfuric acid.\n* Copper(II) oxide, copper(II) carbonate, and copper(II) hydroxide are basic and react readily with dilute sulfuric acid to form copper(II) sulfate.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q35",
+    lessonNum: 3,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l3_lv2_6-2024",
+    question: "Which of the following is the correct ionic equation for the precipitation of silver chloride?",
+    options: [
+      { text: "Ag⁺(aq) + Cl⁻(aq) → AgCl(s)", isCorrect: true },
+      { text: "AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq)" },
+      { text: "Ag(s) + Cl₂(g) → AgCl(s)" },
+      { text: "Ag⁺(aq) + NO₃⁻(aq) → AgNO₃(s)" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In an ionic equation for a precipitation reaction, spectator ions ($Na^+$ and $NO_3^-$) are omitted.\n* The reacting aqueous ions combine to form the insoluble solid precipitate: $Ag^+(aq) + Cl^-(aq) \\rightarrow AgCl(s)$.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q33",
+    lessonNum: 3,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l3_lv2_7-2025",
+    question: "In the preparation of pure, dry crystals of hydrated magnesium sulfate (MgSO₄·7H₂O), the saturated solution is left to cool slowly at room temperature rather than boiled dry. Why?",
+    options: [
+      { text: "Slow cooling allows large, well-formed hydrated crystals to grow and prevents loss of water of crystallisation", isCorrect: true },
+      { text: "Boiling dry converts magnesium sulfate into magnesium metal" },
+      { text: "Magnesium sulfate decomposes into toxic sulfur gas when heated above 50 °C" },
+      { text: "Water of crystallisation can only enter the salt at temperatures below 10 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rapid heating to dryness would drive off the water of crystallisation, leaving a fine anhydrous powder ($MgSO_4$) rather than hydrated crystals ($MgSO_4\\cdot 7H_2O$).\n* Slow cooling allows proper crystal lattice growth.",
+    level: 2,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q36",
+    lessonNum: 3,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q460",
     createdAt: "2026-08-22T05:35:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv2_5-2023",
+    question: "A student runs a chromatogram with four dyes: W, X, Y, and Z. The solvent front moves 8.0 cm.\nSpot W moves 2.0 cm\nSpot X moves 4.8 cm\nSpot Y moves 6.0 cm\nSpot Z moves 7.2 cm\nWhich dye has an $R_f$ value of 0.60?",
+    options: [
+      { text: "Dye X", isCorrect: true },
+      { text: "Dye W" },
+      { text: "Dye Y" },
+      { text: "Dye Z" }
+    ],
+    correctAnswer: 0,
+    explanation: "* $R_f = \\text{distance moved by spot} / \\text{distance moved by solvent front}$.\n* For dye X: $R_f = 4.8 / 8.0 = 0.60$.\n* (For W: $2.0 / 8.0 = 0.25$; for Y: $6.0 / 8.0 = 0.75$; for Z: $7.2 / 8.0 = 0.90$).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q4",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv2_6-2024",
+    question: "Which method is most suitable to separate ethanol (boiling point 78 °C) and water (boiling point 100 °C) from a miscible mixture?",
+    options: [
+      { text: "Fractional distillation", isCorrect: true },
+      { text: "Simple distillation" },
+      { text: "Separating funnel" },
+      { text: "Filtration" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Ethanol and water are miscible liquids with relatively close boiling points (78 °C and 100 °C).\n* Fractional distillation uses a fractionating column to achieve repeated condensation and evaporation cycles, efficiently separating the mixture.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q4",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l2_lv2_7-2025",
+    question: "A solid sample of an organic compound is suspected to be impure.\nWhich observation confirms that the sample is NOT pure?",
+    options: [
+      { text: "It melts over a range of temperatures below its literature melting point", isCorrect: true },
+      { text: "It melts sharply at an exact, well-defined single temperature" },
+      { text: "It produces a single sharp spot on a thin-layer chromatogram" },
+      { text: "Its boiling point equals that of the pure compound" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Impurities lower the melting point and cause the substance to melt over a broad range of temperatures.\n* Pure substances melt sharply at a specific, fixed temperature.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 2,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q3",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

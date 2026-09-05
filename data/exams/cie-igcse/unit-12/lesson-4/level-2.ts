@@ -73,5 +73,62 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q484",
     createdAt: "2026-08-22T08:15:00Z"
+  },
+  {
+    id: "ex_ci_u12_l4_lv2_5-2023",
+    question: "A student carries out a titration to determine the concentration of hydrochloric acid.\nWhich step in the procedure introduces an error into the result?",
+    options: [
+      { text: "Rinsing the conical flask with the sodium hydroxide solution before pipetting 25.0 cm³ of alkali into it", isCorrect: true },
+      { text: "Rinsing the pipette with the sodium hydroxide solution before using it" },
+      { text: "Rinsing the burette with the hydrochloric acid before filling it" },
+      { text: "Rinsing the inside walls of the conical flask with distilled water during the titration" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rinsing the conical flask with alkali introduces extra unmeasured moles of sodium hydroxide, requiring a falsely large volume of acid to reach the endpoint.\n* Washing the flask with distilled water during titration does not alter the moles of reactants present, so it does not cause an error.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 4,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q39",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l4_lv2_6-2024",
+    question: "In gas chromatography, a mixture of volatile organic compounds is injected into a column.\nWhat determines the retention time (the time taken for each substance to travel through the column)?",
+    options: [
+      { text: "The relative attraction of the compound to the stationary phase and its solubility in the mobile carrier gas", isCorrect: true },
+      { text: "Only the density of the compound in its liquid state" },
+      { text: "The atmospheric pressure in the laboratory on that day" },
+      { text: "The colour of the compound when illuminated by UV light" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In gas chromatography, substances partition between the mobile gas phase and the stationary liquid/solid phase.\n* Substances with stronger attraction to the stationary phase take longer to travel through the column (longer retention time).",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 4,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q40",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l4_lv2_7-2025",
+    question: "In a flame emission spectrometer, why can the instrument identify several different metal ions present in the same solution simultaneously?",
+    options: [
+      { text: "Each metal ion emits light at characteristic discrete wavelengths that produce a unique line spectrum", isCorrect: true },
+      { text: "Each metal ion absorbs all visible light at the exact same wavelength" },
+      { text: "Different metal ions react with the flame to produce different gases" },
+      { text: "The instrument separates the metal ions by magnetic attraction inside the detector" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Each metal element has a unique electronic structure, so when excited in a flame, its electrons emit photons at characteristic discrete wavelengths.\n* The resulting line spectrum allows simultaneous qualitative identification and quantitative measurement from light intensity.",
+    level: 2,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 4,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q40",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q169",
     createdAt: "2026-08-20T23:30:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv2_5-2023",
+    question: "A reaction between dilute nitric acid and marble chips is carried out. Which combination of conditions produces the highest initial rate of reaction?",
+    options: [
+      { text: "Powdered marble chips, 2.0 mol/dm³ acid, temperature 40 °C", isCorrect: true },
+      { text: "Large marble chips, 2.0 mol/dm³ acid, temperature 40 °C" },
+      { text: "Powdered marble chips, 1.0 mol/dm³ acid, temperature 20 °C" },
+      { text: "Large marble chips, 1.0 mol/dm³ acid, temperature 20 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Highest rate is achieved by maximising all rate-increasing factors:\n  1. Powdered solid (maximum surface area).\n  2. Higher concentration (2.0 mol/dm³ vs 1.0 mol/dm³).\n  3. Higher temperature (40 °C vs 20 °C).",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q29",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv2_6-2024",
+    question: "Which statement explains why a small increase in temperature (e.g. by 10 °C) often causes a very large increase in reaction rate?",
+    options: [
+      { text: "The proportion of particles with energy equal to or greater than activation energy increases significantly", isCorrect: true },
+      { text: "The activation energy of the reaction is halved" },
+      { text: "The frequency of collisions increases ten-fold" },
+      { text: "The density of the reacting solution doubles" }
+    ],
+    correctAnswer: 0,
+    explanation: "* While collision frequency increases only slightly (~2%) for a 10 °C rise, the fraction of molecules with $E \\ge E_a$ can double or triple, leading to an exponential increase in effective collisions.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q27",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv2_7-2025",
+    question: "In a coal mine, coal dust suspended in the air presents an explosive hazard, whereas a large lump of coal burns slowly. What is the reason for this difference?",
+    options: [
+      { text: "Coal dust has a vastly greater surface area to volume ratio, leading to a much higher collision frequency with oxygen", isCorrect: true },
+      { text: "Coal dust contains a higher percentage of carbon than large lumps" },
+      { text: "Coal dust has an activation energy of zero" },
+      { text: "Coal dust decomposes endothermically" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Finely divided coal dust has a massive total surface area exposed to oxygen molecules.\n* When ignited, oxygen collides with coal particles at a rapid rate, triggering an explosive combustion reaction.",
+    level: 2,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 22 Q30",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

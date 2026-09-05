@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q165",
     createdAt: "2026-08-20T23:10:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv1_4-2023",
+    question: "Why does increasing the temperature increase the rate of a chemical reaction?",
+    options: [
+      { text: "Particles move faster and collide more frequently with energy greater than the activation energy", isCorrect: true },
+      { text: "Particles expand and increase in volume" },
+      { text: "The activation energy of the reaction is lowered" },
+      { text: "The concentration of reactants increases" }
+    ],
+    correctAnswer: 0,
+    explanation: "* At higher temperatures, particles gain kinetic energy, move faster, and collide more frequently.\n* More importantly, a much higher proportion of colliding particles possess energy equal to or greater than the activation energy ($E \\ge E_a$).",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q29",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv1_5-2024",
+    question: "A piece of zinc metal reacts much faster with dilute hydrochloric acid when powdered than when in a single lump. Why?",
+    options: [
+      { text: "Powdered zinc has a larger total surface area exposed to acid collisions", isCorrect: true },
+      { text: "Powdered zinc has a lower activation energy" },
+      { text: "Powdered zinc produces more total moles of hydrogen" },
+      { text: "Powdered zinc acts as a catalyst" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Grinding a solid into powder greatly increases the exposed surface area.\n* More zinc atoms are in direct contact with acid particles at any given moment, leading to a higher frequency of collisions per unit time.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q29",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u6_l2_lv1_6-2025",
+    question: "How does increasing the pressure of reacting gases affect the rate of reaction?",
+    options: [
+      { text: "Gas particles are pushed closer together, increasing the frequency of collisions", isCorrect: true },
+      { text: "Gas particles slow down and stick together" },
+      { text: "The activation energy of the gas reaction is decreased" },
+      { text: "The total number of gas molecules doubles" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Increasing pressure reduces the volume of a gaseous mixture, meaning there are more gas particles per unit volume.\n* This leads to more frequent collisions between reacting gas molecules, speeding up the reaction rate.",
+    level: 1,
+    topic: "chemical-reactions",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q31",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

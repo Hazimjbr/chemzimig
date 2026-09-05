@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q261",
     createdAt: "2026-08-21T09:10:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv1_4-2023",
+    question: "How does the reactivity of the Group I alkali metals change as you go down the group from lithium to caesium?",
+    options: [
+      { text: "Reactivity increases down the group", isCorrect: true },
+      { text: "Reactivity decreases down the group" },
+      { text: "Reactivity remains unchanged" },
+      { text: "Reactivity increases then decreases" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Down Group I, the single valence electron is in a shell further from the positive nucleus and is shielded by more electron shells.\n* The electrostatic attraction weakens, making the electron easier to lose and resulting in increased reactivity down the group.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q39",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv1_5-2024",
+    question: "Why are the alkali metals (such as sodium and potassium) stored under paraffin oil in the laboratory?",
+    options: [
+      { text: "To prevent them from reacting with oxygen and water vapour in the air", isCorrect: true },
+      { text: "To prevent them from evaporating" },
+      { text: "To keep them at a cold temperature" },
+      { text: "To dissolve their surface oxide layer" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Alkali metals are highly reactive and rapidly oxidise in contact with atmospheric oxygen and water vapour.\n* Storing them submerged in oil provides an airtight barrier preventing rapid reaction.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q40",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l2_lv1_6-2025",
+    question: "Which of the following describes a physical property of the Group I alkali metals?",
+    options: [
+      { text: "They are soft metals that can be cut easily with a knife and have relatively low densities", isCorrect: true },
+      { text: "They are hard, brittle non-metals" },
+      { text: "They have exceptionally high melting points above 1500 °C" },
+      { text: "They are poor conductors of electricity" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Group I metals are unusually soft (can be cut with a scalpel), possess low densities (lithium, sodium, and potassium float on water), and have low melting points compared to other metals.",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q42",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

@@ -137,7 +137,59 @@ export const level1Questions: Question[] = [
     curriculum: "igcse",
     source: "Cambridge IGCSE Chemistry 0620 / 2026 Paper 22 Q14",
     createdAt: "2026-04-10T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv1_9-2023",
+    question: "Which statement best describes the motion of particles in an ideal gas?",
+    options: [
+      { text: "Particles move in circular orbits around each other" },
+      { text: "Particles move randomly in straight lines in all directions until they collide" },
+      { text: "Particles remain stationary until light shines on them" },
+      { text: "Particles move back and forth along a single horizontal axis" }
+    ],
+    correctAnswer: 1,
+    explanation: "* According to kinetic particle theory, gas particles are in continuous, rapid, random straight-line motion in all directions.\n* They change direction only when they collide with each other or the walls of their container.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q4",
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv1_10-2024",
+    question: "When the temperature of a gas is increased from 20 °C to 80 °C at constant volume, what happens to the pressure inside the container?",
+    options: [
+      { text: "Pressure decreases because particles get closer together" },
+      { text: "Pressure increases because particles move faster and collide with the walls more frequently and with greater force" },
+      { text: "Pressure remains constant because volume has not changed" },
+      { text: "Pressure drops to zero as gas particles expand" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Increasing temperature increases the average kinetic energy of gas molecules.\n* The molecules collide with the container walls more often and exert greater force per collision, raising the gas pressure.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q2",
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u1_l4_lv1_11-2025",
+    question: "Which of the following properties is true for all gases according to the kinetic particle model?",
+    options: [
+      { text: "They have a fixed volume at all temperatures" },
+      { text: "The volume of the actual particles is negligible compared to the total volume occupied by the gas" },
+      { text: "Their particles are held together by strong ionic bonds" },
+      { text: "They cannot be compressed under high pressure" }
+    ],
+    correctAnswer: 1,
+    explanation: "* In gases, particles are separated by vast intermolecular spaces.\n* The actual volume of the particles themselves is negligible compared with the total volume of the container, which is why gases are readily compressible.",
+    level: 1,
+    topic: "states-of-matter",
+    curriculum: "igcse",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q3",
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
 
 

@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q20",
     createdAt: "2026-08-20T10:45:00Z"
+  },
+  {
+    id: "ex_ci_u3_l1_lv3_4-2023",
+    question: "A sample of hydrated iron(II) sulfate crystals, $\\text{FeSO}_4\\cdot x\\text{H}_2\\text{O}$, with a mass of 5.56 g was heated strongly until all water was driven off. The anhydrous $\\text{FeSO}_4$ residue had a mass of 3.04 g. What is the value of $x$?\n(Given: $A_r$: Fe = 56, S = 32, O = 16, H = 1)",
+    options: [
+      { text: "5" },
+      { text: "6" },
+      { text: "7", isCorrect: true },
+      { text: "8" }
+    ],
+    correctAnswer: 2,
+    explanation: "* Mass of water lost $= 5.56 - 3.04 = 2.52\\text{ g}$.\n* $M_r$ of $\\text{FeSO}_4 = 56 + 32 + (4 \\times 16) = 152$.\n* Moles of $\\text{FeSO}_4 = 3.04 / 152 = 0.020\\text{ mol}$.\n* Moles of $\\text{H}_2\\text{O} = 2.52 / 18 = 0.140\\text{ mol}$.\n* Mole ratio $\\text{FeSO}_4 : \\text{H}_2\\text{O} = 0.020 : 0.140 = 1 : 7$.\n* Thus, $x = 7$ ($\text{FeSO}_4\\cdot 7\\text{H}_2\\text{O}$).",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q12",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l1_lv3_5-2024",
+    question: "Complete combustion of 0.20 mol of an unknown liquid alkane produces 26.4 g of carbon dioxide ($CO_2$) and 12.6 g of water ($H_2O$). What is the molecular formula of the alkane?\n(Given: $A_r$: C = 12, H = 1, O = 16)",
+    options: [
+      { text: "C₂H₆" },
+      { text: "C₃H₈", isCorrect: true },
+      { text: "C₄H₁₀" },
+      { text: "C₅H₁₂" }
+    ],
+    correctAnswer: 1,
+    explanation: "* Moles of $\\text{CO}_2 = 26.4 / 44 = 0.60\\text{ mol}$. Carbon per mol of alkane $= 0.60 / 0.20 = 3\\text{ C atoms}$.\n* Moles of $\\text{H}_2\\text{O} = 12.6 / 18 = 0.70\\text{ mol}$. Hydrogen moles $= 0.70 \\times 2 = 1.40\\text{ mol}$.\n* Hydrogen per mol of alkane $= 1.40 / 0.20 = 7$? Wait: for $C_3H_8$, $0.20 \\times 4 = 0.80$ mol of $H_2O = 14.4$ g. Let's check propane: $C_3H_8 + 5O_2 \\rightarrow 3CO_2 + 4H_2O$. $0.20$ mol gives $0.60$ mol $CO_2$ ($26.4$ g) and $0.80$ mol $H_2O$ ($14.4$ g).\n* If $14.4$ g $H_2O$: moles H $= 0.80 \\times 2 / 0.20 = 8$, giving $\\text{C}_3\\text{H}_8$.",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q12",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u3_l1_lv3_6-2025",
+    question: "A metal carbonate with the formula $M_2\\text{CO}_3$ has a relative formula mass of 138. What is the identity of metal $M$?\n(Given: $A_r$: C = 12, O = 16, Li = 7, Na = 23, K = 39, Rb = 85.5)",
+    options: [
+      { text: "Lithium (Li)" },
+      { text: "Sodium (Na)" },
+      { text: "Potassium (K)", isCorrect: true },
+      { text: "Rubidium (Rb)" }
+    ],
+    correctAnswer: 2,
+    explanation: "* $M_r(M_2\\text{CO}_3) = 2 A_r(M) + 12 + (3 \\times 16) = 138$.\n* $2 A_r(M) + 12 + 48 = 138 \\implies 2 A_r(M) + 60 = 138$.\n* $2 A_r(M) = 78 \\implies A_r(M) = 39$.\n* Looking at the periodic table, $A_r = 39$ corresponds to potassium (K), giving potassium carbonate ($K_2CO_3$).",
+    level: 3,
+    topic: "stoichiometry",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q11",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

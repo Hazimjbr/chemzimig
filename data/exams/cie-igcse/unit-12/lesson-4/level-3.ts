@@ -73,5 +73,62 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q488",
     createdAt: "2026-08-22T08:35:00Z"
+  },
+  {
+    id: "ex_ci_u12_l4_lv3_5-2023",
+    question: "A student performs a titration experiment to find the concentration of an unknown sodium hydroxide solution using standard 0.100 mol/dm³ hydrochloric acid.\nThe burette reading was recorded at the top of the liquid meniscus instead of the bottom for both the initial and final readings.\nWhat effect will this error have on the calculated concentration of the sodium hydroxide?",
+    options: [
+      { text: "No effect on the calculated concentration, because the systematic error cancels out when calculating the titre volume", isCorrect: true },
+      { text: "The calculated concentration will be significantly too high" },
+      { text: "The calculated concentration will be significantly too low" },
+      { text: "The titre volume will be double the true value" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Because the student consistently reads the top of the meniscus for BOTH the initial and final burette readings, the constant offset $\\Delta V$ cancels out when taking the difference:\n  $$\\text{Titre} = (V_{\\text{final}} + c) - (V_{\\text{initial}} + c) = V_{\\text{final}} - V_{\\text{initial}}$$\n* Therefore, the titre volume and the calculated concentration are completely unaffected.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 4,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q38",
+    createdAt: "2023-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l4_lv3_6-2024",
+    question: "A chromatogram is obtained for a mixture of amino acids using a paper chromatography setup. Spot P has an $R_f$ value of 0.45, and Spot Q has an $R_f$ value of 0.72 in solvent 1.\nWhich statement correctly explains why Spot Q has a higher $R_f$ value than Spot P in solvent 1?",
+    options: [
+      { text: "Spot Q has a greater solubility in mobile solvent 1 and a weaker attraction to the stationary paper phase than Spot P", isCorrect: true },
+      { text: "Spot Q has a higher relative molecular mass than Spot P" },
+      { text: "Spot Q reacted chemically with the cellulose paper fibers" },
+      { text: "Spot P evaporates more quickly than Spot Q during the run" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In chromatography, a substance travels further (higher $R_f$) if it is more soluble in the mobile phase (the solvent) and has less affinity/adsorption to the stationary phase (the paper).",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 4,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q37",
+    createdAt: "2024-06-01T09:00:00Z"
+  },
+  {
+    id: "ex_ci_u12_l4_lv3_7-2025",
+    question: "A student determines the percentage purity of a sample of limestone ($CaCO_3$) by adding excess dilute hydrochloric acid and measuring the loss in mass as $CO_2$ escapes.\nWhich precaution ensures that the measured loss in mass is due ONLY to carbon dioxide escaping?",
+    options: [
+      { text: "Placing a cotton wool plug in the neck of the conical flask to prevent acid spray from escaping while letting gas pass through", isCorrect: true },
+      { text: "Heating the flask strongly with a Bunsen burner during the reaction" },
+      { text: "Leaving the flask open to allow ambient air to enter and replace the gas" },
+      { text: "Using concentrated nitric acid instead of dilute hydrochloric acid" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Rapid effervescence generates tiny droplets of acid spray.\n* A loose cotton wool plug allows gaseous $CO_2$ to freely escape while trapping liquid acid droplets, ensuring the mass lost is solely due to carbon dioxide.",
+    level: 3,
+    topic: "experimental-techniques",
+    curriculum: "igcse",
+    paperType: "mcq",
+    lessonNum: 4,
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q38",
+    createdAt: "2025-06-01T09:00:00Z"
   }
 ];

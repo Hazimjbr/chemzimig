@@ -55,5 +55,63 @@ export const level1Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q251",
     createdAt: "2026-08-21T08:10:00Z"
+  },
+  {
+    id: "ex_ci_u8_l1_lv1_4-2023",
+    question: "How are the elements arranged in the modern Periodic Table?",
+    options: [
+      { text: "In order of increasing atomic number (proton number)", isCorrect: true },
+      { text: "In order of increasing relative atomic mass" },
+      { text: "In order of alphabetical symbol names" },
+      { text: "In order of decreasing reactivity" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The modern Periodic Table is arranged strictly in order of increasing atomic number (the number of protons in the nucleus of an atom).",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 21 Q38",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l1_lv1_5-2024",
+    question: "What information does the period number in the Periodic Table give about an element?",
+    options: [
+      { text: "The number of occupied electron shells in its atoms", isCorrect: true },
+      { text: "The number of outer-shell electrons" },
+      { text: "The total number of neutrons in the nucleus" },
+      { text: "The charge on its ion" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The period number corresponds to the number of occupied electron shells in an atom of the element (e.g. Period 3 elements have electrons occupying 3 shells).",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 22 Q39",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u8_l1_lv1_6-2025",
+    question: "Which of the following elements is located in Group VII and Period 3 of the Periodic Table?",
+    options: [
+      { text: "Chlorine, Cl", isCorrect: true },
+      { text: "Fluorine, F" },
+      { text: "Bromine, Br" },
+      { text: "Phosphorus, P" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Chlorine ($Cl$) has atomic number 17, with electron configuration 2,8,7.\n* It has 3 electron shells (Period 3) and 7 valence electrons (Group VII).",
+    level: 1,
+    topic: "periodic-table",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q41",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

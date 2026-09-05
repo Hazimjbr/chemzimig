@@ -73,5 +73,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q116",
     createdAt: "2026-08-20T18:55:00Z"
+  },
+  {
+    id: "ex_ci_u5_l1_lv3_5-2023",
+    question: "When 25.0 cm³ of 1.0 mol/dm³ HCl is neutralised by 25.0 cm³ of 1.0 mol/dm³ NaOH, the temperature rise is 6.5 °C. What would be the expected temperature rise if 50.0 cm³ of 1.0 mol/dm³ HCl is mixed with 50.0 cm³ of 1.0 mol/dm³ NaOH in the same calorimeter?",
+    options: [
+      { text: "6.5 °C", isCorrect: true },
+      { text: "13.0 °C" },
+      { text: "3.25 °C" },
+      { text: "26.0 °C" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Doubling the volumes doubles the number of moles reacting, thereby releasing twice as much total thermal energy ($2 \\times Q$).\n* However, the total mass/volume of the solution being heated is also doubled ($50 + 50 = 100\\text{ cm}^3$ instead of $50\\text{ cm}^3$).\n* Since $\\Delta T = \\frac{Q}{m \\times c}$, doubling both $Q$ and $m$ cancels out, resulting in the same temperature rise of 6.5 °C.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q23",
+    lessonNum: 1,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l1_lv3_6-2024",
+    question: "A student dissolves 4.0 g of anhydrous copper(II) sulfate (CuSO₄, Mr = 160) into 50.0 g of water, and the temperature increases by 7.0 °C. Assuming specific heat capacity c = 4.2 J/(g·°C), what is the calculated enthalpy of solution in kJ/mol?",
+    options: [
+      { text: "-58.8 kJ/mol", isCorrect: true },
+      { text: "+58.8 kJ/mol" },
+      { text: "-14.7 kJ/mol" },
+      { text: "-1.47 kJ/mol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Heat released $Q = m \\times c \\times \\Delta T = 50.0 \\times 4.2 \\times 7.0 = 1470\\text{ J} = 1.47\\text{ kJ}$.\n* Moles of CuSO₄ $= \\frac{4.0}{160} = 0.025\\text{ mol}$.\n* $\\Delta H = -\\frac{Q}{n} = -\\frac{1.47}{0.025} = -58.8\\text{ kJ/mol}$.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q23",
+    lessonNum: 1,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l1_lv3_7-2025",
+    question: "In an experiment to determine the enthalpy of combustion of liquid ethanol, which experimental error would cause the experimentally determined value of ΔH to be less negative than the true theoretical value?",
+    options: [
+      { text: "Thermal energy is lost from the flame and beaker to the surrounding air", isCorrect: true },
+      { text: "The water was stirred continuously during heating" },
+      { text: "Complete combustion occurred with excess oxygen" },
+      { text: "A copper calorimeter was used instead of a glass beaker" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Heat losses to the surrounding air and apparatus cause the measured temperature rise of the water to be lower than expected.\n* This makes the calculated heat output ($Q$) smaller, leading to a calculated enthalpy of combustion ($\\Delta H$) that is less exothermic (less negative) than the accepted book value.",
+    level: 3,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q24",
+    lessonNum: 1,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

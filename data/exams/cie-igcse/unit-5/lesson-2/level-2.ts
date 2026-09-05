@@ -73,5 +73,63 @@ export const level2Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q124",
     createdAt: "2026-08-20T19:35:00Z"
+  },
+  {
+    id: "ex_ci_u5_l2_lv2_5-2023",
+    question: "How does the addition of a catalyst affect the reaction pathway diagram for an exothermic reaction?",
+    options: [
+      { text: "It lowers the activation energy peak, while ΔH remains completely unchanged", isCorrect: true },
+      { text: "It lowers the activation energy peak and makes ΔH more negative" },
+      { text: "It raises the energy level of the reactants" },
+      { text: "It lowers the energy level of the products" }
+    ],
+    correctAnswer: 0,
+    explanation: "* A catalyst provides an alternative reaction pathway with a lower activation energy ($E_a$).\n* It does not alter the energy levels of the initial reactants or the final products, so the overall enthalpy change ($\\Delta H$) remains unchanged.",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 22 Q24",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l2_lv2_6-2024",
+    question: "For a reversible reaction, the forward reaction has an activation energy of +80 kJ/mol and an enthalpy change of -30 kJ/mol. What is the activation energy of the reverse reaction?",
+    options: [
+      { text: "+110 kJ/mol", isCorrect: true },
+      { text: "+50 kJ/mol" },
+      { text: "-50 kJ/mol" },
+      { text: "+80 kJ/mol" }
+    ],
+    correctAnswer: 0,
+    explanation: "* In a reaction pathway diagram, the products are 30 kJ/mol lower than the reactants ($\\Delta H = -30\\text{ kJ/mol}$).\n* The peak of the curve is 80 kJ/mol above the reactants.\n* Therefore, to go from products back to the transition state peak, energy required $= 30 + 80 = 110\\text{ kJ/mol}$.",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 21 Q23",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u5_l2_lv2_7-2025",
+    question: "Which statement correctly compares an uncatalysed reaction with a catalysed reaction?",
+    options: [
+      { text: "The catalysed reaction has a lower activation energy and a faster rate of reaction", isCorrect: true },
+      { text: "The catalysed reaction has a higher activation energy and a faster rate of reaction" },
+      { text: "The catalysed reaction produces more total heat energy (larger ΔH)" },
+      { text: "The catalysed reaction increases the yield of products at equilibrium" }
+    ],
+    correctAnswer: 0,
+    explanation: "* By lowering the activation energy barrier, a greater proportion of colliding particles possess energy $E \\ge E_a$, resulting in more frequent effective collisions and a faster rate.\n* The catalyst does not affect $\\Delta H$ or the position of equilibrium.",
+    level: 2,
+    topic: "chemical-energetics",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 21 Q26",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+

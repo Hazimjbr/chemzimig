@@ -55,5 +55,63 @@ export const level3Questions: Question[] = [
     paperType: "mcq",
     source: "CIE IGCSE Chemistry 0620 / 2026 Paper 2 Q219",
     createdAt: "2026-08-21T04:40:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv3_4-2023",
+    question: "When amphoteric zinc oxide reacts with excess concentrated aqueous sodium hydroxide, what is the formula of the complex salt formed in solution?",
+    options: [
+      { text: "Na₂Zn(OH)₄ (sodium tetrahydroxozincate)", isCorrect: true },
+      { text: "NaZnO" },
+      { text: "Zn(OH)₂" },
+      { text: "Na₂ZnO" }
+    ],
+    correctAnswer: 0,
+    explanation: "* The reaction is: $ZnO(s) + 2NaOH(aq) + H_2O(l) \\rightarrow Na_2[Zn(OH)_4](aq)$.\n* Zinc forms the soluble tetrahydroxozincate complex anion $[Zn(OH)_4]^{2-}$, demonstrating its amphoteric nature in alkaline media.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2023 Paper 23 Q33",
+    lessonNum: 2,
+    createdAt: "2023-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv3_5-2024",
+    question: "A mixture of solid silicon(IV) oxide (SiO₂) and solid copper(II) oxide (CuO) is heated with excess aqueous sodium hydroxide. The mixture is then filtered. What is left on the filter paper and what is in the filtrate?",
+    options: [
+      { text: "Residue on filter paper: CuO; Filtrate: sodium silicate solution", isCorrect: true },
+      { text: "Residue on filter paper: SiO₂; Filtrate: sodium cuprate solution" },
+      { text: "Both solids dissolve completely into the filtrate" },
+      { text: "Neither solid dissolves, both remain on filter paper" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Silicon(IV) oxide ($SiO_2$) is an acidic giant covalent oxide that reacts with hot concentrated alkalis to form soluble silicates: $SiO_2 + 2NaOH \\rightarrow Na_2SiO_3 + H_2O$.\n* Copper(II) oxide ($CuO$) is purely basic and does not react with alkalis, so it remains undissolved as an insoluble residue on the filter paper.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2024 Paper 23 Q33",
+    lessonNum: 2,
+    createdAt: "2024-06-01T10:00:00Z"
+  },
+  {
+    id: "ex_ci_u7_l2_lv3_6-2025",
+    question: "Which trend in oxide behaviour is observed as you move from left to right across Period 3 of the Periodic Table (Na to Cl)?",
+    options: [
+      { text: "Basic oxides → Amphoteric oxide → Acidic oxides", isCorrect: true },
+      { text: "Acidic oxides → Amphoteric oxide → Basic oxides" },
+      { text: "Neutral oxides → Basic oxides → Acidic oxides" },
+      { text: "Amphoteric oxides → Basic oxides → Neutral oxides" }
+    ],
+    correctAnswer: 0,
+    explanation: "* Across Period 3: Na₂O and MgO are strongly basic; Al₂O₃ is amphoteric; SiO₂, P₄O₁₀, SO₃, and Cl₂O₇ are acidic with increasing acidity across the non-metals.",
+    level: 3,
+    topic: "acids-bases-salts",
+    curriculum: "igcse",
+    paperType: "mcq",
+    source: "Cambridge IGCSE Chemistry 0620 / June 2025 Paper 23 Q33",
+    lessonNum: 2,
+    createdAt: "2025-06-01T10:00:00Z"
   }
 ];
+
