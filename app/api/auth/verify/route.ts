@@ -38,9 +38,15 @@ export async function GET(request: NextRequest) {
                 email: student.email || undefined,
                 image: student.image || undefined,
                 grade: student.grade || undefined,
+                track: student.grade || undefined,
+                enrolledTracks: student.enrolledTracks && student.enrolledTracks.length > 0
+                    ? student.enrolledTracks
+                    : (student.grade ? [student.grade] : undefined),
                 isAdmin: student.isAdmin || false,
                 role: student.role || 'student',
-                authMethod: 'credentials'
+                authMethod: 'credentials',
+                dentalBookmarks: student.dentalBookmarks || [],
+                dentalMistakes: student.dentalMistakes || []
             }
         });
     } catch (error) {

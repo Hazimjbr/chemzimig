@@ -144,7 +144,7 @@ export default function HeroSection() {
           {/* Heading & Intro */}
           <div className="animate-fade-in-up">
             <h1 className="text-4xl sm:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] tracking-tight leading-[1.1] mb-4">
-              <span className="text-white">Master Science & Board Exams</span>
+              <span className="text-white">Master Science <span className="font-sans font-semibold">&</span> Board Exams</span>
               <br />
               <span className="text-gradient-hero">The Smart Way</span>
             </h1>
