@@ -182,7 +182,7 @@ function getWebGLFingerprint(): string {
     }
 }
 
-// Get audio fingerprint
+// Get audio fingerprint using deterministic OfflineAudioContext (no user gesture or race conditions)
 function getAudioFingerprint(): Promise<string> {
     return new Promise((resolve) => {
         try {
@@ -191,51 +191,41 @@ function getAudioFingerprint(): Promise<string> {
                 return;
             }
 
-            const AudioContextClass = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
-            if (!AudioContextClass) {
+            const OfflineContext = window.OfflineAudioContext || (window as unknown as { webkitOfflineAudioContext?: typeof OfflineAudioContext }).webkitOfflineAudioContext;
+            if (!OfflineContext) {
                 resolve('');
                 return;
             }
 
-            const audioContext = new AudioContextClass();
-            const oscillator = audioContext.createOscillator();
-            const analyser = audioContext.createAnalyser();
-            const gain = audioContext.createGain();
-            const processor = audioContext.createScriptProcessor(4096, 1, 1);
-
-            gain.gain.value = 0;
+            const context = new OfflineContext(1, 44100, 44100);
+            const oscillator = context.createOscillator();
             oscillator.type = 'triangle';
-            oscillator.connect(analyser);
-            analyser.connect(processor);
-            processor.connect(gain);
-            gain.connect(audioContext.destination);
+            oscillator.frequency.setValueAtTime(10000, context.currentTime);
 
+            const compressor = context.createDynamicsCompressor();
+            compressor.threshold.setValueAtTime(-50, context.currentTime);
+            compressor.knee.setValueAtTime(40, context.currentTime);
+            compressor.ratio.setValueAtTime(12, context.currentTime);
+            compressor.attack.setValueAtTime(0, context.currentTime);
+            compressor.release.setValueAtTime(0.25, context.currentTime);
+
+            oscillator.connect(compressor);
+            compressor.connect(context.destination);
             oscillator.start(0);
 
-            let fingerprint = '';
-            processor.onaudioprocess = (event) => {
+            context.oncomplete = (e) => {
                 try {
-                    const data = event.inputBuffer.getChannelData(0);
-                    fingerprint = data.slice(0, 100).join(',');
-                    oscillator.stop();
-                    processor.disconnect();
-                    if (audioContext.state !== 'closed') {
-                        audioContext.close().catch(() => {});
+                    const samples = e.renderedBuffer.getChannelData(0);
+                    let sum = 0;
+                    for (let i = 4500; i < 5000; i++) {
+                        sum += Math.abs(samples[i] || 0);
                     }
-                    resolve(fingerprint.substring(0, 50));
+                    resolve(sum.toFixed(6));
                 } catch {
                     resolve('');
                 }
             };
-
-            setTimeout(() => {
-                try {
-                    if (audioContext.state !== 'closed') {
-                        audioContext.close().catch(() => {});
-                    }
-                } catch {}
-                resolve('');
-            }, 100);
+            context.startRendering();
         } catch {
             resolve('');
         }
@@ -303,12 +293,27 @@ export async function getDeviceFingerprint(): Promise<DeviceInfo> {
     const browser = getBrowser();
     const os = getOS();
     const deviceName = getDeviceName();
-
-    // Collect fingerprinting data
     const screenResolution = `${screen.width}x${screen.height}`;
-    const colorDepth = screen.colorDepth?.toString() || '';
     const language = navigator.language || '';
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+
+    // Check if we already have a persisted stable fingerprint in localStorage
+    const stored = getStoredFingerprint();
+    if (stored && stored.length >= 16) {
+        return {
+            fingerprint: stored,
+            name: deviceName,
+            type: deviceType,
+            browser,
+            os,
+            screenResolution,
+            language,
+            timezone,
+        };
+    }
+
+    // Collect fingerprinting data
+    const colorDepth = screen.colorDepth?.toString() || '';
     const platform = navigator.platform || '';
     const cookiesEnabled = navigator.cookieEnabled?.toString() || '';
     const doNotTrack = navigator.doNotTrack || '';
@@ -344,10 +349,14 @@ export async function getDeviceFingerprint(): Promise<DeviceInfo> {
         os,
     ].join('|');
 
-    const fingerprint = await generateHash(fingerprintData);
+    const rawHash = await generateHash(fingerprintData);
+    const fingerprint = rawHash.substring(0, 32);
+
+    // Persist to localStorage immediately
+    storeFingerprint(fingerprint);
 
     return {
-        fingerprint: fingerprint.substring(0, 32),
+        fingerprint,
         name: deviceName,
         type: deviceType,
         browser,
